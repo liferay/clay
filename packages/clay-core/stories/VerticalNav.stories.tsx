@@ -4,6 +4,8 @@
  */
 
 import Button from '@clayui/button';
+import ClayIcon from '@clayui/icon';
+import ClaySticker from '@clayui/sticker';
 import React, {useState} from 'react';
 
 import {VerticalNav} from '../src';
@@ -483,5 +485,171 @@ export const ControlledExpandedKeys = () => {
 				)}
 			</VerticalNav>
 		</>
+	);
+};
+
+type ProductMenuItem = {
+	id: string;
+	href?: string;
+	label: string;
+	active?: boolean;
+	icon?: string;
+	itemClass?: string;
+	sticker?: {
+		displayType: string;
+		label: string;
+	};
+	menubarAction?: {
+		ariaLabel: string;
+		title: string;
+	};
+	items?: Array<ProductMenuItem>;
+};
+
+const items_cms_product_menu = [
+	{
+		href: '#home',
+		icon: 'home',
+		label: 'Home',
+	},
+	{
+		href: '#analytics',
+		icon: 'analytics',
+		label: 'Analytics',
+	},
+	{
+		initialExpanded: true,
+		itemClass: 'mt-3',
+		items: [
+			{
+				href: '#all',
+				icon: 'sheets',
+				label: 'All',
+			},
+			{
+				href: '#content',
+				icon: 'catalog',
+				label: 'Content',
+			},
+			{
+				href: '#files',
+				icon: 'documents-and-media',
+				label: 'Files',
+			},
+		],
+		label: 'Assets',
+	},
+	{
+		href: '#shared-with-me',
+		icon: 'users',
+		itemClass: 'mt-3',
+		label: 'Shared With Me',
+	},
+	{
+		initialExpanded: true,
+		itemClass: 'mt-3',
+		items: [
+			{
+				href: '#structures',
+				icon: 'edit-layout',
+				label: 'Structures',
+			},
+			{
+				href: '#collections',
+				icon: 'books',
+				label: 'Collections',
+			},
+			{
+				href: '#categorization',
+				icon: 'vocabulary',
+				label: 'Categorization',
+			},
+			{
+				href: '#workflow',
+				icon: 'workflow',
+				label: 'Workflow',
+			},
+		],
+		label: 'Admin',
+	},
+	{
+		initialExpanded: true,
+		itemClass: 'mt-3',
+		items: [
+			{
+				href: '#marketing',
+				label: 'Marketing',
+				sticker: {
+					displayType: 'danger',
+					label: 'M',
+				},
+			},
+			{
+				href: '#campaigns',
+				label: 'Campaigns',
+				sticker: {
+					displayType: 'primary',
+					label: 'C',
+				},
+			},
+			{
+				href: '#all-spaces',
+				icon: 'box-container',
+				label: 'All Spaces',
+			},
+		],
+		label: 'Spaces',
+		menubarAction: {
+			ariaLabel: 'New Space',
+			title: 'New Space',
+		},
+	},
+	{
+		href: '#recycle-bin',
+		icon: 'trash',
+		itemClass: 'mt-3',
+		label: 'Recycle Bin',
+	},
+] as Array<ProductMenuItem>;
+
+export const Primary = () => {
+	return (
+		<VerticalNav
+			active="Home"
+			displayType="primary"
+			items={items_cms_product_menu}
+		>
+			{(item) => (
+				<VerticalNav.Item
+					href={item.href}
+					initialExpanded={item.initialExpanded}
+					items={item.items}
+					key={item.label}
+					menubarAction={item.menubarAction}
+					textValue={item.label}
+				>
+					<div className="autofit-row">
+						{item.sticker && (
+							<ClaySticker
+								displayType={item.sticker.displayType}
+								size="sm"
+							>
+								{item.sticker.label}
+							</ClaySticker>
+						)}
+
+						{item.icon && (
+							<div className="autofit-col">
+								<ClayIcon symbol={item.icon} />
+							</div>
+						)}
+
+						<div className="autofit-col autofit-col-expand">
+							{item.label}
+						</div>
+					</div>
+				</VerticalNav.Item>
+			)}
+		</VerticalNav>
 	);
 };

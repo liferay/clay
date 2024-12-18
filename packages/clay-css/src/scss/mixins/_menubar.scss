@@ -931,6 +931,10 @@
 			}
 		}
 
+		.nav-item {
+			@include clay-css(map-get($map, nav-item));
+		}
+
 		.nav-link {
 			$_nav-link: setter(map-get($map, nav-link), ());
 			$_nav-link: map-deep-merge($link, $_nav-link);
@@ -940,6 +944,14 @@
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-link($link-mobile);
 			}
+		}
+
+		.menubar-actions-1 {
+			@include clay-css(map-get($map, menubar-actions-1));
+		}
+
+		.menubar-action {
+			@include clay-css(map-get($map, menubar-action));
 		}
 
 		$_media-breakpoint-down: map-get($map, media-breakpoint-down);

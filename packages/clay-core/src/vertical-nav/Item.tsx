@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button';
 import {useProvider} from '@clayui/provider';
 import {Keys, setElementFullHeight, useId} from '@clayui/shared';
 import React, {useContext, useMemo, useRef, useState} from 'react';
@@ -40,6 +41,14 @@ interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	 * @ignore
 	 */
 	keyValue?: React.Key;
+
+	/**
+	 * Properties to pass to the menubar action
+	 */
+	menubarAction?: {
+		ariaLabel: string;
+		title: string;
+	};
 
 	/**
 	 * Internal property.
@@ -81,7 +90,7 @@ const ParentContext = React.createContext<React.RefObject<
 	HTMLButtonElement | HTMLAnchorElement
 > | null>(null);
 
-export function Item<T extends object>({
+export function Item<T extends Record<string, any>>({
 	active: depreactedActive,
 	children,
 	href,
@@ -89,6 +98,7 @@ export function Item<T extends object>({
 	initialExpanded,
 	items,
 	keyValue,
+	menubarAction,
 	onClick,
 	textValue: _textValue,
 	...otherProps
@@ -137,6 +147,7 @@ export function Item<T extends object>({
 				aria-controls={items ? ariaControlsId : undefined}
 				aria-current={active ? ariaCurrent ?? undefined : undefined}
 				aria-expanded={items ? isExpanded : undefined}
+				className={menubarAction ? 'menubar-action-1' : ''}
 				collapsed={!isExpanded}
 				href={href}
 				onClick={(event) => {
@@ -203,6 +214,18 @@ export function Item<T extends object>({
 			>
 				{children}
 			</Nav.Link>
+
+			{menubarAction && (
+				<ClayButtonWithIcon
+					aria-label={menubarAction.ariaLabel}
+					className="menubar-action"
+					displayType="secondary"
+					monospaced
+					size="xs"
+					symbol="plus"
+					title={menubarAction.title}
+				/>
+			)}
 
 			{items && (
 				<CSSTransition

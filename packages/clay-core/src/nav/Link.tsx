@@ -36,7 +36,7 @@ export interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 export const Link = React.forwardRef<
-	HTMLButtonElement | HTMLAnchorElement,
+	HTMLButtonElement | HTMLAnchorElement | HTMLDivElement,
 	IProps
 >(
 	(
@@ -74,7 +74,7 @@ export const Link = React.forwardRef<
 								focusable="false"
 								role="presentation"
 								spritemap={spritemap}
-								symbol="caret-right"
+								symbol="angle-right-small"
 							/>
 						</span>
 
@@ -83,7 +83,7 @@ export const Link = React.forwardRef<
 								focusable="false"
 								role="presentation"
 								spritemap={spritemap}
-								symbol="caret-bottom"
+								symbol="angle-down-small"
 							/>
 						</span>
 					</>

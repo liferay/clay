@@ -8,6 +8,14 @@
 	display: none;
 }
 
+.menubar-primary {
+	@include clay-menubar-vertical-variant($menubar-primary);
+
+	.nav .nav .nav > li > .nav-link {
+		margin-left: 1rem;
+	}
+}
+
 // Menubar Vertical MD
 
 .menubar-vertical-expand-md {

@@ -55,6 +55,11 @@ type Props<T extends Record<string, any> | string> = {
 	children?: React.ReactNode | ChildrenFunction<T, null>;
 
 	/**
+	 * Determines the Vertical Nav variant to use.
+	 */
+	displayType?: null | 'primary';
+
+	/**
 	 * Flag to activate the Decorator variation.
 	 */
 	decorated?: boolean;
@@ -137,6 +142,7 @@ function VerticalNav<T extends Record<string, any> | string>({
 	activation = 'manual',
 	children,
 	decorated,
+	displayType,
 	defaultExpandedKeys = new Set(),
 	expandedKeys: externalExpandedKeys,
 	itemAriaCurrent: ariaCurrent = true,
@@ -149,7 +155,7 @@ function VerticalNav<T extends Record<string, any> | string>({
 }: Props<T>) {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const containerRef = useRef<HTMLDivElement | null>(null);
+	const containerRef = useRef<HTMLUListElement | null>(null);
 
 	const [expandedKeys, setExpandedKeys] = useControlledState({
 		defaultName: 'defaultExpandedKeys',
@@ -238,57 +244,73 @@ function VerticalNav<T extends Record<string, any> | string>({
 		return depthActive(items as Array<Record<string, any>>);
 	}, [active, items]);
 
+	const content = (
+		<Nav
+			{...navigationProps}
+			aria-orientation="vertical"
+			nested
+			ref={containerRef}
+			role="menubar"
+		>
+			<VerticalNavContext.Provider
+				value={{
+					activeKey:
+						active && collection.hasItem(active)
+							? active
+							: hasDepthActive
+							? null
+							: undefined,
+					ariaCurrent: ariaCurrent ? 'page' : null,
+					childrenRoot: childrenRootRef,
+					close,
+					expandedKeys,
+					firstKey: collection.getFirstItem().key,
+					open,
+					spritemap,
+					toggle,
+				}}
+			>
+				<Collection collection={collection} />
+			</VerticalNavContext.Provider>
+		</Nav>
+	);
+
 	return (
 		<nav
 			className={classNames('menubar menubar-transparent', {
 				['menubar-decorated']: decorated,
+				['menubar-primary']: displayType === 'primary',
 				['menubar-vertical-expand-lg']: large,
-				['menubar-vertical-expand-md']: !large,
+				['menubar-vertical-expand-md']:
+					!large && displayType !== 'primary',
 			})}
 		>
-			<CustomTrigger onClick={() => setIsOpen(!isOpen)}>
-				<span className="inline-item inline-item-before">
-					{triggerLabel}
-				</span>
+			{displayType !== 'primary' && (
+				<>
+					<CustomTrigger onClick={() => setIsOpen(!isOpen)}>
+						<span className="inline-item inline-item-before">
+							{triggerLabel}
+						</span>
 
-				<Icon
-					focusable="false"
-					role="presentation"
-					spritemap={spritemap}
-					symbol="caret-bottom"
-				/>
-			</CustomTrigger>
+						<Icon
+							focusable="false"
+							role="presentation"
+							spritemap={spritemap}
+							symbol="caret-bottom"
+						/>
+					</CustomTrigger>
 
-			<div
-				{...navigationProps}
-				className={classNames('collapse menubar-collapse', {
-					show: isOpen,
-				})}
-				ref={containerRef}
-			>
-				<Nav aria-orientation="vertical" nested role="menubar">
-					<VerticalNavContext.Provider
-						value={{
-							activeKey:
-								active && collection.hasItem(active)
-									? active
-									: hasDepthActive
-									? null
-									: undefined,
-							ariaCurrent: ariaCurrent ? 'page' : null,
-							childrenRoot: childrenRootRef,
-							close,
-							expandedKeys,
-							firstKey: collection.getFirstItem().key,
-							open,
-							spritemap,
-							toggle,
-						}}
+					<div
+						className={classNames('collapse menubar-collapse', {
+							show: isOpen,
+						})}
 					>
-						<Collection<T> collection={collection} />
-					</VerticalNavContext.Provider>
-				</Nav>
-			</div>
+						{content}
+					</div>
+				</>
+			)}
+
+			{displayType === 'primary' && content}
 		</nav>
 	);
 }

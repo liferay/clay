@@ -48,12 +48,12 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
               class="collapse-icon-closed"
             >
               <svg
-                class="lexicon-icon lexicon-icon-caret-right"
+                class="lexicon-icon lexicon-icon-angle-right-small"
                 focusable="false"
                 role="presentation"
               >
                 <use
-                  href="#caret-right"
+                  href="#angle-right-small"
                 />
               </svg>
             </span>
@@ -61,12 +61,12 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
               class="collapse-icon-open"
             >
               <svg
-                class="lexicon-icon lexicon-icon-caret-bottom"
+                class="lexicon-icon lexicon-icon-angle-down-small"
                 focusable="false"
                 role="presentation"
               >
                 <use
-                  href="#caret-bottom"
+                  href="#angle-down-small"
                 />
               </svg>
             </span>
