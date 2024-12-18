@@ -36,11 +36,12 @@ exports[`ClayVerticalNav renders 1`] = `
           class="nav-item"
           role="none"
         >
-          <div
+          <button
             aria-controls="clay-id-2"
             aria-expanded="true"
-            class="nav-link collapse-icon"
+            class="nav-link collapse-icon btn btn-unstyled"
             role="menuitem"
+            type="button"
           >
             Home
             <span
@@ -69,7 +70,7 @@ exports[`ClayVerticalNav renders 1`] = `
                 />
               </svg>
             </span>
-          </div>
+          </button>
           <ul
             class="nav nav-stacked"
             id="clay-id-2"

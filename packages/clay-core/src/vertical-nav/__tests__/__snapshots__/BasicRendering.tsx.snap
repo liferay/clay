@@ -36,11 +36,12 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
           class="nav-item"
           role="none"
         >
-          <div
+          <button
             aria-controls="clay-id-6"
             aria-expanded="false"
-            class="nav-link collapse-icon collapsed"
+            class="nav-link collapse-icon collapsed btn btn-unstyled"
             role="menuitem"
+            type="button"
           >
             Home
             <span
@@ -69,7 +70,7 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
                 />
               </svg>
             </span>
-          </div>
+          </button>
         </li>
         <li
           class="nav-item"
