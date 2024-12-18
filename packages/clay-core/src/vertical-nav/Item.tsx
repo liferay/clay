@@ -3,13 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button';
 import {useProvider} from '@clayui/provider';
 import {Keys, setElementFullHeight, useId} from '@clayui/shared';
 import React, {useContext, useMemo, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
-import classNames from 'classnames';
-import {ClayButtonWithIcon} from '@clayui/button';
 import {Collection} from '../collection';
 import {Nav} from '../nav';
 import {useVertical} from './context';
