@@ -1,6 +1,9 @@
 $menubar-primary: () !default;
 $menubar-primary: map-deep-merge(
 	(
+		nav-item: (
+			position: relative,
+		),
 		nav-link: (
 			border-radius: 0,
 			color: $gray-900,
@@ -105,6 +108,14 @@ $menubar-primary: map-deep-merge(
 					top: calc(22px - (1em / 2)),
 				),
 			),
+		),
+		menubar-actions-1: (
+			padding-right: 4rem,
+		),
+		menubar-action: (
+			position: absolute,
+			top: 0.625rem,
+			right: 2rem,
 		),
 	),
 	$menubar-primary

@@ -1,3 +1,126 @@
+$cadmin-menubar-primary: () !default;
+$cadmin-menubar-primary: map-deep-merge(
+	(
+		nav-item: (
+			position: relative,
+		),
+		nav-link: (
+			border-radius: 0,
+			color: $cadmin-gray-900,
+			line-height: 24px,
+			transition: #{color 0.15s ease-in-out,
+			background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out,
+			box-shadow 0.15s ease-in-out},
+			before: (
+				bottom: 0,
+				content: '',
+				display: block,
+				left: 0,
+				position: absolute,
+				top: 0,
+				transition: $cadmin-transition-base,
+			),
+			hover: (
+				background-color: $cadmin-primary-l3,
+				color: $cadmin-gray-900,
+				letter-spacing: 0,
+				before: (
+					background: $cadmin-secondary-l0,
+					width: 2px,
+				),
+			),
+			focus: (
+				background-color: c-unset,
+				box-shadow: none,
+				color: $cadmin-gray-900,
+				outline: 0,
+				after: (
+					bottom: 0,
+					box-shadow: $cadmin-component-focus-inset-box-shadow,
+					content: '',
+					display: block,
+					left: 0,
+					pointer-events: none,
+					position: absolute,
+					right: 0,
+					top: 0,
+				),
+			),
+			active-class: (
+				background-color: $cadmin-primary-l3,
+				color: $cadmin-gray-900,
+				font-weight: $cadmin-font-weight-semi-bold,
+				before: (
+					background-color: $cadmin-primary,
+					width: 6px,
+				),
+				focus: (
+					before: (
+						display: none,
+					),
+				),
+			),
+			disabled: (
+				background-color: transparent,
+				box-shadow: none,
+				font-weight: $cadmin-font-weight-normal,
+				letter-spacing: 0.016rem,
+				before: (
+					content: none,
+				),
+				after: (
+					content: none,
+				),
+			),
+			show: (
+				background-color: c-unset,
+				box-shadow: c-unset,
+				color: $cadmin-gray-900,
+				before: (
+					background-color: transparent,
+					width: 0,
+				),
+				hover: (
+					before: (
+						background-color: $cadmin-secondary-l0,
+						width: 2px,
+					),
+				),
+			),
+			autofit-row: (
+				align-items: center,
+				margin-left: -4px,
+				margin-right: -4px,
+				autofit-col: (
+					padding-left: 4px,
+					padding-right: 4px,
+				),
+			),
+			collapse-icon: (
+				font-size: 12px,
+				font-weight: $cadmin-font-weight-semi-bold,
+				text-transform: uppercase,
+				collapse-icon-closed: (
+					top: calc(22px - (1em / 2)),
+				),
+				collapse-icon-open: (
+					top: calc(22px - (1em / 2)),
+				),
+			),
+		),
+		menubar-actions-1: (
+			padding-right: 64px,
+		),
+		menubar-action: (
+			position: absolute,
+			top: 10px,
+			right: 32px,
+		),
+	),
+	$cadmin-menubar-primary
+);
+
 // Menubar Vertical MD
 
 $cadmin-menubar-vertical-expand-md: () !default;

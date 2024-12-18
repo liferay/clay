@@ -8,6 +8,14 @@
 	display: none;
 }
 
+.menubar-primary {
+	@include clay-menubar-vertical-variant($cadmin-menubar-primary);
+
+	.nav .nav .nav > li > .nav-link {
+		margin-left: 16px;
+	}
+}
+
 // Menubar Vertical MD
 
 .menubar-vertical-expand-md {
