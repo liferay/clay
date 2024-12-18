@@ -7,7 +7,7 @@ import Button from '@clayui/button';
 import {ClayToggle as Toggle} from '@clayui/form';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
-import React, {useMemo} from 'react';
+import React, {useEffect, useLayoutEffect} from 'react';
 
 import {ChildrenFunction, Collection, useCollection} from '../collection';
 import {Item, Menu} from '../drop-down';
@@ -35,6 +35,9 @@ const Header = React.forwardRef<HTMLLIElement, HeaderProps>(
 		);
 	}
 );
+
+const useIsomorphicEffect =
+	typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 type Props<T> = {
 	/**
@@ -68,12 +71,12 @@ function HeadInner<T extends Record<string, any>>(
 		visibleKeys: new Set(visibleColumns.keys()),
 	});
 
-	useMemo(() => {
+	useIsomorphicEffect(() => {
 		if (visibleColumns.size === 0) {
 			onVisibleColumnsChange(collection.getItems(), 0);
 		}
 		onHeadCellsChange(collection.getSize());
-	}, []);
+	}, [collection.getSize()]);
 
 	return (
 		<thead {...otherProps} ref={ref}>
