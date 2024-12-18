@@ -155,7 +155,7 @@ function VerticalNav<T extends Record<string, any> | string>({
 }: Props<T>) {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const containerRef = useRef<HTMLDivElement | null>(null);
+	const containerRef = useRef<HTMLUListElement | null>(null);
 
 	const [expandedKeys, setExpandedKeys] = useControlledState({
 		defaultName: 'defaultExpandedKeys',
@@ -245,7 +245,13 @@ function VerticalNav<T extends Record<string, any> | string>({
 	}, [active, items]);
 
 	const content = (
-		<Nav aria-orientation="vertical" nested role="menubar">
+		<Nav
+			{...navigationProps}
+			aria-orientation="vertical"
+			nested
+			ref={containerRef}
+			role="menubar"
+		>
 			<VerticalNavContext.Provider
 				value={{
 					activeKey:
@@ -295,11 +301,9 @@ function VerticalNav<T extends Record<string, any> | string>({
 					</CustomTrigger>
 
 					<div
-						{...navigationProps}
 						className={classNames('collapse menubar-collapse', {
 							show: isOpen,
 						})}
-						ref={containerRef}
 					>
 						{content}
 					</div>
