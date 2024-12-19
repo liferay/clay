@@ -86,6 +86,7 @@ $blue-l1: #338fff !default;
 $blue-l2: #66abff !default;
 $blue-l3: #97c5ff !default;
 $blue-l4: #cce3ff !default;
+$blue-l5: #e5f1ff !default;
 
 $indigo-d4: #0017e5 !default;
 $indigo-d3: #001aff !default;
@@ -96,6 +97,7 @@ $indigo-l1: #808cff !default;
 $indigo-l2: #99a3ff !default;
 $indigo-l3: #b2baff !default;
 $indigo-l4: #ccd1ff !default;
+$indigo-l5: #e5e8ff !default;
 
 $purple-d4: #7700cc !default;
 $purple-d3: #8600e6 !default;
@@ -106,6 +108,7 @@ $purple-l1: #bf66ff !default;
 $purple-l2: #ca80ff !default;
 $purple-l3: #d499ff !default;
 $purple-l4: #dfb3ff !default;
+$purple-l5: #f2e5ff !default;
 
 $pink-d4: #800048 !default;
 $pink-d3: #990057 !default;
@@ -116,6 +119,7 @@ $pink-l1: #ff4db2 !default;
 $pink-l2: #ff80c8 !default;
 $pink-l3: #ff99d3 !default;
 $pink-l4: #ffb3de !default;
+$pink-l5: #ffe5f4 !default;
 
 $red-d4: #800000 !default;
 $red-d3: #990000 !default;
@@ -126,6 +130,7 @@ $red-l1: #ff4d4d !default;
 $red-l2: #ff6666 !default;
 $red-l3: #ff8080 !default;
 $red-l4: #ff9999 !default;
+$red-l5: #ffe5e5 !default;
 
 $orange-d4: #662700 !default;
 $orange-d3: #803100 !default;
@@ -136,6 +141,7 @@ $orange-l1: #ff6200 !default;
 $orange-l2: #ff8133 !default;
 $orange-l3: #ffa166 !default;
 $orange-l4: #ffc099 !default;
+$orange-l5: #fff0e5 !default;
 
 $yellow-d4: #997000 !default;
 $yellow-d3: #b38900 !default;
@@ -146,6 +152,7 @@ $yellow-l1: #ffc933 !default;
 $yellow-l2: #ffd666 !default;
 $yellow-l3: #ffe499 !default;
 $yellow-l4: #fff1cc !default;
+$yellow-l5: #fff8e5 !default;
 
 $green-d4: #162d06 !default;
 $green-d3: #22430a !default;
@@ -156,6 +163,7 @@ $green-l1: #53a117 !default;
 $green-l2: #67c91d !default;
 $green-l3: #81e236 !default;
 $green-l4: #9de963 !default;
+$green-l5: #f1fce9 !default;
 
 $teal-d4: #092a25 !default;
 $teal-d3: #0d3f37 !default;
@@ -166,6 +174,7 @@ $teal-l1: #24a892 !default;
 $teal-l2: #42d7be !default;
 $teal-l3: #6ce0cc !default;
 $teal-l4: #96e9db !default;
+$teal-l5: #eafbf8 !default;
 
 $cyan-d4: #00334d !default;
 $cyan-d3: #004466 !default;
@@ -176,6 +185,7 @@ $cyan-l1: #0099e6 !default;
 $cyan-l2: #33bbff !default;
 $cyan-l3: #66ccff !default;
 $cyan-l4: #99ddff !default;
+$cyan-l5: #e5f6ff !default;
 
 $colors: () !default;
 $colors: map-merge(
