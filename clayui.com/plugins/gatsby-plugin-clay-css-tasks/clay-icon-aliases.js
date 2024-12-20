@@ -629,6 +629,7 @@ const iconsData = {
 	"format":                   '"editor", "paint", "style", "text"',
 	"forms":                    '"inputs", "layout", "list", "structure"',
 	"full-size":                '"expand", "fullscreen", "increase"',
+	"gallery":                  '"view", "media", "file", "image"',
 	"geolocation":              '"pin", "place"',
 	"globe":                    '"earth", "location", "web", "world"',
 	"globe-lines":              '"country", "earth", "location", "web", "world"',
