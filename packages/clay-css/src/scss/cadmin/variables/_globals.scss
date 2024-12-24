@@ -79,7 +79,7 @@ $cadmin-blue-d4: #004799 !default;
 $cadmin-blue-d3: #0053b3 !default;
 $cadmin-blue-d2: #005fcc !default;
 $cadmin-blue-d1: #006be6 !default;
-$cadmin-blue: if($cadmin-enable-lexicon-flat-colors, #4b9fff, #0b5fff) !default;
+$cadmin-blue: if($cadmin-enable-lexicon-flat-colors, #006eff, #0b5fff) !default;
 $cadmin-blue-l1: #338fff !default;
 $cadmin-blue-l2: #66abff !default;
 $cadmin-blue-l3: #97c5ff !default;
@@ -91,7 +91,7 @@ $cadmin-indigo-d2: #1a30ff !default;
 $cadmin-indigo-d1: #3347ff !default;
 $cadmin-indigo: if(
 	$cadmin-enable-lexicon-flat-colors,
-	#7785ff,
+	#4d5fff,
 	#6610f2
 ) !default;
 $cadmin-indigo-l1: #808cff !default;
@@ -105,7 +105,7 @@ $cadmin-purple-d2: #9500ff !default;
 $cadmin-purple-d1: #9f1aff !default;
 $cadmin-purple: if(
 	$cadmin-enable-lexicon-flat-colors,
-	#af78ff,
+	#aa33ff,
 	#6f42c1
 ) !default;
 $cadmin-purple-l1: #bf66ff !default;
@@ -117,7 +117,7 @@ $cadmin-pink-d4: #800048 !default;
 $cadmin-pink-d3: #990057 !default;
 $cadmin-pink-d2: #b30065 !default;
 $cadmin-pink-d1: #cc0074 !default;
-$cadmin-pink: if($cadmin-enable-lexicon-flat-colors, #ff73c3, #e83e8c) !default;
+$cadmin-pink: if($cadmin-enable-lexicon-flat-colors, #e50082, #e83e8c) !default;
 $cadmin-pink-l1: #ff4db2 !default;
 $cadmin-pink-l2: #ff80c8 !default;
 $cadmin-pink-l3: #ff99d3 !default;
@@ -127,7 +127,7 @@ $cadmin-red-d4: #800000 !default;
 $cadmin-red-d3: #990000 !default;
 $cadmin-red-d2: #b30000 !default;
 $cadmin-red-d1: #cc0000 !default;
-$cadmin-red: if($cadmin-enable-lexicon-flat-colors, #ff5f5f, #da1414) !default;
+$cadmin-red: if($cadmin-enable-lexicon-flat-colors, #e60000, #da1414) !default;
 $cadmin-red-l1: #ff4d4d !default;
 $cadmin-red-l2: #ff6666 !default;
 $cadmin-red-l3: #ff8080 !default;
@@ -139,7 +139,7 @@ $cadmin-orange-d2: #993b00 !default;
 $cadmin-orange-d1: #b34400 !default;
 $cadmin-orange: if(
 	$cadmin-enable-lexicon-flat-colors,
-	#ffb46e,
+	#cc4e00,
 	#b95000
 ) !default;
 $cadmin-orange-l1: #ff6200 !default;
@@ -153,7 +153,7 @@ $cadmin-yellow-d2: #cc9600 !default;
 $cadmin-yellow-d1: #e6a800 !default;
 $cadmin-yellow: if(
 	$cadmin-enable-lexicon-flat-colors,
-	#ffd76e,
+	#ffbb00,
 	#ffc107
 ) !default;
 $cadmin-yellow-l1: #ffc933 !default;
@@ -167,7 +167,7 @@ $cadmin-green-d2: #2e590d !default;
 $cadmin-green-d1: #397010 !default;
 $cadmin-green: if(
 	$cadmin-enable-lexicon-flat-colors,
-	#9be169,
+	#458613,
 	#287d3d
 ) !default;
 $cadmin-green-l1: #53a117 !default;
@@ -179,7 +179,7 @@ $cadmin-teal-d4: #092a25 !default;
 $cadmin-teal-d3: #0d3f37 !default;
 $cadmin-teal-d2: #125449 !default;
 $cadmin-teal-d1: #16695b !default;
-$cadmin-teal: if($cadmin-enable-lexicon-flat-colors, #50d2a0, #20c997) !default;
+$cadmin-teal: if($cadmin-enable-lexicon-flat-colors, #1b7e6e, #20c997) !default;
 $cadmin-teal-l1: #24a892 !default;
 $cadmin-teal-l2: #42d7be !default;
 $cadmin-teal-l3: #6ce0cc !default;
@@ -189,7 +189,7 @@ $cadmin-cyan-d4: #00334d !default;
 $cadmin-cyan-d3: #004466 !default;
 $cadmin-cyan-d2: #005580 !default;
 $cadmin-cyan-d1: #006699 !default;
-$cadmin-cyan: if($cadmin-enable-lexicon-flat-colors, #5fc8ff, #17a2b8) !default;
+$cadmin-cyan: if($cadmin-enable-lexicon-flat-colors, #0077b3, #17a2b8) !default;
 $cadmin-cyan-l1: #0099e6 !default;
 $cadmin-cyan-l2: #33bbff !default;
 $cadmin-cyan-l3: #66ccff !default;
@@ -927,7 +927,7 @@ $cadmin-clay-dark-mark: map-deep-merge(
 
 $cadmin-dt-font-weight: $cadmin-font-weight-bold !default;
 
-$cadmin-code-color: #e83e8c !default;
+$cadmin-code-color: $cadmin-red !default;
 $cadmin-code-font-size: 87.5% !default;
 
 $cadmin-kbd-bg: $cadmin-gray-900 !default;
