@@ -497,7 +497,7 @@ $toggle-switch-sizes: map-deep-merge(
 		toggle-switch-sm: (
 			simple-toggle-switch: (
 				toggle-switch-label: (
-					max-width: calc(100% - 38px),
+					max-width: calc(100% - 34px),
 				),
 			),
 			toggle-switch-check: (
@@ -515,9 +515,8 @@ $toggle-switch-sizes: map-deep-merge(
 					),
 					toggle-switch-handle: (
 						min-width: 30px,
-						max-width: 30px,
 						after: (
-							margin-left: 38px,
+							margin-left: 34px,
 						),
 					),
 					toggle-switch-icon: (
