@@ -45,6 +45,19 @@ const StickerColorsAndSizesCode = `const Component = () => {
 			<ClaySticker displayType="warning" size="sm">
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
+
+			<div className="mt-3">
+				<ClaySticker displayType="space-0">S</ClaySticker>
+				<ClaySticker displayType="space-1">M</ClaySticker>
+				<ClaySticker displayType="space-2">C</ClaySticker>
+				<ClaySticker displayType="space-3">M</ClaySticker>
+				<ClaySticker displayType="space-4">S</ClaySticker>
+				<ClaySticker displayType="space-5">S</ClaySticker>
+				<ClaySticker displayType="space-6">E</ClaySticker>
+				<ClaySticker displayType="space-7">Q</ClaySticker>
+				<ClaySticker displayType="space-8">D</ClaySticker>
+				<ClaySticker displayType="space-9">P</ClaySticker>
+			</div>
 		</>
 	);
 }
@@ -99,7 +112,18 @@ const StickerColorsAndSizesJSPCode = `<clay:sticker
 	displayType="warning"
 	icon="users"
 	size="sm"
-/>`;
+/>
+
+<clay:sticker displayType="space-0" label="S" />
+<clay:sticker displayType="space-1" label="M" />
+<clay:sticker displayType="space-2" label="C" />
+<clay:sticker displayType="space-3" label="M" />
+<clay:sticker displayType="space-4" label="S" />
+<clay:sticker displayType="space-5" label="S" />
+<clay:sticker displayType="space-6" label="E" />
+<clay:sticker displayType="space-7" label="Q" />
+<clay:sticker displayType="space-8" label="D" />
+<clay:sticker displayType="space-9" label="P" />`;
 
 export const StickerColorsAndSizes = () => {
 	const scope = {ClayIcon, ClaySticker};
