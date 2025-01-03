@@ -26,7 +26,7 @@ mainTabURL: 'docs/components/toggle-switch.html'
 <div class="sheet-example">
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input class="toggle-switch-check" type="checkbox" />
+			<input class="toggle-switch-check" role="switch" type="checkbox" />
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -34,7 +34,7 @@ mainTabURL: 'docs/components/toggle-switch.html'
 	</label>
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input class="toggle-switch-check" type="checkbox">
+			<input class="toggle-switch-check" role="switch" type="checkbox">
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
 					<span class="button-icon button-icon-on toggle-switch-icon">
@@ -56,7 +56,7 @@ mainTabURL: 'docs/components/toggle-switch.html'
 ```html
 <label class="toggle-switch">
 	<span class="toggle-switch-check-bar">
-		<input class="toggle-switch-check" type="checkbox" />
+		<input class="toggle-switch-check" role="switch" type="checkbox" />
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span class="toggle-switch-handle"></span>
 		</span>
@@ -64,7 +64,7 @@ mainTabURL: 'docs/components/toggle-switch.html'
 </label>
 <label class="toggle-switch">
 	<span class="toggle-switch-check-bar">
-		<input class="toggle-switch-check" type="checkbox" />
+		<input class="toggle-switch-check" role="switch" type="checkbox" />
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span
 				class="toggle-switch-handle"
@@ -104,7 +104,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 <div class="sheet-example">
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input class="toggle-switch-check" type="checkbox" />
+			<input class="toggle-switch-check" role="switch" type="checkbox" />
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -112,7 +112,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 	</label>
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input class="toggle-switch-check" type="checkbox" />
+			<input class="toggle-switch-check" role="switch" type="checkbox" />
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -123,7 +123,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 ```html
 <label class="toggle-switch">
 	<span class="toggle-switch-check-bar">
-		<input class="toggle-switch-check" type="checkbox" />
+		<input class="toggle-switch-check" role="switch" type="checkbox" />
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span class="toggle-switch-handle"></span>
 		</span>
@@ -136,7 +136,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 <div class="sheet-example">
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option1"/>
+			<input class="toggle-switch-check" name="toggleSwitchRadio1" role="radio" type="radio" value="option1"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -144,7 +144,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 	</label>
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option2"/>
+			<input class="toggle-switch-check" name="toggleSwitchRadio1" role="radio" type="radio" value="option2"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -152,7 +152,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 	</label>
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option3"/>
+			<input class="toggle-switch-check" name="toggleSwitchRadio1" role="radio" type="radio" value="option3"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -166,6 +166,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 		<input
 			class="toggle-switch-check"
 			name="toggleSwitchRadio1"
+			role="radio"
 			type="radio"
 			value="option1"
 		/>
@@ -179,6 +180,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 		<input
 			class="toggle-switch-check"
 			name="toggleSwitchRadio1"
+			role="radio"
 			type="radio"
 			value="option2"
 		/>
@@ -192,6 +194,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 		<input
 			class="toggle-switch-check"
 			name="toggleSwitchRadio1"
+			role="radio"
 			type="radio"
 			value="option3"
 		/>
@@ -207,7 +210,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 <div class="sheet-example">
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input disabled class="toggle-switch-check" type="checkbox" />
+			<input disabled class="toggle-switch-check" role="switch" type="checkbox" />
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -215,7 +218,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 	</label>
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input disabled checked class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option1"/>
+			<input disabled checked class="toggle-switch-check" name="toggleSwitchRadio1" role="radio" type="radio" value="option1"/>
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle"></span>
 			</span>
@@ -226,7 +229,12 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 ```html
 <label class="toggle-switch">
 	<span class="toggle-switch-check-bar">
-		<input disabled class="toggle-switch-check" type="checkbox" />
+		<input
+			disabled
+			class="toggle-switch-check"
+			role="switch"
+			type="checkbox"
+		/>
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span class="toggle-switch-handle"></span>
 		</span>
@@ -239,6 +247,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 			checked
 			class="toggle-switch-check"
 			name="toggleSwitchRadio1"
+			role="radio"
 			type="radio"
 			value="option1"
 		/>
@@ -261,7 +270,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 			<span class="toggle-switch-label">Adding Required Text</span>
 			<span class="toggle-switch-text">Required *</span>
 			<span class="toggle-switch-check-bar">
-				<input class="toggle-switch-check" type="checkbox" />
+				<input class="toggle-switch-check" role="switch" type="checkbox" />
 				<span aria-hidden="true" class="toggle-switch-bar">
 					<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
 					</span>
@@ -273,7 +282,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 		<label class="toggle-switch">
 			<span class="toggle-switch-label">Adding Required Text</span>
 			<span class="toggle-switch-check-bar">
-				<input class="toggle-switch-check" type="checkbox" />
+				<input class="toggle-switch-check" role="switch" type="checkbox" />
 				<span aria-hidden="true" class="toggle-switch-bar">
 					<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
 					</span>
@@ -286,7 +295,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 		<label class="toggle-switch">
 			<span class="toggle-switch-label">Required Text on Right</span>
 			<span class="toggle-switch-check-bar">
-				<input class="toggle-switch-check" type="checkbox" />
+				<input class="toggle-switch-check" role="switch" type="checkbox" />
 				<span aria-hidden="true" class="toggle-switch-bar">
 					<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
 					</span>
@@ -300,7 +309,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 			<span class="toggle-switch-label">Required Text on Left</span>
 			<span class="toggle-switch-text toggle-switch-text-left">Required *</span>
 			<span class="toggle-switch-check-bar">
-				<input class="toggle-switch-check" type="checkbox" />
+				<input class="toggle-switch-check" role="switch" type="checkbox" />
 				<span aria-hidden="true" class="toggle-switch-bar">
 					<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
 					</span>
@@ -314,7 +323,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 			<span class="toggle-switch-text">Top Text</span>
 			<span class="toggle-switch-text toggle-switch-text-left">Error</span>
 			<span class="toggle-switch-check-bar">
-				<input class="toggle-switch-check" type="checkbox" />
+				<input class="toggle-switch-check" role="switch" type="checkbox" />
 				<span aria-hidden="true" class="toggle-switch-bar">
 					<span class="toggle-switch-handle" data-label-off="OFF" data-label-on="ON">
 					</span>
@@ -331,7 +340,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 	<span class="toggle-switch-label">Adding Required Text</span>
 	<span class="toggle-switch-text">Required *</span>
 	<span class="toggle-switch-check-bar">
-		<input class="toggle-switch-check" type="checkbox" />
+		<input class="toggle-switch-check" role="switch" type="checkbox" />
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span
 				class="toggle-switch-handle"
@@ -345,7 +354,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 <label class="toggle-switch">
 	<span class="toggle-switch-label">Adding Required Text</span>
 	<span class="toggle-switch-check-bar">
-		<input class="toggle-switch-check" type="checkbox" />
+		<input class="toggle-switch-check" role="switch" type="checkbox" />
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span
 				class="toggle-switch-handle"
@@ -360,7 +369,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 <label class="toggle-switch">
 	<span class="toggle-switch-label">Required Text on Right</span>
 	<span class="toggle-switch-check-bar">
-		<input class="toggle-switch-check" type="checkbox" />
+		<input class="toggle-switch-check" role="switch" type="checkbox" />
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span
 				class="toggle-switch-handle"
@@ -376,7 +385,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 	<span class="toggle-switch-label">Required Text on Left</span>
 	<span class="toggle-switch-text toggle-switch-text-left">Required *</span>
 	<span class="toggle-switch-check-bar">
-		<input class="toggle-switch-check" type="checkbox" />
+		<input class="toggle-switch-check" role="switch" type="checkbox" />
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span
 				class="toggle-switch-handle"
@@ -392,7 +401,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 	<span class="toggle-switch-text">Top Text</span>
 	<span class="toggle-switch-text toggle-switch-text-left">Error</span>
 	<span class="toggle-switch-check-bar">
-		<input class="toggle-switch-check" type="checkbox" />
+		<input class="toggle-switch-check" role="switch" type="checkbox" />
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span
 				class="toggle-switch-handle"
@@ -417,7 +426,7 @@ Add `<span class="button-icon button-icon-off icon-volume-off toggle-switch-icon
 	<div class="form-group">
 		<label class="toggle-switch">
 			<span class="toggle-switch-check-bar">
-				<input class="toggle-switch-check" type="checkbox" />
+				<input class="toggle-switch-check" role="switch" type="checkbox" />
 				<span aria-hidden="true" class="toggle-switch-bar">
 					<span class="toggle-switch-handle" data-label-off="" data-label-on="">
 						<span class="button-icon button-icon-on toggle-switch-icon">
@@ -439,7 +448,7 @@ Add `<span class="button-icon button-icon-off icon-volume-off toggle-switch-icon
 		<label class="toggle-switch">
 			<span class="toggle-switch-label">Toggle Switch with data-label-on</span>
 			<span class="toggle-switch-check-bar">
-				<input class="toggle-switch-check" type="checkbox" />
+				<input class="toggle-switch-check" role="switch" type="checkbox" />
 				<span aria-hidden="true" class="toggle-switch-bar">
 					<span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
 						<span class="button-icon button-icon-on toggle-switch-icon">
@@ -461,7 +470,7 @@ Add `<span class="button-icon button-icon-off icon-volume-off toggle-switch-icon
 		<label class="toggle-switch">
 			<span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
 			<span class="toggle-switch-check-bar">
-				<input class="toggle-switch-check" type="checkbox" />
+				<input class="toggle-switch-check" role="switch" type="checkbox" />
 				<span aria-hidden="true" class="toggle-switch-bar">
 					<span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
 						<span class="button-icon button-icon-on toggle-switch-icon">
@@ -488,7 +497,7 @@ Alternatively, you can add `<span class="icon-remove toggle-switch-icon toggle-s
 <div class="sheet-example">
 	<label class="toggle-switch">
 		<span class="toggle-switch-check-bar">
-			<input class="toggle-switch-check" type="checkbox" />
+			<input class="toggle-switch-check" role="switch" type="checkbox" />
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle">
 					<span class="toggle-switch-icon toggle-switch-icon-on">
@@ -510,7 +519,7 @@ Alternatively, you can add `<span class="icon-remove toggle-switch-icon toggle-s
 ```html
 <label class="toggle-switch">
 	<span class="toggle-switch-check-bar">
-		<input class="toggle-switch-check" type="checkbox" />
+		<input class="toggle-switch-check" role="switch" type="checkbox" />
 		<span aria-hidden="true" class="toggle-switch-bar">
 			<span class="toggle-switch-handle">
 				<span class="toggle-switch-icon toggle-switch-icon-on">
