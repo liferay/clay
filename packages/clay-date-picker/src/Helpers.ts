@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {default as formatDate} from 'date-fns/format';
-import {default as parseDate} from 'date-fns/parse';
+import {format as formatDate} from 'date-fns/format';
+import {parse as parseDate} from 'date-fns/parse';
 
 import type {ISelectOption} from './Select';
 
