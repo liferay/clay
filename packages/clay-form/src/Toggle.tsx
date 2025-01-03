@@ -44,6 +44,7 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 		ref
 	) => {
 		if (type === 'radio') {
+			role = 'radio';
 			toggled = checked;
 		}
 
