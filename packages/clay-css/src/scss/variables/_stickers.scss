@@ -402,6 +402,106 @@ $sticker-dark: map-deep-merge(
 	$sticker-dark
 );
 
+$sticker-outline-0: () !default;
+$sticker-outline-0: map-deep-merge(
+	(
+		background-color: $light,
+		border: 1px solid $dark,
+		color: $dark,
+	),
+	$sticker-outline-0
+);
+
+$sticker-outline-1: () !default;
+$sticker-outline-1: map-deep-merge(
+	(
+		background-color: $purple-l5,
+		border: 1px solid $purple,
+		color: $purple,
+	),
+	$sticker-outline-1
+);
+
+$sticker-outline-2: () !default;
+$sticker-outline-2: map-deep-merge(
+	(
+		background-color: $yellow-l5,
+		border: 1px solid $yellow-d3,
+		color: $yellow-d3,
+	),
+	$sticker-outline-2
+);
+
+$sticker-outline-3: () !default;
+$sticker-outline-3: map-deep-merge(
+	(
+		background-color: $green-l5,
+		border: 1px solid $green,
+		color: $green,
+	),
+	$sticker-outline-3
+);
+
+$sticker-outline-4: () !default;
+$sticker-outline-4: map-deep-merge(
+	(
+		background-color: $red-l5,
+		border: 1px solid $red,
+		color: $red,
+	),
+	$sticker-outline-4
+);
+
+$sticker-outline-5: () !default;
+$sticker-outline-5: map-deep-merge(
+	(
+		background-color: $orange-l5,
+		border: 1px solid $orange,
+		color: $orange,
+	),
+	$sticker-outline-5
+);
+
+$sticker-outline-6: () !default;
+$sticker-outline-6: map-deep-merge(
+	(
+		background-color: $teal-l5,
+		border: 1px solid $teal,
+		color: $teal,
+	),
+	$sticker-outline-6
+);
+
+$sticker-outline-7: () !default;
+$sticker-outline-7: map-deep-merge(
+	(
+		background-color: $cyan-l5,
+		border: 1px solid $cyan,
+		color: $cyan,
+	),
+	$sticker-outline-7
+);
+
+$sticker-outline-8: () !default;
+$sticker-outline-8: map-deep-merge(
+	(
+		background-color: $pink-l5,
+		border: 1px solid $pink,
+		color: $pink-d4,
+	),
+	$sticker-outline-8
+);
+
+$sticker-outline-9: () !default;
+$sticker-outline-9: map-deep-merge(
+	(
+		background-color: $white,
+		border: 1px solid $dark-l2,
+		color: $dark-l2,
+	),
+	$sticker-outline-9
+);
+
 $sticker-palette: () !default;
 $sticker-palette: map-deep-merge(
 	(
@@ -413,6 +513,16 @@ $sticker-palette: map-deep-merge(
 		danger: $sticker-danger,
 		light: $sticker-light,
 		dark: $sticker-dark,
+		'.sticker-outline-0': $sticker-outline-0,
+		'.sticker-outline-1': $sticker-outline-1,
+		'.sticker-outline-2': $sticker-outline-2,
+		'.sticker-outline-3': $sticker-outline-3,
+		'.sticker-outline-4': $sticker-outline-4,
+		'.sticker-outline-5': $sticker-outline-5,
+		'.sticker-outline-6': $sticker-outline-6,
+		'.sticker-outline-7': $sticker-outline-7,
+		'.sticker-outline-8': $sticker-outline-8,
+		'.sticker-outline-9': $sticker-outline-9,
 	),
 	$sticker-palette
 );

@@ -51,6 +51,19 @@ export const Default = () => (
 		<ClaySticker displayType="warning">
 			<ClayIcon symbol="user" />
 		</ClaySticker>
+
+		<div className="mt-3">
+			<ClaySticker displayType="outline-0">S</ClaySticker>
+			<ClaySticker displayType="outline-1">M</ClaySticker>
+			<ClaySticker displayType="outline-2">C</ClaySticker>
+			<ClaySticker displayType="outline-3">M</ClaySticker>
+			<ClaySticker displayType="outline-4">S</ClaySticker>
+			<ClaySticker displayType="outline-5">S</ClaySticker>
+			<ClaySticker displayType="outline-6">E</ClaySticker>
+			<ClaySticker displayType="outline-7">Q</ClaySticker>
+			<ClaySticker displayType="outline-8">D</ClaySticker>
+			<ClaySticker displayType="outline-9">P</ClaySticker>
+		</div>
 	</div>
 );
 
