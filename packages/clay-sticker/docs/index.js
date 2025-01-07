@@ -45,6 +45,19 @@ const StickerColorsAndSizesCode = `const Component = () => {
 			<ClaySticker displayType="warning" size="sm">
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
+
+			<div className="mt-3">
+				<ClaySticker displayType="outline-0">S</ClaySticker>
+				<ClaySticker displayType="outline-1">M</ClaySticker>
+				<ClaySticker displayType="outline-2">C</ClaySticker>
+				<ClaySticker displayType="outline-3">M</ClaySticker>
+				<ClaySticker displayType="outline-4">S</ClaySticker>
+				<ClaySticker displayType="outline-5">S</ClaySticker>
+				<ClaySticker displayType="outline-6">E</ClaySticker>
+				<ClaySticker displayType="outline-7">Q</ClaySticker>
+				<ClaySticker displayType="outline-8">D</ClaySticker>
+				<ClaySticker displayType="outline-9">P</ClaySticker>
+			</div>
 		</>
 	);
 }
@@ -99,7 +112,18 @@ const StickerColorsAndSizesJSPCode = `<clay:sticker
 	displayType="warning"
 	icon="users"
 	size="sm"
-/>`;
+/>
+
+<clay:sticker displayType="outline-0" label="S" />
+<clay:sticker displayType="outline-1" label="M" />
+<clay:sticker displayType="outline-2" label="C" />
+<clay:sticker displayType="outline-3" label="M" />
+<clay:sticker displayType="outline-4" label="S" />
+<clay:sticker displayType="outline-5" label="S" />
+<clay:sticker displayType="outline-6" label="E" />
+<clay:sticker displayType="outline-7" label="Q" />
+<clay:sticker displayType="outline-8" label="D" />
+<clay:sticker displayType="outline-9" label="P" />`;
 
 export const StickerColorsAndSizes = () => {
 	const scope = {ClayIcon, ClaySticker};
