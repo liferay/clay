@@ -40,7 +40,7 @@ exports[`Rendering inside radiogroup 1`] = `
         checked={true}
         className="toggle-switch-check"
         onChange={[Function]}
-        role="switch"
+        role="radio"
         type="radio"
         value="foo"
       />
@@ -69,7 +69,7 @@ exports[`Rendering inside radiogroup 1`] = `
         checked={false}
         className="toggle-switch-check"
         onChange={[Function]}
-        role="switch"
+        role="radio"
         type="radio"
         value="bar"
       />
@@ -98,7 +98,7 @@ exports[`Rendering inside radiogroup 1`] = `
         checked={false}
         className="toggle-switch-check"
         onChange={[Function]}
-        role="switch"
+        role="radio"
         type="radio"
         value="baz"
       />
