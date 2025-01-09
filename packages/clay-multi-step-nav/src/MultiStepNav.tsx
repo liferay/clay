@@ -52,8 +52,8 @@ function ClayMultiStepNav({
 	return (
 		<ol
 			className={classNames('multi-step-nav', className, {
-				'multi-step-nav-center': center,
 				'multi-step-item-fixed-width': fixedWidth,
+				'multi-step-nav-center': center,
 				'multi-step-nav-collapse-sm': autoCollapse,
 				[`multi-step-indicator-label-${indicatorLabel}`]:
 					indicatorLabel,
