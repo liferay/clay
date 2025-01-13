@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"declarationDir": "./lib"
+	},
+	"extends": "../../tsconfig.declarations.json",
+	"include": ["src"]
+}
