@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
+
+### Features
+
+-   **@clayui/multi-step-nav:** LPD-36816 Adds prop center to center the nav ([4a2de61](https://github.com/liferay/clay/commit/4a2de61b8d201616bf8fca2b22ba77b93f8b9054))
+
 # [3.124.0](https://github.com/liferay/clay/compare/v3.123.1...v3.124.0) (2024-12-18)
 
 **Note:** Version bump only for package @clayui/multi-step-nav

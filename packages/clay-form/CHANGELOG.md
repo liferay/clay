@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
+
+### Bug Fixes
+
+-   **@clayui/form:** LPD-45345 Radio Toggle Switch should use role="radio" ([a7d88a5](https://github.com/liferay/clay/commit/a7d88a575c0f75badee3b910111b3137cc542682))
+
 # [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
 
 ### Bug Fixes

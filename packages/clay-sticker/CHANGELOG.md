@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
+
+### Features
+
+-   **@clayui/sticker:** LPD-40080 Add new displayType outline-\* ([9a86f6d](https://github.com/liferay/clay/commit/9a86f6ddbd61d17878ecd5669a26064e356ffe0a))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/sticker

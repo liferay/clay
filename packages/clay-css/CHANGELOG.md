@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
+
+
+### Bug Fixes
+
+* **@clayui.css:** LPD-44793 toggle-switch-sm label text breaks to new line too early ([4ebdd4d](https://github.com/liferay/clay/commit/4ebdd4da99ecd6d54e5aef8c047a85855fdb7e12))
+* **@clayui/css:** LPD-40824 Update code color to #e60000 red ([750f56f](https://github.com/liferay/clay/commit/750f56f5779b111b088cb490122ac72e0e791b00)), closes [#e60000](https://github.com/liferay/clay/issues/e60000)
+* **@clayui/css:** LPD-45052 Remove letter-spacing from diabled link in menubar-primary ([ea66fae](https://github.com/liferay/clay/commit/ea66faebaa89a835a91e34d2e300e78eb4a7906f))
+* **@clayui/css:** LPD-45685 Multi Step Nav should use focus-visible ([9a18636](https://github.com/liferay/clay/commit/9a1863683ae5b9f766d8fe5af3739a116b0abd68))
+
+
+### Features
+
+* **@clayui/css:** LPD-36816 Multi Step Nav adds multi-step-nav-center ([ad0abb8](https://github.com/liferay/clay/commit/ad0abb87da3f6b846af888117c6898da2a6fb5e2))
+* **@clayui/css:** LPD-40080 Add new sticker variants sticker-outline-* ([86c8523](https://github.com/liferay/clay/commit/86c852362fcaa7d4d0c0e1272088aa6af2ee9729))
+* **@clayui/css:** LPD-45032 Add new gallery icon ([89ff50a](https://github.com/liferay/clay/commit/89ff50a5f4feee7eab2f1e74160f0c0682751d63))
+
+
+
+
+
 # [3.124.0](https://github.com/liferay/clay/compare/v3.123.1...v3.124.0) (2024-12-18)
 
 
