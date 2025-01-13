@@ -119,6 +119,23 @@ describe('ClayLanguagePicker', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders with translations', () => {
+		const {container} = render(
+			<ClayLanguagePicker
+				locales={locales}
+				onSelectedLocaleChange={onSelectedLocaleChange}
+				selectedLocale={locales[0]!}
+				spritemap="/path/to/svg"
+				translations={{
+					'en-US': 'Apple',
+					'es-ES': 'Manzana',
+				}}
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('calls onSelectedLocaleChange when a language is selected', () => {
 		render(
 			<ClayLanguagePicker

@@ -6,6 +6,7 @@
 import ClayButton from '@clayui/button';
 import {Option, Picker} from '@clayui/core';
 import ClayIcon from '@clayui/icon';
+import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
 import {InternalDispatch, sub} from '@clayui/shared';
 import classNames from 'classnames';
@@ -16,6 +17,10 @@ type Item = {
 	id: string;
 	label: string;
 	symbol: string;
+};
+
+type Translations = {
+	[key: string]: string;
 };
 
 type Props = {
@@ -75,6 +80,11 @@ type Props = {
 	 * Path to the location of the spritemap resource.
 	 */
 	spritemap?: string;
+
+	/**
+	 * Translations provided to the component to be used and modified by it
+	 */
+	translations?: Translations;
 };
 
 const Trigger = React.forwardRef<HTMLButtonElement>(
@@ -127,7 +137,11 @@ const ClayLanguagePicker = ({
 	selectedLocale,
 	small,
 	spritemap,
+	translations = {},
 }: Props) => {
+	const defaultLanguage = locales[0];
+	const hasTranslations = Object.keys(translations).length;
+
 	return (
 		<Picker
 			active={active}
@@ -163,6 +177,29 @@ const ClayLanguagePicker = ({
 									{locale.label}
 								</ClayLayout.ContentSection>
 							</ClayLayout.ContentCol>
+							{hasTranslations ? (
+								<ClayLayout.ContentCol containerElement="span">
+									<ClayLayout.ContentSection>
+										<ClayLabel
+											displayType={
+												locale.label ===
+												defaultLanguage?.label
+													? 'info'
+													: translations[locale.label]
+													? 'success'
+													: 'warning'
+											}
+										>
+											{locale.label ===
+											defaultLanguage?.label
+												? labels.default
+												: translations[locale.label]
+												? labels.translated
+												: labels.untranslated}
+										</ClayLabel>
+									</ClayLayout.ContentSection>
+								</ClayLayout.ContentCol>
+							) : null}
 						</ClayLayout.ContentRow>
 					</Option>
 				);

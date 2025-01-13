@@ -140,3 +140,31 @@ exports[`ClayLanguagePicker renders with custom labels 1`] = `
   </button>
 </div>
 `;
+
+exports[`ClayLanguagePicker renders with translations 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: en-US."
+    class="form-control-select btn btn-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-en-us"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#en-us"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
