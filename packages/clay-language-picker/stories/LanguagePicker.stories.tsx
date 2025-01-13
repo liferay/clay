@@ -44,6 +44,7 @@ export const Default = (args: any) => {
 
 	return (
 		<ClayLanguagePicker
+			hideTriggerText={args.hideTriggerText}
 			id="languagePicker"
 			locales={locales}
 			onSelectedLocaleChange={(id) => {
@@ -60,6 +61,7 @@ export const Default = (args: any) => {
 };
 
 Default.args = {
+	hideTriggerText: false,
 	small: false,
 };
 
@@ -72,6 +74,7 @@ export const LanguagePickerWithTranslations = (args: any) => {
 
 	return (
 		<ClayLanguagePicker
+			hideTriggerText={args.hideTriggerText}
 			id="languagePicker"
 			locales={locales}
 			onSelectedLocaleChange={(id) => {
@@ -89,5 +92,6 @@ export const LanguagePickerWithTranslations = (args: any) => {
 };
 
 LanguagePickerWithTranslations.args = {
+	hideTriggerText: false,
 	small: false,
 };

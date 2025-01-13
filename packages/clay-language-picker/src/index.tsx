@@ -36,6 +36,12 @@ type Props = {
 	classNamesTrigger?: string;
 
 	/**
+	 * Flag to hide the text in the trigger.
+	 */
+
+	hideTriggerText?: boolean;
+
+	/**
 	 * The id of the component.
 	 */
 	id?: string;
@@ -92,6 +98,7 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 		{
 			ariaLabelTrigger,
 			classNamesTrigger,
+			hideTriggerText,
 			selectedLocale,
 			small,
 			spritemap,
@@ -103,7 +110,13 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 			<ClayButton
 				{...otherProps}
 				aria-label={ariaLabelTrigger}
-				className={classNames(classNamesTrigger, 'form-control-select')}
+				className={classNames(
+					classNamesTrigger,
+					'form-control-select',
+					{
+						'hidden-label': hideTriggerText,
+					}
+				)}
 				displayType="secondary"
 				ref={ref}
 				size={small ? 'sm' : undefined}
@@ -114,6 +127,12 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 						symbol={selectedLocale.symbol}
 					/>
 				</span>
+
+				{!hideTriggerText ? (
+					<span className="font-weight-normal mr-2">
+						{selectedLocale.label}
+					</span>
+				) : null}
 			</ClayButton>
 		);
 	}
@@ -130,6 +149,7 @@ const ClayLanguagePicker = ({
 	},
 	active,
 	classNamesTrigger,
+	hideTriggerText,
 	id,
 	locales,
 	onActiveChange,
@@ -148,6 +168,7 @@ const ClayLanguagePicker = ({
 			ariaLabelTrigger={sub(labels.trigger, [selectedLocale.label])}
 			as={Trigger}
 			classNamesTrigger={classNamesTrigger}
+			hideTriggerText={hideTriggerText}
 			id={id}
 			items={locales}
 			onActiveChange={onActiveChange}

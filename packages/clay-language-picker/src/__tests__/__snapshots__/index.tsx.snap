@@ -24,6 +24,11 @@ exports[`ClayLanguagePicker renders 1`] = `
         />
       </svg>
     </span>
+    <span
+      class="font-weight-normal mr-2"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
@@ -52,6 +57,11 @@ exports[`ClayLanguagePicker renders a class name for the trigger 1`] = `
         />
       </svg>
     </span>
+    <span
+      class="font-weight-normal mr-2"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
@@ -64,6 +74,39 @@ exports[`ClayLanguagePicker renders a small picker 1`] = `
     aria-haspopup="listbox"
     aria-label="Select a language, current language: en-US."
     class="form-control-select btn btn-sm btn-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-en-us"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#en-us"
+        />
+      </svg>
+    </span>
+    <span
+      class="font-weight-normal mr-2"
+    >
+      en-US
+    </span>
+  </button>
+</div>
+`;
+
+exports[`ClayLanguagePicker renders hidding the trigger text 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: en-US."
+    class="form-control-select hidden-label btn btn-secondary"
     role="combobox"
     tabindex="0"
     type="button"
@@ -109,6 +152,11 @@ exports[`ClayLanguagePicker renders the picker with id 1`] = `
         />
       </svg>
     </span>
+    <span
+      class="font-weight-normal mr-2"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
@@ -137,6 +185,11 @@ exports[`ClayLanguagePicker renders with custom labels 1`] = `
         />
       </svg>
     </span>
+    <span
+      class="font-weight-normal mr-2"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
@@ -164,6 +217,11 @@ exports[`ClayLanguagePicker renders with translations 1`] = `
           href="/path/to/svg#en-us"
         />
       </svg>
+    </span>
+    <span
+      class="font-weight-normal mr-2"
+    >
+      en-US
     </span>
   </button>
 </div>

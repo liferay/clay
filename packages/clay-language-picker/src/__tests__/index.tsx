@@ -136,6 +136,20 @@ describe('ClayLanguagePicker', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders hidding the trigger text', () => {
+		const {container} = render(
+			<ClayLanguagePicker
+				hideTriggerText
+				locales={locales}
+				onSelectedLocaleChange={onSelectedLocaleChange}
+				selectedLocale={locales[0]!}
+				spritemap="/path/to/svg"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('calls onSelectedLocaleChange when a language is selected', () => {
 		render(
 			<ClayLanguagePicker
