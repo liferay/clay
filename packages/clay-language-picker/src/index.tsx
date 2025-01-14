@@ -12,6 +12,8 @@ import {InternalDispatch, sub} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
+type DisplayType = 'info' | 'secondary' | 'success' | 'warning';
+
 type Item = {
 	href?: string;
 	id: string;
@@ -19,8 +21,18 @@ type Item = {
 	symbol: string;
 };
 
+type Labels = {
+	default: string;
+	trigger: string;
+	translated: string;
+	translating: string;
+	untranslated: string;
+};
+
+type Translation = {total: number; translated: number};
+
 type Translations = {
-	[key: string]: string;
+	[key: string]: Translation;
 };
 
 type Props = {
@@ -49,12 +61,7 @@ type Props = {
 	/**
 	 * Labels for the component
 	 */
-	labels?: {
-		default: string;
-		trigger: string;
-		translated: string;
-		untranslated: string;
-	};
+	labels?: Labels;
 
 	/**
 	 * List of locales to allow localization for
@@ -92,6 +99,40 @@ type Props = {
 	 */
 	translations?: Translations;
 };
+
+const TranslationLabel = ({
+	defaultLanguage,
+	labels,
+	locale,
+	translation,
+}: {
+	defaultLanguage: Item;
+	labels: Labels;
+	locale: Item;
+	translation: Translation;
+}) => {
+	let displayType: DisplayType = 'warning';
+	let label = labels.untranslated;
+
+	if (locale.label === defaultLanguage?.label) {
+		displayType = 'info';
+		label = labels.default;
+	} else if (translation) {
+		const {total, translated} = translation;
+
+		if (total && total === translated) {
+			displayType = 'success';
+			label = labels.translated;
+		} else {
+			displayType = 'secondary';
+			label = sub(labels.translating, [translated, total]);
+		}
+	}
+
+	return <ClayLabel displayType={displayType}>{label}</ClayLabel>;
+};
+
+TranslationLabel.displayName = 'Label';
 
 const Trigger = React.forwardRef<HTMLButtonElement>(
 	(
@@ -144,6 +185,7 @@ const ClayLanguagePicker = ({
 	labels = {
 		default: 'Default',
 		translated: 'Translated',
+		translating: 'Translating {0}/{1}',
 		trigger: 'Select a language, current language: {0}.',
 		untranslated: 'Untranslated',
 	},
@@ -201,23 +243,14 @@ const ClayLanguagePicker = ({
 							{hasTranslations ? (
 								<ClayLayout.ContentCol containerElement="span">
 									<ClayLayout.ContentSection>
-										<ClayLabel
-											displayType={
-												locale.label ===
-												defaultLanguage?.label
-													? 'info'
-													: translations[locale.label]
-													? 'success'
-													: 'warning'
+										<TranslationLabel
+											defaultLanguage={defaultLanguage!}
+											labels={labels}
+											locale={locale}
+											translation={
+												translations[locale.label]!
 											}
-										>
-											{locale.label ===
-											defaultLanguage?.label
-												? labels.default
-												: translations[locale.label]
-												? labels.translated
-												: labels.untranslated}
-										</ClayLabel>
+										/>
 									</ClayLayout.ContentSection>
 								</ClayLayout.ContentCol>
 							) : null}

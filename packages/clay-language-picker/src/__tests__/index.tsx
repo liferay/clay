@@ -92,6 +92,7 @@ describe('ClayLanguagePicker', () => {
 				labels={{
 					default: 'Default Label',
 					translated: 'Translated Label',
+					translating: 'Translating Label',
 					trigger: 'Trigger Label',
 					untranslated: 'Untranslated Label',
 				}}
@@ -127,8 +128,8 @@ describe('ClayLanguagePicker', () => {
 				selectedLocale={locales[0]!}
 				spritemap="/path/to/svg"
 				translations={{
-					'en-US': 'Apple',
-					'es-ES': 'Manzana',
+					'es-ES': {total: 4, translated: 2},
+					'fr-FR': {total: 4, translated: 4},
 				}}
 			/>
 		);
@@ -148,6 +149,33 @@ describe('ClayLanguagePicker', () => {
 		);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it('renders different labels for translations', () => {
+		render(
+			<ClayLanguagePicker
+				locales={locales}
+				onSelectedLocaleChange={onSelectedLocaleChange}
+				selectedLocale={locales[0]!}
+				spritemap="/path/to/svg"
+				translations={{
+					'es-ES': {total: 4, translated: 2},
+					'fr-FR': {total: 4, translated: 4},
+				}}
+			/>
+		);
+
+		fireEvent.click(screen.getByRole('combobox'));
+
+		const esOption = screen.getByRole('option', {name: /es-ES/});
+		const enOption = screen.getByRole('option', {name: /en-US/});
+		const frOption = screen.getByRole('option', {name: /fr-FR/});
+		const nlOption = screen.getByRole('option', {name: /nl-NL/});
+
+		expect(enOption).toHaveTextContent('Default');
+		expect(esOption).toHaveTextContent('Translating 2/4');
+		expect(frOption).toHaveTextContent('Translated');
+		expect(nlOption).toHaveTextContent('Untranslated');
 	});
 
 	it('calls onSelectedLocaleChange when a language is selected', () => {

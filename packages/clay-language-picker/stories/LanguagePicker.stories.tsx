@@ -68,8 +68,8 @@ Default.args = {
 export const LanguagePickerWithTranslations = (args: any) => {
 	const [selectedLocale, setSelectedLocale] = useState<any>(locales[0]);
 	const translations = {
-		'en-US': 'Apple',
-		'es-ES': 'Manzana',
+		'ca-ES': {total: 4, translated: 2},
+		'nl-NL': {total: 4, translated: 4},
 	};
 
 	return (
