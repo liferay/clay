@@ -91,6 +91,7 @@ describe('ClayLanguagePicker', () => {
 			<ClayLanguagePicker
 				labels={{
 					default: 'Default Label',
+					option: 'Option Label',
 					translated: 'Translated Label',
 					translating: 'Translating Label',
 					trigger: 'Trigger Label',
@@ -167,10 +168,10 @@ describe('ClayLanguagePicker', () => {
 
 		fireEvent.click(screen.getByRole('combobox'));
 
-		const esOption = screen.getByRole('option', {name: /es-ES/});
-		const enOption = screen.getByRole('option', {name: /en-US/});
-		const frOption = screen.getByRole('option', {name: /fr-FR/});
-		const nlOption = screen.getByRole('option', {name: /nl-NL/});
+		const esOption = screen.getByRole('option', {name: /Spanish/});
+		const enOption = screen.getByRole('option', {name: /English/});
+		const frOption = screen.getByRole('option', {name: /French/});
+		const nlOption = screen.getByRole('option', {name: /Dutch/});
 
 		expect(enOption).toHaveTextContent('Default');
 		expect(esOption).toHaveTextContent('Translating 2/4');

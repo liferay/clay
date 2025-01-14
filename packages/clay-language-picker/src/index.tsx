@@ -15,6 +15,7 @@ import React from 'react';
 type DisplayType = 'info' | 'secondary' | 'success' | 'warning';
 
 type Item = {
+	displayName?: string;
 	href?: string;
 	id: string;
 	label: string;
@@ -23,6 +24,7 @@ type Item = {
 
 type Labels = {
 	default: string;
+	option: string;
 	trigger: string;
 	translated: string;
 	translating: string;
@@ -129,7 +131,20 @@ const TranslationLabel = ({
 		}
 	}
 
-	return <ClayLabel displayType={displayType}>{label}</ClayLabel>;
+	return (
+		<>
+			<span className="sr-only">
+				{sub(labels.option, [
+					locale.displayName || locale.label,
+					label,
+				])}
+			</span>
+
+			<ClayLabel aria-hidden="true" displayType={displayType}>
+				{label}
+			</ClayLabel>
+		</>
+	);
 };
 
 TranslationLabel.displayName = 'Label';
@@ -184,6 +199,7 @@ Trigger.displayName = 'Trigger';
 const ClayLanguagePicker = ({
 	labels = {
 		default: 'Default',
+		option: '{0} language: {1}.',
 		translated: 'Translated',
 		translating: 'Translating {0}/{1}',
 		trigger: 'Select a language, current language: {0}.',
@@ -207,7 +223,9 @@ const ClayLanguagePicker = ({
 	return (
 		<Picker
 			active={active}
-			ariaLabelTrigger={sub(labels.trigger, [selectedLocale.label])}
+			ariaLabelTrigger={sub(labels.trigger, [
+				selectedLocale.displayName || selectedLocale.label,
+			])}
 			as={Trigger}
 			classNamesTrigger={classNamesTrigger}
 			hideTriggerText={hideTriggerText}
@@ -237,7 +255,9 @@ const ClayLanguagePicker = ({
 										symbol={locale.symbol}
 									/>
 
-									{locale.label}
+									<span aria-hidden="true">
+										{locale.label}
+									</span>
 								</ClayLayout.ContentSection>
 							</ClayLayout.ContentCol>
 							{hasTranslations ? (
