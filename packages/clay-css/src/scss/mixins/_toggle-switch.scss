@@ -646,31 +646,6 @@
 		$breakpoint-down: setter(map-get($map, breakpoint-down), sm);
 		$enabled: setter(map-get($map, enabled), true);
 
-		$_enable-focus-visible: if(
-			variable-exists(enable-focus-visible),
-			$enable-focus-visible,
-			if(
-				variable-exists(cadmin-enable-focus-visible),
-				$cadmin-enable-focus-visible,
-				true
-			)
-		);
-
-		$_c-prefers-focus-selector: if(
-			$_enable-focus-visible,
-			'.c-prefers-focus &:focus',
-			''
-		);
-
-		@if (variable-exists(cadmin-enable-focus-visible)) and
-			($_enable-focus-visible)
-		{
-			$_c-prefers-focus-selector: clay-insert-before(
-				'.cadmin',
-				'.c-prefers-focus '
-			);
-		}
-
 		@include clay-css($map);
 
 		@if ($enabled) {
@@ -688,7 +663,7 @@
 
 			@at-root {
 				#{$focus-visible-selector},
-				#{$_c-prefers-focus-selector} {
+				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 					~ .toggle-switch-bar {
 						@include clay-toggle-switch-bar-variant(
 							map-deep-get($map, focus, toggle-switch-bar)
@@ -725,7 +700,7 @@
 			@at-root {
 				&:checked {
 					#{$focus-visible-selector},
-					#{$_c-prefers-focus-selector} {
+					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 						~ .toggle-switch-bar {
 							@include clay-toggle-switch-bar-variant(
 								map-deep-get(
@@ -768,7 +743,7 @@
 			@at-root {
 				&:indeterminate {
 					#{$focus-visible-selector},
-					#{$_c-prefers-focus-selector} {
+					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 						~ .toggle-switch-bar {
 							@include clay-toggle-switch-bar-variant(
 								map-deep-get(
@@ -818,7 +793,7 @@
 
 				@at-root {
 					#{$focus-visible-selector},
-					#{$_c-prefers-focus-selector} {
+					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 						~ .toggle-switch-bar {
 							@include clay-toggle-switch-bar-variant(
 								map-deep-get(
@@ -866,7 +841,7 @@
 				@at-root {
 					&:checked {
 						#{$focus-visible-selector},
-						#{$_c-prefers-focus-selector} {
+						#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 							~ .toggle-switch-bar {
 								@include clay-toggle-switch-bar-variant(
 									map-deep-get(
@@ -933,7 +908,7 @@
 				@at-root {
 					&:indeterminate {
 						#{$focus-visible-selector},
-						#{$_c-prefers-focus-selector} {
+						#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 							~ .toggle-switch-bar {
 								@include clay-toggle-switch-bar-variant(
 									map-deep-get(

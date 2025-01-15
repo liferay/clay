@@ -24,6 +24,12 @@ $focus-visible-selector: if(
 	'&:focus'
 ) !default;
 
+$c-prefers-focus-selector: if(
+	$enable-focus-visible,
+	'.c-prefers-focus &:focus',
+	null
+);
+
 $enable-lexicon-flat-colors: false !default;
 $enable-scaling-components: false !default;
 $scaling-breakpoint-down: sm !default;

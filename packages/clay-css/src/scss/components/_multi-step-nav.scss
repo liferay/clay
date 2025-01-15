@@ -189,7 +189,8 @@
 
 			@at-root {
 				&.focus,
-				#{$focus-visible-selector} {
+				#{$focus-visible-selector},
+				.c-prefers-focus &:focus {
 					box-shadow: $multi-step-icon-disabled-focus-box-shadow;
 				}
 			}
@@ -282,7 +283,8 @@
 
 	@at-root {
 		&.focus,
-		#{$focus-visible-selector} {
+		#{$focus-visible-selector},
+		.c-prefers-focus &:focus {
 			background-color: $multi-step-icon-focus-bg;
 			box-shadow: $multi-step-icon-focus-box-shadow;
 			color: $multi-step-icon-focus-color;
