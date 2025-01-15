@@ -140,7 +140,11 @@ const TranslationLabel = ({
 				])}
 			</span>
 
-			<ClayLabel aria-hidden="true" displayType={displayType}>
+			<ClayLabel
+				aria-hidden="true"
+				className="c-ml-3"
+				displayType={displayType}
+			>
 				{label}
 			</ClayLabel>
 		</>
