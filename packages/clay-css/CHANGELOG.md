@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.126.0](https://github.com/liferay/clay/compare/v3.125.0...v3.126.0) (2025-01-15)
+
+
+### Features
+
+* **@clayui/css:** LPD-45032 regen icons ([51f48b7](https://github.com/liferay/clay/commit/51f48b7067a0529c84afa160512daeb594247576))
+
+
+
+
+
 # [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
 
 
