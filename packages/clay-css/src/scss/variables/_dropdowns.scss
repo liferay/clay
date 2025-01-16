@@ -217,6 +217,7 @@ $dropdown-item-base: map-deep-merge(
 			line-height: calc(#{$dropdown-font-size} * #{$line-height-base}),
 		),
 		'&.autofit-row': (
+			align-items: center,
 			padding-left: calc(#{$dropdown-item-padding-x} - 0.25rem),
 			padding-right: calc(#{$dropdown-item-padding-x} - 0.25rem),
 			autofit-col: (
@@ -225,6 +226,7 @@ $dropdown-item-base: map-deep-merge(
 			),
 		),
 		autofit-row: (
+			align-items: center,
 			margin-left: -0.25rem,
 			margin-right: -0.25rem,
 			width: auto,
@@ -232,6 +234,17 @@ $dropdown-item-base: map-deep-merge(
 				padding-left: 0.25rem,
 				padding-right: 0.25rem,
 			),
+		),
+		inline-item: (
+			line-height: 1,
+			lexicon-icon: (
+				font-size: 1rem,
+				margin-top: 0,
+			),
+		),
+		label: (
+			margin-bottom: 0,
+			margin-top: 0.3125rem,
 		),
 	),
 	$dropdown-item-base
@@ -502,6 +515,7 @@ $dropdown-item-indicator-start: map-deep-merge(
 			),
 		width: $dropdown-item-indicator-size,
 		lexicon-icon: (
+			font-size: 1rem,
 			margin-top: 0,
 		),
 	),
@@ -548,6 +562,7 @@ $dropdown-item-indicator-end: map-deep-merge(
 			),
 		width: $dropdown-item-indicator-size,
 		lexicon-icon: (
+			font-size: 16px,
 			margin-top: 0,
 		),
 	),
@@ -963,10 +978,6 @@ $dropdown-menu-palette: map-deep-merge(
 				padding-left: 1.75rem,
 				padding-right: 0.5rem,
 				padding-top: 0.3125rem,
-				'&.autofit-row': (
-					padding-left: 1.5rem,
-					padding-right: 0.5rem,
-				),
 			),
 			dropdown-item-scroll: (
 				font-size: 1rem,
@@ -1023,13 +1034,11 @@ $dropdown-menu-palette: map-deep-merge(
 			dropdown-menu-indicator-start: (
 				dropdown-item-indicator-start: (
 					left: 0.5rem,
-					top: 0.5rem,
 				),
 			),
 			dropdown-menu-indicator-end: (
 				dropdown-item-indicator-end: (
 					right: 0.5rem,
-					top: 0.5rem,
 				),
 			),
 		),
