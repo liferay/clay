@@ -175,7 +175,8 @@
 
 			@at-root {
 				&.focus,
-				#{$focus-visible-selector} {
+				#{$focus-visible-selector},
+				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 					box-shadow: $cadmin-multi-step-icon-disabled-focus-box-shadow;
 				}
 			}
@@ -272,7 +273,8 @@
 
 	@at-root {
 		&.focus,
-		#{$focus-visible-selector} {
+		#{$focus-visible-selector},
+		#{if($c-prefers-focus-selector, $c-prefers-focus-selector, clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 			background-color: $cadmin-multi-step-icon-focus-bg;
 			box-shadow: $cadmin-multi-step-icon-focus-box-shadow;
 			color: $cadmin-multi-step-icon-focus-color;

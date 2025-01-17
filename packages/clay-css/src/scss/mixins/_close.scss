@@ -67,31 +67,6 @@
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
 
-		$_enable-focus-visible: if(
-			variable-exists(enable-focus-visible),
-			$enable-focus-visible,
-			if(
-				variable-exists(cadmin-enable-focus-visible),
-				$cadmin-enable-focus-visible,
-				true
-			)
-		);
-
-		$_c-prefers-focus-selector: if(
-			$_enable-focus-visible,
-			'.c-prefers-focus &:focus',
-			''
-		);
-
-		@if (variable-exists(cadmin-enable-focus-visible)) and
-			($_enable-focus-visible)
-		{
-			$_c-prefers-focus-selector: clay-insert-before(
-				'.cadmin',
-				'.c-prefers-focus '
-			);
-		}
-
 		$base: map-merge(
 			$map,
 			(
@@ -382,7 +357,7 @@
 			@at-root {
 				button#{&} {
 					#{$focus-visible-selector},
-					#{$_c-prefers-focus-selector} {
+					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 						@include clay-css($btn-focus);
 					}
 				}
@@ -391,7 +366,7 @@
 			@at-root {
 				&.focus,
 				#{$focus-visible-selector},
-				#{$_c-prefers-focus-selector} {
+				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 					@include clay-css($focus);
 				}
 			}

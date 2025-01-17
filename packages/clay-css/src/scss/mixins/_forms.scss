@@ -297,31 +297,6 @@
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
 
-		$_enable-focus-visible: if(
-			variable-exists(enable-focus-visible),
-			$enable-focus-visible,
-			if(
-				variable-exists(cadmin-enable-focus-visible),
-				$cadmin-enable-focus-visible,
-				true
-			)
-		);
-
-		$_c-prefers-focus-selector: if(
-			$_enable-focus-visible,
-			'.c-prefers-focus &:focus',
-			''
-		);
-
-		@if (variable-exists(cadmin-enable-focus-visible)) and
-			($_enable-focus-visible)
-		{
-			$_c-prefers-focus-selector: clay-insert-before(
-				'.cadmin',
-				'.c-prefers-focus '
-			);
-		}
-
 		$base: setter($map, ());
 		$base: map-merge(
 			$map,
@@ -586,7 +561,7 @@
 			@at-root {
 				&.focus,
 				#{$focus-visible-selector},
-				#{$_c-prefers-focus-selector} {
+				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 					@include clay-css($focus);
 
 					&::placeholder {
@@ -744,31 +719,6 @@
 @mixin clay-select-variant($map) {
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
-
-		$_enable-focus-visible: if(
-			variable-exists(enable-focus-visible),
-			$enable-focus-visible,
-			if(
-				variable-exists(cadmin-enable-focus-visible),
-				$cadmin-enable-focus-visible,
-				true
-			)
-		);
-
-		$_c-prefers-focus-selector: if(
-			$_enable-focus-visible,
-			'.c-prefers-focus &:focus',
-			''
-		);
-
-		@if (variable-exists(cadmin-enable-focus-visible)) and
-			($_enable-focus-visible)
-		{
-			$_c-prefers-focus-selector: clay-insert-before(
-				'.cadmin',
-				'.c-prefers-focus '
-			);
-		}
 
 		$base: map-merge(
 			$map,
@@ -960,7 +910,7 @@
 			@at-root {
 				&.focus,
 				#{$focus-visible-selector},
-				#{$_c-prefers-focus-selector} {
+				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 					@include clay-css($focus);
 
 					> option {
@@ -1095,7 +1045,7 @@
 					@at-root {
 						&.focus,
 						#{$focus-visible-selector},
-						#{$_c-prefers-focus-selector} {
+						#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 							$ff-only-focus: setter(
 								map-get($ff-only, focus),
 								()
@@ -1630,31 +1580,6 @@
 @mixin clay-range-input-variant($map) {
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
-
-		$_enable-focus-visible: if(
-			variable-exists(enable-focus-visible),
-			$enable-focus-visible,
-			if(
-				variable-exists(cadmin-enable-focus-visible),
-				$cadmin-enable-focus-visible,
-				true
-			)
-		);
-
-		$_c-prefers-focus-selector: if(
-			$_enable-focus-visible,
-			'.c-prefers-focus &:focus',
-			''
-		);
-
-		@if (variable-exists(cadmin-enable-focus-visible)) and
-			($_enable-focus-visible)
-		{
-			$_c-prefers-focus-selector: clay-insert-before(
-				'.cadmin',
-				'.c-prefers-focus '
-			);
-		}
 
 		$clay-range-thumb: setter(map-get($map, clay-range-thumb), ());
 		$clay-range-thumb: map-merge(
@@ -2559,7 +2484,7 @@
 				@at-root {
 					&.focus,
 					#{$focus-visible-selector},
-					#{$_c-prefers-focus-selector} {
+					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 						@include clay-css($focus);
 
 						~ .clay-range-track {

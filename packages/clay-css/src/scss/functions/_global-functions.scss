@@ -170,11 +170,17 @@
 /// @param {String} $selector - The full selector
 
 @function clay-insert-before($location, $insert, $selector: &) {
-	@return clay-str-replace(
-		'#{$selector}',
+	$newSelector: clay-str-replace(
+		'#{&}',
 		'#{$location}',
 		'#{$insert}#{$location}'
 	);
+
+	@if ($selector == '&:focus') {
+		@return '#{$newSelector}:focus';
+	}
+
+	@return $newSelector;
 }
 
 /// A helper function for displaying warning messages for required variables.
