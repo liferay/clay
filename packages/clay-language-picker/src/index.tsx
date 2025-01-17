@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton from '@clayui/button';
 import {Option, Picker} from '@clayui/core';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -167,19 +166,18 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 		ref
 	) => {
 		return (
-			<ClayButton
+			<button
 				{...otherProps}
 				aria-label={ariaLabelTrigger}
 				className={classNames(
 					classNamesTrigger,
-					'form-control-select',
+					'form-control form-control-select form-control-select-secondary',
 					{
+						'form-control-sm': small,
 						'hidden-label': hideTriggerText,
 					}
 				)}
-				displayType="secondary"
 				ref={ref}
-				size={small ? 'sm' : undefined}
 			>
 				<span className="inline-item-before">
 					<ClayIcon
@@ -188,12 +186,8 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 					/>
 				</span>
 
-				{!hideTriggerText ? (
-					<span className="font-weight-normal mr-2">
-						{selectedLocale.label}
-					</span>
-				) : null}
-			</ClayButton>
+				{!hideTriggerText ? selectedLocale.label : null}
+			</button>
 		);
 	}
 );

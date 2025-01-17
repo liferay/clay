@@ -7,7 +7,7 @@ exports[`ClayLanguagePicker renders 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-label="Select a language, current language: English (United States)."
-    class="form-control-select btn btn-secondary"
+    class="form-control form-control-select form-control-select-secondary"
     role="combobox"
     tabindex="0"
     type="button"
@@ -24,11 +24,7 @@ exports[`ClayLanguagePicker renders 1`] = `
         />
       </svg>
     </span>
-    <span
-      class="font-weight-normal mr-2"
-    >
-      en-US
-    </span>
+    en-US
   </button>
 </div>
 `;
@@ -40,7 +36,7 @@ exports[`ClayLanguagePicker renders a class name for the trigger 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-label="Select a language, current language: English (United States)."
-    class="trigger-class form-control-select btn btn-secondary"
+    class="trigger-class form-control form-control-select form-control-select-secondary"
     role="combobox"
     tabindex="0"
     type="button"
@@ -57,11 +53,7 @@ exports[`ClayLanguagePicker renders a class name for the trigger 1`] = `
         />
       </svg>
     </span>
-    <span
-      class="font-weight-normal mr-2"
-    >
-      en-US
-    </span>
+    en-US
   </button>
 </div>
 `;
@@ -73,7 +65,7 @@ exports[`ClayLanguagePicker renders a small picker 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-label="Select a language, current language: English (United States)."
-    class="form-control-select btn btn-sm btn-secondary"
+    class="form-control form-control-select form-control-select-secondary form-control-sm"
     role="combobox"
     tabindex="0"
     type="button"
@@ -90,11 +82,7 @@ exports[`ClayLanguagePicker renders a small picker 1`] = `
         />
       </svg>
     </span>
-    <span
-      class="font-weight-normal mr-2"
-    >
-      en-US
-    </span>
+    en-US
   </button>
 </div>
 `;
@@ -106,7 +94,7 @@ exports[`ClayLanguagePicker renders hidding the trigger text 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-label="Select a language, current language: English (United States)."
-    class="form-control-select hidden-label btn btn-secondary"
+    class="form-control form-control-select form-control-select-secondary hidden-label"
     role="combobox"
     tabindex="0"
     type="button"
@@ -134,7 +122,7 @@ exports[`ClayLanguagePicker renders the picker with id 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-label="Select a language, current language: English (United States)."
-    class="form-control-select btn btn-secondary"
+    class="form-control form-control-select form-control-select-secondary"
     id="pickerId"
     role="combobox"
     tabindex="0"
@@ -152,11 +140,7 @@ exports[`ClayLanguagePicker renders the picker with id 1`] = `
         />
       </svg>
     </span>
-    <span
-      class="font-weight-normal mr-2"
-    >
-      en-US
-    </span>
+    en-US
   </button>
 </div>
 `;
@@ -168,7 +152,7 @@ exports[`ClayLanguagePicker renders with custom labels 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-label="Trigger Label"
-    class="form-control-select btn btn-secondary"
+    class="form-control form-control-select form-control-select-secondary"
     role="combobox"
     tabindex="0"
     type="button"
@@ -185,11 +169,7 @@ exports[`ClayLanguagePicker renders with custom labels 1`] = `
         />
       </svg>
     </span>
-    <span
-      class="font-weight-normal mr-2"
-    >
-      en-US
-    </span>
+    en-US
   </button>
 </div>
 `;
@@ -201,7 +181,7 @@ exports[`ClayLanguagePicker renders with translations 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-label="Select a language, current language: English (United States)."
-    class="form-control-select btn btn-secondary"
+    class="form-control form-control-select form-control-select-secondary"
     role="combobox"
     tabindex="0"
     type="button"
@@ -218,11 +198,7 @@ exports[`ClayLanguagePicker renders with translations 1`] = `
         />
       </svg>
     </span>
-    <span
-      class="font-weight-normal mr-2"
-    >
-      en-US
-    </span>
+    en-US
   </button>
 </div>
 `;
