@@ -115,21 +115,21 @@ type Props = {
 	translations?: Translations;
 };
 
-const TranslationLabel = ({
+const getTranslationLabel = ({
 	defaultLocaleId,
-	locale,
+	localeId,
 	messages,
 	translation,
 }: {
 	defaultLocaleId: React.Key;
+	localeId: React.Key;
 	messages: Messages;
-	locale: Item;
 	translation: Translation;
 }) => {
 	let displayType: DisplayType = 'warning';
-	let label = messages.untranslated;
+	let label: string = messages.untranslated;
 
-	if (locale.id === defaultLocaleId) {
+	if (localeId === defaultLocaleId) {
 		displayType = 'info';
 		label = messages.default;
 	} else if (translation) {
@@ -144,27 +144,8 @@ const TranslationLabel = ({
 		}
 	}
 
-	return (
-		<>
-			<span className="sr-only">
-				{sub(messages.option, [
-					locale.displayName || locale.label,
-					label,
-				])}
-			</span>
-
-			<ClayLabel
-				aria-hidden="true"
-				className="c-ml-3"
-				displayType={displayType}
-			>
-				{label}
-			</ClayLabel>
-		</>
-	);
+	return {displayType, label};
 };
-
-TranslationLabel.displayName = 'Label';
 
 const Trigger = React.forwardRef<HTMLButtonElement>(
 	(
@@ -264,8 +245,22 @@ const ClayLanguagePicker = ({
 			triggerMessage={messages.trigger}
 		>
 			{(locale) => {
+				const translationLabel = getTranslationLabel({
+					defaultLocaleId: defaultLocaleId || locales[0]!.id,
+					localeId: locale.id,
+					messages,
+					translation: translations[locale.label]!,
+				});
+
 				return (
-					<Option key={locale.id} textValue={locale.label}>
+					<Option
+						aria-label={sub(messages.option, [
+							locale.displayName || locale.label,
+							translationLabel.label,
+						])}
+						key={locale.id}
+						textValue={locale.label}
+					>
 						<ClayLayout.ContentRow containerElement="span">
 							<ClayLayout.ContentCol
 								containerElement="span"
@@ -286,17 +281,23 @@ const ClayLanguagePicker = ({
 							{hasTranslations ? (
 								<ClayLayout.ContentCol containerElement="span">
 									<ClayLayout.ContentSection>
-										<TranslationLabel
-											defaultLocaleId={
-												defaultLocaleId ||
-												locales[0]!.id
+										<ClayLabel
+											aria-hidden="true"
+											className="c-ml-3"
+											displayType={
+												translationLabel.displayType
 											}
-											locale={locale}
-											messages={messages}
-											translation={
-												translations[locale.label]!
-											}
-										/>
+										>
+											{translationLabel.label}
+
+											<span className="sr-only">
+												{sub(messages.option, [
+													locale.displayName ||
+														locale.label,
+													translationLabel.label,
+												])}
+											</span>
+										</ClayLabel>
 									</ClayLayout.ContentSection>
 								</ClayLayout.ContentCol>
 							) : null}
