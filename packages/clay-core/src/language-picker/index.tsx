@@ -15,9 +15,9 @@ import {Option, Picker} from '../picker';
 type DisplayType = 'info' | 'secondary' | 'success' | 'warning';
 
 type Item = {
-	displayName?: string;
 	id: string;
 	label: string;
+	name?: string;
 	symbol: string;
 };
 
@@ -171,7 +171,7 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 			<button
 				{...otherProps}
 				aria-label={sub(triggerMessage, [
-					selectedItem?.displayName || selectedItem?.label,
+					selectedItem?.name || selectedItem?.label,
 				])}
 				className={classNames(
 					classNamesTrigger,
@@ -255,7 +255,7 @@ const ClayLanguagePicker = ({
 				return (
 					<Option
 						aria-label={sub(messages.option, [
-							locale.displayName || locale.label,
+							locale.name || locale.label,
 							translationLabel.label,
 						])}
 						key={locale.id}
@@ -292,8 +292,7 @@ const ClayLanguagePicker = ({
 
 											<span className="sr-only">
 												{sub(messages.option, [
-													locale.displayName ||
-														locale.label,
+													locale.name || locale.label,
 													translationLabel.label,
 												])}
 											</span>

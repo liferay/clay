@@ -14,27 +14,27 @@ export default {
 
 const locales = [
 	{
-		displayName: 'English (United States)',
 		id: 'en_US',
 		label: 'en-US',
+		name: 'English (United States)',
 		symbol: 'en-us',
 	},
 	{
-		displayName: 'Arabic (Saudi Arabia)',
 		id: 'ar_SA',
 		label: 'ar-SA',
+		name: 'Arabic (Saudi Arabia)',
 		symbol: 'ar-sa',
 	},
 	{
-		displayName: 'Catalan (Spain)',
 		id: 'ca_ES',
 		label: 'ca-ES',
+		name: 'Catalan (Spain)',
 		symbol: 'ca-es',
 	},
 	{
-		displayName: 'Dutch (Netherlands)',
 		id: 'nl_NL',
 		label: 'nl-NL',
+		name: 'Dutch (Netherlands)',
 		symbol: 'nl-nl',
 	},
 ];

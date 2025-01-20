@@ -15,27 +15,27 @@ import React from 'react';
 
 const locales = [
 	{
-		displayName: 'English (United States)',
 		id: 'en_US',
 		label: 'en-US',
+		name: 'English (United States)',
 		symbol: 'en-us',
 	},
 	{
-		displayName: 'Spanish (Spain)',
 		id: 'es_ES',
 		label: 'es-ES',
+		name: 'Spanish (Spain)',
 		symbol: 'es-es',
 	},
 	{
-		displayName: 'French (France)',
 		id: 'fr_FR',
 		label: 'fr-FR',
+		name: 'French (France)',
 		symbol: 'fr-fr',
 	},
 	{
-		displayName: 'Dutch (Netherlands)',
 		id: 'nl_NL',
 		label: 'nl-NL',
+		name: 'Dutch (Netherlands)',
 		symbol: 'nl-nl',
 	},
 ];
