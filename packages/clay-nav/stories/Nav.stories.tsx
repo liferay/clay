@@ -70,7 +70,11 @@ export const Default = () => (
 );
 
 export const VerticalNav = (args: any) => (
-	<ClayVerticalNav items={items} large={args.large} />
+	<ClayVerticalNav
+		aria-label="vertical navbar"
+		items={items}
+		large={args.large}
+	/>
 );
 
 VerticalNav.args = {
@@ -79,6 +83,7 @@ VerticalNav.args = {
 
 export const CustomTrigger = () => (
 	<ClayVerticalNav
+		aria-label="vertical navbar"
 		items={items}
 		trigger={(props) => (
 			<ClayVerticalNav.Trigger {...props}>
@@ -92,4 +97,6 @@ export const CustomTrigger = () => (
 	/>
 );
 
-export const WithDecorator = () => <ClayVerticalNav decorated items={items} />;
+export const WithDecorator = () => (
+	<ClayVerticalNav aria-label="vertical navbar" decorated items={items} />
+);

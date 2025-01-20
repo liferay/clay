@@ -441,7 +441,7 @@ export default {
 };
 
 export const Default = () => (
-	<VerticalNav active="6" items={items}>
+	<VerticalNav active="6" aria-label="vertical navbar" items={items}>
 		{(item) => (
 			<VerticalNav.Item href={item.href} items={item.items} key={item.id}>
 				{item.label}
@@ -474,6 +474,7 @@ export const ControlledExpandedKeys = () => {
 
 			<VerticalNav
 				active={active}
+				aria-label="vertical navbar"
 				expandedKeys={expandedKeys}
 				items={items_long}
 				onExpandedChange={setExpandedKeys}
@@ -616,6 +617,7 @@ export const Primary = () => {
 	return (
 		<VerticalNav
 			active="Home"
+			aria-label="vertical navbar"
 			displayType="primary"
 			items={items_cms_product_menu}
 		>
