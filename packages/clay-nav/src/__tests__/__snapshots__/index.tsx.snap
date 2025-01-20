@@ -3,6 +3,7 @@
 exports[`ClayVerticalNav renders 1`] = `
 <div>
   <nav
+    aria-label="vertical navbar"
     class="menubar menubar-transparent menubar-vertical-expand-md"
   >
     <button

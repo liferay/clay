@@ -3,6 +3,7 @@
 exports[`VerticalNav basic rendering render dynamic content 1`] = `
 <div>
   <nav
+    aria-label="vertical navbar"
     class="menubar menubar-transparent menubar-vertical-expand-md"
   >
     <button
@@ -107,6 +108,7 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
 exports[`VerticalNav basic rendering render static content 1`] = `
 <div>
   <nav
+    aria-label="vertical navbar"
     class="menubar menubar-transparent menubar-vertical-expand-md"
   >
     <button
