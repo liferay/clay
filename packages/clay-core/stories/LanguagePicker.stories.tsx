@@ -5,7 +5,7 @@
 
 import React, {useState} from 'react';
 
-import ClayLanguagePicker from '../src';
+import ClayLanguagePicker from '../src/language-picker';
 
 export default {
 	component: ClayLanguagePicker,

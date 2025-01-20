@@ -3,13 +3,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Option, Picker} from '@clayui/core';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
 import {InternalDispatch, sub} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
+
+import {Option, Picker} from '../picker';
 
 type DisplayType = 'info' | 'secondary' | 'success' | 'warning';
 
@@ -72,7 +73,6 @@ type Props = {
 	/**
 	 * Callback for when the active state changes (controlled).
 	 */
-
 	onActiveChange?: InternalDispatch<boolean>;
 
 	/**
