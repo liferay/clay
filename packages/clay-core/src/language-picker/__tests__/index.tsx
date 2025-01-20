@@ -161,6 +161,26 @@ describe('ClayLanguagePicker', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders the Default label in the correct default locale', () => {
+		render(
+			<ClayLanguagePicker
+				defaultLocaleId="nl_NL"
+				locales={locales}
+				spritemap="/path/to/svg"
+				translations={{
+					'es-ES': {total: 4, translated: 2},
+					'fr-FR': {total: 4, translated: 4},
+				}}
+			/>
+		);
+
+		fireEvent.click(screen.getByRole('combobox'));
+
+		const nlOption = screen.getByRole('option', {name: /Dutch/});
+
+		expect(nlOption).toHaveTextContent('Default');
+	});
+
 	it('renders different labels for translations', () => {
 		render(
 			<ClayLanguagePicker

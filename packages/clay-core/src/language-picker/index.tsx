@@ -55,6 +55,11 @@ type Props = {
 	defaultActive?: boolean;
 
 	/**
+	 * The default locale id.
+	 */
+	defaultLocaleId?: React.Key;
+
+	/**
 	 * The initial selected locale id (uncontrolled).
 	 */
 	defaultSelectedLocaleId?: React.Key;
@@ -112,12 +117,12 @@ type Props = {
 };
 
 const TranslationLabel = ({
-	defaultLanguage,
+	defaultLocaleId,
 	locale,
 	messages,
 	translation,
 }: {
-	defaultLanguage: Item;
+	defaultLocaleId: React.Key;
 	messages: Messages;
 	locale: Item;
 	translation: Translation;
@@ -125,7 +130,7 @@ const TranslationLabel = ({
 	let displayType: DisplayType = 'warning';
 	let label = messages.untranslated;
 
-	if (locale.label === defaultLanguage?.label) {
+	if (locale.id === defaultLocaleId) {
 		displayType = 'info';
 		label = messages.default;
 	} else if (translation) {
@@ -217,6 +222,7 @@ const ClayLanguagePicker = ({
 	active,
 	classNamesTrigger,
 	defaultActive = false,
+	defaultLocaleId,
 	defaultSelectedLocaleId,
 	hideTriggerText,
 	id,
@@ -236,7 +242,6 @@ const ClayLanguagePicker = ({
 	spritemap,
 	translations = {},
 }: Props) => {
-	const defaultLanguage = locales[0];
 	const hasTranslations = Object.keys(translations).length;
 	const selectedLocale = locales.find(({id}) => id === selectedLocaleId);
 
@@ -283,7 +288,10 @@ const ClayLanguagePicker = ({
 								<ClayLayout.ContentCol containerElement="span">
 									<ClayLayout.ContentSection>
 										<TranslationLabel
-											defaultLanguage={defaultLanguage!}
+											defaultLocaleId={
+												defaultLocaleId ||
+												locales[0]!.id
+											}
 											locale={locale}
 											messages={messages}
 											translation={
