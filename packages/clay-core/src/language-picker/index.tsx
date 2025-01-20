@@ -16,7 +16,6 @@ type DisplayType = 'info' | 'secondary' | 'success' | 'warning';
 
 type Item = {
 	displayName?: string;
-	href?: string;
 	id: string;
 	label: string;
 	symbol: string;
