@@ -145,6 +145,64 @@ exports[`ClayLanguagePicker renders the picker with id 1`] = `
 </div>
 `;
 
+exports[`ClayLanguagePicker renders with a default selected locale 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: Spanish (Spain)."
+    class="trigger-class form-control form-control-select form-control-select-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-es-es"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#es-es"
+        />
+      </svg>
+    </span>
+    es-ES
+  </button>
+</div>
+`;
+
+exports[`ClayLanguagePicker renders with a selected locale 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: French (France)."
+    class="trigger-class form-control form-control-select form-control-select-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-fr-fr"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#fr-fr"
+        />
+      </svg>
+    </span>
+    fr-FR
+  </button>
+</div>
+`;
+
 exports[`ClayLanguagePicker renders with custom labels 1`] = `
 <div>
   <button

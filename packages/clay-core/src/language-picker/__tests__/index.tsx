@@ -47,10 +47,31 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders', () => {
 		const {container} = render(
+			<ClayLanguagePicker locales={locales} spritemap="/path/to/svg" />
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with a default selected locale', () => {
+		const {container} = render(
 			<ClayLanguagePicker
+				classNamesTrigger="trigger-class"
+				defaultSelectedLocaleId={locales[1]!.id}
 				locales={locales}
-				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
+				spritemap="/path/to/svg"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with a selected locale', () => {
+		const {container} = render(
+			<ClayLanguagePicker
+				classNamesTrigger="trigger-class"
+				defaultSelectedLocaleId={locales[2]!.id}
+				locales={locales}
 				spritemap="/path/to/svg"
 			/>
 		);
@@ -63,8 +84,6 @@ describe('ClayLanguagePicker', () => {
 			<ClayLanguagePicker
 				classNamesTrigger="trigger-class"
 				locales={locales}
-				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
 				spritemap="/path/to/svg"
 			/>
 		);
@@ -77,8 +96,6 @@ describe('ClayLanguagePicker', () => {
 			<ClayLanguagePicker
 				id="pickerId"
 				locales={locales}
-				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
 				spritemap="/path/to/svg"
 			/>
 		);
@@ -98,8 +115,6 @@ describe('ClayLanguagePicker', () => {
 					trigger: 'Trigger Label',
 					untranslated: 'Untranslated Label',
 				}}
-				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
 				spritemap="/path/to/svg"
 			/>
 		);
@@ -111,8 +126,6 @@ describe('ClayLanguagePicker', () => {
 		const {container} = render(
 			<ClayLanguagePicker
 				locales={locales}
-				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
 				small
 				spritemap="/path/to/svg"
 			/>
@@ -125,8 +138,6 @@ describe('ClayLanguagePicker', () => {
 		const {container} = render(
 			<ClayLanguagePicker
 				locales={locales}
-				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
 				spritemap="/path/to/svg"
 				translations={{
 					'es-ES': {total: 4, translated: 2},
@@ -143,8 +154,6 @@ describe('ClayLanguagePicker', () => {
 			<ClayLanguagePicker
 				hideTriggerText
 				locales={locales}
-				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
 				spritemap="/path/to/svg"
 			/>
 		);
@@ -156,8 +165,6 @@ describe('ClayLanguagePicker', () => {
 		render(
 			<ClayLanguagePicker
 				locales={locales}
-				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
 				spritemap="/path/to/svg"
 				translations={{
 					'es-ES': {total: 4, translated: 2},
@@ -184,7 +191,6 @@ describe('ClayLanguagePicker', () => {
 			<ClayLanguagePicker
 				locales={locales}
 				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
 				spritemap="/path/to/svg"
 			/>
 		);
@@ -203,8 +209,6 @@ describe('ClayLanguagePicker', () => {
 			<ClayLanguagePicker
 				locales={locales}
 				onActiveChange={onActiveChange}
-				onSelectedLocaleChange={onSelectedLocaleChange}
-				selectedLocaleId={locales[0]!.id}
 				spritemap="/path/to/svg"
 			/>
 		);
