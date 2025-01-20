@@ -55,6 +55,11 @@ type Props = {
 	defaultActive?: boolean;
 
 	/**
+	 * The initial selected locale id (uncontrolled).
+	 */
+	defaultSelectedLocaleId?: React.Key;
+
+	/**
 	 * Flag to hide the text in the trigger.
 	 */
 
@@ -88,7 +93,7 @@ type Props = {
 	/**
 	 * Exposes the currently selected locale id
 	 */
-	selectedLocaleId: string;
+	selectedLocaleId?: React.Key;
 
 	/**
 	 * Flag to show the picker in small size.
@@ -203,6 +208,7 @@ const ClayLanguagePicker = ({
 	active,
 	classNamesTrigger,
 	defaultActive = false,
+	defaultSelectedLocaleId,
 	hideTriggerText,
 	id,
 	messages = {
@@ -223,8 +229,7 @@ const ClayLanguagePicker = ({
 }: Props) => {
 	const defaultLanguage = locales[0];
 	const hasTranslations = Object.keys(translations).length;
-	const selectedLocale =
-		locales.find(({id}) => id === selectedLocaleId) || locales[0]!;
+	const selectedLocale = locales.find(({id}) => id === selectedLocaleId)!;
 
 	return (
 		<Picker
@@ -235,6 +240,7 @@ const ClayLanguagePicker = ({
 			as={Trigger}
 			classNamesTrigger={classNamesTrigger}
 			defaultActive={defaultActive}
+			defaultSelectedKey={defaultSelectedLocaleId || locales[0]!.id}
 			hideTriggerText={hideTriggerText}
 			id={id}
 			items={locales}
