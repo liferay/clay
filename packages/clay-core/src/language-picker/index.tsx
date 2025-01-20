@@ -165,20 +165,29 @@ TranslationLabel.displayName = 'Label';
 const Trigger = React.forwardRef<HTMLButtonElement>(
 	(
 		{
-			ariaLabelTrigger,
 			classNamesTrigger,
 			hideTriggerText,
+			locales,
 			selectedLocale,
 			small,
 			spritemap,
+			triggerMessage,
 			...otherProps
 		}: Record<string, any>,
 		ref
 	) => {
+		const selectedItem =
+			selectedLocale ||
+			locales.find(
+				(locale: Item) => locale.label === otherProps['children']
+			);
+
 		return (
 			<button
 				{...otherProps}
-				aria-label={ariaLabelTrigger}
+				aria-label={sub(triggerMessage, [
+					selectedItem?.displayName || selectedItem?.label,
+				])}
 				className={classNames(
 					classNamesTrigger,
 					'form-control form-control-select form-control-select-secondary',
@@ -192,11 +201,11 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 				<span className="inline-item-before">
 					<ClayIcon
 						spritemap={spritemap}
-						symbol={selectedLocale.symbol}
+						symbol={selectedItem.symbol}
 					/>
 				</span>
 
-				{!hideTriggerText ? selectedLocale.label : null}
+				{!hideTriggerText ? selectedItem.label : null}
 			</button>
 		);
 	}
@@ -229,14 +238,11 @@ const ClayLanguagePicker = ({
 }: Props) => {
 	const defaultLanguage = locales[0];
 	const hasTranslations = Object.keys(translations).length;
-	const selectedLocale = locales.find(({id}) => id === selectedLocaleId)!;
+	const selectedLocale = locales.find(({id}) => id === selectedLocaleId);
 
 	return (
 		<Picker
 			active={active}
-			ariaLabelTrigger={sub(messages.trigger, [
-				selectedLocale.displayName || selectedLocale.label,
-			])}
 			as={Trigger}
 			classNamesTrigger={classNamesTrigger}
 			defaultActive={defaultActive}
@@ -244,12 +250,14 @@ const ClayLanguagePicker = ({
 			hideTriggerText={hideTriggerText}
 			id={id}
 			items={locales}
+			locales={locales}
 			onActiveChange={onActiveChange}
 			onSelectionChange={onSelectedLocaleChange}
 			selectedKey={selectedLocaleId}
 			selectedLocale={selectedLocale}
 			small={small}
 			spritemap={spritemap}
+			triggerMessage={messages.trigger}
 		>
 			{(locale) => {
 				return (
