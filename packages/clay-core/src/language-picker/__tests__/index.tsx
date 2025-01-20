@@ -89,7 +89,8 @@ describe('ClayLanguagePicker', () => {
 	it('renders with custom labels', () => {
 		const {container} = render(
 			<ClayLanguagePicker
-				labels={{
+				locales={locales}
+				messages={{
 					default: 'Default Label',
 					option: 'Option Label',
 					translated: 'Translated Label',
@@ -97,7 +98,6 @@ describe('ClayLanguagePicker', () => {
 					trigger: 'Trigger Label',
 					untranslated: 'Untranslated Label',
 				}}
-				locales={locales}
 				onSelectedLocaleChange={onSelectedLocaleChange}
 				selectedLocale={locales[0]!}
 				spritemap="/path/to/svg"

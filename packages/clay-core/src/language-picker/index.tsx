@@ -22,7 +22,7 @@ type Item = {
 	symbol: string;
 };
 
-type Labels = {
+type Messages = {
 	default: string;
 	option: string;
 	trigger: string;
@@ -61,9 +61,9 @@ type Props = {
 	id?: string;
 
 	/**
-	 * Labels for the component
+	 * Messages for the component
 	 */
-	labels?: Labels;
+	messages?: Messages;
 
 	/**
 	 * List of locales to allow localization for
@@ -103,37 +103,37 @@ type Props = {
 
 const TranslationLabel = ({
 	defaultLanguage,
-	labels,
 	locale,
+	messages,
 	translation,
 }: {
 	defaultLanguage: Item;
-	labels: Labels;
+	messages: Messages;
 	locale: Item;
 	translation: Translation;
 }) => {
 	let displayType: DisplayType = 'warning';
-	let label = labels.untranslated;
+	let label = messages.untranslated;
 
 	if (locale.label === defaultLanguage?.label) {
 		displayType = 'info';
-		label = labels.default;
+		label = messages.default;
 	} else if (translation) {
 		const {total, translated} = translation;
 
 		if (total && total === translated) {
 			displayType = 'success';
-			label = labels.translated;
+			label = messages.translated;
 		} else {
 			displayType = 'secondary';
-			label = sub(labels.translating, [translated, total]);
+			label = sub(messages.translating, [translated, total]);
 		}
 	}
 
 	return (
 		<>
 			<span className="sr-only">
-				{sub(labels.option, [
+				{sub(messages.option, [
 					locale.displayName || locale.label,
 					label,
 				])}
@@ -195,7 +195,11 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 Trigger.displayName = 'Trigger';
 
 const ClayLanguagePicker = ({
-	labels = {
+	active,
+	classNamesTrigger,
+	hideTriggerText,
+	id,
+	messages = {
 		default: 'Default',
 		option: '{0} language: {1}.',
 		translated: 'Translated',
@@ -203,10 +207,6 @@ const ClayLanguagePicker = ({
 		trigger: 'Select a language, current language: {0}.',
 		untranslated: 'Untranslated',
 	},
-	active,
-	classNamesTrigger,
-	hideTriggerText,
-	id,
 	locales,
 	onActiveChange,
 	onSelectedLocaleChange,
@@ -221,7 +221,7 @@ const ClayLanguagePicker = ({
 	return (
 		<Picker
 			active={active}
-			ariaLabelTrigger={sub(labels.trigger, [
+			ariaLabelTrigger={sub(messages.trigger, [
 				selectedLocale.displayName || selectedLocale.label,
 			])}
 			as={Trigger}
@@ -263,8 +263,8 @@ const ClayLanguagePicker = ({
 									<ClayLayout.ContentSection>
 										<TranslationLabel
 											defaultLanguage={defaultLanguage!}
-											labels={labels}
 											locale={locale}
+											messages={messages}
 											translation={
 												translations[locale.label]!
 											}
