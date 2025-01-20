@@ -83,12 +83,12 @@ type Props = {
 	/**
 	 * Callback that gets called when a selected locale gets changed
 	 */
-	onSelectedLocaleChange: (val: React.Key) => void;
+	onSelectedLocaleChange?: InternalDispatch<React.Key>;
 
 	/**
-	 * Exposes the currently selected locale
+	 * Exposes the currently selected locale id
 	 */
-	selectedLocale: Item;
+	selectedLocaleId: string;
 
 	/**
 	 * Flag to show the picker in small size.
@@ -216,13 +216,15 @@ const ClayLanguagePicker = ({
 	locales,
 	onActiveChange,
 	onSelectedLocaleChange,
-	selectedLocale,
+	selectedLocaleId,
 	small,
 	spritemap,
 	translations = {},
 }: Props) => {
 	const defaultLanguage = locales[0];
 	const hasTranslations = Object.keys(translations).length;
+	const selectedLocale =
+		locales.find(({id}) => id === selectedLocaleId) || locales[0]!;
 
 	return (
 		<Picker
@@ -237,10 +239,8 @@ const ClayLanguagePicker = ({
 			id={id}
 			items={locales}
 			onActiveChange={onActiveChange}
-			onSelectionChange={(id: React.Key) => {
-				onSelectedLocaleChange(id);
-			}}
-			selectedKey={selectedLocale.id}
+			onSelectionChange={onSelectedLocaleChange}
+			selectedKey={selectedLocaleId}
 			selectedLocale={selectedLocale}
 			small={small}
 			spritemap={spritemap}

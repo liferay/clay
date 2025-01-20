@@ -40,21 +40,17 @@ const locales = [
 ];
 
 export const Default = (args: any) => {
-	const [selectedLocale, setSelectedLocale] = useState<any>(locales[0]);
+	const [selectedLocaleId, setSelectedLocaleId] = useState<any>(
+		locales[0]!.id
+	);
 
 	return (
 		<ClayLanguagePicker
 			hideTriggerText={args.hideTriggerText}
 			id="languagePicker"
 			locales={locales}
-			onSelectedLocaleChange={(id) => {
-				const locale = locales.find((locale) => locale.id === id);
-
-				if (locale) {
-					setSelectedLocale(locale);
-				}
-			}}
-			selectedLocale={selectedLocale}
+			onSelectedLocaleChange={setSelectedLocaleId}
+			selectedLocaleId={selectedLocaleId}
 			small={args.small}
 		/>
 	);
@@ -66,7 +62,9 @@ Default.args = {
 };
 
 export const LanguagePickerWithTranslations = (args: any) => {
-	const [selectedLocale, setSelectedLocale] = useState<any>(locales[0]);
+	const [selectedLocaleId, setSelectedLocaleId] = useState<any>(
+		locales[0]!.id
+	);
 	const translations = {
 		'ca-ES': {total: 4, translated: 2},
 		'nl-NL': {total: 4, translated: 4},
@@ -77,14 +75,8 @@ export const LanguagePickerWithTranslations = (args: any) => {
 			hideTriggerText={args.hideTriggerText}
 			id="languagePicker"
 			locales={locales}
-			onSelectedLocaleChange={(id) => {
-				const locale = locales.find((locale) => locale.id === id);
-
-				if (locale) {
-					setSelectedLocale(locale);
-				}
-			}}
-			selectedLocale={selectedLocale}
+			onSelectedLocaleChange={setSelectedLocaleId}
+			selectedLocaleId={selectedLocaleId}
 			small={args.small}
 			translations={translations}
 		/>
