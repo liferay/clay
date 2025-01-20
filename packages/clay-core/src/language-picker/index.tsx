@@ -50,6 +50,11 @@ type Props = {
 	classNamesTrigger?: string;
 
 	/**
+	 * Property to set the default value of `active` (uncontrolled).
+	 */
+	defaultActive?: boolean;
+
+	/**
 	 * Flag to hide the text in the trigger.
 	 */
 
@@ -197,6 +202,7 @@ Trigger.displayName = 'Trigger';
 const ClayLanguagePicker = ({
 	active,
 	classNamesTrigger,
+	defaultActive = false,
 	hideTriggerText,
 	id,
 	messages = {
@@ -226,6 +232,7 @@ const ClayLanguagePicker = ({
 			])}
 			as={Trigger}
 			classNamesTrigger={classNamesTrigger}
+			defaultActive={defaultActive}
 			hideTriggerText={hideTriggerText}
 			id={id}
 			items={locales}
