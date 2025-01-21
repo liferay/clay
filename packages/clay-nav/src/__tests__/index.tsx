@@ -64,7 +64,11 @@ describe('ClayVerticalNav', () => {
 
 	it('renders', () => {
 		const {container} = render(
-			<ClayVerticalNav items={items} spritemap="/path/to" />
+			<ClayVerticalNav
+				aria-label="vertical navbar"
+				items={items}
+				spritemap="/path/to"
+			/>
 		);
 
 		expect(container).toMatchSnapshot();
@@ -72,7 +76,11 @@ describe('ClayVerticalNav', () => {
 
 	it('expands items when clicked', () => {
 		const {container, getByText} = render(
-			<ClayVerticalNav items={items} spritemap="/path/to" />
+			<ClayVerticalNav
+				aria-label="vertical navbar"
+				items={items}
+				spritemap="/path/to"
+			/>
 		);
 
 		expect(
@@ -88,7 +96,11 @@ describe('ClayVerticalNav', () => {
 
 	it('expand items by pressing the right arrow key', () => {
 		const {getByText} = render(
-			<ClayVerticalNav items={ITEMS} spritemap="/path/to" />
+			<ClayVerticalNav
+				aria-label="vertical navbar"
+				items={ITEMS}
+				spritemap="/path/to"
+			/>
 		);
 
 		const projects = getByText('Projects');
@@ -105,7 +117,11 @@ describe('ClayVerticalNav', () => {
 
 	it('collapse items by pressing the left arrow key', () => {
 		const {getByText} = render(
-			<ClayVerticalNav items={ITEMS} spritemap="/path/to" />
+			<ClayVerticalNav
+				aria-label="vertical navbar"
+				items={ITEMS}
+				spritemap="/path/to"
+			/>
 		);
 
 		const projects = getByText('Projects');
@@ -126,7 +142,11 @@ describe('ClayVerticalNav', () => {
 
 	it('moves focus to first item if item is expanded', () => {
 		const {getByText} = render(
-			<ClayVerticalNav items={ITEMS} spritemap="/path/to" />
+			<ClayVerticalNav
+				aria-label="vertical navbar"
+				items={ITEMS}
+				spritemap="/path/to"
+			/>
 		);
 
 		const projects = getByText('Projects');
@@ -149,7 +169,11 @@ describe('ClayVerticalNav', () => {
 
 	it('move focus to parent if focus is on child when pressing left arrow key', () => {
 		const {getByText} = render(
-			<ClayVerticalNav items={ITEMS} spritemap="/path/to" />
+			<ClayVerticalNav
+				aria-label="vertical navbar"
+				items={ITEMS}
+				spritemap="/path/to"
+			/>
 		);
 
 		const projects = getByText('Projects');

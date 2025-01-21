@@ -98,6 +98,7 @@ export const UnderlinedLinks = () => (
 			VerticalNav
 		</Heading>
 		<VerticalNav
+			aria-label="vertical navbar"
 			items={[
 				{
 					items: [
@@ -316,6 +317,7 @@ export const TextSpacing = () => (
 			VerticalNav
 		</Heading>
 		<VerticalNav
+			aria-label="vertical navbar"
 			items={[
 				{
 					items: [

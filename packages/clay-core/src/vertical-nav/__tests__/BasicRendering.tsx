@@ -13,7 +13,7 @@ describe('VerticalNav basic rendering', () => {
 
 	it('render static content', () => {
 		const {container} = render(
-			<VerticalNav>
+			<VerticalNav aria-label="vertical navbar">
 				<VerticalNav.Item active key="home">
 					Home
 				</VerticalNav.Item>
@@ -28,6 +28,7 @@ describe('VerticalNav basic rendering', () => {
 	it('render dynamic content', () => {
 		const {container} = render(
 			<VerticalNav
+				aria-label="vertical navbar"
 				items={[
 					{
 						id: 1,

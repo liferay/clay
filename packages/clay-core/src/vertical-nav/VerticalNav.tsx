@@ -11,7 +11,8 @@ import {
 	useNavigation,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import warning from 'warning';
 
 import {Collection, useCollection} from '../collection';
 import {Nav} from '../nav';
@@ -48,6 +49,11 @@ type Props<T extends Record<string, any> | string> = {
 	 * - automatic - moves the focus to the menuitem and activates the menu.
 	 */
 	activation?: 'manual' | 'automatic';
+
+	/**
+	 * Flag to define aria-label.
+	 */
+	'aria-label': string;
 
 	/**
 	 * The component contents.
@@ -140,6 +146,7 @@ function VerticalNav<T extends Record<string, any> | string>(
 function VerticalNav<T extends Record<string, any> | string>({
 	active,
 	activation = 'manual',
+	'aria-label': ariaLabel,
 	children,
 	decorated,
 	displayType,
@@ -275,8 +282,16 @@ function VerticalNav<T extends Record<string, any> | string>({
 		</Nav>
 	);
 
+	useEffect(() => {
+		warning(
+			ariaLabel,
+			"[VerticalNav]: Missing required 'aria-label' attribute. Please provide a value to ensure accessibility."
+		);
+	}, [ariaLabel]);
+
 	return (
 		<nav
+			aria-label={ariaLabel}
 			className={classNames('menubar menubar-transparent', {
 				['menubar-decorated']: decorated,
 				['menubar-primary']: displayType === 'primary',
