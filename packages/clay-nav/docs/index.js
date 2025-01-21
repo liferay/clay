@@ -48,6 +48,7 @@ const verticalNavigationImportsCode = `import {ClayVerticalNav} from '@clayui/na
 const VerticalNavigationCode = `const Component = () => {
 	return (
 		<ClayVerticalNav
+			aria-label="vertical navbar"
 			active="6"
 			defaultExpandedKeys={new Set(['5'])}
 			items={[
@@ -133,6 +134,7 @@ const VerticalNavigationCustomItemCode = `const Component = () => {
 
 	return (
 		<ClayVerticalNav
+			aria-label="vertical navbar"
 			active="6"
 			defaultExpandedKeys={new Set(['5'])}
 			items={[

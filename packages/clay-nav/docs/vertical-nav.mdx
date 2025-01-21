@@ -37,6 +37,7 @@ In its mobile version, Vertical Navigation adds a trigger that is responsible fo
 
 ```js
 <ClayVerticalNav
+	aria-label="vertical navbar"
 	trigger={(props) => (
 		<ClayVerticalNav.Trigger {...props}>
 			<ClayIcon
@@ -54,6 +55,7 @@ Your custom trigger receives the `children` property with the default content, f
 
 ```js
 <ClayVerticalNav
+	aria-label="vertical navbar"
 	trigger={({onClick}) => (
 		<button className="btn btn-secondary" onClick={onClick}>
 			<ClayIcon
