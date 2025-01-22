@@ -190,7 +190,11 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 					/>
 				</span>
 
-				{!hideTriggerText ? selectedItem.label : null}
+				{!hideTriggerText ? (
+					<span className="inline-item-before">
+						{selectedItem.label}
+					</span>
+				) : null}
 			</button>
 		);
 	}

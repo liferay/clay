@@ -24,7 +24,11 @@ exports[`LanguagePicker renders 1`] = `
         />
       </svg>
     </span>
-    en-US
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
@@ -53,7 +57,11 @@ exports[`LanguagePicker renders a class name for the trigger 1`] = `
         />
       </svg>
     </span>
-    en-US
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
@@ -82,7 +90,11 @@ exports[`LanguagePicker renders a small picker 1`] = `
         />
       </svg>
     </span>
-    en-US
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
@@ -140,7 +152,11 @@ exports[`LanguagePicker renders the picker with id 1`] = `
         />
       </svg>
     </span>
-    en-US
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
@@ -169,7 +185,11 @@ exports[`LanguagePicker renders with a default selected locale 1`] = `
         />
       </svg>
     </span>
-    es-ES
+    <span
+      class="inline-item-before"
+    >
+      es-ES
+    </span>
   </button>
 </div>
 `;
@@ -198,7 +218,11 @@ exports[`LanguagePicker renders with a selected locale 1`] = `
         />
       </svg>
     </span>
-    fr-FR
+    <span
+      class="inline-item-before"
+    >
+      fr-FR
+    </span>
   </button>
 </div>
 `;
@@ -227,7 +251,11 @@ exports[`LanguagePicker renders with custom labels 1`] = `
         />
       </svg>
     </span>
-    en-US
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
@@ -256,7 +284,11 @@ exports[`LanguagePicker renders with translations 1`] = `
         />
       </svg>
     </span>
-    en-US
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
   </button>
 </div>
 `;
