@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LanguagePicker renders 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: English (United States)."
+    class="form-control form-control-select form-control-select-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-en-us"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#en-us"
+        />
+      </svg>
+    </span>
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
+  </button>
+</div>
+`;
+
+exports[`LanguagePicker renders a class name for the trigger 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: English (United States)."
+    class="trigger-class form-control form-control-select form-control-select-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-en-us"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#en-us"
+        />
+      </svg>
+    </span>
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
+  </button>
+</div>
+`;
+
+exports[`LanguagePicker renders a small picker 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: English (United States)."
+    class="form-control form-control-select form-control-select-secondary form-control-sm"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-en-us"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#en-us"
+        />
+      </svg>
+    </span>
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
+  </button>
+</div>
+`;
+
+exports[`LanguagePicker renders hidding the trigger text 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: English (United States)."
+    class="form-control form-control-select form-control-select-secondary hidden-label"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-en-us"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#en-us"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`LanguagePicker renders the picker with id 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: English (United States)."
+    class="form-control form-control-select form-control-select-secondary"
+    id="pickerId"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-en-us"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#en-us"
+        />
+      </svg>
+    </span>
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
+  </button>
+</div>
+`;
+
+exports[`LanguagePicker renders with a default selected locale 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: Spanish (Spain)."
+    class="trigger-class form-control form-control-select form-control-select-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-es-es"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#es-es"
+        />
+      </svg>
+    </span>
+    <span
+      class="inline-item-before"
+    >
+      es-ES
+    </span>
+  </button>
+</div>
+`;
+
+exports[`LanguagePicker renders with a selected locale 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: French (France)."
+    class="trigger-class form-control form-control-select form-control-select-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-fr-fr"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#fr-fr"
+        />
+      </svg>
+    </span>
+    <span
+      class="inline-item-before"
+    >
+      fr-FR
+    </span>
+  </button>
+</div>
+`;
+
+exports[`LanguagePicker renders with custom labels 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Trigger Label"
+    class="form-control form-control-select form-control-select-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-en-us"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#en-us"
+        />
+      </svg>
+    </span>
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
+  </button>
+</div>
+`;
+
+exports[`LanguagePicker renders with translations 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-label="Select a language, current language: English (United States)."
+    class="form-control form-control-select form-control-select-secondary"
+    role="combobox"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="inline-item-before"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-en-us"
+        role="presentation"
+      >
+        <use
+          href="/path/to/svg#en-us"
+        />
+      </svg>
+    </span>
+    <span
+      class="inline-item-before"
+    >
+      en-US
+    </span>
+  </button>
+</div>
+`;
