@@ -346,8 +346,8 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 
 				if (startDate.toString() !== 'Invalid Date') {
 					const hours = use12Hours
-						? formatDate(startDate, 'HH')
-						: formatDate(startDate, 'hh');
+						? formatDate(startDate, 'hh')
+						: formatDate(startDate, 'HH');
 
 					const minutes = formatDate(startDate, 'mm');
 
