@@ -1,5 +1,5 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
+ * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
@@ -198,7 +198,7 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 
 Trigger.displayName = 'Trigger';
 
-const ClayLanguagePicker = ({
+export function LanguagePicker({
 	active,
 	classNamesTrigger,
 	defaultActive = false,
@@ -221,7 +221,7 @@ const ClayLanguagePicker = ({
 	small,
 	spritemap,
 	translations = {},
-}: Props) => {
+}: Props) {
 	const hasTranslations = Object.keys(translations).length;
 	const selectedLocale = locales.find(({id}) => id === selectedLocaleId);
 
@@ -306,8 +306,4 @@ const ClayLanguagePicker = ({
 			}}
 		</Picker>
 	);
-};
-
-ClayLanguagePicker.displayName = 'ClayLanguagePicker';
-
-export default ClayLanguagePicker;
+}

@@ -5,10 +5,10 @@
 
 import React, {useState} from 'react';
 
-import ClayLanguagePicker from '../src/language-picker';
+import {LanguagePicker} from '../src/language-picker';
 
 export default {
-	component: ClayLanguagePicker,
+	component: LanguagePicker,
 	title: 'Design System/Components/LanguagePicker',
 };
 
@@ -45,7 +45,7 @@ export const Default = (args: any) => {
 	);
 
 	return (
-		<ClayLanguagePicker
+		<LanguagePicker
 			hideTriggerText={args.hideTriggerText}
 			id="languagePicker"
 			locales={locales}
@@ -71,7 +71,7 @@ export const LanguagePickerWithTranslations = (args: any) => {
 	};
 
 	return (
-		<ClayLanguagePicker
+		<LanguagePicker
 			hideTriggerText={args.hideTriggerText}
 			id="languagePicker"
 			locales={locales}

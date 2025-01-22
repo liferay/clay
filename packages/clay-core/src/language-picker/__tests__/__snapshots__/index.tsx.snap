@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayLanguagePicker renders 1`] = `
+exports[`LanguagePicker renders 1`] = `
 <div>
   <button
     aria-activedescendant=""
@@ -29,7 +29,7 @@ exports[`ClayLanguagePicker renders 1`] = `
 </div>
 `;
 
-exports[`ClayLanguagePicker renders a class name for the trigger 1`] = `
+exports[`LanguagePicker renders a class name for the trigger 1`] = `
 <div>
   <button
     aria-activedescendant=""
@@ -58,7 +58,7 @@ exports[`ClayLanguagePicker renders a class name for the trigger 1`] = `
 </div>
 `;
 
-exports[`ClayLanguagePicker renders a small picker 1`] = `
+exports[`LanguagePicker renders a small picker 1`] = `
 <div>
   <button
     aria-activedescendant=""
@@ -87,7 +87,7 @@ exports[`ClayLanguagePicker renders a small picker 1`] = `
 </div>
 `;
 
-exports[`ClayLanguagePicker renders hidding the trigger text 1`] = `
+exports[`LanguagePicker renders hidding the trigger text 1`] = `
 <div>
   <button
     aria-activedescendant=""
@@ -115,7 +115,7 @@ exports[`ClayLanguagePicker renders hidding the trigger text 1`] = `
 </div>
 `;
 
-exports[`ClayLanguagePicker renders the picker with id 1`] = `
+exports[`LanguagePicker renders the picker with id 1`] = `
 <div>
   <button
     aria-activedescendant=""
@@ -145,7 +145,7 @@ exports[`ClayLanguagePicker renders the picker with id 1`] = `
 </div>
 `;
 
-exports[`ClayLanguagePicker renders with a default selected locale 1`] = `
+exports[`LanguagePicker renders with a default selected locale 1`] = `
 <div>
   <button
     aria-activedescendant=""
@@ -174,7 +174,7 @@ exports[`ClayLanguagePicker renders with a default selected locale 1`] = `
 </div>
 `;
 
-exports[`ClayLanguagePicker renders with a selected locale 1`] = `
+exports[`LanguagePicker renders with a selected locale 1`] = `
 <div>
   <button
     aria-activedescendant=""
@@ -203,7 +203,7 @@ exports[`ClayLanguagePicker renders with a selected locale 1`] = `
 </div>
 `;
 
-exports[`ClayLanguagePicker renders with custom labels 1`] = `
+exports[`LanguagePicker renders with custom labels 1`] = `
 <div>
   <button
     aria-activedescendant=""
@@ -232,7 +232,7 @@ exports[`ClayLanguagePicker renders with custom labels 1`] = `
 </div>
 `;
 
-exports[`ClayLanguagePicker renders with translations 1`] = `
+exports[`LanguagePicker renders with translations 1`] = `
 <div>
   <button
     aria-activedescendant=""

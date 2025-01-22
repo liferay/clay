@@ -24,6 +24,7 @@ export {Picker, Option} from './picker';
 export {FocusTrap} from './focus-trap';
 export {Nav} from './nav';
 export {Body, Cell, Head, Row, Table} from './table';
+export {LanguagePicker} from './language-picker';
 
 // Experimental components
 export * as __EXPERIMENTAL_MENU from './drop-down';

@@ -9,7 +9,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLanguagePicker from '..';
+import {LanguagePicker} from '..';
 import {cleanup, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
@@ -42,12 +42,12 @@ const locales = [
 
 const onSelectedLocaleChange = jest.fn(() => null);
 
-describe('ClayLanguagePicker', () => {
+describe('LanguagePicker', () => {
 	afterEach(cleanup);
 
 	it('renders', () => {
 		const {container} = render(
-			<ClayLanguagePicker locales={locales} spritemap="/path/to/svg" />
+			<LanguagePicker locales={locales} spritemap="/path/to/svg" />
 		);
 
 		expect(container).toMatchSnapshot();
@@ -55,7 +55,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders with a default selected locale', () => {
 		const {container} = render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				classNamesTrigger="trigger-class"
 				defaultSelectedLocaleId={locales[1]!.id}
 				locales={locales}
@@ -68,7 +68,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders with a selected locale', () => {
 		const {container} = render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				classNamesTrigger="trigger-class"
 				defaultSelectedLocaleId={locales[2]!.id}
 				locales={locales}
@@ -81,7 +81,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders a class name for the trigger', () => {
 		const {container} = render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				classNamesTrigger="trigger-class"
 				locales={locales}
 				spritemap="/path/to/svg"
@@ -93,7 +93,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders the picker with id', () => {
 		const {container} = render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				id="pickerId"
 				locales={locales}
 				spritemap="/path/to/svg"
@@ -105,7 +105,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders with custom labels', () => {
 		const {container} = render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				locales={locales}
 				messages={{
 					default: 'Default Label',
@@ -124,11 +124,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders a small picker', () => {
 		const {container} = render(
-			<ClayLanguagePicker
-				locales={locales}
-				small
-				spritemap="/path/to/svg"
-			/>
+			<LanguagePicker locales={locales} small spritemap="/path/to/svg" />
 		);
 
 		expect(container).toMatchSnapshot();
@@ -136,7 +132,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders with translations', () => {
 		const {container} = render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				locales={locales}
 				spritemap="/path/to/svg"
 				translations={{
@@ -151,7 +147,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders hidding the trigger text', () => {
 		const {container} = render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				hideTriggerText
 				locales={locales}
 				spritemap="/path/to/svg"
@@ -163,7 +159,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders the Default label in the correct default locale', () => {
 		render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				defaultLocaleId="nl_NL"
 				locales={locales}
 				spritemap="/path/to/svg"
@@ -183,7 +179,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('renders different labels for translations', () => {
 		render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				locales={locales}
 				spritemap="/path/to/svg"
 				translations={{
@@ -208,7 +204,7 @@ describe('ClayLanguagePicker', () => {
 
 	it('calls onSelectedLocaleChange when a language is selected', () => {
 		render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				locales={locales}
 				onSelectedLocaleChange={onSelectedLocaleChange}
 				spritemap="/path/to/svg"
@@ -226,7 +222,7 @@ describe('ClayLanguagePicker', () => {
 		const onActiveChange = jest.fn(() => null);
 
 		render(
-			<ClayLanguagePicker
+			<LanguagePicker
 				locales={locales}
 				onActiveChange={onActiveChange}
 				spritemap="/path/to/svg"
