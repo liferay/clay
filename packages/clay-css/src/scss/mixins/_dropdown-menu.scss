@@ -830,6 +830,20 @@
 			.custom-control-label {
 				font-weight: map-get($map, font-weight);
 			}
+
+			.inline-item {
+				$_inline-item: setter(map-get($map, inline-item), ());
+
+				@include clay-css($_inline-item);
+
+				.lexicon-icon {
+					@include clay-css(map-get($_inline-item, lexicon-icon));
+				}
+			}
+
+			.label {
+				@include clay-label-variant(map-get($map, label));
+			}
 		}
 	}
 }

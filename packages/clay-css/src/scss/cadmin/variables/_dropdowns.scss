@@ -163,6 +163,7 @@ $cadmin-dropdown-item-base: map-deep-merge(
 			line-height: $cadmin-dropdown-font-size * $cadmin-line-height-base,
 		),
 		'&.autofit-row': (
+			align-items: center,
 			padding-left: calc(#{$cadmin-dropdown-item-padding-x} - 4px),
 			padding-right: calc(#{$cadmin-dropdown-item-padding-x} - 4px),
 			autofit-col: (
@@ -171,6 +172,7 @@ $cadmin-dropdown-item-base: map-deep-merge(
 			),
 		),
 		autofit-row: (
+			align-items: center,
 			margin-left: -4px,
 			margin-right: -4px,
 			width: auto,
@@ -178,6 +180,17 @@ $cadmin-dropdown-item-base: map-deep-merge(
 				padding-left: 4px,
 				padding-right: 4px,
 			),
+		),
+		inline-item: (
+			line-height: 1,
+			lexicon-icon: (
+				font-size: 16px,
+				margin-top: 0,
+			),
+		),
+		label: (
+			margin-bottom: 0,
+			margin-top: 5px,
 		),
 	),
 	$cadmin-dropdown-item-base
@@ -408,6 +421,7 @@ $cadmin-dropdown-item-indicator-start: map-deep-merge(
 			),
 		width: $cadmin-dropdown-item-indicator-size,
 		lexicon-icon: (
+			font-size: 16px,
 			margin-top: 0,
 		),
 	),
@@ -455,6 +469,7 @@ $cadmin-dropdown-item-indicator-end: map-deep-merge(
 			),
 		width: $cadmin-dropdown-item-indicator-size,
 		lexicon-icon: (
+			font-size: 16px,
 			margin-top: 0,
 		),
 	),
@@ -812,10 +827,6 @@ $cadmin-dropdown-menu-palette: map-deep-merge(
 				padding-left: 28px,
 				padding-right: 8px,
 				padding-top: 5px,
-				'&.autofit-row': (
-					padding-left: 24px,
-					padding-right: 8px,
-				),
 			),
 			dropdown-item-scroll: (
 				font-size: 16px,
@@ -872,13 +883,11 @@ $cadmin-dropdown-menu-palette: map-deep-merge(
 			dropdown-menu-indicator-start: (
 				dropdown-item-indicator-start: (
 					left: 8px,
-					top: 8px,
 				),
 			),
 			dropdown-menu-indicator-end: (
 				dropdown-item-indicator-end: (
 					right: 8px,
-					top: 8px,
 				),
 			),
 		),
