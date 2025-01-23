@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
+
+### Features
+
+-   **@clayui/language-picker:** LPD-45714 Add defaultActive prop ([ef3b2fa](https://github.com/liferay/clay/commit/ef3b2fa7583fadda12fd01c53f69ed2b85aa3c0d))
+-   **@clayui/language-picker:** LPD-45714 Add defaultLocaleId to the API ([559b176](https://github.com/liferay/clay/commit/559b1761af9a1361bc0f341bd4de39132efd58f9))
+-   **@clayui/language-picker:** LPD-45714 Add defaultSelectedLocaleId ([29a032b](https://github.com/liferay/clay/commit/29a032bfa6d036f81032c614b793eb84722cfc18))
+-   **@clayui/language-picker:** LPD-45714 Export component as LanguagePicker ([b030db1](https://github.com/liferay/clay/commit/b030db1e788bc943332e3a08b9dac78e3a844501))
+-   **@clayui/language-picker:** LPD-45714 Make the language picker work in an uncontrolled way ([6f0a6c0](https://github.com/liferay/clay/commit/6f0a6c08a7617448666bee60fc1625878af98183))
+-   **@clayui/language-picker:** LPD-45714 Move component to clay-core ([1ebff3b](https://github.com/liferay/clay/commit/1ebff3b6f71fa091d94eb0dc8de358c8f818f132))
+-   **@clayui/language-picker:** LPD-45714 Move the label for the SR to the Option component ([effc1b6](https://github.com/liferay/clay/commit/effc1b6cb8f513b3252cc58389a147ea7456ce5d))
+-   **@clayui/language-picker:** LPD-45714 Remove unnecessary href ([077031a](https://github.com/liferay/clay/commit/077031aac7720234057be058f3ccb48cb9c5c5fd))
+-   **@clayui/language-picker:** LPD-45714 Rename labels to messages ([ca04d51](https://github.com/liferay/clay/commit/ca04d5137dcce223c377b4fc3f8e77ba042a8eb5))
+-   **@clayui/language-picker:** LPD-45714 Replace displayName by name ([35025a8](https://github.com/liferay/clay/commit/35025a821bb26c12d848da382c5d59eb72746d0f))
+-   **@clayui/language-picker:** LPD-45714 Replace selectedLocale with selectedLocaleId to be consistent with the design of the onSelectedLocaleChange API ([b68567e](https://github.com/liferay/clay/commit/b68567e244e1efb282ca607fc8e230e0122cb402))
+-   **@clayui/language-picker:** LPD-45714 Update tests ([983d7fc](https://github.com/liferay/clay/commit/983d7fc502792122f361d22c024bba98ea338cd8))
+-   **@clayui/language-picker:** LPD-45714 Wrap label to add right margin ([9eaf740](https://github.com/liferay/clay/commit/9eaf740f22f14de05dd0a7fbaaf7a898c2dd52b6))
+-   **@clayui/vertical-nav:** LPD-46396 - Include an aria-label property on the Clay Vertical Navigation component and ensure its proper implementation in usage. ([e86d6cc](https://github.com/liferay/clay/commit/e86d6ccc46ea2566146e110f453a5e4b1d1bf7bb))
+-   **@clayui/vertical-nav:** LPD-46396 - Update stories ([2fc9c3d](https://github.com/liferay/clay/commit/2fc9c3d80f028f8c0d26da2fb28db33532a60d88))
+-   **@clayui/vertical-nav:** LPD-46396 - Update tests and snapshots ([859c893](https://github.com/liferay/clay/commit/859c893ea28d7dbeaf8719e594ebe5ae3b294ba6))
+
 # [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
 
 **Note:** Version bump only for package @clayui/core

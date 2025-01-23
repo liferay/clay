@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
+
+
+### Bug Fixes
+
+* **@clay/css:** LPD-46380 Labels in dropdown-item are slightly misaligned ([b46a14e](https://github.com/liferay/clay/commit/b46a14efde05f15d53ce318fde84078794395969))
+* **@clayui/css:** LPD-45799 Cadmin c-prefers-focus should output correct selector ([346126e](https://github.com/liferay/clay/commit/346126e50b22faa41b4a848e452b2f19b68dc15d))
+
+
+### Features
+
+* **@clayui/language-picker:** LPD-45714 Move component to clay-core ([1ebff3b](https://github.com/liferay/clay/commit/1ebff3b6f71fa091d94eb0dc8de358c8f818f132))
+
+
+
+
+
 # [3.126.0](https://github.com/liferay/clay/compare/v3.125.0...v3.126.0) (2025-01-15)
 
 

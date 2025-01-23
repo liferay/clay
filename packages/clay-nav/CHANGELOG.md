@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
+
+### Features
+
+-   **@clayui/vertical-nav:** LPD-46396 - Update stories ([2fc9c3d](https://github.com/liferay/clay/commit/2fc9c3d80f028f8c0d26da2fb28db33532a60d88))
+-   **@clayui/vertical-nav:** LPD-46396 - Update tests and snapshots ([859c893](https://github.com/liferay/clay/commit/859c893ea28d7dbeaf8719e594ebe5ae3b294ba6))
+
 # [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
 
 **Note:** Version bump only for package @clayui/nav
