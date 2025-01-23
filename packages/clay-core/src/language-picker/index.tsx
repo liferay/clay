@@ -75,12 +75,12 @@ type Props = {
 	id?: string;
 
 	/**
-	 * Messages for the component
+	 * Messages for the component.
 	 */
 	messages?: Messages;
 
 	/**
-	 * List of locales to allow localization for
+	 * List of locales to allow localization for.
 	 */
 	locales: Array<Item>;
 
@@ -90,12 +90,12 @@ type Props = {
 	onActiveChange?: InternalDispatch<boolean>;
 
 	/**
-	 * Callback that gets called when a selected locale gets changed
+	 * Callback that gets called when a selected locale gets changed.
 	 */
 	onSelectedLocaleChange?: InternalDispatch<React.Key>;
 
 	/**
-	 * Exposes the currently selected locale id
+	 * Exposes the currently selected locale id (controlled).
 	 */
 	selectedLocaleId?: React.Key;
 
@@ -110,7 +110,7 @@ type Props = {
 	spritemap?: string;
 
 	/**
-	 * Translations provided to the component to be used and modified by it
+	 * Translations provided to the component to display the translation language status.
 	 */
 	translations?: Translations;
 };
