@@ -1,0 +1,129 @@
+---
+title: 'Language Picker'
+description: 'A language picker is very similar to a dropdown visually but it let users select languages from the panel and then represent the selection in the button.'
+packageNpm: '@clayui/core'
+packageStatus: 'Beta'
+storybookPath: 'design-system-components-language-picker'
+---
+
+import {
+	LanguagePickerExample,
+	LanguagePickerLanguagesExample,
+	LanguagePickerOnlyIconExample,
+	LanguagePickerSmallExample,
+	LanguagePickerTranslationsExample,
+} from '$packages/clay-core/docs/language-picker';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Example](#example)
+-   [Introduction](#introduction)
+-   [Controlled and Uncontrolled component](#controlled-and-uncontrolled-component)
+-   [Translations Variant](#translations-variant)
+-   [Trigger Options](#trigger-options)
+    -   [Trigger without Language Label](#trigger-without-language-label)
+    -   [Small Trigger](#small-trigger)
+
+</div>
+</div>
+
+## Example
+
+<LanguagePickerExample />
+
+## Introduction
+
+The Language Picker component is visually similar to a DropDown component but developed specifically for the user to select languages from the menu but following the [w3c accessibility](https://www.w3.org/WAI/ARIA/apg/example-index/combobox/combobox-select-only.html) recommendations.
+
+The Language Picker is a component based on the Picker component that provides an accessible experience for selecting languages. It follows standard accessibility patterns for a combobox-only and offers flexibility to customize the content of the options.
+
+## Controlled and Uncontrolled component
+
+As with any component in Clay, controlled and uncontrolled components are the ability to manage state in the parent or let Clay control the state of the component. You can [read more about this in our blog](/blog/2022/05/02/api-consistency-improvements-for-controlled-and-uncontrolled-components.html).
+
+For the `<LanguagePicker />` component you can control the `selectedLocaleId` and `active` states by adding a state to your component, this is only advisable when you need this information otherwise don't use it.
+
+If you just need to set the initial state of the `selectedLocaleId`, use the `defaultSelectedLocaleId` property which is appropriate for that use case. In case `defaultSelectedLocaleId` is not defined, it will take the first locale as the default locale.
+
+<div class="clay-site-alert alert alert-info">
+	<strong class="lead">Info</strong>
+	The <code class="language-text">selectedLocaleId</code> property is equivalent
+	to <code class="language-text">selectedKey</code> in the Picker, which is represented
+	by the <code class="language-text">key</code> property configured in the <code class="language-text">
+		Option
+	</code> component, so the component can identify which value is selected and
+	which should be shown in the trigger. <br />
+</div>
+
+```jsx
+function Example() {
+	// Controlled
+	const [active, setActive] = useState(false);
+
+	// Controlled
+	const [selectedLocaleId, setSelectedLocaleId] = useState('');
+
+	return (
+		<LanguagePicker
+			active={active}
+			locales={[
+				{
+					id: 'en_US',
+					label: 'en-US',
+					name: 'English (United States)',
+					symbol: 'en-us',
+				},
+				{
+					id: 'ar_SA',
+					label: 'ar-SA',
+					name: 'Arabic (Saudi Arabia)',
+					symbol: 'ar-sa',
+				},
+				{
+					id: 'ca_ES',
+					label: 'ca-ES',
+					name: 'Catalan (Spain)',
+					symbol: 'ca-es',
+				},
+				{
+					id: 'nl_NL',
+					label: 'nl-NL',
+					name: 'Dutch (Netherlands)',
+					symbol: 'nl-nl',
+				},
+			]}
+			onActiveChange={setActive}
+			onSelectedLocaleChange={setSelectedLocaleId}
+			selectedLocaleId={selectedLocaleId}
+		/>
+	);
+}
+```
+
+## Translations Variant
+
+Unlike the default Language Picker, translations variant is used to select a translation from a list of translation languages that have been translated or not. An example of using this variant could be a form with one or more localizable fields, where we want to select and view the status of translations.
+
+<LanguagePickerTranslationsExample />
+
+This variant shows translation status labels next to each translation language to indicate the translation status for the content. The states are described below:
+
+-   **Default**: Indentifies the default language. This default language is set with the property `defaultLocaleId`. If there is no `defaultLocaleId` it will take the first of the locales.
+-   **Translated**: Used when all fields have been translated.
+-   **Not Translated**: Used when none of the localizable fields have been translated.
+-   **Translating x/x**: Used when at least one of the localizable fields of a content item has been translated. This label indicates the number of fields translated compared to the total number of fields.
+
+## Trigger Options
+
+### Trigger Without Language Label
+
+You can customize the Language Picker trigger to display only the icon by setting the `hideTriggerText` property to true. This removes the language label.
+
+<LanguagePickerOnlyIconExample />
+
+### Small Trigger
+
+You can reduce the size of the Language Picker trigger by setting the `small` property to `true`.
+
+<LanguagePickerSmallExample />
