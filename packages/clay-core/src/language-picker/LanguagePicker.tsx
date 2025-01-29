@@ -45,7 +45,6 @@ type Props = {
 	/**
 	 * Class names for the trigger.
 	 */
-
 	classNamesTrigger?: string;
 
 	/**
