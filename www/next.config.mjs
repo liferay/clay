@@ -19,6 +19,10 @@ const withMDX = createMDXPlugin({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	output: 'export',
+	images: {
+		unoptimized: true,
+	},
 	pageExtensions: ['mdx', 'ts', 'tsx'],
 	async redirects() {
 		const redirects = [

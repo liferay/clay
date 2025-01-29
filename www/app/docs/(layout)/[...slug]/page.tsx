@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import {AllCollection} from '@/data';
+import {createLXCResource} from '@/lxc';
 
 import {DocsLayout} from './DocsLayout';
 import {RemoteLayout} from './RemoteLayout';
@@ -10,12 +11,20 @@ type Props = {
 	}>;
 };
 
+const lxc = createLXCResource();
+
 export async function generateStaticParams() {
 	const collection = await AllCollection.getSources();
+	const remoteCollection = await lxc.getResources();
 
-	return collection.map((entry) => ({
-		slug: entry.getPath().split('/').slice(1),
-	}));
+	return [
+		...collection.map((entry) => ({
+			slug: entry.getPath().split('/').slice(1),
+		})),
+		...remoteCollection.map((item) => ({
+			slug: ['components', item.slug.slice(1), 'design'],
+		})),
+	];
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {

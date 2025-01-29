@@ -110,6 +110,11 @@ async function getResourceCache(siteId: string, host: string) {
 
 export function createLXCResource() {
 	return {
+		getResources: () =>
+			getResourceCache(
+				process.env.LIFERAY_SITE_ID!,
+				process.env.LIFERAY_HOST!
+			),
 		getResource: async (slug: Array<string>) => {
 			const resource = await getResourceCache(
 				process.env.LIFERAY_SITE_ID!,
