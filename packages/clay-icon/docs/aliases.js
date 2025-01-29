@@ -5,7 +5,7 @@
 
 // Aliases for Clay CSS Language Flag SVG Icons. Only a subset of these flags
 // are in Clay CSS. These are the aliases used in
-// `https://clayui.com/docs/components/icon.html`.
+// `https://clayui.com/docs/components/icon`.
 
 export const flagsData = {
 	'af-za': ['af-za', 'Afrikaans', 'South Africa'],
@@ -389,7 +389,7 @@ export const flagsData = {
 };
 
 // Aliases for Clay CSS SVG Icons. These are the aliases used in
-// `https://clayui.com/docs/components/icon.html`.
+// `https://clayui.com/docs/components/icon`.
 
 export const iconsData = {
 	accessibility: ['human', 'inclusive', 'user'],

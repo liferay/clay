@@ -141,7 +141,7 @@ Static content is when the `<Table />` options do not change during the lifecycl
 
 ### Dynamic
 
-Unlike static content, dynamic content is when the options can change during the lifecycle of the application or when the data comes from a service. Dynamic content rendering is data agnostic, this allows you to configure how to render the component options regardless of the chosen data structure. For more information about controlled and uncontrolled components, visit [this blog post](/blog/2022/05/02/api-consistency-improvements-for-controlled-and-uncontrolled-components.html).
+Unlike static content, dynamic content is when the options can change during the lifecycle of the application or when the data comes from a service. Dynamic content rendering is data agnostic, this allows you to configure how to render the component options regardless of the chosen data structure. For more information about controlled and uncontrolled components, visit [this blog post](/blog/2022/05/02/api-consistency-improvements-for-controlled-and-uncontrolled-components).
 
 ```jsx
 <Table>
@@ -184,7 +184,7 @@ Unlike static content, dynamic content is when the options can change during the
 <div className="clay-site-alert alert alert-warning">
 	<strong className="lead">Warning</strong>
 	When implementing ClayTable from a React application, the icons may not render.
-	The <a href="https://clayui.com/docs/components/provider.html#application-provider">
+	The <a href="https://clayui.com/docs/components/provider#application-provider">
 		Application Provider
 	</a> method will make the icons available for use.
 </div>
@@ -286,7 +286,7 @@ export function App() {
 
 ### Asynchronous
 
-Most tables with sorting can have a lot of data and are paged so the sorting must happen on the server side instead of implementing the logic on the client side. You can achieve this level of implementation by composing using the [`useResource` hook](/docs/components/data-provider.html).
+Most tables with sorting can have a lot of data and are paged so the sorting must happen on the server side instead of implementing the logic on the client side. You can achieve this level of implementation by composing using the [`useResource` hook](/docs/components/data-provider).
 
 ```jsx
 function App() {

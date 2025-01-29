@@ -263,7 +263,7 @@ This should have reduced the size of `clay.css` in 7.4 to ~127kb or ~16kb gzippe
 
 ## Load Everything for Logged in Users
 
-The next step is to load Clay CSS, in full, for users that have logged in. This step may not be needed in 7.4 due to the [Clay Admin feature](https://clayui.com/blog/2021/09/13/clay0-css-cadmin.html). It provides styles for most of Liferay's admin components so you only need to worry about your page styles. It is loaded only for users that have logged in.
+The next step is to load Clay CSS, in full, for users that have logged in. This step may not be needed in 7.4 due to the [Clay Admin feature](/blog/2021-09-13-clay-css-cadmin). It provides styles for most of Liferay's admin components so you only need to worry about your page styles. It is loaded only for users that have logged in.
 
 We recommend not removing variable imports. There are component specific variables that are reused in other components in Clay. We were not able to completely modularize it due to backward compatibility issues. You will most likely encounter build errors without further customization. If you are a completionist and need to do it anyway, this is your warning.
 
