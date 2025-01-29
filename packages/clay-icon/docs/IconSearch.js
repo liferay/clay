@@ -22,27 +22,21 @@ export const IconSearch = ({
 	label = 'Search Icons',
 	placeholder = 'Search Icons...',
 	source,
-	iconLabelFormatter = (icon) => icon.name,
+	type = 'icon',
 }) => {
 	const [searchQuery, setSearchQuery] = useState('');
-
-	const data = useMemo(() => {
-		const keys = Object.keys(source);
-
-		return keys.map((key) => ({aliases: source[key], name: key}));
-	}, [source]);
 
 	const filteredIcons = useMemo(() => {
 		const query = searchQuery.toLowerCase();
 
-		return data.filter(
+		return source.filter(
 			({aliases, name}) =>
 				name.toLowerCase().includes(query) ||
 				aliases.some((alias) => alias.toLowerCase().includes(query))
 		);
-	}, [searchQuery, data]);
+	}, [searchQuery, source]);
 
-	const list = searchQuery ? filteredIcons : data;
+	const list = searchQuery ? filteredIcons : source;
 
 	return (
 		<>
@@ -60,13 +54,21 @@ export const IconSearch = ({
 			</ClayForm.Group>
 
 			<ul className="d-flex flex-wrap lexicon-icon-list list-unstyled">
-				{list.map((icon) => (
-					<li key={icon.name}>
-						<ClayIcon spritemap={spritemap} symbol={icon.name} />
+				{list.map((icon) => {
+					const name =
+						type === 'icon' ? icon.name : icon.aliases.join(' - ');
 
-						<span>{iconLabelFormatter(icon)}</span>
-					</li>
-				))}
+					return (
+						<li key={icon.name}>
+							<ClayIcon
+								spritemap={spritemap}
+								symbol={icon.name}
+							/>
+
+							<span>{name}</span>
+						</li>
+					);
+				})}
 			</ul>
 
 			{!list.length && (

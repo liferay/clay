@@ -5,9 +5,12 @@ import webpack from 'webpack';
 import path from 'path';
 
 import {unwrapMdxBlockElements} from './plugins/remark-unwrap-paragraphs/index.mjs';
+import {buildIcons} from './plugins/scss/index.mjs';
 
 // @ts-ignore
 import clay from '@clayui/css';
+
+buildIcons();
 
 const withMDX = createMDXPlugin({
 	extension: /\.mdx?$/,
