@@ -67,6 +67,7 @@ export async function DocsLayout({slug}: Props) {
 					title={frontmatter.title}
 					description={frontmatter.description}
 					lexicon={frontmatter.lexiconDefinition}
+					packageStatus={frontmatter.packageStatus}
 					path={slug}
 					markup={!!fileMarkup}
 					design={!!fileDesign}

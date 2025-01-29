@@ -33,6 +33,7 @@ export async function RemoteLayout({slug}: Props) {
 					title={frontmatter.title}
 					description={frontmatter.description}
 					lexicon={frontmatter.lexiconDefinition}
+					packageStatus={frontmatter.packageStatus}
 					path={slug}
 					design
 					markup={!!fileMarkup}

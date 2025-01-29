@@ -10,6 +10,7 @@ import {z} from 'zod';
 const frontmatterSchema = z.object({
 	title: z.string(),
 	description: z.string(),
+	packageStatus: z.optional(z.string()),
 	packageNpm: z.optional(z.string()),
 	packageUse: z.optional(z.string()),
 	lexiconDefinition: z.optional(z.string()),

@@ -10,6 +10,7 @@ type Props = {
 	description?: string;
 	title: string;
 	path: Array<string>;
+	packageStatus?: string;
 	lexicon?: string;
 	markup?: boolean;
 	design?: boolean;
@@ -21,6 +22,7 @@ export default function Heading({
 	description,
 	title,
 	lexicon,
+	packageStatus,
 	path = [],
 	markup,
 	design,
@@ -69,6 +71,17 @@ export default function Heading({
 					>
 						View in Lexicon
 					</a>
+				)}
+				{packageStatus && (
+					<span
+						className={classNames('badge badge-translucent', {
+							'badge-success': packageStatus === 'Stable',
+							'badge-warning': packageStatus === 'Beta',
+							'badge-danger': packageStatus === 'Deprecated',
+						})}
+					>
+						{packageStatus}
+					</span>
 				)}
 			</div>
 			{description && (
