@@ -265,8 +265,8 @@ export const Cell = React.forwardRef(
 						<Layout.ContentCol>
 							<button
 								className="component-action"
-								type="button"
 								title={messages['sortDescription']}
+								type="button"
 							>
 								<Icon symbol="order-arrow" />
 							</button>

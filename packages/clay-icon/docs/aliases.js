@@ -9,264 +9,264 @@
 
 export const flagsData = [
 	{
-		name: 'ar-sa',
 		aliases: ['ar-sa', 'Arabic', 'Saudi Arabia'],
+		name: 'ar-sa',
 	},
 	{
-		name: 'bg-bg',
 		aliases: ['bg-bg', 'Bulgarian', 'Bulgaria'],
+		name: 'bg-bg',
 	},
 	{
-		name: 'ca-ad',
 		aliases: ['ca-ad', 'Catalan', 'Andorra'],
+		name: 'ca-ad',
 	},
 	{
-		name: 'ca-es-valencia',
 		aliases: ['ca-es-valencia', 'Catalan', 'Valencia'],
+		name: 'ca-es-valencia',
 	},
 	{
-		name: 'ca-es',
 		aliases: ['ca-es', 'Catalan', 'Spain'],
+		name: 'ca-es',
 	},
 	{
-		name: 'cs-cz',
 		aliases: ['cs-cz', 'Czech', 'Czech Republic'],
+		name: 'cs-cz',
 	},
 	{
-		name: 'da-dk',
 		aliases: ['da-dk', 'Danish', 'Denmark'],
+		name: 'da-dk',
 	},
 	{
-		name: 'de-at',
 		aliases: ['de-at', 'German', 'Austria'],
+		name: 'de-at',
 	},
 	{
-		name: 'de-ch',
 		aliases: ['de-ch', 'German', 'Switzerland'],
+		name: 'de-ch',
 	},
 	{
-		name: 'de-de',
 		aliases: ['de-de', 'German', 'Germany'],
+		name: 'de-de',
 	},
 	{
-		name: 'el-gr',
 		aliases: ['el-gr', 'Greek', 'Greece'],
+		name: 'el-gr',
 	},
 	{
-		name: 'en-au',
 		aliases: ['en-au', 'English', 'Australia'],
+		name: 'en-au',
 	},
 	{
-		name: 'en-ca',
 		aliases: ['en-ca', 'English', 'Canada'],
+		name: 'en-ca',
 	},
 	{
-		name: 'en-gb',
 		aliases: ['en-gb', 'English', 'United Kingdom'],
+		name: 'en-gb',
 	},
 	{
-		name: 'en-us',
 		aliases: ['en-us', 'English', 'United States'],
+		name: 'en-us',
 	},
 	{
-		name: 'es-ar',
 		aliases: ['es-ar', 'Spanish', 'Argentina'],
+		name: 'es-ar',
 	},
 	{
-		name: 'es-co',
 		aliases: ['es-co', 'Spanish', 'Colombia'],
+		name: 'es-co',
 	},
 	{
-		name: 'es-es',
 		aliases: ['es-es', 'Spanish', 'Spain'],
+		name: 'es-es',
 	},
 	{
-		name: 'es-mx',
 		aliases: ['es-mx', 'Spanish', 'Mexico'],
+		name: 'es-mx',
 	},
 	{
-		name: 'et-ee',
 		aliases: ['et-ee', 'Estonian', 'Estonia'],
+		name: 'et-ee',
 	},
 	{
-		name: 'eu-es',
 		aliases: ['eu-es', 'Basque', 'Spain'],
+		name: 'eu-es',
 	},
 	{
-		name: 'fa-ir',
 		aliases: ['fa-ir', 'Farsi', 'Iran'],
+		name: 'fa-ir',
 	},
 	{
-		name: 'fi-fi',
 		aliases: ['fi-fi', 'Finnish', 'Finland'],
+		name: 'fi-fi',
 	},
 	{
-		name: 'fr-be',
 		aliases: ['fr-be', 'French', 'Belgium'],
+		name: 'fr-be',
 	},
 	{
-		name: 'fr-ca',
 		aliases: ['fr-ca', 'French', 'Canada'],
+		name: 'fr-ca',
 	},
 	{
-		name: 'fr-ch',
 		aliases: ['fr-ch', 'French', 'Switzerland'],
+		name: 'fr-ch',
 	},
 	{
-		name: 'fr-fr',
 		aliases: ['fr-fr', 'French', 'France'],
+		name: 'fr-fr',
 	},
 	{
-		name: 'gl-es',
 		aliases: ['gl-es', 'Galician', 'Spain'],
+		name: 'gl-es',
 	},
 	{
-		name: 'hi-in',
 		aliases: ['hi-in', 'Hindi', 'India'],
+		name: 'hi-in',
 	},
 	{
-		name: 'hr-hr',
 		aliases: ['hr-hr', 'Croatian', 'Croatia'],
+		name: 'hr-hr',
 	},
 	{
-		name: 'hu-hu',
 		aliases: ['hu-hu', 'Hungarian', 'Hungary'],
+		name: 'hu-hu',
 	},
 	{
-		name: 'in-id',
 		aliases: ['in-id', 'Indonesian', 'Indonesia'],
+		name: 'in-id',
 	},
 	{
-		name: 'it-ch',
 		aliases: ['it-ch', 'Italian', 'Switzerland'],
+		name: 'it-ch',
 	},
 	{
-		name: 'it-it',
 		aliases: ['it-it', 'Italian', 'Italy'],
+		name: 'it-it',
 	},
 	{
-		name: 'iw-il',
 		aliases: ['iw-il', 'Hebrew', 'Israel'],
+		name: 'iw-il',
 	},
 	{
-		name: 'ja-jp',
 		aliases: ['ja-jp', 'Japanese', 'Japan'],
+		name: 'ja-jp',
 	},
 	{
-		name: 'kk-kz',
 		aliases: ['kk-kz', 'Kazakh', 'Kazakhstan'],
+		name: 'kk-kz',
 	},
 	{
-		name: 'km-kh',
 		aliases: ['km-kh', 'Cambodia'],
+		name: 'km-kh',
 	},
 	{
-		name: 'ko-kr',
 		aliases: ['ko-kr', 'Korean', 'South Korea'],
+		name: 'ko-kr',
 	},
 	{
-		name: 'lo-la',
 		aliases: ['lo-la', 'Lao', 'Laos'],
+		name: 'lo-la',
 	},
 	{
-		name: 'lt-lt',
 		aliases: ['lt-lt', 'Lithuanian', 'Lithuania'],
+		name: 'lt-lt',
 	},
 	{
-		name: 'mk-mk',
 		aliases: ['mk-mk', 'Macedonian', 'Macedonia'],
+		name: 'mk-mk',
 	},
 	{
-		name: 'ms-my',
 		aliases: ['ms-my', 'Malay', 'Malaysia'],
+		name: 'ms-my',
 	},
 	{
-		name: 'nb-no',
 		aliases: ['nb-no', 'Norwegian Bokmål', 'Norway'],
+		name: 'nb-no',
 	},
 	{
-		name: 'nl-be',
 		aliases: ['nl-be', 'Dutch', 'Belgium'],
+		name: 'nl-be',
 	},
 	{
-		name: 'nl-nl',
 		aliases: ['nl-nl', 'Dutch', 'Netherlands'],
+		name: 'nl-nl',
 	},
 	{
-		name: 'no-no',
 		aliases: ['no-no', 'Norwegian', 'Norway'],
+		name: 'no-no',
 	},
 	{
-		name: 'pl-pl',
 		aliases: ['pl-pl', 'Polish', 'Poland'],
+		name: 'pl-pl',
 	},
 	{
-		name: 'pt-br',
 		aliases: ['pt-br', 'Portuguese', 'Brazil'],
+		name: 'pt-br',
 	},
 	{
-		name: 'pt-pt',
 		aliases: ['pt-pt', 'Portuguese', 'Portugal'],
+		name: 'pt-pt',
 	},
 	{
-		name: 'ro-ro',
 		aliases: ['ro-ro', 'Romanian', 'Romania'],
+		name: 'ro-ro',
 	},
 	{
-		name: 'ru-ru',
 		aliases: ['ru-ru', 'Russian', 'Russia'],
+		name: 'ru-ru',
 	},
 	{
-		name: 'rw-rw',
 		aliases: ['rw-rw', 'Kinyarwanda', 'Rwanda'],
+		name: 'rw-rw',
 	},
 	{
-		name: 'sk-sk',
 		aliases: ['sk-sk', 'Slovak', 'Slovakia'],
+		name: 'sk-sk',
 	},
 	{
-		name: 'sl-si',
 		aliases: ['sl-si', 'Slovenian', 'Slovenia'],
+		name: 'sl-si',
 	},
 	{
-		name: 'sr-rs-latin',
 		aliases: ['sr-rs-latin', 'Serbian Latin', 'Serbia'],
+		name: 'sr-rs-latin',
 	},
 	{
-		name: 'sr-rs',
 		aliases: ['sr-rs', 'Serbian', 'Serbia'],
+		name: 'sr-rs',
 	},
 	{
-		name: 'sv-se',
 		aliases: ['sv-se', 'Swedish', 'Sweden'],
+		name: 'sv-se',
 	},
 	{
-		name: 'ta-in',
 		aliases: ['ta-in', 'Tamil', 'India'],
+		name: 'ta-in',
 	},
 	{
-		name: 'th-th',
 		aliases: ['th-th', 'Thai', 'Thailand'],
+		name: 'th-th',
 	},
 	{
-		name: 'tr-tr',
 		aliases: ['tr-tr', 'Turkish', 'Turkey'],
+		name: 'tr-tr',
 	},
 	{
-		name: 'uk-ua',
 		aliases: ['uk-ua', 'Ukrainian', 'Ukraine'],
+		name: 'uk-ua',
 	},
 	{
-		name: 'vi-vn',
 		aliases: ['vi-vn', 'Vietnamese', 'Vietnam'],
+		name: 'vi-vn',
 	},
 	{
-		name: 'zh-cn',
 		aliases: ['zh-cn', 'Chinese', 'China'],
+		name: 'zh-cn',
 	},
 	{
-		name: 'zh-tw',
 		aliases: ['zh-tw', 'Chinese', 'Taiwan'],
+		name: 'zh-tw',
 	},
 ];
 
@@ -275,15 +275,14 @@ export const flagsData = [
 
 export const iconsData = [
 	{
-		name: 'accessibility',
 		aliases: ['human', 'inclusive', 'user'],
+		name: 'accessibility',
 	},
 	{
-		name: 'add-cell',
 		aliases: ['center', 'excel', 'grid', 'squares', 'table'],
+		name: 'add-cell',
 	},
 	{
-		name: 'add-column',
 		aliases: [
 			'cell',
 			'center',
@@ -293,13 +292,13 @@ export const iconsData = [
 			'table',
 			'vertical',
 		],
+		name: 'add-column',
 	},
 	{
-		name: 'add-role',
 		aliases: [''],
+		name: 'add-role',
 	},
 	{
-		name: 'add-row',
 		aliases: [
 			'cell',
 			'squares',
@@ -309,9 +308,9 @@ export const iconsData = [
 			'horizontal',
 			'excel',
 		],
+		name: 'add-row',
 	},
 	{
-		name: 'adjust',
 		aliases: [
 			'circle',
 			'half',
@@ -320,117 +319,117 @@ export const iconsData = [
 			'settings',
 			'editor',
 		],
+		name: 'adjust',
 	},
 	{
+		aliases: ['texts', 'lines', 'editor'],
 		name: 'align-center',
-		aliases: ['texts', 'lines', 'editor'],
 	},
 	{
+		aliases: ['texts', 'lines', 'editor'],
 		name: 'align-image-center',
-		aliases: ['texts', 'lines', 'editor'],
 	},
 	{
+		aliases: ['texts', 'lines', 'editor'],
 		name: 'align-image-full-width',
-		aliases: ['texts', 'lines', 'editor'],
 	},
 	{
+		aliases: ['texts', 'lines', 'editor'],
 		name: 'align-image-left',
-		aliases: ['texts', 'lines', 'editor'],
 	},
 	{
+		aliases: ['texts', 'lines', 'editor'],
 		name: 'align-image-right',
-		aliases: ['texts', 'lines', 'editor'],
 	},
 	{
+		aliases: ['texts', 'lines', 'editor'],
 		name: 'align-justify',
-		aliases: ['texts', 'lines', 'editor'],
 	},
 	{
+		aliases: ['texts', 'lines', 'editor'],
 		name: 'align-left',
-		aliases: ['texts', 'lines', 'editor'],
 	},
 	{
+		aliases: ['texts', 'lines', 'editor'],
 		name: 'align-right',
-		aliases: ['texts', 'lines', 'editor'],
 	},
 	{
-		name: 'analytics',
 		aliases: ['grow', 'arrow', 'increase', 'bar', 'data', 'expand'],
+		name: 'analytics',
 	},
 	{
+		aliases: [''],
 		name: 'angle-double-left-small',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'angle-double-left',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'angle-double-right-small',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'angle-double-right',
-		aliases: [''],
 	},
 	{
+		aliases: ['arrow', 'bottom', 'chevron'],
 		name: 'angle-down-small',
-		aliases: ['arrow', 'bottom', 'chevron'],
 	},
 	{
+		aliases: ['arrow', 'bottom', 'chevron'],
 		name: 'angle-down',
-		aliases: ['arrow', 'bottom', 'chevron'],
 	},
 	{
+		aliases: ['arrow', 'chevron'],
 		name: 'angle-left-small',
-		aliases: ['arrow', 'chevron'],
 	},
 	{
+		aliases: ['arrow', 'chevron'],
 		name: 'angle-left',
-		aliases: ['arrow', 'chevron'],
 	},
 	{
+		aliases: ['arrow', 'chevron'],
 		name: 'angle-right-small',
-		aliases: ['arrow', 'chevron'],
 	},
 	{
+		aliases: ['arrow', 'chevron'],
 		name: 'angle-right',
-		aliases: ['arrow', 'chevron'],
 	},
 	{
+		aliases: ['arrow', 'top', 'chevron'],
 		name: 'angle-up-small',
-		aliases: ['arrow', 'top', 'chevron'],
 	},
 	{
+		aliases: ['arrow', 'top', 'chevron'],
 		name: 'angle-up',
-		aliases: ['arrow', 'top', 'chevron'],
 	},
 	{
-		name: 'announcement',
 		aliases: ['deprecated'],
+		name: 'announcement',
 	},
 	{
-		name: 'anonymize',
 		aliases: [''],
+		name: 'anonymize',
 	},
 	{
-		name: 'api-lock',
 		aliases: ['security', 'access', 'login'],
+		name: 'api-lock',
 	},
 	{
-		name: 'api-web',
 		aliases: ['world', 'globe'],
+		name: 'api-web',
 	},
 	{
-		name: 'archive',
 		aliases: ['box', 'stock'],
+		name: 'archive',
 	},
 	{
-		name: 'arrow-end',
 		aliases: ['right', 'stop', 'workflow'],
+		name: 'arrow-end',
 	},
 	{
-		name: 'arrow-join',
 		aliases: [
 			'branch',
 			'combine',
@@ -439,453 +438,453 @@ export const iconsData = [
 			'merge',
 			'workflow',
 		],
+		name: 'arrow-join',
 	},
 	{
+		aliases: [''],
 		name: 'arrow-right-full',
-		aliases: [''],
 	},
 	{
-		name: 'arrow-split',
 		aliases: ['down', 'fork', 'workflow'],
+		name: 'arrow-split',
 	},
 	{
-		name: 'arrow-start',
 		aliases: ['right', 'workflow'],
+		name: 'arrow-start',
 	},
 	{
-		name: 'arrow-up-full',
 		aliases: ['circle', 'upload', 'workflow'],
+		name: 'arrow-up-full',
 	},
 	{
-		name: 'arrow-xor',
 		aliases: ['down', 'join', 'workflow'],
+		name: 'arrow-xor',
 	},
 	{
-		name: 'asterisk',
 		aliases: ['*', 'mandatory', 'required'],
+		name: 'asterisk',
 	},
 	{
-		name: 'audio',
 		aliases: ['sound', 'music', 'note'],
+		name: 'audio',
 	},
 	{
+		aliases: [''],
 		name: 'automatic-translate',
-		aliases: [''],
 	},
 	{
-		name: 'autosize',
 		aliases: ['arrows', 'box', 'expand', 'fullscreen', 'resize'],
+		name: 'autosize',
 	},
 	{
-		name: 'background-color',
 		aliases: ['bucket'],
+		name: 'background-color',
 	},
 	{
-		name: 'bars',
 		aliases: ['menu', 'lines', 'horizontal', 'more'],
+		name: 'bars',
 	},
 	{
+		aliases: ['alert', 'audio', 'music', 'notification', 'sound'],
 		name: 'bell-full',
-		aliases: ['alert', 'audio', 'music', 'notification', 'sound'],
 	},
 	{
+		aliases: ['alert', 'audio', 'music', 'notification', 'sound'],
 		name: 'bell-off',
-		aliases: ['alert', 'audio', 'music', 'notification', 'sound'],
 	},
 	{
+		aliases: ['alert', 'audio', 'music', 'notification', 'sound'],
 		name: 'bell-on',
-		aliases: ['alert', 'audio', 'music', 'notification', 'sound'],
 	},
 	{
-		name: 'block',
 		aliases: ['block', 'ignore', 'prohibited'],
+		name: 'block',
 	},
 	{
-		name: 'blogs',
 		aliases: ['journal'],
+		name: 'blogs',
 	},
 	{
-		name: 'bold',
 		aliases: ['editor', 'style', 'texts'],
+		name: 'bold',
 	},
 	{
-		name: 'bolt',
 		aliases: ['bind', 'mapping', 'thunder', 'trigger'],
+		name: 'bolt',
 	},
 	{
-		name: 'book',
 		aliases: ['library', 'pages'],
+		name: 'book',
 	},
 	{
+		aliases: ['clip', 'holder', 'marker', 'tag', 'save'],
 		name: 'bookmarks-full',
-		aliases: ['clip', 'holder', 'marker', 'tag', 'save'],
 	},
 	{
+		aliases: ['clip', 'holder', 'marker', 'tag', 'save'],
 		name: 'bookmarks',
-		aliases: ['clip', 'holder', 'marker', 'tag', 'save'],
 	},
 	{
+		aliases: [''],
 		name: 'books',
-		aliases: [''],
 	},
 	{
-		name: 'border-style',
 		aliases: ['line', 'stroke', 'dashed', 'solid'],
+		name: 'border-style',
 	},
 	{
-		name: 'border-width',
 		aliases: ['line', 'stroke', 'weight', 'thickness'],
+		name: 'border-width',
 	},
 	{
-		name: 'box-container',
 		aliases: ['chest', 'collection', 'package'],
+		name: 'box-container',
 	},
 	{
-		name: 'braces',
 		aliases: ['container', 'curly brackets', 'keys', 'object', 'record'],
+		name: 'braces',
 	},
 	{
-		name: 'brackets',
 		aliases: ['array', 'container'],
+		name: 'brackets',
 	},
 	{
-		name: 'breadcrumb',
 		aliases: ['navigation', 'path', 'sequence', 'steps'],
+		name: 'breadcrumb',
 	},
 	{
+		aliases: [''],
 		name: 'briefcase',
-		aliases: [''],
 	},
 	{
+		aliases: ['box', 'grid', 'rectangle', 'squares'],
 		name: 'button',
-		aliases: ['box', 'grid', 'rectangle', 'squares'],
 	},
 	{
-		name: 'calendar',
 		aliases: ['agenda', 'date', 'days', 'picker', 'time'],
+		name: 'calendar',
 	},
 	{
-		name: 'camera',
 		aliases: ['image', 'photo', 'picture'],
+		name: 'camera',
 	},
 	{
+		aliases: ['box', 'grid', 'rectangle', 'squares'],
 		name: 'cards-full',
-		aliases: ['box', 'grid', 'rectangle', 'squares'],
 	},
 	{
+		aliases: ['box', 'grid', 'rectangle', 'squares'],
 		name: 'cards',
-		aliases: ['box', 'grid', 'rectangle', 'squares'],
 	},
 	{
-		name: 'cards2',
 		aliases: ['box', 'squares', 'grid', 'rectangle'],
+		name: 'cards2',
 	},
 	{
+		aliases: ['arrow', 'down'],
 		name: 'caret-bottom-l',
-		aliases: ['arrow', 'down'],
 	},
 	{
+		aliases: ['arrow', 'down'],
 		name: 'caret-bottom',
-		aliases: ['arrow', 'down'],
 	},
 	{
+		aliases: ['arrow', 'bottom', 'double', 'down', 'select', 'top', 'up'],
 		name: 'caret-double-l',
-		aliases: ['arrow', 'bottom', 'double', 'down', 'select', 'top', 'up'],
 	},
 	{
+		aliases: ['arrow', 'bottom', 'double', 'down', 'select', 'top', 'up'],
 		name: 'caret-double',
-		aliases: ['arrow', 'bottom', 'double', 'down', 'select', 'top', 'up'],
 	},
 	{
+		aliases: ['arrow'],
 		name: 'caret-left-l',
-		aliases: ['arrow'],
 	},
 	{
+		aliases: ['arrow'],
 		name: 'caret-left',
-		aliases: ['arrow'],
 	},
 	{
+		aliases: ['arrow'],
 		name: 'caret-right-l',
-		aliases: ['arrow'],
 	},
 	{
+		aliases: ['arrow'],
 		name: 'caret-right',
-		aliases: ['arrow'],
 	},
 	{
+		aliases: ['arrow', 'up'],
 		name: 'caret-top-l',
-		aliases: ['arrow', 'up'],
 	},
 	{
+		aliases: ['arrow', 'up'],
 		name: 'caret-top',
-		aliases: ['arrow', 'up'],
 	},
 	{
+		aliases: [''],
 		name: 'catalog',
-		aliases: [''],
 	},
 	{
-		name: 'categories',
 		aliases: ['product', 'tag'],
+		name: 'categories',
 	},
 	{
-		name: 'chain-broken',
 		aliases: ['link'],
+		name: 'chain-broken',
 	},
 	{
+		aliases: [''],
 		name: 'change-list-disabled',
-		aliases: [''],
 	},
 	{
-		name: 'change-list',
 		aliases: ['arrows', 'box', 'move', 'update'],
+		name: 'change-list',
 	},
 	{
-		name: 'change',
 		aliases: ['arrows', 'reload', 'repeat', 'update'],
+		name: 'change',
 	},
 	{
-		name: 'chatbot',
 		aliases: ['chat', 'bot'],
+		name: 'chatbot',
 	},
 	{
+		aliases: ['active', 'approve', 'boolean', 'done', 'select', 'success'],
 		name: 'check-circle-full',
-		aliases: ['active', 'approve', 'boolean', 'done', 'select', 'success'],
 	},
 	{
+		aliases: ['active', 'approve', 'boolean', 'done', 'select', 'success'],
 		name: 'check-circle',
-		aliases: ['active', 'approve', 'boolean', 'done', 'select', 'success'],
 	},
 	{
+		aliases: [''],
 		name: 'check-small',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'check-square',
-		aliases: [''],
 	},
 	{
-		name: 'check',
 		aliases: ['active', 'approve', 'boolean', 'done', 'select', 'success'],
+		name: 'check',
 	},
 	{
-		name: 'chip',
 		aliases: ['infrastructure', 'processor', 'technology'],
+		name: 'chip',
 	},
 	{
-		name: 'circle',
 		aliases: ['event', 'workflow'],
+		name: 'circle',
 	},
 	{
+		aliases: [''],
 		name: 'closed-book',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'cloud',
-		aliases: [''],
 	},
 	{
-		name: 'code',
 		aliases: ['editor', 'script', 'text'],
+		name: 'code',
 	},
 	{
-		name: 'cog',
 		aliases: ['change', 'settings'],
+		name: 'cog',
 	},
 	{
-		name: 'coin',
 		aliases: ['cash', 'circle', 'dollar', 'money'],
+		name: 'coin',
 	},
 	{
-		name: 'color-picker',
 		aliases: ['bucket', 'can', 'drop', 'hue', 'paint'],
+		name: 'color-picker',
 	},
 	{
-		name: 'columns',
 		aliases: ['grid', 'table'],
+		name: 'columns',
 	},
 	{
+		aliases: [''],
 		name: 'comments',
-		aliases: [''],
 	},
 	{
-		name: 'community',
 		aliases: ['people', 'user'],
+		name: 'community',
 	},
 	{
-		name: 'compress',
 		aliases: ['arrows', 'decrease', 'reduce', 'resize', 'small'],
+		name: 'compress',
 	},
 	{
-		name: 'container',
 		aliases: ['box', 'grid', 'rectangle', 'squares'],
+		name: 'container',
 	},
 	{
-		name: 'content-shield',
 		aliases: ['csp', 'security', 'shield'],
+		name: 'content-shield',
 	},
 	{
-		name: 'control-panel',
 		aliases: ['change', 'effects', 'settings'],
+		name: 'control-panel',
 	},
 	{
-		name: 'cookie',
 		aliases: ['biscuit', 'browser', 'history'],
+		name: 'cookie',
 	},
 	{
-		name: 'copy',
 		aliases: ['duplicate', 'paste'],
+		name: 'copy',
 	},
 	{
-		name: 'corner-radius',
 		aliases: ['border radius', 'smooth corners', 'rounded corners'],
+		name: 'corner-radius',
 	},
 	{
+		aliases: [''],
 		name: 'credit-card',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'cursor',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'custom-field',
-		aliases: [''],
 	},
 	{
-		name: 'custom-size',
 		aliases: ['arrows', 'box', 'increase', 'sides'],
+		name: 'custom-size',
 	},
 	{
-		name: 'cut',
 		aliases: ['copy', 'editor', 'paste', 'scissors', 'text'],
+		name: 'cut',
 	},
 	{
+		aliases: [''],
 		name: 'date-time',
-		aliases: [''],
 	},
 	{
-		name: 'date',
 		aliases: ['agenda', 'calendar', 'day', 'picker', 'time'],
+		name: 'date',
 	},
 	{
-		name: 'decimal',
 		aliases: ['0', 'number', 'zero'],
+		name: 'decimal',
 	},
 	{
-		name: 'desktop',
 		aliases: ['deprecated'],
+		name: 'desktop',
 	},
 	{
+		aliases: [''],
 		name: 'device-check',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'devices',
-		aliases: [''],
 	},
 	{
-		name: 'diagonal-line',
 		aliases: ['line', 'diagonal', 'slash', 'null', 'empty'],
+		name: 'diagonal-line',
 	},
 	{
-		name: 'diagram',
 		aliases: ['map', 'schema', 'structure'],
+		name: 'diagram',
 	},
 	{
-		name: 'diamond',
 		aliases: ['condition', 'if', 'gateway', 'gem', 'workflow'],
+		name: 'diamond',
 	},
 	{
-		name: 'diary',
 		aliases: ['agenda', 'book', 'library'],
+		name: 'diary',
 	},
 	{
-		name: 'disk',
 		aliases: ['floppy disk', 'save'],
+		name: 'disk',
 	},
 	{
+		aliases: ['computer', 'monitor', 'screen'],
 		name: 'display-content',
-		aliases: ['computer', 'monitor', 'screen'],
 	},
 	{
+		aliases: ['computer', 'monitor', 'screen'],
 		name: 'display',
-		aliases: ['computer', 'monitor', 'screen'],
 	},
 	{
-		name: 'document-code',
 		aliases: ['file', 'script'],
+		name: 'document-code',
 	},
 	{
-		name: 'document-compressed',
 		aliases: ['file', 'rar', 'zip'],
+		name: 'document-compressed',
 	},
 	{
-		name: 'document-default',
 		aliases: ['file'],
+		name: 'document-default',
 	},
 	{
-		name: 'document-image',
 		aliases: ['file', 'photo', 'picture'],
+		name: 'document-image',
 	},
 	{
-		name: 'document-multimedia',
 		aliases: ['audio', 'file', 'music', 'play', 'video'],
+		name: 'document-multimedia',
 	},
 	{
+		aliases: ['file', 'text'],
 		name: 'document-pdf',
-		aliases: ['file', 'text'],
 	},
 	{
+		aliases: [''],
 		name: 'document-pending',
-		aliases: [''],
 	},
 	{
-		name: 'document-presentation',
 		aliases: ['file', 'keynote', 'powerpoint', 'slide'],
+		name: 'document-presentation',
 	},
 	{
-		name: 'document-table',
 		aliases: ['excel', 'file', 'spreadsheet'],
+		name: 'document-table',
 	},
 	{
-		name: 'document-text',
 		aliases: ['file', 'write'],
+		name: 'document-text',
 	},
 	{
+		aliases: [''],
 		name: 'document-vector',
-		aliases: [''],
 	},
 	{
-		name: 'document',
 		aliases: ['file', 'text'],
+		name: 'document',
 	},
 	{
-		name: 'documents-and-media',
 		aliases: ['audio', 'file', 'music', 'video'],
+		name: 'documents-and-media',
 	},
 	{
-		name: 'dollar-symbol',
 		aliases: ['cash', 'currency', 'money', 'price'],
+		name: 'dollar-symbol',
 	},
 	{
-		name: 'download',
 		aliases: ['arrow', 'down'],
+		name: 'download',
 	},
 	{
+		aliases: [''],
 		name: 'drag',
-		aliases: [''],
 	},
 	{
-		name: 'drop',
 		aliases: ['color', 'hue', 'paint', 'picker'],
+		name: 'drop',
 	},
 	{
-		name: 'dropdown',
 		aliases: [''],
+		name: 'dropdown',
 	},
 	{
-		name: 'dynamic-data-list',
 		aliases: [
 			'action',
 			'active',
@@ -895,205 +894,205 @@ export const iconsData = [
 			'thunder',
 			'update',
 		],
+		name: 'dynamic-data-list',
 	},
 	{
+		aliases: [''],
 		name: 'dynamic-data-mapping',
-		aliases: [''],
 	},
 	{
-		name: 'edit-layout',
 		aliases: ['grid', 'structure'],
+		name: 'edit-layout',
 	},
 	{
-		name: 'effects',
 		aliases: ['dots', 'settings'],
+		name: 'effects',
 	},
 	{
-		name: 'ellipsis-h',
 		aliases: ['dots', 'horizontal', 'menu', 'more'],
+		name: 'ellipsis-h',
 	},
 	{
-		name: 'ellipsis-v',
 		aliases: ['dots', 'menu', 'more', 'vertical'],
+		name: 'ellipsis-v',
 	},
 	{
-		name: 'embed',
 		aliases: ['deprecated'],
+		name: 'embed',
 	},
 	{
+		aliases: [''],
 		name: 'emoji',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'envelope-closed',
-		aliases: [''],
 	},
 	{
-		name: 'envelope-open',
 		aliases: ['email', 'message', 'postal'],
+		name: 'envelope-open',
 	},
 	{
+		aliases: [''],
 		name: 'environment-connected',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'environment-disconnected',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'environment',
-		aliases: [''],
 	},
 	{
+		aliases: ['alert', 'attention', 'error', 'validation'],
 		name: 'exclamation-circle',
-		aliases: ['alert', 'attention', 'error', 'validation'],
 	},
 	{
+		aliases: ['alert', 'attention', 'error', 'validation'],
 		name: 'exclamation-full',
-		aliases: ['alert', 'attention', 'error', 'validation'],
 	},
 	{
-		name: 'expand',
 		aliases: ['fullscreen', 'increase'],
+		name: 'expand',
 	},
 	{
+		aliases: [''],
 		name: 'export',
-		aliases: [''],
 	},
 	{
-		name: 'field-area',
 		aliases: ['field', 'area'],
+		name: 'field-area',
 	},
 	{
+		aliases: [''],
 		name: 'fieldset',
-		aliases: [''],
 	},
 	{
-		name: 'file-script',
 		aliases: ['code', 'document'],
+		name: 'file-script',
 	},
 	{
-		name: 'file-template',
 		aliases: ['document', 'layout', 'page', 'structure'],
+		name: 'file-template',
 	},
 	{
-		name: 'file-xsl',
 		aliases: ['document'],
+		name: 'file-xsl',
 	},
 	{
-		name: 'filter',
 		aliases: ['order', 'sort'],
+		name: 'filter',
 	},
 	{
+		aliases: ['banner', 'report'],
 		name: 'flag-empty',
-		aliases: ['banner', 'report'],
 	},
 	{
+		aliases: ['banner', 'report'],
 		name: 'flag-full',
-		aliases: ['banner', 'report'],
 	},
 	{
+		aliases: ['closed', 'locked', 'permissions', 'private'],
 		name: 'folder-lock-line',
-		aliases: ['closed', 'locked', 'permissions', 'private'],
 	},
 	{
+		aliases: ['closed', 'locked', 'permissions', 'private'],
 		name: 'folder-lock',
-		aliases: ['closed', 'locked', 'permissions', 'private'],
 	},
 	{
-		name: 'folder',
 		aliases: ['box', 'container', 'file'],
+		name: 'folder',
 	},
 	{
-		name: 'font-family',
 		aliases: ['text', 'editor', 'style'],
+		name: 'font-family',
 	},
 	{
-		name: 'font-size',
 		aliases: ['text', 'editor', 'size', 'style'],
+		name: 'font-size',
 	},
 	{
-		name: 'form-extensions',
 		aliases: ['form', 'extensions'],
+		name: 'form-extensions',
 	},
 	{
-		name: 'format',
 		aliases: ['editor', 'paint', 'style', 'text'],
+		name: 'format',
 	},
 	{
-		name: 'forms',
 		aliases: ['inputs', 'layout', 'list', 'structure'],
+		name: 'forms',
 	},
 	{
-		name: 'full-size',
 		aliases: ['expand', 'fullscreen', 'increase'],
+		name: 'full-size',
 	},
 	{
-		name: 'gallery',
 		aliases: ['view', 'media', 'file', 'image'],
+		name: 'gallery',
 	},
 	{
-		name: 'geolocation',
 		aliases: ['pin', 'place'],
+		name: 'geolocation',
 	},
 	{
-		name: 'globe-lines',
 		aliases: ['country', 'earth', 'location', 'web', 'world'],
+		name: 'globe-lines',
 	},
 	{
-		name: 'globe-pin',
 		aliases: ['earth', 'location', 'region', 'web', 'world'],
+		name: 'globe-pin',
 	},
 	{
-		name: 'globe',
 		aliases: ['earth', 'location', 'web', 'world'],
+		name: 'globe',
 	},
 	{
+		aliases: [''],
 		name: 'google-drive',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'google',
-		aliases: [''],
 	},
 	{
-		name: 'grid',
 		aliases: ['apps', 'layout', 'rectangle', 'squares', 'structure'],
+		name: 'grid',
 	},
 	{
+		aliases: ['editor', 'heading', 'text', 'title'],
 		name: 'h1',
-		aliases: ['editor', 'heading', 'text', 'title'],
 	},
 	{
+		aliases: ['editor', 'heading', 'text', 'title'],
 		name: 'h2',
-		aliases: ['editor', 'heading', 'text', 'title'],
 	},
 	{
-		name: 'hashtag',
 		aliases: ['mark', 'number'],
+		name: 'hashtag',
 	},
 	{
+		aliases: [''],
 		name: 'hdd',
-		aliases: [''],
 	},
 	{
-		name: 'heading',
 		aliases: ['h', 'title', 'text', 'editor'],
+		name: 'heading',
 	},
 	{
-		name: 'heart-full',
 		aliases: [''],
+		name: 'heart-full',
 	},
 	{
-		name: 'heart',
 		aliases: ['emotion', 'like', 'love'],
+		name: 'heart',
 	},
 	{
-		name: 'hidden',
 		aliases: ['eye', 'hide', 'see', 'show', 'view'],
+		name: 'hidden',
 	},
 	{
-		name: 'hierarchy',
 		aliases: [
 			'browse',
 			'layers',
@@ -1103,885 +1102,886 @@ export const iconsData = [
 			'order',
 			'sequence',
 		],
+		name: 'hierarchy',
 	},
 	{
+		aliases: [''],
 		name: 'home-full',
-		aliases: [''],
 	},
 	{
-		name: 'home',
 		aliases: ['house'],
+		name: 'home',
 	},
 	{
+		aliases: ['arrows', 'expand'],
 		name: 'horizontal-scroll',
-		aliases: ['arrows', 'expand'],
 	},
 	{
-		name: 'hr',
 		aliases: ['line', 'minus', 'rectangle'],
+		name: 'hr',
 	},
 	{
-		name: 'icon-rule-builder',
 		aliases: ['rules', 'rule-builder', 'logic'],
+		name: 'icon-rule-builder',
 	},
 	{
+		aliases: ['deprecated'],
 		name: 'import-export',
-		aliases: ['deprecated'],
 	},
 	{
+		aliases: [''],
 		name: 'import-list',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'import',
-		aliases: [''],
 	},
 	{
-		name: 'indent-less',
 		aliases: ['align', 'arrow', 'editor', 'right', 'text'],
+		name: 'indent-less',
 	},
 	{
-		name: 'indent-more',
 		aliases: ['align', 'arrow', 'editor', 'left', 'text'],
+		name: 'indent-more',
 	},
 	{
-		name: 'info-book',
 		aliases: ['help', 'library'],
+		name: 'info-book',
 	},
 	{
-		name: 'info-circle-open',
 		aliases: ['help', 'validation'],
+		name: 'info-circle-open',
 	},
 	{
+		aliases: [''],
 		name: 'info-circle',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'info-panel-closed',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'info-panel-open',
-		aliases: [''],
 	},
 	{
-		name: 'information-live',
 		aliases: ['help', 'instruction'],
+		name: 'information-live',
 	},
 	{
-		name: 'integer',
 		aliases: ['10', 'number'],
+		name: 'integer',
 	},
 	{
+		aliases: ['editor', 'text'],
 		name: 'italic',
-		aliases: ['editor', 'text'],
 	},
 	{
-		name: 'key',
 		aliases: ['key', 'security', 'save'],
+		name: 'key',
 	},
 	{
+		aliases: [''],
 		name: 'liferay-ac',
-		aliases: [''],
 	},
 	{
-		name: 'link',
 		aliases: ['chain', 'connection'],
+		name: 'link',
 	},
 	{
+		aliases: [''],
 		name: 'list-ol-rtl',
-		aliases: [''],
 	},
 	{
-		name: 'list-ol',
 		aliases: ['number', 'order', 'sequence'],
+		name: 'list-ol',
 	},
 	{
+		aliases: [''],
 		name: 'list-ul-rtl',
-		aliases: [''],
 	},
 	{
-		name: 'list-ul',
 		aliases: ['dots', 'order', 'sequence'],
+		name: 'list-ul',
 	},
 	{
-		name: 'list',
 		aliases: ['order', 'sequence'],
+		name: 'list',
 	},
 	{
-		name: 'live',
 		aliases: ['circle'],
+		name: 'live',
 	},
 	{
-		name: 'lock-dots',
 		aliases: ['access', 'close', 'multiple', 'security'],
+		name: 'lock-dots',
 	},
 	{
-		name: 'lock',
 		aliases: ['access', 'close', 'security'],
+		name: 'lock',
 	},
 	{
-		name: 'logout',
 		aliases: ['log out', 'off', 'on', 'sign', 'sign out', 'turn'],
+		name: 'logout',
 	},
 	{
+		aliases: [''],
 		name: 'low-vision',
-		aliases: [''],
 	},
 	{
-		name: 'magic',
 		aliases: ['effects', 'select', 'wand'],
+		name: 'magic',
 	},
 	{
-		name: 'maps',
 		aliases: ['pin', 'location', 'place'],
+		name: 'maps',
 	},
 	{
-		name: 'mark-as-answer',
 		aliases: ['lines', 'list', 'question'],
+		name: 'mark-as-answer',
 	},
 	{
-		name: 'mark-as-question',
 		aliases: ['lines', 'list'],
+		name: 'mark-as-question',
 	},
 	{
-		name: 'marketplace',
 		aliases: ['shop', 'store'],
+		name: 'marketplace',
 	},
 	{
+		aliases: [''],
 		name: 'megaphone-full',
-		aliases: [''],
 	},
 	{
-		name: 'merge',
 		aliases: ['branch', 'combine', 'incorporate'],
+		name: 'merge',
 	},
 	{
+		aliases: ['chat', 'discussion', 'text', 'word'],
 		name: 'message-boards',
-		aliases: ['chat', 'discussion', 'text', 'word'],
 	},
 	{
+		aliases: ['chat', 'discussion', 'text', 'word'],
 		name: 'message',
-		aliases: ['chat', 'discussion', 'text', 'word'],
 	},
 	{
+		aliases: [''],
 		name: 'minus-circle',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'mobile-device-rules',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'mobile-devices',
-		aliases: [''],
 	},
 	{
+		aliases: ['smartphone', 'technology'],
 		name: 'mobile-landscape',
-		aliases: ['smartphone', 'technology'],
 	},
 	{
+		aliases: ['smartphone', 'technology'],
 		name: 'mobile-portrait',
-		aliases: ['smartphone', 'technology'],
 	},
 	{
-		name: 'moon',
 		aliases: ['light', 'night'],
+		name: 'moon',
 	},
 	{
-		name: 'move-folder',
 		aliases: ['change', 'file', 'location'],
+		name: 'move-folder',
 	},
 	{
-		name: 'move',
 		aliases: ['arrows', 'change', 'position'],
+		name: 'move',
 	},
 	{
+		aliases: ['social'],
 		name: 'myspace',
-		aliases: ['social'],
 	},
 	{
-		name: 'no-bot',
 		aliases: ['captcha', 'robot', 'test'],
+		name: 'no-bot',
 	},
 	{
-		name: 'nodes',
 		aliases: ['channel', 'commerce', 'marketing', 'sales', 'user'],
+		name: 'nodes',
 	},
 	{
-		name: 'number',
 		aliases: ['counter', 'order', 'sequence'],
+		name: 'number',
 	},
 	{
+		aliases: [''],
 		name: 'oauth',
-		aliases: [''],
 	},
 	{
-		name: 'opacity',
 		aliases: ['transparent', 'checker', 'opaque'],
+		name: 'opacity',
 	},
 	{
+		aliases: [''],
 		name: 'open-id',
-		aliases: [''],
 	},
 	{
-		name: 'order-arrow-down',
 		aliases: ['bottom'],
+		name: 'order-arrow-down',
 	},
 	{
+		aliases: [''],
 		name: 'order-arrow-left',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'order-arrow-right',
-		aliases: [''],
 	},
 	{
-		name: 'order-arrow-up',
 		aliases: ['top'],
+		name: 'order-arrow-up',
 	},
 	{
+		aliases: [''],
 		name: 'order-arrow',
-		aliases: [''],
 	},
 	{
+		aliases: ['arrows', 'filter', 'alphabetical', 'sort', 'list'],
 		name: 'order-ascending',
-		aliases: ['arrows', 'filter', 'alphabetical', 'sort', 'list'],
 	},
 	{
+		aliases: ['arrows', 'filter', 'alphabetical', 'sort', 'list'],
 		name: 'order-descending',
-		aliases: ['arrows', 'filter', 'alphabetical', 'sort', 'list'],
 	},
 	{
-		name: 'order-form-cog',
 		aliases: ['commerce', 'configuration', 'settings'],
+		name: 'order-form-cog',
 	},
 	{
-		name: 'order-form-pencil',
 		aliases: ['commerce', 'details'],
+		name: 'order-form-pencil',
 	},
 	{
-		name: 'order-form-tag',
 		aliases: ['commerce', 'type'],
+		name: 'order-form-tag',
 	},
 	{
-		name: 'order-form',
 		aliases: ['commerce', 'list', 'shop'],
+		name: 'order-form',
 	},
 	{
+		aliases: [''],
 		name: 'order-list-down',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'order-list-up',
-		aliases: [''],
 	},
 	{
-		name: 'organizations',
 		aliases: ['connection', 'multiple', 'structure'],
+		name: 'organizations',
 	},
 	{
-		name: 'page-template',
 		aliases: ['layout', 'paper'],
+		name: 'page-template',
 	},
 	{
+		aliases: ['paper'],
 		name: 'page',
-		aliases: ['paper'],
 	},
 	{
+		aliases: [''],
 		name: 'pages-tree',
-		aliases: [''],
 	},
 	{
-		name: 'paperclip',
 		aliases: ['attachment', 'editor', 'file'],
+		name: 'paperclip',
 	},
 	{
-		name: 'paragraph',
 		aliases: ['text', 'editor'],
+		name: 'paragraph',
 	},
 	{
-		name: 'password-policies',
 		aliases: ['access', 'login', 'log in', 'security', 'user'],
+		name: 'password-policies',
 	},
 	{
+		aliases: [''],
 		name: 'paste-plaintext',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'paste-word',
-		aliases: [''],
 	},
 	{
-		name: 'paste',
 		aliases: ['copy', 'duplicate'],
+		name: 'paste',
 	},
 	{
-		name: 'pause',
 		aliases: ['control', 'multimedia', 'play'],
+		name: 'pause',
 	},
 	{
-		name: 'pencil',
 		aliases: ['draft', 'edit', 'write'],
+		name: 'pencil',
 	},
 	{
-		name: 'percentage-banner',
 		aliases: ['discount', 'flag', 'label', 'standard', 'tag'],
+		name: 'percentage-banner',
 	},
 	{
-		name: 'percentage-symbol',
 		aliases: ['%', 'discount'],
+		name: 'percentage-symbol',
 	},
 	{
-		name: 'phone',
 		aliases: ['call', 'contact'],
+		name: 'phone',
 	},
 	{
-		name: 'picture',
 		aliases: ['image', 'photo'],
+		name: 'picture',
 	},
 	{
+		aliases: [''],
 		name: 'pin-full',
-		aliases: [''],
 	},
 	{
-		name: 'pin',
 		aliases: ['fix'],
+		name: 'pin',
 	},
 	{
-		name: 'play',
 		aliases: ['control', 'multimedia'],
+		name: 'play',
 	},
 	{
-		name: 'plug',
 		aliases: ['connect', 'electricity'],
+		name: 'plug',
 	},
 	{
-		name: 'plus-squares',
 		aliases: ['add', 'create', 'multiple', 'new'],
+		name: 'plus-squares',
 	},
 	{
-		name: 'plus',
 		aliases: ['add', 'create', 'new'],
+		name: 'plus',
 	},
 	{
-		name: 'polls',
 		aliases: ['bars', 'results', 'statistics'],
+		name: 'polls',
 	},
 	{
-		name: 'price-tag',
 		aliases: ['cash', 'discount', 'dollar', 'money', 'offer'],
+		name: 'price-tag',
 	},
 	{
-		name: 'print',
 		aliases: ['paper'],
+		name: 'print',
 	},
 	{
+		aliases: ['list', 'navigation', 'sidebar'],
 		name: 'product-menu-closed',
-		aliases: ['list', 'navigation', 'sidebar'],
 	},
 	{
+		aliases: ['list', 'navigation', 'sidebar'],
 		name: 'product-menu-open',
-		aliases: ['list', 'navigation', 'sidebar'],
 	},
 	{
+		aliases: ['list', 'navigation', 'sidebar'],
 		name: 'product-menu',
-		aliases: ['list', 'navigation', 'sidebar'],
 	},
 	{
-		name: 'propagation',
 		aliases: ['arrows', 'circle', 'multiplication', 'publish'],
+		name: 'propagation',
 	},
 	{
+		aliases: ['help', 'mark'],
 		name: 'question-circle-full',
-		aliases: ['help', 'mark'],
 	},
 	{
+		aliases: ['help', 'mark'],
 		name: 'question-circle',
-		aliases: ['help', 'mark'],
 	},
 	{
+		aliases: ['"', 'commas'],
 		name: 'quote-left',
-		aliases: ['"', 'commas'],
 	},
 	{
+		aliases: ['"', 'commas'],
 		name: 'quote-right',
-		aliases: ['"', 'commas'],
 	},
 	{
-		name: 'radio-button',
 		aliases: ['check', 'circle', 'off', 'on'],
+		name: 'radio-button',
 	},
 	{
+		aliases: [''],
 		name: 'react',
-		aliases: [''],
 	},
 	{
-		name: 'rectangle-split',
 		aliases: ['split-view'],
+		name: 'rectangle-split',
 	},
 	{
-		name: 'rectangle',
 		aliases: ['full-view'],
+		name: 'rectangle',
 	},
 	{
-		name: 'redo',
 		aliases: ['action', 'arrow', 'control', 'editor', 'right'],
+		name: 'redo',
 	},
 	{
+		aliases: [''],
 		name: 'relationship',
-		aliases: [''],
 	},
 	{
-		name: 'reload',
 		aliases: ['change', 'circle', 'update'],
+		name: 'reload',
 	},
 	{
+		aliases: [''],
 		name: 'remove-role',
-		aliases: [''],
 	},
 	{
-		name: 'remove-style',
 		aliases: ['editor', 'text'],
+		name: 'remove-style',
 	},
 	{
-		name: 'reply',
 		aliases: ['answer', 'arrow', 'left', 'respond'],
+		name: 'reply',
 	},
 	{
-		name: 'repository',
 		aliases: ['connection', 'folder'],
+		name: 'repository',
 	},
 	{
+		aliases: [''],
 		name: 'reset',
-		aliases: [''],
 	},
 	{
-		name: 'restore',
 		aliases: ['back', 'history', 'time'],
+		name: 'restore',
 	},
 	{
-		name: 'rotate',
 		aliases: ['pivot', 'spin', 'move', 'turn'],
+		name: 'rotate',
 	},
 	{
+		aliases: [''],
 		name: 'rss-full',
-		aliases: [''],
 	},
 	{
-		name: 'rss',
 		aliases: ['notification', 'updates'],
+		name: 'rss',
 	},
 	{
-		name: 'ruler',
 		aliases: ['measure', 'size'],
+		name: 'ruler',
 	},
 	{
-		name: 'rules',
 		aliases: ['condition'],
+		name: 'rules',
 	},
 	{
-		name: 'scim',
 		aliases: ['shield'],
+		name: 'scim',
 	},
 	{
+		aliases: [''],
 		name: 'search-experiences',
-		aliases: [''],
 	},
 	{
+		aliases: ['inspect', 'lens', 'zoom'],
 		name: 'search-plus',
-		aliases: ['inspect', 'lens', 'zoom'],
 	},
 	{
+		aliases: ['inspect', 'lens', 'zoom'],
 		name: 'search',
-		aliases: ['inspect', 'lens', 'zoom'],
 	},
 	{
+		aliases: [''],
 		name: 'select-all',
-		aliases: [''],
 	},
 	{
+		aliases: ['input', 'multiple', 'options'],
 		name: 'select-from-list',
-		aliases: ['input', 'multiple', 'options'],
 	},
 	{
+		aliases: ['input', 'multiple', 'options'],
 		name: 'select',
-		aliases: ['input', 'multiple', 'options'],
 	},
 	{
-		name: 'seo',
 		aliases: ['engine', 'search', 'keyword'],
+		name: 'seo',
 	},
 	{
-		name: 'separator',
 		aliases: ['divider', 'group', 'line'],
+		name: 'separator',
 	},
 	{
-		name: 'shadow',
 		aliases: ['effect', 'light'],
+		name: 'shadow',
 	},
 	{
+		aliases: [''],
 		name: 'share-alt',
-		aliases: [''],
 	},
 	{
-		name: 'share',
 		aliases: ['social'],
+		name: 'share',
 	},
 	{
-		name: 'sheets',
 		aliases: ['assets', 'layers'],
+		name: 'sheets',
 	},
 	{
-		name: 'shield-asterisk',
 		aliases: ['authentication', 'mfa', 'security', 'shield'],
+		name: 'shield-asterisk',
 	},
 	{
+		aliases: [''],
 		name: 'shield-check',
-		aliases: [''],
 	},
 	{
-		name: 'shopping-cart',
 		aliases: ['buy', 'commerce'],
+		name: 'shopping-cart',
 	},
 	{
-		name: 'shortcut',
 		aliases: ['external', 'window'],
+		name: 'shortcut',
 	},
 	{
+		aliases: [''],
 		name: 'sign-in',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'signature',
-		aliases: [''],
 	},
 	{
-		name: 'simple-circle',
 		aliases: ['dot', 'point'],
+		name: 'simple-circle',
 	},
 	{
+		aliases: ['target'],
 		name: 'simulation-menu-closed',
-		aliases: ['target'],
 	},
 	{
+		aliases: ['target'],
 		name: 'simulation-menu-open',
-		aliases: ['target'],
 	},
 	{
+		aliases: ['target'],
 		name: 'simulation-menu',
-		aliases: ['target'],
 	},
 	{
+		aliases: ['compass', 'navigation'],
 		name: 'site-template',
-		aliases: ['compass', 'navigation'],
 	},
 	{
+		aliases: ['compass', 'navigation'],
 		name: 'sites',
-		aliases: ['compass', 'navigation'],
 	},
 	{
-		name: 'slideshow',
 		aliases: ['box', 'grid', 'rectangle', 'squares'],
+		name: 'slideshow',
 	},
 	{
+		aliases: ['share'],
 		name: 'social-facebook',
-		aliases: ['share'],
 	},
 	{
+		aliases: [''],
 		name: 'social-instagram',
-		aliases: [''],
 	},
 	{
+		aliases: ['share'],
 		name: 'social-linkedin',
-		aliases: ['share'],
 	},
 	{
+		aliases: ['share'],
 		name: 'social-twitter',
-		aliases: ['share'],
 	},
 	{
+		aliases: [''],
 		name: 'social-vimeo',
-		aliases: [''],
 	},
 	{
-		name: 'spacer',
 		aliases: ['margin', 'padding'],
+		name: 'spacer',
 	},
 	{
+		aliases: [''],
 		name: 'special-character',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'square-hole-multi',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'square-hole',
-		aliases: [''],
 	},
 	{
-		name: 'square',
 		aliases: ['task', 'workflow'],
+		name: 'square',
 	},
 	{
-		name: 'squares-clock',
 		aliases: ['availability', 'boxes', 'hour', 'inventory', 'time'],
+		name: 'squares-clock',
 	},
 	{
-		name: 'squares',
 		aliases: ['boxes', 'inventory'],
+		name: 'squares',
 	},
 	{
-		name: 'staging',
 		aliases: ['changes', 'circle', 'loading'],
+		name: 'staging',
 	},
 	{
+		aliases: ['favorite', 'rating'],
 		name: 'star-half',
-		aliases: ['favorite', 'rating'],
 	},
 	{
+		aliases: ['favorite', 'rating'],
 		name: 'star-o',
-		aliases: ['favorite', 'rating'],
 	},
 	{
+		aliases: ['favorite', 'rating'],
 		name: 'star',
-		aliases: ['favorite', 'rating'],
 	},
 	{
-		name: 'stars',
 		aliases: ['ai', 'magic', 'effects'],
+		name: 'stars',
 	},
 	{
+		aliases: ['deprecated'],
 		name: 'sticky',
-		aliases: ['deprecated'],
 	},
 	{
+		aliases: ['editor', 'style', 'text'],
 		name: 'strikethrough',
-		aliases: ['editor', 'style', 'text'],
 	},
 	{
+		aliases: ['editor', 'style', 'text'],
 		name: 'subscript',
-		aliases: ['editor', 'style', 'text'],
 	},
 	{
-		name: 'suitcase',
 		aliases: ['business'],
+		name: 'suitcase',
 	},
 	{
-		name: 'sun',
 		aliases: ['day', 'light'],
+		name: 'sun',
 	},
 	{
+		aliases: ['editor', 'style', 'text'],
 		name: 'superscript',
-		aliases: ['editor', 'style', 'text'],
 	},
 	{
+		aliases: ['column', 'grid', 'row'],
 		name: 'table',
-		aliases: ['column', 'grid', 'row'],
 	},
 	{
+		aliases: ['column', 'grid', 'row'],
 		name: 'table2',
-		aliases: ['column', 'grid', 'row'],
 	},
 	{
+		aliases: ['device', 'mobile'],
 		name: 'tablet-landscape',
-		aliases: ['device', 'mobile'],
 	},
 	{
+		aliases: ['device', 'mobile'],
 		name: 'tablet-portrait',
-		aliases: ['device', 'mobile'],
 	},
 	{
+		aliases: [''],
 		name: 'tabs',
-		aliases: [''],
 	},
 	{
-		name: 'tag',
 		aliases: ['category', 'product'],
+		name: 'tag',
 	},
 	{
+		aliases: ['arrow', 'top', 'up'],
 		name: 'tap-ahead',
-		aliases: ['arrow', 'top', 'up'],
 	},
 	{
-		name: 'test',
 		aliases: ['experiment', 'lab'],
+		name: 'test',
 	},
 	{
+		aliases: [''],
 		name: 'text-color',
-		aliases: [''],
 	},
 	{
-		name: 'text-editor',
 		aliases: ['style'],
+		name: 'text-editor',
 	},
 	{
+		aliases: ['a', 'editor'],
 		name: 'text-l',
-		aliases: ['a', 'editor'],
 	},
 	{
+		aliases: ['a', 'editor'],
 		name: 'text',
-		aliases: ['a', 'editor'],
 	},
 	{
+		aliases: [''],
 		name: 'textbox',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'theme',
-		aliases: [''],
 	},
 	{
+		aliases: [''],
 		name: 'third-party',
-		aliases: [''],
 	},
 	{
+		aliases: ['dislike', 'social'],
 		name: 'thumbs-down-full',
-		aliases: ['dislike', 'social'],
 	},
 	{
+		aliases: ['dislike', 'social'],
 		name: 'thumbs-down',
-		aliases: ['dislike', 'social'],
 	},
 	{
+		aliases: [''],
 		name: 'thumbs-up-arrow',
-		aliases: [''],
 	},
 	{
+		aliases: ['like', 'social'],
 		name: 'thumbs-up-full',
-		aliases: ['like', 'social'],
 	},
 	{
+		aliases: ['like', 'social'],
 		name: 'thumbs-up',
-		aliases: ['like', 'social'],
 	},
 	{
-		name: 'time',
 		aliases: ['clock', 'day', 'hour'],
+		name: 'time',
 	},
 	{
+		aliases: [''],
 		name: 'times-circle-full',
-		aliases: [''],
 	},
 	{
-		name: 'times-circle',
 		aliases: ['remove', 'x'],
+		name: 'times-circle',
 	},
 	{
+		aliases: [''],
 		name: 'times-small',
-		aliases: [''],
 	},
 	{
-		name: 'times',
 		aliases: ['cancel', 'close', 'x'],
+		name: 'times',
 	},
 	{
-		name: 'transform',
 		aliases: ['editor', 'image'],
+		name: 'transform',
 	},
 	{
-		name: 'trash',
 		aliases: ['bin', 'recycle'],
+		name: 'trash',
 	},
 	{
-		name: 'truck',
 		aliases: [''],
+		name: 'truck',
 	},
 	{
-		name: 'twitter-x',
 		aliases: ['share'],
+		name: 'twitter-x',
 	},
 	{
+		aliases: ['deprecated'],
 		name: 'twitter',
-		aliases: ['deprecated'],
 	},
 	{
-		name: 'underline',
 		aliases: ['editor', 'style', 'text'],
+		name: 'underline',
 	},
 	{
-		name: 'undo',
 		aliases: ['arrow', 'back', 'cancel', 'control'],
+		name: 'undo',
 	},
 	{
-		name: 'unlock',
 		aliases: ['access', 'login', 'open', 'security'],
+		name: 'unlock',
 	},
 	{
-		name: 'unpin',
 		aliases: ['fix', 'move'],
+		name: 'unpin',
 	},
 	{
+		aliases: ['arrow', 'top', 'up'],
 		name: 'upload-multiple',
-		aliases: ['arrow', 'top', 'up'],
 	},
 	{
+		aliases: ['arrow', 'top', 'up'],
 		name: 'upload',
-		aliases: ['arrow', 'top', 'up'],
 	},
 	{
-		name: 'urgent',
 		aliases: ['deprecated'],
+		name: 'urgent',
 	},
 	{
-		name: 'user-plus',
 		aliases: ['add', 'client', 'create', 'people'],
+		name: 'user-plus',
 	},
 	{
-		name: 'user',
 		aliases: ['client', 'contact'],
+		name: 'user',
 	},
 	{
-		name: 'users',
 		aliases: ['client', 'contacts', 'people'],
+		name: 'users',
 	},
 	{
-		name: 'vertical-scroll',
 		aliases: ['arrows', 'expand'],
+		name: 'vertical-scroll',
 	},
 	{
-		name: 'video-streaming',
 		aliases: ['video', 'streaming', 'direct', 'video-streaming'],
+		name: 'video-streaming',
 	},
 	{
-		name: 'video',
 		aliases: ['multimedia', 'play'],
+		name: 'video',
 	},
 	{
-		name: 'view',
 		aliases: ['eye', 'see', 'show'],
+		name: 'view',
 	},
 	{
-		name: 'vocabulary',
 		aliases: ['abc', 'editor', 'order', 'text'],
+		name: 'vocabulary',
 	},
 	{
-		name: 'warehouse',
 		aliases: ['boxes', 'deposit', 'house', 'inventory', 'stock'],
+		name: 'warehouse',
 	},
 	{
+		aliases: ['alert', 'attention', 'exclamation', 'validation'],
 		name: 'warning-full',
-		aliases: ['alert', 'attention', 'exclamation', 'validation'],
 	},
 	{
+		aliases: ['alert', 'attention', 'exclamation', 'validation'],
 		name: 'warning',
-		aliases: ['alert', 'attention', 'exclamation', 'validation'],
 	},
 	{
-		name: 'web-content',
 		aliases: ['assets'],
+		name: 'web-content',
 	},
 	{
+		aliases: ['knowledge'],
 		name: 'wiki-page',
-		aliases: ['knowledge'],
 	},
 	{
+		aliases: ['knowledge'],
 		name: 'wiki',
-		aliases: ['knowledge'],
 	},
 	{
-		name: 'workflow',
 		aliases: ['function', 'progress'],
+		name: 'workflow',
 	},
 ];
