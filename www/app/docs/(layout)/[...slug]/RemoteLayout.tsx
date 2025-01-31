@@ -54,7 +54,10 @@ export async function RemoteLayout({slug}: Props) {
 					}
 				/>
 
-				<div dangerouslySetInnerHTML={{__html: fileDesign.html}} />
+				<div
+					className="clay-docs-design"
+					dangerouslySetInnerHTML={{__html: fileDesign.html}}
+				/>
 
 				<div className={styles.author_container}>
 					{fileDesign.dateModified && (
