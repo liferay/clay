@@ -542,7 +542,6 @@ function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 					{defaultValue ? (
 						<span
 							style={{
-								flexShrink: 0,
 								display: 'flex',
 								alignItems: 'center',
 								gap: '0.25rem',
