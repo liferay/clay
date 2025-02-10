@@ -8,7 +8,7 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
-import ClaySticker, {DisplayType as StickerDisplayType} from '@clayui/sticker';
+import ClaySticker, {IClayStickerProps} from '@clayui/sticker';
 import React from 'react';
 
 import ClayCard from './Card';
@@ -81,7 +81,7 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Displays the color of the user icon
 	 */
-	userDisplayType?: StickerDisplayType;
+	userDisplayType?: IClayStickerProps['displayType'];
 
 	/**
 	 * Value for alt attribute for user image

@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import React from 'react';
 import Button, {ButtonProps} from '@clayui/button';
 import classNames from 'classnames';
 

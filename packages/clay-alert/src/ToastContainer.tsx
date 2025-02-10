@@ -6,15 +6,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {IClayAlertProps} from './index';
-
 interface IToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Children of the ToastContainer must be a ClayAlert
 	 */
-	children?:
-		| React.ReactElement<IClayAlertProps>
-		| Array<React.ReactElement<IClayAlertProps>>;
+	children?: React.ReactElement<any> | Array<React.ReactElement<any>>;
 }
 
 export const ClayToastContainer = ({
