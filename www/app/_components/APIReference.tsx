@@ -142,7 +142,11 @@ async function APIReferenceAsync({
 					</div>
 
 					<div style={{display: 'flex'}}>
-						<TypeChildren type={type} css={{marginTop: '2rem'}} />
+						<TypeChildren
+							type={type}
+							css={{marginTop: '2rem'}}
+							types={exportedTypes}
+						/>
 					</div>
 				</div>
 			));
@@ -210,7 +214,15 @@ async function APIReferenceAsync({
 }
 
 /** Determines how to render the immediate type children based on its kind. */
-function TypeChildren({type, css: cssProp}: {type: any; css: CSSObject}) {
+function TypeChildren({
+	type,
+	css: cssProp,
+	types,
+}: {
+	type: any;
+	css: CSSObject;
+	types?: Record<string, any>;
+}) {
 	if (
 		type.kind === 'Enum' ||
 		type.kind === 'Generic' ||
@@ -299,6 +311,22 @@ function TypeChildren({type, css: cssProp}: {type: any; css: CSSObject}) {
 					</h4>
 				) : null}
 				{type.signatures.map((signature: any, index: number) => {
+					const isReference =
+						signature.parameter &&
+						((signature.parameter.kind === 'Intersection' &&
+							signature.parameter.name === 'props') ||
+							signature.parameter.kind === 'Reference');
+					const reference = isReference
+						? types!.find(
+								(type: any) =>
+									type.name ===
+									(signature.parameter.kind === 'Reference'
+										? signature.parameter.text
+										: signature.parameter.properties[0]
+												.text)
+						  )!
+						: null;
+
 					return (
 						<Fragment key={index}>
 							{signature.parameter ? (
@@ -308,8 +336,9 @@ function TypeChildren({type, css: cssProp}: {type: any; css: CSSObject}) {
 										<TypeProperties
 											type={signature.parameter}
 										/>
-									) : signature.parameter.kind ===
-									  'Reference' ? (
+									) : !reference &&
+									  signature.parameter.kind ===
+											'Reference' ? (
 										<CodeInline
 											value={signature.parameter.text}
 											language="typescript"
@@ -318,6 +347,30 @@ function TypeChildren({type, css: cssProp}: {type: any; css: CSSObject}) {
 												marginTop: '1.5rem',
 											}}
 										/>
+									) : reference && isReference ? (
+										reference.properties
+											.filter((type: any) => {
+												if (type.tags) {
+													return !type.tags.some(
+														(tag: any) =>
+															tag.tagName ===
+															'ignore'
+													);
+												}
+
+												return true;
+											})
+											.map(
+												(
+													propertyType: any,
+													index: number
+												) => (
+													<TypeValue
+														key={index}
+														type={propertyType}
+													/>
+												)
+											)
 									) : (
 										<TypeValue type={signature.parameter} />
 									)}
