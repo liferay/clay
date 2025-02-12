@@ -36,7 +36,7 @@
 		"lint:quiet": "eslint --quiet \".*.js\" \"**/*.{js,ts,tsx}\"",
 		"lint:typescript": "tsc --project ./tsconfig.global.json",
 		"lint": "eslint \".*.js\" \"!(www)/**/*.{js,ts,tsx}\"",
-		"site": "cd clayui.com && yarn build && yarn serve",
+		"site": "cd www && yarn && yarn build",
 		"sizeLimit": "size-limit",
 		"storybook:build": "NODE_OPTIONS=--max_old_space_size=8192 build-storybook -c .storybook -o .storybook-static",
 		"storybook": "start-storybook -p 8888",
@@ -112,8 +112,7 @@
 	},
 	"workspaces": {
 		"packages": [
-			"packages/*",
-			"clayui.com"
+			"packages/*"
 		],
 		"nohoist": [
 			"gatsby",
