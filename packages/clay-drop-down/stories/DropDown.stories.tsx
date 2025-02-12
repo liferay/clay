@@ -114,7 +114,7 @@ export const Default = (args: any) => (
 );
 
 Default.args = {
-	alignmentPosition: 5,
+	alignmentPosition: 'BottomLeft',
 	height: '',
 	renderMenuOnClick: false,
 	width: '',

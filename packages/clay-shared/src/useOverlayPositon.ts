@@ -12,28 +12,13 @@ type Props = {
 	isOpen: boolean;
 	ref: React.RefObject<HTMLElement>;
 	alignmentByViewport?: boolean;
-	alignmentPosition?: number | AlignPoints;
+	alignmentPosition?: keyof typeof ALIGN_MAP;
 	autoBestAlign?: boolean;
-	getOffset?: (points: AlignPoints) => [number, number];
+	getOffset?: (alignPoints: readonly [string, string]) => [number, number];
 	triggerRef: React.RefObject<HTMLElement>;
 };
 
-const ALIGN_INVERSE = {
-	0: 'TopCenter',
-	1: 'TopRight',
-	2: 'RightCenter',
-	3: 'BottomRight',
-	4: 'BottomCenter',
-	5: 'BottomLeft',
-	6: 'LeftCenter',
-	7: 'TopLeft',
-	8: 'RightTop',
-	9: 'RightBottom',
-	10: 'LeftTop',
-	11: 'LeftBottom',
-} as const;
-
-const ALIGN_MAP = {
+export const ALIGN_MAP = {
 	BottomCenter: ['tc', 'bc'],
 	BottomLeft: ['tl', 'bl'],
 	BottomRight: ['tr', 'br'],
@@ -48,14 +33,11 @@ const ALIGN_MAP = {
 	TopRight: ['br', 'tr'],
 } as const;
 
-export type AlignPoints = typeof ALIGN_MAP[keyof typeof ALIGN_MAP];
-
 /**
  * For backwards compatability, we are creating a util here so that `metal-position`
  * number values are used in the same manner and result in the same alignment direction.
  */
-const getAlignPoints = (val: keyof typeof ALIGN_INVERSE) =>
-	ALIGN_MAP[ALIGN_INVERSE[val]];
+const getAlignPoints = (alignmentPosition: keyof typeof ALIGN_MAP) => ALIGN_MAP[alignmentPosition];
 
 const BOTTOM_OFFSET = [0, 4] as const;
 const LEFT_OFFSET = [-4, 0] as const;
@@ -80,13 +62,13 @@ const OFFSET_MAP = {
 const useIsomorphicLayoutEffect =
 	typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
-const defaultOffset = (points: AlignPoints) =>
-	OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [number, number];
+const defaultOffset = (alignPoints: readonly [string, string]) =>
+	OFFSET_MAP[alignPoints.join('') as keyof typeof OFFSET_MAP] as [number, number];
 
 export function useOverlayPosition(
 	{
 		alignmentByViewport,
-		alignmentPosition = 5,
+		alignmentPosition = 'BottomLeft',
 		autoBestAlign = true,
 		getOffset = defaultOffset,
 		isOpen,
@@ -97,20 +79,17 @@ export function useOverlayPosition(
 ) {
 	const alignElement = useCallback(() => {
 		if (triggerRef.current && ref.current) {
-			let points = alignmentPosition;
-
-			if (typeof points === 'number') {
-				points = getAlignPoints(points as keyof typeof ALIGN_INVERSE);
-			}
+			const alignPoints = getAlignPoints(alignmentPosition);
+			const offset = getOffset(alignPoints);
 
 			doAlign({
-				offset: getOffset(points),
+				offset,
 				overflow: {
 					adjustX: autoBestAlign,
 					adjustY: autoBestAlign,
 					alwaysByViewport: alignmentByViewport,
 				},
-				points,
+				points: alignPoints,
 				sourceElement: ref.current,
 				targetElement: triggerRef.current,
 			});

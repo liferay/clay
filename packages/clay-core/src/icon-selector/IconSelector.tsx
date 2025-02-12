@@ -16,6 +16,7 @@ import {
 	useOverlayPosition,
 } from '@clayui/shared';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useResource} from '@clayui/data-provider';
 
 export type IProps = {
 	/**
@@ -72,6 +73,8 @@ const fetchIcons = async (spritemap: string): Promise<Array<string>> => {
 
 	return iconNames;
 };
+
+
 
 function SearchInput({
 	'aria-describedby': ariaDescribedby,
@@ -153,7 +156,8 @@ function IconSelectTrigger({
 	useOverlayPosition(
 		{
 			alignmentByViewport: true,
-			alignmentPosition: direction === 'bottom' ? 5 : 7,
+			alignmentPosition:
+				direction === 'bottom' ? 'BottomLeft' : 'TopLeft',
 			autoBestAlign: true,
 			isOpen: active,
 			ref: menuRef,
@@ -161,6 +165,8 @@ function IconSelectTrigger({
 		},
 		[active, children]
 	);
+
+	
 
 	useEffect(() => {
 		fetchIcons(spritemap).then((iconNames) => {
