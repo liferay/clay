@@ -187,7 +187,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 	useOverlayPosition(
 		{
 			alignmentByViewport: true,
-			alignmentPosition: 5,
+			alignmentPosition: 'BottomLeft',
 			autoBestAlign: true,
 			isOpen: active,
 			ref: menuRef,

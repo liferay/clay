@@ -410,7 +410,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 	useOverlayPosition(
 		{
 			alignmentByViewport: true,
-			alignmentPosition: direction === 'bottom' ? 5 : 7,
+			alignmentPosition: direction === 'bottom' ? 'BottomLeft' : 'TopLeft',
 			autoBestAlign: true,
 			isOpen: active,
 			ref: menuRef,
