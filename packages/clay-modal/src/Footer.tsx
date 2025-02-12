@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IFooterProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IFooterProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Sets the elements that are positioned `first following
 	 * the LTR direction on the footer.

@@ -7,7 +7,7 @@ import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps extends React.ComponentProps<typeof ClayLink> {
+export interface IProps extends React.ComponentProps<typeof ClayLink> {
 	/**
 	 * Flag that determines if the Link will have a `disabled` class, disabling interactions.
 	 */

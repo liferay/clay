@@ -3,4 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export {Popover} from './Popover';
+import {Popover} from './Popover';
+
+export {Popover};
+export default Popover;

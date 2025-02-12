@@ -6,7 +6,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IToastContainerProps
+	extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Children of the ToastContainer must be a ClayAlert
 	 */

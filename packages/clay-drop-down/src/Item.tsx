@@ -10,7 +10,7 @@ import React, {useContext} from 'react';
 
 import {DropDownContext} from './DropDownContext';
 
-interface IProps
+export interface IProps
 	extends React.HTMLAttributes<
 		HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
 	> {

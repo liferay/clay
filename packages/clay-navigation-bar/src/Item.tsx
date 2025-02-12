@@ -8,7 +8,7 @@ import React, {useContext} from 'react';
 
 import {NavigationBarContext} from './context';
 
-interface IProps extends React.HTMLAttributes<HTMLLIElement> {
+export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Determines the active state of an dropdown list item.
 	 */

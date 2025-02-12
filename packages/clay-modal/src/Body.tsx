@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
-interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Props to add to the iframe element
 	 */

@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * Specifies whether the `tbar-nav-wrap` class should be added to the Toolbar.Nav
 	 */

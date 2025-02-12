@@ -22,7 +22,7 @@ type DisplayType =
 	| 'beta-dark'
 	| 'unstyled';
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Flag to indicate if button is used within an alert component.
 	 */

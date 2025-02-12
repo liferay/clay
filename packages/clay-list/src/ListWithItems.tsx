@@ -13,7 +13,7 @@ import React from 'react';
 
 import ClayList from './List';
 
-interface IListItem {
+export interface IListItem {
 	/**
 	 * Description of item.
 	 */

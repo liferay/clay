@@ -14,7 +14,7 @@ import ItemText from './ItemText';
 import ItemTitle from './ItemTitle';
 import QuickActionMenu from './QuickActionMenu';
 
-interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	children?:
 		| React.ReactElement<React.HTMLAttributes<HTMLLIElement>>
 		| Array<React.ReactElement<React.HTMLAttributes<HTMLLIElement>>>;

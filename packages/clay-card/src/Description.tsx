@@ -7,7 +7,7 @@ import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
-interface ICardDescriptionProps
+export interface ICardDescriptionProps
 	extends React.HTMLAttributes<
 		HTMLHeadingElement | HTMLDivElement | HTMLSpanElement
 	> {

@@ -40,7 +40,7 @@ interface ICommonProps
 	symbol: string;
 }
 
-type Props = ICommonProps & ButtonAria;
+export type Props = ICommonProps & ButtonAria;
 
 const ClayButtonWithIcon = React.forwardRef<HTMLButtonElement, Props>(
 	({monospaced = true, spritemap, symbol, ...otherProps}: Props, ref) => (

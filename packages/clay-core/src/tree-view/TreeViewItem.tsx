@@ -24,7 +24,7 @@ import {useDnD} from './DragAndDrop';
 import {Icons, useAPI, useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
-interface ITreeViewItemProps
+export interface ITreeViewItemProps
 	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'children'> {
 	/**
 	 * Flag to set the node to the active state.

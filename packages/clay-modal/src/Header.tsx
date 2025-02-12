@@ -20,7 +20,7 @@ export const ItemGroup = ({
 	</div>
 );
 
-interface IItemProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IItemProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag for indicating if item should autofitting the width
 	 */
@@ -155,7 +155,7 @@ const ClayModalHeader = ({
 	</div>
 );
 
-interface IHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag for indicating if you want to use the Header its children being the title.
 	 * Set to `false` if you want to use this as a low-level component.

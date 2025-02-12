@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps extends React.HTMLAttributes<HTMLParagraphElement> {
+export interface IProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	/**
 	 * Flag to indicate if content should be styled as subtext.
 	 */

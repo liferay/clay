@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IContainerProps extends React.HTMLAttributes<HTMLElement> {
+export interface IContainerProps extends React.HTMLAttributes<HTMLElement> {
 	/**
 	 * Element or component to render for container
 	 */
@@ -114,7 +114,7 @@ const SheetRow = React.forwardRef<HTMLElement, IContainerProps>(
 
 SheetRow.displayName = 'ClaySheetRow';
 
-interface IProps extends IContainerProps {
+export interface IProps extends IContainerProps {
 	/**
 	 * Setting this to sets a max-width on the sheet
 	 */

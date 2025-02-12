@@ -12,7 +12,7 @@ import React, {useContext, useEffect} from 'react';
 
 import {DropDownContext} from './DropDownContext';
 
-interface IProps
+export interface IProps
 	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
 	/**
 	 * Initial value of the input (uncontrolled).

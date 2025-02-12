@@ -13,7 +13,7 @@ import type {ICollectionProps} from '@clayui/core';
 
 const {Collection} = __NOT_PUBLIC_COLLECTION;
 
-interface IProps<T>
+export interface IProps<T>
 	extends Omit<ICollectionProps<T, unknown>, 'virtualize'>,
 		Omit<React.HTMLAttributes<HTMLUListElement>, 'children'> {}
 

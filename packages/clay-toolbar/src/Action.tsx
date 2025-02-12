@@ -7,7 +7,7 @@ import ClayIcon from '@clayui/icon';
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	/**
 	 * Flag that determines if the Action will have a `disabled` class, disabling interactions.
 	 */

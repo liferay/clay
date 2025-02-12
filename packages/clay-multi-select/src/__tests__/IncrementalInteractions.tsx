@@ -112,7 +112,7 @@ describe('MultiSelect incremental interactions', () => {
 
 	it('remove the label when clicking on the close button', () => {
 		const {getAllByRole, queryAllByRole} = render(
-			<MultiSelect defaultItems={[labels[0]]} spritemap="/foo/bar" />
+			<MultiSelect defaultItems={[labels[0]!]} spritemap="/foo/bar" />
 		);
 
 		expect(getAllByRole('row').length).toEqual(1);
@@ -127,7 +127,7 @@ describe('MultiSelect incremental interactions', () => {
 	xit('pressing backspace with empty input should focus last item', () => {
 		const {getAllByRole, getByRole} = render(
 			<MultiSelect
-				defaultItems={[labels[0], labels[1]]}
+				defaultItems={[labels[0]!, labels[1]!]}
 				spritemap="/foo/bar"
 			/>
 		);

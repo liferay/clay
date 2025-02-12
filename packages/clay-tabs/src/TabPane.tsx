@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface ITabPaneProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ITabPaneProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate if `active` classname should be applied
 	 */
