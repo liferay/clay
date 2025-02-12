@@ -5,8 +5,6 @@
 
 'use client';
 
-import ClayForm, {ClayInput} from '@clayui/form';
-import ClayIcon from '@clayui/icon';
 import React, {useMemo, useState} from 'react';
 
 const spritemap = '/images/icons/icons.svg';
@@ -40,18 +38,19 @@ export const IconSearch = ({
 
 	return (
 		<>
-			<ClayForm.Group>
+			<div className="input-group">
 				<label className="form-control-label">
 					<span className="form-control-label-text">{label}</span>
 
-					<ClayInput
+					<input
+						className="form-control"
 						onChange={(event) => setSearchQuery(event.target.value)}
 						placeholder={placeholder}
 						type="text"
 						value={searchQuery}
 					/>
 				</label>
-			</ClayForm.Group>
+			</div>
 
 			<ul className="d-flex flex-wrap lexicon-icon-list list-unstyled">
 				{list.map((icon) => {
@@ -60,10 +59,11 @@ export const IconSearch = ({
 
 					return (
 						<li key={icon.name}>
-							<ClayIcon
-								spritemap={spritemap}
-								symbol={icon.name}
-							/>
+							<svg
+								className={`lexicon-icon lexicon-icon-${icon.name}`}
+							>
+								<use href={`${spritemap}#${icon.name}`} />
+							</svg>
 
 							<span>{name}</span>
 						</li>
