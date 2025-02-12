@@ -8,8 +8,6 @@ import React from 'react';
 
 import ClayButton from './Button';
 
-import type {IProps} from './Button';
-
 type ButtonAria =
 	| {
 			/**
@@ -26,7 +24,11 @@ type ButtonAria =
 			'aria-labelledby': string;
 	  };
 
-interface ICommonProps extends Omit<IProps, 'aria-label' | 'aria-labelledby'> {
+interface ICommonProps
+	extends Omit<
+		React.ComponentProps<typeof ClayButton>,
+		'aria-label' | 'aria-labelledby'
+	> {
 	/**
 	 * Path to the location of the spritemap resource.
 	 */

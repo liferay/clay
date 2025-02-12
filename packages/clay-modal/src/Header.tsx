@@ -163,11 +163,7 @@ export interface IHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 	withTitle?: boolean;
 }
 
-const ClayModalHeaderHybrid = ({
-	children,
-	withTitle = true,
-	...otherProps
-}: IHeaderProps) => {
+const Header = ({children, withTitle = true, ...otherProps}: IHeaderProps) => {
 	const {onClose, spritemap, status} = React.useContext(Context);
 
 	return (
@@ -187,4 +183,4 @@ const ClayModalHeaderHybrid = ({
 	);
 };
 
-export default ClayModalHeaderHybrid;
+export default Header;

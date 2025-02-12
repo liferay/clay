@@ -23,7 +23,7 @@ export interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 	url?: string;
 }
 
-const ClayModalBody = ({
+const Body = ({
 	children,
 	className,
 	iFrameProps = {},
@@ -70,4 +70,4 @@ const ClayModalBody = ({
 	);
 };
 
-export default ClayModalBody;
+export default Body;

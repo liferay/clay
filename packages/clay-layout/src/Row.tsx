@@ -29,7 +29,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	justify?: 'start' | 'center' | 'end' | 'around' | 'between';
 }
 
-const ClayRow = React.forwardRef<HTMLElement, IProps>(
+const Row = React.forwardRef<HTMLElement, IProps>(
 	(
 		{
 			children,
@@ -56,6 +56,6 @@ const ClayRow = React.forwardRef<HTMLElement, IProps>(
 	}
 );
 
-ClayRow.displayName = 'ClayRow';
+Row.displayName = 'ClayRow';
 
-export default ClayRow;
+export default Row;

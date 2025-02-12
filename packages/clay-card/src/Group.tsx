@@ -14,7 +14,7 @@ export interface ICardGroupProps
 	label?: string;
 }
 
-const ClayCardGroup = ({
+const Group = ({
 	children,
 	className,
 	label,
@@ -40,4 +40,4 @@ const ClayCardGroup = ({
 	);
 };
 
-export default ClayCardGroup;
+export default Group;

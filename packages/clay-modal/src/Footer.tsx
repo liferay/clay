@@ -26,7 +26,7 @@ export interface IFooterProps extends React.HTMLAttributes<HTMLDivElement> {
 	middle?: React.ReactElement;
 }
 
-const ClayModalFooter = ({
+const Footer = ({
 	className,
 	first,
 	last,
@@ -42,4 +42,4 @@ const ClayModalFooter = ({
 	);
 };
 
-export default ClayModalFooter;
+export default Footer;

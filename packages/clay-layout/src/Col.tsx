@@ -52,7 +52,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	xl?: TColSize;
 }
 
-const ClayCol = React.forwardRef<HTMLElement, IProps>(
+const Col = React.forwardRef<HTMLElement, IProps>(
 	(
 		{
 			children,
@@ -95,6 +95,6 @@ const ClayCol = React.forwardRef<HTMLElement, IProps>(
 	}
 );
 
-ClayCol.displayName = 'ClayCol';
+Col.displayName = 'ClayCol';
 
-export default ClayCol;
+export default Col;

@@ -42,7 +42,7 @@ export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	state?: State;
 }
 
-const ClayMultiStepNavItem = ({
+const Item = ({
 	active,
 	children,
 	className,
@@ -69,4 +69,4 @@ const ClayMultiStepNavItem = ({
 	);
 };
 
-export default ClayMultiStepNavItem;
+export default Item;
