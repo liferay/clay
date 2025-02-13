@@ -1,0 +1,20 @@
+// Variables
+$grid-columns: 9;
+$max-input-width: 200px;
+
+@mixin grid-layout($columns) {
+	display: grid;
+	grid-template-columns: repeat($columns, 1fr);
+}
+
+.grid-container {
+	@include grid-layout($grid-columns);
+}
+
+.selected-icon-container {
+	.input-group {
+		.input-group-item {
+			max-width: $max-input-width;
+		}
+	}
+}
