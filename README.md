@@ -48,7 +48,7 @@ Clay repository follows the monorepo approach, all the major components that are
 
 -   **[Clay React Components](./packages)**: A set of components that use `clay-css` and Lexicon guidelines, developed with [React.js](http://reactjs.org)
 
--   **[clayui.com](./clayui.com)**: The source code for our documentation site.
+-   **[clayui.com](./www)**: The source code for our documentation site.
 
 ## Documentation
 
@@ -157,7 +157,7 @@ To contribute to the documentation, you can run the site locally to test your ch
 1. Navigate to the site's directory:
 
 ```
-cd clayui.com
+cd www
 ```
 
 2. Install the dependencies:
@@ -169,7 +169,7 @@ yarn
 3. Run the site in a development environment:
 
 ```
-yarn develop
+yarn dev
 ```
 
 > If you want to test in a production environment so that you do not take risks of inconsistencies, issue the following command in the root directory:

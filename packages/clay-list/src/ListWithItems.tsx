@@ -13,7 +13,7 @@ import React from 'react';
 
 import ClayList from './List';
 
-interface IListItem {
+export interface IListItem {
 	/**
 	 * Description of item.
 	 */
@@ -76,7 +76,7 @@ interface IBooleanMap {
 	[s: string]: boolean;
 }
 
-export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Property of item that makes it unique from other items.
 	 * Defaults to 'id'.
@@ -193,7 +193,7 @@ const ListItem = ({
 	);
 };
 
-export const ClayListWithItems = ({
+export const ListWithItems = ({
 	className,
 	itemIdentifier = 'id',
 	items = [],

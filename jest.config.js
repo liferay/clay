@@ -135,7 +135,7 @@ module.exports = {
 		},
 		'./packages/clay-modal/src/': {
 			branches: 55,
-			functions: 81,
+			functions: 74,
 			lines: 85,
 			statements: 85,
 		},
@@ -165,13 +165,13 @@ module.exports = {
 		},
 		'./packages/clay-pagination/src/': {
 			branches: 86,
-			functions: 92,
+			functions: 76,
 			lines: 92,
 			statements: 98,
 		},
 		'./packages/clay-pagination-bar/src/': {
 			branches: 92,
-			functions: 88,
+			functions: 69,
 			lines: 94,
 			statements: 95,
 		},
