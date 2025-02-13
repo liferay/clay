@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import {Inter} from 'next/font/google';
+import {GoogleAnalytics} from '@next/third-parties/google';
 import {SandPackCSS} from './_components/SandpackStyles';
 import './clay.scss';
 import './globals.scss';
@@ -24,6 +25,7 @@ export default function RootLayout({
 				<SandPackCSS />
 			</head>
 			<body className={inter.className}>{children}</body>
+			<GoogleAnalytics gaId={process.env.GA4!} />
 		</html>
 	);
 }
