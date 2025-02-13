@@ -156,11 +156,6 @@ export default function Home() {
 								<li>
 									<Link href="/docs/css">CSS Framework</Link>
 								</li>
-								<li>
-									<Link href="/docs/taglib">
-										Liferay Taglibs
-									</Link>
-								</li>
 							</ul>
 						</div>
 						<div className={styles.footer_list}>

@@ -17,10 +17,12 @@ export default function DocsLayout({children}: {children: React.ReactNode}) {
 					{
 						name: 'Components',
 						collection: ComponentDocumentsCollection,
+						sort: true,
 					},
 					{
 						name: 'CSS',
 						collection: CSSDocumentsCollection,
+						sort: true,
 					},
 				]}
 				path="docs"

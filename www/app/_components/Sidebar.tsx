@@ -14,6 +14,7 @@ type Item = {
 type CollectionItem = {
 	name: string;
 	collection: Collection<ComponentDocumentsSchema | any>;
+	sort?: boolean;
 };
 
 type Props = {
@@ -49,6 +50,7 @@ export function Sidebar({collection, path, items}: Props) {
 							<TreeCollection
 								collection={item.collection}
 								path={path}
+								sort={item.sort}
 							/>
 						</ul>
 					</ul>
@@ -92,10 +94,14 @@ export function Sidebar({collection, path, items}: Props) {
 type TreeCollectionProps = {
 	collection: AllCollection | Collection<ComponentDocumentsSchema>;
 	path?: string;
+	sort?: boolean;
 };
 
-async function TreeCollection({collection, path}: TreeCollectionProps) {
-	const entries = await collection.getSources();
+async function TreeCollection({collection, path, sort}: TreeCollectionProps) {
+	const items = await collection.getSources();
+	const entries = sort
+		? items.sort((a, b) => a.getTitle().localeCompare(b.getTitle()))
+		: items;
 
 	return (
 		<>
@@ -138,7 +144,9 @@ async function ListNavigation({entry, path: pathUrl}: ListNavigationProps) {
 		return link;
 	}
 
-	const entries = await entry.getSources({depth: 1});
+	const entries = (await entry.getSources({depth: 1})).sort((a, b) =>
+		a.getTitle().localeCompare(b.getTitle())
+	);
 
 	if (entries.length === 0) {
 		return link;
