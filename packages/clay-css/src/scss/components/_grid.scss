@@ -43,7 +43,9 @@
 				);
 				$grid-breakpoint-pos: index($grid-breakpoints, $name $width);
 
-				@if ($container-max-width-pos >= $grid-breakpoint-pos) {
+				@if ($container-max-width-pos) and
+					($container-max-width-pos >= $grid-breakpoint-pos)
+				{
 					.container#{breakpoint-infix($name, $grid-breakpoints)} {
 						@extend %responsive-container-#{$breakpoint} !optional;
 					}
