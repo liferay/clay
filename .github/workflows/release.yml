@@ -1,122 +1,124 @@
 name: Clay Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        required: false
-        description: 'Defines a specific version (e.g 3.70.0)'
-        type: string
+    workflow_dispatch:
+        inputs:
+            version:
+                required: false
+                description: 'Defines a specific version (e.g 3.70.0)'
+                type: string
 
 jobs:
-  test:
-    name: Unit tests and lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-      - uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Install Dependencies
-        run: yarn install
-      - name: Lint
-        run: yarn lint
-      - name: Format
-        run: yarn format:check
-      - name: Verify Dependencies
-        run: yarn checkDeps
-      - name: Run Jest
+    test:
+        name: Unit tests and lint
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '18'
+            - uses: actions/cache@v2
+              with:
+                  path: '**/node_modules'
+                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+            - name: Install Dependencies
+              run: yarn install
+            - name: Lint
+              run: yarn lint
+            - name: Format
+              run: yarn format:check
+            - name: Verify Dependencies
+              run: yarn checkDeps
+            - name: Run Jest
+              env:
+                  BROWSERSLIST_CONFIG: './packages/browserslist-config-clay/config'
+                  BROWSERSLIST_DISABLE_CACHE: 1
+                  CI: true
+              run: yarn test
+
+    uiTest:
+        name: Visual Testing
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '18'
+            - uses: actions/cache@v2
+              with:
+                  path: '**/node_modules'
+                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+            - name: Install Dependencies
+              run: yarn install
+            - name: Build
+              run: yarn build
+            - name: UI Tests
+              env:
+                  CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+              run: yarn chromatic
+
+    version:
+        name: Cut version
+        needs: [test, uiTest]
+        runs-on: ubuntu-latest
+        outputs:
+            new_sha: ${{ steps.sha.outputs.SHA }}
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '18'
+            - uses: actions/cache@v2
+              with:
+                  path: '**/node_modules'
+                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+            - run: yarn
+            - run: |
+                  git config user.name github-actions
+                  git config user.email github-actions@github.com
+            - name: Version
+              run: yarn lerna:version ${{ github.event.inputs.version }} --no-push --yes
+            - run: git push origin master --follow-tags
+            - name: Get SHA
+              id: sha
+              run: |
+                  sha_new=$(git rev-parse HEAD)
+                  echo $sha_new
+                  echo "SHA=$sha_new" >> $GITHUB_OUTPUT
+            - run: echo ${{ steps.sha.outputs.SHA }}
+
+    publish:
+        name: Publish
+        needs: version
+        runs-on: ubuntu-latest
         env:
-            BROWSERSLIST_CONFIG: './packages/browserslist-config-clay/config'
-            BROWSERSLIST_DISABLE_CACHE: 1
-            CI: true
-        run: yarn test
-
-  uiTest:
-    name: Visual Testing
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Install Dependencies
-        run: yarn install
-      - name: Build
-        run: yarn build
-      - name: UI Tests
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        run: yarn chromatic
-
-  version:
-    name: Cut version
-    needs: [test, uiTest]
-    runs-on: ubuntu-latest
-    outputs:
-      new_sha: ${{ steps.sha.outputs.SHA }}
-    steps:
-      - uses: actions/checkout@v2
-        with:
-            fetch-depth: 0
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-      - uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - run: yarn
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-      - name: Version
-        run: yarn lerna:version ${{ github.event.inputs.version }} --no-push --yes
-      - run: git push origin master --follow-tags
-      - name: Get SHA
-        id: sha
-        run: |
-          sha_new=$(git rev-parse HEAD)
-          echo $sha_new
-          echo "SHA=$sha_new" >> $GITHUB_OUTPUT
-      - run:
-          echo ${{ steps.sha.outputs.SHA }}
-
-  publish:
-    name: Publish
-    needs: version
-    runs-on: ubuntu-latest
-    env:
-       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ needs.version.outputs.new_sha }}
-          fetch-depth: 0
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@clayui'
-      - uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: NPM Identity
-        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
-      - name: Build
-        run: yarn build
-      - name: Types
-        run: yarn buildTypes
-      - name: Git
-        run: git restore packages/clay-css/src/scss/_license-text.scss
-      - name: Publish
-        run: yarn lerna:publish
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  ref: ${{ needs.version.outputs.new_sha }}
+                  fetch-depth: 0
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '18'
+                  registry-url: 'https://registry.npmjs.org'
+                  scope: '@clayui'
+            - uses: actions/cache@v2
+              with:
+                  path: '**/node_modules'
+                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+            - name: NPM Identity
+              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+            - name: Build
+              run: yarn build
+            - name: Types
+              run: yarn buildTypes
+            - name: Git
+              run: git restore packages/clay-css/src/scss/_license-text.scss
+            - name: Publish
+              run: yarn lerna:publish
