@@ -54,7 +54,9 @@
 					$cadmin-name $cadmin-width
 				);
 
-				@if ($container-max-width-pos >= $grid-breakpoint-pos) {
+				@if ($container-max-width-pos) and
+					($container-max-width-pos >= $grid-breakpoint-pos)
+				{
 					.container#{breakpoint-infix($cadmin-name, $cadmin-grid-breakpoints)} {
 						@extend %responsive-container-#{$cadmin-breakpoint}
 								!optional;

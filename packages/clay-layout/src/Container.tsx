@@ -26,7 +26,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Adds `.container-fluid-${size}` class to set max width on container.
 	 */
-	fluidSize?: 'sm' | 'md' | 'lg' | 'xl';
+	fluidSize?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 
 	/**
 	 * Adds the `.container-form-${formSize}` class to properly space

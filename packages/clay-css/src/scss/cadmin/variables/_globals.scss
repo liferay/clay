@@ -499,6 +499,8 @@ $cadmin-container-max-widths: (
 	md: 720px,
 	lg: 960px,
 	xl: 1248px,
+	xxl: 1392px,
+	xxxl: 1872px,
 ) !default;
 
 @include _assert-ascending(
