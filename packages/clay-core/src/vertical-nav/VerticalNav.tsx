@@ -39,7 +39,7 @@ type Props<T extends Record<string, any> | string> = {
 	/**
 	 * Flag to define aria-label.
 	 */
-	'aria-label': string;
+	'aria-label'?: string;
 
 	/**
 	 * The component contents.
