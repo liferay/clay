@@ -22,7 +22,7 @@ jobs:
                   path: '**/node_modules'
                   key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
             - name: Install Dependencies
-              run: yarn install
+              run: yarn install && cd www && yarn install && cd ..
             - name: Lint
               run: yarn lint
             - name: Format
@@ -76,7 +76,7 @@ jobs:
               with:
                   path: '**/node_modules'
                   key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-            - run: yarn && cd www && yarn && cd ..
+            - run: yarn
             - run: |
                   git config user.name github-actions
                   git config user.email github-actions@github.com
