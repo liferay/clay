@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Bug Fixes
+
+-   fix typescript error ([79b6a1f](https://github.com/liferay/clay/commit/79b6a1f9b6f160fcf9c158bf4e88702a07aa7280))
+-   **www:** fixes bug in build ([aa63833](https://github.com/liferay/clay/commit/aa63833462810249e896cb9da30629275f500b0b))
+
+### Features
+
+-   **@clayui/alert:** Improve Alert typing ([cebf9c8](https://github.com/liferay/clay/commit/cebf9c8309942618ea25bd28beec35eb23ca479e))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/alert

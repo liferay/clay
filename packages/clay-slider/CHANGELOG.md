@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/slider:** improves component typing to create API Slider ([39b0d28](https://github.com/liferay/clay/commit/39b0d28507a3e5ff98447cccbcea4d83236a51a8))
+
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
 **Note:** Version bump only for package @clayui/slider

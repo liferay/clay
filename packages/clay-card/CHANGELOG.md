@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Bug Fixes
+
+-   fix typescript error ([79b6a1f](https://github.com/liferay/clay/commit/79b6a1f9b6f160fcf9c158bf4e88702a07aa7280))
+
+### Features
+
+-   **@clayui/card:** improves component typing to create API Card ([ca308ab](https://github.com/liferay/clay/commit/ca308abdd380149533c1a830ccbbcfc6056b0ccb))
+
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 **Note:** Version bump only for package @clayui/card

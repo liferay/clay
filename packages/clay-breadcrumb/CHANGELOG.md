@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/breadcrumb:** improves component typing to create API Breadcrumb ([0da37ce](https://github.com/liferay/clay/commit/0da37cee0656624b98c7f08dd1666dc06b237ca1))
+
 # [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
 
 **Note:** Version bump only for package @clayui/breadcrumb

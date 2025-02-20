@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Bug Fixes
+
+-   fixes bug in components with generic types and sub components ([4dd37e6](https://github.com/liferay/clay/commit/4dd37e654b22206aad190d6ce5558dab1dfd2d36))
+-   **www:** fixes bug in build ([aa63833](https://github.com/liferay/clay/commit/aa63833462810249e896cb9da30629275f500b0b))
+
+### Features
+
+-   **@clayui/autocomplete:** improves component typing to create API Table ([674b3aa](https://github.com/liferay/clay/commit/674b3aa5fe060a1b6cd8a19ee5cd9f7428fa5d47))
+
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 **Note:** Version bump only for package @clayui/autocomplete

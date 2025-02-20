@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/localized-input:** improves component typing to create API Localized Input ([f5a9ceb](https://github.com/liferay/clay/commit/f5a9ceb240b244d61a91cc305750e27384752fb1))
+
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 **Note:** Version bump only for package @clayui/localized-input

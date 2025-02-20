@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/empty-state:** improves component typing to create API EmptyState ([add1b9b](https://github.com/liferay/clay/commit/add1b9bff61b952a3da8bd40d975fff2039a9e80))
+
 # [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
 
 **Note:** Version bump only for package @clayui/empty-state

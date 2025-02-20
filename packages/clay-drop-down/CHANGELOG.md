@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes bug when unable to render component APIs in documentation ([35fd03d](https://github.com/liferay/clay/commit/35fd03d8e59c68c99a6d8a7a4b02e21e6e46c8d4))
+-   **www:** fixes bug in build ([aa63833](https://github.com/liferay/clay/commit/aa63833462810249e896cb9da30629275f500b0b))
+
+### Features
+
+-   **@clayui/drop-down:** improves component typing to create API DropDown ([d1ea434](https://github.com/liferay/clay/commit/d1ea434df5693ed47e5adca0c2d131cef8fb9c48))
+-   **@clayui/modal:** improves component typing to create API Modal ([abd1394](https://github.com/liferay/clay/commit/abd13945c9f302ab50c5f6949ab1596103ffb6c5))
+
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 **Note:** Version bump only for package @clayui/drop-down

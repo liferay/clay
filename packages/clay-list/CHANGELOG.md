@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/list:** improves component typing to create API List ([de91472](https://github.com/liferay/clay/commit/de9147272917fd0b0b66b7b23ad231826fe943dc))
+-   **@clayui/loading-indicator:** improves component typing to create API Loading Indicator ([b1ee1f0](https://github.com/liferay/clay/commit/b1ee1f02ce397bc6a8f5cbe4ce08b519f5ee611f))
+
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 **Note:** Version bump only for package @clayui/list

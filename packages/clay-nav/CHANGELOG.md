@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/core:** improves component typing to create API Nav ([3d82db0](https://github.com/liferay/clay/commit/3d82db02d81c9c7d3768648909ccd2a688674fa1))
+-   **@clayui/nav:** improves component typing to create API Vertical Nav Input ([9218ca1](https://github.com/liferay/clay/commit/9218ca1ac9e96b66d5b04fd21fc3213116ab4eea))
+
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 ### Features

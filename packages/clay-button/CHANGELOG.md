@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/button:** improves component typing to create API Table ([e4eff1c](https://github.com/liferay/clay/commit/e4eff1c47e4f3ad23b849185e93a77f0f1897e95))
+-   **@clayui/nav:** improves component typing to create API Vertical Nav Input ([9218ca1](https://github.com/liferay/clay/commit/9218ca1ac9e96b66d5b04fd21fc3213116ab4eea))
+-   **www:** add mdxts implementation to read documents from clay-core ([fdb5701](https://github.com/liferay/clay/commit/fdb570189948c8f6947047aa9302171547da1968))
+
 # [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
 
 ### Features

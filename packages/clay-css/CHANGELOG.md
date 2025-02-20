@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-470022 Improve button and links compile performance ([40e28c9](https://github.com/liferay/clay/commit/40e28c951df74e3110c309436440c0ea4bfdf74f))
+* **@clayui/css:** LPD-47129 Mixins, Improve performance in alerts, badges, and cards ([34f48df](https://github.com/liferay/clay/commit/34f48df1285428aa8f04817b57a582c067b1e429))
+* **@clayui/css:** LPD-47130 Improve performance in close, custom-forms, and dropdown-menu mixins ([9c3f64d](https://github.com/liferay/clay/commit/9c3f64daf8bc4d4218a29db03d8e33c977f0c73f))
+
+
+### Features
+
+* **@clayui/css:** Grid adds container-fluid-max-{xxl | xxxl}; 1392px and 1872, respectively ([a0f296b](https://github.com/liferay/clay/commit/a0f296b6e0d9309ccaf7bbe6500bba8c7331d5ab))
+* **@clayui/css:** LPD-41942 Picker (dropdown-menu-select) change max-height to 7 items ([f9a43ee](https://github.com/liferay/clay/commit/f9a43ee3323a13906f9f8df38832d15b02820adb))
+
+
+
+
+
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 

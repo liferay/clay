@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes build bug in applications ([817bf5f](https://github.com/liferay/clay/commit/817bf5f437f445db86bfd7b97d4b8420a245d909))
+-   fix eslint error ([92fe965](https://github.com/liferay/clay/commit/92fe9659846eedaecc3ab7b29641ce20bd651169))
+-   fix typescript error ([79b6a1f](https://github.com/liferay/clay/commit/79b6a1f9b6f160fcf9c158bf4e88702a07aa7280))
+
+### Features
+
+-   **@clayui/core:** improves component typing to create API FocusTrap ([1137de8](https://github.com/liferay/clay/commit/1137de801f53d0b44d9ed40b95c394ec2ff4a93e))
+-   **@clayui/core:** improves component typing to create API Heading ([2396f37](https://github.com/liferay/clay/commit/2396f37f68f5f0d6fbbfda556f058c7e694d292b))
+-   **@clayui/core:** improves component typing to create API Nav ([3d82db0](https://github.com/liferay/clay/commit/3d82db02d81c9c7d3768648909ccd2a688674fa1))
+-   **@clayui/core:** improves component typing to create API OverlayMask ([047bd8a](https://github.com/liferay/clay/commit/047bd8a342eb89844dd3b5c87eb959a2da80f4d7))
+-   **@clayui/core:** improves component typing to create API Reduced Motion ([83a35cc](https://github.com/liferay/clay/commit/83a35cc5948accd8a79e6c6f4a3a0aa460aee4de))
+-   **@clayui/core:** improves component typing to create API Table Input ([21d6c22](https://github.com/liferay/clay/commit/21d6c22478f08cc30d79fbae0a7b9afc81f19bb4))
+-   **@clayui/core:** improves component typing to create API Text ([10d366a](https://github.com/liferay/clay/commit/10d366a6acec609bb4e129884a622243a8406094))
+-   **@clayui/core:** improves component typing to create API TreeView ([96beca8](https://github.com/liferay/clay/commit/96beca8f231f5801dc2f12aca8b3e31e82f72e6e))
+-   **@clayui/core:** improves component typing to create API VerticalBar ([0569bde](https://github.com/liferay/clay/commit/0569bde368d1e14796fb019d6c11f75da5e38d10))
+-   **@clayui/nav:** improves component typing to create API Vertical Nav Input ([9218ca1](https://github.com/liferay/clay/commit/9218ca1ac9e96b66d5b04fd21fc3213116ab4eea))
+-   **@clayui/picker:** improves component typing to create API Picker ([e21fa76](https://github.com/liferay/clay/commit/e21fa7657f8a15df7634cac58f0ac060a38b2f5b))
+-   **www:** Add CSS category documents ([a5f5862](https://github.com/liferay/clay/commit/a5f586222d90e015e6f580edcb552aeb0da7c498))
+-   **www:** add mdxts implementation to read documents from clay-core ([fdb5701](https://github.com/liferay/clay/commit/fdb570189948c8f6947047aa9302171547da1968))
+
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 ### Features

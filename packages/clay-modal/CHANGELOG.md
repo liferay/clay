@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/modal:** improves component typing to create API Modal ([abd1394](https://github.com/liferay/clay/commit/abd13945c9f302ab50c5f6949ab1596103ffb6c5))
+
 # [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
 
 ### Bug Fixes

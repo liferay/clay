@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/sticker:** improves component typing to create API Sticker ([de1f6c7](https://github.com/liferay/clay/commit/de1f6c7b4669c6bb0d8f28797e5e08a0566d9e80))
+
 # [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
 
 ### Features

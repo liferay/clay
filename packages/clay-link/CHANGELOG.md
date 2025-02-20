@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/link:** improves component typing to create API Link ([5955715](https://github.com/liferay/clay/commit/595571593603ada0b3c15bfd48b2035d90f38de2))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/link

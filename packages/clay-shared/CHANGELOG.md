@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Bug Fixes
+
+-   **@clayui/shared:** Only run hide code if menus match in Overlay ([824e33c](https://github.com/liferay/clay/commit/824e33c3a896bab3d49820fcc48ca1e1b6ff3fdd))
+
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
 ### Bug Fixes

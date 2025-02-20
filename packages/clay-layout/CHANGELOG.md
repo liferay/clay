@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/layout:** improves component typing to create API Layout ([77da733](https://github.com/liferay/clay/commit/77da73301ff171519d03a22bbc8709b7bb00dbca))
+-   **@clayui/layout:** LPD-49037 Add xxl and xxxl sizes to container fluid ([b73ede8](https://github.com/liferay/clay/commit/b73ede8689d2419c84fab2f02c43efe571971f74))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/layout

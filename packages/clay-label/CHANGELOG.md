@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/label:** improves component typing to create API Label ([65aaf24](https://github.com/liferay/clay/commit/65aaf24be6b8697acc96a61d877ba04087409986))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/label

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/form:** improves component typing to create API DualListBox ([cf9a9c2](https://github.com/liferay/clay/commit/cf9a9c243335498ec9e6bc5c29294c3971b739fd))
+-   **@clayui/form:** improves component typing to create API Form ([d8fdfa4](https://github.com/liferay/clay/commit/d8fdfa4ce97aa875a75e09bee84d2807a0add1fb))
+-   **@clayui/form:** improves component typing to create API Input ([395ec1e](https://github.com/liferay/clay/commit/395ec1ef6c1b2c95de6c22bd6213a3131de127ed))
+-   **@clayui/form:** improves component typing to create API Radio ([a7d7f57](https://github.com/liferay/clay/commit/a7d7f578ebe8b198dc7701aad9771345d382b019))
+-   **@clayui/form:** improves component typing to create API Select ([3784785](https://github.com/liferay/clay/commit/37847858390f8a9e910a2ea29dca00955a131ad3))
+-   **@clayui/form:** improves component typing to create API SelectBox ([be21064](https://github.com/liferay/clay/commit/be2106498e342653bfae1b6c4c18a2e47ffde97d))
+-   **@clayui/form:** improves component typing to create API Toggle ([8f96507](https://github.com/liferay/clay/commit/8f96507ab038f8fa6e28203229701df0641b454c))
+
 # [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
 
 ### Bug Fixes

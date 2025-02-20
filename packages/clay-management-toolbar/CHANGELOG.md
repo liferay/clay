@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Bug Fixes
+
+-   fix typescript error ([79b6a1f](https://github.com/liferay/clay/commit/79b6a1f9b6f160fcf9c158bf4e88702a07aa7280))
+
+### Features
+
+-   **@clayui/management-toolbar:** improves component typing to create API Management Toolbar ([6ab6ee8](https://github.com/liferay/clay/commit/6ab6ee89e478966c3da6fc80045c83ef47f4d00d))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/management-toolbar

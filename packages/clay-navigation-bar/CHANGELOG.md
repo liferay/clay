@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Features
+
+-   **@clayui/navigation-bar:** improves component typing to create API Navigation Bar ([7eac095](https://github.com/liferay/clay/commit/7eac09524d84c1fffe97c067dc9a310a3e1478d1))
+
 ## [3.123.1](https://github.com/liferay/clay/compare/v3.123.0...v3.123.1) (2024-11-27)
 
 ### Bug Fixes

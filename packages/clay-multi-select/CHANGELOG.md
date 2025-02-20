@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
+
+### Bug Fixes
+
+-   fixes bug in components with generic types and sub components ([4dd37e6](https://github.com/liferay/clay/commit/4dd37e654b22206aad190d6ce5558dab1dfd2d36))
+
+### Features
+
+-   **@clayui/multi-select:** improves component typing to create API MultiSelect ([f4d6b29](https://github.com/liferay/clay/commit/f4d6b29a2162dab8237546daaa5610f541fc2bf2))
+
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 **Note:** Version bump only for package @clayui/multi-select
