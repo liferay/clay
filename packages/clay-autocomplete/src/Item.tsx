@@ -11,7 +11,7 @@ import React, {useCallback} from 'react';
 
 import {useAutocompleteState} from './Context';
 
-interface IProps
+export interface IProps
 	extends React.HTMLAttributes<
 		HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
 	> {
