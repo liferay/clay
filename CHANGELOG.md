@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.128.1](https://github.com/liferay/clay/compare/v3.128.0...v3.128.1) (2025-02-21)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fixes typescript lint bug ([0a7b319](https://github.com/liferay/clay/commit/0a7b319f1e509b8812294a55799585a668afca59))
+
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Bug Fixes
