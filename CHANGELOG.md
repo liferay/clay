@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.128.3](https://github.com/liferay/clay/compare/v3.128.2...v3.128.3) (2025-02-21)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** fixes typescript lint bug ([7a3f32a](https://github.com/liferay/clay/commit/7a3f32a95e85339b50c2fd732675d2e6d02246e8))
+
 ## [3.128.2](https://github.com/liferay/clay/compare/v3.128.1...v3.128.2) (2025-02-21)
 
 ### Bug Fixes
