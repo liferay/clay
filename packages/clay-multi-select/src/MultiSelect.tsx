@@ -44,7 +44,7 @@ interface IMenuRendererProps {
 
 type MenuRenderer = (props: IMenuRendererProps) => JSX.Element;
 
-interface IProps<T extends Record<string, any> = Item>
+export interface IProps<T extends Record<string, any> = Item>
 	extends Omit<
 			React.HTMLAttributes<HTMLInputElement>,
 			'onChange' | 'children'
