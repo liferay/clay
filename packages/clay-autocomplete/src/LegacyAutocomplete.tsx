@@ -49,7 +49,7 @@ const hasItems = (children?: React.ReactNode) => {
 	}).filter(Boolean);
 };
 
-interface IProps<T> extends IAutocompleteProps<T> {
+export interface IProps<T> extends IAutocompleteProps<T> {
 	/**
 	 * Div component to render. It can be a one component that will replace the markup.
 	 */
