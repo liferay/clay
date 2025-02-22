@@ -238,8 +238,13 @@ It is also possible to implement your own logic on the client side when your dat
 </div>
 
 ```jsx preview
-export function App() {
-	const [sort, setSort] = (useState < Sorting) | (null > null);
+import React, {useMemo, useState} from 'react';
+import {Body, Cell, Text, Head, Row, Table, Provider} from '@clayui/core';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	const [sort, setSort] = useState(null);
 	const [items, setItems] = useState([
 		{files: 22, id: 1, name: 'Games', type: 'File folder'},
 		{files: 7, id: 2, name: 'Program Files', type: 'File folder'},
@@ -247,7 +252,7 @@ export function App() {
 
 	const filteredItems = useMemo(() => {
 		if (!sort) {
-			return;
+			return items;
 		}
 
 		return items.sort((a, b) => {
@@ -265,21 +270,37 @@ export function App() {
 	}, [sort, items]);
 
 	return (
-		<Table onSortChange={setSort} sort={sort}>
-			<Head>
-				<Cell key="name" sortable>
-					Name
-				</Cell>
-				<Cell key="files" sortable>
-					Files
-				</Cell>
-				<Cell key="type" sortable>
-					Type
-				</Cell>
-			</Head>
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Table onSortChange={setSort} sort={sort}>
+					<Head>
+						<Cell key="name" sortable>
+							Name
+						</Cell>
+						<Cell key="files" sortable>
+							Files
+						</Cell>
+						<Cell key="type" sortable>
+							Type
+						</Cell>
+					</Head>
 
-			<Body defaultItems={filteredItems}>...</Body>
-		</Table>
+					<Body defaultItems={filteredItems}>
+						{(row) => (
+							<Row>
+								<Cell>
+									<Text size={3} weight="semi-bold">
+										{row['name']}
+									</Text>
+								</Cell>
+								<Cell>{row['files']}</Cell>
+								<Cell>{row['type']}</Cell>
+							</Row>
+						)}
+					</Body>
+				</Table>
+			</div>
+		</Provider>
 	);
 }
 ```
