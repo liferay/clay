@@ -16,12 +16,18 @@ interface IProps extends React.HTMLAttributes<HTMLElement> {
 	 * Flag that identifies when to show the active state of the component.
 	 */
 	active?: boolean;
+
+	/**
+	 * Set a maximum width on container-fluid.
+	 */
+	fluidSize?: React.ComponentProps<typeof ClayLayout.Container>['fluidSize'];
 }
 
 function ManagementToolbar({
 	active = false,
 	children,
 	className,
+	fluidSize,
 	...otherProps
 }: IProps) {
 	return (
@@ -36,7 +42,9 @@ function ManagementToolbar({
 				}
 			)}
 		>
-			<ClayLayout.ContainerFluid>{children}</ClayLayout.ContainerFluid>
+			<ClayLayout.ContainerFluid size={fluidSize}>
+				{children}
+			</ClayLayout.ContainerFluid>
 		</nav>
 	);
 }
