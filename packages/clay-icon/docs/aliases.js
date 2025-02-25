@@ -1609,6 +1609,10 @@ export const iconsData = [
 		name: 'select',
 	},
 	{
+		aliases: [''],
+		name: 'send',
+	},
+	{
 		aliases: ['engine', 'search', 'keyword'],
 		name: 'seo',
 	},
@@ -1721,7 +1725,7 @@ export const iconsData = [
 		name: 'square-hole',
 	},
 	{
-		aliases: ['task', 'workflow'],
+		aliases: ['stop', 'task', 'workflow'],
 		name: 'square',
 	},
 	{
