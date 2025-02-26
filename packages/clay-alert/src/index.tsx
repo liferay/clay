@@ -55,6 +55,13 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	};
 };
 
+export type DisplayType =
+	| 'danger'
+	| 'info'
+	| 'secondary'
+	| 'success'
+	| 'warning';
+
 interface IClayAlertProps
 	extends Omit<React.HTMLAttributes<HTMLDivElement>, 'role'> {
 	/**

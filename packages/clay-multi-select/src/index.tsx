@@ -6,6 +6,7 @@
 import {Item} from '@clayui/autocomplete';
 
 import {MultiSelect, itemLabelFilter} from './MultiSelect';
+
 import type {IProps} from './MultiSelect';
 
 export {itemLabelFilter};
