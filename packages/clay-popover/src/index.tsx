@@ -4,6 +4,8 @@
  */
 
 import {Popover} from './Popover';
+import type {ALIGN_POSITIONS} from './Popover';
 
 export {Popover};
+export type {ALIGN_POSITIONS};
 export default Popover;

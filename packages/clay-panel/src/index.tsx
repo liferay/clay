@@ -22,7 +22,7 @@ import {Group} from './Group';
 import {Header} from './Header';
 import {Title} from './Title';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate that Panel is collapsable.
 	 */

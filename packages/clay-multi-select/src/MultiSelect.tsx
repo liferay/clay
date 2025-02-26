@@ -538,3 +538,14 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 		</Container>
 	);
 }) as Component;
+
+/**
+ * Utility used for filtering an array of items based off the locator which
+ * is set to `label` by default.
+ * @deprecated since v3.95.2 - it is no longer necessary...
+ */
+export const itemLabelFilter = (
+	items: Array<Item>,
+	_value: string,
+	_locator = 'label'
+) => items;
