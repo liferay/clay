@@ -4,7 +4,6 @@
  */
 
 import Button, {ClayButtonWithIcon} from '@clayui/button';
-import {Text} from '@clayui/core';
 import {useResource} from '@clayui/data-provider';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
@@ -25,29 +24,6 @@ enum alignPosition {
 
 export type Props = {
 	/**
-	 * The url of the icons.
-	 */
-	spritemap: string;
-
-	/**
-	 * Direction the menu will render relative to the Autocomplete.
-	 */
-	direction?: 'bottom' | 'top';
-
-	/**
-	 * Messages for icon selector.
-	 */
-	messages?: {
-		changeIcon: string;
-		clearInput?: string;
-		notFound: string;
-		placeholder?: string;
-		removeIcon: string;
-		selectIcon: string;
-		selectIconButton?: string;
-	};
-
-	/**
 	 * Flag to indicate if menu is showing or not (controlled).
 	 */
 	active?: boolean;
@@ -58,13 +34,36 @@ export type Props = {
 	defaultActive?: boolean;
 
 	/**
+	 * Direction the menu will render relative to the trigger.
+	 */
+	direction?: 'bottom' | 'top';
+
+	/**
+	 * Messages for icon selector.
+	 */
+	messages?: {
+		changeIconButton: string;
+		clearInput?: string;
+		notFound: string;
+		placeholder?: string;
+		removeIcon: string;
+		selectIcon: string;
+		selectIconButton?: string;
+	};
+
+	/**
 	 * Callback for when the active state changes (controlled).
 	 */
 	onActiveChange?: InternalDispatch<boolean>;
+
+	/**
+	 * URL of the SVG icons.
+	 */
+	spritemap: string;
 };
 
 const defaultMessages = {
-	changeIcon: 'Change Icon',
+	changeIconButton: 'Change Icon',
 	clearInput: 'Clear search input',
 	notFound: 'No items were found.',
 	placeholder: 'Search',
@@ -106,6 +105,8 @@ export function IconSelector({
 	spritemap,
 }: Props) {
 	const [selectedIcon, setSelectedIcon] = useState<string>('');
+	const [isInputFocused, setIsInputFocused] = useState(false);
+
 	const menuRef = useRef<HTMLDivElement>(null);
 	const triggerRef = useRef<HTMLButtonElement | null>(null);
 
@@ -171,12 +172,15 @@ export function IconSelector({
 				aria-expanded={active}
 				aria-label={messages?.selectIconButton}
 				displayType="secondary"
-				onClick={() => setActive(true)}
+				monospaced={!!selectedIcon}
+				onClick={() => {
+					setActive(true);
+				}}
 				ref={triggerRef}
 				role="button"
 				title={
 					selectedIcon
-						? messages?.changeIcon
+						? messages?.changeIconButton
 						: messages?.selectIconButton
 				}
 			>
@@ -198,81 +202,94 @@ export function IconSelector({
 					triggerRef={triggerRef}
 				>
 					<div
-						className="dropdown-menu dropdown-menu-select p-2 show"
+						className="dropdown-menu dropdown-menu-width-sm show"
 						id={overlayId}
 						ref={menuRef}
 						role="presentation"
-						style={{
-							maxWidth: 'none',
-						}}
 					>
-						<ClayInput.Group>
-							<ClayInput.GroupItem>
-								<ClayInput
-									aria-describedby={inputId}
-									insetAfter
-									insetBefore
-									onChange={(event) =>
-										setSearchTerm(event.target.value)
+						<div className="dropdown-section">
+							<ClayInput.Group small>
+								<ClayInput.GroupItem
+									className={
+										isInputFocused ? 'focus' : undefined
 									}
-									placeholder={defaultMessages.placeholder}
-									type="text"
-									value={searchTerm}
-								/>
-								<ClayInput.GroupInsetItem
-									before
-									className="pl-3"
-									tag="span"
 								>
-									<ClayIcon symbol="search" />
-								</ClayInput.GroupInsetItem>
-								<ClayInput.GroupInsetItem after tag="span">
-									<ClayButtonWithIcon
-										aria-label={defaultMessages.clearInput}
-										displayType="unstyled"
-										onClick={() => setSearchTerm('')}
-										symbol="times"
-										title={defaultMessages.clearInput}
-									/>
-								</ClayInput.GroupInsetItem>
-							</ClayInput.GroupItem>
-						</ClayInput.Group>
+									<ClayInput.GroupInsetItem before tag="span">
+										{!searchTerm && !isInputFocused && (
+											<div className="input-group-inset-icon">
+												<ClayIcon symbol="search" />
+											</div>
+										)}
+									</ClayInput.GroupInsetItem>
 
-						<div className="grid-container">
-							{filteredIcons.map((item: string) => (
-								<div className="p-2" key={item}>
-									<ClayButtonWithIcon
-										aria-label={
-											messages
-												? sub(messages?.selectIcon, [
-														item,
-												  ])
-												: ''
+									<ClayInput
+										aria-describedby={inputId}
+										insetAfter
+										insetBefore
+										onBlur={() => setIsInputFocused(false)}
+										onChange={(event) =>
+											setSearchTerm(event.target.value)
 										}
-										borderless
-										displayType="secondary"
-										onClick={() => {
-											setSelectedIcon(item);
-
-											onClose();
-										}}
-										spritemap={spritemap}
-										symbol={item}
-										title={item}
+										onFocus={() => setIsInputFocused(true)}
+										placeholder={
+											defaultMessages.placeholder
+										}
+										type="text"
+										value={searchTerm}
 									/>
-								</div>
-							))}
+
+									<ClayInput.GroupInsetItem after tag="span">
+										<ClayButtonWithIcon
+											aria-label={
+												defaultMessages.clearInput
+											}
+											displayType="unstyled"
+											monospaced
+											onClick={() => setSearchTerm('')}
+											symbol="times"
+											title={defaultMessages.clearInput}
+										/>
+									</ClayInput.GroupInsetItem>
+								</ClayInput.GroupItem>
+							</ClayInput.Group>
 						</div>
+
+						{filteredIcons.length > 0 && (
+							<ul className="dropdown-section-grid list-unstyled">
+								{filteredIcons.map((item: string) => (
+									<li key={item}>
+										<ClayButtonWithIcon
+											aria-label={
+												messages
+													? sub(
+															messages?.selectIcon,
+															[item]
+													  )
+													: ''
+											}
+											borderless
+											displayType="secondary"
+											onClick={() => {
+												setSelectedIcon(item);
+
+												onClose();
+											}}
+											spritemap={spritemap}
+											symbol={item}
+											title={item}
+										/>
+									</li>
+								))}
+							</ul>
+						)}
 
 						{filteredIcons.length === 0 && (
 							<div
 								aria-live="polite"
-								className="d-block my-2"
+								className="dropdown-caption"
 								id={inputId}
 							>
-								<Text as="span" color="muted">
-									{messages?.notFound}
-								</Text>
+								{messages?.notFound}
 							</div>
 						)}
 					</div>

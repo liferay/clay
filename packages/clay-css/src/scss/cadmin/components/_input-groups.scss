@@ -193,7 +193,8 @@
 			}
 		}
 
-		.btn-monospaced {
+		.btn-monospaced,
+		.input-group-inset-icon {
 			@include clay-button-variant(
 				$cadmin-input-group-inset-item-btn-monospaced
 			);
@@ -207,6 +208,16 @@
 					$cadmin-input-group-inset-form-file-btn
 				);
 			}
+		}
+	}
+
+	.input-group-inset-icon {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+
+		.lexicon-icon {
+			margin-top: 0;
 		}
 	}
 
