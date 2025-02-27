@@ -5,6 +5,10 @@
 
 import {Item} from '@clayui/autocomplete';
 
-import {MultiSelect} from './MultiSelect';
+import {MultiSelect, itemLabelFilter} from './MultiSelect';
 
+import type {IProps} from './MultiSelect';
+
+export {itemLabelFilter};
+export type {IProps};
 export default Object.assign(MultiSelect, {Item});

@@ -13,7 +13,7 @@ import TabPane from './TabPane';
 
 export type DisplayType = null | 'basic' | 'underline';
 
-interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * Flag to indicate the navigation behavior in the tab.
 	 *

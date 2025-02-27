@@ -5,7 +5,9 @@
 
 import Sticker from './Sticker';
 
+import type {DisplayType} from './Sticker';
+
 type IClayStickerProps = React.ComponentProps<typeof Sticker>;
 
-export type {IClayStickerProps};
+export type {DisplayType, IClayStickerProps};
 export default Sticker;

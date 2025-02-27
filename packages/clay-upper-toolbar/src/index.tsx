@@ -8,7 +8,7 @@ import ClayLayout from '@clayui/layout';
 import classNames from 'classnames';
 import React from 'react';
 
-interface IInputProps extends React.ComponentProps<typeof ClayInput> {}
+export interface IInputProps extends React.ComponentProps<typeof ClayInput> {}
 
 export const Input = ({className, ...otherProps}: IInputProps) => (
 	<Item expand>
