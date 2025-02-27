@@ -12,13 +12,29 @@ import styles from './sandpack.module.css';
 type Props = {
 	language: string;
 	children: any;
+	geo?: any;
 };
 
-export async function Sandpack({language, children}: Props) {
+export async function Sandpack({language, children, geo}: Props) {
 	const file = await fs.readFile(
 		process.cwd() + '/node_modules/@clayui/css/lib/images/icons/icons.svg',
 		'utf-8'
 	);
+
+	const files: Record<string, any> = {
+		'/public/icons.svg': file,
+		'/App.js': {
+			active: true,
+			code: children,
+		},
+	};
+
+	if (geo) {
+		files['/map.json'] = await fs.readFile(
+			process.cwd() + '/map.json',
+			'utf-8'
+		);
+	}
 
 	return (
 		<SandpackProvider
@@ -42,6 +58,7 @@ export async function Sandpack({language, children}: Props) {
 					'@clayui/breadcrumb': 'latest',
 					'@clayui/card': 'latest',
 					'@clayui/color-picker': 'latest',
+					'@clayui/charts': 'latest',
 					'@clayui/date-picker': 'latest',
 					'@clayui/empty-state': 'latest',
 					'@clayui/link': 'latest',
@@ -67,13 +84,7 @@ export async function Sandpack({language, children}: Props) {
 					'@clayui/upper-toolbar': 'latest',
 				},
 			}}
-			files={{
-				'/public/icons.svg': file,
-				'/App.js': {
-					active: true,
-					code: children,
-				},
-			}}
+			files={files}
 			options={{
 				experimental_enableServiceWorker: true,
 			}}

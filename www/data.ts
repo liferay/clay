@@ -131,6 +131,7 @@ const PATHS = [
 	'toolbar',
 	'tooltip',
 	'upper-toolbar',
+	'charts',
 ];
 
 export const ComponentDocumentsCollection =
