@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.129.1](https://github.com/liferay/clay/compare/v3.129.0...v3.129.1) (2025-02-27)
+
+### Bug Fixes
+
+-   **@clayui/alert:** fixes missing exporting type ([adc328b](https://github.com/liferay/clay/commit/adc328bbd03cf294afd92ef7925591d1280dc23d))
+
 # [3.129.0](https://github.com/liferay/clay/compare/v3.128.3...v3.129.0) (2025-02-27)
 
 ### Bug Fixes
