@@ -242,7 +242,6 @@ export function IconSelector({
 							{filteredIcons.map((item: string) => (
 								<div className="p-2" key={item}>
 									<ClayButtonWithIcon
-										spritemap={spritemap}
 										aria-label={
 											messages
 												? sub(messages?.selectIcon, [
@@ -257,6 +256,7 @@ export function IconSelector({
 
 											onClose();
 										}}
+										spritemap={spritemap}
 										symbol={item}
 										title={item}
 									/>

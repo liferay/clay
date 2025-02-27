@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import React from 'react';
 
 import {IconSelector} from '../src/icon-selector';
 
