@@ -28,11 +28,7 @@ import Menu from './Menu';
 import Search from './Search';
 import Section from './Section';
 
-import type {
-	AlignPoints,
-	IPortalBaseProps,
-	InternalDispatch,
-} from '@clayui/shared';
+import type {AlignPoints, InternalDispatch} from '@clayui/shared';
 
 const {Collection} = __NOT_PUBLIC_COLLECTION;
 
@@ -108,7 +104,8 @@ interface IProps<T>
 	/**
 	 * Prop to pass DOM element attributes to DropDown.Menu.
 	 */
-	menuElementAttrs?: React.HTMLAttributes<HTMLDivElement> & IPortalBaseProps;
+	menuElementAttrs?: React.HTMLAttributes<HTMLDivElement> &
+		Pick<React.ComponentProps<typeof Menu>, 'containerProps'>;
 
 	/**
 	 * Adds utility class name `dropdown-menu-height-${height}`
