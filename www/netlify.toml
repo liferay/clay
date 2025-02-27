@@ -674,3 +674,23 @@ status = 301
 from = "/docs/css/utilities/markup-width-and-height.html"
 to = "/docs/css/width-and-height"
 status = 301
+
+[[redirects]]
+from = "/docs/introduction/index.html"
+to = "/docs/introduction/how-to-use-clay"
+status = 301
+
+[[redirects]]
+from = "/docs/components/index.html"
+to = "/docs/components/alert"
+status = 301
+
+[[redirects]]
+from = "/docs/components/index.html"
+to = "/docs/components/alert"
+status = 301
+
+[[redirects]]
+from = "/docs/css/index.html"
+to = "/docs/css/scss"
+status = 301
