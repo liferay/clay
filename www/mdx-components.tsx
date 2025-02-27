@@ -42,10 +42,17 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 				</As>
 			);
 		},
-		pre: ({children, preview, language, value, ...otherProps}: any) => {
+		pre: ({
+			children,
+			preview,
+			language,
+			value,
+			geo,
+			...otherProps
+		}: any) => {
 			if (preview) {
 				return (
-					<Sandpack language={language}>
+					<Sandpack language={language} geo={geo}>
 						{(children as any).props.children}
 					</Sandpack>
 				);
