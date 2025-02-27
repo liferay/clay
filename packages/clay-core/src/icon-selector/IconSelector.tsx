@@ -5,7 +5,6 @@
 
 import Button, {ClayButtonWithIcon} from '@clayui/button';
 import {Text} from '@clayui/core';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {useResource} from '@clayui/data-provider';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
@@ -24,24 +23,12 @@ enum alignPosition {
 	topLeft = 7,
 }
 
-export type IPropsTrigger = {
+export type Props = {
 	/**
-	 * Flag to indicate if menu is showing or not.
+	 * The url of the icons.
 	 */
-	active?: boolean;
-	/**
-	 * The initial value of the active state (uncontrolled).
-	 */
-	defaultActive?: boolean;
-	/**
-	 * Callback for when the active state changes (controlled).
-	 */
-	onActiveChange?: InternalDispatch<boolean>;
+	spritemap: string;
 
-	[key: string]: any;
-};
-
-interface IProps {
 	/**
 	 * Direction the menu will render relative to the Autocomplete.
 	 */
@@ -59,7 +46,22 @@ interface IProps {
 		selectIcon: string;
 		selectIconButton?: string;
 	};
-}
+
+	/**
+	 * Flag to indicate if menu is showing or not (controlled).
+	 */
+	active?: boolean;
+
+	/**
+	 * The initial value of the active state (uncontrolled).
+	 */
+	defaultActive?: boolean;
+
+	/**
+	 * Callback for when the active state changes (controlled).
+	 */
+	onActiveChange?: InternalDispatch<boolean>;
+};
 
 const defaultMessages = {
 	changeIcon: 'Change Icon',
@@ -95,199 +97,189 @@ const fetchIcons = async (spritemap: string): Promise<Response> => {
 	});
 };
 
-function SearchInput({
-	'aria-describedby': ariaDescribedby,
-	searchTerm,
-	setSearchTerm,
-}: any) {
-	return (
-		<ClayInput.Group>
-			<ClayInput.GroupItem>
-				<ClayInput
-					aria-describedby={ariaDescribedby}
-					insetAfter
-					insetBefore
-					onChange={(event) => setSearchTerm(event.target.value)}
-					placeholder={defaultMessages.placeholder}
-					type="text"
-					value={searchTerm}
-				/>
-				<ClayInput.GroupInsetItem before className="pl-3" tag="span">
-					<ClayIcon symbol="search" />
-				</ClayInput.GroupInsetItem>
-				<ClayInput.GroupInsetItem after tag="span">
-					<ClayButtonWithIcon
-						aria-label={defaultMessages.clearInput}
-						displayType="unstyled"
-						onClick={() => setSearchTerm('')}
-						spritemap={spritemap}
-						symbol="times"
-						title={defaultMessages.clearInput}
-					/>
-				</ClayInput.GroupInsetItem>
-			</ClayInput.GroupItem>
-		</ClayInput.Group>
-	);
-}
-
 export function IconSelector({
+	active: externalActive,
+	defaultActive,
 	direction = 'bottom',
-	messages,
-}: IProps): JSX.Element {
+	messages = defaultMessages,
+	onActiveChange,
+	spritemap,
+}: Props) {
 	const [selectedIcon, setSelectedIcon] = useState<string>('');
+	const menuRef = useRef<HTMLDivElement>(null);
+	const triggerRef = useRef<HTMLButtonElement | null>(null);
+
+	const inputId = useId();
+	const overlayId = useId();
+
+	const [searchTerm, setSearchTerm] = useState<string>('');
+
+	const [active, setActive] = useControlledState({
+		defaultName: 'defaultActive',
+		defaultValue: defaultActive,
+		handleName: 'onActiveChange',
+		name: 'active',
+		onChange: onActiveChange,
+		value: externalActive,
+	});
+
+	const url = spritemap.includes('http')
+		? spritemap
+		: new URL(spritemap, window.location.origin).toString();
+
+	const {resource} = useResource({
+		fetch: fetchIcons,
+		link: url,
+	});
+
+	const filteredIcons = useMemo(() => {
+		if (!resource) {
+			return [];
+		}
+
+		return resource.filter((icon: string) =>
+			icon.toLowerCase().includes(searchTerm.toLowerCase())
+		);
+	}, [resource, searchTerm]);
+
+	const onClose = useCallback(() => setActive(false), []);
+
+	useOverlayPosition(
+		{
+			alignmentByViewport: true,
+			alignmentPosition:
+				direction === 'bottom'
+					? alignPosition.bottomLeft
+					: alignPosition.topLeft,
+			autoBestAlign: true,
+			isOpen: active,
+			ref: menuRef,
+			triggerRef,
+		},
+		[active]
+	);
 
 	messages = {
 		...defaultMessages,
 		...(messages ?? {}),
 	};
 
-	function IconSelectTrigger({
-		active: externalActive,
-		children,
-		containerElementRef,
-		defaultActive,
-		onActiveChange,
-	}: IPropsTrigger) {
-		const menuRef = useRef<HTMLDivElement>(null);
-		const triggerRef = useRef<HTMLButtonElement | null>(null);
-
-		const inputId = useId();
-		const overlayId = useId();
-
-		const [searchTerm, setSearchTerm] = useState<string>('');
-
-		const [active, setActive] = useControlledState({
-			defaultName: 'defaultActive',
-			defaultValue: defaultActive,
-			handleName: 'onActiveChange',
-			name: 'active',
-			onChange: onActiveChange,
-			value: externalActive,
-		});
-
-		const {resource} = useResource({
-			fetch: fetchIcons,
-			link: `${window.location.origin}/${spritemap}`,
-		});
-
-		const filteredIcons = useMemo(() => {
-			if (!resource) {
-				return [];
-			}
-
-			return resource.filter((icon: string) =>
-				icon.toLowerCase().includes(searchTerm.toLowerCase())
-			);
-		}, [resource, searchTerm]);
-
-		const onClose = useCallback(() => setActive(false), []);
-
-		useOverlayPosition(
-			{
-				alignmentByViewport: true,
-				alignmentPosition:
-					direction === 'bottom'
-						? alignPosition.bottomLeft
-						: alignPosition.topLeft,
-				autoBestAlign: true,
-				isOpen: active,
-				ref: menuRef,
-				triggerRef: containerElementRef ?? triggerRef,
-			},
-			[active, children]
-		);
-
-		return (
-			<>
-				<Button
-					aria-controls={active ? overlayId : undefined}
-					aria-expanded={active}
-					aria-label={messages?.selectIconButton}
-					displayType="secondary"
-					onClick={() => setActive(true)}
-					ref={triggerRef}
-					role="button"
-					title={
-						selectedIcon
-							? messages?.changeIcon
-							: messages?.selectIconButton
-					}
-				>
-					{selectedIcon ? (
-						<ClayIcon symbol="change" />
-					) : (
-						<>{messages?.selectIconButton}</>
-					)}
-				</Button>
-
-				{active && (
-					<Overlay
-						isCloseOnInteractOutside
-						isOpen
-						menuRef={menuRef}
-						onClose={onClose}
-						portalRef={menuRef}
-						suppress={[triggerRef, menuRef]}
-						triggerRef={triggerRef}
-					>
-						<div
-							className="dropdown-menu dropdown-menu-select p-2 show"
-							id={overlayId}
-							ref={menuRef}
-							role="presentation"
-							style={{
-								maxWidth: 'none',
-							}}
-						>
-							<SearchInput
-								aria-describedby={inputId}
-								searchTerm={searchTerm}
-								setSearchTerm={setSearchTerm}
-							/>
-
-							<div className="grid-container">
-								{filteredIcons.map((item: string) => (
-									<div className="p-2" key={item}>
-										<ClayButtonWithIcon
-											aria-label={
-												messages
-													? sub(
-															messages?.selectIcon,
-															[item]
-													  )
-													: ''
-											}
-											borderless
-											displayType="secondary"
-											onClick={() => {
-												setSelectedIcon(item);
-
-												onClose();
-											}}
-											symbol={item}
-											title={item}
-										/>
-									</div>
-								))}
-							</div>
-
-							{filteredIcons.length === 0 && (
-								<div
-									aria-live="polite"
-									className="d-block my-2"
-									id={inputId}
-								>
-									<Text as="span" color="muted">
-										{messages?.notFound}
-									</Text>
-								</div>
-							)}
-						</div>
-					</Overlay>
+	const content = (
+		<>
+			<Button
+				aria-controls={active ? overlayId : undefined}
+				aria-expanded={active}
+				aria-label={messages?.selectIconButton}
+				displayType="secondary"
+				onClick={() => setActive(true)}
+				ref={triggerRef}
+				role="button"
+				title={
+					selectedIcon
+						? messages?.changeIcon
+						: messages?.selectIconButton
+				}
+			>
+				{selectedIcon ? (
+					<ClayIcon symbol="change" />
+				) : (
+					<>{messages?.selectIconButton}</>
 				)}
-			</>
-		);
-	}
+			</Button>
+
+			{active && (
+				<Overlay
+					isCloseOnInteractOutside
+					isOpen
+					menuRef={menuRef}
+					onClose={onClose}
+					portalRef={menuRef}
+					suppress={[triggerRef, menuRef]}
+					triggerRef={triggerRef}
+				>
+					<div
+						className="dropdown-menu dropdown-menu-select p-2 show"
+						id={overlayId}
+						ref={menuRef}
+						role="presentation"
+						style={{
+							maxWidth: 'none',
+						}}
+					>
+						<ClayInput.Group>
+							<ClayInput.GroupItem>
+								<ClayInput
+									aria-describedby={inputId}
+									insetAfter
+									insetBefore
+									onChange={(event) =>
+										setSearchTerm(event.target.value)
+									}
+									placeholder={defaultMessages.placeholder}
+									type="text"
+									value={searchTerm}
+								/>
+								<ClayInput.GroupInsetItem
+									before
+									className="pl-3"
+									tag="span"
+								>
+									<ClayIcon symbol="search" />
+								</ClayInput.GroupInsetItem>
+								<ClayInput.GroupInsetItem after tag="span">
+									<ClayButtonWithIcon
+										aria-label={defaultMessages.clearInput}
+										displayType="unstyled"
+										onClick={() => setSearchTerm('')}
+										symbol="times"
+										title={defaultMessages.clearInput}
+									/>
+								</ClayInput.GroupInsetItem>
+							</ClayInput.GroupItem>
+						</ClayInput.Group>
+
+						<div className="grid-container">
+							{filteredIcons.map((item: string) => (
+								<div className="p-2" key={item}>
+									<ClayButtonWithIcon
+										spritemap={spritemap}
+										aria-label={
+											messages
+												? sub(messages?.selectIcon, [
+														item,
+												  ])
+												: ''
+										}
+										borderless
+										displayType="secondary"
+										onClick={() => {
+											setSelectedIcon(item);
+
+											onClose();
+										}}
+										symbol={item}
+										title={item}
+									/>
+								</div>
+							))}
+						</div>
+
+						{filteredIcons.length === 0 && (
+							<div
+								aria-live="polite"
+								className="d-block my-2"
+								id={inputId}
+							>
+								<Text as="span" color="muted">
+									{messages?.notFound}
+								</Text>
+							</div>
+						)}
+					</div>
+				</Overlay>
+			)}
+		</>
+	);
 
 	return (
 		<>
@@ -304,9 +296,7 @@ export function IconSelector({
 						</ClayInput.GroupItem>
 
 						<ClayInput.GroupItem shrink>
-							<IconSelectTrigger
-								aria-label={defaultMessages.changeIcon}
-							/>
+							{content}
 						</ClayInput.GroupItem>
 						<ClayInput.GroupItem shrink>
 							<ClayButtonWithIcon
@@ -320,7 +310,7 @@ export function IconSelector({
 					</ClayInput.Group>
 				</div>
 			) : (
-				<IconSelectTrigger />
+				content
 			)}
 		</>
 	);

@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 import {IconSelector} from '../src/icon-selector';
 
@@ -14,7 +15,7 @@ export default {
 export const Default = () => {
 	return (
 		<div>
-			<IconSelector />
+			<IconSelector spritemap={spritemap} />
 		</div>
 	);
 };
