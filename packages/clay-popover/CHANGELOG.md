@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.129.0](https://github.com/liferay/clay/compare/v3.128.3...v3.129.0) (2025-02-27)
+
+### Bug Fixes
+
+-   exports displayType types ([c507341](https://github.com/liferay/clay/commit/c5073416dcb706e25772076a0558e4181b2beff8))
+-   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.129.0](https://github.com/liferay/clay/compare/v3.128.3...v3.129.0) (2025-02-27)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes `menuElementAttrs` type bug ([4942022](https://github.com/liferay/clay/commit/494202250dcf20b12f59d65e33bd0f85cae8243c))
+-   exports displayType types ([c507341](https://github.com/liferay/clay/commit/c5073416dcb706e25772076a0558e4181b2beff8))
+-   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+-   **www:** add new redirects ([ed51bba](https://github.com/liferay/clay/commit/ed51bba9bf64456075bc2d6f9ed9e81f4c0e9d75))
+
+### Features
+
+-   **@clayui/management-toolbar:** LPD-49362 Add fluidSize prop ([d47205f](https://github.com/liferay/clay/commit/d47205ff1170bf91363739bd23abf1b802b52261))
+
 ## [3.128.3](https://github.com/liferay/clay/compare/v3.128.2...v3.128.3) (2025-02-21)
 
 ### Bug Fixes

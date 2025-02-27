@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.129.0](https://github.com/liferay/clay/compare/v3.128.3...v3.129.0) (2025-02-27)
+
+### Features
+
+-   **@clayui/management-toolbar:** LPD-49362 Add fluidSize prop ([d47205f](https://github.com/liferay/clay/commit/d47205ff1170bf91363739bd23abf1b802b52261))
+
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Bug Fixes

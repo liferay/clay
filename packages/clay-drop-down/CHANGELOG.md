@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.129.0](https://github.com/liferay/clay/compare/v3.128.3...v3.129.0) (2025-02-27)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes `menuElementAttrs` type bug ([4942022](https://github.com/liferay/clay/commit/494202250dcf20b12f59d65e33bd0f85cae8243c))
+
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Bug Fixes
