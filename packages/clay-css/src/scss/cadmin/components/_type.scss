@@ -130,9 +130,13 @@ mark.clay-dark,
 
 // Lists
 
-.list-unstyled {
+%list-unstyled {
 	list-style: none;
 	padding-left: 0;
+}
+
+.list-unstyled {
+	@extend %list-unstyled;
 }
 
 // Inline turns list items into inline-block
