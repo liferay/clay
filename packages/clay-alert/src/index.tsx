@@ -62,7 +62,7 @@ export type DisplayType =
 	| 'success'
 	| 'warning';
 
-interface IClayAlertProps
+export interface IClayAlertProps
 	extends Omit<React.HTMLAttributes<HTMLDivElement>, 'role'> {
 	/**
 	 * A React Component to render the alert actions.
