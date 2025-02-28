@@ -38,7 +38,7 @@ export const IconSearch = ({
 
 	return (
 		<>
-			<div className="input-group">
+			<div className="form-group">
 				<label className="form-control-label">
 					<span className="form-control-label-text">{label}</span>
 
