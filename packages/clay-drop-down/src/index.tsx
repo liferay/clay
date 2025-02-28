@@ -6,7 +6,14 @@
 import DropDown from './DropDown';
 import {ClayDropDownWithDrilldown} from './DropDownWithDrilldown';
 import {ClayDropDownWithItems} from './DropDownWithItems';
+import {SymbolDisplayType} from './Item';
 import {Align} from './Menu';
 
-export {Align, DropDown, ClayDropDownWithItems, ClayDropDownWithDrilldown};
+export {
+	Align,
+	DropDown,
+	ClayDropDownWithItems,
+	ClayDropDownWithDrilldown,
+	SymbolDisplayType,
+};
 export default DropDown;

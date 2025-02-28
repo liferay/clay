@@ -10,6 +10,17 @@ import React, {useContext} from 'react';
 
 import {DropDownContext} from './DropDownContext';
 
+const SYMBOL_DISPLAY_TYPES = [
+	'danger',
+	'info',
+	'primary',
+	'secondary',
+	'success',
+	'warning',
+] as const;
+
+export type SymbolDisplayType = typeof SYMBOL_DISPLAY_TYPES[number];
+
 export interface IProps
 	extends React.HTMLAttributes<
 		HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
@@ -53,6 +64,11 @@ export interface IProps
 	symbolLeft?: string;
 
 	/**
+	 * Display type of the icon symbol if there is one on the left side.
+	 */
+	symbolLeftDisplayType?: SymbolDisplayType;
+
+	/**
 	 * Flag that indicates if there is an icon symbol on the right side.
 	 */
 	symbolRight?: string;
@@ -74,6 +90,7 @@ const Item = React.forwardRef<HTMLLIElement, IProps>(
 			spritemap,
 			style,
 			symbolLeft,
+			symbolLeftDisplayType,
 			symbolRight,
 			tabIndex,
 			...otherProps
@@ -82,6 +99,9 @@ const Item = React.forwardRef<HTMLLIElement, IProps>(
 	) => {
 		const clickableElement = onClick ? 'button' : 'span';
 		const ItemElement = href ? ClayLink : clickableElement;
+
+		const displayTypeIsValid = (displayType: SymbolDisplayType) =>
+			SYMBOL_DISPLAY_TYPES.includes(displayType);
 
 		const {close, closeOnClick, tabFocus} = useContext(DropDownContext);
 
@@ -126,6 +146,12 @@ const Item = React.forwardRef<HTMLLIElement, IProps>(
 					{symbolLeft && (
 						<span className="dropdown-item-indicator-start">
 							<ClayIcon
+								className={
+									symbolLeftDisplayType &&
+									displayTypeIsValid(symbolLeftDisplayType)
+										? `text-${symbolLeftDisplayType}`
+										: undefined
+								}
 								spritemap={spritemap}
 								symbol={symbolLeft}
 							/>
