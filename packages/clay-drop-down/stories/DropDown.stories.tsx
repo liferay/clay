@@ -4,6 +4,7 @@
  */
 
 import ClayButton from '@clayui/button';
+import {SymbolDisplayType} from '@clayui/drop-down';
 import {ClayCheckbox, ClayInput, ClayRadio} from '@clayui/form';
 import ClayModal, {useModal} from '@clayui/modal';
 import React, {useRef, useState} from 'react';
@@ -330,32 +331,45 @@ export const CaptionAndHelp = () => (
 	</ClayDropDown>
 );
 
-export const ItemsWithIcons = () => (
-	<ClayDropDown
-		alignmentPosition={Align.BottomLeft}
-		hasLeftSymbols
-		hasRightSymbols
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	>
-		<ClayDropDown.ItemList>
-			{[
-				{label: 'Left', left: 'trash'},
-				{label: 'Right', right: 'check'},
-				{label: 'Both', left: 'trash', right: 'check'},
-			].map((item, i) => (
-				<ClayDropDown.Item
-					key={i}
-					onClick={() => {}}
-					symbolLeft={item.left}
-					symbolRight={item.right}
-				>
-					{item.label}
-				</ClayDropDown.Item>
-			))}
-		</ClayDropDown.ItemList>
-	</ClayDropDown>
-);
+export const ItemsWithIcons = () => {
+	type Item = {
+		label: string;
+		left?: string;
+		leftDisplayType?: SymbolDisplayType;
+		right?: string;
+	};
+
+	const items: Array<Item> = [
+		{label: 'Left', left: 'trash'},
+		{label: 'Right', right: 'check'},
+		{label: 'Both', left: 'trash', right: 'check'},
+		{label: 'Left', left: 'trash', leftDisplayType: 'primary'},
+	];
+
+	return (
+		<ClayDropDown
+			alignmentPosition={Align.BottomLeft}
+			hasLeftSymbols
+			hasRightSymbols
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
+			<ClayDropDown.ItemList>
+				{items.map((item, i) => (
+					<ClayDropDown.Item
+						key={i}
+						onClick={() => {}}
+						symbolLeft={item.left}
+						symbolLeftDisplayType={item.leftDisplayType}
+						symbolRight={item.right}
+					>
+						{item.label}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+};
 
 export const CustomOffset = () => (
 	<ClayDropDown
