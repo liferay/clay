@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayDropDown, {ClayDropDownWithItems} from '..';
+import ClayDropDown, {ClayDropDownWithItems, SymbolDisplayType} from '..';
 import {cleanup, fireEvent, getAllByRole, render} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -201,18 +201,29 @@ describe('ClayDropDown', () => {
 	});
 
 	it('renders with icons', () => {
+		type Item = {
+			label: string;
+			left?: string;
+			leftDisplayType?: SymbolDisplayType;
+			right?: string;
+		};
+
+		const items: Array<Item> = [
+			{label: 'Left', left: 'trash'},
+			{label: 'Right', right: 'check'},
+			{label: 'Both', left: 'trash', right: 'check'},
+			{label: 'Left', left: 'trash', leftDisplayType: 'primary'},
+		];
+
 		const {container} = render(
 			<DropDownWithState hasLeftSymbols hasRightSymbols>
 				<ClayDropDown.ItemList>
-					{[
-						{label: 'Left', left: 'trash'},
-						{label: 'Right', right: 'check'},
-						{label: 'Both', left: 'trash', right: 'check'},
-					].map((item, i) => (
+					{items.map((item, i) => (
 						<ClayDropDown.Item
 							key={i}
 							spritemap="/foo/bar"
 							symbolLeft={item.left}
+							symbolLeftDisplayType={item.leftDisplayType}
 							symbolRight={item.right}
 						>
 							{item.label}
