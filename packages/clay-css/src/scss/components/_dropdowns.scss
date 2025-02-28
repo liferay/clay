@@ -99,6 +99,16 @@
 	}
 }
 
+.dropdown-section-grid {
+	@extend %list-unstyled !optional;
+
+	display: grid;
+	gap: 0.5rem 0.75rem;
+	grid-template-columns: repeat(9, 1fr);
+	margin-bottom: 0;
+	padding: map-get($dropdown-section, padding);
+}
+
 // Dropdown Footer
 
 .dropdown-footer {
