@@ -327,7 +327,10 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 								}
 							}
 
-							if (group) {
+							if (
+								group &&
+								itemStackProps.expandOnClick !== false
+							) {
 								toggle(item.key);
 							} else {
 								loadMore();
@@ -628,6 +631,12 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * button on the item.
 	 */
 	expandable?: boolean;
+
+	/**
+	 * Flag to indicate if the item should be expanded when clicking the
+	 * node itself (not the expander)
+	 */
+	expandOnClick?: boolean;
 
 	/**
 	 * Flag to remove the visual of the hover over the item.
