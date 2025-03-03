@@ -99,6 +99,11 @@ type Props = {
 	selectedLocaleId?: React.Key;
 
 	/**
+	 * Flag to make the picker only as wide as its contents.
+	 */
+	shrink?: boolean;
+
+	/**
 	 * Flag to show the picker in small size.
 	 */
 	small?: boolean;
@@ -156,6 +161,7 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 			small,
 			spritemap,
 			triggerMessage,
+			triggerShrink,
 			...otherProps
 		}: Record<string, any>,
 		ref
@@ -176,6 +182,7 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 					classNamesTrigger,
 					'form-control form-control-select form-control-select-secondary',
 					{
+						'form-control-shrink': triggerShrink,
 						'form-control-sm': small,
 						'hidden-label': hideTriggerText,
 					}
@@ -221,6 +228,7 @@ export function LanguagePicker({
 	onActiveChange,
 	onSelectedLocaleChange,
 	selectedLocaleId,
+	shrink = true,
 	small,
 	spritemap,
 	translations = {},
@@ -243,9 +251,11 @@ export function LanguagePicker({
 			onSelectionChange={onSelectedLocaleChange}
 			selectedKey={selectedLocaleId}
 			selectedLocale={selectedLocale}
+			shrink={shrink}
 			small={small}
 			spritemap={spritemap}
 			triggerMessage={messages.trigger}
+			triggerShrink={shrink}
 		>
 			{(locale) => {
 				const translationLabel = getTranslationLabel({
