@@ -319,12 +319,10 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 								return;
 							}
 
-							if (selectionMode === 'single') {
-								selection.toggleSelection(item.key);
+							selection.toggleSelection(item.key);
 
-								if (onSelect) {
-									onSelect(removeItemInternalProps(item));
-								}
+							if (onSelect) {
+								onSelect(removeItemInternalProps(item));
 							}
 
 							if (
