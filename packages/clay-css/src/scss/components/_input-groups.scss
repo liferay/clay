@@ -245,7 +245,8 @@
 			}
 		}
 
-		.btn-monospaced {
+		.btn-monospaced,
+		.input-group-inset-icon {
 			@include clay-button-variant(
 				$input-group-inset-item-btn-monospaced
 			);
@@ -257,6 +258,16 @@
 			.btn {
 				@include clay-button-size($input-group-inset-form-file-btn);
 			}
+		}
+	}
+
+	.input-group-inset-icon {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+
+		.lexicon-icon {
+			margin-top: 0;
 		}
 	}
 
