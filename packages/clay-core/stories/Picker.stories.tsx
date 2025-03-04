@@ -226,6 +226,50 @@ export const CustomGroup = () => {
 	);
 };
 
+export const Shrink = () => {
+	const pickerId = useId();
+	const labelId = useId();
+
+	return (
+		<Form.Group>
+			<label htmlFor={pickerId} id={labelId}>
+				Select an option
+			</label>
+			<Picker
+				aria-labelledby={labelId}
+				id={pickerId}
+				items={[
+					{
+						items: [
+							{label: 'Apple', value: '1'},
+							{label: 'Banana', value: '2'},
+							{label: 'Mangos', value: '3'},
+						],
+						label: 'Fruit',
+					},
+					{
+						items: [
+							{label: 'Onions', value: '4'},
+							{label: 'abc', value: '5'},
+							{label: 'def', value: '6'},
+						],
+						label: 'Vegetable',
+					},
+				]}
+				shrink
+			>
+				{(group) => (
+					<DropDown.Group header={group.label} items={group.items}>
+						{(item) => (
+							<Option key={item.value}>{item.label}</Option>
+						)}
+					</DropDown.Group>
+				)}
+			</Picker>
+		</Form.Group>
+	);
+};
+
 export const Width = () => {
 	const pickerId = useId();
 	const labelId = useId();
