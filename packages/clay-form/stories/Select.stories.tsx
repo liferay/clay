@@ -32,6 +32,7 @@ export const Composition = (args: any) => (
 				disabled={args.disabled}
 				id="mySelectId"
 				multiple={args.multiple}
+				shrink={args.shrink}
 			>
 				{options.map((item) => (
 					<ClaySelect.Option
@@ -48,6 +49,7 @@ export const Composition = (args: any) => (
 Composition.args = {
 	disabled: false,
 	multiple: false,
+	shrink: false,
 };
 
 export const HighLevel = (args: any) => (
@@ -60,6 +62,7 @@ export const HighLevel = (args: any) => (
 				id="mySelectId"
 				multiple={args.multiple}
 				options={options}
+				shrink={args.shrink}
 			/>
 		</div>
 	</div>
@@ -68,6 +71,7 @@ export const HighLevel = (args: any) => (
 HighLevel.args = {
 	disabled: false,
 	multiple: false,
+	shrink: false,
 };
 
 export const HighLevelWithGroup = () => (

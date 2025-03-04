@@ -127,6 +127,11 @@ type Props<T> = {
 	selectedKey?: React.Key;
 
 	/**
+	 * Flag to make the picker only as wide as its contents.
+	 */
+	shrink?: boolean;
+
+	/**
 	 * Sets the width of the panel.
 	 */
 	width?: number;
@@ -167,6 +172,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 	onSelectionChange,
 	placeholder = 'Select an option',
 	selectedKey: externalSelectedKey,
+	shrink,
 	width,
 	...otherProps
 }: Props<T>) {
@@ -369,6 +375,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 				{...otherProps}
 				className={classNames(
 					'form-control form-control-select form-control-select-secondary',
+					{'form-control-shrink': shrink},
 					className
 				)}
 				onChange={(event) => setSelectedKey(event.target.value)}
@@ -398,6 +405,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 				}
 				className={classNames(
 					'form-control form-control-select form-control-select-secondary',
+					{'form-control-shrink': shrink},
 					className,
 					{
 						show: active,
