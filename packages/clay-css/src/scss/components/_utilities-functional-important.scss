@@ -855,4 +855,12 @@
 
 .c-prefers-reduced-motion {
 	@include clay-css($c-prefers-reduced-motion);
+
+	.loading-animation-squares {
+		@extend %loading-animation !optional;
+
+		@include clay-map-to-css(
+			map-get($c-prefers-reduced-motion, '.loading-animation-squares')
+		);
+	}
 }
