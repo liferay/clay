@@ -1718,6 +1718,10 @@ export const iconsData = [
 	},
 	{
 		aliases: [''],
+		name: 'speed',
+	},
+	{
+		aliases: [''],
 		name: 'square-hole-multi',
 	},
 	{
@@ -1959,6 +1963,10 @@ export const iconsData = [
 	{
 		aliases: ['abc', 'editor', 'order', 'text'],
 		name: 'vocabulary',
+	},
+	{
+		aliases: [''],
+		name: 'voice',
 	},
 	{
 		aliases: ['boxes', 'deposit', 'house', 'inventory', 'stock'],
