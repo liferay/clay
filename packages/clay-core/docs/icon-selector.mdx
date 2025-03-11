@@ -1,0 +1,29 @@
+---
+title: 'Icon Selector'
+description: 'Icon Selector is a field type that allows users to choose an icon from a predefined list'
+packageNpm: '@clayui/core'
+packageStatus: 'Beta'
+packageUse: "import {IconSelector} from '@clayui/core';"
+packageTypes: ['clay-core/src/icon-selector/IconSelector.tsx']
+storybookPath: 'design-system-components-icon-selector'
+---
+
+## Introduction
+
+Icon Selector is a field type that allows users to choose an icon from a predefined list. When clicking the button, a dropdown menu appears displaying available icons, enabling selection with a single click. The chosen icon is then visually represented within the field.
+
+## Example
+
+```jsx preview
+import {IconSelector} from '@clayui/core';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<div className="p-4">
+			<IconSelector />
+		</div>
+	);
+}
+```
