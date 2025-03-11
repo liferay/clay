@@ -880,5 +880,16 @@
 
 	html#{$cadmin-selector} .c-prefers-reduced-motion .cadmin {
 		@include clay-css($cadmin-c-prefers-reduced-motion);
+
+		.loading-animation-squares {
+			@extend %loading-animation !optional;
+
+			@include clay-map-to-css(
+				map-get(
+					$cadmin-c-prefers-reduced-motion,
+					'.loading-animation-squares'
+				)
+			);
+		}
 	}
 }
