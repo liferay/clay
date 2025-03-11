@@ -11,6 +11,7 @@ import {
 	MouseSafeArea,
 	throttle,
 	useControlledState,
+	useId,
 	useNavigation,
 } from '@clayui/shared';
 import classNames from 'classnames';
@@ -21,6 +22,7 @@ import Caption from './Caption';
 import Divider from './Divider';
 import ClayDropDown from './DropDown';
 import {DropDownContext} from './DropDownContext';
+import {ClayDropDownWithDrilldown} from './DropDownWithDrilldown';
 import {FocusMenu} from './FocusMenu';
 import ClayDropDownGroup from './Group';
 import Help from './Help';
@@ -556,6 +558,34 @@ const Items = ({items, spritemap}: IDropDownContentProps) => {
 	);
 };
 
+const drilldownItems = (items: any, id: string, menu: any = {}) => {
+	menu[id] = [];
+
+	items.forEach((item: any, index: number) => {
+		const keys = Object.keys(item);
+
+		menu[id][index] = Object.create({});
+
+		keys.forEach((key) => {
+			if (typeof item[key] === 'object') {
+				const childId = useId();
+
+				menu[id][index].child = childId;
+
+				drilldownItems(item[key], childId, menu);
+			} else {
+				if (key === 'label') {
+					menu[id][index].title = item[key];
+				} else {
+					menu[id][index][key] = item[key];
+				}
+			}
+		});
+	});
+
+	return menu;
+};
+
 const DropDownContent = ({
 	items,
 	role,
@@ -615,78 +645,112 @@ export const ClayDropDownWithItems = ({
 
 	const Wrap = footerContent ? 'form' : React.Fragment;
 
-	return (
-		<ClayDropDown
-			active={internalActive}
-			alignmentByViewport={alignmentByViewport}
-			alignmentPosition={alignmentPosition}
-			className={className}
-			closeOnClickOutside={closeOnClickOutside}
-			containerElement={containerElement}
-			hasLeftSymbols={hasLeftSymbols}
-			hasRightSymbols={hasRightSymbols}
-			menuElementAttrs={menuElementAttrs}
-			menuHeight={menuHeight}
-			menuWidth={menuWidth}
-			offsetFn={offsetFn}
-			onActiveChange={setInternalActive}
-			renderMenuOnClick={renderMenuOnClick}
-			trigger={React.cloneElement(trigger, {
-				ref: (node: HTMLButtonElement) => {
-					if (node) {
-						triggerElementRef.current = node;
-						// Call the original ref, if any.
-						const {ref} = trigger;
-						if (typeof ref === 'function') {
-							ref(node);
+	const defaultActiveMenu = useId();
+
+	const windowWidth = window.innerWidth;
+
+	if (windowWidth < 768) {
+		return (
+			<ClayDropDownWithDrilldown
+				defaultActiveMenu={defaultActiveMenu}
+				hasLeftSymbols={hasLeftSymbols}
+				menus={drilldownItems(items, defaultActiveMenu)}
+				renderMenuOnClick={renderMenuOnClick}
+				trigger={React.cloneElement(trigger, {
+					ref: (node: HTMLButtonElement) => {
+						if (node) {
+							triggerElementRef.current = node;
+							// Call the original ref, if any.
+							const {ref} = trigger;
+							if (typeof ref === 'function') {
+								ref(node);
+							}
 						}
-					}
-				},
-			})}
-			triggerIcon={triggerIcon}
-		>
-			<ClayDropDownContext.Provider
-				value={{
-					close: () => {
-						setInternalActive(false);
-						triggerElementRef.current?.focus();
 					},
-				}}
+				})}
+				triggerIcon={triggerIcon}
+			/>
+		);
+	} else {
+		return (
+			<ClayDropDown
+				active={internalActive}
+				alignmentByViewport={alignmentByViewport}
+				alignmentPosition={alignmentPosition}
+				className={className}
+				closeOnClickOutside={closeOnClickOutside}
+				containerElement={containerElement}
+				hasLeftSymbols={hasLeftSymbols}
+				hasRightSymbols={hasRightSymbols}
+				menuElementAttrs={menuElementAttrs}
+				menuHeight={menuHeight}
+				menuWidth={menuWidth}
+				offsetFn={offsetFn}
+				onActiveChange={setInternalActive}
+				renderMenuOnClick={renderMenuOnClick}
+				trigger={React.cloneElement(trigger, {
+					ref: (node: HTMLButtonElement) => {
+						if (node) {
+							triggerElementRef.current = node;
+							// Call the original ref, if any.
+							const {ref} = trigger;
+							if (typeof ref === 'function') {
+								ref(node);
+							}
+						}
+					},
+				})}
+				triggerIcon={triggerIcon}
 			>
-				{helpText && <Help>{helpText}</Help>}
+				<ClayDropDownContext.Provider
+					value={{
+						close: () => {
+							setInternalActive(false);
+							triggerElementRef.current?.focus();
+						},
+					}}
+				>
+					{helpText && <Help>{helpText}</Help>}
 
-				{searchable && (
-					<Search
-						{...searchProps}
-						onChange={onSearchValueChange}
-						spritemap={spritemap}
-						value={searchValue}
-					/>
-				)}
+					{searchable && (
+						<Search
+							{...searchProps}
+							onChange={onSearchValueChange}
+							spritemap={spritemap}
+							value={searchValue}
+						/>
+					)}
 
-				<Wrap>
-					{footerContent ? (
-						<div className="inline-scroller">
+					<Wrap>
+						{footerContent ? (
+							<div className="inline-scroller">
+								<DropDownContent
+									items={items}
+									spritemap={spritemap}
+								/>
+							</div>
+						) : (
 							<DropDownContent
 								items={items}
 								spritemap={spritemap}
 							/>
-						</div>
-					) : (
-						<DropDownContent items={items} spritemap={spritemap} />
-					)}
+						)}
 
-					{caption && <Caption>{caption}</Caption>}
+						{caption && <Caption>{caption}</Caption>}
 
-					{footerContent && (
-						<div className="dropdown-section" role="presentation">
-							{footerContent}
-						</div>
-					)}
-				</Wrap>
-			</ClayDropDownContext.Provider>
-		</ClayDropDown>
-	);
+						{footerContent && (
+							<div
+								className="dropdown-section"
+								role="presentation"
+							>
+								{footerContent}
+							</div>
+						)}
+					</Wrap>
+				</ClayDropDownContext.Provider>
+			</ClayDropDown>
+		);
+	}
 };
 
 ClayDropDownWithItems.displayName = 'ClayDropDownWithItems';
