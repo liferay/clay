@@ -51,6 +51,7 @@ export const Default = (args: any) => {
 			locales={locales}
 			onSelectedLocaleChange={setSelectedLocaleId}
 			selectedLocaleId={selectedLocaleId}
+			shrink={args.shrink}
 			small={args.small}
 		/>
 	);
@@ -58,6 +59,7 @@ export const Default = (args: any) => {
 
 Default.args = {
 	hideTriggerText: false,
+	shrink: true,
 	small: false,
 };
 
@@ -146,6 +148,7 @@ export const LanguagePickerWithTranslations = (args: any) => {
 			locales={localesLong}
 			onSelectedLocaleChange={setSelectedLocaleId}
 			selectedLocaleId={selectedLocaleId}
+			shrink={args.shrink}
 			small={args.small}
 			translations={translations}
 		/>
@@ -154,5 +157,6 @@ export const LanguagePickerWithTranslations = (args: any) => {
 
 LanguagePickerWithTranslations.args = {
 	hideTriggerText: false,
+	shrink: true,
 	small: false,
 };

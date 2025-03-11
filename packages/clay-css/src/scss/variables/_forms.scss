@@ -120,6 +120,16 @@ $input: map-deep-merge(
 // Form Control Variants
 
 $input-palette: () !default;
+$input-palette: map-deep-merge(
+	(
+		'.form-control-shrink': (
+			max-width: 100%,
+			white-space: nowrap,
+			width: min-content,
+		),
+	),
+	$input-palette
+);
 
 // Form Control Plaintext
 

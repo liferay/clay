@@ -22,16 +22,22 @@ export const Option = ({
 
 interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	/**
+	 * Flag to make the Select component only as wide as its contents.
+	 */
+	shrink?: boolean;
+
+	/**
 	 * Set the proportional size of the Select component.
 	 */
 	sizing?: 'lg' | 'sm';
 }
 
-function Select({children, className, sizing, ...otherProps}: IProps) {
+function Select({children, className, shrink, sizing, ...otherProps}: IProps) {
 	return (
 		<select
 			{...otherProps}
 			className={classNames('form-control', className, {
+				'form-control-shrink': shrink,
 				[`form-control-${sizing}`]: sizing,
 			})}
 		>
