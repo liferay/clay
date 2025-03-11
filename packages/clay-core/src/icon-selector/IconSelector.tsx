@@ -8,11 +8,14 @@ import {useResource} from '@clayui/data-provider';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import {
+	FOCUSABLE_ELEMENTS,
 	InternalDispatch,
+	Keys,
 	Overlay,
 	sub,
 	useControlledState,
 	useId,
+	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
 import React, {useCallback, useMemo, useRef, useState} from 'react';
@@ -60,6 +63,8 @@ export type Props = {
 	 * URL of the SVG icons.
 	 */
 	spritemap: string;
+
+	UNSAFE_focusableElements?: Array<string>;
 };
 
 const defaultMessages = {
@@ -97,6 +102,7 @@ const fetchIcons = async (spritemap: string): Promise<Response> => {
 };
 
 export function IconSelector({
+	UNSAFE_focusableElements,
 	active: externalActive,
 	defaultActive,
 	direction = 'bottom',
@@ -143,7 +149,11 @@ export function IconSelector({
 		);
 	}, [resource, searchTerm]);
 
-	const onClose = useCallback(() => setActive(false), []);
+	const onClose = useCallback(() => {
+		setActive(false);
+
+		setSearchTerm('');
+	}, []);
 
 	useOverlayPosition(
 		{
@@ -164,6 +174,16 @@ export function IconSelector({
 		...defaultMessages,
 		...(messages ?? {}),
 	};
+
+	const {navigationProps} = useNavigation({
+		activation: 'manual',
+		containerRef: menuRef,
+		focusableElements: UNSAFE_focusableElements,
+		loop: true,
+		orientation: 'vertical',
+		typeahead: true,
+		visible: active,
+	});
 
 	const content = (
 		<>
@@ -257,7 +277,45 @@ export function IconSelector({
 						{filteredIcons.length > 0 && (
 							<ul className="dropdown-section-grid list-unstyled">
 								{filteredIcons.map((item: string) => (
-									<li key={item}>
+									<li
+										key={item}
+										onKeyDown={(event) => {
+											switch (event.key) {
+												case Keys.Tab: {
+													event.preventDefault();
+
+													setActive(false);
+
+													const list =
+														Array.from<HTMLElement>(
+															document.querySelectorAll(
+																FOCUSABLE_ELEMENTS.join(
+																	','
+																)
+															)
+														);
+
+													const position =
+														list.indexOf(
+															triggerRef.current!
+														);
+
+													const nextElement =
+														list[position + 1];
+
+													if (nextElement) {
+														nextElement.focus();
+													}
+													break;
+												}
+												default:
+													navigationProps.onKeyDown(
+														event
+													);
+													break;
+											}
+										}}
+									>
 										<ClayButtonWithIcon
 											aria-label={
 												messages
