@@ -15,10 +15,13 @@ import {
 	sub,
 	useControlledState,
 	useId,
+	useInteractionFocus,
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
 import React, {useCallback, useMemo, useRef, useState} from 'react';
+
+import {FocusMenu} from '../focus-trap';
 
 enum alignPosition {
 	bottomLeft = 5,
@@ -63,8 +66,6 @@ export type Props = {
 	 * URL of the SVG icons.
 	 */
 	spritemap: string;
-
-	UNSAFE_focusableElements?: Array<string>;
 };
 
 const defaultMessages = {
@@ -102,7 +103,6 @@ const fetchIcons = async (spritemap: string): Promise<Response> => {
 };
 
 export function IconSelector({
-	UNSAFE_focusableElements,
 	active: externalActive,
 	defaultActive,
 	direction = 'bottom',
@@ -115,6 +115,8 @@ export function IconSelector({
 
 	const menuRef = useRef<HTMLDivElement>(null);
 	const triggerRef = useRef<HTMLButtonElement | null>(null);
+
+	const {isFocusVisible} = useInteractionFocus();
 
 	const inputId = useId();
 	const overlayId = useId();
@@ -176,9 +178,7 @@ export function IconSelector({
 	};
 
 	const {navigationProps} = useNavigation({
-		activation: 'manual',
 		containerRef: menuRef,
-		focusableElements: UNSAFE_focusableElements,
 		loop: true,
 		orientation: 'vertical',
 		typeahead: true,
@@ -193,8 +193,28 @@ export function IconSelector({
 				aria-label={messages?.selectIconButton}
 				displayType="secondary"
 				monospaced={!!selectedIcon}
-				onClick={() => {
-					setActive(true);
+				onClick={() => setActive(!active)}
+				onKeyDown={(event: React.KeyboardEvent<HTMLButtonElement>) => {
+					switch (event.key) {
+						case Keys.Spacebar:
+							event.preventDefault();
+							setActive(!active);
+							break;
+						case Keys.Up:
+						case Keys.Down: {
+							event.preventDefault();
+							event.stopPropagation();
+
+							if (!active) {
+								setActive(true);
+							}
+
+							navigationProps.onKeyDown(event);
+							break;
+						}
+						default:
+							break;
+					}
 				}}
 				ref={triggerRef}
 				role="button"
@@ -214,6 +234,7 @@ export function IconSelector({
 			{active && (
 				<Overlay
 					isCloseOnInteractOutside
+					isKeyboardDismiss
 					isOpen
 					menuRef={menuRef}
 					onClose={onClose}
@@ -227,129 +248,161 @@ export function IconSelector({
 						ref={menuRef}
 						role="presentation"
 					>
-						<div className="dropdown-section">
-							<ClayInput.Group small>
-								<ClayInput.GroupItem
-									className={
-										isInputFocused ? 'focus' : undefined
-									}
-								>
-									<ClayInput.GroupInsetItem before tag="span">
-										{!searchTerm && !isInputFocused && (
-											<div className="input-group-inset-icon">
-												<ClayIcon symbol="search" />
-											</div>
-										)}
-									</ClayInput.GroupInsetItem>
-
-									<ClayInput
-										aria-describedby={inputId}
-										insetAfter
-										insetBefore
-										onBlur={() => setIsInputFocused(false)}
-										onChange={(event) =>
-											setSearchTerm(event.target.value)
+						<FocusMenu menuRef={menuRef}>
+							<div className="dropdown-section">
+								<ClayInput.Group small>
+									<ClayInput.GroupItem
+										className={
+											isInputFocused ? 'focus' : undefined
 										}
-										onFocus={() => setIsInputFocused(true)}
-										placeholder={
-											defaultMessages.placeholder
-										}
-										type="text"
-										value={searchTerm}
-									/>
-
-									<ClayInput.GroupInsetItem after tag="span">
-										<ClayButtonWithIcon
-											aria-label={
-												defaultMessages.clearInput
-											}
-											displayType="unstyled"
-											monospaced
-											onClick={() => setSearchTerm('')}
-											symbol="times"
-											title={defaultMessages.clearInput}
-										/>
-									</ClayInput.GroupInsetItem>
-								</ClayInput.GroupItem>
-							</ClayInput.Group>
-						</div>
-
-						{filteredIcons.length > 0 && (
-							<ul className="dropdown-section-grid list-unstyled">
-								{filteredIcons.map((item: string) => (
-									<li
-										key={item}
-										onKeyDown={(event) => {
-											switch (event.key) {
-												case Keys.Tab: {
-													event.preventDefault();
-
-													setActive(false);
-
-													const list =
-														Array.from<HTMLElement>(
-															document.querySelectorAll(
-																FOCUSABLE_ELEMENTS.join(
-																	','
-																)
-															)
-														);
-
-													const position =
-														list.indexOf(
-															triggerRef.current!
-														);
-
-													const nextElement =
-														list[position + 1];
-
-													if (nextElement) {
-														nextElement.focus();
-													}
-													break;
-												}
-												default:
-													navigationProps.onKeyDown(
-														event
-													);
-													break;
-											}
-										}}
 									>
-										<ClayButtonWithIcon
-											aria-label={
-												messages
-													? sub(
-															messages?.selectIcon,
-															[item]
-													  )
-													: ''
+										<ClayInput.GroupInsetItem
+											before
+											tag="span"
+										>
+											{!searchTerm && !isInputFocused && (
+												<div className="input-group-inset-icon">
+													<ClayIcon symbol="search" />
+												</div>
+											)}
+										</ClayInput.GroupInsetItem>
+
+										<ClayInput
+											aria-describedby={inputId}
+											insetAfter
+											insetBefore
+											onBlur={() =>
+												setIsInputFocused(false)
 											}
-											borderless
-											displayType="secondary"
-											onClick={() => {
-												setSelectedIcon(item);
-
-												onClose();
-											}}
-											spritemap={spritemap}
-											symbol={item}
-											title={item}
+											onChange={(event) =>
+												setSearchTerm(
+													event.target.value
+												)
+											}
+											onFocus={() =>
+												setIsInputFocused(true)
+											}
+											placeholder={
+												defaultMessages.placeholder
+											}
+											type="text"
+											value={searchTerm}
 										/>
-									</li>
-								))}
-							</ul>
-						)}
 
-						{filteredIcons.length === 0 && (
-							<div
-								aria-live="polite"
-								className="dropdown-caption"
-								id={inputId}
-							>
-								{messages?.notFound}
+										<ClayInput.GroupInsetItem
+											after
+											tag="span"
+										>
+											<ClayButtonWithIcon
+												aria-label={
+													defaultMessages.clearInput
+												}
+												displayType="unstyled"
+												monospaced
+												onClick={() =>
+													setSearchTerm('')
+												}
+												symbol="times"
+												title={
+													defaultMessages.clearInput
+												}
+											/>
+										</ClayInput.GroupInsetItem>
+									</ClayInput.GroupItem>
+								</ClayInput.Group>
 							</div>
-						)}
+
+							{filteredIcons.length > 0 && (
+								<ul
+									className="dropdown-section-grid list-unstyled"
+									onKeyDown={(event) => {
+										switch (event.key) {
+											case Keys.Tab: {
+												event.preventDefault();
+
+												setActive(false);
+
+												const list =
+													Array.from<HTMLElement>(
+														document.querySelectorAll(
+															FOCUSABLE_ELEMENTS.join(
+																','
+															)
+														)
+													);
+
+												const position = list.indexOf(
+													triggerRef.current!
+												);
+
+												const nextElement =
+													list[position + 1];
+
+												if (nextElement) {
+													nextElement.focus();
+												}
+
+												navigationProps.onKeyDown(
+													event
+												);
+												break;
+											}
+											default:
+												navigationProps.onKeyDown(
+													event
+												);
+												break;
+										}
+									}}
+								>
+									{filteredIcons.map((item: string) => (
+										<li key={item}>
+											<ClayButtonWithIcon
+												aria-label={
+													messages
+														? sub(
+																messages?.selectIcon,
+																[item]
+														  )
+														: ''
+												}
+												borderless
+												displayType="secondary"
+												onClick={() => {
+													setSelectedIcon(item);
+													onClose();
+
+													if (isFocusVisible()) {
+														if (selectedIcon) {
+															triggerRef.current!.focus();
+														} else {
+															setTimeout(
+																() =>
+																	triggerRef.current!.focus(),
+																10
+															);
+														}
+													}
+												}}
+												spritemap={spritemap}
+												symbol={item}
+												title={item}
+											/>
+										</li>
+									))}
+								</ul>
+							)}
+
+							{filteredIcons.length === 0 && (
+								<div
+									aria-live="polite"
+									className="dropdown-caption"
+									id={inputId}
+								>
+									{messages?.notFound}
+								</div>
+							)}
+						</FocusMenu>
 					</div>
 				</Overlay>
 			)}
