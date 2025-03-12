@@ -50,6 +50,7 @@ export type Props = {
 	messages?: {
 		changeIconButton: string;
 		clearInput?: string;
+		iconSelected: string;
 		notFound: string;
 		placeholder?: string;
 		removeIcon: string;
@@ -71,6 +72,7 @@ export type Props = {
 const defaultMessages = {
 	changeIconButton: 'Change Icon',
 	clearInput: 'Clear search input',
+	iconSelected: 'Icon selected',
 	notFound: 'No items were found.',
 	placeholder: 'Search',
 	removeIcon: 'Remove icon selection',
@@ -393,15 +395,14 @@ export function IconSelector({
 								</ul>
 							)}
 
-							{filteredIcons.length === 0 && (
-								<div
-									aria-live="polite"
-									className="dropdown-caption"
-									id={inputId}
-								>
-									{messages?.notFound}
-								</div>
-							)}
+							<div
+								aria-live="assertive"
+								className="dropdown-caption"
+								id={inputId}
+							>
+								{filteredIcons.length === 0 &&
+									messages?.notFound}
+							</div>
 						</FocusMenu>
 					</div>
 				</Overlay>
@@ -422,6 +423,10 @@ export function IconSelector({
 						<ClayInput.GroupItem append>
 							<ClayInput readOnly value={selectedIcon} />
 						</ClayInput.GroupItem>
+
+						<div className="sr-only" role="status">
+							{`${selectedIcon} ${defaultMessages.iconSelected}`}
+						</div>
 
 						<ClayInput.GroupItem shrink>
 							{content}
