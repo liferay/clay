@@ -330,7 +330,7 @@ function TypeChildren({
 					return (
 						<Fragment key={index}>
 							{signature.parameter ? (
-								<div>
+								<>
 									<h5 style={{margin: '0'}}>Parameters</h5>
 									{signature.parameter.kind === 'Object' ? (
 										<TypeProperties
@@ -374,7 +374,7 @@ function TypeChildren({
 									) : (
 										<TypeValue type={signature.parameter} />
 									)}
-								</div>
+								</>
 							) : null}
 							{signature.returnType ? (
 								<div>
