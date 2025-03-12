@@ -536,6 +536,7 @@ $custom-control-outside: () !default;
 $custom-control-outside: map-deep-merge(
 	(
 		label: (
+			display: inline-block,
 			padding-left:
 				calc(
 					#{$custom-control-indicator-size} + #{$custom-control-description-padding-left}
