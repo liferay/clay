@@ -330,7 +330,7 @@ function TypeChildren({
 					return (
 						<Fragment key={index}>
 							{signature.parameter ? (
-								<div>
+								<>
 									<h5 style={{margin: '0'}}>Parameters</h5>
 									{signature.parameter.kind === 'Object' ? (
 										<TypeProperties
@@ -374,7 +374,7 @@ function TypeChildren({
 									) : (
 										<TypeValue type={signature.parameter} />
 									)}
-								</div>
+								</>
 							) : null}
 							{signature.returnType ? (
 								<div>
@@ -528,6 +528,9 @@ function TypeProperties({type, css: cssProp}: {type: any; css?: CSSObject}) {
 /** Renders a type value with its name, type, and description. */
 function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 	const isNameSameAsType = type.name === type.text;
+	const isDeprecated = type.tags?.find(
+		(item: any) => item.tagName === 'deprecated'
+	);
 	let isRequired = false;
 	let defaultValue;
 
@@ -536,80 +539,96 @@ function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 		defaultValue = type.defaultValue;
 	}
 
+	const titleJSX = (
+		<div
+			style={{
+				display: 'flex',
+				alignItems: 'center',
+				gap: 8,
+			}}
+		>
+			<h4
+				style={{
+					display: 'flex',
+					alignItems: 'flex-start',
+					flexShrink: 0,
+					margin: 0,
+					fontWeight: 400,
+					color: 'var(--color-foreground-secondary)',
+				}}
+			>
+				{type.name}{' '}
+				{isRequired && (
+					<span
+						style={{color: 'oklch(0.8 0.15 36.71)'}}
+						title="required"
+					>
+						*
+					</span>
+				)}
+			</h4>
+			<div
+				style={{
+					display: 'flex',
+					alignItems: 'center',
+					gap: '0.25rem',
+					minWidth: 0,
+				}}
+			>
+				{isNameSameAsType ? null : (
+					<CodeInline
+						value={type.text}
+						language="typescript"
+						paddingX="0.5rem"
+						paddingY="0.2rem"
+						style={{fontSize: 'var(--font-size-body-2)'}}
+					/>
+				)}
+				{defaultValue ? (
+					<span
+						style={{
+							display: 'flex',
+							alignItems: 'center',
+							gap: '0.25rem',
+							minWidth: 0,
+						}}
+					>
+						={' '}
+						<CodeInline
+							value={JSON.stringify(defaultValue)}
+							language="typescript"
+						/>
+					</span>
+				) : null}
+			</div>
+		</div>
+	);
+
 	return (
 		<div
 			key={type.name + type.text}
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
-				padding: '1.5rem 0',
+				padding: '8px 0',
 				gap: '0.8rem',
 				minWidth: 0,
 				...cssProp,
 			}}
 		>
-			<div
-				style={{
-					display: 'flex',
-					alignItems: 'center',
-					gap: 8,
-				}}
-			>
-				<h4
-					style={{
-						display: 'flex',
-						alignItems: 'flex-start',
-						flexShrink: 0,
-						margin: 0,
-						fontWeight: 400,
-						color: 'var(--color-foreground-secondary)',
-					}}
-				>
-					{type.name}{' '}
-					{isRequired && (
-						<span
-							style={{color: 'oklch(0.8 0.15 36.71)'}}
-							title="required"
-						>
-							*
-						</span>
-					)}
-				</h4>
-				<div
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						gap: '0.25rem',
-						minWidth: 0,
-					}}
-				>
-					{isNameSameAsType ? null : (
-						<CodeInline
-							value={type.text}
-							language="typescript"
-							paddingX="0.5rem"
-							paddingY="0.2rem"
-							style={{fontSize: 'var(--font-size-body-2)'}}
-						/>
-					)}
-					{defaultValue ? (
-						<span
-							style={{
-								display: 'flex',
-								alignItems: 'center',
-								gap: '0.25rem',
-								minWidth: 0,
-							}}
-						>
-							={' '}
-							<CodeInline
-								value={JSON.stringify(defaultValue)}
-								language="typescript"
-							/>
-						</span>
-					) : null}
+			{!!isDeprecated ? (
+				<div>
+					<span
+						className="badge badge-danger"
+						title={isDeprecated.text}
+					>
+						Deprecated
+					</span>
+					{titleJSX}
 				</div>
-			</div>
+			) : (
+				titleJSX
+			)}
 
 			{type.description && (
 				<MDXRenderer

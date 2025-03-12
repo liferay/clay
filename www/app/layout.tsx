@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import {Inter} from 'next/font/google';
 import {GoogleAnalytics} from '@next/third-parties/google';
 import {SandPackCSS} from './_components/SandpackStyles';
+import Script from 'next/script';
 import './clay.scss';
 import './globals.scss';
 
@@ -23,6 +24,7 @@ export default function RootLayout({
 		<html lang="en">
 			<head>
 				<SandPackCSS />
+				<Script src="/js/docs-site.js" />
 			</head>
 			<body className={inter.className}>{children}</body>
 			<GoogleAnalytics gaId={process.env.GA4!} />
