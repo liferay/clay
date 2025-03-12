@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.130.0](https://github.com/liferay/clay/compare/v3.129.1...v3.130.0) (2025-03-12)
+
+### Features
+
+-   **@clayui/form:** LPD-46381 Select adds shrink to make select element only as wide as its longest option ([e87cd5c](https://github.com/liferay/clay/commit/e87cd5c3e2952f5418a6b40474b7cd5a6a7f9eb8))
+
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features

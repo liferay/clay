@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.130.0](https://github.com/liferay/clay/compare/v3.129.1...v3.130.0) (2025-03-12)
+
+### Features
+
+-   **@clayui/core:** LPD-46157 Improvements on visual and review requests ([94005a2](https://github.com/liferay/clay/commit/94005a233be20e7a96fe8f6ef744472239a83f08))
+-   **@clayui/core:** LPD-46157 simplifies the implementation of IconSelector, adds public APIs and removes some unnecessary stuff ([18455d4](https://github.com/liferay/clay/commit/18455d4130d10779112be90de22fa5d715477cbe))
+-   **@clayui/core:** LPD-46381 Language Picker should use shrink be default ([d946364](https://github.com/liferay/clay/commit/d9463649ce3e2953c2dd43b7ad34c4bb0bce3a01))
+-   **@clayui/core:** LPD-46381 Picker adds shrink prop ([885c124](https://github.com/liferay/clay/commit/885c124e8272944130098762578fb328abe7d7d7))
+-   **@clayui/icon-selector:** LPD-46157 Add docs and stories ([9db809d](https://github.com/liferay/clay/commit/9db809d501a47b39eeced0982288f6b37b74af04))
+-   **@clayui/icon-selector:** LPD-46157 Add new icon-selector component and it's imports ([0c0b26a](https://github.com/liferay/clay/commit/0c0b26a44a538ffd054052d4d87c54cff73f8e1d))
+-   **@clayui/icon-selector:** LPD-46157 Update dependencies ([1e6fbf6](https://github.com/liferay/clay/commit/1e6fbf69fb3642da24b6d6ffb1f607e4a7c7159d))
+
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Bug Fixes

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.130.0](https://github.com/liferay/clay/compare/v3.129.1...v3.130.0) (2025-03-12)
+
+### Bug Fixes
+
+-   **@clayui/css:** custom-control-outside shouldn't be clickable beyond the text ([42b167f](https://github.com/liferay/clay/commit/42b167f3e0e6c7d63ea38d251658a6860f051525))
+-   **@clayui/css:** LPD-47339 loading-animation-squares should look like loading-animation when c-prefers-reduced-motion is on ([66f0d11](https://github.com/liferay/clay/commit/66f0d116efe7f54129797d73d7ff2f71c289c06b))
+-   **@clayui/css:** LPD-51231 custom-control-outside renders text below input ([b70f601](https://github.com/liferay/clay/commit/b70f6016d80323dc09e57de777134e109b407db9))
+
+### Features
+
+-   **@clayui/core:** LPD-46157 Improvements on visual and review requests ([94005a2](https://github.com/liferay/clay/commit/94005a233be20e7a96fe8f6ef744472239a83f08))
+-   **@clayui/core:** LPD-46157 simplifies the implementation of IconSelector, adds public APIs and removes some unnecessary stuff ([18455d4](https://github.com/liferay/clay/commit/18455d4130d10779112be90de22fa5d715477cbe))
+-   **@clayui/core:** LPD-46381 Language Picker should use shrink be default ([d946364](https://github.com/liferay/clay/commit/d9463649ce3e2953c2dd43b7ad34c4bb0bce3a01))
+-   **@clayui/core:** LPD-46381 Picker adds shrink prop ([885c124](https://github.com/liferay/clay/commit/885c124e8272944130098762578fb328abe7d7d7))
+-   **@clayui/css:** LPD-46381 Forms add form-control-shrink to make width of select element only as wide as its contents ([7f8db3d](https://github.com/liferay/clay/commit/7f8db3d6fb235ed8f9350bce5361c20c988d7e19))
+-   **@clayui/css:** LPD-49901 Icons, adds send.svg ([0fd5cf5](https://github.com/liferay/clay/commit/0fd5cf55ca816c129a573a34d961dc4794b09ee7))
+-   **@clayui/css:** LPD-50634 Icons adds Speed and Voice svgs ([cb40bc1](https://github.com/liferay/clay/commit/cb40bc1f33af7f1fb9744ebc95f21a502d59447f))
+-   **@clayui/form:** LPD-46381 Select adds shrink to make select element only as wide as its longest option ([e87cd5c](https://github.com/liferay/clay/commit/e87cd5c3e2952f5418a6b40474b7cd5a6a7f9eb8))
+-   **@clayui/icon-selector:** LPD-46157 Add docs and stories ([9db809d](https://github.com/liferay/clay/commit/9db809d501a47b39eeced0982288f6b37b74af04))
+-   **@clayui/icon-selector:** LPD-46157 Add new icon-selector component and it's imports ([0c0b26a](https://github.com/liferay/clay/commit/0c0b26a44a538ffd054052d4d87c54cff73f8e1d))
+-   **@clayui/icon-selector:** LPD-46157 Add style to icon selector ([fa00f38](https://github.com/liferay/clay/commit/fa00f38a460333433b4ab501634801af3b53046e))
+-   **@clayui/icon-selector:** LPD-46157 Update dependencies ([1e6fbf6](https://github.com/liferay/clay/commit/1e6fbf69fb3642da24b6d6ffb1f607e4a7c7159d))
+
 ## [3.129.1](https://github.com/liferay/clay/compare/v3.129.0...v3.129.1) (2025-02-27)
 
 ### Bug Fixes
