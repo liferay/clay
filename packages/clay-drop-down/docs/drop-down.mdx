@@ -313,63 +313,32 @@ Allows you to create a simple DropDown, through its API you are able to create a
 import {Provider} from '@clayui/core';
 import DropDown from '@clayui/drop-down';
 import Button from '@clayui/button';
-import React, {useState} from 'react';
+import React from 'react';
 
 import '@clayui/css/lib/css/atlas.css';
 
 const items = [
 	{
-		label: 'clickable',
-		onClick: (event) => event.preventDefault(),
-	},
-	{
-		type: 'divider',
-	},
-	{
-		items: [
-			{
-				label: 'one',
-				type: 'radio',
-				value: 'one',
-			},
-			{
-				label: 'two',
-				type: 'radio',
-				value: 'two',
-			},
+		children: [
+			{id: 2, name: 'Apple'},
+			{id: 3, name: 'Banana'},
+			{id: 4, name: 'Mangos'},
 		],
-		label: 'radio',
-		name: 'radio',
-		onChange: (value) => alert('New Radio checked'),
-		type: 'radiogroup',
+		id: 1,
+		name: 'Fruit',
 	},
 	{
-		items: [
-			{
-				checked: true,
-				label: 'checkbox',
-				onChange: () => alert('checkbox changed'),
-				type: 'checkbox',
-			},
-			{
-				checked: true,
-				label: 'checkbox 1',
-				onChange: () => alert('checkbox changed'),
-				type: 'checkbox',
-			},
+		children: [
+			{id: 6, name: 'Potatoes'},
+			{id: 7, name: 'Tomatoes'},
+			{id: 8, name: 'Onions'},
 		],
-		label: 'checkbox',
-		type: 'group',
-	},
-	{
-		href: '#',
-		label: 'linkable',
+		id: 5,
+		name: 'Vegetable',
 	},
 ];
 
 export default function App() {
-	const [value, setValue] = useState();
-
 	return (
 		<Provider spritemap="/public/icons.svg">
 			<div className="p-4">
