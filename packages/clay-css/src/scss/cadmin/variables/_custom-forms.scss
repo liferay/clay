@@ -538,6 +538,7 @@ $cadmin-custom-control-outside: () !default;
 $cadmin-custom-control-outside: map-deep-merge(
 	(
 		label: (
+			display: inline-block,
 			padding-left:
 				calc(
 					#{$cadmin-custom-control-indicator-size} + #{$cadmin-custom-control-description-padding-left}
