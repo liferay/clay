@@ -39,7 +39,9 @@ export const Default = (args: any) => {
 					size={args.size}
 					status={args.status}
 				>
-					<ClayModal.Header>{args.title}</ClayModal.Header>
+					<ClayModal.Header clean={args.clean}>
+						{args.title}
+					</ClayModal.Header>
 					<ClayModal.Body
 						iFrameProps={{
 							'aria-label': 'Hello World',
@@ -95,6 +97,7 @@ export const Default = (args: any) => {
 Default.args = {
 	autoClose: false,
 	center: false,
+	clean: false,
 	scrollable: false,
 	size: 'lg',
 	status: undefined,
