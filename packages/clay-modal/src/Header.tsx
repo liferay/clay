@@ -22,6 +22,12 @@ export const ItemGroup = ({
 
 export interface IItemProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
+	 * Flag indicating if the modal should be the clean variant
+	 * with the title hidden
+	 */
+	clean?: boolean;
+
+	/**
 	 * Flag for indicating if item should autofitting the width
 	 */
 	shrink?: boolean;
@@ -120,12 +126,13 @@ const ICON_MAP = {
 
 const HighLevel = ({
 	children,
+	clean,
 	onClose,
 	spritemap,
 	status,
 }: IContext & {children?: React.ReactNode}) => (
 	<>
-		<Title>
+		<Title className={classNames({'sr-only': clean})}>
 			{status && (
 				<TitleIndicator>
 					<ClayIcon spritemap={spritemap} symbol={ICON_MAP[status]} />
@@ -157,19 +164,34 @@ const ClayModalHeader = ({
 
 export interface IHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
+	 * Flag indicating if the modal should be the clean variant
+	 * with the title hidden
+	 */
+	clean?: boolean;
+
+	/**
 	 * Flag for indicating if you want to use the Header its children being the title.
 	 * Set to `false` if you want to use this as a low-level component.
 	 */
 	withTitle?: boolean;
 }
 
-const Header = ({children, withTitle = true, ...otherProps}: IHeaderProps) => {
+const Header = ({
+	children,
+	clean = false,
+	withTitle = true,
+	...otherProps
+}: IHeaderProps) => {
 	const {onClose, spritemap, status} = React.useContext(Context);
 
 	return (
-		<ClayModalHeader {...otherProps}>
+		<ClayModalHeader
+			className={classNames({'modal-header-clean': clean})}
+			{...otherProps}
+		>
 			{withTitle && (
 				<HighLevel
+					clean={clean}
 					onClose={onClose}
 					spritemap={spritemap}
 					status={status}
