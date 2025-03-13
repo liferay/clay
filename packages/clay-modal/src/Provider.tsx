@@ -35,6 +35,12 @@ type TState = {
 	center?: boolean;
 
 	/**
+	 * Flag indicating if the modal should be the clean variant
+	 * with the title hidden
+	 */
+	clean?: boolean;
+
+	/**
 	 * Render the action buttons on the footer following the order of `ClayModal.Footer`:
 	 * - first
 	 * - middle
@@ -102,7 +108,16 @@ const ModalProvider = ({children, spritemap}: IProps) => {
 	const {observer, onClose} = useModal({
 		onClose: () => dispatch({type: Action.Close}),
 	});
-	const {body, center, footer = [], header, size, status, url} = otherState;
+	const {
+		body,
+		center,
+		clean,
+		footer = [],
+		header,
+		size,
+		status,
+		url,
+	} = otherState;
 	const [first, middle, last] = footer;
 	const state = {
 		...otherState,
@@ -119,7 +134,11 @@ const ModalProvider = ({children, spritemap}: IProps) => {
 					spritemap={spritemap}
 					status={status}
 				>
-					{header && <ClayModal.Header>{header}</ClayModal.Header>}
+					{header && (
+						<ClayModal.Header clean={clean}>
+							{header}
+						</ClayModal.Header>
+					)}
 					<ClayModal.Body url={url}>{body}</ClayModal.Body>
 					{!!footer.length && (
 						<ClayModal.Footer

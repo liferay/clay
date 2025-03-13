@@ -472,3 +472,10 @@
 	top: -9999px;
 	width: 50px;
 }
+
+.modal-header-clean {
+	position: absolute;
+	right: 0;
+	z-index: 9;
+	border: 0;
+}

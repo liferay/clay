@@ -11,6 +11,12 @@ export interface IContext {
 	ariaLabelledby?: string;
 
 	/**
+	 * Flag indicating if the modal should be the clean variant
+	 * with the title hidden
+	 */
+	clean?: boolean;
+
+	/**
 	 * Callback called to close the modal.
 	 */
 	onClose: () => void;
