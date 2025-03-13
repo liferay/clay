@@ -12,6 +12,7 @@ import {
 	throttle,
 	useControlledState,
 	useId,
+	useIsMobileDevice,
 	useNavigation,
 } from '@clayui/shared';
 import classNames from 'classnames';
@@ -647,9 +648,9 @@ export const ClayDropDownWithItems = ({
 
 	const defaultActiveMenu = useId();
 
-	const windowWidth = window.innerWidth;
+	const isMobile = useIsMobileDevice();
 
-	if (windowWidth < 768) {
+	if (isMobile) {
 		return (
 			<ClayDropDownWithDrilldown
 				defaultActiveMenu={defaultActiveMenu}
