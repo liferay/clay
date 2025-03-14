@@ -11,7 +11,6 @@ import {
 	MouseSafeArea,
 	throttle,
 	useControlledState,
-	useId,
 	useIsMobileDevice,
 	useNavigation,
 } from '@clayui/shared';
@@ -559,6 +558,12 @@ const Items = ({items, spritemap}: IDropDownContentProps) => {
 	);
 };
 
+let counter = 0;
+
+function useDrilldownId() {
+	return `clay-drilldown-id-${counter++}`;
+}
+
 const drilldownItems = (items: any, id: string, menu: any = {}) => {
 	menu[id] = [];
 
@@ -569,7 +574,7 @@ const drilldownItems = (items: any, id: string, menu: any = {}) => {
 
 		keys.forEach((key) => {
 			if (typeof item[key] === 'object') {
-				const childId = useId();
+				const childId = useDrilldownId();
 
 				menu[id][index].child = childId;
 
@@ -646,7 +651,7 @@ export const ClayDropDownWithItems = ({
 
 	const Wrap = footerContent ? 'form' : React.Fragment;
 
-	const defaultActiveMenu = useId();
+	const defaultActiveMenu = useDrilldownId();
 
 	const isMobile = useIsMobileDevice();
 
