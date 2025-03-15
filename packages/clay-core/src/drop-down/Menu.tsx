@@ -8,21 +8,17 @@ import {
 	InternalDispatch,
 	Keys,
 	Overlay,
-	getFocusableList,
 	useControlledState,
 	useId,
+	useInteractionFocus,
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {
-	useCallback,
-	useEffect,
-	useImperativeHandle,
-	useRef,
-} from 'react';
+import React, {useCallback, useImperativeHandle, useRef} from 'react';
 
 import {Collection, useCollection, useVirtual} from '../collection';
+import {FocusMenu} from '../focus-trap';
 
 import type {ICollectionProps} from '../collection';
 
@@ -125,6 +121,9 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 	const containerRef = useRef<HTMLDivElement>(null);
 	const menuRef = useRef<HTMLDivElement>(null);
 	const triggerRef = useRef<HTMLButtonElement | null>(null);
+
+	// Pre-initializes events for the Focus Menu.
+	useInteractionFocus();
 
 	useImperativeHandle(ref, () => menuRef.current, []);
 
@@ -287,23 +286,8 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 							style={style}
 						>
 							<FocusMenu
-								onRender={() => {
-									// After a few milliseconds querying the elements in the DOM
-									// inside the menu. This especially when the menu is not
-									// rendered yet only after the menu is opened, React needs
-									// to commit the changes to the DOM so that the elements are
-									// visible and we can move the focus.
-									setTimeout(() => {
-										const list = getFocusableList(
-											menuRef,
-											UNSAFE_focusableElements
-										);
-
-										if (list.length) {
-											list[0]!.focus();
-										}
-									}, 10);
-								}}
+								focusableElements={UNSAFE_focusableElements}
+								menuRef={menuRef}
 							>
 								<Collection<T>
 									{...otherProps}
@@ -355,19 +339,6 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 			)}
 		</div>
 	);
-}
-
-type FocusMenuProps<T> = {
-	children: T;
-	onRender: () => void;
-};
-
-export function FocusMenu<T>({children, onRender}: FocusMenuProps<T>) {
-	useEffect(() => {
-		onRender();
-	}, []);
-
-	return children;
 }
 
 type ForwardRef = {

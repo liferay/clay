@@ -4,3 +4,4 @@
  */
 
 export {FocusTrap} from './FocusTrap';
+export {FocusMenu} from './FocusMenu';
