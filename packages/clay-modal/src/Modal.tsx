@@ -33,6 +33,12 @@ interface IProps
 	center?: boolean;
 
 	/**
+	 * Flag indicating if the modal should be the clean variant
+	 * with the title hidden
+	 */
+	clean?: boolean;
+
+	/**
 	 * Container element to render modal into.
 	 */
 	containerElementRef?: React.RefObject<Element>;
@@ -83,6 +89,7 @@ const Modal = ({
 	center,
 	children,
 	className,
+	clean,
 	containerElementRef,
 	containerProps = {},
 	disableAutoClose = false,
@@ -198,6 +205,7 @@ const Modal = ({
 						<Context.Provider
 							value={{
 								ariaLabelledby,
+								clean,
 								onClose: () =>
 									observer.dispatch(ObserverType.Close),
 								spritemap,
