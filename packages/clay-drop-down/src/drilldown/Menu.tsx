@@ -24,12 +24,14 @@ export interface IItem extends React.ComponentProps<typeof LinkOrButton> {
 	title?: string;
 	href?: string;
 	symbol?: string;
+	symbolRight?: string;
 	type?: TType;
 }
 
 export interface IProps {
 	active?: boolean;
 	direction?: 'prev' | 'next';
+	hasLeftSymbols?: boolean;
 	header?: string;
 	items: Array<IItem>;
 	messages: Messages;
@@ -103,6 +105,8 @@ const DrilldownMenu = ({
 									className,
 									onClick,
 									symbol,
+									symbolLeft,
+									symbolRight,
 									title,
 									type,
 									...other
@@ -144,9 +148,25 @@ const DrilldownMenu = ({
 												</span>
 											)}
 
-											<span className="dropdown-item-indicator-text-end">
-												{title}
-											</span>
+											{symbolLeft && (
+												<span className="dropdown-item-indicator-start">
+													<ClayIcon
+														spritemap={spritemap}
+														symbol={symbolLeft}
+													/>
+												</span>
+											)}
+
+											<span>{title}</span>
+
+											{symbolRight && (
+												<span className="dropdown-item-indicator-end">
+													<ClayIcon
+														spritemap={spritemap}
+														symbol={symbolRight}
+													/>
+												</span>
+											)}
 
 											{child && (
 												<span

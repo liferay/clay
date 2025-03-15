@@ -55,6 +55,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	defaultActiveMenu?: string;
 
 	/**
+	 * Flag to indicate if menu is displaying a clay-icon on the left.
+	 */
+	hasLeftSymbols?: boolean;
+
+	/**
 	 * The unique identifier of the menu that should be active on mount.
 	 * @deprecated since v3.51.0 - use `defaultActiveMenu` instead.
 	 */
@@ -129,6 +134,7 @@ export const ClayDropDownWithDrilldown = ({
 	containerElement,
 	defaultActive = false,
 	defaultActiveMenu,
+	hasLeftSymbols,
 	initialActiveMenu,
 	menuElementAttrs,
 	menuHeight,
@@ -204,6 +210,7 @@ export const ClayDropDownWithDrilldown = ({
 			alignmentPosition={alignmentPosition}
 			className={className}
 			containerElement={containerElement}
+			hasLeftSymbols={hasLeftSymbols}
 			hasRightSymbols
 			menuElementAttrs={{
 				...menuElementAttrs,
