@@ -798,22 +798,6 @@ $c-prefers-reduced-motion: map-merge(
 	(
 		scroll-behavior: auto,
 		transition: clay-enable-transitions(none),
-		'.loading-animation-squares': (
-			'&::before': (
-				background-color: transparent,
-				display: block,
-				font-size: inherit,
-				opacity: inherit,
-				transform: none,
-			),
-			'&::after': (
-				font-size: inherit,
-				left: auto,
-				position: relative,
-				top: auto,
-				transform: none,
-			),
-		),
 	),
 	$c-prefers-reduced-motion
 );

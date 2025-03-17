@@ -882,12 +882,10 @@
 		@include clay-css($cadmin-c-prefers-reduced-motion);
 
 		.loading-animation-squares {
-			@extend %loading-animation !optional;
-
 			@include clay-map-to-css(
-				map-get(
-					$cadmin-c-prefers-reduced-motion,
-					'.loading-animation-squares'
+				map-deep-get(
+					$cadmin-loading-animation-squares,
+					'prefers-reduced-motion'
 				)
 			);
 		}
