@@ -4,9 +4,6 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<path class="lexicon-icon-outline corner-radius-bottom-right" d="M448,384c0,35.3-28.7,64-64,64h-64v64h64c70.7,0,128-57.3,128-128v-64h-64V384z"></path>
-	<path class="lexicon-icon-outline corner-radius-top-right" d="M384,0h-64v64h64c35.3,0,64,28.7,64,64v64h64v-64C512,57.3,454.7,0,384,0z"></path>
-	<path class="lexicon-icon-outline corner-radius-top-left" d="M64,128c0-35.3,28.7-64,64-64h64V0h-64C57.3,0,0,57.3,0,128v64h64V128z"></path>
-	<path class="lexicon-icon-outline corner-radius-bottom-left" d="M64,384v-64H0v64c0,70.7,57.3,128,128,128h64v-64h-64C92.7,448,64,419.3,64,384z"></path>
+<svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path class="lexicon-icon-outline" fill-rule="evenodd" clip-rule="evenodd" d="M2 4.00256C2 2.89944 2.89687 2.00256 4 2.00256H6V0.00256348H4C1.79063 0.00256348 0 1.79319 0 4.00256V6.00256H2V4.00256ZM10 0.00256348H12C14.2094 0.00256348 16 1.79319 16 4.00256V6.00256H14V4.00256C14 2.89944 13.1031 2.00256 12 2.00256H10V0.00256348ZM12 14.0026C13.1031 14.0026 14 13.1057 14 12.0026V10.0026H16V12.0026C16 14.2119 14.2094 16.0026 12 16.0026H10V14.0026H12ZM2 10.0026V12.0026C2 13.1057 2.89687 14.0026 4 14.0026H6V16.0026H4C1.79063 16.0026 0 14.2119 0 12.0026V10.0026H2Z" />
 </svg>

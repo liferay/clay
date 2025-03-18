@@ -4,13 +4,12 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<path class="lexicon-icon-body" fill="none" d="M448,0H64C28.7,0,0,28.7,0,64v384c0,35.3,28.7,64,64,64h384c35.3,0,64-28.7,64-64V64C512,28.7,483.3,0,448,0z"></path>
-	<path class="lexicon-icon-outline forms-border" d="M448,0H64C28.7,0,0,28.7,0,64v384c0,35.3,28.7,64,64,64h384c35.3,0,64-28.7,64-64V64C512,28.7,483.3,0,448,0z M448,448H64V64h384V448C448,448,448,448,448,448z"></path>
-	<path class="lexicon-icon-outline forms-li-item-1" d="M384,128H224c-17.7,0-32,14.3-32,32s14.3,32,32,32h160c17.7,0,32-14.3,32-32S401.7,128,384,128z"></path>
-	<circle class="lexicon-icon-outline forms-li-bullet-1" cx="128" cy="160" r="32"></circle>
-	<path class="lexicon-icon-outline forms-li-item-2" d="M384,224H224c-17.7,0-32,14.3-32,32s14.3,32,32,32h160c17.7,0,32-14.3,32-32S401.7,224,384,224z"></path>
-	<circle class="lexicon-icon-outline forms-li-bullet-2" cx="128" cy="256" r="32"></circle>
-	<path class="lexicon-icon-outline forms-li-item-3" d="M384,320H224c-17.7,0-32,14.3-32,32s14.3,32,32,32h160c17.7,0,32-14.3,32-32S401.7,320,384,320z"></path>
-	<circle class="lexicon-icon-outline forms-li-bullet-3" cx="128" cy="352" r="32"></circle>
+<svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path class="lexicon-icon-outline" d="M12 4.00244H7C6.44727 4.00244 6 4.44931 6 5.00244C6 5.55557 6.44727 6.00244 7 6.00244H12C12.5527 6.00244 13 5.55557 13 5.00244C13 4.44931 12.5527 4.00244 12 4.00244Z" />
+<path class="lexicon-icon-outline" d="M5 5.00244C5 5.55472 4.55273 6.00244 4 6.00244C3.44727 6.00244 3 5.55472 3 5.00244C3 4.45016 3.44727 4.00244 4 4.00244C4.55273 4.00244 5 4.45016 5 5.00244Z" />
+<path class="lexicon-icon-outline" d="M12 7.00244H7C6.44727 7.00244 6 7.44931 6 8.00244C6 8.55557 6.44727 9.00244 7 9.00244H12C12.5527 9.00244 13 8.55557 13 8.00244C13 7.44931 12.5527 7.00244 12 7.00244Z" />
+<path class="lexicon-icon-outline" d="M5 8.00244C5 8.55472 4.55273 9.00244 4 9.00244C3.44727 9.00244 3 8.55472 3 8.00244C3 7.45016 3.44727 7.00244 4 7.00244C4.55273 7.00244 5 7.45016 5 8.00244Z" />
+<path class="lexicon-icon-outline" d="M12 10.0024H7C6.44727 10.0024 6 10.4493 6 11.0024C6 11.5556 6.44727 12.0024 7 12.0024H12C12.5527 12.0024 13 11.5556 13 11.0024C13 10.4493 12.5527 10.0024 12 10.0024Z" />
+<path class="lexicon-icon-outline" d="M5 11.0024C5 11.5547 4.55273 12.0024 4 12.0024C3.44727 12.0024 3 11.5547 3 11.0024C3 10.4502 3.44727 10.0024 4 10.0024C4.55273 10.0024 5 10.4502 5 11.0024Z" />
+<path class="lexicon-icon-outline" fill-rule="evenodd" clip-rule="evenodd" d="M2 0.00244141H14C15.1035 0.00244141 16 0.899323 16 2.00244V14.0024C16 15.1056 15.1035 16.0024 14 16.0024H2C0.896484 16.0024 0 15.1056 0 14.0024V2.00244C0 0.899323 0.896484 0.00244141 2 0.00244141ZM2 14.0024H14V2.00244H2V14.0024Z" />
 </svg>

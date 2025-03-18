@@ -4,12 +4,12 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<rect y="64" fill="#C0CFD8" width="512" height="384"></rect>
-	<rect x="16" y="80" fill="#FFFFFF" width="480" height="352"></rect>
-	<rect x="16" y="96" fill="#0094CE" width="480" height="64"></rect>
-	<rect x="16" y="352" fill="#0094CE" width="480" height="64"></rect>
-	<polygon fill="#0094CE" points="256,192 288,239.7 320,287.5 256,287.5 192,287.5 224,239.7"></polygon>
-	<polygon fill="#0094CE" points="256,320 224,272.3 192,224.5 256,224.5 320,224.5 288,272.3"></polygon>
-	<circle fill="#FFFFFF" cx="256" cy="256" r="16"></circle>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 2H0V14H16V2Z" fill="#C0CFD8"/>
+<path d="M15.5 2.5H0.5V13.5H15.5V2.5Z" fill="white"/>
+<path d="M15.5 3H0.5V5H15.5V3Z" fill="#0094CE"/>
+<path d="M15.5 11H0.5V13H15.5V11Z" fill="#0094CE"/>
+<path d="M8 6L9 7.49062L10 8.98438H8H6L7 7.49062L8 6Z" fill="#0094CE"/>
+<path d="M8 10L7 8.50937L6 7.01562H8H10L9 8.50937L8 10Z" fill="#0094CE"/>
+<path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8C8.5 7.72386 8.27614 7.5 8 7.5C7.72386 7.5 7.5 7.72386 7.5 8C7.5 8.27614 7.72386 8.5 8 8.5Z" fill="white"/>
 </svg>

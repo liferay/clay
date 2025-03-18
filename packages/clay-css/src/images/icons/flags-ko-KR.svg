@@ -4,13 +4,10 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<rect y="64" fill="#B0BEC9" width="512" height="384"></rect>
-	<rect x="16" y="81.3" fill="#FFFFFF" width="480" height="352"></rect>
-	<path fill="#E03232" d="M256,176c-44.2,0-80,35.8-80,80h160C336,211.8,300.2,176,256,176z"></path>
-	<path fill="#0035A0" d="M256,336c44.2,0,80-35.8,80-80H176C176,300.2,211.8,336,256,336z"></path>
-	<line fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" x1="384" y1="128" x2="448" y2="192"></line>
-	<line fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" x1="64" y1="192" x2="128" y2="128"></line>
-	<line fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" x1="128" y1="384" x2="64" y2="320"></line>
-	<line fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" x1="448" y1="320" x2="384" y2="384"></line>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 2H0V14H16V2Z" fill="#B0BEC9"/>
+<path d="M15 3H1V13H15V3Z" fill="white"/>
+<path d="M8 6C6.895 6 6 6.895 6 8H10C10 6.895 9.105 6 8 6Z" fill="#E03232"/>
+<path d="M8 10C9.105 10 10 9.105 10 8H6C6 9.105 6.895 10 8 10Z" fill="#0035A0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.35359 6.35359L4.35359 4.35359L3.64648 3.64648L1.64648 5.64648L2.35359 6.35359ZM11.6465 4.35359L13.6465 6.35359L14.3536 5.64648L12.3536 3.64648L11.6465 4.35359ZM2.35359 9.64648L4.35359 11.6465L3.64648 12.3536L1.64648 10.3536L2.35359 9.64648ZM13.6465 9.64648L11.6465 11.6465L12.3536 12.3536L14.3536 10.3536L13.6465 9.64648Z" fill="black"/>
 </svg>

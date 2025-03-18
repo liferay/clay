@@ -4,9 +4,8 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<path class="lexicon-icon-body" fill="none" d="M0,128v295.1C0,454.5,25.5,480,56.9,480h398.2c31.4,0,56.9-25.5,56.9-56.9V128H0z"></path>
-	<path class="lexicon-icon-outline" d="M0,128v295.1C0,454.5,25.5,480,56.9,480h398.2c31.4,0,56.9-25.5,56.9-56.9V128H0z M64,416V192h384l0,224H64z"></path>
-	<path class="lexicon-icon-outline" d="M480,96H32C14.4,96,0,81.6,0,64l0,0c0-17.6,14.4-32,32-32h448c17.6,0,32,14.4,32,32l0,0C512,81.6,497.6,96,480,96z"></path>
-	<path class="lexicon-icon-outline" d="M320,320H192c-17.6,0-32-14.4-32-32l0,0c0-17.6,14.4-32,32-32h128c17.6,0,32,14.4,32,32l0,0C352,305.6,337.6,320,320,320z"></path>
+<svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path class="lexicon-icon-outline" d="M15 3H1C0.450195 3 0 2.55 0 2C0 1.45 0.450195 1 1 1H15C15.5498 1 16 1.45 16 2C16 2.55 15.5498 3 15 3Z" />
+<path class="lexicon-icon-outline" d="M6 10H10C10.5498 10 11 9.55 11 9C11 8.45 10.5498 8 10 8H6C5.4502 8 5 8.45 5 9C5 9.55 5.4502 10 6 10Z" />
+<path class="lexicon-icon-outline" fill-rule="evenodd" clip-rule="evenodd" d="M0 13.2219V4H16V13.2219C16 14.2031 15.2031 15 14.2217 15H1.77832C0.796875 15 0 14.2031 0 13.2219ZM2 6V13H14V6H2Z" />
 </svg>

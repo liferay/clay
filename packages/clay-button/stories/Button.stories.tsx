@@ -95,7 +95,7 @@ GroupVertical.args = {
 
 export const Icon = () => (
 	<>
-		<ClayButtonWithIcon aria-label="Trash" symbol="trash" />
+		<ClayButtonWithIcon aria-label="Trash" symbol="angle-down" />
 		<ClayButtonWithIcon
 			aria-label="Cog"
 			displayType="secondary"

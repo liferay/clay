@@ -4,9 +4,9 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<path class="lexicon-icon-outline lx-chatbot-border" d="M480,32H32C12.8,32,0,44.8,0,64v319.7c0,19.2,12.8,32,32,32h64v32c0,25.6,32,44.8,54.4,22.5l54.4-54.4H480c19.2,0,32-12.8,32-32V64C512,44.8,499.2,32,480,32z M448,351.8H64V96h384V351.8z"/>
-	<rect class="lexicon-icon-outline lx-chatbot-eye-1" x="128" y="160" width="64" height="64"/>
-	<rect class="lexicon-icon-outline lx-chatbot-eye-2" x="320" y="160" width="64" height="64"/>
-	<path class="lexicon-icon-outline lx-chatbot-mouth" d="M256,320c64,0,96-28.7,96-64H160C160,291.3,192,320,256,320z"/>
+<svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path class="lexicon-icon-outline" fill-rule="evenodd" clip-rule="evenodd" d="M1 1.00256H15C15.5996 1.00256 16 1.40228 16 2.00189V11.9955C16 12.5952 15.5996 12.9949 15 12.9949H6.40039L4.7002 14.6938C4 15.3933 3 14.7937 3 13.9942V12.9949H1C0.400391 12.9949 0 12.5952 0 11.9955V2.00189C0 1.40228 0.400391 1.00256 1 1.00256ZM2 10.9962H14V3.00128H2V10.9962Z" />
+<path class="lexicon-icon-outline" d="M4 5.00256H6V7.00256H4V5.00256Z" />
+<path class="lexicon-icon-outline" d="M10 5.00256H12V7.00256H10V5.00256Z" />
+<path class="lexicon-icon-outline" d="M5 8.00256H11C11 9.10713 10 10.0026 8 10.0026C6 10.0026 5 9.10713 5 8.00256Z" />
 </svg>

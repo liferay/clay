@@ -4,14 +4,14 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<path class="lexicon-icon-outline books-1-spine-top" d="M96.1,32h-64c-17.7,0-32,14.3-32,32v32h128V64C128.1,46.3,113.8,32,96.1,32z"/>
-	<path class="lexicon-icon-outline books-1-spine-bottom" d="M0.1,448c0,17.7,14.3,32,32,32h64c17.7,0,32-14.3,32-32v-32H0.1V448z"/>
-	<rect class="lexicon-icon-outline books-1-spine" x="0.1" y="128" width="128" height="256"/>
-	<path class="lexicon-icon-outline books-2-spine-top" d="M256.1,32h-64c-17.7,0-32,14.3-32,32v32h128V64C288.1,46.3,273.8,32,256.1,32z"/>
-	<path class="lexicon-icon-outline books-2-spine-bottom" d="M160.1,448c0,17.7,14.3,32,32,32h64c17.7,0,32-14.3,32-32v-32h-128V448z"/>
-	<rect class="lexicon-icon-outline books-2-spine" x="160.1" y="128" width="128" height="256"/>
-	<path class="lexicon-icon-outline books-3-spine-top" d="M359.2,35.2l-31,8.1c-17.1,4.5-27.4,21.9-22.9,39l8.1,31l92.9-24.2l-8.1-31C393.7,41,376.3,30.7,359.2,35.2z"/>
-	<rect class="lexicon-icon-outline books-3-spine" x="352.1" y="128" transform="matrix(0.9678 -0.2518 0.2518 0.9678 -51.571 108.9927)" width="96" height="256"/>
-	<path class="lexicon-icon-outline books-3-spine-bottom" d="M402,453.9c4.5,17.1,21.9,27.4,39,22.9l31-8.1c17.1-4.5,27.4-21.9,22.9-39l-8.1-31l-92.9,24.2L402,453.9z"/>
+<svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path class="lexicon-icon-outline" d="M2.99212 1.00232H0.996232C0.444246 1.00232 -0.00170898 1.44919 -0.00170898 2.00232V3.00232H3.99006V2.00232C3.99006 1.44919 3.5441 1.00232 2.99212 1.00232Z" />
+<path class="lexicon-icon-outline" d="M-0.00170898 14.0023C-0.00170898 14.5554 0.444246 15.0023 0.996232 15.0023H2.99212C3.5441 15.0023 3.99006 14.5554 3.99006 14.0023V13.0023H-0.00170898V14.0023Z" />
+<path class="lexicon-icon-outline" d="M3.99006 4.00232H-0.00170898V12.0023H3.99006V4.00232Z" />
+<path class="lexicon-icon-outline" d="M7.98183 1.00232H5.98595C5.43396 1.00232 4.988 1.44919 4.988 2.00232V3.00232H8.97977V2.00232C8.97977 1.44919 8.53382 1.00232 7.98183 1.00232Z" />
+<path class="lexicon-icon-outline" d="M4.988 14.0023C4.988 14.5554 5.43396 15.0023 5.98595 15.0023H7.98183C8.53382 15.0023 8.97977 14.5554 8.97977 14.0023V13.0023H4.988V14.0023Z" />
+<path class="lexicon-icon-outline" d="M8.97977 4.00232H4.988V12.0023H8.97977V4.00232Z" />
+<path class="lexicon-icon-outline" d="M11.7335 1.10234L10.7668 1.35547C10.2335 1.49609 9.9123 2.03984 10.0526 2.57422L10.3052 3.54297L13.2024 2.78672L12.9498 1.81797C12.8094 1.28359 12.2668 0.961715 11.7335 1.10234Z" />
+<path class="lexicon-icon-outline" d="M13.4544 3.75349L10.557 4.50889L12.5672 12.2513L15.4646 11.4959L13.4544 3.75349Z" />
+<path class="lexicon-icon-outline" d="M13.0682 14.1867C13.2085 14.7211 13.7512 15.043 14.2844 14.9024L15.2512 14.6493C15.7845 14.5086 16.1057 13.9649 15.9654 13.4305L15.7128 12.4618L12.8156 13.218L13.0682 14.1867Z" />
 </svg>

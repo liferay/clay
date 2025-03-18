@@ -4,21 +4,21 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<path class="calendar-border lexicon-icon-outline" d="M512,160c0-35-28.7-64-63.7-64l-0.3,0v-64c0-44-64-41-64,0v64h-96v-64c0-40-64-44-64,0v64h-96v-64c0-45-64-40-64,0v64l-0.3,0c-35,0-63.7,29-63.7,64V448c0,35,29,64,64,64h352l96-96V160z M384,448.1v-64h64L384,448.1z M448,320H320v128H64V160h384V320z"></path>
-	<rect class="calendar-date lexicon-icon-outline" x="96" y="192" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="160" y="192" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="224" y="192" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="288" y="192" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="352" y="192" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="96" y="256" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="160" y="256" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="224" y="256" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="288" y="256" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="352" y="256" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="96" y="320" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="96" y="384" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="160" y="384" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="160" y="320" width="32" height="32"></rect>
-	<rect class="calendar-date lexicon-icon-outline" x="224" y="320" width="32" height="32"></rect>
+<svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path class="lexicon-icon-outline" d="M2.99198 6.00116H3.99315V7.00096H2.99198V6.00116Z" />
+<path class="lexicon-icon-outline" d="M5.99547 6.00116H4.99431V7.00096H5.99547V6.00116Z" />
+<path class="lexicon-icon-outline" d="M7.9978 6.00116H6.99664V7.00096H7.9978V6.00116Z" />
+<path class="lexicon-icon-outline" d="M10.0001 6.00116H8.99897V7.00096H10.0001V6.00116Z" />
+<path class="lexicon-icon-outline" d="M12.0025 6.00116H11.0013V7.00096H12.0025V6.00116Z" />
+<path class="lexicon-icon-outline" d="M3.99315 8.00076H2.99198V9.00056H3.99315V8.00076Z" />
+<path class="lexicon-icon-outline" d="M5.99547 8.00076H4.99431V9.00056H5.99547V8.00076Z" />
+<path class="lexicon-icon-outline" d="M7.9978 8.00076H6.99664V9.00056H7.9978V8.00076Z" />
+<path class="lexicon-icon-outline" d="M10.0001 8.00076H8.99897V9.00056H10.0001V8.00076Z" />
+<path class="lexicon-icon-outline" d="M12.0025 8.00076H11.0013V9.00056H12.0025V8.00076Z" />
+<path class="lexicon-icon-outline" d="M3.99315 10.0004H2.99198V11.0002H3.99315V10.0004Z" />
+<path class="lexicon-icon-outline" d="M3.99315 12H2.99198V12.9998H3.99315V12Z" />
+<path class="lexicon-icon-outline" d="M5.99547 12H4.99431V12.9998H5.99547V12Z" />
+<path class="lexicon-icon-outline" d="M5.99547 10.0004H4.99431V11.0002H5.99547V10.0004Z" />
+<path class="lexicon-icon-outline" d="M7.9978 10.0004H6.99664V11.0002H7.9978V10.0004Z" />
+<path class="lexicon-icon-outline" fill-rule="evenodd" clip-rule="evenodd" d="M13.9993 0.00231934C15.1038 0.00231934 15.9993 0.89775 15.9993 2.00232L15.9984 11.7592C15.9983 12.5555 15.6817 13.3191 15.1183 13.8817L13.8732 15.1251C13.3107 15.6868 12.5483 16.0023 11.7534 16.0023H1.98201C0.886799 16.0023 -0.00170898 14.9588 -0.00170898 13.8652V4.98259C-0.00170898 4.9616 -0.00138186 4.9407 -0.000732422 4.91987V2.00232C-0.000732422 0.89775 0.894698 0.00231934 1.99927 0.00231934H13.9993ZM2.00062 5.00232V13.8621C2.00062 13.9027 2.03197 13.9621 2.06331 13.9996H10.9913L10.9929 11.9994C10.9933 11.4473 11.441 11.0001 11.993 11.0001L13.996 11.0004V5.00232H2.00062Z" />
 </svg>
