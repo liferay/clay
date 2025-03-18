@@ -857,10 +857,8 @@
 	@include clay-css($c-prefers-reduced-motion);
 
 	.loading-animation-squares {
-		@extend %loading-animation !optional;
-
 		@include clay-map-to-css(
-			map-get($c-prefers-reduced-motion, '.loading-animation-squares')
+			map-deep-get($loading-animation-squares, 'prefers-reduced-motion')
 		);
 	}
 }

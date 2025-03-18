@@ -219,6 +219,12 @@
 			&::after {
 				@include clay-css(map-get($map, after));
 			}
+
+			@media (prefers-reduced-motion: reduce) {
+				@include clay-map-to-css(
+					map-get($map, 'prefers-reduced-motion')
+				);
+			}
 		}
 	}
 }
