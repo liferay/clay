@@ -128,6 +128,8 @@
 	}
 }
 
+/// @deprecated as of v3.130.0
+
 @mixin clay-custom-grid-columns($map) {
 	@if (type-of($map) == 'map') {
 		$custom-grid-props: map-merge(

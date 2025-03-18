@@ -470,7 +470,7 @@
 // Card Page
 
 .card-page {
-	@extend %clay-custom-grid-wrapper !optional;
+	@include clay-map-to-css($cadmin-card-page);
 
 	&.card-page-equal-height {
 		.card-page-item,
@@ -499,15 +499,15 @@
 }
 
 .card-page-item-directory {
-	@include clay-custom-grid-columns($cadmin-card-page-item-directory);
+	@include clay-map-to-css($cadmin-card-page-item-directory);
 }
 
 .card-page-item-asset {
-	@include clay-custom-grid-columns($cadmin-card-page-item-asset);
+	@include clay-map-to-css($cadmin-card-page-item-asset);
 }
 
 .card-page-item-user {
-	@include clay-custom-grid-columns($cadmin-card-page-item-user);
+	@include clay-map-to-css($cadmin-card-page-item-user);
 }
 
 // Card Interactive

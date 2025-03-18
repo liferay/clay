@@ -436,6 +436,14 @@
 					@media #{clay-str-replace('#{$selector}', '@media ', '')} {
 						@include clay-map-to-css($value);
 					}
+				} @else if (starts-with($selector, '@container ')) {
+					@at-root {
+						@container #{clay-str-replace('#{$selector}', '@container ', '')} {
+							& {
+								@include clay-map-to-css($value);
+							}
+						}
+					}
 				} @else {
 					#{$selector} {
 						@include clay-map-to-css($value);
