@@ -234,6 +234,7 @@
 	}
 
 	%clay-custom-grid-wrapper {
+		container-type: inline-size;
 		display: flex;
 		flex-wrap: wrap;
 		list-style: none;
