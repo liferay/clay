@@ -7,9 +7,9 @@ import {useEffect, useState} from 'react';
 
 import {throttle} from './throttle';
 
-export function useIsMobileDevice(): boolean {
-	const getIsMobile = () => window.screen.width <= 700;
+const getIsMobile = () => window.document.body.clientWidth <= 700;
 
+export function useIsMobileDevice(): boolean {
 	const [isMobile, setIsMobile] = useState<boolean>(getIsMobile());
 
 	useEffect(() => {

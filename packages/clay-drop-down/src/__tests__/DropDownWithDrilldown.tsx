@@ -9,9 +9,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayDropDownWithDrilldown} from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
+
+import {ClayDropDownWithDrilldown} from '../DropDownWithDrilldown';
 
 describe('ClayDropDownWithDrilldown', () => {
 	afterEach(cleanup);
