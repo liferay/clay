@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.131.0](https://github.com/liferay/clay/compare/v3.130.0...v3.131.0) (2025-03-20)
+
+### Features
+
+-   **@clayui/core:** Improves IconSelector keyboard navigation ([e8b293f](https://github.com/liferay/clay/commit/e8b293f63c53e5fa75d55bd026ed22cf1fc14b72))
+-   **@clayui/core:** LPD-47056 Add spritemap property in documentation ([1f7770e](https://github.com/liferay/clay/commit/1f7770eb2d93e9e8c7301f8cfa1fbdd6650faab0))
+-   **@clayui/core:** LPD-47056 Improve screen reader feedback ([240c618](https://github.com/liferay/clay/commit/240c6181fb82a05c323a3e614e4cdaf2b3d907a6))
+
 # [3.130.0](https://github.com/liferay/clay/compare/v3.129.1...v3.130.0) (2025-03-12)
 
 ### Features
