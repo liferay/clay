@@ -150,7 +150,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
-	trigger: React.ReactElement;
+	trigger: React.ReactElement & {
+		ref?: (node: HTMLButtonElement | null) => void;
+	};
 
 	/**
 	 * Flag indicating if the caret icon should be displayed on the right side.
@@ -228,6 +230,8 @@ export const ClayDropDownWithDrilldown = ({
 	const [direction, setDirection] = useState<'prev' | 'next'>();
 	const [history, setHistory] = useState<Array<History>>([]);
 
+	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
+
 	const {isFocusVisible} = useInteractionFocus();
 
 	const [active, setActive] = useControlledState({
@@ -298,7 +302,7 @@ export const ClayDropDownWithDrilldown = ({
 
 	const onClose = useCallback(() => {
 		setActive(false);
-		// triggerElementRef.current?.focus();
+		triggerElementRef.current?.focus();
 	}, []);
 
 	const hasLeftSymbols = useMemo(
@@ -333,7 +337,18 @@ export const ClayDropDownWithDrilldown = ({
 				setActive(value);
 			}}
 			renderMenuOnClick={renderMenuOnClick}
-			trigger={trigger}
+			trigger={React.cloneElement(trigger, {
+				ref: (node: HTMLButtonElement) => {
+					if (node) {
+						triggerElementRef.current = node;
+						// Call the original ref, if any.
+						const {ref} = trigger;
+						if (typeof ref === 'function') {
+							ref(node);
+						}
+					}
+				},
+			})}
 			triggerIcon={triggerIcon}
 		>
 			<ClayDropDownContext.Provider
