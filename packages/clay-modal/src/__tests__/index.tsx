@@ -218,4 +218,24 @@ describe('ClayModal', () => {
 
 		expect(document.body).toMatchSnapshot();
 	});
+
+	it('renders with clean variant', () => {
+		const ModalWithCleanVariant = () => {
+			const {observer} = useModal({onClose: () => {}});
+
+			return (
+				<ClayModal observer={observer} spritemap={spritemap}>
+					<ClayModal.Header clean>Foo</ClayModal.Header>
+				</ClayModal>
+			);
+		};
+
+		render(<ModalWithCleanVariant />);
+
+		act(() => {
+			jest.runAllTimers();
+		});
+
+		expect(document.body).toMatchSnapshot();
+	});
 });
