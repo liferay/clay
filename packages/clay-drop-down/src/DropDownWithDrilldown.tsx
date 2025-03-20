@@ -210,8 +210,8 @@ export const ClayDropDownWithDrilldown = ({
 	menuWidth,
 	menus,
 	messages = {
-		back: '',
-		goTo: '',
+		back: 'Back',
+		goTo: 'Go to',
 	},
 	offsetFn,
 	onActiveChange,
@@ -306,7 +306,10 @@ export const ClayDropDownWithDrilldown = ({
 	}, []);
 
 	const hasLeftSymbols = useMemo(
-		() => !!findNested(menus[activeMenu!]!, 'symbolLeft'),
+		() =>
+			menus[activeMenu!]
+				? findNested(menus[activeMenu!]!, 'symbolLeft')
+				: false,
 		[activeMenu, menus]
 	);
 

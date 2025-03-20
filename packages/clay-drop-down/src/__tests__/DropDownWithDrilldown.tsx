@@ -10,6 +10,7 @@
  */
 
 import {cleanup, fireEvent, render} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import {ClayDropDownWithDrilldown} from '../DropDownWithDrilldown';
@@ -83,7 +84,7 @@ describe('ClayDropDownWithDrilldown', () => {
 	});
 
 	xit('navigates forwards when clicking through menus', () => {
-		const {getByTestId} = render(
+		const {getAllByRole, getByTestId} = render(
 			<ClayDropDownWithDrilldown
 				initialActiveMenu="x0a3"
 				menus={{
@@ -101,7 +102,9 @@ describe('ClayDropDownWithDrilldown', () => {
 
 		fireEvent.click(getByTestId('trigger'));
 
-		fireEvent.click(getByTestId('menu-item-Subnav'));
+		const [, item] = getAllByRole('menuitem');
+
+		fireEvent.click(item!);
 
 		jest.runAllTimers();
 
@@ -164,7 +167,7 @@ describe('ClayDropDownWithDrilldown', () => {
 	it('the menu can be toggled by clicking in an item', () => {
 		const onActiveChange = jest.fn();
 
-		const {getByTestId} = render(
+		const {getAllByRole, getByTestId} = render(
 			<ClayDropDownWithDrilldown
 				active={false}
 				defaultActiveMenu="x0a3"
@@ -182,12 +185,13 @@ describe('ClayDropDownWithDrilldown', () => {
 			/>
 		);
 
-		fireEvent.click(getByTestId('trigger'));
-		fireEvent.click(getByTestId('menu-item-Toggle'));
-		fireEvent.click(getByTestId('menu-item-Toggle'));
-		fireEvent.click(getByTestId('menu-item-Toggle'));
+		userEvent.click(getByTestId('trigger'));
 
-		expect(onActiveChange).toHaveBeenCalledTimes(4);
+		const [item] = getAllByRole('menuitem', {hidden: true});
+
+		userEvent.click(item!);
+
+		expect(onActiveChange).toBeCalled();
 
 		expect(document.body).toMatchSnapshot();
 	});

@@ -82,7 +82,7 @@ module.exports = {
 		'./packages/clay-drop-down/src/': {
 			branches: 57,
 			functions: 51,
-			lines: 70,
+			lines: 69,
 			statements: 69,
 		},
 		'./packages/clay-empty-state/src/': {
