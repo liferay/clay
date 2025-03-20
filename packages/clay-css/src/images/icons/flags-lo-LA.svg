@@ -4,10 +4,10 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<rect y="64" fill="#B0BEC9" width="512" height="384"></rect>
-	<rect x="16" y="81.3" fill="#E03232" width="480" height="112"></rect>
-	<rect x="16" y="320" fill="#E03232" width="480" height="112"></rect>
-	<rect x="16" y="192" fill="#0035A0" width="480" height="128"></rect>
-	<circle fill="#FFFFFF" cx="256" cy="256" r="48"></circle>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 2H0V14H16V2Z" fill="#B0BEC9"/>
+<path d="M15.5 2.54065H0.5V6.04065H15.5V2.54065Z" fill="#E03232"/>
+<path d="M15.5 10H0.5V13.5H15.5V10Z" fill="#E03232"/>
+<path d="M15.5 6H0.5V10H15.5V6Z" fill="#0035A0"/>
+<path d="M8 9.5C8.82843 9.5 9.5 8.82843 9.5 8C9.5 7.17157 8.82843 6.5 8 6.5C7.17157 6.5 6.5 7.17157 6.5 8C6.5 8.82843 7.17157 9.5 8 9.5Z" fill="white"/>
 </svg>

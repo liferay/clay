@@ -1,13 +1,13 @@
 <!--
-* SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
-* SPDX-FileCopyrightText: © 2022 Contributors to the project Clay <https://github.com/liferay/clay/graphs/contributors>
+* SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
+* SPDX-FileCopyrightText: © 2020 Contributors to the project Clay <https://github.com/liferay/clay/graphs/contributors>
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<path class="lexicon-icon-outline lx-order-form-pencil-border" d="M64,64h336c0,41.3,64,41.3,64,0c0-35.3-28.7-64-64-64H64C28.7,0,0,28.7,0,64v384c0,35.3,28.7,64,64,64h192c41.3,0,41.3-64,0-64H64V64z"/>
-	<path class="lexicon-icon-outline lx-order-form-pencil-line-1" d="M160,128h144c41.3,0,41.3,64,0,64H160C118.7,192,118.7,128,160,128z"/>
-	<path class="lexicon-icon-outline lx-order-form-pencil-line-2" d="M160,224h96c41.3,0,41.3,64,0,64h-96C118.7,288,118.7,224,160,224z"/>
-	<path class="lexicon-icon-outline lx-order-form-pencil-line-3" d="M160,320c-41.3,0-41.3,64,0,64h96c41.3,0,41.3-64,0-64H160z"/>
-	<path class="lexicon-icon-outline lx-order-form-pencil-pencil" d="M339,425.5l0.1-219.1l86.4-84.1L512,208v217.6C512,540,339,541.6,339,425.5z M425.4,206.4l-28.8,28.5l0.1,117.1l57.6,0l-0.1-117.1L425.4,206.4z M454.2,416l-57.6,0C389.7,467,460.6,467.7,454.2,416z" clip-rule="evenodd" fill-rule="evenodd"/>
+<svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path class="lexicon-icon-outline" d="M2.00024 2.00244H12.5002C12.5002 3.29307 14.5002 3.29307 14.5002 2.00244C14.5002 0.899316 13.6034 0.00244141 12.5002 0.00244141H2.00024C0.897119 0.00244141 0.000244141 0.899316 0.000244141 2.00244V14.0024C0.000244141 15.1056 0.897119 16.0024 2.00024 16.0024H8.00024C9.29087 16.0024 9.29087 14.0024 8.00024 14.0024H2.00024V2.00244Z" />
+<path class="lexicon-icon-outline" d="M5.00024 4.00244H9.50024C10.7909 4.00244 10.7909 6.00244 9.50024 6.00244H5.00024C3.70962 6.00244 3.70962 4.00244 5.00024 4.00244Z" />
+<path class="lexicon-icon-outline" d="M8.00024 7.00244H5.00024C3.70962 7.00244 3.70962 9.00244 5.00024 9.00244H8.00024C9.29087 9.00244 9.29087 7.00244 8.00024 7.00244Z" />
+<path class="lexicon-icon-outline" d="M5.00024 10.0024C3.70962 10.0024 3.70962 12.0024 5.00024 12.0024H8.00024C9.29087 12.0024 9.29087 10.0024 8.00024 10.0024H5.00024Z" />
+<path class="lexicon-icon-outline" fill-rule="evenodd" clip-rule="evenodd" d="M10.5971 6.45244L10.594 13.2993C10.594 16.9274 16.0002 16.8774 16.0002 13.3024V6.50244L13.2971 3.82432L10.5971 6.45244ZM12.394 7.34307L13.294 6.45244L14.194 7.34307L14.1971 11.0024H12.3971L12.394 7.34307ZM14.194 13.0024H12.394C12.1784 14.5962 14.394 14.6181 14.194 13.0024Z" />
 </svg>

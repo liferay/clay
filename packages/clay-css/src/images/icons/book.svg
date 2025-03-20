@@ -1,10 +1,9 @@
 <!--
-* SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
-* SPDX-FileCopyrightText: © 2022 Contributors to the project Clay <https://github.com/liferay/clay/graphs/contributors>
+* SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
+* SPDX-FileCopyrightText: © 2020 Contributors to the project Clay <https://github.com/liferay/clay/graphs/contributors>
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<path class="lexicon-icon-outline" d="M480,352V32c0-16.6-14.3-32-32-32H128C75,0,32,46.3,32,96v352c0,0,0,64,80.2,63.7c0.1,0,351.8,0.3,351.8,0.3c21.6-1.3,20.9-30.7,0-31.9L112,480c-64.1-0.1-63.9-96.1,0.2-96H448C465.7,383.9,480,368.6,480,352z M416,320H128V64h288V320z"/>
-	<path class="lexicon-icon-outline" d="M111.8,416c-20.1,0.3-22.2,31,0,32H432c23.1-1.6,19.4-31.7,0-32H111.8z"/>
+<svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path class="lexicon-icon-outline" fill-rule="evenodd" clip-rule="evenodd" d="M14.9983 1.00232V11.0023C14.9983 11.5211 14.5514 11.9992 13.9983 12.0023H3.50454C1.50142 11.9992 1.49517 14.9992 3.49829 15.0023L14.4983 15.0054C15.1514 15.0429 15.1733 15.9617 14.4983 16.0023L3.50454 15.9929C0.998291 16.0023 0.998291 14.0023 0.998291 14.0023V3.00232C0.998291 1.44919 2.34204 0.00231934 3.99829 0.00231934H13.9983C14.5514 0.00231934 14.9983 0.483569 14.9983 1.00232ZM3.99829 10.0023H12.9983V2.00232H3.99829V10.0023ZM3.4921 14.0023C2.79835 13.9711 2.86398 13.0117 3.4921 13.0023H13.4984C14.1046 13.0117 14.2202 13.9523 13.4984 14.0023H3.4921Z" />
 </svg>
