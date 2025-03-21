@@ -76,10 +76,7 @@ const Breadcrumb = ({
 	const [collapsed, setCollapsed] = useState(false);
 
 	return (
-		<nav
-			aria-label={ariaLabels.breadcrumb}
-			className="align-items-center d-flex"
-		>
+		<nav aria-label={ariaLabels.breadcrumb} className="breadcrumb-bar">
 			{items.length > 3 && (
 				<ClayButtonWithIcon
 					aria-expanded={collapsed}
