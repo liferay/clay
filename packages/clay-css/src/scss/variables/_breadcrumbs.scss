@@ -148,3 +148,12 @@ $breadcrumb-toggle: map-merge(
 	),
 	$breadcrumb-toggle
 );
+
+$breadcrumb-bar: () !default;
+$breadcrumb-bar: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+	),
+	$breadcrumb-bar
+);

@@ -155,3 +155,12 @@ $cadmin-breadcrumb-toggle: map-merge(
 	),
 	$cadmin-breadcrumb-toggle
 );
+
+$cadmin-breadcrumb-bar: () !default;
+$cadmin-breadcrumb-bar: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+	),
+	$cadmin-breadcrumb-bar
+);
