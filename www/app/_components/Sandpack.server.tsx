@@ -27,6 +27,8 @@ export async function Sandpack({language, children}: Props) {
 			template={language === 'jsx' ? 'react' : undefined}
 			customSetup={{
 				dependencies: {
+					react: '^16.12.0',
+					'react-dom': '^16.12.0',
 					'@clayui/core': 'latest',
 					'@clayui/icon': 'latest',
 					'@clayui/button': 'latest',
@@ -72,6 +74,20 @@ export async function Sandpack({language, children}: Props) {
 				'/App.js': {
 					active: true,
 					code: children,
+				},
+				'/index.js': {
+					code: `import React, { StrictMode } from "react";
+import ReactDOM from "react-dom";
+import "./styles.css";
+
+import App from "./App";
+
+ReactDOM.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+  document.getElementById("root")
+);`,
 				},
 			}}
 			options={{
