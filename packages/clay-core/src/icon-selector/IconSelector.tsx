@@ -4,7 +4,6 @@
  */
 
 import Button, {ClayButtonWithIcon} from '@clayui/button';
-import {useResource} from '@clayui/data-provider';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import {
@@ -19,7 +18,7 @@ import {
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
-import React, {useCallback, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {FocusMenu} from '../focus-trap';
 
@@ -80,7 +79,7 @@ const defaultMessages = {
 	selectIconButton: 'Select an Icon',
 };
 
-const fetchIcons = async (spritemap: string): Promise<Response> => {
+const fetchIcons = async (spritemap: string): Promise<Array<string>> => {
 	const iconNames: Array<string> = [];
 
 	const res = await fetch(spritemap);
@@ -99,9 +98,7 @@ const fetchIcons = async (spritemap: string): Promise<Response> => {
 		}
 	});
 
-	return new Response(JSON.stringify(iconNames), {
-		headers: {'Content-Type': 'application/json'},
-	});
+	return iconNames;
 };
 
 export function IconSelector({
@@ -114,6 +111,7 @@ export function IconSelector({
 }: Props) {
 	const [selectedIcon, setSelectedIcon] = useState<string>('');
 	const [isInputFocused, setIsInputFocused] = useState(false);
+	const [iconNames, setIconNames] = useState<Array<string>>([]);
 
 	const menuRef = useRef<HTMLDivElement>(null);
 	const triggerRef = useRef<HTMLButtonElement | null>(null);
@@ -134,24 +132,21 @@ export function IconSelector({
 		value: externalActive,
 	});
 
-	const url = spritemap.includes('http')
-		? spritemap
-		: new URL(spritemap, window.location.origin).toString();
-
-	const {resource} = useResource({
-		fetch: fetchIcons,
-		link: url,
-	});
+	useEffect(() => {
+		fetchIcons(spritemap).then((iconNames) => {
+			setIconNames(iconNames);
+		});
+	}, [spritemap]);
 
 	const filteredIcons = useMemo(() => {
-		if (!resource) {
+		if (!iconNames) {
 			return [];
 		}
 
-		return resource.filter((icon: string) =>
+		return iconNames.filter((icon: string) =>
 			icon.toLowerCase().includes(searchTerm.toLowerCase())
 		);
-	}, [resource, searchTerm]);
+	}, [iconNames, searchTerm]);
 
 	const onClose = useCallback(() => {
 		setActive(false);
