@@ -1,3 +1,7 @@
+.breadcrumb-bar {
+	@include clay-css($cadmin-breadcrumb-bar);
+}
+
 .breadcrumb {
 	@include clay-css($cadmin-breadcrumb);
 }
