@@ -622,12 +622,17 @@ $cadmin-card-page-item-asset: map-deep-merge(
 			flex-basis: 50%,
 			max-width: 50%,
 		),
+		'@container #{map-get($cadmin-card-page, container-name)} (min-width: #{map-get($cadmin-container-max-widths, md)})':
+		(
+			flex-basis: 33.33333%,
+			max-width: 33.33333%,
+		),
 		'@container #{map-get($cadmin-card-page, container-name)} (min-width: #{map-get($cadmin-container-max-widths, lg)})':
 		(
 			flex-basis: 25%,
 			max-width: 25%,
 		),
-		'@container #{map-get($cadmin-card-page, container-name)} (min-width: #{map-get($cadmin-container-max-widths, xxl)})':
+		'@container #{map-get($cadmin-card-page, container-name)} (min-width: #{map-get($cadmin-container-max-widths, xl)})':
 		(
 			flex-basis: 20%,
 			max-width: 20%,
