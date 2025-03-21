@@ -32,62 +32,45 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
             class="drilldown-item drilldown-current"
           >
             <ul
-              class="inline-scroller"
+              class="list-unstyled"
               role="menu"
             >
               <li
-                role="none"
+                role="presentation"
               >
                 <a
                   class="dropdown-item"
-                  data-testid="menu-item-Hash Link"
                   href="#"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Hash Link
-                  </span>
+                  Hash Link
                 </a>
               </li>
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-Alert!"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Alert!
-                  </span>
+                  Alert!
                 </button>
               </li>
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-Subnav"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
+                  Subnav
                   <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Subnav
-                  </span>
-                  <span
-                    aria-label=" Subnav"
+                    aria-label="Go to Subnav"
                     class="dropdown-item-indicator-end"
-                    title=" Subnav"
+                    title="Go to Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -107,45 +90,34 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
             class="drilldown-item"
           >
             <ul
-              class="inline-scroller"
+              class="list-unstyled"
               role="menu"
             >
               <li
-                role="none"
+                role="presentation"
               >
                 <a
                   class="dropdown-item"
-                  data-testid="menu-item-2nd hash link"
                   href="#"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    2nd hash link
-                  </span>
+                  2nd hash link
                 </a>
               </li>
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-Subnav"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
+                  Subnav
                   <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Subnav
-                  </span>
-                  <span
-                    aria-label=" Subnav"
+                    aria-label="Go to Subnav"
                     class="dropdown-item-indicator-end"
-                    title=" Subnav"
+                    title="Go to Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -165,41 +137,29 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
             class="drilldown-item"
           >
             <ul
-              class="inline-scroller"
+              class="list-unstyled"
               role="menu"
             >
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-The"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    The
-                  </span>
+                  The
                 </button>
               </li>
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-End"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    End
-                  </span>
+                  End
                 </button>
               </li>
             </ul>
@@ -243,24 +203,19 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
             class="drilldown-item"
           >
             <ul
-              class="inline-scroller"
+              class="list-unstyled"
               role="menu"
             >
               <li
-                role="none"
+                role="presentation"
               >
                 <a
                   class="dropdown-item"
-                  data-testid="menu-item-Hash Link"
                   href="#"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Hash Link
-                  </span>
+                  Hash Link
                 </a>
               </li>
               <li
@@ -268,20 +223,14 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                 role="separator"
               />
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-Alert!"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Alert!
-                  </span>
+                  Alert!
                 </button>
               </li>
               <li
@@ -289,24 +238,18 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                 role="separator"
               />
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-Subnav"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
+                  Subnav
                   <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Subnav
-                  </span>
-                  <span
-                    aria-label=" Subnav"
+                    aria-label="Go to Subnav"
                     class="dropdown-item-indicator-end"
-                    title=" Subnav"
+                    title="Go to Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -326,24 +269,19 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
             class="drilldown-item"
           >
             <ul
-              class="inline-scroller"
+              class="list-unstyled"
               role="menu"
             >
               <li
-                role="none"
+                role="presentation"
               >
                 <a
                   class="dropdown-item"
-                  data-testid="menu-item-2nd hash link"
                   href="#"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    2nd hash link
-                  </span>
+                  2nd hash link
                 </a>
               </li>
               <li
@@ -351,24 +289,18 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                 role="separator"
               />
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-Subnav"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
+                  Subnav
                   <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Subnav
-                  </span>
-                  <span
-                    aria-label=" Subnav"
+                    aria-label="Go to Subnav"
                     class="dropdown-item-indicator-end"
-                    title=" Subnav"
+                    title="Go to Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -388,24 +320,18 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
             class="drilldown-item"
           >
             <ul
-              class="inline-scroller"
+              class="list-unstyled"
               role="menu"
             >
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-The"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    The
-                  </span>
+                  The
                 </button>
               </li>
               <li
@@ -413,20 +339,14 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                 role="separator"
               />
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-End"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    End
-                  </span>
+                  End
                 </button>
               </li>
             </ul>
@@ -487,45 +407,33 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
             class="drilldown-item drilldown-current"
           >
             <ul
-              class="inline-scroller"
+              class="list-unstyled"
               role="menu"
             >
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-Toggle"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Toggle
-                  </span>
+                  Toggle
                 </button>
               </li>
               <li
-                role="none"
+                role="presentation"
               >
                 <button
-                  class="dropdown-item btn btn-unstyled"
-                  data-testid="menu-item-Subnav"
+                  class="dropdown-item"
                   role="menuitem"
                   tabindex="-1"
-                  type="button"
                 >
+                  Subnav
                   <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    Subnav
-                  </span>
-                  <span
-                    aria-label=" Subnav"
+                    aria-label="Go to Subnav"
                     class="dropdown-item-indicator-end"
-                    title=" Subnav"
+                    title="Go to Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -545,24 +453,19 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
             class="drilldown-item"
           >
             <ul
-              class="inline-scroller"
+              class="list-unstyled"
               role="menu"
             >
               <li
-                role="none"
+                role="presentation"
               >
                 <a
                   class="dropdown-item"
-                  data-testid="menu-item-2nd hash link"
                   href="#"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  <span
-                    class="dropdown-item-indicator-text-end"
-                  >
-                    2nd hash link
-                  </span>
+                  2nd hash link
                 </a>
               </li>
             </ul>

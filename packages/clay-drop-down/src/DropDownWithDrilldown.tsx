@@ -3,19 +3,30 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button';
 import {
 	InternalDispatch,
 	useControlledState,
 	useInteractionFocus,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {CSSTransition} from 'react-transition-group';
 
-import ClayDropDown from './DropDown';
-import ClayDropDownMenu from './Menu';
-import Drilldown from './drilldown';
+import Caption from './Caption';
+import DropDown from './DropDown';
+import Help from './Help';
+import {ClayDropDownContext, DropDownItems, findNested} from './Items';
+import Search from './Search';
 
-import type {Messages} from './drilldown';
+import type {AlignPoints} from '@clayui/shared';
+
+import type {Item} from './Items';
+
+type Messages = {
+	goTo: string;
+	back: string;
+};
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -26,23 +37,39 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to align the DropDown menu within the viewport.
 	 */
-	alignmentByViewport?: React.ComponentProps<
-		typeof ClayDropDownMenu
-	>['alignmentByViewport'];
+	alignmentByViewport?: boolean;
 
 	/**
-	 * Default position of menu element. Values come from `./Menu`.
+	 * Default position of menu element. Values come from above.
+	 *
+	 * Align.TopCenter = 0;
+	 * Align.TopRight = 1;
+	 * Align.RightCenter = 2;
+	 * Align.BottomRight = 3;
+	 * Align.BottomCenter = 4;
+	 * Align.BottomLeft = 5;
+	 * Align.LeftCenter = 6;
+	 * Align.TopLeft = 7;
+	 *
+	 * Defaults to BottomLeft
+	 *
+	 * You can also pass an array of strings, corresponding to the points
+	 * of the targetNode and sourceNode, `[sourceNode, targetNode]`.
+	 *
+	 * Points can be 't'(top), 'b'(bottom), 'c'(center), 'l'(left), 'r'(right).
+	 * For example: `['tl', 'bl']` corresponds to the bottom left alignment.
 	 */
-	alignmentPosition?: React.ComponentProps<
-		typeof ClayDropDownMenu
-	>['alignmentPosition'];
+	alignmentPosition?: number | AlignPoints;
+
+	/**
+	 * Informational text that appears at the end or above the `footerContent` prop.
+	 */
+	caption?: string;
 
 	/**
 	 * HTML element tag that the container should render.
 	 */
-	containerElement?: React.ComponentProps<
-		typeof ClayDropDown
-	>['containerElement'];
+	containerElement?: React.JSXElementConstructor<any> | 'div' | 'li';
 
 	/**
 	 * Property to set the initial value of `active` (uncontrolled).
@@ -55,6 +82,12 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	defaultActiveMenu?: string;
 
 	/**
+	 * Add an action button or any other element you want to be fixed position to the
+	 * footer from the DropDown.
+	 */
+	footerContent?: React.ReactElement;
+
+	/**
 	 * The unique identifier of the menu that should be active on mount.
 	 * @deprecated since v3.51.0 - use `defaultActiveMenu` instead.
 	 */
@@ -64,12 +97,23 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Prop to pass DOM element attributes to DropDown.Menu.
 	 */
 	menuElementAttrs?: React.ComponentProps<
-		typeof ClayDropDown
+		typeof DropDown
 	>['menuElementAttrs'];
 
-	menuHeight?: React.ComponentProps<typeof ClayDropDown>['menuHeight'];
+	/**
+	 * Adds utility class name `dropdown-menu-height-${height}`
+	 */
+	menuHeight?: 'auto';
 
-	menuWidth?: React.ComponentProps<typeof ClayDropDown>['menuWidth'];
+	/**
+	 * The modifier class `dropdown-menu-width-${width}` makes the menu expand
+	 * the full width of the page.
+	 *
+	 * - sm makes the menu 500px wide.
+	 * - shrink makes the menu auto-adjust to text and max 240px wide.
+	 * - full makes the menu 100% wide.
+	 */
+	menuWidth?: 'sm' | 'shrink' | 'full';
 
 	/**
 	 * Messages for drilldown.
@@ -80,13 +124,13 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Map of menus and items to be used in the drilldown. Each key should be a unique identifier for the menu.
 	 */
 	menus: {
-		[id: string]: React.ComponentProps<typeof Drilldown.Menu>['items'];
+		[id: string]: Array<Item>;
 	};
 
 	/**
 	 * Function for setting the offset of the menu from the trigger.
 	 */
-	offsetFn?: React.ComponentProps<typeof ClayDropDown>['offsetFn'];
+	offsetFn?: React.ComponentProps<typeof DropDown>['offsetFn'];
 
 	/**
 	 * Callback the will be invoked when the active prop is changed (controlled).
@@ -101,19 +145,47 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag indicating if the menu should be rendered lazily
 	 */
-	renderMenuOnClick?: React.ComponentProps<
-		typeof ClayDropDown
-	>['renderMenuOnClick'];
+	renderMenuOnClick?: boolean;
 
 	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
-	trigger: React.ReactElement;
+	trigger: React.ReactElement & {
+		ref?: (node: HTMLButtonElement | null) => void;
+	};
 
 	/**
 	 * Flag indicating if the caret icon should be displayed on the right side.
 	 */
 	triggerIcon?: string | null;
+
+	/**
+	 * Add informational text at the top of DropDown.
+	 */
+	helpText?: string;
+
+	/**
+	 * Callback will always be called when the user is interacting with search.
+	 */
+	onSearchValueChange?: (newValue: string) => void;
+
+	/**
+	 * Flag to show search at the top of the DropDown.
+	 */
+	searchable?: boolean;
+
+	/**
+	 * Pass the props to the Search component.
+	 */
+	searchProps?: Omit<
+		React.ComponentProps<typeof Search>,
+		'onChange' | 'spritemap' | 'value'
+	>;
+
+	/**
+	 * The value that will be passed to the search input element.
+	 */
+	searchValue?: string;
 }
 
 type History = {
@@ -125,9 +197,12 @@ export const ClayDropDownWithDrilldown = ({
 	active: externalActive,
 	alignmentByViewport,
 	alignmentPosition,
+	caption,
 	className,
 	containerElement,
 	defaultActive = false,
+	footerContent,
+	helpText,
 	defaultActiveMenu,
 	initialActiveMenu,
 	menuElementAttrs,
@@ -135,12 +210,16 @@ export const ClayDropDownWithDrilldown = ({
 	menuWidth,
 	menus,
 	messages = {
-		back: '',
-		goTo: '',
+		back: 'Back',
+		goTo: 'Go to',
 	},
 	offsetFn,
 	onActiveChange,
+	onSearchValueChange = () => {},
 	renderMenuOnClick,
+	searchable,
+	searchProps,
+	searchValue = '',
 	spritemap,
 	trigger,
 	triggerIcon = null,
@@ -150,6 +229,8 @@ export const ClayDropDownWithDrilldown = ({
 	);
 	const [direction, setDirection] = useState<'prev' | 'next'>();
 	const [history, setHistory] = useState<Array<History>>([]);
+
+	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
 
 	const {isFocusVisible} = useInteractionFocus();
 
@@ -167,6 +248,8 @@ export const ClayDropDownWithDrilldown = ({
 	const innerRef = useRef<HTMLDivElement>(null);
 
 	const menuIds = Object.keys(menus);
+
+	const Wrap = footerContent ? 'form' : React.Fragment;
 
 	useEffect(() => {
 		if (!isFocusVisible()) {
@@ -197,13 +280,47 @@ export const ClayDropDownWithDrilldown = ({
 		}
 	}, [activeMenu, direction, innerRef, focusHistory, menus]);
 
+	const onBack = useCallback(() => {
+		const [parent] = history.slice(-1);
+
+		setHistory(history.slice(0, history.length - 1));
+		setDirection('prev');
+		setActiveMenu(parent!.id);
+	}, [history]);
+
+	const onForward = useCallback(
+		(label: string, id: string) => {
+			setHistory((history) => [
+				...history,
+				{id: activeMenu, title: label} as History,
+			]);
+			setDirection('next');
+			setActiveMenu(id);
+		},
+		[activeMenu]
+	);
+
+	const onClose = useCallback(() => {
+		setActive(false);
+		triggerElementRef.current?.focus();
+	}, []);
+
+	const hasLeftSymbols = useMemo(
+		() =>
+			menus[activeMenu!]
+				? findNested(menus[activeMenu!]!, 'symbolLeft')
+				: false,
+		[activeMenu, menus]
+	);
+
 	return (
-		<ClayDropDown
+		<DropDown
 			active={active}
 			alignmentByViewport={alignmentByViewport}
 			alignmentPosition={alignmentPosition}
 			className={className}
 			containerElement={containerElement}
+			hasLeftSymbols={hasLeftSymbols}
 			hasRightSymbols
 			menuElementAttrs={{
 				...menuElementAttrs,
@@ -223,50 +340,150 @@ export const ClayDropDownWithDrilldown = ({
 				setActive(value);
 			}}
 			renderMenuOnClick={renderMenuOnClick}
-			trigger={trigger}
+			trigger={React.cloneElement(trigger, {
+				ref: (node: HTMLButtonElement) => {
+					if (node) {
+						triggerElementRef.current = node;
+						// Call the original ref, if any.
+						const {ref} = trigger;
+						if (typeof ref === 'function') {
+							ref(node);
+						}
+					}
+				},
+			})}
 			triggerIcon={triggerIcon}
 		>
-			<Drilldown.Inner ref={innerRef}>
-				{menuIds.map((menuKey) => {
-					return (
-						<Drilldown.Menu
-							active={activeMenu === menuKey}
-							direction={direction}
-							header={
-								activeMenu === menuKey && !!history.length
-									? history.slice(-1)[0]!.title
-									: undefined
-							}
-							items={menus[menuKey]!}
-							key={menuKey}
-							messages={messages}
-							onBack={() => {
-								const [parent] = history.slice(-1);
+			<ClayDropDownContext.Provider
+				value={{
+					close: onClose,
+					messages,
+					onForward,
+				}}
+			>
+				<div className="drilldown-inner" ref={innerRef}>
+					{menuIds.map((menuKey) => {
+						const items = menus[menuKey]!.map(
+							({label, title, ...item}) => ({
+								...item,
+								label: label || title,
+							})
+						);
 
-								setHistory(
-									history.slice(0, history.length - 1)
-								);
+						const header =
+							activeMenu === menuKey && !!history.length
+								? history.slice(-1)[0]!.title
+								: undefined;
+						const initialClasses = classNames('transitioning', {
+							'drilldown-prev-initial': direction === 'prev',
+						});
 
-								setDirection('prev');
+						const active = activeMenu === menuKey;
 
-								setActiveMenu(parent!.id);
-							}}
-							onForward={(title, childId) => {
-								setHistory([
-									...history,
-									{id: activeMenu, title} as History,
-								]);
+						return (
+							<CSSTransition
+								aria-hidden={!active}
+								className={classNames('drilldown-item', {
+									'drilldown-current': active,
+								})}
+								classNames={{
+									enter: initialClasses,
+									enterActive: `drilldown-transition drilldown-${direction}-active`,
+									exit: initialClasses,
+									exitActive: `drilldown-transition drilldown-${direction}-active`,
+								}}
+								in={active}
+								key={menuKey}
+								timeout={250}
+							>
+								<div className="drilldown-item-inner">
+									{header && (
+										<>
+											<div
+												className="dropdown-header"
+												data-testid={`back-button-${header}`}
+												onClick={onBack}
+											>
+												<ClayButtonWithIcon
+													aria-label={messages.back}
+													className="component-action dropdown-item-indicator-start"
+													onClick={onBack}
+													spritemap={spritemap}
+													symbol="angle-left"
+													tabIndex={-1}
+													title={messages.back}
+												/>
 
-								setDirection('next');
+												<span className="dropdown-item-indicator-text-start">
+													{header}
+												</span>
+											</div>
 
-								setActiveMenu(childId);
-							}}
-							spritemap={spritemap}
-						/>
-					);
-				})}
-			</Drilldown.Inner>
-		</ClayDropDown>
+											<div className="dropdown-divider" />
+										</>
+									)}
+
+									{defaultActiveMenu === menuKey ? (
+										<>
+											{helpText && (
+												<Help>{helpText}</Help>
+											)}
+
+											{searchable && (
+												<Search
+													{...searchProps}
+													onChange={
+														onSearchValueChange
+													}
+													spritemap={spritemap}
+													value={searchValue}
+												/>
+											)}
+
+											<Wrap>
+												{footerContent ? (
+													<div className="inline-scroller">
+														<DropDownItems
+															items={items}
+															spritemap={
+																spritemap
+															}
+														/>
+													</div>
+												) : (
+													<DropDownItems
+														items={items}
+														spritemap={spritemap}
+													/>
+												)}
+
+												{caption && (
+													<Caption>{caption}</Caption>
+												)}
+
+												{footerContent && (
+													<div
+														className="dropdown-section"
+														role="presentation"
+													>
+														{footerContent}
+													</div>
+												)}
+											</Wrap>
+										</>
+									) : (
+										<DropDownItems
+											items={items}
+											spritemap={spritemap}
+										/>
+									)}
+								</div>
+							</CSSTransition>
+						);
+					})}
+				</div>
+			</ClayDropDownContext.Provider>
+		</DropDown>
 	);
 };
 

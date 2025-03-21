@@ -3,10 +3,28 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export function useIsMobileDevice(): boolean {
-	if (typeof window === 'undefined') {
-		return false;
-	}
+import {useEffect, useState} from 'react';
 
-	return window.screen.width <= 700;
+import {throttle} from './throttle';
+
+const getIsMobile = () => window.document.body.clientWidth <= 700;
+
+export function useIsMobileDevice(): boolean {
+	const [isMobile, setIsMobile] = useState<boolean>(getIsMobile());
+
+	useEffect(() => {
+		if (typeof window === 'undefined') {
+			return;
+		}
+
+		const handleResize = throttle(() => setIsMobile(getIsMobile()), 200);
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	return isMobile;
 }
