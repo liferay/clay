@@ -4,7 +4,7 @@ exports[`ClayBreadcrumb calls callback when an item is clicked 1`] = `
 <div>
   <nav
     aria-label="Breadcrumb"
-    class="align-items-center d-flex"
+    class="breadcrumb-bar"
   >
     <button
       aria-expanded="false"
@@ -54,7 +54,7 @@ exports[`ClayBreadcrumb renders 1`] = `
 <div>
   <nav
     aria-label="Breadcrumb"
-    class="align-items-center d-flex"
+    class="breadcrumb-bar"
   >
     <button
       aria-expanded="false"
@@ -106,7 +106,7 @@ exports[`ClayBreadcrumb renders with properties passed by \`ellipsisProps\` 1`] 
 <div>
   <nav
     aria-label="Breadcrumb"
-    class="align-items-center d-flex"
+    class="breadcrumb-bar"
   >
     <button
       aria-expanded="false"
@@ -158,7 +158,7 @@ exports[`ClayBreadcrumb throws a warning when not passing \`active\` to any \`it
 <div>
   <nav
     aria-label="Breadcrumb"
-    class="align-items-center d-flex"
+    class="breadcrumb-bar"
   >
     <ol
       class="breadcrumb"
