@@ -8,7 +8,6 @@ export {
 	ClayButtonWithIcon as ButtonWithIcon,
 } from '@clayui/button';
 export {default as Icon} from '@clayui/icon';
-export {IconSelector} from './icon-selector';
 export {
 	default as Modal,
 	Context as ModalContext,
@@ -16,6 +15,7 @@ export {
 } from '@clayui/modal';
 export {Provider, useProvider} from '@clayui/provider';
 
+export {IconSelector} from './icon-selector';
 export {Heading, Text, TextHighlight} from './typography';
 export {OverlayMask} from './overlay-mask';
 export {TreeView} from './tree-view';
