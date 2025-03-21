@@ -8,6 +8,7 @@ export {
 	ClayButtonWithIcon as ButtonWithIcon,
 } from '@clayui/button';
 export {default as Icon} from '@clayui/icon';
+export {IconSelector} from './icon-selector';
 export {
 	default as Modal,
 	Context as ModalContext,
