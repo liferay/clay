@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
+
+### Bug Fixes
+
+-   **@clayui/breadcrumb:** LPD-51678 Use breadcrumb-bar instead of utility classes ([c59d9fc](https://github.com/liferay/clay/commit/c59d9fc06a25143041d8ca6d97ee85fadd96f650))
+-   **@clayui/core:** LPD-47056 Follow up to export module ([dae7cdc](https://github.com/liferay/clay/commit/dae7cdc2234f10960ce39cf181e4a9e34433760b))
+-   **@clayui/core:** LPD-47056 Increase size limit ([5f3514f](https://github.com/liferay/clay/commit/5f3514f665f4cb1c998eca5ab3e412e5dd222bdc))
+-   **@clayui/core:** LPD-47056 REmove usage of useResource due to errors ([c2bd4e5](https://github.com/liferay/clay/commit/c2bd4e5d9324e648ba4cea003f984a55fe233193))
+-   **@clayui/css:** LPD-51678 Breadcrumb adds breadcrumb-bar ([58e6b1c](https://github.com/liferay/clay/commit/58e6b1c2ca835483efab441d70848886eaf7fe73))
+-   **@clayui/css:** LPD-51827 card-page add md container query and move xxxl query down to xl ([6a5dc5e](https://github.com/liferay/clay/commit/6a5dc5e8930217ee24f9573a591d5dcbf8f8d9f0))
+-   **@clayui/drop-down:** closing the drilldown moves the focus to the trigger ([0ae9f53](https://github.com/liferay/clay/commit/0ae9f53d98b095da014e4ec6048f0bc77be2575e))
+
+### Features
+
+-   **@clayui/drop-down:** Add support for more item types for Drill Down and compatibility with the DropDownWithItems component ([a1d09e4](https://github.com/liferay/clay/commit/a1d09e4f92d28f95efe2be739d3f45d3ccbad58d))
+-   **@clayui/drop-down:** LPD-47559 Cascading Menu should turn into drilldown in smaller screens ([6cd180c](https://github.com/liferay/clay/commit/6cd180c847ea774ddf25c95c9c45d34cc26e4527))
+
 # [3.131.0](https://github.com/liferay/clay/compare/v3.130.0...v3.131.0) (2025-03-20)
 
 ### Bug Fixes

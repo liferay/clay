@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
+
+### Bug Fixes
+
+-   **@clayui/breadcrumb:** LPD-51678 Use breadcrumb-bar instead of utility classes ([c59d9fc](https://github.com/liferay/clay/commit/c59d9fc06a25143041d8ca6d97ee85fadd96f650))
+
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features

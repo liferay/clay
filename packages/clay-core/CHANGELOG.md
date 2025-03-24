@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-47056 Follow up to export module ([dae7cdc](https://github.com/liferay/clay/commit/dae7cdc2234f10960ce39cf181e4a9e34433760b))
+-   **@clayui/core:** LPD-47056 REmove usage of useResource due to errors ([c2bd4e5](https://github.com/liferay/clay/commit/c2bd4e5d9324e648ba4cea003f984a55fe233193))
+
 # [3.131.0](https://github.com/liferay/clay/compare/v3.130.0...v3.131.0) (2025-03-20)
 
 ### Features

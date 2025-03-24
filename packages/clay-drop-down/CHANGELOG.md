@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** closing the drilldown moves the focus to the trigger ([0ae9f53](https://github.com/liferay/clay/commit/0ae9f53d98b095da014e4ec6048f0bc77be2575e))
+
+### Features
+
+-   **@clayui/drop-down:** Add support for more item types for Drill Down and compatibility with the DropDownWithItems component ([a1d09e4](https://github.com/liferay/clay/commit/a1d09e4f92d28f95efe2be739d3f45d3ccbad58d))
+-   **@clayui/drop-down:** LPD-47559 Cascading Menu should turn into drilldown in smaller screens ([6cd180c](https://github.com/liferay/clay/commit/6cd180c847ea774ddf25c95c9c45d34cc26e4527))
+
 # [3.131.0](https://github.com/liferay/clay/compare/v3.130.0...v3.131.0) (2025-03-20)
 
 **Note:** Version bump only for package @clayui/drop-down

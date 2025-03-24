@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
+
+### Features
+
+-   **@clayui/drop-down:** Add support for more item types for Drill Down and compatibility with the DropDownWithItems component ([a1d09e4](https://github.com/liferay/clay/commit/a1d09e4f92d28f95efe2be739d3f45d3ccbad58d))
+
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Bug Fixes

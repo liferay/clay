@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-51678 Breadcrumb adds breadcrumb-bar ([58e6b1c](https://github.com/liferay/clay/commit/58e6b1c2ca835483efab441d70848886eaf7fe73))
+* **@clayui/css:** LPD-51827 card-page add md container query and move xxxl query down to xl ([6a5dc5e](https://github.com/liferay/clay/commit/6a5dc5e8930217ee24f9573a591d5dcbf8f8d9f0))
+
+
+
+
+
 # [3.131.0](https://github.com/liferay/clay/compare/v3.130.0...v3.131.0) (2025-03-20)
 
 
