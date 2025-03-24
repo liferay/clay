@@ -162,16 +162,13 @@ function getId() {
 const transformTreeToLinkedList = (items: any, id: string, menu: any = {}) => {
 	menu[id] = [];
 
-	items.forEach((item: any, index: number) => {
+	items?.forEach((item: any, index: number) => {
 		const keys = Object.keys(item);
 
 		menu[id][index] = {};
 
 		keys.forEach((key) => {
-			if (
-				item['type'] === 'contextual' &&
-				typeof item[key] === 'object'
-			) {
+			if (item['type'] === 'contextual' && Array.isArray(item[key])) {
 				const childId = getId();
 
 				menu[id][index].child = childId;
