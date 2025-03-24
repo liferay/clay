@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.132.1](https://github.com/liferay/clay/compare/v3.132.0...v3.132.1) (2025-03-24)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes bug when transforming tree items to a linked list ([19123fc](https://github.com/liferay/clay/commit/19123fc7319eb69b190210e05f33838a497b42ce))
+
 # [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
 
 ### Bug Fixes
