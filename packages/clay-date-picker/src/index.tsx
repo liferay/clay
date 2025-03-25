@@ -10,6 +10,7 @@ import Icon from '@clayui/icon';
 import {
 	FocusScope,
 	InternalDispatch,
+	sub,
 	useControlledState,
 	useId,
 } from '@clayui/shared';
@@ -241,7 +242,12 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 				buttonDot: 'Select current date',
 				buttonNextMonth: 'Select the next month',
 				buttonPreviousMonth: 'Select the previous month',
+				chooseDate:
+					'Use the calendar to choose a Date. Current selection {0}',
 				dialog: 'Choose date',
+				openCalendar: 'Open Calendar Picker',
+				selectMonth: 'Select a month',
+				selectYear: 'Select a year',
 			},
 			dateFormat = 'yyyy-MM-dd',
 			defaultExpanded,
@@ -673,6 +679,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 										displayType="unstyled"
 										onClick={handleCalendarButtonClicked}
 										ref={chooseDateRef}
+										title={ariaLabels.openCalendar}
 									>
 										<Icon
 											spritemap={spritemap}
@@ -698,10 +705,12 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 							triggerRef={chooseDateRef}
 						>
 							<div
-								aria-label={formatDate(
-									currentMonth,
-									'MMMM yyyy'
-								)}
+								aria-label={
+									ariaLabels.chooseDate &&
+									sub(ariaLabels.chooseDate, [
+										formatDate(currentMonth, 'MMMM yyyy'),
+									])
+								}
 								className="date-picker-calendar"
 								role="group"
 							>
