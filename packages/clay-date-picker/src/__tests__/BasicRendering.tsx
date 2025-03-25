@@ -110,7 +110,11 @@ describe('BasicRendering', () => {
 					buttonDot: 'Select current date',
 					buttonNextMonth: 'Select the next month',
 					buttonPreviousMonth: 'Select the previous month',
+					chooseDate:
+						'Use the calendar to choose a Date. Current selection {0}',
 					input: 'input-test',
+					selectMonth: 'Select a month',
+					selectYear: 'Select a year',
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				defaultValue="2019-04-10"
@@ -138,7 +142,11 @@ describe('BasicRendering', () => {
 					buttonDot: 'Select current date',
 					buttonNextMonth: 'Select the next month',
 					buttonPreviousMonth: 'Select the previous month',
+					chooseDate:
+						'Use the calendar to choose a Date. Current selection {0}',
 					input: 'input-test',
+					selectMonth: 'Select a month',
+					selectYear: 'Select a year',
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				onChange={() => {}}
@@ -167,7 +175,11 @@ describe('BasicRendering', () => {
 					buttonDot: 'Select current date',
 					buttonNextMonth: 'Select the next month',
 					buttonPreviousMonth: 'Select the previous month',
+					chooseDate:
+						'Use the calendar to choose a Date. Current selection {0}',
 					input: 'input-test',
+					selectMonth: 'Select a month',
+					selectYear: 'Select a year',
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				onChange={() => {}}
@@ -199,7 +211,11 @@ describe('BasicRendering', () => {
 					buttonDot: 'Select current date',
 					buttonNextMonth: 'Select the next month',
 					buttonPreviousMonth: 'Select the previous month',
+					chooseDate:
+						'Use the calendar to choose a Date. Current selection {0}',
 					input: 'input-test',
+					selectMonth: 'Select a month',
+					selectYear: 'Select a year',
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				defaultValue="2019-04-10 - 2019-04-15"
@@ -229,7 +245,11 @@ describe('BasicRendering', () => {
 					buttonDot: 'Select current date',
 					buttonNextMonth: 'Select the next month',
 					buttonPreviousMonth: 'Select the previous month',
+					chooseDate:
+						'Use the calendar to choose a Date. Current selection {0}',
 					input: 'input-test',
+					selectMonth: 'Select a month',
+					selectYear: 'Select a year',
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				onChange={() => {}}
@@ -265,7 +285,11 @@ describe('BasicRendering', () => {
 					buttonDot: 'Select current date',
 					buttonNextMonth: 'Select the next month',
 					buttonPreviousMonth: 'Select the previous month',
+					chooseDate:
+						'Use the calendar to choose a Date. Current selection {0}',
 					input: 'input-test',
+					selectMonth: 'Select a month',
+					selectYear: 'Select a year',
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				defaultValue="2019-04-10 05:00"
