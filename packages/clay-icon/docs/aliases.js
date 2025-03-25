@@ -1685,6 +1685,10 @@ export const iconsData = [
 		name: 'sites',
 	},
 	{
+		aliases: [''],
+		name: 'slash',
+	},
+	{
 		aliases: ['box', 'grid', 'rectangle', 'squares'],
 		name: 'slideshow',
 	},
