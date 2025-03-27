@@ -71,7 +71,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -85,6 +85,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -155,6 +156,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -908,7 +910,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -922,6 +924,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -992,6 +995,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -1745,7 +1749,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -1759,6 +1763,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -1829,6 +1834,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -2582,7 +2588,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -2596,6 +2602,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -2666,6 +2673,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -3419,7 +3427,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -3433,6 +3441,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -3503,6 +3512,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -4256,7 +4266,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -4270,6 +4280,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -4340,6 +4351,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -5197,7 +5209,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -5211,6 +5223,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -5281,6 +5294,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -6034,7 +6048,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -6048,6 +6062,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -6118,6 +6133,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >

@@ -66,6 +66,7 @@ const ClayDatePickerDateNavigation = ({
 			<div className="date-picker-nav">
 				<div className="date-picker-nav-item input-date-picker-month">
 					<Select
+						aria-label={ariaLabels.selectMonth}
 						disabled={disabled}
 						name="month"
 						onChange={(event) =>
@@ -84,6 +85,7 @@ const ClayDatePickerDateNavigation = ({
 				<div className="date-picker-nav-item input-date-picker-year">
 					<Picker
 						UNSAFE_behavior="secondary"
+						aria-label={ariaLabels.selectYear}
 						className="form-control-sm"
 						data-testid="year-select"
 						disabled={disabled}

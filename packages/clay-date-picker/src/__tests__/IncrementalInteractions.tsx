@@ -21,7 +21,10 @@ const ariaLabels = {
 	buttonDot: 'Select current date',
 	buttonNextMonth: 'Select the next month',
 	buttonPreviousMonth: 'Select the previous month',
+	chooseDate: 'Use the calendar to choose a Date. Current selection {0}',
 	input: 'input-test',
+	selectMonth: 'Select a month',
+	selectYear: 'Select a year',
 };
 
 const DatePickerWithState = ({
