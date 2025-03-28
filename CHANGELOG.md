@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.133.0](https://github.com/liferay/clay/compare/v3.132.1...v3.133.0) (2025-03-28)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-50358 Apply selection toggle regardless of selection mode ([11c0fac](https://github.com/liferay/clay/commit/11c0fac730186240dbd171754facfc7b11a297cf))
+-   **@clayui/core:** LPD-52304 Add selectedIcon and onIconChange to handle control state ([791ccd1](https://github.com/liferay/clay/commit/791ccd1e796e0220c84c3810bb0e840cf35ed132))
+-   **@clayui/core:** LPD-52304 Adjust size limit ([a2096ae](https://github.com/liferay/clay/commit/a2096aea5618fb7f1d4faee5d00764ccf227a57a))
+-   **@clayui/date-picker:** LPD-51873 improve accessibility and update types ([8c827fc](https://github.com/liferay/clay/commit/8c827fc02f5b6590bec668c685729d692d1dd22f))
+-   **@clayui/date-picker:** LPD-51873 Update stories ([9d50ec2](https://github.com/liferay/clay/commit/9d50ec2c593788dbd2c55fd4d9569b098597a395))
+-   **@clayui/date-picker:** LPD-51873 Update tests and snapshots ([8ef7a26](https://github.com/liferay/clay/commit/8ef7a263b996bf8f456f22c8750c9dace9759653))
+
+### Features
+
+-   **@clayui/core:** LPD-50358 Add option to avoid expanding on item's click ([d6d13b8](https://github.com/liferay/clay/commit/d6d13b82b29cf90369e428d4a8a89bcecc1be5a2))
+-   **@clayui/css:** LPD-52054 SVG adds new slash icon ([3b8abe8](https://github.com/liferay/clay/commit/3b8abe8fd949523fd313816243d4ad8076b4d845))
+
 ## [3.132.1](https://github.com/liferay/clay/compare/v3.132.0...v3.132.1) (2025-03-24)
 
 ### Bug Fixes

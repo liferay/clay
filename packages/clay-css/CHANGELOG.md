@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.133.0](https://github.com/liferay/clay/compare/v3.132.1...v3.133.0) (2025-03-28)
+
+
+### Features
+
+* **@clayui/css:** LPD-52054 SVG adds new slash icon ([3b8abe8](https://github.com/liferay/clay/commit/3b8abe8fd949523fd313816243d4ad8076b4d845))
+
+
+
+
+
 # [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
 
 
