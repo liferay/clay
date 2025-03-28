@@ -212,7 +212,9 @@
 		);
 
 		@if ($enabled) {
-			@include clay-css($base);
+			@if (length($base) != 0) {
+				@include clay-css($base);
+			}
 
 			// Inline Item in Labels are deprecated in v2.0.0-rc.11 use .label-item
 			// pattern instead
@@ -228,39 +230,59 @@
 				}
 			}
 
-			.label-item {
-				@include clay-css($label-item);
+			@if (length($label-item) != 0) {
+				.label-item {
+					@include clay-css($label-item);
 
-				.lexicon-icon {
-					@include clay-css($lexicon-icon);
+					@if (length($lexicon-icon) != 0) {
+						.lexicon-icon {
+							@include clay-css($lexicon-icon);
+						}
+					}
 				}
 			}
 
-			.label-item-expand {
-				@include clay-css(map-get($map, label-item-expand));
+			$_label-item-expand: map-get($map, label-item-expand);
+
+			@if ($_label-item-expand) {
+				.label-item-expand {
+					@include clay-css($_label-item-expand);
+				}
 			}
 
-			.label-item-before {
-				@include clay-css($label-item-before);
+			@if (length($label-item-before) != 0) {
+				.label-item-before {
+					@include clay-css($label-item-before);
+				}
 			}
 
-			.label-item-after {
-				@include clay-css($label-item-after);
+			@if (length($label-item-after) != 0) {
+				.label-item-after {
+					@include clay-css($label-item-after);
+				}
 			}
 
-			.close {
-				@include clay-close(map-get($map, close));
+			$_close: map-get($map, close);
+
+			@if ($_close) {
+				.close {
+					@include clay-close($_close);
+				}
 			}
 
-			.sticker {
-				@include clay-css($sticker);
+			@if (length($sticker) != 0) {
+				.sticker {
+					@include clay-css($sticker);
+				}
 			}
 
-			.sticker-overlay {
-				@include clay-css($sticker-overlay);
+			@if (length($sticker-overlay) != 0) {
+				.sticker-overlay {
+					@include clay-css($sticker-overlay);
+				}
 			}
 
-			@if (map-get($c-inner, enabled)) {
+			@if (map-get($c-inner, enabled) and length($c-inner) != 0) {
 				> .c-inner {
 					@include clay-css($c-inner);
 				}
@@ -670,61 +692,91 @@
 		);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			&:disabled,
-			&.disabled {
-				@include clay-css($disabled);
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			&[href],
-			&[type],
-			&[tabindex] {
-				@include clay-link($href);
+			@if (length($disabled) != 0) {
+				&:disabled,
+				&.disabled {
+					@include clay-css($disabled);
+				}
 			}
 
-			.lexicon-icon {
-				@include clay-css($lexicon-icon);
+			@if (length($href) != 0) {
+				&[href],
+				&[type],
+				&[tabindex] {
+					@include clay-link($href);
+				}
 			}
 
-			.label-item {
-				@include clay-css($label-item);
-
+			@if (length($lexicon-icon) != 0) {
 				.lexicon-icon {
 					@include clay-css($lexicon-icon);
 				}
 			}
 
-			.label-item-expand {
-				@include clay-css(map-get($map, label-item-expand));
+			@if (length($label-item) != 0) {
+				.label-item {
+					@include clay-css($label-item);
+
+					@if (length($lexicon-icon) != 0) {
+						.lexicon-icon {
+							@include clay-css($lexicon-icon);
+						}
+					}
+				}
 			}
 
-			.label-item-before {
-				@include clay-css($label-item-before);
+			$_label-item-expand: map-get($map, label-item-expand);
+
+			@if ($_label-item-expand) {
+				.label-item-expand {
+					@include clay-css($_label-item-expand);
+				}
 			}
 
-			.label-item-after {
-				@include clay-css($label-item-after);
+			@if (length($label-item-before) != 0) {
+				.label-item-before {
+					@include clay-css($label-item-before);
+				}
 			}
 
-			a,
-			.btn-unstyled {
-				@include clay-link($link);
+			@if (length($label-item-after) != 0) {
+				.label-item-after {
+					@include clay-css($label-item-after);
+				}
 			}
 
-			.close {
-				@include clay-close(map-get($map, close));
+			@if (length($link) != 0) {
+				a,
+				.btn-unstyled {
+					@include clay-link($link);
+				}
 			}
 
-			.sticker {
-				@include clay-css($sticker);
+			$_close: map-get($map, close);
+
+			@if ($_close) {
+				.close {
+					@include clay-close($_close);
+				}
 			}
 
-			.sticker-overlay {
-				@include clay-css($sticker-overlay);
+			@if (length($sticker) != 0) {
+				.sticker {
+					@include clay-css($sticker);
+				}
 			}
 
-			@if (map-get($c-inner, enabled)) {
+			@if (length($sticker-overlay) != 0) {
+				.sticker-overlay {
+					@include clay-css($sticker-overlay);
+				}
+			}
+
+			@if (map-get($c-inner, enabled) and length($c-inner) != 0) {
 				> .c-inner {
 					@include clay-css($c-inner);
 				}
