@@ -39,6 +39,11 @@ export type Props = {
 	defaultActive?: boolean;
 
 	/**
+	 * The initial value of the icon state (uncontrolled).
+	 */
+	defaultSelectedIcon?: string;
+
+	/**
 	 * Direction the menu will render relative to the trigger.
 	 */
 	direction?: 'bottom' | 'top';
@@ -63,9 +68,19 @@ export type Props = {
 	onActiveChange?: InternalDispatch<boolean>;
 
 	/**
+	 * Callback when an icon is selected.
+	 */
+	onIconChange?: InternalDispatch<string>;
+
+	/**
 	 * URL of the SVG icons.
 	 */
 	spritemap: string;
+
+	/**
+	 * Selected icon (controlled).
+	 */
+	selectedIcon?: string;
 };
 
 const defaultMessages = {
@@ -104,12 +119,14 @@ const fetchIcons = async (spritemap: string): Promise<Array<string>> => {
 export function IconSelector({
 	active: externalActive,
 	defaultActive,
+	defaultSelectedIcon,
 	direction = 'bottom',
 	messages = defaultMessages,
+	selectedIcon: externalSelectedIcon,
+	onIconChange,
 	onActiveChange,
 	spritemap,
 }: Props) {
-	const [selectedIcon, setSelectedIcon] = useState<string>('');
 	const [isInputFocused, setIsInputFocused] = useState(false);
 	const [iconNames, setIconNames] = useState<Array<string>>([]);
 
@@ -130,6 +147,15 @@ export function IconSelector({
 		name: 'active',
 		onChange: onActiveChange,
 		value: externalActive,
+	});
+
+	const [selectedIcon, setSelectedIcon] = useControlledState({
+		defaultName: 'defaultSelectedIcon',
+		defaultValue: defaultSelectedIcon,
+		handleName: 'onIconChange',
+		name: 'selectedIcon',
+		onChange: onIconChange,
+		value: externalSelectedIcon,
 	});
 
 	useEffect(() => {
@@ -153,6 +179,11 @@ export function IconSelector({
 
 		setSearchTerm('');
 	}, []);
+
+	const handleIconSelection = (item: string) => {
+		setSelectedIcon(item);
+		onClose();
+	};
 
 	useOverlayPosition(
 		{
@@ -366,8 +397,7 @@ export function IconSelector({
 												borderless
 												displayType="secondary"
 												onClick={() => {
-													setSelectedIcon(item);
-													onClose();
+													handleIconSelection(item);
 
 													if (isFocusVisible()) {
 														if (selectedIcon) {
