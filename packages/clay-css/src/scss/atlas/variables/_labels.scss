@@ -63,6 +63,7 @@ $label: map-deep-merge($label, $label-base);
 $label-close: () !default;
 $label-close: map-deep-merge(
 	(
+		margin: -5px -4px,
 		disabled: (
 			color: inherit,
 		),
