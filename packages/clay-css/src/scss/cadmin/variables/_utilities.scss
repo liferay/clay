@@ -258,6 +258,13 @@ $cadmin-bg-theme-colors: map-deep-merge(
 				background-color: clay-darken($cadmin-primary, 10%) !important,
 			),
 		),
+		'primary-l3': (
+			background-color: $cadmin-primary-l3 !important,
+			hover: (
+				background-color: clay-darken($cadmin-primary-l3, 10%)
+					!important,
+			),
+		),
 		'secondary': (
 			background-color: $cadmin-secondary !important,
 			hover: (
