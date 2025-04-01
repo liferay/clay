@@ -101,6 +101,10 @@ $cadmin-modal-header: map-deep-merge(
 		padding: $cadmin-modal-header-padding,
 		padding-bottom: 0,
 		padding-top: 0,
+		'.modal-title': (
+			margin-bottom: 0,
+			margin-top: 0,
+		),
 		mobile: (
 			height: $cadmin-modal-header-height-mobile,
 		),
@@ -129,6 +133,17 @@ $cadmin-modal-body: map-deep-merge(
 		overflow-wrap: break-word,
 		padding: $cadmin-modal-inner-padding,
 		position: relative,
+		'.aspect-ratio': (
+			margin-left: math-sign($cadmin-modal-inner-padding),
+			margin-right: math-sign($cadmin-modal-inner-padding),
+			top: math-sign($cadmin-modal-inner-padding),
+		),
+		'.close': (
+			position: absolute,
+			right: 1rem,
+			top: 1rem,
+			z-index: 1,
+		),
 		'&.inline-scroller': (
 			max-height: none,
 			-webkit-overflow-scrolling: touch,
@@ -226,7 +241,7 @@ $cadmin-modal-item-shrink: map-deep-merge(
 
 $cadmin-modal-title-font-size: 20px !default; // 20px
 $cadmin-modal-title-font-weight: $cadmin-font-weight-bold !default;
-$cadmin-modal-title-line-height: $cadmin-line-height-base !default;
+$cadmin-modal-title-line-height: $cadmin-headings-line-height !default;
 $cadmin-modal-title-text-align: null !default;
 $cadmin-modal-title-font-size-mobile: null !default;
 
@@ -354,7 +369,8 @@ $cadmin-modal: map-deep-merge(
 			font-size: $cadmin-modal-title-font-size,
 			font-weight: $cadmin-modal-title-font-weight,
 			line-height: $cadmin-modal-title-line-height,
-			margin-bottom: 0,
+			margin-bottom: 24px,
+			margin-top: 16px,
 			overflow: hidden,
 			text-align: $cadmin-modal-title-text-align,
 			text-overflow: ellipsis,
