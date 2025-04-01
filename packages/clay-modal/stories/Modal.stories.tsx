@@ -10,6 +10,7 @@ import ClayIcon from '@clayui/icon';
 import React, {useContext, useRef, useState} from 'react';
 
 import ClayModal, {ClayModalProvider, Context, useModal} from '../src';
+const group1075Image = require('./static/group-1075.svg');
 
 export default {
 	argTypes: {
@@ -343,3 +344,83 @@ export const Provider = () => (
 		<MyAppWithoutFooterAndHeader />
 	</ClayModalProvider>
 );
+
+export const CardStyleModal = (args: any) => {
+	const {observer, onOpenChange, open} = useModal();
+
+	return (
+		<>
+			{open && (
+				<ClayModal
+					center={args.center}
+					disableAutoClose={args.autoClose}
+					observer={observer}
+					size={args.size}
+				>
+					<ClayModal.Body
+						iFrameProps={{
+							'aria-label': 'Hello World',
+						}}
+						scrollable={args.scrollable}
+					>
+						<ClayButton
+							aria-label="Close the modal"
+							className="close"
+							displayType={null}
+							onClick={() => onOpenChange(false)}
+						>
+							<ClayIcon symbol="times" />
+						</ClayButton>
+						<div className="aspect-ratio aspect-ratio-16-to-9 bg-primary-l3">
+							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+								<img
+									alt="An image of adding modules to a page"
+									src={group1075Image}
+								/>
+							</div>
+						</div>
+						<ClayModal.Title>{args.title}</ClayModal.Title>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. Curabitur dignissim eu ante eget lobortis.
+							Praesent a mattis diam, nec auctor nisi. Nam porta
+							lobortis massa hendrerit sagittis.
+						</p>
+					</ClayModal.Body>
+					<ClayModal.Footer
+						last={
+							<ClayButton.Group spaced>
+								<ClayButton
+									displayType="secondary"
+									onClick={() => onOpenChange(false)}
+								>
+									Cancel
+								</ClayButton>
+								<ClayButton onClick={() => onOpenChange(false)}>
+									<span className="inline-item inline-item-before">
+										<ClayIcon symbol="marketplace" />
+									</span>
+									Explore Marketplace
+								</ClayButton>
+							</ClayButton.Group>
+						}
+					/>
+				</ClayModal>
+			)}
+			<ClayButton
+				displayType="primary"
+				onClick={() => onOpenChange(true)}
+			>
+				Open modal
+			</ClayButton>
+		</>
+	);
+};
+
+CardStyleModal.args = {
+	autoClose: false,
+	center: false,
+	scrollable: false,
+	size: 'md',
+	title: 'Lorem Ipsum Dolor Sit Amet!',
+};
