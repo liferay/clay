@@ -89,14 +89,20 @@
 
 	@if ($enabled) {
 		@include media-breakpoint-down($breakpoint-down) {
-			@include clay-css($map);
-
-			> .input-group-item {
-				@include clay-css($item);
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			> .input-group-item-shrink {
-				@include clay-css($item-shrink);
+			@if (length($item) != 0) {
+				> .input-group-item {
+					@include clay-css($item);
+				}
+			}
+
+			@if (length($item-shrink) != 0) {
+				> .input-group-item-shrink {
+					@include clay-css($item-shrink);
+				}
 			}
 		}
 	}
@@ -164,29 +170,49 @@
 		);
 
 		@if ($enabled) {
-			@include clay-css($base);
-
-			label {
-				@include clay-css(map-deep-get($map, label));
+			@if (length($base) != 0) {
+				@include clay-css($base);
 			}
 
-			.custom-control {
-				@include clay-custom-control-variant(
-					map-deep-get($map, custom-control)
-				);
-			}
+			$_label: map-get($map, label);
 
-			.form-check {
-				@include clay-css(map-deep-get($map, form-check));
-
-				input[type='radio'],
-				input[type='checkbox'] {
-					@include clay-css(map-deep-get($map, form-check, input));
+			@if ($_label) {
+				label {
+					@include clay-css($_label);
 				}
 			}
 
-			.lexicon-icon {
-				@include clay-css(map-deep-get($map, lexicon-icon));
+			$_custom-control: map-get($map, custom-control);
+
+			@if ($_custom-control) {
+				.custom-control {
+					@include clay-custom-control-variant($_custom-control);
+				}
+			}
+
+			$_form-check: map-get($map, form-check);
+
+			@if ($_form-check) {
+				.form-check {
+					@include clay-css($_form-check);
+
+					$_input: map-get($_form-check, input);
+
+					@if ($_input) {
+						input[type='radio'],
+						input[type='checkbox'] {
+							@include clay-css($_input);
+						}
+					}
+				}
+			}
+
+			$_lexicon-icon: map-get($map, lexicon-icon);
+
+			@if ($_lexicon-icon) {
+				.lexicon-icon {
+					@include clay-css($_lexicon-icon);
+				}
 			}
 
 			$_media-breakpoint-down: map-get($map, media-breakpoint-down);
@@ -288,121 +314,190 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			&::before {
-				@include clay-css(map-get($map, before));
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			&::after {
-				@include clay-css(map-get($map, after));
-			}
+			$_before: map-get($map, before);
 
-			&.focus {
-				@include clay-input-group-item-variant(map-get($map, focus));
-			}
-
-			&:focus-within:has(input:focus) {
-				@include clay-input-group-item-variant(
-					map-get($map, focus-within)
-				);
-			}
-
-			&:first-child {
-				@include clay-css(map-deep-get($map, first-child));
-			}
-
-			&.input-group-prepend {
-				@include clay-css(map-deep-get($map, input-group-prepend));
-			}
-
-			&.input-group-append {
-				@include clay-css(map-deep-get($map, input-group-append));
-			}
-
-			> .btn {
-				@include clay-button-variant(map-deep-get($map, btn));
-			}
-
-			> .btn-monospaced {
-				@include clay-button-variant(
-					map-deep-get($map, btn-monospaced)
-				);
-			}
-
-			> .dropdown {
-				@include clay-css(map-deep-get($map, dropdown));
-			}
-
-			> .form-control {
-				@include clay-form-control-variant(
-					map-deep-get($map, form-control)
-				);
-			}
-
-			> .form-file {
-				@include clay-css(map-deep-get($map, form-file));
-
-				.btn {
-					@include clay-button-variant(
-						map-deep-get($map, form-file, btn)
-					);
+			@if ($_before) {
+				&::before {
+					@include clay-css($_before);
 				}
 			}
 
-			> textarea.form-control,
-			> .form-control-textarea {
-				@include clay-form-control-variant(
-					map-deep-get($map, textarea)
-				);
+			$_after: map-get($map, after);
+
+			@if ($_after) {
+				&::after {
+					@include clay-css($_after);
+				}
 			}
 
-			> .form-control-plaintext {
-				@include clay-form-control-variant(
-					map-deep-get($map, form-control-plaintext)
-				);
+			$_focus: map-get($map, focus);
+
+			@if ($_focus) {
+				&.focus {
+					@include clay-input-group-item-variant($_focus);
+				}
 			}
 
-			> .input-group-text {
-				@include clay-input-group-text-variant(
-					map-deep-get($map, input-group-text)
-				);
+			$_focus-within: map-get($map, focus-within);
+
+			@if ($_focus-within) {
+				&:focus-within:has(input:focus) {
+					@include clay-input-group-item-variant($_focus-within);
+				}
 			}
 
-			> .input-group-inset-item {
-				@include clay-css(map-deep-get($map, input-group-inset-item));
+			$_first-child: map-get($map, first-child);
 
+			@if ($_first-child) {
+				&:first-child {
+					@include clay-css($_first-child);
+				}
+			}
+
+			$_input-group-prepend: map-get($map, input-group-prepend);
+
+			@if ($_input-group-prepend) {
+				&.input-group-prepend {
+					@include clay-css($_input-group-prepend);
+				}
+			}
+
+			$_input-group-append: map-get($map, input-group-append);
+
+			@if ($_input-group-append) {
+				&.input-group-append {
+					@include clay-css($_input-group-append);
+				}
+			}
+
+			$_btn: map-get($map, btn);
+
+			@if ($_btn) {
 				> .btn {
-					@include clay-button-variant(
-						map-deep-get($map, input-group-inset-item, btn)
-					);
+					@include clay-button-variant($_btn);
 				}
+			}
 
+			$_btn-monospaced: map-get($map, btn-monospaced);
+
+			@if ($_btn-monospaced) {
 				> .btn-monospaced {
-					@include clay-button-variant(
-						map-deep-get(
-							$map,
-							input-group-inset-item,
-							btn-monospaced
-						)
-					);
+					@include clay-button-variant($_btn-monospaced);
 				}
+			}
 
+			$_dropdown: map-get($map, dropdown);
+
+			@if ($_dropdown) {
+				> .dropdown {
+					@include clay-css($_dropdown);
+				}
+			}
+
+			$_form-control: map-get($map, form-control);
+
+			@if ($_form-control) {
+				> .form-control {
+					@include clay-form-control-variant($_form-control);
+				}
+			}
+
+			$_form-file: map-get($map, form-file);
+
+			@if ($_form-file) {
 				> .form-file {
-					@include clay-css(map-deep-get($map, form-file));
+					@include clay-css($_form-file);
 
-					.btn {
-						@include clay-button-variant(
-							map-deep-get($map, form-file, btn)
-						);
+					$_btn: map-get($_form-file, btn);
+
+					@if ($_btn) {
+						.btn {
+							@include clay-button-variant($_btn);
+						}
 					}
 				}
 			}
 
-			.form-control-inset {
-				@include clay-form-control-variant(
-					map-deep-get($map, form-control-inset)
-				);
+			$_textarea: map-get($map, textarea);
+
+			@if ($_textarea) {
+				> textarea.form-control,
+				> .form-control-textarea {
+					@include clay-form-control-variant($_textarea);
+				}
+			}
+
+			$_form-control-plaintext: map-get($map, form-control-plaintext);
+
+			@if ($_form-control-plaintext) {
+				> .form-control-plaintext {
+					@include clay-form-control-variant(
+						$_form-control-plaintext
+					);
+				}
+			}
+
+			$_input-group-text: map-get($map, input-group-text);
+
+			@if ($_input-group-text) {
+				> .input-group-text {
+					@include clay-input-group-text-variant($_input-group-text);
+				}
+			}
+
+			$_input-group-inset-item: map-get($map, input-group-inset-item);
+
+			@if ($_input-group-inset-item) {
+				> .input-group-inset-item {
+					@include clay-css($_input-group-inset-item);
+
+					$_btn: map-get($_input-group-inset-item, btn);
+
+					@if ($_btn) {
+						> .btn {
+							@include clay-button-variant($_btn);
+						}
+					}
+
+					$_btn-monospaced: map-get(
+						$_input-group-inset-item,
+						btn-monospaced
+					);
+
+					@if ($_btn-monospaced) {
+						> .btn-monospaced {
+							@include clay-button-variant($_btn-monospaced);
+						}
+					}
+
+					$_form-file: map-get($map, form-file);
+
+					@if ($_form-file) {
+						> .form-file {
+							@include clay-css($_form-file);
+
+							$_btn: map-get($_form-file, btn);
+
+							@if ($_btn) {
+								.btn {
+									@include clay-button-variant($_btn);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			$_form-control-inset: map-get($map, form-control-inset);
+
+			@if ($_form-control-inset) {
+				.form-control-inset {
+					@include clay-form-control-variant($_form-control-inset);
+				}
 			}
 		}
 	}
@@ -463,30 +558,50 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			> .input-group-item {
-				@include clay-input-group-item-variant(
-					map-deep-get($map, input-group-item)
-				);
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			> .input-group-item-shrink {
-				@include clay-input-group-item-variant(
-					map-deep-get($map, input-group-item-shrink)
-				);
+			$_input-group-item: map-get($map, input-group-item);
+
+			@if ($_input-group-item) {
+				> .input-group-item {
+					@include clay-input-group-item-variant($_input-group-item);
+				}
 			}
 
-			.btn-primary {
-				@include clay-button-variant(map-deep-get($map, btn-primary));
+			$_input-group-item-shrink: map-get($map, input-group-item-shrink);
+
+			@if ($_input-group-item-shrink) {
+				> .input-group-item-shrink {
+					@include clay-input-group-item-variant(
+						$_input-group-item-shrink
+					);
+				}
 			}
 
-			.btn-secondary {
-				@include clay-button-variant(map-deep-get($map, btn-secondary));
+			$_btn-primary: map-get($map, btn-primary);
+
+			@if ($_btn-primary) {
+				.btn-primary {
+					@include clay-button-variant($_btn-primary);
+				}
 			}
 
-			.btn-unstyled {
-				@include clay-button-variant(map-deep-get($map, btn-unstyled));
+			$_btn-secondary: map-get($map, btn-secondary);
+
+			@if ($_btn-secondary) {
+				.btn-secondary {
+					@include clay-button-variant($_btn-secondary);
+				}
+			}
+
+			$_btn-unstyled: map-get($map, btn-unstyled);
+
+			@if ($_btn-unstyled) {
+				.btn-unstyled {
+					@include clay-button-variant($_btn-unstyled);
+				}
 			}
 
 			$_media-breakpoint-down: map-get($map, media-breakpoint-down);

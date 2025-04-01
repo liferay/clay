@@ -526,66 +526,106 @@
 		);
 
 		@if ($enabled) {
-			@include clay-css($base);
-
-			&::placeholder {
-				// opacity: 1, override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-
-				@include clay-css($placeholder);
+			@if (length($base) != 0) {
+				@include clay-css($base);
 			}
 
-			&::-moz-selection,
-			&::selection {
-				@include clay-css($selection);
-			}
-
-			~ .input-group-inset-item {
-				@include clay-css(map-deep-get($map, input-group-inset-item));
-			}
-
-			&:hover,
-			&.hover {
-				@include clay-css($hover);
-
+			@if (length($placeholder) != 0) {
 				&::placeholder {
-					@include clay-css($hover-placeholder);
-				}
+					// opacity: 1, override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
 
+					@include clay-css($placeholder);
+				}
+			}
+
+			@if (length($selection) != 0) {
+				&::-moz-selection,
+				&::selection {
+					@include clay-css($selection);
+				}
+			}
+
+			$_input-group-inset-item: map-get($map, input-group-inset-item);
+
+			@if ($_input-group-inset-item) {
 				~ .input-group-inset-item {
-					@include clay-css(
-						map-deep-get($map, hover, input-group-inset-item)
+					@include clay-css($_input-group-inset-item);
+				}
+			}
+
+			@if (length($hover) != 0) {
+				&:hover,
+				&.hover {
+					@include clay-css($hover);
+
+					@if (length($hover-placeholder) != 0) {
+						&::placeholder {
+							@include clay-css($hover-placeholder);
+						}
+					}
+
+					$_input-group-inset-item: map-get(
+						$hover,
+						input-group-inset-item
 					);
+
+					@if ($_input-group-inset-item) {
+						~ .input-group-inset-item {
+							@include clay-css($_input-group-inset-item);
+						}
+					}
 				}
 			}
 
-			@at-root {
-				&.focus,
-				#{$focus-visible-selector},
-				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-					@include clay-css($focus);
+			@if (length($focus) != 0) {
+				@at-root {
+					&.focus,
+					#{$focus-visible-selector},
+					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+						@include clay-css($focus);
 
-					&::placeholder {
-						@include clay-css($focus-placeholder);
-					}
+						@if (length($focus-placeholder) != 0) {
+							&::placeholder {
+								@include clay-css($focus-placeholder);
+							}
+						}
 
-					~ .input-group-inset-item {
-						@include clay-css(
-							map-deep-get($map, focus, input-group-inset-item)
+						$_input-group-inset-item: map-get(
+							$focus,
+							input-group-inset-item
 						);
+
+						@if ($_input-group-inset-item) {
+							~ .input-group-inset-item {
+								@include clay-css($_input-group-inset-item);
+							}
+						}
 					}
 				}
 			}
 
-			&:focus-within:has(input:focus) {
-				@include clay-form-control-variant(map-get($map, focus-within));
+			$_focus-within: map-get($map, focus-within);
+
+			@if ($_focus-within) {
+				&:focus-within:has(input:focus) {
+					@include clay-form-control-variant($_focus-within);
+				}
 			}
 
-			&:active {
-				@include clay-css(map-get($map, active));
+			$_active: map-get($map, active);
+
+			@if ($_active) {
+				&:active {
+					@include clay-css($_active);
+				}
 			}
 
-			&.active {
-				@include clay-css(map-get($map, active-class));
+			$_active-class: map-get($map, active-class);
+
+			@if ($_active-class) {
+				&.active {
+					@include clay-css($_active-class);
+				}
 			}
 
 			// @deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
@@ -609,36 +649,55 @@
 			// disabled if the fieldset is disabled. Due to implementation difficulty, we
 			// don't honor that edge case; we style them as disabled anyway.
 
-			&:disabled,
-			&.disabled {
-				// `opacity: 1;` iOS fix for unreadable disabled content;
-				// see https://github.com/twbs/bootstrap/issues/11655.
+			@if (length($disabled) != 0) {
+				&:disabled,
+				&.disabled {
+					// `opacity: 1;` iOS fix for unreadable disabled content;
+					// see https://github.com/twbs/bootstrap/issues/11655.
 
-				@include clay-css($disabled);
+					@include clay-css($disabled);
 
-				&::placeholder {
-					@include clay-css($disabled-placeholder);
-				}
+					@if (length($disabled-placeholder) != 0) {
+						&::placeholder {
+							@include clay-css($disabled-placeholder);
+						}
+					}
 
-				~ .input-group-inset-item {
-					@include clay-css(
-						map-deep-get($map, disabled, input-group-inset-item)
+					$_input-group-inset-item: map-get(
+						$disabled,
+						input-group-inset-item
 					);
+
+					@if ($_input-group-inset-item) {
+						~ .input-group-inset-item {
+							@include clay-css($_input-group-inset-item);
+						}
+					}
 				}
 			}
 
-			.inline-item {
-				@include clay-css(map-get($map, inline-item));
+			$_inline-item: map-get($map, inline-item);
+
+			@if ($_inline-item) {
+				.inline-item {
+					@include clay-css($_inline-item);
+				}
 			}
 
-			.label {
-				@include clay-css(map-get($map, label));
+			$_label: map-get($map, label);
+
+			@if ($_label) {
+				.label {
+					@include clay-css($_label);
+				}
 			}
 
-			.form-control-inset {
-				@include clay-form-control-variant(
-					map-get($map, form-control-inset)
-				);
+			$_form-control-inset: map-get($map, form-control-inset);
+
+			@if ($_form-control-inset) {
+				.form-control-inset {
+					@include clay-form-control-variant($_form-control-inset);
+				}
 			}
 
 			@include clay-generate-media-breakpoints($map);
@@ -866,7 +925,9 @@
 		$mobile: setter(map-get($map, mobile), ());
 
 		@if ($enabled) {
-			@include clay-css($base);
+			@if (length($base) != 0) {
+				@include clay-css($base);
+			}
 
 			@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
 				@include clay-generate-media-breakpoints(
@@ -875,238 +936,354 @@
 				);
 			}
 
-			&:hover,
-			&.hover {
-				@include clay-css($hover);
+			@if (length($hover) != 0) {
+				&:hover,
+				&.hover {
+					@include clay-css($hover);
 
-				> option {
-					$hover-option: setter(map-get($hover, option), ());
+					$_hover-option: map-get($hover, option);
 
-					@include clay-css($hover-option);
+					@if ($_hover-option) {
+						> option {
+							@include clay-css($_hover-option);
 
-					&:hover {
-						@include clay-css(map-get($hover-option, hover));
-					}
+							$_hover: map-get($_hover-option, hover);
 
-					&:checked {
-						@include clay-css(map-get($hover-option, checked));
+							@if ($_hover) {
+								&:hover {
+									@include clay-css($_hover);
+								}
+							}
+
+							$_checked: map-get($_hover-option, checked);
+
+							@if ($_checked) {
+								&:checked {
+									@include clay-css($_checked);
+								}
+							}
+						}
 					}
 				}
 			}
 
-			@at-root {
-				&.focus,
-				#{$focus-visible-selector},
-				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-					@include clay-css($focus);
+			@if (length($focus) != 0) {
+				@at-root {
+					&.focus,
+					#{$focus-visible-selector},
+					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+						@include clay-css($focus);
 
-					> option {
-						$focus-option: setter(map-get($focus, option), ());
+						$_focus-option: map-get($focus, option);
 
-						@include clay-css($focus-option);
+						@if ($_focus-option) {
+							> option {
+								@include clay-css($_focus-option);
 
+								$_hover: map-get($_focus-option, hover);
+
+								@if ($_hover) {
+									&:hover {
+										@include clay-css($_hover);
+									}
+								}
+
+								$_checked: map-get($_focus-option, checked);
+
+								@if ($_checked) {
+									&:checked {
+										@include clay-css($_checked);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			$_active: map-get($map, active);
+
+			@if ($_active) {
+				&:active {
+					@include clay-css($_active);
+
+					$_option: map-get($_active, option);
+
+					@if ($_option) {
+						> option {
+							@include clay-css($_option);
+
+							$_checked: map-get($_option, checked);
+
+							@if ($_checked) {
+								&:checked {
+									@include clay-css($_checked);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			$_active-class: map-get($map, active-class);
+
+			@if ($_active-class) {
+				&.active {
+					@include clay-css($_active-class);
+
+					$_option: map-get($_active-class, option);
+
+					@if ($_option) {
+						> option {
+							@include clay-css($_option);
+
+							$_checked: map-get($_option, checked);
+
+							@if ($_checked) {
+								&:checked {
+									@include clay-css($_checked);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			$_show: map-get($map, show);
+
+			@if ($_show) {
+				&.show {
+					@include clay-css($_show);
+
+					$_option: map-get($_show, option);
+
+					@if ($_option) {
+						> option {
+							@include clay-css($_option);
+
+							$_checked: map-get($_option, checked);
+
+							@if ($_checked) {
+								&:checked {
+									@include clay-css($_checked);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			@if (length($disabled) != 0) {
+				&:disabled,
+				&.disabled {
+					@include clay-css($disabled);
+
+					@if (length($disabled-option) != 0) {
+						> option {
+							@include clay-css($disabled-option);
+
+							$_hover: map-get($disabled-option, hover);
+
+							@if ($_hover) {
+								&:hover {
+									@include clay-css($_hover);
+								}
+							}
+
+							$_checked: map-get($disabled-option, checked);
+
+							@if ($_checked) {
+								&:checked {
+									@include clay-css($_checked);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			$_option: map-get($map, option);
+
+			@if ($_option) {
+				option {
+					@include clay-css($_option);
+
+					$_hover: map-get($_option, hover);
+
+					@if ($_hover) {
 						&:hover {
-							@include clay-css(map-get($focus-option, hover));
+							@include clay-css($_hover);
 						}
+					}
 
+					$_checked: map-get($_option, checked);
+
+					@if ($_checked) {
 						&:checked {
-							@include clay-css(map-get($focus-option, checked));
+							@include clay-css($_checked);
 						}
 					}
 				}
 			}
 
-			&:active {
-				$active: setter(map-get($map, active), ());
+			$ff-only: map-get($map, firefox-only);
 
-				@include clay-css($active);
-
-				> option {
-					$option: setter(map-get($active, option), ());
-
-					@include clay-css($option);
-
-					&:checked {
-						@include clay-css(map-get($option, checked));
-					}
-				}
-			}
-
-			&.active {
-				$active-class: setter(map-get($map, active-class), ());
-
-				@include clay-css($active-class);
-
-				> option {
-					$option: setter(map-get($active-class, option), ());
-
-					@include clay-css($option);
-
-					&:checked {
-						@include clay-css(map-get($option, checked));
-					}
-				}
-			}
-
-			&.show {
-				$show: setter(map-get($map, show), ());
-
-				@include clay-css($show);
-
-				> option {
-					$option: setter(map-get($show, option), ());
-
-					@include clay-css($option);
-
-					&:checked {
-						@include clay-css(map-get($option, checked));
-					}
-				}
-			}
-
-			&:disabled,
-			&.disabled {
-				@include clay-css($disabled);
-
-				> option {
-					@include clay-css($disabled-option);
-
-					&:hover {
-						@include clay-css(map-get($disabled-option, hover));
-					}
-
-					&:checked {
-						@include clay-css(map-get($disabled-option, checked));
-					}
-				}
-			}
-
-			option {
-				$option: setter(map-get($map, option), ());
-
-				@include clay-css($option);
-
-				&:hover {
-					@include clay-css(map-get($option, hover));
-				}
-
-				&:checked {
-					@include clay-css(map-get($option, checked));
-				}
-			}
-
-			@if (map-get($map, firefox-only)) {
+			@if ($ff-only) {
 				@-moz-document url-prefix() {
-					$ff-only: setter(map-get($map, firefox-only), ());
-
 					@include clay-css($ff-only);
 
-					&:hover,
-					&.hover {
-						$ff-only-hover: setter(map-get($ff-only, hover), ());
+					$ff-only-hover: map-get($ff-only, hover);
 
-						@include clay-css($ff-only-hover);
+					@if ($ff-only-hover) {
+						&:hover,
+						&.hover {
+							@include clay-css($ff-only-hover);
 
-						> option {
-							$ff-only-hover-option: setter(
-								map-get($ff-only-hover, option),
-								()
+							$ff-only-hover-option: map-get(
+								$ff-only-hover,
+								option
 							);
 
-							@include clay-css($ff-only-hover-option);
+							@if ($ff-only-hover-option) {
+								> option {
+									@include clay-css($ff-only-hover-option);
 
-							&:hover {
-								@include clay-css(
-									map-get($ff-only-hover-option, hover)
-								);
-							}
+									$_hover: map-get(
+										$ff-only-hover-option,
+										hover
+									);
 
-							&:checked {
-								@include clay-css(
-									map-get($ff-only-hover-option, checked)
-								);
+									@if ($_hover) {
+										&:hover {
+											@include clay-css($_hover);
+										}
+									}
+
+									$_checked: map-get(
+										$ff-only-hover-option,
+										checked
+									);
+
+									@if ($_checked) {
+										&:checked {
+											@include clay-css($_checked);
+										}
+									}
+								}
 							}
 						}
 					}
 
-					@at-root {
-						&.focus,
-						#{$focus-visible-selector},
-						#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-							$ff-only-focus: setter(
-								map-get($ff-only, focus),
-								()
-							);
+					$ff-only-focus: map-get($ff-only, focus);
 
-							@include clay-css($ff-only-focus);
+					@if ($ff-only-focus) {
+						@at-root {
+							&.focus,
+							#{$focus-visible-selector},
+							#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+								@include clay-css($ff-only-focus);
 
-							> option {
-								$ff-only-focus-option: setter(
-									map-get($ff-only-focus, option),
-									()
+								$ff-only-focus-option: map-get(
+									$ff-only-focus,
+									option
 								);
 
-								@include clay-css($ff-only-focus-option);
+								@if ($ff-only-focus-option) {
+									> option {
+										@include clay-css(
+											$ff-only-focus-option
+										);
 
+										$_hover: map-get(
+											$ff-only-focus-option,
+											hover
+										);
+
+										@if ($_hover) {
+											&:hover {
+												@include clay-css($_hover);
+											}
+										}
+
+										$_checked: map-get(
+											$ff-only-focus-option,
+											checked
+										);
+
+										@if ($_checked) {
+											&:checked {
+												@include clay-css($_checked);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+
+					$ff-only-disabled: map-get($ff-only, disabled);
+
+					@if ($ff-only-disabled) {
+						&:disabled,
+						&.disabled {
+							@include clay-css($ff-only-disabled);
+
+							$ff-only-disabled-option: map-get(
+								$ff-only-disabled,
+								option
+							);
+
+							@if ($ff-only-disabled-option) {
+								> option {
+									@include clay-css($ff-only-disabled-option);
+
+									$_hover: map-get(
+										$ff-only-disabled-option,
+										hover
+									);
+
+									@if ($_hover) {
+										&:hover {
+											@include clay-css($_hover);
+										}
+									}
+
+									$_checked: map-get(
+										$ff-only-disabled-option,
+										checked
+									);
+
+									@if ($_checked) {
+										&:checked {
+											@include clay-css($_checked);
+										}
+									}
+								}
+							}
+						}
+					}
+
+					$ff-only-option: map-get($ff-only, option);
+
+					@if ($ff-only-option) {
+						option {
+							@include clay-css($ff-only-option);
+
+							$_hover: map-get($ff-only-option, hover);
+
+							@if ($_hover) {
 								&:hover {
-									@include clay-css(
-										map-get($ff-only-focus-option, hover)
-									);
+									@include clay-css($_hover);
 								}
+							}
 
+							$_checked: map-get($ff-only-option, checked);
+
+							@if ($_checked) {
 								&:checked {
-									@include clay-css(
-										map-get($ff-only-focus-option, checked)
-									);
+									@include clay-css($_checked);
 								}
 							}
-						}
-					}
-
-					&:disabled,
-					&.disabled {
-						$ff-only-disabled: setter(
-							map-get($ff-only, disabled),
-							()
-						);
-
-						@include clay-css($ff-only-disabled);
-
-						> option {
-							$ff-only-disabled-option: setter(
-								map-get($ff-only-disabled, option),
-								()
-							);
-
-							@include clay-css($ff-only-disabled-option);
-
-							&:hover {
-								@include clay-css(
-									map-get($ff-only-disabled-option, hover)
-								);
-							}
-
-							&:checked {
-								@include clay-css(
-									map-get($ff-only-disabled-option, checked)
-								);
-							}
-						}
-					}
-
-					option {
-						$ff-only-option: setter(map-get($ff-only, option), ());
-
-						@include clay-css($ff-only-option);
-
-						&:hover {
-							@include clay-css(map-get($ff-only-option, hover));
-						}
-
-						&:checked {
-							@include clay-css(
-								map-get($ff-only-option, checked)
-							);
 						}
 					}
 				}
@@ -1202,177 +1379,228 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			label {
-				@include clay-css(map-get($map, label));
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			.custom-control-label,
-			.form-check-label {
-				@include clay-css(map-get($map, custom-control-label));
-			}
+			$_label: map-get($map, label);
 
-			.form-control {
-				@include clay-form-control-variant(map-get($map, form-control));
-			}
-
-			.form-control[readonly] {
-				@include clay-form-control-variant(
-					map-deep-get($map, form-control, readonly)
-				);
-			}
-
-			.form-feedback-group {
-				@include clay-css(map-get($map, form-feedback-group));
-			}
-
-			.form-feedback-item {
-				@include clay-css(map-get($map, form-feedback-item));
-			}
-
-			.form-feedback-indicator {
-				@include clay-css(map-get($map, form-feedback-indicator));
-			}
-
-			.form-feedback-text {
-				@include clay-css(map-get($map, form-feedback-text));
-			}
-
-			select.form-control {
-				@include clay-select-variant(
-					map-deep-get($map, select, form-control)
-				);
-
-				&[size] {
-					@include clay-select-variant(
-						map-deep-get($map, select, form-control, size)
-					);
-				}
-
-				&[multiple] {
-					@include clay-select-variant(
-						map-deep-get($map, select, form-control, multiple)
-					);
+			@if ($_label) {
+				label {
+					@include clay-css($_label);
 				}
 			}
 
-			.input-group-item {
-				@include clay-css(map-get($map, input-group-item));
+			$_custom-control-label: map-get($map, custom-control-label);
 
-				&:hover {
-					.input-group-inset {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								input-group-item,
-								hover,
-								input-group-inset
-							)
-						);
+			@if ($_custom-control-label) {
+				.custom-control-label,
+				.form-check-label {
+					@include clay-css($_custom-control-label);
+				}
+			}
 
-						~ .input-group-inset-item {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									input-group-item,
-									hover,
-									input-group-inset,
-									input-group-inset-item
-								)
-							);
+			$_form-control: map-get($map, form-control);
+
+			@if ($_form-control) {
+				.form-control {
+					@include clay-form-control-variant($_form-control);
+				}
+			}
+
+			$_form-control-readonly: map-get($_form-control, readonly);
+
+			@if ($_form-control-readonly) {
+				.form-control[readonly] {
+					@include clay-form-control-variant($_form-control-readonly);
+				}
+			}
+
+			$_form-feedback-group: map-get($map, form-feedback-group);
+
+			@if ($_form-feedback-group) {
+				.form-feedback-group {
+					@include clay-css($_form-feedback-group);
+				}
+			}
+
+			$_form-feedback-item: map-get($map, form-feedback-item);
+
+			@if ($_form-feedback-item) {
+				.form-feedback-item {
+					@include clay-css($_form-feedback-item);
+				}
+			}
+
+			$_form-feedback-indicator: map-get($map, form-feedback-indicator);
+
+			@if ($_form-feedback-indicator) {
+				.form-feedback-indicator {
+					@include clay-css($_form-feedback-indicator);
+				}
+			}
+
+			$_form-feedback-text: map-get($map, form-feedback-text);
+
+			@if ($_form-feedback-text) {
+				.form-feedback-text {
+					@include clay-css($_form-feedback-text);
+				}
+			}
+
+			$_select-form-control: map-deep-get($map, select, form-control);
+
+			@if ($_select-form-control) {
+				select.form-control {
+					@include clay-select-variant($_select-form-control);
+
+					$_size: map-get($_select-form-control, size);
+
+					@if ($_size) {
+						&[size] {
+							@include clay-select-variant($_size);
+						}
+					}
+
+					$_multiple: map-get($_select-form-control, multiple);
+
+					@if ($_multiple) {
+						&[multiple] {
+							@include clay-select-variant($_multiple);
 						}
 					}
 				}
+			}
 
-				&.focus {
-					@include clay-css(
-						map-deep-get($map, input-group-item, focus)
-					);
+			$_input-group-item: map-get($map, input-group-item);
 
-					.input-group-inset {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								input-group-item,
-								focus,
+			@if ($_input-group-item) {
+				.input-group-item {
+					@include clay-css($_input-group-item);
+
+					$_hover: map-get($_input-group-item, hover);
+
+					@if ($_hover) {
+						&:hover {
+							$_input-group-inset: map-get(
+								$_hover,
 								input-group-inset
-							)
-						);
-
-						~ .input-group-inset-item {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									input-group-item,
-									focus,
-									input-group-inset,
-									input-group-inset-item
-								)
 							);
+
+							@if ($_input-group-inset) {
+								.input-group-inset {
+									@include clay-css($_input-group-inset);
+
+									$_input-group-inset-item: map-get(
+										$_input-group-inset,
+										input-group-inset-item
+									);
+
+									@if ($_input-group-inset-item) {
+										~ .input-group-inset-item {
+											@include clay-css(
+												$_input-group-inset-item
+											);
+										}
+									}
+								}
+							}
 						}
 					}
-				}
 
-				.input-group-inset {
-					@include clay-css(
-						map-deep-get($map, input-group-item, input-group-inset)
+					$_focus: map-get($_input-group-item, focus);
+
+					@if ($_focus) {
+						&.focus {
+							@include clay-css($_focus);
+
+							$_input-group-inset: map-get(
+								$_focus,
+								input-group-inset
+							);
+
+							@if ($_input-group-inset) {
+								.input-group-inset {
+									@include clay-css($_input-group-inset);
+
+									$_input-group-inset-item: map-get(
+										$_input-group-inset,
+										input-group-inset-item
+									);
+
+									@if ($_input-group-inset-item) {
+										~ .input-group-inset-item {
+											@include clay-css(
+												$_input-group-inset-item
+											);
+										}
+									}
+								}
+							}
+						}
+					}
+
+					$_input-group-inset: map-get(
+						$_input-group-item,
+						input-group-inset
 					);
 
-					~ .input-group-inset-item {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								input-group-item,
-								input-group-inset,
+					@if ($_input-group-inset) {
+						.input-group-inset {
+							@include clay-css($_input-group-inset);
+
+							$_input-group-inset-item: map-get(
+								$_input-group-inset,
 								input-group-inset-item
-							)
-						);
-					}
-
-					&:hover {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								input-group-item,
-								input-group-inset,
-								hover
-							)
-						);
-
-						~ .input-group-inset-item {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									input-group-item,
-									input-group-inset,
-									hover,
-									input-group-inset-item
-								)
 							);
-						}
-					}
 
-					&:focus {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								input-group-item,
-								input-group-inset,
-								focus
-							)
-						);
+							@if ($_input-group-inset-item) {
+								~ .input-group-inset-item {
+									@include clay-css($_input-group-inset-item);
+								}
+							}
 
-						~ .input-group-inset-item {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									input-group-item,
-									input-group-inset,
-									focus,
-									input-group-inset-item
-								)
-							);
+							$_hover: map-get($_input-group-inset, hover);
+
+							@if ($_hover) {
+								&:hover {
+									@include clay-css($_hover);
+
+									$_input-group-inset-item: map-get(
+										$_hover,
+										input-group-inset-item
+									);
+
+									@if ($_input-group-inset-item) {
+										~ .input-group-inset-item {
+											@include clay-css(
+												$_input-group-inset-item
+											);
+										}
+									}
+								}
+							}
+
+							$_focus: map-get($_input-group-inset, focus);
+
+							@if ($_focus) {
+								&:focus {
+									@include clay-css($_focus);
+
+									$_input-group-inset-item: map-get(
+										$_focus,
+										input-group-inset-item
+									);
+
+									@if ($_input-group-inset-item) {
+										~ .input-group-inset-item {
+											@include clay-css(
+												$_input-group-inset-item
+											);
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -2035,7 +2263,7 @@
 		);
 
 		$form-control-range: setter(map-get($map, form-control-range), ());
-		$form-control-range: map-merge(
+		$form-control-range: map-deep-merge(
 			$form-control-range,
 			(
 				appearance:
@@ -2171,7 +2399,7 @@
 		);
 
 		$hover: setter(map-deep-get($map, form-control-range, hover), ());
-		$hover: map-merge(
+		$hover: map-deep-merge(
 			$hover,
 			(
 				cursor:
@@ -2197,7 +2425,7 @@
 			)
 		);
 		$focus: setter(map-deep-get($map, form-control-range, focus), ());
-		$focus: map-merge(
+		$focus: map-deep-merge(
 			$focus,
 			(
 				outline:
@@ -2228,7 +2456,7 @@
 		);
 
 		$disabled: setter(map-deep-get($map, form-control-range, disabled), ());
-		$disabled: map-merge(
+		$disabled: map-deep-merge(
 			$disabled,
 			(
 				color:
@@ -2248,7 +2476,7 @@
 			map-deep-get($map, disabled, clay-range-thumb),
 			setter(map-get($disabled, clay-range-thumb), ())
 		);
-		$disabled-clay-range-thumb: map-merge(
+		$disabled-clay-range-thumb: map-deep-merge(
 			setter(map-get($disabled, clay-range-thumb), ()),
 			(
 				background-color:
@@ -2300,46 +2528,70 @@
 		);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			.tooltip {
-				@include clay-css($tooltip);
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			.tooltip-inner {
-				@include clay-css($tooltip-inner);
-			}
-
-			.tooltip-arrow {
-				@include clay-css($tooltip-arrow);
-			}
-
-			.clay-tooltip-bottom {
-				@include clay-css($clay-tooltip-bottom);
-
-				.tooltip-arrow {
-					@include clay-css($clay-tooltip-bottom-tooltip-arrow);
+			@if (length($tooltip) != 0) {
+				.tooltip {
+					@include clay-css($tooltip);
 				}
 			}
 
-			.clay-tooltip-top {
-				@include clay-css($clay-tooltip-top);
-
-				.tooltip-arrow {
-					@include clay-css($clay-tooltip-top-tooltip-arrow);
+			@if (length($tooltip-inner) != 0) {
+				.tooltip-inner {
+					@include clay-css($tooltip-inner);
 				}
 			}
 
-			.clay-range-track {
-				@include clay-css($clay-range-track);
+			@if (length($tooltip-arrow) != 0) {
+				.tooltip-arrow {
+					@include clay-css($tooltip-arrow);
+				}
 			}
 
-			.clay-range-progress {
-				@include clay-css($clay-range-progress);
+			@if (length($clay-tooltip-bottom) != 0) {
+				.clay-tooltip-bottom {
+					@include clay-css($clay-tooltip-bottom);
+
+					@if (length($clay-tooltip-bottom-tooltip-arrow) != 0) {
+						.tooltip-arrow {
+							@include clay-css(
+								$clay-tooltip-bottom-tooltip-arrow
+							);
+						}
+					}
+				}
 			}
 
-			.clay-range-thumb {
-				@include clay-css($clay-range-thumb);
+			@if (length($clay-tooltip-top) != 0) {
+				.clay-tooltip-top {
+					@include clay-css($clay-tooltip-top);
+
+					@if (length($clay-tooltip-top-tooltip-arrow) != 0) {
+						.tooltip-arrow {
+							@include clay-css($clay-tooltip-top-tooltip-arrow);
+						}
+					}
+				}
+			}
+
+			@if (length($clay-range-track) != 0) {
+				.clay-range-track {
+					@include clay-css($clay-range-track);
+				}
+			}
+
+			@if (length($clay-range-progress) != 0) {
+				.clay-range-progress {
+					@include clay-css($clay-range-progress);
+				}
+			}
+
+			@if (length($clay-range-thumb) != 0) {
+				.clay-range-thumb {
+					@include clay-css($clay-range-thumb);
+				}
 			}
 
 			.form-control-range {
@@ -2353,8 +2605,10 @@
 					}
 				}
 
-				&::-moz-range-thumb {
-					@include clay-css($moz-range-thumb);
+				@if (length($moz-range-thumb) != 0) {
+					&::-moz-range-thumb {
+						@include clay-css($moz-range-thumb);
+					}
 				}
 
 				&::-moz-range-track {
@@ -2391,23 +2645,19 @@
 				}
 
 				// Webkit
+
 				&::-webkit-slider-container {
 					@include clay-css(
-						map-deep-get(
-							$map,
-							form-control-range,
-							webkit-slider-container
-						)
+						map-get($form-control-range, webkit-slider-container)
 					);
 				}
 
-				&::-webkit-slider-runnable-track {
-					$webkit-slider-runnable-track: map-deep-get(
-						$map,
-						form-control-range,
-						webkit-slider-runnable-track
-					);
+				$webkit-slider-runnable-track: map-get(
+					$form-control-range,
+					webkit-slider-runnable-track
+				);
 
+				&::-webkit-slider-runnable-track {
 					@if not($webkit-slider-runnable-track) {
 						-webkit-appearance: none;
 						appearance: none;
@@ -2424,26 +2674,16 @@
 				&:hover {
 					@include clay-css($hover);
 
-					~ .clay-range-track {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								form-control-range,
-								hover,
-								clay-range-track
-							)
-						);
+					$_clay-range-track: map-get($hover, clay-range-track);
+
+					@if ($_clay-range-track) {
+						~ .clay-range-track {
+							@include clay-css($_clay-range-track);
+						}
 					}
 
 					~ .clay-range-progress {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								form-control-range,
-								hover,
-								clay-range-progress
-							)
-						);
+						@include clay-css(map-get($hover, clay-range-progress));
 
 						.clay-range-thumb {
 							@include clay-css($hover-clay-range-thumb);
@@ -2474,29 +2714,23 @@
 					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 						@include clay-css($focus);
 
-						~ .clay-range-track {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									form-control-range,
-									focus,
-									clay-range-track
-								)
-							);
+						$_clay-range-track: map-get($focus, clay-range-track);
+
+						@if ($_clay-range-track) {
+							~ .clay-range-track {
+								@include clay-css($_clay-range-track);
+							}
 						}
 
 						~ .clay-range-progress {
 							@include clay-css(
-								map-deep-get(
-									$map,
-									form-control-range,
-									focus,
-									clay-range-progress
-								)
+								map-get($focus, clay-range-progress)
 							);
 
-							.clay-range-thumb {
-								@include clay-css($focus-clay-range-thumb);
+							@if (length($focus-clay-range-thumb) != 0) {
+								.clay-range-thumb {
+									@include clay-css($focus-clay-range-thumb);
+								}
 							}
 
 							.tooltip {
@@ -2519,51 +2753,71 @@
 					}
 				}
 
-				&:disabled {
-					@include clay-css($disabled);
+				@if (length($disabled) != 0) {
+					&:disabled {
+						@include clay-css($disabled);
 
-					~ .clay-range-track {
-						@include clay-css($disabled-clay-range-track);
-					}
+						@if (length($disabled-clay-range-track) != 0) {
+							~ .clay-range-track {
+								@include clay-css($disabled-clay-range-track);
+							}
+						}
 
-					~ .clay-range-progress {
-						@include clay-css($disabled-clay-range-progress);
+						@if (length($disabled-clay-range-progress) != 0) {
+							~ .clay-range-progress {
+								@include clay-css(
+									$disabled-clay-range-progress
+								);
 
-						.clay-range-thumb {
+								@if (length($disabled-clay-range-thumb) != 0) {
+									.clay-range-thumb {
+										@include clay-css(
+											$disabled-clay-range-thumb
+										);
+									}
+								}
+							}
+						}
+
+						&::-moz-range-thumb {
 							@include clay-css($disabled-clay-range-thumb);
 						}
-					}
 
-					&::-moz-range-thumb {
-						@include clay-css($disabled-clay-range-thumb);
-					}
+						&::-ms-thumb {
+							@include clay-css($disabled-clay-range-thumb);
+						}
 
-					&::-ms-thumb {
-						@include clay-css($disabled-clay-range-thumb);
-					}
-
-					&::-webkit-slider-thumb {
-						@include clay-css($disabled-clay-range-thumb);
+						&::-webkit-slider-thumb {
+							@include clay-css($disabled-clay-range-thumb);
+						}
 					}
 				}
 			}
 
-			&[data-label-min],
-			&[data-label-max] {
-				@include clay-css($data-label-min-max);
+			@if (length($data-label-min-max) != 0) {
+				&[data-label-min],
+				&[data-label-max] {
+					@include clay-css($data-label-min-max);
+				}
 			}
 
-			&[data-label-min]::before {
-				@include clay-css($data-label-min-before);
+			@if (length($data-label-min-before) != 0) {
+				&[data-label-min]::before {
+					@include clay-css($data-label-min-before);
+				}
 			}
 
-			&[data-label-max]::after {
-				@include clay-css($data-label-max-after);
+			@if (length($data-label-max-after) != 0) {
+				&[data-label-max]::after {
+					@include clay-css($data-label-max-after);
+				}
 			}
 
-			&::after,
-			&::before {
-				@include clay-css($before-after);
+			@if (length($before-after) != 0) {
+				&::after,
+				&::before {
+					@include clay-css($before-after);
+				}
 			}
 		}
 	}
@@ -2754,10 +3008,14 @@
 		);
 
 		@if ($enabled) {
-			@include clay-css($map);
+			@if (length($map) != 0) {
+				@include clay-css($map);
+			}
 
-			.clay-range-input {
-				@include clay-range-input-variant($clay-range-input);
+			@if (length($clay-range-input) != 0) {
+				.clay-range-input {
+					@include clay-range-input-variant($clay-range-input);
+				}
 			}
 		}
 	}
