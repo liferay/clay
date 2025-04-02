@@ -46,8 +46,8 @@ export const Default = () => (
 	<ClayDatePickerWithState
 		placeholder="YYYY-MM-DD"
 		years={{
-			end: 2024,
-			start: 1997,
+			end: new Date().getFullYear(),
+			start: 1998,
 		}}
 	/>
 );
@@ -57,8 +57,8 @@ export const Disabled = () => (
 		disabled
 		placeholder="YYYY-MM-DD"
 		years={{
-			end: 2024,
-			start: 1997,
+			end: new Date().getFullYear(),
+			start: 1998,
 		}}
 	/>
 );
@@ -70,8 +70,8 @@ export const Time = (args: any) => (
 		timezone="GMT+01:00"
 		use12Hours={args.use12Hours}
 		years={{
-			end: 2024,
-			start: 1997,
+			end: new Date().getFullYear(),
+			start: 1998,
 		}}
 	/>
 );
@@ -103,8 +103,8 @@ export const Locale = () => (
 		timezone="GMT+03:00"
 		weekdaysShort={['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']}
 		years={{
-			end: 2024,
-			start: 1997,
+			end: new Date().getFullYear(),
+			start: 1998,
 		}}
 	/>
 );
@@ -127,8 +127,8 @@ export const CustomExpand = () => {
 				placeholder="YYYY-MM-DD"
 				value={value}
 				years={{
-					end: 2024,
-					start: 1997,
+					end: new Date().getFullYear(),
+					start: 1998,
 				}}
 			/>
 		</>
@@ -145,8 +145,8 @@ export const DateRange = () => (
 		placeholder="YYYY/MM/DD - YYYY/MM/DD"
 		range
 		years={{
-			end: 2024,
-			start: 1997,
+			end: new Date().getFullYear(),
+			start: 1998,
 		}}
 	/>
 );
