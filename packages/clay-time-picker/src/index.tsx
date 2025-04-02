@@ -539,6 +539,7 @@ const TimePicker = ({
 													  }
 											)
 										}
+										tabIndex={visibleActionReset ? 0 : -1}
 									>
 										<ClayIcon
 											spritemap={spritemap}
