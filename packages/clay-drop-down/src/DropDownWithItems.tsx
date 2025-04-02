@@ -12,10 +12,12 @@ import {ClayDropDownWithDrilldown} from './DropDownWithDrilldown';
 import Help from './Help';
 import {ClayDropDownContext, DropDownItems, findNested} from './Items';
 import Search from './Search';
+import Menu from './Menu';
 
 import type {AlignPoints, InternalDispatch} from '@clayui/shared';
 
 import type {Item} from './Items';
+import type {IProps as SearchProps} from './Search';
 
 export type Props = {
 	/**
@@ -75,9 +77,8 @@ export type Props = {
 	/**
 	 * Prop to pass DOM element attributes to DropDown.Menu.
 	 */
-	menuElementAttrs?: React.ComponentProps<
-		typeof ClayDropDown
-	>['menuElementAttrs'];
+	menuElementAttrs?: React.HTMLAttributes<HTMLDivElement> &
+		Pick<React.ComponentProps<typeof Menu>, 'containerProps'>;
 
 	/**
 	 * Adds utility class name `dropdown-menu-height-${height}`
@@ -102,7 +103,7 @@ export type Props = {
 	/**
 	 * Function for setting the offset of the menu from the trigger.
 	 */
-	offsetFn?: React.ComponentProps<typeof ClayDropDown>['offsetFn'];
+	offsetFn?: (points: AlignPoints) => [number, number];
 
 	/**
 	 * Callback for when the active state changes (controlled).
@@ -127,10 +128,7 @@ export type Props = {
 	/**
 	 * Pass the props to the Search component.
 	 */
-	searchProps?: Omit<
-		React.ComponentProps<typeof Search>,
-		'onChange' | 'spritemap' | 'value'
-	>;
+	searchProps?: SearchProps;
 
 	/**
 	 * The value that will be passed to the search input element.
