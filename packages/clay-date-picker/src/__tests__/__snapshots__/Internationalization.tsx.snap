@@ -7011,6 +7011,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
                           <button
                             aria-label="Delete the entered time"
                             class="clay-time-clear-btn btn btn-unstyled"
+                            tabindex="-1"
                             type="button"
                           >
                             <svg

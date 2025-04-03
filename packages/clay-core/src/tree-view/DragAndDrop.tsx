@@ -487,13 +487,13 @@ export function DragAndDropProvider<T>({
 					<span
 						aria-hidden="true"
 						data-focus-scope-start="true"
-						tabIndex={0}
+						tabIndex={-1}
 					/>
 					{children}
 					<span
 						aria-hidden="true"
 						data-focus-scope-end="true"
-						tabIndex={0}
+						tabIndex={-1}
 					/>
 				</>
 			) : (

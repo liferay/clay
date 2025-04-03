@@ -73,7 +73,7 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 					<span
 						aria-hidden="true"
 						data-focus-scope-start="true"
-						tabIndex={0}
+						tabIndex={-1}
 					/>
 				) : null}
 
@@ -83,7 +83,7 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 					<span
 						aria-hidden="true"
 						data-focus-scope-end="true"
-						tabIndex={0}
+						tabIndex={-1}
 					/>
 				) : null}
 			</div>
