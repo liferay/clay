@@ -371,6 +371,12 @@ $cadmin-spacers: map-deep-merge(
 		8: $cadmin-spacer * 7.5,
 		9: $cadmin-spacer * 9,
 		10: $cadmin-spacer * 10,
+		'2px': $cadmin-spacer * 0.125,
+		'12px': $cadmin-spacer * 0.75,
+		'20px': $cadmin-spacer * 1.25,
+		'40px': $cadmin-spacer * 2.5,
+		'56px': $cadmin-spacer * 3.5,
+		'64px': $cadmin-spacer * 4,
 	),
 	$cadmin-spacers
 );

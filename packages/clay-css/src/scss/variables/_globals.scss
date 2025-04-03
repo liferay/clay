@@ -312,6 +312,12 @@ $spacers: map-deep-merge(
 		6: $spacer * 4.5,
 		7: $spacer * 6,
 		8: $spacer * 7.5,
+		'2px': $spacer * 0.125,
+		'12px': $spacer * 0.75,
+		'20px': $spacer * 1.25,
+		'40px': $spacer * 2.5,
+		'56px': $spacer * 3.5,
+		'64px': $spacer * 4,
 	),
 	$spacers
 );
