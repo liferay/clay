@@ -260,6 +260,12 @@ $bg-theme-colors: map-deep-merge(
 				background-color: clay-darken($primary, 10%) !important,
 			),
 		),
+		'primary-l3': (
+			background-color: $primary-l3 !important,
+			hover: (
+				background-color: clay-darken($primary-l3, 10%) !important,
+			),
+		),
 		'secondary': (
 			background-color: $secondary !important,
 			hover: (
