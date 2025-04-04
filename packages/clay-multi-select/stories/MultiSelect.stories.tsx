@@ -317,7 +317,7 @@ export const Group = (args: any) => {
 
 					<ClayInput.GroupItem shrink>
 						<ClayButton displayType="secondary" onClick={() => {}}>
-							Select
+							Submit Labels
 						</ClayButton>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
