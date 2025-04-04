@@ -17,18 +17,24 @@ import Caption from './Caption';
 import DropDown from './DropDown';
 import Help from './Help';
 import {ClayDropDownContext, DropDownItems, findNested} from './Items';
+import Menu from './Menu';
 import Search from './Search';
 
 import type {AlignPoints} from '@clayui/shared';
 
 import type {Item} from './Items';
+import type {IProps as SearchProps} from './Search';
 
 type Messages = {
 	goTo: string;
 	back: string;
 };
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+type TriggerElement = React.ReactElement & {
+	ref?: (node: HTMLButtonElement | null) => void;
+};
+
+export type Props = {
 	/**
 	 * Flag to indicate if the menu should be initially open (controlled).
 	 */
@@ -66,6 +72,8 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 */
 	caption?: string;
 
+	className?: string;
+
 	/**
 	 * HTML element tag that the container should render.
 	 */
@@ -96,9 +104,8 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Prop to pass DOM element attributes to DropDown.Menu.
 	 */
-	menuElementAttrs?: React.ComponentProps<
-		typeof DropDown
-	>['menuElementAttrs'];
+	menuElementAttrs?: React.HTMLAttributes<HTMLDivElement> &
+		Pick<React.ComponentProps<typeof Menu>, 'containerProps'>;
 
 	/**
 	 * Adds utility class name `dropdown-menu-height-${height}`
@@ -130,7 +137,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Function for setting the offset of the menu from the trigger.
 	 */
-	offsetFn?: React.ComponentProps<typeof DropDown>['offsetFn'];
+	offsetFn?: (points: AlignPoints) => [number, number];
 
 	/**
 	 * Callback the will be invoked when the active prop is changed (controlled).
@@ -150,9 +157,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
-	trigger: React.ReactElement & {
-		ref?: (node: HTMLButtonElement | null) => void;
-	};
+	trigger: TriggerElement;
 
 	/**
 	 * Flag indicating if the caret icon should be displayed on the right side.
@@ -177,16 +182,13 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Pass the props to the Search component.
 	 */
-	searchProps?: Omit<
-		React.ComponentProps<typeof Search>,
-		'onChange' | 'spritemap' | 'value'
-	>;
+	searchProps?: SearchProps;
 
 	/**
 	 * The value that will be passed to the search input element.
 	 */
 	searchValue?: string;
-}
+};
 
 type History = {
 	id: string;
@@ -223,7 +225,7 @@ export const ClayDropDownWithDrilldown = ({
 	spritemap,
 	trigger,
 	triggerIcon = null,
-}: IProps) => {
+}: Props) => {
 	const [activeMenu, setActiveMenu] = useState(
 		defaultActiveMenu ?? initialActiveMenu
 	);
