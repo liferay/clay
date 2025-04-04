@@ -11,8 +11,8 @@ import ClayDropDown from './DropDown';
 import {ClayDropDownWithDrilldown} from './DropDownWithDrilldown';
 import Help from './Help';
 import {ClayDropDownContext, DropDownItems, findNested} from './Items';
-import Search from './Search';
 import Menu from './Menu';
+import Search from './Search';
 
 import type {AlignPoints, InternalDispatch} from '@clayui/shared';
 

@@ -17,8 +17,8 @@ import Caption from './Caption';
 import DropDown from './DropDown';
 import Help from './Help';
 import {ClayDropDownContext, DropDownItems, findNested} from './Items';
-import Search from './Search';
 import Menu from './Menu';
+import Search from './Search';
 
 import type {AlignPoints} from '@clayui/shared';
 
