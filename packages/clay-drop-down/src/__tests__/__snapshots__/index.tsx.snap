@@ -326,6 +326,29 @@ exports[`ClayDropDown renders with icons 1`] = `
               </span>
             </span>
           </li>
+          <li
+            role="presentation"
+          >
+            <span
+              class="dropdown-item"
+              role="menuitem"
+              tabindex="-1"
+            >
+              <span
+                class="dropdown-item-indicator-start"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-trash text-primary"
+                  role="presentation"
+                >
+                  <use
+                    href="/foo/bar#trash"
+                  />
+                </svg>
+              </span>
+              Left
+            </span>
+          </li>
         </ul>
       </div>
     </div>
