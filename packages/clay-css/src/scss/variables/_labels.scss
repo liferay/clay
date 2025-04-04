@@ -125,15 +125,14 @@ $label-dismissible: map-merge(
 $label-close: () !default;
 $label-close: map-deep-merge(
 	(
-		border-radius: 1px,
+		border-radius: 5000px,
 		color: inherit,
 		display: inline-flex,
 		font-size: 1rem,
-		height: auto,
-		margin-bottom: -2px,
-		margin-top: -2px,
+		height: 1.5rem,
+		margin: -6px,
 		opacity: 1,
-		width: auto,
+		width: 1.5rem,
 		hover: (
 			color: inherit,
 			opacity: 1,
