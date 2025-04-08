@@ -312,8 +312,10 @@
 		@if ($enabled) {
 			@include clay-css($map);
 
-			@include media-breakpoint-down($breakpoint-down) {
-				@include clay-css($mobile);
+			@if (length($breakpoint-down) != 0) {
+				@include media-breakpoint-down($breakpoint-down) {
+					@include clay-css($mobile);
+				}
 			}
 
 			.menubar-collapse {
@@ -353,28 +355,50 @@
 				}
 			}
 
-			.nav-nested {
-				@include clay-css(map-get($map, nav-nested));
+			$_nav-nested: map-get($map, nav-nested);
 
-				@include media-breakpoint-down($breakpoint-down) {
-					@include clay-css($nav-nested-mobile);
+			@if ($_nav-nested) {
+				.nav-nested {
+					@include clay-css($_nav-nested);
+
+					@include media-breakpoint-down($breakpoint-down) {
+						@include clay-css($nav-nested-mobile);
+					}
 				}
 			}
 
-			.nav-nested-margins {
-				@include clay-css(map-get($map, nav-nested-margins));
+			$_nav-nested-margins: map-get($map, nav-nested-margins);
 
-				@include media-breakpoint-down($breakpoint-down) {
-					@include clay-css($nav-nested-margins-mobile);
-				}
-
-				> li .nav > li {
-					@include clay-css(map-get($map, nav-nested-margins-item));
+			@if ($_nav-nested-margins) {
+				.nav-nested-margins {
+					@include clay-css($_nav-nested-margins);
 
 					@include media-breakpoint-down($breakpoint-down) {
-						@include clay-css(
-							map-get($map, nav-nested-margins-item-mobile)
-						);
+						@include clay-css($nav-nested-margins-mobile);
+					}
+
+					$_nav-nested-margins-item: map-get(
+						$map,
+						nav-nested-margins-item
+					);
+
+					@if ($_nav-nested-margins-item) {
+						> li .nav > li {
+							@include clay-css($_nav-nested-margins-item);
+
+							$_nav-nested-margins-item-mobile: $map,
+								nav-nested-margins-item-mobile;
+
+							@if ($_nav-nested-margins-item-mobile) {
+								@include media-breakpoint-down(
+									$breakpoint-down
+								) {
+									@include clay-css(
+										$_nav-nested-margins-item-mobile
+									);
+								}
+							}
+						}
 					}
 				}
 			}
@@ -877,81 +901,128 @@
 	);
 
 	@if ($enable) {
-		@include clay-css($map);
-
-		@include media-breakpoint-down($breakpoint-down) {
-			@include clay-css($mobile);
+		@if (length($map) != 0) {
+			@include clay-css($map);
 		}
 
-		.menubar-collapse {
-			$_menubar-collapse: setter(map-get($map, collapse), ());
-			$_menubar-collapse: map-merge(
-				setter(map-get($map, menubar-collapse), ()),
-				$_menubar-collapse
-			);
-
-			@include clay-css($_menubar-collapse);
-
+		@if (length($mobile) != 0) {
 			@include media-breakpoint-down($breakpoint-down) {
-				@include clay-css($collapse-mobile);
+				@include clay-css($mobile);
 			}
 		}
 
-		.menubar-toggler {
-			$_menubar-toggler: setter(map-get($map, menubar-toggler), ());
+		$_menubar-collapse: setter(map-get($map, collapse), ());
+		$_menubar-collapse: map-merge(
+			setter(map-get($map, menubar-collapse), ()),
+			$_menubar-collapse
+		);
 
-			@include clay-css($_menubar-toggler);
-
-			.c-inner {
-				@include clay-css(map-get($_menubar-toggler, c-inner));
-			}
-
-			.lexicon-icon {
-				@include clay-css(map-get($_menubar-toggler, lexicon-icon));
-			}
-
-			@include media-breakpoint-down($breakpoint-down) {
-				@include clay-button-variant($toggler-mobile);
-			}
-		}
-
-		.nav-nested {
-			@include clay-css(map-get($map, nav-nested));
-		}
-
-		.nav-nested-margins {
-			> li .nav > li {
-				@include clay-css(map-get($map, nav-nested-margins-item));
+		@if (length($_menubar-collapse) != 0) {
+			.menubar-collapse {
+				@include clay-css($_menubar-collapse);
 
 				@include media-breakpoint-down($breakpoint-down) {
-					@include clay-css(
-						map-get($map, nav-nested-margins-item-mobile)
-					);
+					@include clay-css($collapse-mobile);
 				}
 			}
 		}
 
-		.nav-item {
-			@include clay-css(map-get($map, nav-item));
-		}
+		$_menubar-toggler: map-get($map, menubar-toggler);
 
-		.nav-link {
-			$_nav-link: setter(map-get($map, nav-link), ());
-			$_nav-link: map-deep-merge($link, $_nav-link);
+		@if ($_menubar-toggler) {
+			.menubar-toggler {
+				@include clay-css($_menubar-toggler);
 
-			@include clay-link($_nav-link);
+				$_c-inner: map-get($_menubar-toggler, c-inner);
 
-			@include media-breakpoint-down($breakpoint-down) {
-				@include clay-link($link-mobile);
+				@if ($_c-inner) {
+					.c-inner {
+						@include clay-css($_c-inner);
+					}
+				}
+
+				$_lexicon-icon: map-get($_menubar-toggler, lexicon-icon);
+
+				@if ($_lexicon-icon) {
+					.lexicon-icon {
+						@include clay-css($_lexicon-icon);
+					}
+				}
+
+				@if (length($toggler-mobile) != 0) {
+					@include media-breakpoint-down($breakpoint-down) {
+						@include clay-button-variant($toggler-mobile);
+					}
+				}
 			}
 		}
 
-		.menubar-actions-1 {
-			@include clay-css(map-get($map, menubar-actions-1));
+		$_nav-nested: map-get($map, nav-nested);
+
+		@if ($_nav-nested) {
+			.nav-nested {
+				@include clay-css($_nav-nested);
+			}
 		}
 
-		.menubar-action {
-			@include clay-css(map-get($map, menubar-action));
+		$_nav-nested-margins: map-get($map, nav-nested-margins-item);
+
+		@if ($_nav-nested-margins) {
+			.nav-nested-margins {
+				> li .nav > li {
+					@include clay-css($_nav-nested-margins);
+
+					$_nav-nested-margins-item-mobile: map-get(
+						$map,
+						nav-nested-margins-item-mobile
+					);
+
+					@if ($_nav-nested-margins-item-mobile) {
+						@include media-breakpoint-down($breakpoint-down) {
+							@include clay-css($_nav-nested-margins-item-mobile);
+						}
+					}
+				}
+			}
+		}
+
+		$_nav-item: map-get($map, nav-item);
+
+		@if ($_nav-item) {
+			.nav-item {
+				@include clay-css($_nav-item);
+			}
+		}
+
+		$_nav-link: setter(map-get($map, nav-link), ());
+		$_nav-link: map-deep-merge($link, $_nav-link);
+
+		@if (length($_nav-link) != 0) {
+			.nav-link {
+				@include clay-link($_nav-link);
+
+				@include media-breakpoint-down($breakpoint-down) {
+					@if (length($link-mobile) != 0) {
+						@include clay-link($link-mobile);
+					}
+				}
+			}
+		}
+
+		$_menubar-actions-1: map-get($map, menubar-actions-1);
+
+		@if ($_menubar-actions-1) {
+			.menubar-actions-1 {
+				@include clay-css($_menubar-actions-1);
+			}
+		}
+
+		$_menubar-action: map-get($map, menubar-action);
+
+		@if ($_menubar-action) {
+			.menubar-action {
+				@include clay-css($_menubar-action);
+			}
 		}
 
 		$_media-breakpoint-down: map-get($map, media-breakpoint-down);
