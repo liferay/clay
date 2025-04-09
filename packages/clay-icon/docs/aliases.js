@@ -181,6 +181,10 @@ export const flagsData = [
 		name: 'ms-my',
 	},
 	{
+		aliases: ['my-mm', 'Burmese', 'Myanmar'],
+		name: 'my-mm',
+	},
+	{
 		aliases: ['nb-no', 'Norwegian Bokmål', 'Norway'],
 		name: 'nb-no',
 	},
