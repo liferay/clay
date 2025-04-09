@@ -65,6 +65,14 @@ export const flagsData = [
 		name: 'en-gb',
 	},
 	{
+		aliases: ['en-ie', 'English', 'Ireland'],
+		name: 'en-ie',
+	},
+	{
+		aliases: ['en-lv', 'English', 'Latvia'],
+		name: 'en-lv',
+	},
+	{
 		aliases: ['en-us', 'English', 'United States'],
 		name: 'en-us',
 	},
