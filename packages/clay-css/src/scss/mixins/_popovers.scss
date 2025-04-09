@@ -27,22 +27,40 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			&::before {
-				@include clay-css(map-get($map, before));
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			&::after {
-				@include clay-css(map-get($map, after));
+			$_before: map-get($map, before);
+
+			@if ($_before) {
+				&::before {
+					@include clay-css($_before);
+				}
 			}
 
-			&:empty {
-				@include clay-css(map-get($map, empty));
+			$_after: map-get($map, after);
+
+			@if ($_after) {
+				&::after {
+					@include clay-css($_after);
+				}
 			}
 
-			.close {
-				@include clay-close(map-get($map, close));
+			$_empty: map-get($map, empty);
+
+			@if ($_empty) {
+				&:empty {
+					@include clay-css($_empty);
+				}
+			}
+
+			$_close: map-get($map, close);
+
+			@if ($_close) {
+				.close {
+					@include clay-close($_close);
+				}
 			}
 		}
 	}
@@ -91,43 +109,75 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
+			@if (length($map) != 0) {
+				@include clay-css($map);
+			}
 
-			.arrow {
-				@include clay-css(map-get($map, arrow));
+			$_arrow: map-get($map, arrow);
 
-				&::before {
-					@include clay-css(map-deep-get($map, arrow, before));
+			@if ($_arrow) {
+				.arrow {
+					@include clay-css($_arrow);
+
+					$_before: map-get($_arrow, before);
+
+					@if ($_before) {
+						&::before {
+							@include clay-css($_before);
+						}
+					}
+
+					$_after: map-get($_arrow, after);
+
+					@if ($_after) {
+						&::after {
+							@include clay-css($_after);
+						}
+					}
 				}
+			}
 
-				&::after {
-					@include clay-css(map-deep-get($map, arrow, after));
+			$_popover-header: map-get($map, popover-header);
+
+			@if ($_popover-header) {
+				.popover-header {
+					@include clay-popover-header-variant($_popover-header);
 				}
 			}
 
-			.popover-header {
-				@include clay-popover-header-variant(
-					map-get($map, popover-header)
-				);
+			$_popover-body: map-get($map, popover-body);
+
+			@if ($_popover-body) {
+				.popover-body {
+					@include clay-css($_popover-body);
+				}
 			}
 
-			.popover-body {
-				@include clay-css(map-get($map, popover-body));
+			$_inline-scroller: map-get($map, inline-scroller);
+
+			@if ($_inline-scroller) {
+				.inline-scroller {
+					@include clay-css($_inline-scroller);
+				}
 			}
 
-			.inline-scroller {
-				@include clay-css(map-get($map, inline-scroller));
+			$_close: map-get($map, close);
+
+			@if ($_close) {
+				.close {
+					@include clay-close($_close);
+				}
 			}
 
-			.close {
-				@include clay-close(map-get($map, close));
-			}
+			$_focus: map-get($map, focus);
 
-			@at-root {
-				&.focus,
-				#{$focus-visible-selector},
-				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-					@include clay-popover-variant(map-get($map, focus));
+			@if ($_focus) {
+				@at-root {
+					&.focus,
+					#{$focus-visible-selector},
+					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+						@include clay-popover-variant($_focus);
+					}
 				}
 			}
 		}

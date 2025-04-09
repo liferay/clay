@@ -107,106 +107,141 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			> a,
-			> button {
-				@include clay-link(map-get($map, link));
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			&.active {
+			$_link: map-get($map, link);
+
+			@if ($_link) {
 				> a,
 				> button {
-					@include clay-link(map-deep-get($map, link, active-class));
+					@include clay-link(map-get($map, link));
+				}
+
+				$_active-class: map-get($_link, active-class);
+
+				@if ($_active-class) {
+					&.active {
+						> a,
+						> button {
+							@include clay-link($_active-class);
+						}
+					}
+				}
+
+				$_disabled: map-get($_link, disabled);
+
+				@if ($_disabled) {
+					&.disabled {
+						> a,
+						> button {
+							@include clay-link($_disabled);
+						}
+					}
 				}
 			}
 
-			&.disabled {
-				> a,
-				> button {
-					@include clay-link(map-deep-get($map, link, disabled));
+			$_dropdown-menu: map-get($map, dropdown-menu);
+
+			@if ($_dropdown-menu) {
+				.dropdown-menu {
+					@include clay-dropdown-menu-variant($_dropdown-menu);
 				}
 			}
 
-			.dropdown-menu {
-				@include clay-dropdown-menu-variant(
-					map-get($map, dropdown-menu)
-				);
+			$_lexicon-icon: map-get($map, lexicon-icon);
+
+			@if ($_lexicon-icon) {
+				.lexicon-icon {
+					@include clay-css($_lexicon-icon);
+				}
 			}
 
-			.lexicon-icon {
-				@include clay-css(map-get($map, lexicon-icon));
+			$_pagination-results: map-get($map, pagination-results);
+
+			@if ($_pagination-results) {
+				+ .pagination-results {
+					@include clay-css($_pagination-results);
+				}
 			}
 
-			+ .pagination-results {
-				@include clay-css(map-get($map, pagination-results));
-			}
+			$_media-breakpoint-down: map-get($map, media-breakpoint-down);
 
-			@if (map-get($map, media-breakpoint-down)) {
-				@each $breakpoint
-					in map-keys(map-get($map, media-breakpoint-down))
-				{
-					$media-breakpoint-down: map-deep-get(
-						$map,
-						media-breakpoint-down,
+			@if ($_media-breakpoint-down) {
+				@each $breakpoint in map-keys($_media-breakpoint-down) {
+					$media-breakpoint-down: map-get(
+						$_media-breakpoint-down,
 						$breakpoint
 					);
 
 					@include media-breakpoint-down($breakpoint) {
 						@include clay-css($media-breakpoint-down);
 
-						> a,
-						> button {
-							@include clay-link(
-								map-get($media-breakpoint-down, link)
-							);
-						}
+						$_link: map-get($media-breakpoint-down, link);
 
-						&.active {
+						@if ($_link) {
 							> a,
 							> button {
-								@include clay-link(
-									map-deep-get(
-										$media-breakpoint-down,
-										link,
-										active-class
-									)
+								@include clay-link($_link);
+							}
+
+							$_active-class: map-get($_link, active-class);
+
+							@if ($_active-class) {
+								&.active {
+									> a,
+									> button {
+										@include clay-link($_active-class);
+									}
+								}
+							}
+
+							$_disabled: map-get($_link, disabled);
+
+							@if ($_disabled) {
+								&.disabled {
+									> a,
+									> button {
+										@include clay-link($_disabled);
+									}
+								}
+							}
+						}
+
+						$_dropdown-menu: map-get(
+							$media-breakpoint-down,
+							dropdown-menu
+						);
+
+						@if ($_dropdown-menu) {
+							.dropdown-menu {
+								@include clay-dropdown-menu-variant(
+									$_dropdown-menu
 								);
 							}
 						}
 
-						&.disabled {
-							> a,
-							> button {
-								@include clay-link(
-									map-deep-get(
-										$media-breakpoint-down,
-										link,
-										disabled
-									)
-								);
+						$_lexicon-icon: map-get(
+							$media-breakpoint-down,
+							lexicon-icon
+						);
+
+						@if ($_lexicon-icon) {
+							.lexicon-icon {
+								@include clay-css($_lexicon-icon);
 							}
 						}
 
-						.dropdown-menu {
-							@include clay-dropdown-menu-variant(
-								map-get($media-breakpoint-down, dropdown-menu)
-							);
-						}
+						$_pagination-results: map-get(
+							$media-breakpoint-down,
+							pagination-results
+						);
 
-						.lexicon-icon {
-							@include clay-css(
-								map-get($media-breakpoint-down, lexicon-icon)
-							);
-						}
-
-						+ .pagination-results {
-							@include clay-css(
-								map-get(
-									$media-breakpoint-down,
-									pagination-results
-								)
-							);
+						@if ($_pagination-results) {
+							+ .pagination-results {
+								@include clay-css($_pagination-results);
+							}
 						}
 					}
 				}
@@ -288,132 +323,187 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			.page-item {
-				@include clay-css(map-get($map, page-item));
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			.page-link {
-				@include clay-link(map-get($map, page-link));
-			}
+			$_page-item: map-get($map, page-item);
 
-			.page-item:first-child .page-link,
-			.page-link-first {
-				@include clay-css(map-get($map, page-link-first));
-			}
-
-			.page-item:last-child .page-link,
-			.page-link-last {
-				@include clay-css(map-get($map, page-link-last));
-			}
-
-			.page-item {
-				&.active {
-					.page-link {
-						@include clay-link(
-							map-deep-get($map, page-link, active-class)
-						);
-					}
-				}
-
-				&.disabled {
-					.page-link {
-						@include clay-link(
-							map-deep-get($map, page-link, disabled)
-						);
-					}
+			@if ($_page-item) {
+				.page-item {
+					@include clay-css($_page-item);
 				}
 			}
 
-			.pagination {
-				@include clay-pagination-variant(map-get($map, pagination));
+			$_page-link: map-get($map, page-link);
+
+			@if ($_page-link) {
+				.page-link {
+					@include clay-link($_page-link);
+				}
 			}
 
-			.pagination-items-per-page {
-				@include clay-pagination-items-per-page-variant(
-					map-get($map, pagination-items-per-page)
-				);
+			$_page-link-first: map-get($map, page-link-first);
+
+			@if ($_page-link-first) {
+				.page-item:first-child .page-link,
+				.page-link-first {
+					@include clay-css($_page-link-first);
+				}
 			}
 
-			@if (map-get($map, media-breakpoint-down)) {
-				@each $breakpoint
-					in map-keys(map-get($map, media-breakpoint-down))
-				{
-					$media-breakpoint-down: map-deep-get(
-						$map,
-						media-breakpoint-down,
+			$_page-link-last: map-get($map, page-link-last);
+
+			@if ($_page-link-last) {
+				.page-item:last-child .page-link,
+				.page-link-last {
+					@include clay-css($_page-link-last);
+				}
+			}
+
+			@if ($_page-link) {
+				.page-item {
+					$_active-class: map-get($_page-link, active-class);
+
+					@if ($_active-class) {
+						&.active {
+							.page-link {
+								@include clay-link($_active-class);
+							}
+						}
+					}
+
+					$_disabled: map-get($_page-link, disabled);
+
+					@if ($_disabled) {
+						&.disabled {
+							.page-link {
+								@include clay-link($_disabled);
+							}
+						}
+					}
+				}
+			}
+
+			$_pagination: map-get($map, pagination);
+
+			@if ($_pagination) {
+				.pagination {
+					@include clay-pagination-variant($_pagination);
+				}
+			}
+
+			$_pagination-items-per-page: map-get(
+				$map,
+				pagination-items-per-page
+			);
+
+			@if ($_pagination-items-per-page) {
+				.pagination-items-per-page {
+					@include clay-pagination-items-per-page-variant(
+						$_pagination-items-per-page
+					);
+				}
+			}
+
+			$_media-breakpoint-down: map-get($map, media-breakpoint-down);
+
+			@if ($_media-breakpoint-down) {
+				@each $breakpoint in map-keys($_media-breakpoint-down) {
+					$media-breakpoint-down: map-get(
+						$_media-breakpoint-down,
 						$breakpoint
 					);
 
 					@include media-breakpoint-down($breakpoint) {
 						@include clay-css($media-breakpoint-down);
 
-						.page-item {
-							@include clay-css(
-								map-get($media-breakpoint-down, page-item)
-							);
-						}
+						$_page-item: map-get($media-breakpoint-down, page-item);
 
-						.page-link {
-							@include clay-link(
-								map-get($media-breakpoint-down, page-link)
-							);
-						}
-
-						.page-item:first-child .page-link,
-						.page-link-first {
-							@include clay-css(
-								map-get($media-breakpoint-down, page-link-first)
-							);
-						}
-
-						.page-item:last-child .page-link,
-						.page-link-last {
-							@include clay-css(
-								map-get($media-breakpoint-down, page-link-last)
-							);
-						}
-
-						.page-item {
-							&.active {
-								.page-link {
-									@include clay-link(
-										map-deep-get(
-											$media-breakpoint-down,
-											page-link,
-											active
-										)
-									);
-								}
-							}
-
-							&.disabled {
-								.page-link {
-									@include clay-link(
-										map-deep-get(
-											$media-breakpoint-down,
-											page-link,
-											disabled
-										)
-									);
-								}
+						@if ($_page-item) {
+							.page-item {
+								@include clay-css($_page-item);
 							}
 						}
 
-						.pagination {
-							@include clay-pagination-variant(
-								map-get($media-breakpoint-down, pagination)
-							);
+						$_page-link: map-get($media-breakpoint-down, page-link);
+
+						@if ($_page-link) {
+							.page-link {
+								@include clay-link($_page-link);
+							}
 						}
 
-						.pagination-items-per-page {
-							@include clay-pagination-items-per-page-variant(
-								map-get(
-									$media-breakpoint-down,
-									pagination-items-per-page
-								)
-							);
+						$_page-link-first: map-get(
+							$media-breakpoint-down,
+							page-link-first
+						);
+
+						@if ($_page-link-first) {
+							.page-item:first-child .page-link,
+							.page-link-first {
+								@include clay-css($_page-link-first);
+							}
+						}
+
+						$_page-link-last: map-get(
+							$media-breakpoint-down,
+							page-link-last
+						);
+
+						@if ($_page-link-last) {
+							.page-item:last-child .page-link,
+							.page-link-last {
+								@include clay-css($_page-link-last);
+							}
+						}
+
+						@if ($_page-link) {
+							.page-item {
+								$_active: map-get($_page-link, active);
+
+								@if ($_active) {
+									&.active {
+										.page-link {
+											@include clay-link($_active);
+										}
+									}
+								}
+
+								$_disabled: map-get($_page-link, disabled);
+
+								@if ($_disabled) {
+									&.disabled {
+										.page-link {
+											@include clay-link($_disabled);
+										}
+									}
+								}
+							}
+						}
+
+						$_pagination: map-get(
+							$media-breakpoint-down,
+							pagination
+						);
+
+						@if ($_pagination) {
+							.pagination {
+								@include clay-pagination-variant($_pagination);
+							}
+						}
+
+						$_pagination-items-per-page: map-get(
+							$media-breakpoint-down,
+							pagination-items-per-page
+						);
+
+						@if ($_pagination-items-per-page) {
+							.pagination-items-per-page {
+								@include clay-pagination-items-per-page-variant(
+									$_pagination-items-per-page
+								);
+							}
 						}
 					}
 				}

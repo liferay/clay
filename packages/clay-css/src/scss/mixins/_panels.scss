@@ -308,83 +308,118 @@
 		);
 
 		@if ($enabled) {
-			@include clay-css($base);
+			@if (length($base) != 0) {
+				@include clay-css($base);
+			}
 
-			.panel-header {
-				@include clay-css($header);
+			@if (length($header) != 0) {
+				.panel-header {
+					@include clay-css($header);
 
-				@if (map-get($header-c-inner, enabled)) {
-					.c-inner {
-						@include clay-css($header-c-inner);
+					@if (map-get($header-c-inner, enabled)) {
+						.c-inner {
+							@include clay-css($header-c-inner);
+						}
 					}
-				}
 
-				&.collapsed {
-					@include clay-css($header-collapsed);
-				}
-
-				&.panel-header-link {
-					@include clay-link($header-link);
-				}
-
-				&.collapse-icon {
-					$_panel-header: setter(map-get($map, panel-header), ());
-
-					@include clay-css(
-						map-get($_panel-header, '&.collapse-icon')
-					);
-				}
-
-				&:not(.collapse-icon-middle) {
-					.collapse-icon-closed,
-					.collapse-icon-open {
-						@include clay-css($collapse-icon);
+					@if (length($header-collapsed) != 0) {
+						&.collapsed {
+							@include clay-css($header-collapsed);
+						}
 					}
-				}
 
-				&.collapse-icon-middle {
-					$_collapse-icon-middle: setter(
-						map-get($map, collapse-icon-middle),
-						()
-					);
+					@if (length($header-link) != 0) {
+						&.panel-header-link {
+							@include clay-link($header-link);
+						}
+					}
 
-					@include clay-css($_collapse-icon-middle);
+					$_panel-header: map-get($map, panel-header);
 
-					.collapse-icon-closed,
-					.collapse-icon-open {
-						@include clay-css(
-							map-get($_collapse-icon-middle, collapse-icon)
+					@if ($_panel-header) {
+						$_collapse-icon: map-get(
+							$_panel-header,
+							'&.collapse-icon'
 						);
+
+						@if ($_collapse-icon) {
+							&.collapse-icon {
+								@include clay-css($_collapse-icon);
+							}
+						}
+					}
+
+					@if (length($collapse-icon) != 0) {
+						&:not(.collapse-icon-middle) {
+							.collapse-icon-closed,
+							.collapse-icon-open {
+								@include clay-css($collapse-icon);
+							}
+						}
+					}
+
+					$_collapse-icon-middle: map-get($map, collapse-icon-middle);
+
+					@if ($_collapse-icon-middle) {
+						&.collapse-icon-middle {
+							@include clay-css($_collapse-icon-middle);
+
+							$_collapse-icon: map-get(
+								$_collapse-icon-middle,
+								collapse-icon
+							);
+
+							@if ($_collapse-icon) {
+								.collapse-icon-closed,
+								.collapse-icon-open {
+									@include clay-css($_collapse-icon);
+								}
+							}
+						}
+					}
+
+					$_border-color: map-get($base, border-color);
+
+					@if ($_border-color) {
+						.panel-group & {
+							+ .panel-collapse > .panel-body {
+								border-color: $_border-color;
+							}
+						}
 					}
 				}
+			}
 
-				.panel-group & {
-					+ .panel-collapse > .panel-body {
-						border-color: map-get($base, border-color);
-					}
+			@if (length($title) != 0) {
+				.panel-title {
+					@include clay-css($title);
 				}
 			}
 
-			.panel-title {
-				@include clay-css($title);
+			@if (length($body) != 0) {
+				.panel-body {
+					@include clay-css($body);
+				}
 			}
 
-			.panel-body {
-				@include clay-css($body);
-			}
-
-			.panel-footer {
-				@include clay-css($footer);
+			@if (length($footer) != 0) {
+				.panel-footer {
+					@include clay-css($footer);
+				}
 			}
 
 			// For Focus Box Shadow
 
-			@at-root {
-				.panel-group.panel-group-flush & {
-					.panel-header-link {
-						&,
-						&.collapsed {
-							border-radius: map-get($header-link, border-radius);
+			$_border-radius: map-get($header-link, border-radius);
+
+			@if ($_border-radius) {
+				@at-root {
+					.panel-group.panel-group-flush & {
+						.panel-header-link {
+							&,
+							&.collapsed {
+								border-radius: $_border-radius;
+							}
 						}
 					}
 				}
