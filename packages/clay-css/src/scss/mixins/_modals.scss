@@ -132,41 +132,57 @@
 		);
 
 		@if ($enabled) {
-			@include clay-map-to-css($map);
+			@if (length($map) != 0) {
+				@include clay-map-to-css($map);
+			}
 
 			// Modal specific btn-monospaced is deprecated in v2.0.0-rc.12
 
-			.btn-monospaced {
-				color: map-get($header-close, color);
+			$_color: map-get($header-close, color);
+
+			@if ($_color) {
+				.btn-monospaced {
+					color: $_color;
+				}
 			}
 
-			.close {
-				@include clay-close($header-close);
+			@if (length($header-close) != 0) {
+				.close {
+					@include clay-close($header-close);
+				}
 			}
 
-			@at-root {
-				button.close {
-					#{$focus-visible-selector},
-					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-						box-shadow: map-get(
-							$header-close-btn-focus,
-							box-shadow
-						);
-						outline: map-get($header-close-btn-focus, outline);
+			$_box-shadow: map-get($header-close-btn-focus, box-shadow);
+			$_outline: map-get($header-close-btn-focus, outline);
+
+			@if ($_box-shadow or $_outline) {
+				@at-root {
+					button.close {
+						#{$focus-visible-selector},
+						#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+							box-shadow: $_box-shadow;
+							outline: $_outline;
+						}
 					}
 				}
 			}
 
-			.modal-header {
-				@include clay-map-to-css($header);
+			@if (length($header) != 0) {
+				.modal-header {
+					@include clay-map-to-css($header);
+				}
 			}
 
-			.modal-body {
-				@include clay-map-to-css($body);
+			@if (length($body) != 0) {
+				.modal-body {
+					@include clay-map-to-css($body);
+				}
 			}
 
-			.modal-footer {
-				@include clay-map-to-css($footer);
+			@if (length($footer) != 0) {
+				.modal-footer {
+					@include clay-map-to-css($footer);
+				}
 			}
 		}
 	}

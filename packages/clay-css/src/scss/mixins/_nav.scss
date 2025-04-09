@@ -213,65 +213,117 @@
 		);
 
 		@if ($enabled) {
-			@include clay-css($base);
-
-			.nav-link {
-				@include clay-link($nav-link);
+			@if (length($base) != 0) {
+				@include clay-css($base);
 			}
 
-			.nav-link-monospaced {
-				@include clay-link(map-get($map, nav-link-monospaced));
-			}
-
-			.nav-btn {
-				@include clay-button-variant(map-get($map, nav-btn));
-			}
-
-			.nav-btn-monospaced {
-				@include clay-button-variant(map-get($map, nav-btn-monospaced));
-			}
-
-			.nav-item {
-				@include clay-css(map-get($map, nav-item));
-
-				&::before {
-					@include clay-css(map-deep-get($map, nav-item, before));
-				}
-
-				&::before {
-					@include clay-css(map-deep-get($map, nav-item, after));
+			@if (length($nav-link) != 0) {
+				.nav-link {
+					@include clay-link($nav-link);
 				}
 			}
 
-			.nav-divider {
-				@include clay-css(map-get($map, nav-divider));
+			$_nav-link-monospaced: map-get($map, nav-link-monospaced);
 
-				&::before {
-					@include clay-css(map-deep-get($map, nav-divider, before));
-				}
-
-				&::after {
-					@include clay-css(map-deep-get($map, nav-divider, after));
+			@if ($_nav-link-monospaced) {
+				.nav-link-monospaced {
+					@include clay-link($_nav-link-monospaced);
 				}
 			}
 
-			.nav-form {
-				@include clay-css(map-get($map, nav-form));
+			$_nav-btn: map-get($map, nav-btn);
+
+			@if ($_nav-btn) {
+				.nav-btn {
+					@include clay-button-variant($_nav-btn);
+				}
 			}
 
-			.dropdown-menu {
-				@include clay-dropdown-menu-variant(
-					map-get($map, dropdown-menu)
-				);
+			$_nav-btn-monospaced: map-get($map, nav-btn-monospaced);
+
+			@if ($_nav-btn-monospaced) {
+				.nav-btn-monospaced {
+					@include clay-button-variant($_nav-btn-monospaced);
+				}
 			}
 
-			+ .tab-content {
-				$_tab-content: setter(map-get($map, tab-content), ());
+			$_nav-item: map-get($map, nav-item);
 
-				@include clay-css($_tab-content);
+			@if ($_nav-item) {
+				.nav-item {
+					@include clay-css($_nav-item);
 
-				.tab-pane {
-					@include clay-css(map-get($_tab-content, tab-pane));
+					$_before: map-get($_nav-item, before);
+
+					@if ($_before) {
+						&::before {
+							@include clay-css($_before);
+						}
+					}
+
+					$_after: map-get($_nav-item, after);
+
+					@if ($_after) {
+						&::after {
+							@include clay-css($_after);
+						}
+					}
+				}
+			}
+
+			$_nav-divider: map-get($map, nav-divider);
+
+			@if ($_nav-divider) {
+				.nav-divider {
+					@include clay-css($_nav-divider);
+
+					$_before: map-get($_nav-divider, before);
+
+					@if ($_before) {
+						&::before {
+							@include clay-css($_before);
+						}
+					}
+
+					$_after: map-get($_nav-divider, after);
+
+					@if ($_after) {
+						&::after {
+							@include clay-css($_after);
+						}
+					}
+				}
+			}
+
+			$_nav-form: map-get($map, nav-form);
+
+			@if ($_nav-form) {
+				.nav-form {
+					@include clay-css($_nav-form);
+				}
+			}
+
+			$_dropdown-menu: map-get($map, dropdown-menu);
+
+			@if ($_dropdown-menu) {
+				.dropdown-menu {
+					@include clay-dropdown-menu-variant($_dropdown-menu);
+				}
+			}
+
+			$_tab-content: map-get($map, tab-content);
+
+			@if ($_tab-content) {
+				+ .tab-content {
+					@include clay-css($_tab-content);
+
+					$_tab-pane: map-get($_tab-content, tab-pane);
+
+					@if ($_tab-pane) {
+						.tab-pane {
+							@include clay-css($_tab-pane);
+						}
+					}
 				}
 			}
 		}
