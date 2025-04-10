@@ -21,78 +21,128 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			&.c-slideout-shown {
-				@include clay-css(map-get($map, c-slideout-shown));
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			&.c-slideout-tbar-shown {
-				@include clay-css(map-get($map, c-slideout-tbar-shown));
+			$_c-slideout-shown: map-get($map, c-slideout-shown);
+
+			@if ($_c-slideout-shown) {
+				&.c-slideout-shown {
+					@include clay-css($_c-slideout-shown);
+				}
 			}
 
-			&.c-slideout-tbar-shown .sidebar {
-				@include clay-css(map-get($map, c-slideout-tbar-shown-sidebar));
+			$_c-slideout-tbar-shown: map-get($map, c-slideout-tbar-shown);
+
+			@if ($_c-slideout-tbar-shown) {
+				&.c-slideout-tbar-shown {
+					@include clay-css($_c-slideout-tbar-shown);
+				}
 			}
 
-			.sidebar {
-				@include clay-css(map-get($map, sidebar));
+			$_c-slideout-tbar-shown-sidebar: map-get(
+				$map,
+				c-slideout-tbar-shown-sidebar
+			);
+
+			@if ($_c-slideout-tbar-shown-sidebar) {
+				&.c-slideout-tbar-shown .sidebar {
+					@include clay-css($_c-slideout-tbar-shown-sidebar);
+				}
 			}
 
-			.sidebar.c-slideout-show {
-				@include clay-css(map-get($map, sidebar-c-slideout-show));
+			$_sidebar: map-get($map, sidebar);
+
+			@if ($_sidebar) {
+				.sidebar {
+					@include clay-css($_sidebar);
+				}
 			}
 
-			.sidebar.c-slideout-transition {
-				$_sidebar-c-slideout-transition: setter(
-					map-get($map, sidebar-c-slideout-transition),
-					()
-				);
+			$_sidebar-c-slideout-show: map-get($map, sidebar-c-slideout-show);
 
-				@include clay-css($_sidebar-c-slideout-transition);
+			@if ($_sidebar-c-slideout-show) {
+				.sidebar.c-slideout-show {
+					@include clay-css($_sidebar-c-slideout-show);
+				}
+			}
 
-				.c-horizontal-resizer {
-					@include clay-css(
-						map-get(
-							$_sidebar-c-slideout-transition,
-							c-horizontal-resizer
-						)
+			$_sidebar-c-slideout-transition: map-get(
+				$map,
+				sidebar-c-slideout-transition
+			);
+
+			@if ($_sidebar-c-slideout-transition) {
+				.sidebar.c-slideout-transition {
+					@include clay-css($_sidebar-c-slideout-transition);
+
+					$_c-horizontal-resizer: map-get(
+						$_sidebar-c-slideout-transition,
+						c-horizontal-resizer
 					);
+
+					@if ($_c-horizontal-resizer) {
+						.c-horizontal-resizer {
+							@include clay-css($_c-horizontal-resizer);
+						}
+					}
 				}
 			}
 
-			.tbar-stacked {
-				@include clay-css(map-get($map, tbar-stacked));
-			}
+			$_tbar-stacked: map-get($map, tbar-stacked);
 
-			.tbar-stacked.c-slideout-show {
-				@include clay-css(map-get($map, tbar-stacked-c-slideout-show));
-			}
-
-			.tbar-stacked.c-slideout-transition {
-				@include clay-css(
-					map-get($map, tbar-stacked-c-slideout-transition)
-				);
-			}
-
-			.c-horizontal-resizer {
-				$_c-horizontal-resizer: setter(
-					map-get($map, c-horizontal-resizer),
-					()
-				);
-
-				@include clay-css($_c-horizontal-resizer);
-
-				&:hover {
-					@include clay-css(map-get($_c-horizontal-resizer, hover));
+			@if ($_tbar-stacked) {
+				.tbar-stacked {
+					@include clay-css($_tbar-stacked);
 				}
+			}
 
-				@at-root {
-					#{$focus-visible-selector},
-					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-						@include clay-css(
-							map-get($_c-horizontal-resizer, focus)
-						);
+			$_tbar-stacked-c-slideout-show: map-get(
+				$map,
+				tbar-stacked-c-slideout-show
+			);
+
+			@if ($_tbar-stacked-c-slideout-show) {
+				.tbar-stacked.c-slideout-show {
+					@include clay-css($_tbar-stacked-c-slideout-show);
+				}
+			}
+
+			$_tbar-stacked-c-slideout-transition: map-get(
+				$map,
+				tbar-stacked-c-slideout-transition
+			);
+
+			@if ($_tbar-stacked-c-slideout-transition) {
+				.tbar-stacked.c-slideout-transition {
+					@include clay-css($_tbar-stacked-c-slideout-transition);
+				}
+			}
+
+			$_c-horizontal-resizer: map-get($map, c-horizontal-resizer);
+
+			@if ($_c-horizontal-resizer) {
+				.c-horizontal-resizer {
+					@include clay-css($_c-horizontal-resizer);
+
+					$_hover: map-get($_c-horizontal-resizer, hover);
+
+					@if ($_hover) {
+						&:hover {
+							@include clay-css($_hover);
+						}
+					}
+
+					$_focus: map-get($_c-horizontal-resizer, focus);
+
+					@if ($_focus) {
+						@at-root {
+							#{$focus-visible-selector},
+							#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+								@include clay-css($_focus);
+							}
+						}
 					}
 				}
 			}

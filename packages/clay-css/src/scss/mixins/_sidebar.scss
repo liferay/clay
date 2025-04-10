@@ -230,159 +230,265 @@
 		);
 
 		@if ($enabled) {
-			@include clay-css($base);
-
-			@at-root {
-				#{clay-insert-before(clay-parent(&), '.sidenav-start ')},
-				#{clay-insert-before(clay-parent(&), '.sidenav-left ')} {
-					$sidenav-start: setter(map-get($map, sidenav-start), ());
-
-					@include clay-css($sidenav-start);
-
-					&.focus,
-					#{$focus-visible-selector},
-					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-						@include clay-css(map-get($sidenav-start, focus));
-					}
-				}
-
-				#{clay-insert-before(clay-parent(&), '.sidenav-end ')},
-				#{clay-insert-before(clay-parent(&), '.sidenav-right ')} {
-					$sidenav-end: setter(map-get($map, sidenav-right), ());
-
-					@include clay-css($sidenav-end);
-
-					&.focus,
-					#{$focus-visible-selector},
-					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-						@include clay-css(map-get($sidenav-end, focus));
-					}
-				}
+			@if (length($base) != 0) {
+				@include clay-css($base);
 			}
 
 			@at-root {
-				&.focus,
-				#{$focus-visible-selector},
-				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-					@include clay-css(map-get($map, focus));
+				$_sidenav-start: map-get($map, sidenav-start);
+
+				@if ($_sidenav-start) {
+					#{clay-insert-before(clay-parent(&), '.sidenav-start ')},
+					#{clay-insert-before(clay-parent(&), '.sidenav-left ')} {
+						@include clay-css($_sidenav-start);
+
+						$_focus: map-get($_sidenav-start, focus);
+
+						@if ($_focus) {
+							&.focus,
+							#{$focus-visible-selector},
+							#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+								@include clay-css($_focus);
+							}
+						}
+					}
+				}
+
+				$_sidenav-end: map-get($map, sidenav-right);
+
+				@if ($_sidenav-end) {
+					#{clay-insert-before(clay-parent(&), '.sidenav-end ')},
+					#{clay-insert-before(clay-parent(&), '.sidenav-right ')} {
+						@include clay-css($_sidenav-end);
+
+						$_focus: map-get($sidenav-end, focus);
+
+						@if ($_focus) {
+							&.focus,
+							#{$focus-visible-selector},
+							#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+								@include clay-css($_focus);
+							}
+						}
+					}
 				}
 			}
 
-			.component-link {
-				@include clay-text-typography(map-get($map, component-link));
-			}
+			$_focus: map-get($map, focus);
 
-			.close {
-				@include clay-close(map-get($map, close));
-			}
-
-			.sidebar-header {
-				@include clay-css($header);
-
-				.component-title {
-					@include clay-text-typography($header-component-title);
-				}
-
-				.component-subtitle {
-					@include clay-text-typography($header-component-subtitle);
+			@if ($_focus) {
+				@at-root {
+					&.focus,
+					#{$focus-visible-selector},
+					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+						@include clay-css($_focus);
+					}
 				}
 			}
 
-			.sidebar-body {
-				@include clay-css($body);
-			}
+			$_component-link: map-get($map, component-link);
 
-			.sidebar-footer {
-				@include clay-css($footer);
-			}
-
-			.nav-nested {
-				@include clay-css($nav-nested);
-
-				.nav-link {
-					@include clay-link($nav-nested-nav-link);
+			@if ($_component-link) {
+				.component-link {
+					@include clay-text-typography($_component-link);
 				}
 			}
 
-			.sidebar-list-group {
-				@include clay-css($sidebar-list-group);
+			$_close: map-get($map, close);
 
-				.list-group-item {
-					@include clay-css($sidebar-list-group-item);
-				}
-
-				.list-group-title {
-					@include clay-text-typography($sidebar-list-group-title);
-				}
-
-				.list-group-subtitle {
-					@include clay-text-typography($sidebar-list-group-subtitle);
-				}
-
-				.list-group-text {
-					@include clay-text-typography($sidebar-list-group-text);
-				}
-
-				.list-group-subtext {
-					@include clay-text-typography($sidebar-list-group-subtext);
-				}
-
-				.sticker {
-					@include clay-sticker-variant($sidebar-list-group-sticker);
-				}
-
-				.sticker-secondary {
-					@include clay-sticker-variant(
-						$sidebar-list-group-sticker-secondary
-					);
+			@if ($_close) {
+				.close {
+					@include clay-close($_close);
 				}
 			}
 
-			.sidebar-panel {
-				@include clay-css($panel);
+			@if (length($header) != 0) {
+				.sidebar-header {
+					@include clay-css($header);
+
+					@if (length($header-component-title) != 0) {
+						.component-title {
+							@include clay-text-typography(
+								$header-component-title
+							);
+						}
+					}
+
+					@if (length($header-component-subtitle) != 0) {
+						.component-subtitle {
+							@include clay-text-typography(
+								$header-component-subtitle
+							);
+						}
+					}
+				}
 			}
 
-			.sidebar-dt {
-				@include clay-text-typography($dt);
+			@if (length($body) != 0) {
+				.sidebar-body {
+					@include clay-css($body);
+				}
 			}
 
-			.sidebar-dd {
-				@include clay-text-typography($dd);
+			@if (length($footer) != 0) {
+				.sidebar-footer {
+					@include clay-css($footer);
+				}
 			}
 
-			.panel-unstyled {
-				@include clay-panel-variant(map-get($map, panel-unstyled));
+			@if (length($nav-nested) != 0) {
+				.nav-nested {
+					@include clay-css($nav-nested);
+
+					@if (length($nav-nested-nav-link) != 0) {
+						.nav-link {
+							@include clay-link($nav-nested-nav-link);
+						}
+					}
+				}
 			}
 
-			.component-navigation-bar {
-				@include clay-navbar-variant(
-					map-get($map, component-navigation-bar)
-				);
+			@if (length($sidebar-list-group) != 0) {
+				.sidebar-list-group {
+					@include clay-css($sidebar-list-group);
+
+					@if (length($sidebar-list-group-item) != 0) {
+						.list-group-item {
+							@include clay-css($sidebar-list-group-item);
+						}
+					}
+
+					@if (length($sidebar-list-group-title) != 0) {
+						.list-group-title {
+							@include clay-text-typography(
+								$sidebar-list-group-title
+							);
+						}
+					}
+
+					@if (length($sidebar-list-group-subtitle) != 0) {
+						.list-group-subtitle {
+							@include clay-text-typography(
+								$sidebar-list-group-subtitle
+							);
+						}
+					}
+
+					@if (length($sidebar-list-group-text) != 0) {
+						.list-group-text {
+							@include clay-text-typography(
+								$sidebar-list-group-text
+							);
+						}
+					}
+
+					@if (length($sidebar-list-group-subtext) != 0) {
+						.list-group-subtext {
+							@include clay-text-typography(
+								$sidebar-list-group-subtext
+							);
+						}
+					}
+
+					@if (length($sidebar-list-group-sticker) != 0) {
+						.sticker {
+							@include clay-sticker-variant(
+								$sidebar-list-group-sticker
+							);
+						}
+					}
+
+					@if (length($sidebar-list-group-sticker-secondary) != 0) {
+						.sticker-secondary {
+							@include clay-sticker-variant(
+								$sidebar-list-group-sticker-secondary
+							);
+						}
+					}
+				}
 			}
 
-			.panel-group {
-				@include clay-map-to-css(map-get($map, panel-group));
+			@if (length($panel) != 0) {
+				.sidebar-panel {
+					@include clay-css($panel);
+				}
 			}
 
-			.btn {
-				@include clay-map-to-css(map-get($map, btn));
+			@if (length($dt) != 0) {
+				.sidebar-dt {
+					@include clay-text-typography($dt);
+				}
 			}
 
-			.form-control {
-				@include clay-map-to-css(map-get($map, form-control));
+			@if (length($dd) != 0) {
+				.sidebar-dd {
+					@include clay-text-typography($dd);
+				}
 			}
 
-			select.form-control,
-			.form-control-select {
-				@include clay-map-to-css(map-get($map, form-control-select));
+			$_panel-unstyled: map-get($map, panel-unstyled);
+
+			@if ($_panel-unstyled) {
+				.panel-unstyled {
+					@include clay-panel-variant($_panel-unstyled);
+				}
 			}
 
-			.form-control-tag-group {
-				@include clay-map-to-css(map-get($map, form-control-tag-group));
+			$_component-navigation-bar: map-get($map, component-navigation-bar);
+
+			@if ($_component-navigation-bar) {
+				.component-navigation-bar {
+					@include clay-navbar-variant($_component-navigation-bar);
+				}
 			}
 
-			.input-group {
-				@include clay-map-to-css(map-get($map, input-group));
+			$_panel-group: map-get($map, panel-group);
+
+			@if ($_panel-group) {
+				.panel-group {
+					@include clay-map-to-css($_panel-group);
+				}
+			}
+
+			$_btn: map-get($map, btn);
+
+			@if ($_btn) {
+				.btn {
+					@include clay-map-to-css($_btn);
+				}
+			}
+
+			$_form-control: map-get($map, form-control);
+
+			@if ($_form-control) {
+				.form-control {
+					@include clay-map-to-css($_form-control);
+				}
+			}
+
+			$_form-control-select: map-get($map, form-control-select);
+
+			@if ($_form-control-select) {
+				select.form-control,
+				.form-control-select {
+					@include clay-map-to-css($_form-control-select);
+				}
+			}
+
+			$_form-control-tag-group: map-get($map, form-control-tag-group);
+
+			@if ($_form-control-tag-group) {
+				.form-control-tag-group {
+					@include clay-map-to-css($_form-control-tag-group);
+				}
+			}
+
+			$_input-group: map-get($map, input-group);
+
+			@if ($_input-group) {
+				.input-group {
+					@include clay-map-to-css($_input-group);
+				}
 			}
 		}
 	}

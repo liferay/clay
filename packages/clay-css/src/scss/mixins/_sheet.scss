@@ -33,18 +33,30 @@
 
 	@if ($enabled) {
 		@include media-breakpoint-down($breakpoint-down) {
-			@include clay-css($mobile);
-
-			.btn {
-				@include clay-css($btn-mobile);
+			@if (length($mobile) != 0) {
+				@include clay-css($mobile);
 			}
 
-			.btn-group {
-				@include clay-css(map-get($mobile, btn-group));
+			@if (length($btn-mobile) != 0) {
+				.btn {
+					@include clay-css($btn-mobile);
+				}
 			}
 
-			.btn-group-item {
-				@include clay-css(map-get($mobile, btn-group-item));
+			$_btn-group: map-get($mobile, btn-group);
+
+			@if ($_btn-group) {
+				.btn-group {
+					@include clay-css($_btn-group);
+				}
+			}
+
+			$_btn-group-item: map-get($mobile, btn-group-item);
+
+			@if ($_btn-group-item) {
+				.btn-group-item {
+					@include clay-css($_btn-group-item);
+				}
 			}
 		}
 	}
