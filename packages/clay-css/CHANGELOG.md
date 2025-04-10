@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.134.0](https://github.com/liferay/clay/compare/v3.133.0...v3.134.0) (2025-04-10)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-47131 Improve performance in forms, input-groups, and label mixins ([f37de70](https://github.com/liferay/clay/commit/f37de702b644ee9d0d42738d627da471390104b5))
+* **@clayui/css:** LPD-48267 Label close button should be 24px x 24px for accessiblity ([72b058f](https://github.com/liferay/clay/commit/72b058f9b266855e4395f023c0bc449ac2cb9c5a))
+
+
+### Features
+
+* **@clayui/css:** LPD-52454 Modal add support for aspect-ratio in modal-body ([8ff9789](https://github.com/liferay/clay/commit/8ff97898a5e05040b6a58cebc4dd11fdb99ae523))
+* **@clayui/css:** LPD-52454 Utilities adds bg-primary-l3 ([5b11327](https://github.com/liferay/clay/commit/5b113277cd4c986d761fdc6e6fed07eedd5483ae))
+* **@clayui/css:** LPD-52767 Icons adds Myanmar Flag ([122765e](https://github.com/liferay/clay/commit/122765ee6bebd0b00bb3264ae9d4f1c81e4115ed))
+* **@clayui/css:** LPD-52791 Icons adds Ireland and Latvia flags ([8cad8aa](https://github.com/liferay/clay/commit/8cad8aa602c2b60a5350e1473f39369ded28aa43))
+
+
+
+
+
 # [3.133.0](https://github.com/liferay/clay/compare/v3.132.1...v3.133.0) (2025-03-28)
 
 

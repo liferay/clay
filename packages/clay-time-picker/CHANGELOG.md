@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.134.0](https://github.com/liferay/clay/compare/v3.133.0...v3.134.0) (2025-04-10)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** LPD-52380 Update snapshot ([16921f3](https://github.com/liferay/clay/commit/16921f3c9dce13c5a95aa656f2313e05f5869c9b))
+-   **@clayui/time-picker:** LPD-52380 Add tabIndex on clear button to prevent focus when element not present ([7c42c82](https://github.com/liferay/clay/commit/7c42c82935c6111206c6d2e0750f5a5feb2c9731))
+
 # [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
 
 **Note:** Version bump only for package @clayui/time-picker

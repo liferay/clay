@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.134.0](https://github.com/liferay/clay/compare/v3.133.0...v3.134.0) (2025-04-10)
+
+### Bug Fixes
+
+-   **@clayui/@date-picker:** LPD-51204 Add higher width to year dropdown ([549f781](https://github.com/liferay/clay/commit/549f781bc694ac33cdef3001cab903707adda86f))
+-   **@clayui/@date-picker:** LPD-51204 Update year on stories ([493494b](https://github.com/liferay/clay/commit/493494b749bbe3f51f5a681d0734cce82f27a375))
+-   **@clayui/date-picker:** LPD-52380 Update snapshot ([16921f3](https://github.com/liferay/clay/commit/16921f3c9dce13c5a95aa656f2313e05f5869c9b))
+
 # [3.133.0](https://github.com/liferay/clay/compare/v3.132.1...v3.133.0) (2025-03-28)
 
 ### Bug Fixes

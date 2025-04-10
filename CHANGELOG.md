@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.134.0](https://github.com/liferay/clay/compare/v3.133.0...v3.134.0) (2025-04-10)
+
+### Bug Fixes
+
+-   **@clayui/@date-picker:** LPD-51204 Add higher width to year dropdown ([549f781](https://github.com/liferay/clay/commit/549f781bc694ac33cdef3001cab903707adda86f))
+-   **@clayui/@date-picker:** LPD-51204 Update year on stories ([493494b](https://github.com/liferay/clay/commit/493494b749bbe3f51f5a681d0734cce82f27a375))
+-   **@clayui/css:** LPD-47131 Improve performance in forms, input-groups, and label mixins ([f37de70](https://github.com/liferay/clay/commit/f37de702b644ee9d0d42738d627da471390104b5))
+-   **@clayui/css:** LPD-48267 Label close button should be 24px x 24px for accessiblity ([72b058f](https://github.com/liferay/clay/commit/72b058f9b266855e4395f023c0bc449ac2cb9c5a))
+-   **@clayui/date-picker:** LPD-52380 Update snapshot ([16921f3](https://github.com/liferay/clay/commit/16921f3c9dce13c5a95aa656f2313e05f5869c9b))
+-   **@clayui/drop-down:** fix Dropdown types to correctly generate API Table ([80fcb5d](https://github.com/liferay/clay/commit/80fcb5d84e4c8c2c6de3a38fe006c9752d78d769))
+-   **@clayui/focus-trap:** LPD-52380 Change tabindex to prevent focus on hidden elements ([368d318](https://github.com/liferay/clay/commit/368d318aeeb86c1337ef37023af150883e9a12bf))
+-   **@clayui/focus-trap:** LPD-52380 Update snapshot ([80ff99f](https://github.com/liferay/clay/commit/80ff99fcd2a72de663e42591b8f3c30251b1aaae))
+-   **@clayui/time-picker:** LPD-52380 Add tabIndex on clear button to prevent focus when element not present ([7c42c82](https://github.com/liferay/clay/commit/7c42c82935c6111206c6d2e0750f5a5feb2c9731))
+
+### Features
+
+-   **@clayui/css:** LPD-52454 Modal add support for aspect-ratio in modal-body ([8ff9789](https://github.com/liferay/clay/commit/8ff97898a5e05040b6a58cebc4dd11fdb99ae523))
+-   **@clayui/css:** LPD-52454 Utilities adds bg-primary-l3 ([5b11327](https://github.com/liferay/clay/commit/5b113277cd4c986d761fdc6e6fed07eedd5483ae))
+-   **@clayui/css:** LPD-52767 Icons adds Myanmar Flag ([122765e](https://github.com/liferay/clay/commit/122765ee6bebd0b00bb3264ae9d4f1c81e4115ed))
+-   **@clayui/css:** LPD-52791 Icons adds Ireland and Latvia flags ([8cad8aa](https://github.com/liferay/clay/commit/8cad8aa602c2b60a5350e1473f39369ded28aa43))
+
 # [3.133.0](https://github.com/liferay/clay/compare/v3.132.1...v3.133.0) (2025-03-28)
 
 ### Bug Fixes

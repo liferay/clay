@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.134.0](https://github.com/liferay/clay/compare/v3.133.0...v3.134.0) (2025-04-10)
+
+### Bug Fixes
+
+-   **@clayui/focus-trap:** LPD-52380 Change tabindex to prevent focus on hidden elements ([368d318](https://github.com/liferay/clay/commit/368d318aeeb86c1337ef37023af150883e9a12bf))
+-   **@clayui/focus-trap:** LPD-52380 Update snapshot ([80ff99f](https://github.com/liferay/clay/commit/80ff99fcd2a72de663e42591b8f3c30251b1aaae))
+
 # [3.133.0](https://github.com/liferay/clay/compare/v3.132.1...v3.133.0) (2025-03-28)
 
 ### Bug Fixes
