@@ -55,403 +55,598 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
+			@if (length($map) != 0) {
+				@include clay-css($map);
+			}
 
-			thead {
-				$_thead: setter(map-get($map, thead), ());
+			$_thead: map-get($map, thead);
 
-				@include clay-css($_thead);
+			@if ($_thead) {
+				thead {
+					@include clay-css($_thead);
 
+					$_thead-table-cell: map-get($_thead, table-cell);
+
+					@if ($_thead-table-cell) {
+						th,
+						td {
+							@include clay-css($_thead-table-cell);
+
+							$_hover: map-get($_thead-table-cell, hover);
+
+							@if ($_hover) {
+								&:hover {
+									@include clay-css($_hover);
+								}
+							}
+
+							$_first-child: map-get(
+								$_thead-table-cell,
+								table-column-start
+							);
+
+							@if ($_first-child) {
+								&:first-child {
+									@include clay-css($_first-child);
+								}
+							}
+
+							$_last-child: map-get(
+								$_thead-table-cell,
+								table-column-end
+							);
+
+							@if ($_last-child) {
+								&:last-child {
+									@include clay-css($_last-child);
+								}
+							}
+
+							$_component-action: map-get(
+								$_thead-table-cell,
+								component-action
+							);
+
+							@if ($_component-action) {
+								.component-action {
+									@include clay-css($_component-action);
+								}
+							}
+						}
+					}
+
+					$_th: map-get($_thead, th);
+
+					@if ($_th) {
+						th {
+							@include clay-css($_th);
+
+							$_href: map-get($_th, href);
+
+							@if ($_href) {
+								a[href] {
+									@include clay-link($_href);
+								}
+							}
+						}
+					}
+
+					$_autofit-col: map-get($_thead, autofit-col);
+
+					@if ($_autofit-col) {
+						.autofit-col {
+							@include clay-css($_autofit-col);
+
+							$_first-child: map-get($_autofit-col, first-child);
+
+							@if ($_first-child) {
+								&:first-child {
+									@include clay-css($_first-child);
+								}
+							}
+
+							$_last-child: map-get($_autofit-col, last-child);
+
+							@if ($_last-child) {
+								&:last-child {
+									@include clay-css($_last-child);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			$_table-cell: map-get($map, table-cell);
+
+			@if ($_table-cell) {
 				th,
 				td {
-					$_thead-table-cell: setter(
-						map-get($_thead, table-cell),
-						()
-					);
+					@include clay-css($_table-cell);
 
-					@include clay-css($_thead-table-cell);
+					$_href: map-get($_table-cell, href);
 
-					&:hover {
-						@include clay-css(map-get($_thead-table-cell, hover));
-					}
-
-					&:first-child {
-						@include clay-css(
-							map-get($_thead-table-cell, table-column-start)
-						);
-					}
-
-					&:last-child {
-						@include clay-css(
-							map-get($_thead-table-cell, table-column-end)
-						);
-					}
-
-					.component-action {
-						@include clay-css(
-							map-get($_thead-table-cell, component-action)
-						);
+					@if ($_href) {
+						a[href] {
+							@include clay-link($_href);
+						}
 					}
 				}
+			}
 
+			$_table-column-start: map-get($map, table-column-start);
+
+			@if ($_table-column-start) {
+				th:first-child,
+				td:first-child,
+				.table-column-start {
+					@include clay-css($_table-column-start);
+				}
+			}
+
+			$_table-column-end: map-get($map, table-column-end);
+
+			@if ($_table-column-end) {
+				th:last-child,
+				td:last-child,
+				.table-column-end {
+					@include clay-css($_table-column-end);
+				}
+			}
+
+			$_th: map-get($map, th);
+
+			@if ($_th) {
 				th {
-					@include clay-css(map-deep-get($map, thead, th));
-
-					a[href] {
-						@include clay-link(map-deep-get($map, thead, th, href));
-					}
-				}
-
-				.autofit-col {
-					$_autofit-col: setter(map-get($_thead, autofit-col), ());
-
-					@include clay-css($_autofit-col);
-
-					&:first-child {
-						$_first-child: setter(
-							map-get($_autofit-col, first-child),
-							()
-						);
-
-						@include clay-css($_first-child);
-					}
-
-					&:last-child {
-						$_last-child: setter(
-							map-get($_autofit-col, last-child),
-							()
-						);
-
-						@include clay-css($_last-child);
-					}
+					@include clay-css($_th);
 				}
 			}
 
-			th,
-			td {
-				@include clay-css(map-get($map, table-cell));
+			$_td: map-get($map, td);
 
-				a[href] {
-					@include clay-link(map-deep-get($map, table-cell, href));
+			@if ($_td) {
+				td {
+					@include clay-css($_td);
 				}
 			}
 
-			th:first-child,
-			td:first-child,
-			.table-column-start {
-				@include clay-css(map-get($map, table-column-start));
-			}
+			$_table-row-start: map-get($map, table-row-start);
 
-			th:last-child,
-			td:last-child,
-			.table-column-end {
-				@include clay-css(map-get($map, table-column-end));
-			}
+			@if ($_table-row-start) {
+				thead:first-child,
+				tbody:first-child,
+				tfoot:first-child,
+				caption:first-child + thead {
+					tr:first-child {
+						@include clay-css($_table-row-start);
 
-			th {
-				@include clay-css(map-get($map, th));
-			}
+						$_table-cell: map-get($_table-row-start, table-cell);
 
-			td {
-				@include clay-css(map-get($map, td));
-			}
+						@if ($_table-cell) {
+							th,
+							td {
+								@include clay-css($_table-cell);
 
-			thead:first-child,
-			tbody:first-child,
-			tfoot:first-child,
-			caption:first-child + thead {
-				tr:first-child {
-					@include clay-css(map-get($map, table-row-start));
-
-					th,
-					td {
-						@include clay-css(
-							map-deep-get($map, table-row-start, table-cell)
-						);
-
-						&:first-child {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									table-row-start,
+								$_table-cell-start: map-get(
+									$_table-row-start,
 									table-cell-start
-								)
-							);
-						}
+								);
 
-						&:last-child {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									table-row-start,
+								@if ($_table-cell-start) {
+									&:first-child {
+										@include clay-css($_table-cell-start);
+									}
+								}
+
+								$_table-cell-end: map-get(
+									$_table-row-start,
 									table-cell-end
-								)
-							);
+								);
+
+								@if ($_table-cell-end) {
+									&:last-child {
+										@include clay-css($_table-cell-end);
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.table-row-start {
+					@include clay-css($_table-row-start);
+
+					$_table-cell-start: map-get(
+						$_table-row-start,
+						table-cell-start
+					);
+
+					@if ($_table-cell-start) {
+						.table-cell-start {
+							@include clay-css($_table-cell-start);
+						}
+					}
+
+					$_table-cell-end: map-get(
+						$_table-row-start,
+						table-cell-end
+					);
+
+					@if ($_table-cell-end) {
+						.table-cell-end {
+							@include clay-css($_table-cell-end);
 						}
 					}
 				}
 			}
 
-			.table-row-start {
-				@include clay-css(map-get($map, table-row-start));
+			$_table-row-end: map-get($map, table-row-end);
 
-				.table-cell-start {
-					@include clay-css(
-						map-deep-get($map, table-row-start, table-cell-start)
-					);
-				}
-
-				.table-cell-end {
-					@include clay-css(
-						map-deep-get($map, table-row-start, table-cell-end)
-					);
-				}
-			}
-
-			thead:last-child,
-			tbody:last-child,
-			tfoot:last-child {
-				tr:last-child {
-					@include clay-css(map-get($map, table-row-end));
-
-					th,
-					td {
-						&:first-child {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									table-row-end,
-									table-cell-start
-								)
-							);
-						}
-
-						&:last-child {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									table-row-end,
-									table-cell-end
-								)
-							);
-						}
-					}
-				}
-			}
-
-			.table-row-end {
-				@include clay-css(map-get($map, table-row-end));
-
-				.table-cell-start {
-					@include clay-css(
-						map-deep-get($map, table-row-end, table-cell-start)
-					);
-				}
-
-				.table-cell-end {
-					@include clay-css(
-						map-deep-get($map, table-row-end, table-cell-end)
-					);
-				}
-			}
-
-			tbody {
-				@include clay-css(map-get($map, tbody));
-
-				tr {
-					@include clay-css(map-deep-get($map, tbody, tr));
-
-					&:hover {
-						@include clay-css(map-deep-get($map, tbody, tr, hover));
+			@if ($_table-row-end) {
+				thead:last-child,
+				tbody:last-child,
+				tfoot:last-child {
+					tr:last-child {
+						@include clay-css($_table-row-end);
 
 						th,
 						td {
-							@include clay-css(
-								map-deep-get($map, tbody, tr, hover, table-cell)
+							$_table-cell-start: map-get(
+								$_table-row-end,
+								table-cell-start
 							);
-						}
 
-						.quick-action-menu {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									tbody,
-									tr,
-									hover,
-									quick-action-menu
-								)
+							@if ($_table-cell-start) {
+								&:first-child {
+									@include clay-css($_table-cell-start);
+								}
+							}
+
+							$_table-cell-end: map-get(
+								$_table-row-end,
+								table-cell-end
 							);
+
+							@if ($_table-cell-end) {
+								&:last-child {
+									@include clay-css($_table-cell-end);
+								}
+							}
 						}
 					}
 				}
 
-				th,
-				td {
-					@include clay-css(map-deep-get($map, tbody, table-cell));
-				}
+				.table-row-end {
+					@include clay-css($_table-row-end);
 
-				+ tbody {
-					@include clay-css(map-deep-get($map, tbody, tbody));
-				}
-			}
-
-			tfoot {
-				@include clay-css(map-get($map, tfoot));
-
-				th,
-				td {
-					@include clay-css(map-deep-get($map, tfoot, table-cell));
-				}
-			}
-
-			caption {
-				@include clay-css(map-get($map, caption));
-			}
-
-			.table-divider {
-				th,
-				td {
-					@include clay-css(
-						map-deep-get($map, table-divider, table-cell)
+					$_table-cell-start: map-get(
+						$_table-row-end,
+						table-cell-start
 					);
+
+					@if ($_table-cell-start) {
+						.table-cell-start {
+							@include clay-css($_table-cell-start);
+						}
+					}
+
+					$_table-cell-end: map-get($_table-row-end, table-cell-end);
+
+					@if ($_table-cell-end) {
+						.table-cell-end {
+							@include clay-css($_table-cell-end);
+						}
+					}
 				}
 			}
 
-			.table-active {
-				@include clay-css(map-get($map, table-active));
+			$_tbody: map-get($map, tbody);
 
-				&:hover {
-					@include clay-css(map-deep-get($map, table-active, hover));
+			@if ($_tbody) {
+				tbody {
+					@include clay-css($_tbody);
 
-					th,
-					td {
-						@include clay-css(
-							map-deep-get($map, table-active, hover, table-cell)
-						);
+					$_tr: map-get($_tbody, tr);
+
+					@if ($_tr) {
+						tr {
+							@include clay-css($_tr);
+
+							$_hover: map-get($_tr, hover);
+
+							@if ($_hover) {
+								&:hover {
+									@include clay-css($_hover);
+
+									$_table-cell: map-get($_hover, table-cell);
+
+									@if ($_table-cell) {
+										th,
+										td {
+											@include clay-css($_table-cell);
+										}
+									}
+
+									$_quick-action-menu: map-get(
+										$_hover,
+										quick-action-menu
+									);
+
+									@if ($_quick-action-menu) {
+										.quick-action-menu {
+											@include clay-css(
+												$_quick-action-menu
+											);
+										}
+									}
+								}
+							}
+						}
 					}
 
-					.quick-action-menu {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								table-active,
-								hover,
+					$_table-cell: map-get($_tbody, table-cell);
+
+					@if ($_table-cell) {
+						th,
+						td {
+							@include clay-css($_table-cell);
+						}
+					}
+
+					$_tbody: map-get($_tbody, tbody);
+
+					@if ($_tbody) {
+						+ tbody {
+							@include clay-css($_tbody);
+						}
+					}
+				}
+			}
+
+			$_tfoot: map-get($map, tfoot);
+
+			@if ($_tfoot) {
+				tfoot {
+					@include clay-css($_tfoot);
+
+					$_table-cell: map-get($_tfoot, table-cell);
+
+					@if ($_table-cell) {
+						th,
+						td {
+							@include clay-css($_table-cell);
+						}
+					}
+				}
+			}
+
+			$_caption: map-get($map, caption);
+
+			@if ($_caption) {
+				caption {
+					@include clay-css($_caption);
+				}
+			}
+
+			$_table-divider: map-get($map, table-divider);
+
+			@if ($_table-divider) {
+				.table-divider {
+					$_table-cell: map-get($_table-divider, table-cell);
+
+					@if ($_table-cell) {
+						th,
+						td {
+							@include clay-css($_table-cell);
+						}
+					}
+				}
+			}
+
+			$_table-active: map-get($map, table-active);
+
+			@if ($_table-active) {
+				.table-active {
+					@include clay-css($_table-active);
+
+					$_hover: map-get($_table-active, hover);
+
+					@if ($_hover) {
+						&:hover {
+							@include clay-css($_hover);
+
+							$_table-cell: map-get($_hover, table-cell);
+
+							@if ($_table-cell) {
+								th,
+								td {
+									@include clay-css($_table-cell);
+								}
+							}
+
+							$_quick-action-menu: map-get(
+								$_hover,
 								quick-action-menu
-							)
-						);
+							);
+
+							@if ($_quick-action-menu) {
+								.quick-action-menu {
+									@include clay-css($_quick-action-menu);
+								}
+							}
+						}
+					}
+
+					$_table-cell: map-get($_table-active, table-cell);
+
+					@if ($_table-cell) {
+						th,
+						td {
+							@include clay-css($_table-cell);
+						}
+					}
+
+					$_quick-action-menu: map-get(
+						$_table-active,
+						quick-action-menu
+					);
+
+					@if ($_quick-action-menu) {
+						.quick-action-menu {
+							@include clay-css($_quick-action-menu);
+						}
 					}
 				}
+			}
 
-				th,
-				td {
-					@include clay-css(
-						map-deep-get($map, table-active, table-cell)
+			$_table-disabled: map-get($map, table-disabled);
+
+			@if ($_table-disabled) {
+				.table-disabled {
+					@include clay-css($_table-disabled);
+
+					$_hover: map-get($_table-disabled, hover);
+
+					@if ($_hover) {
+						&:hover {
+							@include clay-css($_hover);
+
+							$_table-cell: map-get($_hover, table-cell);
+
+							@if ($_table-cell) {
+								th,
+								td {
+									@include clay-css($_table-cell);
+								}
+							}
+						}
+					}
+
+					$_table-cell: map-get($_table-disabled, table-cell);
+
+					@if ($_table-cell) {
+						th,
+						td {
+							@include clay-css($_table-cell);
+
+							$_href: map-get($_table-cell, href);
+
+							@if ($_href) {
+								a[href] {
+									@include clay-link($_href);
+								}
+							}
+						}
+					}
+
+					$_table-title: map-get($_table-disabled, table-title);
+
+					@if ($_table-title) {
+						.table-title {
+							@include clay-text-typography($_table-title);
+						}
+					}
+
+					$_table-list-title: map-get(
+						$_table-disabled,
+						table-list-title
 					);
-				}
 
+					@if ($_table-list-title) {
+						.table-list-title {
+							@include clay-text-typography($_table-list-title);
+						}
+					}
+				}
+			}
+
+			$_autofit-col: map-get($map, autofit-col);
+
+			@if ($_autofit-col) {
+				.autofit-col {
+					@include clay-css($_autofit-col);
+
+					$_first-child: map-get($_autofit-col, first-child);
+
+					@if ($_first-child) {
+						&:first-child {
+							@include clay-css($_first-child);
+						}
+					}
+
+					$_last-child: map-get($_autofit-col, last-child);
+
+					@if ($_last-child) {
+						&:last-child {
+							@include clay-css($_last-child);
+						}
+					}
+				}
+			}
+
+			$_autofit-col-checkbox: map-get($map, autofit-col-checkbox);
+
+			@if ($_autofit-col-checkbox) {
+				.autofit-col-checkbox {
+					@include clay-css($_autofit-col-checkbox);
+				}
+			}
+
+			$_autofit-col-icon: map-get($map, autofit-col-icon);
+
+			@if ($_autofit-col-icon) {
+				.autofit-col-icon {
+					@include clay-css($_autofit-col-icon);
+				}
+			}
+
+			$_autofit-col-toggle: map-get($map, autofit-col-toggle);
+
+			@if ($_autofit-col-toggle) {
+				.autofit-col-toggle {
+					@include clay-css($_autofit-col-toggle);
+				}
+			}
+
+			$_component-action: map-get($map, component-action);
+
+			@if ($_component-action) {
+				.component-action {
+					@include clay-link($_component-action);
+				}
+			}
+
+			$_component-drag: map-get($map, component-drag);
+
+			@if ($_component-drag) {
+				.component-drag {
+					@include clay-link($_component-drag);
+				}
+			}
+
+			$_component-toggle: map-get($map, component-toggle);
+
+			@if ($_component-toggle) {
+				.component-toggle {
+					@include clay-link($_component-toggle);
+				}
+			}
+
+			$_custom-control: map-get($map, custom-control);
+
+			@if ($_custom-control) {
+				.custom-control,
+				.form-check {
+					@include clay-custom-control-variant($_custom-control);
+				}
+			}
+
+			$_quick-action-menu: map-get($map, quick-action-menu);
+
+			@if ($_quick-action-menu) {
 				.quick-action-menu {
-					@include clay-css(
-						map-deep-get($map, table-active, quick-action-menu)
-					);
+					@include clay-css($_quick-action-menu);
 				}
-			}
-
-			.table-disabled {
-				@include clay-css(map-get($map, table-disabled));
-
-				&:hover {
-					@include clay-css(
-						map-deep-get($map, table-disabled, hover)
-					);
-
-					th,
-					td {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								table-disabled,
-								hover,
-								table-cell
-							)
-						);
-					}
-				}
-
-				th,
-				td {
-					@include clay-css(
-						map-deep-get($map, table-disabled, table-cell)
-					);
-
-					a[href] {
-						@include clay-link(
-							map-deep-get($map, table-disabled, table-cell, href)
-						);
-					}
-				}
-
-				.table-title {
-					@include clay-text-typography(
-						map-deep-get($map, table-disabled, table-title)
-					);
-				}
-
-				.table-list-title {
-					@include clay-text-typography(
-						map-deep-get($map, table-disabled, table-list-title)
-					);
-				}
-			}
-
-			.autofit-col {
-				@include clay-css(map-get($map, autofit-col));
-
-				&:first-child {
-					@include clay-css(
-						map-deep-get($map, autofit-col, first-child)
-					);
-				}
-
-				&:last-child {
-					@include clay-css(
-						map-deep-get($map, autofit-col, last-child)
-					);
-				}
-			}
-
-			.autofit-col-checkbox {
-				@include clay-css(map-get($map, autofit-col-checkbox));
-			}
-
-			.autofit-col-icon {
-				@include clay-css(map-get($map, autofit-col-icon));
-			}
-
-			.autofit-col-toggle {
-				@include clay-css(map-get($map, autofit-col-toggle));
-			}
-
-			.component-action {
-				@include clay-link(map-get($map, component-action));
-			}
-
-			.component-drag {
-				@include clay-link(map-get($map, component-drag));
-			}
-
-			.component-toggle {
-				@include clay-link(map-get($map, component-toggle));
-			}
-
-			.custom-control,
-			.form-check {
-				@include clay-custom-control-variant(
-					map-get($map, custom-control)
-				);
-			}
-
-			.quick-action-menu {
-				@include clay-css(map-get($map, quick-action-menu));
 			}
 		}
 	}
@@ -468,46 +663,62 @@
 
 @mixin clay-table-drag-variant($map) {
 	@if (type-of($map) == 'map') {
-		$cell: setter(map-get($map, cell), ());
-
-		$c-drag: setter(map-get($map, c-drag), ());
-
-		$c-dragging-before: setter(map-get($map, c-dragging-before), ());
-
-		$c-dragging-after: setter(map-get($map, c-dragging-after), ());
-
-		$c-droppable-before: setter(map-get($map, c-droppable-before), ());
-
-		$c-droppable-after: setter(map-get($map, c-droppable-after), ());
-
-		@include clay-css($map);
-
-		th,
-		td {
-			@include clay-css($cell);
+		@if (length($map) != 0) {
+			@include clay-css($map);
 		}
 
-		.c-drag {
-			@include clay-css($c-drag);
-		}
+		$_cell: map-get($map, cell);
 
-		.c-dragging {
-			&::before {
-				@include clay-css($c-dragging-before);
-			}
-
-			&::after {
-				@include clay-css($c-dragging-after);
+		@if ($_cell) {
+			th,
+			td {
+				@include clay-css($_cell);
 			}
 		}
 
-		.c-droppable {
-			&::before {
-				@include clay-css($c-droppable-before);
-			}
+		$_c-drag: map-get($map, c-drag);
 
-			&::after {
-				@include clay-css($c-droppable-after);
+		@if ($_c-drag) {
+			.c-drag {
+				@include clay-css($_c-drag);
+			}
+		}
+
+		$_c-dragging-after: map-get($map, c-dragging-after);
+		$_c-dragging-before: map-get($map, c-dragging-before);
+
+		@if ($_c-dragging-after or $_c-dragging-before) {
+			.c-dragging {
+				@if ($_c-dragging-before) {
+					&::before {
+						@include clay-css($_c-dragging-before);
+					}
+				}
+
+				@if ($_c-dragging-after) {
+					&::after {
+						@include clay-css($_c-dragging-after);
+					}
+				}
+			}
+		}
+
+		$_c-droppable-after: map-get($map, c-droppable-after);
+		$_c-droppable-before: map-get($map, c-droppable-before);
+
+		@if ($_c-droppable-after or $_c-droppable-before) {
+			.c-droppable {
+				@if ($_c-droppable-before) {
+					&::before {
+						@include clay-css($_c-droppable-before);
+					}
+				}
+
+				@if ($_c-droppable-after) {
+					&::after {
+						@include clay-css($_c-droppable-after);
+					}
+				}
 			}
 		}
 	}
@@ -523,25 +734,33 @@
 
 @mixin clay-table-clone-variant($map) {
 	@if (type-of($map) == 'map') {
-		$before: setter(map-get($map, before), ());
-
-		$after: setter(map-get($map, after), ());
-
-		$cell: setter(map-get($map, cell), ());
-
-		@include clay-css($map);
-
-		&::before {
-			@include clay-css($before);
+		@if (length($map) != 0) {
+			@include clay-css($map);
 		}
 
-		&::after {
-			@include clay-css($after);
+		$_before: map-get($map, before);
+
+		@if ($_before) {
+			&::before {
+				@include clay-css($_before);
+			}
 		}
 
-		thead th,
-		tbody td {
-			@include clay-css($cell);
+		$_after: map-get($map, after);
+
+		@if ($_after) {
+			&::after {
+				@include clay-css($_after);
+			}
+		}
+
+		$_cell: map-get($map, cell);
+
+		@if ($_cell) {
+			thead th,
+			tbody td {
+				@include clay-css($_cell);
+			}
 		}
 	}
 }
