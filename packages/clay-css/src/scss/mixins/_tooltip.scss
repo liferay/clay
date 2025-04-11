@@ -30,40 +30,72 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			&.show {
-				@include clay-css(map-get($map, show));
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			.arrow {
-				@include clay-css(map-get($map, arrow));
+			$_show: map-get($map, show);
 
-				&::before {
-					@include clay-css(map-deep-get($map, arrow, before));
-				}
-
-				&::after {
-					@include clay-css(map-deep-get($map, arrow, after));
+			@if ($_show) {
+				&.show {
+					@include clay-css($_show);
 				}
 			}
 
-			.tooltip-arrow {
-				@include clay-css(map-get($map, tooltip-arrow));
+			$_arrow: map-get($map, arrow);
 
-				&::before {
-					@include clay-css(
-						map-deep-get($map, tooltip-arrow, before)
-					);
-				}
+			@if ($_arrow) {
+				.arrow {
+					@include clay-css($_arrow);
 
-				&::after {
-					@include clay-css(map-deep-get($map, tooltip-arrow, after));
+					$_before: map-get($_arrow, before);
+
+					@if ($_before) {
+						&::before {
+							@include clay-css($_before);
+						}
+					}
+
+					$_after: map-get($_arrow, after);
+
+					@if ($_after) {
+						&::after {
+							@include clay-css($_after);
+						}
+					}
 				}
 			}
 
-			.tooltip-inner {
-				@include clay-css(map-get($map, tooltip-inner));
+			$_tooltip-arrow: map-get($map, tooltip-arrow);
+
+			@if ($_tooltip-arrow) {
+				.tooltip-arrow {
+					@include clay-css($_tooltip-arrow);
+
+					$_before: map-get($_tooltip-arrow, before);
+
+					@if ($_before) {
+						&::before {
+							@include clay-css($_before);
+						}
+					}
+
+					$_after: map-get($_tooltip-arrow, after);
+
+					@if ($_after) {
+						&::after {
+							@include clay-css($_after);
+						}
+					}
+				}
+			}
+
+			$_tooltip-inner: map-get($map, tooltip-inner);
+
+			@if ($_tooltip-inner) {
+				.tooltip-inner {
+					@include clay-css($_tooltip-inner);
+				}
 			}
 		}
 	}
