@@ -66,89 +66,149 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
-
-			&::before {
-				@include clay-css(map-get($map, before));
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			&::after {
-				@include clay-css(map-get($map, after));
-			}
+			$_before: map-get($map, before);
 
-			.toggle-switch-handle {
-				@include clay-css(map-get($map, toggle-switch-handle));
-
+			@if ($_before) {
 				&::before {
-					@include clay-css(
-						map-deep-get($map, toggle-switch-handle, before)
-					);
+					@include clay-css($_before);
 				}
+			}
 
+			$_after: map-get($map, after);
+
+			@if ($_after) {
 				&::after {
-					@include clay-css(
-						map-deep-get($map, toggle-switch-handle, after)
-					);
+					@include clay-css($_after);
 				}
 			}
 
-			.toggle-switch-icon {
-				@include clay-css(map-get($map, toggle-switch-icon));
+			$_toggle-switch-handle: map-get($map, toggle-switch-handle);
 
-				.lexicon-icon {
-					@include clay-css(
-						map-deep-get($map, toggle-switch-icon, lexicon-icon)
-					);
+			@if ($_toggle-switch-handle) {
+				.toggle-switch-handle {
+					@include clay-css($_toggle-switch-handle);
+
+					$_before: map-get($_toggle-switch-handle, before);
+
+					@if ($_before) {
+						&::before {
+							@include clay-css($_before);
+						}
+					}
+
+					$_after: map-get($_toggle-switch-handle, after);
+
+					@if ($_after) {
+						&::after {
+							@include clay-css($_after);
+						}
+					}
 				}
 			}
 
-			.toggle-switch-icon-on {
-				@include clay-css(map-get($map, toggle-switch-icon-on));
+			$_toggle-switch-icon: map-get($map, toggle-switch-icon);
 
-				.lexicon-icon {
-					@include clay-css(
-						map-deep-get($map, toggle-switch-icon-on, lexicon-icon)
-					);
+			@if ($_toggle-switch-icon) {
+				.toggle-switch-icon {
+					@include clay-css($_toggle-switch-icon);
+
+					$_lexicon-icon: map-get($_toggle-switch-icon, lexicon-icon);
+
+					@if ($_lexicon-icon) {
+						.lexicon-icon {
+							@include clay-css($_lexicon-icon);
+						}
+					}
 				}
 			}
 
-			.toggle-switch-icon-off {
-				@include clay-css(map-get($map, toggle-switch-icon-off));
+			$_toggle-switch-icon-on: map-get($map, toggle-switch-icon-on);
 
-				.lexicon-icon {
-					@include clay-css(
-						map-deep-get($map, toggle-switch-icon-off, lexicon-icon)
+			@if ($_toggle-switch-icon-on) {
+				.toggle-switch-icon-on {
+					@include clay-css($_toggle-switch-icon-on);
+
+					$_lexicon-icon: map-get(
+						$_toggle-switch-icon-on,
+						lexicon-icon
 					);
+
+					@if ($_lexicon-icon) {
+						.lexicon-icon {
+							@include clay-css($_lexicon-icon);
+						}
+					}
 				}
 			}
 
-			.button-icon {
-				@include clay-css(map-get($map, button-icon));
+			$_toggle-switch-icon-off: map-get($map, toggle-switch-icon-off);
 
-				.lexicon-icon {
-					@include clay-css(
-						map-deep-get($map, button-icon, lexicon-icon)
+			@if ($_toggle-switch-icon-off) {
+				.toggle-switch-icon-off {
+					@include clay-css($_toggle-switch-icon-off);
+
+					$_lexicon-icon: map-get(
+						$_toggle-switch-icon-off,
+						lexicon-icon
 					);
+
+					@if ($_lexicon-icon) {
+						.lexicon-icon {
+							@include clay-css($_lexicon-icon);
+						}
+					}
 				}
 			}
 
-			.button-icon-on {
-				@include clay-css(map-get($map, button-icon-on));
+			$_button-icon: map-get($map, button-icon);
 
-				.lexicon-icon {
-					@include clay-css(
-						map-deep-get($map, button-icon-on, lexicon-icon)
-					);
+			@if ($_button-icon) {
+				.button-icon {
+					@include clay-css($_button-icon);
+
+					$_lexicon-icon: map-get($_button-icon, lexicon-icon);
+
+					@if ($_lexicon-icon) {
+						.lexicon-icon {
+							@include clay-css($_lexicon-icon);
+						}
+					}
 				}
 			}
 
-			.button-icon-off {
-				@include clay-css(map-get($map, button-icon-off));
+			$_button-icon-on: map-get($map, button-icon-on);
 
-				.lexicon-icon {
-					@include clay-css(
-						map-deep-get($map, button-icon-off, lexicon-icon)
-					);
+			@if ($_button-icon-on) {
+				.button-icon-on {
+					@include clay-css($_button-icon-on);
+
+					$_lexicon-icon: map-get($_button-icon-on, lexicon-icon);
+
+					@if ($_lexicon-icon) {
+						.lexicon-icon {
+							@include clay-css($_lexicon-icon);
+						}
+					}
+				}
+			}
+
+			$_button-icon-off: map-get($map, button-icon-off);
+
+			@if ($_button-icon-off) {
+				.button-icon-off {
+					@include clay-css($_button-icon-off);
+
+					$_lexicon-icon: map-get($_button-icon-off, lexicon-icon);
+
+					@if ($_lexicon-icon) {
+						.lexicon-icon {
+							@include clay-css($_lexicon-icon);
+						}
+					}
 				}
 			}
 		}
@@ -646,307 +706,488 @@
 		$breakpoint-down: setter(map-get($map, breakpoint-down), sm);
 		$enabled: setter(map-get($map, enabled), true);
 
-		@include clay-css($map);
-
 		@if ($enabled) {
-			~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-get($map, toggle-switch-bar)
-				);
+			@if (length($map) != 0) {
+				@include clay-css($map);
 			}
 
-			&:hover ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, hover, toggle-switch-bar)
-				);
-			}
+			$_toggle-switch-bar: map-get($map, toggle-switch-bar);
 
-			@at-root {
-				#{$focus-visible-selector},
-				#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-					~ .toggle-switch-bar {
-						@include clay-toggle-switch-bar-variant(
-							map-deep-get($map, focus, toggle-switch-bar)
-						);
-					}
-				}
-			}
-
-			&:active ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, active, toggle-switch-bar)
-				);
-			}
-
-			&[disabled] ~ .toggle-switch-bar,
-			&:disabled ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, disabled, toggle-switch-bar)
-				);
-			}
-
-			&:checked ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, checked, toggle-switch-bar)
-				);
-			}
-
-			&:checked:hover ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, checked, hover, toggle-switch-bar)
-				);
-			}
-
-			@at-root {
-				&:checked {
-					#{$focus-visible-selector},
-					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-						~ .toggle-switch-bar {
-							@include clay-toggle-switch-bar-variant(
-								map-deep-get(
-									$map,
-									checked,
-									focus,
-									toggle-switch-bar
-								)
-							);
-						}
-					}
-				}
-			}
-
-			&:checked:active ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, checked, active, toggle-switch-bar)
-				);
-			}
-
-			&:checked[disabled] ~ .toggle-switch-bar,
-			&:checked:disabled ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, checked, disabled, toggle-switch-bar)
-				);
-			}
-
-			&:indeterminate ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, indeterminate, toggle-switch-bar)
-				);
-			}
-
-			&:indeterminate:hover ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, indeterminate, hover, toggle-switch-bar)
-				);
-			}
-
-			@at-root {
-				&:indeterminate {
-					#{$focus-visible-selector},
-					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
-						~ .toggle-switch-bar {
-							@include clay-toggle-switch-bar-variant(
-								map-deep-get(
-									$map,
-									indeterminate,
-									focus,
-									toggle-switch-bar
-								)
-							);
-						}
-					}
-				}
-			}
-
-			&:indeterminate:active ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get($map, indeterminate, active, toggle-switch-bar)
-				);
-			}
-
-			&:indeterminate[disabled] ~ .toggle-switch-bar,
-			&:indeterminate:disabled ~ .toggle-switch-bar {
-				@include clay-toggle-switch-bar-variant(
-					map-deep-get(
-						$map,
-						indeterminate,
-						disabled,
-						toggle-switch-bar
-					)
-				);
-			}
-
-			@include media-breakpoint-down($breakpoint-down) {
-				@include clay-css(map-get($map, mobile));
-
+			@if ($_toggle-switch-bar) {
 				~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get($map, mobile, toggle-switch-bar)
+						$_toggle-switch-bar
 					);
 				}
+			}
 
+			$_hover-toggle-switch-bar: map-deep-get(
+				$map,
+				hover,
+				toggle-switch-bar
+			);
+
+			@if ($_hover-toggle-switch-bar) {
 				&:hover ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get($map, mobile, hover, toggle-switch-bar)
+						$_hover-toggle-switch-bar
 					);
 				}
+			}
 
+			$_focus-toggle-switch-bar: map-deep-get(
+				$map,
+				focus,
+				toggle-switch-bar
+			);
+
+			@if ($_focus-toggle-switch-bar) {
 				@at-root {
 					#{$focus-visible-selector},
 					#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 						~ .toggle-switch-bar {
 							@include clay-toggle-switch-bar-variant(
-								map-deep-get(
-									$map,
-									mobile,
-									focus,
-									toggle-switch-bar
-								)
+								$_focus-toggle-switch-bar
 							);
 						}
 					}
 				}
+			}
 
+			$_active-toggle-switch-bar: map-deep-get(
+				$map,
+				active,
+				toggle-switch-bar
+			);
+
+			@if ($_active-toggle-switch-bar) {
 				&:active ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get($map, mobile, active, toggle-switch-bar)
+						$_active-toggle-switch-bar
 					);
 				}
+			}
 
+			$_disabled-toggle-switch-bar: map-deep-get(
+				$map,
+				disabled,
+				toggle-switch-bar
+			);
+
+			@if ($_disabled-toggle-switch-bar) {
 				&[disabled] ~ .toggle-switch-bar,
 				&:disabled ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get($map, mobile, disabled, toggle-switch-bar)
+						$_disabled-toggle-switch-bar
 					);
 				}
+			}
 
+			$_checked-toggle-switch-bar: map-deep-get(
+				$map,
+				checked,
+				toggle-switch-bar
+			);
+
+			@if ($_checked-toggle-switch-bar) {
 				&:checked ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get($map, mobile, checked, toggle-switch-bar)
+						$_checked-toggle-switch-bar
 					);
 				}
+			}
 
+			$_checked-hover-toggle-switch-bar: map-deep-get(
+				$map,
+				checked,
+				hover,
+				toggle-switch-bar
+			);
+
+			@if ($_checked-hover-toggle-switch-bar) {
 				&:checked:hover ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get(
-							$map,
-							mobile,
-							checked,
-							hover,
-							toggle-switch-bar
-						)
+						$_checked-hover-toggle-switch-bar
 					);
 				}
+			}
 
+			$_checked-focus-toggle-switch-bar: map-deep-get(
+				$map,
+				checked,
+				focus,
+				toggle-switch-bar
+			);
+
+			@if ($_checked-focus-toggle-switch-bar) {
 				@at-root {
 					&:checked {
 						#{$focus-visible-selector},
 						#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 							~ .toggle-switch-bar {
 								@include clay-toggle-switch-bar-variant(
-									map-deep-get(
-										$map,
-										mobile,
-										checked,
-										focus,
-										toggle-switch-bar
-									)
+									$_checked-focus-toggle-switch-bar
 								);
 							}
 						}
 					}
 				}
+			}
 
+			$_checked-active-toggle-switch-bar: map-deep-get(
+				$map,
+				checked,
+				active,
+				toggle-switch-bar
+			);
+
+			@if ($_checked-active-toggle-switch-bar) {
 				&:checked:active ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get(
-							$map,
-							mobile,
-							checked,
-							active,
-							toggle-switch-bar
-						)
+						$_checked-active-toggle-switch-bar
 					);
 				}
+			}
 
+			$_checked-disabled-toggle-switch-bar: map-deep-get(
+				$map,
+				checked,
+				disabled,
+				toggle-switch-bar
+			);
+
+			@if ($_checked-disabled-toggle-switch-bar) {
 				&:checked[disabled] ~ .toggle-switch-bar,
 				&:checked:disabled ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get(
-							$map,
-							mobile,
-							checked,
-							disabled,
-							toggle-switch-bar
-						)
+						$_checked-disabled-toggle-switch-bar
 					);
 				}
+			}
 
+			$_indeterminate-toggle-switch-bar: map-deep-get(
+				$map,
+				indeterminate,
+				toggle-switch-bar
+			);
+
+			@if ($_indeterminate-toggle-switch-bar) {
 				&:indeterminate ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get(
-							$map,
-							mobile,
-							indeterminate,
-							toggle-switch-bar
-						)
+						$_indeterminate-toggle-switch-bar
 					);
 				}
+			}
 
+			$_indeterminate-hover-toggle-switch-bar: map-deep-get(
+				$map,
+				indeterminate,
+				hover,
+				toggle-switch-bar
+			);
+
+			@if ($_indeterminate-hover-toggle-switch-bar) {
 				&:indeterminate:hover ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get(
-							$map,
-							mobile,
-							indeterminate,
-							hover,
-							toggle-switch-bar
-						)
+						$_indeterminate-hover-toggle-switch-bar
 					);
 				}
+			}
 
+			$_indeterminate-focus-toggle-switch-bar: map-deep-get(
+				$map,
+				indeterminate,
+				focus,
+				toggle-switch-bar
+			);
+
+			@if ($_indeterminate-focus-toggle-switch-bar) {
 				@at-root {
 					&:indeterminate {
 						#{$focus-visible-selector},
 						#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
 							~ .toggle-switch-bar {
 								@include clay-toggle-switch-bar-variant(
-									map-deep-get(
-										$map,
-										mobile,
-										indeterminate,
-										focus,
-										toggle-switch-bar
-									)
+									$_indeterminate-focus-toggle-switch-bar
 								);
 							}
 						}
 					}
 				}
+			}
 
+			$_indeterminate-active-toggle-switch-bar: map-deep-get(
+				$map,
+				indeterminate,
+				active,
+				toggle-switch-bar
+			);
+
+			@if ($_indeterminate-active-toggle-switch-bar) {
 				&:indeterminate:active ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get(
-							$map,
-							mobile,
-							indeterminate,
-							active,
-							toggle-switch-bar
-						)
+						$_indeterminate-active-toggle-switch-bar
 					);
 				}
+			}
 
+			$_indeterminate-disabled-toggle-switch-bar: map-deep-get(
+				$map,
+				indeterminate,
+				disabled,
+				toggle-switch-bar
+			);
+
+			@if ($_indeterminate-disabled-toggle-switch-bar) {
 				&:indeterminate[disabled] ~ .toggle-switch-bar,
 				&:indeterminate:disabled ~ .toggle-switch-bar {
 					@include clay-toggle-switch-bar-variant(
-						map-deep-get(
-							$map,
-							mobile,
-							indeterminate,
-							disabled,
-							toggle-switch-bar
-						)
+						$_indeterminate-disabled-toggle-switch-bar
 					);
+				}
+			}
+
+			@include media-breakpoint-down($breakpoint-down) {
+				$_mobile: map-get($map, mobile);
+
+				@if ($_mobile) {
+					@include clay-css($_mobile);
+
+					$_toggle-switch-bar: map-get($_mobile, toggle-switch-bar);
+
+					@if ($_toggle-switch-bar) {
+						~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_toggle-switch-bar
+							);
+						}
+					}
+
+					$_hover-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						hover,
+						toggle-switch-bar
+					);
+
+					@if ($_hover-toggle-switch-bar) {
+						&:hover ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_hover-toggle-switch-bar
+							);
+						}
+					}
+
+					$_focus-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						focus,
+						toggle-switch-bar
+					);
+
+					@if ($_focus-toggle-switch-bar) {
+						@at-root {
+							#{$focus-visible-selector},
+							#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+								~ .toggle-switch-bar {
+									@include clay-toggle-switch-bar-variant(
+										$_focus-toggle-switch-bar
+									);
+								}
+							}
+						}
+					}
+
+					$_active-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						active,
+						toggle-switch-bar
+					);
+
+					@if ($_active-toggle-switch-bar) {
+						&:active ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_active-toggle-switch-bar
+							);
+						}
+					}
+
+					$_disabled-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						disabled,
+						toggle-switch-bar
+					);
+
+					@if ($_disabled-toggle-switch-bar) {
+						&[disabled] ~ .toggle-switch-bar,
+						&:disabled ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_disabled-toggle-switch-bar
+							);
+						}
+					}
+
+					$_checked-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						checked,
+						toggle-switch-bar
+					);
+
+					@if ($_checked-toggle-switch-bar) {
+						&:checked ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_checked-toggle-switch-bar
+							);
+						}
+					}
+
+					$_checked-hover-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						checked,
+						hover,
+						toggle-switch-bar
+					);
+
+					@if ($_checked-hover-toggle-switch-bar) {
+						&:checked:hover ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_checked-hover-toggle-switch-bar
+							);
+						}
+					}
+
+					$_checked-focus-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						checked,
+						focus,
+						toggle-switch-bar
+					);
+
+					@if ($_checked-focus-toggle-switch-bar) {
+						@at-root {
+							&:checked {
+								#{$focus-visible-selector},
+								#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+									~ .toggle-switch-bar {
+										@include clay-toggle-switch-bar-variant(
+											$_checked-focus-toggle-switch-bar
+										);
+									}
+								}
+							}
+						}
+					}
+
+					$_checked-active-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						checked,
+						active,
+						toggle-switch-bar
+					);
+
+					@if ($_checked-active-toggle-switch-bar) {
+						&:checked:active ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_checked-active-toggle-switch-bar
+							);
+						}
+					}
+
+					$_checked-disabled-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						checked,
+						disabled,
+						toggle-switch-bar
+					);
+
+					@if ($_checked-disabled-toggle-switch-bar) {
+						&:checked[disabled] ~ .toggle-switch-bar,
+						&:checked:disabled ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_checked-disabled-toggle-switch-bar
+							);
+						}
+					}
+
+					$_indeterminate-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						indeterminate,
+						toggle-switch-bar
+					);
+
+					@if ($_indeterminate-toggle-switch-bar) {
+						&:indeterminate ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_indeterminate-toggle-switch-bar
+							);
+						}
+					}
+
+					$_indeterminate-hover-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						indeterminate,
+						hover,
+						toggle-switch-bar
+					);
+
+					@if ($_indeterminate-hover-toggle-switch-bar) {
+						&:indeterminate:hover ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_indeterminate-hover-toggle-switch-bar
+							);
+						}
+					}
+
+					$_indeterminate-focus-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						indeterminate,
+						focus,
+						toggle-switch-bar
+					);
+
+					@if ($_indeterminate-focus-toggle-switch-bar) {
+						@at-root {
+							&:indeterminate {
+								#{$focus-visible-selector},
+								#{if($c-prefers-focus-selector,$c-prefers-focus-selector,clay-insert-before('.cadmin', '.c-prefers-focus ', '&:focus'))} {
+									~ .toggle-switch-bar {
+										@include clay-toggle-switch-bar-variant(
+											$_indeterminate-focus-toggle-switch-bar
+										);
+									}
+								}
+							}
+						}
+					}
+
+					$_indeterminate-active-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						indeterminate,
+						active,
+						toggle-switch-bar
+					);
+
+					@if ($_indeterminate-active-toggle-switch-bar) {
+						&:indeterminate:active ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_indeterminate-active-toggle-switch-bar
+							);
+						}
+					}
+
+					$_indeterminate-disabled-toggle-switch-bar: map-deep-get(
+						$_mobile,
+						indeterminate,
+						disabled,
+						toggle-switch-bar
+					);
+
+					@if ($_indeterminate-disabled-toggle-switch-bar) {
+						&:indeterminate[disabled] ~ .toggle-switch-bar,
+						&:indeterminate:disabled ~ .toggle-switch-bar {
+							@include clay-toggle-switch-bar-variant(
+								$_indeterminate-disabled-toggle-switch-bar
+							);
+						}
+					}
 				}
 			}
 		}
@@ -1024,182 +1265,266 @@
 		$breakpoint-down: setter(map-get($map, breakpoint-down), sm);
 		$enabled: setter(map-get($map, enabled), true);
 
-		@include clay-css($map);
-
-		.simple-toggle-switch,
-		&.simple-toggle-switch {
-			@include clay-toggle-switch-variant(
-				map-get($map, simple-toggle-switch)
-			);
+		@if (length($map) != 0) {
+			@include clay-css($map);
 		}
 
-		.toggle-switch-check-bar {
-			@include clay-css(map-get($map, toggle-switch-check-bar));
+		$_simple-toggle-switch: map-get($map, simple-toggle-switch);
 
-			&::before {
-				@include clay-css(
-					map-deep-get($map, toggle-switch-check-bar, before)
-				);
-			}
-
-			&::after {
-				@include clay-css(
-					map-deep-get($map, toggle-switch-check-bar, after)
-				);
+		@if ($_simple-toggle-switch) {
+			.simple-toggle-switch,
+			&.simple-toggle-switch {
+				@include clay-toggle-switch-variant($_simple-toggle-switch);
 			}
 		}
 
-		.toggle-switch-check {
-			@include clay-toggle-switch-check-variant(
-				map-get($map, toggle-switch-check)
-			);
+		$_toggle-switch-check-bar: map-get($map, toggle-switch-check-bar);
+
+		@if ($_toggle-switch-check-bar) {
+			.toggle-switch-check-bar {
+				@include clay-css($_toggle-switch-check-bar);
+
+				$_before: map-get($_toggle-switch-check-bar, before);
+
+				@if ($_before) {
+					&::before {
+						@include clay-css($_before);
+					}
+				}
+
+				$_after: map-get($_toggle-switch-check-bar, after);
+
+				@if ($_after) {
+					&::after {
+						@include clay-css($_after);
+					}
+				}
+			}
 		}
 
-		.toggle-switch-label {
-			@include clay-css(map-get($map, toggle-switch-label));
+		$_toggle-switch-check: map-get($map, toggle-switch-check);
+
+		@if ($_toggle-switch-check) {
+			.toggle-switch-check {
+				@include clay-toggle-switch-check-variant(
+					$_toggle-switch-check
+				);
+			}
 		}
 
-		.toggle-switch-text {
-			@include clay-css(map-get($map, toggle-switch-text));
-		}
+		$_toggle-switch-label: map-get($map, toggle-switch-label);
 
-		.toggle-switch-text-left {
-			@include clay-css(map-get($map, toggle-switch-text-left));
-		}
-
-		.toggle-switch-text-right {
-			@include clay-css(map-get($map, toggle-switch-text-right));
-		}
-
-		&.disabled {
-			@include clay-css(map-get($map, disabled));
-
+		@if ($_toggle-switch-label) {
 			.toggle-switch-label {
-				@include clay-css(
-					map-deep-get($map, disabled, toggle-switch-label)
-				);
+				@include clay-css($_toggle-switch-label);
 			}
+		}
 
+		$_toggle-switch-text: map-get($map, toggle-switch-text);
+
+		@if ($_toggle-switch-text) {
 			.toggle-switch-text {
-				@include clay-css(
-					map-deep-get($map, disabled, toggle-switch-text)
-				);
+				@include clay-css($_toggle-switch-text);
 			}
+		}
 
+		$_toggle-switch-text-left: map-get($map, toggle-switch-text-left);
+
+		@if ($_toggle-switch-text-left) {
 			.toggle-switch-text-left {
-				@include clay-css(
-					map-deep-get($map, disabled, toggle-switch-text-left)
-				);
+				@include clay-css($_toggle-switch-text-left);
 			}
+		}
 
+		$_toggle-switch-text-right: map-get($map, toggle-switch-text-right);
+
+		@if ($_toggle-switch-text-right) {
 			.toggle-switch-text-right {
-				@include clay-css(
-					map-deep-get($map, disabled, toggle-switch-text-right)
+				@include clay-css($_toggle-switch-text-right);
+			}
+		}
+
+		$_disabled: map-get($map, disabled);
+
+		@if ($_disabled) {
+			&.disabled {
+				@include clay-css($_disabled);
+
+				$_toggle-switch-label: map-get($_disabled, toggle-switch-label);
+
+				@if ($_toggle-switch-label) {
+					.toggle-switch-label {
+						@include clay-css($_toggle-switch-label);
+					}
+				}
+
+				$_toggle-switch-text: map-get($_disabled, toggle-switch-text);
+
+				@if ($_toggle-switch-text) {
+					.toggle-switch-text {
+						@include clay-css($_toggle-switch-text);
+					}
+				}
+
+				$_toggle-switch-text-left: map-get(
+					$_disabled,
+					toggle-switch-text-left
 				);
+
+				@if ($_toggle-switch-text-left) {
+					.toggle-switch-text-left {
+						@include clay-css($_toggle-switch-text-left);
+					}
+				}
+
+				$_toggle-switch-text-right: map-get(
+					$_disabled,
+					toggle-switch-text-right
+				);
+
+				@if ($_toggle-switch-text-right) {
+					.toggle-switch-text-right {
+						@include clay-css($_toggle-switch-text-right);
+					}
+				}
 			}
 		}
 
 		@include media-breakpoint-down($breakpoint-down) {
-			@include clay-css(map-get($map, mobile));
+			$_mobile: map-get($map, mobile);
 
-			.toggle-switch-check-bar {
-				@include clay-css(
-					map-deep-get($map, mobile, toggle-switch-check-bar)
+			@if ($_mobile) {
+				@include clay-css($_mobile);
+
+				$_toggle-switch-check-bar: map-get(
+					$_mobile,
+					toggle-switch-check-bar
 				);
 
-				&::before {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							mobile,
-							toggle-switch-check-bar,
-							before
-						)
-					);
+				@if ($_toggle-switch-check-bar) {
+					.toggle-switch-check-bar {
+						@include clay-css($_toggle-switch-check-bar);
+
+						$_before: map-get($_toggle-switch-check-bar, before);
+
+						@if ($_before) {
+							&::before {
+								@include clay-css($_before);
+							}
+						}
+
+						$_after: map-get($_toggle-switch-check-bar, after);
+
+						@if ($_after) {
+							&::after {
+								@include clay-css($_after);
+							}
+						}
+					}
 				}
 
-				&::after {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							mobile,
-							toggle-switch-check-bar,
-							after
-						)
-					);
+				$_toggle-switch-check: map-get($_mobile, toggle-switch-check);
+
+				@if ($_toggle-switch-check) {
+					.toggle-switch-check {
+						@include clay-toggle-switch-check-variant(
+							$_toggle-switch-check
+						);
+					}
 				}
-			}
 
-			.toggle-switch-check {
-				@include clay-toggle-switch-check-variant(
-					map-deep-get($map, mobile, toggle-switch-check)
+				$_toggle-switch-label: map-get($_mobile, toggle-switch-label);
+
+				@if ($_toggle-switch-label) {
+					.toggle-switch-label {
+						@include clay-css($_toggle-switch-label);
+					}
+				}
+
+				$_toggle-switch-text: map-get($_mobile, toggle-switch-text);
+
+				@if ($_toggle-switch-text) {
+					.toggle-switch-text {
+						@include clay-css($_toggle-switch-text);
+					}
+				}
+
+				$_toggle-switch-text-left: map-get(
+					$_mobile,
+					toggle-switch-text-left
 				);
-			}
 
-			.toggle-switch-label {
-				@include clay-css(
-					map-deep-get($map, mobile, toggle-switch-label)
+				@if ($_toggle-switch-text-left) {
+					.toggle-switch-text-left {
+						@include clay-css($_toggle-switch-text-left);
+					}
+				}
+
+				$_toggle-switch-text-right: map-get(
+					$_mobile,
+					toggle-switch-text-right
 				);
-			}
 
-			.toggle-switch-text {
-				@include clay-css(
-					map-deep-get($map, mobile, toggle-switch-text)
-				);
-			}
+				@if ($_toggle-switch-text-right) {
+					.toggle-switch-text-right {
+						@include clay-css($_toggle-switch-text-right);
+					}
+				}
 
-			.toggle-switch-text-left {
-				@include clay-css(
-					map-deep-get($map, mobile, toggle-switch-text-left)
-				);
-			}
+				$_disabled: map-get($_mobile, disabled);
 
-			.toggle-switch-text-right {
-				@include clay-css(
-					map-deep-get($map, mobile, toggle-switch-text-right)
-				);
-			}
+				@if ($_disabled) {
+					&.disabled {
+						@include clay-css($_disabled);
 
-			&.disabled {
-				@include clay-css(map-deep-get($map, mobile, disabled));
-
-				.toggle-switch-label {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							mobile,
-							disabled,
+						$_toggle-switch-label: map-get(
+							$_disabled,
 							toggle-switch-label
-						)
-					);
-				}
+						);
 
-				.toggle-switch-text {
-					@include clay-css(
-						map-deep-get($map, mobile, disabled, toggle-switch-text)
-					);
-				}
+						@if ($_toggle-switch-label) {
+							.toggle-switch-label {
+								@include clay-css($_toggle-switch-label);
+							}
 
-				.toggle-switch-text-left {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							mobile,
-							disabled,
-							toggle-switch-text-left
-						)
-					);
-				}
+							$_toggle-switch-text: map-get(
+								$_disabled,
+								toggle-switch-text
+							);
 
-				.toggle-switch-text-right {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							mobile,
-							disabled,
-							toggle-switch-text-right
-						)
-					);
+							@if ($_toggle-switch-text) {
+								.toggle-switch-text {
+									@include clay-css($_toggle-switch-text);
+								}
+							}
+
+							$_toggle-switch-text-left: map-get(
+								$_disabled,
+								toggle-switch-text-left
+							);
+
+							@if ($_toggle-switch-text-left) {
+								.toggle-switch-text-left {
+									@include clay-css(
+										$_toggle-switch-text-left
+									);
+								}
+							}
+
+							$_toggle-switch-text-right: map-get(
+								$_disabled,
+								toggle-switch-text-right
+							);
+
+							@if ($_toggle-switch-text-right) {
+								.toggle-switch-text-right {
+									@include clay-css(
+										$_toggle-switch-text-right
+									);
+								}
+							}
+						}
+					}
 				}
 			}
 		}
