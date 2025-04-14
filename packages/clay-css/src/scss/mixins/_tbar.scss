@@ -466,155 +466,231 @@
 			)
 		);
 
-		@include clay-css($base);
-
-		strong {
-			@include clay-css($strong);
+		@if (length($base) != 0) {
+			@include clay-css($base);
 		}
 
-		.component-action {
-			@include clay-link(map-get($map, component-action));
+		@if (length($strong) != 0) {
+			strong {
+				@include clay-css($strong);
+			}
 		}
 
-		.component-link {
-			@include clay-link(map-get($map, component-link));
+		$_component-action: map-get($map, component-action);
+
+		@if ($_component-action) {
+			.component-action {
+				@include clay-link($_component-action);
+			}
 		}
 
-		.tbar-nav {
-			$tbar-nav: setter(map-get($map, tbar-nav), ());
-			$tbar-nav: map-merge($tbar-nav, setter(map-get($map, nav), ()));
+		$_component-link: map-get($map, component-link);
 
-			@include clay-css($tbar-nav);
+		@if ($_component-link) {
+			.component-link {
+				@include clay-link($_component-link);
+			}
 		}
 
-		.tbar-item {
-			@include clay-css($item);
+		$tbar-nav: setter(map-get($map, tbar-nav), ());
+		$tbar-nav: map-merge($tbar-nav, setter(map-get($map, nav), ()));
+
+		@if (length($tbar-nav) != 0) {
+			.tbar-nav {
+				@include clay-css($tbar-nav);
+			}
 		}
 
-		.tbar-divider-before {
-			$tbar-divider-before: setter(
-				map-get($map, tbar-divider-before),
-				()
-			);
+		@if (length($item) != 0) {
+			.tbar-item {
+				@include clay-css($item);
+			}
+		}
 
-			@include clay-css($tbar-divider-before);
+		$_tbar-divider-before: map-get($map, tbar-divider-before);
 
-			&::before {
-				$before: setter(map-get($tbar-divider-before, before), ());
+		@if ($_tbar-divider-before) {
+			.tbar-divider-before {
+				@include clay-css($_tbar-divider-before);
+
+				$before: setter(map-get($_tbar-divider-before, before), ());
 				$before: map-merge(
 					$before,
 					setter(map-get($map, divider-before), ())
 				);
 
-				@include clay-css($before);
-			}
+				@if (length($before) != 0) {
+					&::before {
+						@include clay-css($before);
+					}
+				}
 
-			&::after {
-				@include clay-css(map-get($tbar-divider-before, after));
+				$_after: map-get($_tbar-divider-before, after);
+
+				@if ($_after) {
+					&::after {
+						@include clay-css($_after);
+					}
+				}
 			}
 		}
 
-		.tbar-divider-after {
-			$tbar-divider-after: setter(map-get($map, tbar-divider-after), ());
+		$_tbar-divider-after: map-get($map, tbar-divider-after);
 
-			@include clay-css($tbar-divider-after);
+		@if ($_tbar-divider-after) {
+			.tbar-divider-after {
+				@include clay-css($_tbar-divider-after);
 
-			&::before {
-				@include clay-css(map-get($tbar-divider-after, before));
-			}
+				$_before: map-get($_tbar-divider-after, before);
 
-			&::after {
-				$after: setter(map-get($tbar-divider-after, after), ());
+				@if ($_before) {
+					&::before {
+						@include clay-css($_before);
+					}
+				}
+
+				$after: setter(map-get($_tbar-divider-after, after), ());
 				$after: map-merge(
 					$after,
 					setter(map-get($map, divider-after), ())
 				);
 
-				@include clay-css($after);
-			}
-		}
-
-		.tbar-item-expand {
-			$tbar-item-expand: setter(map-get($map, tbar-item-expand), ());
-			$tbar-item-expand: map-merge(
-				$tbar-item-expand,
-				setter(map-get($map, item-expand), ())
-			);
-			@include clay-css($tbar-item-expand);
-		}
-
-		.tbar-btn {
-			@include clay-button-variant($btn);
-
-			@if (map-get($btn-c-inner, enabled)) {
-				.c-inner {
-					@include clay-css($btn-c-inner);
+				@if (length($after) != 0) {
+					&::after {
+						@include clay-css($after);
+					}
 				}
 			}
 		}
 
-		.tbar-link {
-			@include clay-link($link);
+		$tbar-item-expand: setter(map-get($map, tbar-item-expand), ());
+		$tbar-item-expand: map-merge(
+			$tbar-item-expand,
+			setter(map-get($map, item-expand), ())
+		);
 
-			@if (map-get($link-c-inner, enabled)) {
-				.c-inner {
-					@include clay-css($link-c-inner);
+		@if (length($tbar-item-expand) != 0) {
+			.tbar-item-expand {
+				@include clay-css($tbar-item-expand);
+			}
+		}
+
+		@if (length($btn) != 0) {
+			.tbar-btn {
+				@include clay-button-variant($btn);
+
+				@if (
+					map-get($btn-c-inner, enabled) and
+						(length($btn-c-inner) != 0)
+				) {
+					.c-inner {
+						@include clay-css($btn-c-inner);
+					}
 				}
 			}
 		}
 
-		.tbar-btn-monospaced {
-			@include clay-button-variant($btn-monospaced);
+		@if (length($link) != 0) {
+			.tbar-link {
+				@include clay-link($link);
 
-			@if (map-get($btn-monospaced-c-inner, enabled)) {
-				.c-inner {
-					@include clay-css($btn-monospaced-c-inner);
+				@if (
+					map-get($link-c-inner, enabled) and
+						(length($link-c-inner) != 0)
+				) {
+					.c-inner {
+						@include clay-css($link-c-inner);
+					}
 				}
 			}
-
-			.inline-item {
-				font-size: map-get($btn-monospaced, font-size);
-			}
 		}
 
-		.tbar-link-monospaced {
-			@include clay-link($link-monospaced);
+		@if (length($btn-monospaced) != 0) {
+			.tbar-btn-monospaced {
+				@include clay-button-variant($btn-monospaced);
 
-			@if (map-get($link-monospaced-c-inner, enabled)) {
-				.c-inner {
-					@include clay-css($link-monospaced-c-inner);
+				@if (
+					map-get($btn-monospaced-c-inner, enabled) and
+						(length($btn-monospaced-c-inner) != 0)
+				) {
+					.c-inner {
+						@include clay-css($btn-monospaced-c-inner);
+					}
+				}
+
+				$_font-size: map-get($btn-monospaced, font-size);
+
+				@if ($_font-size) {
+					.inline-item {
+						font-size: $_font-size;
+					}
 				}
 			}
+		}
 
-			.inline-item {
-				font-size: map-get($link-monospaced, font-size);
+		@if (length($link-monospaced) != 0) {
+			.tbar-link-monospaced {
+				@include clay-link($link-monospaced);
+
+				@if (
+					map-get($link-monospaced-c-inner, enabled) and
+						(length($link-monospaced-c-inner) != 0)
+				) {
+					.c-inner {
+						@include clay-css($link-monospaced-c-inner);
+					}
+				}
+
+				$_font-size: map-get($link-monospaced, font-size);
+
+				@if ($_font-size) {
+					.inline-item {
+						font-size: $_font-size;
+					}
+				}
 			}
 		}
 
-		.tbar-section {
-			@include clay-css($section);
+		@if (length($section) != 0) {
+			.tbar-section {
+				@include clay-css($section);
+			}
 		}
 
-		.component-title {
-			@include clay-text-typography(map-get($map, component-title));
+		$_component-title: map-get($map, component-title);
+
+		@if ($_component-title) {
+			.component-title {
+				@include clay-text-typography($_component-title);
+			}
 		}
 
-		.component-text {
-			@include clay-text-typography(map-get($map, component-text));
+		$_component-text: map-get($map, component-text);
+
+		@if ($_component-text) {
+			.component-text {
+				@include clay-text-typography($_component-text);
+			}
 		}
 
-		.component-label {
-			@include clay-label-variant(map-get($map, component-label));
+		$_component-label: map-get($map, component-label);
+
+		@if ($_component-label) {
+			.component-label {
+				@include clay-label-variant($_component-label);
+			}
 		}
 
-		.tbar-label {
-			$tbar-label: setter(map-get($map, tbar-label), ());
-			$tbar-label: map-merge(
-				$tbar-label,
-				setter(map-get($map, tbar-label-size), ())
-			);
+		$tbar-label: setter(map-get($map, tbar-label), ());
+		$tbar-label: map-merge(
+			$tbar-label,
+			setter(map-get($map, tbar-label-size), ())
+		);
 
-			@include clay-label-size($tbar-label);
+		@if (length($tbar-label) != 0) {
+			.tbar-label {
+				@include clay-label-size($tbar-label);
+			}
 		}
 	}
 }
@@ -666,8 +742,10 @@
 					display: inline;
 				}
 
-				.tbar-item {
-					@include clay-css($tbar-item);
+				@if (length($tbar-item) != 0) {
+					.tbar-item {
+						@include clay-css($tbar-item);
+					}
 				}
 			}
 		}

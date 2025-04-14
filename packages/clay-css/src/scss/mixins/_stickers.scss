@@ -217,73 +217,120 @@
 		}
 
 		@if ($enabled) {
-			@include clay-css($base);
+			@if (length($base) != 0) {
+				@include clay-css($base);
+			}
 
-			> .inline-item {
-				@include clay-css($inline-item);
+			@if (length($inline-item) != 0) {
+				> .inline-item {
+					@include clay-css($inline-item);
 
+					$_lexicon-icon: map-get($inline-item, lexicon-icon);
+
+					@if ($_lexicon-icon) {
+						.lexicon-icon {
+							@include clay-css($_lexicon-icon);
+						}
+					}
+				}
+			}
+
+			$_lexicon-icon: map-get($map, lexicon-icon);
+
+			@if ($_lexicon-icon) {
 				.lexicon-icon {
-					@include clay-css(
-						map-deep-get($map, inline-item, lexicon-icon)
-					);
+					@include clay-css($_lexicon-icon);
 				}
 			}
 
-			.lexicon-icon {
-				@include clay-css(map-get($map, lexicon-icon));
+			$_sticker-img: map-get($map, sticker-img);
+
+			@if ($_sticker-img) {
+				.sticker-img {
+					@include clay-css($_sticker-img);
+				}
 			}
 
-			.sticker-img {
-				@include clay-css(map-get($map, sticker-img));
-			}
+			$_sticker-overlay: map-get($map, sticker-overlay);
 
-			.sticker-overlay {
-				@include clay-css(map-get($map, sticker-overlay));
-			}
-
-			&.rounded {
-				@include clay-css(map-get($map, rounded));
-
+			@if ($_sticker-overlay) {
 				.sticker-overlay {
-					@include clay-css(
-						map-deep-get($map, rounded, sticker-overlay)
-					);
+					@include clay-css($_sticker-overlay);
 				}
 			}
 
-			&.rounded-circle {
-				@include clay-css(map-get($map, rounded-circle));
+			$_rounded: map-get($map, rounded);
 
-				.sticker-overlay {
-					@include clay-css(
-						map-deep-get($map, rounded-circle, sticker-overlay)
-					);
+			@if ($_rounded) {
+				&.rounded {
+					@include clay-css($_rounded);
+
+					$_sticker-overlay: map-get($_rounded, sticker-overlay);
+
+					@if ($_sticker-overlay) {
+						.sticker-overlay {
+							@include clay-css($_sticker-overlay);
+						}
+					}
 				}
 			}
 
-			&.rounded-0 {
-				@include clay-css(map-get($map, rounded-0));
+			$_rounded-circle: map-get($map, rounded-circle);
 
-				.sticker-overlay {
-					@include clay-css(
-						map-deep-get($map, rounded-0, sticker-overlay)
+			@if ($_rounded-circle) {
+				&.rounded-circle {
+					@include clay-css($_rounded-circle);
+
+					$_sticker-overlay: map-get(
+						$_rounded-circle,
+						sticker-overlay
 					);
+
+					@if ($_sticker-overlay) {
+						.sticker-overlay {
+							@include clay-css($_sticker-overlay);
+						}
+					}
 				}
 			}
 
-			&.sticker-outside {
-				@include clay-css($sticker-outside);
+			$_rounded-0: map-get($map, rounded-0);
 
-				&.sticker-bottom-left {
-					@include clay-css($sticker-outside-bottom-left);
+			@if ($_rounded-0) {
+				&.rounded-0 {
+					@include clay-css($_rounded-0);
+
+					$_sticker-overlay: map-get($_rounded-0, sticker-overlay);
+
+					@if ($_sticker-overlay) {
+						.sticker-overlay {
+							@include clay-css($_sticker-overlay);
+						}
+					}
 				}
+			}
 
-				&.sticker-bottom-right {
-					@include clay-css($sticker-outside-bottom-right);
-				}
+			@if (length($sticker-outside) != 0) {
+				&.sticker-outside {
+					@include clay-css($sticker-outside);
 
-				&.sticker-top-right {
-					@include clay-css($sticker-outside-top-right);
+					@if (length($sticker-outside-bottom-left) != 0) {
+						&.sticker-bottom-left {
+							@include clay-css($sticker-outside-bottom-left);
+						}
+					}
+
+					@if (length($sticker-outside-bottom-right) != 0) {
+						&.sticker-bottom-right {
+							@include clay-css($sticker-outside-bottom-right);
+						}
+					}
+
+					@if (length($sticker-outside-top-right) != 0) {
+						&.sticker-top-right {
+							@include clay-css($sticker-outside-top-right);
+						}
+					}
 				}
 			}
 		}
