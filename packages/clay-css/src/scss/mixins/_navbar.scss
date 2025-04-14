@@ -973,212 +973,292 @@
 		$enabled: setter(map-get($map, enabled), true);
 
 		@if ($enabled) {
-			@include clay-css($map);
+			@if (length($map) != 0) {
+				@include clay-css($map);
+			}
 
-			&.navbar-underline {
-				@include clay-css(map-get($map, navbar-underline));
+			$_navbar-underline: map-get($map, navbar-underline);
 
-				.navbar-nav {
-					@include clay-css(
-						map-deep-get($map, navbar-underline, navbar-nav)
-					);
+			@if ($_navbar-underline) {
+				&.navbar-underline {
+					@include clay-css($_navbar-underline);
 
-					.nav-link {
-						@include clay-link(
-							map-deep-get(
-								$map,
-								navbar-underline,
-								navbar-nav,
-								nav-link
-							)
-						);
-					}
+					$_navbar-nav: map-get($_navbar-underline, navbar-nav);
 
-					.nav-link-monospaced {
-						@include clay-link(
-							map-deep-get(
-								$map,
-								navbar-underline,
-								navbar-nav,
+					@if ($_navbar-nav) {
+						.navbar-nav {
+							@include clay-css($_navbar-nav);
+
+							$_nav-link: map-get($_navbar-nav, nav-link);
+
+							@if ($_nav-link) {
+								.nav-link {
+									@include clay-link($_nav-link);
+								}
+							}
+
+							$_nav-link-monospaced: map-get(
+								$_navbar-nav,
 								nav-link-monospaced
-							)
-						);
-					}
+							);
 
-					.nav-btn {
-						@include clay-button-variant(
-							map-deep-get(
-								$map,
-								navbar-underline,
-								navbar-nav,
-								nav-btn
-							)
-						);
-					}
+							@if ($_nav-link-monospaced) {
+								.nav-link-monospaced {
+									@include clay-link($_nav-link-monospaced);
+								}
+							}
 
-					.nav-btn-monospaced {
-						@include clay-button-variant(
-							map-deep-get(
-								$map,
-								navbar-underline,
-								navbar-nav,
+							$_nav-btn: map-get($_navbar-nav, nav-btn);
+
+							@if ($_nav-btn) {
+								.nav-btn {
+									@include clay-button-variant($_nav-btn);
+								}
+							}
+
+							$_nav-btn-monospaced: map-get(
+								$_navbar-nav,
 								nav-btn-monospaced
-							)
-						);
+							);
+
+							@if ($_nav-btn-monospaced) {
+								.nav-btn-monospaced {
+									@include clay-button-variant(
+										$_nav-btn-monospaced
+									);
+								}
+							}
+						}
 					}
 				}
 			}
 
-			&.navbar-collapse-absolute .navbar-collapse {
-				@include clay-css(
-					map-deep-get(
-						$map,
-						navbar-collapse-absolute,
-						navbar-collapse
-					)
-				);
+			$_navbar-collapse: map-deep-get(
+				$map,
+				navbar-collapse-absolute,
+				navbar-collapse
+			);
+
+			@if ($_navbar-collapse) {
+				&.navbar-collapse-absolute .navbar-collapse {
+					@include clay-css($_navbar-collapse);
+				}
 			}
 
-			.navbar-collapse {
-				@include clay-css(map-get($map, navbar-collapse));
+			$_navbar-collapse: map-get($map, navbar-collapse);
 
-				.navbar-nav {
-					@include clay-css(
-						map-deep-get($map, navbar-collapse, navbar-nav)
-					);
+			@if ($_navbar-collapse) {
+				.navbar-collapse {
+					@include clay-css($_navbar-collapse);
 
-					.dropdown-header {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								navbar-collapse,
-								navbar-nav,
+					$_navbar-nav: map-get($_navbar-collapse, navbar-nav);
+
+					@if ($_navbar-nav) {
+						.navbar-nav {
+							@include clay-css($_navbar-nav);
+
+							$_dropdown-header: map-get(
+								$_navbar-nav,
 								dropdown-header
-							)
-						);
-					}
+							);
 
-					.dropdown-divider {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								navbar-collapse,
-								navbar-nav,
+							@if ($_dropdown-header) {
+								.dropdown-header {
+									@include clay-css($_dropdown-header);
+								}
+							}
+
+							$_dropdown-divider: map-get(
+								$_navbar-nav,
 								dropdown-divider
-							)
-						);
-					}
+							);
 
-					.dropdown-item {
-						@include clay-link(
-							map-deep-get(
-								$map,
-								navbar-collapse,
-								navbar-nav,
+							@if ($_dropdown-divider) {
+								.dropdown-divider {
+									@include clay-css($_dropdown-divider);
+								}
+							}
+
+							$_dropdown-item: map-get(
+								$_navbar-nav,
 								dropdown-item
-							)
-						);
+							);
+
+							@if ($_dropdown-item) {
+								.dropdown-item {
+									@include clay-link($_dropdown-item);
+								}
+							}
+						}
 					}
 				}
 			}
 
-			.container {
-				@include clay-css(map-get($map, container));
+			$_container: map-get($map, container);
+
+			@if ($_container) {
+				.container {
+					@include clay-css($_container);
+				}
 			}
 
-			.container-fluid {
-				@include clay-css(map-get($map, container-fluid));
+			$_container-fluid: map-get($map, container-fluid);
+
+			@if ($_container-fluid) {
+				.container-fluid {
+					@include clay-css($_container-fluid);
+				}
 			}
 
-			.navbar-nav {
-				.nav-link {
-					@include clay-link(
-						map-deep-get($map, navbar-nav, nav-link)
-					);
-				}
+			$_navbar-nav: map-get($map, navbar-nav);
 
-				.nav-link-monospaced {
-					@include clay-link(
-						map-deep-get($map, navbar-nav, nav-link-monospaced)
-					);
-				}
+			@if ($_navbar-nav) {
+				.navbar-nav {
+					$_nav-link: map-get($_navbar-nav, nav-link);
 
-				.nav-btn {
-					@include clay-button-variant(
-						map-deep-get($map, navbar-nav, nav-btn)
-					);
-				}
+					@if ($_nav-link) {
+						.nav-link {
+							@include clay-link($_nav-link);
+						}
+					}
 
-				.nav-btn-monospaced {
-					@include clay-button-variant(
-						map-deep-get($map, navbar-nav, nav-btn-monospaced)
+					$_nav-link-monospaced: map-get(
+						$_navbar-nav,
+						nav-link-monospaced
 					);
-				}
 
-				.nav-item {
-					> .custom-control {
-						@include clay-custom-control-variant(
-							map-deep-get(
-								$map,
-								navbar-nav,
-								nav-item,
+					@if ($_nav-link-monospaced) {
+						.nav-link-monospaced {
+							@include clay-link($_nav-link-monospaced);
+						}
+					}
+
+					$_nav-btn: map-get($_navbar-nav, nav-btn);
+
+					@if ($_nav-btn) {
+						.nav-btn {
+							@include clay-button-variant($_nav-btn);
+						}
+					}
+
+					$_nav-btn-monospaced: map-get(
+						$_navbar-nav,
+						nav-btn-monospaced
+					);
+
+					@if ($_nav-btn-monospaced) {
+						.nav-btn-monospaced {
+							@include clay-button-variant($_nav-btn-monospaced);
+						}
+					}
+
+					$_nav-item: map-get($_navbar-nav, nav-item);
+
+					@if ($_nav-item) {
+						.nav-item {
+							$_custom-control: map-get(
+								$_nav-item,
 								custom-control
-							)
-						);
+							);
+
+							@if ($_custom-control) {
+								> .custom-control {
+									@include clay-custom-control-variant(
+										$_custom-control
+									);
+								}
+							}
+						}
 					}
 				}
 			}
 
-			.navbar-form {
-				@include clay-css(map-get($map, navbar-form));
+			$_navbar-form: map-get($map, navbar-form);
 
-				> .container {
-					@include clay-css(
-						map-deep-get($map, navbar-form, container)
-					);
+			@if ($_navbar-form) {
+				.navbar-form {
+					@include clay-css($_navbar-form);
+
+					$_container: map-get($_navbar-form, container);
+
+					@if ($_container) {
+						> .container {
+							@include clay-css($_container);
+						}
+					}
+
+					$_container-fluid: map-get($_navbar-form, container-fluid);
+
+					@if ($_container-fluid) {
+						> .container-fluid {
+							@include clay-css($_container-fluid);
+						}
+					}
+
+					$_form-control: map-get($_navbar-form, form-control);
+
+					@if ($_form-control) {
+						.form-control {
+							@include clay-form-control-variant($_form-control);
+						}
+					}
 				}
+			}
 
-				> .container-fluid {
-					@include clay-css(
-						map-deep-get($map, navbar-form, container-fluid)
-					);
-				}
+			$_navbar-brand: map-get($map, navbar-brand);
 
-				.form-control {
-					@include clay-form-control-variant(
-						map-deep-get($map, navbar-form, form-control)
-					);
+			@if ($_navbar-brand) {
+				.navbar-brand {
+					@include clay-link($_navbar-brand);
 				}
 			}
 
-			.navbar-brand {
-				@include clay-link(map-get($map, navbar-brand));
+			$_navbar-title: map-get($map, navbar-title);
+
+			@if ($_navbar-title) {
+				.navbar-title {
+					@include clay-link($_navbar-title);
+				}
 			}
 
-			.navbar-title {
-				@include clay-link(map-get($map, navbar-title));
+			$_navbar-text: map-get($map, navbar-text);
+
+			@if ($_navbar-text) {
+				.navbar-text {
+					@include clay-link($_navbar-text);
+				}
 			}
 
-			.navbar-text {
-				@include clay-link(map-get($map, navbar-text));
+			$_navbar-toggler: map-get($map, navbar-toggler);
+
+			@if ($_navbar-toggler) {
+				.navbar-toggler {
+					@include clay-button-variant($_navbar-toggler);
+				}
 			}
 
-			.navbar-toggler {
-				@include clay-button-variant(map-get($map, navbar-toggler));
+			$_navbar-toggler-link: map-get($map, navbar-toggler-link);
+
+			@if ($_navbar-toggler-link) {
+				.navbar-toggler-link {
+					@include clay-link($_navbar-toggler-link);
+				}
 			}
 
-			.navbar-toggler-link {
-				@include clay-link(map-get($map, navbar-toggler-link));
+			$_navbar-overlay: map-get($map, navbar-overlay);
+
+			@if ($_navbar-overlay) {
+				.navbar-overlay {
+					@include clay-css($_navbar-overlay);
+				}
 			}
 
-			.navbar-overlay {
-				@include clay-css(map-get($map, navbar-overlay));
-			}
+			$_dropdown-menu: map-get($map, dropdown-menu);
 
-			.dropdown-menu {
-				@include clay-dropdown-menu-variant(
-					map-get($map, dropdown-menu)
-				);
+			@if ($_dropdown-menu) {
+				.dropdown-menu {
+					@include clay-dropdown-menu-variant($_dropdown-menu);
+				}
 			}
 		}
 	}
@@ -1473,144 +1553,222 @@
 		$underline-active-bg: map-get($map, underline-active-bg);
 
 		@if ($enabled) {
-			@include clay-css($base);
-
-			.container {
-				@include clay-css(map-get($map, container));
+			@if (length($base) != 0) {
+				@include clay-css($base);
 			}
 
-			.container-fluid {
-				@include clay-css(map-get($map, container-fluid));
+			$_container: map-get($map, container);
+
+			@if ($_container) {
+				.container {
+					@include clay-css($_container);
+				}
 			}
 
-			.navbar-nav {
-				.nav-link {
-					@include clay-link($nav-link);
-				}
+			$_container-fluid: map-get($map, container-fluid);
 
-				.nav-link-monospaced {
-					@include clay-link(
-						map-deep-get($map, navbar-nav, nav-link-monospaced)
+			@if ($_container-fluid) {
+				.container-fluid {
+					@include clay-css($_container-fluid);
+				}
+			}
+
+			$_navbar-nav: map-get($map, navbar-nav);
+
+			@if ($_navbar-nav) {
+				.navbar-nav {
+					@if (length($nav-link) != 0) {
+						.nav-link {
+							@include clay-link($nav-link);
+						}
+					}
+
+					$_nav-link-monospaced: map-get(
+						$_navbar-nav,
+						nav-link-monospaced
 					);
-				}
 
-				.nav-btn {
-					@include clay-button-variant($nav-btn);
-				}
+					@if ($_nav-link-monospaced) {
+						.nav-link-monospaced {
+							@include clay-link($_nav-link-monospaced);
+						}
+					}
 
-				.nav-btn-monospaced {
-					@include clay-button-variant(
-						map-deep-get($map, navbar-nav, nav-btn-monospaced)
+					@if (length($nav-btn) != 0) {
+						.nav-btn {
+							@include clay-button-variant($nav-btn);
+						}
+					}
+
+					$_nav-btn-monospaced: map-get(
+						$_navbar-nav,
+						nav-btn-monospaced
 					);
-				}
 
-				.nav-item {
-					> .custom-control {
-						@include clay-custom-control-variant(
-							map-deep-get(
-								$map,
-								navbar-nav,
-								nav-item,
+					@if ($_nav-btn-monospaced) {
+						.nav-btn-monospaced {
+							@include clay-button-variant($_nav-btn-monospaced);
+						}
+					}
+
+					$_nav-item: map-get($_navbar-nav, nav-item);
+
+					@if ($_nav-item) {
+						.nav-item {
+							$_custom-control: map-get(
+								$_nav-item,
 								custom-control
-							)
-						);
-					}
-				}
+							);
 
-				.nav-divider {
-					@include clay-css(map-get($map, nav-divider));
-
-					&::before {
-						@include clay-css(
-							map-deep-get($map, nav-divider, before)
-						);
+							@if ($_custom-control) {
+								> .custom-control {
+									@include clay-custom-control-variant(
+										$_custom-control
+									);
+								}
+							}
+						}
 					}
 
-					&::after {
-						@include clay-css(
-							map-deep-get($map, nav-divider, after)
-						);
+					$_nav-divider: map-get($map, nav-divider);
+
+					@if ($_nav-divider) {
+						.nav-divider {
+							@include clay-css($_nav-divider);
+
+							$_before: map-get($_nav-divider, before);
+
+							@if ($_before) {
+								&::before {
+									@include clay-css($_before);
+								}
+							}
+
+							$_after: map-get($_nav-divider, after);
+
+							@if ($_after) {
+								&::after {
+									@include clay-css($_after);
+								}
+							}
+						}
+					}
+
+					$_nav-divider-end: map-get($map, nav-divider-end);
+
+					@if ($_nav-divider-end) {
+						.nav-divider-end {
+							@include clay-css($_nav-divider-end);
+
+							$_before: map-get($_nav-divider-end, before);
+
+							@if ($_before) {
+								&::before {
+									@include clay-css($_before);
+								}
+							}
+
+							$_after: map-get($_nav-divider-end, after);
+
+							@if ($_after) {
+								&::after {
+									@include clay-css($_after);
+								}
+							}
+						}
 					}
 				}
+			}
 
-				.nav-divider-end {
-					@include clay-css(map-get($map, nav-divider-end));
+			$_navbar-form: map-get($map, navbar-form);
 
-					&::before {
-						@include clay-css(
-							map-deep-get($map, nav-divider-end, before)
-						);
+			@if ($_navbar-form) {
+				.navbar-form {
+					@include clay-css($_navbar-form);
+
+					> .container {
+						@include clay-css(map-get($_navbar-form, container));
 					}
 
-					&::after {
-						@include clay-css(
-							map-deep-get($map, nav-divider-end, after)
-						);
+					$_container-fluid: map-get($_navbar-form, container-fluid);
+
+					@if ($_container-fluid) {
+						> .container-fluid {
+							@include clay-css($_container-fluid);
+						}
+					}
+
+					$_form-control: map-get($_navbar-form, form-control);
+
+					@if ($_form-control) {
+						.form-control {
+							@include clay-form-control-variant($_form-control);
+						}
 					}
 				}
 			}
 
-			.navbar-form {
-				@include clay-css(map-get($map, navbar-form));
-
-				> .container {
-					@include clay-css(
-						map-deep-get($map, navbar-form, container)
-					);
-				}
-
-				> .container-fluid {
-					@include clay-css(
-						map-deep-get($map, navbar-form, container-fluid)
-					);
-				}
-
-				.form-control {
-					@include clay-form-control-variant(
-						map-deep-get($map, navbar-form, form-control)
-					);
+			@if (length($navbar-brand) != 0) {
+				.navbar-brand {
+					@include clay-link($navbar-brand);
 				}
 			}
 
-			.navbar-brand {
-				@include clay-link($navbar-brand);
+			$_navbar-title: map-get($map, navbar-title);
+
+			@if ($_navbar-title) {
+				.navbar-title {
+					@include clay-link($_navbar-title);
+				}
 			}
 
-			.navbar-title {
-				@include clay-link(map-get($map, navbar-title));
+			$_navbar-text: map-get($map, navbar-text);
+
+			@if ($_navbar-text) {
+				.navbar-text {
+					@include clay-link($_navbar-text);
+				}
 			}
 
-			.navbar-text {
-				@include clay-link(map-get($map, navbar-text));
+			@if (length($navbar-toggler) != 0) {
+				.navbar-toggler {
+					@include clay-button-variant($navbar-toggler);
+				}
 			}
 
-			.navbar-toggler {
-				@include clay-button-variant($navbar-toggler);
-			}
+			$_navbar-toggler-link: map-get($map, navbar-toggler-link);
 
-			.navbar-toggler-link {
-				@include clay-link(map-get($map, navbar-toggler-link));
-			}
-
-			.navbar-overlay {
-				@include clay-css($navbar-overlay);
-			}
-
-			.dropdown-menu {
-				@include clay-dropdown-menu-variant(
-					map-get($map, dropdown-menu)
-				);
-			}
-
-			&.navbar-underline {
+			@if ($_navbar-toggler-link) {
 				.navbar-toggler-link {
-					@include clay-link(
-						map-deep-get(
-							$map,
-							navbar-underline,
-							navbar-toggler-link
-						)
-					);
+					@include clay-link($_navbar-toggler-link);
+				}
+			}
+
+			@if (length($navbar-overlay) != 0) {
+				.navbar-overlay {
+					@include clay-css($navbar-overlay);
+				}
+			}
+
+			$_dropdown-menu: map-get($map, dropdown-menu);
+
+			@if ($_dropdown-menu) {
+				.dropdown-menu {
+					@include clay-dropdown-menu-variant($_dropdown-menu);
+				}
+			}
+
+			$_navbar-underline-toggler-link: map-deep-get(
+				$map,
+				navbar-underline,
+				navbar-toggler-link
+			);
+
+			@if ($_navbar-underline-toggler-link) {
+				&.navbar-underline {
+					.navbar-toggler-link {
+						@include clay-link($_navbar-underline-toggler-link);
+					}
 				}
 			}
 
@@ -1641,31 +1799,35 @@
 							@if not($is-last-breakpoint) {
 								$infix: '-' + breakpoint-next($breakpoint);
 
-								&.navbar-expand#{$infix} {
-									@include clay-navbar-expand-variant(
-										map-get(
-											$media-breakpoint-down,
-											'navbar-expand#{$infix}'
-										)
-									);
+								$_navbar-expand: map-get(
+									$media-breakpoint-down,
+									'navbar-expand#{$infix}'
+								);
+
+								@if ($_navbar-expand) {
+									&.navbar-expand#{$infix} {
+										@include clay-navbar-expand-variant(
+											$_navbar-expand
+										);
+									}
 								}
 
-								.navbar-overlay-#{$breakpoint}-down {
-									@include clay-css(
-										map-get(
-											$media-breakpoint-down,
-											'navbar-overlay-#{$breakpoint}-down'
-										)
-									);
+								$_navbar-overlay: map-get(
+									$media-breakpoint-down,
+									'navbar-overlay-#{$breakpoint}-down'
+								);
 
-									&.show {
-										@include clay-css(
-											map-deep-get(
-												$media-breakpoint-down,
-												'navbar-overlay-#{$breakpoint}-down',
-												show
-											)
-										);
+								@if ($_navbar-overlay) {
+									.navbar-overlay-#{$breakpoint}-down {
+										@include clay-css($_navbar-overlay);
+
+										$_show: map-get($_navbar-overlay, show);
+
+										@if ($_show) {
+											&.show {
+												@include clay-css($_show);
+											}
+										}
 									}
 								}
 							}
@@ -1698,13 +1860,17 @@
 							@if not($is-first-breakpoint) {
 								$infix: '-' + $breakpoint;
 
-								&.navbar-expand#{$infix} {
-									@include clay-navbar-expand-variant(
-										map-get(
-											$media-breakpoint-up,
-											'navbar-expand#{$infix}'
-										)
-									);
+								$_navbar-expand: map-get(
+									$media-breakpoint-up,
+									'navbar-expand#{$infix}'
+								);
+
+								@if ($_navbar-expand) {
+									&.navbar-expand#{$infix} {
+										@include clay-navbar-expand-variant(
+											$_navbar-expand
+										);
+									}
 								}
 							}
 						}
