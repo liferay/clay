@@ -95,6 +95,7 @@ const Item = ({
 
 	return (
 		<DropDown.Item
+			{...props}
 			onClick={(event) => {
 				if (onForward && child && label) {
 					event.preventDefault();
@@ -115,7 +116,6 @@ const Item = ({
 				}
 			}}
 			spritemap={spritemap}
-			{...props}
 		>
 			{label}
 
@@ -406,18 +406,19 @@ export type Item = {
 	 * The unique id that references the next menu.
 	 */
 	child?: string;
+	title?: string;
+	items?: Array<Item>;
 
 	/**
 	 * @deprecated since v3.129.0 - use `title` instead.
 	 */
-	title?: string;
-	items?: Array<Item>;
 	label?: string;
 	name?: string;
 	onChange?: Function;
 	onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 	symbolLeft?: string;
 	symbolRight?: string;
+	target?: string;
 	type?:
 		| 'checkbox'
 		| 'contextual'
