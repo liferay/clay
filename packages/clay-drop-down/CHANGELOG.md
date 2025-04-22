@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.135.0](https://github.com/liferay/clay/compare/v3.134.0...v3.135.0) (2025-04-22)
+
+### Features
+
+-   **@clayui/drop-down:** adds target prop to high-level components ([164f5fd](https://github.com/liferay/clay/commit/164f5fd63d5693c63aa7c85fb2893406717faea9))
+
 # [3.134.0](https://github.com/liferay/clay/compare/v3.133.0...v3.134.0) (2025-04-10)
 
 ### Bug Fixes
