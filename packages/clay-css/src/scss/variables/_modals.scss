@@ -138,7 +138,7 @@ $modal-body: map-deep-merge(
 			overflow: auto,
 			padding: $modal-inner-padding,
 		),
-		'.aspect-ratio': (
+		'.modal-banner-img': (
 			margin-left: math-sign($modal-inner-padding),
 			margin-right: math-sign($modal-inner-padding),
 			top: math-sign($modal-inner-padding),
