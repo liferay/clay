@@ -148,7 +148,7 @@ export function Editor({
 	onHueChange,
 }: Props) {
 	const {b, g, r} = color.toRgb();
-	const {s, v} = color.toHsv();
+	const {h, s, v} = color.toHsv();
 
 	const rgbArr: Array<[number, string]> = [
 		[r, 'r'],
@@ -170,7 +170,7 @@ export function Editor({
 						tinycolor({h: hue, s, v}).setAlpha(color.getAlpha())
 					);
 				}}
-				value={hue}
+				value={Math.round(h)}
 			/>
 			<div className="clay-color-map-group">
 				<GradientSelector
