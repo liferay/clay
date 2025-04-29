@@ -416,9 +416,12 @@ describe('Interactions', () => {
 			) as Array<HTMLElement>;
 
 			fireEvent.change(hueSlider as HTMLElement, {target: {value: 1}});
-			fireEvent.change(hueSlider as HTMLElement, {target: {value: 0}});
 
-			expect(handleColorsChange).toBeCalledTimes(2);
+			fireEvent.change(hueSlider as HTMLElement, {target: {value: 2}});
+
+			fireEvent.change(hueSlider as HTMLElement, {target: {value: 1}});
+
+			expect(handleColorsChange).toBeCalledTimes(3);
 		});
 	});
 
