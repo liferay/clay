@@ -44,21 +44,21 @@
 
 	'angle-double-right': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline lx-angle-double-right-line-1" d="m92.529 39.52 204.069 199.855c10.319 9.889 9.409 24.03 0 33.227L92.326 472.556c-23.775 22.744-60.603-11.768-36.422-34.711l185.149-181.856L56.005 74.329C31.825 50.992 68.753 16.677 92.529 39.52Z" fill="#{$color}"/><path class="lexicon-icon-outline lx-angle-double-right-line-2" d="m252.529 39.52 204.069 199.855c10.319 9.889 9.409 24.03 0 33.227L252.327 472.556c-23.776 22.744-60.604-11.768-36.423-34.711l185.149-181.856-185.048-181.66c-24.181-23.337 12.748-57.652 36.524-34.809Z" fill="#{$color}"/></svg>',
 
-	'angle-down-small': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="m268 339.9 142.6-142.2c16.4-16.4-8.5-41.7-25.1-25.1L256 301.7 126.5 172.5c-16.8-16.7-41.6 8.7-25.1 25.1L244 339.9c7.2 7.1 17.4 6.5 24 0z" fill="#{$color}"/></svg>',
+	'angle-down-small': '<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="lexicon-icon-outline" d="m8.672 10.56 4.05-4.11c.793-.844-.285-1.99-1.063-1.165L8 9.008 4.3 5.263c-.721-.768-1.781.415-1.056 1.186l4.06 4.12c.489.532.786.62 1.369-.01Z" fill="#{$color}"/></svg>',
 
-	'angle-down': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M272.8 375.2 475 173.3c23-23.6-11.9-59.9-35.1-36L256 320.3 72.2 137.4c-23.5-24-58.2 12.5-35.2 36.1l202.1 201.7c10.1 10.2 24.4 9.3 33.7 0z" fill="#{$color}"/></svg>',
+	'angle-down': '<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="lexicon-icon-outline" d="m8.52 12.769 6.247-6.383c.711-.747-.367-1.894-1.084-1.139L8 11.033 2.321 5.251c-.726-.76-1.798.395-1.088 1.14l6.245 6.378c.312.322.754.294 1.041 0Z" fill="#{$color}"/></svg>',
 
-	'angle-left-small': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="m172.1 268 142.2 142.6c16.4 16.4 41.7-8.5 25.1-25.1L210.3 256l129.2-129.5c16.7-16.8-8.7-41.6-25.1-25.1L172.1 244c-7.1 7.2-6.5 17.4 0 24z" fill="#{$color}"/></svg>',
+	'angle-left-small': '<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="lexicon-icon-outline" d="m5.44 8.672 4.11 4.05c.844.793 1.99-.285 1.165-1.063L6.992 8l3.745-3.7c.768-.721-.415-1.781-1.186-1.056l-4.12 4.06c-.532.489-.62.786.01 1.369Z" fill="#{$color}"/></svg>',
 
 	'angle-left': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="m136.8 272.8 201.7 202.1c23.5 23.1 60-11.6 36.1-35.2L191.7 256l183-183.9c23.9-23.2-12.5-58.1-36-35.1L136.8 239.2c-9.3 9.3-10.2 23.6 0 33.6z" fill="#{$color}"/></svg>',
 
-	'angle-right-small': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M339.9 244 197.6 101.4c-16.4-16.5-41.8 8.3-25.1 25.1L301.7 256 172.6 385.5c-16.6 16.6 8.7 41.5 25.1 25.1L339.9 268c6.5-6.6 7.1-16.8 0-24z" fill="#{$color}"/></svg>',
+	'angle-right-small': '<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="lexicon-icon-outline" d="m10.56 7.328-4.11-4.05c-.844-.793-1.99.285-1.165 1.063L9.008 8l-3.745 3.7c-.768.721.415 1.781 1.186 1.056l4.12-4.06c.532-.489.62-.786-.01-1.369Z" fill="#{$color}"/></svg>',
 
 	'angle-right': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M375.2 239.2 173.3 37c-23.6-23-59.9 11.9-36 35.1l183 183.9-182.9 183.8c-24 23.5 12.5 58.2 36.1 35.2l201.7-202.1c10.2-10.1 9.3-24.4 0-33.7z" fill="#{$color}"/></svg>',
 
-	'angle-up-small': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M244 172.1 101.4 314.4c-16.5 16.4 8.3 41.8 25.1 25.1L256 210.3l129.5 129.2c16.6 16.6 41.5-8.7 25.1-25.1L268 172.1c-6.6-6.5-16.8-7.1-24 0z" fill="#{$color}"/></svg>',
+	'angle-up-small': '<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="lexicon-icon-outline" d="m8.672 5.44 4.05 4.11c.793.844-.285 1.99-1.063 1.165L8 6.992l-3.7 3.745c-.721.768-1.781-.415-1.056-1.186l4.06-4.12c.489-.532.786-.62 1.369.01Z" fill="#{$color}"/></svg>',
 
-	'angle-up': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M239.2 136.8 37.1 338.5c-23.1 23.5 11.6 60 35.2 36.1L256 191.7l183.9 183c23.2 23.9 58.1-12.5 35.1-36L272.8 136.8c-9.3-9.3-23.6-10.2-33.6 0z" fill="#{$color}"/></svg>',
+	'angle-up': '<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="lexicon-icon-outline" d="M7.48 3.231 1.235 9.608c-.714.743.358 1.897 1.088 1.142L8 4.967l5.683 5.786c.717.756 1.795-.395 1.084-1.138L8.52 3.23c-.288-.294-.73-.322-1.039 0Z" fill="#{$color}"/></svg>',
 
 	'announcement': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zM95.9 240.2c.2-28.7 10.4-34.2 24.2-37.4l71.7-6.8v88.3s-54-3-71.9-5.4c-11.6-1.7-24.2-8.8-24-38.7zM192 400.1c-.7 20.9-31 21.6-32 0v-86l32 2.4v83.6zm192.1-63.6c-.3 14.6-17.3 21.3-27.4 11.1-21.4-21.4-86.1-61.2-132.8-61.2v-92.8c46.1 0 111.2-39.1 132.6-60.5 10.8-10.8 27.4-2.6 27.4 11.1l.2 192.3z"/></svg>',
 
