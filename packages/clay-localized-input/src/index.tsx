@@ -9,10 +9,14 @@ import ClayForm, {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
-import React from 'react';
+import type {Item} from '@clayui/core';
+import {LanguagePicker} from '@clayui/core';
+import React, {useMemo} from 'react';
 
 interface IItem {
+	id?: string;
 	label: string;
+	name?: string;
 	symbol: string;
 }
 
@@ -111,6 +115,36 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 
 		const defaultLanguage = locales[0]!;
 
+		const languagePickerLocales = useMemo(() => {
+			locales.forEach((locale, index) => {
+				if (!locale.id) {
+					locales[index]!['id'] = locale.label;
+				}
+			});
+
+			return locales as Array<Item>;
+		}, []);
+
+		let languagePickerTranslations: any = {};
+
+		languagePickerTranslations = useMemo(() => {
+			Object.keys(translations).forEach((locale) => {
+				languagePickerTranslations[locale] = {
+					total: 1,
+					translated: 1,
+				};
+			});
+
+			return languagePickerTranslations;
+		}, []);
+
+		useMemo(() => {
+			languagePickerTranslations[selectedLocale?.id!] = {
+				total: 1,
+				translated: translations[selectedLocale.label] ? 1 : 0,
+			};
+		}, [translations]);
+
 		return (
 			<>
 				{label && <label htmlFor={id}>{label}</label>}
@@ -144,85 +178,18 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 					</ClayInput.GroupItem>
 
 					<ClayInput.GroupItem shrink>
-						<ClayDropDown
-							active={active}
-							onActiveChange={setActive}
-							trigger={
-								<ClayButton
-									displayType="secondary"
-									monospaced
-									onClick={() => setActive(!active)}
-									title={ariaLabels.openLocalizations}
-								>
-									<span className="inline-item">
-										<ClayIcon
-											spritemap={spritemap}
-											symbol={selectedLocale.symbol}
-										/>
-									</span>
-									<span className="btn-section">
-										{selectedLocale.label}
-									</span>
-								</ClayButton>
+						<LanguagePicker
+							defaultLocaleId={defaultLanguage.id}
+							locales={languagePickerLocales}
+							onSelectedLocaleChange={(locale: any) =>
+								onSelectedLocaleChange(
+									languagePickerLocales.find(
+										({id}) => id === locale
+									)!
+								)
 							}
-						>
-							<ClayDropDown.ItemList>
-								{locales.map((locale) => {
-									const value = translations[locale.label];
-
-									return (
-										<ClayDropDown.Item
-											key={locale.label}
-											onClick={() =>
-												onSelectedLocaleChange(locale)
-											}
-										>
-											<ClayLayout.ContentRow containerElement="span">
-												<ClayLayout.ContentCol
-													containerElement="span"
-													expand
-												>
-													<ClayLayout.ContentSection>
-														<ClayIcon
-															className="inline-item inline-item-before"
-															spritemap={
-																spritemap
-															}
-															symbol={
-																locale.symbol
-															}
-														/>
-
-														{locale.label}
-													</ClayLayout.ContentSection>
-												</ClayLayout.ContentCol>
-												<ClayLayout.ContentCol containerElement="span">
-													<ClayLayout.ContentSection>
-														<ClayLabel
-															displayType={
-																locale.label ===
-																defaultLanguage.label
-																	? 'info'
-																	: value
-																	? 'success'
-																	: 'warning'
-															}
-														>
-															{locale.label ===
-															defaultLanguage.label
-																? ariaLabels.default
-																: value
-																? ariaLabels.translated
-																: ariaLabels.untranslated}
-														</ClayLabel>
-													</ClayLayout.ContentSection>
-												</ClayLayout.ContentCol>
-											</ClayLayout.ContentRow>
-										</ClayDropDown.Item>
-									);
-								})}
-							</ClayDropDown.ItemList>
-						</ClayDropDown>
+							translations={languagePickerTranslations}
+						/>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 
