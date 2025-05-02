@@ -7,6 +7,7 @@ import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
 import {InternalDispatch, sub} from '@clayui/shared';
+import {ClayTooltipProvider} from '@clayui/tooltip';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -128,19 +129,19 @@ const getTranslationLabel = ({
 	defaultLocaleId: React.Key;
 	localeId: React.Key;
 	messages: Messages;
-	translation: Translation;
+	translation?: Translation;
 }) => {
 	let displayType: DisplayType = 'warning';
 	let label: string = messages.untranslated;
 
-	if (translation) {
+	if (localeId === defaultLocaleId) {
+		displayType = 'info';
+		label = messages.default;
+	} else if (translation) {
 		const {total, translated} = translation;
 
-		if (total !== 0) {
-			if (localeId === defaultLocaleId) {
-				displayType = 'info';
-				label = messages.default;
-			} else if (total === translated) {
+		if (translated !== 0) {
+			if (total === translated) {
 				displayType = 'success';
 				label = messages.translated;
 			} else {
@@ -175,35 +176,38 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 			);
 
 		return (
-			<button
-				{...otherProps}
-				aria-label={sub(triggerMessage, [
-					selectedItem?.name || selectedItem?.label,
-				])}
-				className={classNames(
-					classNamesTrigger,
-					'form-control form-control-select form-control-select-secondary',
-					{
-						'form-control-shrink': triggerShrink,
-						'form-control-sm': small,
-						'hidden-label': hideTriggerText,
-					}
-				)}
-				ref={ref}
-			>
-				<span className="inline-item-before">
-					<ClayIcon
-						spritemap={spritemap}
-						symbol={selectedItem.symbol}
-					/>
-				</span>
-
-				{!hideTriggerText ? (
+			<ClayTooltipProvider>
+				<button
+					{...otherProps}
+					aria-label={sub(triggerMessage, [
+						selectedItem?.name || selectedItem?.label,
+					])}
+					className={classNames(
+						classNamesTrigger,
+						'form-control form-control-select form-control-select-secondary',
+						{
+							'form-control-shrink': triggerShrink,
+							'form-control-sm': small,
+							'hidden-label': hideTriggerText,
+						}
+					)}
+					ref={ref}
+					title={hideTriggerText ? selectedItem.label : null}
+				>
 					<span className="inline-item-before">
-						{selectedItem.label}
+						<ClayIcon
+							spritemap={spritemap}
+							symbol={selectedItem.symbol}
+						/>
 					</span>
-				) : null}
-			</button>
+
+					{!hideTriggerText ? (
+						<span className="inline-item-before">
+							{selectedItem.label}
+						</span>
+					) : null}
+				</button>
+			</ClayTooltipProvider>
 		);
 	}
 );
