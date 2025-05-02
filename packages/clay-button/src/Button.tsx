@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import LoadingIndicator from '@clayui/loading-indicator';
 import classNames from 'classnames';
 import React from 'react';
 import warning from 'warning';
@@ -50,6 +51,11 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	 * The values `null` and `unstyled` are for internal use only.
 	 */
 	displayType?: DisplayType;
+
+	/**
+	 * Flag to display a loading indicator.
+	 */
+	loading?: boolean;
 
 	/**
 	 * Flag to indicate if button should be monospaced.
@@ -102,6 +108,7 @@ const Button = forwardRef(
 			className,
 			dark,
 			displayType = 'primary',
+			loading,
 			monospaced,
 			outline,
 			rounded,
@@ -156,6 +163,11 @@ const Button = forwardRef(
 				type={type}
 				{...otherProps}
 			>
+				{loading && (
+					<span className="inline-item inline-item-before">
+						<LoadingIndicator />
+					</span>
+				)}
 				{children}
 			</button>
 		);

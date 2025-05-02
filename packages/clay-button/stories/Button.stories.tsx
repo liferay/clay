@@ -40,6 +40,7 @@ export const Default = (args: any) => (
 		dark={args.dark}
 		disabled={args.disabled}
 		displayType={args.displayType}
+		loading={args.loading}
 		monospaced={args.monospaced}
 		outline={args.outline}
 		rounded={args.rounded}
@@ -58,6 +59,7 @@ Default.args = {
 	dark: false,
 	disabled: false,
 	displayType: 'primary',
+	loading: false,
 	monospaced: false,
 	outline: false,
 	rounded: false,
