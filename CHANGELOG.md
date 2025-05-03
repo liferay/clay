@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.136.0](https://github.com/liferay/clay/compare/v3.135.0...v3.136.0) (2025-05-03)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** LPD-53383 Hue slider thumb should update color when the color state changes ([708257d](https://github.com/liferay/clay/commit/708257d926b201f177d9586dea76e63083a93bd2))
+
+### Features
+
+-   **@clayui/button:** LPD-50102 Adds loading prop to show loading indicator ([3e78307](https://github.com/liferay/clay/commit/3e78307009f69943c59e7ff61c930cec27a0beff))
+-   **@clayui/clay-css:** Add lock and unlock 16px icons ([af8758b](https://github.com/liferay/clay/commit/af8758baa68c65132704ceb93b975cac52ba47a1))
+-   **@clayui/clay-css:** Follow up to change lock icon and new generated files ([69a258f](https://github.com/liferay/clay/commit/69a258f91f01bf056a454f697c6f7ceec007bce3))
+-   **@clayui/clay-css:** generated files ([80462ce](https://github.com/liferay/clay/commit/80462ce47f49cec3efd1c90e5d63f623ec220632))
+-   **@clayui/clay-css:** LPD-53575 Add transform 16px icon and generated files ([864931e](https://github.com/liferay/clay/commit/864931e9d7c4e0a1ef2682dacb574ac36f84dbe3))
+-   **@clayui/clay-css:** LPD-53576 Add thumbs-up 16px icons and generated files ([d1a2d65](https://github.com/liferay/clay/commit/d1a2d65c2ed9ba51ef9b77b2450f1b9cced60b0e))
+-   **@clayui/clay-css:** LPD-53577 Add thumbs-down 16px icons and generated files ([a2fc21c](https://github.com/liferay/clay/commit/a2fc21c3ad615ef2df907be74bc67d2f812c8b2a))
+-   **@clayui/clay-css:** LPD-53579 Add thumbs-up-arrow 16px icons and generated files ([da798fb](https://github.com/liferay/clay/commit/da798fb775878136d7b4e7adeb0c5c6716bcb511))
+-   **@clayui/clay-css:** LPD-53580 Add tablet 16px icons and generated files ([f977a99](https://github.com/liferay/clay/commit/f977a99c01b4827b40d53e432a287f1cf3ed2f6e))
+-   **@clayui/clay-css:** LPD-53582 Add select-all 16px icons and generated files ([8bcaa19](https://github.com/liferay/clay/commit/8bcaa1970ef3b1fc4e28cc39e40325d0e075be4f))
+-   **@clayui/clay-css:** LPD-53583 Add play 16px icon and generated files ([ebdb2c8](https://github.com/liferay/clay/commit/ebdb2c85155db9754d295846815f095f09355aa1))
+-   **@clayui/clay-css:** LPD-53585 Add pencil 16px icon and generated files ([e14cf6e](https://github.com/liferay/clay/commit/e14cf6ec7dd0b1cbe2528e51050b69270b9d0fc5))
+-   **@clayui/clay-css:** LPD-53586 Add page 16px icon and generated files ([09c8f45](https://github.com/liferay/clay/commit/09c8f45d720f0de1b6c4931ca963c4b9613e47c2))
+-   **@clayui/clay-css:** LPD-53587 Add page-template 16px icon and generated files ([e63f6d1](https://github.com/liferay/clay/commit/e63f6d12affee4b8d434e3cc0ec843da6286b6d9))
+-   **@clayui/clay-css:** LPD-53588 Add date 16px icon and generated files ([7e066ac](https://github.com/liferay/clay/commit/7e066ac30e7027b2e8c32b08ecaf6aaf3ac65ffd))
+-   **@clayui/clay-css:** LPD-53589 Add documents 16px icons and generated files ([6d80f3b](https://github.com/liferay/clay/commit/6d80f3bd027f307ed9756c3cecd5fce94dcbff08))
+-   **@clayui/clay-css:** LPD-53590 Add date-time 16px icon and generated files ([4f71778](https://github.com/liferay/clay/commit/4f717788b454c4c5aa6cd7321e1e39456cc02e77))
+-   **@clayui/clay-css:** LPD-53591 Add calendar 16px icon and generated files ([92c0243](https://github.com/liferay/clay/commit/92c0243e8f02fe38332f2c941a03ea025db59f21))
+-   **@clayui/clay-css:** LPD-53591 Add cut 16px icon and generated files ([041fb66](https://github.com/liferay/clay/commit/041fb665071ab887c274734c0c7060f0344ea979))
+-   **@clayui/clay-css:** LPD-53594 Add bars 16px icon and generated files ([8991b11](https://github.com/liferay/clay/commit/8991b115e23d85ab62c0f4dc7330b7301db54033))
+-   **@clayui/clay-css:** LPD-53595 Add audio 16px icon and generated files ([fcd7f90](https://github.com/liferay/clay/commit/fcd7f906a222e4f740217f33d13e1cf12b947ef5))
+-   **@clayui/clay-css:** LPD-53596 Add exclamation full and circle 16px icons and generated files ([e20f69e](https://github.com/liferay/clay/commit/e20f69e5bb92d18dbd79cdb237f9e58cacec39c0))
+-   **@clayui/clay-css:** LPD-53598 Add arrows 16px icons and generated files ([36fe49a](https://github.com/liferay/clay/commit/36fe49a64a085926683be1cc642ef8b6199870cf))
+-   **@clayui/clay-css:** LPD-53629 Add strikethrough 16px icon and generated files ([70ecbca](https://github.com/liferay/clay/commit/70ecbca820e532d7d4c4cf41ac0cf2dd6db8c801))
+-   **@clayui/clay-css:** LPD-53630 Add text 16px icon and generated files ([a35102a](https://github.com/liferay/clay/commit/a35102a8a35f080b687096b4bf3b8e6dfd9591a8))
+-   **@clayui/clay-css:** LPD-53829 Add redo and undo 16px icons and generated files ([a60ae4b](https://github.com/liferay/clay/commit/a60ae4b5899dc376583885dcd59fdc033af7ca86))
+-   **@clayui/clay-css:** LPD-53832 Add compress 16px icon and generated files ([9bde421](https://github.com/liferay/clay/commit/9bde4212304f28afc4b9c6f1c93ee881c95f71ce))
+-   **@clayui/clay-css:** LPD-53833 Add border-width 16px icon and generated files ([b54a974](https://github.com/liferay/clay/commit/b54a974478ae076f3394ea88eec60c7120812fcf))
+-   **@clayui/clay-css:** LPD-53991 Add cards and cards-full 16px icons and generated files ([1b1aba6](https://github.com/liferay/clay/commit/1b1aba682575f5bf8d4eca648f75abe538e6058d))
+-   **@clayui/clay-css:** LPD-53993 Add device-check 16px icon and generated files ([55b2022](https://github.com/liferay/clay/commit/55b20221d9d00e746ffe65d6b990e25a841be013))
+-   **@clayui/clay-css:** LPD-53994 Add magic 16px icon and generated files ([f965f99](https://github.com/liferay/clay/commit/f965f99659c071791a05149c6a451244693a2d68))
+-   **@clayui/clay-css:** LPD-53995 Add reply 16px icon and generated files ([7cb79fe](https://github.com/liferay/clay/commit/7cb79fe00a1e88156b43e89d7f321bde05ccec5e))
+-   **@clayui/clay-css:** LPD-53998 Add trash 16px icon and generated files ([a67ffe1](https://github.com/liferay/clay/commit/a67ffe1d2388e55005bfec6d313440b0a7db129b))
+-   **@clayui/clay-css:** LPD-54000 Add underline 16px icon and generated files ([1c3230c](https://github.com/liferay/clay/commit/1c3230c04260a7cbeecefce86f71f211eb4348c7))
+-   **@clayui/clay-css:** LPD-54026 Add search-plus 16px icon and generated files ([b9ad7c6](https://github.com/liferay/clay/commit/b9ad7c62d658069f4af50225abd0c965cd9c443e))
+-   **@clayui/clay-css:** LPD-54050 Add square and square-hole 16px icons and generated files ([52a70bb](https://github.com/liferay/clay/commit/52a70bb0bb5e0c5c0ae5d837424ba1e032fc098c))
+-   **@clayui/clay-css:** LPD-54055 Add select and select-from-list 16px icons and generated files ([0a15d78](https://github.com/liferay/clay/commit/0a15d7877bf8447d8ff446d08ae1ed052dbbd56a))
+-   **@clayui/clay-css:** LPD-54061 Add sign-in 16px icon and generated files ([88b66e9](https://github.com/liferay/clay/commit/88b66e9fd5e78db1ace0d64591239b4fb68d7566))
+
 # [3.135.0](https://github.com/liferay/clay/compare/v3.134.0...v3.135.0) (2025-04-22)
 
 ### Bug Fixes

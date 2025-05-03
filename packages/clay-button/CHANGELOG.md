@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.136.0](https://github.com/liferay/clay/compare/v3.135.0...v3.136.0) (2025-05-03)
+
+### Features
+
+-   **@clayui/button:** LPD-50102 Adds loading prop to show loading indicator ([3e78307](https://github.com/liferay/clay/commit/3e78307009f69943c59e7ff61c930cec27a0beff))
+
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features

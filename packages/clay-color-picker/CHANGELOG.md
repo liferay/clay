@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.136.0](https://github.com/liferay/clay/compare/v3.135.0...v3.136.0) (2025-05-03)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** LPD-53383 Hue slider thumb should update color when the color state changes ([708257d](https://github.com/liferay/clay/commit/708257d926b201f177d9586dea76e63083a93bd2))
+
 # [3.135.0](https://github.com/liferay/clay/compare/v3.134.0...v3.135.0) (2025-04-22)
 
 **Note:** Version bump only for package @clayui/color-picker
