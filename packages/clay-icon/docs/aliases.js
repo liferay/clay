@@ -1550,6 +1550,10 @@ export const iconsData = [
 	},
 	{
 		aliases: [''],
+		name: 'repeat',
+	},
+	{
+		aliases: [''],
 		name: 'remove-role',
 	},
 	{
