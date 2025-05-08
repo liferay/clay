@@ -1,12 +1,14 @@
-import {CodeBlock, MDXComponents} from 'renoun/components';
+import {CodeBlock, LineNumbers, Tokens, Toolbar} from 'renoun/components';
+import type {MDXComponents as MDXComponentsType} from 'renoun/mdx';
 import Link from 'next/link';
 import {Sandpack} from '@/app/_components/Sandpack.server';
 import styles from './mdx-components.module.css';
 import React from 'react';
 
-export function useMDXComponents(components: MDXComponents): MDXComponents {
+import {Code} from '@/app/_components/CodeBlock';
+
+export function useMDXComponents() {
 	return {
-		...components,
 		h1: ({children, id}) => (
 			<h1 className="text-10" id={id}>
 				{children}
@@ -70,5 +72,5 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 				{children}
 			</blockquote>
 		),
-	};
+	} as MDXComponentsType;
 }

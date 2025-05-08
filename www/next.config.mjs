@@ -1,6 +1,8 @@
 import createMDXPlugin from '@next/mdx';
 import rehypeMdxCodeProps from 'rehype-mdx-code-props';
 import {remarkPlugins, rehypePlugins} from 'renoun/mdx';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import webpack from 'webpack';
 import path from 'path';
 
@@ -15,7 +17,12 @@ buildIcons();
 const withMDX = createMDXPlugin({
 	extension: /\.mdx?$/,
 	options: {
-		remarkPlugins: [...remarkPlugins, unwrapMdxBlockElements],
+		remarkPlugins: [
+			...remarkPlugins,
+			remarkFrontmatter,
+			remarkMdxFrontmatter,
+			unwrapMdxBlockElements,
+		],
 		rehypePlugins: [...rehypePlugins, rehypeMdxCodeProps],
 	},
 });
@@ -26,7 +33,14 @@ const nextConfig = {
 	images: {
 		unoptimized: true,
 	},
-	pageExtensions: ['mdx', 'ts', 'tsx'],
+	transpilePackages: ['renoun'],
+	webpack(config) {
+		config.resolve.extensionAlias = {
+			'.js': ['.ts', '.tsx', '.js'],
+		};
+		return config;
+	},
+	pageExtensions: ['mdx', 'md', 'ts', 'tsx'],
 	async redirects() {
 		const redirects = [
 			{
@@ -249,9 +263,35 @@ const nextConfig = {
 		return [
 			{
 				destination:
-					'/blog/2022-05-02-api-consistency-improvements-for-controlled-and-uncontrolled-components',
+					'/blog/api-consistency-improvements-for-controlled-and-uncontrolled-components',
 				permanent: false,
 				source: '/blog',
+			},
+			{
+				destination:
+					'/blog/api-consistency-improvements-for-controlled-and-uncontrolled-components',
+				permanent: false,
+				source: '/blog/2022-05-02-api-consistency-improvements-for-controlled-and-uncontrolled-components',
+			},
+			{
+				destination: '/blog/slimming-down-clay-css',
+				permanent: false,
+				source: '/blog/2022-02-08-slimming-down-clay-css',
+			},
+			{
+				destination: '/blog/clay-css-cadmin',
+				permanent: false,
+				source: '/blog/2021-09-13-clay-css-cadmin',
+			},
+			{
+				destination: '/blog/clay-css-mixin-updates',
+				permanent: false,
+				source: '/blog/2021-09-09-clay-css-mixin-updates',
+			},
+			{
+				destination: '/blog/introducing-clay-v3',
+				permanent: false,
+				source: '/blog/2019-10-25-introducing-clay-v3',
 			},
 			{
 				destination: '/docs/introduction/how-to-use-clay',

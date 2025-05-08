@@ -1,6 +1,7 @@
 ---
 title: 'Clay v3: Slimming Down Clay CSS'
 author: [patrickyeo]
+date: 2022-02-08
 ---
 
 ## Introduction
@@ -25,7 +26,7 @@ The components section is where all styles are output. Our modifications will ha
 
 A Liferay Theme imports Clay CSS through the file `clay.scss`. It contains `@import 'clay/base';` for Styled Theme and `@import 'clay/atlas';` for Classic Theme. These imports include everything mentioned above. We can break this down into their individual imports to make it easier to see what to remove.
 
-<div class="clay-site-alert alert alert-warning">
+<div className="clay-site-alert alert alert-warning">
 	Modifying the imports in the `clay.scss` file will require manual
 	maintenance of Clay CSS component imports. New components added by Clay CSS
 	will not be available in your theme which is probably what you want if you
@@ -34,12 +35,12 @@ A Liferay Theme imports Clay CSS through the file `clay.scss`. It contains `@imp
 
 The line `@import 'clay/atlas';` imports:
 
-<div class="clay-site-alert alert alert-info">
+<div className="clay-site-alert alert alert-info">
 	The import paths have been slightly modified relative to the location of the{' '}
 	<code>clay.scss</code> file.
 </div>
 
-<div class="h6 font-italic">clay.scss</div>
+<div className="h6 font-italic">clay.scss</div>
 
 ```scss
 @import 'clay/_license-text';
@@ -150,7 +151,7 @@ The line `@import 'clay/atlas';` imports:
 
 We will comment out every component except the components that import CSS variables, CSS style resets, grid, modal, and utilities. We need the modal styles to be able to sign in on a vanilla Liferay instance. You can remove this if it is not relevant to you.
 
-<div class="h6 font-italic">clay.scss</div>
+<div className="h6 font-italic">clay.scss</div>
 
 ```scss
 @import 'clay/_license-text';
@@ -271,7 +272,7 @@ We recommend not removing variable imports. There are component specific variabl
 
 7.3 does not include Clay Admin. We will need to load Clay CSS fully, otherwise most admin related controls will be unstyled. We can create a file `clay_loggedin_user.scss` in your theme's `src/css/` directory, then import atlas.
 
-<div class="h6 font-italic">clay_loggedin_user.scss</div>
+<div className="h6 font-italic">clay_loggedin_user.scss</div>
 
 ```scss
 @import 'clay/atlas';
@@ -279,7 +280,7 @@ We recommend not removing variable imports. There are component specific variabl
 
 We can gate this behind an if statement in the `head` tag of your theme's `portal_normal.ftl`. The code below checks if a user has signed in.
 
-<div class="h6 font-italic">portal_normal.ftl</div>
+<div className="h6 font-italic">portal_normal.ftl</div>
 
 ```html
 <head>
@@ -299,7 +300,7 @@ It is included before `<@liferay_util["include"] page=top_head_include />` so ou
 
 We can refine the amount of CSS further for signed in and admin users. It will not be covered here, but the steps above just need to be repeated.
 
-<div class="h6 font-italic">portal_normal.ftl</div>
+<div className="h6 font-italic">portal_normal.ftl</div>
 
 ```html
 <head>
