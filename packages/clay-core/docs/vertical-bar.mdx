@@ -6,13 +6,13 @@ packageStatus: 'Beta'
 packageUse: "import {VerticalBar} from '@clayui/core';"
 storybookPath: 'design-system-components-verticalbar'
 packageTypes:
-    [
-        'clay-core/src/vertical-bar/VerticalBar.tsx',
-        'clay-core/src/vertical-bar/Bar.tsx',
-        'clay-core/src/vertical-bar/Item.tsx',
-        'clay-core/src/vertical-bar/Panel.tsx',
-        'clay-core/src/vertical-bar/Content.tsx',
-    ]
+  [
+    'clay-core/src/vertical-bar/VerticalBar.tsx',
+    'clay-core/src/vertical-bar/Bar.tsx',
+    'clay-core/src/vertical-bar/Item.tsx',
+    'clay-core/src/vertical-bar/Panel.tsx',
+    'clay-core/src/vertical-bar/Content.tsx',
+  ]
 ---
 
 ## Example
@@ -25,57 +25,49 @@ import React from 'react';
 const spritemap = '/public/icons.svg';
 
 export default function App() {
-	const items = [
-		{
-			icon: 'tag',
-			title: 'Tag',
-		},
-		{
-			divider: true,
-			icon: 'message',
-			title: 'Message',
-		},
-		{
-			icon: 'effects',
-			title: 'Effects',
-		},
-	];
+  const items = [
+    {
+      icon: 'tag',
+      title: 'Tag',
+    },
+    {
+      divider: true,
+      icon: 'message',
+      title: 'Message',
+    },
+    {
+      icon: 'effects',
+      title: 'Effects',
+    },
+  ];
 
-	return (
-		<div style={{height: '400px'}}>
-			<Provider spritemap={spritemap}>
-				<VerticalBar absolute defaultActive="Tag">
-					<VerticalBar.Content items={items}>
-						{(item) => (
-							<VerticalBar.Panel key={item.title}>
-								<div className="sidebar-header">
-									<div className="component-title">
-										{item.title}
-									</div>
-								</div>
-							</VerticalBar.Panel>
-						)}
-					</VerticalBar.Content>
+  return (
+    <div style={{height: '400px'}}>
+      <Provider spritemap={spritemap}>
+        <VerticalBar absolute defaultActive="Tag">
+          <VerticalBar.Content items={items}>
+            {(item) => (
+              <VerticalBar.Panel key={item.title}>
+                <div className="sidebar-header">
+                  <div className="component-title">{item.title}</div>
+                </div>
+              </VerticalBar.Panel>
+            )}
+          </VerticalBar.Content>
 
-					<VerticalBar.Bar displayType="light" items={items}>
-						{(item) => (
-							<VerticalBar.Item
-								divider={item.divider}
-								key={item.title}
-							>
-								<Button
-									aria-label={'Open ' + item.title}
-									displayType={null}
-								>
-									<Icon symbol={item.icon} />
-								</Button>
-							</VerticalBar.Item>
-						)}
-					</VerticalBar.Bar>
-				</VerticalBar>
-			</Provider>
-		</div>
-	);
+          <VerticalBar.Bar displayType="light" items={items}>
+            {(item) => (
+              <VerticalBar.Item divider={item.divider} key={item.title}>
+                <Button aria-label={'Open ' + item.title} displayType={null}>
+                  <Icon symbol={item.icon} />
+                </Button>
+              </VerticalBar.Item>
+            )}
+          </VerticalBar.Bar>
+        </VerticalBar>
+      </Provider>
+    </div>
+  );
 }
 ```
 
@@ -93,34 +85,34 @@ The component controls the OOTB state to toggle the visibility of the panels ie 
 
 ```jsx
 <VerticalBar>
-	<VerticalBar.Content>
-		<VerticalBar.Panel>Tag</VerticalBar.Panel>
-		<VerticalBar.Panel>Message</VerticalBar.Panel>
-	</VerticalBar.Content>
-	<VerticalBar.Bar>
-		<VerticalBar.Item>
-			<Button displayType={null}>
-				<Icon symbol="tag" />
-			</Button>
-		</VerticalBar.Item>
-		<VerticalBar.Item divider>
-			<Button displayType={null}>
-				<Icon symbol="message" />
-			</Button>
-		</VerticalBar.Item>
-		<VerticalBar.Item>
-			<Button
-				displayType={null}
-				onClick={(event) => {
-					event.preventDefault();
+  <VerticalBar.Content>
+    <VerticalBar.Panel>Tag</VerticalBar.Panel>
+    <VerticalBar.Panel>Message</VerticalBar.Panel>
+  </VerticalBar.Content>
+  <VerticalBar.Bar>
+    <VerticalBar.Item>
+      <Button displayType={null}>
+        <Icon symbol="tag" />
+      </Button>
+    </VerticalBar.Item>
+    <VerticalBar.Item divider>
+      <Button displayType={null}>
+        <Icon symbol="message" />
+      </Button>
+    </VerticalBar.Item>
+    <VerticalBar.Item>
+      <Button
+        displayType={null}
+        onClick={(event) => {
+          event.preventDefault();
 
-					// Dispatch some action
-				}}
-			>
-				<Icon symbol="effects" />
-			</Button>
-		</VerticalBar.Item>
-	</VerticalBar.Bar>
+          // Dispatch some action
+        }}
+      >
+        <Icon symbol="effects" />
+      </Button>
+    </VerticalBar.Item>
+  </VerticalBar.Bar>
 </VerticalBar>
 ```
 
@@ -128,16 +120,16 @@ The declaration order is important for the component to know which Panel should 
 
 ```jsx
 <VerticalBar>
-	<VerticalBar.Content>
-		<VerticalBar.Panel key="tag">Tag</VerticalBar.Panel>
-	</VerticalBar.Content>
-	<VerticalBar.Bar>
-		<VerticalBar.Item key="tag">
-			<Button displayType={null}>
-				<Icon symbol="tag" />
-			</Button>
-		</VerticalBar.Item>
-	</VerticalBar.Bar>
+  <VerticalBar.Content>
+    <VerticalBar.Panel key="tag">Tag</VerticalBar.Panel>
+  </VerticalBar.Content>
+  <VerticalBar.Bar>
+    <VerticalBar.Item key="tag">
+      <Button displayType={null}>
+        <Icon symbol="tag" />
+      </Button>
+    </VerticalBar.Item>
+  </VerticalBar.Bar>
 </VerticalBar>
 ```
 
@@ -147,28 +139,28 @@ Declaring components and the list of panels and hard coded items that are not co
 
 ```jsx
 <VerticalBar>
-	<VerticalBar.Content>
-		<VerticalBar.Panel>Tag</VerticalBar.Panel>
-		<VerticalBar.Panel>Message</VerticalBar.Panel>
-		<VerticalBar.Panel>Effects</VerticalBar.Panel>
-	</VerticalBar.Content>
-	<VerticalBar.Bar>
-		<VerticalBar.Item>
-			<Button displayType={null}>
-				<Icon symbol="tag" />
-			</Button>
-		</VerticalBar.Item>
-		<VerticalBar.Item divider>
-			<Button displayType={null}>
-				<Icon symbol="message" />
-			</Button>
-		</VerticalBar.Item>
-		<VerticalBar.Item>
-			<Button displayType={null}>
-				<Icon symbol="effects" />
-			</Button>
-		</VerticalBar.Item>
-	</VerticalBar.Bar>
+  <VerticalBar.Content>
+    <VerticalBar.Panel>Tag</VerticalBar.Panel>
+    <VerticalBar.Panel>Message</VerticalBar.Panel>
+    <VerticalBar.Panel>Effects</VerticalBar.Panel>
+  </VerticalBar.Content>
+  <VerticalBar.Bar>
+    <VerticalBar.Item>
+      <Button displayType={null}>
+        <Icon symbol="tag" />
+      </Button>
+    </VerticalBar.Item>
+    <VerticalBar.Item divider>
+      <Button displayType={null}>
+        <Icon symbol="message" />
+      </Button>
+    </VerticalBar.Item>
+    <VerticalBar.Item>
+      <Button displayType={null}>
+        <Icon symbol="effects" />
+      </Button>
+    </VerticalBar.Item>
+  </VerticalBar.Bar>
 </VerticalBar>
 ```
 
@@ -180,41 +172,39 @@ To make a component dynamic is only possible by using the properties of `items` 
 
 ```jsx
 const items = [
-	{
-		icon: 'tag',
-		title: 'Tag',
-	},
-	{
-		divider: true,
-		icon: 'message',
-		title: 'Message',
-	},
-	{
-		icon: 'effects',
-		title: 'Effects',
-	},
+  {
+    icon: 'tag',
+    title: 'Tag',
+  },
+  {
+    divider: true,
+    icon: 'message',
+    title: 'Message',
+  },
+  {
+    icon: 'effects',
+    title: 'Effects',
+  },
 ];
 
 return (
-	<VerticalBar defaultActive="Tag">
-		<VerticalBar.Content items={items}>
-			{(item) => (
-				<VerticalBar.Panel key={item.title}>
-					{item.title}
-				</VerticalBar.Panel>
-			)}
-		</VerticalBar.Content>
+  <VerticalBar defaultActive="Tag">
+    <VerticalBar.Content items={items}>
+      {(item) => (
+        <VerticalBar.Panel key={item.title}>{item.title}</VerticalBar.Panel>
+      )}
+    </VerticalBar.Content>
 
-		<VerticalBar.Bar items={items}>
-			{(item) => (
-				<VerticalBar.Item divider={item.divider} key={item.title}>
-					<Button displayType={null}>
-						<Icon symbol={item.icon} />
-					</Button>
-				</VerticalBar.Item>
-			)}
-		</VerticalBar.Bar>
-	</VerticalBar>
+    <VerticalBar.Bar items={items}>
+      {(item) => (
+        <VerticalBar.Item divider={item.divider} key={item.title}>
+          <Button displayType={null}>
+            <Icon symbol={item.icon} />
+          </Button>
+        </VerticalBar.Item>
+      )}
+    </VerticalBar.Bar>
+  </VerticalBar>
 );
 ```
 
@@ -224,8 +214,8 @@ Positioning the VerticalBar on the right or left side is possible by setting the
 
 ```jsx
 <VerticalBar position="left">
-	<VerticalBar.Bar></VerticalBar.Bar>
-	<VerticalBar.Content></VerticalBar.Content>
+  <VerticalBar.Bar></VerticalBar.Bar>
+  <VerticalBar.Content></VerticalBar.Content>
 </VerticalBar>
 ```
 
@@ -236,11 +226,11 @@ The property `resize` in `<VerticalBar.Bar />` enables the user to increase or d
 The property `onPanelWidthChange` accepts a callback function that executes when the `panelWidth` is updated. The callback function has the value of the panel width as the parameter. It can be used to make updates to other parts of your application, such as pushing body content over as the user resizes the Vertical Bar Panel.
 
 <div className="clay-site-alert alert alert-warning">
-	When using the property `onPanelWidthChange`, you must also declare
-	`panelWidth`. Setting a fixed value for `panelWidth` will result in
-	`onPanelWidthChange` always returning that value, you must use
-	`React.useState` to get your callback function to return the correct value.
-	Please see the code example below.
+  When using the property `onPanelWidthChange`, you must also declare
+  `panelWidth`. Setting a fixed value for `panelWidth` will result in
+  `onPanelWidthChange` always returning that value, you must use
+  `React.useState` to get your callback function to return the correct value.
+  Please see the code example below.
 </div>
 
 <div className="overflow-hidden"></div>
@@ -254,43 +244,43 @@ const TagPanel = React.lazy(() => import('./TagPanel'));
 const MessagePanel = React.lazy(() => import('./MessagePanel'));
 
 export const LoadLazyPanel = () => {
-	const items = [
-		{
-			icon: 'tag',
-			panel: TagPanel,
-			title: 'Tag',
-		},
-		{
-			divider: true,
-			icon: 'message',
-			panel: MessagePanel,
-			title: 'Message',
-		},
-	];
+  const items = [
+    {
+      icon: 'tag',
+      panel: TagPanel,
+      title: 'Tag',
+    },
+    {
+      divider: true,
+      icon: 'message',
+      panel: MessagePanel,
+      title: 'Message',
+    },
+  ];
 
-	return (
-		<VerticalBar>
-			<VerticalBar.Content displayType="light" items={items}>
-				{({panel: PanelLazy, title}) => (
-					<VerticalBar.Panel key={title}>
-						<Suspense fallback={<div>Loading...</div>}>
-							<PanelLazy />
-						</Suspense>
-					</VerticalBar.Panel>
-				)}
-			</VerticalBar.Content>
+  return (
+    <VerticalBar>
+      <VerticalBar.Content displayType="light" items={items}>
+        {({panel: PanelLazy, title}) => (
+          <VerticalBar.Panel key={title}>
+            <Suspense fallback={<div>Loading...</div>}>
+              <PanelLazy />
+            </Suspense>
+          </VerticalBar.Panel>
+        )}
+      </VerticalBar.Content>
 
-			<VerticalBar.Bar displayType="light" items={items}>
-				{(item) => (
-					<VerticalBar.Item divider={item.divider} key={item.title}>
-						<Button displayType={null}>
-							<Icon symbol={item.icon} />
-						</Button>
-					</VerticalBar.Item>
-				)}
-			</VerticalBar.Bar>
-		</VerticalBar>
-	);
+      <VerticalBar.Bar displayType="light" items={items}>
+        {(item) => (
+          <VerticalBar.Item divider={item.divider} key={item.title}>
+            <Button displayType={null}>
+              <Icon symbol={item.icon} />
+            </Button>
+          </VerticalBar.Item>
+        )}
+      </VerticalBar.Bar>
+    </VerticalBar>
+  );
 };
 ```
 
@@ -298,14 +288,14 @@ You can also use the `<ErrorBoundary />` above the `<Suspense />` to capture err
 
 ```jsx
 <VerticalBar.Content displayType="light" items={items}>
-	{({panel: PanelLazy, title}) => (
-		<VerticalBar.Panel key={title}>
-			<ErrorBoundary>
-				<Suspense fallback={<div>Loading...</div>}>
-					<PanelLazy />
-				</Suspense>
-			</ErrorBoundary>
-		</VerticalBar.Panel>
-	)}
+  {({panel: PanelLazy, title}) => (
+    <VerticalBar.Panel key={title}>
+      <ErrorBoundary>
+        <Suspense fallback={<div>Loading...</div>}>
+          <PanelLazy />
+        </Suspense>
+      </ErrorBoundary>
+    </VerticalBar.Panel>
+  )}
 </VerticalBar.Content>
 ```

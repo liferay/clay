@@ -15,25 +15,25 @@ import ColorPicker from '@clayui/color-picker';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [customColors, setCustoms] = useState(['008000', '00FFFF', '0000FF']);
-	const [color, setColor] = useState(customColors[0]);
+  const [customColors, setCustoms] = useState(['008000', '00FFFF', '0000FF']);
+  const [color, setColor] = useState(customColors[0]);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ColorPicker
-					colors={customColors}
-					label="Custom Colors"
-					name="colorPicker2"
-					onChange={setColor}
-					onColorsChange={setCustoms}
-					showHex={true}
-					title="Custom Colors"
-					value={color}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ColorPicker
+          colors={customColors}
+          label="Custom Colors"
+          name="colorPicker2"
+          onChange={setColor}
+          onColorsChange={setCustoms}
+          showHex={true}
+          title="Custom Colors"
+          value={color}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -41,9 +41,9 @@ export default function App() {
 
 Color Picker is delivered in 4 different ways: default colors, custom colors, native and small.
 
--   **Default colors**: a predefined list of colors to the dropdown that is not allowed to change or manipulate.
--   **Custom colors**: using the [`colors`](#api-colors) API in conjunction with [`onColorsChange`](#api-onColorsChange) enables the user to modify colors and add new ones.
--   **Native**: use the [`useNative`](#api-useNative) API when the color picker is being used in a native environment, it changes to the browser default color picker.
--   **Small**: use the [`small`](#api-small) API to size the color picker input to match other small inputs.
+- **Default colors**: a predefined list of colors to the dropdown that is not allowed to change or manipulate.
+- **Custom colors**: using the [`colors`](#api-colors) API in conjunction with [`onColorsChange`](#api-onColorsChange) enables the user to modify colors and add new ones.
+- **Native**: use the [`useNative`](#api-useNative) API when the color picker is being used in a native environment, it changes to the browser default color picker.
+- **Small**: use the [`small`](#api-small) API to size the color picker input to match other small inputs.
 
 We recommend that you review the [use cases in the Storybook](https://storybook.clayui.com/?path=/story/design-system-components-colorpicker--default).

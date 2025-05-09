@@ -6,11 +6,11 @@ packageNpm: '@clayui/nav'
 storybookPath: 'design-system-components-verticalnav--default'
 packageUse: "import {ClayVerticalNav} from '@clayui/nav';"
 packageTypes:
-    [
-        'clay-nav/src/Vertical.tsx',
-        'clay-core/src/vertical-nav/Item.tsx',
-        'clay-core/src/vertical-nav/Trigger.tsx',
-    ]
+  [
+    'clay-nav/src/Vertical.tsx',
+    'clay-core/src/vertical-nav/Item.tsx',
+    'clay-core/src/vertical-nav/Trigger.tsx',
+  ]
 ---
 
 ## Example
@@ -21,72 +21,72 @@ import {ClayVerticalNav} from '@clayui/nav';
 import React, {useState} from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayVerticalNav
-					aria-label="vertical navbar"
-					active="6"
-					defaultExpandedKeys={new Set(['5'])}
-					items={[
-						{
-							id: '1',
-							items: [
-								{
-									id: '2',
-									href: '#nested1',
-									label: 'Nested1',
-								},
-							],
-							label: 'Home',
-						},
-						{
-							id: '3',
-							href: '#2',
-							label: 'About',
-						},
-						{
-							id: '4',
-							href: '#3',
-							label: 'Contact',
-						},
-						{
-							id: '5',
-							items: [
-								{
-									id: '6',
-									href: '#5',
-									label: 'Five',
-								},
-								{
-									id: '7',
-									href: '#6',
-									label: 'Six',
-								},
-							],
-							label: 'Projects',
-						},
-						{
-							id: '8',
-							href: '#7',
-							label: 'Seven',
-						},
-					]}
-					large={false}
-				>
-					{(item) => (
-						<ClayVerticalNav.Item
-							href={item.href}
-							items={item.items}
-							key={item.id}
-						>
-							{item.label}
-						</ClayVerticalNav.Item>
-					)}
-				</ClayVerticalNav>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayVerticalNav
+          aria-label="vertical navbar"
+          active="6"
+          defaultExpandedKeys={new Set(['5'])}
+          items={[
+            {
+              id: '1',
+              items: [
+                {
+                  id: '2',
+                  href: '#nested1',
+                  label: 'Nested1',
+                },
+              ],
+              label: 'Home',
+            },
+            {
+              id: '3',
+              href: '#2',
+              label: 'About',
+            },
+            {
+              id: '4',
+              href: '#3',
+              label: 'Contact',
+            },
+            {
+              id: '5',
+              items: [
+                {
+                  id: '6',
+                  href: '#5',
+                  label: 'Five',
+                },
+                {
+                  id: '7',
+                  href: '#6',
+                  label: 'Six',
+                },
+              ],
+              label: 'Projects',
+            },
+            {
+              id: '8',
+              href: '#7',
+              label: 'Seven',
+            },
+          ]}
+          large={false}
+        >
+          {(item) => (
+            <ClayVerticalNav.Item
+              href={item.href}
+              items={item.items}
+              key={item.id}
+            >
+              {item.label}
+            </ClayVerticalNav.Item>
+          )}
+        </ClayVerticalNav>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -103,77 +103,77 @@ import React, {useState} from 'react';
 const noIcons = ['1', '5'];
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayVerticalNav
-					aria-label="vertical navbar"
-					active="6"
-					defaultExpandedKeys={new Set(['5'])}
-					items={[
-						{
-							id: '1',
-							items: [
-								{
-									id: '2',
-									href: '#nested1',
-									label: 'Nested1',
-								},
-							],
-							label: 'Home',
-						},
-						{
-							id: '3',
-							href: '#2',
-							label: 'About',
-						},
-						{
-							id: '4',
-							href: '#3',
-							label: 'Contact',
-						},
-						{
-							id: '5',
-							items: [
-								{
-									id: '6',
-									href: '#5',
-									label: 'Five',
-								},
-								{
-									id: '7',
-									href: '#6',
-									label: 'Six',
-								},
-							],
-							label: 'Projects',
-						},
-						{
-							id: '8',
-							href: '#7',
-							label: 'Seven',
-						},
-					]}
-					large={false}
-				>
-					{(item) => (
-						<ClayVerticalNav.Item
-							href={item.href}
-							items={item.items}
-							key={item.id}
-						>
-							{item.label}
-							{!noIcons.includes(item.id) && (
-								<span class="inline-item inline-item-after">
-									<Icon symbol="lock" />
-								</span>
-							)}
-						</ClayVerticalNav.Item>
-					)}
-				</ClayVerticalNav>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayVerticalNav
+          aria-label="vertical navbar"
+          active="6"
+          defaultExpandedKeys={new Set(['5'])}
+          items={[
+            {
+              id: '1',
+              items: [
+                {
+                  id: '2',
+                  href: '#nested1',
+                  label: 'Nested1',
+                },
+              ],
+              label: 'Home',
+            },
+            {
+              id: '3',
+              href: '#2',
+              label: 'About',
+            },
+            {
+              id: '4',
+              href: '#3',
+              label: 'Contact',
+            },
+            {
+              id: '5',
+              items: [
+                {
+                  id: '6',
+                  href: '#5',
+                  label: 'Five',
+                },
+                {
+                  id: '7',
+                  href: '#6',
+                  label: 'Six',
+                },
+              ],
+              label: 'Projects',
+            },
+            {
+              id: '8',
+              href: '#7',
+              label: 'Seven',
+            },
+          ]}
+          large={false}
+        >
+          {(item) => (
+            <ClayVerticalNav.Item
+              href={item.href}
+              items={item.items}
+              key={item.id}
+            >
+              {item.label}
+              {!noIcons.includes(item.id) && (
+                <span class="inline-item inline-item-after">
+                  <Icon symbol="lock" />
+                </span>
+              )}
+            </ClayVerticalNav.Item>
+          )}
+        </ClayVerticalNav>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -183,17 +183,17 @@ In its mobile version, Vertical Navigation adds a trigger that is responsible fo
 
 ```js
 <ClayVerticalNav
-	aria-label="vertical navbar"
-	trigger={(props) => (
-		<ClayVerticalNav.Trigger {...props}>
-			<ClayIcon
-				focusable="false"
-				role="presentation"
-				spritemap={spritemap}
-				symbol="ellipsis-v"
-			/>
-		</ClayVerticalNav.Trigger>
-	)}
+  aria-label="vertical navbar"
+  trigger={(props) => (
+    <ClayVerticalNav.Trigger {...props}>
+      <ClayIcon
+        focusable="false"
+        role="presentation"
+        spritemap={spritemap}
+        symbol="ellipsis-v"
+      />
+    </ClayVerticalNav.Trigger>
+  )}
 />
 ```
 
@@ -201,16 +201,16 @@ Your custom trigger receives the `children` property with the default content, f
 
 ```js
 <ClayVerticalNav
-	aria-label="vertical navbar"
-	trigger={({onClick}) => (
-		<button className="btn btn-secondary" onClick={onClick}>
-			<ClayIcon
-				focusable="false"
-				role="presentation"
-				spritemap={spritemap}
-				symbol="ellipsis-v"
-			/>
-		</button>
-	)}
+  aria-label="vertical navbar"
+  trigger={({onClick}) => (
+    <button className="btn btn-secondary" onClick={onClick}>
+      <ClayIcon
+        focusable="false"
+        role="presentation"
+        spritemap={spritemap}
+        symbol="ellipsis-v"
+      />
+    </button>
+  )}
 />
 ```

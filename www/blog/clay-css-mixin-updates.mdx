@@ -32,26 +32,26 @@ have been combined into a single map:
 ```scss
 $alert-close: () !default;
 $alert-close: map-deep-merge(
-	(
-		color: inherit,
-		font-size: $alert-close-font-size,
-		height: $alert-close-height,
-		line-height: $alert-close-line-height,
-		margin-left: $alert-close-margin-left,
-		opacity: $alert-close-opacity,
-		padding-bottom: $alert-close-padding-bottom,
-		padding-left: $alert-close-padding-left,
-		padding-right: $alert-close-padding-right,
-		padding-top: $alert-close-padding-top,
-		position: absolute,
-		right: $alert-close-position-right,
-		top: $alert-close-position-top,
-		width: $alert-close-width,
-		hover: (
-			color: inherit,
-		),
-	),
-	$alert-close
+  (
+    color: inherit,
+    font-size: $alert-close-font-size,
+    height: $alert-close-height,
+    line-height: $alert-close-line-height,
+    margin-left: $alert-close-margin-left,
+    opacity: $alert-close-opacity,
+    padding-bottom: $alert-close-padding-bottom,
+    padding-left: $alert-close-padding-left,
+    padding-right: $alert-close-padding-right,
+    padding-top: $alert-close-padding-top,
+    position: absolute,
+    right: $alert-close-position-right,
+    top: $alert-close-position-top,
+    width: $alert-close-width,
+    hover: (
+      color: inherit,
+    ),
+  ),
+  $alert-close
 );
 ```
 
@@ -68,47 +68,47 @@ Key names like `hover-bg`, `focus-border-color`, `active-focus-box-shadow`, and 
 ```scss
 $btn-primary: () !default;
 $btn-primary: map-deep-merge(
-	(
-		// bg,
-		background-color: value,
-		// bg-image,
-		background-image: value,
-		// padding-y,
-		margin-bottom: value,
-		// padding-x,
-		margin-left: value,
-		// padding-x,
-		margin-right: value,
-		// padding-y,
-		margin-top: value,
-		// padding-y,
-		padding-bottom: value,
-		// padding-x,
-		padding-left: value,
-		// padding-x,
-		padding-right: value,
-		// padding-y,
-		padding-top: value,
-		hover: (
-			// hover-bg,
-			background-color: value
-		),
-		focus: (
-			// focus-border-color,
-			border-color: value
-		),
-		active: (
-			focus: (
-				// active-focus-box-shadow,
-				box-shadow: value,
-			),
-		),
-		disabled: (
-			// disabled-opacity,
-			opacity: value
-		)
-	),
-	$btn-primary
+  (
+    // bg,
+    background-color: value,
+    // bg-image,
+    background-image: value,
+    // padding-y,
+    margin-bottom: value,
+    // padding-x,
+    margin-left: value,
+    // padding-x,
+    margin-right: value,
+    // padding-y,
+    margin-top: value,
+    // padding-y,
+    padding-bottom: value,
+    // padding-x,
+    padding-left: value,
+    // padding-x,
+    padding-right: value,
+    // padding-y,
+    padding-top: value,
+    hover: (
+      // hover-bg,
+      background-color: value
+    ),
+    focus: (
+      // focus-border-color,
+      border-color: value
+    ),
+    active: (
+      focus: (
+        // active-focus-box-shadow,
+        box-shadow: value,
+      ),
+    ),
+    disabled: (
+      // disabled-opacity,
+      opacity: value
+    )
+  ),
+  $btn-primary
 );
 ```
 
@@ -118,25 +118,25 @@ The old key names are still valid and will win over new key names. One quirk tha
 // Your extending theme using new keys
 
 $btn-primary: (
-	background-color: #3d536b,
-	hover: (
-		background-color: #34465b,
-	),
-	focus: (
-		background-color: #2b3a4b,
-	),
+  background-color: #3d536b,
+  hover: (
+    background-color: #34465b,
+  ),
+  focus: (
+    background-color: #2b3a4b,
+  ),
 );
 
 // Variable Theme still using old keys
 
 $btn-primary: () !default;
 $btn-primary: map-deep-merge(
-	(
-		bg: #5924eb,
-		hover-bg: #4429b3,
-		focus-bg: #3c249e,
-	),
-	$btn-primary
+  (
+    bg: #5924eb,
+    hover-bg: #4429b3,
+    focus-bg: #3c249e,
+  ),
+  $btn-primary
 );
 
 // $btn-primary will contain the old values:
@@ -158,22 +158,22 @@ Properties can be unset in maps by setting the value to `$clay-unset` or `$c-uns
 ```scss
 $btn-primary: () !default;
 $btn-primary: map-deep-merge(
-	(
-		background-color: $c-unset,
-		border-color: $c-unset,
-		color: $c-unset,
-	),
-	$btn-primary
+  (
+    background-color: $c-unset,
+    border-color: $c-unset,
+    color: $c-unset,
+  ),
+  $btn-primary
 );
 
 $btn-primary: () !default;
 $btn-primary: map-deep-merge(
-	(
-		background-color: aliceblue,
-		border-color: aliceblue,
-		color: black,
-	),
-	$btn-primary
+  (
+    background-color: aliceblue,
+    border-color: aliceblue,
+    color: black,
+  ),
+  $btn-primary
 );
 
 // $btn-primary contains nothing:

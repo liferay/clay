@@ -23,26 +23,26 @@ import Label from '@clayui/label';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<>
-					<Label displayType="success">Label Success</Label>
-					<Label displayType="info">Label Info</Label>
-					<Label displayType="secondary">Label Secondary</Label>
-					<Label displayType="warning">Label Warning</Label>
-					<Label displayType="danger">Label Danger</Label>
-				</>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <>
+          <Label displayType="success">Label Success</Label>
+          <Label displayType="info">Label Info</Label>
+          <Label displayType="secondary">Label Secondary</Label>
+          <Label displayType="warning">Label Warning</Label>
+          <Label displayType="danger">Label Danger</Label>
+        </>
+      </div>
+    </Provider>
+  );
 }
 ```
 
 ## Closing Actions
 
 <div class="clay-site-alert alert alert-warning">
-	This property is mandatory if you want make your label dismissible.
+  This property is mandatory if you want make your label dismissible.
 </div>
 
 Use [`closeButtonProps`](#api-closeButtonProps) property for applying custom properties to the button that wraps the closing icon.
@@ -55,22 +55,22 @@ import Label from '@clayui/label';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Label
-					closeButtonProps={{
-						'aria-label': 'Close',
-						title: 'Close',
-						id: 'closeId',
-					}}
-					displayType="success"
-				>
-					Label Text
-				</Label>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Label
+          closeButtonProps={{
+            'aria-label': 'Close',
+            title: 'Close',
+            id: 'closeId',
+          }}
+          displayType="success"
+        >
+          Label Text
+        </Label>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -82,25 +82,25 @@ import Label from '@clayui/label';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(true);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				{visible && (
-					<Label
-						closeButtonProps={{
-							'aria-label': 'Close',
-							title: 'Close',
-							onClick: () => setVisible((val) => !val),
-						}}
-						displayType="success"
-					>
-						Label Text
-					</Label>
-				)}
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        {visible && (
+          <Label
+            closeButtonProps={{
+              'aria-label': 'Close',
+              title: 'Close',
+              onClick: () => setVisible((val) => !val),
+            }}
+            displayType="success"
+          >
+            Label Text
+          </Label>
+        )}
+      </div>
+    </Provider>
+  );
 }
 ```

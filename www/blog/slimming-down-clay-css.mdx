@@ -27,17 +27,17 @@ The components section is where all styles are output. Our modifications will ha
 A Liferay Theme imports Clay CSS through the file `clay.scss`. It contains `@import 'clay/base';` for Styled Theme and `@import 'clay/atlas';` for Classic Theme. These imports include everything mentioned above. We can break this down into their individual imports to make it easier to see what to remove.
 
 <div className="clay-site-alert alert alert-warning">
-	Modifying the imports in the `clay.scss` file will require manual
-	maintenance of Clay CSS component imports. New components added by Clay CSS
-	will not be available in your theme which is probably what you want if you
-	are reading this post.
+  Modifying the imports in the `clay.scss` file will require manual maintenance
+  of Clay CSS component imports. New components added by Clay CSS will not be
+  available in your theme which is probably what you want if you are reading
+  this post.
 </div>
 
 The line `@import 'clay/atlas';` imports:
 
 <div className="clay-site-alert alert alert-info">
-	The import paths have been slightly modified relative to the location of the{' '}
-	<code>clay.scss</code> file.
+  The import paths have been slightly modified relative to the location of the{' '}
+  <code>clay.scss</code> file.
 </div>
 
 <div className="h6 font-italic">clay.scss</div>
@@ -56,7 +56,7 @@ The line `@import 'clay/atlas';` imports:
 @import 'clay/_mixins';
 
 @if ($font-import-url) {
-	@import url($font-import-url);
+  @import url($font-import-url);
 }
 
 @import 'clay/components/_root';
@@ -167,7 +167,7 @@ We will comment out every component except the components that import CSS variab
 @import 'clay/_mixins';
 
 @if ($font-import-url) {
-	@import url($font-import-url);
+  @import url($font-import-url);
 }
 
 @import 'clay/components/_root';

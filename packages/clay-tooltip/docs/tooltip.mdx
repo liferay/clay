@@ -5,7 +5,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/popovers-tool
 packageNpm: '@clayui/tooltip'
 packageUse: "import Tooltip from '@clayui/tooltip';"
 packageTypes:
-    ['clay-tooltip/src/Tooltip.tsx', 'clay-tooltip/src/TooltipProvider.tsx']
+  ['clay-tooltip/src/Tooltip.tsx', 'clay-tooltip/src/TooltipProvider.tsx']
 ---
 
 Simplest way of using Tooltip is by leveraging it's `show` prop and specifying `alignPosition` to determine it's position relative to the element it's aligned to.
@@ -18,15 +18,15 @@ import Tooltip from '@clayui/tooltip';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4" style={{height: 50}}>
-				<Tooltip alignPosition="bottom" show>
-					Tooltip content
-				</Tooltip>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4" style={{height: 50}}>
+        <Tooltip alignPosition="bottom" show>
+          Tooltip content
+        </Tooltip>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -36,10 +36,10 @@ By using the `<TooltipProvider>` it allows you to add the desired tooltip conten
 
 Here's a list of html attributes that you can provide to children elements of the TooltipProvider:
 
--   `title` is for the tooltip content.
--   `data-tooltip-align` is for alignment direction.
--   `data-tooltip-delay` is for the delay(ms) before showing the tooltip.
--   `data-tooltip-floating` defines if the tooltip should be floating positioned where the mouse is over the element.
+- `title` is for the tooltip content.
+- `data-tooltip-align` is for alignment direction.
+- `data-tooltip-delay` is for the delay(ms) before showing the tooltip.
+- `data-tooltip-floating` defines if the tooltip should be floating positioned where the mouse is over the element.
 
 ```jsx preview
 import {Provider} from '@clayui/core';
@@ -47,22 +47,19 @@ import {ClayTooltipProvider} from '@clayui/tooltip';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayTooltipProvider>
-					<div>
-						<button
-							data-tooltip-align="top"
-							title="Tooltip Content"
-						>
-							{'Hover'}
-						</button>
-					</div>
-				</ClayTooltipProvider>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayTooltipProvider>
+          <div>
+            <button data-tooltip-align="top" title="Tooltip Content">
+              {'Hover'}
+            </button>
+          </div>
+        </ClayTooltipProvider>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -76,21 +73,21 @@ import {ClayTooltipProvider} from '@clayui/tooltip';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayTooltipProvider
-					contentRenderer={(props) =>
-						props.title.toLowerCase().split(' ').join('-')
-					}
-				>
-					<div>
-						<button title="Hello World">{'kebabCase'}</button>
-					</div>
-				</ClayTooltipProvider>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayTooltipProvider
+          contentRenderer={(props) =>
+            props.title.toLowerCase().split(' ').join('-')
+          }
+        >
+          <div>
+            <button title="Hello World">{'kebabCase'}</button>
+          </div>
+        </ClayTooltipProvider>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -107,11 +104,11 @@ Elements or components that use the browser's native `disabled` property, have t
 ```html
 // use
 <button
-	className="btn btn-primary disabled"
-	aria-disabled="true"
-	title="Open Menu"
+  className="btn btn-primary disabled"
+  aria-disabled="true"
+  title="Open Menu"
 >
-	Click
+  Click
 </button>
 <button aria-disabled="true" className="disabled" title="Top">Top</button>
 ```

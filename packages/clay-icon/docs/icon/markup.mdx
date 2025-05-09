@@ -12,11 +12,11 @@ We use SVG elements that link to an SVG sprite, like so:
 
 ```html
 <svg
-	className="lexicon-icon lexicon-icon-add-column"
-	focusable="false"
-	role="presentation"
+  className="lexicon-icon lexicon-icon-add-column"
+  focusable="false"
+  role="presentation"
 >
-	<use xlink:href="path/to/icons.svg#add-column" />
+  <use xlink:href="path/to/icons.svg#add-column" />
 </svg>
 ```
 
@@ -50,8 +50,8 @@ We have created a Sass function to turn Lexicon SVG icon's into data uri schemes
 You can turn your custom SVG into a data uri using the Sass function `clay-svg-url($svg)`, where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
 
 <div className="alert alert-info">
-	When using `clay-svg-url()`, wrap your inline SVG code with single quotes if
-	your SVG's attributes are delimited with double quotes.
+  When using `clay-svg-url()`, wrap your inline SVG code with single quotes if
+  your SVG's attributes are delimited with double quotes.
 </div>
 
 <span className="clay-site-linux-tux clay-site-svg-bg">Linux Tux</span>
@@ -65,13 +65,13 @@ higher level of fidelity and clarity in the icons. Also, SVG supports
 multi-color icons, as shown below:
 
 <div className="lexicon-icon-examples">
-	<svg className="lexicon-icon lexicon-icon-asterisk">
-		<use href="/images/icons/icons.svg#asterisk" />
-	</svg>
-	<svg className="lexicon-icon lexicon-icon-logout">
-		<use href="/images/icons/icons.svg#logout" />
-	</svg>
-	<svg className="lexicon-icon lexicon-icon-exclamation-full">
-		<use href="/images/icons/icons.svg#exclamation-full" />
-	</svg>
+  <svg className="lexicon-icon lexicon-icon-asterisk">
+    <use href="/images/icons/icons.svg#asterisk" />
+  </svg>
+  <svg className="lexicon-icon lexicon-icon-logout">
+    <use href="/images/icons/icons.svg#logout" />
+  </svg>
+  <svg className="lexicon-icon lexicon-icon-exclamation-full">
+    <use href="/images/icons/icons.svg#exclamation-full" />
+  </svg>
 </div>

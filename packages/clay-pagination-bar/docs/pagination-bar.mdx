@@ -5,10 +5,10 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/pagination/'
 packageNpm: '@clayui/pagination-bar'
 packageUse: "import PaginationBar, {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';"
 packageTypes:
-    [
-        'clay-pagination-bar/src/PaginationBar.tsx',
-        'clay-pagination-bar/src/PaginationBarWithBasicItems.tsx',
-    ]
+  [
+    'clay-pagination-bar/src/PaginationBar.tsx',
+    'clay-pagination-bar/src/PaginationBarWithBasicItems.tsx',
+  ]
 ---
 
 ## PaginationBar Composition
@@ -22,39 +22,39 @@ import Icon from '@clayui/icon';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<PaginationBar>
-					<PaginationBar.DropDown
-						items={[
-							{
-								label: '10',
-								onClick: () => {},
-							},
-						]}
-						trigger={
-							<Button displayType="unstyled">
-								{'10 items per page'}
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <PaginationBar>
+          <PaginationBar.DropDown
+            items={[
+              {
+                label: '10',
+                onClick: () => {},
+              },
+            ]}
+            trigger={
+              <Button displayType="unstyled">
+                {'10 items per page'}
 
-								<Icon symbol="caret-double-l" />
-							</Button>
-						}
-					/>
+                <Icon symbol="caret-double-l" />
+              </Button>
+            }
+          />
 
-					<PaginationBar.Results>
-						Showing a handful of items...
-					</PaginationBar.Results>
+          <PaginationBar.Results>
+            Showing a handful of items...
+          </PaginationBar.Results>
 
-					<ClayPaginationWithBasicItems
-						defaultActive={1}
-						ellipsisProps={{'aria-label': 'More', title: 'More'}}
-						totalPages={10}
-					/>
-				</PaginationBar>
-			</div>
-		</Provider>
-	);
+          <ClayPaginationWithBasicItems
+            defaultActive={1}
+            ellipsisProps={{'aria-label': 'More', title: 'More'}}
+            totalPages={10}
+          />
+        </PaginationBar>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -66,40 +66,40 @@ import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [delta, setDelta] = useState(4);
+  const [delta, setDelta] = useState(4);
 
-	const deltas = [
-		{
-			href: '#1',
-			label: 1,
-		},
-		{
-			label: 2,
-		},
-		{
-			href: '#3',
-			label: 3,
-		},
-		{
-			label: 4,
-		},
-	];
+  const deltas = [
+    {
+      href: '#1',
+      label: 1,
+    },
+    {
+      label: 2,
+    },
+    {
+      href: '#3',
+      label: 3,
+    },
+    {
+      label: 4,
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayPaginationBarWithBasicItems
-					defaultActive={1}
-					activeDelta={delta}
-					deltas={deltas}
-					ellipsisBuffer={3}
-					ellipsisProps={{'aria-label': 'More', title: 'More'}}
-					onDeltaChange={setDelta}
-					totalItems={21}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayPaginationBarWithBasicItems
+          defaultActive={1}
+          activeDelta={delta}
+          deltas={deltas}
+          ellipsisBuffer={3}
+          ellipsisProps={{'aria-label': 'More', title: 'More'}}
+          onDeltaChange={setDelta}
+          totalItems={21}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -111,22 +111,22 @@ import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [delta, setDelta] = useState(5);
+  const [delta, setDelta] = useState(5);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayPaginationBarWithBasicItems
-					activeDelta={delta}
-					defaultActive={1}
-					ellipsisBuffer={3}
-					ellipsisProps={{'aria-label': 'More', title: 'More'}}
-					onDeltaChange={setDelta}
-					showDeltasDropDown={false}
-					totalItems={21}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayPaginationBarWithBasicItems
+          activeDelta={delta}
+          defaultActive={1}
+          ellipsisBuffer={3}
+          ellipsisProps={{'aria-label': 'More', title: 'More'}}
+          onDeltaChange={setDelta}
+          showDeltasDropDown={false}
+          totalItems={21}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

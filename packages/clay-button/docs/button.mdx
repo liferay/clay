@@ -5,11 +5,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
 packageNpm: '@clayui/button'
 packageUse: "import Button from '@clayui/button';"
 packageTypes:
-    [
-        'clay-button/src/Button.tsx',
-        'clay-button/src/ButtonWithIcon.tsx',
-        'clay-button/src/Group.tsx',
-    ]
+  [
+    'clay-button/src/Button.tsx',
+    'clay-button/src/ButtonWithIcon.tsx',
+    'clay-button/src/Group.tsx',
+  ]
 ---
 
 ## Display Types
@@ -24,18 +24,18 @@ import Button from '@clayui/button';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Button.Group spaced>
-					<Button displayType="primary">Button Primary</Button>
-					<Button displayType="secondary">Button Secondary</Button>
-					<Button displayType="link">Button Link</Button>
-					<Button borderless>Button Borderless</Button>
-				</Button.Group>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Button.Group spaced>
+          <Button displayType="primary">Button Primary</Button>
+          <Button displayType="secondary">Button Secondary</Button>
+          <Button displayType="link">Button Link</Button>
+          <Button borderless>Button Borderless</Button>
+        </Button.Group>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -51,19 +51,19 @@ import Button from '@clayui/button';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Button.Group>
-					<Button>This</Button>
-					<Button displayType="secondary">is</Button>
-					<Button>a</Button>
-					<Button displayType="secondary">button</Button>
-					<Button>group.</Button>
-				</Button.Group>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Button.Group>
+          <Button>This</Button>
+          <Button displayType="secondary">is</Button>
+          <Button>a</Button>
+          <Button displayType="secondary">button</Button>
+          <Button>group.</Button>
+        </Button.Group>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -78,22 +78,18 @@ import Icon from '@clayui/icon';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayButtonWithIcon
-					aria-label="Close"
-					symbol="times"
-					title="Close"
-				/>
-				<Button>
-					<span className="inline-item inline-item-before">
-						<Icon symbol="times" />
-					</span>
-					Close w/ text
-				</Button>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayButtonWithIcon aria-label="Close" symbol="times" title="Close" />
+        <Button>
+          <span className="inline-item inline-item-before">
+            <Icon symbol="times" />
+          </span>
+          Close w/ text
+        </Button>
+      </div>
+    </Provider>
+  );
 }
 ```

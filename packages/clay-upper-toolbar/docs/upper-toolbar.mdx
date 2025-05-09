@@ -10,9 +10,9 @@ packageTypes: ['clay-upper-toolbar/src/index.tsx']
 ---
 
 <div className="clay-site-alert alert alert-warning">
-	<strong className="lead">Warning</strong>
-	This component has been discontinued in favor of ClayToolbar, you can get the
-	[same result](https://storybook.clayui.com/?path=/story/design-system-components-toolbar--upper-toolbar).
+  <strong className="lead">Warning</strong>
+  This component has been discontinued in favor of ClayToolbar, you can get the [same
+  result](https://storybook.clayui.com/?path=/story/design-system-components-toolbar--upper-toolbar).
 </div>
 
 ## Introduction
@@ -30,73 +30,70 @@ import Icon from '@clayui/icon';
 import React, {useState} from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<UpperToolbar>
-					<UpperToolbar.Item className="text-left" expand>
-						<label className="component-title">{'Foo Bar'}</label>
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <UpperToolbar>
+          <UpperToolbar.Item className="text-left" expand>
+            <label className="component-title">{'Foo Bar'}</label>
 
-						<Icon symbol="lock" />
-					</UpperToolbar.Item>
+            <Icon symbol="lock" />
+          </UpperToolbar.Item>
 
-					<UpperToolbar.Input placeholder="Search..." />
+          <UpperToolbar.Input placeholder="Search..." />
 
-					<UpperToolbar.Item>
-						<Button.Group>
-							<ClayButtonWithIcon
-								displayType="secondary"
-								onClick={() => {}}
-								small
-								symbol="angle-left"
-							/>
+          <UpperToolbar.Item>
+            <Button.Group>
+              <ClayButtonWithIcon
+                displayType="secondary"
+                onClick={() => {}}
+                small
+                symbol="angle-left"
+              />
 
-							<ClayButtonWithIcon
-								displayType="secondary"
-								onClick={() => {}}
-								small
-								symbol="angle-right"
-							/>
-						</Button.Group>
-					</UpperToolbar.Item>
+              <ClayButtonWithIcon
+                displayType="secondary"
+                onClick={() => {}}
+                small
+                symbol="angle-right"
+              />
+            </Button.Group>
+          </UpperToolbar.Item>
 
-					<UpperToolbar.Item>
-						<Button displayType="secondary" onClick={() => {}}>
-							{'Delete'}
-						</Button>
+          <UpperToolbar.Item>
+            <Button displayType="secondary" onClick={() => {}}>
+              {'Delete'}
+            </Button>
 
-						<Button
-							className="inline-item-after"
-							onClick={() => {}}
-						>
-							{'Edit'}
-						</Button>
-					</UpperToolbar.Item>
+            <Button className="inline-item-after" onClick={() => {}}>
+              {'Edit'}
+            </Button>
+          </UpperToolbar.Item>
 
-					<UpperToolbar.Item>
-						<ClayDropDownWithItems
-							items={[
-								{href: '#one', label: 'one'},
-								{href: '#two', label: 'two'},
-								{
-									disabled: true,
-									href: '#three',
-									label: 'three',
-								},
-								{href: '#four', label: 'four'},
-							]}
-							trigger={
-								<ClayButtonWithIcon
-									displayType="unstyled"
-									small
-									symbol="ellipsis-v"
-								/>
-							}
-						/>
-					</UpperToolbar.Item>
-				</UpperToolbar>
-			</div>
-		</Provider>
-	);
+          <UpperToolbar.Item>
+            <ClayDropDownWithItems
+              items={[
+                {href: '#one', label: 'one'},
+                {href: '#two', label: 'two'},
+                {
+                  disabled: true,
+                  href: '#three',
+                  label: 'three',
+                },
+                {href: '#four', label: 'four'},
+              ]}
+              trigger={
+                <ClayButtonWithIcon
+                  displayType="unstyled"
+                  small
+                  symbol="ellipsis-v"
+                />
+              }
+            />
+          </UpperToolbar.Item>
+        </UpperToolbar>
+      </div>
+    </Provider>
+  );
 }
 ```

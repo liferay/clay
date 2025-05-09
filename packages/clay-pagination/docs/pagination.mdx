@@ -5,12 +5,12 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/pagination/'
 packageNpm: '@clayui/pagination'
 packageUse: "import Pagination, {ClayPaginationWithBasicItems} from '@clayui/pagination';"
 packageTypes:
-    [
-        'clay-pagination/src/PaginationWithBasicItems.tsx',
-        'clay-pagination/src/Pagination.tsx',
-        'clay-pagination/src/Item.tsx',
-        'clay-pagination/src/Ellipsis.tsx',
-    ]
+  [
+    'clay-pagination/src/PaginationWithBasicItems.tsx',
+    'clay-pagination/src/Pagination.tsx',
+    'clay-pagination/src/Item.tsx',
+    'clay-pagination/src/Ellipsis.tsx',
+  ]
 ---
 
 You can use `ClayPagination.Ellipsis` to display a dropdown with the specified page numbers as the dropdown's options.
@@ -25,21 +25,21 @@ import Pagination from '@clayui/pagination';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Pagination>
-					<Pagination.Item>{1}</Pagination.Item>
-					<Pagination.Ellipsis
-						aria-label="More"
-						title="More"
-						items={[2, 3, 4, 5]}
-					/>
-					<Pagination.Item>{'End'}</Pagination.Item>
-				</Pagination>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Pagination>
+          <Pagination.Item>{1}</Pagination.Item>
+          <Pagination.Ellipsis
+            aria-label="More"
+            title="More"
+            items={[2, 3, 4, 5]}
+          />
+          <Pagination.Item>{'End'}</Pagination.Item>
+        </Pagination>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -53,21 +53,21 @@ import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [active, setActive] = useState(8);
+  const [active, setActive] = useState(8);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayPaginationWithBasicItems
-					active={active}
-					ellipsisBuffer={2}
-					ellipsisProps={{'aria-label': 'More', title: 'More'}}
-					onActiveChange={setActive}
-					totalPages={25}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayPaginationWithBasicItems
+          active={active}
+          ellipsisBuffer={2}
+          ellipsisProps={{'aria-label': 'More', title: 'More'}}
+          onActiveChange={setActive}
+          totalPages={25}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -77,14 +77,14 @@ export default function App() {
 
 ```jsx
 <ClayPaginationWithBasicItems
-	ariaLabels={{
-		link: 'Change the page to {0}',
-		next: 'Change the page to {0}',
-		previous: 'Change the page to {0}',
-	}}
-	activePage={8}
-	ellipsisBuffer={2}
-	totalPages={25}
+  ariaLabels={{
+    link: 'Change the page to {0}',
+    next: 'Change the page to {0}',
+    previous: 'Change the page to {0}',
+  }}
+  activePage={8}
+  ellipsisBuffer={2}
+  totalPages={25}
 />
 ```
 
@@ -92,10 +92,10 @@ The `aria-label` attribute on `ClayPaginationWithBasicItems` sets the `aria-labe
 
 ```jsx
 <ClayPaginationWithBasicItems
-	aria-label="Pagination for 25 pages worth of stuff"
-	activePage={8}
-	ellipsisBuffer={2}
-	totalPages={25}
+  aria-label="Pagination for 25 pages worth of stuff"
+  activePage={8}
+  ellipsisBuffer={2}
+  totalPages={25}
 />
 ```
 
@@ -103,12 +103,12 @@ The ellipsis `aria-label` and `title` are customized through the `ellipsisProps`
 
 ```jsx
 <ClayPaginationWithBasicItems
-	activePage={8}
-	ellipsisBuffer={2}
-	ellipsisProps={{
-		'aria-label': 'Show links to pages {0} through {1}',
-		title: 'Show links to pages {0} through {1}',
-	}}
-	totalPages={25}
+  activePage={8}
+  ellipsisBuffer={2}
+  ellipsisProps={{
+    'aria-label': 'Show links to pages {0} through {1}',
+    title: 'Show links to pages {0} through {1}',
+  }}
+  totalPages={25}
 />
 ```

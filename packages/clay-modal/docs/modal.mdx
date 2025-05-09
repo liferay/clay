@@ -5,13 +5,13 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/modals/'
 packageNpm: '@clayui/modal'
 packageUse: "import Modal from '@clayui/modal';"
 packageTypes:
-    [
-        'clay-modal/src/Modal.tsx',
-        'clay-modal/src/Provider.tsx',
-        'clay-modal/src/useModal.tsx',
-        'clay-modal/src/Header.tsx',
-        'clay-modal/src/Body.tsx',
-    ]
+  [
+    'clay-modal/src/Modal.tsx',
+    'clay-modal/src/Provider.tsx',
+    'clay-modal/src/useModal.tsx',
+    'clay-modal/src/Header.tsx',
+    'clay-modal/src/Body.tsx',
+  ]
 ---
 
 You may want to compose your content and customize with your use cases or add your own components while still keeping the logic of a modal.
@@ -23,44 +23,40 @@ import Button from '@clayui/button';
 import React from 'react';
 
 export default function App() {
-	const {observer, onOpenChange, open} = useModal();
+  const {observer, onOpenChange, open} = useModal();
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<>
-					{open && (
-						<Modal observer={observer} size="lg" status="info">
-							<Modal.Header>Documents</Modal.Header>
-							<Modal.Body>
-								<p>Do you want to save your documents?</p>
-							</Modal.Body>
-							<Modal.Footer
-								last={
-									<Button.Group spaced>
-										<Button
-											displayType="secondary"
-											onClick={() => onOpenChange(false)}
-										>
-											Cancel
-										</Button>
-										<Button
-											onClick={() => onOpenChange(false)}
-										>
-											Save changes
-										</Button>
-									</Button.Group>
-								}
-							/>
-						</Modal>
-					)}
-					<Button onClick={() => onOpenChange(true)}>
-						Open modal
-					</Button>
-				</>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <>
+          {open && (
+            <Modal observer={observer} size="lg" status="info">
+              <Modal.Header>Documents</Modal.Header>
+              <Modal.Body>
+                <p>Do you want to save your documents?</p>
+              </Modal.Body>
+              <Modal.Footer
+                last={
+                  <Button.Group spaced>
+                    <Button
+                      displayType="secondary"
+                      onClick={() => onOpenChange(false)}
+                    >
+                      Cancel
+                    </Button>
+                    <Button onClick={() => onOpenChange(false)}>
+                      Save changes
+                    </Button>
+                  </Button.Group>
+                }
+              />
+            </Modal>
+          )}
+          <Button onClick={() => onOpenChange(true)}>Open modal</Button>
+        </>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -70,28 +66,24 @@ Modal can be controlled using the `useModal` hook without the need for additiona
 
 ```jsx
 const Dialog = () => {
-	const {observer, onOpenChange, open} = useModal();
+  const {observer, onOpenChange, open} = useModal();
 
-	return (
-		<>
-			{open && (
-				<Modal observer={observer}>
-					<Modal.Header>Title</Modal.Header>
-					<Modal.Body>Body</Modal.Body>
-					<Modal.Footer
-						last={
-							<ClayButton onClick={() => onOpenChange(false)}>
-								Close
-							</ClayButton>
-						}
-					/>
-				</Modal>
-			)}
-			<ClayButton onClick={() => onOpenChange(true)}>
-				Open modal
-			</ClayButton>
-		</>
-	);
+  return (
+    <>
+      {open && (
+        <Modal observer={observer}>
+          <Modal.Header>Title</Modal.Header>
+          <Modal.Body>Body</Modal.Body>
+          <Modal.Footer
+            last={
+              <ClayButton onClick={() => onOpenChange(false)}>Close</ClayButton>
+            }
+          />
+        </Modal>
+      )}
+      <ClayButton onClick={() => onOpenChange(true)}>Open modal</ClayButton>
+    </>
+  );
 };
 ```
 
@@ -101,17 +93,17 @@ The `useModal` [hook](https://reactjs.org/docs/hooks-intro.html) is required to 
 
 `useModal` returns a signature with `observer` and `onClose`:
 
--   **observer** - Observer is the communication channel that connects Modal with `useModal`.
--   **onOpenChange** - Callback to change open state.
--   **open** - Flag to indicate the open state of the modal.
+- **observer** - Observer is the communication channel that connects Modal with `useModal`.
+- **onOpenChange** - Callback to change open state.
+- **open** - Flag to indicate the open state of the modal.
 
 ```jsx
 const {observer, onOpenChange, open} = useModal();
 ```
 
 <div class="clay-site-alert alert alert-warning">
-	To avoid future problems, do not use the information or change the values
-	​​of `observer`, it is considered a bad practice.
+  To avoid future problems, do not use the information or change the values ​​of
+  `observer`, it is considered a bad practice.
 </div>
 
 ### Header
@@ -128,50 +120,48 @@ import Icon from '@clayui/icon';
 import React from 'react';
 
 export default function App() {
-	const {observer, onOpenChange, open} = useModal();
+  const {observer, onOpenChange, open} = useModal();
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<>
-					<Modal.Header>{'Modal Title'}</Modal.Header>
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <>
+          <Modal.Header>{'Modal Title'}</Modal.Header>
 
-					<br />
+          <br />
 
-					<Modal.Header withTitle={false}>
-						<Modal.ItemGroup>
-							<Modal.Item>
-								<Modal.TitleSection>
-									<Modal.Title>
-										<Modal.TitleIndicator>
-											<Icon symbol="info-circle" />
-										</Modal.TitleIndicator>
-										{'Modal Title'}
-									</Modal.Title>
-								</Modal.TitleSection>
-							</Modal.Item>
-							<Modal.Item shrink>
-								<Modal.SubtitleSection>
-									<Modal.Subtitle>
-										{'Modal Subtitle'}
-									</Modal.Subtitle>
-								</Modal.SubtitleSection>
-							</Modal.Item>
-						</Modal.ItemGroup>
+          <Modal.Header withTitle={false}>
+            <Modal.ItemGroup>
+              <Modal.Item>
+                <Modal.TitleSection>
+                  <Modal.Title>
+                    <Modal.TitleIndicator>
+                      <Icon symbol="info-circle" />
+                    </Modal.TitleIndicator>
+                    {'Modal Title'}
+                  </Modal.Title>
+                </Modal.TitleSection>
+              </Modal.Item>
+              <Modal.Item shrink>
+                <Modal.SubtitleSection>
+                  <Modal.Subtitle>{'Modal Subtitle'}</Modal.Subtitle>
+                </Modal.SubtitleSection>
+              </Modal.Item>
+            </Modal.ItemGroup>
 
-						<Button
-							aria-label="close"
-							className="close"
-							displayType="unstyled"
-							onClick={() => {}}
-						>
-							<Icon symbol="times" />
-						</Button>
-					</Modal.Header>
-				</>
-			</div>
-		</Provider>
-	);
+            <Button
+              aria-label="close"
+              className="close"
+              displayType="unstyled"
+              onClick={() => {}}
+            >
+              <Icon symbol="times" />
+            </Button>
+          </Modal.Header>
+        </>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -183,7 +173,7 @@ Add in the project root:
 
 ```jsx
 <ClayModalProvider spritemap={spritemap}>
-	<MyApp />
+  <MyApp />
 </ClayModalProvider>
 ```
 
@@ -194,53 +184,53 @@ import {Context} from '@clayui/modal';
 import ClayButton from '@clayui/button';
 
 const MyApp = () => {
-	const [state, dispatch] = useContext(Context);
+  const [state, dispatch] = useContext(Context);
 
-	return (
-		<ClayButton
-			displayType="primary"
-			onClick={() =>
-				dispatch({
-					payload: {
-						body: <h1>{'Hello world!'}</h1>,
-						footer: [
-							,
-							,
-							<ClayButton key={3} onClick={state.onClose}>
-								{'Primary'}
-							</ClayButton>,
-						],
-						header: 'Title',
-						size: 'lg',
-					},
-					type: 1,
-				})
-			}
-		>
-			{'Open modal'}
-		</ClayButton>
-	);
+  return (
+    <ClayButton
+      displayType="primary"
+      onClick={() =>
+        dispatch({
+          payload: {
+            body: <h1>{'Hello world!'}</h1>,
+            footer: [
+              ,
+              ,
+              <ClayButton key={3} onClick={state.onClose}>
+                {'Primary'}
+              </ClayButton>,
+            ],
+            header: 'Title',
+            size: 'lg',
+          },
+          type: 1,
+        })
+      }
+    >
+      {'Open modal'}
+    </ClayButton>
+  );
 };
 ```
 
 Provider contains two different states that you can control:
 
--   **Close** - CLOSE
--   **Open** - OPEN
+- **Close** - CLOSE
+- **Open** - OPEN
 
 The context signature is similar to a [`useReducer`](https://reactjs.org/docs/hooks-reference.html#usereducer), contains `state` and `dispatch`.
 
 ```jsx
 function Example() {
-	const [state, dispatch] = useContext(Context);
+  const [state, dispatch] = useContext(Context);
 
-	return (
-		<Button
-			onClick={() => dispatch({payload: {header: 'Title'}, type: 'OPEN'})}
-		>
-			Open Modal
-		</Button>
-	);
+  return (
+    <Button
+      onClick={() => dispatch({payload: {header: 'Title'}, type: 'OPEN'})}
+    >
+      Open Modal
+    </Button>
+  );
 }
 ```
 

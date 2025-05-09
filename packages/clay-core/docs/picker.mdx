@@ -6,7 +6,7 @@ packageStatus: 'Beta'
 packageUse: "import {Option, Picker} from '@clayui/core';"
 storybookPath: 'design-system-components-picker'
 packageTypes:
-    ['clay-core/src/picker/Picker.tsx', 'clay-core/src/picker/Option.tsx']
+  ['clay-core/src/picker/Picker.tsx', 'clay-core/src/picker/Option.tsx']
 ---
 
 ## Example
@@ -17,38 +17,38 @@ import Form from '@clayui/form';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div style={{width: '100px'}}>
-					<Form.Group>
-						<label htmlFor="picker" id="picker-label">
-							Year
-						</label>
-						<Picker
-							width={85}
-							aria-labelledby="picker-label"
-							id="picker"
-							items={[
-								'2020',
-								'2021',
-								'2022',
-								'2023',
-								'2024',
-								'2025',
-								'2026',
-								'2027',
-								'2028',
-							]}
-							placeholder="Year"
-						>
-							{(item) => <Option key={item}>{item}</Option>}
-						</Picker>
-					</Form.Group>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div style={{width: '100px'}}>
+          <Form.Group>
+            <label htmlFor="picker" id="picker-label">
+              Year
+            </label>
+            <Picker
+              width={85}
+              aria-labelledby="picker-label"
+              id="picker"
+              items={[
+                '2020',
+                '2021',
+                '2022',
+                '2023',
+                '2024',
+                '2025',
+                '2026',
+                '2027',
+                '2028',
+              ]}
+              placeholder="Year"
+            >
+              {(item) => <Option key={item}>{item}</Option>}
+            </Picker>
+          </Form.Group>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -68,17 +68,17 @@ Static content is when the `<Picker />` options do not change during the lifecyc
 
 ```jsx
 <Form.Group>
-	<label htmlFor="picker" id="picker-label">
-		Choose a fruit
-	</label>
-	<Picker aria-labelledby="picker-label" id="picker">
-		<Option key="apple">Apple</Option>
-		<Option disabled key="banana">
-			Banana
-		</Option>
-		<Option key="mangos">Mangos</Option>
-		<Option key="blueberry">Blueberry</Option>
-	</Picker>
+  <label htmlFor="picker" id="picker-label">
+    Choose a fruit
+  </label>
+  <Picker aria-labelledby="picker-label" id="picker">
+    <Option key="apple">Apple</Option>
+    <Option disabled key="banana">
+      Banana
+    </Option>
+    <Option key="mangos">Mangos</Option>
+    <Option key="blueberry">Blueberry</Option>
+  </Picker>
 </Form.Group>
 ```
 
@@ -88,16 +88,16 @@ Unlike static content, dynamic content is when the options can change during the
 
 ```jsx
 <Form.Group>
-	<label htmlFor="picker" id="picker-label">
-		Choose a fruit
-	</label>
-	<Picker
-		aria-labelledby="picker-label"
-		id="picker"
-		items={['Apple', 'Banana', 'Mangos']}
-	>
-		{(item) => <Option key={item}>{item}</Option>}
-	</Picker>
+  <label htmlFor="picker" id="picker-label">
+    Choose a fruit
+  </label>
+  <Picker
+    aria-labelledby="picker-label"
+    id="picker"
+    items={['Apple', 'Banana', 'Mangos']}
+  >
+    {(item) => <Option key={item}>{item}</Option>}
+  </Picker>
 </Form.Group>
 ```
 
@@ -110,46 +110,47 @@ For the `<Picker />` component you can control the `selectedKey` and `active` st
 If you just need to set the initial state of the `selectedKey`, use the `defaultSelectedKey` property which is appropriate for that use case.
 
 <div className="clay-site-alert alert alert-info">
-	<strong className="lead">Info</strong>
-	The <code className="language-text">selectedKey</code> property is represented
-	by the <code className="language-text">key</code> property configured in the{' '}
-	<code className="language-text">Option</code> component, so the component can
-	identify which value is selected and which should be shown in the trigger. <br />
-	<br />
-	When the content rendering is dynamic and the data has <code className="language-text">
-		id
-	</code> property defined, the component uses <code className="language-text">
-		id
-	</code> instead of <code className="language-text">key</code>.
+  <strong className="lead">Info</strong>
+  The <code className="language-text">selectedKey</code> property is represented
+  by the <code className="language-text">key</code> property configured in the <code className="language-text">
+    Option
+  </code> component, so the component can identify which value is selected and which
+  should be shown in the trigger. <br />
+  <br />
+  When the content rendering is dynamic and the data has <code className="language-text">
+    id
+  </code> property defined, the component uses <code className="language-text">
+    id
+  </code> instead of <code className="language-text">key</code>.
 </div>
 
 ```jsx
 function Example() {
-	// Controlled
-	const [active, setActive] = useState(false);
+  // Controlled
+  const [active, setActive] = useState(false);
 
-	// Controlled
-	const [selectedKey, setSelectedKey] = useState('');
+  // Controlled
+  const [selectedKey, setSelectedKey] = useState('');
 
-	return (
-		<Form.Group>
-			<label htmlFor="picker" id="picker-label">
-				Choose a fruit
-			</label>
-			<Picker
-				active={active}
-				aria-labelledby="picker-label"
-				id="picker"
-				onActiveChange={setActive}
-				onSelectionChange={setSelectedKey}
-				selectedKey={selectedKey}
-			>
-				<Option key="apple">Apple</Option>
-				<Option key="banana">Banana</Option>
-				<Option key="mangos">Mangos</Option>
-			</Picker>
-		</Form.Group>
-	);
+  return (
+    <Form.Group>
+      <label htmlFor="picker" id="picker-label">
+        Choose a fruit
+      </label>
+      <Picker
+        active={active}
+        aria-labelledby="picker-label"
+        id="picker"
+        onActiveChange={setActive}
+        onSelectionChange={setSelectedKey}
+        selectedKey={selectedKey}
+      >
+        <Option key="apple">Apple</Option>
+        <Option key="banana">Banana</Option>
+        <Option key="mangos">Mangos</Option>
+      </Picker>
+    </Form.Group>
+  );
 }
 ```
 
@@ -166,37 +167,37 @@ import Form from '@clayui/form';
 import React from 'react';
 
 const Trigger = React.forwardRef(({children, ...otherProps}, ref) => (
-	<div ref={ref} {...otherProps} tabIndex={0}>
-		<Icon className="mr-2" symbol="user" />
-		{children}
-	</div>
+  <div ref={ref} {...otherProps} tabIndex={0}>
+    <Icon className="mr-2" symbol="user" />
+    {children}
+  </div>
 ));
 
 export default function App() {
-	const pickerId = useId();
-	const labelId = useId();
+  const pickerId = useId();
+  const labelId = useId();
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div style={{width: '150px'}}>
-					<Form.Group>
-						<label htmlFor={pickerId} id={labelId}>
-							Choose a user
-						</label>
-						<Picker
-							aria-labelledby={labelId}
-							as={Trigger}
-							id={pickerId}
-							items={['Liam', 'Noah', 'Oliver']}
-						>
-							{(item) => <Option key={item}>{item}</Option>}
-						</Picker>
-					</Form.Group>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div style={{width: '150px'}}>
+          <Form.Group>
+            <label htmlFor={pickerId} id={labelId}>
+              Choose a user
+            </label>
+            <Picker
+              aria-labelledby={labelId}
+              as={Trigger}
+              id={pickerId}
+              items={['Liam', 'Noah', 'Oliver']}
+            >
+              {(item) => <Option key={item}>{item}</Option>}
+            </Picker>
+          </Form.Group>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -211,54 +212,47 @@ import Form from '@clayui/form';
 import React from 'react';
 
 export default function App() {
-	const pickerId = useId();
-	const labelId = useId();
+  const pickerId = useId();
+  const labelId = useId();
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div style={{width: '150px'}}>
-					<Form.Group>
-						<label htmlFor={pickerId} id={labelId}>
-							Choose a user
-						</label>
-						<Picker
-							aria-labelledby={labelId}
-							id={pickerId}
-							items={['Liam', 'Noah', 'Oliver']}
-						>
-							{(item) => (
-								<Option key={item} textValue={item}>
-									<Layout.ContentRow>
-										<Layout.ContentCol expand>
-											<Text size={3} weight="semi-bold">
-												{item}
-											</Text>
-											<Text
-												aria-hidden
-												color="secondary"
-												size={2}
-											>
-												Description
-											</Text>
-										</Layout.ContentCol>
-										<Layout.ContentCol>
-											<Label
-												aria-hidden
-												displayType="success"
-											>
-												Active
-											</Label>
-										</Layout.ContentCol>
-									</Layout.ContentRow>
-								</Option>
-							)}
-						</Picker>
-					</Form.Group>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div style={{width: '150px'}}>
+          <Form.Group>
+            <label htmlFor={pickerId} id={labelId}>
+              Choose a user
+            </label>
+            <Picker
+              aria-labelledby={labelId}
+              id={pickerId}
+              items={['Liam', 'Noah', 'Oliver']}
+            >
+              {(item) => (
+                <Option key={item} textValue={item}>
+                  <Layout.ContentRow>
+                    <Layout.ContentCol expand>
+                      <Text size={3} weight="semi-bold">
+                        {item}
+                      </Text>
+                      <Text aria-hidden color="secondary" size={2}>
+                        Description
+                      </Text>
+                    </Layout.ContentCol>
+                    <Layout.ContentCol>
+                      <Label aria-hidden displayType="success">
+                        Active
+                      </Label>
+                    </Layout.ContentCol>
+                  </Layout.ContentRow>
+                </Option>
+              )}
+            </Picker>
+          </Form.Group>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -272,57 +266,50 @@ import Form from '@clayui/form';
 import React from 'react';
 
 export default function App() {
-	const pickerId = useId();
-	const labelId = useId();
+  const pickerId = useId();
+  const labelId = useId();
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div style={{width: '150px'}}>
-					<Form.Group>
-						<label htmlFor={pickerId} id={labelId}>
-							Select an option
-						</label>
-						<Picker
-							aria-labelledby={labelId}
-							id={pickerId}
-							items={[
-								{
-									items: [
-										{label: 'Apple', value: '1'},
-										{label: 'Banana', value: '2'},
-										{label: 'Mangos', value: '3'},
-									],
-									label: 'Fruit',
-								},
-								{
-									items: [
-										{label: 'Onions', value: '4'},
-										{label: 'abc', value: '5'},
-										{label: 'def', value: '6'},
-									],
-									label: 'Vegetable',
-								},
-							]}
-						>
-							{(group) => (
-								<DropDown.Group
-									header={group.label}
-									items={group.items}
-								>
-									{(item) => (
-										<Option key={item.value}>
-											{item.label}
-										</Option>
-									)}
-								</DropDown.Group>
-							)}
-						</Picker>
-					</Form.Group>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div style={{width: '150px'}}>
+          <Form.Group>
+            <label htmlFor={pickerId} id={labelId}>
+              Select an option
+            </label>
+            <Picker
+              aria-labelledby={labelId}
+              id={pickerId}
+              items={[
+                {
+                  items: [
+                    {label: 'Apple', value: '1'},
+                    {label: 'Banana', value: '2'},
+                    {label: 'Mangos', value: '3'},
+                  ],
+                  label: 'Fruit',
+                },
+                {
+                  items: [
+                    {label: 'Onions', value: '4'},
+                    {label: 'abc', value: '5'},
+                    {label: 'def', value: '6'},
+                  ],
+                  label: 'Vegetable',
+                },
+              ]}
+            >
+              {(group) => (
+                <DropDown.Group header={group.label} items={group.items}>
+                  {(item) => <Option key={item.value}>{item.label}</Option>}
+                </DropDown.Group>
+              )}
+            </Picker>
+          </Form.Group>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -334,38 +321,38 @@ import Form from '@clayui/form';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div style={{width: '100px'}}>
-					<Form.Group>
-						<label htmlFor="picker" id="picker-label">
-							Year
-						</label>
-						<Picker
-							width={85}
-							aria-labelledby="picker-label"
-							id="picker"
-							items={[
-								'2020',
-								'2021',
-								'2022',
-								'2023',
-								'2024',
-								'2025',
-								'2026',
-								'2027',
-								'2028',
-							]}
-							placeholder="Year"
-						>
-							{(item) => <Option key={item}>{item}</Option>}
-						</Picker>
-					</Form.Group>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div style={{width: '100px'}}>
+          <Form.Group>
+            <label htmlFor="picker" id="picker-label">
+              Year
+            </label>
+            <Picker
+              width={85}
+              aria-labelledby="picker-label"
+              id="picker"
+              items={[
+                '2020',
+                '2021',
+                '2022',
+                '2023',
+                '2024',
+                '2025',
+                '2026',
+                '2027',
+                '2028',
+              ]}
+              placeholder="Year"
+            >
+              {(item) => <Option key={item}>{item}</Option>}
+            </Picker>
+          </Form.Group>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -374,21 +361,21 @@ export default function App() {
 Native select for mobile devices offers a better experience compared to Picker in some cases. The Picker offers the possibility to render using the native selector of the browser of the device when it is detected that it is on a mobile device, by default this property is disabled but it can be enabled by setting the `native` property to `true`.
 
 <div className="clay-site-alert alert alert-warning">
-	<strong className="lead">Warning</strong>
-	If the content of the Option component is not simple text, for it to work correctly
-	set the property <code className="language-text">textValue</code> to ensure that
-	the component knows what the option label is.
+  <strong className="lead">Warning</strong>
+  If the content of the Option component is not simple text, for it to work correctly
+  set the property <code className="language-text">textValue</code> to ensure that
+  the component knows what the option label is.
 </div>
 
 ```jsx
 <Form.Group>
-	<label htmlFor="picker" id="picker-label">
-		Choose a fruit
-	</label>
-	<Picker aria-labelledby="picker-label" id="picker" native>
-		<Option key="apple">Apple</Option>
-		<Option key="banana">Banana</Option>
-		<Option key="mangos">Mangos</Option>
-	</Picker>
+  <label htmlFor="picker" id="picker-label">
+    Choose a fruit
+  </label>
+  <Picker aria-labelledby="picker-label" id="picker" native>
+    <Option key="apple">Apple</Option>
+    <Option key="banana">Banana</Option>
+    <Option key="mangos">Mangos</Option>
+  </Picker>
 </Form.Group>
 ```

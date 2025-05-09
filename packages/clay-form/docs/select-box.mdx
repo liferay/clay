@@ -20,35 +20,35 @@ import {ClaySelectBox} from '@clayui/form';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [items, setItems] = useState([
-		{
-			label: 'Reddit',
-			value: 'reddit',
-		},
-		{
-			label: 'Slack',
-			value: 'slack',
-		},
-		{
-			label: 'Twitter',
-			value: 'twitter',
-		},
-	]);
-	const [value, setValue] = useState([]);
+  const [items, setItems] = useState([
+    {
+      label: 'Reddit',
+      value: 'reddit',
+    },
+    {
+      label: 'Slack',
+      value: 'slack',
+    },
+    {
+      label: 'Twitter',
+      value: 'twitter',
+    },
+  ]);
+  const [value, setValue] = useState([]);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClaySelectBox
-					items={items}
-					label="In Use"
-					multiple
-					onItemsChange={setItems}
-					onSelectChange={setValue}
-					value={value}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClaySelectBox
+          items={items}
+          label="In Use"
+          multiple
+          onItemsChange={setItems}
+          onSelectChange={setValue}
+          value={value}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

@@ -15,16 +15,16 @@ import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 import React, {useState} from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayRadioGroup defaultValue="one" inline>
-					<ClayRadio label="One" value="one" />
-					<ClayRadio label="Two" value="two" />
-					<ClayRadio label="Three" value="three" />
-				</ClayRadioGroup>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayRadioGroup defaultValue="one" inline>
+          <ClayRadio label="One" value="one" />
+          <ClayRadio label="Two" value="two" />
+          <ClayRadio label="Three" value="three" />
+        </ClayRadioGroup>
+      </div>
+    </Provider>
+  );
 }
 ```

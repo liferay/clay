@@ -22,32 +22,32 @@ import {ClaySelect} from '@clayui/form';
 import React, {useState} from 'react';
 
 export default function App() {
-	const options = [
-		{
-			label: 'Option 1',
-			value: '1',
-		},
-		{
-			label: 'Option 2',
-			value: '2',
-		},
-	];
+  const options = [
+    {
+      label: 'Option 1',
+      value: '1',
+    },
+    {
+      label: 'Option 2',
+      value: '2',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClaySelect aria-label="Select Label" id="mySelectId">
-					{options.map((item) => (
-						<ClaySelect.Option
-							key={item.value}
-							label={item.label}
-							value={item.value}
-						/>
-					))}
-				</ClaySelect>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClaySelect aria-label="Select Label" id="mySelectId">
+          {options.map((item) => (
+            <ClaySelect.Option
+              key={item.value}
+              label={item.label}
+              value={item.value}
+            />
+          ))}
+        </ClaySelect>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -61,27 +61,27 @@ import {ClaySelectWithOption} from '@clayui/form';
 import React, {useState} from 'react';
 
 export default function App() {
-	const options = [
-		{
-			label: 'Option 1',
-			value: '1',
-		},
-		{
-			label: 'Option 2',
-			value: '2',
-		},
-	];
+  const options = [
+    {
+      label: 'Option 1',
+      value: '1',
+    },
+    {
+      label: 'Option 2',
+      value: '2',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClaySelectWithOption
-					aria-label="Select Label"
-					id="mySelectId"
-					options={options}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClaySelectWithOption
+          aria-label="Select Label"
+          id="mySelectId"
+          options={options}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

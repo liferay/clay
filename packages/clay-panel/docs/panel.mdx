@@ -4,14 +4,14 @@ description: 'Toggle content visibility using Panel.'
 packageNpm: '@clayui/panel'
 packageUse: "import Panel from '@clayui/panel';"
 packageTypes:
-    [
-        'clay-panel/src/index.tsx',
-        'clay-panel/src/Body.tsx',
-        'clay-panel/src/Group.tsx',
-        'clay-panel/src/Footer.tsx',
-        'clay-panel/src/Header.tsx',
-        'clay-panel/src/Title.tsx',
-    ]
+  [
+    'clay-panel/src/index.tsx',
+    'clay-panel/src/Body.tsx',
+    'clay-panel/src/Group.tsx',
+    'clay-panel/src/Footer.tsx',
+    'clay-panel/src/Header.tsx',
+    'clay-panel/src/Title.tsx',
+  ]
 ---
 
 The Panel is a replacement for the old ClayCollapse in version 2.x, has the same effect but written in React using composition, try it. We recommend that you review the [use cases in the Storybook](https://storybook.clayui.com/?path=/story/design-system-components-panel--default).
@@ -24,20 +24,20 @@ import Panel from '@clayui/panel';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Panel
-					collapsable
-					displayTitle="Title"
-					displayType="secondary"
-					showCollapseIcon={true}
-				>
-					<Panel.Body>{'Body!'}</Panel.Body>
-				</Panel>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Panel
+          collapsable
+          displayTitle="Title"
+          displayType="secondary"
+          showCollapseIcon={true}
+        >
+          <Panel.Body>{'Body!'}</Panel.Body>
+        </Panel>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -52,30 +52,30 @@ import Label from '@clayui/label';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Panel
-					collapsable
-					displayTitle={
-						<Panel.Title>
-							<h3>{'Title'}</h3>
-							<span>{'If field '}</span>
-							<Label displayType="success">{'Country'}</Label>
-							<Label>{'Is Equal To'}</Label>
-							<span>{'value '}</span>
-							<Label displayType="info">{'Brazil'}</Label>
-							<span>{'enable '}</span>
-							<Label displayType="success">{'State'}</Label>
-						</Panel.Title>
-					}
-					displayType="secondary"
-					showCollapseIcon={true}
-				>
-					<Panel.Body>{'Body!'}</Panel.Body>
-				</Panel>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Panel
+          collapsable
+          displayTitle={
+            <Panel.Title>
+              <h3>{'Title'}</h3>
+              <span>{'If field '}</span>
+              <Label displayType="success">{'Country'}</Label>
+              <Label>{'Is Equal To'}</Label>
+              <span>{'value '}</span>
+              <Label displayType="info">{'Brazil'}</Label>
+              <span>{'enable '}</span>
+              <Label displayType="success">{'State'}</Label>
+            </Panel.Title>
+          }
+          displayType="secondary"
+          showCollapseIcon={true}
+        >
+          <Panel.Body>{'Body!'}</Panel.Body>
+        </Panel>
+      </div>
+    </Provider>
+  );
 }
 ```

@@ -18,18 +18,18 @@ import Badge from '@clayui/badge';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Badge displayType="success" label="100" />
-				<Badge displayType="primary" label="100" />
-				<Badge displayType="secondary" label="100" />
-				<Badge displayType="info" label="100" />
-				<Badge displayType="warning" label="100" />
-				<Badge displayType="danger" label="100" />
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Badge displayType="success" label="100" />
+        <Badge displayType="primary" label="100" />
+        <Badge displayType="secondary" label="100" />
+        <Badge displayType="info" label="100" />
+        <Badge displayType="warning" label="100" />
+        <Badge displayType="danger" label="100" />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -45,17 +45,17 @@ import Badge from '@clayui/badge';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Badge displayType="primary" label="Primary" translucent />
-				<Badge displayType="info" label="Info" translucent />
-				<Badge displayType="success" label="Success" translucent />
-				<Badge displayType="warning" label="Warning" translucent />
-				<Badge displayType="danger" label="Danger" translucent />
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Badge displayType="primary" label="Primary" translucent />
+        <Badge displayType="info" label="Info" translucent />
+        <Badge displayType="success" label="Success" translucent />
+        <Badge displayType="warning" label="Warning" translucent />
+        <Badge displayType="danger" label="Danger" translucent />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -69,26 +69,26 @@ import Badge from '@clayui/badge';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="clay-dark bg-dark p-4">
-				<Badge displayType="primary" label="Primary" translucent />
-				<Badge displayType="info" label="Info" translucent />
-				<Badge displayType="success" label="Success" translucent />
-				<Badge displayType="warning" label="Warning" translucent />
-				<Badge displayType="danger" label="Danger" translucent />
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="clay-dark bg-dark p-4">
+        <Badge displayType="primary" label="Primary" translucent />
+        <Badge displayType="info" label="Info" translucent />
+        <Badge displayType="success" label="Success" translucent />
+        <Badge displayType="warning" label="Warning" translucent />
+        <Badge displayType="danger" label="Danger" translucent />
+      </div>
+    </Provider>
+  );
 }
 ```
 
 ## Beta (Deprecated)
 
 <div className="clay-site-alert alert alert-warning">
-	The property <code>displayType="beta"</code> has been deprecated in favor of
-	semantic attributes <code>displayType="info"</code> and{' '}
-	<code>translucent</code>.
+  The property <code>displayType="beta"</code> has been deprecated in favor of
+  semantic attributes <code>displayType="info"</code> and{' '}
+  <code>translucent</code>.
 </div>
 
 A component to indicate beta features in DXP. The `badge-beta` variant doesn’t have any interaction. It just informs the user. It uses a Badge component with custom visual states.
@@ -99,22 +99,22 @@ import Badge from '@clayui/badge';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Badge displayType="info" label="Beta" translucent />
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Badge displayType="info" label="Beta" translucent />
+      </div>
+    </Provider>
+  );
 }
 ```
 
 ## Beta Dark (Deprecated)
 
 <div className="clay-site-alert alert alert-warning">
-	The property <code>displayType="beta-dark"</code> has been deprecated in
-	favor of semantic attributes <code>dark</code>,{' '}
-	<code>displayType="info"</code> and <code>translucent</code>.
+  The property <code>displayType="beta-dark"</code> has been deprecated in favor
+  of semantic attributes <code>dark</code>, <code>displayType="info"</code> and{' '}
+  <code>translucent</code>.
 </div>
 
 `badge-beta-dark` is a dark variant of `badge-beta` to be used with dark backgrounds.
@@ -125,12 +125,12 @@ import Badge from '@clayui/badge';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="bg-dark p-4">
-				<Badge displayType="info" label="Beta" translucent />
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="bg-dark p-4">
+        <Badge displayType="info" label="Beta" translucent />
+      </div>
+    </Provider>
+  );
 }
 ```

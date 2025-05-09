@@ -5,16 +5,16 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/'
 packageNpm: '@clayui/toolbar'
 packageUse: "import TimePicker from '@clayui/toolbar';"
 packageTypes:
-    [
-        'clay-toolbar/src/index.tsx',
-        'clay-toolbar/src/Action.tsx',
-        'clay-toolbar/src/Input.tsx',
-        'clay-toolbar/src/Item.tsx',
-        'clay-toolbar/src/Label.tsx',
-        'clay-toolbar/src/Link.tsx',
-        'clay-toolbar/src/Nav.tsx',
-        'clay-toolbar/src/Section.tsx',
-    ]
+  [
+    'clay-toolbar/src/index.tsx',
+    'clay-toolbar/src/Action.tsx',
+    'clay-toolbar/src/Input.tsx',
+    'clay-toolbar/src/Item.tsx',
+    'clay-toolbar/src/Label.tsx',
+    'clay-toolbar/src/Link.tsx',
+    'clay-toolbar/src/Nav.tsx',
+    'clay-toolbar/src/Section.tsx',
+  ]
 ---
 
 ## Introduction
@@ -27,63 +27,61 @@ import Toolbar from '@clayui/toolbar';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Toolbar>
-					<Toolbar.Nav>
-						<Toolbar.Item>
-							<Toolbar.Action
-								aria-label="Previous"
-								disabled
-								href="#"
-								symbol="angle-left"
-								title="Previous"
-							/>
-						</Toolbar.Item>
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Toolbar>
+          <Toolbar.Nav>
+            <Toolbar.Item>
+              <Toolbar.Action
+                aria-label="Previous"
+                disabled
+                href="#"
+                symbol="angle-left"
+                title="Previous"
+              />
+            </Toolbar.Item>
 
-						<Toolbar.Item expand>
-							<Toolbar.Section>
-								<span className="text-truncate-inline">
-									<span className="text-truncate">
-										{
-											'Item 1 of 3,138,732,873,467,182,321,341,231,234,342,559,827,334,424'
-										}
-									</span>
-								</span>
-							</Toolbar.Section>
-						</Toolbar.Item>
+            <Toolbar.Item expand>
+              <Toolbar.Section>
+                <span className="text-truncate-inline">
+                  <span className="text-truncate">
+                    {
+                      'Item 1 of 3,138,732,873,467,182,321,341,231,234,342,559,827,334,424'
+                    }
+                  </span>
+                </span>
+              </Toolbar.Section>
+            </Toolbar.Item>
 
-						<Toolbar.Item>
-							<Toolbar.Link href="#">
-								{'Component Link'}
-							</Toolbar.Link>
-						</Toolbar.Item>
+            <Toolbar.Item>
+              <Toolbar.Link href="#">{'Component Link'}</Toolbar.Link>
+            </Toolbar.Item>
 
-						<Toolbar.Item>
-							<Toolbar.Action
-								aria-label="Next"
-								title="Next"
-								disabled
-								href="#"
-								symbol="angle-right"
-							/>
-						</Toolbar.Item>
+            <Toolbar.Item>
+              <Toolbar.Action
+                aria-label="Next"
+                title="Next"
+                disabled
+                href="#"
+                symbol="angle-right"
+              />
+            </Toolbar.Item>
 
-						<Toolbar.Item>
-							<Toolbar.Action
-								aria-label="Close"
-								title="Close"
-								disabled
-								href="#"
-								symbol="times"
-							/>
-						</Toolbar.Item>
-					</Toolbar.Nav>
-				</Toolbar>
-			</div>
-		</Provider>
-	);
+            <Toolbar.Item>
+              <Toolbar.Action
+                aria-label="Close"
+                title="Close"
+                disabled
+                href="#"
+                symbol="times"
+              />
+            </Toolbar.Item>
+          </Toolbar.Nav>
+        </Toolbar>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -109,101 +107,93 @@ import Button, {ClayButtonWithIcon} from '@clayui/button';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Toolbar>
-					<Toolbar.Nav>
-						<Toolbar.Item className="text-left" expand>
-							<Toolbar.Section>
-								<label className="component-title">
-									{'Foo Bar'}
-								</label>
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Toolbar>
+          <Toolbar.Nav>
+            <Toolbar.Item className="text-left" expand>
+              <Toolbar.Section>
+                <label className="component-title">{'Foo Bar'}</label>
 
-								<Icon symbol="lock" />
-							</Toolbar.Section>
-						</Toolbar.Item>
+                <Icon symbol="lock" />
+              </Toolbar.Section>
+            </Toolbar.Item>
 
-						<Toolbar.Item>
-							<ClayInput.Group>
-								<ClayInput.GroupItem>
-									<ClayInput
-										className="form-control-inline"
-										placeholder="Search..."
-									/>
-								</ClayInput.GroupItem>
-							</ClayInput.Group>
-						</Toolbar.Item>
+            <Toolbar.Item>
+              <ClayInput.Group>
+                <ClayInput.GroupItem>
+                  <ClayInput
+                    className="form-control-inline"
+                    placeholder="Search..."
+                  />
+                </ClayInput.GroupItem>
+              </ClayInput.Group>
+            </Toolbar.Item>
 
-						<Toolbar.Item>
-							<Toolbar.Section>
-								<Button.Group>
-									<ClayButtonWithIcon
-										aria-label="Previous"
-										title="Previous"
-										displayType="secondary"
-										onClick={() => {}}
-										small
-										symbol="angle-left"
-									/>
+            <Toolbar.Item>
+              <Toolbar.Section>
+                <Button.Group>
+                  <ClayButtonWithIcon
+                    aria-label="Previous"
+                    title="Previous"
+                    displayType="secondary"
+                    onClick={() => {}}
+                    small
+                    symbol="angle-left"
+                  />
 
-									<ClayButtonWithIcon
-										aria-label="Next"
-										title="Next"
-										displayType="secondary"
-										onClick={() => {}}
-										small
-										symbol="angle-right"
-									/>
-								</Button.Group>
-							</Toolbar.Section>
-						</Toolbar.Item>
+                  <ClayButtonWithIcon
+                    aria-label="Next"
+                    title="Next"
+                    displayType="secondary"
+                    onClick={() => {}}
+                    small
+                    symbol="angle-right"
+                  />
+                </Button.Group>
+              </Toolbar.Section>
+            </Toolbar.Item>
 
-						<Toolbar.Item>
-							<Toolbar.Section>
-								<Button
-									displayType="secondary"
-									onClick={() => {}}
-								>
-									{'Delete'}
-								</Button>
+            <Toolbar.Item>
+              <Toolbar.Section>
+                <Button displayType="secondary" onClick={() => {}}>
+                  {'Delete'}
+                </Button>
 
-								<Button
-									className="inline-item-after"
-									onClick={() => {}}
-								>
-									{'Edit'}
-								</Button>
-							</Toolbar.Section>
-						</Toolbar.Item>
+                <Button className="inline-item-after" onClick={() => {}}>
+                  {'Edit'}
+                </Button>
+              </Toolbar.Section>
+            </Toolbar.Item>
 
-						<Toolbar.Item>
-							<ClayDropDownWithItems
-								items={[
-									{href: '#one', label: 'one'},
-									{href: '#two', label: 'two'},
-									{
-										disabled: true,
-										href: '#three',
-										label: 'three',
-									},
-									{href: '#four', label: 'four'},
-								]}
-								trigger={
-									<ClayButtonWithIcon
-										aria-label="More Actions"
-										title="More Actions"
-										displayType="unstyled"
-										small
-										symbol="ellipsis-v"
-									/>
-								}
-							/>
-						</Toolbar.Item>
-					</Toolbar.Nav>
-				</Toolbar>
-			</div>
-		</Provider>
-	);
+            <Toolbar.Item>
+              <ClayDropDownWithItems
+                items={[
+                  {href: '#one', label: 'one'},
+                  {href: '#two', label: 'two'},
+                  {
+                    disabled: true,
+                    href: '#three',
+                    label: 'three',
+                  },
+                  {href: '#four', label: 'four'},
+                ]}
+                trigger={
+                  <ClayButtonWithIcon
+                    aria-label="More Actions"
+                    title="More Actions"
+                    displayType="unstyled"
+                    small
+                    symbol="ellipsis-v"
+                  />
+                }
+              />
+            </Toolbar.Item>
+          </Toolbar.Nav>
+        </Toolbar>
+      </div>
+    </Provider>
+  );
 }
 ```

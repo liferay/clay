@@ -15,16 +15,16 @@ import Slider from '@clayui/slider';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div className="form-group">
-					<label htmlFor="slider">With Tooltip</label>
-					<Slider defaultValue={10} id="slider" />
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div className="form-group">
+          <label htmlFor="slider">With Tooltip</label>
+          <Slider defaultValue={10} id="slider" />
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -38,20 +38,15 @@ import Slider from '@clayui/slider';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div className="form-group">
-					<label htmlFor="slider">Decades</label>
-					<Slider
-						defaultValue={10}
-						id="slider"
-						max={2020}
-						step={10}
-					/>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div className="form-group">
+          <label htmlFor="slider">Decades</label>
+          <Slider defaultValue={10} id="slider" max={2020} step={10} />
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```

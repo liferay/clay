@@ -17,36 +17,36 @@ import Breadcrumb from '@clayui/breadcrumb';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Breadcrumb
-					items={[
-						{
-							href: '#1',
-							label: 'Home',
-						},
-						{
-							href: '#2',
-							label: 'About',
-						},
-						{
-							href: '#3',
-							label: 'Contact',
-						},
-						{
-							href: '#4',
-							label: 'Projects',
-						},
-						{
-							active: true,
-							href: '#5',
-							label: 'Five',
-						},
-					]}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Breadcrumb
+          items={[
+            {
+              href: '#1',
+              label: 'Home',
+            },
+            {
+              href: '#2',
+              label: 'About',
+            },
+            {
+              href: '#3',
+              label: 'Contact',
+            },
+            {
+              href: '#4',
+              label: 'Projects',
+            },
+            {
+              active: true,
+              href: '#5',
+              label: 'Five',
+            },
+          ]}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

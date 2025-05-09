@@ -15,64 +15,64 @@ import {Provider, LanguagePicker} from '@clayui/core';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4" style={{width: 'fit-content'}}>
-				<LanguagePicker
-					locales={[
-						{
-							id: 'en_US',
-							label: 'en-US',
-							name: 'English (United States)',
-							symbol: 'en-us',
-						},
-						{
-							id: 'ar_SA',
-							label: 'ar-SA',
-							name: 'Arabic (Saudi Arabia)',
-							symbol: 'ar-sa',
-						},
-						{
-							id: 'ca_ES',
-							label: 'ca-ES',
-							name: 'Catalan (Spain)',
-							symbol: 'ca-es',
-						},
-						{
-							id: 'nl_NL',
-							label: 'nl-NL',
-							name: 'Dutch (Netherlands)',
-							symbol: 'nl-nl',
-						},
-						{
-							id: 'fi_FI',
-							label: 'fi-FI',
-							name: 'Finnish (Finland)',
-							symbol: 'fi-fi',
-						},
-						{
-							id: 'fr_FR',
-							label: 'fr-FR',
-							name: 'French (France)',
-							symbol: 'fr-fr',
-						},
-						{
-							id: 'de_DE',
-							label: 'de-DE',
-							name: 'German (Germany)',
-							symbol: 'de-de',
-						},
-						{
-							id: 'hu_HU',
-							label: 'hu-HU',
-							name: 'Hungarian (Hungary)',
-							symbol: 'hu-hu',
-						},
-					]}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4" style={{width: 'fit-content'}}>
+        <LanguagePicker
+          locales={[
+            {
+              id: 'en_US',
+              label: 'en-US',
+              name: 'English (United States)',
+              symbol: 'en-us',
+            },
+            {
+              id: 'ar_SA',
+              label: 'ar-SA',
+              name: 'Arabic (Saudi Arabia)',
+              symbol: 'ar-sa',
+            },
+            {
+              id: 'ca_ES',
+              label: 'ca-ES',
+              name: 'Catalan (Spain)',
+              symbol: 'ca-es',
+            },
+            {
+              id: 'nl_NL',
+              label: 'nl-NL',
+              name: 'Dutch (Netherlands)',
+              symbol: 'nl-nl',
+            },
+            {
+              id: 'fi_FI',
+              label: 'fi-FI',
+              name: 'Finnish (Finland)',
+              symbol: 'fi-fi',
+            },
+            {
+              id: 'fr_FR',
+              label: 'fr-FR',
+              name: 'French (France)',
+              symbol: 'fr-fr',
+            },
+            {
+              id: 'de_DE',
+              label: 'de-DE',
+              name: 'German (Germany)',
+              symbol: 'de-de',
+            },
+            {
+              id: 'hu_HU',
+              label: 'hu-HU',
+              name: 'Hungarian (Hungary)',
+              symbol: 'hu-hu',
+            },
+          ]}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -91,57 +91,57 @@ For the `<LanguagePicker />` component you can control the `selectedLocaleId` an
 If you just need to set the initial state of the `selectedLocaleId`, use the `defaultSelectedLocaleId` property which is appropriate for that use case. In case `defaultSelectedLocaleId` is not defined, it will take the first locale as the default locale.
 
 <div class="clay-site-alert alert alert-info">
-	<strong class="lead">Info</strong>
-	The <code class="language-text">selectedLocaleId</code> property is equivalent
-	to <code class="language-text">selectedKey</code> in the Picker, which is represented
-	by the <code class="language-text">key</code> property configured in the <code class="language-text">
-		Option
-	</code> component, so the component can identify which value is selected and
-	which should be shown in the trigger. <br />
+  <strong class="lead">Info</strong>
+  The <code class="language-text">selectedLocaleId</code> property is equivalent
+  to <code class="language-text">selectedKey</code> in the Picker, which is represented
+  by the <code class="language-text">key</code> property configured in the <code class="language-text">
+    Option
+  </code> component, so the component can identify which value is selected and which
+  should be shown in the trigger. <br />
 </div>
 
 ```jsx
 function Example() {
-	// Controlled
-	const [active, setActive] = useState(false);
+  // Controlled
+  const [active, setActive] = useState(false);
 
-	// Controlled
-	const [selectedLocaleId, setSelectedLocaleId] = useState('');
+  // Controlled
+  const [selectedLocaleId, setSelectedLocaleId] = useState('');
 
-	return (
-		<LanguagePicker
-			active={active}
-			locales={[
-				{
-					id: 'en_US',
-					label: 'en-US',
-					name: 'English (United States)',
-					symbol: 'en-us',
-				},
-				{
-					id: 'ar_SA',
-					label: 'ar-SA',
-					name: 'Arabic (Saudi Arabia)',
-					symbol: 'ar-sa',
-				},
-				{
-					id: 'ca_ES',
-					label: 'ca-ES',
-					name: 'Catalan (Spain)',
-					symbol: 'ca-es',
-				},
-				{
-					id: 'nl_NL',
-					label: 'nl-NL',
-					name: 'Dutch (Netherlands)',
-					symbol: 'nl-nl',
-				},
-			]}
-			onActiveChange={setActive}
-			onSelectedLocaleChange={setSelectedLocaleId}
-			selectedLocaleId={selectedLocaleId}
-		/>
-	);
+  return (
+    <LanguagePicker
+      active={active}
+      locales={[
+        {
+          id: 'en_US',
+          label: 'en-US',
+          name: 'English (United States)',
+          symbol: 'en-us',
+        },
+        {
+          id: 'ar_SA',
+          label: 'ar-SA',
+          name: 'Arabic (Saudi Arabia)',
+          symbol: 'ar-sa',
+        },
+        {
+          id: 'ca_ES',
+          label: 'ca-ES',
+          name: 'Catalan (Spain)',
+          symbol: 'ca-es',
+        },
+        {
+          id: 'nl_NL',
+          label: 'nl-NL',
+          name: 'Dutch (Netherlands)',
+          symbol: 'nl-nl',
+        },
+      ]}
+      onActiveChange={setActive}
+      onSelectedLocaleChange={setSelectedLocaleId}
+      selectedLocaleId={selectedLocaleId}
+    />
+  );
 }
 ```
 
@@ -154,55 +154,55 @@ import {Provider, LanguagePicker} from '@clayui/core';
 import React from 'react';
 
 export default function App() {
-	const translations = {
-		'ca-ES': {total: 4, translated: 2},
-		'nl-NL': {total: 4, translated: 4},
-	};
+  const translations = {
+    'ca-ES': {total: 4, translated: 2},
+    'nl-NL': {total: 4, translated: 4},
+  };
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4" style={{width: 'fit-content'}}>
-				<LanguagePicker
-					locales={[
-						{
-							id: 'en_US',
-							label: 'en-US',
-							name: 'English (United States)',
-							symbol: 'en-us',
-						},
-						{
-							id: 'ar_SA',
-							label: 'ar-SA',
-							name: 'Arabic (Saudi Arabia)',
-							symbol: 'ar-sa',
-						},
-						{
-							id: 'ca_ES',
-							label: 'ca-ES',
-							name: 'Catalan (Spain)',
-							symbol: 'ca-es',
-						},
-						{
-							id: 'nl_NL',
-							label: 'nl-NL',
-							name: 'Dutch (Netherlands)',
-							symbol: 'nl-nl',
-						},
-					]}
-					translations={translations}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4" style={{width: 'fit-content'}}>
+        <LanguagePicker
+          locales={[
+            {
+              id: 'en_US',
+              label: 'en-US',
+              name: 'English (United States)',
+              symbol: 'en-us',
+            },
+            {
+              id: 'ar_SA',
+              label: 'ar-SA',
+              name: 'Arabic (Saudi Arabia)',
+              symbol: 'ar-sa',
+            },
+            {
+              id: 'ca_ES',
+              label: 'ca-ES',
+              name: 'Catalan (Spain)',
+              symbol: 'ca-es',
+            },
+            {
+              id: 'nl_NL',
+              label: 'nl-NL',
+              name: 'Dutch (Netherlands)',
+              symbol: 'nl-nl',
+            },
+          ]}
+          translations={translations}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
 This variant shows translation status labels next to each translation language to indicate the translation status for the content. The states are described below:
 
--   **Default**: Indentifies the default language. This default language is set with the property `defaultLocaleId`. If there is no `defaultLocaleId` it will take the first of the locales.
--   **Translated**: Used when all fields have been translated.
--   **Not Translated**: Used when none of the localizable fields have been translated.
--   **Translating x/x**: Used when at least one of the localizable fields of a content item has been translated. This label indicates the number of fields translated compared to the total number of fields.
+- **Default**: Indentifies the default language. This default language is set with the property `defaultLocaleId`. If there is no `defaultLocaleId` it will take the first of the locales.
+- **Translated**: Used when all fields have been translated.
+- **Not Translated**: Used when none of the localizable fields have been translated.
+- **Translating x/x**: Used when at least one of the localizable fields of a content item has been translated. This label indicates the number of fields translated compared to the total number of fields.
 
 ## Trigger Options
 
@@ -215,41 +215,41 @@ import {Provider, LanguagePicker} from '@clayui/core';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4" style={{width: 'fit-content'}}>
-				<LanguagePicker
-					hideTriggerText
-					locales={[
-						{
-							id: 'en_US',
-							label: 'en-US',
-							name: 'English (United States)',
-							symbol: 'en-us',
-						},
-						{
-							id: 'ar_SA',
-							label: 'ar-SA',
-							name: 'Arabic (Saudi Arabia)',
-							symbol: 'ar-sa',
-						},
-						{
-							id: 'ca_ES',
-							label: 'ca-ES',
-							name: 'Catalan (Spain)',
-							symbol: 'ca-es',
-						},
-						{
-							id: 'nl_NL',
-							label: 'nl-NL',
-							name: 'Dutch (Netherlands)',
-							symbol: 'nl-nl',
-						},
-					]}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4" style={{width: 'fit-content'}}>
+        <LanguagePicker
+          hideTriggerText
+          locales={[
+            {
+              id: 'en_US',
+              label: 'en-US',
+              name: 'English (United States)',
+              symbol: 'en-us',
+            },
+            {
+              id: 'ar_SA',
+              label: 'ar-SA',
+              name: 'Arabic (Saudi Arabia)',
+              symbol: 'ar-sa',
+            },
+            {
+              id: 'ca_ES',
+              label: 'ca-ES',
+              name: 'Catalan (Spain)',
+              symbol: 'ca-es',
+            },
+            {
+              id: 'nl_NL',
+              label: 'nl-NL',
+              name: 'Dutch (Netherlands)',
+              symbol: 'nl-nl',
+            },
+          ]}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -262,40 +262,40 @@ import {Provider, LanguagePicker} from '@clayui/core';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4" style={{width: 'fit-content'}}>
-				<LanguagePicker
-					locales={[
-						{
-							id: 'en_US',
-							label: 'en-US',
-							name: 'English (United States)',
-							symbol: 'en-us',
-						},
-						{
-							id: 'ar_SA',
-							label: 'ar-SA',
-							name: 'Arabic (Saudi Arabia)',
-							symbol: 'ar-sa',
-						},
-						{
-							id: 'ca_ES',
-							label: 'ca-ES',
-							name: 'Catalan (Spain)',
-							symbol: 'ca-es',
-						},
-						{
-							id: 'nl_NL',
-							label: 'nl-NL',
-							name: 'Dutch (Netherlands)',
-							symbol: 'nl-nl',
-						},
-					]}
-					small
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4" style={{width: 'fit-content'}}>
+        <LanguagePicker
+          locales={[
+            {
+              id: 'en_US',
+              label: 'en-US',
+              name: 'English (United States)',
+              symbol: 'en-us',
+            },
+            {
+              id: 'ar_SA',
+              label: 'ar-SA',
+              name: 'Arabic (Saudi Arabia)',
+              symbol: 'ar-sa',
+            },
+            {
+              id: 'ca_ES',
+              label: 'ca-ES',
+              name: 'Catalan (Spain)',
+              symbol: 'ca-es',
+            },
+            {
+              id: 'nl_NL',
+              label: 'nl-NL',
+              name: 'Dutch (Netherlands)',
+              symbol: 'nl-nl',
+            },
+          ]}
+          small
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

@@ -4,11 +4,11 @@ description: 'Clay Nav provides a clear and semantic navigation for your site'
 packageNpm: '@clayui/nav'
 packageUse: "import Nav from '@clayui/nav';"
 packageTypes:
-    [
-        'clay-core/src/nav/Nav.tsx',
-        'clay-core/src/nav/Link.tsx',
-        'clay-core/src/nav/Item.tsx',
-    ]
+  [
+    'clay-core/src/nav/Nav.tsx',
+    'clay-core/src/nav/Link.tsx',
+    'clay-core/src/nav/Item.tsx',
+  ]
 ---
 
 ## Basic Usage
@@ -19,26 +19,26 @@ import Nav from '@clayui/nav';
 import React, {useState} from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Nav>
-					<Nav.Item>
-						<Nav.Link active href="#">
-							{'Active'}
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="#">{'Normal'}</Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link disabled href="#">
-							{'Disabled'}
-						</Nav.Link>
-					</Nav.Item>
-				</Nav>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Nav>
+          <Nav.Item>
+            <Nav.Link active href="#">
+              {'Active'}
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#">{'Normal'}</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link disabled href="#">
+              {'Disabled'}
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
+      </div>
+    </Provider>
+  );
 }
 ```

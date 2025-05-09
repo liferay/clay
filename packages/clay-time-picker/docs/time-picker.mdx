@@ -14,22 +14,22 @@ import TimePicker from '@clayui/time-picker';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [state, setState] = useState({
-		hours: '--',
-		minutes: '--',
-	});
+  const [state, setState] = useState({
+    hours: '--',
+    minutes: '--',
+  });
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<TimePicker
-					onChange={setState}
-					timezone="GMT+01:00"
-					use12Hours
-					value={state}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <TimePicker
+          onChange={setState}
+          timezone="GMT+01:00"
+          use12Hours
+          value={state}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

@@ -18,18 +18,18 @@ import {ClayCheckbox} from '@clayui/form';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayCheckbox
-					checked={value}
-					onChange={() => setValue((val) => !val)}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayCheckbox
+          checked={value}
+          onChange={() => setValue((val) => !val)}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -45,24 +45,24 @@ import {ClayCheckbox} from '@clayui/form';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-	const data = {
-		id: 'test',
-	};
+  const data = {
+    id: 'test',
+  };
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayCheckbox
-					aria-label="I'm checked indefinitely"
-					checked={true}
-					containerProps={data}
-					onChange={() => setValue((val) => !val)}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayCheckbox
+          aria-label="I'm checked indefinitely"
+          checked={true}
+          containerProps={data}
+          onChange={() => setValue((val) => !val)}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -76,20 +76,20 @@ import {ClayCheckbox} from '@clayui/form';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayCheckbox
-					aria-label="Option 1"
-					checked={value}
-					onChange={() => setValue((val) => !val)}
-					label="Option 1"
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayCheckbox
+          aria-label="Option 1"
+          checked={value}
+          onChange={() => setValue((val) => !val)}
+          label="Option 1"
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -103,37 +103,37 @@ import {ClayCheckbox} from '@clayui/form';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<>
-					<ClayCheckbox
-						aria-label="Option 1"
-						checked={value}
-						onChange={() => setValue((val) => !val)}
-						label="Option 1"
-						inline
-					/>
-					<ClayCheckbox
-						aria-label="Option 2"
-						checked={value}
-						onChange={() => setValue((val) => !val)}
-						label="Option 2"
-						inline
-					/>
-					<ClayCheckbox
-						aria-label="Option 3"
-						checked={value}
-						onChange={() => setValue((val) => !val)}
-						label="Option 3"
-						inline
-					/>
-				</>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <>
+          <ClayCheckbox
+            aria-label="Option 1"
+            checked={value}
+            onChange={() => setValue((val) => !val)}
+            label="Option 1"
+            inline
+          />
+          <ClayCheckbox
+            aria-label="Option 2"
+            checked={value}
+            onChange={() => setValue((val) => !val)}
+            label="Option 2"
+            inline
+          />
+          <ClayCheckbox
+            aria-label="Option 3"
+            checked={value}
+            onChange={() => setValue((val) => !val)}
+            label="Option 3"
+            inline
+          />
+        </>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -147,19 +147,19 @@ import {ClayCheckbox} from '@clayui/form';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayCheckbox
-					aria-label="I'm indeterminate"
-					checked={value}
-					onChange={() => setValue((val) => !val)}
-					indeterminate
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayCheckbox
+          aria-label="I'm indeterminate"
+          checked={value}
+          onChange={() => setValue((val) => !val)}
+          indeterminate
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

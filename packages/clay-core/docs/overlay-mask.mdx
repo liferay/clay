@@ -15,29 +15,26 @@ import {Provider, Button, OverlayMask} from '@clayui/core';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Button.Group spaced>
-					<Button
-						displayType="secondary"
-						borderless
-						onClick={() => setVisible(!visible)}
-					>
-						Open overlay
-					</Button>
-					<OverlayMask
-						onClick={() => setVisible(false)}
-						visible={visible}
-					>
-						<Button>Button</Button>
-					</OverlayMask>
-				</Button.Group>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Button.Group spaced>
+          <Button
+            displayType="secondary"
+            borderless
+            onClick={() => setVisible(!visible)}
+          >
+            Open overlay
+          </Button>
+          <OverlayMask onClick={() => setVisible(false)} visible={visible}>
+            <Button>Button</Button>
+          </OverlayMask>
+        </Button.Group>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -53,7 +50,7 @@ There are two different ways to create the highlighted area for a component, thi
 
 ```jsx
 <OverlayMask>
-	<ClayButton>Button</ClayButton>
+  <ClayButton>Button</ClayButton>
 </OverlayMask>
 ```
 
@@ -61,12 +58,12 @@ Another option is for cases where it is not possible to define the component as 
 
 ```jsx
 <OverlayMask>
-	{(ref) => (
-		<>
-			<ClayButton>Button A</ClayButton>
-			<ClayButton ref={ref}>Button B</ClayButton>
-		</>
-	)}
+  {(ref) => (
+    <>
+      <ClayButton>Button A</ClayButton>
+      <ClayButton ref={ref}>Button B</ClayButton>
+    </>
+  )}
 </OverlayMask>
 ```
 
@@ -79,22 +76,22 @@ const logo = document.body.querySelector('.logo');
 const {height, width, x, y} = logo.getBoundingClientRect();
 
 <OverlayMask
-	defaultBounds={{
-		height,
-		width,
-		x,
-		y,
-	}}
-	visible
+  defaultBounds={{
+    height,
+    width,
+    x,
+    y,
+  }}
+  visible
 />;
 
 // or
 
 const [bounds, setBounds] = useState({
-	height: 0,
-	width: 0,
-	x: 0,
-	y: 0,
+  height: 0,
+  width: 0,
+  x: 0,
+  y: 0,
 });
 
 useEffect(() => {}, []);

@@ -5,7 +5,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/selecto
 packageNpm: '@clayui/multi-select'
 packageUse: "import MultiSelect from '@clayui/multi-select';"
 packageTypes:
-    ['clay-multi-select/src/MultiSelect.tsx', 'clay-autocomplete/src/Item.tsx']
+  ['clay-multi-select/src/MultiSelect.tsx', 'clay-autocomplete/src/Item.tsx']
 ---
 
 Multi Select is an aggregate component of the `@clayui/form` package, consisting of a high-level written above a `<ClayInput />` that provides the ability to create tags.
@@ -16,27 +16,27 @@ import MultiSelect from '@clayui/multi-select';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
-		{
-			label: 'one',
-			value: '1',
-		},
-	]);
+  const [value, setValue] = useState('');
+  const [items, setItems] = useState([
+    {
+      label: 'one',
+      value: '1',
+    },
+  ]);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<MultiSelect
-					inputName="myInput"
-					items={items}
-					onChange={setValue}
-					onItemsChange={setItems}
-					value={value}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <MultiSelect
+          inputName="myInput"
+          items={items}
+          onChange={setValue}
+          onItemsChange={setItems}
+          value={value}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -54,47 +54,47 @@ import MultiSelect from '@clayui/multi-select';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
-		{
-			label: 'one',
-			value: '1',
-		},
-	]);
+  const [value, setValue] = useState('');
+  const [items, setItems] = useState([
+    {
+      label: 'one',
+      value: '1',
+    },
+  ]);
 
-	const sourceItems = [
-		{
-			label: 'one',
-			value: '1',
-		},
-		{
-			label: 'two',
-			value: '2',
-		},
-		{
-			label: 'three',
-			value: '3',
-		},
-		{
-			label: 'four',
-			value: '4',
-		},
-	];
+  const sourceItems = [
+    {
+      label: 'one',
+      value: '1',
+    },
+    {
+      label: 'two',
+      value: '2',
+    },
+    {
+      label: 'three',
+      value: '3',
+    },
+    {
+      label: 'four',
+      value: '4',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<MultiSelect
-					inputName="myInput"
-					items={items}
-					onChange={setValue}
-					onItemsChange={setItems}
-					sourceItems={sourceItems}
-					value={value}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <MultiSelect
+          inputName="myInput"
+          items={items}
+          onChange={setValue}
+          onItemsChange={setItems}
+          sourceItems={sourceItems}
+          value={value}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -110,61 +110,58 @@ import Button from '@clayui/button';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
-		{
-			label: 'one',
-			value: '1',
-		},
-	]);
+  const [value, setValue] = useState('');
+  const [items, setItems] = useState([
+    {
+      label: 'one',
+      value: '1',
+    },
+  ]);
 
-	const sourceItems = [
-		{
-			label: 'one',
-			value: '1',
-		},
-		{
-			label: 'two',
-			value: '2',
-		},
-		{
-			label: 'three',
-			value: '3',
-		},
-		{
-			label: 'four',
-			value: '4',
-		},
-	];
+  const sourceItems = [
+    {
+      label: 'one',
+      value: '1',
+    },
+    {
+      label: 'two',
+      value: '2',
+    },
+    {
+      label: 'three',
+      value: '3',
+    },
+    {
+      label: 'four',
+      value: '4',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayForm.Group>
-					<ClayInput.Group>
-						<ClayInput.GroupItem>
-							<MultiSelect
-								inputName="myInput"
-								items={items}
-								onChange={setValue}
-								onItemsChange={setItems}
-								sourceItems={sourceItems}
-								value={value}
-							/>
-						</ClayInput.GroupItem>
-						<ClayInput.GroupItem shrink>
-							<Button
-								displayType="secondary"
-								onClick={() => alert('Click')}
-							>
-								{'Select'}
-							</Button>
-						</ClayInput.GroupItem>
-					</ClayInput.Group>
-				</ClayForm.Group>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayForm.Group>
+          <ClayInput.Group>
+            <ClayInput.GroupItem>
+              <MultiSelect
+                inputName="myInput"
+                items={items}
+                onChange={setValue}
+                onItemsChange={setItems}
+                sourceItems={sourceItems}
+                value={value}
+              />
+            </ClayInput.GroupItem>
+            <ClayInput.GroupItem shrink>
+              <Button displayType="secondary" onClick={() => alert('Click')}>
+                {'Select'}
+              </Button>
+            </ClayInput.GroupItem>
+          </ClayInput.Group>
+        </ClayForm.Group>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -180,71 +177,68 @@ import Button from '@clayui/button';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
-		{
-			label: 'one',
-			value: '1',
-		},
-	]);
+  const [value, setValue] = useState('');
+  const [items, setItems] = useState([
+    {
+      label: 'one',
+      value: '1',
+    },
+  ]);
 
-	const sourceItems = [
-		{
-			label: 'one',
-			value: '1',
-		},
-		{
-			label: 'two',
-			value: '2',
-		},
-		{
-			label: 'three',
-			value: '3',
-		},
-		{
-			label: 'four',
-			value: '4',
-		},
-	];
+  const sourceItems = [
+    {
+      label: 'one',
+      value: '1',
+    },
+    {
+      label: 'two',
+      value: '2',
+    },
+    {
+      label: 'three',
+      value: '3',
+    },
+    {
+      label: 'four',
+      value: '4',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayForm.Group className="has-error">
-					<label>{'MultiSelect'}</label>
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayForm.Group className="has-error">
+          <label>{'MultiSelect'}</label>
 
-					<ClayInput.Group>
-						<ClayInput.GroupItem>
-							<MultiSelect
-								inputName="myInput"
-								items={items}
-								onChange={setValue}
-								onItemsChange={setItems}
-								sourceItems={sourceItems}
-								value={value}
-							/>
+          <ClayInput.Group>
+            <ClayInput.GroupItem>
+              <MultiSelect
+                inputName="myInput"
+                items={items}
+                onChange={setValue}
+                onItemsChange={setItems}
+                sourceItems={sourceItems}
+                value={value}
+              />
 
-							<ClayForm.FeedbackGroup>
-								<ClayForm.FeedbackItem>
-									<ClayForm.FeedbackIndicator symbol="info-circle" />
+              <ClayForm.FeedbackGroup>
+                <ClayForm.FeedbackItem>
+                  <ClayForm.FeedbackIndicator symbol="info-circle" />
 
-									{'You made an error'}
-								</ClayForm.FeedbackItem>
-							</ClayForm.FeedbackGroup>
-						</ClayInput.GroupItem>
-						<ClayInput.GroupItem shrink>
-							<Button
-								displayType="secondary"
-								onClick={() => alert('Click')}
-							>
-								{'Select'}
-							</Button>
-						</ClayInput.GroupItem>
-					</ClayInput.Group>
-				</ClayForm.Group>
-			</div>
-		</Provider>
-	);
+                  {'You made an error'}
+                </ClayForm.FeedbackItem>
+              </ClayForm.FeedbackGroup>
+            </ClayInput.GroupItem>
+            <ClayInput.GroupItem shrink>
+              <Button displayType="secondary" onClick={() => alert('Click')}>
+                {'Select'}
+              </Button>
+            </ClayInput.GroupItem>
+          </ClayInput.Group>
+        </ClayForm.Group>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -260,64 +254,58 @@ import Icon from '@clayui/icon';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
-		{
-			email: 'one@example.com',
-			label: 'One',
-			value: '1',
-		},
-	]);
+  const [value, setValue] = useState('');
+  const [items, setItems] = useState([
+    {
+      email: 'one@example.com',
+      label: 'One',
+      value: '1',
+    },
+  ]);
 
-	const sourceItems = [
-		{
-			email: 'one@example.com',
-			label: 'One',
-			value: '1',
-		},
-		{
-			email: 'two@example.com',
-			label: 'Two',
-			value: '2',
-		},
-	];
+  const sourceItems = [
+    {
+      email: 'one@example.com',
+      label: 'One',
+      value: '1',
+    },
+    {
+      email: 'two@example.com',
+      label: 'Two',
+      value: '2',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<MultiSelect
-					inputName="myInput"
-					items={items}
-					onChange={setValue}
-					onItemsChange={setItems}
-					sourceItems={sourceItems}
-					value={value}
-				>
-					{(item) => (
-						<MultiSelect.Item
-							key={item.value}
-							textValue={item.label}
-						>
-							<div className="autofit-row autofit-row-center">
-								<div className="autofit-col mr-3">
-									<Sticker
-										className="sticker-user-icon"
-										size="lg"
-									>
-										<Icon symbol="user" />
-									</Sticker>
-								</div>
-								<div className="autofit-col">
-									<strong>{item.label}</strong>
-									<span>{item.email}</span>
-								</div>
-							</div>
-						</MultiSelect.Item>
-					)}
-				</MultiSelect>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <MultiSelect
+          inputName="myInput"
+          items={items}
+          onChange={setValue}
+          onItemsChange={setItems}
+          sourceItems={sourceItems}
+          value={value}
+        >
+          {(item) => (
+            <MultiSelect.Item key={item.value} textValue={item.label}>
+              <div className="autofit-row autofit-row-center">
+                <div className="autofit-col mr-3">
+                  <Sticker className="sticker-user-icon" size="lg">
+                    <Icon symbol="user" />
+                  </Sticker>
+                </div>
+                <div className="autofit-col">
+                  <strong>{item.label}</strong>
+                  <span>{item.email}</span>
+                </div>
+              </div>
+            </MultiSelect.Item>
+          )}
+        </MultiSelect>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -335,28 +323,28 @@ import MultiSelect from '@clayui/multi-select';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
-		{
-			label: 'one',
-			value: '1',
-		},
-	]);
+  const [value, setValue] = useState('');
+  const [items, setItems] = useState([
+    {
+      label: 'one',
+      value: '1',
+    },
+  ]);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<MultiSelect
-					inputName="multiSelectSmallInput"
-					items={items}
-					onChange={setValue}
-					onItemsChange={setItems}
-					size="sm"
-					value={value}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <MultiSelect
+          inputName="multiSelectSmallInput"
+          items={items}
+          onChange={setValue}
+          onItemsChange={setItems}
+          size="sm"
+          value={value}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -370,60 +358,57 @@ import Button from '@clayui/button';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
-		{
-			label: 'one',
-			value: '1',
-		},
-	]);
+  const [value, setValue] = useState('');
+  const [items, setItems] = useState([
+    {
+      label: 'one',
+      value: '1',
+    },
+  ]);
 
-	const sourceItems = [
-		{
-			label: 'one',
-			value: '1',
-		},
-		{
-			label: 'two',
-			value: '2',
-		},
-		{
-			label: 'three',
-			value: '3',
-		},
-		{
-			label: 'four',
-			value: '4',
-		},
-	];
+  const sourceItems = [
+    {
+      label: 'one',
+      value: '1',
+    },
+    {
+      label: 'two',
+      value: '2',
+    },
+    {
+      label: 'three',
+      value: '3',
+    },
+    {
+      label: 'four',
+      value: '4',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayForm.Group>
-					<ClayInput.Group className="input-group-sm">
-						<ClayInput.GroupItem>
-							<MultiSelect
-								inputName="myInput"
-								items={items}
-								onChange={setValue}
-								onItemsChange={setItems}
-								sourceItems={sourceItems}
-								value={value}
-							/>
-						</ClayInput.GroupItem>
-						<ClayInput.GroupItem shrink>
-							<Button
-								displayType="secondary"
-								onClick={() => alert('Click')}
-							>
-								{'Select'}
-							</Button>
-						</ClayInput.GroupItem>
-					</ClayInput.Group>
-				</ClayForm.Group>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayForm.Group>
+          <ClayInput.Group className="input-group-sm">
+            <ClayInput.GroupItem>
+              <MultiSelect
+                inputName="myInput"
+                items={items}
+                onChange={setValue}
+                onItemsChange={setItems}
+                sourceItems={sourceItems}
+                value={value}
+              />
+            </ClayInput.GroupItem>
+            <ClayInput.GroupItem shrink>
+              <Button displayType="secondary" onClick={() => alert('Click')}>
+                {'Select'}
+              </Button>
+            </ClayInput.GroupItem>
+          </ClayInput.Group>
+        </ClayForm.Group>
+      </div>
+    </Provider>
+  );
 }
 ```

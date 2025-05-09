@@ -17,10 +17,10 @@ import {flagsData, iconsData} from './aliases';
 ## Language Flags
 
 <IconSearch
-	label="Search Flags"
-	placeholder="Search Flags..."
-	source={flagsData}
-	type="flag"
+  label="Search Flags"
+  placeholder="Search Flags..."
+  source={flagsData}
+  type="flag"
 />
 
 ## Best Practices
@@ -35,14 +35,14 @@ If you are using the spritemap from `@clayui/css` you can download that svg [her
 ### Using Context
 
 <div className="clay-site-alert alert alert-info">
-	For V3, an API was added to utilize context for passing spritemap down
-	instead of having to pass the prop everywhere.
+  For V3, an API was added to utilize context for passing spritemap down instead
+  of having to pass the prop everywhere.
 </div>
 
 Add `import { ClayIconSpriteContext } from "@clayui/icon"` use the context as a provider. `<ClayIconSpriteContext.Provider value="path/to/sprite.svg">`.
 
 ```jsx
 <ClayIconSpriteContext.Provider value="/icons.svg">
-	<ClayIcon symbol="add-cell" />
+  <ClayIcon symbol="add-cell" />
 </ClayIconSpriteContext.Provider>
 ```

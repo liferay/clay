@@ -6,19 +6,19 @@ packageNpm: '@clayui/management-toolbar'
 packageStatus: 'Deprecated'
 packageUse: "import ManagementToolbar from '@clayui/management-toolbar';"
 packageTypes:
-    [
-        'clay-management-toolbar/src/ManagementToolbar.tsx',
-        'clay-management-toolbar/src/ResultsBar.tsx',
-        'clay-management-toolbar/src/Item.tsx',
-        'clay-management-toolbar/src/ItemList.tsx',
-        'clay-management-toolbar/src/ResultsBarItem.tsx',
-        'clay-management-toolbar/src/Search.tsx',
-    ]
+  [
+    'clay-management-toolbar/src/ManagementToolbar.tsx',
+    'clay-management-toolbar/src/ResultsBar.tsx',
+    'clay-management-toolbar/src/Item.tsx',
+    'clay-management-toolbar/src/ItemList.tsx',
+    'clay-management-toolbar/src/ResultsBarItem.tsx',
+    'clay-management-toolbar/src/Search.tsx',
+  ]
 ---
 
 <div className="clay-site-alert alert alert-warning">
-	<strong className="lead">Warning</strong>
-	Deprecated since version 3.54.x
+  <strong className="lead">Warning</strong>
+  Deprecated since version 3.54.x
 </div>
 
 ## Composing
@@ -38,64 +38,62 @@ import Icon from '@clayui/icon';
 import React, {useState} from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ManagementToolbar>
-					<ManagementToolbar.ItemList>
-						<ManagementToolbar.Search>
-							<ClayInput.Group>
-								<ClayInput.GroupItem>
-									<ClayInput
-										aria-label="Search"
-										className="form-control input-group-inset input-group-inset-after"
-										defaultValue="Red"
-										type="text"
-									/>
-									<ClayInput.GroupInsetItem after tag="span">
-										<ClayButtonWithIcon
-											aria-label="Close search"
-											className="navbar-breakpoint-d-none"
-											displayType="unstyled"
-											onClick={() =>
-												setSearchMobile(false)
-											}
-											symbol="times"
-										/>
-										<ClayButtonWithIcon
-											aria-label="Search"
-											displayType="unstyled"
-											symbol="search"
-											type="submit"
-										/>
-									</ClayInput.GroupInsetItem>
-								</ClayInput.GroupItem>
-							</ClayInput.Group>
-						</ManagementToolbar.Search>
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ManagementToolbar>
+          <ManagementToolbar.ItemList>
+            <ManagementToolbar.Search>
+              <ClayInput.Group>
+                <ClayInput.GroupItem>
+                  <ClayInput
+                    aria-label="Search"
+                    className="form-control input-group-inset input-group-inset-after"
+                    defaultValue="Red"
+                    type="text"
+                  />
+                  <ClayInput.GroupInsetItem after tag="span">
+                    <ClayButtonWithIcon
+                      aria-label="Close search"
+                      className="navbar-breakpoint-d-none"
+                      displayType="unstyled"
+                      onClick={() => setSearchMobile(false)}
+                      symbol="times"
+                    />
+                    <ClayButtonWithIcon
+                      aria-label="Search"
+                      displayType="unstyled"
+                      symbol="search"
+                      type="submit"
+                    />
+                  </ClayInput.GroupInsetItem>
+                </ClayInput.GroupItem>
+              </ClayInput.Group>
+            </ManagementToolbar.Search>
 
-						<ManagementToolbar.Item>
-							<Button
-								aria-label="Info"
-								className="nav-link nav-link-monospaced"
-								displayType="unstyled"
-								onClick={() => {}}
-							>
-								<Icon symbol="info-circle-open" />
-							</Button>
-						</ManagementToolbar.Item>
+            <ManagementToolbar.Item>
+              <Button
+                aria-label="Info"
+                className="nav-link nav-link-monospaced"
+                displayType="unstyled"
+                onClick={() => {}}
+              >
+                <Icon symbol="info-circle-open" />
+              </Button>
+            </ManagementToolbar.Item>
 
-						<ManagementToolbar.Item>
-							<ClayButtonWithIcon
-								aria-label="Add"
-								className="nav-btn nav-btn-monospaced"
-								symbol="plus"
-							/>
-						</ManagementToolbar.Item>
-					</ManagementToolbar.ItemList>
-				</ManagementToolbar>
-			</div>
-		</Provider>
-	);
+            <ManagementToolbar.Item>
+              <ClayButtonWithIcon
+                aria-label="Add"
+                className="nav-btn nav-btn-monospaced"
+                symbol="plus"
+              />
+            </ManagementToolbar.Item>
+          </ManagementToolbar.ItemList>
+        </ManagementToolbar>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -112,200 +110,187 @@ import Label from '@clayui/label';
 import React, {useState} from 'react';
 
 export default function App() {
-	const filterItems = [
-		{label: 'Filter Action 1', onClick: () => alert('Filter clicked')},
-		{label: 'Filter Action 2', onClick: () => alert('Filter clicked')},
-	];
+  const filterItems = [
+    {label: 'Filter Action 1', onClick: () => alert('Filter clicked')},
+    {label: 'Filter Action 2', onClick: () => alert('Filter clicked')},
+  ];
 
-	const viewTypes = [
-		{
-			label: 'List',
-			onClick: () => alert('Show view list'),
-			symbolLeft: 'list',
-		},
-		{
-			active: true,
-			label: 'Table',
-			onClick: () => alert('Show view table'),
-			symbolLeft: 'table',
-		},
-		{
-			label: 'Card',
-			onClick: () => alert('Show view card'),
-			symbolLeft: 'cards2',
-		},
-	];
+  const viewTypes = [
+    {
+      label: 'List',
+      onClick: () => alert('Show view list'),
+      symbolLeft: 'list',
+    },
+    {
+      active: true,
+      label: 'Table',
+      onClick: () => alert('Show view table'),
+      symbolLeft: 'table',
+    },
+    {
+      label: 'Card',
+      onClick: () => alert('Show view card'),
+      symbolLeft: 'cards2',
+    },
+  ];
 
-	const [searchMobile, setSearchMobile] = useState(false);
-	const [checked, setChecked] = useState(false);
+  const [searchMobile, setSearchMobile] = useState(false);
+  const [checked, setChecked] = useState(false);
 
-	const viewTypeActive = viewTypes.find((type) => type.active);
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<>
-					<ManagementToolbar>
-						<ManagementToolbar.ItemList>
-							<ManagementToolbar.Item>
-								<ClayCheckbox
-									aria-label={
-										checked ? 'Unselect all' : 'Select all'
-									}
-									checked={checked}
-									onChange={(event) =>
-										setChecked(event.target.checked)
-									}
-								/>
-							</ManagementToolbar.Item>
+  const viewTypeActive = viewTypes.find((type) => type.active);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <>
+          <ManagementToolbar>
+            <ManagementToolbar.ItemList>
+              <ManagementToolbar.Item>
+                <ClayCheckbox
+                  aria-label={checked ? 'Unselect all' : 'Select all'}
+                  checked={checked}
+                  onChange={(event) => setChecked(event.target.checked)}
+                />
+              </ManagementToolbar.Item>
 
-							<ClayDropDownWithItems
-								items={filterItems}
-								trigger={
-									<Button
-										className="nav-link"
-										displayType="unstyled"
-									>
-										<span className="navbar-breakpoint-down-d-none">
-											<span className="navbar-text-truncate">
-												{'Filter and Order'}
-											</span>
-										</span>
-										<span className="navbar-breakpoint-d-none">
-											<Icon symbol="filter" />
-										</span>
-									</Button>
-								}
-								triggerIcon="caret-bottom"
-							/>
+              <ClayDropDownWithItems
+                items={filterItems}
+                trigger={
+                  <Button className="nav-link" displayType="unstyled">
+                    <span className="navbar-breakpoint-down-d-none">
+                      <span className="navbar-text-truncate">
+                        {'Filter and Order'}
+                      </span>
+                    </span>
+                    <span className="navbar-breakpoint-d-none">
+                      <Icon symbol="filter" />
+                    </span>
+                  </Button>
+                }
+                triggerIcon="caret-bottom"
+              />
 
-							<ManagementToolbar.Item>
-								<Button
-									aria-label="Order"
-									className="nav-link nav-link-monospaced"
-									displayType="unstyled"
-									onClick={() => {}}
-								>
-									<Icon symbol="order-list-up" />
-								</Button>
-							</ManagementToolbar.Item>
-						</ManagementToolbar.ItemList>
+              <ManagementToolbar.Item>
+                <Button
+                  aria-label="Order"
+                  className="nav-link nav-link-monospaced"
+                  displayType="unstyled"
+                  onClick={() => {}}
+                >
+                  <Icon symbol="order-list-up" />
+                </Button>
+              </ManagementToolbar.Item>
+            </ManagementToolbar.ItemList>
 
-						<ManagementToolbar.Search showMobile={searchMobile}>
-							<ClayInput.Group>
-								<ClayInput.GroupItem>
-									<ClayInput
-										aria-label="Search"
-										className="form-control input-group-inset input-group-inset-after"
-										defaultValue="Red"
-										type="text"
-									/>
-									<ClayInput.GroupInsetItem after tag="span">
-										<ClayButtonWithIcon
-											aria-label="Close search"
-											className="navbar-breakpoint-d-none"
-											displayType="unstyled"
-											onClick={() =>
-												setSearchMobile(false)
-											}
-											symbol="times"
-										/>
-										<ClayButtonWithIcon
-											aria-label="Search"
-											displayType="unstyled"
-											symbol="search"
-											type="submit"
-										/>
-									</ClayInput.GroupInsetItem>
-								</ClayInput.GroupItem>
-							</ClayInput.Group>
-						</ManagementToolbar.Search>
+            <ManagementToolbar.Search showMobile={searchMobile}>
+              <ClayInput.Group>
+                <ClayInput.GroupItem>
+                  <ClayInput
+                    aria-label="Search"
+                    className="form-control input-group-inset input-group-inset-after"
+                    defaultValue="Red"
+                    type="text"
+                  />
+                  <ClayInput.GroupInsetItem after tag="span">
+                    <ClayButtonWithIcon
+                      aria-label="Close search"
+                      className="navbar-breakpoint-d-none"
+                      displayType="unstyled"
+                      onClick={() => setSearchMobile(false)}
+                      symbol="times"
+                    />
+                    <ClayButtonWithIcon
+                      aria-label="Search"
+                      displayType="unstyled"
+                      symbol="search"
+                      type="submit"
+                    />
+                  </ClayInput.GroupInsetItem>
+                </ClayInput.GroupItem>
+              </ClayInput.Group>
+            </ManagementToolbar.Search>
 
-						<ManagementToolbar.ItemList>
-							<ManagementToolbar.Item className="navbar-breakpoint-d-none">
-								<Button
-									aria-label="Search"
-									className="nav-link nav-link-monospaced"
-									displayType="unstyled"
-									onClick={() => setSearchMobile(true)}
-								>
-									<Icon symbol="search" />
-								</Button>
-							</ManagementToolbar.Item>
+            <ManagementToolbar.ItemList>
+              <ManagementToolbar.Item className="navbar-breakpoint-d-none">
+                <Button
+                  aria-label="Search"
+                  className="nav-link nav-link-monospaced"
+                  displayType="unstyled"
+                  onClick={() => setSearchMobile(true)}
+                >
+                  <Icon symbol="search" />
+                </Button>
+              </ManagementToolbar.Item>
 
-							<ManagementToolbar.Item>
-								<Button
-									aria-label="Info"
-									className="nav-link nav-link-monospaced"
-									displayType="unstyled"
-									onClick={() => {}}
-								>
-									<Icon symbol="info-circle-open" />
-								</Button>
-							</ManagementToolbar.Item>
+              <ManagementToolbar.Item>
+                <Button
+                  aria-label="Info"
+                  className="nav-link nav-link-monospaced"
+                  displayType="unstyled"
+                  onClick={() => {}}
+                >
+                  <Icon symbol="info-circle-open" />
+                </Button>
+              </ManagementToolbar.Item>
 
-							<ManagementToolbar.Item>
-								<ClayDropDownWithItems
-									items={viewTypes}
-									trigger={
-										<Button
-											aria-label="Display view"
-											className="nav-link-monospaced nav-link"
-											displayType="unstyled"
-										>
-											<Icon
-												symbol={
-													viewTypeActive
-														? viewTypeActive.symbolLeft
-														: ''
-												}
-											/>
-										</Button>
-									}
-									triggerIcon="caret-double-l"
-								/>
-							</ManagementToolbar.Item>
+              <ManagementToolbar.Item>
+                <ClayDropDownWithItems
+                  items={viewTypes}
+                  trigger={
+                    <Button
+                      aria-label="Display view"
+                      className="nav-link-monospaced nav-link"
+                      displayType="unstyled"
+                    >
+                      <Icon
+                        symbol={viewTypeActive ? viewTypeActive.symbolLeft : ''}
+                      />
+                    </Button>
+                  }
+                  triggerIcon="caret-double-l"
+                />
+              </ManagementToolbar.Item>
 
-							<ManagementToolbar.Item>
-								<ClayButtonWithIcon
-									aria-label="Add"
-									className="nav-btn nav-btn-monospaced"
-									symbol="plus"
-								/>
-							</ManagementToolbar.Item>
-						</ManagementToolbar.ItemList>
-					</ManagementToolbar>
+              <ManagementToolbar.Item>
+                <ClayButtonWithIcon
+                  aria-label="Add"
+                  className="nav-btn nav-btn-monospaced"
+                  symbol="plus"
+                />
+              </ManagementToolbar.Item>
+            </ManagementToolbar.ItemList>
+          </ManagementToolbar>
 
-					<ClayResultsBar>
-						<ClayResultsBar.Item>
-							<span className="component-text text-truncate-inline">
-								<span className="text-truncate">
-									{'2 results for "'}
-									<strong>{'Red'}</strong>
-									{'"'}
-								</span>
-							</span>
-						</ClayResultsBar.Item>
-						<ClayResultsBar.Item expand>
-							<Label
-								className="component-label tbar-label"
-								displayType="unstyled"
-							>
-								{'Filter'}
-							</Label>
-						</ClayResultsBar.Item>
-						<ClayResultsBar.Item>
-							<Button
-								className="component-link tbar-link"
-								displayType="unstyled"
-							>
-								{'Clear'}
-							</Button>
-						</ClayResultsBar.Item>
-					</ClayResultsBar>
-				</>
-			</div>
-		</Provider>
-	);
+          <ClayResultsBar>
+            <ClayResultsBar.Item>
+              <span className="component-text text-truncate-inline">
+                <span className="text-truncate">
+                  {'2 results for "'}
+                  <strong>{'Red'}</strong>
+                  {'"'}
+                </span>
+              </span>
+            </ClayResultsBar.Item>
+            <ClayResultsBar.Item expand>
+              <Label
+                className="component-label tbar-label"
+                displayType="unstyled"
+              >
+                {'Filter'}
+              </Label>
+            </ClayResultsBar.Item>
+            <ClayResultsBar.Item>
+              <Button
+                className="component-link tbar-link"
+                displayType="unstyled"
+              >
+                {'Clear'}
+              </Button>
+            </ClayResultsBar.Item>
+          </ClayResultsBar>
+        </>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -321,40 +306,40 @@ import Label from '@clayui/label';
 import React, {useState} from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ManagementToolbar>
-					<ClayResultsBar>
-						<ClayResultsBar.Item>
-							<span className="component-text text-truncate-inline">
-								<span className="text-truncate">
-									{'2 results for "'}
-									<strong>{'Red'}</strong>
-									{'"'}
-								</span>
-							</span>
-						</ClayResultsBar.Item>
-						<ClayResultsBar.Item expand>
-							<Label
-								className="component-label tbar-label"
-								displayType="unstyled"
-							>
-								{'Filter'}
-							</Label>
-						</ClayResultsBar.Item>
-						<ClayResultsBar.Item>
-							<Button
-								className="component-link tbar-link"
-								displayType="unstyled"
-							>
-								{'Clear'}
-							</Button>
-						</ClayResultsBar.Item>
-					</ClayResultsBar>
-				</ManagementToolbar>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ManagementToolbar>
+          <ClayResultsBar>
+            <ClayResultsBar.Item>
+              <span className="component-text text-truncate-inline">
+                <span className="text-truncate">
+                  {'2 results for "'}
+                  <strong>{'Red'}</strong>
+                  {'"'}
+                </span>
+              </span>
+            </ClayResultsBar.Item>
+            <ClayResultsBar.Item expand>
+              <Label
+                className="component-label tbar-label"
+                displayType="unstyled"
+              >
+                {'Filter'}
+              </Label>
+            </ClayResultsBar.Item>
+            <ClayResultsBar.Item>
+              <Button
+                className="component-link tbar-link"
+                displayType="unstyled"
+              >
+                {'Clear'}
+              </Button>
+            </ClayResultsBar.Item>
+          </ClayResultsBar>
+        </ManagementToolbar>
+      </div>
+    </Provider>
+  );
 }
 ```

@@ -6,12 +6,12 @@ packageNpm: '@clayui/multi-step-nav'
 storybookPath: 'design-system-components-multistepnav'
 packageUse: "import MultiStepNav from '@clayui/multi-step-nav';"
 packageTypes:
-    [
-        'clay-multi-step-nav/src/MultiStepNav.tsx',
-        'clay-multi-step-nav/src/MultiStepNavWithBasicItems.tsx',
-        'clay-multi-step-nav/src/Item.tsx',
-        'clay-multi-step-nav/src/Title.tsx',
-    ]
+  [
+    'clay-multi-step-nav/src/MultiStepNav.tsx',
+    'clay-multi-step-nav/src/MultiStepNavWithBasicItems.tsx',
+    'clay-multi-step-nav/src/Item.tsx',
+    'clay-multi-step-nav/src/Title.tsx',
+  ]
 ---
 
 It's used when a major or big task has to be divided into smaller task, with the aim of letting the user breath in the process and providing them with a sense of progression.
@@ -24,56 +24,56 @@ import MultiStepNav from '@clayui/multi-step-nav';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(1);
+  const [value, setValue] = useState(1);
 
-	const steps = [
-		{
-			subTitle: 'SubOne',
-			title: 'One',
-		},
-		{
-			subTitle: 'SubTwo',
-			title: 'Two',
-		},
-		{
-			subTitle: 'SubThree',
-			title: 'Three',
-		},
-		{
-			subTitle: 'SubFour',
-			title: 'Four',
-		},
-	];
+  const steps = [
+    {
+      subTitle: 'SubOne',
+      title: 'One',
+    },
+    {
+      subTitle: 'SubTwo',
+      title: 'Two',
+    },
+    {
+      subTitle: 'SubThree',
+      title: 'Three',
+    },
+    {
+      subTitle: 'SubFour',
+      title: 'Four',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<MultiStepNav>
-					{steps.map(({subTitle, title}, i) => {
-						const complete = value > i;
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <MultiStepNav>
+          {steps.map(({subTitle, title}, i) => {
+            const complete = value > i;
 
-						return (
-							<MultiStepNav.Item
-								active={value === i}
-								expand={i + 1 !== steps.length}
-								key={i}
-								state={complete ? 'complete' : undefined}
-							>
-								<MultiStepNav.Title>{title}</MultiStepNav.Title>
-								<MultiStepNav.Divider />
-								<MultiStepNav.Indicator
-									complete={complete}
-									label={1 + i}
-									onClick={() => setValue(i)}
-									subTitle={subTitle}
-								/>
-							</MultiStepNav.Item>
-						);
-					})}
-				</MultiStepNav>
-			</div>
-		</Provider>
-	);
+            return (
+              <MultiStepNav.Item
+                active={value === i}
+                expand={i + 1 !== steps.length}
+                key={i}
+                state={complete ? 'complete' : undefined}
+              >
+                <MultiStepNav.Title>{title}</MultiStepNav.Title>
+                <MultiStepNav.Divider />
+                <MultiStepNav.Indicator
+                  complete={complete}
+                  label={1 + i}
+                  onClick={() => setValue(i)}
+                  subTitle={subTitle}
+                />
+              </MultiStepNav.Item>
+            );
+          })}
+        </MultiStepNav>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -87,56 +87,56 @@ import MultiStepNav from '@clayui/multi-step-nav';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(1);
+  const [value, setValue] = useState(1);
 
-	const steps = [
-		{
-			subTitle: 'Step 01',
-			title: 'Ticket Buyer Information',
-		},
-		{
-			subTitle: 'Step 02',
-			title: 'Attendee Information',
-		},
-		{
-			subTitle: 'Step 03',
-			title: 'Payment Information',
-		},
-		{
-			subTitle: 'Step 04',
-			title: 'Completed',
-		},
-	];
+  const steps = [
+    {
+      subTitle: 'Step 01',
+      title: 'Ticket Buyer Information',
+    },
+    {
+      subTitle: 'Step 02',
+      title: 'Attendee Information',
+    },
+    {
+      subTitle: 'Step 03',
+      title: 'Payment Information',
+    },
+    {
+      subTitle: 'Step 04',
+      title: 'Completed',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<MultiStepNav center>
-					{steps.map(({subTitle, title}, i) => {
-						const complete = value > i;
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <MultiStepNav center>
+          {steps.map(({subTitle, title}, i) => {
+            const complete = value > i;
 
-						return (
-							<MultiStepNav.Item
-								active={value === i}
-								expand={i + 1 !== steps.length}
-								key={i}
-								state={complete ? 'complete' : undefined}
-							>
-								<MultiStepNav.Title>{title}</MultiStepNav.Title>
-								<MultiStepNav.Divider />
-								<MultiStepNav.Indicator
-									complete={complete}
-									label={1 + i}
-									onClick={() => setValue(i)}
-									subTitle={subTitle}
-								/>
-							</MultiStepNav.Item>
-						);
-					})}
-				</MultiStepNav>
-			</div>
-		</Provider>
-	);
+            return (
+              <MultiStepNav.Item
+                active={value === i}
+                expand={i + 1 !== steps.length}
+                key={i}
+                state={complete ? 'complete' : undefined}
+              >
+                <MultiStepNav.Title>{title}</MultiStepNav.Title>
+                <MultiStepNav.Divider />
+                <MultiStepNav.Indicator
+                  complete={complete}
+                  label={1 + i}
+                  onClick={() => setValue(i)}
+                  subTitle={subTitle}
+                />
+              </MultiStepNav.Item>
+            );
+          })}
+        </MultiStepNav>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -154,39 +154,39 @@ import {ClayMultiStepNavWithBasicItems} from '@clayui/multi-step-nav';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(1);
+  const [value, setValue] = useState(1);
 
-	const steps = [
-		{
-			subTitle: 'SubOne',
-			title: 'One',
-		},
-		{
-			subTitle: 'SubTwo',
-			title: 'Two',
-		},
-		{
-			subTitle: 'SubThree',
-			title: 'Three',
-		},
-		{
-			subTitle: 'SubFour',
-			title: 'Four',
-		},
-	];
+  const steps = [
+    {
+      subTitle: 'SubOne',
+      title: 'One',
+    },
+    {
+      subTitle: 'SubTwo',
+      title: 'Two',
+    },
+    {
+      subTitle: 'SubThree',
+      title: 'Three',
+    },
+    {
+      subTitle: 'SubFour',
+      title: 'Four',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayMultiStepNavWithBasicItems
-					active={value}
-					onActiveChange={setValue}
-					state="error"
-					steps={steps}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayMultiStepNavWithBasicItems
+          active={value}
+          onActiveChange={setValue}
+          state="error"
+          steps={steps}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -196,20 +196,20 @@ Some use cases don't need the title or subtitle to add context to the steps, in 
 
 ```jsx
 <ClayMultiStepNav indicatorLabel="top">
-	<ClayMultiStepNav.Item
-		active={active}
-		complete={complete}
-		expand={i + 1 !== steps.length}
-		key={i}
-	>
-		<ClayMultiStepNav.Divider />
-		<ClayMultiStepNav.Indicator
-			complete={complete}
-			label={1 + i}
-			onClick={onClick}
-			subTitle={label}
-		/>
-	</ClayMultiStepNav.Item>
+  <ClayMultiStepNav.Item
+    active={active}
+    complete={complete}
+    expand={i + 1 !== steps.length}
+    key={i}
+  >
+    <ClayMultiStepNav.Divider />
+    <ClayMultiStepNav.Indicator
+      complete={complete}
+      label={1 + i}
+      onClick={onClick}
+      subTitle={label}
+    />
+  </ClayMultiStepNav.Item>
 </ClayMultiStepNav>
 ```
 
@@ -223,38 +223,38 @@ import {ClayMultiStepNavWithBasicItems} from '@clayui/multi-step-nav';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(1);
+  const [value, setValue] = useState(1);
 
-	const steps = [
-		{
-			subTitle: 'SubOne',
-			title: 'One',
-		},
-		{
-			subTitle: 'SubTwo',
-			title: 'Two',
-		},
-		{
-			subTitle: 'SubThree',
-			title: 'Three',
-		},
-		{
-			subTitle: 'SubFour',
-			title: 'Four',
-		},
-	];
+  const steps = [
+    {
+      subTitle: 'SubOne',
+      title: 'One',
+    },
+    {
+      subTitle: 'SubTwo',
+      title: 'Two',
+    },
+    {
+      subTitle: 'SubThree',
+      title: 'Three',
+    },
+    {
+      subTitle: 'SubFour',
+      title: 'Four',
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<ClayMultiStepNavWithBasicItems
-					active={value}
-					maxStepsShown={2}
-					onActiveChange={setValue}
-					steps={steps}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayMultiStepNavWithBasicItems
+          active={value}
+          maxStepsShown={2}
+          onActiveChange={setValue}
+          steps={steps}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

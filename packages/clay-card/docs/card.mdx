@@ -5,19 +5,19 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/cards/'
 packageNpm: '@clayui/card'
 packageUse: "import ClayCard from '@clayui/card';"
 packageTypes:
-    [
-        'clay-card/src/Card.tsx',
-        'clay-card/src/CardWithHorizontal.tsx',
-        'clay-card/src/CardWithInfo.tsx',
-        'clay-card/src/CardWithNavigation.tsx',
-        'clay-card/src/CardWithUser.tsx',
-        'clay-card/src/AspectRatio.tsx',
-        'clay-card/src/Body.tsx',
-        'clay-card/src/Caption.tsx',
-        'clay-card/src/Description.tsx',
-        'clay-card/src/Group.tsx',
-        'clay-card/src/Row.tsx',
-    ]
+  [
+    'clay-card/src/Card.tsx',
+    'clay-card/src/CardWithHorizontal.tsx',
+    'clay-card/src/CardWithInfo.tsx',
+    'clay-card/src/CardWithNavigation.tsx',
+    'clay-card/src/CardWithUser.tsx',
+    'clay-card/src/AspectRatio.tsx',
+    'clay-card/src/Body.tsx',
+    'clay-card/src/Caption.tsx',
+    'clay-card/src/Description.tsx',
+    'clay-card/src/Group.tsx',
+    'clay-card/src/Row.tsx',
+  ]
 ---
 
 ## Composing
@@ -35,30 +35,27 @@ import Button from '@clayui/button';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div className="col-md-5">
-					<Card>
-						<Card.Body>
-							<Card.Description displayType="title">
-								{'Card Title'}
-							</Card.Description>
-							<Card.Description
-								truncate={false}
-								displayType="text"
-							>
-								{
-									'Some quick example text to build on the card title and make up the bulk of the card content.'
-								}
-							</Card.Description>
-							<Button>{'Go somewhere'}</Button>
-						</Card.Body>
-					</Card>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div className="col-md-5">
+          <Card>
+            <Card.Body>
+              <Card.Description displayType="title">
+                {'Card Title'}
+              </Card.Description>
+              <Card.Description truncate={false} displayType="text">
+                {
+                  'Some quick example text to build on the card title and make up the bulk of the card content.'
+                }
+              </Card.Description>
+              <Button>{'Go somewhere'}</Button>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -72,37 +69,34 @@ import Card from '@clayui/card';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Card horizontal>
-					<Card.Row>
-						<div className="autofit-col">
-							<img
-								alt="thumbnail"
-								className="card-item-first"
-								src="https://clayui.com/images/thumbnail_placeholder.gif"
-								style={{width: '150px'}}
-							/>
-						</div>
-						<div className="autofit-col autofit-col-expand autofit-col-gutters">
-							<section className="autofit-section">
-								<Card.Description displayType="title">
-									{'So ristretto cappuccino'}
-								</Card.Description>
-								<Card.Description
-									truncate={false}
-									displayType="text"
-								>
-									{'Wings eu, pumpkin spice robusta.'}
-								</Card.Description>
-							</section>
-						</div>
-					</Card.Row>
-				</Card>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Card horizontal>
+          <Card.Row>
+            <div className="autofit-col">
+              <img
+                alt="thumbnail"
+                className="card-item-first"
+                src="https://clayui.com/images/thumbnail_placeholder.gif"
+                style={{width: '150px'}}
+              />
+            </div>
+            <div className="autofit-col autofit-col-expand autofit-col-gutters">
+              <section className="autofit-section">
+                <Card.Description displayType="title">
+                  {'So ristretto cappuccino'}
+                </Card.Description>
+                <Card.Description truncate={false} displayType="text">
+                  {'Wings eu, pumpkin spice robusta.'}
+                </Card.Description>
+              </section>
+            </div>
+          </Card.Row>
+        </Card>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -121,46 +115,41 @@ import Label from '@clayui/label';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div className="col-md-4">
-					<Card displayType="file">
-						<Card.AspectRatio className="card-item-first">
-							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-								<Icon symbol="documents-and-media" />
-							</div>
-							<Sticker
-								displayType="danger"
-								position="bottom-left"
-							>
-								{'DOC'}
-							</Sticker>
-						</Card.AspectRatio>
-						<Card.Body>
-							<Card.Row>
-								<div className="autofit-col autofit-col-expand">
-									<section className="autofit-section">
-										<Card.Description displayType="title">
-											{'deliverable.doc'}
-										</Card.Description>
-										<Card.Description displayType="subtitle">
-											{'Stevie Ray Vaughn'}
-										</Card.Description>
-										<Card.Caption>
-											<Label displayType="success">
-												{'Approved'}
-											</Label>
-										</Card.Caption>
-									</section>
-								</div>
-							</Card.Row>
-						</Card.Body>
-					</Card>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div className="col-md-4">
+          <Card displayType="file">
+            <Card.AspectRatio className="card-item-first">
+              <div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+                <Icon symbol="documents-and-media" />
+              </div>
+              <Sticker displayType="danger" position="bottom-left">
+                {'DOC'}
+              </Sticker>
+            </Card.AspectRatio>
+            <Card.Body>
+              <Card.Row>
+                <div className="autofit-col autofit-col-expand">
+                  <section className="autofit-section">
+                    <Card.Description displayType="title">
+                      {'deliverable.doc'}
+                    </Card.Description>
+                    <Card.Description displayType="subtitle">
+                      {'Stevie Ray Vaughn'}
+                    </Card.Description>
+                    <Card.Caption>
+                      <Label displayType="success">{'Approved'}</Label>
+                    </Card.Caption>
+                  </section>
+                </div>
+              </Card.Row>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -168,11 +157,11 @@ export default function App() {
 
 ClayCard's high-level components predict the major cases of the Lexicon specification:
 
--   Cards with Images
--   Card for user listing
--   Card for docs listing
--   Card for folder
--   Card for navigation
+- Cards with Images
+- Card for user listing
+- Card for docs listing
+- Card for folder
+- Card for navigation
 
 #### CardWithInfo
 
@@ -184,50 +173,50 @@ import {ClayCardWithInfo} from '@clayui/card';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="row">
-				<div className="col-md-4">
-					<ClayCardWithInfo
-						actions={[
-							{
-								label: 'clickable',
-								onClick: () => {
-									alert('you clicked!');
-								},
-							},
-							{type: 'divider'},
-							{
-								href: '#',
-								label: 'linkable',
-							},
-						]}
-						description="A cool description"
-						href="#"
-						labels={[
-							{
-								displayType: 'success',
-								value: 'Awesome',
-							},
-							{
-								displayType: 'danger',
-								value: 'Crazy',
-							},
-						]}
-						onSelectChange={(newVal) => setValue(newVal)}
-						selected={value}
-						stickerProps={{
-							content: 'DOC',
-							displayType: 'danger',
-						}}
-						title="Selectable File"
-					/>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="row">
+        <div className="col-md-4">
+          <ClayCardWithInfo
+            actions={[
+              {
+                label: 'clickable',
+                onClick: () => {
+                  alert('you clicked!');
+                },
+              },
+              {type: 'divider'},
+              {
+                href: '#',
+                label: 'linkable',
+              },
+            ]}
+            description="A cool description"
+            href="#"
+            labels={[
+              {
+                displayType: 'success',
+                value: 'Awesome',
+              },
+              {
+                displayType: 'danger',
+                value: 'Crazy',
+              },
+            ]}
+            onSelectChange={(newVal) => setValue(newVal)}
+            selected={value}
+            stickerProps={{
+              content: 'DOC',
+              displayType: 'danger',
+            }}
+            title="Selectable File"
+          />
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -240,25 +229,25 @@ import Icon from '@clayui/icon';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div className="row">
-					<div className="col-md-4">
-						<ClayCardWithNavigation
-							description="Pick and choose your layout..."
-							onClick={() => alert('clicked')}
-							title="onClick Card with icon"
-						>
-							<Icon symbol="page-template" />
-						</ClayCardWithNavigation>
-					</div>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div className="row">
+          <div className="col-md-4">
+            <ClayCardWithNavigation
+              description="Pick and choose your layout..."
+              onClick={() => alert('clicked')}
+              title="onClick Card with icon"
+            >
+              <Icon symbol="page-template" />
+            </ClayCardWithNavigation>
+          </div>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -270,48 +259,48 @@ import {ClayCardWithUser} from '@clayui/card';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div className="row">
-					<div className="col-md-4">
-						<ClayCardWithUser
-							actions={[
-								{
-									label: 'clickable',
-									onClick: () => {
-										alert('you clicked!');
-									},
-								},
-								{type: 'divider'},
-								{
-									href: '#',
-									label: 'linkable',
-								},
-							]}
-							description="Assistant to the regional manager"
-							href="#"
-							labels={[
-								{
-									displayType: 'success',
-									value: 'Awesome',
-								},
-								{
-									displayType: 'danger',
-									value: 'Crazy',
-								},
-							]}
-							name="Abraham Kuyper"
-							onSelectChange={() => {}}
-							selected={true}
-						/>
-					</div>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div className="row">
+          <div className="col-md-4">
+            <ClayCardWithUser
+              actions={[
+                {
+                  label: 'clickable',
+                  onClick: () => {
+                    alert('you clicked!');
+                  },
+                },
+                {type: 'divider'},
+                {
+                  href: '#',
+                  label: 'linkable',
+                },
+              ]}
+              description="Assistant to the regional manager"
+              href="#"
+              labels={[
+                {
+                  displayType: 'success',
+                  value: 'Awesome',
+                },
+                {
+                  displayType: 'danger',
+                  value: 'Crazy',
+                },
+              ]}
+              name="Abraham Kuyper"
+              onSelectChange={() => {}}
+              selected={true}
+            />
+          </div>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -323,36 +312,36 @@ import {ClayCardWithHorizontal} from '@clayui/card';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<div className="row">
-					<div className="col-md-4">
-						<ClayCardWithHorizontal
-							actions={[
-								{
-									label: 'clickable',
-									onClick: () => {
-										alert('you clicked!');
-									},
-								},
-								{type: 'divider'},
-								{
-									href: '#',
-									label: 'linkable',
-								},
-							]}
-							href="#"
-							onSelectChange={setValue}
-							selected={value}
-							title="Selectable Folder"
-						/>
-					</div>
-				</div>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <div className="row">
+          <div className="col-md-4">
+            <ClayCardWithHorizontal
+              actions={[
+                {
+                  label: 'clickable',
+                  onClick: () => {
+                    alert('you clicked!');
+                  },
+                },
+                {type: 'divider'},
+                {
+                  href: '#',
+                  label: 'linkable',
+                },
+              ]}
+              href="#"
+              onSelectChange={setValue}
+              selected={value}
+              title="Selectable Folder"
+            />
+          </div>
+        </div>
+      </div>
+    </Provider>
+  );
 }
 ```

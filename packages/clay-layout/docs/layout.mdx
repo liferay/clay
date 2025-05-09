@@ -5,14 +5,14 @@ lexiconDefinition: 'https://liferay.design/lexicon/foundations/grid/'
 packageNpm: '@clayui/layout'
 packageUse: "import Layout from '@clayui/layout';"
 packageTypes:
-    [
-        'clay-layout/src/Col.tsx',
-        'clay-layout/src/Container.tsx',
-        'clay-layout/src/ContainerFluid.tsx',
-        'clay-layout/src/Content.tsx',
-        'clay-layout/src/Row.tsx',
-        'clay-layout/src/Sheet.tsx',
-    ]
+  [
+    'clay-layout/src/Col.tsx',
+    'clay-layout/src/Container.tsx',
+    'clay-layout/src/ContainerFluid.tsx',
+    'clay-layout/src/Content.tsx',
+    'clay-layout/src/Row.tsx',
+    'clay-layout/src/Sheet.tsx',
+  ]
 ---
 
 ## Container vs. Content
@@ -31,9 +31,9 @@ Low-level component that serves as a wrapper of smaller building blocks like row
 
 These are self-explanatory, their purpose is to structure content inside them horizontally, or vertically. They are the next component in a typical DOM structure under a `Container`.
 
--   `Row` can be customized so that its `gutters` are removed, and its content can be `justified`.
+- `Row` can be customized so that its `gutters` are removed, and its content can be `justified`.
 
--   `Col` (column) has various sizing options, from `xs` (extra small) to `xl` (extra large), as well as a `size` prop that allows custom sizing to be provided.
+- `Col` (column) has various sizing options, from `xs` (extra small) to `xl` (extra large), as well as a `size` prop that allows custom sizing to be provided.
 
 ### `ContentRow`, `ContentCol`, and `ContentSection`
 
@@ -47,61 +47,61 @@ import Layout from '@clayui/layout';
 import React from 'react';
 
 export default function App() {
-	const colStyles = {
-		backgroundColor: '#E7E7ED',
-		border: '1px solid #CDCED9',
-		paddingBottom: '.75rem',
-		paddingTop: '.75rem',
-	};
+  const colStyles = {
+    backgroundColor: '#E7E7ED',
+    border: '1px solid #CDCED9',
+    paddingBottom: '.75rem',
+    paddingTop: '.75rem',
+  };
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Layout.ContainerFluid view>
-					<Layout.Row justify="start">
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-					</Layout.Row>
-					<Layout.Row justify="center">
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-					</Layout.Row>
-					<Layout.Row justify="end">
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-					</Layout.Row>
-					<Layout.Row justify="around">
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-					</Layout.Row>
-					<Layout.Row justify="between">
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-						<Layout.Col size={4} style={colStyles}>
-							{'One of two columns'}
-						</Layout.Col>
-					</Layout.Row>
-				</Layout.ContainerFluid>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Layout.ContainerFluid view>
+          <Layout.Row justify="start">
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+          </Layout.Row>
+          <Layout.Row justify="center">
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+          </Layout.Row>
+          <Layout.Row justify="end">
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+          </Layout.Row>
+          <Layout.Row justify="around">
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+          </Layout.Row>
+          <Layout.Row justify="between">
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+            <Layout.Col size={4} style={colStyles}>
+              {'One of two columns'}
+            </Layout.Col>
+          </Layout.Row>
+        </Layout.ContainerFluid>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -113,51 +113,47 @@ import Layout from '@clayui/layout';
 import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<Layout.ContentRow padded>
-					<Layout.ContentCol>
-						<div className="form-check">
-							<label className="form-check-label">
-								<input
-									className="form-check-input"
-									type="checkbox"
-									value=""
-								/>
-							</label>
-						</div>
-					</Layout.ContentCol>
-					<Layout.ContentCol expand>
-						<Layout.ContentSection>
-							<h6>
-								<span className="text-truncate-inline">
-									<span className="text-truncate">
-										Alberto Calvo, modified 2 hours ago.
-									</span>
-								</span>
-							</h6>
-							<p>
-								<span className="text-truncate-inline">
-									<a className="text-truncate" href="#1">
-										ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
-									</a>
-								</span>
-							</p>
-						</Layout.ContentSection>
-					</Layout.ContentCol>
-					<Layout.ContentCol>
-						<svg
-							className="lexicon-icon lexicon-icon-ellipsis-v"
-							focusable="false"
-							role="presentation"
-						>
-							<use href="/images/icons/icons.svg#ellipsis-v" />
-						</svg>
-					</Layout.ContentCol>
-				</Layout.ContentRow>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Layout.ContentRow padded>
+          <Layout.ContentCol>
+            <div className="form-check">
+              <label className="form-check-label">
+                <input className="form-check-input" type="checkbox" value="" />
+              </label>
+            </div>
+          </Layout.ContentCol>
+          <Layout.ContentCol expand>
+            <Layout.ContentSection>
+              <h6>
+                <span className="text-truncate-inline">
+                  <span className="text-truncate">
+                    Alberto Calvo, modified 2 hours ago.
+                  </span>
+                </span>
+              </h6>
+              <p>
+                <span className="text-truncate-inline">
+                  <a className="text-truncate" href="#1">
+                    ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+                  </a>
+                </span>
+              </p>
+            </Layout.ContentSection>
+          </Layout.ContentCol>
+          <Layout.ContentCol>
+            <svg
+              className="lexicon-icon lexicon-icon-ellipsis-v"
+              focusable="false"
+              role="presentation"
+            >
+              <use href="/images/icons/icons.svg#ellipsis-v" />
+            </svg>
+          </Layout.ContentCol>
+        </Layout.ContentRow>
+      </div>
+    </Provider>
+  );
 }
 ```

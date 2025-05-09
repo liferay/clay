@@ -5,13 +5,13 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/tabs/'
 packageNpm: '@clayui/tabs'
 packageUse: "import Tabs from '@clayui/tabs';"
 packageTypes:
-    [
-        'clay-tabs/src/index.tsx',
-        'clay-tabs/src/Content.tsx',
-        'clay-tabs/src/Item.tsx',
-        'clay-tabs/src/List.tsx',
-        'clay-tabs/src/TabPane.tsx',
-    ]
+  [
+    'clay-tabs/src/index.tsx',
+    'clay-tabs/src/Content.tsx',
+    'clay-tabs/src/Item.tsx',
+    'clay-tabs/src/List.tsx',
+    'clay-tabs/src/TabPane.tsx',
+  ]
 ---
 
 ## Introduction
@@ -23,8 +23,8 @@ Use `Tabs.Item` for defining a TabPane's trigger. For using this trigger as an `
 ## Tabs
 
 <div className="clay-site-alert alert alert-warning">
-	<strong className="lead">Warning</strong>
-	The `displayType` attribute has been deprecated after 3.89.0.
+  <strong className="lead">Warning</strong>
+  The `displayType` attribute has been deprecated after 3.89.0.
 </div>
 
 This is the default tab. The `displayType` attribute was deprecated after 3.89.0. You no longer need to use `displayType="basic"` to output this style.
@@ -35,53 +35,50 @@ import Tabs from '@clayui/tabs';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [active, setActive] = useState(0);
+  const [active, setActive] = useState(0);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<>
-					<Tabs active={active} onActiveChange={setActive}>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-1',
-							}}
-						>
-							Tab 1
-						</Tabs.Item>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-2',
-							}}
-						>
-							Tab 2
-						</Tabs.Item>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-3',
-							}}
-						>
-							Tab 3
-						</Tabs.Item>
-					</Tabs>
-					<Tabs.Content activeIndex={active} fade>
-						<Tabs.TabPane aria-labelledby="tab-1">
-							1. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-2">
-							2. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-3">
-							3. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-					</Tabs.Content>
-				</>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <>
+          <Tabs active={active} onActiveChange={setActive}>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-1',
+              }}
+            >
+              Tab 1
+            </Tabs.Item>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-2',
+              }}
+            >
+              Tab 2
+            </Tabs.Item>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-3',
+              }}
+            >
+              Tab 3
+            </Tabs.Item>
+          </Tabs>
+          <Tabs.Content activeIndex={active} fade>
+            <Tabs.TabPane aria-labelledby="tab-1">
+              1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-2">
+              2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-3">
+              3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+          </Tabs.Content>
+        </>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -93,68 +90,61 @@ import Tabs from '@clayui/tabs';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [active, setActive] = useState(0);
+  const [active, setActive] = useState(0);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<>
-					<Tabs
-						active={active}
-						displayType="light"
-						onActiveChange={setActive}
-					>
-						<Tabs.List>
-							<Tabs.Item
-								innerProps={{
-									'aria-controls': 'tabpanel-1',
-								}}
-							>
-								Tab 1
-							</Tabs.Item>
-							<Tabs.Item
-								innerProps={{
-									'aria-controls': 'tabpanel-2',
-								}}
-							>
-								Tab 2
-							</Tabs.Item>
-							<Tabs.Item
-								innerProps={{
-									'aria-controls': 'tabpanel-3',
-								}}
-							>
-								Tab 3
-							</Tabs.Item>
-						</Tabs.List>
-						<Tabs.Panels>
-							<Tabs.TabPanel aria-labelledby="tab-1">
-								1. Proin efficitur imperdiet dolor, a iaculis
-								orci lacinia eu.
-							</Tabs.TabPanel>
-							<Tabs.TabPanel aria-labelledby="tab-2">
-								2. Proin efficitur imperdiet dolor, a iaculis
-								orci lacinia eu.
-							</Tabs.TabPanel>
-							<Tabs.TabPanel aria-labelledby="tab-3">
-								3. Proin efficitur imperdiet dolor, a iaculis
-								orci lacinia eu.
-							</Tabs.TabPanel>
-						</Tabs.Panels>
-					</Tabs>
-				</>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <>
+          <Tabs active={active} displayType="light" onActiveChange={setActive}>
+            <Tabs.List>
+              <Tabs.Item
+                innerProps={{
+                  'aria-controls': 'tabpanel-1',
+                }}
+              >
+                Tab 1
+              </Tabs.Item>
+              <Tabs.Item
+                innerProps={{
+                  'aria-controls': 'tabpanel-2',
+                }}
+              >
+                Tab 2
+              </Tabs.Item>
+              <Tabs.Item
+                innerProps={{
+                  'aria-controls': 'tabpanel-3',
+                }}
+              >
+                Tab 3
+              </Tabs.Item>
+            </Tabs.List>
+            <Tabs.Panels>
+              <Tabs.TabPanel aria-labelledby="tab-1">
+                1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+              </Tabs.TabPanel>
+              <Tabs.TabPanel aria-labelledby="tab-2">
+                2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+              </Tabs.TabPanel>
+              <Tabs.TabPanel aria-labelledby="tab-3">
+                3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+              </Tabs.TabPanel>
+            </Tabs.Panels>
+          </Tabs>
+        </>
+      </div>
+    </Provider>
+  );
 }
 ```
 
 ## Modern Tabs
 
 <div className="clay-site-alert alert alert-warning">
-	<strong className="lead">Warning</strong>
-	The `modern` attribute has been deprecated after 3.89.0. The styles for the `.nav-underline`
-	class have been removed.
+  <strong className="lead">Warning</strong>
+  The `modern` attribute has been deprecated after 3.89.0. The styles for the `.nav-underline`
+  class have been removed.
 </div>
 
 For the modern variant of Tabs use the `modern` property. If you need to justify the text inside the `Tabs.Item`, use the `justified` property.
@@ -165,53 +155,50 @@ import Tabs from '@clayui/tabs';
 import React, {useState} from 'react';
 
 export default function App() {
-	const [active, setActive] = useState(0);
+  const [active, setActive] = useState(0);
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<>
-					<Tabs active={active} modern onActiveChange={setActive}>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-1',
-							}}
-						>
-							Tab 1
-						</Tabs.Item>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-2',
-							}}
-						>
-							Tab 2
-						</Tabs.Item>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-3',
-							}}
-						>
-							Tab 3
-						</Tabs.Item>
-					</Tabs>
-					<Tabs.Content activeIndex={active} fade>
-						<Tabs.TabPane aria-labelledby="tab-1">
-							1. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-2">
-							2. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-3">
-							3. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-					</Tabs.Content>
-				</>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <>
+          <Tabs active={active} modern onActiveChange={setActive}>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-1',
+              }}
+            >
+              Tab 1
+            </Tabs.Item>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-2',
+              }}
+            >
+              Tab 2
+            </Tabs.Item>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-3',
+              }}
+            >
+              Tab 3
+            </Tabs.Item>
+          </Tabs>
+          <Tabs.Content activeIndex={active} fade>
+            <Tabs.TabPane aria-labelledby="tab-1">
+              1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-2">
+              2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-3">
+              3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+          </Tabs.Content>
+        </>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -227,151 +214,135 @@ import DropDown, {Align} from '@clayui/drop-down';
 import React, {useState} from 'react';
 
 const DropDownWithState = ({children, trigger, ...others}) => {
-	return (
-		<DropDown
-			alignmentPosition={Align.BottomLeft}
-			hasRightSymbols
-			trigger={trigger}
-			{...others}
-		>
-			{children}
-		</DropDown>
-	);
+  return (
+    <DropDown
+      alignmentPosition={Align.BottomLeft}
+      hasRightSymbols
+      trigger={trigger}
+      {...others}
+    >
+      {children}
+    </DropDown>
+  );
 };
 
 export default function App() {
-	const [active, setActive] = useState(0);
+  const [active, setActive] = useState(0);
 
-	const dropdownTabsItems = [
-		{
-			disabled: true,
-			label: 'Tab 5',
-			tabkey: 5,
-		},
-		{
-			label: 'Tab 6',
-			tabkey: 6,
-		},
-		{
-			label: 'Tab 7',
-			tabkey: 7,
-		},
-	];
+  const dropdownTabsItems = [
+    {
+      disabled: true,
+      label: 'Tab 5',
+      tabkey: 5,
+    },
+    {
+      label: 'Tab 6',
+      tabkey: 6,
+    },
+    {
+      label: 'Tab 7',
+      tabkey: 7,
+    },
+  ];
 
-	return (
-		<Provider spritemap="/icons.svg">
-			<div className="p-4">
-				<>
-					<Tabs active={active} onActiveChange={setActive}>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-1',
-							}}
-						>
-							Tab 1
-						</Tabs.Item>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-2',
-							}}
-						>
-							Tab 2
-						</Tabs.Item>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-3',
-							}}
-						>
-							Tab 3
-						</Tabs.Item>
-						<Tabs.Item
-							innerProps={{
-								'aria-controls': 'tabpanel-4',
-							}}
-						>
-							Tab 4
-						</Tabs.Item>
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <>
+          <Tabs active={active} onActiveChange={setActive}>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-1',
+              }}
+            >
+              Tab 1
+            </Tabs.Item>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-2',
+              }}
+            >
+              Tab 2
+            </Tabs.Item>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-3',
+              }}
+            >
+              Tab 3
+            </Tabs.Item>
+            <Tabs.Item
+              innerProps={{
+                'aria-controls': 'tabpanel-4',
+              }}
+            >
+              Tab 4
+            </Tabs.Item>
 
-						<DropDownWithState
-							trigger={
-								<Tabs.Item
-									active={[5, 6, 7].includes(active)}
-									innerProps={{
-										'aria-controls': 'tabpanel-5',
-									}}
-								>
-									More
-									<Icon symbol="caret-bottom" />
-								</Tabs.Item>
-							}
-						>
-							<DropDown.ItemList>
-								{dropdownTabsItems.map(
-									({disabled = false, label, tabkey}, i) => {
-										return (
-											<DropDown.Item
-												active={active === tabkey}
-												aria-selected={
-													active === tabkey
-												}
-												disabled={disabled}
-												key={i}
-												onClick={() =>
-													setActive(tabkey)
-												}
-												role="tab"
-												symbolRight={
-													active === tabkey
-														? 'check'
-														: undefined
-												}
-											>
-												{label}
-											</DropDown.Item>
-										);
-									}
-								)}
-							</DropDown.ItemList>
-						</DropDownWithState>
-					</Tabs>
-					<Tabs.Content activeIndex={active} fade>
-						<Tabs.TabPane aria-labelledby="tab-1">
-							1. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-2">
-							2. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-3">
-							3. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-4">
-							4. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-5">
-							5. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-6">
-							6. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-7">
-							7. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-8">
-							8. Proin efficitur imperdiet dolor, a iaculis orci
-							lacinia eu.
-						</Tabs.TabPane>
-					</Tabs.Content>
-				</>
-			</div>
-		</Provider>
-	);
+            <DropDownWithState
+              trigger={
+                <Tabs.Item
+                  active={[5, 6, 7].includes(active)}
+                  innerProps={{
+                    'aria-controls': 'tabpanel-5',
+                  }}
+                >
+                  More
+                  <Icon symbol="caret-bottom" />
+                </Tabs.Item>
+              }
+            >
+              <DropDown.ItemList>
+                {dropdownTabsItems.map(
+                  ({disabled = false, label, tabkey}, i) => {
+                    return (
+                      <DropDown.Item
+                        active={active === tabkey}
+                        aria-selected={active === tabkey}
+                        disabled={disabled}
+                        key={i}
+                        onClick={() => setActive(tabkey)}
+                        role="tab"
+                        symbolRight={active === tabkey ? 'check' : undefined}
+                      >
+                        {label}
+                      </DropDown.Item>
+                    );
+                  }
+                )}
+              </DropDown.ItemList>
+            </DropDownWithState>
+          </Tabs>
+          <Tabs.Content activeIndex={active} fade>
+            <Tabs.TabPane aria-labelledby="tab-1">
+              1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-2">
+              2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-3">
+              3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-4">
+              4. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-5">
+              5. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-6">
+              6. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-7">
+              7. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+            <Tabs.TabPane aria-labelledby="tab-8">
+              8. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+            </Tabs.TabPane>
+          </Tabs.Content>
+        </>
+      </div>
+    </Provider>
+  );
 }
 ```
 

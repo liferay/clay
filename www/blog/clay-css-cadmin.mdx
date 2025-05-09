@@ -24,7 +24,7 @@ The class cadmin is a marker to indicate where isolation should start. It mimics
 
 ```html
 <div className="cadmin">
-	<div className="dropdown-menu"></div>
+  <div className="dropdown-menu"></div>
 </div>
 ```
 
@@ -32,7 +32,7 @@ It also redeclares CSS properties on all child elements to prevent styles like:
 
 ```css
 h1 {
-	font-size: 50px;
+  font-size: 50px;
 }
 ```
 
@@ -42,9 +42,9 @@ For admin controls mixed with user created content (Page Editor), you shouldn't 
 
 ```scss
 html#{$cadmin-selector} {
-	.page-editor__topper__content {
-		// page-editor__topper__content CSS properties
-	}
+  .page-editor__topper__content {
+    // page-editor__topper__content CSS properties
+  }
 }
 ```
 
