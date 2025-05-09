@@ -1,9 +1,8 @@
+import {CodeInline} from 'renoun/components';
+import {getEntry, getEntryMarkup} from '@/collections/site';
 import {createLXCResource} from '@/lxc';
 import {notFound} from 'next/navigation';
 import Heading from '@/app/_components/Heading';
-import {APIReference} from '@/app/_components/APIReference';
-import {AllCollection} from '@/data';
-import {CodeInline} from 'renoun/components';
 
 import styles from './page.module.css';
 
@@ -15,10 +14,8 @@ const lxc = createLXCResource();
 
 export async function DocsLayout({slug}: Props) {
 	const [file, fileMarkup, fileDesign] = await Promise.all([
-		AllCollection.getSource(slug),
-		slug.includes('markup')
-			? true
-			: AllCollection.getSource([...slug, 'markup']),
+		getEntry(slug),
+		slug.includes('markup') ? true : getEntryMarkup(slug),
 		lxc.getResource(slug),
 	]);
 
@@ -26,12 +23,12 @@ export async function DocsLayout({slug}: Props) {
 		notFound();
 	}
 
-	const updatedAt = await file.getUpdatedAt();
+	const updatedAt = await file.getLastCommitDate();
 	const authors = await file.getAuthors();
 
-	const headings = await file.getExport('headings').getValue();
-	const frontmatter = await file.getExport('frontmatter').getValue();
-	const Content = (await file.getExport('default').getValue()) as any;
+	const headings = await file.getExportValue('headings');
+	const frontmatter = await file.getExportValue('frontmatter');
+	const Content = await file.getExportValue('default');
 
 	const tocContent = (
 		<>
@@ -44,13 +41,13 @@ export async function DocsLayout({slug}: Props) {
 								{
 									text: 'API Reference',
 									id: 'api-reference',
-									depth: 2,
+									level: 2,
 								},
 						  ]
 						: []),
 				].map((item) => (
 					<li
-						style={{marginLeft: `${(item.depth - 2) * 10}px`}}
+						style={{marginLeft: `${(item.level - 2) * 10}px`}}
 						key={item.id}
 					>
 						<a href={`#${item.id}`}>{item.text}</a>
@@ -75,13 +72,14 @@ export async function DocsLayout({slug}: Props) {
 					use={
 						frontmatter.packageUse ? (
 							<CodeInline
-								value={frontmatter.packageUse}
 								language="jsx"
 								style={{
 									backgroundColor: 'transparent',
 									boxShadow: 'none',
 								}}
-							/>
+							>
+								{frontmatter.packageUse}
+							</CodeInline>
 						) : (
 							''
 						)
@@ -103,28 +101,13 @@ export async function DocsLayout({slug}: Props) {
 						<h2 className="text-7 mb-4 mt-5" id="api-reference">
 							API Reference
 						</h2>
-
-						{frontmatter.packageTypes.map((path) => (
-							<APIReference
-								key={path}
-								source={path}
-								workingDirectory="../packages"
-								filter={(type) => {
-									return (
-										!type.name?.includes('Forward') &&
-										(type.kind === 'Function' ||
-											type.kind === 'Component')
-									);
-								}}
-							/>
-						))}
 					</div>
 				)}
 
 				<div className={styles.author_container}>
 					<a
 						className="link-primary mb-3"
-						href={file.getEditPath()}
+						href={file.getEditUrl()}
 						target="_blank"
 						rel="noreferrer"
 						style={{
@@ -140,7 +123,7 @@ export async function DocsLayout({slug}: Props) {
 								Contributors
 							</p>
 							<div className={styles.author_list}>
-								{authors.join(', ')}
+								{authors.map((item) => item.name).join(', ')}
 							</div>
 						</>
 					)}

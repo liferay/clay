@@ -1,5 +1,5 @@
 import {createLXCResource} from '@/lxc';
-import {AllCollection} from '@/data';
+import {getEntry, getEntryMarkup} from '@/collections/site';
 import Heading from '@/app/_components/Heading';
 import {notFound} from 'next/navigation';
 import {CodeInline} from 'renoun/components';
@@ -15,8 +15,8 @@ const lxc = createLXCResource();
 export async function RemoteLayout({slug}: Props) {
 	const slugBase = slug.filter((item) => item !== 'design');
 	const [file, fileMarkup, fileDesign] = await Promise.all([
-		AllCollection.getSource(slugBase),
-		AllCollection.getSource([...slugBase, 'markup']),
+		getEntry(slugBase),
+		getEntryMarkup(slugBase),
 		lxc.getResource(slug),
 	]);
 
@@ -24,7 +24,7 @@ export async function RemoteLayout({slug}: Props) {
 		notFound();
 	}
 
-	const frontmatter = await file.getExport('frontmatter').getValue();
+	const frontmatter = await file.getExportValue('frontmatter');
 
 	return (
 		<div className={styles.content}>
@@ -41,13 +41,14 @@ export async function RemoteLayout({slug}: Props) {
 					use={
 						frontmatter.packageUse ? (
 							<CodeInline
-								value={frontmatter.packageUse}
 								language="jsx"
 								style={{
 									backgroundColor: 'transparent',
 									boxShadow: 'none',
 								}}
-							/>
+							>
+								{frontmatter.packageUse}
+							</CodeInline>
 						) : (
 							''
 						)

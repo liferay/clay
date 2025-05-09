@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import {AllCollection} from '@/data';
+import {CollectionGroup, getEntry} from '@/collections/site';
 import {createLXCResource} from '@/lxc';
 
 import {DocsLayout} from './DocsLayout';
@@ -14,12 +14,12 @@ type Props = {
 const lxc = createLXCResource();
 
 export async function generateStaticParams() {
-	const collection = await AllCollection.getSources();
+	const collection = await CollectionGroup.getEntries({recursive: true});
 	const remoteCollection = await lxc.getResources();
 
 	return [
 		...collection.map((entry) => ({
-			slug: entry.getPath().split('/').slice(1),
+			slug: entry.getPathSegments({includeBasePath: false}),
 		})),
 		...remoteCollection.map((item) => ({
 			slug: ['components', item.slug.slice(1), 'design'],
@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
 	const params = await props.params;
-	const document = await AllCollection.getSource(
+	const document = await getEntry(
 		params.slug.filter((item) => item !== 'design')
 	);
 
@@ -39,7 +39,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 		};
 	}
 
-	const frontmatter = await document.getExport('frontmatter').getValue();
+	const frontmatter = await document.getExportValue('frontmatter');
 
 	const title = `${frontmatter.title} - Clay by Liferay`;
 

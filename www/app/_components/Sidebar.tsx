@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import {type FileSystemEntry, type Directory, isMDXFile, isFile} from 'renoun/file-system';
-import type {AllCollection, ComponentDocumentsSchema} from '@/data';
+import {isFile} from 'renoun/file-system';
+import type {FileSystemEntry, Directory} from 'renoun/file-system';
+import type {AllCollection} from '@/data';
 
 import ClayLink from '../_components/Link';
 import styles from './sidebar.module.css';
@@ -98,9 +99,16 @@ type TreeCollectionProps = {
 };
 
 async function TreeCollection({collection, path, sort}: TreeCollectionProps) {
-	const items = await collection.getEntries();
+	const items = (
+		await collection.getEntries({recursive: true, includeDuplicates: true})
+	).filter(
+		(entry: FileSystemEntry<any>) =>
+			isFile(entry, 'mdx') && !entry.getPath().includes('/markup')
+	);
 	const entries = sort
-		? items.sort((a: FileSystemEntry<any>, b: FileSystemEntry<any>) => a.getTitle().localeCompare(b.getTitle()))
+		? items.sort((a: FileSystemEntry<any>, b: FileSystemEntry<any>) =>
+				a.getTitle().localeCompare(b.getTitle())
+		  )
 		: items;
 
 	return (
@@ -123,17 +131,14 @@ type ListNavigationProps = {
 
 async function ListNavigation({entry, path: pathUrl}: ListNavigationProps) {
 	const path = entry.getPath();
-	const title = isFile(entry, 'mdx') ? (await entry.getExportValue('frontmatter')).title : entry.getTitle();
-
-	if (path.includes('/markup')) {
-		return null;
-	}
+	const title = isFile(entry, 'mdx')
+		? (await entry.getExportValue('frontmatter')).title
+		: entry.getTitle();
+	const url = `${pathUrl ? `/${pathUrl}` : ''}${path}`;
 
 	const link = (
 		<li>
-			<ClayLink
-				href={`${pathUrl ? `/${pathUrl}` : ''}${path}`}
-			>
+			<ClayLink href={url.replace(/clay-[^/]+\/docs\//g, '')}>
 				{title}
 			</ClayLink>
 		</li>

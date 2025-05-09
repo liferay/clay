@@ -1,5 +1,34 @@
-import {Directory, isFile, withSchema} from 'renoun/file-system';
+import {
+	Directory,
+	EntryGroup,
+	FileNotFoundError,
+	isDirectory,
+	isFile,
+	MDXFile,
+	withSchema,
+} from 'renoun/file-system';
+import type {FileSystemEntry} from 'renoun/file-system';
+import type {MDXContent} from 'renoun/mdx';
 import {z} from 'zod';
+
+const documentsSchema = z.object({
+	title: z.string(),
+	description: z.string(),
+	packageStatus: z.optional(z.string()),
+	packageNpm: z.optional(z.string()),
+	packageUse: z.optional(z.string()),
+	lexiconDefinition: z.optional(z.string()),
+	packageTypes: z.optional(z.array(z.string())),
+});
+
+const headings = z.array(
+	z.object({
+		id: z.string(),
+		level: z.number(),
+		text: z.string(),
+		children: z.custom<NonNullable<React.ReactNode>>(),
+	})
+);
 
 export const BlogCollection = new Directory({
 	path: 'blog',
@@ -12,13 +41,7 @@ export const BlogCollection = new Directory({
 					author: z.array(z.string()),
 					date: z.coerce.date(),
 				}),
-				headings: z.array(
-					z.object({
-						id: z.string(),
-						level: z.number(),
-						text: z.string(),
-					})
-				),
+				headings,
 			},
 			(path) => import(`@/blog/${path}.mdx`)
 		),
@@ -31,3 +54,114 @@ export const BlogCollection = new Directory({
 		return bFrontmatter.date.getTime() - aFrontmatter.date.getTime();
 	},
 });
+
+export const DocumentsCollection = new Directory({
+	path: 'docs/01.introduction',
+	basePath: 'introduction',
+	loaders: {
+		mdx: withSchema(
+			{
+				frontmatter: documentsSchema,
+				headings,
+			},
+			(path) => import(`@/docs/01.introduction/${path}.mdx`)
+		),
+	},
+	include: (entry) => isFile(entry, 'mdx'),
+});
+
+export const CSSDocumentsCollection = new Directory({
+	path: 'docs/css',
+	basePath: 'css',
+	loaders: {
+		mdx: withSchema(
+			{
+				frontmatter: documentsSchema,
+				headings,
+			},
+			(path) => import(`@/docs/css/${path}.mdx`)
+		),
+	},
+	include: (entry) => isFile(entry, 'mdx'),
+});
+
+async function filterInternalExports(entry: FileSystemEntry<any>) {
+	const path = entry.getPath();
+
+	return (
+		(isDirectory(entry) &&
+			!!path.match(/clay-[^/]*(?:\/docs(?:\/|$)|$)/)) ||
+		isFile(entry, 'mdx')
+	);
+}
+
+export const ComponentDocumentsCollection = new Directory({
+	path: '../packages',
+	basePath: 'components',
+	tsConfigPath: '../../packages/tsconfig.json',
+	loaders: {
+		mdx: withSchema(
+			{
+				frontmatter: documentsSchema,
+				headings,
+			},
+			(path) => import(`../../packages/${path}.mdx`)
+		),
+	},
+	include: filterInternalExports,
+});
+
+export const CollectionGroup = new EntryGroup({
+	entries: [
+		CSSDocumentsCollection,
+		ComponentDocumentsCollection,
+		DocumentsCollection,
+	],
+});
+
+export const getEntryMarkup = async (slug: Array<string>) => {
+	try {
+		return await CollectionGroup.getFile([...slug, 'markup'], 'mdx');
+	} catch (error) {
+		return null;
+	}
+};
+
+declare let global: {
+	cachedEntries: Array<
+		MDXFile<{
+			default: MDXContent;
+			headings: z.infer<typeof headings>;
+			frontmatter: z.infer<typeof documentsSchema>;
+		}>
+	> | null;
+};
+
+export const getEntry = async (slug: Array<string>) => {
+	try {
+		return await CollectionGroup.getFile(slug, 'mdx');
+	} catch (error) {
+		if (error instanceof FileNotFoundError) {
+			if (!global.cachedEntries) {
+				console.log('not cached');
+				global.cachedEntries = (
+					await ComponentDocumentsCollection.getEntries({
+						recursive: true,
+						includeDuplicates: true,
+					})
+				).filter((entry) => isFile(entry, 'mdx'));
+			}
+
+			return (
+				global.cachedEntries.find((item) =>
+					item
+						.getPath()
+						.replace(/clay-[^/]+\/docs\//g, '')
+						.includes(slug.join('/'))
+				) || null
+			);
+		}
+
+		return null;
+	}
+};
