@@ -4,7 +4,6 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"postinstall": "patch-package",
 		"dev": "renoun next dev",
 		"build": "renoun next build",
 		"start": "next start",
@@ -46,7 +45,6 @@
 		"@types/react-dom": "18.3.5",
 		"eslint": "^8",
 		"eslint-config-next": "15.1.2",
-		"patch-package": "^8.0.0",
 		"typescript": "^5.8.3"
 	},
 	"resolutions": {
