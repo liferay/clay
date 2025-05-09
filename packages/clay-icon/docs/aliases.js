@@ -17,6 +17,10 @@ export const flagsData = [
 		name: 'bg-bg',
 	},
 	{
+		aliases: ['bs-ba', 'Bosnian', 'Bosnia'],
+		name: 'bs-ba',
+	},
+	{
 		aliases: ['ca-ad', 'Catalan', 'Andorra'],
 		name: 'ca-ad',
 	},
