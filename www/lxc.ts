@@ -1,7 +1,11 @@
 import {parse} from 'node-html-parser';
 import {cache} from 'react';
 
-const fetchLiferay = cache(async function fetchLiferay(slug: string, siteId: string, host: string) {
+const fetchLiferay = cache(async function fetchLiferay(
+	slug: string,
+	siteId: string,
+	host: string
+) {
 	const response = await fetch(
 		new URL(
 			`/o/headless-delivery/v1.0/sites/${siteId}/site-pages${slug}`,

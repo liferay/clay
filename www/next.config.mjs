@@ -1,16 +1,14 @@
-import createMDXPlugin from '@next/mdx';
-import rehypeMdxCodeProps from 'rehype-mdx-code-props';
 import {remarkPlugins, rehypePlugins} from 'renoun/mdx';
+import createMDXPlugin from '@next/mdx';
+import path from 'path';
+import rehypeMdxCodeProps from 'rehype-mdx-code-props';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import webpack from 'webpack';
-import path from 'path';
 
 import {unwrapMdxBlockElements} from './plugins/remark-unwrap-paragraphs/index.mjs';
 import {buildIcons} from './plugins/scss/index.mjs';
-
-// @ts-ignore
-import clay from '@clayui/css';
+import clay from '../packages/clay-css/index.mjs';
 
 buildIcons();
 
@@ -29,17 +27,11 @@ const withMDX = createMDXPlugin({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	output: 'export',
+	// output: 'export',
 	images: {
 		unoptimized: true,
 	},
 	transpilePackages: ['renoun'],
-	webpack(config) {
-		config.resolve.extensionAlias = {
-			'.js': ['.ts', '.tsx', '.js'],
-		};
-		return config;
-	},
 	pageExtensions: ['mdx', 'md', 'ts', 'tsx'],
 	async redirects() {
 		const redirects = [
@@ -407,6 +399,10 @@ const nextConfig = {
 	},
 	transpilePackages: ['renoun'],
 	webpack(config) {
+		config.resolve.extensionAlias = {
+			'.js': ['.ts', '.tsx', '.js'],
+		};
+
 		config.module.rules.push({
 			test: [/packages[\\/]clay-.*[\\/.].*\.(ts|tsx)/],
 			loader: path.resolve('./use-client-loader.mjs'),

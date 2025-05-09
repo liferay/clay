@@ -1,6 +1,6 @@
-import clay from '@clayui/css';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
+import clay from '../../../packages/clay-css/index.mjs';
 import fs from 'node:fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -43,8 +43,5 @@ export function buildIcons() {
 
 	strSprite += '</svg>';
 
-	fs.writeFileSync(
-		join(staticPath, 'images', 'icons', 'icons.svg'),
-		strSprite
-	);
+	fs.writeFileSync(join(staticPath, 'icons.svg'), strSprite);
 }
