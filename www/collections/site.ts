@@ -119,14 +119,6 @@ export const CollectionGroup = new EntryGroup({
 	],
 });
 
-export const getEntryMarkup = async (slug: Array<string>) => {
-	try {
-		return await CollectionGroup.getFile([...slug, 'markup'], 'mdx');
-	} catch (error) {
-		return null;
-	}
-};
-
 declare let global: {
 	cachedEntries: Array<
 		MDXFile<{
@@ -137,29 +129,54 @@ declare let global: {
 	> | null;
 };
 
+// Renoun doesn't resolve glob paths for components spread across multiple
+// packages in the same directory structure. As a result, document paths
+// include package names. In our case, we want to simplify document slugs by
+// removing package names. However, there's currently no straightforward way to
+// rewrite the paths cleanly for easier access, and we also run into conflicts
+// between directories and files that share the same name. To handle this, we
+// traverse the directory once, cache the structure for the lifetime of the
+// Next.js instance, and later resolve user-friendly paths based on the
+// actual file system paths.
+const getEntryFallback = async (slug: Array<string>) => {
+	if (!global.cachedEntries) {
+		console.log('cachedEntries: not cached');
+		global.cachedEntries = (
+			await ComponentDocumentsCollection.getEntries({
+				recursive: true,
+				includeDuplicates: true,
+			})
+		).filter((entry) => isFile(entry, 'mdx'));
+	}
+
+	return (
+		global.cachedEntries.find((item) =>
+			item
+				.getPath()
+				.replace(/clay-[^/]+\/docs\//g, '')
+				.includes(slug.join('/'))
+		) || null
+	);
+};
+
+export const getEntryMarkup = async (slug: Array<string>) => {
+	try {
+		return await CollectionGroup.getFile([...slug, 'markup'], 'mdx');
+	} catch (error) {
+		if (error instanceof FileNotFoundError) {
+			return getEntryFallback(slug);
+		}
+
+		return null;
+	}
+};
+
 export const getEntry = async (slug: Array<string>) => {
 	try {
 		return await CollectionGroup.getFile(slug, 'mdx');
 	} catch (error) {
 		if (error instanceof FileNotFoundError) {
-			if (!global.cachedEntries) {
-				console.log('cachedEntries: not cached');
-				global.cachedEntries = (
-					await ComponentDocumentsCollection.getEntries({
-						recursive: true,
-						includeDuplicates: true,
-					})
-				).filter((entry) => isFile(entry, 'mdx'));
-			}
-
-			return (
-				global.cachedEntries.find((item) =>
-					item
-						.getPath()
-						.replace(/clay-[^/]+\/docs\//g, '')
-						.includes(slug.join('/'))
-				) || null
-			);
+			return getEntryFallback(slug);
 		}
 
 		return null;
