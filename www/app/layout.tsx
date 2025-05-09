@@ -3,6 +3,7 @@ import {Inter} from 'next/font/google';
 import {GoogleAnalytics} from '@next/third-parties/google';
 import {SandPackCSS} from './_components/SandpackStyles';
 import Script from 'next/script';
+
 import './clay.scss';
 import './globals.scss';
 

@@ -1,7 +1,7 @@
-import {CodeBlock, LineNumbers, Tokens, Toolbar} from 'renoun/components';
+/* eslint-disable react/display-name */
+import {Tokens} from 'renoun/components';
 import type {MDXComponents as MDXComponentsType} from 'renoun/mdx';
 import Link from 'next/link';
-import {Sandpack} from '@/app/_components/Sandpack.server';
 import styles from './mdx-components.module.css';
 import React from 'react';
 
@@ -44,27 +44,13 @@ export function useMDXComponents() {
 				</As>
 			);
 		},
-		pre: ({children, preview, language, value, ...otherProps}: any) => {
-			if (preview) {
-				return (
-					<Sandpack language={language}>
-						{(children as any).props.children}
-					</Sandpack>
-				);
-			}
+		pre: ({children, preview, language, title}: any) => {
+			const code = children.props.children;
 
 			return (
-				<CodeBlock
-					{...otherProps}
-					value={value}
-					allowCopy
-					className={{
-						container: styles.code_editor,
-					}}
-					shouldFormat={false}
-					showToolbar={false}
-					language={language}
-				/>
+				<Code title={title} language={language} value={code} preview={preview}>
+					<Tokens shouldFormat={false} language="jsx">{code}</Tokens>
+				</Code>
 			);
 		},
 		blockquote: ({children, ...otherProps}) => (
@@ -72,5 +58,5 @@ export function useMDXComponents() {
 				{children}
 			</blockquote>
 		),
-	} as MDXComponentsType;
+	} satisfies MDXComponentsType;
 }

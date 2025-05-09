@@ -1,0 +1,128 @@
+.code {
+	--radius-md: 6px;
+	--border: #f3f3f3;
+
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+	margin: 20px 0;
+}
+
+.code_playground {
+	position: relative;
+	border-top-left-radius: var(--radius-md);
+	border-top-right-radius: var(--radius-md);
+	scrollbar-width: thin;
+	overflow: auto hidden;
+	justify-content: center;
+	align-items: center;
+	min-width: fit-content;
+	min-height: 11.25rem;
+	padding: 3rem 1.5rem;
+	display: flex;
+}
+
+.code_playground__error {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	background-color: #feefef;
+  color: #da1414;
+	font-size: .875rem;
+	padding: .9375rem 1rem;
+	border-radius: var(--radius-md);
+}
+
+.code_container {
+	position: relative;
+}
+
+.code_toolbar__floating {
+	border-top: 1px solid var(--border);
+	position: absolute;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	user-select: none;
+	width: 100%;
+	gap: 32px;
+	height: 40px;
+	padding: 0 4px;
+	overflow: auto hidden;
+	pointer-events: none;
+	z-index: 10;
+}
+
+.code_toolbar {
+	white-space: nowrap;
+	border-block: 1px solid var(--border);
+	display: flex;
+	align-items: center;
+	user-select: none;
+	gap: 32px;
+	height: 36px;
+	padding: 0 12px;
+	overflow: auto hidden;
+}
+
+.code_toolbar p {
+	margin: 0;
+}
+
+.code_toolbar__actions {
+	pointer-events: auto;
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.code_pre__viewport {
+	position: relative;
+	scrollbar-width: none;
+	height: 100%;
+	overscroll-behavior-x: contain;
+}
+
+.code_pre__viewport[data-closed] {
+	max-height: calc(8.75lh + .5rem);
+	overflow: hidden;
+}
+
+.code_pre__viewport[data-closed]::before {
+	background: linear-gradient(#0000,#fff);
+	bottom: 0;
+	content: '';
+	height: 7.5rem;
+	pointer-events: none;
+	position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.code_pre {
+	margin: 0;
+	padding: 15px;
+}
+
+.code_collpase__button {
+	position: relative;
+	background-color: #fff;
+	border-bottom-left-radius: var(--radius-md);
+	border-bottom-right-radius: var(--radius-md);
+	border: none;
+	border-top: 1px solid var(--border);
+	color: #6b6c7e;
+	font-size: 0.875rem;
+	font-weight: 600;
+	padding: .4375rem .9375rem;
+	text-align: center;
+	user-select: none;
+	width: 100%;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	z-index: 10;
+}
+
+.code_collpase__button:hover {
+	background-color: #f7f8f9;
+  color: #272833;
+}

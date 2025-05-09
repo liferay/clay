@@ -143,7 +143,7 @@ export const getEntry = async (slug: Array<string>) => {
 	} catch (error) {
 		if (error instanceof FileNotFoundError) {
 			if (!global.cachedEntries) {
-				console.log('not cached');
+				console.log('cachedEntries: not cached');
 				global.cachedEntries = (
 					await ComponentDocumentsCollection.getEntries({
 						recursive: true,
