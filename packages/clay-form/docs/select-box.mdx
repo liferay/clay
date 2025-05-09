@@ -19,7 +19,6 @@ import {Provider} from '@clayui/core';
 import {ClaySelectBox} from '@clayui/form';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [items, setItems] = useState([
@@ -39,7 +38,7 @@ export default function App() {
 	const [value, setValue] = useState([]);
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<ClaySelectBox
 					items={items}

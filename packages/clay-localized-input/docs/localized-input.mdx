@@ -14,7 +14,6 @@ import {Provider} from '@clayui/core';
 import LocalizedInput from '@clayui/localized-input';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const locales = [
@@ -43,7 +42,7 @@ export default function App() {
 	});
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<LocalizedInput
 					id="locale1"
@@ -68,7 +67,6 @@ import {Provider} from '@clayui/core';
 import LocalizedInput from '@clayui/localized-input';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const locales = [
@@ -99,7 +97,7 @@ export default function App() {
 	const prepend = '/home/';
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<LocalizedInput
 					id="locale2"

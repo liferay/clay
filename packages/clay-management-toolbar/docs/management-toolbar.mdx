@@ -37,11 +37,10 @@ import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<ManagementToolbar>
 					<ManagementToolbar.ItemList>
@@ -113,7 +112,6 @@ import Icon from '@clayui/icon';
 import Label from '@clayui/label';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const filterItems = [
@@ -145,7 +143,7 @@ export default function App() {
 
 	const viewTypeActive = viewTypes.find((type) => type.active);
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<>
 					<ManagementToolbar>
@@ -324,11 +322,10 @@ import Button from '@clayui/button';
 import Label from '@clayui/label';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<ManagementToolbar>
 					<ClayResultsBar>

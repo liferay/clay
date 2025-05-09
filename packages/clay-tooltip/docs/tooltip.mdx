@@ -17,11 +17,10 @@ import {Provider} from '@clayui/core';
 import Tooltip from '@clayui/tooltip';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4" style={{height: 50}}>
 				<Tooltip alignPosition="bottom" show>
 					Tooltip content
@@ -48,11 +47,10 @@ import {Provider} from '@clayui/core';
 import {ClayTooltipProvider} from '@clayui/tooltip';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<ClayTooltipProvider>
 					<div>
@@ -79,11 +77,10 @@ import {Provider} from '@clayui/core';
 import {ClayTooltipProvider} from '@clayui/tooltip';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<ClayTooltipProvider
 					contentRenderer={(props) =>

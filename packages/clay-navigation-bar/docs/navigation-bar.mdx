@@ -17,13 +17,12 @@ import Link from '@clayui/link';
 import Button from '@clayui/button';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [active, setActive] = useState('Item 1');
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<NavigationBar triggerLabel={active}>
 					<NavigationBar.Item active={active === 'Item 1'}>
@@ -77,7 +76,6 @@ import {Provider} from '@clayui/core';
 import NavigationBar from '@clayui/navigation-bar';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const btnStyle = {
@@ -86,7 +84,7 @@ export default function App() {
 	};
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<NavigationBar triggerLabel="Item 1">
 					<NavigationBar.Item active>

@@ -19,19 +19,18 @@ packageTypes:
 ## Example
 
 ```jsx preview
-import React, {useCallback, useState} from 'react';
+import React from 'react';
 import {Body, Cell, Text, Head, Row, Table, Provider} from '@clayui/core';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
-	const [sort, setSort] = useState(null);
-	const [items, setItems] = useState([
+	const [sort, setSort] = React.useState(null);
+	const [items, setItems] = React.useState([
 		{files: 22, id: 1, name: 'Games', type: 'File folder'},
 		{files: 7, id: 2, name: 'Program Files', type: 'File folder'},
 	]);
 
-	const onSortChange = useCallback((sort) => {
+	const onSortChange = React.useCallback((sort) => {
 		if (sort) {
 			setItems((items) =>
 				items.sort((a, b) => {
@@ -53,7 +52,7 @@ export default function App() {
 	}, []);
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Table onSortChange={onSortChange} sort={sort}>
 					<Head
@@ -238,19 +237,18 @@ It is also possible to implement your own logic on the client side when your dat
 </div>
 
 ```jsx preview
-import React, {useMemo, useState} from 'react';
+import React from 'react';
 import {Body, Cell, Text, Head, Row, Table, Provider} from '@clayui/core';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
-	const [sort, setSort] = useState(null);
-	const [items, setItems] = useState([
+	const [sort, setSort] = React.useState(null);
+	const [items, setItems] = React.useState([
 		{files: 22, id: 1, name: 'Games', type: 'File folder'},
 		{files: 7, id: 2, name: 'Program Files', type: 'File folder'},
 	]);
 
-	const filteredItems = useMemo(() => {
+	const filteredItems = React.useMemo(() => {
 		if (!sort) {
 			return items;
 		}
@@ -270,7 +268,7 @@ export default function App() {
 	}, [sort, items]);
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Table onSortChange={setSort} sort={sort}>
 					<Head>
@@ -367,7 +365,6 @@ When using the nested row pattern, Clay automatically changes the accessibility 
 import React from 'react';
 import {Body, Cell, Head, Row, Table, Provider} from '@clayui/core';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const columns = [
@@ -382,7 +379,7 @@ export default function App() {
 	];
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Table aria-label="Drive" nestedKey="children">
 					<Head items={columns}>
@@ -434,14 +431,14 @@ export default function App() {
 
 Expanding nodes is done OOTB in the component but it is also possible to control the state to modify behaviors if necessary or use it to save a session to improve the user experience.
 
-<div class="clay-site-alert alert alert-warning">
-	<strong class="lead">Warning</strong>
-	If your data structure does not have a key property <code class="language-text">
+<div className="clay-site-alert alert alert-warning">
+	<strong className="lead">Warning</strong>
+	If your data structure does not have a key property <code className="language-text">
 		id
 	</code> that is used as a unique identifier for each item, you need to configure
-	which key will be used to identify the item by using the <code class="language-text">
+	which key will be used to identify the item by using the <code className="language-text">
 		itemIdKey
-	</code> API in the <code class="language-text">Table</code> component.
+	</code> API in the <code className="language-text">Table</code> component.
 </div>
 
 ```jsx

@@ -16,11 +16,10 @@ import {Provider, Option, Picker} from '@clayui/core';
 import Form from '@clayui/form';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<div style={{width: '100px'}}>
 					<Form.Group>
@@ -167,7 +166,6 @@ import {useId} from '@clayui/shared';
 import Form from '@clayui/form';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 const Trigger = React.forwardRef(({children, ...otherProps}, ref) => (
 	<div ref={ref} {...otherProps} tabIndex={0}>
@@ -181,7 +179,7 @@ export default function App() {
 	const labelId = useId();
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<div style={{width: '150px'}}>
 					<Form.Group>
@@ -214,14 +212,13 @@ import Label from '@clayui/label';
 import Form from '@clayui/form';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const pickerId = useId();
 	const labelId = useId();
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<div style={{width: '150px'}}>
 					<Form.Group>
@@ -277,14 +274,13 @@ import DropDown from '@clayui/drop-down';
 import Form from '@clayui/form';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const pickerId = useId();
 	const labelId = useId();
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<div style={{width: '150px'}}>
 					<Form.Group>
@@ -341,11 +337,10 @@ import {Provider, Option, Picker} from '@clayui/core';
 import Form from '@clayui/form';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<div style={{width: '100px'}}>
 					<Form.Group>

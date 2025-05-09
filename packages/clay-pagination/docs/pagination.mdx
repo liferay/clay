@@ -24,11 +24,10 @@ import {Provider} from '@clayui/core';
 import Pagination from '@clayui/pagination';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Pagination>
 					<Pagination.Item>{1}</Pagination.Item>
@@ -54,13 +53,12 @@ import {Provider} from '@clayui/core';
 import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [active, setActive] = useState(8);
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<ClayPaginationWithBasicItems
 					active={active}

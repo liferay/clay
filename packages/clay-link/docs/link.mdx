@@ -16,7 +16,6 @@ import {Provider} from '@clayui/core';
 import Link from '@clayui/link';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const colStyles = {
@@ -27,7 +26,7 @@ export default function App() {
 	};
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Link displayType="primary" href="#link-styles">
 					Primary

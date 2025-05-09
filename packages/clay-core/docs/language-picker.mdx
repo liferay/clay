@@ -14,11 +14,10 @@ packageTypes: ['clay-core/src/language-picker/LanguagePicker.tsx']
 import {Provider, LanguagePicker} from '@clayui/core';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4" style={{width: 'fit-content'}}>
 				<LanguagePicker
 					locales={[
@@ -155,7 +154,6 @@ Unlike the default Language Picker, translations variant is used to select a tra
 import {Provider, LanguagePicker} from '@clayui/core';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const translations = {
@@ -164,7 +162,7 @@ export default function App() {
 	};
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4" style={{width: 'fit-content'}}>
 				<LanguagePicker
 					locales={[
@@ -218,11 +216,10 @@ You can customize the Language Picker trigger to display only the icon by settin
 import {Provider, LanguagePicker} from '@clayui/core';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4" style={{width: 'fit-content'}}>
 				<LanguagePicker
 					hideTriggerText
@@ -267,11 +264,10 @@ You can reduce the size of the Language Picker trigger by setting the `small` pr
 import {Provider, LanguagePicker} from '@clayui/core';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4" style={{width: 'fit-content'}}>
 				<LanguagePicker
 					locales={[

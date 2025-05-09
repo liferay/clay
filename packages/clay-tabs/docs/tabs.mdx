@@ -34,13 +34,12 @@ import {Provider} from '@clayui/core';
 import Tabs from '@clayui/tabs';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [active, setActive] = useState(0);
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<>
 					<Tabs active={active} onActiveChange={setActive}>
@@ -94,13 +93,12 @@ import {Provider} from '@clayui/core';
 import Tabs from '@clayui/tabs';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [active, setActive] = useState(0);
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<>
 					<Tabs
@@ -168,13 +166,12 @@ import {Provider} from '@clayui/core';
 import Tabs from '@clayui/tabs';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [active, setActive] = useState(0);
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<>
 					<Tabs active={active} modern onActiveChange={setActive}>
@@ -232,7 +229,6 @@ import Icon from '@clayui/icon';
 import DropDown, {Align} from '@clayui/drop-down';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 const DropDownWithState = ({children, trigger, ...others}) => {
 	return (
@@ -267,7 +263,7 @@ export default function App() {
 	];
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<>
 					<Tabs active={active} onActiveChange={setActive}>

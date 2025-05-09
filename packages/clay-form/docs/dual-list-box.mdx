@@ -19,7 +19,6 @@ import {Provider} from '@clayui/core';
 import {ClayDualListBox} from '@clayui/form';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const moveBoxesOptions = [
@@ -64,7 +63,7 @@ export default function App() {
 	const [firstSelectBoxItems, secondSelectBoxItems] = items;
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<ClayDualListBox
 					disableLTR={firstSelectBoxItems.length === 0}

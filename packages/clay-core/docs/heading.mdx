@@ -20,11 +20,10 @@ By default, the semantic of the heading level is level 1 in which the component 
 import {Provider, Heading} from '@clayui/core';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Heading level={1} weight="semi-bold">
 					h1. Heading Level 1
@@ -58,11 +57,10 @@ In the same way, Heading component provides some styles depending on the `weight
 import {Provider, Heading} from '@clayui/core';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Heading level={3} weight="lighter">
 					Heading with ligther weight

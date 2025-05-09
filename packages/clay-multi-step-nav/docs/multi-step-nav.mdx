@@ -23,7 +23,6 @@ import {Provider} from '@clayui/core';
 import MultiStepNav from '@clayui/multi-step-nav';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [value, setValue] = useState(1);
@@ -48,7 +47,7 @@ export default function App() {
 	];
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<MultiStepNav>
 					{steps.map(({subTitle, title}, i) => {
@@ -88,7 +87,6 @@ import {Provider} from '@clayui/core';
 import MultiStepNav from '@clayui/multi-step-nav';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [value, setValue] = useState(1);
@@ -113,7 +111,7 @@ export default function App() {
 	];
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<MultiStepNav center>
 					{steps.map(({subTitle, title}, i) => {
@@ -157,7 +155,6 @@ import {Provider} from '@clayui/core';
 import {ClayMultiStepNavWithBasicItems} from '@clayui/multi-step-nav';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [value, setValue] = useState(1);
@@ -182,7 +179,7 @@ export default function App() {
 	];
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<ClayMultiStepNavWithBasicItems
 					active={value}
@@ -228,7 +225,6 @@ import {Provider} from '@clayui/core';
 import {ClayMultiStepNavWithBasicItems} from '@clayui/multi-step-nav';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [value, setValue] = useState(1);
@@ -253,7 +249,7 @@ export default function App() {
 	];
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<ClayMultiStepNavWithBasicItems
 					active={value}

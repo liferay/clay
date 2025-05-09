@@ -46,7 +46,6 @@ import {Provider} from '@clayui/core';
 import Layout from '@clayui/layout';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const colStyles = {
@@ -57,7 +56,7 @@ export default function App() {
 	};
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Layout.ContainerFluid view>
 					<Layout.Row justify="start">
@@ -114,11 +113,10 @@ import {Provider} from '@clayui/core';
 import Layout from '@clayui/layout';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Layout.ContentRow padded>
 					<Layout.ContentCol>

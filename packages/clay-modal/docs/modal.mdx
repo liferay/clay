@@ -22,13 +22,12 @@ import Modal, {useModal} from '@clayui/modal';
 import Button from '@clayui/button';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const {observer, onOpenChange, open} = useModal();
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<>
 					{open && (
@@ -129,13 +128,12 @@ import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const {observer, onOpenChange, open} = useModal();
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<>
 					<Modal.Header>{'Modal Title'}</Modal.Header>

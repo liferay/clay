@@ -14,13 +14,12 @@ packageTypes: ['clay-core/src/overlay-mask/OverlayMask.tsx']
 import {Provider, Button, OverlayMask} from '@clayui/core';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [visible, setVisible] = useState(false);
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Button.Group spaced>
 					<Button

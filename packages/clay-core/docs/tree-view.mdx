@@ -21,11 +21,7 @@ import React from 'react';
 import {Provider, TreeView} from '@clayui/core';
 import Icon from '@clayui/icon';
 
-import '@clayui/css/lib/css/atlas.css';
-
-const spritemap = '/public/icons.svg';
-
-export default function FileExplorer() {
+export default function App() {
 	const items = [
 		{
 			children: [
@@ -103,7 +99,7 @@ export default function FileExplorer() {
 	};
 
 	return (
-		<Provider spritemap={spritemap}>
+		<Provider spritemap="/icons.svg">
 			<TreeView defaultItems={items} dragAndDrop nestedKey="children">
 				{(item) => (
 					<TreeView.Item>

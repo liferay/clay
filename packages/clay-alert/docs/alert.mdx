@@ -21,11 +21,10 @@ import {Provider} from '@clayui/core';
 import Alert from '@clayui/alert';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Alert displayType="info" title="Info" role={null}>
 					This is an info message.
@@ -59,11 +58,10 @@ import {Provider, Button} from '@clayui/core';
 import Alert from '@clayui/alert';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<div className="c-mt-3">
 					<Alert
@@ -125,11 +123,10 @@ import {Provider} from '@clayui/core';
 import Alert from '@clayui/alert';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Alert
 					displayType="info"
@@ -153,11 +150,10 @@ import {Provider, Button} from '@clayui/core';
 import Alert from '@clayui/alert';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Alert displayType="info" title="With a Button" role={null}>
 					This is an alert with a button!
@@ -178,11 +174,10 @@ import {Provider, Button} from '@clayui/core';
 import Alert from '@clayui/alert';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<Alert
 					actions={<Button alert>View</Button>}
@@ -208,13 +203,12 @@ import {Provider, Button} from '@clayui/core';
 import Alert from '@clayui/alert';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
 	const [toastItems, setToastItems] = useState([]);
 
 	return (
-		<Provider spritemap="/public/icons.svg">
+		<Provider spritemap="/icons.svg">
 			<div className="p-4">
 				<div>
 					<Button
