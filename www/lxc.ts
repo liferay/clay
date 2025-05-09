@@ -1,6 +1,7 @@
 import {parse} from 'node-html-parser';
+import {cache} from 'react';
 
-async function fetchLiferay(slug: string, siteId: string, host: string) {
+const fetchLiferay = cache(async function fetchLiferay(slug: string, siteId: string, host: string) {
 	const response = await fetch(
 		new URL(
 			`/o/headless-delivery/v1.0/sites/${siteId}/site-pages${slug}`,
@@ -31,7 +32,7 @@ async function fetchLiferay(slug: string, siteId: string, host: string) {
 
 		return data;
 	}
-}
+});
 
 type Resource = {
 	dateCreated: string;
@@ -96,16 +97,16 @@ async function getResource(siteId: string, host: string) {
 	}
 }
 
-const cache = new Map<string, Promise<Resource[]>>();
+const cacheRef = new Map<string, Promise<Resource[]>>();
 
 async function getResourceCache(siteId: string, host: string) {
 	const id = `${siteId}:${host}`;
 
-	if (!cache.has(id)) {
-		cache.set(id, getResource(siteId, host));
+	if (!cacheRef.has(id)) {
+		cacheRef.set(id, getResource(siteId, host));
 	}
 
-	return await cache.get(id)!;
+	return await cacheRef.get(id)!;
 }
 
 export function createLXCResource() {
@@ -116,7 +117,7 @@ export function createLXCResource() {
 				process.env.LIFERAY_HOST!
 			),
 		getResource: async (slug: Array<string>) => {
-			const resource = await getResourceCache(
+			const resource = await getResource(
 				process.env.LIFERAY_SITE_ID!,
 				process.env.LIFERAY_HOST!
 			);
