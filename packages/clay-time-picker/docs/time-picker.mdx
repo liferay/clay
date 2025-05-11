@@ -11,10 +11,10 @@ packageTypes: ['clay-time-picker/src/index.tsx']
 ```jsx preview
 import {Provider} from '@clayui/core';
 import TimePicker from '@clayui/time-picker';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [state, setState] = useState({
+  const [state, setState] = React.useState({
     hours: '--',
     minutes: '--',
   });

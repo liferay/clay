@@ -41,7 +41,7 @@ export default function App() {
 
 ## Closing Actions
 
-<div class="clay-site-alert alert alert-warning">
+<div className="clay-site-alert alert alert-warning">
   This property is mandatory if you want make your label dismissible.
 </div>
 
@@ -79,10 +79,10 @@ You can also set a state for the visibility of the Label for example, handling `
 ```jsx preview
 import {Provider} from '@clayui/core';
 import Label from '@clayui/label';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = React.useState(true);
 
   return (
     <Provider spritemap="/icons.svg">

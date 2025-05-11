@@ -83,7 +83,7 @@ render(<App />);`}
 								displayType="secondary"
 								size="sm"
 								monospaced
-								onClick={(event) => {
+								onClick={() => {
 									navigator.clipboard
 										.writeText(value)
 										.then(() => {

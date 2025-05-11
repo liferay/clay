@@ -12,7 +12,7 @@ Use it when you want to enable the users to define values like post titles, head
 ```jsx preview
 import {Provider} from '@clayui/core';
 import LocalizedInput from '@clayui/localized-input';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
   const locales = [
@@ -34,8 +34,8 @@ export default function App() {
     },
   ];
 
-  const [selectedLocale, setSelectedLocale] = useState(locales[0]);
-  const [translations, setTranslations] = useState({
+  const [selectedLocale, setSelectedLocale] = React.useState(locales[0]);
+  const [translations, setTranslations] = React.useState({
     'en-US': 'Apple',
     'es-ES': 'Manzana',
   });
@@ -64,7 +64,7 @@ You might want to allow your users to localize URLs, in that case here's an exam
 ```jsx preview
 import {Provider} from '@clayui/core';
 import LocalizedInput from '@clayui/localized-input';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
   const locales = [
@@ -86,8 +86,8 @@ export default function App() {
     },
   ];
 
-  const [selectedLocale, setSelectedLocale] = useState(locales[0]);
-  const [translations, setTranslations] = useState({
+  const [selectedLocale, setSelectedLocale] = React.useState(locales[0]);
+  const [translations, setTranslations] = React.useState({
     'en-US': 'Apple',
     'es-ES': 'Manzana',
   });

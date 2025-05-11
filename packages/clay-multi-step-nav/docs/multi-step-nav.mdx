@@ -21,10 +21,10 @@ Each step can have two different states: `active` or `complete` defined by props
 ```jsx preview
 import {Provider} from '@clayui/core';
 import MultiStepNav from '@clayui/multi-step-nav';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = React.useState(1);
 
   const steps = [
     {
@@ -84,10 +84,10 @@ The `center` boolean property centers the `multi-step-nav`.
 ```jsx preview
 import {Provider} from '@clayui/core';
 import MultiStepNav from '@clayui/multi-step-nav';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = React.useState(1);
 
   const steps = [
     {
@@ -151,10 +151,10 @@ The `complete` and `error` states are defined using the `state` property in the 
 ```jsx preview
 import {Provider} from '@clayui/core';
 import {ClayMultiStepNavWithBasicItems} from '@clayui/multi-step-nav';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = React.useState(1);
 
   const steps = [
     {
@@ -220,10 +220,10 @@ Using `ClayMultiStepNavWithBasicItems` in combination with `maxStepsShown` prop 
 ```jsx preview
 import {Provider} from '@clayui/core';
 import {ClayMultiStepNavWithBasicItems} from '@clayui/multi-step-nav';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = React.useState(1);
 
   const steps = [
     {

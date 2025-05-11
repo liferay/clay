@@ -32,10 +32,10 @@ The component is treated as controlled, use the [`onValueChange`](#api-onValueCh
 ```jsx preview
 import {Provider} from '@clayui/core';
 import DatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = React.useState(null);
 
   return (
     <Provider spritemap="/icons.svg">
@@ -62,10 +62,10 @@ The ClayTimePicker by default is already implemented in the Date Picker, you can
 ```jsx preview
 import {Provider} from '@clayui/core';
 import DatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = React.useState(null);
 
   return (
     <Provider spritemap="/icons.svg">
@@ -103,10 +103,10 @@ When a range is selected using the `input` or the calendar, the [`onValueChange`
 ```jsx preview
 import {Provider} from '@clayui/core';
 import DatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = React.useState(null);
 
   return (
     <Provider spritemap="/icons.svg">
@@ -134,10 +134,10 @@ To set internationalization of the component, you need to configure the props ac
 ```jsx preview
 import {Provider} from '@clayui/core';
 import DatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = React.useState(null);
 
   return (
     <Provider spritemap="/icons.svg">
@@ -197,10 +197,10 @@ To customize the Date Picker content footer you can use the [`footerElement`](#a
 ```jsx preview
 import {Provider} from '@clayui/core';
 import DatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = React.useState(null);
 
   return (
     <Provider spritemap="/icons.svg">

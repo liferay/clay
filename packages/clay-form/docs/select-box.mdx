@@ -17,10 +17,10 @@ Select Box is exported from the `@clayui/form` package, consisting of some low-l
 ```jsx preview
 import {Provider} from '@clayui/core';
 import {ClaySelectBox} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [items, setItems] = useState([
+  const [items, setItems] = React.useState([
     {
       label: 'Reddit',
       value: 'reddit',
@@ -34,7 +34,7 @@ export default function App() {
       value: 'twitter',
     },
   ]);
-  const [value, setValue] = useState([]);
+  const [value, setValue] = React.useState([]);
 
   return (
     <Provider spritemap="/icons.svg">

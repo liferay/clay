@@ -32,10 +32,10 @@ This is the default tab. The `displayType` attribute was deprecated after 3.89.0
 ```jsx preview
 import {Provider} from '@clayui/core';
 import Tabs from '@clayui/tabs';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = React.useState(0);
 
   return (
     <Provider spritemap="/icons.svg">
@@ -87,10 +87,10 @@ export default function App() {
 ```jsx preview
 import {Provider} from '@clayui/core';
 import Tabs from '@clayui/tabs';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = React.useState(0);
 
   return (
     <Provider spritemap="/icons.svg">
@@ -152,10 +152,10 @@ For the modern variant of Tabs use the `modern` property. If you need to justify
 ```jsx preview
 import {Provider} from '@clayui/core';
 import Tabs from '@clayui/tabs';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = React.useState(0);
 
   return (
     <Provider spritemap="/icons.svg">
@@ -211,7 +211,7 @@ import {Provider} from '@clayui/core';
 import Tabs from '@clayui/tabs';
 import Icon from '@clayui/icon';
 import DropDown, {Align} from '@clayui/drop-down';
-import React, {useState} from 'react';
+import React from 'react';
 
 const DropDownWithState = ({children, trigger, ...others}) => {
   return (
@@ -227,7 +227,7 @@ const DropDownWithState = ({children, trigger, ...others}) => {
 };
 
 export default function App() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = React.useState(0);
 
   const dropdownTabsItems = [
     {

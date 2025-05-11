@@ -15,12 +15,12 @@ You can also have custom icons that further signal the current state of the Togg
 ```jsx preview
 import {Provider} from '@clayui/core';
 import {ClayToggle} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [toggled1, setToggle1] = useState(false);
-  const [toggled2, setToggle2] = useState(false);
-  const [toggled3, setToggle3] = useState(false);
+  const [toggled1, setToggle1] = React.useState(false);
+  const [toggled2, setToggle2] = React.useState(false);
+  const [toggled3, setToggle3] = React.useState(false);
 
   return (
     <Provider spritemap="/icons.svg">
@@ -59,10 +59,10 @@ If you want the Toggle to behave like a radio element (toggling one on will togg
 ```jsx preview
 import {Provider} from '@clayui/core';
 import {ClayRadioGroup, ClayToggle} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState('foo');
+  const [value, setValue] = React.useState('foo');
 
   return (
     <Provider spritemap="/icons.svg">
@@ -89,12 +89,12 @@ The attribute `sizing="sm"` can be used to create a smaller toggle switch.
 ```jsx preview
 import {Provider} from '@clayui/core';
 import {ClayToggle} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [toggled1, setToggle1] = useState(false);
-  const [toggled2, setToggle2] = useState(false);
-  const [toggled3, setToggle3] = useState(false);
+  const [toggled1, setToggle1] = React.useState(false);
+  const [toggled2, setToggle2] = React.useState(false);
+  const [toggled3, setToggle3] = React.useState(false);
 
   return (
     <Provider spritemap="/icons.svg">

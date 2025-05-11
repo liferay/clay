@@ -13,11 +13,11 @@ Multi Select is an aggregate component of the `@clayui/form` package, consisting
 ```jsx preview
 import {Provider} from '@clayui/core';
 import MultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState('');
-  const [items, setItems] = useState([
+  const [value, setValue] = React.useState('');
+  const [items, setItems] = React.useState([
     {
       label: 'one',
       value: '1',
@@ -51,11 +51,11 @@ Usually a MultiSelect has an autocomplete to help the user choose existing tags.
 ```jsx preview
 import {Provider} from '@clayui/core';
 import MultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState('');
-  const [items, setItems] = useState([
+  const [value, setValue] = React.useState('');
+  const [items, setItems] = React.useState([
     {
       label: 'one',
       value: '1',
@@ -107,11 +107,11 @@ import {Provider} from '@clayui/core';
 import MultiSelect from '@clayui/multi-select';
 import ClayForm, {ClayInput} from '@clayui/form';
 import Button from '@clayui/button';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState('');
-  const [items, setItems] = useState([
+  const [value, setValue] = React.useState('');
+  const [items, setItems] = React.useState([
     {
       label: 'one',
       value: '1',
@@ -174,11 +174,11 @@ import {Provider} from '@clayui/core';
 import MultiSelect from '@clayui/multi-select';
 import ClayForm, {ClayInput} from '@clayui/form';
 import Button from '@clayui/button';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState('');
-  const [items, setItems] = useState([
+  const [value, setValue] = React.useState('');
+  const [items, setItems] = React.useState([
     {
       label: 'one',
       value: '1',
@@ -249,13 +249,12 @@ To customize Autocomplete content to stylize to your needs and also have filter 
 ```jsx preview
 import {Provider} from '@clayui/core';
 import MultiSelect from '@clayui/multi-select';
-import Sticker from '@clayui/sticker';
 import Icon from '@clayui/icon';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState('');
-  const [items, setItems] = useState([
+  const [value, setValue] = React.useState('');
+  const [items, setItems] = React.useState([
     {
       email: 'one@example.com',
       label: 'One',
@@ -320,11 +319,11 @@ Render a smaller `ClayMultiSelect` input by setting the `size` property to `sm`.
 ```jsx preview
 import {Provider} from '@clayui/core';
 import MultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState('');
-  const [items, setItems] = useState([
+  const [value, setValue] = React.useState('');
+  const [items, setItems] = React.useState([
     {
       label: 'one',
       value: '1',
@@ -355,11 +354,11 @@ import {Provider} from '@clayui/core';
 import MultiSelect from '@clayui/multi-select';
 import ClayForm, {ClayInput} from '@clayui/form';
 import Button from '@clayui/button';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [value, setValue] = useState('');
-  const [items, setItems] = useState([
+  const [value, setValue] = React.useState('');
+  const [items, setItems] = React.useState([
     {
       label: 'one',
       value: '1',

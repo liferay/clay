@@ -23,13 +23,13 @@ It definitely is used when trying to build accessible components, blocking all i
 
 ```jsx preview
 import {Provider, Button, FocusTrap} from '@clayui/core';
-import React, {useEffect, useRef, useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [active, setActive] = useState(false);
-  const activateButtonRef = useRef(null);
+  const [active, setActive] = React.useState(false);
+  const activateButtonRef = React.useRef(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (active) {
       return () => activateButtonRef.current?.focus();
     }

@@ -12,10 +12,10 @@ packageTypes: ['clay-core/src/overlay-mask/OverlayMask.tsx']
 
 ```jsx preview
 import {Provider, Button, OverlayMask} from '@clayui/core';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = React.useState(false);
 
   return (
     <Provider spritemap="/icons.svg">

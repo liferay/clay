@@ -15,10 +15,10 @@ import {Provider} from '@clayui/core';
 import NavigationBar from '@clayui/navigation-bar';
 import Link from '@clayui/link';
 import Button from '@clayui/button';
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function App() {
-  const [active, setActive] = useState('Item 1');
+  const [active, setActive] = React.useState('Item 1');
 
   return (
     <Provider spritemap="/icons.svg">
