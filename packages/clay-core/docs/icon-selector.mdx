@@ -15,7 +15,7 @@ Icon Selector is a field type that allows users to choose an icon from a predefi
 ## Example
 
 ```jsx preview
-import {IconSelector} from '@clayui/core';
+import {Provider, IconSelector} from '@clayui/core';
 import React from 'react';
 
 const spritemap = '/icons.svg';
@@ -23,7 +23,9 @@ const spritemap = '/icons.svg';
 export default function App() {
   return (
     <div className="p-4">
-      <IconSelector spritemap={spritemap} />
+      <Provider spritemap="/icons.svg">
+        <IconSelector spritemap={spritemap} />
+      </Provider>
     </div>
   );
 }
