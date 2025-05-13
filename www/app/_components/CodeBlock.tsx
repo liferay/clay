@@ -28,7 +28,7 @@ export function Code({
 
 	const shouldCollapsed = lineBreaks.length > 12;
 
-	const [open, setOpen] = useState(shouldCollapsed);
+	const [open, setOpen] = useState(!shouldCollapsed);
 	const [state, setState] = useState<'idle' | 'not-allowed' | 'copied'>(
 		'idle'
 	);
@@ -102,8 +102,8 @@ export function Code({
 					id={id}
 					tabIndex={-1}
 					className={styles.code_pre__viewport}
-					aria-hidden={open}
-					data-closed={open ? '' : undefined}
+					aria-hidden={!open}
+					data-closed={!open ? '' : undefined}
 					onKeyDown={(event: React.KeyboardEvent) => {
 						if (
 							event.key === 'a' &&
@@ -123,7 +123,7 @@ export function Code({
 
 				{shouldCollapsed && (
 					<button
-						aria-expanded={!open}
+						aria-expanded={open}
 						aria-controls={id}
 						className={`btn ${styles.code_collpase__button}`}
 						type="button"
