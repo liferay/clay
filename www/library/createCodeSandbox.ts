@@ -55,6 +55,10 @@ type CodeSandboxProps = {
 	) => [string, string] | null;
 };
 
+/**
+ * `createCodeSandbox` method is based on base-ui implementation with some modifications.
+ * https://github.com/mui/base-ui/blob/2c7fc9a3ec56981d2c0266f919bffb6c4c32239b/docs/src/blocks/createCodeSandbox/createCodeSandbox.ts#L7
+ */
 export function createCodeSandbox(options: CodeSandboxProps) {
 	const payload = createCodeSandboxRequestPayload(options);
 	const initialFile = Object.keys(payload)[0];
