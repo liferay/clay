@@ -163,7 +163,7 @@ export const getEntryMarkup = async (slug: Array<string>) => {
 		return await CollectionGroup.getFile([...slug, 'markup'], 'mdx');
 	} catch (error) {
 		if (error instanceof FileNotFoundError) {
-			return getEntryFallback(slug);
+			return getEntryFallback([...slug, 'markup']);
 		}
 
 		return null;
