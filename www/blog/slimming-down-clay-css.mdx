@@ -40,9 +40,7 @@ The line `@import 'clay/atlas';` imports:
   <code>clay.scss</code> file.
 </div>
 
-<div className="h6 font-italic">clay.scss</div>
-
-```scss
+```scss title="clay.scss"
 @import 'clay/_license-text';
 
 @import 'clay/functions/_global-functions';
@@ -151,9 +149,7 @@ The line `@import 'clay/atlas';` imports:
 
 We will comment out every component except the components that import CSS variables, CSS style resets, grid, modal, and utilities. We need the modal styles to be able to sign in on a vanilla Liferay instance. You can remove this if it is not relevant to you.
 
-<div className="h6 font-italic">clay.scss</div>
-
-```scss
+```scss title="clay.scss"
 @import 'clay/_license-text';
 
 @import 'clay/functions/_global-functions';
@@ -272,17 +268,13 @@ We recommend not removing variable imports. There are component specific variabl
 
 7.3 does not include Clay Admin. We will need to load Clay CSS fully, otherwise most admin related controls will be unstyled. We can create a file `clay_loggedin_user.scss` in your theme's `src/css/` directory, then import atlas.
 
-<div className="h6 font-italic">clay_loggedin_user.scss</div>
-
-```scss
+```scss title="clay_loggedin_user.scss"
 @import 'clay/atlas';
 ```
 
 We can gate this behind an if statement in the `head` tag of your theme's `portal_normal.ftl`. The code below checks if a user has signed in.
 
-<div className="h6 font-italic">portal_normal.ftl</div>
-
-```html
+```html title="portal_normal.ftl"
 <head>
 	<title>${html_title}</title>
 
@@ -300,9 +292,7 @@ It is included before `<@liferay_util["include"] page=top_head_include />` so ou
 
 We can refine the amount of CSS further for signed in and admin users. It will not be covered here, but the steps above just need to be repeated.
 
-<div className="h6 font-italic">portal_normal.ftl</div>
-
-```html
+```html title="portal_normal.ftl"
 <head>
 	<title>${html_title}</title>
 

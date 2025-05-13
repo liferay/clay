@@ -162,7 +162,6 @@ The composition allows you to customize the component or add new features. See s
 
 ```jsx preview
 import {Provider, Option, Picker, Icon} from '@clayui/core';
-import {useId} from '@clayui/shared';
 import Form from '@clayui/form';
 import React from 'react';
 
@@ -174,8 +173,8 @@ const Trigger = React.forwardRef(({children, ...otherProps}, ref) => (
 ));
 
 export default function App() {
-  const pickerId = useId();
-  const labelId = useId();
+  const pickerId = React.useId();
+  const labelId = React.useId();
 
   return (
     <Provider spritemap="/icons.svg">
@@ -205,15 +204,14 @@ export default function App() {
 
 ```jsx preview
 import {Provider, Option, Picker, Text} from '@clayui/core';
-import {useId} from '@clayui/shared';
 import Layout from '@clayui/layout';
 import Label from '@clayui/label';
 import Form from '@clayui/form';
 import React from 'react';
 
 export default function App() {
-  const pickerId = useId();
-  const labelId = useId();
+  const pickerId = React.useId();
+  const labelId = React.useId();
 
   return (
     <Provider spritemap="/icons.svg">
@@ -260,14 +258,13 @@ export default function App() {
 
 ```jsx preview
 import {Provider, Option, Picker} from '@clayui/core';
-import {useId} from '@clayui/shared';
 import DropDown from '@clayui/drop-down';
 import Form from '@clayui/form';
 import React from 'react';
 
 export default function App() {
-  const pickerId = useId();
-  const labelId = useId();
+  const pickerId = React.useId();
+  const labelId = React.useId();
 
   return (
     <Provider spritemap="/icons.svg">

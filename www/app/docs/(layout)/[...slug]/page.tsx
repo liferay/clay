@@ -1,6 +1,12 @@
 import type {Metadata} from 'next';
-import {CollectionGroup, getEntry} from '@/collections/site';
+import {
+	DocumentsCollection,
+	CSSDocumentsCollection,
+	ComponentDocumentsCollection,
+	getEntry,
+} from '@/collections/site';
 import {createLXCResource} from '@/lxc';
+import {isFile} from 'renoun/file-system';
 
 import {DocsLayout} from './DocsLayout';
 import {RemoteLayout} from './RemoteLayout';
@@ -14,13 +20,26 @@ type Props = {
 const lxc = createLXCResource();
 
 export async function generateStaticParams() {
-	const collection = await CollectionGroup.getEntries({recursive: true});
+	const [css, documents, components] = await Promise.all([
+		CSSDocumentsCollection.getEntries({recursive: true}),
+		DocumentsCollection.getEntries({recursive: true}),
+		ComponentDocumentsCollection.getEntries({
+			recursive: true,
+			includeDuplicates: true,
+		}),
+	]);
 	const remoteCollection = await lxc.getResources();
 
 	return [
-		...collection.map((entry) => ({
-			slug: entry.getPathSegments({includeBasePath: false}),
-		})),
+		...[...css, ...documents, ...components]
+			.filter((entry) => isFile(entry, 'mdx'))
+			.map((entry) => ({
+				slug: entry
+					.getPathSegments()
+					.join('/')
+					.replace(/clay-[^/]+\/docs\//g, '')
+					.split('/'),
+			})),
 		...remoteCollection.map((item) => ({
 			slug: ['components', item.slug.slice(1), 'design'],
 		})),

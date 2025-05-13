@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import {Tokens} from 'renoun/components';
+import {parsePreProps, Tokens} from 'renoun/components';
 import type {MDXComponents as MDXComponentsType} from 'renoun/mdx';
 import Link from 'next/link';
 import styles from './mdx-components.module.css';
@@ -44,18 +44,25 @@ export function useMDXComponents() {
 				</As>
 			);
 		},
-		pre: ({children, preview, language, title}: any) => {
-			const code = children.props.children;
+		pre: (props: any) => {
+			const {preview, title} = props;
+			const {children, language} = parsePreProps(props);
 
 			return (
 				<Code
 					title={title}
 					language={language}
-					value={code}
+					value={children}
 					preview={preview}
 				>
-					<Tokens shouldFormat={false} language="jsx">
-						{code}
+					<Tokens
+						shouldAnalyze={preview}
+						allowErrors={false}
+						showErrors={false}
+						shouldFormat={false}
+						language={language}
+					>
+						{children}
 					</Tokens>
 				</Code>
 			);

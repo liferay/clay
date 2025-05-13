@@ -159,20 +159,20 @@ async function APIReferenceAsync({
 							</h3>
 
 							<CodeInline
-								children={type.text}
 								language="typescript"
 								shouldAnalyze={false}
 								css={codeInlineStyles}
-							/>
+							>
+								{type.text}
+							</CodeInline>
 
 							{/* {type.path && <ViewSource href={type.path} />} */}
 						</div>
 
 						{type.description ? (
-							<MDXRenderer
-								children={type.description}
-								{...mdxRendererProps}
-							/>
+							<MDXRenderer {...mdxRendererProps}>
+								{type.description}
+							</MDXRenderer>
 						) : null}
 					</div>
 
@@ -229,20 +229,20 @@ async function APIReferenceAsync({
 					</h3>
 
 					<CodeInline
-						children={type.text}
 						language="typescript"
 						shouldAnalyze={false}
 						css={codeInlineStyles}
-					/>
+					>
+						{type.text}
+					</CodeInline>
 
 					{/* {type.path && <ViewSource href={type.path} />} */}
 				</div>
 
 				{type.description ? (
-					<MDXRenderer
-						children={type.description}
-						{...mdxRendererProps}
-					/>
+					<MDXRenderer {...mdxRendererProps}>
+						{type.description}
+					</MDXRenderer>
 				) : null}
 			</div>
 
@@ -271,11 +271,12 @@ function TypeChildren({
 	) {
 		return (
 			<CodeInline
-				children={type.text}
 				language="typescript"
 				shouldAnalyze={false}
 				css={codeInlineStyles}
-			/>
+			>
+				{type.text}
+			</CodeInline>
 		);
 	}
 
@@ -387,14 +388,15 @@ function TypeChildren({
 									  signature.parameter.kind ===
 											'Reference' ? (
 										<CodeInline
-											children={signature.parameter.text}
 											language="typescript"
 											shouldAnalyze={false}
 											css={{
 												...codeInlineStyles,
 												marginTop: '1.5rem',
 											}}
-										/>
+										>
+											{signature.parameter.text}
+										</CodeInline>
 									) : reference && isReference ? (
 										reference.properties
 											.filter((type: any) => {
@@ -503,11 +505,12 @@ function TypeChildren({
 		} else {
 			return (
 				<CodeInline
-					children={type.text}
 					language="typescript"
 					shouldAnalyze={false}
 					css={codeInlineStyles}
-				/>
+				>
+					{type.text}
+				</CodeInline>
 			);
 		}
 	}
@@ -640,7 +643,6 @@ function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 			>
 				{isNameSameAsType ? null : (
 					<CodeInline
-						children={type.text}
 						language="typescript"
 						shouldAnalyze={false}
 						paddingX="0.5rem"
@@ -649,7 +651,9 @@ function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 							...codeInlineStyles,
 							fontSize: 'var(--font-size-body-2)',
 						}}
-					/>
+					>
+						{type.text}
+					</CodeInline>
 				)}
 				{defaultValue ? (
 					<span
@@ -662,11 +666,12 @@ function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 					>
 						={' '}
 						<CodeInline
-							children={JSON.stringify(defaultValue)}
 							language="typescript"
 							shouldAnalyze={false}
 							css={codeInlineStyles}
-						/>
+						>
+							{JSON.stringify(defaultValue)}
+						</CodeInline>
 					</span>
 				) : null}
 			</div>
@@ -700,10 +705,9 @@ function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 			)}
 
 			{type.description && (
-				<MDXRenderer
-					children={type.description}
-					{...mdxRendererProps}
-				/>
+				<MDXRenderer {...mdxRendererProps}>
+					{type.description}
+				</MDXRenderer>
 			)}
 
 			{type.kind === 'Object' && type.properties

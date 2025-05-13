@@ -1,4 +1,4 @@
-import {BlogCollection} from '@/data';
+import {BlogCollection} from '@/collections/site';
 
 import {Sidebar} from '../_components/Sidebar';
 import {Navbar} from '../_components/Navbar';

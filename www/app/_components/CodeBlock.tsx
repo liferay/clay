@@ -240,7 +240,7 @@ ReactDOM.render(
 			},
 			additionalHtmlHeadContent: cssThemeSetup,
 		});
-	}, [title, description]);
+	}, [file, title, description]);
 
 	return (
 		<Button

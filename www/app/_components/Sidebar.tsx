@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import {isFile} from 'renoun/file-system';
 import type {FileSystemEntry, Directory} from 'renoun/file-system';
-import type {AllCollection} from '@/data';
 
 import ClayLink from '../_components/Link';
 import styles from './sidebar.module.css';
@@ -21,7 +20,7 @@ type CollectionItem = {
 type Props = {
 	items?: Array<Item>;
 	path?: string;
-	collection?: AllCollection | Directory<any> | Array<CollectionItem>;
+	collection?: Directory<any> | Array<CollectionItem>;
 };
 
 export function Sidebar({collection, path, items}: Props) {
@@ -93,7 +92,7 @@ export function Sidebar({collection, path, items}: Props) {
 }
 
 type TreeCollectionProps = {
-	collection: AllCollection | Directory<any>;
+	collection: Directory<any>;
 	path?: string;
 	sort?: boolean;
 };

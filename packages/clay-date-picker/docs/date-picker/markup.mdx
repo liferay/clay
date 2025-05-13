@@ -46,11 +46,11 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 	<div className="date-picker">
 		<div className="input-group">
 			<div className="input-group-item">
-				<input name="datePicker" type="hidden" value="" />
-				<input className="form-control input-group-inset input-group-inset-after" placeholder="YYYY-MM-DD" type="text" value="" />
+				<input name="datePicker" type="hidden" defaultValue="" />
+				<input className="form-control input-group-inset input-group-inset-after" placeholder="YYYY-MM-DD" type="text" defaultValue="" />
 				<div className="input-group-inset-item input-group-inset-item-after">
 					<button className="btn btn-unstyled date-picker-dropdown-toggle" type="button">
-						<span className="c-inner" tabindex="-1">
+						<span className="c-inner" tabIndex="-1">
 							<svg className="lexicon-icon lexicon-icon-calendar" focusable="false" role="presentation">
 								<use href="/icons.svg#calendar" />
 							</svg>
@@ -113,21 +113,21 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
     					</div>
     					<div className="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls">
     						<button aria-label="Select the previous month" className="btn nav-btn nav-btn-monospaced" disabled="" type="button">
-    							<span className="c-inner" tabindex="-1">
+    							<span className="c-inner" tabIndex="-1">
     								<svg className="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
     									<use href="/icons.svg#angle-left" />
     								</svg>
     							</span>
     						</button>
     						<button aria-label="Select current date" className="btn nav-btn nav-btn-monospaced" type="button">
-    							<span className="c-inner" tabindex="-1">
+    							<span className="c-inner" tabIndex="-1">
     								<svg className="lexicon-icon lexicon-icon-simple-circle" focusable="false" role="presentation">
     									<use href="/icons.svg#simple-circle" />
     								</svg>
     							</span>
     						</button>
     						<button aria-label="Select the next month" className="btn nav-btn nav-btn-monospaced" type="button">
-    							<span className="c-inner" tabindex="-1">
+    							<span className="c-inner" tabIndex="-1">
     								<svg className="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
     									<use href="/icons.svg#angle-right" />
     								</svg>
@@ -162,117 +162,117 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
     				</div>
     				<div className="date-picker-date-row date-picker-row">
     					<div className="date-picker-col">
-    						<button aria-label="2019 01 27" className="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button"><span className="c-inner" tabindex="-1">27</span></button>
+    						<button aria-label="2019 01 27" className="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button"><span className="c-inner" tabIndex="-1">27</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 01 28" className="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button"><span className="c-inner" tabindex="-1">28</span></button>
+    						<button aria-label="2019 01 28" className="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button"><span className="c-inner" tabIndex="-1">28</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 01 29" className="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button"><span className="c-inner" tabindex="-1">29</span></button>
+    						<button aria-label="2019 01 29" className="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button"><span className="c-inner" tabIndex="-1">29</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 01 30" className="active date-picker-date date-picker-calendar-item previous-month-date" type="button"><span className="c-inner" tabindex="-1">30</span></button>
+    						<button aria-label="2019 01 30" className="active date-picker-date date-picker-calendar-item previous-month-date" type="button"><span className="c-inner" tabIndex="-1">30</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 01 31" className="date-picker-date date-picker-calendar-item previous-month-date" type="button"><span className="c-inner" tabindex="-1">31</span></button>
+    						<button aria-label="2019 01 31" className="date-picker-date date-picker-calendar-item previous-month-date" type="button"><span className="c-inner" tabIndex="-1">31</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 01" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">1</span></button>
+    						<button aria-label="2019 02 01" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">1</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 02" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">2</span></button>
-    					</div>
-    				</div>
-    				<div className="date-picker-date-row date-picker-row">
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 03" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">3</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 04" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">4</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 05" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">5</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 06" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">6</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 07" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">7</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 08" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">8</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 09" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">9</span></button>
+    						<button aria-label="2019 02 02" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">2</span></button>
     					</div>
     				</div>
     				<div className="date-picker-date-row date-picker-row">
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 10" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">10</span></button>
+    						<button aria-label="2019 02 03" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">3</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 11" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">11</span></button>
+    						<button aria-label="2019 02 04" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">4</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 12" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">12</span></button>
+    						<button aria-label="2019 02 05" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">5</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 13" className="date-picker-date date-picker-calendar-item" tabindex="-1" type="button"><span className="c-inner" tabindex="-1">13</span></button>
+    						<button aria-label="2019 02 06" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">6</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 14" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">14</span></button>
+    						<button aria-label="2019 02 07" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">7</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 15" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">15</span></button>
+    						<button aria-label="2019 02 08" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">8</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 16" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">16</span></button>
-    					</div>
-    				</div>
-    				<div className="date-picker-date-row date-picker-row">
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 17" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">17</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 18" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">18</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 19" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">19</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 20" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">20</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 21" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">21</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 22" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">22</span></button>
-    					</div>
-    					<div className="date-picker-col">
-    						<button aria-label="2019 02 23" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">23</span></button>
+    						<button aria-label="2019 02 09" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">9</span></button>
     					</div>
     				</div>
     				<div className="date-picker-date-row date-picker-row">
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 24" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">24</span></button>
+    						<button aria-label="2019 02 10" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">10</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 25" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">25</span></button>
+    						<button aria-label="2019 02 11" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">11</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 26" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">26</span></button>
+    						<button aria-label="2019 02 12" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">12</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 27" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">27</span></button>
+    						<button aria-label="2019 02 13" className="date-picker-date date-picker-calendar-item" tabIndex="-1" type="button"><span className="c-inner" tabIndex="-1">13</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 02 28" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabindex="-1">28</span></button>
+    						<button aria-label="2019 02 14" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">14</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 03 01" className="date-picker-date date-picker-calendar-item next-month-date" type="button"><span className="c-inner" tabindex="-1">1</span></button>
+    						<button aria-label="2019 02 15" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">15</span></button>
     					</div>
     					<div className="date-picker-col">
-    						<button aria-label="2019 03 02" className="date-picker-date date-picker-calendar-item next-month-date" type="button"><span className="c-inner" tabindex="-1">2</span></button>
+    						<button aria-label="2019 02 16" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">16</span></button>
+    					</div>
+    				</div>
+    				<div className="date-picker-date-row date-picker-row">
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 17" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">17</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 18" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">18</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 19" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">19</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 20" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">20</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 21" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">21</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 22" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">22</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 23" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">23</span></button>
+    					</div>
+    				</div>
+    				<div className="date-picker-date-row date-picker-row">
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 24" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">24</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 25" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">25</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 26" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">26</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 27" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">27</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 02 28" className="date-picker-date date-picker-calendar-item" type="button"><span className="c-inner" tabIndex="-1">28</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 03 01" className="date-picker-date date-picker-calendar-item next-month-date" type="button"><span className="c-inner" tabIndex="-1">1</span></button>
+    					</div>
+    					<div className="date-picker-col">
+    						<button aria-label="2019 03 02" className="date-picker-date date-picker-calendar-item next-month-date" type="button"><span className="c-inner" tabIndex="-1">2</span></button>
     					</div>
     				</div>
     			</div>
@@ -287,7 +287,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
     							</span>
     						</div>
     						<div className="input-group-item">
-    							<input className="form-control" name="timer" type="time" value="00:00" />
+    							<input className="form-control" name="timer" type="time" defaultValue="00:00" />
     						</div>
     						<div className="input-group-item input-group-item-shrink">
     							<span className="input-group-text">(GMT+01:00)</span>
@@ -305,19 +305,19 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 <div className="date-picker">
   <div className="input-group">
     <div className="input-group-item">
-      <input name="datePicker" type="hidden" value="" />
+      <input name="datePicker" type="hidden" defaultValue="" />
       <input
         className="form-control input-group-inset input-group-inset-after"
         placeholder="YYYY-MM-DD"
         type="text"
-        value=""
+        defaultValue=""
       />
       <div className="input-group-inset-item input-group-inset-item-after">
         <button
           className="btn btn-unstyled date-picker-dropdown-toggle"
           type="button"
         >
-          <span className="c-inner" tabindex="-1">
+          <span className="c-inner" tabIndex="-1">
             <svg
               className="lexicon-icon lexicon-icon-calendar"
               focusable="false"
@@ -390,7 +390,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               disabled=""
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-angle-left"
                   focusable="false"
@@ -405,7 +405,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="btn nav-btn nav-btn-monospaced"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-simple-circle"
                   focusable="false"
@@ -420,7 +420,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="btn nav-btn nav-btn-monospaced"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-angle-right"
                   focusable="false"
@@ -479,7 +479,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               disabled=""
               type="button"
             >
-              <span className="c-inner" tabindex="-1">27</span>
+              <span className="c-inner" tabIndex="-1">27</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -489,7 +489,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               disabled=""
               type="button"
             >
-              <span className="c-inner" tabindex="-1">28</span>
+              <span className="c-inner" tabIndex="-1">28</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -499,7 +499,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               disabled=""
               type="button"
             >
-              <span className="c-inner" tabindex="-1">29</span>
+              <span className="c-inner" tabIndex="-1">29</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -508,7 +508,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="active date-picker-date date-picker-calendar-item previous-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">30</span>
+              <span className="c-inner" tabIndex="-1">30</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -517,7 +517,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item previous-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">31</span>
+              <span className="c-inner" tabIndex="-1">31</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -526,7 +526,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">1</span>
+              <span className="c-inner" tabIndex="-1">1</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -535,7 +535,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">2</span>
+              <span className="c-inner" tabIndex="-1">2</span>
             </button>
           </div>
         </div>
@@ -546,7 +546,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">3</span>
+              <span className="c-inner" tabIndex="-1">3</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -555,7 +555,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">4</span>
+              <span className="c-inner" tabIndex="-1">4</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -564,7 +564,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">5</span>
+              <span className="c-inner" tabIndex="-1">5</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -573,7 +573,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">6</span>
+              <span className="c-inner" tabIndex="-1">6</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -582,7 +582,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">7</span>
+              <span className="c-inner" tabIndex="-1">7</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -591,7 +591,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">8</span>
+              <span className="c-inner" tabIndex="-1">8</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -600,7 +600,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">9</span>
+              <span className="c-inner" tabIndex="-1">9</span>
             </button>
           </div>
         </div>
@@ -611,7 +611,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">10</span>
+              <span className="c-inner" tabIndex="-1">10</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -620,7 +620,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">11</span>
+              <span className="c-inner" tabIndex="-1">11</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -629,7 +629,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">12</span>
+              <span className="c-inner" tabIndex="-1">12</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -639,7 +639,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               tabindex="-1"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">13</span>
+              <span className="c-inner" tabIndex="-1">13</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -648,7 +648,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">14</span>
+              <span className="c-inner" tabIndex="-1">14</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -657,7 +657,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">15</span>
+              <span className="c-inner" tabIndex="-1">15</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -666,7 +666,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">16</span>
+              <span className="c-inner" tabIndex="-1">16</span>
             </button>
           </div>
         </div>
@@ -677,7 +677,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">17</span>
+              <span className="c-inner" tabIndex="-1">17</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -686,7 +686,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">18</span>
+              <span className="c-inner" tabIndex="-1">18</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -695,7 +695,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">19</span>
+              <span className="c-inner" tabIndex="-1">19</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -704,7 +704,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">20</span>
+              <span className="c-inner" tabIndex="-1">20</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -713,7 +713,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">21</span>
+              <span className="c-inner" tabIndex="-1">21</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -722,7 +722,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">22</span>
+              <span className="c-inner" tabIndex="-1">22</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -731,7 +731,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">23</span>
+              <span className="c-inner" tabIndex="-1">23</span>
             </button>
           </div>
         </div>
@@ -742,7 +742,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">24</span>
+              <span className="c-inner" tabIndex="-1">24</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -751,7 +751,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">25</span>
+              <span className="c-inner" tabIndex="-1">25</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -760,7 +760,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">26</span>
+              <span className="c-inner" tabIndex="-1">26</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -769,7 +769,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">27</span>
+              <span className="c-inner" tabIndex="-1">27</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -778,7 +778,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">28</span>
+              <span className="c-inner" tabIndex="-1">28</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -787,7 +787,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item next-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">1</span>
+              <span className="c-inner" tabIndex="-1">1</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -796,7 +796,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item next-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">2</span>
+              <span className="c-inner" tabIndex="-1">2</span>
             </button>
           </div>
         </div>
@@ -820,7 +820,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="form-control"
                 name="timer"
                 type="time"
-                value="00:00"
+                defaultValue="00:00"
               />
             </div>
             <div className="input-group-item input-group-item-shrink">
@@ -896,7 +896,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 disabled=""
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   <svg
                     className="lexicon-icon lexicon-icon-angle-left"
                     focusable="false"
@@ -911,7 +911,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="btn nav-btn nav-btn-monospaced"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   <svg
                     className="lexicon-icon lexicon-icon-simple-circle"
                     focusable="false"
@@ -926,7 +926,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="btn nav-btn nav-btn-monospaced"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   <svg
                     className="lexicon-icon lexicon-icon-angle-right"
                     focusable="false"
@@ -985,7 +985,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 disabled=""
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   27
                 </span>
               </button>
@@ -997,7 +997,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 disabled=""
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   28
                 </span>
               </button>
@@ -1009,7 +1009,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 disabled=""
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   29
                 </span>
               </button>
@@ -1020,7 +1020,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="active date-picker-date date-picker-calendar-item previous-month-date"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   30
                 </span>
               </button>
@@ -1031,7 +1031,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item previous-month-date"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   31
                 </span>
               </button>
@@ -1042,7 +1042,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   1
                 </span>
               </button>
@@ -1053,7 +1053,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   2
                 </span>
               </button>
@@ -1066,7 +1066,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   3
                 </span>
               </button>
@@ -1077,7 +1077,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   4
                 </span>
               </button>
@@ -1088,7 +1088,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   5
                 </span>
               </button>
@@ -1099,7 +1099,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   6
                 </span>
               </button>
@@ -1110,7 +1110,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   7
                 </span>
               </button>
@@ -1121,7 +1121,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   8
                 </span>
               </button>
@@ -1132,7 +1132,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   9
                 </span>
               </button>
@@ -1145,7 +1145,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   10
                 </span>
               </button>
@@ -1156,7 +1156,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   11
                 </span>
               </button>
@@ -1167,7 +1167,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   12
                 </span>
               </button>
@@ -1176,10 +1176,10 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               <button
                 aria-label="2019 02 13"
                 className="date-picker-date date-picker-calendar-item"
-                tabindex="-1"
+                tabIndex="-1"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   13
                 </span>
               </button>
@@ -1190,7 +1190,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   14
                 </span>
               </button>
@@ -1201,7 +1201,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   15
                 </span>
               </button>
@@ -1212,7 +1212,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   16
                 </span>
               </button>
@@ -1225,7 +1225,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   17
                 </span>
               </button>
@@ -1236,7 +1236,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   18
                 </span>
               </button>
@@ -1247,7 +1247,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   19
                 </span>
               </button>
@@ -1258,7 +1258,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   20
                 </span>
               </button>
@@ -1269,7 +1269,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   21
                 </span>
               </button>
@@ -1280,7 +1280,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   22
                 </span>
               </button>
@@ -1291,7 +1291,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   23
                 </span>
               </button>
@@ -1304,7 +1304,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   24
                 </span>
               </button>
@@ -1315,7 +1315,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   25
                 </span>
               </button>
@@ -1326,7 +1326,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   26
                 </span>
               </button>
@@ -1337,7 +1337,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   27
                 </span>
               </button>
@@ -1348,7 +1348,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   28
                 </span>
               </button>
@@ -1359,7 +1359,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item next-month-date"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   1
                 </span>
               </button>
@@ -1370,7 +1370,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
                 className="date-picker-date date-picker-calendar-item next-month-date"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   2
                 </span>
               </button>
@@ -1444,7 +1444,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               disabled=""
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-angle-left"
                   focusable="false"
@@ -1459,7 +1459,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="btn nav-btn nav-btn-monospaced"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-simple-circle"
                   focusable="false"
@@ -1474,7 +1474,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="btn nav-btn nav-btn-monospaced"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-angle-right"
                   focusable="false"
@@ -1533,7 +1533,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               disabled=""
               type="button"
             >
-              <span className="c-inner" tabindex="-1">27</span>
+              <span className="c-inner" tabIndex="-1">27</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1543,7 +1543,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               disabled=""
               type="button"
             >
-              <span className="c-inner" tabindex="-1">28</span>
+              <span className="c-inner" tabIndex="-1">28</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1553,7 +1553,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               disabled=""
               type="button"
             >
-              <span className="c-inner" tabindex="-1">29</span>
+              <span className="c-inner" tabIndex="-1">29</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1562,7 +1562,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="active date-picker-date date-picker-calendar-item previous-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">30</span>
+              <span className="c-inner" tabIndex="-1">30</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1571,7 +1571,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item previous-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">31</span>
+              <span className="c-inner" tabIndex="-1">31</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1580,7 +1580,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">1</span>
+              <span className="c-inner" tabIndex="-1">1</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1589,7 +1589,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">2</span>
+              <span className="c-inner" tabIndex="-1">2</span>
             </button>
           </div>
         </div>
@@ -1600,7 +1600,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">3</span>
+              <span className="c-inner" tabIndex="-1">3</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1609,7 +1609,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">4</span>
+              <span className="c-inner" tabIndex="-1">4</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1618,7 +1618,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">5</span>
+              <span className="c-inner" tabIndex="-1">5</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1627,7 +1627,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">6</span>
+              <span className="c-inner" tabIndex="-1">6</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1636,7 +1636,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">7</span>
+              <span className="c-inner" tabIndex="-1">7</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1645,7 +1645,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">8</span>
+              <span className="c-inner" tabIndex="-1">8</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1654,7 +1654,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">9</span>
+              <span className="c-inner" tabIndex="-1">9</span>
             </button>
           </div>
         </div>
@@ -1665,7 +1665,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">10</span>
+              <span className="c-inner" tabIndex="-1">10</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1674,7 +1674,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">11</span>
+              <span className="c-inner" tabIndex="-1">11</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1683,7 +1683,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">12</span>
+              <span className="c-inner" tabIndex="-1">12</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1693,7 +1693,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               tabindex="-1"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">13</span>
+              <span className="c-inner" tabIndex="-1">13</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1702,7 +1702,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">14</span>
+              <span className="c-inner" tabIndex="-1">14</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1711,7 +1711,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">15</span>
+              <span className="c-inner" tabIndex="-1">15</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1720,7 +1720,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">16</span>
+              <span className="c-inner" tabIndex="-1">16</span>
             </button>
           </div>
         </div>
@@ -1731,7 +1731,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">17</span>
+              <span className="c-inner" tabIndex="-1">17</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1740,7 +1740,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">18</span>
+              <span className="c-inner" tabIndex="-1">18</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1749,7 +1749,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">19</span>
+              <span className="c-inner" tabIndex="-1">19</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1758,7 +1758,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">20</span>
+              <span className="c-inner" tabIndex="-1">20</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1767,7 +1767,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">21</span>
+              <span className="c-inner" tabIndex="-1">21</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1776,7 +1776,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">22</span>
+              <span className="c-inner" tabIndex="-1">22</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1785,7 +1785,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">23</span>
+              <span className="c-inner" tabIndex="-1">23</span>
             </button>
           </div>
         </div>
@@ -1796,7 +1796,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">24</span>
+              <span className="c-inner" tabIndex="-1">24</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1805,7 +1805,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">25</span>
+              <span className="c-inner" tabIndex="-1">25</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1814,7 +1814,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">26</span>
+              <span className="c-inner" tabIndex="-1">26</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1823,7 +1823,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">27</span>
+              <span className="c-inner" tabIndex="-1">27</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1832,7 +1832,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">28</span>
+              <span className="c-inner" tabIndex="-1">28</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1841,7 +1841,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item next-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">1</span>
+              <span className="c-inner" tabIndex="-1">1</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -1850,7 +1850,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
               className="date-picker-date date-picker-calendar-item next-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">2</span>
+              <span className="c-inner" tabIndex="-1">2</span>
             </button>
           </div>
         </div>
@@ -1867,19 +1867,19 @@ Add the class `focus` to the `input-group-item` to show the focus border.
 <div className="sheet-example">
   <div className="input-group">
     <div className="input-group-item">
-      <input name="datePicker" type="hidden" value="" />
+      <input name="datePicker" type="hidden" defaultValue="" />
       <input
         className="form-control input-group-inset input-group-inset-after"
         placeholder="YYYY-MM-DD"
         type="text"
-        value=""
+        defaultValue=""
       />
       <div className="input-group-inset-item input-group-inset-item-after">
         <button
           className="btn btn-unstyled date-picker-dropdown-toggle"
           type="button"
         >
-          <span className="c-inner" tabindex="-1">
+          <span className="c-inner" tabIndex="-1">
             <svg
               className="lexicon-icon lexicon-icon-calendar"
               focusable="false"
@@ -1897,19 +1897,19 @@ Add the class `focus` to the `input-group-item` to show the focus border.
 ```html
 <div className="input-group">
   <div className="input-group-item">
-    <input name="datePicker" type="hidden" value="" />
+    <input name="datePicker" type="hidden" defaultValue="" />
     <input
       className="form-control input-group-inset input-group-inset-after"
       placeholder="YYYY-MM-DD"
       type="text"
-      value=""
+      defaultValue=""
     />
     <div className="input-group-inset-item input-group-inset-item-after">
       <button
         className="btn btn-unstyled date-picker-dropdown-toggle"
         type="button"
       >
-        <span className="c-inner" tabindex="-1">
+        <span className="c-inner" tabIndex="-1">
           <svg
             className="lexicon-icon lexicon-icon-calendar"
             focusable="false"
@@ -1992,13 +1992,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 disabled
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   <svg
                     className="lexicon-icon lexicon-icon-angle-left"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-left"></use>
+                    <use xlinkHref="/icons.svg#angle-left"></use>
                   </svg>
                 </span>
               </button>
@@ -2007,13 +2007,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="btn nav-btn nav-btn-monospaced"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   <svg
                     className="lexicon-icon lexicon-icon-simple-circle"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#simple-circle"></use>
+                    <use xlinkHref="/icons.svg#simple-circle"></use>
                   </svg>
                 </span>
               </button>
@@ -2022,13 +2022,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="btn nav-btn nav-btn-monospaced"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   <svg
                     className="lexicon-icon lexicon-icon-angle-right"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-right"></use>
+                    <use xlinkHref="/icons.svg#angle-right"></use>
                   </svg>
                 </span>
               </button>
@@ -2081,7 +2081,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 disabled
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   27
                 </span>
               </button>
@@ -2093,7 +2093,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 disabled
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   28
                 </span>
               </button>
@@ -2105,7 +2105,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 disabled
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   29
                 </span>
               </button>
@@ -2114,10 +2114,10 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               <button
                 aria-label="2019 01 30"
                 className="active date-picker-date date-picker-calendar-item previous-month-date"
-                tabindex="-1"
+                tabIndex="-1"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   30
                 </span>
               </button>
@@ -2128,7 +2128,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item previous-month-date"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   31
                 </span>
               </button>
@@ -2139,7 +2139,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   1
                 </span>
               </button>
@@ -2150,7 +2150,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   2
                 </span>
               </button>
@@ -2163,7 +2163,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   3
                 </span>
               </button>
@@ -2174,7 +2174,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   4
                 </span>
               </button>
@@ -2185,7 +2185,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   5
                 </span>
               </button>
@@ -2196,7 +2196,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   6
                 </span>
               </button>
@@ -2207,7 +2207,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   7
                 </span>
               </button>
@@ -2218,7 +2218,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   8
                 </span>
               </button>
@@ -2229,7 +2229,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   9
                 </span>
               </button>
@@ -2242,7 +2242,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   10
                 </span>
               </button>
@@ -2253,7 +2253,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   11
                 </span>
               </button>
@@ -2264,7 +2264,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   12
                 </span>
               </button>
@@ -2273,10 +2273,10 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               <button
                 aria-label="2019 02 13"
                 className="date-picker-date date-picker-calendar-item active"
-                tabindex="-1"
+                tabIndex="-1"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   13
                 </span>
               </button>
@@ -2287,7 +2287,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   14
                 </span>
               </button>
@@ -2298,7 +2298,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   15
                 </span>
               </button>
@@ -2309,7 +2309,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   16
                 </span>
               </button>
@@ -2322,7 +2322,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   17
                 </span>
               </button>
@@ -2333,7 +2333,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   18
                 </span>
               </button>
@@ -2344,7 +2344,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   19
                 </span>
               </button>
@@ -2355,7 +2355,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   20
                 </span>
               </button>
@@ -2366,7 +2366,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   21
                 </span>
               </button>
@@ -2377,7 +2377,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   22
                 </span>
               </button>
@@ -2388,7 +2388,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   23
                 </span>
               </button>
@@ -2401,7 +2401,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   24
                 </span>
               </button>
@@ -2412,7 +2412,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   25
                 </span>
               </button>
@@ -2423,7 +2423,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   26
                 </span>
               </button>
@@ -2434,7 +2434,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   27
                 </span>
               </button>
@@ -2445,7 +2445,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   28
                 </span>
               </button>
@@ -2456,7 +2456,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item next-month-date"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   1
                 </span>
               </button>
@@ -2467,7 +2467,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="date-picker-date date-picker-calendar-item next-month-date"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   2
                 </span>
               </button>
@@ -2541,13 +2541,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               disabled
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-angle-left"
                   focusable="false"
                   role="presentation"
                 >
-                  <use xlink:href="/icons.svg#angle-left"></use>
+                  <use xlinkHref="/icons.svg#angle-left"></use>
                 </svg>
               </span>
             </button>
@@ -2556,13 +2556,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="btn nav-btn nav-btn-monospaced"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-simple-circle"
                   focusable="false"
                   role="presentation"
                 >
-                  <use xlink:href="/icons.svg#simple-circle"></use>
+                  <use xlinkHref="/icons.svg#simple-circle"></use>
                 </svg>
               </span>
             </button>
@@ -2571,13 +2571,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="btn nav-btn nav-btn-monospaced"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-angle-right"
                   focusable="false"
                   role="presentation"
                 >
-                  <use xlink:href="/icons.svg#angle-right"></use>
+                  <use xlinkHref="/icons.svg#angle-right"></use>
                 </svg>
               </span>
             </button>
@@ -2630,7 +2630,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               disabled
               type="button"
             >
-              <span className="c-inner" tabindex="-1">27</span>
+              <span className="c-inner" tabIndex="-1">27</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2640,7 +2640,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               disabled
               type="button"
             >
-              <span className="c-inner" tabindex="-1">28</span>
+              <span className="c-inner" tabIndex="-1">28</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2650,7 +2650,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               disabled
               type="button"
             >
-              <span className="c-inner" tabindex="-1">29</span>
+              <span className="c-inner" tabIndex="-1">29</span>
             </button>
           </div>
           <div className="c-selected c-selected-start date-picker-col">
@@ -2660,7 +2660,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               tabindex="-1"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">30</span>
+              <span className="c-inner" tabIndex="-1">30</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2669,7 +2669,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item previous-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">31</span>
+              <span className="c-inner" tabIndex="-1">31</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2678,7 +2678,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">1</span>
+              <span className="c-inner" tabIndex="-1">1</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2687,7 +2687,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">2</span>
+              <span className="c-inner" tabIndex="-1">2</span>
             </button>
           </div>
         </div>
@@ -2698,7 +2698,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">3</span>
+              <span className="c-inner" tabIndex="-1">3</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2707,7 +2707,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">4</span>
+              <span className="c-inner" tabIndex="-1">4</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2716,7 +2716,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">5</span>
+              <span className="c-inner" tabIndex="-1">5</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2725,7 +2725,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">6</span>
+              <span className="c-inner" tabIndex="-1">6</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2734,7 +2734,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">7</span>
+              <span className="c-inner" tabIndex="-1">7</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2743,7 +2743,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">8</span>
+              <span className="c-inner" tabIndex="-1">8</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2752,7 +2752,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">9</span>
+              <span className="c-inner" tabIndex="-1">9</span>
             </button>
           </div>
         </div>
@@ -2763,7 +2763,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">10</span>
+              <span className="c-inner" tabIndex="-1">10</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2772,7 +2772,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">11</span>
+              <span className="c-inner" tabIndex="-1">11</span>
             </button>
           </div>
           <div className="c-selected date-picker-col">
@@ -2781,7 +2781,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">12</span>
+              <span className="c-inner" tabIndex="-1">12</span>
             </button>
           </div>
           <div className="c-selected c-selected-end date-picker-col">
@@ -2791,7 +2791,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               tabindex="-1"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">13</span>
+              <span className="c-inner" tabIndex="-1">13</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2800,7 +2800,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">14</span>
+              <span className="c-inner" tabIndex="-1">14</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2809,7 +2809,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">15</span>
+              <span className="c-inner" tabIndex="-1">15</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2818,7 +2818,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">16</span>
+              <span className="c-inner" tabIndex="-1">16</span>
             </button>
           </div>
         </div>
@@ -2829,7 +2829,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">17</span>
+              <span className="c-inner" tabIndex="-1">17</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2838,7 +2838,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">18</span>
+              <span className="c-inner" tabIndex="-1">18</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2847,7 +2847,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">19</span>
+              <span className="c-inner" tabIndex="-1">19</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2856,7 +2856,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">20</span>
+              <span className="c-inner" tabIndex="-1">20</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2865,7 +2865,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">21</span>
+              <span className="c-inner" tabIndex="-1">21</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2874,7 +2874,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">22</span>
+              <span className="c-inner" tabIndex="-1">22</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2883,7 +2883,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">23</span>
+              <span className="c-inner" tabIndex="-1">23</span>
             </button>
           </div>
         </div>
@@ -2894,7 +2894,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">24</span>
+              <span className="c-inner" tabIndex="-1">24</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2903,7 +2903,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">25</span>
+              <span className="c-inner" tabIndex="-1">25</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2912,7 +2912,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">26</span>
+              <span className="c-inner" tabIndex="-1">26</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2921,7 +2921,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">27</span>
+              <span className="c-inner" tabIndex="-1">27</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2930,7 +2930,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">28</span>
+              <span className="c-inner" tabIndex="-1">28</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2939,7 +2939,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item next-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">1</span>
+              <span className="c-inner" tabIndex="-1">1</span>
             </button>
           </div>
           <div className="date-picker-col">
@@ -2948,7 +2948,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item next-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">2</span>
+              <span className="c-inner" tabIndex="-1">2</span>
             </button>
           </div>
         </div>
@@ -3034,13 +3034,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 disabled
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   <svg
                     className="lexicon-icon lexicon-icon-angle-left"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-left"></use>
+                    <use xlinkHref="/icons.svg#angle-left"></use>
                   </svg>
                 </span>
               </button>
@@ -3049,13 +3049,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="btn nav-btn nav-btn-monospaced"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   <svg
                     className="lexicon-icon lexicon-icon-simple-circle"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#simple-circle"></use>
+                    <use xlinkHref="/icons.svg#simple-circle"></use>
                   </svg>
                 </span>
               </button>
@@ -3064,13 +3064,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
                 className="btn nav-btn nav-btn-monospaced"
                 type="button"
               >
-                <span className="c-inner" tabindex="-1">
+                <span className="c-inner" tabIndex="-1">
                   <svg
                     className="lexicon-icon lexicon-icon-angle-right"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-right"></use>
+                    <use xlinkHref="/icons.svg#angle-right"></use>
                   </svg>
                 </span>
               </button>
@@ -3108,7 +3108,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               disabled
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 27
               </span>
             </button>
@@ -3118,7 +3118,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               disabled
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 28
               </span>
             </button>
@@ -3128,7 +3128,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               disabled
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 29
               </span>
             </button>
@@ -3137,7 +3137,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="active date-picker-date date-picker-calendar-item previous-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 30
               </span>
             </button>
@@ -3146,7 +3146,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item previous-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 31
               </span>
             </button>
@@ -3155,7 +3155,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 1
               </span>
             </button>
@@ -3164,7 +3164,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 2
               </span>
             </button>
@@ -3175,7 +3175,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 3
               </span>
             </button>
@@ -3184,7 +3184,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 4
               </span>
             </button>
@@ -3193,7 +3193,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 5
               </span>
             </button>
@@ -3202,7 +3202,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 6
               </span>
             </button>
@@ -3211,7 +3211,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 7
               </span>
             </button>
@@ -3220,7 +3220,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 8
               </span>
             </button>
@@ -3229,7 +3229,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 9
               </span>
             </button>
@@ -3240,7 +3240,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 10
               </span>
             </button>
@@ -3249,7 +3249,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 11
               </span>
             </button>
@@ -3258,17 +3258,17 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 12
               </span>
             </button>
             <button
               aria-label="2019 02 13"
               className="date-picker-date date-picker-calendar-item active"
-              tabindex="-1"
+              tabIndex="-1"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 13
               </span>
             </button>
@@ -3277,7 +3277,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 14
               </span>
             </button>
@@ -3286,7 +3286,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 15
               </span>
             </button>
@@ -3295,7 +3295,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 16
               </span>
             </button>
@@ -3306,7 +3306,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 17
               </span>
             </button>
@@ -3315,7 +3315,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 18
               </span>
             </button>
@@ -3324,7 +3324,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 19
               </span>
             </button>
@@ -3333,7 +3333,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 20
               </span>
             </button>
@@ -3342,7 +3342,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 21
               </span>
             </button>
@@ -3351,7 +3351,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 22
               </span>
             </button>
@@ -3360,7 +3360,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 23
               </span>
             </button>
@@ -3371,7 +3371,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 24
               </span>
             </button>
@@ -3380,7 +3380,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 25
               </span>
             </button>
@@ -3389,7 +3389,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 26
               </span>
             </button>
@@ -3398,7 +3398,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 27
               </span>
             </button>
@@ -3407,7 +3407,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 28
               </span>
             </button>
@@ -3416,7 +3416,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item next-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 1
               </span>
             </button>
@@ -3425,7 +3425,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="date-picker-date date-picker-calendar-item next-month-date"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 2
               </span>
             </button>
@@ -3498,13 +3498,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               disabled
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-angle-left"
                   focusable="false"
                   role="presentation"
                 >
-                  <use xlink:href="/icons.svg#angle-left"></use>
+                  <use xlinkHref="/icons.svg#angle-left"></use>
                 </svg>
               </span>
             </button>
@@ -3513,13 +3513,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="btn nav-btn nav-btn-monospaced"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-simple-circle"
                   focusable="false"
                   role="presentation"
                 >
-                  <use xlink:href="/icons.svg#simple-circle"></use>
+                  <use xlinkHref="/icons.svg#simple-circle"></use>
                 </svg>
               </span>
             </button>
@@ -3528,13 +3528,13 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
               className="btn nav-btn nav-btn-monospaced"
               type="button"
             >
-              <span className="c-inner" tabindex="-1">
+              <span className="c-inner" tabIndex="-1">
                 <svg
                   className="lexicon-icon lexicon-icon-angle-right"
                   focusable="false"
                   role="presentation"
                 >
-                  <use xlink:href="/icons.svg#angle-right"></use>
+                  <use xlinkHref="/icons.svg#angle-right"></use>
                 </svg>
               </span>
             </button>
@@ -3572,7 +3572,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
             disabled
             type="button"
           >
-            <span className="c-inner" tabindex="-1">27</span>
+            <span className="c-inner" tabIndex="-1">27</span>
           </button>
           <button
             aria-label="2019 01 28"
@@ -3580,7 +3580,7 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
             disabled
             type="button"
           >
-            <span className="c-inner" tabindex="-1">28</span>
+            <span className="c-inner" tabIndex="-1">28</span>
           </button>
           <button
             aria-label="2019 01 29"
@@ -3588,35 +3588,35 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
             disabled
             type="button"
           >
-            <span className="c-inner" tabindex="-1">29</span>
+            <span className="c-inner" tabIndex="-1">29</span>
           </button>
           <button
             aria-label="2019 01 30"
             className="active date-picker-date date-picker-calendar-item previous-month-date"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">30</span>
+            <span className="c-inner" tabIndex="-1">30</span>
           </button>
           <button
             aria-label="2019 01 31"
             className="date-picker-date date-picker-calendar-item previous-month-date"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">31</span>
+            <span className="c-inner" tabIndex="-1">31</span>
           </button>
           <button
             aria-label="2019 02 01"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">1</span>
+            <span className="c-inner" tabIndex="-1">1</span>
           </button>
           <button
             aria-label="2019 02 02"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">2</span>
+            <span className="c-inner" tabIndex="-1">2</span>
           </button>
         </div>
         <div className="date-picker-date-row date-picker-row">
@@ -3625,49 +3625,49 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">3</span>
+            <span className="c-inner" tabIndex="-1">3</span>
           </button>
           <button
             aria-label="2019 02 04"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">4</span>
+            <span className="c-inner" tabIndex="-1">4</span>
           </button>
           <button
             aria-label="2019 02 05"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">5</span>
+            <span className="c-inner" tabIndex="-1">5</span>
           </button>
           <button
             aria-label="2019 02 06"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">6</span>
+            <span className="c-inner" tabIndex="-1">6</span>
           </button>
           <button
             aria-label="2019 02 07"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">7</span>
+            <span className="c-inner" tabIndex="-1">7</span>
           </button>
           <button
             aria-label="2019 02 08"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">8</span>
+            <span className="c-inner" tabIndex="-1">8</span>
           </button>
           <button
             aria-label="2019 02 09"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">9</span>
+            <span className="c-inner" tabIndex="-1">9</span>
           </button>
         </div>
         <div className="date-picker-date-row date-picker-row">
@@ -3676,21 +3676,21 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">10</span>
+            <span className="c-inner" tabIndex="-1">10</span>
           </button>
           <button
             aria-label="2019 02 11"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">11</span>
+            <span className="c-inner" tabIndex="-1">11</span>
           </button>
           <button
             aria-label="2019 02 12"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">12</span>
+            <span className="c-inner" tabIndex="-1">12</span>
           </button>
           <button
             aria-label="2019 02 13"
@@ -3698,28 +3698,28 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
             tabindex="-1"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">13</span>
+            <span className="c-inner" tabIndex="-1">13</span>
           </button>
           <button
             aria-label="2019 02 14"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">14</span>
+            <span className="c-inner" tabIndex="-1">14</span>
           </button>
           <button
             aria-label="2019 02 15"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">15</span>
+            <span className="c-inner" tabIndex="-1">15</span>
           </button>
           <button
             aria-label="2019 02 16"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">16</span>
+            <span className="c-inner" tabIndex="-1">16</span>
           </button>
         </div>
         <div className="date-picker-date-row date-picker-row">
@@ -3728,49 +3728,49 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">17</span>
+            <span className="c-inner" tabIndex="-1">17</span>
           </button>
           <button
             aria-label="2019 02 18"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">18</span>
+            <span className="c-inner" tabIndex="-1">18</span>
           </button>
           <button
             aria-label="2019 02 19"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">19</span>
+            <span className="c-inner" tabIndex="-1">19</span>
           </button>
           <button
             aria-label="2019 02 20"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">20</span>
+            <span className="c-inner" tabIndex="-1">20</span>
           </button>
           <button
             aria-label="2019 02 21"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">21</span>
+            <span className="c-inner" tabIndex="-1">21</span>
           </button>
           <button
             aria-label="2019 02 22"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">22</span>
+            <span className="c-inner" tabIndex="-1">22</span>
           </button>
           <button
             aria-label="2019 02 23"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">23</span>
+            <span className="c-inner" tabIndex="-1">23</span>
           </button>
         </div>
         <div className="date-picker-date-row date-picker-row">
@@ -3779,49 +3779,49 @@ The class `c-selected-end` must be added to `date-picker-col` for the last date 
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">24</span>
+            <span className="c-inner" tabIndex="-1">24</span>
           </button>
           <button
             aria-label="2019 02 25"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">25</span>
+            <span className="c-inner" tabIndex="-1">25</span>
           </button>
           <button
             aria-label="2019 02 26"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">26</span>
+            <span className="c-inner" tabIndex="-1">26</span>
           </button>
           <button
             aria-label="2019 02 27"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">27</span>
+            <span className="c-inner" tabIndex="-1">27</span>
           </button>
           <button
             aria-label="2019 02 28"
             className="date-picker-date date-picker-calendar-item"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">28</span>
+            <span className="c-inner" tabIndex="-1">28</span>
           </button>
           <button
             aria-label="2019 03 01"
             className="date-picker-date date-picker-calendar-item next-month-date"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">1</span>
+            <span className="c-inner" tabIndex="-1">1</span>
           </button>
           <button
             aria-label="2019 03 02"
             className="date-picker-date date-picker-calendar-item next-month-date"
             type="button"
           >
-            <span className="c-inner" tabindex="-1">2</span>
+            <span className="c-inner" tabIndex="-1">2</span>
           </button>
         </div>
       </div>
@@ -3836,26 +3836,26 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 <div className="sheet-example">
   <div className="form-group">
-    <label for="defaultInputDate">Default Input Date</label>
+    <label htmlFor="defaultInputDate">Default Input Date</label>
     <input
       className="form-control"
       id="defaultInputDate"
       name="defaultInputDate"
       type="date"
-      value="1970-01-01"
+      defaultValue="1970-01-01"
     />
   </div>
 </div>
 
 ```html
 <div className="form-group">
-  <label for="defaultInputDate">Default Input Date</label>
+  <label htmlFor="defaultInputDate">Default Input Date</label>
   <input
     className="form-control"
     id="defaultInputDate"
     name="defaultInputDate"
     type="date"
-    value="1970-01-01"
+    defaultValue="1970-01-01"
   />
 </div>
 ```
@@ -3872,7 +3872,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 <div className="sheet-example">
   <div className="form-group">
-    <label for="timePicker12h">Time Picker (12H)</label>
+    <label htmlFor="timePicker12h">Time Picker (12H)</label>
     <div className="clay-time">
       <div className="input-group">
         <div className="input-group-item input-group-item-shrink">
@@ -3881,25 +3881,25 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               <input
                 className="clay-time-hours form-control-inset"
                 id="timePicker12h"
-                maxlength="2"
+                maxLength="2"
                 name="hours"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-minutes form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="minutes"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <input
                 className="clay-time-ampm form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="ampm"
                 type="text"
-                value="PM"
+                defaultValue="PM"
               />
             </div>
             <div className="clay-time-action-group">
@@ -3917,7 +3917,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-up"></use>
+                      <use xlinkHref="/icons.svg#angle-up"></use>
                     </svg>
                   </button>
                   <button
@@ -3929,7 +3929,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-down"></use>
+                      <use xlinkHref="/icons.svg#angle-down"></use>
                     </svg>
                   </button>
                 </div>
@@ -3944,7 +3944,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 ```html
 <div className="form-group">
-  <label for="timePicker12h">Time Picker (12H)</label>
+  <label htmlFor="timePicker12h">Time Picker (12H)</label>
   <div className="clay-time">
     <div className="input-group">
       <div className="input-group-item input-group-item-shrink">
@@ -3956,7 +3956,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="hours"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <span className="clay-time-divider">:</span>
             <input
@@ -3964,14 +3964,14 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="minutes"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <input
               className="clay-time-ampm form-control-inset"
               maxlength="2"
               name="ampm"
               type="text"
-              value="PM"
+              defaultValue="PM"
             />
           </div>
           <div className="clay-time-action-group">
@@ -3989,7 +3989,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-up"></use>
+                    <use xlinkHref="/icons.svg#angle-up"></use>
                   </svg>
                 </button>
                 <button
@@ -4001,7 +4001,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-down"></use>
+                    <use xlinkHref="/icons.svg#angle-down"></use>
                   </svg>
                 </button>
               </div>
@@ -4018,7 +4018,9 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 <div className="sheet-example">
   <div className="form-group">
-    <label for="timePicker12hTimeZone">Time Picker (12H) with Time Zone</label>
+    <label htmlFor="timePicker12hTimeZone">
+      Time Picker (12H) with Time Zone
+    </label>
     <div className="clay-time">
       <div className="input-group">
         <div className="input-group-item input-group-item-shrink">
@@ -4027,25 +4029,25 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               <input
                 className="clay-time-hours form-control-inset"
                 id="timePicker12hTimeZone"
-                maxlength="2"
+                maxLength="2"
                 name="hours"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-minutes form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="minutes"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <input
                 className="clay-time-ampm form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="ampm"
                 type="text"
-                value="PM"
+                defaultValue="PM"
               />
             </div>
             <div className="clay-time-action-group">
@@ -4063,7 +4065,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-up"></use>
+                      <use xlinkHref="/icons.svg#angle-up"></use>
                     </svg>
                   </button>
                   <button
@@ -4075,7 +4077,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-down"></use>
+                      <use xlinkHref="/icons.svg#angle-down"></use>
                     </svg>
                   </button>
                 </div>
@@ -4095,7 +4097,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 <div className="sheet-example">
   <div className="form-group">
-    <label for="timePicker12hTimeZoneIcon">
+    <label htmlFor="timePicker12hTimeZoneIcon">
       Time Picker (12H) with Time Zone and Icon
     </label>
     <div className="clay-time">
@@ -4107,7 +4109,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               focusable="false"
               role="presentation"
             >
-              <use xlink:href="/icons.svg#time"></use>
+              <use xlinkHref="/icons.svg#time"></use>
             </svg>
           </div>
         </div>
@@ -4117,25 +4119,25 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               <input
                 className="clay-time-hours form-control-inset"
                 id="timePicker12hTimeZoneIcon"
-                maxlength="2"
+                maxLength="2"
                 name="hours"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-minutes form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="minutes"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <input
                 className="clay-time-ampm form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="ampm"
                 type="text"
-                value="PM"
+                defaultValue="PM"
               />
             </div>
             <div className="clay-time-action-group">
@@ -4153,7 +4155,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-up"></use>
+                      <use xlinkHref="/icons.svg#angle-up"></use>
                     </svg>
                   </button>
                   <button
@@ -4165,7 +4167,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-down"></use>
+                      <use xlinkHref="/icons.svg#angle-down"></use>
                     </svg>
                   </button>
                 </div>
@@ -4183,7 +4185,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 ```html
 <div className="form-group">
-  <label for="timePicker12hTimeZoneIcon"
+  <label htmlFor="timePicker12hTimeZoneIcon"
     >Time Picker (12H) with Time Zone and Icon</label
   >
   <div className="clay-time">
@@ -4195,7 +4197,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
             focusable="false"
             role="presentation"
           >
-            <use xlink:href="/icons.svg#time"></use>
+            <use xlinkHref="/icons.svg#time"></use>
           </svg>
         </div>
       </div>
@@ -4208,7 +4210,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="hours"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <span className="clay-time-divider">:</span>
             <input
@@ -4216,14 +4218,14 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="minutes"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <input
               className="clay-time-ampm form-control-inset"
               maxlength="2"
               name="ampm"
               type="text"
-              value="PM"
+              defaultValue="PM"
             />
           </div>
           <div className="clay-time-action-group">
@@ -4241,7 +4243,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-up"></use>
+                    <use xlinkHref="/icons.svg#angle-up"></use>
                   </svg>
                 </button>
                 <button
@@ -4253,7 +4255,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-down"></use>
+                    <use xlinkHref="/icons.svg#angle-down"></use>
                   </svg>
                 </button>
               </div>
@@ -4273,7 +4275,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 <div className="sheet-example">
   <div className="form-group">
-    <label for="timePicker24h">Time Picker (24H)</label>
+    <label htmlFor="timePicker24h">Time Picker (24H)</label>
     <div className="clay-time">
       <div className="input-group">
         <div className="input-group-item input-group-item-shrink">
@@ -4282,18 +4284,18 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               <input
                 className="clay-time-hours form-control-inset"
                 id="timePicker24h"
-                maxlength="2"
+                maxLength="2"
                 name="hours"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-minutes form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="minutes"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
             </div>
             <div className="clay-time-action-group">
@@ -4311,7 +4313,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-up"></use>
+                      <use xlinkHref="/icons.svg#angle-up"></use>
                     </svg>
                   </button>
                   <button
@@ -4323,7 +4325,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-down"></use>
+                      <use xlinkHref="/icons.svg#angle-down"></use>
                     </svg>
                   </button>
                 </div>
@@ -4338,7 +4340,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 ```html
 <div className="form-group">
-  <label for="timePicker24h">Time Picker (24H)</label>
+  <label htmlFor="timePicker24h">Time Picker (24H)</label>
   <div className="clay-time">
     <div className="input-group">
       <div className="input-group-item input-group-item-shrink">
@@ -4350,7 +4352,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="hours"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <span className="clay-time-divider">:</span>
             <input
@@ -4358,7 +4360,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="minutes"
               type="text"
-              value="--"
+              defaultValue="--"
             />
           </div>
           <div className="clay-time-action-group">
@@ -4376,7 +4378,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-up"></use>
+                    <use xlinkHref="/icons.svg#angle-up"></use>
                   </svg>
                 </button>
                 <button
@@ -4388,7 +4390,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-down"></use>
+                    <use xlinkHref="/icons.svg#angle-down"></use>
                   </svg>
                 </button>
               </div>
@@ -4405,7 +4407,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 <div className="sheet-example">
   <div className="form-group">
-    <label for="timePicker12hSeconds">Time Picker (12H)</label>
+    <label htmlFor="timePicker12hSeconds">Time Picker (12H)</label>
     <div className="clay-time">
       <div className="input-group">
         <div className="input-group-item input-group-item-shrink">
@@ -4414,33 +4416,33 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               <input
                 className="clay-time-hours form-control-inset"
                 id="timePicker12hSeconds"
-                maxlength="2"
+                maxLength="2"
                 name="hours"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-minutes form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="minutes"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-seconds form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="seconds"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <input
                 className="clay-time-ampm form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="ampm"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
             </div>
             <div className="clay-time-action-group">
@@ -4451,7 +4453,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#times-circle"></use>
+                    <use xlinkHref="/icons.svg#times-circle"></use>
                   </svg>
                 </button>
               </div>
@@ -4469,7 +4471,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-up"></use>
+                      <use xlinkHref="/icons.svg#angle-up"></use>
                     </svg>
                   </button>
                   <button
@@ -4481,7 +4483,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-down"></use>
+                      <use xlinkHref="/icons.svg#angle-down"></use>
                     </svg>
                   </button>
                 </div>
@@ -4493,7 +4495,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
     </div>
   </div>
   <div className="form-group">
-    <label for="timePicker24hSeconds">Time Picker (24H)</label>
+    <label htmlFor="timePicker24hSeconds">Time Picker (24H)</label>
     <div className="clay-time">
       <div className="input-group">
         <div className="input-group-item input-group-item-shrink">
@@ -4502,26 +4504,26 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               <input
                 className="clay-time-hours form-control-inset"
                 id="timePicker24hSeconds"
-                maxlength="2"
+                maxLength="2"
                 name="hours"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-minutes form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="minutes"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-seconds form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="seconds"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
             </div>
             <div className="clay-time-action-group">
@@ -4532,7 +4534,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#times-circle"></use>
+                    <use xlinkHref="/icons.svg#times-circle"></use>
                   </svg>
                 </button>
               </div>
@@ -4550,7 +4552,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-up"></use>
+                      <use xlinkHref="/icons.svg#angle-up"></use>
                     </svg>
                   </button>
                   <button
@@ -4562,7 +4564,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-down"></use>
+                      <use xlinkHref="/icons.svg#angle-down"></use>
                     </svg>
                   </button>
                 </div>
@@ -4577,7 +4579,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 ```html
 <div className="form-group">
-  <label for="timePicker12hSeconds">Time Picker (12H)</label>
+  <label htmlFor="timePicker12hSeconds">Time Picker (12H)</label>
   <div className="clay-time">
     <div className="input-group">
       <div className="input-group-item input-group-item-shrink">
@@ -4589,7 +4591,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="hours"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <span className="clay-time-divider">:</span>
             <input
@@ -4597,7 +4599,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="minutes"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <span className="clay-time-divider">:</span>
             <input
@@ -4605,14 +4607,14 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="seconds"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <input
               className="clay-time-ampm form-control-inset"
               maxlength="2"
               name="ampm"
               type="text"
-              value="--"
+              defaultValue="--"
             />
           </div>
           <div className="clay-time-action-group">
@@ -4623,7 +4625,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                   focusable="false"
                   role="presentation"
                 >
-                  <use xlink:href="/icons.svg#times-circle"></use>
+                  <use xlinkHref="/icons.svg#times-circle"></use>
                 </svg>
               </button>
             </div>
@@ -4641,7 +4643,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-up"></use>
+                    <use xlinkHref="/icons.svg#angle-up"></use>
                   </svg>
                 </button>
                 <button
@@ -4653,7 +4655,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-down"></use>
+                    <use xlinkHref="/icons.svg#angle-down"></use>
                   </svg>
                 </button>
               </div>
@@ -4666,7 +4668,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 </div>
 
 <div className="form-group">
-  <label for="timePicker24hSeconds">Time Picker (24H)</label>
+  <label htmlFor="timePicker24hSeconds">Time Picker (24H)</label>
   <div className="clay-time">
     <div className="input-group">
       <div className="input-group-item input-group-item-shrink">
@@ -4678,7 +4680,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="hours"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <span className="clay-time-divider">:</span>
             <input
@@ -4686,7 +4688,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="minutes"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <span className="clay-time-divider">:</span>
             <input
@@ -4694,7 +4696,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
               maxlength="2"
               name="seconds"
               type="text"
-              value="--"
+              defaultValue="--"
             />
           </div>
           <div className="clay-time-action-group">
@@ -4705,7 +4707,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                   focusable="false"
                   role="presentation"
                 >
-                  <use xlink:href="/icons.svg#times-circle"></use>
+                  <use xlinkHref="/icons.svg#times-circle"></use>
                 </svg>
               </button>
             </div>
@@ -4723,7 +4725,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-up"></use>
+                    <use xlinkHref="/icons.svg#angle-up"></use>
                   </svg>
                 </button>
                 <button
@@ -4735,7 +4737,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-down"></use>
+                    <use xlinkHref="/icons.svg#angle-down"></use>
                   </svg>
                 </button>
               </div>
@@ -4754,7 +4756,7 @@ Add the class `focus` to `form-control`.
 
 <div className="sheet-example">
   <div className="form-group">
-    <label for="timePicker12hFocus">Time Picker (12H)</label>
+    <label htmlFor="timePicker12hFocus">Time Picker (12H)</label>
     <div className="clay-time">
       <div className="input-group">
         <div className="input-group-item input-group-item-shrink">
@@ -4763,25 +4765,25 @@ Add the class `focus` to `form-control`.
               <input
                 className="clay-time-hours form-control-inset"
                 id="timePicker12hFocus"
-                maxlength="2"
+                maxLength="2"
                 name="hours"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-minutes form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="minutes"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <input
                 className="clay-time-ampm form-control-inset"
-                maxlength="2"
+                maxLength="2"
                 name="ampm"
                 type="text"
-                value="PM"
+                defaultValue="PM"
               />
             </div>
             <div className="clay-time-action-group">
@@ -4799,7 +4801,7 @@ Add the class `focus` to `form-control`.
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-up"></use>
+                      <use xlinkHref="/icons.svg#angle-up"></use>
                     </svg>
                   </button>
                   <button
@@ -4811,7 +4813,7 @@ Add the class `focus` to `form-control`.
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-down"></use>
+                      <use xlinkHref="/icons.svg#angle-down"></use>
                     </svg>
                   </button>
                 </div>
@@ -4826,7 +4828,7 @@ Add the class `focus` to `form-control`.
 
 ```html
 <div className="form-group">
-  <label for="timePicker12hFocus">Time Picker (12H)</label>
+  <label htmlFor="timePicker12hFocus">Time Picker (12H)</label>
   <div className="clay-time">
     <div className="input-group">
       <div className="input-group-item input-group-item-shrink">
@@ -4838,7 +4840,7 @@ Add the class `focus` to `form-control`.
               maxlength="2"
               name="hours"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <span className="clay-time-divider">:</span>
             <input
@@ -4846,14 +4848,14 @@ Add the class `focus` to `form-control`.
               maxlength="2"
               name="minutes"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <input
               className="clay-time-ampm form-control-inset"
               maxlength="2"
               name="ampm"
               type="text"
-              value="PM"
+              defaultValue="PM"
             />
           </div>
           <div className="clay-time-action-group">
@@ -4871,7 +4873,7 @@ Add the class `focus` to `form-control`.
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-up"></use>
+                    <use xlinkHref="/icons.svg#angle-up"></use>
                   </svg>
                 </button>
                 <button
@@ -4883,7 +4885,7 @@ Add the class `focus` to `form-control`.
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-down"></use>
+                    <use xlinkHref="/icons.svg#angle-down"></use>
                   </svg>
                 </button>
               </div>
@@ -4902,7 +4904,7 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
 
 <div className="sheet-example">
   <div className="form-group">
-    <label for="timePicker12hDisabled">Time Picker (12H)</label>
+    <label htmlFor="timePicker12hDisabled">Time Picker (12H)</label>
     <div className="clay-time">
       <div className="input-group">
         <div className="input-group-item input-group-item-shrink">
@@ -4912,27 +4914,27 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
                 className="clay-time-hours form-control-inset"
                 disabled
                 id="timePicker12hDisabled"
-                maxlength="2"
+                maxLength="2"
                 name="hours"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <span className="clay-time-divider">:</span>
               <input
                 className="clay-time-minutes form-control-inset"
                 disabled
-                maxlength="2"
+                maxLength="2"
                 name="minutes"
                 type="text"
-                value="--"
+                defaultValue="--"
               />
               <input
                 className="clay-time-ampm form-control-inset"
                 disabled
-                maxlength="2"
+                maxLength="2"
                 name="ampm"
                 type="text"
-                value="PM"
+                defaultValue="PM"
               />
             </div>
             <div className="clay-time-action-group">
@@ -4951,7 +4953,7 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-up"></use>
+                      <use xlinkHref="/icons.svg#angle-up"></use>
                     </svg>
                   </button>
                   <button
@@ -4964,7 +4966,7 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
                       focusable="false"
                       role="presentation"
                     >
-                      <use xlink:href="/icons.svg#angle-down"></use>
+                      <use xlinkHref="/icons.svg#angle-down"></use>
                     </svg>
                   </button>
                 </div>
@@ -4979,7 +4981,7 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
 
 ```html
 <div className="form-group">
-  <label for="timePicker12hDisabled">Time Picker (12H)</label>
+  <label htmlFor="timePicker12hDisabled">Time Picker (12H)</label>
   <div className="clay-time">
     <div className="input-group">
       <div className="input-group-item input-group-item-shrink">
@@ -4992,7 +4994,7 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
               maxlength="2"
               name="hours"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <span className="clay-time-divider">:</span>
             <input
@@ -5001,7 +5003,7 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
               maxlength="2"
               name="minutes"
               type="text"
-              value="--"
+              defaultValue="--"
             />
             <input
               className="clay-time-ampm form-control-inset"
@@ -5009,7 +5011,7 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
               maxlength="2"
               name="ampm"
               type="text"
-              value="PM"
+              defaultValue="PM"
             />
           </div>
           <div className="clay-time-action-group">
@@ -5028,7 +5030,7 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-up"></use>
+                    <use xlinkHref="/icons.svg#angle-up"></use>
                   </svg>
                 </button>
                 <button
@@ -5041,7 +5043,7 @@ Add the class `disabled` to `form-control` and the attribute `disabled` to all n
                     focusable="false"
                     role="presentation"
                   >
-                    <use xlink:href="/icons.svg#angle-down"></use>
+                    <use xlinkHref="/icons.svg#angle-down"></use>
                   </svg>
                 </button>
               </div>
@@ -5061,19 +5063,19 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 <div className="sheet-example">
   <div className="form-group">
     <div className="clay-time">
-      <label for="defaultTimeInput">Time</label>
+      <label htmlFor="defaultTimeInput">Time</label>
       <input
         className="form-control"
         id="defaultTimeInput"
         name="defaultTimeInput"
         type="time"
-        value="14:00:00"
+        defaultValue="14:00:00"
       />
     </div>
   </div>
   <div className="form-group">
     <div className="clay-time">
-      <label for="inputGroupDefaultTimeInput">Time With Time Zone</label>
+      <label htmlFor="inputGroupDefaultTimeInput">Time With Time Zone</label>
       <div className="input-group">
         <div className="input-group-item">
           <input
@@ -5081,7 +5083,7 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
             id="inputGroupDefaultTimeInput"
             name="timer"
             type="time"
-            value="00:00"
+            defaultValue="00:00"
           />
         </div>
         <div className="input-group-item input-group-item-shrink">
@@ -5094,20 +5096,25 @@ Check the <a href="https://caniuse.com/input-datetime" rel="noreferrer noopener"
 
 ```html
 <div className="form-group">
-  <label for="defaultTimeInput">Time</label>
+  <label htmlFor="defaultTimeInput">Time</label>
   <input
     className="form-control"
     id="defaultTimeInput"
     name="defaultTimeInput"
     type="time"
-    value="14:00:00"
+    defaultValue="14:00:00"
   />
 </div>
 
 <div className="form-group">
   <div className="input-group">
     <div className="input-group-item">
-      <input className="form-control" name="timer" type="time" value="00:00" />
+      <input
+        className="form-control"
+        name="timer"
+        type="time"
+        defaultValue="00:00"
+      />
     </div>
     <div className="input-group-item input-group-item-shrink">
       <span className="input-group-text">(GMT+01:00)</span>
