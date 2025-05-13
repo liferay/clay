@@ -1,7 +1,7 @@
 'use client';
 
 import {LiveProvider, LiveError, LivePreview} from 'react-live';
-import {useCallback, useId, useState} from 'react';
+import {useCallback, useId, useMemo, useState} from 'react';
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import {createCodeSandbox} from '@/library/createCodeSandbox';
@@ -38,118 +38,123 @@ export function Code({
 	const onToggle = useCallback(() => setOpen((state) => !state), []);
 
 	return (
-		<LiveProvider
-			noInline={true}
-			scope={resolveDependencies(value)}
-			code={`${cleanupCode(value)};
-render(<App />);`}
-		>
-			<div className={styles.code}>
-				{preview && (
-					<div
-						aria-label="Component demo"
-						className={styles.code_playground}
-					>
-						<LivePreview />
+		<div className={styles.code}>
+			{preview && <Preview value={value} />}
 
-						<LiveError className={styles.code_playground__error} />
-					</div>
-				)}
+			<div className={styles.code_container}>
+				<div
+					className={
+						preview
+							? styles.code_toolbar__floating
+							: styles.code_toolbar
+					}
+				>
+					{!preview && <p className="text-3">{title || language}</p>}
 
-				<div className={styles.code_container}>
-					<div
-						className={
-							preview
-								? styles.code_toolbar__floating
-								: styles.code_toolbar
-						}
-					>
-						{!preview && (
-							<p className="text-3">{title || language}</p>
+					<div className={styles.code_toolbar__actions}>
+						{preview && (
+							<CodeSandboxLink
+								title="Clay example"
+								description="A Web Implementation of Lexicon Experience Language"
+								file={value}
+							/>
 						)}
-
-						<div className={styles.code_toolbar__actions}>
-							{preview && (
-								<CodeSandboxLink
-									title="Clay example"
-									description="A Web Implementation of Lexicon Experience Language"
-									file={value}
-								/>
-							)}
-							<Button
-								aria-label="Copy code"
-								title="Copy code"
-								borderless
-								displayType="secondary"
-								size="sm"
-								monospaced
-								onClick={() => {
-									navigator.clipboard
-										.writeText(value)
-										.then(() => {
-											setState('copied');
-										})
-										.catch(() => {
-											setState('not-allowed');
-										})
-										.finally(() => {
-											setTimeout(
-												() => setState('idle'),
-												1000
-											);
-										});
-								}}
-							>
-								<Icon
-									symbol={
-										state === 'copied'
-											? 'check'
-											: state === 'not-allowed'
-											? 'block'
-											: 'copy'
-									}
-									spritemap="/images/icons/icons.svg"
-								/>
-							</Button>
-						</div>
-					</div>
-
-					<div
-						role="presentation"
-						id={id}
-						tabIndex={-1}
-						className={styles.code_pre__viewport}
-						aria-hidden={open}
-						data-closed={open ? '' : undefined}
-						onKeyDown={(event: React.KeyboardEvent) => {
-							if (
-								event.key === 'a' &&
-								(event.metaKey || event.ctrlKey) &&
-								!event.shiftKey &&
-								!event.altKey
-							) {
-								event.preventDefault();
-								window
-									.getSelection()
-									?.selectAllChildren(event.currentTarget);
-							}
-						}}
-					>
-						<pre className={styles.code_pre}>{children}</pre>
-					</div>
-
-					{shouldCollapsed && (
-						<button
-							aria-expanded={!open}
-							aria-controls={id}
-							className={`btn ${styles.code_collpase__button}`}
-							type="button"
-							onClick={onToggle}
+						<Button
+							aria-label="Copy code"
+							title="Copy code"
+							borderless
+							displayType="secondary"
+							size="sm"
+							monospaced
+							onClick={() => {
+								navigator.clipboard
+									.writeText(value)
+									.then(() => {
+										setState('copied');
+									})
+									.catch(() => {
+										setState('not-allowed');
+									})
+									.finally(() => {
+										setTimeout(
+											() => setState('idle'),
+											1000
+										);
+									});
+							}}
 						>
-							{open ? 'Hide code' : 'Show code'}
-						</button>
-					)}
+							<Icon
+								symbol={
+									state === 'copied'
+										? 'check'
+										: state === 'not-allowed'
+										? 'block'
+										: 'copy'
+								}
+								spritemap="/images/icons/icons.svg"
+							/>
+						</Button>
+					</div>
 				</div>
+
+				<div
+					role="presentation"
+					id={id}
+					tabIndex={-1}
+					className={styles.code_pre__viewport}
+					aria-hidden={open}
+					data-closed={open ? '' : undefined}
+					onKeyDown={(event: React.KeyboardEvent) => {
+						if (
+							event.key === 'a' &&
+							(event.metaKey || event.ctrlKey) &&
+							!event.shiftKey &&
+							!event.altKey
+						) {
+							event.preventDefault();
+							window
+								.getSelection()
+								?.selectAllChildren(event.currentTarget);
+						}
+					}}
+				>
+					<pre className={styles.code_pre}>{children}</pre>
+				</div>
+
+				{shouldCollapsed && (
+					<button
+						aria-expanded={!open}
+						aria-controls={id}
+						className={`btn ${styles.code_collpase__button}`}
+						type="button"
+						onClick={onToggle}
+					>
+						{open ? 'Hide code' : 'Show code'}
+					</button>
+				)}
+			</div>
+		</div>
+	);
+}
+
+type PreviewProps = {
+	value: string;
+};
+
+function Preview({value}: PreviewProps) {
+	const dependencies = useMemo(() => resolveDependencies(value), [value]);
+	const code = useMemo(
+		() => `${cleanupCode(value)};
+render(<App />);`,
+		[value]
+	);
+
+	return (
+		<LiveProvider noInline={true} scope={dependencies} code={code}>
+			<div aria-label="Component demo" className={styles.code_playground}>
+				<LivePreview />
+
+				<LiveError className={styles.code_playground__error} />
 			</div>
 		</LiveProvider>
 	);

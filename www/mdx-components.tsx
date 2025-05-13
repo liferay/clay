@@ -45,7 +45,7 @@ export function useMDXComponents() {
 			);
 		},
 		pre: (props: any) => {
-			const {preview, title} = props;
+			const {preview = false, title} = props;
 			const {children, language} = parsePreProps(props);
 
 			return (

@@ -46,14 +46,14 @@ const PATHS = [
 type ComponentSchema = Record<string, React.ComponentType>;
 
 export const ComponentsCollection = new Directory({
-	path: '../packages/clay-icon/src',
+	path: '../packages/clay-core/src/aria',
 	tsConfigPath: '../packages/tsconfig.json',
 	loaders: {
 		ts: withSchema<ComponentSchema>(
-			(path) => import(`../../packages/clay-icon/src/${path}.ts`)
+			(path) => import(`../../packages/clay-core/src/aria/${path}.ts`)
 		),
 		tsx: withSchema<ComponentSchema>(
-			(path) => import(`../../packages/clay-icon/src/${path}.tsx`)
+			(path) => import(`../../packages/clay-core/src/aria/${path}.tsx`)
 		),
 	},
 	include: (entry) => {
