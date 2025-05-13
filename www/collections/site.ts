@@ -150,9 +150,10 @@ const getEntryFallback = async (slug: Array<string>) => {
 	}
 
 	return (
-		global.cachedEntries.find((item) => item
-				.getPath()
-				.replace(/clay-[^/]+\/docs\//g, '') === `/${slug.join('/')}`
+		global.cachedEntries.find(
+			(item) =>
+				item.getPath().replace(/clay-[^/]+\/docs\//g, '') ===
+				`/${slug.join('/')}`
 		) || null
 	);
 };

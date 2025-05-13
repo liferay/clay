@@ -15,7 +15,11 @@ import ColorPicker from '@clayui/color-picker';
 import React from 'react';
 
 export default function App() {
-  const [customColors, setCustoms] = React.useState(['008000', '00FFFF', '0000FF']);
+  const [customColors, setCustoms] = React.useState([
+    '008000',
+    '00FFFF',
+    '0000FF',
+  ]);
   const [color, setColor] = React.useState(customColors[0]);
 
   return (

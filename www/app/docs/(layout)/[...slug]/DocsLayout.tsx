@@ -2,6 +2,7 @@ import {CodeInline} from 'renoun/components';
 import {getEntry, getEntryMarkup} from '@/collections/site';
 import {createLXCResource} from '@/lxc';
 import {notFound} from 'next/navigation';
+import {APIReference} from '@/app/_components/APIReference';
 import Heading from '@/app/_components/Heading';
 
 import styles from './page.module.css';
@@ -101,6 +102,21 @@ export async function DocsLayout({slug}: Props) {
 						<h2 className="text-7 mb-4 mt-5" id="api-reference">
 							API Reference
 						</h2>
+
+						{frontmatter.packageTypes.map((path) => (
+							<APIReference
+								key={path}
+								source={path}
+								workingDirectory="../packages"
+								filter={(type) => {
+									return (
+										!type.name?.includes('Forward') &&
+										(type.kind === 'Function' ||
+											type.kind === 'Component')
+									);
+								}}
+							/>
+						))}
 					</div>
 				)}
 

@@ -442,7 +442,10 @@ export function IconSelector({
 					<ClayInput.Group>
 						<ClayInput.GroupItem prepend shrink>
 							<ClayInput.GroupText className="bg-transparent">
-								<ClayIcon symbol={selectedIcon} spritemap={spritemap} />
+								<ClayIcon
+									symbol={selectedIcon}
+									spritemap={spritemap}
+								/>
 							</ClayInput.GroupText>
 						</ClayInput.GroupItem>
 						<ClayInput.GroupItem append>

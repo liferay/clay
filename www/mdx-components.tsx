@@ -48,8 +48,15 @@ export function useMDXComponents() {
 			const code = children.props.children;
 
 			return (
-				<Code title={title} language={language} value={code} preview={preview}>
-					<Tokens shouldFormat={false} language="jsx">{code}</Tokens>
+				<Code
+					title={title}
+					language={language}
+					value={code}
+					preview={preview}
+				>
+					<Tokens shouldFormat={false} language="jsx">
+						{code}
+					</Tokens>
 				</Code>
 			);
 		},
@@ -58,5 +65,5 @@ export function useMDXComponents() {
 				{children}
 			</blockquote>
 		),
-	} satisfies MDXComponentsType;
+	} as MDXComponentsType;
 }
