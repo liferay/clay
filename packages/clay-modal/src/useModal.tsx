@@ -23,7 +23,7 @@ type Props = {
 
 type Return = {
 	/**
-	 * Observer is an internal property that must be connected to the <ClayModal /> component.
+	 * Observer is an internal property that must be connected to the `<ClayModal />` component.
 	 */
 	observer: Observer;
 

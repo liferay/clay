@@ -15,22 +15,22 @@ React components allows us to pass objects and consequently React elements since
 
 ```jsx
 <ClayModal>
-	<ClayModal.Footer
-		first={
-			<ClayButton.Group spaced>
-				<ClayButton displayType="secondary">{'Secondary'}</ClayButton>
-				<ClayButton displayType="secondary">{'Secondary'}</ClayButton>
-			</ClayButton.Group>
-		}
-		middle={<ClayButton>{'Primary'}</ClayButton>}
-	/>
+  <ClayModal.Footer
+    first={
+      <ClayButton.Group spaced>
+        <ClayButton displayType="secondary">{'Secondary'}</ClayButton>
+        <ClayButton displayType="secondary">{'Secondary'}</ClayButton>
+      </ClayButton.Group>
+    }
+    middle={<ClayButton>{'Primary'}</ClayButton>}
+  />
 </ClayModal>
 ```
 
 So we follow some of React's composition approaches:
 
--   [**Containment**](https://reactjs.org/docs/composition-vs-inheritance.html#containment) - Components that are treated as generic blocks that accept the passing of arbitrary `children` to them, either using `children` props or the special naming convention itself.
--   [**Specialization**](https://reactjs.org/docs/composition-vs-inheritance.html#specialization) - Special case components that are for a specific use case and not treated as something more generic.
+- [**Containment**](https://reactjs.org/docs/composition-vs-inheritance.html#containment) - Components that are treated as generic blocks that accept the passing of arbitrary `children` to them, either using `children` props or the special naming convention itself.
+- [**Specialization**](https://reactjs.org/docs/composition-vs-inheritance.html#specialization) - Special case components that are for a specific use case and not treated as something more generic.
 
 ## Philosophy
 
@@ -44,8 +44,8 @@ Dealing with this is complex and requires balancing component flexibility and sp
 
 We are delivering Clay as a **Multi-Layered API library**: **low-level**, **high-level** and **pure html**(@clayui/css). Each approach has its purposes of use:
 
--   **low-level** - Basic building blocks to provide flexibility so that you can customize and create high level components.
--   **high-level** - Highly specific component that tend to cover only specific use cases, limiting their flexibility.
+- **low-level** - Basic building blocks to provide flexibility so that you can customize and create high level components.
+- **high-level** - Highly specific component that tend to cover only specific use cases, limiting their flexibility.
 
 ### Low-level components
 
@@ -55,24 +55,24 @@ In essence, low-level components are more flexible but can slightly increase the
 
 Clay follows a namespace pattern for low-level layer components, components are always nested according to responsibilities, common example:
 
--   ClayDropDown
--   ClayDropDown.Action
--   ClayDropDown.Item
--   ClayDropDown.ItemList
--   ClayDropDown.Search
+- ClayDropDown
+- ClayDropDown.Action
+- ClayDropDown.Item
+- ClayDropDown.ItemList
+- ClayDropDown.Search
 
 ```jsx
 <ClayDropDown
-	active={expand}
-	onActiveChange={setExpand}
-	trigger={<ClayButton>{'Low-level'}</ClayButton>}
+  active={expand}
+  onActiveChange={setExpand}
+  trigger={<ClayButton>{'Low-level'}</ClayButton>}
 >
-	<ClayDropDown.ItemList>
-		<ClayDropDown.Item href="#1">Linkable</ClayDropDown.Item>
-		<ClayDropDown.Item>
-			<ClayCheckbox checked label="Checkbox" onChange={() => {}} />
-		</ClayDropDown.Item>
-	</ClayDropDown.ItemList>
+  <ClayDropDown.ItemList>
+    <ClayDropDown.Item href="#1">Linkable</ClayDropDown.Item>
+    <ClayDropDown.Item>
+      <ClayCheckbox checked label="Checkbox" onChange={() => {}} />
+    </ClayDropDown.Item>
+  </ClayDropDown.ItemList>
 </ClayDropDown>
 ```
 
@@ -82,29 +82,29 @@ They are friendlier in simple use cases and help develop quickly but are special
 
 The standard for differentiating high-level components from low-level components is defined in component naming following the pattern `{ComponentName}{Variant}`.
 
--   ClayButtonWithIcon
--   ClayCardWithHorizontal
--   ClayCardWithNavigation
--   ClayDropDownWithItems
+- ClayButtonWithIcon
+- ClayCardWithHorizontal
+- ClayCardWithNavigation
+- ClayDropDownWithItems
 
 <div className="alert alert-warning">
-	There are some exceptions to some components, Date Picker, Color Picker and
-	Time Picker are examples of this.
+  There are some exceptions to some components, Date Picker, Color Picker and
+  Time Picker are examples of this.
 </div>
 
 ```jsx
 <ClayDropDownWithItems
-	items={[
-		{
-			href: '#linkable',
-			label: 'linkable',
-		},
-		{
-			checked: true,
-			label: 'Checkbox',
-			type: 'checkbox',
-		},
-	]}
-	trigger={<ClayButton>{'High-level'}</ClayButton>}
+  items={[
+    {
+      href: '#linkable',
+      label: 'linkable',
+    },
+    {
+      checked: true,
+      label: 'Checkbox',
+      type: 'checkbox',
+    },
+  ]}
+  trigger={<ClayButton>{'High-level'}</ClayButton>}
 />
 ```

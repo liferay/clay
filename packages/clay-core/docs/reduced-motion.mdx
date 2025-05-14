@@ -14,15 +14,15 @@ Setting the motion reduction of animations can be done in two different ways in 
 
 To remove transition from components in React, you need to declare the [`Provider`](/docs/components/provider) component at the root of your application and set the `reducedMotion` property to whichever option you want.
 
--   `user`: Respect user's device setting.
--   `always`: Enforce reduced motion.
--   `never`: Don't reduce motion.
+- `user`: Respect user's device setting.
+- `always`: Enforce reduced motion.
+- `never`: Don't reduce motion.
 
 ```jsx
 import {Provider} from '@clayui/core';
 
 <Provider spritemap={spritemap} reducedMotion="user">
-	<App />
+  <App />
 </Provider>;
 ```
 

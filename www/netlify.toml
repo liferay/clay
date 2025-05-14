@@ -7,7 +7,32 @@ publish = ".next"
 
 [[redirects]]
 from = "/blog"
-to = "/blog/2022-05-02-api-consistency-improvements-for-controlled-and-uncontrolled-components"
+to = "/blog/api-consistency-improvements-for-controlled-and-uncontrolled-components"
+status = 302
+
+[[redirects]]
+from = "/blog/2022-05-02-api-consistency-improvements-for-controlled-and-uncontrolled-components"
+to = "/blog/api-consistency-improvements-for-controlled-and-uncontrolled-components"
+status = 302
+
+[[redirects]]
+from = "/blog/2022-02-08-slimming-down-clay-css"
+to = "/blog/slimming-down-clay-css"
+status = 302
+
+[[redirects]]
+from = "/blog/2021-09-13-clay-css-cadmin"
+to = "/blog/clay-css-cadmin"
+status = 302
+
+[[redirects]]
+from = "/blog/2021-09-09-clay-css-mixin-updates"
+to = "/blog/clay-css-mixin-updates"
+status = 302
+
+[[redirects]]
+from = "/blog/2019-10-25-introducing-clay-v3"
+to = "/blog/introducing-clay-v3"
 status = 302
 
 [[redirects]]

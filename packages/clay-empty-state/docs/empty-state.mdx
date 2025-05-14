@@ -18,18 +18,16 @@ import EmptyState from '@clayui/empty-state';
 import Button from '@clayui/button';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
-
 export default function App() {
-	return (
-		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
-				<EmptyState>
-					<Button displayType="primary">Button</Button>
-				</EmptyState>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <EmptyState>
+          <Button displayType="primary">Button</Button>
+        </EmptyState>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -42,22 +40,20 @@ import {Provider} from '@clayui/core';
 import EmptyState from '@clayui/empty-state';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
-
 export default function App() {
-	return (
-		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
-				<EmptyState
-					description="You don't have more notifications to review"
-					imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
-					imgSrc="https://clayui.com/images/success_state.svg"
-					imgSrcReducedMotion="https://clayui.com/images/success_state_reduced_motion.svg"
-					title="Hurray"
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <EmptyState
+          description="You don't have more notifications to review"
+          imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
+          imgSrc="https://clayui.com/images/success_state.svg"
+          imgSrcReducedMotion="https://clayui.com/images/success_state_reduced_motion.svg"
+          title="Hurray"
+        />
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -70,8 +66,8 @@ The property `imgSrcReducedMotion` is used to provide an alternate image if a us
 There is an accompanying property, `imgPropsReducedMotion`, where specific properties can be passed to the reduced motion `img` tag. If it is not defined, it uses the properties defined in `imgProps`.
 
 <div className="clay-site-alert alert alert-info">
-	To see the system's reduce motion setting in action, refer to the example in
-	the <a href="#with-animation">With Animation</a> section.
+  To see the system's reduce motion setting in action, refer to the example in
+  the <a href="#with-animation">With Animation</a> section.
 </div>
 
 ```jsx preview
@@ -79,21 +75,19 @@ import {Provider} from '@clayui/core';
 import EmptyState from '@clayui/empty-state';
 import React from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
-
 export default function App() {
-	return (
-		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
-				<EmptyState
-					description="You don't have more notifications to review"
-					imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
-					imgSrc="https://clayui.com/images/success_state.svg"
-					imgSrcReducedMotion="https://clayui.com/images/success_state_reduced_motion.svg"
-					title="Hurray"
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <EmptyState
+          description="You don't have more notifications to review"
+          imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
+          imgSrc="https://clayui.com/images/success_state.svg"
+          imgSrcReducedMotion="https://clayui.com/images/success_state_reduced_motion.svg"
+          title="Hurray"
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

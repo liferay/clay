@@ -11,27 +11,25 @@ packageTypes: ['clay-time-picker/src/index.tsx']
 ```jsx preview
 import {Provider} from '@clayui/core';
 import TimePicker from '@clayui/time-picker';
-import React, {useState} from 'react';
-
-import '@clayui/css/lib/css/atlas.css';
+import React from 'react';
 
 export default function App() {
-	const [state, setState] = useState({
-		hours: '--',
-		minutes: '--',
-	});
+  const [state, setState] = React.useState({
+    hours: '--',
+    minutes: '--',
+  });
 
-	return (
-		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
-				<TimePicker
-					onChange={setState}
-					timezone="GMT+01:00"
-					use12Hours
-					value={state}
-				/>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <TimePicker
+          onChange={setState}
+          timezone="GMT+01:00"
+          use12Hours
+          value={state}
+        />
+      </div>
+    </Provider>
+  );
 }
 ```

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import type {FileSystemSource, Collection} from 'renoun/collections';
-import type {AllCollection, ComponentDocumentsSchema} from '@/data';
+import {isFile} from 'renoun/file-system';
+import type {FileSystemEntry, Directory} from 'renoun/file-system';
 
 import ClayLink from '../_components/Link';
 import styles from './sidebar.module.css';
@@ -13,14 +13,14 @@ type Item = {
 
 type CollectionItem = {
 	name: string;
-	collection: Collection<ComponentDocumentsSchema | any>;
+	collection: Directory<any>;
 	sort?: boolean;
 };
 
 type Props = {
 	items?: Array<Item>;
 	path?: string;
-	collection?: AllCollection | Collection<any> | Array<CollectionItem>;
+	collection?: Directory<any> | Array<CollectionItem>;
 };
 
 export function Sidebar({collection, path, items}: Props) {
@@ -92,20 +92,27 @@ export function Sidebar({collection, path, items}: Props) {
 }
 
 type TreeCollectionProps = {
-	collection: AllCollection | Collection<ComponentDocumentsSchema>;
+	collection: Directory<any>;
 	path?: string;
 	sort?: boolean;
 };
 
 async function TreeCollection({collection, path, sort}: TreeCollectionProps) {
-	const items = await collection.getSources();
+	const items = (
+		await collection.getEntries({recursive: true, includeDuplicates: true})
+	).filter(
+		(entry: FileSystemEntry<any>) =>
+			isFile(entry, 'mdx') && !entry.getPath().includes('/markup')
+	);
 	const entries = sort
-		? items.sort((a, b) => a.getTitle().localeCompare(b.getTitle()))
+		? items.sort((a: FileSystemEntry<any>, b: FileSystemEntry<any>) =>
+				a.getTitle().localeCompare(b.getTitle())
+		  )
 		: items;
 
 	return (
 		<>
-			{entries.map((entry) => (
+			{entries.map((entry: FileSystemEntry<any>) => (
 				<ListNavigation
 					key={entry.getPath()}
 					entry={entry}
@@ -117,34 +124,30 @@ async function TreeCollection({collection, path, sort}: TreeCollectionProps) {
 }
 
 type ListNavigationProps = {
-	entry: FileSystemSource<any>;
+	entry: FileSystemEntry<any>;
 	path?: string;
 };
 
 async function ListNavigation({entry, path: pathUrl}: ListNavigationProps) {
 	const path = entry.getPath();
-	const title = entry.getTitle();
-
-	if (path.includes('/markup')) {
-		return null;
-	}
+	const title = isFile(entry, 'mdx')
+		? (await entry.getExportValue('frontmatter')).title
+		: entry.getTitle();
+	const url = `${pathUrl ? `/${pathUrl}` : ''}${path}`;
 
 	const link = (
 		<li>
-			<ClayLink
-				href={`${pathUrl ? `/${pathUrl}` : ''}${path}`}
-				style={{textTransform: 'capitalize'}}
-			>
-				{title.replaceAll(/\d{4}\s\d{2}\s\d{2}/g, '')}
+			<ClayLink href={url.replace(/clay-[^/]+\/docs\//g, '')}>
+				{title}
 			</ClayLink>
 		</li>
 	);
 
-	if (entry.isFile()) {
+	if (isFile(entry)) {
 		return link;
 	}
 
-	const entries = (await entry.getSources({depth: 1})).sort((a, b) =>
+	const entries = (await entry.getEntries()).sort((a, b) =>
 		a.getTitle().localeCompare(b.getTitle())
 	);
 

@@ -12,21 +12,19 @@ packageTypes: ['clay-form/src/RadioGroup.tsx', 'clay-form/src/Radio.tsx']
 ```jsx preview
 import {Provider} from '@clayui/core';
 import {ClayRadio, ClayRadioGroup} from '@clayui/form';
-import React, {useState} from 'react';
-
-import '@clayui/css/lib/css/atlas.css';
+import React from 'react';
 
 export default function App() {
-	return (
-		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
-				<ClayRadioGroup defaultValue="one" inline>
-					<ClayRadio label="One" value="one" />
-					<ClayRadio label="Two" value="two" />
-					<ClayRadio label="Three" value="three" />
-				</ClayRadioGroup>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <ClayRadioGroup defaultValue="one" inline>
+          <ClayRadio label="One" value="one" />
+          <ClayRadio label="Two" value="two" />
+          <ClayRadio label="Three" value="three" />
+        </ClayRadioGroup>
+      </div>
+    </Provider>
+  );
 }
 ```

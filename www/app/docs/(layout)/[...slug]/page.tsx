@@ -1,6 +1,12 @@
 import type {Metadata} from 'next';
-import {AllCollection} from '@/data';
+import {
+	DocumentsCollection,
+	CSSDocumentsCollection,
+	ComponentDocumentsCollection,
+	getEntry,
+} from '@/collections/site';
 import {createLXCResource} from '@/lxc';
+import {isFile} from 'renoun/file-system';
 
 import {DocsLayout} from './DocsLayout';
 import {RemoteLayout} from './RemoteLayout';
@@ -14,13 +20,26 @@ type Props = {
 const lxc = createLXCResource();
 
 export async function generateStaticParams() {
-	const collection = await AllCollection.getSources();
+	const [css, documents, components] = await Promise.all([
+		CSSDocumentsCollection.getEntries({recursive: true}),
+		DocumentsCollection.getEntries({recursive: true}),
+		ComponentDocumentsCollection.getEntries({
+			recursive: true,
+			includeDuplicates: true,
+		}),
+	]);
 	const remoteCollection = await lxc.getResources();
 
 	return [
-		...collection.map((entry) => ({
-			slug: entry.getPath().split('/').slice(1),
-		})),
+		...[...css, ...documents, ...components]
+			.filter((entry) => isFile(entry, 'mdx'))
+			.map((entry) => ({
+				slug: entry
+					.getPathSegments()
+					.join('/')
+					.replace(/clay-[^/]+\/docs\//g, '')
+					.split('/'),
+			})),
 		...remoteCollection.map((item) => ({
 			slug: ['components', item.slug.slice(1), 'design'],
 		})),
@@ -29,7 +48,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
 	const params = await props.params;
-	const document = await AllCollection.getSource(
+	const document = await getEntry(
 		params.slug.filter((item) => item !== 'design')
 	);
 
@@ -39,7 +58,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 		};
 	}
 
-	const frontmatter = await document.getExport('frontmatter').getValue();
+	const frontmatter = await document.getExportValue('frontmatter');
 
 	const title = `${frontmatter.title} - Clay by Liferay`;
 

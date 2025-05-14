@@ -5,7 +5,7 @@ description: 'Practical guidelines to start using Clay, a quick guide on how to 
 
 Clay follows some fundamentals and we recommend that you read more about this before you start using it in your application.
 
--   [Composing](https://clayui.com/docs/introduction/composition)
+- [Composing](https://clayui.com/docs/introduction/composition)
 
 ## Install with NPM or Yarn
 
@@ -40,8 +40,8 @@ We provide Clay CSS via CDN, which is an option when you do not want to install 
 
 ```html
 <link
-	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/@clayui/css/lib/css/atlas.css"
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@clayui/css/lib/css/atlas.css"
 />
 ```
 
@@ -51,32 +51,32 @@ Example:
 
 ```html
 <link
-	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/@clayui/css@3.0.0/lib/css/atlas.css"
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@clayui/css@3.0.0/lib/css/atlas.css"
 />
 ```
 
 ## Quick start
 
 <div className="clay-site-alert alert alert-warning">
-	<strong className="lead">Warning</strong>
-	Before you get started with this quick start, read about Clay's fundamentals
-	of composition to move on. The information below is assuming you have read about
-	Clay's compositional philosophy and learned about the terms.
+  <strong className="lead">Warning</strong>
+  Before you get started with this quick start, read about Clay's fundamentals of
+  composition to move on. The information below is assuming you have read about Clay's
+  compositional philosophy and learned about the terms.
 </div>
 
 <div className="clay-site-alert alert alert-warning">
-	<strong className="lead">Warning</strong>
-	This quick start requires that you have a minimum knowledge of [React Hooks](https://reactjs.org/docs/hooks-intro.html),
-	not much of your API's will be used but just [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
-	to control the component.
+  <strong className="lead">Warning</strong>
+  This quick start requires that you have a minimum knowledge of [React Hooks](https://reactjs.org/docs/hooks-intro.html),
+  not much of your API's will be used but just [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
+  to control the component.
 </div>
 
 <div className="clay-site-alert alert alert-warning">
-	<strong className="lead">Warning</strong>
-	To ensure that Clay functions correctly, please remember to import the CSS package
-	from `@clayui/css` into your React entrypoint component, as demonstrated in the
-	example below.
+  <strong className="lead">Warning</strong>
+  To ensure that Clay functions correctly, please remember to import the CSS package
+  from `@clayui/css` into your React entrypoint component, as demonstrated in the
+  example below.
 </div>
 
 For this quick start we will use [codesandbox](https://codesandbox.io/) which does not need to install an environment on your machine.
@@ -84,25 +84,25 @@ For this quick start we will use [codesandbox](https://codesandbox.io/) which do
 Use the **codesandbox** below as your text editor and environment so we can follow through with the examples.
 
 <iframe
-	src="https://codesandbox.io/embed/intelligent-resonance-dlpgp?fontsize=14&view=editor"
-	title="quick-start-clay"
-	allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
-	style={{
-		width: '100%',
-		height: '500px',
-		border: 0,
-		borderRadius: '4px',
-		overflow: 'hidden',
-	}}
-	sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+  src="https://codesandbox.io/embed/intelligent-resonance-dlpgp?fontsize=14&view=editor"
+  title="quick-start-clay"
+  allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+  style={{
+    width: '100%',
+    height: '500px',
+    border: 0,
+    borderRadius: '4px',
+    overflow: 'hidden',
+  }}
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
 />
 
 Let's use the **DropDown** component `@clayui/drop-down` and understand how the compositing philosophy works for this component so you can start replicating on other components.
 
 <div className="clay-site-alert alert alert-info">
-	<strong className="lead">Info</strong>
-	You can check the [ClayDropDown](https://clayui.com/docs/components/drop-down)
-	package documentation for its API and usage philosophy.
+  <strong className="lead">Info</strong>
+  You can check the [ClayDropDown](https://clayui.com/docs/components/drop-down)
+  package documentation for its API and usage philosophy.
 </div>
 
 Before we get started, let's import the main packages that we will use to create a low-level Drop Down with Clay components.
@@ -114,9 +114,9 @@ import ClayDropDown from '@clayui/drop-down';
 ```
 
 <div className="clay-site-alert alert alert-info">
-	<strong className="lead">Info</strong>
-	These packages are installed in the sandbox environment, so feel free to fork
-	the environment if you want to test with other Clay components.
+  <strong className="lead">Info</strong>
+  These packages are installed in the sandbox environment, so feel free to fork the
+  environment if you want to test with other Clay components.
 </div>
 
 As you learned from [Clay's compositional philosophy](https://clayui.com/docs/introduction/composition), we are using a low-level DropDown component, as its essence is a controlled component and for that you need to control DropDown's expand state. Let's use React's [useState](https://reactjs.org/docs/hooks-reference.html#usestate) to control the state.
@@ -129,9 +129,9 @@ Soon after we can add the components to see rendered on the screen.
 
 ```jsx
 <ClayDropDown
-	active={expand}
-	onActiveChange={setExpand}
-	trigger={<ClayButton>{'Click Me'}</ClayButton>}
+  active={expand}
+  onActiveChange={setExpand}
+  trigger={<ClayButton>{'Click Me'}</ClayButton>}
 />
 ```
 
@@ -141,11 +141,11 @@ Try this:
 
 ```jsx
 <ClayDropDown
-	active={expand}
-	onActiveChange={setExpand}
-	trigger={<ClayButton>{'Click Me'}</ClayButton>}
+  active={expand}
+  onActiveChange={setExpand}
+  trigger={<ClayButton>{'Click Me'}</ClayButton>}
 >
-	<h1>Menu</h1>
+  <h1>Menu</h1>
 </ClayDropDown>
 ```
 
@@ -153,19 +153,19 @@ Now we can compose with other Clay components and add a Checkbox and Radio to th
 
 ```jsx
 <ClayDropDown
-	active={expand}
-	onActiveChange={setExpand}
-	trigger={<ClayButton>{'Click Me'}</ClayButton>}
+  active={expand}
+  onActiveChange={setExpand}
+  trigger={<ClayButton>{'Click Me'}</ClayButton>}
 >
-	<ClayDropDown.ItemList>
-		<ClayDropDown.Item href="#1">Linkable</ClayDropDown.Item>
-		<ClayDropDown.Item>
-			<ClayCheckbox checked label="Checkbox" onChange={() => {}} />
-		</ClayDropDown.Item>
-		<ClayDropDown.Item>
-			<ClayRadio checked label="Radio" value="radio" />
-		</ClayDropDown.Item>
-	</ClayDropDown.ItemList>
+  <ClayDropDown.ItemList>
+    <ClayDropDown.Item href="#1">Linkable</ClayDropDown.Item>
+    <ClayDropDown.Item>
+      <ClayCheckbox checked label="Checkbox" onChange={() => {}} />
+    </ClayDropDown.Item>
+    <ClayDropDown.Item>
+      <ClayRadio checked label="Radio" value="radio" />
+    </ClayDropDown.Item>
+  </ClayDropDown.ItemList>
 </ClayDropDown>
 ```
 
@@ -179,38 +179,38 @@ import ClayDropDown, {ClayDropDownWithItems} from '@clayui/drop-down';
 
 ```jsx
 <ClayDropDownWithItems
-	items={[
-		{
-			href: '#linkable',
-			label: 'linkable',
-		},
-		{
-			checked: true,
-			label: 'Checkbox',
-			type: 'checkbox',
-		},
-		{
-			label: 'Radio',
-			type: 'radio',
-			value: 'radio',
-		},
-	]}
-	trigger={<ClayButton>{'Click Me'}</ClayButton>}
+  items={[
+    {
+      href: '#linkable',
+      label: 'linkable',
+    },
+    {
+      checked: true,
+      label: 'Checkbox',
+      type: 'checkbox',
+    },
+    {
+      label: 'Radio',
+      type: 'radio',
+      value: 'radio',
+    },
+  ]}
+  trigger={<ClayButton>{'Click Me'}</ClayButton>}
 />
 ```
 
 If you had problems, this is the final sandbox with all the examples described above.
 
 <iframe
-	src="https://codesandbox.io/embed/quick-start-clay-23xtz?fontsize=14"
-	title="quick-start-clay-finale"
-	allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
-	style={{
-		width: '100%',
-		height: '500px',
-		border: 0,
-		borderRadius: '4px',
-		overflow: 'hidden',
-	}}
-	sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+  src="https://codesandbox.io/embed/quick-start-clay-23xtz?fontsize=14"
+  title="quick-start-clay-finale"
+  allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+  style={{
+    width: '100%',
+    height: '500px',
+    border: 0,
+    borderRadius: '4px',
+    overflow: 'hidden',
+  }}
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
 />

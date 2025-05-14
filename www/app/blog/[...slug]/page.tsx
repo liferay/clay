@@ -1,7 +1,8 @@
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
-import {AUTHORS, BlogCollection} from '@/data';
 import Heading from '@/app/_components/Heading';
+import {BlogCollection} from '@/collections/site';
+import {AUTHORS} from '@/collections/static';
 
 import styles from '../../docs/(layout)/[...slug]/page.module.css';
 import Link from 'next/link';
@@ -13,16 +14,16 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-	const collection = await BlogCollection.getSources();
+	const entries = await BlogCollection.getEntries();
 
-	return collection.map((entry) => ({
-		slug: entry.getPath().split('/').slice(2),
+	return entries.map((entry) => ({
+		slug: entry.getPathSegments({includeBasePath: false}),
 	}));
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
 	const params = await props.params;
-	const document = await BlogCollection.getSource(params.slug);
+	const document = await BlogCollection.getFile(params.slug, 'mdx');
 
 	if (!document) {
 		return {
@@ -30,7 +31,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 		};
 	}
 
-	const frontmatter = await document.getExport('frontmatter').getValue();
+	const frontmatter = await document.getExportValue('frontmatter');
 
 	const title = `${frontmatter.title} - Clay by Liferay`;
 
@@ -44,17 +45,17 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
 export default async function Page(props: Props) {
 	const params = await props.params;
-	const file = await BlogCollection.getSource(params.slug);
+	const file = await BlogCollection.getFile(params.slug, 'mdx');
 
 	if (!file) {
 		notFound();
 	}
 
-	const updatedAt = await file.getUpdatedAt();
+	const updatedAt = await file.getLastCommitDate();
 
-	const headings = await file.getExport('headings').getValue();
-	const frontmatter = await file.getExport('frontmatter').getValue();
-	const Content = (await file.getExport('default').getValue()) as any;
+	const headings = await file.getExportValue('headings');
+	const frontmatter = await file.getExportValue('frontmatter');
+	const Content = await file.getExportValue('default');
 
 	const tocContent = (
 		<>
@@ -62,7 +63,7 @@ export default async function Page(props: Props) {
 			<ul className={styles.toc_list}>
 				{headings.map((item) => (
 					<li
-						style={{marginLeft: `${(item.depth - 2) * 10}px`}}
+						style={{marginLeft: `${(item.level - 2) * 10}px`}}
 						key={item.id}
 					>
 						<a href={`#${item.id}`}>{item.text}</a>
@@ -77,7 +78,12 @@ export default async function Page(props: Props) {
 			<div className={styles.article}>
 				<Heading
 					title={frontmatter.title}
-					description={''}
+					description={new Intl.DateTimeFormat('en-US', {
+						year: 'numeric',
+						month: '2-digit',
+						day: '2-digit',
+						timeZone: 'UTC',
+					}).format(frontmatter.date)}
 					path={params.slug}
 				/>
 
@@ -88,7 +94,7 @@ export default async function Page(props: Props) {
 				<div className={styles.author_container}>
 					<a
 						className="link-primary mb-2"
-						href={file.getEditPath()}
+						href={file.getEditUrl()}
 						target="_blank"
 						rel="noreferrer"
 						style={{

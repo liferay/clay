@@ -1,12 +1,14 @@
-import {CodeBlock, MDXComponents} from 'renoun/components';
+/* eslint-disable react/display-name */
+import {parsePreProps, Tokens} from 'renoun/components';
+import type {MDXComponents as MDXComponentsType} from 'renoun/mdx';
 import Link from 'next/link';
-import {Sandpack} from '@/app/_components/Sandpack.server';
 import styles from './mdx-components.module.css';
 import React from 'react';
 
-export function useMDXComponents(components: MDXComponents): MDXComponents {
+import {Code} from '@/app/_components/CodeBlock';
+
+export function useMDXComponents() {
 	return {
-		...components,
 		h1: ({children, id}) => (
 			<h1 className="text-10" id={id}>
 				{children}
@@ -42,27 +44,27 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 				</As>
 			);
 		},
-		pre: ({children, preview, language, value, ...otherProps}: any) => {
-			if (preview) {
-				return (
-					<Sandpack language={language}>
-						{(children as any).props.children}
-					</Sandpack>
-				);
-			}
+		pre: (props: any) => {
+			const {preview = false, title} = props;
+			const {children, language} = parsePreProps(props);
 
 			return (
-				<CodeBlock
-					{...otherProps}
-					value={value}
-					allowCopy
-					className={{
-						container: styles.code_editor,
-					}}
-					shouldFormat={false}
-					showToolbar={false}
+				<Code
+					title={title}
 					language={language}
-				/>
+					value={children}
+					preview={preview}
+				>
+					<Tokens
+						shouldAnalyze={preview}
+						allowErrors={false}
+						showErrors={false}
+						shouldFormat={false}
+						language={language}
+					>
+						{children}
+					</Tokens>
+				</Code>
 			);
 		},
 		blockquote: ({children, ...otherProps}) => (
@@ -70,5 +72,5 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 				{children}
 			</blockquote>
 		),
-	};
+	} as MDXComponentsType;
 }

@@ -1,8 +1,8 @@
 import {
-	DocumentsCollection,
 	CSSDocumentsCollection,
 	ComponentDocumentsCollection,
-} from '@/data';
+	DocumentsCollection,
+} from '@/collections/site';
 
 import {Sidebar} from '../../_components/Sidebar';
 import {Navbar} from '../../_components/Navbar';

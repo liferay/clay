@@ -17,23 +17,21 @@ import {Provider} from '@clayui/core';
 import Form, {ClayInput} from '@clayui/form';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
-
 export default function App() {
-	return (
-		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
-				<Form.Group>
-					<label htmlFor="basicInputText">Name</label>
-					<ClayInput
-						id="basicInputText"
-						placeholder="Insert your name here"
-						type="text"
-					/>
-				</Form.Group>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Form.Group>
+          <label htmlFor="basicInputText">Name</label>
+          <ClayInput
+            id="basicInputText"
+            placeholder="Insert your name here"
+            type="text"
+          />
+        </Form.Group>
+      </div>
+    </Provider>
+  );
 }
 ```
 
@@ -46,23 +44,21 @@ import {Provider} from '@clayui/core';
 import Form, {ClayInput} from '@clayui/form';
 import React, {useState} from 'react';
 
-import '@clayui/css/lib/css/atlas.css';
-
 export default function App() {
-	return (
-		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
-				<Form.Group>
-					<label htmlFor="basicInputText">Name</label>
-					<ClayInput
-						component="textarea"
-						id="basicInputText"
-						placeholder="Insert your name here"
-						type="text"
-					/>
-				</Form.Group>
-			</div>
-		</Provider>
-	);
+  return (
+    <Provider spritemap="/icons.svg">
+      <div className="p-4">
+        <Form.Group>
+          <label htmlFor="basicInputText">Name</label>
+          <ClayInput
+            component="textarea"
+            id="basicInputText"
+            placeholder="Insert your name here"
+            type="text"
+          />
+        </Form.Group>
+      </div>
+    </Provider>
+  );
 }
 ```
