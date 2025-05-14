@@ -226,9 +226,11 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 
-				<ClayForm.Text>
-					{resultFormatter(translations[defaultLanguage.label]!)}
-				</ClayForm.Text>
+				{selectedLocale.symbol !== defaultLanguage.symbol && (
+					<ClayForm.Text className="blockquote">
+						{resultFormatter(translations[defaultLanguage.label]!)}
+					</ClayForm.Text>
+				)}
 			</ClayForm.Group>
 		);
 	}
