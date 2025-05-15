@@ -347,6 +347,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 
 	const virtualizer = useVirtual({
 		estimateSize: 37,
+		isLoading,
 		items: filteredItems,
 		parentRef: menuRef,
 	});
@@ -396,6 +397,11 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 			[value]
 		),
 		items: filteredItems,
+		load: (
+			<DropDown.Item aria-disabled="true" roleItem="option">
+				<LoadingIndicator size="sm" />
+			</DropDown.Item>
+		),
 		notFound: (
 			<DropDown.Item
 				aria-disabled="true"
