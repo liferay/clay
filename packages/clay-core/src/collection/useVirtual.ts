@@ -23,11 +23,21 @@ type Props<T> = {
 	 * collection.
 	 */
 	parentRef: React.RefObject<HTMLElement>;
+
+	/**
+	 * Flag if a request is in progress.
+	 */
+	isLoading?: boolean;
 };
 
-export function useVirtual<T>({estimateSize, items = [], parentRef}: Props<T>) {
+export function useVirtual<T>({
+	estimateSize,
+	items = [],
+	parentRef,
+	isLoading,
+}: Props<T>) {
 	const virtualizer = useVirtualizer({
-		count: items.length,
+		count: isLoading ? items.length + 1 : items.length,
 		estimateSize: () => estimateSize,
 		getScrollElement: () => parentRef.current,
 		overscan: 7,

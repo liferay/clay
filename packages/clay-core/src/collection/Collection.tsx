@@ -175,8 +175,7 @@ export function Collection<
 			const target = event.target as HTMLElement;
 
 			if (
-				target.scrollTop + target.clientHeight >=
-					target.scrollHeight - 40 &&
+				target.scrollTop + target.clientHeight >= target.scrollHeight &&
 				!isLoading
 			) {
 				onLoadMore!();

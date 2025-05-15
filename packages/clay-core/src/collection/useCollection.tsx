@@ -61,6 +61,7 @@ export function useCollection<
 	itemContainer: ItemContainer,
 	itemIdKey = 'id',
 	items,
+	load,
 	notFound,
 	parentKey,
 	passthroughKey = true,
@@ -96,7 +97,7 @@ export function useCollection<
 
 			return false;
 		},
-		[filter]
+		[filter, filterKey]
 	);
 
 	const performItemRender = useCallback(
@@ -154,7 +155,7 @@ export function useCollection<
 				...(props ? props : {}),
 			});
 		},
-		[ItemContainer, performFilter]
+		[ItemContainer, performFilter, passthroughKey, suppressTextValueWarning]
 	);
 
 	const createItemsLayout = useCallback(
@@ -253,7 +254,16 @@ export function useCollection<
 				});
 			}
 		},
-		[performFilter, publicApi, itemIdKey]
+		[
+			performFilter,
+			publicApi,
+			itemIdKey,
+			exclude,
+			parentKey,
+			suppressTextValueWarning,
+			collectionId,
+			layout,
+		]
 	);
 
 	const performCollectionRender = useCallback(
@@ -261,6 +271,28 @@ export function useCollection<
 			if (children instanceof Function && items) {
 				if (virtualizer) {
 					return virtualizer.getVirtualItems().map((virtual) => {
+						const isLoader = virtual.index > items.length - 1;
+
+						if (isLoader) {
+							return React.cloneElement(
+								load as React.ReactElement,
+								{
+									'data-index': virtual.index,
+									key: `${virtual.index}-loader`,
+									ref: (node: HTMLElement) => {
+										virtualizer.measureElement(node);
+									},
+									style: {
+										left: 0,
+										position: 'absolute',
+										top: 0,
+										transform: `translateY(${virtual.start}px)`,
+										width: '100%',
+									},
+								}
+							);
+						}
+
 						const item = items[virtual.index] as T;
 
 						const publicItem =
@@ -281,6 +313,10 @@ export function useCollection<
 							  ) as ChildElement);
 
 						const props = {
+							className:
+								virtual.index === items.length - 1 && !!load
+									? 'mb-2'
+									: undefined,
 							'data-index': virtual.index,
 							ref: (node: HTMLElement) => {
 								virtualizer.measureElement(node);
@@ -368,21 +404,30 @@ export function useCollection<
 			});
 		},
 		[
+			load,
 			performItemRender,
 			publicApi,
-			virtualizer?.getVirtualItems().length,
+			exclude,
+			parentKey,
 			visibleKeys,
 			itemIdKey,
+			virtualizer,
 		]
 	);
 
-	const getItem = useCallback((key: React.Key) => {
-		return layout.current.get(key)!;
-	}, []);
+	const getItem = useCallback(
+		(key: React.Key) => {
+			return layout.current.get(key)!;
+		},
+		[layout]
+	);
 
-	const hasItem = useCallback((key: React.Key) => {
-		return layout.current.has(key)!;
-	}, []);
+	const hasItem = useCallback(
+		(key: React.Key) => {
+			return layout.current.has(key)!;
+		},
+		[layout]
+	);
 
 	const getFirstItem = useCallback(() => {
 		const key = layout.current.keys().next().value;
@@ -391,7 +436,7 @@ export function useCollection<
 			key,
 			...layout.current.get(key)!,
 		};
-	}, []);
+	}, [layout]);
 
 	const getLastItem = useCallback(() => {
 		const key = Array.from(layout.current.keys()).pop()!;
@@ -400,13 +445,13 @@ export function useCollection<
 			key,
 			...layout.current.get(key)!,
 		};
-	}, []);
+	}, [layout]);
 
 	const getItems = useCallback(() => {
 		return Array.from(layout.current.keys());
-	}, []);
+	}, [layout]);
 
-	const getSize = useCallback(() => layout.current.size, [collectionId]);
+	const getSize = useCallback(() => layout.current.size, [layout]);
 
 	const cleanUp = useCallback(() => {
 		layout.current.forEach((value, key) => {
@@ -429,7 +474,7 @@ export function useCollection<
 		// before rendering the element. The data can be consumed later even
 		// if the element is not rendered.
 		createItemsLayout({children, items});
-	}, [children, createItemsLayout, items]);
+	}, [children, createItemsLayout, items, cleanUp, parentLayout]);
 
 	// It builds the dynamic or static collection, done in two steps: Data and
 	// Rendering, both go through the elements to get the data of each item.
@@ -444,7 +489,7 @@ export function useCollection<
 		}
 
 		return list;
-	}, [children, performCollectionRender, items]);
+	}, [children, performCollectionRender, items, notFound]);
 
 	// Effect only called when the component is unmounted removing the layout
 	// items that are rendered by the collection instance, effect only when
@@ -468,31 +513,45 @@ export function useCollection<
 		if (forceUpdate) {
 			forceUpdate(null);
 		}
-	}, [children, createItemsLayout, performCollectionRender, items]);
+	}, [forceUpdate, children, items]);
+
+	const contextValue = useMemo(
+		() => ({
+			forceUpdate: forceDeepRootUpdate ? setForceUpdate : undefined,
+			keys: layoutKeysRef,
+			layout,
+		}),
+		[forceDeepRootUpdate, setForceUpdate, layoutKeysRef, layout]
+	);
+
+	const collectionOutput = useMemo(
+		() =>
+			connectNested ? (
+				<CollectionContext.Provider value={contextValue}>
+					{rendered}
+				</CollectionContext.Provider>
+			) : (
+				<>{rendered}</>
+			),
+		[connectNested, contextValue, rendered]
+	);
+
+	const collectionAPI = useMemo(
+		() => ({
+			getFirstItem,
+			getItem,
+			getItems,
+			getLastItem,
+			getSize,
+			hasItem,
+		}),
+		[getFirstItem, getItem, getItems, getLastItem, getSize, hasItem]
+	);
 
 	return {
 		UNSAFE_virtualizer: virtualizer,
-		collection: connectNested ? (
-			<CollectionContext.Provider
-				value={{
-					forceUpdate: forceDeepRootUpdate
-						? setForceUpdate
-						: undefined,
-					keys: layoutKeysRef,
-					layout,
-				}}
-			>
-				{rendered}
-			</CollectionContext.Provider>
-		) : (
-			<>{rendered}</>
-		),
-		getFirstItem,
-		getItem,
-		getItems,
-		getLastItem,
-		getSize,
-		hasItem,
+		collection: collectionOutput,
+		...collectionAPI,
 		size: virtualizer ? virtualizer.getTotalSize() : undefined,
 		virtualize: !!virtualizer,
 	};
