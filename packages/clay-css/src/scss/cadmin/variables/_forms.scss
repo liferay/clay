@@ -631,6 +631,24 @@ $cadmin-form-text: map-merge(
 		font-weight: $cadmin-form-text-font-weight,
 		margin-top: $cadmin-form-text-margin-top,
 		word-wrap: break-word,
+		blockquote: (
+			font-style: italic,
+			font-weight: $cadmin-font-weight-normal,
+			margin-bottom: 0,
+			margin-top: 12px,
+			padding-left: 12px,
+			position: relative,
+			before: (
+				background-color: $cadmin-secondary-l1,
+				bottom: 0,
+				content: '',
+				display: block,
+				left: 0,
+				position: absolute,
+				top: 0,
+				width: 2px,
+			),
+		),
 	),
 	$cadmin-form-text
 );
