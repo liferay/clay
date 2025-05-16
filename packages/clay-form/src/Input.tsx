@@ -4,6 +4,7 @@
  */
 
 import ClayIcon from '@clayui/icon';
+import {InternalDispatch, useControlledState} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -157,13 +158,26 @@ const GroupInsetItem = React.forwardRef<
 GroupInsetItem.displayName = 'ClayInputGroupInsetItem';
 
 interface IInlineTextProps
-	extends React.HTMLAttributes<
-		HTMLDivElement | HTMLSpanElement | HTMLLabelElement
-	> {
+	extends React.HTMLAttributes<HTMLDivElement | HTMLSpanElement> {
+	/**
+	 * The initial value of the input (uncontrolled).
+	 */
+	defaultInputValue?: string;
+
 	/**
 	 * The id of the component
 	 */
 	id?: string;
+
+	/**
+	 * The current value of the input (controlled).
+	 */
+	inputValue?: string;
+
+	/**
+	 * Callback called when input value changes (controlled).
+	 */
+	onInputValueChange?: InternalDispatch<string>;
 
 	/**
 	 * Text that hints at the expected data type to be entered.
@@ -181,25 +195,38 @@ interface IInlineTextProps
 	spritemap?: string;
 }
 
-const InlineText = React.forwardRef<
-	HTMLDivElement | HTMLSpanElement | HTMLLabelElement,
-	IInlineTextProps
->(
-	({
-		children,
-		className,
-		id,
-		placeholder,
-		readOnly,
-		spritemap,
-		...otherProps
-	}: IInlineTextProps) => {
-		const inputRef = React.useRef<HTMLDivElement>(null);
+const InlineText = React.forwardRef<HTMLDivElement, IInlineTextProps>(
+	(
+		{
+			children,
+			className,
+			defaultInputValue,
+			id,
+			inputValue: externalInputValue,
+			onInputValueChange,
+			placeholder,
+			readOnly,
+			spritemap,
+			...otherProps
+		}: IInlineTextProps,
+		ref: React.Ref<HTMLDivElement>
+	) => {
+		const inputRef = React.useRef<HTMLSpanElement>(null);
 
-		const [inputValue, setInputValue] = React.useState('');
+		const [inputValue = '', setInputValue] = useControlledState({
+			defaultName: 'defaultInputValue',
+			defaultValue: defaultInputValue,
+			handleName: 'onInputValueChange',
+			name: 'inputValue',
+			onChange: onInputValueChange,
+			value: externalInputValue,
+		});
 
 		return (
-			<div className="form-control-fit-content inline-text-input">
+			<div
+				className="form-control-fit-content inline-text-input"
+				ref={ref}
+			>
 				<div className={classNames('form-control', className)}>
 					<Input
 						aria-hidden
@@ -209,7 +236,6 @@ const InlineText = React.forwardRef<
 							inputRef.current?.focus();
 						}}
 						readOnly
-						tabIndex={-1}
 						type="text"
 						value={inputValue}
 					/>
@@ -232,7 +258,6 @@ const InlineText = React.forwardRef<
 						placeholder={placeholder}
 						ref={inputRef}
 						role="textbox"
-						tabIndex={0}
 						{...otherProps}
 					/>
 					<span className="form-control-indicator form-control-item">
