@@ -5,5 +5,7 @@
 
 export {LiveAnnouncer} from './LiveAnnouncer';
 export {VisuallyHidden} from './VisuallyHidden';
+export {Announcer} from './store';
 
+export type {Log} from './store';
 export type {AnnouncerAPI} from './LiveAnnouncer';
