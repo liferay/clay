@@ -364,6 +364,17 @@ export const Keyboard = () => {
 		<div className="row">
 			<div className="col-md-5">
 				<div className="sheet">
+					<div className="alert alert-danger">
+						This Autocomplete implementation uses the deprecated
+						implementation, we recommend using the{' '}
+						<a
+							href="https://clayui.com/docs/components/autocomplete"
+							target="__blank"
+						>
+							new pattern
+						</a>
+						.
+					</div>
 					<div className="form-group">
 						<label>Numbers (one-five)</label>
 						<FocusScope>
@@ -421,6 +432,17 @@ export const AsyncData = () => {
 		<div className="row">
 			<div className="col-md-5">
 				<div className="sheet">
+					<div className="alert alert-danger">
+						This Autocomplete implementation uses the deprecated
+						implementation, we recommend using the{' '}
+						<a
+							href="https://clayui.com/docs/components/autocomplete"
+							target="__blank"
+						>
+							new pattern
+						</a>
+						.
+					</div>
 					<div className="form-group">
 						<label>Name</label>
 						<ClayAutocomplete>
