@@ -449,6 +449,14 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 		}
 	}, [active]);
 
+	useEffect(() => {
+		const lastKey = collection.getLastItem();
+
+		if (onLoadMore && !isLoading && activeDescendant === lastKey?.key) {
+			onLoadMore();
+		}
+	}, [activeDescendant]);
+
 	const optionCount = collection.getItems().length;
 	const lastSize = useRef(optionCount);
 
