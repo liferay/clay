@@ -4,11 +4,7 @@
  */
 
 import {Text, TextHighlight} from '@clayui/core';
-import {useResource} from '@clayui/data-provider';
-import {
-	FetchPolicy,
-	NetworkStatus,
-} from '@clayui/data-provider/src/useResource';
+import {FetchPolicy, NetworkStatus, useResource} from '@clayui/data-provider';
 import DropDown from '@clayui/drop-down';
 import Layout from '@clayui/layout';
 import {FocusScope, useDebounce} from '@clayui/shared';
