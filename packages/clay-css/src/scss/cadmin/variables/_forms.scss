@@ -634,7 +634,9 @@ $cadmin-form-text: map-merge(
 		blockquote: (
 			font-style: italic,
 			font-weight: $cadmin-font-weight-normal,
-			padding-left: 0.75rem,
+			margin-bottom: 0,
+			margin-top: 12px,
+			padding-left: 12px,
 			position: relative,
 			before: (
 				background-color: $cadmin-secondary-l1,
@@ -644,7 +646,7 @@ $cadmin-form-text: map-merge(
 				left: 0,
 				position: absolute,
 				top: 0,
-				width: 0.125rem,
+				width: 2px,
 			),
 		),
 	),
