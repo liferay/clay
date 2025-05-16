@@ -141,7 +141,7 @@ $cadmin-input-palette: map-deep-merge(
 				min-width: 50px,
 				width: auto,
 				'&:empty:before': (
-					color: $secondary,
+					color: $cadmin-secondary,
 					content: unquote("'\\FEFF' attr(placeholder)"),
 					cursor: text,
 					pointer-events: none,
@@ -158,16 +158,16 @@ $cadmin-input-palette: map-deep-merge(
 			'.form-control': (
 				background-color: transparent,
 				border-color: transparent,
-				font-size: 1.75rem,
-				font-weight: $font-weight-semi-bold,
+				font-size: 28px,
+				font-weight: $cadmin-font-weight-semi-bold,
 				line-height: 1,
-				padding: 0.3125rem 0 0.3125rem 1rem,
+				padding: 5px 0 5px 16px,
 				'&:hover': (
-					border-color: $secondary-l3,
+					border-color: $cadmin-secondary-l3,
 				),
 			),
 			'.form-control-inset': (
-				padding-right: 1rem,
+				padding-right: 16px,
 				'&:focus ~ .form-control-indicator': (
 					display: none,
 				),
@@ -176,10 +176,10 @@ $cadmin-input-palette: map-deep-merge(
 				),
 			),
 			'.form-control-item': (
-				padding-right: 1rem,
+				padding-right: 16px,
 			),
 			'.lexicon-icon': (
-				font-size: 1rem,
+				font-size: 16px,
 			),
 		),
 	),
@@ -896,7 +896,7 @@ $cadmin-has-error: map-deep-merge(
 		),
 		'.inline-text-input': (
 			'.form-control': (
-				border-color: $input-danger-border-color,
+				border-color: $cadmin-input-danger-border-color,
 			),
 			'.form-control-indicator': (
 				display: none,
@@ -1074,7 +1074,7 @@ $cadmin-has-warning: map-deep-merge(
 		),
 		'.inline-text-input': (
 			'.form-control': (
-				border-color: $input-warning-border-color,
+				border-color: $cadmin-input-warning-border-color,
 			),
 			'.form-control-indicator': (
 				display: none,
@@ -1252,7 +1252,7 @@ $cadmin-has-success: map-deep-merge(
 		),
 		'.inline-text-input': (
 			'.form-control': (
-				border-color: $input-success-border-color,
+				border-color: $cadmin-input-success-border-color,
 			),
 			'.form-control-indicator': (
 				display: none,
