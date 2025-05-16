@@ -607,8 +607,11 @@
 			$_focus-within: map-get($map, focus-within);
 
 			@if ($_focus-within) {
-				&:focus-within:has(input:focus) {
-					@include clay-form-control-variant($_focus-within);
+				&:focus-within {
+					&:has(input:focus),
+					&:has([contenteditable]:focus) {
+						@include clay-form-control-variant($_focus-within);
+					}
 				}
 			}
 
@@ -641,6 +644,14 @@
 
 				&::placeholder {
 					color: $readonly-placeholder-color;
+				}
+			}
+
+			$_readonly: map-get($map, readonly);
+
+			@if ($_readonly) {
+				&[readonly] {
+					@include clay-form-control-variant($_readonly);
 				}
 			}
 
@@ -697,6 +708,22 @@
 			@if ($_form-control-inset) {
 				.form-control-inset {
 					@include clay-form-control-variant($_form-control-inset);
+				}
+			}
+
+			@each $key, $value in $map {
+				@if not clay-is-map-unset($value) {
+					$selector: if(
+						starts-with($key, '.') or starts-with($key, '#'),
+						$key,
+						false
+					);
+
+					@if ($selector) {
+						#{$selector} {
+							@include clay-map-to-css($value);
+						}
+					}
 				}
 			}
 
@@ -1601,6 +1628,22 @@
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+
+			@each $key, $value in $map {
+				@if not clay-is-map-unset($value) {
+					$selector: if(
+						starts-with($key, '.') or starts-with($key, '#'),
+						$key,
+						false
+					);
+
+					@if ($selector) {
+						#{$selector} {
+							@include clay-map-to-css($value);
 						}
 					}
 				}

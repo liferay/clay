@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayIcon from '@clayui/icon';
+import {InternalDispatch, useControlledState} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -155,6 +157,121 @@ const GroupInsetItem = React.forwardRef<
 
 GroupInsetItem.displayName = 'ClayInputGroupInsetItem';
 
+interface IInlineTextProps
+	extends React.HTMLAttributes<HTMLDivElement | HTMLSpanElement> {
+	/**
+	 * The initial value of the input (uncontrolled).
+	 */
+	defaultInputValue?: string;
+
+	/**
+	 * The id of the component
+	 */
+	id?: string;
+
+	/**
+	 * The current value of the input (controlled).
+	 */
+	inputValue?: string;
+
+	/**
+	 * Callback called when input value changes (controlled).
+	 */
+	onInputValueChange?: InternalDispatch<string>;
+
+	/**
+	 * Text that hints at the expected data type to be entered.
+	 */
+	placeholder?: string;
+
+	/**
+	 * A flag that sets the component as noneditable.
+	 */
+	readOnly?: boolean;
+
+	/**
+	 * Path to the spritemap that Icon should use when referencing symbols.
+	 */
+	spritemap?: string;
+}
+
+const InlineText = React.forwardRef<HTMLDivElement, IInlineTextProps>(
+	(
+		{
+			children,
+			className,
+			defaultInputValue,
+			id,
+			inputValue: externalInputValue,
+			onInputValueChange,
+			placeholder,
+			readOnly,
+			spritemap,
+			...otherProps
+		}: IInlineTextProps,
+		ref: React.Ref<HTMLDivElement>
+	) => {
+		const inputRef = React.useRef<HTMLSpanElement>(null);
+
+		const [inputValue = '', setInputValue] = useControlledState({
+			defaultName: 'defaultInputValue',
+			defaultValue: defaultInputValue,
+			handleName: 'onInputValueChange',
+			name: 'inputValue',
+			onChange: onInputValueChange,
+			value: externalInputValue,
+		});
+
+		return (
+			<div
+				className="form-control-fit-content inline-text-input"
+				ref={ref}
+			>
+				<div className={classNames('form-control', className)}>
+					<Input
+						aria-hidden
+						className="form-control-hidden"
+						id={id}
+						onFocus={() => {
+							inputRef.current?.focus();
+						}}
+						readOnly
+						type="text"
+						value={inputValue}
+					/>
+					<span
+						className="form-control-inset"
+						// @ts-ignore
+						contentEditable={readOnly ? false : 'plaintext-only'}
+						onBlur={(event) => {
+							if (inputValue.trim() === '') {
+								const input = event.target as HTMLElement;
+
+								input.innerHTML = '';
+							}
+						}}
+						onInput={(event) => {
+							const input = event.target as HTMLElement;
+
+							setInputValue(input.innerText);
+						}}
+						placeholder={placeholder}
+						ref={inputRef}
+						role="textbox"
+						{...otherProps}
+					/>
+					<span className="form-control-indicator form-control-item">
+						<ClayIcon spritemap={spritemap} symbol="pencil" />
+					</span>
+					{children}
+				</div>
+			</div>
+		);
+	}
+);
+
+InlineText.displayName = 'ClayInlineText';
+
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Input component to render. Can either be a string like 'input' or 'textarea' or a component.
@@ -183,6 +300,7 @@ interface IForwardRef<T, P = {}>
 	GroupInsetItem: typeof GroupInsetItem;
 	GroupItem: typeof GroupItem;
 	GroupText: typeof GroupText;
+	InlineText: typeof InlineText;
 }
 
 function forwardRef<T, P = {}>(component: React.RefForwardingComponent<T, P>) {
@@ -221,5 +339,6 @@ Input.Group = Group;
 Input.GroupInsetItem = GroupInsetItem;
 Input.GroupItem = GroupItem;
 Input.GroupText = GroupText;
+Input.InlineText = InlineText;
 
 export default Input;
