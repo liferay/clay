@@ -26,6 +26,9 @@ export {FocusTrap} from './focus-trap';
 export {Nav} from './nav';
 export {Body, Cell, Head, Row, Table} from './table';
 export {LanguagePicker} from './language-picker';
+export {LiveAnnouncer, Announcer} from './live-announcer';
+
+export type {Log} from './live-announcer';
 
 // Experimental components
 export * as __EXPERIMENTAL_MENU from './drop-down';

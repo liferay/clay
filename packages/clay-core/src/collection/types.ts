@@ -110,6 +110,11 @@ export type Props<P, K> = {
 	notFound?: JSX.Element;
 
 	/**
+	 * Renders an element when it is loading more items.
+	 */
+	load?: JSX.Element;
+
+	/**
 	 * Defines which key should be used as the item identifier.
 	 */
 	itemIdKey?: string;
