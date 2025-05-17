@@ -3,10 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {
-	__NOT_PUBLIC_COLLECTION,
-	__NOT_PUBLIC_LIVE_ANNOUNCER,
-} from '@clayui/core';
+import {Announcer, LiveAnnouncer, __NOT_PUBLIC_COLLECTION} from '@clayui/core';
 import DropDown from '@clayui/drop-down';
 import {ClayInput as Input} from '@clayui/form';
 import LoadingIndicator from '@clayui/loading-indicator';
@@ -27,10 +24,9 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
 
-import type {AnnouncerAPI, ICollectionProps} from '@clayui/core';
+import type {ICollectionProps} from '@clayui/core';
 
 const {Collection, useCollection, useVirtual} = __NOT_PUBLIC_COLLECTION;
-const {LiveAnnouncer} = __NOT_PUBLIC_LIVE_ANNOUNCER;
 
 type ItemProps<T> = {
 	children: React.ReactElement;
@@ -110,8 +106,11 @@ export interface IProps<T>
 	 * Messages for autocomplete.
 	 */
 	messages?: {
+		infiniteScrollingListCountPlural?: string;
 		listCount?: string;
 		listCountPlural?: string;
+		infiniteScrollingLoaded: string;
+		infiniteScrollingLoading: string;
 		loading: string;
 		notFound: string;
 	};
@@ -189,6 +188,9 @@ function hasItem<T extends Record<string, any> | string | number>(
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
 const defaultMessages = {
+	infiniteScrollingListCountPlural: '{0} items loaded.',
+	infiniteScrollingLoaded: '{0} more items loaded.',
+	infiniteScrollingLoading: 'Loading more items.',
 	listCount: '{0} option available.',
 	listCountPlural: '{0} options available.',
 	loading: 'Loading...',
@@ -267,8 +269,6 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 	const currentItemSelected = useRef<string>('');
 
 	const ariaControlsId = useId();
-
-	const announcerAPI = useRef<AnnouncerAPI>(null);
 
 	const isFirst = useIsFirstRender();
 
@@ -460,12 +460,33 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 	const optionCount = collection.getItems().length;
 	const lastSize = useRef(optionCount);
 
+	const itemsSizeRef = useRef(items?.length);
+
+	useEffect(() => {
+		itemsSizeRef.current = items?.length;
+	}, [items?.length]);
+
+	// TODO: Move to Collection in the future and identify a better standard for
+	// all components.
+	useEffect(() => {
+		if (active && isLoading) {
+			Announcer.announce(messages!.infiniteScrollingLoading);
+
+			return () => {
+				Announcer.announce(
+					sub(messages!.infiniteScrollingLoaded, [
+						itemsSizeRef.current! - items!.length!,
+					])
+				);
+			};
+		}
+	}, [active, messages!.infiniteScrollingLoading, isLoading]);
+
 	useEffect(() => {
 		// Only announces the number of options available when the menu is open
 		// if there is no item with focus, with the exception of Voice Over
 		// which does not include the message.
 		if (
-			announcerAPI.current &&
 			active &&
 			(!activeDescendant ||
 				isAppleDevice() ||
@@ -473,10 +494,12 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 		) {
 			const optionCount = collection.getItems().length;
 
-			announcerAPI.current.announce(
+			Announcer.announce(
 				sub(
 					optionCount === 1
 						? messages!.listCount!
+						: onLoadMore
+						? messages!.infiniteScrollingListCountPlural!
 						: messages!.listCountPlural!,
 					[optionCount]
 				)
@@ -504,7 +527,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 
 	return (
 		<>
-			<LiveAnnouncer ref={announcerAPI} />
+			<LiveAnnouncer />
 
 			<As
 				{...otherProps}
