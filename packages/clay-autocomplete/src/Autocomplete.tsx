@@ -107,10 +107,10 @@ export interface IProps<T>
 	 */
 	messages?: {
 		infiniteScrollingListCountPlural?: string;
+		infiniteScrollingLoaded?: string;
+		infiniteScrollingLoading?: string;
 		listCount?: string;
 		listCountPlural?: string;
-		infiniteScrollingLoaded: string;
-		infiniteScrollingLoading: string;
 		loading: string;
 		notFound: string;
 	};
@@ -474,7 +474,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 
 			return () => {
 				Announcer.announce(
-					sub(messages!.infiniteScrollingLoaded, [
+					sub(messages!.infiniteScrollingLoaded!, [
 						itemsSizeRef.current! - items!.length!,
 					])
 				);

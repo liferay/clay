@@ -167,6 +167,9 @@ export interface IProps<T extends Record<string, any> = Item>
 	 * Messages for autocomplete.
 	 */
 	messages?: {
+		infiniteScrollingListCountPlural?: string;
+		infiniteScrollingLoaded?: string;
+		infiniteScrollingLoading?: string;
 		listCount?: string;
 		listCountPlural?: string;
 		loading: string;
@@ -270,6 +273,9 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 		menuRenderer: MenuRenderer,
 		messages = {
 			hotkeys: 'Press backspace to delete the current row.',
+			infiniteScrollingListCountPlural: '{0} items loaded.',
+			infiniteScrollingLoaded: '{0} more items loaded.',
+			infiniteScrollingLoading: 'Loading more items.',
 			labelAdded: 'Label {0} added to the list',
 			labelRemoved: 'Label {0} removed to the list',
 			listCount: '{0} option available.',
