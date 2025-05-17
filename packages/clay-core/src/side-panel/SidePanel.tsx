@@ -5,7 +5,8 @@
 
 import {Keys, useControlledState} from '@clayui/shared';
 import classnames from 'classnames';
-import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import {animate} from 'motion/mini';
+import React, {useEffect, useLayoutEffect, useRef} from 'react';
 
 import {SidePanelContext} from './context';
 
@@ -109,8 +110,6 @@ export function SidePanel({
 		value: externalOpen,
 	});
 
-	const [transition, setTransition] = useState(false);
-
 	useEffect(() => {
 		if (open) {
 			// Saves the last element that has focus before moving to the sidepanel to
@@ -137,46 +136,71 @@ export function SidePanel({
 				}
 			};
 
+			// Add Side Panel content to DOM focus management
+			ref.current?.removeAttribute('inert');
+
 			// Move focus to sidepanel when opening
 			ref.current?.focus();
 
 			document.addEventListener('keydown', onKeyDown, true);
 
 			return () => {
+				// Remove Side Panel content from DOM focus management
+				ref.current?.setAttribute('inert', '');
+
 				document.removeEventListener('keydown', onKeyDown, true);
 			};
 		}
 	}, [open]);
 
 	useLayoutEffect(() => {
-		setTransition(true);
-
-		return () => {
-			setTransition(false);
+		const performSlideout = (position: string | number) => {
+			if (ref.current) {
+				animate(
+					ref.current,
+					{[direction]: position},
+					{
+						duration: 0.3,
+						ease: 'easeInOut',
+					}
+				);
+			}
 		};
+
+		if (open && ref.current) {
+			performSlideout(0);
+
+			return () => {
+				performSlideout('-360px');
+			};
+		}
 	}, [open]);
 
 	return (
 		<div
-			className={classnames('c-slideout c-slideout-fixed', {
-				'c-slideout-end': direction === 'right',
-				'c-slideout-shown': !transition && open,
-				'c-slideout-start': direction === 'left',
-			})}
+			className={classnames(
+				'c-slideout c-slideout-fixed c-slideout-shown',
+				{
+					'c-slideout-end': direction === 'right',
+					'c-slideout-start': direction === 'left',
+				}
+			)}
 		>
 			<As
-				className={classnames('sidebar c-slideout-active', className, {
-					'c-slideout-show': open,
-					'c-slideout-transition': transition,
-					'c-slideout-transition-in': transition && open,
-					'c-slideout-transition-out': transition && !open,
-					'sidebar-dark': displayType === 'dark',
-					'sidebar-light': displayType === 'light',
-				})}
-				onTransitionEnd={() => setTransition(false)}
-				ref={ref}
-				tabIndex={-1}
 				{...otherProps}
+				className={classnames(
+					'sidebar c-slideout-active c-slideout-show',
+					className,
+					{
+						'sidebar-dark': displayType === 'dark',
+						'sidebar-light': displayType === 'light',
+					}
+				)}
+				ref={ref}
+				style={{
+					[direction]: '-360px',
+				}}
+				tabIndex={-1}
 			>
 				<SidePanelContext.Provider
 					value={{onOpenChange: setOpen, open}}
