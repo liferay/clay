@@ -8,6 +8,7 @@ import {createContext, useContext} from 'react';
 type Context = {
 	onOpenChange: (open: boolean) => void;
 	open: boolean;
+	titleId: string;
 };
 
 export const SidePanelContext = createContext<Context | null>(null);
