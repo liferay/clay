@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Keys, useControlledState} from '@clayui/shared';
+import {Keys, useControlledState, useId} from '@clayui/shared';
 import classnames from 'classnames';
 import {animate} from 'motion/mini';
 import React, {useEffect, useLayoutEffect, useRef} from 'react';
@@ -88,6 +88,8 @@ export type Props = {
 } & (UncontrolledState | ControlledState);
 
 export function SidePanel({
+	'aria-label': ariaLabel,
+	'aria-labelledby': ariaLabelledby,
 	as: As = 'aside',
 	children,
 	className,
@@ -176,6 +178,8 @@ export function SidePanel({
 		}
 	}, [open]);
 
+	const titleId = useId();
+
 	return (
 		<div
 			className={classnames(
@@ -188,6 +192,10 @@ export function SidePanel({
 		>
 			<As
 				{...otherProps}
+				aria-label={ariaLabel}
+				aria-labelledby={
+					!ariaLabelledby && !ariaLabel ? titleId : ariaLabelledby
+				}
 				className={classnames(
 					'sidebar c-slideout-active c-slideout-show',
 					className,
@@ -203,7 +211,7 @@ export function SidePanel({
 				tabIndex={-1}
 			>
 				<SidePanelContext.Provider
-					value={{onOpenChange: setOpen, open}}
+					value={{onOpenChange: setOpen, open, titleId}}
 				>
 					{children}
 				</SidePanelContext.Provider>

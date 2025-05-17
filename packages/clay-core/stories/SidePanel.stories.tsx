@@ -7,7 +7,7 @@ import Button from '@clayui/button';
 import {useId} from '@clayui/shared';
 import React, {useState} from 'react';
 
-import {Body, Footer, Header, SidePanel} from '../src/side-panel';
+import {Body, Footer, Header, SidePanel, Title} from '../src/side-panel';
 
 export default {
 	title: 'Design System/Components/SidePanel',
@@ -29,7 +29,7 @@ export const Default = () => {
 
 			<SidePanel id={sidePanelId} onOpenChange={setOpen} open={open}>
 				<Header>
-					<div className="component-title">Default Header</div>
+					<Title>Title</Title>
 				</Header>
 				<Body>Body</Body>
 				<Footer>
