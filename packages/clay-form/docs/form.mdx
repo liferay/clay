@@ -41,6 +41,53 @@ export default function App() {
 }
 ```
 
+## Inline Text Input
+
+A text input that grows along with its content.
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Form, {ClayInput} from '@clayui/form';
+import React, {useState} from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Form>
+					<Form.Group>
+						<label htmlFor="inlineTextInput1">
+							Inline Text Input with Label
+						</label>
+						<ClayInput.InlineText
+							id="inlineTextInput1"
+							placeholder="Placeholder"
+						/>
+					</Form.Group>
+					<Form.Group>
+						<label htmlFor="inlineTextInput1">Readonly</label>
+						<ClayInput.InlineText
+							id="inlineTextInput2"
+							placeholder="Placeholder"
+							readonly={true}
+							value="This is readonly text in the input."
+						/>
+					</Form.Group>
+					<Form.Group>
+						<ClayInput.InlineText
+							id="inlineTextInput3"
+							placeholder="Untitled Case Study"
+						/>
+					</Form.Group>
+				</Form>
+			</div>
+		</Provider>
+	);
+}
+```
+
 ## Validation
 
 `.has-error`, `.has-success` and `.has-warning` classes are used in `ClayForm.Group` to identifier validation state of the form group items.
