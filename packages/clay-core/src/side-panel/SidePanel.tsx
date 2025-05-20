@@ -8,6 +8,9 @@ import classnames from 'classnames';
 import {animate} from 'motion/mini';
 import React, {useEffect, useLayoutEffect, useRef} from 'react';
 
+import {Body} from './Body';
+import {Footer} from './Footer';
+import {Header, Title} from './Header';
 import {SidePanelContext} from './context';
 
 type ControlledState = {
@@ -219,3 +222,8 @@ export function SidePanel({
 		</div>
 	);
 }
+
+SidePanel.Header = Header;
+SidePanel.Title = Title;
+SidePanel.Body = Body;
+SidePanel.Footer = Footer;
