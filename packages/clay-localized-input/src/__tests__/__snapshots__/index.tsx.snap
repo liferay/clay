@@ -2,61 +2,57 @@
 
 exports[`ClayLocalizedInput renders 1`] = `
 <div>
-  <div
-    class="form-group"
+  <label
+    for="locale1"
   >
-    <label
-      for="locale1"
-    >
-      Check for translations
-    </label>
+    Check for translations
+  </label>
+  <div
+    class="input-group"
+  >
     <div
-      class="input-group"
+      class="input-group-item"
+    >
+      <input
+        class="form-control"
+        id="locale1"
+        placeholder="Text to translate..."
+        type="text"
+        value="Apple"
+      />
+    </div>
+    <div
+      class="input-group-item input-group-item-shrink"
     >
       <div
-        class="input-group-item"
+        class="dropdown"
       >
-        <input
-          class="form-control"
-          id="locale1"
-          placeholder="Text to translate..."
-          type="text"
-          value="Apple"
-        />
-      </div>
-      <div
-        class="input-group-item input-group-item-shrink"
-      >
-        <div
-          class="dropdown"
+        <button
+          aria-controls="clay-dropdown-menu-1"
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="dropdown-toggle btn btn-monospaced btn-secondary"
+          title="Open Localizations"
+          type="button"
         >
-          <button
-            aria-controls="clay-dropdown-menu-1"
-            aria-expanded="false"
-            aria-haspopup="true"
-            class="dropdown-toggle btn btn-monospaced btn-secondary"
-            title="Open Localizations"
-            type="button"
+          <span
+            class="inline-item"
           >
-            <span
-              class="inline-item"
+            <svg
+              class="lexicon-icon lexicon-icon-en-us"
+              role="presentation"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-en-us"
-                role="presentation"
-              >
-                <use
-                  href="/path/to/svg#en-us"
-                />
-              </svg>
-            </span>
-            <span
-              class="btn-section"
-            >
-              en-US
-            </span>
-          </button>
-        </div>
+              <use
+                href="/path/to/svg#en-us"
+              />
+            </svg>
+          </span>
+          <span
+            class="btn-section"
+          >
+            en-US
+          </span>
+        </button>
       </div>
     </div>
   </div>
@@ -65,70 +61,66 @@ exports[`ClayLocalizedInput renders 1`] = `
 
 exports[`ClayLocalizedInput renders with prepend content and result formatter 1`] = `
 <div>
-  <div
-    class="form-group"
+  <label
+    for="locale1"
   >
-    <label
-      for="locale1"
-    >
-      Check for translations
-    </label>
+    Check for translations
+  </label>
+  <div
+    class="input-group"
+  >
     <div
-      class="input-group"
+      class="input-group-item input-group-item-shrink input-group-prepend"
     >
       <div
-        class="input-group-item input-group-item-shrink input-group-prepend"
+        class="input-group-text"
       >
-        <div
-          class="input-group-text"
-        >
-          /home/
-        </div>
+        /home/
       </div>
+    </div>
+    <div
+      class="input-group-item input-group-append"
+    >
+      <input
+        class="form-control"
+        id="locale1"
+        placeholder="Text to translate..."
+        type="text"
+        value="Apple"
+      />
+    </div>
+    <div
+      class="input-group-item input-group-item-shrink"
+    >
       <div
-        class="input-group-item input-group-append"
+        class="dropdown"
       >
-        <input
-          class="form-control"
-          id="locale1"
-          placeholder="Text to translate..."
-          type="text"
-          value="Apple"
-        />
-      </div>
-      <div
-        class="input-group-item input-group-item-shrink"
-      >
-        <div
-          class="dropdown"
+        <button
+          aria-controls="clay-dropdown-menu-2"
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="dropdown-toggle btn btn-monospaced btn-secondary"
+          title="Open Localizations"
+          type="button"
         >
-          <button
-            aria-controls="clay-dropdown-menu-2"
-            aria-expanded="false"
-            aria-haspopup="true"
-            class="dropdown-toggle btn btn-monospaced btn-secondary"
-            title="Open Localizations"
-            type="button"
+          <span
+            class="inline-item"
           >
-            <span
-              class="inline-item"
+            <svg
+              class="lexicon-icon lexicon-icon-en-us"
+              role="presentation"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-en-us"
-                role="presentation"
-              >
-                <use
-                  href="/path/to/svg#en-us"
-                />
-              </svg>
-            </span>
-            <span
-              class="btn-section"
-            >
-              en-US
-            </span>
-          </button>
-        </div>
+              <use
+                href="/path/to/svg#en-us"
+              />
+            </svg>
+          </span>
+          <span
+            class="btn-section"
+          >
+            en-US
+          </span>
+        </button>
       </div>
     </div>
   </div>
