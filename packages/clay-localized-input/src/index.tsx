@@ -112,7 +112,7 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 		const defaultLanguage = locales[0]!;
 
 		return (
-			<ClayForm.Group>
+			<>
 				{label && <label htmlFor={id}>{label}</label>}
 
 				{helpText && <ClayForm.Text>{helpText}</ClayForm.Text>}
@@ -231,7 +231,7 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 						{resultFormatter(translations[defaultLanguage.label]!)}
 					</ClayForm.Text>
 				)}
-			</ClayForm.Group>
+			</>
 		);
 	}
 );
