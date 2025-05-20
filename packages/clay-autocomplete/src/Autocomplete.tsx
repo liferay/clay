@@ -470,7 +470,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 	// all components.
 	useEffect(() => {
 		if (active && isLoading) {
-			Announcer.announce(messages!.infiniteScrollingLoading);
+			Announcer.announce(messages!.infiniteScrollingLoading!);
 
 			return () => {
 				Announcer.announce(
