@@ -200,27 +200,27 @@ const InlineText = React.forwardRef<HTMLDivElement, IInlineTextProps>(
 		{
 			children,
 			className,
-			defaultInputValue,
-			id,
-			inputValue: externalInputValue,
-			onInputValueChange,
+			defaultValue,
+			onValueChange,
 			placeholder,
-			readOnly,
 			spritemap,
+			value: externalValue,
 			...otherProps
 		}: IInlineTextProps,
 		ref: React.Ref<HTMLDivElement>
 	) => {
 		const inputRef = React.useRef<HTMLSpanElement>(null);
 
-		const [inputValue = '', setInputValue] = useControlledState({
-			defaultName: 'defaultInputValue',
-			defaultValue: defaultInputValue,
-			handleName: 'onInputValueChange',
-			name: 'inputValue',
-			onChange: onInputValueChange,
-			value: externalInputValue,
+		const [value = '', setValue] = useControlledState({
+			defaultName: 'defaultValue',
+			defaultValue: defaultValue,
+			handleName: 'onValueChange',
+			name: 'value',
+			onChange: onValueChange,
+			value: externalValue,
 		});
+
+		const initialValue = value;
 
 		return (
 			<div
@@ -229,22 +229,22 @@ const InlineText = React.forwardRef<HTMLDivElement, IInlineTextProps>(
 			>
 				<div className={classNames('form-control', className)}>
 					<Input
-						aria-hidden
 						className="form-control-hidden"
-						id={id}
-						onFocus={() => {
+						onFocus={(event) => {
 							inputRef.current?.focus();
 						}}
-						readOnly
 						type="text"
-						value={inputValue}
+						value={value}
+						{...otherProps}
 					/>
 					<span
 						className="form-control-inset"
 						// @ts-ignore
-						contentEditable={readOnly ? false : 'plaintext-only'}
+						contentEditable={
+							otherProps.readonly ? false : 'plaintext-only'
+						}
 						onBlur={(event) => {
-							if (inputValue.trim() === '') {
+							if (value.trim() === '') {
 								const input = event.target as HTMLElement;
 
 								input.innerHTML = '';
@@ -253,13 +253,15 @@ const InlineText = React.forwardRef<HTMLDivElement, IInlineTextProps>(
 						onInput={(event) => {
 							const input = event.target as HTMLElement;
 
-							setInputValue(input.innerText);
+							setValue(input.innerText);
 						}}
 						placeholder={placeholder}
 						ref={inputRef}
 						role="textbox"
-						{...otherProps}
-					/>
+						suppressContentEditableWarning={true}
+					>
+						{defaultValue}
+					</span>
 					<span className="form-control-indicator form-control-item">
 						<ClayIcon spritemap={spritemap} symbol="pencil" />
 					</span>

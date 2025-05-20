@@ -99,9 +99,12 @@ export const InlineText = (args: any) => (
 		>
 			<label htmlFor="inlineText">Inline Text Example</label>
 			<ClayInput.InlineText
+				defaultValue="Initial Value"
 				id="inlineText"
-				placeholder="Untitled Case Study"
-				readOnly={args.readOnly}
+				name="inlineText"
+				placeholder="Placeholder Text"
+				readonly={args.readonly}
+				required
 			/>
 		</ClayForm.Group>
 	</div>
@@ -111,5 +114,5 @@ InlineText.args = {
 	hasError: false,
 	hasSuccess: false,
 	hasWarning: false,
-	readOnly: false,
+	readonly: false,
 };
