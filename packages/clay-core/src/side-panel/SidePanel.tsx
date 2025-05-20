@@ -150,25 +150,31 @@ export function SidePanel({
 			document.addEventListener('keydown', onKeyDown, true);
 
 			return () => {
-				// Remove Side Panel content from DOM focus management
-				ref.current?.setAttribute('inert', '');
-
 				document.removeEventListener('keydown', onKeyDown, true);
 			};
+		} else {
+			// Remove Side Panel content from DOM focus management
+			ref.current?.setAttribute('inert', '');
 		}
 	}, [open]);
 
 	useLayoutEffect(() => {
 		const performSlideout = (position: string | number) => {
 			if (ref.current) {
-				animate(
-					ref.current,
-					{[direction]: position},
-					{
-						duration: 0.3,
-						ease: 'easeInOut',
-					}
-				);
+				// Only use animate in the browser environment
+				if ('animate' in ref.current) {
+					animate(
+						ref.current,
+						{[direction]: position},
+						{
+							duration: 0.3,
+							ease: 'easeInOut',
+						}
+					);
+				} else {
+					// @ts-ignore
+					(ref.current as HTMLDivElement).style[direction] = position;
+				}
 			}
 		};
 

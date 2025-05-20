@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidePanel basic rendering render basic content 1`] = `
+<div>
+  <div
+    class="c-slideout c-slideout-fixed c-slideout-shown c-slideout-end"
+  >
+    <aside
+      aria-labelledby="clay-id-1"
+      class="sidebar c-slideout-active c-slideout-show sidebar-light"
+      id="sidepanel"
+      inert=""
+      style="right: -360px;"
+      tabindex="-1"
+    >
+      <div
+        class="sidebar-header"
+      >
+        <div
+          class="autofit-row sidebar-section"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <span
+              class="component-title"
+              id="clay-id-1"
+            >
+              Title
+            </span>
+          </div>
+          <div
+            class="autofit-col"
+          >
+            <button
+              aria-label="Close"
+              class="close"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  href="icons.svg#times"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sidebar-body"
+      >
+        Body
+      </div>
+      <div
+        class="sidebar-footer"
+      >
+        Footer
+      </div>
+    </aside>
+  </div>
+</div>
+`;
+
+exports[`SidePanel basic rendering render component with open state 1`] = `
+<div>
+  <div
+    class="c-slideout c-slideout-fixed c-slideout-shown c-slideout-end"
+  >
+    <aside
+      aria-labelledby="clay-id-2"
+      class="sidebar c-slideout-active c-slideout-show sidebar-light"
+      id="sidepanel"
+      style="right: 0px;"
+      tabindex="-1"
+    >
+      <div
+        class="sidebar-header"
+      >
+        <div
+          class="autofit-row sidebar-section"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <span
+              class="component-title"
+              id="clay-id-2"
+            >
+              Title
+            </span>
+          </div>
+          <div
+            class="autofit-col"
+          >
+            <button
+              aria-label="Close"
+              class="close"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  href="icons.svg#times"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sidebar-body"
+      >
+        Body
+      </div>
+      <div
+        class="sidebar-footer"
+      >
+        Footer
+      </div>
+    </aside>
+  </div>
+</div>
+`;
+
+exports[`SidePanel basic rendering render with custom aria-label 1`] = `
+<div>
+  <div
+    class="c-slideout c-slideout-fixed c-slideout-shown c-slideout-end"
+  >
+    <aside
+      aria-label="Custom Title"
+      class="sidebar c-slideout-active c-slideout-show sidebar-light"
+      id="sidepanel"
+      inert=""
+      style="right: -360px;"
+      tabindex="-1"
+    >
+      <div
+        class="sidebar-header"
+      >
+        <div
+          class="autofit-row sidebar-section"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <span
+              class="component-title"
+              id="clay-id-3"
+            >
+              Title
+            </span>
+          </div>
+          <div
+            class="autofit-col"
+          >
+            <button
+              aria-label="Close"
+              class="close"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  href="icons.svg#times"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sidebar-body"
+      >
+        Body
+      </div>
+      <div
+        class="sidebar-footer"
+      >
+        Footer
+      </div>
+    </aside>
+  </div>
+</div>
+`;
