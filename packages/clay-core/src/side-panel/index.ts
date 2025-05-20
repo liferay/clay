@@ -4,7 +4,4 @@
  */
 
 export {SidePanel} from './SidePanel';
-export {Body} from './Body';
-export {Footer} from './Footer';
-export {Header, Title} from './Header';
 export type {Props as SidePanelProps} from './SidePanel';
