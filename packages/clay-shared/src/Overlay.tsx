@@ -114,8 +114,11 @@ export function Overlay({
 
 	useInteractOutside({
 		isDisabled: isOpen ? !isCloseOnInteractOutside : true,
-		onInteract: () => {
-			onHide('blur');
+		onInteract: (event) => {
+			// @ts-ignore
+			if (event.button === 0) {
+				onHide('blur');
+			}
 		},
 		onInteractStart: (event) => {
 			if (overlayStack[overlayStack.length - 1] === menuRef) {
