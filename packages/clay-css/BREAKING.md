@@ -9,3 +9,4 @@
 -   Icon share-alt.svg is deprecated as of v3.136.0 use share.svg instead
 -   Icon third-party.svg is deprecated as of v3.136.0 and will be removed with no replacement
 -   Icon send.svg is deprecated as of v3.136.0 and will be removed with no replacement
+-   Icon devices.svg is deprecated as of v3.136.0 use mobile-devices instead
