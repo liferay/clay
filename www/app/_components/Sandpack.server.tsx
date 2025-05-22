@@ -98,12 +98,7 @@ ReactDOM.render(
 				<SandpackPreview />
 			</div>
 			<SandpackLayout>
-				<SandpackCodeEditor
-					showLineNumbers
-					showReadOnly={false}
-					showTabs={false}
-					readOnly
-				/>
+				<SandpackCodeEditor showLineNumbers showTabs={false} />
 			</SandpackLayout>
 		</SandpackProvider>
 	);
