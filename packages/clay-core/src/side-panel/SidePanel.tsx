@@ -51,7 +51,7 @@ export type Props = {
 	 * contains primary actions like important forms or sidebar is the
 	 * only important content.
 	 */
-	as?: 'aside' | 'nav' | 'section';
+	as?: 'aside' | 'div' | 'nav' | 'section';
 
 	/**
 	 * Sets the CSS className for the component.
@@ -94,7 +94,7 @@ export type Props = {
 export function SidePanel({
 	'aria-label': ariaLabel,
 	'aria-labelledby': ariaLabelledby,
-	as: As = 'aside',
+	as: As = 'div',
 	children,
 	className,
 	defaultOpen,
