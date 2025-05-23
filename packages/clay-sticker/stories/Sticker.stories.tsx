@@ -80,21 +80,43 @@ export const Shape = () => (
 
 export const Size = () => (
 	<div>
-		<ClaySticker displayType="light" size="sm">
+		<ClaySticker className="mr-1" displayType="dark" size="xs">
 			<ClayIcon symbol="user" />
 		</ClaySticker>
 
-		<ClaySticker>
+		<ClaySticker className="mr-1" displayType="light" size="sm">
 			<ClayIcon symbol="user" />
 		</ClaySticker>
 
-		<ClaySticker displayType="success" size="lg">
+		<ClaySticker className="mr-1">
 			<ClayIcon symbol="user" />
 		</ClaySticker>
 
-		<ClaySticker displayType="danger" size="xl">
+		<ClaySticker className="mr-1" displayType="success" size="lg">
 			<ClayIcon symbol="user" />
 		</ClaySticker>
+
+		<ClaySticker className="mr-1" displayType="danger" size="xl">
+			<ClayIcon symbol="user" />
+		</ClaySticker>
+
+		<div className="mt-3">
+			<ClaySticker className="mr-1" displayType="outline-0" size="xs">
+				S
+			</ClaySticker>
+			<ClaySticker className="mr-1" displayType="outline-1" size="sm">
+				M
+			</ClaySticker>
+			<ClaySticker className="mr-1" displayType="outline-2">
+				C
+			</ClaySticker>
+			<ClaySticker className="mr-1" displayType="outline-3" size="lg">
+				M
+			</ClaySticker>
+			<ClaySticker className="mr-1" displayType="outline-4" size="xl">
+				S
+			</ClaySticker>
+		</div>
 	</div>
 );
 

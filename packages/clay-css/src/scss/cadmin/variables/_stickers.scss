@@ -95,6 +95,12 @@ $cadmin-sticker-xl: map-deep-merge(
 $cadmin-sticker-sizes: () !default;
 $cadmin-sticker-sizes: map-deep-merge(
 	(
+		sticker-xs: (
+			font-size: 0.5rem,
+			height: 1rem,
+			line-height: 1rem,
+			width: 1rem,
+		),
 		sticker-sm: $cadmin-sticker-sm,
 		sticker-lg: $cadmin-sticker-lg,
 		sticker-xl: $cadmin-sticker-xl,
