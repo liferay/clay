@@ -205,13 +205,10 @@ export function SidePanel({
 						containerRef.current.classList.add(
 							'c-slideout-transition-in'
 						);
-						containerRef.current.setAttribute(
-							'style',
-							`${
-								direction === 'right'
-									? 'padding-right'
-									: 'padding-left'
-							}: 320px`
+						containerRef.current.classList.add(
+							`c-slideout-push-${
+								direction === 'left' ? 'start' : 'end'
+							}`
 						);
 					}
 				}}
@@ -234,13 +231,32 @@ export function SidePanel({
 				}}
 				onExit={() => {
 					if (containerRef?.current) {
-						containerRef.current.setAttribute(
-							'style',
-							`${
-								direction === 'right'
-									? 'padding-right'
-									: 'padding-left'
-							}: 0px`
+						containerRef.current.classList.add(
+							'c-slideout-transition'
+						);
+						containerRef.current.classList.add(
+							'c-slideout-transition-out'
+						);
+						containerRef.current.classList.remove(
+							`c-slideout-push-${
+								direction === 'left' ? 'start' : 'end'
+							}`
+						);
+					}
+				}}
+				onExited={() => {
+					if (slideoutRef.current) {
+						slideoutRef.current.classList.remove(
+							'c-slideout-shown'
+						);
+					}
+
+					if (containerRef?.current) {
+						containerRef.current.classList.remove(
+							'c-slideout-transition'
+						);
+						containerRef.current.classList.remove(
+							'c-slideout-transition-out'
 						);
 					}
 				}}
