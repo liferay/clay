@@ -11,6 +11,7 @@ $cadmin-c-slideout-tbar-stacked-min-width-mobile: 40px !default;
 $cadmin-c-slideout-transition-in: () !default;
 $cadmin-c-slideout-transition-in: map-merge(
 	(
+		overflow: hidden,
 		transition: all 0.3s ease-in-out,
 	),
 	$cadmin-c-slideout-transition-in
@@ -19,6 +20,7 @@ $cadmin-c-slideout-transition-in: map-merge(
 $cadmin-c-slideout-transition-out: () !default;
 $cadmin-c-slideout-transition-out: map-merge(
 	(
+		overflow: hidden,
 		transition: all 0.2s ease-in,
 	),
 	$cadmin-c-slideout-transition-out
@@ -42,6 +44,22 @@ $cadmin-c-slideout-fixed: map-merge(
 	$cadmin-c-slideout-fixed
 );
 
+$cadmin-c-slideout-push-start: () !default;
+$cadmin-c-slideout-push-start: map-deep-merge(
+	(
+		padding-left: $cadmin-c-slideout-sidebar-width,
+	),
+	$cadmin-c-slideout-push-start
+);
+
+$cadmin-c-slideout-push-end: () !default;
+$cadmin-c-slideout-push-end: map-deep-merge(
+	(
+		padding-right: $cadmin-c-slideout-sidebar-width,
+	),
+	$cadmin-c-slideout-push-end
+);
+
 // C Slideout Base
 
 $cadmin-c-slideout: () !default;
@@ -60,11 +78,16 @@ $cadmin-c-slideout: map-deep-merge(
 			position: relative,
 			width: $cadmin-c-slideout-sidebar-width,
 		),
+		sidebar-body: (
+			flex-grow: 1,
+		),
 		sidebar-c-slideout-show: (
-			display: block,
+			display: flex,
+			flex-direction: column,
 		),
 		sidebar-c-slideout-transition: (
-			display: block,
+			display: flex,
+			flex-direction: column,
 			c-horizontal-resizer: (
 				display: none,
 			),

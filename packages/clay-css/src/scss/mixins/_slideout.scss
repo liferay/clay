@@ -60,6 +60,14 @@
 				}
 			}
 
+			$_sidebar-body: map-get($map, sidebar-body);
+
+			@if ($_sidebar-body) {
+				.sidebar-body {
+					@include clay-css($_sidebar-body);
+				}
+			}
+
 			$_sidebar-c-slideout-show: map-get($map, sidebar-c-slideout-show);
 
 			@if ($_sidebar-c-slideout-show) {
