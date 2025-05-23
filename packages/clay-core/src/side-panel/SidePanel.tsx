@@ -10,7 +10,8 @@ import React, {useEffect, useLayoutEffect, useRef} from 'react';
 
 import {Body} from './Body';
 import {Footer} from './Footer';
-import {Header, Title} from './Header';
+import {Header} from './Header';
+import {Title} from './Title';
 import {SidePanelContext} from './context';
 
 type ControlledState = {
