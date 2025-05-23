@@ -20,6 +20,22 @@
 
 .form-text {
 	@include clay-css($cadmin-form-text);
+
+	$_blockquote: map-get($cadmin-form-text, blockquote);
+
+	@if ($_blockquote) {
+		&.blockquote {
+			@include clay-css($_blockquote);
+
+			$_before: map-get($_blockquote, before);
+
+			@if ($_before) {
+				&::before {
+					@include clay-css($_before);
+				}
+			}
+		}
+	}
 }
 
 // Non HTML5 Form Validator

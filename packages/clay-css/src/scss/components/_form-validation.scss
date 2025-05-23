@@ -42,6 +42,22 @@
 
 .form-text {
 	@include clay-css($form-text);
+
+	$_blockquote: map-get($form-text, blockquote);
+
+	@if ($_blockquote) {
+		&.blockquote {
+			@include clay-css($_blockquote);
+
+			$_before: map-get($_blockquote, before);
+
+			@if ($_before) {
+				&::before {
+					@include clay-css($_before);
+				}
+			}
+		}
+	}
 }
 
 @if ($enable-bs4-deprecated) {
