@@ -6,66 +6,54 @@
 import React, {
 	forwardRef,
 	useCallback,
+	useEffect,
 	useImperativeHandle,
 	useState,
 } from 'react';
 import {createPortal} from 'react-dom';
+import warning from 'warning';
 
-import {useIsMounted} from '../hooks/useIsMounted';
 import {VisuallyHidden} from './VisuallyHidden';
+import {Announcer} from './store';
+
+import type {Log} from './store';
 
 export type AnnouncerAPI = {
 	announce: (message: string, assertiveness?: 'assertive' | 'polite') => void;
 };
 
-type Log = {
-	id: number;
-	message: string;
-	assertiveness: 'assertive' | 'polite';
-};
-
-const LIVEREGION_TIMEOUT_DELAY = 7000;
-
-let counter = 0;
-
-/**
- * TODO: LiveAnnouncer should be a singleton.
- */
 export const LiveAnnouncer = forwardRef<AnnouncerAPI>(function LiveAnnouncer(
 	_,
 	ref
 ) {
 	const [logs, setLogs] = useState<Array<Log>>([]);
-	const isMounted = useIsMounted();
 
+	const onLogChange = useCallback((logs: Array<Log>) => setLogs(logs), []);
+
+	useEffect(() => Announcer.subscribe(onLogChange), []);
+
+	/**
+	 * Use the Announcer store directly instead of the component API.
+	 * @example
+	 * import {Announcer} from '@clayui/core';
+	 * Announcer.announce('message', 'assertive');
+	 * @deprecated
+	 */
 	const announce = useCallback(
 		(
 			message: string,
 			assertiveness: 'assertive' | 'polite' = 'assertive'
 		) => {
-			setLogs((logs) => {
-				counter++;
+			warning(
+				false,
+				`Use the Announcer store directly instead of the component API.
 
-				return [
-					...logs,
-					{
-						assertiveness,
-						id: counter,
-						message,
-					},
-				];
-			});
+@example
+import {Announcer} from '@clayui/core';
+Announcer.announce('message', 'assertive');`
+			);
 
-			setTimeout(() => {
-				if (isMounted()) {
-					setLogs((logs) => {
-						const newLogs = [...logs];
-						newLogs.shift();
-
-						return newLogs;
-					});
-				}
-			}, LIVEREGION_TIMEOUT_DELAY);
+			Announcer.announce(message, assertiveness);
 		},
 		[]
 	);
