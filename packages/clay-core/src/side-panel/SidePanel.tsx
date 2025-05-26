@@ -6,7 +6,7 @@
 import {useProvider} from '@clayui/provider';
 import {Keys, useControlledState, useId} from '@clayui/shared';
 import classnames from 'classnames';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useLayoutEffect, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import {Body} from './Body';
@@ -142,6 +142,12 @@ export function SidePanel({
 			};
 		}
 	}, [open]);
+
+	useLayoutEffect(() => {
+		if (containerRef?.current) {
+			containerRef.current.classList.add('position-relative');
+		}
+	}, [containerRef?.current]);
 
 	useEffect(() => {
 		if (open) {
