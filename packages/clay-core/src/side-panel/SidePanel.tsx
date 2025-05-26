@@ -114,8 +114,8 @@ export function SidePanel({
 	triggerRef,
 	...otherProps
 }: Props) {
-	const sidePanelRef = useRef<HTMLElement | null>(null);
-	const slideoutRef = useRef<HTMLElement | null>(null);
+	const sidePanelRef = useRef<HTMLDivElement>(null);
+	const slideoutRef = useRef<HTMLDivElement>(null);
 
 	const {prefersReducedMotion} = useProvider();
 
@@ -130,8 +130,8 @@ export function SidePanel({
 
 	useEffect(() => {
 		if (open) {
-			// Saves the last element that has focus before moving to the sidepanel to
-			// regain focus when closing the sidepanel.
+			// Saves the last element that has focus before moving to the
+			// sidepanel to regain focus when closing the sidepanel.
 			const element =
 				(document.activeElement as HTMLElement | null) ||
 				triggerRef?.current ||
@@ -144,10 +144,8 @@ export function SidePanel({
 	}, [open]);
 
 	useLayoutEffect(() => {
-		if (containerRef?.current) {
-			containerRef.current.classList.add('position-relative');
-		}
-	}, [containerRef?.current]);
+		containerRef.current?.classList.add('position-relative');
+	}, [containerRef.current]);
 
 	useEffect(() => {
 		if (open) {
@@ -204,67 +202,44 @@ export function SidePanel({
 				}}
 				in={open}
 				onEnter={() => {
-					if (containerRef?.current) {
-						containerRef.current.classList.add(
-							'c-slideout-transition'
-						);
-						containerRef.current.classList.add(
-							'c-slideout-transition-in'
-						);
-						containerRef.current.classList.add(
-							`c-slideout-push-${
-								direction === 'left' ? 'start' : 'end'
-							}`
-						);
-					}
+					containerRef.current?.classList.add(
+						'c-slideout-transition',
+						'c-slideout-transition-in',
+						`c-slideout-push-${
+							direction === 'left' ? 'start' : 'end'
+						}`
+					);
 				}}
 				onEntered={() => {
-					if (slideoutRef.current) {
-						slideoutRef.current.classList.add('c-slideout-shown');
-					}
+					slideoutRef.current?.classList.add('c-slideout-shown');
 
-					if (containerRef.current) {
-						containerRef.current.classList.remove(
-							'c-slideout-transition'
-						);
-						containerRef.current.classList.remove(
-							'c-slideout-transition-in'
-						);
-					}
+					containerRef.current?.classList.remove(
+						'c-slideout-transition',
+						'c-slideout-transition-in'
+					);
 
 					// Move focus to sidepanel when opening
 					sidePanelRef.current?.focus({preventScroll: true});
 				}}
 				onExit={() => {
-					if (containerRef?.current) {
-						containerRef.current.classList.add(
-							'c-slideout-transition'
-						);
-						containerRef.current.classList.add(
-							'c-slideout-transition-out'
-						);
-						containerRef.current.classList.remove(
-							`c-slideout-push-${
-								direction === 'left' ? 'start' : 'end'
-							}`
-						);
-					}
+					containerRef.current?.classList.add(
+						'c-slideout-transition',
+						'c-slideout-transition-out'
+					);
+
+					containerRef.current?.classList.remove(
+						`c-slideout-push-${
+							direction === 'left' ? 'start' : 'end'
+						}`
+					);
 				}}
 				onExited={() => {
-					if (slideoutRef.current) {
-						slideoutRef.current.classList.remove(
-							'c-slideout-shown'
-						);
-					}
+					slideoutRef.current?.classList.remove('c-slideout-shown');
 
-					if (containerRef?.current) {
-						containerRef.current.classList.remove(
-							'c-slideout-transition'
-						);
-						containerRef.current.classList.remove(
-							'c-slideout-transition-out'
-						);
-					}
+					containerRef.current?.classList.remove(
+						'c-slideout-transition',
+						'c-slideout-transition-out'
+					);
 				}}
 				timeout={prefersReducedMotion ? 0 : open ? 200 : 300}
 			>
