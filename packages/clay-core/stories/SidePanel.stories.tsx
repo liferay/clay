@@ -5,7 +5,7 @@
 
 import Button from '@clayui/button';
 import {useId} from '@clayui/shared';
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 
 import {SidePanel} from '../src/side-panel';
 
@@ -17,8 +17,10 @@ export const Default = () => {
 	const [open, setOpen] = useState(false);
 	const sidePanelId = useId();
 
+	const ref = useRef<HTMLElement | null>(null);
+
 	return (
-		<>
+		<div className="position-relative" ref={ref}>
 			<Button
 				aria-controls={sidePanelId}
 				aria-pressed={open}
@@ -27,7 +29,27 @@ export const Default = () => {
 				Open
 			</Button>
 
-			<SidePanel id={sidePanelId} onOpenChange={setOpen} open={open}>
+			{`Viennese flavour cup eu, percolator froth ristretto mazagran
+			caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+			spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+			caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+			spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+			caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+			spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+			caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+			spoon acerbic to go macchiato strong.`}
+			<br />
+			<img
+				alt="cat"
+				src="https://cataas.com/cat/says/it has side panel"
+			/>
+
+			<SidePanel
+				containerRef={ref}
+				id={sidePanelId}
+				onOpenChange={setOpen}
+				open={open}
+			>
 				<SidePanel.Header>
 					<SidePanel.Title>Title</SidePanel.Title>
 				</SidePanel.Header>
@@ -39,6 +61,6 @@ export const Default = () => {
 					</Button.Group>
 				</SidePanel.Footer>
 			</SidePanel>
-		</>
+		</div>
 	);
 };

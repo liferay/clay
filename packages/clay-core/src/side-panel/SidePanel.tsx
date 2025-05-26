@@ -3,10 +3,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useProvider} from '@clayui/provider';
 import {Keys, useControlledState, useId} from '@clayui/shared';
 import classnames from 'classnames';
-import {animate} from 'motion/mini';
-import React, {useEffect, useLayoutEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
+import {CSSTransition} from 'react-transition-group';
 
 import {Body} from './Body';
 import {Footer} from './Footer';
@@ -64,6 +65,13 @@ export type Props = {
 	children: React.ReactNode;
 
 	/**
+	 * Element reference to the container of the SidePanel and primary content.
+	 * NOTE: The containerRef is needed to properly handle layout and
+	 * transitions of the SidePanel.
+	 */
+	containerRef: React.RefObject<HTMLElement>;
+
+	/**
 	 * Property to set the default value (uncontrolled).
 	 */
 	defaultOpen?: boolean;
@@ -97,6 +105,7 @@ export function SidePanel({
 	as: As = 'div',
 	children,
 	className,
+	containerRef,
 	defaultOpen,
 	direction = 'right',
 	displayType = 'light',
@@ -105,7 +114,10 @@ export function SidePanel({
 	triggerRef,
 	...otherProps
 }: Props) {
-	const ref = useRef<HTMLElement | null>(null);
+	const sidePanelRef = useRef<HTMLElement | null>(null);
+	const slideoutRef = useRef<HTMLElement | null>(null);
+
+	const {prefersReducedMotion} = useProvider();
 
 	const [open, setOpen] = useControlledState({
 		defaultName: 'defaultOpen',
@@ -143,10 +155,7 @@ export function SidePanel({
 			};
 
 			// Add Side Panel content to DOM focus management
-			ref.current?.removeAttribute('inert');
-
-			// Move focus to sidepanel when opening
-			ref.current?.focus();
+			sidePanelRef.current?.removeAttribute('inert');
 
 			document.addEventListener('keydown', onKeyDown, true);
 
@@ -155,36 +164,7 @@ export function SidePanel({
 			};
 		} else {
 			// Remove Side Panel content from DOM focus management
-			ref.current?.setAttribute('inert', '');
-		}
-	}, [open]);
-
-	useLayoutEffect(() => {
-		const performSlideout = (position: string | number) => {
-			if (ref.current) {
-				// Only use animate in the browser environment
-				if ('animate' in ref.current) {
-					animate(
-						ref.current,
-						{[direction]: position},
-						{
-							duration: 0.3,
-							ease: 'easeInOut',
-						}
-					);
-				} else {
-					// @ts-ignore
-					(ref.current as HTMLDivElement).style[direction] = position;
-				}
-			}
-		};
-
-		if (open && ref.current) {
-			performSlideout(0);
-
-			return () => {
-				performSlideout('-360px');
-			};
+			sidePanelRef.current?.setAttribute('inert', '');
 		}
 	}, [open]);
 
@@ -193,39 +173,95 @@ export function SidePanel({
 	return (
 		<div
 			className={classnames(
-				'c-slideout c-slideout-fixed c-slideout-shown',
+				'c-slideout c-slideout-absolute c-slideout-push',
 				{
 					'c-slideout-end': direction === 'right',
 					'c-slideout-start': direction === 'left',
 				}
 			)}
+			ref={slideoutRef}
 		>
-			<As
-				{...otherProps}
-				aria-label={ariaLabel}
-				aria-labelledby={
-					!ariaLabelledby && !ariaLabel ? titleId : ariaLabelledby
-				}
-				className={classnames(
-					'sidebar c-slideout-active c-slideout-show',
-					className,
-					{
-						'sidebar-dark': displayType === 'dark',
-						'sidebar-light': displayType === 'light',
-					}
-				)}
-				ref={ref}
-				style={{
-					[direction]: '-360px',
+			<CSSTransition
+				className={classnames('sidebar', className, {
+					'sidebar-dark': displayType === 'dark',
+					'sidebar-light': displayType === 'light',
+				})}
+				classNames={{
+					appear: 'c-slideout-transition c-slideout-transition-in',
+					appearActive: 'c-slideout-show',
+					appearDone: 'c-slideout-show',
+					enter: 'c-slideout-transition c-slideout-transition-in',
+					enterActive: 'c-slideout-show',
+					enterDone: 'c-slideout-show',
+					exit: 'c-slideout-transition c-slideout-transition-out',
+					exitActive: '',
 				}}
-				tabIndex={-1}
+				in={open}
+				onEnter={() => {
+					if (containerRef?.current) {
+						containerRef.current.classList.add(
+							'c-slideout-transition'
+						);
+						containerRef.current.classList.add(
+							'c-slideout-transition-in'
+						);
+						containerRef.current.setAttribute(
+							'style',
+							`${
+								direction === 'right'
+									? 'padding-right'
+									: 'padding-left'
+							}: 320px`
+						);
+					}
+				}}
+				onEntered={() => {
+					if (slideoutRef.current) {
+						slideoutRef.current.classList.add('c-slideout-shown');
+					}
+
+					if (containerRef.current) {
+						containerRef.current.classList.remove(
+							'c-slideout-transition'
+						);
+						containerRef.current.classList.remove(
+							'c-slideout-transition-in'
+						);
+					}
+
+					// Move focus to sidepanel when opening
+					sidePanelRef.current?.focus();
+				}}
+				onExit={() => {
+					if (containerRef?.current) {
+						containerRef.current.setAttribute(
+							'style',
+							`${
+								direction === 'right'
+									? 'padding-right'
+									: 'padding-left'
+							}: 0px`
+						);
+					}
+				}}
+				timeout={prefersReducedMotion ? 0 : open ? 200 : 300}
 			>
-				<SidePanelContext.Provider
-					value={{onOpenChange: setOpen, open, titleId}}
+				<As
+					{...otherProps}
+					aria-label={ariaLabel}
+					aria-labelledby={
+						!ariaLabelledby && !ariaLabel ? titleId : ariaLabelledby
+					}
+					ref={sidePanelRef}
+					tabIndex={-1}
 				>
-					{children}
-				</SidePanelContext.Provider>
-			</As>
+					<SidePanelContext.Provider
+						value={{onOpenChange: setOpen, open, titleId}}
+					>
+						{children}
+					</SidePanelContext.Provider>
+				</As>
+			</CSSTransition>
 		</div>
 	);
 }
