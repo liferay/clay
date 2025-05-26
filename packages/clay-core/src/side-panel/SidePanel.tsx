@@ -227,7 +227,7 @@ export function SidePanel({
 					}
 
 					// Move focus to sidepanel when opening
-					sidePanelRef.current?.focus();
+					sidePanelRef.current?.focus({preventScroll: true});
 				}}
 				onExit={() => {
 					if (containerRef?.current) {
