@@ -1573,7 +1573,7 @@ export const iconsData = [
 		name: 'repository',
 	},
 	{
-		aliases: [''],
+		aliases: ['back', 'history', 'original', 'beginning'],
 		name: 'reset',
 	},
 	{
