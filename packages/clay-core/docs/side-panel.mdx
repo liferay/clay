@@ -1,0 +1,165 @@
+---
+title: 'SidePanel'
+description: 'Side Panels are vertical containers used to display additional information that supports the main content area or to edit specific content within the page.'
+packageNpm: '@clayui/core'
+packageStatus: 'Beta'
+packageUse: "import {SidePanel} from '@clayui/core';"
+storybookPath: 'design-system-components-sidepanel'
+packageTypes:
+    [
+        'clay-core/src/side-panel/SidePanel.tsx',
+        'clay-core/src/side-panel/Header.tsx',
+        'clay-core/src/side-panel/Title.tsx',
+        'clay-core/src/side-panel/Body.tsx',
+        'clay-core/src/side-panel/Footer.tsx',
+    ]
+---
+
+## Example
+
+```jsx preview
+import {SidePanel, Provider} from '@clayui/core';
+import Button from '@clayui/button';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	const [open, setOpen] = React.useState(false);
+
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Button
+					aria-controls="sidepanel-example"
+					aria-pressed={open}
+					onClick={() => setOpen(!open)}
+				>
+					Open
+				</Button>
+
+				<SidePanel
+					id="sidepanel-example"
+					onOpenChange={setOpen}
+					open={open}
+				>
+					<SidePanel.Header>
+						<SidePanel.Title>Title</SidePanel.Title>
+					</SidePanel.Header>
+					<SidePanel.Body>Body</SidePanel.Body>
+					<SidePanel.Footer>
+						<Button.Group spaced>
+							<Button>Primary</Button>
+							<Button displayType="secondary">Secondary</Button>
+						</Button.Group>
+					</SidePanel.Footer>
+				</SidePanel>
+			</div>
+		</Provider>
+	);
+}
+```
+
+## Introduction
+
+The Side Panel component provides a more easy and quick way for the users to consult or edit information without the need for deeper navigation.
+
+Side Panels can anchor to the left or right side of the screen. They can be collapsible or triggered by a button or a link. When activated, the Side Panel opens and the content of the page is readjusted. You can navigate through the Side Panel content using both mouse and keyboard.
+
+## Anatomy
+
+```jsx
+import {SidePanel} from '@clayui/core';
+
+<SidePanel>
+	<SidePanel.Header>
+		<SidePanel.Title />
+	</SidePanel.Header>
+	<SidePanel.Body />
+	<SidePanel.Footer />
+</SidePanel>;
+```
+
+## Content
+
+The SidePanel component follows a compositional API with subcomponents: Header, Title, Body, and Footer. Refer to the design specifications to configure each part according to your use case.
+
+### Header
+
+he `<SidePanel.Header />` subcomponent always renders the close button by default but leaves the left side of the header open for developer customization.
+
+The `<SidePanel.Title />` must always be used as a direct child of Header. It automatically configures accessibility attributes—such as setting the appropriate `aria-labelledby` relationship between the title and the panel.
+
+```jsx
+<SidePanel.Header>
+	<SidePanel.Title>Title</SidePanel.Title>
+</SidePanel.Header>
+```
+
+### Body and Footer
+
+The `<SidePanel.Body />` and `<SidePanel.Footer />` components are flexible containers that can render any content. However, you should follow design system guidelines and recommendations to ensure consistent layout and behavior across the application.
+
+## Open panel
+
+The SidePanel component requires the open state to be controlled, even though it defaults to an uncontrolled behavior.
+
+Opening the SidePanel can be triggered from any button or link in the DOM, so it’s your responsibility to ensure the trigger element meets accessibility standards. This includes adding appropriate attributes such as `aria-controls` and `aria-pressed` to the button:
+
+```jsx
+import {SidePanel} from '@clayui/core';
+import Button from '@clayui/button';
+
+export default function App() {
+	const [open, setOpen] = useState(false);
+
+	return (
+		<>
+			<Button
+				aria-controls="sidepanel-example"
+				aria-pressed={open}
+				onClick={() => setOpen(!open)}
+			>
+				Open
+			</Button>
+
+			<SidePanel
+				id="sidepanel-example"
+				onOpenChange={setOpen}
+				open={open}
+			/>
+		</>
+	);
+}
+```
+
+Make sure the `id` used in `aria-controls` matches the `id` of the `<SidePanel />` component to maintain a proper relationship between the trigger and the panel.
+
+## Direction
+
+Positioning the SidePanel on the right or left side is possible by setting the `direction` property.
+
+```jsx
+<SidePanel direction="left" />
+```
+
+## Accesibility
+
+The SidePanel component handles most accessibility rules OOTB, but in some cases, you may need to configure specific properties based on your use case.
+
+By default, SidePanel renders using the `<aside>` tag, but this may not be appropriate for all scenarios:
+
+-   ✅ Use `<aside>` when it’s suitable for collapsible sidebars:
+    -   Secondary navigation or filtering options (e.g., product filters on an e-commerce site).
+    -   Widgets or supplementary content (e.g., related articles in a blog).
+    -   Contextual or complementary information (e.g., author bios, ads, promotions).
+-   ⚠️ Avoid using `<aside>` when:
+    -   The content is critical for primary navigation (e.g., a main menu).
+    -   The sidebar includes primary user actions (e.g., key forms).
+    -   The sidebar is the main focus of the page (in this case, consider using `<nav>` or `<section>` instead).
+
+Once you determine the correct semantic tag for your use case, you can configure which HTML element the component should render by setting the `as` prop. For example:
+
+```jsx
+<SidePanel as="nav" />
+```

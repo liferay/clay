@@ -11,6 +11,7 @@ $c-slideout-tbar-stacked-min-width-mobile: 40px !default;
 $c-slideout-transition-in: () !default;
 $c-slideout-transition-in: map-merge(
 	(
+		overflow: hidden,
 		transition: all 0.3s ease-in-out,
 	),
 	$c-slideout-transition-in
@@ -19,6 +20,7 @@ $c-slideout-transition-in: map-merge(
 $c-slideout-transition-out: () !default;
 $c-slideout-transition-out: map-merge(
 	(
+		overflow: hidden,
 		transition: all 0.2s ease-in,
 	),
 	$c-slideout-transition-out
@@ -42,6 +44,22 @@ $c-slideout-fixed: map-merge(
 	$c-slideout-fixed
 );
 
+$c-slideout-push-start: () !default;
+$c-slideout-push-start: map-deep-merge(
+	(
+		padding-left: $c-slideout-sidebar-width,
+	),
+	$c-slideout-push-start
+);
+
+$c-slideout-push-end: () !default;
+$c-slideout-push-end: map-deep-merge(
+	(
+		padding-right: $c-slideout-sidebar-width,
+	),
+	$c-slideout-push-end
+);
+
 // C Slideout Base
 
 $c-slideout: () !default;
@@ -60,11 +78,16 @@ $c-slideout: map-deep-merge(
 			position: relative,
 			width: $c-slideout-sidebar-width,
 		),
+		sidebar-body: (
+			flex-grow: 1,
+		),
 		sidebar-c-slideout-show: (
-			display: block,
+			display: flex,
+			flex-direction: column,
 		),
 		sidebar-c-slideout-transition: (
-			display: block,
+			display: flex,
+			flex-direction: column,
 			c-horizontal-resizer: (
 				display: none,
 			),

@@ -14,6 +14,14 @@
 	@include clay-css($c-slideout-absolute);
 }
 
+.c-slideout-push-start {
+	@include clay-css($c-slideout-push-start);
+}
+
+.c-slideout-push-end {
+	@include clay-css($c-slideout-push-end);
+}
+
 .c-slideout {
 	@include clay-slideout-variant($c-slideout);
 
