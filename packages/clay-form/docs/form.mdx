@@ -116,6 +116,67 @@ export default function App() {
 }
 ```
 
+```jsx preview
+import {Provider} from '@clayui/core';
+import ClayForm from '@clayui/form';
+import LocalizedInput from '@clayui/localized-input';
+import React, {useState} from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	const locales = [
+		{
+			label: 'en-US',
+			symbol: 'en-us',
+		},
+		{
+			label: 'es-ES',
+			symbol: 'es-es',
+		},
+		{
+			label: 'fr-FR',
+			symbol: 'fr-fr',
+		},
+		{
+			label: 'hr-HR',
+			symbol: 'hr-hr',
+		},
+	];
+
+	const [selectedLocaleError, setSelectedLocaleError] = useState(locales[0]);
+	const [translationsError, setTranslationsError] = useState({
+		'en-US': 'Apple',
+		'es-ES': 'Manzana',
+	});
+
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<ClayForm.Group className="has-error">
+					<LocalizedInput
+						id="locale3"
+						label="Localized Input Error State"
+						locales={locales}
+						onSelectedLocaleChange={setSelectedLocaleError}
+						onTranslationsChange={setTranslationsError}
+						selectedLocale={selectedLocaleError}
+						translations={translationsError}
+					/>
+					<ClayForm.FeedbackGroup>
+						<ClayForm.Text>Clay Form Text</ClayForm.Text>
+						<ClayForm.FeedbackItem id="input-group-error">
+							<ClayForm.FeedbackIndicator symbol="exclamation-full" />
+							This is a description of the error!
+						</ClayForm.FeedbackItem>
+					</ClayForm.FeedbackGroup>
+				</ClayForm.Group>
+			</div>
+		</Provider>
+	);
+}
+```
+
 ## Group Caption
 
 Use `ClayForm.Text` for creating a caption on Form Groups.
