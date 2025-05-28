@@ -234,7 +234,7 @@ type RickandMorty = {
 };
 
 export const AsyncFilter = () => {
-	const [value, setValue] = useState('');
+	const [value, setValue] = useState('Magma-Q');
 
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
 		NetworkStatus.Unused
@@ -259,6 +259,7 @@ export const AsyncFilter = () => {
 						</label>
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
+							filterKey="name"
 							id="clay-autocomplete-1"
 							items={
 								(resource?.results as Array<RickandMorty>) ?? []
