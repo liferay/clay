@@ -293,6 +293,18 @@ $cadmin-sidebar-dark: map-deep-merge(
 	$cadmin-sidebar-dark
 );
 
+$cadmin-sidebar-c-slideout-start: () !default;
+$cadmin-sidebar-c-slideout-start: map-deep-merge(
+	(
+		'.sidebar-light': (
+			box-shadow: 0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+		),
+	),
+	$cadmin-sidebar-c-slideout-start
+);
+
+$cadmin-sidebar-c-slideout-end: () !default;
+
 $cadmin-sidebar-palette: () !default;
 $cadmin-sidebar-palette: map-deep-merge(
 	(

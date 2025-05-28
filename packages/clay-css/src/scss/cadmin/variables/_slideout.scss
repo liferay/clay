@@ -48,6 +48,11 @@ $cadmin-c-slideout-push-start: () !default;
 $cadmin-c-slideout-push-start: map-deep-merge(
 	(
 		padding-left: $cadmin-c-slideout-sidebar-width,
+		media-breakpoint-down: (
+			md: (
+				padding-left: 0,
+			),
+		),
 	),
 	$cadmin-c-slideout-push-start
 );
@@ -56,6 +61,11 @@ $cadmin-c-slideout-push-end: () !default;
 $cadmin-c-slideout-push-end: map-deep-merge(
 	(
 		padding-right: $cadmin-c-slideout-sidebar-width,
+		media-breakpoint-down: (
+			md: (
+				padding-right: 0,
+			),
+		),
 	),
 	$cadmin-c-slideout-push-end
 );
