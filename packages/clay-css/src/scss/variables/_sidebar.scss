@@ -82,10 +82,6 @@ $sidebar: map-deep-merge(
 		height: 100%,
 		overflow: auto,
 		-webkit-overflow-scrolling: touch,
-		focus: (
-			box-shadow: $component-focus-inset-box-shadow,
-			outline: 0,
-		),
 		sidebar-header: (
 			padding-bottom: $sidebar-padding-bottom,
 			padding-left: $sidebar-padding-left,
@@ -296,6 +292,10 @@ $sidebar-dark: map-deep-merge(
 	),
 	$sidebar-dark
 );
+
+$sidebar-c-slideout-start: () !default;
+
+$sidebar-c-slideout-end: () !default;
 
 $sidebar-palette: () !default;
 $sidebar-palette: map-deep-merge(

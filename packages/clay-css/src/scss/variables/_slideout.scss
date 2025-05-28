@@ -48,6 +48,11 @@ $c-slideout-push-start: () !default;
 $c-slideout-push-start: map-deep-merge(
 	(
 		padding-left: $c-slideout-sidebar-width,
+		media-breakpoint-down: (
+			md: (
+				padding-left: 0,
+			),
+		),
 	),
 	$c-slideout-push-start
 );
@@ -56,6 +61,11 @@ $c-slideout-push-end: () !default;
 $c-slideout-push-end: map-deep-merge(
 	(
 		padding-right: $c-slideout-sidebar-width,
+		media-breakpoint-down: (
+			md: (
+				padding-right: 0,
+			),
+		),
 	),
 	$c-slideout-push-end
 );

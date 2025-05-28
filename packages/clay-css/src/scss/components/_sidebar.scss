@@ -119,3 +119,11 @@
 		}
 	}
 }
+
+.c-slideout-start {
+	@include clay-map-to-css($sidebar-c-slideout-start);
+}
+
+.c-slideout-end {
+	@include clay-map-to-css($sidebar-c-slideout-end);
+}

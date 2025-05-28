@@ -63,10 +63,6 @@ $sidebar-light: map-deep-merge(
 		box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
 		sidenav-start: (
 			box-shadow: 0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
-			focus: (
-				box-shadow: #{0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
-				$component-focus-inset-box-shadow},
-			),
 		),
 		sidebar-panel: (
 			background-color: $gray-200,
@@ -92,4 +88,14 @@ $sidebar-light: map-deep-merge(
 		component-navigation-bar: $sidebar-light-navigation-bar,
 	),
 	$sidebar-light
+);
+
+$sidebar-c-slideout-start: () !default;
+$sidebar-c-slideout-start: map-deep-merge(
+	(
+		'.sidebar-light': (
+			box-shadow: 0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+		),
+	),
+	$sidebar-c-slideout-start
 );
