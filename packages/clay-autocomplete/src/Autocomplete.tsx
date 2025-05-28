@@ -294,7 +294,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 
 			if (!filterKey && items.length && typeof items[0] === 'object') {
 				console.warn(
-					`<Autocomplete />: the component is trying to validate that the initial value exists in the items, but it doesn't know which key to use for comparison. Define the key in 'filterKey' ('<Autocomplete filterKey="value" />').`,
+					`<Autocomplete />: the component is trying to validate that the initial value exists in the items, but it doesn't know which key to use for comparison. Define the key in 'filterKey' ('<Autocomplete filterKey="value" />').`
 				);
 			}
 		}
