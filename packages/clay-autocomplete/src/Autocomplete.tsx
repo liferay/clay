@@ -291,8 +291,14 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 			if (hasItem(items, value, filterKey)) {
 				currentItemSelected.current = value;
 			}
+
+			if (!filterKey && items.length && typeof items[0] === 'object') {
+				console.warn(
+					`<Autocomplete />: the component is trying to validate that the initial value exists in the items, but it doesn't know which key to use for comparison. Define the key in 'filterKey' ('<Autocomplete filterKey="value" />').`,
+				);
+			}
 		}
-	}, []);
+	}, [items]);
 
 	useEffect(() => {
 		// Does not update state on first render, if the custom value is allowed
@@ -330,7 +336,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 		return items?.filter((option) => {
 			if (!filterKey && typeof option === 'object') {
 				console.warn(
-					`<Autocomplete />: the component is trying to filter the list but it doesn't know which key to use for comparison, defines the key in 'filterKey' ('<Autocomplete filterKey="value" />'). option=`,
+					`<Autocomplete />: the component is trying to filter the list but it doesn't know which key to use for comparison. Define the key in 'filterKey' ('<Autocomplete filterKey="value" />'). option=`,
 					option
 				);
 
