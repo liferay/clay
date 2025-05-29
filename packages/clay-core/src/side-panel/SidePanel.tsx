@@ -92,6 +92,11 @@ export type Props = {
 	id?: string;
 
 	/**
+	 * Property to determine how the SidePanel will be positioned.
+	 */
+	position?: 'absolute' | 'fixed';
+
+	/**
 	 * Element reference to open the SidePanel.
 	 * NOTE: SidePanel automatically identifies the trigger but it may not
 	 * work in some cases when the element disappears from the DOM.
@@ -111,6 +116,7 @@ export function SidePanel({
 	displayType = 'light',
 	onOpenChange,
 	open: externalOpen,
+	position = 'absolute',
 	triggerRef,
 	...otherProps
 }: Props) {
@@ -174,16 +180,19 @@ export function SidePanel({
 
 	const titleId = useId();
 
+	const offsetTop = useOffsetTop(containerRef);
+
 	return (
 		<div
 			className={classnames(
-				'c-slideout c-slideout-absolute c-slideout-push',
+				`c-slideout c-slideout-${position} c-slideout-push`,
 				{
 					'c-slideout-end': direction === 'right',
 					'c-slideout-start': direction === 'left',
 				}
 			)}
 			ref={slideoutRef}
+			style={position === 'fixed' ? {top: `${offsetTop}px`} : undefined}
 		>
 			<CSSTransition
 				className={classnames('sidebar', className, {
@@ -261,6 +270,31 @@ export function SidePanel({
 			</CSSTransition>
 		</div>
 	);
+}
+
+function useOffsetTop(ref: React.RefObject<HTMLElement>) {
+	const [offsetTop, setOffsetTop] = React.useState<Number>();
+
+	React.useLayoutEffect(() => {
+		const handleResize = () => {
+			if (ref.current) {
+				const offsetTop =
+					ref.current?.getBoundingClientRect().top + window.scrollY;
+
+				setOffsetTop(offsetTop);
+			}
+		};
+
+		handleResize();
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, [ref.current]);
+
+	return offsetTop;
 }
 
 SidePanel.Header = Header;
