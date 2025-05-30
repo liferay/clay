@@ -4,6 +4,8 @@
  */
 
 import Button from '@clayui/button';
+import ClayForm, {ClayInput, ClaySelect} from '@clayui/form';
+import Panel from '@clayui/panel';
 import {useId} from '@clayui/shared';
 import Toolbar from '@clayui/toolbar';
 import React, {useRef, useState} from 'react';
@@ -35,13 +37,36 @@ const BodyContent = () => {
 	);
 };
 
-export const PositionAbsolute = () => {
+export const PositionAbsolute = (args: any) => {
 	const [open, setOpen] = useState(false);
 	const [openStart, setOpenStart] = useState(false);
 	const sidePanelId = useId();
 	const sidePanelStartId = useId();
 
 	const ref = useRef<HTMLElement | null>(null);
+
+	const options = [
+		{
+			label: 'gram (g)',
+			value: 'g',
+		},
+		{
+			label: 'kilogram (kg)',
+			value: 'kg',
+		},
+		{
+			label: 'ounce (oz)',
+			value: 'oz',
+		},
+		{
+			label: 'pound (lb)',
+			value: 'lb',
+		},
+		{
+			label: 'ton (T)',
+			value: 'T',
+		},
+	];
 
 	return (
 		<div className="m-n3 min-vh-100">
@@ -73,17 +98,18 @@ export const PositionAbsolute = () => {
 				<SidePanel
 					containerRef={ref}
 					direction="left"
+					displayType="dark"
 					id={sidePanelStartId}
 					onOpenChange={setOpenStart}
 					open={openStart}
 				>
-					<SidePanel.Header>
+					<SidePanel.Header sticky={args.footerSticky}>
 						<SidePanel.Title>Left Panel</SidePanel.Title>
 					</SidePanel.Header>
 					<SidePanel.Body>
 						<BodyContent />
 					</SidePanel.Body>
-					<SidePanel.Footer>
+					<SidePanel.Footer sticky={args.footerSticky}>
 						<Button.Group spaced>
 							<Button>Primary</Button>
 							<Button displayType="secondary">Secondary</Button>
@@ -115,13 +141,80 @@ export const PositionAbsolute = () => {
 					onOpenChange={setOpen}
 					open={open}
 				>
-					<SidePanel.Header>
-						<SidePanel.Title>Right Panel</SidePanel.Title>
+					<SidePanel.Header sticky={args.headerSticky}>
+						<SidePanel.Title>Title</SidePanel.Title>
 					</SidePanel.Header>
 					<SidePanel.Body>
-						<BodyContent />
+						<Panel.Group flush small>
+							<Panel displayTitle="DETAIL" displayType="unstyled">
+								<Panel.Body>
+									<ClayForm.Group>
+										<label htmlFor="decimalQuantity">
+											Decimal Quantity
+										</label>
+										<ClayInput
+											id="decimalQuantity"
+											type="number"
+										></ClayInput>
+									</ClayForm.Group>
+									<ClayForm.Group>
+										<label
+											htmlFor="measurementUnits"
+											id="measurementUnitsLabel"
+										>
+											Measurement Units
+										</label>
+										<ClaySelect
+											aria-label="Select measurement unit"
+											id="measurementUnitsLabel"
+										>
+											{options.map((item) => (
+												<ClaySelect.Option
+													key={item.value}
+													label={item.label}
+													value={item.value}
+												/>
+											))}
+										</ClaySelect>
+									</ClayForm.Group>
+									<ClayForm.Group>
+										<label htmlFor="price">Price</label>
+										<ClayInput
+											id="price"
+											type="number"
+										></ClayInput>
+									</ClayForm.Group>
+									<ClayForm.Group>
+										<label htmlFor="discount">
+											Discount
+										</label>
+										<ClayInput
+											id="discount"
+											type="number"
+										></ClayInput>
+									</ClayForm.Group>
+									<ClayForm.Group>
+										<label htmlFor="total">Total</label>
+										<ClayInput
+											id="total"
+											type="number"
+										></ClayInput>
+									</ClayForm.Group>
+									<ClayForm.Group>
+										<label htmlFor="deliveryGroup">
+											Delivery Group
+										</label>
+										<textarea
+											className="form-control"
+											id="deliveryGroup"
+											placeholder="Delivery Group"
+										></textarea>
+									</ClayForm.Group>
+								</Panel.Body>
+							</Panel>
+						</Panel.Group>
 					</SidePanel.Body>
-					<SidePanel.Footer>
+					<SidePanel.Footer sticky={args.footerSticky}>
 						<Button.Group spaced>
 							<Button>Primary</Button>
 							<Button displayType="secondary">Secondary</Button>
@@ -133,8 +226,13 @@ export const PositionAbsolute = () => {
 	);
 };
 
+PositionAbsolute.args = {
+	footerSticky: false,
+	headerSticky: false,
+};
+
 export const PositionFixed = () => {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(true);
 	const [openStart, setOpenStart] = useState(false);
 	const sidePanelId = useId();
 	const sidePanelStartId = useId();
@@ -224,8 +322,8 @@ export const PositionFixed = () => {
 					</SidePanel.Body>
 					<SidePanel.Footer>
 						<Button.Group spaced>
-							<Button>Primary</Button>
-							<Button displayType="secondary">Secondary</Button>
+							<Button displayType="secondary">Cancel</Button>
+							<Button>Save</Button>
 						</Button.Group>
 					</SidePanel.Footer>
 				</SidePanel>
