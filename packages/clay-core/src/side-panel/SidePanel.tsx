@@ -150,7 +150,7 @@ export function SidePanel({
 	}, [open]);
 
 	useLayoutEffect(() => {
-		containerRef.current?.classList.add('position-relative');
+		containerRef.current?.classList.add('c-slideout-container');
 	}, [containerRef.current]);
 
 	useEffect(() => {
