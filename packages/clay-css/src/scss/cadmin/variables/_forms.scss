@@ -678,7 +678,7 @@ $cadmin-form-feedback-invalid-color: $cadmin-danger !default;
 
 $cadmin-input-danger-bg: $cadmin-danger-l2 !default;
 $cadmin-input-danger-border-color: $cadmin-danger-l1 !default;
-$cadmin-input-danger-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$cadmin-input-danger-box-shadow: null !default;
 $cadmin-input-danger-color: $cadmin-input-color !default;
 
 $cadmin-input-danger-focus-bg: null !default;
@@ -698,6 +698,12 @@ $cadmin-input-danger: map-deep-merge(
 			border-color: $cadmin-input-danger-focus-border-color,
 			box-shadow: $cadmin-input-danger-focus-box-shadow,
 			color: $cadmin-input-danger-focus-color,
+		),
+		focus-within: (
+			background-color: $cadmin-input-danger-bg,
+			border-color: $cadmin-input-danger-border-color,
+			box-shadow: $cadmin-input-danger-box-shadow,
+			color: $cadmin-input-danger-color,
 		),
 	),
 	$cadmin-input-danger
@@ -848,7 +854,7 @@ $cadmin-has-error: map-deep-merge(
 
 $cadmin-input-warning-bg: $cadmin-warning-l2 !default;
 $cadmin-input-warning-border-color: $cadmin-warning-l1 !default;
-$cadmin-input-warning-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$cadmin-input-warning-box-shadow: null !default;
 $cadmin-input-warning-color: $cadmin-input-color !default;
 
 $cadmin-input-warning-focus-bg: null !default;
@@ -868,6 +874,12 @@ $cadmin-input-warning: map-deep-merge(
 			border-color: $cadmin-input-warning-focus-border-color,
 			box-shadow: $cadmin-input-warning-focus-box-shadow,
 			color: $cadmin-input-warning-focus-color,
+		),
+		focus-within: (
+			background-color: $cadmin-input-warning-bg,
+			border-color: $cadmin-input-warning-border-color,
+			box-shadow: $cadmin-input-warning-box-shadow,
+			color: $cadmin-input-warning-color,
 		),
 	),
 	$cadmin-input-warning
@@ -1018,7 +1030,7 @@ $cadmin-has-warning: map-deep-merge(
 
 $cadmin-input-success-bg: $cadmin-success-l2 !default;
 $cadmin-input-success-border-color: $cadmin-success-l1 !default;
-$cadmin-input-success-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$cadmin-input-success-box-shadow: null !default;
 $cadmin-input-success-color: $cadmin-input-color !default;
 
 $cadmin-input-success-focus-bg: null !default;
@@ -1038,6 +1050,12 @@ $cadmin-input-success: map-deep-merge(
 			border-color: $cadmin-input-success-focus-border-color,
 			box-shadow: $cadmin-input-success-focus-box-shadow,
 			color: $cadmin-input-success-focus-color,
+		),
+		focus-within: (
+			background-color: $cadmin-input-success-bg,
+			border-color: $cadmin-input-success-border-color,
+			box-shadow: $cadmin-input-success-box-shadow,
+			color: $cadmin-input-success-color,
 		),
 	),
 	$cadmin-input-success
