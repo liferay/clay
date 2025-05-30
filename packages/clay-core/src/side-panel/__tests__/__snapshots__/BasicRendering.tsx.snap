@@ -17,7 +17,7 @@ exports[`SidePanel basic rendering render basic content 1`] = `
           class="sidebar-header"
         >
           <div
-            class="autofit-row sidebar-section"
+            class="autofit-row"
           >
             <div
               class="autofit-col autofit-col-expand"
@@ -81,7 +81,7 @@ exports[`SidePanel basic rendering render component with open state 1`] = `
           class="sidebar-header"
         >
           <div
-            class="autofit-row sidebar-section"
+            class="autofit-row"
           >
             <div
               class="autofit-col autofit-col-expand"
@@ -146,7 +146,7 @@ exports[`SidePanel basic rendering render with custom aria-label 1`] = `
           class="sidebar-header"
         >
           <div
-            class="autofit-row sidebar-section"
+            class="autofit-row"
           >
             <div
               class="autofit-col autofit-col-expand"
