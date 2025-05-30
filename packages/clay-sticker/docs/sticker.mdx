@@ -24,33 +24,33 @@ import '@clayui/css/lib/css/atlas.css';
 export default function App() {
 	return (
 		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
+			<div className="bg-light p-4">
 				<>
-					<Sticker displayType="danger" size="sm">
+					<Sticker className="mr-1" displayType="danger" size="sm">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker displayType="dark" size="md">
+					<Sticker className="mr-1" displayType="dark" size="md">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker displayType="info" size="lg">
+					<Sticker className="mr-1" displayType="info" size="lg">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker displayType="light" size="xl">
+					<Sticker className="mr-1" displayType="light" size="xl">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker displayType="secondary" size="xl">
+					<Sticker className="mr-1" displayType="secondary" size="xl">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker displayType="success" size="lg">
+					<Sticker className="mr-1" displayType="success" size="lg">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker displayType="unstyled" size="md">
+					<Sticker className="mr-1" displayType="unstyled" size="md">
 						<Icon symbol="user" />
 					</Sticker>
 
@@ -59,15 +59,49 @@ export default function App() {
 					</Sticker>
 
 					<div className="mt-3">
-						<Sticker displayType="outline-0">S</Sticker>
-						<Sticker displayType="outline-1">M</Sticker>
-						<Sticker displayType="outline-2">C</Sticker>
-						<Sticker displayType="outline-3">M</Sticker>
-						<Sticker displayType="outline-4">S</Sticker>
-						<Sticker displayType="outline-5">S</Sticker>
-						<Sticker displayType="outline-6">E</Sticker>
-						<Sticker displayType="outline-7">Q</Sticker>
-						<Sticker displayType="outline-8">D</Sticker>
+						<Sticker
+							className="mr-1"
+							displayType="outline-0"
+							size="xs"
+						>
+							S
+						</Sticker>
+						<Sticker
+							className="mr-1"
+							displayType="outline-1"
+							size="sm"
+						>
+							M
+						</Sticker>
+						<Sticker className="mr-1" displayType="outline-2">
+							C
+						</Sticker>
+						<Sticker
+							className="mr-1"
+							displayType="outline-3"
+							size="lg"
+						>
+							M
+						</Sticker>
+						<Sticker
+							className="mr-1"
+							displayType="outline-4"
+							size="xl"
+						>
+							S
+						</Sticker>
+						<Sticker className="mr-1" displayType="outline-5">
+							S
+						</Sticker>
+						<Sticker className="mr-1" displayType="outline-6">
+							E
+						</Sticker>
+						<Sticker className="mr-1" displayType="outline-7">
+							Q
+						</Sticker>
+						<Sticker className="mr-1" displayType="outline-8">
+							D
+						</Sticker>
 						<Sticker displayType="outline-9">P</Sticker>
 					</div>
 				</>
@@ -79,7 +113,7 @@ export default function App() {
 
 ## User Icon
 
-Use a Sticker as User Icon just adding `sticker-user-icon` on className of the `Sticker` component like the example below:
+A specific type of Sticker used to display user icons. Use the attribute `shape="user-icon"` just like in the example below:
 
 ```jsx preview
 import {Provider} from '@clayui/core';
@@ -91,16 +125,16 @@ import '@clayui/css/lib/css/atlas.css';
 export default function App() {
 	return (
 		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
+			<div className="bg-light p-4">
 				<>
-					<Sticker userIcon size="xl">
+					<Sticker className="mr-1" shape="user-icon" size="xl">
 						<Sticker.Image
 							alt="placeholder"
 							src="https://clayui.com/images/long_user_image.png"
 						/>
 					</Sticker>
 
-					<Sticker userIcon size="xl">
+					<Sticker shape="user-icon" size="xl">
 						BS
 					</Sticker>
 				</>
