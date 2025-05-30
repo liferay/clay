@@ -135,6 +135,15 @@ export function SidePanel({
 	});
 
 	useEffect(() => {
+		// Ensures SidePanel is open when initial state is open.
+		if (open) {
+			containerRef.current?.classList.add(
+				`c-slideout-push-${direction === 'left' ? 'start' : 'end'}`
+			);
+		}
+	}, []);
+
+	useEffect(() => {
 		if (open) {
 			// Saves the last element that has focus before moving to the
 			// sidepanel to regain focus when closing the sidepanel.
@@ -151,7 +160,7 @@ export function SidePanel({
 
 	useLayoutEffect(() => {
 		containerRef.current?.classList.add('position-relative');
-	}, [containerRef.current]);
+	}, [containerRef]);
 
 	useEffect(() => {
 		if (open) {
@@ -195,6 +204,7 @@ export function SidePanel({
 			style={position === 'fixed' ? {top: `${offsetTop}px`} : undefined}
 		>
 			<CSSTransition
+				appear={open}
 				className={classnames('sidebar', className, {
 					'sidebar-dark': displayType === 'dark',
 					'sidebar-light': displayType === 'light',
@@ -219,7 +229,7 @@ export function SidePanel({
 						}`
 					);
 				}}
-				onEntered={() => {
+				onEntered={(_, isAppearing) => {
 					slideoutRef.current?.classList.add('c-slideout-shown');
 
 					containerRef.current?.classList.remove(
@@ -227,8 +237,11 @@ export function SidePanel({
 						'c-slideout-transition-in'
 					);
 
-					// Move focus to sidepanel when opening
-					sidePanelRef.current?.focus({preventScroll: true});
+					if (!isAppearing) {
+						// Move focus to sidepanel when opening but not if
+						// opened on first load.
+						sidePanelRef.current?.focus({preventScroll: true});
+					}
 				}}
 				onExit={() => {
 					containerRef.current?.classList.add(
@@ -275,7 +288,7 @@ export function SidePanel({
 function useOffsetTop(ref: React.RefObject<HTMLElement>) {
 	const [offsetTop, setOffsetTop] = React.useState<Number>();
 
-	React.useLayoutEffect(() => {
+	const checkOffset = () => {
 		const handleResize = () => {
 			if (ref.current) {
 				const offsetTop =
@@ -292,7 +305,19 @@ function useOffsetTop(ref: React.RefObject<HTMLElement>) {
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
-	}, [ref.current]);
+	};
+
+	React.useLayoutEffect(() => {
+		if (!ref.current) {
+			return;
+		}
+
+		checkOffset();
+	}, [ref]);
+
+	React.useEffect(() => {
+		checkOffset();
+	}, []);
 
 	return offsetTop;
 }

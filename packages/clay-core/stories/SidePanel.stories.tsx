@@ -134,7 +134,7 @@ export const PositionAbsolute = () => {
 };
 
 export const PositionFixed = () => {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(true);
 	const [openStart, setOpenStart] = useState(false);
 	const sidePanelId = useId();
 	const sidePanelStartId = useId();
