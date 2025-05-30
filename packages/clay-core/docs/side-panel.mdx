@@ -154,24 +154,3 @@ The SidePanel is designed to use either `absolute` or `fixed` positioning.
 ```jsx
 <SidePanel position="fixed" />
 ```
-
-## Accesibility
-
-The SidePanel component handles most accessibility rules OOTB, but in some cases, you may need to configure specific properties based on your use case.
-
-By default, SidePanel renders using the `<aside>` tag, but this may not be appropriate for all scenarios:
-
--   ✅ Use `<aside>` when it’s suitable for collapsible sidebars:
-    -   Secondary navigation or filtering options (e.g., product filters on an e-commerce site).
-    -   Widgets or supplementary content (e.g., related articles in a blog).
-    -   Contextual or complementary information (e.g., author bios, ads, promotions).
--   ⚠️ Avoid using `<aside>` when:
-    -   The content is critical for primary navigation (e.g., a main menu).
-    -   The sidebar includes primary user actions (e.g., key forms).
-    -   The sidebar is the main focus of the page (in this case, consider using `<nav>` or `<section>` instead).
-
-Once you determine the correct semantic tag for your use case, you can configure which HTML element the component should render by setting the `as` prop. For example:
-
-```jsx
-<SidePanel as="nav" />
-```
