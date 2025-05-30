@@ -445,6 +445,14 @@
 	z-index: $zindex-fixed;
 }
 
+.sticky-bottom {
+	@supports (position: sticky) {
+		bottom: 0;
+		position: sticky;
+		z-index: $zindex-sticky;
+	}
+}
+
 .sticky-top {
 	@supports (position: sticky) {
 		position: sticky;
