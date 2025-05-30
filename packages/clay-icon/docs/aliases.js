@@ -721,7 +721,7 @@ export const iconsData = [
 		name: 'columns',
 	},
 	{
-		aliases: [''],
+		aliases: ['chat', 'messages', 'text'],
 		name: 'comments',
 	},
 	{
@@ -1573,7 +1573,7 @@ export const iconsData = [
 		name: 'repository',
 	},
 	{
-		aliases: [''],
+		aliases: ['back', 'beginning', 'history', 'original'],
 		name: 'reset',
 	},
 	{
