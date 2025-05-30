@@ -56,15 +56,7 @@
 
 			@if ($_sidebar) {
 				.sidebar {
-					@include clay-css($_sidebar);
-				}
-			}
-
-			$_sidebar-body: map-get($map, sidebar-body);
-
-			@if ($_sidebar-body) {
-				.sidebar-body {
-					@include clay-css($_sidebar-body);
+					@include clay-sidebar-variant($_sidebar);
 				}
 			}
 

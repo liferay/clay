@@ -30,6 +30,30 @@
 			map-get($sidebar-header, component-subtitle)
 		);
 	}
+
+	$_autofit-row: map-get($sidebar-header, autofit-row);
+
+	@if ($_autofit-row) {
+		.autofit-row {
+			@include clay-css($_autofit-row);
+
+			$_autofit-col: map-get($_autofit-row, autofit-col);
+
+			@if ($_autofit-col) {
+				> .autofit-col {
+					@include clay-css($_autofit-col);
+				}
+			}
+
+			$_autofit-col-expand: map-get($_autofit-row, autofit-col-expand);
+
+			@if ($_autofit-col-expand) {
+				> .autofit-col-expand {
+					@include clay-css($_autofit-col-expand);
+				}
+			}
+		}
+	}
 }
 
 .sidebar-footer {

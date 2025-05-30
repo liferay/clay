@@ -1,14 +1,14 @@
-$cadmin-sidebar-padding-bottom: 16px !default; // 16px
-$cadmin-sidebar-padding-left: 16px !default; // 16px
-$cadmin-sidebar-padding-right: 16px !default; // 16px
-$cadmin-sidebar-padding-top: 16px !default; // 16px
+$cadmin-sidebar-padding-bottom: 16px !default;
+$cadmin-sidebar-padding-left: 24px !default;
+$cadmin-sidebar-padding-right: 24px !default;
+$cadmin-sidebar-padding-top: 16px !default;
 
 // Sidebar Header Title
 
 $cadmin-sidebar-header-component-title: () !default;
 $cadmin-sidebar-header-component-title: map-deep-merge(
 	(
-		font-size: 20px,
+		font-size: 16px,
 		href: (
 			color: $cadmin-gray-900,
 		),
@@ -21,7 +21,7 @@ $cadmin-sidebar-header-component-title: map-deep-merge(
 $cadmin-sidebar-header-component-subtitle: () !default;
 $cadmin-sidebar-header-component-subtitle: map-deep-merge(
 	(
-		font-size: 12px,
+		font-size: 14px,
 		font-weight: $cadmin-font-weight-normal,
 		margin-bottom: 0,
 	),
@@ -86,10 +86,19 @@ $cadmin-sidebar: map-deep-merge(
 		sidebar-header: (
 			padding-bottom: $cadmin-sidebar-padding-bottom,
 			padding-left: $cadmin-sidebar-padding-left,
-			padding-right: $cadmin-sidebar-padding-right,
+			padding-right: 16px,
 			padding-top: $cadmin-sidebar-padding-top,
 			component-title: $cadmin-sidebar-header-component-title,
 			component-subtitle: $cadmin-sidebar-header-component-subtitle,
+			autofit-row: (
+				margin-left: -4px,
+				margin-right: -4px,
+				width: auto,
+				autofit-col: (
+					padding-left: 4px,
+					padding-right: 4px,
+				),
+			),
 		),
 		sidebar-footer: (
 			padding-bottom: $cadmin-sidebar-padding-bottom,
@@ -200,6 +209,14 @@ $cadmin-sidebar-light: map-deep-merge(
 		border-left-width: 0,
 		box-shadow: -4px 0 8px -4px rgba(0, 0, 0, 0.1),
 		color: $cadmin-gray-900,
+		sidebar-header: (
+			background-color: inherit,
+			border: 0px solid $cadmin-gray-300,
+		),
+		sidebar-footer: (
+			background-color: inherit,
+			border: 0px solid $cadmin-gray-300,
+		),
 		sidenav-start: (
 			box-shadow: 4px 0 8px -4px rgba(0, 0, 0, 0.1),
 		),

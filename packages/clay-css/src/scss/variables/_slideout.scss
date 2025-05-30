@@ -44,6 +44,15 @@ $c-slideout-fixed: map-merge(
 	$c-slideout-fixed
 );
 
+$c-slideout-container: () !default;
+$c-slideout-container: map-deep-merge(
+	(
+		min-height: 480px,
+		position: relative,
+	),
+	$c-slideout-container
+);
+
 $c-slideout-push-start: () !default;
 $c-slideout-push-start: map-deep-merge(
 	(
@@ -84,12 +93,18 @@ $c-slideout: map-deep-merge(
 		sidebar: (
 			display: none,
 			flex-shrink: 0,
-			overflow: visible,
 			position: relative,
 			width: $c-slideout-sidebar-width,
-		),
-		sidebar-body: (
-			flex-grow: 1,
+			sidebar-header: (
+				border-bottom-width: 1px,
+			),
+			sidebar-body: (
+				flex-grow: 1,
+				overflow: visible,
+			),
+			sidebar-footer: (
+				border-top-width: 1px,
+			),
 		),
 		sidebar-c-slideout-show: (
 			display: flex,

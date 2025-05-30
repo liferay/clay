@@ -14,6 +14,10 @@
 	@include clay-css($cadmin-c-slideout-absolute);
 }
 
+.c-slideout-container {
+	@include clay-map-to-css($cadmin-c-slideout-container);
+}
+
 .c-slideout-push-start {
 	@include clay-css($cadmin-c-slideout-push-start);
 }
