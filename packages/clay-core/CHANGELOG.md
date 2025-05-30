@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.137.0](https://github.com/liferay/clay/compare/v3.136.0...v3.137.0) (2025-05-30)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-48055 Avoids changing scroll position when focusing the side panel. ([0723d17](https://github.com/liferay/clay/commit/0723d17ee61f822f7d330888753204f0e41e3cf7))
+-   **@clayui/core:** LPD-48055 Ensure the container has position relative so that the side panel is positioned based on the correct container. ([8a9a8aa](https://github.com/liferay/clay/commit/8a9a8aaf27ae7a0eff86b5ef155df6609296f7bd))
+-   **@clayui/core:** LPD-48055 SidePanel use CSS c-slideout-push-{start | end} for parent container ([ebc944f](https://github.com/liferay/clay/commit/ebc944f88812c8dd14e2e1177a861a03a16427bc))
+-   **@clayui/core:** Prefer div so that there are no semantics by default for accessibility. ([df21b3c](https://github.com/liferay/clay/commit/df21b3c8b7a037808c3b312ae1ffa844e3af0db0))
+
+### Features
+
+-   **@clayui/core:** adds SidePanel implementation ([03ac822](https://github.com/liferay/clay/commit/03ac82209966728115d028d4aa61761d6eefe05e))
+-   **@clayui/core:** adds title reference to side panel when `aria-labelledby` or `aria-label` is not defined ([a67f124](https://github.com/liferay/clay/commit/a67f1247158b8d67ae37fb9b33b2a8216c4bda97))
+-   **@clayui/core:** Allow SidePanel to be positioned absolute or fixed. ([ad7aaf9](https://github.com/liferay/clay/commit/ad7aaf998834295018dafac3c48dc0d97c88fe59))
+-   **@clayui/core:** implements SidePanel animation with `motion` ([c498933](https://github.com/liferay/clay/commit/c498933e16df00133c97531f8400b95395c57fdf))
+
 # [3.136.0](https://github.com/liferay/clay/compare/v3.135.0...v3.136.0) (2025-05-03)
 
 **Note:** Version bump only for package @clayui/core

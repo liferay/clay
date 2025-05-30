@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.137.0](https://github.com/liferay/clay/compare/v3.136.0...v3.137.0) (2025-05-30)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-55065 Adds c-slideout-push-start / end for the parent container ([efd117e](https://github.com/liferay/clay/commit/efd117e5353c83fd076e2ce8aabd1d5bfa6d1349))
+* **@clayui/css:** LPD-55326 Cadmin Color Picker alpha slider should use current color ([a9bd93d](https://github.com/liferay/clay/commit/a9bd93dde5ae95a838c822b68f8c7ef9b9e18190))
+
+
+### Features
+
+* **@clayui/css:** LPD-53827 Update paste.svg, paste-plaintext.svg, and paste-word.svg ([4c28228](https://github.com/liferay/clay/commit/4c2822835415bb34168132cfb470876afd0a4439))
+* **@clayui/css:** LPD-54300 Adds repeat.svg ([47f2663](https://github.com/liferay/clay/commit/47f26630ee737c59b85f717f4061c674d239e3c9))
+* **@clayui/css:** LPD-54569 Add Bosnia & Herzegovina Flag. ([af40e02](https://github.com/liferay/clay/commit/af40e026b2d26b12a15bdc526161a2898b7c0b98))
+
+
+
+
+
 # [3.136.0](https://github.com/liferay/clay/compare/v3.135.0...v3.136.0) (2025-05-03)
 
 

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.137.0](https://github.com/liferay/clay/compare/v3.136.0...v3.137.0) (2025-05-30)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-48055 Avoids changing scroll position when focusing the side panel. ([0723d17](https://github.com/liferay/clay/commit/0723d17ee61f822f7d330888753204f0e41e3cf7))
+-   **@clayui/core:** LPD-48055 Ensure the container has position relative so that the side panel is positioned based on the correct container. ([8a9a8aa](https://github.com/liferay/clay/commit/8a9a8aaf27ae7a0eff86b5ef155df6609296f7bd))
+-   **@clayui/core:** LPD-48055 SidePanel use CSS c-slideout-push-{start | end} for parent container ([ebc944f](https://github.com/liferay/clay/commit/ebc944f88812c8dd14e2e1177a861a03a16427bc))
+-   **@clayui/core:** Prefer div so that there are no semantics by default for accessibility. ([df21b3c](https://github.com/liferay/clay/commit/df21b3c8b7a037808c3b312ae1ffa844e3af0db0))
+-   **@clayui/css:** LPD-55065 Adds c-slideout-push-start / end for the parent container ([efd117e](https://github.com/liferay/clay/commit/efd117e5353c83fd076e2ce8aabd1d5bfa6d1349))
+-   **@clayui/css:** LPD-55326 Cadmin Color Picker alpha slider should use current color ([a9bd93d](https://github.com/liferay/clay/commit/a9bd93dde5ae95a838c822b68f8c7ef9b9e18190))
+-   **@clayui/shared:** LPD-48347 Close overlay on left click only ([f19214a](https://github.com/liferay/clay/commit/f19214aab121d0190cfedea4dc94f20d8684df8e))
+
+### Features
+
+-   **@clayui/core:** adds SidePanel implementation ([03ac822](https://github.com/liferay/clay/commit/03ac82209966728115d028d4aa61761d6eefe05e))
+-   **@clayui/core:** adds title reference to side panel when `aria-labelledby` or `aria-label` is not defined ([a67f124](https://github.com/liferay/clay/commit/a67f1247158b8d67ae37fb9b33b2a8216c4bda97))
+-   **@clayui/core:** Allow SidePanel to be positioned absolute or fixed. ([ad7aaf9](https://github.com/liferay/clay/commit/ad7aaf998834295018dafac3c48dc0d97c88fe59))
+-   **@clayui/core:** implements SidePanel animation with `motion` ([c498933](https://github.com/liferay/clay/commit/c498933e16df00133c97531f8400b95395c57fdf))
+-   **@clayui/css:** LPD-53827 Update paste.svg, paste-plaintext.svg, and paste-word.svg ([4c28228](https://github.com/liferay/clay/commit/4c2822835415bb34168132cfb470876afd0a4439))
+-   **@clayui/css:** LPD-54300 Adds repeat.svg ([47f2663](https://github.com/liferay/clay/commit/47f26630ee737c59b85f717f4061c674d239e3c9))
+-   **@clayui/css:** LPD-54569 Add Bosnia & Herzegovina Flag. ([af40e02](https://github.com/liferay/clay/commit/af40e026b2d26b12a15bdc526161a2898b7c0b98))
+-   **www:** LPD-56202 - Make the SandpackCodeEditor editable. ([6db8bcc](https://github.com/liferay/clay/commit/6db8bcc7b8c4bc9ee7e2ca3493f089f96d59ce59))
+
 # [3.136.0](https://github.com/liferay/clay/compare/v3.135.0...v3.136.0) (2025-05-03)
 
 ### Bug Fixes
