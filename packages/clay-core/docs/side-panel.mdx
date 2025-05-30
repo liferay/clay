@@ -1,6 +1,6 @@
 ---
 title: 'SidePanel'
-description: 'Side Panels are vertical containers used to display additional information that supports the main content area or to edit specific content within the page.'
+description: 'SidePanels are vertical containers used to display additional information that supports the main content area or to edit specific content within the page.'
 packageNpm: '@clayui/core'
 packageStatus: 'Beta'
 packageUse: "import {SidePanel} from '@clayui/core';"
@@ -62,9 +62,9 @@ export default function App() {
 
 ## Introduction
 
-The Side Panel component provides a more easy and quick way for the users to consult or edit information without the need for deeper navigation.
+The SidePanel component provides a more easy and quick way for the users to consult or edit information without the need for deeper navigation.
 
-Side Panels can anchor to the left or right side of the screen. They can be collapsible or triggered by a button or a link. When activated, the Side Panel opens and the content of the page is readjusted. You can navigate through the Side Panel content using both mouse and keyboard.
+SidePanels can anchor to the left or right side of the screen. They can be collapsible or triggered by a button or a link. When activated, the SidePanel opens and the content of the page is readjusted. You can navigate through the SidePanel content using both mouse and keyboard.
 
 ## Anatomy
 
@@ -137,10 +137,22 @@ Make sure the `id` used in `aria-controls` matches the `id` of the `<SidePanel /
 
 ## Direction
 
-Positioning the SidePanel on the right or left side is possible by setting the `direction` property.
+The SidePanel can be displayed on the right or left side by setting the `direction` property.
 
 ```jsx
 <SidePanel direction="left" />
+```
+
+## Position
+
+The SidePanel is designed to use either `absolute` or `fixed` positioning.
+
+`absolute` positioning is the default which allows the SidePanel to be used in more flexible contexts If the SidePanel cannot be placed at the edge of the window then `absolute` positioning should be used. When the SidePanel is positioned absolutely the header and footer may be scrolled out of view on longer pages.
+
+`fixed` positioning should only be used when the SidePanel can be placed at a horizontal edge of the window without any elements above it that are not also using `fixed` or `sticky` positioning. With `fixed` positioning the header and footer will also be fixed and the SidePanel body will have it's own independent scroll.
+
+```jsx
+<SidePanel position="fixed" />
 ```
 
 ## Accesibility
