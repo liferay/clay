@@ -67,13 +67,15 @@ exports[`SidePanel basic rendering render basic content 1`] = `
 
 exports[`SidePanel basic rendering render component with open state 1`] = `
 <div>
-  <div>
+  <div
+    class="c-slideout-push-end"
+  >
     <div
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
       <div
         aria-labelledby="clay-id-2"
-        class="sidebar sidebar-light"
+        class="sidebar sidebar-light c-slideout-show"
         id="sidepanel"
         tabindex="-1"
       >
