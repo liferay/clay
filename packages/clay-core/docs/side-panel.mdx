@@ -27,9 +27,11 @@ import '@clayui/css/lib/css/atlas.css';
 export default function App() {
 	const [open, setOpen] = React.useState(false);
 
+	const ref = React.useRef();
+
 	return (
 		<Provider spritemap="/public/icons.svg">
-			<div className="p-4">
+			<div className="p-4" ref={ref} style={{minHeight: '100vh'}}>
 				<Button
 					aria-controls="sidepanel-example"
 					aria-pressed={open}
@@ -39,6 +41,7 @@ export default function App() {
 				</Button>
 
 				<SidePanel
+					containerRef={ref}
 					id="sidepanel-example"
 					onOpenChange={setOpen}
 					open={open}
@@ -113,6 +116,8 @@ import Button from '@clayui/button';
 export default function App() {
 	const [open, setOpen] = useState(false);
 
+	const ref = useRef();
+
 	return (
 		<>
 			<Button
@@ -123,11 +128,14 @@ export default function App() {
 				Open
 			</Button>
 
-			<SidePanel
-				id="sidepanel-example"
-				onOpenChange={setOpen}
-				open={open}
-			/>
+			<div ref={ref}>
+				<SidePanel
+					containerRef={ref}
+					id="sidepanel-example"
+					onOpenChange={setOpen}
+					open={open}
+				/>
+			</div>
 		</>
 	);
 }
