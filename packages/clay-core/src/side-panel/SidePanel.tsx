@@ -160,7 +160,7 @@ export function SidePanel({
 
 	useLayoutEffect(() => {
 		containerRef.current?.classList.add('c-slideout-container');
-	}, [containerRef]);
+	}, [containerRef.current]);
 
 	useEffect(() => {
 		if (open) {
@@ -312,7 +312,7 @@ function useOffsetTop(ref: React.RefObject<HTMLElement>) {
 		}
 
 		checkOffset();
-	}, [ref]);
+	}, [ref.current]);
 
 	React.useEffect(() => {
 		checkOffset();
