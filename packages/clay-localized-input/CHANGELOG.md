@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.138.0](https://github.com/liferay/clay/compare/v3.137.0...v3.138.0) (2025-06-02)
+
+### Bug Fixes
+
+-   **@clayui/localized-input:** LPD-51801 Don't use ClayForm.Group ([8a5feb0](https://github.com/liferay/clay/commit/8a5feb0b979487fe456c0b29c162830dea50e2a0))
+
+### Features
+
+-   **@clayui/localized-input:** LPD-51801 use blockquote form-text for default language translation ([83343ad](https://github.com/liferay/clay/commit/83343ad37c97221c5c74191ab2460024768dbff6))
+
 # [3.137.0](https://github.com/liferay/clay/compare/v3.136.0...v3.137.0) (2025-05-30)
 
 **Note:** Version bump only for package @clayui/localized-input

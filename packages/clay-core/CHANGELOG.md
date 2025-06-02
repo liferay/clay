@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.138.0](https://github.com/liferay/clay/compare/v3.137.0...v3.138.0) (2025-06-02)
+
+### Bug Fixes
+
+-   **@clayui/core:** Fix the SidePanel so that starting in an open state works. ([2e6ac1e](https://github.com/liferay/clay/commit/2e6ac1e9e7d5aa6bef27758d8dc6568d6435f9c8))
+-   **@clayui/core:** Use ref.current as a dependency to make sure the effect runs when the ref.current switches from null to a node. ([172b5ff](https://github.com/liferay/clay/commit/172b5ff45bc726ef5c4ccdefe34f327d58008c2d))
+
+### Features
+
+-   **@clayui/core:** LPD-48055 SidePanel adds sticky prop to Header and Footer ([f91cacc](https://github.com/liferay/clay/commit/f91cacca6b8b0cdd3326e78aea320929e64de92e))
+
 # [3.137.0](https://github.com/liferay/clay/compare/v3.136.0...v3.137.0) (2025-05-30)
 
 ### Bug Fixes

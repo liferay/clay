@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.138.0](https://github.com/liferay/clay/compare/v3.137.0...v3.138.0) (2025-06-02)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-51801 Adjust .form-text.blockquote spacing ([8f59e81](https://github.com/liferay/clay/commit/8f59e8112015643261884999015fa64bf2340a5d))
+* **@clayui/css:** LPD-55065 c-slideout and sidebar scrolling content adjustment ([6a850cb](https://github.com/liferay/clay/commit/6a850cb15aaf940b02312cb6d455f16cde7742d7))
+* **@clayui/css:** LPD-55065 Update c-slideout and sidebar to adhere to Lexicon Side Panel specs ([123de96](https://github.com/liferay/clay/commit/123de96d9436c3a7308ac8c638751fdcf4b9bbf6))
+* **@clayui/css:** LPD-55148 Form Validation styles should work with focus-within ([2da647f](https://github.com/liferay/clay/commit/2da647fd7e28273e38a684547934903d64436c35))
+
+
+### Features
+
+* **@clayui/clay-css:** LPD-54005 Add comments.svg 16px icon and generated files. ([77167bd](https://github.com/liferay/clay/commit/77167bd05fbf67a1f67a05c5af9cfbc6b1231aa6))
+* **@clayui/clay-css:** LPD-54025 Add reset 16px icon and generated files. ([8f8979a](https://github.com/liferay/clay/commit/8f8979a0205e13a7e0d393deeaa3b5c516039aa3))
+* **@clayui/css:** LPD-33184 LPD-55065 clay-css mixin should support media-queries ([2481bb0](https://github.com/liferay/clay/commit/2481bb0fe310a7dd81cd640a20adf5f1288e705c))
+* **@clayui/css:** LPD-51801 Adds .blockquote variant for .form-text ([ef00792](https://github.com/liferay/clay/commit/ef00792e6dd3447100a3e772d8793d53bbf4fdad))
+* **@clayui/css:** LPD-56155 Add sticker-xs ([2112740](https://github.com/liferay/clay/commit/2112740806c75153cdc5eecfd86cd302efaa2a18))
+
+
+
+
+
 # [3.137.0](https://github.com/liferay/clay/compare/v3.136.0...v3.137.0) (2025-05-30)
 
 

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.138.0](https://github.com/liferay/clay/compare/v3.137.0...v3.138.0) (2025-06-02)
+
+### Features
+
+-   **@clayui/sticker:** LPD-56155 Adds size xs to sticker ([1c808c2](https://github.com/liferay/clay/commit/1c808c237d6e41e325fd7dcd3279a692fa35923e))
+
 # [3.129.0](https://github.com/liferay/clay/compare/v3.128.3...v3.129.0) (2025-02-27)
 
 ### Bug Fixes
