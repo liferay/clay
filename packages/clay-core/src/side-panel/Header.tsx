@@ -21,7 +21,9 @@ type Props = {
 	className?: string;
 
 	/**
-	 * Property to make the Header sticky.
+	 * Property to make the Header sticky. Absolutely positioned SidePanel's
+	 * should have the `sidebar-header` `top` CSS property adjusted to account
+	 * for any fixed or sticky navigation bars on the page.
 	 */
 	sticky?: boolean;
 };

@@ -18,7 +18,9 @@ type Props = {
 	className?: string;
 
 	/**
-	 * Property to make the Footer sticky.
+	 * Property to make the Footer sticky. Absolutely positioned SidePanel's
+	 * should have the `sidebar-footer` `bottom` CSS property adjusted to
+	 * account for any fixed or sticky footers on the page.
 	 */
 	sticky?: boolean;
 };
