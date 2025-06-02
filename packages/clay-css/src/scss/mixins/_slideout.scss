@@ -56,15 +56,7 @@
 
 			@if ($_sidebar) {
 				.sidebar {
-					@include clay-css($_sidebar);
-				}
-			}
-
-			$_sidebar-body: map-get($map, sidebar-body);
-
-			@if ($_sidebar-body) {
-				.sidebar-body {
-					@include clay-css($_sidebar-body);
+					@include clay-sidebar-variant($_sidebar);
 				}
 			}
 
@@ -153,6 +145,16 @@
 						}
 					}
 				}
+			}
+
+			$_media-breakpoint-down: map-get($map, media-breakpoint-down);
+			$_media-breakpoint-up: map-get($map, media-breakpoint-up);
+
+			@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+				@include clay-generate-media-breakpoints(
+					$map,
+					'clay-slideout-variant'
+				);
 			}
 		}
 	}

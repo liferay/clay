@@ -1,7 +1,7 @@
-$sidebar-padding-bottom: 1rem !default; // 16px
-$sidebar-padding-left: 1rem !default; // 16px
-$sidebar-padding-right: 1rem !default; // 16px
-$sidebar-padding-top: 1rem !default; // 16px
+$sidebar-padding-bottom: 1rem !default;
+$sidebar-padding-left: 1.5rem !default;
+$sidebar-padding-right: 1.5rem !default;
+$sidebar-padding-top: 1rem !default;
 
 // .sidebar-header .component-title
 
@@ -82,17 +82,22 @@ $sidebar: map-deep-merge(
 		height: 100%,
 		overflow: auto,
 		-webkit-overflow-scrolling: touch,
-		focus: (
-			box-shadow: $component-focus-inset-box-shadow,
-			outline: 0,
-		),
 		sidebar-header: (
 			padding-bottom: $sidebar-padding-bottom,
 			padding-left: $sidebar-padding-left,
-			padding-right: $sidebar-padding-right,
+			padding-right: 1rem,
 			padding-top: $sidebar-padding-top,
 			component-title: $sidebar-header-component-title,
 			component-subtitle: $sidebar-header-component-subtitle,
+			autofit-row: (
+				margin-left: -0.25rem,
+				margin-right: -0.25rem,
+				width: auto,
+				autofit-col: (
+					padding-left: 0.25rem,
+					padding-right: 0.25rem,
+				),
+			),
 		),
 		sidebar-footer: (
 			padding-bottom: $sidebar-padding-bottom,
@@ -220,6 +225,14 @@ $sidebar-light: map-deep-merge(
 		border-color: $gray-300,
 		border-left-width: 1px,
 		color: $gray-900,
+		sidebar-header: (
+			background-color: inherit,
+			border: 0px solid $gray-300,
+		),
+		sidebar-footer: (
+			background-color: inherit,
+			border: 0px solid $gray-300,
+		),
 		sidebar-dd: (
 			href: (
 				color: $gray-900,
@@ -296,6 +309,10 @@ $sidebar-dark: map-deep-merge(
 	),
 	$sidebar-dark
 );
+
+$sidebar-c-slideout-start: () !default;
+
+$sidebar-c-slideout-end: () !default;
 
 $sidebar-palette: () !default;
 $sidebar-palette: map-deep-merge(

@@ -490,6 +490,8 @@
 					@include clay-map-to-css($_input-group);
 				}
 			}
+
+			@include clay-map-to-css($map);
 		}
 	}
 }

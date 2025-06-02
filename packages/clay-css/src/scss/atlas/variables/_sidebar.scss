@@ -3,8 +3,7 @@
 $sidebar-header-component-title: () !default;
 $sidebar-header-component-title: map-deep-merge(
 	(
-		// 20px
-		font-size: 1.25rem
+		font-size: 1rem,
 	),
 	$sidebar-header-component-title
 );
@@ -14,7 +13,7 @@ $sidebar-header-component-title: map-deep-merge(
 $sidebar-header-component-subtitle: () !default;
 $sidebar-header-component-subtitle: map-deep-merge(
 	(
-		font-size: 0.75rem,
+		font-size: 0.875rem,
 		font-weight: $font-weight-normal,
 	),
 	$sidebar-header-component-subtitle
@@ -63,10 +62,6 @@ $sidebar-light: map-deep-merge(
 		box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
 		sidenav-start: (
 			box-shadow: 0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
-			focus: (
-				box-shadow: #{0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
-				$component-focus-inset-box-shadow},
-			),
 		),
 		sidebar-panel: (
 			background-color: $gray-200,
@@ -92,4 +87,14 @@ $sidebar-light: map-deep-merge(
 		component-navigation-bar: $sidebar-light-navigation-bar,
 	),
 	$sidebar-light
+);
+
+$sidebar-c-slideout-start: () !default;
+$sidebar-c-slideout-start: map-deep-merge(
+	(
+		'.sidebar-light': (
+			box-shadow: 0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+		),
+	),
+	$sidebar-c-slideout-start
 );

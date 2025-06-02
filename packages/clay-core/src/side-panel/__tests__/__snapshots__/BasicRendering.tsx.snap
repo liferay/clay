@@ -2,7 +2,9 @@
 
 exports[`SidePanel basic rendering render basic content 1`] = `
 <div>
-  <div>
+  <div
+    class="c-slideout-container"
+  >
     <div
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
@@ -17,7 +19,7 @@ exports[`SidePanel basic rendering render basic content 1`] = `
           class="sidebar-header"
         >
           <div
-            class="autofit-row sidebar-section"
+            class="autofit-row"
           >
             <div
               class="autofit-col autofit-col-expand"
@@ -67,13 +69,15 @@ exports[`SidePanel basic rendering render basic content 1`] = `
 
 exports[`SidePanel basic rendering render component with open state 1`] = `
 <div>
-  <div>
+  <div
+    class="c-slideout-push-end c-slideout-container"
+  >
     <div
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
       <div
         aria-labelledby="clay-id-2"
-        class="sidebar sidebar-light"
+        class="sidebar sidebar-light c-slideout-show"
         id="sidepanel"
         tabindex="-1"
       >
@@ -81,7 +85,7 @@ exports[`SidePanel basic rendering render component with open state 1`] = `
           class="sidebar-header"
         >
           <div
-            class="autofit-row sidebar-section"
+            class="autofit-row"
           >
             <div
               class="autofit-col autofit-col-expand"
@@ -131,7 +135,9 @@ exports[`SidePanel basic rendering render component with open state 1`] = `
 
 exports[`SidePanel basic rendering render with custom aria-label 1`] = `
 <div>
-  <div>
+  <div
+    class="c-slideout-container"
+  >
     <div
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
@@ -146,7 +152,7 @@ exports[`SidePanel basic rendering render with custom aria-label 1`] = `
           class="sidebar-header"
         >
           <div
-            class="autofit-row sidebar-section"
+            class="autofit-row"
           >
             <div
               class="autofit-col autofit-col-expand"

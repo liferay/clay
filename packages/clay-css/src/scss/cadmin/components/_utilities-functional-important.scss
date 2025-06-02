@@ -463,6 +463,14 @@
 	z-index: $cadmin-zindex-fixed;
 }
 
+.sticky-bottom {
+	@supports (position: sticky) {
+		bottom: 0;
+		position: sticky;
+		z-index: $cadmin-zindex-sticky;
+	}
+}
+
 .sticky-top {
 	@supports (position: sticky) {
 		position: sticky;
