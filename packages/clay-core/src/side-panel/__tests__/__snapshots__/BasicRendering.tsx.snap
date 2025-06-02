@@ -2,7 +2,9 @@
 
 exports[`SidePanel basic rendering render basic content 1`] = `
 <div>
-  <div>
+  <div
+    class="c-slideout-container"
+  >
     <div
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
@@ -68,7 +70,7 @@ exports[`SidePanel basic rendering render basic content 1`] = `
 exports[`SidePanel basic rendering render component with open state 1`] = `
 <div>
   <div
-    class="c-slideout-push-end"
+    class="c-slideout-push-end c-slideout-container"
   >
     <div
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
@@ -133,7 +135,9 @@ exports[`SidePanel basic rendering render component with open state 1`] = `
 
 exports[`SidePanel basic rendering render with custom aria-label 1`] = `
 <div>
-  <div>
+  <div
+    class="c-slideout-container"
+  >
     <div
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
