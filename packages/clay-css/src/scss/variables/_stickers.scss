@@ -159,6 +159,12 @@ $sticker-xl: map-deep-merge(
 $sticker-sizes: () !default;
 $sticker-sizes: map-deep-merge(
 	(
+		sticker-xs: (
+			font-size: 0.5rem,
+			height: 1rem,
+			line-height: 1rem,
+			width: 1rem,
+		),
 		sticker-sm: $sticker-sm,
 		sticker-lg: $sticker-lg,
 		sticker-xl: $sticker-xl,
