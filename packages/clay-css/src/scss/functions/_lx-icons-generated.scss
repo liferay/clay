@@ -828,7 +828,7 @@
 
 	'sites': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-body lx-sites-bg" fill="none" d="M437 75C388.7 26.6 324.4 0 256 0S123.3 26.6 75 75C26.6 123.3 0 187.6 0 256s26.6 132.7 75 181c48.4 48.4 112.6 75 181 75s132.7-26.6 181-75c48.4-48.4 75-112.6 75-181s-26.6-132.7-75-181z"/><path class="lexicon-icon-outline lx-sites-border" d="M437 75C388.7 26.6 324.4 0 256 0S123.3 26.6 75 75C26.6 123.3 0 187.6 0 256s26.6 132.7 75 181c48.4 48.4 112.6 75 181 75s132.7-26.6 181-75c48.4-48.4 75-112.6 75-181s-26.6-132.7-75-181zM256 448c-105.9 0-192-86.1-192-192S150.1 64 256 64s192 86.1 192 192-86.1 192-192 192z" fill="#{$color}"/><path class="lexicon-icon-outline lx-sites-hands" d="m128 384 192-64 64-192-192 64-64 192zm126.9-160c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32z" fill="#{$color}"/></svg>',
 
-	'slash': '<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m5.5 14.503 5-13"/></svg>',
+	'slash': '<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="lexicon-icon-outline" d="M10.859.569a1 1 0 0 0-1.292.574l-5 13a1 1 0 0 0 1.866.718l5-13A1 1 0 0 0 10.86.57Z" fill="#{$color}"/></svg>',
 
 	'slideshow': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline lx-slideshow-border" d="M64 480h384c32 0 64-32 64-64V96c0-32-32-64-64-64H64C32 32 0 64 0 96v320c0 32 32 64 64 64zm0-384h384v320H64" fill="#{$color}"/><circle class="lexicon-icon-outline lx-slideshow-dot-1" cx="160" cy="320" r="32" fill="#{$color}"/><circle class="lexicon-icon-outline lx-slideshow-dot-2" cx="256" cy="320" r="32" fill="#{$color}"/><circle class="lexicon-icon-outline lx-slideshow-dot-3" cx="352" cy="320" r="32" fill="#{$color}"/></svg>',
 
