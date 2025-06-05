@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayButton from '@clayui/button';
+import ClayDropDown, {Align} from '@clayui/drop-down';
 import React, {useRef, useState} from 'react';
 
 import ClayDatePicker, {FirstDayOfWeek} from '../src';
@@ -213,3 +215,42 @@ export const DynamicYears = () => {
 		/>
 	);
 };
+
+export const InDropdownMenu = () => (
+	<>
+		<ClayDatePickerWithState
+			placeholder="YYYY-MM-DD"
+			years={{
+				end: new Date().getFullYear(),
+				start: 1998,
+			}}
+		/>
+		<ClayDropDown
+			alignmentPosition={Align.BottomLeft}
+			trigger={
+				<ClayButton>
+					Open this and the Date Picker Menu first
+				</ClayButton>
+			}
+			triggerIcon="caret-bottom"
+		>
+			<ClayDropDown.ItemList>
+				<ClayDropDown.Section>
+					<ClayDatePickerWithState
+						placeholder="YYYY-MM-DD"
+						years={{
+							end: new Date().getFullYear(),
+							start: 1998,
+						}}
+					/>
+				</ClayDropDown.Section>
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+		<ClayDropDown trigger={<ClayButton>second dropdown</ClayButton>}>
+			<ClayDropDown.Item onClick={() => alert('it worked!')}>
+				This should be clickable but isn't due to aria-hidden plugin not
+				working when using a mix of hideOthers and suppressOthers
+			</ClayDropDown.Item>
+		</ClayDropDown>
+	</>
+);
