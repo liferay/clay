@@ -3,8 +3,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import type {Item} from '@clayui/core';
-
 import {LanguagePicker} from '@clayui/core';
 import ClayForm, {ClayInput} from '@clayui/form';
 import React, {useMemo} from 'react';
@@ -167,12 +165,19 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 							value={translations[selectedLocale.label] || ''}
 						/>
 					</ClayInput.GroupItem>
-
 					<ClayInput.GroupItem shrink>
 						<LanguagePicker
 							defaultLocaleId={defaultLanguage.id}
 							hideTriggerText
 							locales={languagePickerLocales}
+							messages={{
+								default: ariaLabels.default,
+								option: '{0} language: {1}.',
+								translated: ariaLabels.translated,
+								translating: 'Translating {0}/{1}',
+								trigger: ariaLabels.openLocalizations,
+								untranslated: ariaLabels.untranslated,
+							}}
 							onSelectedLocaleChange={(localeId: any) =>
 								onSelectedLocaleChange(
 									languagePickerLocales.find(
