@@ -141,7 +141,7 @@ const getTranslationLabel = ({
 		const {total, translated} = translation;
 
 		if (translated !== 0) {
-			 if (total === translated) {
+			if (total === translated) {
 				displayType = 'success';
 				label = messages.translated;
 			} else {
