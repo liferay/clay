@@ -138,7 +138,7 @@ $cadmin-modal-body: map-deep-merge(
 			margin-right: math-sign($cadmin-modal-inner-padding),
 			top: math-sign($cadmin-modal-inner-padding),
 		),
-		'.close': (
+		'> .close': (
 			position: absolute,
 			right: 1rem,
 			top: 1rem,

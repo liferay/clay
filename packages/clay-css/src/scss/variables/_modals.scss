@@ -143,7 +143,7 @@ $modal-body: map-deep-merge(
 			margin-right: math-sign($modal-inner-padding),
 			top: math-sign($modal-inner-padding),
 		),
-		'.close': (
+		'> .close': (
 			position: absolute,
 			right: 1rem,
 			top: 1rem,
