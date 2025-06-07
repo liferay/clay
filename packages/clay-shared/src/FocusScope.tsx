@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {Children, useContext} from 'react';
+import React, {Children} from 'react';
 
 import {Keys} from './Keys';
 import {useFocusManagement} from './useFocusManagement';
@@ -57,8 +57,6 @@ export const FocusScope = ({
 	const elRef = React.useRef<null | HTMLElement>(null);
 	const focusManager = useFocusManagement(elRef);
 
-	const hasParentFocus = useContext(FocusConflictContext);
-
 	const onKeyDown = (event: React.KeyboardEvent<any>) => {
 		const {key, shiftKey} = event;
 
@@ -100,9 +98,7 @@ export const FocusScope = ({
 		<FocusConflictContext.Provider value>
 			{React.cloneElement(child, {
 				onKeyDown: (event: React.KeyboardEvent) => {
-					if (hasParentFocus) {
-						event.stopPropagation();
-					}
+					event.stopPropagation();
 
 					// If the element already exists a `onKeyDown` event should
 					// invoke it as well.
