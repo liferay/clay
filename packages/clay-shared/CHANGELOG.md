@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.139.0](https://github.com/liferay/clay/compare/v3.138.0...v3.139.0) (2025-06-10)
+
+### Bug Fixes
+
+-   **@clayui/shared:** LPD-56545 FocusScope gets stuck on DatePicker Menu when it's nested inside a dropdown menu ([050b87e](https://github.com/liferay/clay/commit/050b87e88b40fca8bfd80aace258e8cdd8844d3d))
+-   **@clayui/shared:** LPD-56545 Overlay fails to remove inert when an inert menu is opened from another menu ([27fc256](https://github.com/liferay/clay/commit/27fc256fbdab5d3b989fa3e5da4a574c65058379))
+
 # [3.137.0](https://github.com/liferay/clay/compare/v3.136.0...v3.137.0) (2025-05-30)
 
 ### Bug Fixes

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.139.0](https://github.com/liferay/clay/compare/v3.138.0...v3.139.0) (2025-06-10)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-50722 LanguagePicker default language label not displaying and SF ([3770f21](https://github.com/liferay/clay/commit/3770f2157764488f33b987b3948fdc4105623b82))
+-   **@clayui/core:** LPD-50722 LanguagePicker should display label untranslated if total is 0 ([f1e1103](https://github.com/liferay/clay/commit/f1e1103a28da6fb6f018f87a1a35d9908356ae80))
+
 # [3.138.0](https://github.com/liferay/clay/compare/v3.137.0...v3.138.0) (2025-06-02)
 
 ### Bug Fixes

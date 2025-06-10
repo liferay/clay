@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.139.0](https://github.com/liferay/clay/compare/v3.138.0...v3.139.0) (2025-06-10)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-56551 SVG Icon paste-plaintext has hard coded fill attribute ([56ea2d2](https://github.com/liferay/clay/commit/56ea2d2f1573e914f9f372f40cf860de16f93415))
+* **@clayui/css:** LPD-57335 Modal be more specific targetting close button ([7303d4a](https://github.com/liferay/clay/commit/7303d4aad22796d0a104e06d472dcc8101d98e42))
+* **@clayui/css:** LPD-57411 SVG Icon slash.svg should use fill instead of stroke ([104f6d2](https://github.com/liferay/clay/commit/104f6d2873368c2bd1207498456bbebffb36c72c))
+
+
+### Features
+
+* **@clayui/clay-css:** LPD-54015 Add minus-circle 16px icon and generated files ([2886767](https://github.com/liferay/clay/commit/28867679c193c6495f00c5485b4ab82f88485a66))
+* **@clayui/css:** LPD-57160 Mixins clay-sticker-variant adds options for interactive states ([e7f07a5](https://github.com/liferay/clay/commit/e7f07a5289cf68c71ec085a7faa50156c3bc33e6))
+
+
+
+
+
 # [3.138.0](https://github.com/liferay/clay/compare/v3.137.0...v3.138.0) (2025-06-02)
 
 

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.139.0](https://github.com/liferay/clay/compare/v3.138.0...v3.139.0) (2025-06-10)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-50722 LanguagePicker default language label not displaying and SF ([3770f21](https://github.com/liferay/clay/commit/3770f2157764488f33b987b3948fdc4105623b82))
+-   **@clayui/core:** LPD-50722 LanguagePicker should display label untranslated if total is 0 ([f1e1103](https://github.com/liferay/clay/commit/f1e1103a28da6fb6f018f87a1a35d9908356ae80))
+-   **@clayui/css:** LPD-56551 SVG Icon paste-plaintext has hard coded fill attribute ([56ea2d2](https://github.com/liferay/clay/commit/56ea2d2f1573e914f9f372f40cf860de16f93415))
+-   **@clayui/css:** LPD-57335 Modal be more specific targetting close button ([7303d4a](https://github.com/liferay/clay/commit/7303d4aad22796d0a104e06d472dcc8101d98e42))
+-   **@clayui/css:** LPD-57411 SVG Icon slash.svg should use fill instead of stroke ([104f6d2](https://github.com/liferay/clay/commit/104f6d2873368c2bd1207498456bbebffb36c72c))
+-   **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([59cca59](https://github.com/liferay/clay/commit/59cca59f9cb87acbd5c600be40db553c5f045849))
+-   **@clayui/shared:** LPD-56545 FocusScope gets stuck on DatePicker Menu when it's nested inside a dropdown menu ([050b87e](https://github.com/liferay/clay/commit/050b87e88b40fca8bfd80aace258e8cdd8844d3d))
+-   **@clayui/shared:** LPD-56545 Overlay fails to remove inert when an inert menu is opened from another menu ([27fc256](https://github.com/liferay/clay/commit/27fc256fbdab5d3b989fa3e5da4a574c65058379))
+
+### Features
+
+-   **@clayui/clay-css:** LPD-54015 Add minus-circle 16px icon and generated files ([2886767](https://github.com/liferay/clay/commit/28867679c193c6495f00c5485b4ab82f88485a66))
+-   **@clayui/css:** LPD-57160 Mixins clay-sticker-variant adds options for interactive states ([e7f07a5](https://github.com/liferay/clay/commit/e7f07a5289cf68c71ec085a7faa50156c3bc33e6))
+-   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([2d04fc5](https://github.com/liferay/clay/commit/2d04fc5085932149803837df6772adb0789d7ca0))
+
 # [3.138.0](https://github.com/liferay/clay/compare/v3.137.0...v3.138.0) (2025-06-02)
 
 ### Bug Fixes
