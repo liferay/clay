@@ -27,7 +27,10 @@ type Props = {
 	triggerRef: React.RefObject<HTMLElement>;
 };
 
-const overlayStack: Array<React.RefObject<Element>> = [];
+const overlayStack: Array<{
+	inert: boolean | undefined;
+	menu: React.RefObject<Element>;
+}> = [];
 
 /**
  * Overlay component is used for components like dialog and modal.
@@ -50,9 +53,11 @@ export function Overlay({
 }: Props) {
 	const unsuppressCallbackRef = useRef<Undo | null>(null);
 
+	const isInert = (isModal || inert) && supportsInert();
+
 	const onHide = useCallback(
 		(action: 'escape' | 'blur') => {
-			if (overlayStack[overlayStack.length - 1] === menuRef) {
+			if (overlayStack[overlayStack.length - 1]?.menu === menuRef) {
 				onClose(action);
 			}
 		},
@@ -85,7 +90,7 @@ export function Overlay({
 			(event: KeyboardEvent) => {
 				if (
 					event.key === Keys.Esc &&
-					overlayStack[overlayStack.length - 1] === menuRef
+					overlayStack[overlayStack.length - 1]?.menu === menuRef
 				) {
 					event.stopImmediatePropagation();
 					event.preventDefault();
@@ -121,7 +126,7 @@ export function Overlay({
 			}
 		},
 		onInteractStart: (event) => {
-			if (overlayStack[overlayStack.length - 1] === menuRef) {
+			if (overlayStack[overlayStack.length - 1]?.menu === menuRef) {
 				if (unsuppressCallbackRef.current) {
 					unsuppressCallbackRef.current();
 					unsuppressCallbackRef.current = null;
@@ -139,11 +144,16 @@ export function Overlay({
 
 	useEffect(() => {
 		if (isOpen) {
-			overlayStack.push(menuRef);
+			overlayStack.push({
+				inert: isInert,
+				menu: menuRef,
+			});
 		}
 
 		return () => {
-			const index = overlayStack.indexOf(menuRef);
+			const index = overlayStack.findIndex(
+				(object) => object.menu === menuRef
+			);
 
 			if (index >= 0) {
 				overlayStack.splice(index, 1);
@@ -152,15 +162,37 @@ export function Overlay({
 	}, [isOpen, menuRef]);
 
 	useEffect(() => {
-		if (menuRef.current && isOpen) {
+		const currentMenuRef = menuRef?.current;
+
+		const previousOverlayStacks = overlayStack.slice(0, -1);
+
+		const previouslyHidden =
+			previousOverlayStacks.findIndex(
+				(object) => object.inert === undefined
+			) >= 0;
+		const previouslyInert =
+			previousOverlayStacks.findIndex(
+				(object) => object.inert === true
+			) >= 0;
+
+		if (currentMenuRef && isOpen) {
 			const elements = suppress
 				? suppress.map((ref) => ref.current!)
-				: menuRef.current;
+				: [currentMenuRef];
+
+			const hiddenElement =
+				currentMenuRef.closest('[aria-hidden]') ||
+				currentMenuRef.closest('[inert]');
+
+			hiddenElement?.removeAttribute('data-suppressed');
+			hiddenElement?.removeAttribute('data-aria-hidden');
+			hiddenElement?.removeAttribute('aria-hidden');
+			hiddenElement?.removeAttribute('inert');
 
 			// Inert is a new native feature to better handle DOM arias that are not
 			// assertive to a SR or that should ignore any user interaction.
 			// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert
-			if ((isModal || inert) && supportsInert()) {
+			if (isInert) {
 				unsuppressCallbackRef.current = suppressOthers(elements);
 			} else {
 				unsuppressCallbackRef.current = hideOthers(elements);
@@ -170,6 +202,19 @@ export function Overlay({
 				if (unsuppressCallbackRef.current) {
 					unsuppressCallbackRef.current();
 				}
+
+				if (isInert && !previouslyInert) {
+					document.querySelectorAll('[inert]').forEach((element) => {
+						element.removeAttribute('inert');
+					});
+				} else if (!isInert && !previouslyHidden) {
+					document
+						.querySelectorAll('[aria-hidden]')
+						.forEach((element) => {
+							element.removeAttribute('aria-hidden');
+						});
+				}
+
 				unsuppressCallbackRef.current = null;
 			};
 		}
