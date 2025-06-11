@@ -35,7 +35,7 @@ exports[`SidePanel basic rendering render basic content 1`] = `
               class="autofit-col"
             >
               <button
-                aria-label="Close"
+                aria-label="Close the undefined sidebar"
                 class="close"
                 type="button"
               >
@@ -101,7 +101,7 @@ exports[`SidePanel basic rendering render component with open state 1`] = `
               class="autofit-col"
             >
               <button
-                aria-label="Close"
+                aria-label="Close the undefined sidebar"
                 class="close"
                 type="button"
               >
@@ -168,7 +168,7 @@ exports[`SidePanel basic rendering render with custom aria-label 1`] = `
               class="autofit-col"
             >
               <button
-                aria-label="Close"
+                aria-label="Close the undefined sidebar"
                 class="close"
                 type="button"
               >
