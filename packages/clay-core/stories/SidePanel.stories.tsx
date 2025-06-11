@@ -105,11 +105,9 @@ export const PositionAbsolute = (args: any) => {
 					open={openStart}
 				>
 					<SidePanel.Header
-						closeElementAttrs={
-							{
-								'aria-label': 'Close the Left Panel sidebar',
-							}
-						}
+						closeElementAttrs={{
+							'aria-label': 'Close the Left Panel sidebar',
+						}}
 						sticky={args.footerSticky}
 					>
 						<SidePanel.Title id={sidebarTitleId}>
