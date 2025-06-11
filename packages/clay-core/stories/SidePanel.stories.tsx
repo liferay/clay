@@ -42,6 +42,7 @@ export const PositionAbsolute = (args: any) => {
 	const [openStart, setOpenStart] = useState(false);
 	const sidePanelId = useId();
 	const sidePanelStartId = useId();
+	const sidebarTitleId = useId();
 
 	const ref = useRef<HTMLElement | null>(null);
 
@@ -103,8 +104,17 @@ export const PositionAbsolute = (args: any) => {
 					onOpenChange={setOpenStart}
 					open={openStart}
 				>
-					<SidePanel.Header sticky={args.footerSticky}>
-						<SidePanel.Title>Left Panel</SidePanel.Title>
+					<SidePanel.Header
+						closeElementAttrs={
+							{
+								'aria-label': 'Close the Left Panel sidebar',
+							}
+						}
+						sticky={args.footerSticky}
+					>
+						<SidePanel.Title id={sidebarTitleId}>
+							<div>Left Panel</div>
+						</SidePanel.Title>
 					</SidePanel.Header>
 					<SidePanel.Body>
 						<BodyContent />
