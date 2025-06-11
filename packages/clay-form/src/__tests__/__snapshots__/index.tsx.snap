@@ -39,10 +39,54 @@ exports[`ClayForm Input.Group renders 1`] = `
 />
 `;
 
+exports[`ClayForm Input.GroupInsetItem renders 1`] = `
+<div
+  className="input-group-inset-item"
+/>
+`;
+
 exports[`ClayForm Input.GroupItem renders 1`] = `
 <div
   className="input-group-item"
 />
+`;
+
+exports[`ClayForm Input.InlineText renders 1`] = `
+<div
+  className="form-control-fit-content inline-text-input"
+>
+  <div
+    className="form-control"
+  >
+    <input
+      aria-hidden={true}
+      className="form-control form-control-hidden"
+      onFocus={[Function]}
+      readOnly={true}
+      type="text"
+      value=""
+    />
+    <span
+      className="form-control-inset"
+      contentEditable="plaintext-only"
+      onBlur={[Function]}
+      onInput={[Function]}
+      role="textbox"
+    />
+    <span
+      className="form-control-indicator form-control-item"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-pencil"
+        role="presentation"
+      >
+        <use
+          href="#pencil"
+        />
+      </svg>
+    </span>
+  </div>
+</div>
 `;
 
 exports[`ClayForm Text renders 1`] = `

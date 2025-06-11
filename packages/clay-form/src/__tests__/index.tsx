@@ -57,4 +57,16 @@ describe('ClayForm', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('Input.GroupInsetItem renders', () => {
+		const testRenderer = TestRenderer.create(<ClayInput.GroupInsetItem />);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('Input.InlineText renders', () => {
+		const testRenderer = TestRenderer.create(<ClayInput.InlineText />);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });
