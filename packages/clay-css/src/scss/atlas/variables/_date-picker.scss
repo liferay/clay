@@ -94,6 +94,7 @@ $date-picker-previous-month-date: map-deep-merge(
 		),
 		active: (
 			background-color: $primary-l2,
+			color: $secondary,
 		),
 	),
 	$date-picker-previous-month-date
