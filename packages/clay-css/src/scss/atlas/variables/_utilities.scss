@@ -28,6 +28,7 @@ $close: map-deep-merge(
 		),
 		focus: (
 			box-shadow: $component-focus-box-shadow,
+			opacity: c-unset,
 		),
 		disabled: (
 			color: $gray-600,
