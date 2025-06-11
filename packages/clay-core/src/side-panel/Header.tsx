@@ -5,7 +5,7 @@
 
 import Icon from '@clayui/icon';
 import classnames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {useSidePanel} from './context';
 
@@ -21,6 +21,11 @@ type Props = {
 	className?: string;
 
 	/**
+	 * Prop to pass DOM element attributes to DropDown.Menu.
+	 */
+	closeElementAttrs?: React.HTMLAttributes<HTMLButtonElement>;
+
+	/**
 	 * Property to make the Header sticky. Absolutely positioned SidePanel's
 	 * should have the `sidebar-header` `top` CSS property adjusted to account
 	 * for any fixed or sticky navigation bars on the page.
@@ -28,8 +33,25 @@ type Props = {
 	sticky?: boolean;
 };
 
-export function Header({children, className, sticky}: Props) {
+export const Header = React.forwardRef<HTMLDivElement, Props>((
+	{children, className, closeElementAttrs, sticky}: Props,
+	ref
+) => {
 	const {onOpenChange} = useSidePanel();
+
+	const headerInternalRef = useRef<HTMLDivElement | null>(null);
+
+	let headerRef = headerInternalRef;
+
+	if (ref) {
+		headerRef = ref as React.MutableRefObject<HTMLDivElement | null>;
+	}
+
+	const [panelTitle, setPanelTitle] = useState('');
+
+	useEffect(() => {
+		setPanelTitle(headerRef.current?.innerText!);
+	}, []);
 
 	return (
 		<div
@@ -40,12 +62,16 @@ export function Header({children, className, sticky}: Props) {
 				},
 				className
 			)}
+			ref={headerRef}
 		>
 			<div className="autofit-row">
 				<div className="autofit-col autofit-col-expand">{children}</div>
 				<div className="autofit-col">
 					<button
-						aria-label="Close"
+						{...closeElementAttrs}
+						aria-label={
+							closeElementAttrs?.['aria-label'] || `Close the ${panelTitle} sidebar`
+						}
 						className="close"
 						onClick={() => onOpenChange(false)}
 						type="button"
@@ -56,4 +82,6 @@ export function Header({children, className, sticky}: Props) {
 			</div>
 		</div>
 	);
-}
+});
+
+Header.displayName = 'Header';
