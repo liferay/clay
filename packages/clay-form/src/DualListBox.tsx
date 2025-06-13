@@ -34,6 +34,11 @@ function swapArrayItems(
 
 type BoxProps = {
 	/**
+	 * Flag to disable the reorder buttons
+	 */
+	disableReorder?: boolean;
+
+	/**
 	 * Id of the selectbox to be used with the label
 	 */
 	id?: string;
@@ -189,6 +194,7 @@ const DualListBox = ({
 						onItemsChange([newLeftItems, rightItems!])
 					}
 					onSelectChange={handleLeftSelectedChange}
+					showArrows={!left.disableReorder}
 					size={size}
 					value={leftSelected}
 				/>
@@ -254,7 +260,7 @@ const DualListBox = ({
 						onItemsChange([leftItems!, newRightItems])
 					}
 					onSelectChange={handleRightSelectedChange}
-					showArrows
+					showArrows={!right.disableReorder}
 					size={size}
 					spritemap={spritemap}
 					value={rightSelected}
