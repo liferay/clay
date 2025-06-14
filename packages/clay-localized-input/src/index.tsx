@@ -3,10 +3,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import type {Item} from '@clayui/core';
-
-import {LanguagePicker} from '@clayui/core';
+import ClayButton from '@clayui/button';
+import ClayDropDown from '@clayui/drop-down';
 import ClayForm, {ClayInput} from '@clayui/form';
+import ClayIcon from '@clayui/icon';
+import ClayLabel from '@clayui/label';
+import ClayLayout from '@clayui/layout';
+import type {Item} from '@clayui/core';
+import {LanguagePicker} from '@clayui/core';
 import React, {useMemo} from 'react';
 
 interface IItem {
@@ -107,27 +111,39 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 		}: IProps,
 		ref
 	) => {
+		const [active, setActive] = React.useState(false);
+
 		const defaultLanguage = locales[0]!;
 
 		const languagePickerLocales = useMemo(() => {
-			return locales.map((locale) => ({
-				id: locale.label,
-				...locale,
-			}));
+			locales.forEach((locale, index) => {
+				if (!locale.id) {
+					locales[index]!['id'] = locale.label;
+				}
+			});
+
+			return locales as Array<Item>;
 		}, []);
 
-		const languagePickerTranslations = useMemo(() => {
-			const languagePickerTranslations: any = {};
+		let languagePickerTranslations: any = {};
 
-			locales.forEach((locale) => {
-				languagePickerTranslations[locale.label] = {
+		languagePickerTranslations = useMemo(() => {
+			Object.keys(translations).forEach((locale) => {
+				languagePickerTranslations[locale] = {
 					total: 1,
-					translated: translations[locale.label] ? 1 : 0,
+					translated: 1,
 				};
 			});
 
 			return languagePickerTranslations;
-		}, [locales, translations]);
+		}, []);
+
+		useMemo(() => {
+			languagePickerTranslations[selectedLocale?.id!] = {
+				total: 1,
+				translated: translations[selectedLocale.label] ? 1 : 0,
+			};
+		}, [translations]);
 
 		return (
 			<>
@@ -148,13 +164,6 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 						<ClayInput
 							{...otherProps}
 							id={id}
-							onBlur={(event) => {
-								onTranslationsChange({
-									...translations,
-									[selectedLocale.label]:
-										event.target.value.trim(),
-								});
-							}}
 							onChange={(event) => {
 								onTranslationsChange({
 									...translations,
@@ -171,16 +180,14 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 					<ClayInput.GroupItem shrink>
 						<LanguagePicker
 							defaultLocaleId={defaultLanguage.id}
-							hideTriggerText
 							locales={languagePickerLocales}
-							onSelectedLocaleChange={(localeId: any) =>
+							onSelectedLocaleChange={(locale: any) =>
 								onSelectedLocaleChange(
 									languagePickerLocales.find(
-										({id}) => id === localeId
+										({id}) => id === locale
 									)!
 								)
 							}
-							spritemap={spritemap}
 							translations={languagePickerTranslations}
 						/>
 					</ClayInput.GroupItem>
