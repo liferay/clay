@@ -24,30 +24,36 @@ exports[`ClayLocalizedInput renders 1`] = `
     <div
       class="input-group-item input-group-item-shrink"
     >
-      <button
-        aria-activedescendant=""
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-label="Open Localizations"
-        class="form-control form-control-select form-control-select-secondary form-control-shrink hidden-label"
-        role="combobox"
-        tabindex="0"
-        title="en-US"
-        type="button"
+      <div
+        class="dropdown"
       >
-        <span
-          class="inline-item-before"
+        <button
+          aria-controls="clay-dropdown-menu-1"
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="dropdown-toggle btn btn-monospaced btn-secondary"
+          title="Open Localizations"
+          type="button"
         >
-          <svg
-            class="lexicon-icon lexicon-icon-en-us"
-            role="presentation"
+          <span
+            class="inline-item"
           >
-            <use
-              href="/path/to/svg#en-us"
-            />
-          </svg>
-        </span>
-      </button>
+            <svg
+              class="lexicon-icon lexicon-icon-en-us"
+              role="presentation"
+            >
+              <use
+                href="/path/to/svg#en-us"
+              />
+            </svg>
+          </span>
+          <span
+            class="btn-section"
+          >
+            en-US
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -86,30 +92,36 @@ exports[`ClayLocalizedInput renders with prepend content and result formatter 1`
     <div
       class="input-group-item input-group-item-shrink"
     >
-      <button
-        aria-activedescendant=""
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-label="Open Localizations"
-        class="form-control form-control-select form-control-select-secondary form-control-shrink hidden-label"
-        role="combobox"
-        tabindex="0"
-        title="en-US"
-        type="button"
+      <div
+        class="dropdown"
       >
-        <span
-          class="inline-item-before"
+        <button
+          aria-controls="clay-dropdown-menu-2"
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="dropdown-toggle btn btn-monospaced btn-secondary"
+          title="Open Localizations"
+          type="button"
         >
-          <svg
-            class="lexicon-icon lexicon-icon-en-us"
-            role="presentation"
+          <span
+            class="inline-item"
           >
-            <use
-              href="/path/to/svg#en-us"
-            />
-          </svg>
-        </span>
-      </button>
+            <svg
+              class="lexicon-icon lexicon-icon-en-us"
+              role="presentation"
+            >
+              <use
+                href="/path/to/svg#en-us"
+              />
+            </svg>
+          </span>
+          <span
+            class="btn-section"
+          >
+            en-US
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </div>
