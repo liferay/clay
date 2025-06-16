@@ -134,14 +134,14 @@ const getTranslationLabel = ({
 	let displayType: DisplayType = 'warning';
 	let label: string = messages.untranslated;
 
-	if (localeId === defaultLocaleId) {
-		displayType = 'info';
-		label = messages.default;
-	} else if (translation) {
+	if (translation) {
 		const {total, translated} = translation;
 
 		if (translated !== 0) {
-			 if (total === translated) {
+			if (localeId === defaultLocaleId) {
+				displayType = 'info';
+				label = messages.default;
+			} else if (total === translated) {
 				displayType = 'success';
 				label = messages.translated;
 			} else {
@@ -191,8 +191,8 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 							'hidden-label': hideTriggerText,
 						}
 					)}
-					ref={ref}
 					title={hideTriggerText ? selectedItem.label : null}
+					ref={ref}
 				>
 					<span className="inline-item-before">
 						<ClayIcon
