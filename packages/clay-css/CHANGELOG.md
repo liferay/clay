@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.139.1](https://github.com/liferay/clay/compare/v3.139.0...v3.139.1) (2025-06-16)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-57725 Date Picker previous date text color to secondary ([42caf25](https://github.com/liferay/clay/commit/42caf252f65cdb0b50349eafd1900c135855a1ee))
+
+
+
+
+
 # [3.139.0](https://github.com/liferay/clay/compare/v3.138.0...v3.139.0) (2025-06-10)
 
 

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.139.1](https://github.com/liferay/clay/compare/v3.139.0...v3.139.1) (2025-06-16)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-57725 Date Picker previous date text color to secondary ([42caf25](https://github.com/liferay/clay/commit/42caf252f65cdb0b50349eafd1900c135855a1ee))
+
+### Reverts
+
+-   Revert "fix(@clayui/core): LPD-50722 LanguagePicker should display label untranslated if total is 0" ([e62679b](https://github.com/liferay/clay/commit/e62679b0217a3aaff60789b961861b7913b0e5cb))
+-   Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([8d45148](https://github.com/liferay/clay/commit/8d45148882f99c246f6a0e2c8bf175eef33d076c))
+-   Revert "chore(@clayui/localized-input): LPD-50722 SF" ([e8817d3](https://github.com/liferay/clay/commit/e8817d3c336dda51cbf6e232092b700888440499))
+-   Revert "fix(@clayui/core) LPD-50722 LanguagePicker should show tooltip when trigger text is hidden" ([fe5f4ef](https://github.com/liferay/clay/commit/fe5f4ef6f55252a7750cb33fa7c707450565c3b3))
+-   Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([564ffb6](https://github.com/liferay/clay/commit/564ffb61cb5531621384e545b439f81786e9f1cd))
+-   Revert "fix(@clayui/core): LPD-50722 LanguagePicker default language label not displaying and SF" ([6fcd83f](https://github.com/liferay/clay/commit/6fcd83f186384331fe5f16a6950c8214fd5d2138))
+-   Revert "chore(@clayui/core): LPD-50722 Update language-picker snapshot due to SF" ([2a06213](https://github.com/liferay/clay/commit/2a06213abd2933b3bd6932d46b91e6ba9143c445))
+-   Revert "chore(@clayui/core): LPD-50722 LanguagePicker SF" ([a69360c](https://github.com/liferay/clay/commit/a69360c8f2cffadc14a45d876f14cf1cd630060d))
+-   Revert "chore(@clayui/core): LPD-50722 Add @clayui/tooltip to dependencies" ([183e5f1](https://github.com/liferay/clay/commit/183e5f186dfec323d9c276e58b0dbdb51259a9c2))
+-   Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([69b7a22](https://github.com/liferay/clay/commit/69b7a22cdbe26befc77e336e7e97ace0c333aff0))
+-   Revert "chore: Update yarn.lock" ([6b3e0e4](https://github.com/liferay/clay/commit/6b3e0e46427dd75183fbd4646653aa9ddf8ffbec))
+
 # [3.139.0](https://github.com/liferay/clay/compare/v3.138.0...v3.139.0) (2025-06-10)
 
 ### Bug Fixes

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.139.1](https://github.com/liferay/clay/compare/v3.139.0...v3.139.1) (2025-06-16)
+
+### Reverts
+
+-   Revert "fix(@clayui/core): LPD-50722 LanguagePicker should display label untranslated if total is 0" ([e62679b](https://github.com/liferay/clay/commit/e62679b0217a3aaff60789b961861b7913b0e5cb))
+-   Revert "fix(@clayui/core) LPD-50722 LanguagePicker should show tooltip when trigger text is hidden" ([fe5f4ef](https://github.com/liferay/clay/commit/fe5f4ef6f55252a7750cb33fa7c707450565c3b3))
+-   Revert "fix(@clayui/core): LPD-50722 LanguagePicker default language label not displaying and SF" ([6fcd83f](https://github.com/liferay/clay/commit/6fcd83f186384331fe5f16a6950c8214fd5d2138))
+-   Revert "chore(@clayui/core): LPD-50722 Update language-picker snapshot due to SF" ([2a06213](https://github.com/liferay/clay/commit/2a06213abd2933b3bd6932d46b91e6ba9143c445))
+-   Revert "chore(@clayui/core): LPD-50722 LanguagePicker SF" ([a69360c](https://github.com/liferay/clay/commit/a69360c8f2cffadc14a45d876f14cf1cd630060d))
+-   Revert "chore(@clayui/core): LPD-50722 Add @clayui/tooltip to dependencies" ([183e5f1](https://github.com/liferay/clay/commit/183e5f186dfec323d9c276e58b0dbdb51259a9c2))
+
 # [3.139.0](https://github.com/liferay/clay/compare/v3.138.0...v3.139.0) (2025-06-10)
 
 ### Bug Fixes
