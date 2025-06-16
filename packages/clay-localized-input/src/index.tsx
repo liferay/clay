@@ -3,14 +3,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {LanguagePicker} from '@clayui/core';
+import ClayButton from '@clayui/button';
+import ClayDropDown from '@clayui/drop-down';
 import ClayForm, {ClayInput} from '@clayui/form';
-import React, {useMemo} from 'react';
+import ClayIcon from '@clayui/icon';
+import ClayLabel from '@clayui/label';
+import ClayLayout from '@clayui/layout';
+import React from 'react';
 
 interface IItem {
-	id?: string;
 	label: string;
-	name?: string;
 	symbol: string;
 }
 
@@ -105,27 +107,9 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 		}: IProps,
 		ref
 	) => {
+		const [active, setActive] = React.useState(false);
+
 		const defaultLanguage = locales[0]!;
-
-		const languagePickerLocales = useMemo(() => {
-			return locales.map((locale) => ({
-				id: locale.label,
-				...locale,
-			}));
-		}, []);
-
-		const languagePickerTranslations = useMemo(() => {
-			const languagePickerTranslations: any = {};
-
-			locales.forEach((locale) => {
-				languagePickerTranslations[locale.label] = {
-					total: 1,
-					translated: translations[locale.label] ? 1 : 0,
-				};
-			});
-
-			return languagePickerTranslations;
-		}, [locales, translations]);
 
 		return (
 			<>
@@ -146,13 +130,6 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 						<ClayInput
 							{...otherProps}
 							id={id}
-							onBlur={(event) => {
-								onTranslationsChange({
-									...translations,
-									[selectedLocale.label]:
-										event.target.value.trim(),
-								});
-							}}
 							onChange={(event) => {
 								onTranslationsChange({
 									...translations,
@@ -165,29 +142,87 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 							value={translations[selectedLocale.label] || ''}
 						/>
 					</ClayInput.GroupItem>
+
 					<ClayInput.GroupItem shrink>
-						<LanguagePicker
-							defaultLocaleId={defaultLanguage.id}
-							hideTriggerText
-							locales={languagePickerLocales}
-							messages={{
-								default: ariaLabels.default,
-								option: '{0} language: {1}.',
-								translated: ariaLabels.translated,
-								translating: 'Translating {0}/{1}',
-								trigger: ariaLabels.openLocalizations,
-								untranslated: ariaLabels.untranslated,
-							}}
-							onSelectedLocaleChange={(localeId: any) =>
-								onSelectedLocaleChange(
-									languagePickerLocales.find(
-										({id}) => id === localeId
-									)!
-								)
+						<ClayDropDown
+							active={active}
+							onActiveChange={setActive}
+							trigger={
+								<ClayButton
+									displayType="secondary"
+									monospaced
+									onClick={() => setActive(!active)}
+									title={ariaLabels.openLocalizations}
+								>
+									<span className="inline-item">
+										<ClayIcon
+											spritemap={spritemap}
+											symbol={selectedLocale.symbol}
+										/>
+									</span>
+									<span className="btn-section">
+										{selectedLocale.label}
+									</span>
+								</ClayButton>
 							}
-							spritemap={spritemap}
-							translations={languagePickerTranslations}
-						/>
+						>
+							<ClayDropDown.ItemList>
+								{locales.map((locale) => {
+									const value = translations[locale.label];
+
+									return (
+										<ClayDropDown.Item
+											key={locale.label}
+											onClick={() =>
+												onSelectedLocaleChange(locale)
+											}
+										>
+											<ClayLayout.ContentRow containerElement="span">
+												<ClayLayout.ContentCol
+													containerElement="span"
+													expand
+												>
+													<ClayLayout.ContentSection>
+														<ClayIcon
+															className="inline-item inline-item-before"
+															spritemap={
+																spritemap
+															}
+															symbol={
+																locale.symbol
+															}
+														/>
+
+														{locale.label}
+													</ClayLayout.ContentSection>
+												</ClayLayout.ContentCol>
+												<ClayLayout.ContentCol containerElement="span">
+													<ClayLayout.ContentSection>
+														<ClayLabel
+															displayType={
+																locale.label ===
+																defaultLanguage.label
+																	? 'info'
+																	: value
+																	? 'success'
+																	: 'warning'
+															}
+														>
+															{locale.label ===
+															defaultLanguage.label
+																? ariaLabels.default
+																: value
+																? ariaLabels.translated
+																: ariaLabels.untranslated}
+														</ClayLabel>
+													</ClayLayout.ContentSection>
+												</ClayLayout.ContentCol>
+											</ClayLayout.ContentRow>
+										</ClayDropDown.Item>
+									);
+								})}
+							</ClayDropDown.ItemList>
+						</ClayDropDown>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 
