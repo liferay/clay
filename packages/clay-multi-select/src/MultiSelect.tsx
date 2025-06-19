@@ -12,6 +12,7 @@ import {ClayInput} from '@clayui/form';
 import {
 	FocusScope,
 	InternalDispatch,
+	getLocatorValue,
 	sub,
 	useControlledState,
 	useId,
@@ -23,7 +24,7 @@ import {Labels} from './Labels';
 
 import type {ICollectionProps} from '@clayui/core';
 
-import type {Item, LastChangeLiveRegion, Locator} from './types';
+import type {Item, LastChangeLiveRegion, Locators} from './types';
 
 interface IMenuRendererProps {
 	/**
@@ -32,7 +33,7 @@ interface IMenuRendererProps {
 	 */
 	inputValue: string;
 
-	locator: Locator;
+	locator: Locators;
 	onItemClick?: (item: Item) => void;
 	sourceItems: Array<Item>;
 
@@ -159,9 +160,9 @@ export interface IProps<T extends Record<string, any> = Item>
 	};
 
 	/**
-	 * Sets the name of the field to map the value/label of the item
+	 * Sets the names of the fields to map the value/label of the item
 	 */
-	locator?: Locator;
+	locator?: Locators;
 
 	/**
 	 * Messages for autocomplete.
@@ -342,6 +343,16 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 				`<ClayMultiSelect />: You are using 'menuRenderer' which is deprecated and missing the new features and improvements that have been implemented in the component try to migrate to the new composition based API to custom list items.`
 			);
 		}
+
+		if (
+			allowsCustomLabel &&
+			(typeof locator.label === 'function' ||
+				typeof locator.value === 'function')
+		) {
+			console.warn(
+				`<ClayMultiSelect />: Custom labels cannot be created because the expected structure of the label is unknown. Please disable allowsCustomLabel or update the locators to be strings rather than functions.`
+			);
+		}
 	}, []);
 
 	useEffect(() => {
@@ -387,7 +398,10 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 
 			return (
 				<AutocompleteItem
-					key={item[locator.value]}
+					key={getLocatorValue({
+						item,
+						locator: locator.value,
+					})}
 					onClick={(event) => {
 						event.preventDefault();
 
@@ -396,7 +410,10 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 						setValue('');
 					}}
 				>
-					{item[locator.label]}
+					{getLocatorValue({
+						item,
+						locator: locator.label,
+					})}
 				</AutocompleteItem>
 			);
 		},
@@ -419,7 +436,12 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 					{...otherProps}
 					UNSAFE_loadingShrink
 					active={MenuRenderer ? false : active}
-					allowsCustomLabel={allowsCustomLabel}
+					allowsCustomLabel={
+						typeof locator.label === 'function' ||
+						typeof locator.value === 'function'
+							? false
+							: allowsCustomLabel
+					}
 					ariaDescriptionId={ariaDescriptionId}
 					as={Labels}
 					closeButtonAriaLabel={closeButtonAriaLabel}

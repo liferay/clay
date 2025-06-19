@@ -234,7 +234,7 @@ type RickandMorty = {
 };
 
 export const AsyncFilter = () => {
-	const [value, setValue] = useState('');
+	const [value, setValue] = useState('Magma-Q');
 
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
 		NetworkStatus.Unused
@@ -259,6 +259,7 @@ export const AsyncFilter = () => {
 						</label>
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
+							filterKey="name"
 							id="clay-autocomplete-1"
 							items={
 								(resource?.results as Array<RickandMorty>) ?? []
@@ -278,6 +279,88 @@ export const AsyncFilter = () => {
 							{(item) => (
 								<ClayAutocomplete.Item key={item.id}>
 									{item.name}
+								</ClayAutocomplete.Item>
+							)}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+type RickandMortyNested = RickandMorty & {
+	nested: {
+		name: string;
+	};
+};
+
+export const NestedData = () => {
+	const [value, setValue] = useState('Morty Smith');
+
+	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
+		NetworkStatus.Unused
+	);
+	const {resource} = useResource({
+		fetch: async (link: string) => {
+			const result = await fetch(link);
+
+			const json = await result.json();
+
+			const items = json.results.map((item: RickandMorty) => ({
+				...item,
+				nested: {
+					name: item.name,
+				},
+			}));
+
+			return {
+				cursor: json.next,
+				results: items,
+			};
+		},
+		fetchPolicy: FetchPolicy.CacheFirst,
+		link: 'https://rickandmortyapi.com/api/character/',
+		onNetworkStatusChange: setNetworkStatus,
+		variables: {name: value},
+	});
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-1"
+							id="clay-autocomplete-label-1"
+						>
+							Name
+						</label>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-1"
+							filterKey={(item: RickandMortyNested) =>
+								item?.nested.name
+							}
+							id="clay-autocomplete-1"
+							items={
+								(resource?.results as Array<RickandMortyNested>) ??
+								[]
+							}
+							loadingState={networkStatus}
+							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
+								loading: 'Loading...',
+								notFound: 'No results found',
+							}}
+							onChange={setValue}
+							onItemsChange={() => {}}
+							placeholder="Enter a name"
+							value={value}
+						>
+							{(item: RickandMortyNested) => (
+								<ClayAutocomplete.Item key={item.id}>
+									{item?.nested.name}
 								</ClayAutocomplete.Item>
 							)}
 						</ClayAutocomplete>

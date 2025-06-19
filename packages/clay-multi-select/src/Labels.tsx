@@ -6,17 +6,23 @@
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
 import Label from '@clayui/label';
-import {InternalDispatch, Keys, sub, useId} from '@clayui/shared';
+import {
+	InternalDispatch,
+	Keys,
+	getLocatorValue,
+	sub,
+	useId,
+} from '@clayui/shared';
 import React, {useCallback, useRef, useState} from 'react';
 
-import type {Item, LastChangeLiveRegion, Locator} from './types';
+import type {Item, LastChangeLiveRegion, Locators} from './types';
 
 interface IProps extends React.ComponentProps<typeof ClayInput> {
 	allowsCustomLabel?: boolean;
 	closeButtonAriaLabel: string;
 	inputName?: string;
 	labels: Array<Item>;
-	locator: Locator;
+	locator: Locators;
 	onLabelsChange: InternalDispatch<Array<Item>>;
 	onFocusChange: (value: boolean) => void;
 	spritemap?: string;
@@ -72,17 +78,28 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 		const labelId = useId();
 
 		const getSourceItemByLabel = (label: string) => {
-			return suggestionList.find((item) => item[locator.label] === label);
+			return suggestionList.find(
+				(item) =>
+					getLocatorValue({
+						item,
+						locator: locator.label,
+					}) === label
+			);
 		};
 
 		const getNewItem = (value: string): Item => {
 			counterUid++;
 
+			const labelKey =
+				typeof locator.label === 'function' ? 'label' : locator.label;
+			const valueKey =
+				typeof locator.value === 'function' ? 'value' : locator.value;
+
 			return (
 				getSourceItemByLabel(value) || {
-					[locator.label]: value,
-					[locator.value]: value,
 					key: `key_${counterUid}`,
+					[labelKey]: value,
+					[valueKey]: value,
 				}
 			);
 		};
@@ -224,10 +241,22 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 						shrink
 					>
 						{labels.map((item, i) => {
+							const value = getLocatorValue({
+								item,
+								locator: locator.value,
+							});
+
 							const uid =
-								item[locator.id!] ?? item[locator.value];
+								getLocatorValue({
+									item,
+									locator: locator.id,
+								}) ?? value;
 							const id = `${labelId}-label-${uid}-span`;
 							const closeId = `${labelId}-label-${uid}-close`;
+							const label = getLocatorValue({
+								item,
+								locator: locator.label,
+							});
 
 							return (
 								<React.Fragment key={id}>
@@ -239,10 +268,7 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 										}
 										onKeyDown={({key}) => {
 											if (key === Keys.Backspace) {
-												onRemove(
-													item[locator.label],
-													i
-												);
+												onRemove(label || '', i);
 											}
 										}}
 										role="row"
@@ -269,23 +295,20 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 													: -1
 											}
 										>
-											{item[locator.label]}
+											{label}
 										</Label.ItemExpand>
 
 										<Label.ItemAfter role="gridcell">
 											<button
 												aria-label={sub(
 													closeButtonAriaLabel,
-													[item[locator.label]]
+													[label || '']
 												)}
 												className="close"
 												disabled={disabled}
 												id={closeId}
 												onClick={() =>
-													onRemove(
-														item[locator.label],
-														i
-													)
+													onRemove(label || '', i)
 												}
 												ref={(ref) => {
 													if (
@@ -315,7 +338,7 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 										<input
 											name={inputName}
 											type="hidden"
-											value={item[locator.value]}
+											value={value}
 										/>
 									)}
 								</React.Fragment>

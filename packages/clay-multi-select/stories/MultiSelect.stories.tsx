@@ -267,6 +267,67 @@ export const Async = () => {
 	);
 };
 
+type RickandMortyNested = RickandMorty & {
+	nested: {
+		name: string;
+	};
+};
+
+export const NestedData = () => {
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState<Array<RickandMorty>>([]);
+
+	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
+		NetworkStatus.Unused
+	);
+	const {resource} = useResource({
+		fetch: async (link: string) => {
+			const result = await fetch(link);
+
+			const json = await result.json();
+
+			const items = json.results.map((item: RickandMorty) => ({
+				...item,
+				nested: {
+					name: item.name,
+				},
+			}));
+
+			return {
+				cursor: json.next,
+				results: items,
+			};
+		},
+		fetchPolicy: FetchPolicy.CacheFirst,
+		link: 'https://rickandmortyapi.com/api/character/',
+		onNetworkStatusChange: setNetworkStatus,
+		variables: {name: value},
+	});
+
+	return (
+		<ClayMultiSelect
+			allowsCustomLabel={false}
+			items={items}
+			loadingState={networkStatus}
+			locator={{
+				id: 'id',
+				label: (item: RickandMortyNested) => item.nested.name,
+				value: (item: RickandMortyNested) => item.nested.name,
+			}}
+			onChange={setValue}
+			onItemsChange={setItems}
+			sourceItems={(resource?.results as Array<RickandMortyNested>) ?? []}
+			value={value}
+		>
+			{(item: RickandMortyNested) => (
+				<ClayMultiSelect.Item key={item.id}>
+					{item.nested.name}
+				</ClayMultiSelect.Item>
+			)}
+		</ClayMultiSelect>
+	);
+};
+
 export const Group = (args: any) => {
 	const [items, setItems] = useState([
 		{
