@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import type {Locator} from '@clayui/shared';
+
 export type Item = {
 	[propName: string]: any;
 
@@ -22,10 +24,10 @@ export type Item = {
 	value?: string;
 };
 
-export type Locator = {
-	id?: string;
-	label: string;
-	value: string;
+export type Locators = {
+	id?: Locator;
+	label: Locator;
+	value: Locator;
 };
 
 export type LastChangeLiveRegion = {
