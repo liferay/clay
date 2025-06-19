@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.140.0](https://github.com/liferay/clay/compare/v3.139.1...v3.140.0) (2025-06-19)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-58275 VerticalNav.Item should accept all ClayButtonWithIcon props via menubarAction ([6a6a4eb](https://github.com/liferay/clay/commit/6a6a4ebae75244008490a3352ef9521dd837d2ab))
+
 ## [3.139.1](https://github.com/liferay/clay/compare/v3.139.0...v3.139.1) (2025-06-16)
 
 ### Reverts

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.140.0](https://github.com/liferay/clay/compare/v3.139.1...v3.140.0) (2025-06-19)
+
+### Features
+
+-   **@clayui/multi-select:** LPD-56059 Update the multiSelect to allow working with data that may be deeply nested. ([1c37228](https://github.com/liferay/clay/commit/1c37228d801e70c72dac4c2ba31348295bb71c88))
+
 ## [3.139.1](https://github.com/liferay/clay/compare/v3.139.0...v3.139.1) (2025-06-16)
 
 **Note:** Version bump only for package @clayui/multi-select

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.140.0](https://github.com/liferay/clay/compare/v3.139.1...v3.140.0) (2025-06-19)
+
+### Bug Fixes
+
+-   **@clayui/shared:** Fix typescript issue with the autocomplete. ([46f6cd1](https://github.com/liferay/clay/commit/46f6cd133bb4aa3514b093663761d1a2957d32fd))
+
+### Features
+
+-   **@clayui/shared:** LPD-56059 Add getLocatorValue shared method to allow for accessing a value from an object using either a string key or a function that accepts an item and returns the value. ([776070e](https://github.com/liferay/clay/commit/776070eb8fed5e127e9d675127621b1c2f8ed623))
+
 # [3.139.0](https://github.com/liferay/clay/compare/v3.138.0...v3.139.0) (2025-06-10)
 
 ### Bug Fixes

@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.140.0](https://github.com/liferay/clay/compare/v3.139.1...v3.140.0) (2025-06-19)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([75a8b73](https://github.com/liferay/clay/commit/75a8b7307ceabacc5ef0b2af436d7eac9df023c4))
+-   **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([5bea09c](https://github.com/liferay/clay/commit/5bea09c3d9f566911e41e84d2fd4d8198253851a))
+-   **@clayui/core:** LPD-58275 VerticalNav.Item should accept all ClayButtonWithIcon props via menubarAction ([6a6a4eb](https://github.com/liferay/clay/commit/6a6a4ebae75244008490a3352ef9521dd837d2ab))
+-   **@clayui/shared:** Fix typescript issue with the autocomplete. ([46f6cd1](https://github.com/liferay/clay/commit/46f6cd133bb4aa3514b093663761d1a2957d32fd))
+
+### Features
+
+-   **@clayui/autocomplete:** LPD-56059 Update the autocomplete to allow filtering data that may be deeply nested. ([85d76ed](https://github.com/liferay/clay/commit/85d76ed0e5916d7317b16c02325e8cf631006b92))
+-   **@clayui/multi-select:** LPD-56059 Update the multiSelect to allow working with data that may be deeply nested. ([1c37228](https://github.com/liferay/clay/commit/1c37228d801e70c72dac4c2ba31348295bb71c88))
+-   **@clayui/shared:** LPD-56059 Add getLocatorValue shared method to allow for accessing a value from an object using either a string key or a function that accepts an item and returns the value. ([776070e](https://github.com/liferay/clay/commit/776070eb8fed5e127e9d675127621b1c2f8ed623))
+
 ## [3.139.1](https://github.com/liferay/clay/compare/v3.139.0...v3.139.1) (2025-06-16)
 
 ### Bug Fixes

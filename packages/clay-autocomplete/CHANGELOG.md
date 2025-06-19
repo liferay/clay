@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.140.0](https://github.com/liferay/clay/compare/v3.139.1...v3.140.0) (2025-06-19)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([75a8b73](https://github.com/liferay/clay/commit/75a8b7307ceabacc5ef0b2af436d7eac9df023c4))
+-   **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([5bea09c](https://github.com/liferay/clay/commit/5bea09c3d9f566911e41e84d2fd4d8198253851a))
+
+### Features
+
+-   **@clayui/autocomplete:** LPD-56059 Update the autocomplete to allow filtering data that may be deeply nested. ([85d76ed](https://github.com/liferay/clay/commit/85d76ed0e5916d7317b16c02325e8cf631006b92))
+
 ## [3.139.1](https://github.com/liferay/clay/compare/v3.139.0...v3.139.1) (2025-06-16)
 
 **Note:** Version bump only for package @clayui/autocomplete
