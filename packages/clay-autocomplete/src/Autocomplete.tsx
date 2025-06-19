@@ -14,6 +14,7 @@ import {
 	InternalDispatch,
 	Keys,
 	Overlay,
+	getLocatorValue,
 	isAppleDevice,
 	sub,
 	useControlledState,
@@ -28,11 +29,14 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {AutocompleteContext} from './Context';
 
 import type {AnnouncerAPI, ICollectionProps} from '@clayui/core';
+import type {Locator} from '@clayui/shared';
 
 const {Collection, useCollection, useVirtual} = __NOT_PUBLIC_COLLECTION;
 const {LiveAnnouncer} = __NOT_PUBLIC_LIVE_ANNOUNCER;
 
-type ItemProps<T> = {
+type Item = Record<string, any> | string | number;
+
+type ItemProps<T extends Item> = {
 	children: React.ReactElement;
 	index: number;
 	item: T;
@@ -94,7 +98,7 @@ export interface IProps<T>
 	 * Defines the name of the property key that is used in the items filter
 	 * test (Dynamic content).
 	 */
-	filterKey?: string;
+	filterKey?: Locator;
 
 	/**
 	 * Property to render content with dynamic data.
@@ -167,22 +171,18 @@ const List = React.forwardRef<
 	);
 });
 
-function hasItem<T extends Record<string, any> | string | number>(
+function hasItem<T extends Item>(
 	items: Array<T>,
 	value: string,
-	filterKey?: string
+	filterKey?: Locator
 ) {
 	return items.find((item) => {
-		if (typeof item === 'string') {
-			return item === value;
-		} else if (typeof item === 'object') {
-			// filter key is not defined and we cannot infer the data type.
-			if (!filterKey) {
-				return false;
-			}
+		const itemValue = getLocatorValue({
+			item,
+			locator: filterKey,
+		});
 
-			return item[filterKey] === value;
-		}
+		return itemValue === value;
 	});
 }
 
@@ -195,7 +195,7 @@ const defaultMessages = {
 	notFound: 'No results found',
 };
 
-function AutocompleteInner<T extends Record<string, any> | string | number>(
+function AutocompleteInner<T extends Item>(
 	{
 		UNSAFE_loadingShrink,
 		active: externalActive,
@@ -344,9 +344,10 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 			}
 
 			return filterFn(
-				filterKey && typeof option === 'object'
-					? option[filterKey]
-					: option
+				getLocatorValue({
+					item: option,
+					locator: filterKey,
+				}) || option.toString()
 			);
 		});
 	}, [debouncedLoadingChange, isItemsUncontrolled, items, filterFn]);
