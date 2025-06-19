@@ -601,7 +601,10 @@ const items_cms_product_menu = [
 		],
 		label: 'Spaces',
 		menubarAction: {
-			ariaLabel: 'New Space',
+			'aria-label': 'New Space',
+			onClick: () => {
+				alert('it works!');
+			},
 			title: 'New Space',
 		},
 	},

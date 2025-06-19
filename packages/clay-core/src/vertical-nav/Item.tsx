@@ -6,6 +6,7 @@
 import {ClayButtonWithIcon} from '@clayui/button';
 import {useProvider} from '@clayui/provider';
 import {Keys, setElementFullHeight, useId} from '@clayui/shared';
+import classNames from 'classnames';
 import React, {useContext, useMemo, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
@@ -44,10 +45,7 @@ interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Properties to pass to the menubar action
 	 */
-	menubarAction?: {
-		ariaLabel: string;
-		title: string;
-	};
+	menubarAction?: React.ComponentProps<typeof ClayButtonWithIcon>;
 
 	/**
 	 * @ignore
@@ -213,13 +211,25 @@ export function Item<T extends Record<string, any>>({
 
 			{menubarAction && (
 				<ClayButtonWithIcon
-					aria-label={menubarAction.ariaLabel}
-					className="menubar-action"
-					displayType="secondary"
-					monospaced
-					size="xs"
-					symbol="plus"
-					title={menubarAction.title}
+					{...menubarAction}
+					className={classNames(
+						menubarAction.className,
+						'menubar-action'
+					)}
+					displayType={
+						menubarAction.displayType === null
+							? null
+							: menubarAction.displayType || 'secondary'
+					}
+					monospaced={
+						menubarAction.monospaced === false ? false : true
+					}
+					size={
+						menubarAction.size === null
+							? undefined
+							: menubarAction.size || 'xs'
+					}
+					symbol={menubarAction.symbol || 'plus'}
 				/>
 			)}
 
