@@ -12,11 +12,11 @@ export function getLocatorValue<T extends Item>({
 }: {
 	item: T;
 	locator?: Locator;
-}): number | string | undefined {
+}): string | undefined {
 	let value;
 
 	if (typeof item === 'number' || typeof item === 'string') {
-		return item;
+		return item.toString();
 	} else if (typeof item === 'object' && locator) {
 		if (typeof locator == 'function') {
 			value = locator(item);
