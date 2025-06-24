@@ -111,6 +111,7 @@ export const Cell = React.forwardRef(
 			expanded,
 			index,
 			keyValue,
+			onClick,
 			sortable,
 			textAlign,
 			textValue,
@@ -227,12 +228,14 @@ export const Cell = React.forwardRef(
 						: `string,${keyValue}`
 				}
 				onClick={(event) => {
-					if (!isSortable) {
-						return;
+					if (isSortable) {
+						event.preventDefault();
+						doSort();
 					}
 
-					event.preventDefault();
-					doSort();
+					if (onClick) {
+						onClick(event);
+					}
 				}}
 				onKeyDown={(event) => {
 					if (event.key === Keys.Enter) {
