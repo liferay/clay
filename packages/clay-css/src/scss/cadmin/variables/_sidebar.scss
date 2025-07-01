@@ -83,6 +83,31 @@ $cadmin-sidebar: map-deep-merge(
 		focus: (
 			box-shadow: $cadmin-component-focus-inset-box-shadow,
 		),
+		close: (
+			color: $cadmin-secondary,
+			hover: (
+				background-color: rgba($cadmin-gray-900, 0.03),
+				color: $cadmin-gray-900,
+			),
+			focus: (
+				background-color: rgba($cadmin-gray-900, 0.03),
+				color: $cadmin-gray-900,
+			),
+			active: (
+				background-color: rgba($cadmin-gray-900, 0.06),
+				color: $cadmin-gray-900,
+			),
+			disabled: (
+				background-color: transparent,
+				box-shadow: none,
+				color: $cadmin-secondary,
+				cursor: $cadmin-disabled-cursor,
+				opacity: $cadmin-component-disabled-opacity,
+				active: (
+					pointer-events: none,
+				),
+			),
+		),
 		sidebar-header: (
 			padding-bottom: $cadmin-sidebar-padding-bottom,
 			padding-left: $cadmin-sidebar-padding-left,

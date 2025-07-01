@@ -65,7 +65,6 @@ $cadmin-close: map-deep-merge(
 		height: 32px,
 		justify-content: center,
 		line-height: 1,
-		opacity: 1,
 		padding: 0,
 		text-align: center,
 		text-shadow: $cadmin-close-text-shadow,
@@ -73,12 +72,10 @@ $cadmin-close: map-deep-merge(
 		width: 32px,
 		hover: (
 			color: $cadmin-close-color,
-			opacity: 1,
 			text-decoration: none,
 		),
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
-			opacity: 1,
 			outline: 0,
 		),
 		disabled: (
