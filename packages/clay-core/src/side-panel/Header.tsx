@@ -42,15 +42,18 @@ type Props = {
 };
 
 export const Header = React.forwardRef<HTMLDivElement, Props>(
-	({
-		children,
-		className,
-		messages = {
-			closeAriaLabel: 'Close the {0} sidebar',
-		},
-		onClose,
-		sticky
-	}: Props, ref) => {
+	(
+		{
+			children,
+			className,
+			messages = {
+				closeAriaLabel: 'Close the {0} sidebar',
+			},
+			onClose,
+			sticky,
+		}: Props,
+		ref
+	) => {
 		const {onOpenChange} = useSidePanel();
 
 		const headerInternalRef = useRef<HTMLDivElement | null>(null);
@@ -89,7 +92,11 @@ export const Header = React.forwardRef<HTMLDivElement, Props>(
 					<div className="autofit-col">
 						<button
 							aria-label={
-								panelTitle ? sub(messages.closeAriaLabel!, [panelTitle]) : 'Close the sidebar'
+								panelTitle
+									? sub(messages.closeAriaLabel!, [
+											panelTitle,
+									  ])
+									: 'Close the sidebar'
 							}
 							className="close"
 							onClick={onClose}
