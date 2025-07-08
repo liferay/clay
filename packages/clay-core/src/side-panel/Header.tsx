@@ -4,6 +4,7 @@
  */
 
 import Icon from '@clayui/icon';
+import {sub} from '@clayui/shared';
 import classnames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -21,9 +22,16 @@ type Props = {
 	className?: string;
 
 	/**
-	 * Prop to pass DOM element attributes to DropDown.Menu.
+	 * Aria labels for the Side Panel Header
 	 */
-	closeElementAttrs?: React.HTMLAttributes<HTMLButtonElement>;
+	messages?: {
+		closeAriaLabel?: string;
+	};
+
+	/**
+	 * Callback function for when the close button is clicked
+	 */
+	onClose?: () => void;
 
 	/**
 	 * Property to make the Header sticky. Absolutely positioned SidePanel's
@@ -34,12 +42,24 @@ type Props = {
 };
 
 export const Header = React.forwardRef<HTMLDivElement, Props>(
-	({children, className, closeElementAttrs, sticky}: Props, ref) => {
+	({
+		children,
+		className,
+		messages = {
+			closeAriaLabel: 'Close the {0} sidebar',
+		},
+		onClose,
+		sticky
+	}: Props, ref) => {
 		const {onOpenChange} = useSidePanel();
 
 		const headerInternalRef = useRef<HTMLDivElement | null>(null);
 
 		let headerRef = headerInternalRef;
+
+		if (!onClose) {
+			onClose = () => onOpenChange(false);
+		}
 
 		if (ref) {
 			headerRef = ref as React.MutableRefObject<HTMLDivElement | null>;
@@ -49,7 +69,7 @@ export const Header = React.forwardRef<HTMLDivElement, Props>(
 
 		useEffect(() => {
 			setPanelTitle(headerRef.current?.innerText!);
-		}, []);
+		}, [headerRef.current]);
 
 		return (
 			<div
@@ -68,13 +88,11 @@ export const Header = React.forwardRef<HTMLDivElement, Props>(
 					</div>
 					<div className="autofit-col">
 						<button
-							{...closeElementAttrs}
 							aria-label={
-								closeElementAttrs?.['aria-label'] ||
-								`Close the ${panelTitle} sidebar`
+								panelTitle ? sub(messages.closeAriaLabel!, [panelTitle]) : 'Close the sidebar'
 							}
 							className="close"
-							onClick={() => onOpenChange(false)}
+							onClick={onClose}
 							type="button"
 						>
 							<Icon symbol="times" />
