@@ -105,8 +105,8 @@ export const PositionAbsolute = (args: any) => {
 					open={openStart}
 				>
 					<SidePanel.Header
-						closeElementAttrs={{
-							'aria-label': 'Close the Left Panel sidebar',
+						messages={{
+							closeAriaLabel: 'Close the Left Panel side panel.',
 						}}
 						sticky={args.footerSticky}
 					>
@@ -149,7 +149,12 @@ export const PositionAbsolute = (args: any) => {
 					onOpenChange={setOpen}
 					open={open}
 				>
-					<SidePanel.Header sticky={args.headerSticky}>
+					<SidePanel.Header
+						messages={{
+							closeAriaLabel: 'Close the Title side panel.',
+						}}
+						sticky={args.headerSticky}
+					>
 						<SidePanel.Title>Title</SidePanel.Title>
 					</SidePanel.Header>
 					<SidePanel.Body>
@@ -283,7 +288,11 @@ export const PositionFixed = () => {
 					open={openStart}
 					position="fixed"
 				>
-					<SidePanel.Header>
+					<SidePanel.Header
+						messages={{
+							closeAriaLabel: 'Close the Left Panel side panel.',
+						}}
+					>
 						<SidePanel.Title>Left Panel</SidePanel.Title>
 					</SidePanel.Header>
 					<SidePanel.Body>
@@ -322,7 +331,11 @@ export const PositionFixed = () => {
 					open={open}
 					position="fixed"
 				>
-					<SidePanel.Header>
+					<SidePanel.Header
+						messages={{
+							closeAriaLabel: 'Close the Right Panel side panel.',
+						}}
+					>
 						<SidePanel.Title>Right Panel</SidePanel.Title>
 					</SidePanel.Header>
 					<SidePanel.Body>
