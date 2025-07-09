@@ -4,9 +4,8 @@
  */
 
 import Icon from '@clayui/icon';
-import {sub} from '@clayui/shared';
 import classnames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React from 'react';
 
 import {useSidePanel} from './context';
 
@@ -29,11 +28,6 @@ type Props = {
 	};
 
 	/**
-	 * Callback function for when the close button is clicked
-	 */
-	onClose?: () => void;
-
-	/**
 	 * Property to make the Header sticky. Absolutely positioned SidePanel's
 	 * should have the `sidebar-header` `top` CSS property adjusted to account
 	 * for any fixed or sticky navigation bars on the page.
@@ -41,74 +35,39 @@ type Props = {
 	sticky?: boolean;
 };
 
-export const Header = React.forwardRef<HTMLDivElement, Props>(
-	(
-		{
-			children,
-			className,
-			messages = {
-				closeAriaLabel: 'Close the {0} sidebar',
-			},
-			onClose,
-			sticky,
-		}: Props,
-		ref
-	) => {
-		const {onOpenChange} = useSidePanel();
+export const Header = ({
+	children,
+	className,
+	messages = {
+		closeAriaLabel: 'Close the sidebar',
+	},
+	sticky,
+}: Props) => {
+	const {onOpenChange} = useSidePanel();
 
-		const headerInternalRef = useRef<HTMLDivElement | null>(null);
-
-		let headerRef = headerInternalRef;
-
-		if (!onClose) {
-			onClose = () => onOpenChange(false);
-		}
-
-		if (ref) {
-			headerRef = ref as React.MutableRefObject<HTMLDivElement | null>;
-		}
-
-		const [panelTitle, setPanelTitle] = useState('');
-
-		useEffect(() => {
-			setPanelTitle(headerRef.current?.innerText!);
-		}, [headerRef.current]);
-
-		return (
-			<div
-				className={classnames(
-					'sidebar-header',
-					{
-						'sticky-top': sticky,
-					},
-					className
-				)}
-				ref={headerRef}
-			>
-				<div className="autofit-row">
-					<div className="autofit-col autofit-col-expand">
-						{children}
-					</div>
-					<div className="autofit-col">
-						<button
-							aria-label={
-								panelTitle
-									? sub(messages.closeAriaLabel!, [
-											panelTitle,
-									  ])
-									: 'Close the sidebar'
-							}
-							className="close"
-							onClick={onClose}
-							type="button"
-						>
-							<Icon symbol="times" />
-						</button>
-					</div>
+	return (
+		<div
+			className={classnames(
+				'sidebar-header',
+				{
+					'sticky-top': sticky,
+				},
+				className
+			)}
+		>
+			<div className="autofit-row">
+				<div className="autofit-col autofit-col-expand">{children}</div>
+				<div className="autofit-col">
+					<button
+						aria-label={messages.closeAriaLabel}
+						className="close"
+						onClick={() => onOpenChange(false)}
+						type="button"
+					>
+						<Icon symbol="times" />
+					</button>
 				</div>
 			</div>
-		);
-	}
-);
-
-Header.displayName = 'Header';
+		</div>
+	);
+};
