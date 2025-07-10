@@ -39,7 +39,7 @@ export const Header = ({
 	children,
 	className,
 	messages = {
-		closeAriaLabel: 'Close the sidebar',
+		closeAriaLabel: 'Close the side panel.',
 	},
 	sticky,
 }: Props) => {
