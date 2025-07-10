@@ -91,7 +91,7 @@ async function APIReferenceAsync({
 			.filter((type): type is any => Boolean(type) && filter(type!))
 			.map((type) => (
 				<div
-					key={type.name}
+					key={type?.name}
 					style={{
 						display: 'flex',
 						flexDirection: 'column',
@@ -116,13 +116,13 @@ async function APIReferenceAsync({
 						>
 							<h3
 								id={
-									type.name
-										? createSlug(type.name, 'kebab')
+									type?.name
+										? createSlug(type?.name, 'kebab')
 										: undefined
 								}
 								style={{flexShrink: 0, margin: '0 !important'}}
 							>
-								{type.name}
+								{type?.name}
 							</h3>
 
 							<CodeInline
@@ -160,7 +160,7 @@ async function APIReferenceAsync({
 
 	return (
 		<div
-			key={type.name}
+			key={type?.name}
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
@@ -184,13 +184,13 @@ async function APIReferenceAsync({
 				>
 					<h3
 						id={
-							type.name
-								? createSlug(type.name, 'kebab')
+							type?.name
+								? createSlug(type?.name, 'kebab')
 								: undefined
 						}
 						style={{flexShrink: 0, margin: 0}}
 					>
-						{type.name}
+						{type?.name}
 					</h3>
 
 					<CodeInline value={type.text} language="typescript" />
@@ -314,12 +314,12 @@ function TypeChildren({
 					const isReference =
 						signature.parameter &&
 						((signature.parameter.kind === 'Intersection' &&
-							signature.parameter.name === 'props') ||
+							signature.parameter?.name === 'props') ||
 							signature.parameter.kind === 'Reference');
 					const reference = isReference
 						? types!.find(
 								(type: any) =>
-									type.name ===
+									type?.name ===
 									(signature.parameter.kind === 'Reference'
 										? signature.parameter.text
 										: signature.parameter.properties[0]
@@ -527,7 +527,7 @@ function TypeProperties({type, css: cssProp}: {type: any; css?: CSSObject}) {
 
 /** Renders a type value with its name, type, and description. */
 function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
-	const isNameSameAsType = type.name === type.text;
+	const isNameSameAsType = type?.name === type.text;
 	const isDeprecated = type.tags?.find(
 		(item: any) => item.tagName === 'deprecated'
 	);
@@ -557,7 +557,7 @@ function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 					color: 'var(--color-foreground-secondary)',
 				}}
 			>
-				{type.name}{' '}
+				{type?.name}{' '}
 				{isRequired && (
 					<span
 						style={{color: 'oklch(0.8 0.15 36.71)'}}
@@ -606,7 +606,7 @@ function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 
 	return (
 		<div
-			key={type.name + type.text}
+			key={type?.name + type.text}
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
