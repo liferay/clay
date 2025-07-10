@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import ClayNavigationBar from '..';
 import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
@@ -97,7 +97,9 @@ describe('ClayNavigationBar', () => {
 
 		fireEvent.click(getByText('Trigger Label'));
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		let navigationBarDropdown;
 

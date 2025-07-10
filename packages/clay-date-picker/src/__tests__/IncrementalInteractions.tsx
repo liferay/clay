@@ -14,6 +14,8 @@ import userEvent from '@testing-library/user-event';
 import {default as formatDate} from 'date-fns/format';
 import React from 'react';
 
+import '@testing-library/jest-dom';
+
 const spritemap = 'icons.svg';
 
 const ariaLabels = {
