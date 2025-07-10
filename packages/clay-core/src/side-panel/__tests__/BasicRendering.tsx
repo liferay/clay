@@ -16,7 +16,11 @@ const SidePanelExample = (props: any) => {
 		<Provider spritemap="icons.svg">
 			<div ref={ref}>
 				<SidePanel containerRef={ref} id="sidepanel" {...props}>
-					<SidePanel.Header>
+					<SidePanel.Header
+						messages={{
+							closeAriaLabel: 'Close the Title side panel.',
+						}}
+					>
 						<SidePanel.Title>Title</SidePanel.Title>
 					</SidePanel.Header>
 					<SidePanel.Body>Body</SidePanel.Body>

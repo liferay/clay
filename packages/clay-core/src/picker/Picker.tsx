@@ -93,7 +93,7 @@ type Props<T> = {
 	id?: string;
 
 	/**
-	 * Texts used for assertive messages to SRs.
+	 * Messages for the Picker.
 	 */
 	messages?: {
 		itemSelected: string;

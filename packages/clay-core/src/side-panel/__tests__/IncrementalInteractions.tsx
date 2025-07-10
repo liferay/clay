@@ -34,7 +34,11 @@ function Example({defaultOpen = false}: {defaultOpen?: boolean}) {
 					onOpenChange={setOpen}
 					open={open}
 				>
-					<SidePanel.Header>
+					<SidePanel.Header
+						messages={{
+							closeAriaLabel: 'Close the Title side panel.',
+						}}
+					>
 						<SidePanel.Title>Title</SidePanel.Title>
 					</SidePanel.Header>
 					<SidePanel.Body>Body</SidePanel.Body>

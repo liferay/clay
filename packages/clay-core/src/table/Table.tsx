@@ -55,7 +55,7 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	visibleColumns?: Map<React.Key, number>;
 
 	/**
-	 * Texts used for assertive messages to SRs.
+	 * Messages for the Table.
 	 */
 	messages?: {
 		columnsVisibility: string;

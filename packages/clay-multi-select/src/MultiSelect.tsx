@@ -165,7 +165,7 @@ export interface IProps<T extends Record<string, any> = Item>
 	locator?: Locators;
 
 	/**
-	 * Messages for autocomplete.
+	 * Messages for the Multi Select.
 	 */
 	messages?: {
 		listCount?: string;
