@@ -49,7 +49,7 @@ export type Props = {
 	direction?: 'bottom' | 'top';
 
 	/**
-	 * Messages for icon selector.
+	 * Messages for the Icon Selector.
 	 */
 	messages?: {
 		changeIconButton: string;

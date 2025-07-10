@@ -44,7 +44,7 @@ export interface IProps
 	inverted?: boolean;
 
 	/**
-	 * Defines aria-label messages to display for the screen reader.
+	 * Messages for the Navigation Bar.
 	 */
 	messages?: {
 		close: 'Close';

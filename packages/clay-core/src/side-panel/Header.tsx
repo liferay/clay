@@ -21,7 +21,7 @@ type Props = {
 	className?: string;
 
 	/**
-	 * Aria labels for the Side Panel Header
+	 * Messages for the Side Panel Header.
 	 */
 	messages?: {
 		closeAriaLabel?: string;

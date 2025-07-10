@@ -111,7 +111,7 @@ export interface IProps<T>
 	defaultItems?: Array<T> | null;
 
 	/**
-	 * Messages for autocomplete.
+	 * Messages for the Autocomplete.
 	 */
 	messages?: {
 		listCount?: string;

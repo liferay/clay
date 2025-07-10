@@ -74,7 +74,7 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	fontSize?: Number;
 
 	/**
-	 * Messages used for announcement to SR. Use this for internationalization.
+	 * Messages for the Link.
 	 */
 	messages?: {
 		opensNewWindow: string;

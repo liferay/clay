@@ -109,7 +109,7 @@ interface IProps
 	label?: string;
 
 	/**
-	 * Message for aria-label
+	 * Messages for the Color Picker.
 	 */
 	messages?: {
 		close: string;

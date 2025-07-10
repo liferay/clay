@@ -47,7 +47,7 @@ type Props = {
 	showPalette?: boolean;
 
 	/**
-	 * Message for aria-label
+	 * Messages for the Color Picker.
 	 */
 	messages?: {
 		close: string;
