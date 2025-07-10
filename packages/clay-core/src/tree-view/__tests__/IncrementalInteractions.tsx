@@ -6,7 +6,7 @@
 import Button from '@clayui/button';
 import {ClayDropDownWithItems as DropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox as Checkbox} from '@clayui/form';
-import {cleanup, fireEvent, render, waitFor} from '@testing-library/react';
+import {act, cleanup, fireEvent, render, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
@@ -81,7 +81,9 @@ describe('TreeView incremental interactions', () => {
 
 		fireEvent.click(expanderButton);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(linkItem.getAttribute('aria-expanded')).toBe('false');
 		expect(container.querySelector('.collapse')).toBeFalsy();
@@ -707,7 +709,7 @@ describe('TreeView incremental interactions', () => {
 			expect(document.activeElement).toBe(item);
 		});
 
-		it('pressing the left arrow key hides the item', () => {
+		it('pressing the left arrow key hides the item', async () => {
 			jest.useFakeTimers();
 
 			const {container, getByRole} = render(
@@ -748,7 +750,9 @@ describe('TreeView incremental interactions', () => {
 
 			fireEvent.keyDown(root, {key: 'ArrowLeft'});
 
-			jest.runAllTimers();
+			await act(() => {
+				jest.runAllTimers();
+			});
 
 			expect(root.getAttribute('aria-expanded')).toBe('false');
 			expect(container.querySelector('.collapse.show')).toBeFalsy();
