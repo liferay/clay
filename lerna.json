@@ -1,8 +1,6 @@
 {
-	"lerna": "3.4.0",
-	"version": "3.141.1",
+	"version": "independent",
 	"npmClient": "yarn",
-	"useWorkspaces": true,
 	"command": {
 		"publish": {
 			"ignoreChanges": [
@@ -17,6 +15,5 @@
 			],
 			"message": "chore(release): publish %s packages"
 		}
-	},
-	"packages": ["packages/*"]
+	}
 }
