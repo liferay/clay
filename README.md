@@ -89,12 +89,6 @@ npm install -g yarn
 yarn
 ```
 
-4. Install the dependencies for each package and link them together:
-
-```
-yarn lerna
-```
-
 5. Build all packages:
 
 ```

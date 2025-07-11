@@ -105,7 +105,6 @@ This section shows you how to send a pull request. The main staff are always mon
 
 -   Fork the repository and create your branch from **master**.
 -   Run `yarn` at the root of the repository to install the project dependencies.
--   Run `yarn lerna` to install the dependencies of each package and link them together.
 -   Run `yarn build` to build all packages.
 -   **If you’ve fixed a bug or added code that should be tested, add tests!**
 -   Run `yarn test` to ensure the test suite passes.

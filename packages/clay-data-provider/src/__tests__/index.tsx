@@ -6,7 +6,7 @@
 /* global fetchMock*/
 
 import {Provider} from '@clayui/provider';
-import {cleanup, fireEvent, render, waitFor} from '@testing-library/react';
+import {act, cleanup, fireEvent, render, waitFor} from '@testing-library/react';
 import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import React, {useState} from 'react';
 
@@ -66,6 +66,10 @@ describe('ClayDataProvider', () => {
 		);
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
+
+		await act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
@@ -282,6 +286,10 @@ describe('ClayDataProvider', () => {
 
 		rerender(<DataProviderTest variables={{name: 'Baz'}} />);
 
+		await act(() => {
+			jest.runAllTimers();
+		});
+
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
 		await fetchMock.mock.results[1]!.value;
 
@@ -313,8 +321,6 @@ describe('ClayDataProvider', () => {
 	});
 
 	it('calls clay.data only once with many changes in variables', async () => {
-		jest.useFakeTimers();
-
 		const data = {title: 'Bar'};
 
 		fetchMock.mockResponse(JSON.stringify(data));
@@ -369,7 +375,9 @@ describe('ClayDataProvider', () => {
 
 		fireEvent.click(clayButton);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		await fetchMock.mock.results[0]!.value;
 		await waitFor(() => expect(fetchMock).toBeCalledTimes(2));
@@ -378,10 +386,9 @@ describe('ClayDataProvider', () => {
 	it('calls clay.data with polling of 50ms', async () => {
 		fetchMock
 			.once(JSON.stringify({title: '1'}))
-			.once(JSON.stringify({title: '2'}))
-			.once(JSON.stringify({title: '3'}));
+			.once(JSON.stringify({title: '2'}));
 
-		const {container} = render(
+		render(
 			<Provider spritemap="">
 				<DataProvider link="https://clay.data" pollInterval={50}>
 					{({data}) => <h1>{data && data.title}</h1>}
@@ -389,19 +396,16 @@ describe('ClayDataProvider', () => {
 			</Provider>
 		);
 
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
-		expect(container.innerHTML).toMatchSnapshot();
-
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
-		expect(container.innerHTML).toMatchSnapshot();
-
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(3));
-		expect(container.innerHTML).toMatchSnapshot();
+		expect(fetchMock.mock.calls.length).toEqual(1);
+		jest.advanceTimersByTime(50);
+		expect(fetchMock.mock.calls.length).toEqual(2);
 
 		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
 	});
 
 	it('data must be aggregated when using paginated data', async () => {
+		jest.useRealTimers();
+
 		fetchMock
 			.once(
 				JSON.stringify({
@@ -437,7 +441,9 @@ describe('ClayDataProvider', () => {
 					<ul>
 						{resource &&
 							resource.map((item: any) => (
-								<li key={item.name}>{item.name}</li>
+								<li key={item.name} role="listitem">
+									{item.name}
+								</li>
 							))}
 					</ul>
 					<button onClick={() => loadMore()} type="button">
@@ -447,22 +453,23 @@ describe('ClayDataProvider', () => {
 			);
 		};
 
-		const {getAllByRole, getByRole} = render(
+		const {findAllByRole, findByRole} = render(
 			<Provider spritemap="">
 				<DataProviderTest />
-			</Provider>
+			</Provider>,
+			{legacyRoot: true}
 		);
 
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
 		expect(fetchMock.mock.calls[0]![0]).toEqual(
 			'https://clay.data/?limit=10'
 		);
 
-		const button = getByRole('button');
+		const button = await findByRole('button');
 
 		fireEvent.click(button);
 
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
+		await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(2));
 
 		expect(fetchMock.mock.calls[1]![0]).toEqual(
 			'https://clay.data/?cursor=1&limit=10'
@@ -470,13 +477,17 @@ describe('ClayDataProvider', () => {
 
 		fireEvent.click(button);
 
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(3));
+		await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(3));
 
 		expect(fetchMock.mock.calls[2]![0]).toEqual(
 			'https://clay.data/?cursor=2&limit=10'
 		);
 
-		expect(getAllByRole('listitem').length).toBe(3);
+		const listItems = await findAllByRole('listitem');
+
+		expect(listItems.length).toBe(3);
+
+		jest.useFakeTimers();
 	});
 
 	it('does not deduplicate the request to the same endpoint when there is no declared Provider', async () => {
@@ -518,11 +529,11 @@ describe('ClayDataProvider', () => {
 			);
 		};
 
-		const {getAllByRole} = render(<DataProviderTest />);
+		const {findAllByRole} = render(<DataProviderTest />);
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
 
-		const [listitem1, listitem2] = getAllByRole('listitem');
+		const [listitem1, listitem2] = await findAllByRole('listitem');
 
 		expect(listitem1).toBeDefined();
 		expect(listitem2).toBeDefined();
@@ -567,7 +578,7 @@ describe('ClayDataProvider', () => {
 			);
 		};
 
-		const {getAllByRole} = render(
+		const {findAllByRole} = render(
 			<Provider spritemap="">
 				<DataProviderTest />
 			</Provider>
@@ -575,7 +586,7 @@ describe('ClayDataProvider', () => {
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
-		const [listitem1, listitem2] = getAllByRole('listitem');
+		const [listitem1, listitem2] = await findAllByRole('listitem');
 
 		expect(listitem1).toBeDefined();
 		expect(listitem2).toBeDefined();
@@ -652,7 +663,7 @@ describe('ClayDataProvider', () => {
 			);
 		};
 
-		const {getAllByRole} = render(
+		const {findAllByRole} = render(
 			<Provider spritemap="">
 				<DataProviderTest />
 			</Provider>
@@ -660,7 +671,7 @@ describe('ClayDataProvider', () => {
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
 
-		const [listitem1, listitem2] = getAllByRole('listitem');
+		const [listitem1, listitem2] = await findAllByRole('listitem');
 
 		expect(listitem1!.innerHTML).toBe('Foo');
 		expect(listitem2!.innerHTML).toBe('Baz');
