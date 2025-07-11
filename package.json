@@ -28,7 +28,6 @@
 		"genBuildSize:compare": "NODE_ENV=production node scripts/check-size/index.js --compare",
 		"genBuildSize": "NODE_ENV=production node scripts/check-size/index.js",
 		"genGlobalChangeLog": "node scripts/generate-global-changelog.js && prettier --write -- \"CHANGELOG.md\"",
-		"lerna": "lerna bootstrap -- --no-optional --no-package-lock",
 		"lerna:version": "lerna version --conventional-commits",
 		"lerna:publish": "lerna publish from-package --no-verify-access --yes",
 		"lint:changed": "git ls-files -mz \"*.js\" \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" | xargs -0 eslint",
