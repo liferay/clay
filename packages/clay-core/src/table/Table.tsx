@@ -59,7 +59,7 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	 */
 	messages?: {
 		columnsVisibility: string;
-		columnsVisibilityCellLabel?: string;
+		columnsVisibilityCell?: string;
 		columnsVisibilityDescription: string;
 		columnsVisibilityHeader: string;
 		expandable: string;

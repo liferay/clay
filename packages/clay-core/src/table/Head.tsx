@@ -87,7 +87,7 @@ export function Head<T extends Record<string, any>>(
 					{columnsVisibility && (
 						<Cell keyValue="visibility" width="72px">
 							<span className="sr-only">
-								{messages['columnsVisibilityCellLabel'] ||
+								{messages['columnsVisibilityCell'] ||
 									messages['columnsVisibility']}
 							</span>
 
