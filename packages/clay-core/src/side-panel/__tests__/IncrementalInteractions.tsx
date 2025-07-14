@@ -9,6 +9,8 @@ import {cleanup, render, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {useRef, useState} from 'react';
 
+import '@testing-library/jest-dom';
+
 import {SidePanel} from '../SidePanel';
 
 function Example({defaultOpen = false}: {defaultOpen?: boolean}) {

@@ -2,7 +2,7 @@
 	"private": true,
 	"repository": "https://github.com/liferay/clay",
 	"engines": {
-		"node": "18.x"
+		"node": "18.x || 20.x"
 	},
 	"size-limit": [
 		{
@@ -28,7 +28,6 @@
 		"genBuildSize:compare": "NODE_ENV=production node scripts/check-size/index.js --compare",
 		"genBuildSize": "NODE_ENV=production node scripts/check-size/index.js",
 		"genGlobalChangeLog": "node scripts/generate-global-changelog.js && prettier --write -- \"CHANGELOG.md\"",
-		"lerna": "lerna bootstrap -- --no-optional --no-package-lock",
 		"lerna:version": "lerna version --conventional-commits",
 		"lerna:publish": "lerna publish from-package --no-verify-access --yes",
 		"lint:changed": "git ls-files -mz \"*.js\" \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" | xargs -0 eslint",
@@ -60,9 +59,9 @@
 		"@storybook/manager-webpack5": "^6.5.10",
 		"@storybook/preset-scss": "^1.0.3",
 		"@storybook/react": "^6.5.10",
-		"@testing-library/dom": "^8.9.0",
-		"@testing-library/jest-dom": "5",
-		"@testing-library/react": "^12.1.2",
+		"@testing-library/dom": "^10.4.0",
+		"@testing-library/jest-dom": "^6.6.3",
+		"@testing-library/react": "^16.3.0",
 		"@testing-library/user-event": "^13.2.1",
 		"@types/d3": "^5.7.2",
 		"@types/geojson": "^7946.0.7",
@@ -91,14 +90,14 @@
 		"fork-ts-checker-webpack-plugin": "^4.0.3",
 		"jest": "27.5.1",
 		"jest-fetch-mock": "^3.0.3",
-		"lerna": "6.6.2",
+		"lerna": "8.2.3",
 		"ncp": "^2.0.0",
 		"parcel-bundler": "^1.12.4",
 		"prettier": "^2.4.1",
 		"raf": "^3.4.1",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0",
-		"react-test-renderer": "^16.6.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-test-renderer": "^18.2.0",
 		"resize-observer-polyfill": "^1.5.1",
 		"sass-loader": "^7.1.0",
 		"size-limit": "^6.0.3",
