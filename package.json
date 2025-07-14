@@ -2,7 +2,7 @@
 	"private": true,
 	"repository": "https://github.com/liferay/clay",
 	"engines": {
-		"node": "18.x"
+		"node": "20.x"
 	},
 	"size-limit": [
 		{
@@ -91,7 +91,7 @@
 		"fork-ts-checker-webpack-plugin": "^4.0.3",
 		"jest": "27.5.1",
 		"jest-fetch-mock": "^3.0.3",
-		"lerna": "6.6.2",
+		"lerna": "8.2.3",
 		"ncp": "^2.0.0",
 		"parcel-bundler": "^1.12.4",
 		"prettier": "^2.4.1",
