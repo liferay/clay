@@ -154,9 +154,13 @@ describe('ClayDataProvider', () => {
 	xit('calls clay.data and returns the timeout error', async () => {
 		fetchMock.mockResponseOnce(
 			() =>
-				new Promise((resolve) =>
-					setTimeout(() => resolve({body: 'ok'}), 200)
-				)
+				new Promise((resolve) => {
+					const timer = setTimeout(() => resolve({body: 'ok'}), 200);
+
+					timer.unref();
+
+					return timer;
+				})
 		);
 
 		const {container} = render(

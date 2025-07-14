@@ -168,11 +168,13 @@ describe('Interactions', () => {
 			function asyncData(query: string) {
 				setIsLoading(true);
 
-				setTimeout(() => {
+				const timer = setTimeout(() => {
 					callbackFn(query);
 
 					setIsLoading(false);
 				}, 2000);
+
+				timer.unref();
 			}
 
 			return (
