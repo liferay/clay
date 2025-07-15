@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.141.0](https://github.com/liferay/clay/compare/v3.140.0...v3.141.0) (2025-07-15)
+
+### Bug Fixes
+
+-   **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([4ed74ad](https://github.com/liferay/clay/commit/4ed74ade7a1feea0cebad55b8027e8e2f524f83f))
+
+### Features
+
+-   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([b6a8726](https://github.com/liferay/clay/commit/b6a8726392fcaf0a7ce6d07eb13a16e74d229544))
+
 # [3.140.0](https://github.com/liferay/clay/compare/v3.139.1...v3.140.0) (2025-06-19)
 
 **Note:** Version bump only for package @clayui/localized-input

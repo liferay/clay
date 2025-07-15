@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.141.0](https://github.com/liferay/clay/compare/v3.140.0...v3.141.0) (2025-07-15)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-47980 Sidebar close button should have hover states ([a6cef0a](https://github.com/liferay/clay/commit/a6cef0ae6ff313200863e55ac6b5f37f82522e89))
+* **@clayui/css:** LPD-59796 SVG Icons update pause.svg ([fc0492f](https://github.com/liferay/clay/commit/fc0492f7d49bcd57505c813e12f0155da1fbddc1))
+
+
+
+
+
 ## [3.139.1](https://github.com/liferay/clay/compare/v3.139.0...v3.139.1) (2025-06-16)
 
 

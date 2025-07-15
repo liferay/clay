@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.141.0](https://github.com/liferay/clay/compare/v3.140.0...v3.141.0) (2025-07-15)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-47980 SidePanel close button should announce the title of the sidebar ([0858cc9](https://github.com/liferay/clay/commit/0858cc924f48f82cd3f0193ff5894df14849dbba))
+-   **@clayui/core:** LPD-47980 SidePanel.Header adds messages and onClose props ([5d5b20d](https://github.com/liferay/clay/commit/5d5b20d149c6483e80380e3b203420b671f81d06))
+-   **@clayui/core:** LPD-47980 SidePanel.Header simplify API ([0761312](https://github.com/liferay/clay/commit/076131286bb3df0d220ec547f6e7ae32f308c26b))
+-   **@clayui/core:** LPD-50722 LanguagePicker default language label not displaying and SF ([de4bb74](https://github.com/liferay/clay/commit/de4bb743dd53698b64de3157de08fefff7951b6c))
+-   **@clayui/core:** LPD-50722 LanguagePicker should display label untranslated if total is 0 ([3d37047](https://github.com/liferay/clay/commit/3d37047c86d682bfe3770e6b5c86d92a2cb17ca3))
+-   **@clayui/core:** LPD-60233 Fix empty table header accessibility issue ([4696ec3](https://github.com/liferay/clay/commit/4696ec31f6ebeb267f696f5c5bbf102d5e9c7a4b))
+-   **@clayui/css:** LPD-47980 Sidebar close button should have hover states ([a6cef0a](https://github.com/liferay/clay/commit/a6cef0ae6ff313200863e55ac6b5f37f82522e89))
+-   **@clayui/css:** LPD-59796 SVG Icons update pause.svg ([fc0492f](https://github.com/liferay/clay/commit/fc0492f7d49bcd57505c813e12f0155da1fbddc1))
+-   **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([4ed74ad](https://github.com/liferay/clay/commit/4ed74ade7a1feea0cebad55b8027e8e2f524f83f))
+
+### Features
+
+-   **@clayui/core:** LPD-58729 - Allow attaching onClick handlers to table cell ([7423e4c](https://github.com/liferay/clay/commit/7423e4c988d6d838093c60d2f5b37574d58a7f11))
+-   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([b6a8726](https://github.com/liferay/clay/commit/b6a8726392fcaf0a7ce6d07eb13a16e74d229544))
+
 # [3.140.0](https://github.com/liferay/clay/compare/v3.139.1...v3.140.0) (2025-06-19)
 
 ### Bug Fixes
