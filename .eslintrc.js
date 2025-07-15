@@ -46,6 +46,7 @@ module.exports = {
 			},
 		],
 		'react/no-unescaped-entities': 'off',
+		'react-compiler/react-compiler': 'error',
 		'react-hooks/exhaustive-deps': 'off',
 		'sort-vars': 'error',
 	},
