@@ -205,6 +205,7 @@ export function OverlayMask<T>({
 						if (typeof ref === 'function') {
 							ref(node);
 						} else if (ref !== null) {
+							// eslint-disable-next-line react-compiler/react-compiler
 							(ref as React.MutableRefObject<any>).current = node;
 						}
 					},

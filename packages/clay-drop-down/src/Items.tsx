@@ -210,6 +210,7 @@ const Contextual = ({
 	});
 
 	const setThrottleVisible = useCallback(
+		// eslint-disable-next-line react-compiler/react-compiler
 		throttle((value: boolean) => setVisible(value), 100),
 		[]
 	);

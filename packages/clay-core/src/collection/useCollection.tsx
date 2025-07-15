@@ -256,6 +256,8 @@ export function useCollection<
 		[performFilter, publicApi, itemIdKey]
 	);
 
+	const virtualizerItems = virtualizer?.getVirtualItems();
+
 	const performCollectionRender = useCallback(
 		({children, items}: ICollectionProps<T, P>) => {
 			if (children instanceof Function && items) {
@@ -370,7 +372,7 @@ export function useCollection<
 		[
 			performItemRender,
 			publicApi,
-			virtualizer?.getVirtualItems().length,
+			virtualizerItems?.length,
 			visibleKeys,
 			itemIdKey,
 		]

@@ -329,6 +329,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 
 	return {
 		focusFirst: () => {
+			// eslint-disable-next-line react-compiler/react-compiler
 			minimalTabIndex = -1;
 			const next = moveFocusInScope(getFiber(scope), false, true);
 			minimalTabIndex = 0;

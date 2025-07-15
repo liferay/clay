@@ -58,6 +58,7 @@ const BillboardWrapper = ({
 				}
 			}
 
+			// eslint-disable-next-line react-compiler/react-compiler
 			forwardRef.current = null;
 		};
 	}, []);
