@@ -1,9 +1,14 @@
 /**
+ * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+/**
  * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const convertBytes = require('./convertBytes');
+import {convertBytes} from './convertBytes.mjs';
 
 const sortDiffSize = (a, b) => {
 	if (a.diffSize === b.diffSize) {
@@ -62,7 +67,7 @@ const getStatsArray = (prevStats, newStats) => {
 	];
 };
 
-function generateTable(prevStats, newStats) {
+export function generateTable(prevStats, newStats) {
 	const [statsArray, totalDiffPercent] = getStatsArray(prevStats, newStats);
 
 	const table = statsArray.sort(sortDiffSize).reduce((acc, item) => {
@@ -81,5 +86,3 @@ function generateTable(prevStats, newStats) {
 		totalDiffPercent,
 	];
 }
-
-module.exports = generateTable;
