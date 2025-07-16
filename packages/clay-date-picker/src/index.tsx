@@ -259,7 +259,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 			footerElement,
 			id,
 			initialExpanded = false,
-			initialMonth = NEW_DATE,
+			initialMonth,
 			inputName,
 			months = [
 				'January',
@@ -299,7 +299,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 	) => {
 		// For backward compatibility `defaultMonth` is just an alias for
 		// `initialMonth`.
-		initialMonth = defaultMonth ?? initialMonth;
+		const initialMonthInternal = defaultMonth ?? initialMonth ?? new Date();
 
 		const [internalValue, setValue, isUncontrolled] = useControlledState({
 			defaultName: 'defaultValue',
@@ -331,7 +331,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 				}
 			}
 
-			const date = normalizeTime(initialMonth);
+			const date = normalizeTime(initialMonthInternal);
 
 			return [date, date] as const;
 		});
@@ -489,9 +489,12 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		const updateDate = useCallback(
 			(value: string) => {
 				if (!value) {
-					changeMonth(initialMonth);
+					changeMonth(initialMonthInternal);
 
-					setDaysSelected([initialMonth, initialMonth]);
+					setDaysSelected([
+						initialMonthInternal,
+						initialMonthInternal,
+					]);
 
 					if (time) {
 						setCurrentTime('--', '--', undefined);
@@ -554,14 +557,16 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		 * is no date selected.
 		 */
 		const handleDotClicked = () => {
+			const currentTime = defaultMonth || new Date();
+
 			const [, endDate] = daysSelected;
 
-			changeMonth(initialMonth);
+			changeMonth(currentTime);
 
 			const newDaysSelected: [Date, Date] =
-				range && endDate < initialMonth
-					? [endDate, initialMonth]
-					: [initialMonth, endDate];
+				range && endDate < currentTime
+					? [endDate, currentTime]
+					: [currentTime, endDate];
 
 			let dateFormatted;
 
@@ -569,17 +574,17 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 				dateFormatted = fromRangeToString(newDaysSelected, dateFormat);
 			} else if (time) {
 				dateFormatted = `${formatDate(
-					initialMonth,
+					currentTime,
 					dateFormat
 				)} ${setCurrentTime(
-					initialMonth.getHours(),
-					initialMonth.getMinutes(),
+					currentTime.getHours(),
+					currentTime.getMinutes(),
 					use12Hours
-						? (formatDate(initialMonth, 'a') as Input['ampm'])
+						? (formatDate(currentTime, 'a') as Input['ampm'])
 						: undefined
 				)}`;
 			} else {
-				dateFormatted = formatDate(initialMonth, dateFormat);
+				dateFormatted = formatDate(currentTime, dateFormat);
 			}
 
 			setDaysSelected(newDaysSelected);
