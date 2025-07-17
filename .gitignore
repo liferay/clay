@@ -7,8 +7,7 @@ node_modules
 package-lock.json
 .env
 .gradle
-.parcel-cache
-.parcel-ci-builds
-.parcel-ci-build.json
+.esbuild-ci-builds
+.esbuild-ci-build.json
 # Local Netlify folder
 .netlify

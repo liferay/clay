@@ -5,7 +5,7 @@
 
 const SIZES = ['B', 'KB', 'MB', 'GB', 'TB'];
 
-const convertBytes = function (bytes) {
+export const convertBytes = function (bytes) {
 	if (bytes === 0) {
 		return '--';
 	}
@@ -20,5 +20,3 @@ const convertBytes = function (bytes) {
 
 	return `${(bytes / Math.pow(1024, i)).toFixed(1)} ${SIZES[i]}`;
 };
-
-module.exports = convertBytes;
