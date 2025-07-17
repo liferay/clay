@@ -6,3 +6,4 @@
 export {Heading} from './Heading';
 export {Text} from './Text';
 export {TextHighlight} from './TextHighlight';
+export type {ColorType} from './Text';
