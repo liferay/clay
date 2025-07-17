@@ -243,6 +243,7 @@ const Geomap = ({
 
 	React.useEffect(() => {
 		if (forwardRef) {
+			// eslint-disable-next-line react-compiler/react-compiler
 			forwardRef.current = new GeomapBase({
 				...otherProps,
 				data,

@@ -47,16 +47,18 @@ const ClayChart = React.forwardRef<HTMLDivElement, IProps>(
 	({color, data, elementProps, grid, line, point, ...otherProps}, ref) => {
 		const defaultRef = React.useRef<any>();
 
+		const renderData = {...data};
+
 		let ChartComponent;
 
 		switch (data.type as Types) {
 			case 'geo-map':
-				delete data.type;
+				delete renderData.type;
 
 				ChartComponent = GeoMap;
 				break;
 			case 'predictive':
-				delete data.type;
+				delete renderData.type;
 
 				ChartComponent = Predictive;
 				break;
@@ -68,7 +70,7 @@ const ClayChart = React.forwardRef<HTMLDivElement, IProps>(
 			<ChartComponent
 				{...otherProps}
 				color={{pattern: DEFAULT_COLORS, ...color}}
-				data={data as Data}
+				data={renderData as Data}
 				elementProps={elementProps}
 				grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
 				line={{classes: DEFAULT_LINE_CLASSES, ...line}}

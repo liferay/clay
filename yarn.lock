@@ -9005,15 +9005,15 @@ eslint-plugin-notice@0.9.10:
     lodash "^4.17.15"
     metric-lcs "^0.1.2"
 
-eslint-plugin-react-compiler@^19.0.0-beta-6fc168f-20241025:
-  version "19.0.0-beta-6fc168f-20241025"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-compiler/-/eslint-plugin-react-compiler-19.0.0-beta-6fc168f-20241025.tgz#dbd1f54b1019a437f09fc9547bea53f82e6026af"
-  integrity sha512-mHn5tYt9dT4GiXHF5muiz6p+4Lirgi0Oc87N2KrbB/ciSkT+VZ8iJA+6bbS4//ljYzYbxBbPMHWS/dZWhQrbpQ==
+eslint-plugin-react-compiler@^19.1.0-rc.2:
+  version "19.1.0-rc.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-compiler/-/eslint-plugin-react-compiler-19.1.0-rc.2.tgz#83343e7422e00fa61e729af8e8468f0ddec37925"
+  integrity sha512-oKalwDGcD+RX9mf3NEO4zOoUMeLvjSvcbbEOpquzmzqEEM2MQdp7/FY/Hx9NzmUwFzH1W9SKTz5fihfMldpEYw==
   dependencies:
     "@babel/core" "^7.24.4"
     "@babel/parser" "^7.24.4"
     "@babel/plugin-proposal-private-methods" "^7.18.6"
-    hermes-parser "^0.20.1"
+    hermes-parser "^0.25.1"
     zod "^3.22.4"
     zod-validation-error "^3.0.3"
 
@@ -10880,17 +10880,17 @@ he@1.2.x, he@^1.2.0:
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
-hermes-estree@0.20.1:
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/hermes-estree/-/hermes-estree-0.20.1.tgz#0b9a544cf883a779a8e1444b915fa365bef7f72d"
-  integrity sha512-SQpZK4BzR48kuOg0v4pb3EAGNclzIlqMj3Opu/mu7bbAoFw6oig6cEt/RAi0zTFW/iW6Iz9X9ggGuZTAZ/yZHg==
+hermes-estree@0.25.1:
+  version "0.25.1"
+  resolved "https://registry.yarnpkg.com/hermes-estree/-/hermes-estree-0.25.1.tgz#6aeec17d1983b4eabf69721f3aa3eb705b17f480"
+  integrity sha512-0wUoCcLp+5Ev5pDW2OriHC2MJCbwLwuRx+gAqMTOkGKJJiBCLjtrvy4PWUGn6MIVefecRpzoOZ/UV6iGdOr+Cw==
 
-hermes-parser@^0.20.1:
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/hermes-parser/-/hermes-parser-0.20.1.tgz#ad10597b99f718b91e283f81cbe636c50c3cff92"
-  integrity sha512-BL5P83cwCogI8D7rrDCgsFY0tdYUtmFP9XaXtl2IQjC+2Xo+4okjfXintlTxcIwl4qeGddEl28Z11kbVIw0aNA==
+hermes-parser@^0.25.1:
+  version "0.25.1"
+  resolved "https://registry.yarnpkg.com/hermes-parser/-/hermes-parser-0.25.1.tgz#5be0e487b2090886c62bd8a11724cd766d5f54d1"
+  integrity sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA==
   dependencies:
-    hermes-estree "0.20.1"
+    hermes-estree "0.25.1"
 
 highcharts@^9.2.2:
   version "9.3.0"

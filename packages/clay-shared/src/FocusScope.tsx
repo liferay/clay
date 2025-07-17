@@ -114,6 +114,7 @@ export const FocusScope = ({
 
 						if (ref) {
 							if (typeof ref === 'object') {
+								// eslint-disable-next-line react-compiler/react-compiler
 								ref.current = r;
 							} else if (typeof ref === 'function') {
 								ref(r);
