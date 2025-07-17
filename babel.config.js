@@ -8,6 +8,27 @@ module.exports = (api) => {
 
 	return {
 		env: {
+			esm: {
+				plugins: [
+					[
+						'react-remove-properties',
+						{
+							properties: ['data-testid'],
+						},
+					],
+					'babel-plugin-fully-specified',
+				],
+				presets: [
+					[
+						'@babel/preset-env',
+						{
+							exclude: ['transform-regenerator'],
+							modules: false,
+							targets: ['defaults'],
+						},
+					],
+				],
+			},
 			production: {
 				plugins: [
 					[
@@ -29,17 +50,7 @@ module.exports = (api) => {
 				'@babel/preset-env',
 				{
 					exclude: ['transform-regenerator'],
-					targets: [
-						'last 2 Chrome versions',
-						'last 1 Edge versions',
-						'last 2 Firefox versions',
-						'last 1 Opera versions',
-						'last 2 Safari versions',
-						'last 1 ChromeAndroid versions',
-						'last 2 iOS versions',
-						'Firefox 52',
-						'IE 11',
-					],
+					targets: ['defaults'],
 				},
 			],
 			'@babel/preset-react',
