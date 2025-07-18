@@ -5647,6 +5647,13 @@ babel-plugin-polyfill-regenerator@^0.2.2:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.2.2"
 
+babel-plugin-react-compiler@^19.1.0-rc.2:
+  version "19.1.0-rc.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-compiler/-/babel-plugin-react-compiler-19.1.0-rc.2.tgz#ef77f4316a2086d81f95ad8edbe081e2840d87a4"
+  integrity sha512-kSNA//p5fMO6ypG8EkEVPIqAjwIXm5tMjfD1XRPL/sRjYSbJ6UsvORfaeolNWnZ9n310aM0xJP7peW26BuCVzA==
+  dependencies:
+    "@babel/types" "^7.26.0"
+
 babel-plugin-react-docgen@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-react-docgen/-/babel-plugin-react-docgen-4.2.1.tgz#7cc8e2f94e8dc057a06e953162f0810e4e72257b"
@@ -16556,6 +16563,11 @@ react-colorful@^5.1.2:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.5.0.tgz#8359f218984a927095477a190ab9927eaf865c0c"
   integrity sha512-BuzrlrM0ylg7coPkXOrRqlf2BgHLw5L44sybbr9Lg4xy7w9e5N7fGYbojOO0s8J0nvrM3PERN2rVFkvSa24lnQ==
+
+react-compiler-runtime@^19.1.0-rc.2:
+  version "19.1.0-rc.2"
+  resolved "https://registry.yarnpkg.com/react-compiler-runtime/-/react-compiler-runtime-19.1.0-rc.2.tgz#6fc2ab85bf76138f9458b5c2050728d34cb7740f"
+  integrity sha512-852AwyIsbWJ5o1LkQVAZsVK3iLjMxOfKZuxqeGd/RfD+j1GqHb6j3DSHLtpu4HhFbQHsP2DzxjJyKR6luv4D8w==
 
 react-dnd-html5-backend@^11.1.1:
   version "11.1.3"
