@@ -742,4 +742,60 @@ describe('IncrementalInteractions', () => {
 		expect(dayNumber.classList).not.toContain('active');
 		expect(endDate.classList).not.toContain('active');
 	});
+
+	it('clicking the dot button should set the current time when the button is clicked', () => {
+		jest.useFakeTimers();
+
+		const date = new Date('1/1/2025');
+
+		date.setMinutes(15);
+
+		jest.setSystemTime(date);
+
+		const {getByLabelText, getByTestId} = render(
+			<ClayDatePicker spritemap={spritemap} time />
+		);
+
+		const dotButtonEl = getByLabelText(ariaLabels.buttonDot);
+
+		fireEvent.click(dotButtonEl);
+
+		expect(getByTestId('minutes')).toHaveDisplayValue('15');
+
+		date.setMinutes(30);
+
+		jest.setSystemTime(date);
+
+		fireEvent.click(dotButtonEl);
+
+		expect(getByTestId('minutes')).toHaveDisplayValue('30');
+
+		jest.useRealTimers();
+	});
+
+	it('clicking the dot button should set the time to whatever is specified in defaultMonth', () => {
+		jest.useFakeTimers();
+
+		const date = new Date('1/1/2025');
+
+		date.setMinutes(15);
+
+		jest.setSystemTime(date);
+
+		const {getByLabelText, getByTestId} = render(
+			<ClayDatePicker
+				defaultMonth={new Date('1/1/2025 12:00')}
+				spritemap={spritemap}
+				time
+			/>
+		);
+
+		const dotButtonEl = getByLabelText(ariaLabels.buttonDot);
+
+		fireEvent.click(dotButtonEl);
+
+		expect(getByTestId('minutes')).toHaveDisplayValue('00');
+
+		jest.useRealTimers();
+	});
 });

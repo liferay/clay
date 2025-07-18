@@ -259,7 +259,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 			footerElement,
 			id,
 			initialExpanded = false,
-			initialMonth = NEW_DATE,
+			initialMonth,
 			inputName,
 			months = [
 				'January',
@@ -297,9 +297,10 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		// For backward compatibility `defaultMonth` is just an alias for
-		// `initialMonth`.
-		initialMonth = defaultMonth ?? initialMonth;
+		const getDefaultMonth = useCallback(
+			() => defaultMonth ?? initialMonth ?? new Date(),
+			[defaultMonth, initialMonth]
+		);
 
 		const [internalValue, setValue, isUncontrolled] = useControlledState({
 			defaultName: 'defaultValue',
@@ -331,7 +332,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 				}
 			}
 
-			const date = normalizeTime(initialMonth);
+			const date = normalizeTime(getDefaultMonth());
 
 			return [date, date] as const;
 		});
@@ -488,10 +489,12 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 
 		const updateDate = useCallback(
 			(value: string) => {
-				if (!value) {
-					changeMonth(initialMonth);
+				const currentDate = getDefaultMonth();
 
-					setDaysSelected([initialMonth, initialMonth]);
+				if (!value) {
+					changeMonth(currentDate);
+
+					setDaysSelected([currentDate, currentDate]);
 
 					if (time) {
 						setCurrentTime('--', '--', undefined);
@@ -554,14 +557,16 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		 * is no date selected.
 		 */
 		const handleDotClicked = () => {
+			const currentDateTime = getDefaultMonth();
+
 			const [, endDate] = daysSelected;
 
-			changeMonth(initialMonth);
+			changeMonth(currentDateTime);
 
 			const newDaysSelected: [Date, Date] =
-				range && endDate < initialMonth
-					? [endDate, initialMonth]
-					: [initialMonth, endDate];
+				range && endDate < currentDateTime
+					? [endDate, currentDateTime]
+					: [currentDateTime, endDate];
 
 			let dateFormatted;
 
@@ -569,17 +574,17 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 				dateFormatted = fromRangeToString(newDaysSelected, dateFormat);
 			} else if (time) {
 				dateFormatted = `${formatDate(
-					initialMonth,
+					currentDateTime,
 					dateFormat
 				)} ${setCurrentTime(
-					initialMonth.getHours(),
-					initialMonth.getMinutes(),
+					currentDateTime.getHours(),
+					currentDateTime.getMinutes(),
 					use12Hours
-						? (formatDate(initialMonth, 'a') as Input['ampm'])
+						? (formatDate(currentDateTime, 'a') as Input['ampm'])
 						: undefined
 				)}`;
 			} else {
-				dateFormatted = formatDate(initialMonth, dateFormat);
+				dateFormatted = formatDate(currentDateTime, dateFormat);
 			}
 
 			setDaysSelected(newDaysSelected);
