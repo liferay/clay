@@ -11,7 +11,7 @@
 		"require": "./lib/cjs/index.js"
 	},
 	"types": "lib/index.d.ts",
-	"ts:main": "src/index.tsx",
+	"ts:main": "src/index.ts",
 	"files": [
 		"lib"
 	],
