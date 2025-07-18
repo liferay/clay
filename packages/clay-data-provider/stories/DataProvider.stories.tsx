@@ -6,7 +6,8 @@
 import React, {useContext, useState} from 'react';
 
 import ClayDataProvider, {useResource} from '../src';
-import {FetchPolicy} from '../src/useResource';
+
+import type {FetchPolicy} from '../src/useResource';
 
 export default {
 	parameters: {
