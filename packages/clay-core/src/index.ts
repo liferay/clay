@@ -16,7 +16,6 @@ export {
 export {Provider, useProvider} from '@clayui/provider';
 
 export {IconSelector} from './icon-selector';
-export {Item} from './language-picker';
 export {Heading, Text, TextHighlight} from './typography';
 export {OverlayMask} from './overlay-mask';
 export {TreeView} from './tree-view';

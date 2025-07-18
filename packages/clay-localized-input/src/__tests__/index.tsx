@@ -95,9 +95,7 @@ describe('ClayLocalizedInput', () => {
 		);
 
 		fireEvent.click(
-			container.querySelector(
-				'.form-control-select'
-			) as HTMLButtonElement,
+			container.querySelector('.dropdown-toggle') as HTMLButtonElement,
 			{}
 		);
 
@@ -107,8 +105,6 @@ describe('ClayLocalizedInput', () => {
 		);
 
 		expect(onSelectedChangeFn).toBeCalledWith({
-			_key: 'es-ES',
-			id: 'es-ES',
 			label: 'es-ES',
 			symbol: 'es-es',
 		});
