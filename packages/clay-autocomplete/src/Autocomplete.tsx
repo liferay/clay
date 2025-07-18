@@ -114,16 +114,23 @@ export interface IProps<T>
 	 * Messages for the Autocomplete.
 	 */
 	messages?: {
+		allowsCustomValue?: string;
 		listCount?: string;
 		listCountPlural?: string;
 		loading: string;
 		notFound: string;
+		setAsHTML?: boolean;
 	};
 
 	/**
 	 * Callback for when the active state changes (controlled).
 	 */
 	onActiveChange?: InternalDispatch<boolean>;
+
+	/**
+	 * Callback called when an item is added to the autocomplete list.
+	 */
+	onAddNewItem?: () => void;
 
 	/**
 	 * Callback called when input value changes (controlled).
@@ -189,10 +196,12 @@ function hasItem<T extends Item>(
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
 const defaultMessages = {
+	allowsCustomValue: 'Add {0}',
 	listCount: '{0} option available.',
 	listCountPlural: '{0} options available.',
 	loading: 'Loading...',
 	notFound: 'No results found',
+	setAsHTML: false,
 };
 
 function AutocompleteInner<T extends Item>(
@@ -214,6 +223,7 @@ function AutocompleteInner<T extends Item>(
 		menuTrigger = 'input',
 		messages,
 		onActiveChange,
+		onAddNewItem,
 		onChange,
 		onItemsChange,
 		onLoadMore,
@@ -279,6 +289,8 @@ function AutocompleteInner<T extends Item>(
 			) !== null,
 		[value]
 	);
+
+	const allowsCustomValueMessage = messages?.allowsCustomValue!;
 
 	useEffect(() => {
 		// Validates that the initial value exists in the items.
@@ -404,13 +416,50 @@ function AutocompleteInner<T extends Item>(
 		),
 		items: filteredItems,
 		notFound: (
-			<DropDown.Item
-				aria-disabled="true"
-				className="disabled"
-				roleItem="option"
-			>
-				{messages.notFound}
-			</DropDown.Item>
+			<>
+				{allowsCustomValue && (
+					<>
+						<DropDown.Item
+							className=""
+							id={value}
+							key={value}
+							onClick={() => {
+								if (allowsCustomValue && items && onAddNewItem) {
+									onAddNewItem();
+
+									items.push(value);
+
+									inputElementRef.current?.focus();
+
+									setValue('');
+								}
+							}}
+							roleItem="option"
+						>
+							{messages.setAsHTML &&
+							typeof allowsCustomValueMessage === 'string' ? (
+								<span
+									dangerouslySetInnerHTML={{
+										__html: sub(allowsCustomValueMessage, [
+											value,
+										]),
+									}}
+								/>
+							) : (
+								sub(allowsCustomValueMessage, [value])
+							)}
+						</DropDown.Item>
+						<li className="dropdown-divider"></li>
+					</>
+				)}
+				<DropDown.Item
+					aria-disabled="true"
+					className="disabled"
+					roleItem="option"
+				>
+					{messages.notFound}
+				</DropDown.Item>
+			</>
 		),
 		suppressTextValueWarning: false,
 		virtualizer: items ? virtualizer : undefined,
@@ -554,6 +603,14 @@ function AutocompleteInner<T extends Item>(
 							break;
 						}
 						case Keys.Enter: {
+							if (allowsCustomValue && items && onAddNewItem) {
+								onAddNewItem();
+
+								items.push(value);
+
+								setValue('');
+							}
+
 							setActive(false);
 
 							if (active && activeDescendant) {
@@ -607,6 +664,7 @@ function AutocompleteInner<T extends Item>(
 							}
 
 							navigationProps.onKeyDown(event);
+
 							break;
 						}
 						default:
