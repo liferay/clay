@@ -14,7 +14,7 @@ import {Option, Picker} from '../picker';
 
 type DisplayType = 'info' | 'secondary' | 'success' | 'warning';
 
-export type Item = {
+type Item = {
 	id: string;
 	label: string;
 	name?: string;
@@ -133,20 +133,18 @@ const getTranslationLabel = ({
 	let displayType: DisplayType = 'warning';
 	let label: string = messages.untranslated;
 
-	if (translation) {
+	if (localeId === defaultLocaleId) {
+		displayType = 'info';
+		label = messages.default;
+	} else if (translation) {
 		const {total, translated} = translation;
 
-		if (total !== 0) {
-			if (localeId === defaultLocaleId) {
-				displayType = 'info';
-				label = messages.default;
-			} else if (total === translated) {
-				displayType = 'success';
-				label = messages.translated;
-			} else {
-				displayType = 'secondary';
-				label = sub(messages.translating, [translated, total]);
-			}
+		if (total && total === translated) {
+			displayType = 'success';
+			label = messages.translated;
+		} else {
+			displayType = 'secondary';
+			label = sub(messages.translating, [translated, total]);
 		}
 	}
 
