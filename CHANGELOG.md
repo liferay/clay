@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
+
+### Bug Fixes
+
+-   **date-picker:** add failing test for clicking current date dot ([6226f51](https://github.com/liferay/clay/commit/6226f51ddbf004485e56623179b5f9fc3ed84e88))
+-   **date-picker:** create a new date object for initialMonth if none is provided and create new variable so that we aren't re-assigning a prop value ([c1d1c37](https://github.com/liferay/clay/commit/c1d1c37c198c1d599f2f0fd41fafa2171a4ce4b1))
+-   **date-picker:** use a function to return defaultMonth or current Date() ([f4358d1](https://github.com/liferay/clay/commit/f4358d1b329377536f741704603d3f387f6d2d57))
+
+### Reverts
+
+-   Revert "fix(@clayui/core): LPD-50722 LanguagePicker should display label untranslated if total is 0" ([843493d](https://github.com/liferay/clay/commit/843493d06fd5f45bbe5b2bae14b72e4973f5f6fe))
+-   Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([4cd7f1c](https://github.com/liferay/clay/commit/4cd7f1c0860cbdd1434f29ffda4c297801cbc34b))
+-   Revert "chore(@clayui/localized-input): LPD-50722 SF" ([4d30415](https://github.com/liferay/clay/commit/4d30415aadfbcc8b6d14e670705a6fb9867042cd))
+-   Revert "fix(@clayui/core) LPD-50722 LanguagePicker should show tooltip when trigger text is hidden" ([fe33ddf](https://github.com/liferay/clay/commit/fe33ddfad7e173e74c9c21ef16e1efba46d7441d))
+-   Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([64f5ae5](https://github.com/liferay/clay/commit/64f5ae57fa03faf53f97286de1dd82425020e87d))
+-   Revert "fix(@clayui/core): LPD-50722 LanguagePicker default language label not displaying and SF" ([2eac48c](https://github.com/liferay/clay/commit/2eac48cb9deee765d026e1954f442c150a673157))
+-   Revert "chore(@clayui/core): LPD-50722 Update language-picker snapshot due to SF" ([060ba0b](https://github.com/liferay/clay/commit/060ba0bddffdea75600193ee4a044571d65be0e7))
+-   Revert "chore(@clayui/core): LPD-50722 LanguagePicker SF" ([c447c3f](https://github.com/liferay/clay/commit/c447c3f873f28884ac1b4afc268264010a7762e0))
+-   Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([e976ac8](https://github.com/liferay/clay/commit/e976ac85c1f5de0df8afba7a589bb8791caaa85e))
+
 # [3.141.0](https://github.com/liferay/clay/compare/v3.140.0...v3.141.0) (2025-07-15)
 
 ### Bug Fixes

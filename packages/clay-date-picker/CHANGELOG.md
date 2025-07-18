@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
+
+### Bug Fixes
+
+-   **date-picker:** add failing test for clicking current date dot ([6226f51](https://github.com/liferay/clay/commit/6226f51ddbf004485e56623179b5f9fc3ed84e88))
+-   **date-picker:** create a new date object for initialMonth if none is provided and create new variable so that we aren't re-assigning a prop value ([c1d1c37](https://github.com/liferay/clay/commit/c1d1c37c198c1d599f2f0fd41fafa2171a4ce4b1))
+-   **date-picker:** use a function to return defaultMonth or current Date() ([f4358d1](https://github.com/liferay/clay/commit/f4358d1b329377536f741704603d3f387f6d2d57))
+
 # [3.141.0](https://github.com/liferay/clay/compare/v3.140.0...v3.141.0) (2025-07-15)
 
 **Note:** Version bump only for package @clayui/date-picker

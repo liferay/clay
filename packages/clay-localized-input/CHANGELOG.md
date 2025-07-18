@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
+
+### Reverts
+
+-   Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([4cd7f1c](https://github.com/liferay/clay/commit/4cd7f1c0860cbdd1434f29ffda4c297801cbc34b))
+-   Revert "chore(@clayui/localized-input): LPD-50722 SF" ([4d30415](https://github.com/liferay/clay/commit/4d30415aadfbcc8b6d14e670705a6fb9867042cd))
+-   Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([64f5ae5](https://github.com/liferay/clay/commit/64f5ae57fa03faf53f97286de1dd82425020e87d))
+-   Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([e976ac8](https://github.com/liferay/clay/commit/e976ac85c1f5de0df8afba7a589bb8791caaa85e))
+
 # [3.141.0](https://github.com/liferay/clay/compare/v3.140.0...v3.141.0) (2025-07-15)
 
 ### Bug Fixes
