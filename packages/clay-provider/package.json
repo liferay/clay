@@ -24,7 +24,8 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/icon": "^3.128.0"
+		"@clayui/icon": "^3.128.0",
+		"react-compiler-runtime": "^19.1.0-rc.2"
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",
