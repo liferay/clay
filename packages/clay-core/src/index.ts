@@ -17,6 +17,7 @@ export {Provider, useProvider} from '@clayui/provider';
 
 export {IconSelector} from './icon-selector';
 export {Heading, Text, TextHighlight} from './typography';
+export type {ColorType} from './typography';
 export {OverlayMask} from './overlay-mask';
 export {TreeView} from './tree-view';
 export {VerticalBar} from './vertical-bar';
@@ -27,6 +28,7 @@ export {Nav} from './nav';
 export {Body, Cell, Head, Row, Table} from './table';
 export {LanguagePicker} from './language-picker';
 export {SidePanel} from './side-panel';
+export type {SidePanelProps} from './side-panel';
 
 // Experimental components
 export * as __EXPERIMENTAL_MENU from './drop-down';

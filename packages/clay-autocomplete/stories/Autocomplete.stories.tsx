@@ -5,16 +5,14 @@
 
 import {Text, TextHighlight} from '@clayui/core';
 import {useResource} from '@clayui/data-provider';
-import {
-	FetchPolicy,
-	NetworkStatus,
-} from '@clayui/data-provider/src/useResource';
 import DropDown from '@clayui/drop-down';
 import Layout from '@clayui/layout';
 import {FocusScope, useDebounce} from '@clayui/shared';
 import React, {useEffect, useRef, useState} from 'react';
 
 import ClayAutocomplete from '../src';
+
+import type {FetchPolicy, NetworkStatus} from '@clayui/data-provider';
 
 const LoadingWithDebounce = ({
 	loading,
