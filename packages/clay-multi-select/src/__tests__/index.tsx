@@ -4,7 +4,8 @@
  */
 
 import ClayMultiSelect from '..';
-import {cleanup, fireEvent, render} from '@testing-library/react';
+import {cleanup, fireEvent, render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 global.ResizeObserver = require('resize-observer-polyfill');
@@ -43,6 +44,57 @@ const ClayMultiSelectWithState = (props: any) => {
 
 describe('Interactions', () => {
 	afterEach(cleanup);
+
+	it('can click on autocomplete item without closing the dropdown menu', () => {
+		render(
+			<ClayMultiSelectWithState
+				items={[]}
+				onItemsChange={jest.fn()}
+				sourceItems={items}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		userEvent.click(screen.getByRole('combobox'));
+
+		const menuOptions = screen.getAllByRole('option');
+
+		userEvent.click(menuOptions.at(0)!);
+
+		menuOptions.forEach((option) => {
+			expect(option).toBeVisible();
+		});
+	});
+
+	it('can click on autocomplete custom child item without closing the dropdown menu', () => {
+		render(
+			<ClayMultiSelectWithState
+				items={[]}
+				onItemsChange={jest.fn()}
+				sourceItems={items}
+				spritemap="/foo/bar"
+			>
+				{(item: any) => (
+					<ClayMultiSelect.Item
+						key={item.value}
+						textValue={item.label}
+					>
+						<strong>{item.label}</strong>
+					</ClayMultiSelect.Item>
+				)}
+			</ClayMultiSelectWithState>
+		);
+
+		userEvent.click(screen.getByRole('combobox'));
+
+		const menuOptions = screen.getAllByRole('option');
+
+		userEvent.click(menuOptions.at(0)!);
+
+		menuOptions.forEach((option) => {
+			expect(option).toBeVisible();
+		});
+	});
 
 	xit('clicking on autocomplete item calls onItemsChange', () => {
 		const onItemsChangeFn = jest.fn();
