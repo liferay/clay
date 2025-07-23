@@ -79,6 +79,11 @@ export interface IProps<T extends Record<string, any> = Item>
 	closeButtonAriaLabel?: string;
 
 	/**
+	 * Flag that indicates whether to close DropDown when clicking on the item.
+	 */
+	closeOnClick?: boolean;
+
+	/**
 	 * The initial value of the active state (uncontrolled).
 	 */
 	defaultActive?: boolean;
@@ -250,6 +255,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 		children,
 		clearAllTitle = 'Clear All',
 		closeButtonAriaLabel = 'Remove {0}',
+		closeOnClick = false,
 		defaultActive = false,
 		defaultItems = [],
 		defaultValue = '',
@@ -389,7 +395,10 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 
 						event.preventDefault();
 
-						setActive(false);
+						if (closeOnClick) {
+							setActive(false);
+						}
+
 						setItems([...items, item]);
 						setValue('');
 					},
@@ -405,7 +414,10 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 					onClick={(event) => {
 						event.preventDefault();
 
-						setActive(false);
+						if (closeOnClick) {
+							setActive(false);
+						}
+
 						setItems([...items, item]);
 						setValue('');
 					}}
