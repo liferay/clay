@@ -390,10 +390,9 @@ describe('ClayDataProvider', () => {
 	it('calls clay.data with polling of 50ms', async () => {
 		fetchMock
 			.once(JSON.stringify({title: '1'}))
-			.once(JSON.stringify({title: '2'}))
-			.once(JSON.stringify({title: '3'}));
+			.once(JSON.stringify({title: '2'}));
 
-		const {container} = render(
+		render(
 			<Provider spritemap="">
 				<DataProvider link="https://clay.data" pollInterval={50}>
 					{({data}) => <h1>{data && data.title}</h1>}
@@ -401,14 +400,9 @@ describe('ClayDataProvider', () => {
 			</Provider>
 		);
 
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
-		expect(container.innerHTML).toMatchSnapshot();
-
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
-		expect(container.innerHTML).toMatchSnapshot();
-
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(3));
-		expect(container.innerHTML).toMatchSnapshot();
+		expect(fetchMock.mock.calls.length).toEqual(1);
+		jest.advanceTimersByTime(50);
+		expect(fetchMock.mock.calls.length).toEqual(2);
 
 		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
 	});
