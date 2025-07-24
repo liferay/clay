@@ -8,7 +8,7 @@ import {cleanup, fireEvent, render} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {useEffect, useState} from 'react';
 
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import {ClayPortal, FocusScope} from '..';
 
 describe('FocusScope', () => {

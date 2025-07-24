@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import ClayMultiStepNav, {ClayMultiStepNavWithBasicItems} from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';

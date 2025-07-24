@@ -13,6 +13,8 @@ import {LanguagePicker} from '..';
 import {cleanup, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
+import '@testing-library/jest-dom';
+
 const locales = [
 	{
 		id: 'en_US',

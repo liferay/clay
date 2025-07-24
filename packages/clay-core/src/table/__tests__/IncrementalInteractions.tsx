@@ -7,6 +7,8 @@ import {cleanup, render} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {useCallback, useMemo, useState} from 'react';
 
+import '@testing-library/jest-dom';
+
 import {Body, Cell, Head, Row, Table} from '../../';
 
 type Sorting = {
