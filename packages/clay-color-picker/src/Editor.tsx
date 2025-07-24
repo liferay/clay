@@ -255,9 +255,7 @@ export function Editor({
 									}
 								}}
 								type="text"
-								value={hex
-									.toUpperCase()
-									.substring(0, color.getAlpha() < 1 ? 8 : 6)}
+								value={hex.toUpperCase().substring(0, 8)}
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">
