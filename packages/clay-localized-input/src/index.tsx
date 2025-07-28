@@ -5,7 +5,7 @@
 
 import {LanguagePicker} from '@clayui/core';
 import ClayForm, {ClayInput} from '@clayui/form';
-import React, {useMemo, useState} from 'react';
+import React, {useMemo} from 'react';
 
 interface IItem {
 	id?: string;
