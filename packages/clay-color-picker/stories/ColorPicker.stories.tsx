@@ -175,7 +175,7 @@ Native.args = {
 export const Validation = () => {
 	const [color, setColor] = useState('');
 
-	const valid = color.length === 6;
+	const valid = color.length === 8;
 
 	return (
 		<ClayForm.Group className={!valid ? 'has-error' : ''}>
