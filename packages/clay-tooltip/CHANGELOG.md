@@ -3,6 +3,220 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.142.0](https://github.com/liferay/clay/compare/@clayui/tooltip@3.4.5...@clayui/tooltip@3.142.0) (2025-08-01)
+
+## 3.141.1 (2025-07-18)
+
+# 3.141.0 (2025-07-15)
+
+# 3.140.0 (2025-06-19)
+
+# 3.139.0 (2025-06-10)
+
+# 3.137.0 (2025-05-30)
+
+# 3.136.0 (2025-05-03)
+
+# 3.132.0 (2025-03-24)
+
+# 3.128.0 (2025-02-20)
+
+### Features
+
+-   **@clayui/tooltip:** improves component typing to create API Tooltip ([eb82afe](https://github.com/liferay/clay/commit/eb82afe50a3765087f5db4ea56bd9fd6f5cf1b5a))
+
+# 3.119.0 (2024-08-30)
+
+# 3.116.0 (2024-06-10)
+
+# 3.115.0 (2024-05-16)
+
+# 3.113.0 (2024-03-28)
+
+# 3.111.0 (2024-02-15)
+
+# 3.109.0 (2024-01-22)
+
+# 3.108.0 (2023-12-12)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** Fix close tooltip when pressing Escape key ([6f40c16](https://github.com/liferay/clay/commit/6f40c16ad2556a99c839822c1486a2e0b2ee710c))
+
+# 3.107.0 (2023-11-27)
+
+## 3.106.1 (2023-10-26)
+
+# 3.106.0 (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+# 3.104.0 (2023-08-25)
+
+## 3.103.1 (2023-08-15)
+
+# 3.101.0 (2023-07-28)
+
+# 3.100.0 (2023-07-13)
+
+## 3.99.1 (2023-07-04)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** fix error not showing tooltip on nested elements ([cf31736](https://github.com/liferay/clay/commit/cf31736b5515af8c2e906443c86c6cdd4c11631d))
+
+# 3.96.0 (2023-05-29)
+
+## 3.95.2 (2023-05-17)
+
+# 3.95.0 (2023-05-15)
+
+# 3.94.0 (2023-05-03)
+
+# 3.93.0 (2023-04-19)
+
+# 3.92.0 (2023-04-06)
+
+# 3.89.0 (2023-03-01)
+
+# 3.88.0 (2023-02-14)
+
+# 3.87.0 (2023-02-08)
+
+## 3.86.1 (2023-02-02)
+
+# 3.86.0 (2023-01-31)
+
+# 3.85.0 (2023-01-23)
+
+## 3.83.1 (2022-12-20)
+
+# 3.83.0 (2022-12-20)
+
+# 3.82.0 (2022-12-07)
+
+# 3.81.0 (2022-11-30)
+
+## 3.80.1 (2022-11-22)
+
+# 3.80.0 (2022-11-21)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** persist the title attribute when navigate via keyboard ([44fe7c4](https://github.com/liferay/clay/commit/44fe7c4113a0889a109f3d71435800468b9ab94a))
+
+# 3.79.0 (2022-11-08)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** fixes error when not aligning the tooltip with focus in sequence of elements ([0d3e415](https://github.com/liferay/clay/commit/0d3e415746f33e62b7eb68e798c19c3ce5173b23))
+
+## 3.78.2 (2022-10-25)
+
+## 3.78.1 (2022-10-25)
+
+# 3.78.0 (2022-10-25)
+
+# 3.77.0 (2022-10-17)
+
+## 3.75.2 (2022-09-29)
+
+# 3.75.0 (2022-09-28)
+
+# 3.73.0 (2022-09-13)
+
+# 3.71.0 (2022-08-30)
+
+## 3.70.3 (2022-08-30)
+
+## 3.70.2 (2022-08-30)
+
+# 3.70.0 (2022-08-23)
+
+# 3.69.0 (2022-08-16)
+
+### Bug Fixes
+
+-   **@clayui/tooltip): Revert "fix(@clayui/tooltip:** adds the option to disappear the floating tooltip after a while" ([43b64b9](https://github.com/liferay/clay/commit/43b64b9e0ca7b503b022f69f2aa710dd51770114))
+-   **@clayui/tooltip:** adds the option to disappear the floating tooltip after a while ([7438e62](https://github.com/liferay/clay/commit/7438e62797131336b6547ffd986ff977c7a59d0d))
+-   **@clayui/tooltip:** remove the behavior of moving the tooltip when the mouse moves ([51585ff](https://github.com/liferay/clay/commit/51585ffb16fe0dea68086ed9c320db381d788215))
+
+# 3.67.0 (2022-07-25)
+
+### Features
+
+-   **@clayui/tooltip:** adds new properties to configure the tooltip to be floating ([c598ca3](https://github.com/liferay/clay/commit/c598ca335b96cafe01848fabdf020135126c9ff9))
+
+# 3.65.0 (2022-07-11)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** adds the possibility to hover over the tooltip ([8b9b256](https://github.com/liferay/clay/commit/8b9b256db39be0a8f7708648946cec6faeb92bb1))
+
+# 3.58.0 (2022-05-23)
+
+# 3.56.0 (2022-05-09)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** cancel scheduled tooltip before scheduling new one ([62551b8](https://github.com/liferay/clay/commit/62551b87af77d6b15d95d80c47525c1071237605))
+
+# 3.55.0 (2022-05-02)
+
+# 3.52.0 (2022-04-04)
+
+# 3.49.0 (2022-03-15)
+
+# 3.47.0 (2022-02-23)
+
+# 3.45.0 (2022-02-01)
+
+# 3.40.0 (2021-11-17)
+
+# 3.39.0 (2021-10-29)
+
+# 3.38.0 (2021-10-22)
+
+# 3.37.0 (2021-10-06)
+
+# 3.36.0 (2021-09-23)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** forces tooltip to be repositioned when the x-axis is modified ([b62313c](https://github.com/liferay/clay/commit/b62313c01a3bd94812b03c5d754653e927b3cfcf))
+-   **@clayui/tooltip:** stop the always showing warnings ([3858bfe](https://github.com/liferay/clay/commit/3858bfe835fb39733bf5e75181d46079a1358d85))
+-   **@clyaui/tooltip:** fixes error when not forcing Tooltip repositioning when X axis is modified ([187f1ef](https://github.com/liferay/clay/commit/187f1ef1f0cad070597c8b9888fb082f9c09cec4))
+
+## 3.35.3 (2021-09-09)
+
+## 3.35.2 (2021-08-30)
+
+## 3.35.1 (2021-08-30)
+
+# 3.35.0 (2021-08-30)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** Hide tooltip on `dragstart` ([70d78da](https://github.com/liferay/clay/commit/70d78daa7d49287f7afb3981dae3c22ac9294bf3))
+
+### Features
+
+-   **@clayui/tooltip:** replaces direct use of dom-align with doAlign with RTL support ([2afa54c](https://github.com/liferay/clay/commit/2afa54ce9b24501cfa34898454dfa6346e8dac83))
+
+# 3.29.0 (2021-05-28)
+
+# 3.28.0 (2021-05-19)
+
+### Features
+
+-   **@clayui/tooltip:** Add the new ContainerProps API ([728600c](https://github.com/liferay/clay/commit/728600c021008c5ed923951c2fa4ea8298d3fd1b))
+-   **@clayui/tooltip:** update logic to handle scoping and a global listener ([1c83d30](https://github.com/liferay/clay/commit/1c83d30fc1a0ea1aa86977d7c86c5b6269b3ab68))
+
+# 3.27.0 (2021-05-05)
+
 ## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
 
 **Note:** Version bump only for package @clayui/tooltip

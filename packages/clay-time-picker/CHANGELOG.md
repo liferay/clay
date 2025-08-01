@@ -3,6 +3,200 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.142.0](https://github.com/liferay/clay/compare/@clayui/time-picker@3.2.6...@clayui/time-picker@3.142.0) (2025-08-01)
+
+## 3.141.1 (2025-07-18)
+
+# 3.141.0 (2025-07-15)
+
+# 3.140.0 (2025-06-19)
+
+# 3.139.0 (2025-06-10)
+
+# 3.137.0 (2025-05-30)
+
+# 3.136.0 (2025-05-03)
+
+# 3.134.0 (2025-04-10)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** LPD-52380 Update snapshot ([16921f3](https://github.com/liferay/clay/commit/16921f3c9dce13c5a95aa656f2313e05f5869c9b))
+-   **@clayui/time-picker:** LPD-52380 Add tabIndex on clear button to prevent focus when element not present ([7c42c82](https://github.com/liferay/clay/commit/7c42c82935c6111206c6d2e0750f5a5feb2c9731))
+
+# 3.132.0 (2025-03-24)
+
+# 3.130.0 (2025-03-12)
+
+# 3.128.0 (2025-02-20)
+
+### Features
+
+-   **@clayui/time-picker:** improves component typing to create API Time Picker ([b1e1e23](https://github.com/liferay/clay/commit/b1e1e230f0ba27d2b2910034be8a066eb49dc69c))
+
+# 3.125.0 (2025-01-13)
+
+# 3.122.0 (2024-11-13)
+
+# 3.119.0 (2024-08-30)
+
+# 3.116.0 (2024-06-10)
+
+# 3.115.0 (2024-05-16)
+
+# 3.113.0 (2024-03-28)
+
+# 3.111.0 (2024-02-15)
+
+# 3.109.0 (2024-01-22)
+
+# 3.107.0 (2023-11-27)
+
+## 3.106.1 (2023-10-26)
+
+# 3.106.0 (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+# 3.105.0 (2023-09-15)
+
+### Bug Fixes
+
+-   **@clayui/time-picker:** Removes focus class, no longer needed with focus-within ([059eaf8](https://github.com/liferay/clay/commit/059eaf8d10904f5163e7406fabd2c480a718d0d3))
+
+# 3.104.0 (2023-08-25)
+
+### Features
+
+-   **@clayui/css:** modifies DatePicker size to new default of 352px ([6ace393](https://github.com/liferay/clay/commit/6ace393fd30661ff8c0632f9d9ea2c7926be3c06))
+
+## 3.103.1 (2023-08-15)
+
+# 3.101.0 (2023-07-28)
+
+# 3.100.0 (2023-07-13)
+
+# 3.99.0 (2023-06-28)
+
+# 3.96.0 (2023-05-29)
+
+## 3.95.2 (2023-05-17)
+
+# 3.95.0 (2023-05-15)
+
+# 3.94.0 (2023-05-03)
+
+# 3.93.0 (2023-04-19)
+
+# 3.92.0 (2023-04-06)
+
+# 3.89.0 (2023-03-01)
+
+# 3.88.0 (2023-02-14)
+
+# 3.87.0 (2023-02-08)
+
+## 3.86.1 (2023-02-02)
+
+# 3.86.0 (2023-01-31)
+
+# 3.85.0 (2023-01-23)
+
+## 3.83.1 (2022-12-20)
+
+# 3.83.0 (2022-12-20)
+
+# 3.82.0 (2022-12-07)
+
+# 3.81.0 (2022-11-30)
+
+## 3.80.1 (2022-11-22)
+
+# 3.80.0 (2022-11-21)
+
+### Features
+
+-   **@clayui/time-picker:** Add id prop that sets id on `clay-time-hours` ([63a151b](https://github.com/liferay/clay/commit/63a151bb5168f776caf6bd22ac8edf1c207945e4))
+
+# 3.79.0 (2022-11-08)
+
+## 3.78.2 (2022-10-25)
+
+## 3.78.1 (2022-10-25)
+
+# 3.78.0 (2022-10-25)
+
+# 3.77.0 (2022-10-17)
+
+## 3.75.2 (2022-09-29)
+
+# 3.75.0 (2022-09-28)
+
+# 3.74.0 (2022-09-19)
+
+# 3.73.0 (2022-09-13)
+
+# 3.71.0 (2022-08-30)
+
+## 3.70.3 (2022-08-30)
+
+## 3.70.2 (2022-08-30)
+
+# 3.70.0 (2022-08-23)
+
+# 3.69.0 (2022-08-16)
+
+# 3.67.0 (2022-07-25)
+
+# 3.65.0 (2022-07-11)
+
+# 3.58.0 (2022-05-23)
+
+# 3.56.0 (2022-05-09)
+
+# 3.55.0 (2022-05-02)
+
+### Features
+
+-   **@clayui/time-picker:** standardizes properties for the controlled and uncontrolled component ([882ab9d](https://github.com/liferay/clay/commit/882ab9d2fb709fc997d0c364a5651d5aa7029fe9))
+
+# 3.52.0 (2022-04-04)
+
+# 3.49.0 (2022-03-15)
+
+# 3.47.0 (2022-02-23)
+
+# 3.45.0 (2022-02-01)
+
+# 3.42.0 (2021-12-15)
+
+# 3.40.0 (2021-11-17)
+
+# 3.39.0 (2021-10-29)
+
+# 3.38.0 (2021-10-22)
+
+# 3.37.0 (2021-10-06)
+
+# 3.36.0 (2021-09-23)
+
+## 3.35.3 (2021-09-09)
+
+## 3.35.2 (2021-08-30)
+
+## 3.35.1 (2021-08-30)
+
+# 3.35.0 (2021-08-30)
+
+# 3.29.0 (2021-05-28)
+
+# 3.28.0 (2021-05-19)
+
+# 3.27.0 (2021-05-05)
+
 ## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
 
 **Note:** Version bump only for package @clayui/time-picker

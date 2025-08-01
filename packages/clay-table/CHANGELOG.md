@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.112.0](https://github.com/liferay/clay/compare/@clayui/table@3.1.0...@clayui/table@3.112.0) (2025-08-01)
+
+# 3.111.0 (2024-02-15)
+
+# 3.108.0 (2023-12-12)
+
+### Features
+
+-   **@clayui/table:** adds the border to the head by default ([fb2cbdb](https://github.com/liferay/clay/commit/fb2cbdb7ac749756ff4c1749056af54bed9441fe))
+-   **@clayui/table:** sets striped by default ([2ee5787](https://github.com/liferay/clay/commit/2ee5787ef5c2bd83aa66632014577a797645081c))
+
+## 3.106.1 (2023-10-26)
+
+# 3.106.0 (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+### Features
+
+-   **@clayui/core:** adds controlled and uncontrolled expandable state ([56f3d8f](https://github.com/liferay/clay/commit/56f3d8f8c1afa43d8ca66973890948f9a78ab413))
+
+# 3.56.0 (2022-05-09)
+
+# 3.40.0 (2021-11-17)
+
+# 3.39.0 (2021-10-29)
+
+# 3.38.0 (2021-10-22)
+
+# 3.37.0 (2021-10-06)
+
+# 3.29.0 (2021-05-28)
+
+### Bug Fixes
+
+-   **@clayui/table:** Fixes lint error ([9dec4a4](https://github.com/liferay/clay/commit/9dec4a4b8d668c12dece5ada34ca080871d7b7dd))
+
+### Features
+
+-   **@clayui/table:** Adds the `noWrap` prop to ClayTable.Cell ([da88293](https://github.com/liferay/clay/commit/da8829363e054c97254ddb99f8a4e672b5fcf7fd))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/table

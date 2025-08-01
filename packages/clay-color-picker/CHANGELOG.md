@@ -3,6 +3,361 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.142.0](https://github.com/liferay/clay/compare/@clayui/color-picker@3.5.0...@clayui/color-picker@3.142.0) (2025-08-01)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** LPD-58303 Allow for 8 digits in color-picker input. ([a39a87c](https://github.com/liferay/clay/commit/a39a87cd2d549bb3613c29526ebbed0078359373))
+
+## 3.141.1 (2025-07-18)
+
+# 3.141.0 (2025-07-15)
+
+# 3.140.0 (2025-06-19)
+
+## 3.139.1 (2025-06-16)
+
+# 3.139.0 (2025-06-10)
+
+# 3.138.0 (2025-06-02)
+
+# 3.137.0 (2025-05-30)
+
+# 3.136.0 (2025-05-03)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** LPD-53383 Hue slider thumb should update color when the color state changes ([708257d](https://github.com/liferay/clay/commit/708257d926b201f177d9586dea76e63083a93bd2))
+
+# 3.135.0 (2025-04-22)
+
+# 3.134.0 (2025-04-10)
+
+# 3.133.0 (2025-03-28)
+
+## 3.132.1 (2025-03-24)
+
+# 3.132.0 (2025-03-24)
+
+# 3.131.0 (2025-03-20)
+
+# 3.130.0 (2025-03-12)
+
+# 3.129.0 (2025-02-27)
+
+# 3.128.0 (2025-02-20)
+
+### Features
+
+-   **@clayui/color-picker:** improves component typing to create API ColorPicker ([5441eb6](https://github.com/liferay/clay/commit/5441eb6fb6a971d803e591813f3f4e80807c440e))
+
+# 3.127.0 (2025-01-23)
+
+# 3.125.0 (2025-01-13)
+
+# 3.124.0 (2024-12-18)
+
+## 3.123.1 (2024-11-27)
+
+# 3.123.0 (2024-11-21)
+
+# 3.122.0 (2024-11-13)
+
+# 3.121.0 (2024-10-17)
+
+# 3.120.0 (2024-09-13)
+
+# 3.119.0 (2024-08-30)
+
+# 3.118.0 (2024-08-13)
+
+### Features
+
+-   **@clayui/color-picker:** Remove color-picker icon and update tests ([3fbe7ac](https://github.com/liferay/clay/commit/3fbe7ac108c65b580018f148ba9cae28f288b8c0))
+-   **@clayui/color-picker:** Remove small color-picker example and add ([2005ade](https://github.com/liferay/clay/commit/2005ade74c49c7af3962cbdd3fee55de8c6def1d))
+
+# 3.117.0 (2024-07-30)
+
+## 3.116.1 (2024-06-27)
+
+# 3.116.0 (2024-06-10)
+
+## 3.115.1 (2024-05-21)
+
+# 3.115.0 (2024-05-16)
+
+# 3.114.0 (2024-04-22)
+
+# 3.113.0 (2024-03-28)
+
+# 3.112.0 (2024-03-11)
+
+# 3.111.0 (2024-02-15)
+
+# 3.109.0 (2024-01-22)
+
+# 3.108.0 (2023-12-12)
+
+## 3.107.1 (2023-11-27)
+
+# 3.107.0 (2023-11-27)
+
+## 3.106.1 (2023-10-26)
+
+# 3.106.0 (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+# 3.105.0 (2023-09-15)
+
+### Bug Fixes
+
+-   **@clayui/css:** Renames form-control-container to input-group-item-focusable ([54b0677](https://github.com/liferay/clay/commit/54b0677bf6eff26c2ab551120ed43a9b0a717100))
+
+### Features
+
+-   **@clayui/color-picker:** Add alpha transparency slider ([534ebde](https://github.com/liferay/clay/commit/534ebde9a5b1c3b4e901643682b46d362bb4dd97))
+-   **@clayui/color-picker:** Use form-control-container for focus-within ([53df194](https://github.com/liferay/clay/commit/53df1940e153bec42000de0c18ff033b4b6fb401))
+
+# 3.104.0 (2023-08-25)
+
+## 3.103.1 (2023-08-15)
+
+# 3.101.0 (2023-07-28)
+
+# 3.100.0 (2023-07-13)
+
+## 3.99.4 (2023-07-10)
+
+## 3.99.1 (2023-07-04)
+
+# 3.99.0 (2023-06-28)
+
+# 3.98.0 (2023-06-20)
+
+## 3.97.1 (2023-06-14)
+
+# 3.97.0 (2023-06-13)
+
+# 3.96.0 (2023-05-29)
+
+## 3.95.2 (2023-05-17)
+
+# 3.95.0 (2023-05-15)
+
+# 3.94.0 (2023-05-03)
+
+# 3.93.0 (2023-04-19)
+
+# 3.92.0 (2023-04-06)
+
+# 3.91.0 (2023-03-24)
+
+# 3.90.0 (2023-03-15)
+
+# 3.89.0 (2023-03-01)
+
+# 3.88.0 (2023-02-14)
+
+# 3.87.0 (2023-02-08)
+
+## 3.86.1 (2023-02-02)
+
+# 3.86.0 (2023-01-31)
+
+# 3.85.0 (2023-01-23)
+
+# 3.84.0 (2022-12-23)
+
+## 3.83.1 (2022-12-20)
+
+# 3.83.0 (2022-12-20)
+
+# 3.82.0 (2022-12-07)
+
+### Features
+
+-   removes duplication of implementation of accessibility features for menu using Overlay component ([9d60eb9](https://github.com/liferay/clay/commit/9d60eb9670cb5dc9fc18e02e3a97f139f1db4cfd))
+
+# 3.81.0 (2022-11-30)
+
+## 3.80.1 (2022-11-22)
+
+# 3.80.0 (2022-11-21)
+
+# 3.79.0 (2022-11-08)
+
+### Features
+
+-   **@clayui/color-picker:** Adds splotchTitle to pass custom title to the input group splotch ([56eec39](https://github.com/liferay/clay/commit/56eec39fe84245dc1378dd966d2c09131bd9a838))
+
+## 3.78.2 (2022-10-25)
+
+## 3.78.1 (2022-10-25)
+
+# 3.78.0 (2022-10-25)
+
+# 3.77.0 (2022-10-17)
+
+## 3.75.2 (2022-09-29)
+
+# 3.75.0 (2022-09-28)
+
+# 3.74.0 (2022-09-19)
+
+# 3.73.0 (2022-09-13)
+
+# 3.72.0 (2022-09-05)
+
+# 3.71.0 (2022-08-30)
+
+## 3.70.3 (2022-08-30)
+
+## 3.70.2 (2022-08-30)
+
+# 3.70.0 (2022-08-23)
+
+# 3.69.0 (2022-08-16)
+
+# 3.68.0 (2022-08-01)
+
+# 3.67.0 (2022-07-25)
+
+# 3.66.0 (2022-07-20)
+
+## 3.65.2 (2022-07-19)
+
+## 3.65.1 (2022-07-11)
+
+# 3.65.0 (2022-07-11)
+
+# 3.64.0 (2022-07-04)
+
+# 3.63.0 (2022-06-27)
+
+# 3.62.0 (2022-06-20)
+
+# 3.61.0 (2022-06-13)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** fix error when `onBlur` method is declared but not called ([fd72c5b](https://github.com/liferay/clay/commit/fd72c5b7de270f725f9493ecb7e2ccb4ccd49473))
+
+## 3.58.1 (2022-05-24)
+
+# 3.58.0 (2022-05-23)
+
+# 3.56.0 (2022-05-09)
+
+# 3.55.0 (2022-05-02)
+
+### Features
+
+-   **@clayui/color-picker:** standardize the controlled and uncontrolled component behavior to `value` prop ([7a435c5](https://github.com/liferay/clay/commit/7a435c5b980976537201ba45ddf8ff034184aad3))
+
+# 3.52.0 (2022-04-04)
+
+### Features
+
+-   **@clayui/color-picker:** Add more test cases in color-picker ([89e5ef6](https://github.com/liferay/clay/commit/89e5ef6b4d91f43d6cbd072daaa37e1f6b0c9fb9))
+-   **@clayui/color-picker:** Adding more test cases and change snapshots by expect functions ([6ef292c](https://github.com/liferay/clay/commit/6ef292c48e6da6f8606db4616f1ff5f8d01bd871))
+-   **@clayui/color-picker:** Update snapshots ([e71da9d](https://github.com/liferay/clay/commit/e71da9d9304684b73e24fe5b9dff3e4380cbfdc3))
+-   **@clayui/color-picker:** Updates in test case title and not expecting splotch clicked ([6b5ff9f](https://github.com/liferay/clay/commit/6b5ff9f27b9472cae7f0fb76a15accb363b65117))
+
+# 3.50.0 (2022-03-21)
+
+### Features
+
+-   **@clayui/color-picker:** add color validation in input ([203649f](https://github.com/liferay/clay/commit/203649fb258f26b70650f58c7853ac8835687c03))
+
+# 3.49.0 (2022-03-15)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** fixes error of adding repeated colors in custom ([e3fb905](https://github.com/liferay/clay/commit/e3fb905ead79c1217cb7d6eb0ed89ce9df725cf9))
+-   **@clayui/color-picker:** fixes error when clicking on a white custom splotch does not update editor and input ([b5e0189](https://github.com/liferay/clay/commit/b5e0189115c2f9b98cbdbb444e5e4fcc8eaa4ef0))
+-   **@clayui/color-picker:** Removing costumize hook ([20fd191](https://github.com/liferay/clay/commit/20fd1919d9acdea016bad5e56878ad3589aa111d))
+
+# 3.48.0 (2022-03-07)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** Changes to improve inconsistent behavior in some scenarios ([85adf72](https://github.com/liferay/clay/commit/85adf727784d0e5a986cabd3124df77489a2b627))
+-   **@clayui/color-picker:** Current colour persist and Hue component synchronization ([07c2552](https://github.com/liferay/clay/commit/07c255200ae0213935f78af651ce5d85df030b55))
+-   **@clayui/color-picker:** Hue behaviour solved and workflow changes ([46821d7](https://github.com/liferay/clay/commit/46821d7e9fc76283e26fbbd4a7e8f08590b7efad))
+
+# 3.47.0 (2022-02-23)
+
+# 3.46.0 (2022-02-09)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** fixes error when not syncing the field state with the editor when there are no palettes ([097b76a](https://github.com/liferay/clay/commit/097b76a4379c2d59e14a89d5067725af762d1962))
+
+# 3.45.0 (2022-02-01)
+
+# 3.43.0 (2021-12-29)
+
+# 3.42.0 (2021-12-15)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** Add active and onActiveChange props ([4c7c683](https://github.com/liferay/clay/commit/4c7c68365b609ba11220f4ca65ed41459e878701))
+
+# 3.41.0 (2021-12-02)
+
+# 3.40.0 (2021-11-17)
+
+# 3.39.0 (2021-10-29)
+
+# 3.38.0 (2021-10-22)
+
+# 3.37.0 (2021-10-06)
+
+# 3.36.0 (2021-09-23)
+
+## 3.35.3 (2021-09-09)
+
+## 3.35.2 (2021-08-30)
+
+## 3.35.1 (2021-08-30)
+
+# 3.35.0 (2021-08-30)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** fix error of "hidden" input add extra margin ([f4d8aa0](https://github.com/liferay/clay/commit/f4d8aa0c974d12a5f1b8398123c5c0c9672efa1e))
+
+# 3.31.0 (2021-06-30)
+
+# 3.30.0 (2021-06-16)
+
+# 3.29.0 (2021-05-28)
+
+# 3.28.0 (2021-05-19)
+
+### Features
+
+-   **@clayui/color-picker:** Add the new DropDownContainerProps API ([ac51bdd](https://github.com/liferay/clay/commit/ac51bdd1c916c8c57dd71186d23f47e0efa71b13))
+
+# 3.27.0 (2021-05-05)
+
+## 3.25.1 (2021-03-05)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** RGB inputs should only accept numeric values from 0 to 255 ([4a7db84](https://github.com/liferay/clay/commit/4a7db845ac0a08919c523e4b4d77f00aa2c929bb))
+-   **@clayui/color-picker:** use isomorphic helper for useLayoutEffect ([42c069e](https://github.com/liferay/clay/commit/42c069ed866160f10cd9159345e59a62db473d83))
+
+# 3.25.0 (2021-02-23)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** remove last-row classes and API that was added on accident ([d4cb8e8](https://github.com/liferay/clay/commit/d4cb8e8f6807794a849081f1bef743bd20449c62))
+
 ## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
 
 **Note:** Version bump only for package @clayui/color-picker

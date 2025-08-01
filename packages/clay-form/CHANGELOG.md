@@ -3,6 +3,243 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.142.0](https://github.com/liferay/clay/compare/@clayui/form@3.14.4...@clayui/form@3.142.0) (2025-08-01)
+
+## 3.141.1 (2025-07-18)
+
+# 3.141.0 (2025-07-15)
+
+# 3.140.0 (2025-06-19)
+
+# 3.139.0 (2025-06-10)
+
+# 3.137.0 (2025-05-30)
+
+# 3.136.0 (2025-05-03)
+
+# 3.132.0 (2025-03-24)
+
+# 3.130.0 (2025-03-12)
+
+### Features
+
+-   **@clayui/form:** LPD-46381 Select adds shrink to make select element only as wide as its longest option ([e87cd5c](https://github.com/liferay/clay/commit/e87cd5c3e2952f5418a6b40474b7cd5a6a7f9eb8))
+
+# 3.128.0 (2025-02-20)
+
+### Features
+
+-   **@clayui/form:** improves component typing to create API DualListBox ([cf9a9c2](https://github.com/liferay/clay/commit/cf9a9c243335498ec9e6bc5c29294c3971b739fd))
+-   **@clayui/form:** improves component typing to create API Form ([d8fdfa4](https://github.com/liferay/clay/commit/d8fdfa4ce97aa875a75e09bee84d2807a0add1fb))
+-   **@clayui/form:** improves component typing to create API Input ([395ec1e](https://github.com/liferay/clay/commit/395ec1ef6c1b2c95de6c22bd6213a3131de127ed))
+-   **@clayui/form:** improves component typing to create API Radio ([a7d7f57](https://github.com/liferay/clay/commit/a7d7f578ebe8b198dc7701aad9771345d382b019))
+-   **@clayui/form:** improves component typing to create API Select ([3784785](https://github.com/liferay/clay/commit/37847858390f8a9e910a2ea29dca00955a131ad3))
+-   **@clayui/form:** improves component typing to create API SelectBox ([be21064](https://github.com/liferay/clay/commit/be2106498e342653bfae1b6c4c18a2e47ffde97d))
+-   **@clayui/form:** improves component typing to create API Toggle ([8f96507](https://github.com/liferay/clay/commit/8f96507ab038f8fa6e28203229701df0641b454c))
+
+# 3.125.0 (2025-01-13)
+
+### Bug Fixes
+
+-   **@clayui/form:** LPD-45345 Radio Toggle Switch should use role="radio" ([a7d88a5](https://github.com/liferay/clay/commit/a7d88a575c0f75badee3b910111b3137cc542682))
+
+# 3.122.0 (2024-11-13)
+
+### Bug Fixes
+
+-   **@clayui/form:** LPD-36696 DualListBox maximum items should correctly disable buttons and error message ([53e9e80](https://github.com/liferay/clay/commit/53e9e806b38a0fe76d709b0bdab0341ec56b3a5c))
+-   **@clayui/form:** LPD-36696 DualListBox adds children and don't disable left right buttons if no items are selected ([c796665](https://github.com/liferay/clay/commit/c796665296793965109aaf425fa3086d66b465ae))
+
+### Features
+
+-   **@clayui/form:** LPD-36696 Add new API to set maximum items for Left and Right side with error message ([8e0ab50](https://github.com/liferay/clay/commit/8e0ab5031c2f1ff596ea33e8ad25b6c81b5a1796))
+-   **@clayui/form:** LPD-36696 sf ([766d9a8](https://github.com/liferay/clay/commit/766d9a89570a030c2aa223910c10586e52549df8))
+
+# 3.119.0 (2024-08-30)
+
+### Bug Fixes
+
+-   **@clayui/form:** LPD-34319 adds disabled to Dual Listbox ([867dee3](https://github.com/liferay/clay/commit/867dee399e7e88d9bc607bd63ae6464e9a3d8427))
+
+# 3.116.0 (2024-06-10)
+
+# 3.115.0 (2024-05-16)
+
+### Features
+
+-   **@clayui/form:** add regular size to input ([53a62b1](https://github.com/liferay/clay/commit/53a62b1cc7ca7c80e471107ba67ddf3fdceca3ee))
+
+# 3.113.0 (2024-03-28)
+
+# 3.111.0 (2024-02-15)
+
+# 3.109.0 (2024-01-22)
+
+### Features
+
+-   **@clayui/form:** Toggle Switch adds sizing attribute ([d29270b](https://github.com/liferay/clay/commit/d29270b6209f3880d3737fd06e778b5c8e9466e8))
+
+# 3.107.0 (2023-11-27)
+
+## 3.106.1 (2023-10-26)
+
+# 3.106.0 (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+### Features
+
+-   **@clayui/form:** Checkbox and Radio should use modifier class custom-control-outside if a label is present ([e2b6335](https://github.com/liferay/clay/commit/e2b633546c55ed1b266f92c277a14f278bf9c22e))
+
+# 3.104.0 (2023-08-25)
+
+## 3.103.1 (2023-08-15)
+
+# 3.101.0 (2023-07-28)
+
+# 3.100.0 (2023-07-13)
+
+# 3.99.0 (2023-06-28)
+
+### Bug Fixes
+
+-   **@clayui/form:** adds the proper `role` to the switch component ([c3530c3](https://github.com/liferay/clay/commit/c3530c38f08b8679a4681f04da631259baef2654))
+
+# 3.96.0 (2023-05-29)
+
+## 3.95.2 (2023-05-17)
+
+# 3.95.0 (2023-05-15)
+
+# 3.94.0 (2023-05-03)
+
+# 3.93.0 (2023-04-19)
+
+# 3.92.0 (2023-04-06)
+
+# 3.89.0 (2023-03-01)
+
+# 3.88.0 (2023-02-14)
+
+# 3.87.0 (2023-02-08)
+
+## 3.86.1 (2023-02-02)
+
+# 3.86.0 (2023-01-31)
+
+# 3.85.0 (2023-01-23)
+
+## 3.83.1 (2022-12-20)
+
+# 3.83.0 (2022-12-20)
+
+# 3.82.0 (2022-12-07)
+
+# 3.81.0 (2022-11-30)
+
+## 3.80.1 (2022-11-22)
+
+# 3.80.0 (2022-11-21)
+
+# 3.79.0 (2022-11-08)
+
+## 3.78.2 (2022-10-25)
+
+## 3.78.1 (2022-10-25)
+
+# 3.78.0 (2022-10-25)
+
+# 3.77.0 (2022-10-17)
+
+## 3.75.2 (2022-09-29)
+
+# 3.75.0 (2022-09-28)
+
+# 3.74.0 (2022-09-19)
+
+### Features
+
+-   **@clayui/form:** add `aria-disabled` when `readOnly` is enabled in the checkbox ([003a6a3](https://github.com/liferay/clay/commit/003a6a3335fbd39d20b25e23f33b518201fe3a66))
+
+# 3.73.0 (2022-09-13)
+
+# 3.71.0 (2022-08-30)
+
+## 3.70.3 (2022-08-30)
+
+## 3.70.2 (2022-08-30)
+
+# 3.70.0 (2022-08-23)
+
+# 3.69.0 (2022-08-16)
+
+# 3.67.0 (2022-07-25)
+
+# 3.65.0 (2022-07-11)
+
+# 3.58.0 (2022-05-23)
+
+# 3.56.0 (2022-05-09)
+
+### Bug Fixes
+
+-   updates broken storybook links in documentation ([22fc1c6](https://github.com/liferay/clay/commit/22fc1c684a92ada9aac73c9c7090c6cbca960f9d))
+
+# 3.55.0 (2022-05-02)
+
+### Features
+
+-   **@clayui/form:** standardize the controlled and uncontrolled ClayRadioGroup component behavior to `value` prop ([478c5ae](https://github.com/liferay/clay/commit/478c5ae598b864a90e127c61373511993d9fc1e5))
+
+# 3.52.0 (2022-04-04)
+
+# 3.49.0 (2022-03-15)
+
+# 3.47.0 (2022-02-23)
+
+# 3.45.0 (2022-02-01)
+
+# 3.42.0 (2021-12-15)
+
+### Bug Fixes
+
+-   **@clayui/form:** add missing "textarea" type to Input's component prop ([b0a3b89](https://github.com/liferay/clay/commit/b0a3b8915d9a5a04838d684b41b9a3a53d9fdc05)), closes [#4477](https://github.com/liferay/clay/issues/4477)
+
+# 3.40.0 (2021-11-17)
+
+# 3.39.0 (2021-10-29)
+
+### Features
+
+-   **@clayui/form:** add the new `sizing` API to Select component ([2c7848d](https://github.com/liferay/clay/commit/2c7848d6729ce26f684010f58c59e1c4d174f7c3))
+
+# 3.38.0 (2021-10-22)
+
+# 3.37.0 (2021-10-06)
+
+### Bug Fixes
+
+-   **@clayui/form:** change the Dual List Box ordering side following the right side as the default behavior ([d4b9630](https://github.com/liferay/clay/commit/d4b963022bd2c6bf0c4f45ed3f9789db22ecf79a))
+
+# 3.36.0 (2021-09-23)
+
+## 3.35.3 (2021-09-09)
+
+## 3.35.2 (2021-08-30)
+
+## 3.35.1 (2021-08-30)
+
+# 3.35.0 (2021-08-30)
+
+# 3.29.0 (2021-05-28)
+
+# 3.28.0 (2021-05-19)
+
+# 3.27.0 (2021-05-05)
+
 ## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
 
 **Note:** Version bump only for package @clayui/form

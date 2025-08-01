@@ -3,6 +3,333 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.142.0](https://github.com/liferay/clay/compare/@clayui/pagination-bar@3.2.6...@clayui/pagination-bar@3.142.0) (2025-08-01)
+
+## 3.141.1 (2025-07-18)
+
+# 3.141.0 (2025-07-15)
+
+# 3.140.0 (2025-06-19)
+
+## 3.139.1 (2025-06-16)
+
+# 3.139.0 (2025-06-10)
+
+# 3.138.0 (2025-06-02)
+
+# 3.137.0 (2025-05-30)
+
+# 3.136.0 (2025-05-03)
+
+# 3.135.0 (2025-04-22)
+
+# 3.134.0 (2025-04-10)
+
+# 3.133.0 (2025-03-28)
+
+## 3.132.1 (2025-03-24)
+
+# 3.132.0 (2025-03-24)
+
+# 3.131.0 (2025-03-20)
+
+# 3.130.0 (2025-03-12)
+
+# 3.129.0 (2025-02-27)
+
+# 3.128.0 (2025-02-20)
+
+### Features
+
+-   **@clayui/pagination-bar:** improves component typing to create API PaginationBar ([52f0303](https://github.com/liferay/clay/commit/52f030345bd616ab8e66384b68c1fd77a227ad7e))
+
+# 3.127.0 (2025-01-23)
+
+# 3.125.0 (2025-01-13)
+
+# 3.124.0 (2024-12-18)
+
+## 3.123.1 (2024-11-27)
+
+# 3.123.0 (2024-11-21)
+
+# 3.122.0 (2024-11-13)
+
+### Bug Fixes
+
+-   **@clayui/pagination-bar:** LPD-38518 - Add case test for pagination bar ([0294c7d](https://github.com/liferay/clay/commit/0294c7ddfe4ec96f0a064c748938c2c27076173a))
+
+# 3.121.0 (2024-10-17)
+
+# 3.120.0 (2024-09-13)
+
+# 3.119.0 (2024-08-30)
+
+# 3.118.0 (2024-08-13)
+
+# 3.117.0 (2024-07-30)
+
+## 3.116.1 (2024-06-27)
+
+# 3.116.0 (2024-06-10)
+
+## 3.115.1 (2024-05-21)
+
+# 3.115.0 (2024-05-16)
+
+# 3.114.0 (2024-04-22)
+
+### Bug Fixes
+
+-   **@clayui/pagination-bar:** LPD-17368 Follow up - Add aria-label ([ba21e0e](https://github.com/liferay/clay/commit/ba21e0e1408bfe3a267c504edb21527f95cbafdb))
+
+# 3.113.0 (2024-03-28)
+
+# 3.112.0 (2024-03-11)
+
+## 3.111.1 (2024-02-20)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** LPD-17368 Add aria-label on pagination picker to ideentify the combobox ([7df8b4c](https://github.com/liferay/clay/commit/7df8b4ce7bcf3502c162c29d842b44cf8e6e2e6c))
+-   **@clayui/pagination:** LPD-17368 Update snapshot ([74f3f21](https://github.com/liferay/clay/commit/74f3f21bcaa53c53566fa81a2bb977afa064365f))
+
+# 3.111.0 (2024-02-15)
+
+# 3.109.0 (2024-01-22)
+
+# 3.108.0 (2023-12-12)
+
+## 3.107.1 (2023-11-27)
+
+# 3.107.0 (2023-11-27)
+
+## 3.106.1 (2023-10-26)
+
+# 3.106.0 (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+# 3.105.0 (2023-09-15)
+
+# 3.104.0 (2023-08-25)
+
+## 3.103.1 (2023-08-15)
+
+# 3.101.0 (2023-07-28)
+
+# 3.100.0 (2023-07-13)
+
+## 3.99.4 (2023-07-10)
+
+## 3.99.1 (2023-07-04)
+
+# 3.99.0 (2023-06-28)
+
+# 3.98.0 (2023-06-20)
+
+## 3.97.1 (2023-06-14)
+
+# 3.97.0 (2023-06-13)
+
+# 3.96.0 (2023-05-29)
+
+## 3.95.2 (2023-05-17)
+
+# 3.95.0 (2023-05-15)
+
+# 3.94.0 (2023-05-03)
+
+# 3.93.0 (2023-04-19)
+
+# 3.92.0 (2023-04-06)
+
+# 3.91.0 (2023-03-24)
+
+### Bug Fixes
+
+-   **@clayui/pagination-bar:** fix bug in documentation example ([8924412](https://github.com/liferay/clay/commit/8924412729baa8a35f4e3729a632d5399fcab93f))
+
+# 3.90.0 (2023-03-15)
+
+# 3.89.0 (2023-03-01)
+
+# 3.88.0 (2023-02-14)
+
+# 3.87.0 (2023-02-08)
+
+## 3.86.1 (2023-02-02)
+
+# 3.86.0 (2023-01-31)
+
+# 3.85.0 (2023-01-23)
+
+### Bug Fixes
+
+-   **@clayui/pagination-bar:** PaginationBarWithBasicItems shouldn't render if totalItems is 0 ([13519e8](https://github.com/liferay/clay/commit/13519e89e5c381627574e06b9bdf0277737e91ee))
+-   **@clayui/pagination:** fix error when `totalPages` is 0 ([16d6094](https://github.com/liferay/clay/commit/16d60941ecd7d5f50c0cd5d51ff6bb925cc26707))
+-   **@clayui/pagination:** remove link from Prev and Next when disabled ([6552d93](https://github.com/liferay/clay/commit/6552d93a6c103c9c8e9bfc1fbcc654821afeaea0))
+
+### Features
+
+-   **@clayui/pagination-bar:** change the DropDown component to the Picker in the high-level component ([6a641d4](https://github.com/liferay/clay/commit/6a641d48cfa14630d68c146527b7afbfff836d21))
+
+# 3.84.0 (2022-12-23)
+
+## 3.83.1 (2022-12-20)
+
+# 3.83.0 (2022-12-20)
+
+# 3.82.0 (2022-12-07)
+
+### Bug Fixes
+
+-   **@clayui/pagination-bar:** add `aria-label` and `title` to ellipsis ([c1124ac](https://github.com/liferay/clay/commit/c1124acc7c82c0bd3b736c506804a7aa4b356b3c))
+
+# 3.81.0 (2022-11-30)
+
+## 3.80.1 (2022-11-22)
+
+# 3.80.0 (2022-11-21)
+
+# 3.79.0 (2022-11-08)
+
+## 3.78.2 (2022-10-25)
+
+## 3.78.1 (2022-10-25)
+
+# 3.78.0 (2022-10-25)
+
+# 3.77.0 (2022-10-17)
+
+## 3.75.2 (2022-09-29)
+
+# 3.75.0 (2022-09-28)
+
+# 3.74.0 (2022-09-19)
+
+# 3.73.0 (2022-09-13)
+
+# 3.72.0 (2022-09-05)
+
+# 3.71.0 (2022-08-30)
+
+## 3.70.3 (2022-08-30)
+
+## 3.70.2 (2022-08-30)
+
+# 3.70.0 (2022-08-23)
+
+# 3.69.0 (2022-08-16)
+
+# 3.68.0 (2022-08-01)
+
+# 3.67.0 (2022-07-25)
+
+# 3.66.0 (2022-07-20)
+
+## 3.65.2 (2022-07-19)
+
+## 3.65.1 (2022-07-11)
+
+# 3.65.0 (2022-07-11)
+
+# 3.64.0 (2022-07-04)
+
+# 3.62.0 (2022-06-20)
+
+# 3.59.0 (2022-05-30)
+
+### Features
+
+-   **@clayui/pagination-bar:** Add flag disableEllipsis to PaginationBarWithBasicItems ([5cb8105](https://github.com/liferay/clay/commit/5cb8105c84b6623b84ab63dd87b02e9d358969de)), closes [#4886](https://github.com/liferay/clay/issues/4886)
+
+# 3.58.0 (2022-05-23)
+
+# 3.56.0 (2022-05-09)
+
+# 3.55.0 (2022-05-02)
+
+### Features
+
+-   **@clayui/pagination-bar:** standardizes properties for the controlled and uncontrolled component ([bd25cf6](https://github.com/liferay/clay/commit/bd25cf6a28eff89ddf203140af7b59af506ca6e0))
+
+# 3.52.0 (2022-04-04)
+
+# 3.49.0 (2022-03-15)
+
+### Features
+
+-   **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
+
+# 3.48.0 (2022-03-07)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** LPS-148048 regen snapshots ([4367010](https://github.com/liferay/clay/commit/4367010721180d2a9b5afaa44d88ad72947ebf5f))
+
+### Features
+
+-   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+
+# 3.47.0 (2022-02-23)
+
+# 3.46.0 (2022-02-09)
+
+# 3.45.0 (2022-02-01)
+
+# 3.43.0 (2021-12-29)
+
+# 3.42.0 (2021-12-15)
+
+# 3.41.0 (2021-12-02)
+
+# 3.40.0 (2021-11-17)
+
+# 3.39.0 (2021-10-29)
+
+# 3.38.0 (2021-10-22)
+
+# 3.37.0 (2021-10-06)
+
+# 3.36.0 (2021-09-23)
+
+## 3.35.3 (2021-09-09)
+
+## 3.35.2 (2021-08-30)
+
+## 3.35.1 (2021-08-30)
+
+# 3.35.0 (2021-08-30)
+
+# 3.33.0 (2021-08-11)
+
+### Features
+
+-   **@clayui/pagination-bar:** Add the `alignmentPosition` API to PaginationBarWithBasicItems component ([eca557f](https://github.com/liferay/clay/commit/eca557fbbbb3a20da550571994af906076509cc7))
+-   **@clayui/pagination-bar:** Add the `showDeltasDropDown` prop ([6c65f43](https://github.com/liferay/clay/commit/6c65f43da7e64c3ed271539f776cb6ab7d0df633)), closes [#4175](https://github.com/liferay/clay/issues/4175)
+
+# 3.31.0 (2021-06-30)
+
+### Bug Fixes
+
+-   **@clayui/pagination-bar:** spritemap should be optional ([38638e5](https://github.com/liferay/clay/commit/38638e5683866da5f427310720bc20e60013eb3e))
+
+# 3.30.0 (2021-06-16)
+
+# 3.29.0 (2021-05-28)
+
+# 3.28.0 (2021-05-19)
+
+# 3.27.0 (2021-05-05)
+
+## 3.25.1 (2021-03-05)
+
+# 3.25.0 (2021-02-23)
+
 ## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
 
 **Note:** Version bump only for package @clayui/pagination-bar

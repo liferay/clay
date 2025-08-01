@@ -3,6 +3,64 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.142.0](https://github.com/liferay/clay/compare/@clayui/link@3.2.0...@clayui/link@3.142.0) (2025-08-01)
+
+# 3.141.0 (2025-07-15)
+
+# 3.128.0 (2025-02-20)
+
+### Features
+
+-   **@clayui/link:** improves component typing to create API Link ([5955715](https://github.com/liferay/clay/commit/595571593603ada0b3c15bfd48b2035d90f38de2))
+
+# 3.111.0 (2024-02-15)
+
+## 3.106.1 (2023-10-26)
+
+# 3.106.0 (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+# 3.88.0 (2023-02-14)
+
+### Features
+
+-   **@clayui/link:** add extra aria-label when target is `_blank` ([6268a88](https://github.com/liferay/clay/commit/6268a8853bab3ea411773238c16a3f6750e70f6c))
+
+# 3.85.0 (2023-01-23)
+
+### Bug Fixes
+
+-   **@clayui/link:** Source Format ([ebc9464](https://github.com/liferay/clay/commit/ebc9464650f9810ac5a8b67a31453ea8d9adf09a))
+
+### Features
+
+-   **@clayui/link:** Adds new displayTypes, decoration, fontSize, and weight properties ([43bd938](https://github.com/liferay/clay/commit/43bd9383726136f56bb8fd0e897f1ea0bd78fe39))
+
+# 3.56.0 (2022-05-09)
+
+# 3.45.0 (2022-02-01)
+
+### Features
+
+-   add plain/common API for button links ([7148450](https://github.com/liferay/clay/commit/7148450cae6b2d90e6052ececc84743daa8077c0))
+
+# 3.40.0 (2021-11-17)
+
+# 3.39.0 (2021-10-29)
+
+# 3.38.0 (2021-10-22)
+
+# 3.37.0 (2021-10-06)
+
+### Features
+
+-   **@clayui/link:** Add JSP code example ([c9b9e99](https://github.com/liferay/clay/commit/c9b9e99dcf1c60494e87ad5d328beeb4f1698f7f))
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9bbaf2163f25a3d3a2e570bf5928051906))
+
 # [3.141.0](https://github.com/liferay/clay/compare/v3.140.0...v3.141.0) (2025-07-15)
 
 **Note:** Version bump only for package @clayui/link

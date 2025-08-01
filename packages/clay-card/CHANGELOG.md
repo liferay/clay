@@ -3,6 +3,323 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.142.0](https://github.com/liferay/clay/compare/@clayui/card@3.6.6...@clayui/card@3.142.0) (2025-08-01)
+
+## 3.141.1 (2025-07-18)
+
+# 3.141.0 (2025-07-15)
+
+# 3.140.0 (2025-06-19)
+
+## 3.139.1 (2025-06-16)
+
+# 3.139.0 (2025-06-10)
+
+# 3.138.0 (2025-06-02)
+
+# 3.137.0 (2025-05-30)
+
+# 3.136.0 (2025-05-03)
+
+# 3.135.0 (2025-04-22)
+
+# 3.134.0 (2025-04-10)
+
+# 3.133.0 (2025-03-28)
+
+## 3.132.1 (2025-03-24)
+
+# 3.132.0 (2025-03-24)
+
+# 3.131.0 (2025-03-20)
+
+# 3.130.0 (2025-03-12)
+
+# 3.129.0 (2025-02-27)
+
+# 3.128.0 (2025-02-20)
+
+### Bug Fixes
+
+-   fix typescript error ([79b6a1f](https://github.com/liferay/clay/commit/79b6a1f9b6f160fcf9c158bf4e88702a07aa7280))
+
+### Features
+
+-   **@clayui/card:** improves component typing to create API Card ([ca308ab](https://github.com/liferay/clay/commit/ca308abdd380149533c1a830ccbbcfc6056b0ccb))
+
+# 3.127.0 (2025-01-23)
+
+# 3.125.0 (2025-01-13)
+
+# 3.124.0 (2024-12-18)
+
+## 3.123.1 (2024-11-27)
+
+# 3.123.0 (2024-11-21)
+
+# 3.122.0 (2024-11-13)
+
+# 3.121.0 (2024-10-17)
+
+# 3.120.0 (2024-09-13)
+
+# 3.119.0 (2024-08-30)
+
+# 3.118.0 (2024-08-13)
+
+# 3.117.0 (2024-07-30)
+
+## 3.116.1 (2024-06-27)
+
+# 3.116.0 (2024-06-10)
+
+### Features
+
+-   **@clayui/card:** LPD-1261 Add name to group all radio type inputs ([71bee15](https://github.com/liferay/clay/commit/71bee153028969c857783346f2dbece96eafb544))
+-   **@clayui/card:** LPD-1261 Update stories adding name in radioProps ([b07d58a](https://github.com/liferay/clay/commit/b07d58aea871d437b9e15bf39e0edf707281fcbf))
+-   **@clayui/card:** LPD-1261 Update tests adding name in radioProps ([bd32f54](https://github.com/liferay/clay/commit/bd32f54255fdd14ed0c14738867d51608d95be14))
+
+## 3.115.1 (2024-05-21)
+
+# 3.115.0 (2024-05-16)
+
+# 3.114.0 (2024-04-22)
+
+### Features
+
+-   **@clayui/card:** LPD-1261 Add ClayRadio component and its radioProps ([1960c4d](https://github.com/liferay/clay/commit/1960c4df8ac544cd7c14ee64bf57139d74f8bd73))
+-   **@clayui/card:** LPD-1261 Add new radio card case in CardWithInfo stories ([188a70c](https://github.com/liferay/clay/commit/188a70c3ce54e91d50e13bbac4086fd57342397d))
+-   **@clayui/card:** LPD-1261 Add radio selectable example in CardWithHorizontal story ([8e9b395](https://github.com/liferay/clay/commit/8e9b39539a278c0c8916020d035c402a419f46e9))
+-   **@clayui/card:** LPD-1261 Add radio selectable example in CardWithUser story ([74a7a59](https://github.com/liferay/clay/commit/74a7a59b737a05de3ca50a07e2e6c382009c0a6e))
+-   **@clayui/card:** LPD-1261 Add radio selectable to CardWithHorizontal ([5231664](https://github.com/liferay/clay/commit/52316644cba723d8d28e9809ccc3dfafa804f507))
+-   **@clayui/card:** LPD-1261 Add radio selectable to CardWithUser ([8326f49](https://github.com/liferay/clay/commit/8326f49c7d7246444cc66ff0f840c2e866c15fa7))
+-   **@clayui/card:** LPD-1261 Add selectableType prop to choose between checkbox and radio ([ca499f8](https://github.com/liferay/clay/commit/ca499f8524b1772b094cf7933b19261813bbdee2))
+-   **@clayui/card:** LPD-1261 Add tests ([843ace6](https://github.com/liferay/clay/commit/843ace6c63d7ef8bd2ef80247e5cb0c8d2803384))
+-   **@clayui/card:** LPD-1261 Add tests for ClayCardWithHorizontal ([9cd1e0a](https://github.com/liferay/clay/commit/9cd1e0a38e6722463d3d92d7486bfe105bc46e08))
+-   **@clayui/card:** LPD-1261 Add tests for ClayCardWithUser ([04cc498](https://github.com/liferay/clay/commit/04cc4982bfd17b78cdbe5cf0c8638e4f4bb9b350))
+-   **@clayui/card:** LPD-1261 Add truncate prop to CardWithHorizontal ([6f88188](https://github.com/liferay/clay/commit/6f88188e1065bfe5eb3081487728162249c49267))
+-   **@clayui/card:** LPD-1261 Add truncate prop to CardWithUser ([43793e3](https://github.com/liferay/clay/commit/43793e368b4288e03a2bcc7c87e70fe1e6bae724))
+-   **@clayui/card:** LPD-1261 Add truncate props to determine if the card text is truncated or not ([a786599](https://github.com/liferay/clay/commit/a786599314b3a59953e01592e6c1da21e5dfd604))
+
+# 3.113.0 (2024-03-28)
+
+# 3.112.0 (2024-03-11)
+
+# 3.111.0 (2024-02-15)
+
+# 3.109.0 (2024-01-22)
+
+# 3.108.0 (2023-12-12)
+
+## 3.107.1 (2023-11-27)
+
+# 3.107.0 (2023-11-27)
+
+## 3.106.1 (2023-10-26)
+
+# 3.106.0 (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+# 3.105.0 (2023-09-15)
+
+# 3.104.0 (2023-08-25)
+
+## 3.103.1 (2023-08-15)
+
+# 3.101.0 (2023-07-28)
+
+# 3.100.0 (2023-07-13)
+
+## 3.99.4 (2023-07-10)
+
+## 3.99.1 (2023-07-04)
+
+# 3.99.0 (2023-06-28)
+
+# 3.98.0 (2023-06-20)
+
+## 3.97.1 (2023-06-14)
+
+# 3.97.0 (2023-06-13)
+
+# 3.96.0 (2023-05-29)
+
+### Features
+
+-   **@clayui/card:** moves root `aria-label` to card titles ([6dc08c2](https://github.com/liferay/clay/commit/6dc08c219c2df8a37ce0bf414724348e2fe0003d))
+
+## 3.95.2 (2023-05-17)
+
+# 3.95.0 (2023-05-15)
+
+# 3.94.0 (2023-05-03)
+
+### Features
+
+-   **clay-card:** Added card-title aria labels and sticker titles. ([0f3038e](https://github.com/liferay/clay/commit/0f3038e2f1d0f0d0a656c98def63bab86d1c5f13))
+
+# 3.93.0 (2023-04-19)
+
+# 3.92.0 (2023-04-06)
+
+# 3.91.0 (2023-03-24)
+
+# 3.90.0 (2023-03-15)
+
+# 3.89.0 (2023-03-01)
+
+# 3.88.0 (2023-02-14)
+
+# 3.87.0 (2023-02-08)
+
+## 3.86.1 (2023-02-02)
+
+# 3.86.0 (2023-01-31)
+
+# 3.85.0 (2023-01-23)
+
+# 3.84.0 (2022-12-23)
+
+## 3.83.1 (2022-12-20)
+
+# 3.83.0 (2022-12-20)
+
+# 3.82.0 (2022-12-07)
+
+# 3.81.0 (2022-11-30)
+
+## 3.80.1 (2022-11-22)
+
+# 3.80.0 (2022-11-21)
+
+# 3.79.0 (2022-11-08)
+
+## 3.78.2 (2022-10-25)
+
+## 3.78.1 (2022-10-25)
+
+# 3.78.0 (2022-10-25)
+
+# 3.77.0 (2022-10-17)
+
+## 3.75.2 (2022-09-29)
+
+# 3.75.0 (2022-09-28)
+
+# 3.74.0 (2022-09-19)
+
+# 3.73.0 (2022-09-13)
+
+# 3.72.0 (2022-09-05)
+
+# 3.71.0 (2022-08-30)
+
+## 3.70.3 (2022-08-30)
+
+## 3.70.2 (2022-08-30)
+
+# 3.70.0 (2022-08-23)
+
+# 3.69.0 (2022-08-16)
+
+# 3.68.0 (2022-08-01)
+
+# 3.67.0 (2022-07-25)
+
+# 3.66.0 (2022-07-20)
+
+## 3.65.2 (2022-07-19)
+
+## 3.65.1 (2022-07-11)
+
+# 3.65.0 (2022-07-11)
+
+# 3.64.0 (2022-07-04)
+
+# 3.62.0 (2022-06-20)
+
+# 3.58.0 (2022-05-23)
+
+# 3.56.0 (2022-05-09)
+
+# 3.55.0 (2022-05-02)
+
+# 3.52.0 (2022-04-04)
+
+# 3.49.0 (2022-03-15)
+
+### Features
+
+-   **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
+
+# 3.48.0 (2022-03-07)
+
+### Features
+
+-   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+
+# 3.47.0 (2022-02-23)
+
+# 3.45.0 (2022-02-01)
+
+# 3.43.0 (2021-12-29)
+
+### Bug Fixes
+
+-   **@clayui/card:** remove unnecessary backgroundImageAspectRatio property ([720a38d](https://github.com/liferay/clay/commit/720a38deafe081bb629c2072f810a0a4ed9579cf))
+
+# 3.42.0 (2021-12-15)
+
+# 3.41.0 (2021-12-02)
+
+### Bug Fixes
+
+-   **clayui.com:** Incorrect import for ClayCardWithNavigation ([b2cc9a7](https://github.com/liferay/clay/commit/b2cc9a726d920ad064c65acd12f48308aa4b3d36))
+
+# 3.40.0 (2021-11-17)
+
+# 3.39.0 (2021-10-29)
+
+# 3.38.0 (2021-10-22)
+
+# 3.37.0 (2021-10-06)
+
+# 3.36.0 (2021-09-23)
+
+## 3.35.3 (2021-09-09)
+
+## 3.35.2 (2021-08-30)
+
+## 3.35.1 (2021-08-30)
+
+# 3.35.0 (2021-08-30)
+
+# 3.31.0 (2021-06-30)
+
+### Bug Fixes
+
+-   **@clayui/card:** spritemap should be optional ([18c11a7](https://github.com/liferay/clay/commit/18c11a72393cedcc8cce332414e6bf26b2477960))
+
+# 3.30.0 (2021-06-16)
+
+# 3.29.0 (2021-05-28)
+
+# 3.28.0 (2021-05-19)
+
+# 3.27.0 (2021-05-05)
+
+## 3.25.1 (2021-03-05)
+
+# 3.25.0 (2021-02-23)
+
+### Features
+
+-   **@clayui/card:** add active state for card when it is selected ([607da9d](https://github.com/liferay/clay/commit/607da9ddbd0cce354a26ad3f48167b0a8fa81025))
+
 ## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
 
 **Note:** Version bump only for package @clayui/card
