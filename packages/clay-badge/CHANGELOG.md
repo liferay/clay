@@ -3,49 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [3.129.0](https://github.com/liferay/clay/compare/@clayui/badge@3.2.0...@clayui/badge@3.129.0) (2025-08-01)
-
-# 3.128.0 (2025-02-20)
-
-### Features
-
--   **@clayui/badge:** improves component typing to create API Badge ([b1d679c](https://github.com/liferay/clay/commit/b1d679c2b9c44e610098893bcfcce49920370718))
-
-# 3.111.0 (2024-02-15)
-
-# 3.107.0 (2023-11-27)
-
-### Features
-
--   **@clayui/badge:** Adds attributes translucent and dark ([77162ef](https://github.com/liferay/clay/commit/77162efe62cd3822f4a64e23b3469e46cee5c530))
-
-## 3.106.1 (2023-10-26)
-
-# 3.106.0 (2023-10-25)
-
-### Bug Fixes
-
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
-
-# 3.100.0 (2023-07-13)
-
-### Features
-
--   **@clayui/badge:** Adds display type beta-dark ([2f53849](https://github.com/liferay/clay/commit/2f5384940aff5909753adeecd8a2f9c12d3dab89))
-
-# 3.92.0 (2023-04-06)
-
-# 3.56.0 (2022-05-09)
-
-# 3.40.0 (2021-11-17)
-
-# 3.39.0 (2021-10-29)
-
-# 3.38.0 (2021-10-22)
-
-# 3.37.0 (2021-10-06)
-
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features

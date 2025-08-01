@@ -3,45 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [3.129.0](https://github.com/liferay/clay/compare/@clayui/icon@3.1.0...@clayui/icon@3.129.0) (2025-08-01)
-
-### Features
-
--   **@clayui/clay-css:** LPD-54005 Add comments.svg 16px icon and generated files. ([77167bd](https://github.com/liferay/clay/commit/77167bd05fbf67a1f67a05c5af9cfbc6b1231aa6))
--   **@clayui/clay-css:** LPD-54025 Add reset 16px icon and generated files. ([8f8979a](https://github.com/liferay/clay/commit/8f8979a0205e13a7e0d393deeaa3b5c516039aa3))
--   **@clayui/css:** LPD-54569 Add Bosnia & Herzegovina Flag. ([af40e02](https://github.com/liferay/clay/commit/af40e026b2d26b12a15bdc526161a2898b7c0b98))
-
-# 3.128.0 (2025-02-20)
-
-### Bug Fixes
-
--   **www:** fixes bug in icon documentation and generates icons at build time ([45adb4f](https://github.com/liferay/clay/commit/45adb4fe277d8cb38c5b8824be9d305010065305))
-
-### Features
-
--   **@clayui/icon:** improves component typing to create API Icon ([f4b94d5](https://github.com/liferay/clay/commit/f4b94d5199f7c29363a223344d372181956f88f0))
-
-# 3.111.0 (2024-02-15)
-
-## 3.106.1 (2023-10-26)
-
-# 3.106.0 (2023-10-25)
-
-### Bug Fixes
-
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
-
-# 3.56.0 (2022-05-09)
-
-# 3.40.0 (2021-11-17)
-
-# 3.39.0 (2021-10-29)
-
-# 3.38.0 (2021-10-22)
-
-# 3.37.0 (2021-10-06)
-
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Bug Fixes

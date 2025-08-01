@@ -3,55 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [3.139.0](https://github.com/liferay/clay/compare/@clayui/sticker@3.3.0...@clayui/sticker@3.139.0) (2025-08-01)
-
-# 3.138.0 (2025-06-02)
-
-### Features
-
--   **@clayui/sticker:** LPD-56155 Adds size xs to sticker ([1c808c2](https://github.com/liferay/clay/commit/1c808c237d6e41e325fd7dcd3279a692fa35923e))
-
-# 3.129.0 (2025-02-27)
-
-### Bug Fixes
-
--   exports displayType types ([c507341](https://github.com/liferay/clay/commit/c5073416dcb706e25772076a0558e4181b2beff8))
-
-# 3.128.0 (2025-02-20)
-
-### Features
-
--   **@clayui/sticker:** improves component typing to create API Sticker ([de1f6c7](https://github.com/liferay/clay/commit/de1f6c7b4669c6bb0d8f28797e5e08a0566d9e80))
-
-# 3.125.0 (2025-01-13)
-
-### Features
-
--   **@clayui/sticker:** LPD-40080 Add new displayType outline-\* ([9a86f6d](https://github.com/liferay/clay/commit/9a86f6ddbd61d17878ecd5669a26064e356ffe0a))
-
-# 3.111.0 (2024-02-15)
-
-## 3.106.1 (2023-10-26)
-
-# 3.106.0 (2023-10-25)
-
-### Bug Fixes
-
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
-
-# 3.65.0 (2022-07-11)
-
-# 3.56.0 (2022-05-09)
-
-# 3.40.0 (2021-11-17)
-
-# 3.39.0 (2021-10-29)
-
-# 3.38.0 (2021-10-22)
-
-# 3.37.0 (2021-10-06)
-
 # [3.138.0](https://github.com/liferay/clay/compare/v3.137.0...v3.138.0) (2025-06-02)
 
 ### Features
