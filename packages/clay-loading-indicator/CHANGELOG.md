@@ -3,46 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [3.129.0](https://github.com/liferay/clay/compare/@clayui/loading-indicator@3.2.0...@clayui/loading-indicator@3.129.0) (2025-08-01)
-
-# 3.128.0 (2025-02-20)
-
-### Features
-
--   **@clayui/loading-indicator:** improves component typing to create API Loading Indicator ([b1ee1f0](https://github.com/liferay/clay/commit/b1ee1f02ce397bc6a8f5cbe4ce08b519f5ee611f))
-
-# 3.111.0 (2024-02-15)
-
-## 3.106.1 (2023-10-26)
-
-# 3.106.0 (2023-10-25)
-
-### Bug Fixes
-
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
-
-# 3.60.0 (2022-06-06)
-
-### Bug Fixes
-
--   **@clayui/loading-indicator:** Deprecate small and light attributes ([4011083](https://github.com/liferay/clay/commit/40110837162ccc2e1da760e762e17cb3c2fa2f15))
--   storybook LoadingIndicator adds displayType, shape, and size ([6a98f20](https://github.com/liferay/clay/commit/6a98f201da7e9bce4932e2eec5f3be22f3f39755))
-
-### Features
-
--   **@clayui/loading-indicator:** Adds more attributes ([0b7627a](https://github.com/liferay/clay/commit/0b7627a4cd1d887b3bc2b1c12dcd0b63795e2f62))
-
-# 3.56.0 (2022-05-09)
-
-# 3.40.0 (2021-11-17)
-
-# 3.39.0 (2021-10-29)
-
-# 3.38.0 (2021-10-22)
-
-# 3.37.0 (2021-10-06)
-
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features

@@ -3,59 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [3.130.0](https://github.com/liferay/clay/compare/@clayui/management-toolbar@3.3.0...@clayui/management-toolbar@3.130.0) (2025-08-01)
-
-# 3.129.0 (2025-02-27)
-
-### Features
-
--   **@clayui/management-toolbar:** LPD-49362 Add fluidSize prop ([d47205f](https://github.com/liferay/clay/commit/d47205ff1170bf91363739bd23abf1b802b52261))
-
-# 3.128.0 (2025-02-20)
-
-### Bug Fixes
-
--   fix typescript error ([79b6a1f](https://github.com/liferay/clay/commit/79b6a1f9b6f160fcf9c158bf4e88702a07aa7280))
-
-### Features
-
--   **@clayui/management-toolbar:** improves component typing to create API Management Toolbar ([6ab6ee8](https://github.com/liferay/clay/commit/6ab6ee89e478966c3da6fc80045c83ef47f4d00d))
-
-# 3.111.0 (2024-02-15)
-
-## 3.106.1 (2023-10-26)
-
-# 3.106.0 (2023-10-25)
-
-### Bug Fixes
-
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
-
-# 3.93.0 (2023-04-19)
-
-## 3.65.1 (2022-07-11)
-
-# 3.65.0 (2022-07-11)
-
-# 3.56.0 (2022-05-09)
-
-# 3.55.0 (2022-05-02)
-
-### Features
-
--   **@clayui/management-toolbar:** Deprecate ClayManagementToolbar ([744b46e](https://github.com/liferay/clay/commit/744b46e54c322fae32d00f2b1cd4762a25e4e5c9))
-
-# 3.40.0 (2021-11-17)
-
-# 3.39.0 (2021-10-29)
-
-# 3.38.0 (2021-10-22)
-
-# 3.37.0 (2021-10-06)
-
-# 3.31.0 (2021-06-30)
-
 # [3.129.0](https://github.com/liferay/clay/compare/v3.128.3...v3.129.0) (2025-02-27)
 
 ### Features

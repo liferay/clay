@@ -3,52 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [3.129.0](https://github.com/liferay/clay/compare/@clayui/layout@3.3.0...@clayui/layout@3.129.0) (2025-08-01)
-
-# 3.128.0 (2025-02-20)
-
-### Features
-
--   **@clayui/layout:** improves component typing to create API Layout ([77da733](https://github.com/liferay/clay/commit/77da73301ff171519d03a22bbc8709b7bb00dbca))
--   **@clayui/layout:** LPD-49037 Add xxl and xxxl sizes to container fluid ([b73ede8](https://github.com/liferay/clay/commit/b73ede8689d2419c84fab2f02c43efe571971f74))
-
-# 3.111.0 (2024-02-15)
-
-## 3.106.1 (2023-10-26)
-
-# 3.106.0 (2023-10-25)
-
-### Bug Fixes
-
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
-
-# 3.93.0 (2023-04-19)
-
-### Features
-
--   **@clayui/layout:** Adds the Sheet Row component ([1271df1](https://github.com/liferay/clay/commit/1271df1d57a169eb7e930428f17f87ac7dee030e))
-
-## 3.65.1 (2022-07-11)
-
-# 3.65.0 (2022-07-11)
-
-# 3.56.0 (2022-05-09)
-
-# 3.40.0 (2021-11-17)
-
-# 3.39.0 (2021-10-29)
-
-# 3.38.0 (2021-10-22)
-
-# 3.37.0 (2021-10-06)
-
-# 3.31.0 (2021-06-30)
-
-### Bug Fixes
-
--   **@clayui/layout:** ContentCol should use autofit-col-end instead of autofit-col-float-end ([a3811d8](https://github.com/liferay/clay/commit/a3811d82818e802578b185500f063dca28c66d6c))
-
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features
