@@ -2,10 +2,6 @@
 	"name": "demos",
 	"private": true,
 	"description": "Extended demos for Clay Components",
-	"engines": {
-		"node": ">=0.12.0",
-		"npm": ">=3.0.0"
-	},
 	"dependencies": {
 		"@clayui/button": "^3.137.0",
 		"@clayui/form": "^3.142.0",
