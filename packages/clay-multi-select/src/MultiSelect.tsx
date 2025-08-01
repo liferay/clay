@@ -330,7 +330,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 
 	const ariaDescriptionId = useId();
 
-	const hasAsyncItems = !!onLoadMore || typeof loadingState === 'number';
+	const hasAsyncItems = typeof loadingState === 'number';
 
 	const Container = MenuRenderer ? FocusScope : React.Fragment;
 	const containerProps = MenuRenderer ? {arrowKeysUpDown: false} : {};
