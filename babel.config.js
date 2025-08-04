@@ -21,6 +21,7 @@ module.exports = (api) => {
 		},
 		ignore: ['node_modules', '**/__snapshots__/**', '**/__tests__/**'],
 		plugins: [
+			['babel-plugin-react-compiler', {target: '18'}],
 			'babel-plugin-dev-expression',
 			'transform-inline-environment-variables',
 		],

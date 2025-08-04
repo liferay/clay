@@ -55,6 +55,7 @@ async function main() {
 			'react-dnd',
 			'react-dom',
 			'react-transition-group',
+			'react-compiler-runtime',
 			'react',
 			'warning',
 		],

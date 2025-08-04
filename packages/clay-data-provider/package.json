@@ -10,7 +10,7 @@
 	},
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
-	"ts:main": "src/index.tsx",
+	"ts:main": "src/index.ts",
 	"files": [
 		"lib"
 	],
@@ -27,6 +27,7 @@
 		"@clayui/provider": "^3.128.0",
 		"@clayui/shared": "^3.141.1",
 		"fast-json-stable-stringify": "^2.1.0",
+		"react-compiler-runtime": "^19.1.0-rc.2",
 		"warning": "^4.0.3"
 	},
 	"peerDependencies": {
