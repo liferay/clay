@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.142.1](https://github.com/liferay/clay/compare/@clayui/multi-select@3.142.0...@clayui/multi-select@3.142.1) (2025-08-07)
+
+### Reverts
+
+-   Revert "fix(@clayui/multi-select): LPD-61750 filter doesn't work when onLoadMore is declared" ([80bd886](https://github.com/liferay/clay/commit/80bd8866f33e975bb0c5604e7e938d2c2c5bb963))
+
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/multi-select@3.9.4...@clayui/multi-select@3.142.0) (2025-08-01)
 
 ### Bug Fixes
