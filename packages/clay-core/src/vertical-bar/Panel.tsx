@@ -52,6 +52,7 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 		panelWidthMax,
 		panelWidthMin,
 		resize,
+		setPanelNext,
 	} = useContext(VerticalBarContext);
 	const {displayType} = useContext(ContentContext);
 
@@ -101,7 +102,10 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 			in={activePanel === keyValue}
 			nodeRef={nodeRef}
 			onExited={() => {
-				onActivePanel(panelNext);
+				if (panelNext) {
+					onActivePanel(panelNext);
+					setPanelNext(null);
+				}
 			}}
 			role="tabpanel"
 			tabIndex={tabIndex}
