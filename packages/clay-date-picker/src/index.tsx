@@ -497,7 +497,11 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 					setDaysSelected([currentDate, currentDate]);
 
 					if (time) {
-						setCurrentTime('--', '--', undefined);
+						setCurrentTime(
+							'--',
+							'--',
+							use12Hours ? '--' : undefined
+						);
 					}
 				} else {
 					const days = hasDaysSelected({
