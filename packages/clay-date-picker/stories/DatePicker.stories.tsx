@@ -67,7 +67,7 @@ export const Disabled = () => (
 
 export const Time = (args: any) => (
 	<ClayDatePickerWithState
-		placeholder="YYYY-MM-DD --:-- --"
+		placeholder={`YYYY-MM-DD --:-- ${args.use12Hours ? '--' : ''}`}
 		time
 		timezone="GMT+01:00"
 		use12Hours={args.use12Hours}
