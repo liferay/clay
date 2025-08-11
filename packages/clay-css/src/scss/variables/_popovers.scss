@@ -118,17 +118,19 @@ $popovers: () !default;
 $popovers: map-deep-merge(
 	(
 		popover: $popover,
-		popover-secondary: (
-			box-shadow: 0 8px 16px 0 rgba($primary, 0.16),
-			popover-header: (
-				background-color: transparent,
-				border-color: transparent,
-				padding-bottom: 0,
+		// @deprecated as of v3.141.0 popover-secondary
+		popover-secondary:
+			(
+				box-shadow: 0 8px 16px 0 rgba($primary, 0.16),
+				popover-header: (
+					background-color: transparent,
+					border-color: transparent,
+					padding-bottom: 0,
+				),
+				close: (
+					color: $gray-600,
+				),
 			),
-			close: (
-				color: $gray-600,
-			),
-		),
 	),
 	$popovers
 );
