@@ -52,32 +52,32 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 		panelWidthMax,
 		panelWidthMin,
 		resize,
+		setPanelNext,
 	} = useContext(VerticalBarContext);
 	const {displayType} = useContext(ContentContext);
 
 	const nodeRef = useRef<HTMLDivElement | null>(null);
 
-	const previousActivePanelRef = useRef<React.Key | null>(null);
-
 	const {prefersReducedMotion} = useProvider();
 
 	const isFirst = useIsFirstRender();
 
+	const previousActivePanel = usePrevious(activePanel);
+	const previousPanelNext = usePrevious(panelNext);
+
 	const isPanelOpen = () => {
 		if (isFirst) {
 			return activePanel !== null;
-		} else if (previousActivePanelRef.current === activePanel) {
-			return true;
-		} else if (activePanel === null) {
-			return false;
-		} else {
-			return previousActivePanelRef.current !== null;
 		}
+
+		if (previousActivePanel === activePanel) {
+			return true;
+		}
+
+		return false;
 	};
 
-	useEffect(() => {
-		previousActivePanelRef.current = activePanel;
-	}, [activePanel]);
+	const noTransition = !panelNext && !previousPanelNext;
 
 	return (
 		<CSSTransition
@@ -88,20 +88,25 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 				'sidebar-light': displayType === 'light',
 			})}
 			classNames={{
-				enter: panelNext
-					? undefined
-					: 'c-slideout-transition c-slideout-transition-in',
+				enter:
+					noTransition && !previousActivePanel
+						? 'c-slideout-transition c-slideout-transition-in'
+						: undefined,
 				enterActive: 'c-slideout-show',
 				enterDone: 'c-slideout-show',
-				exit: panelNext
-					? undefined
-					: 'c-slideout-transition c-slideout-transition-out',
+				exit:
+					noTransition && !activePanel
+						? 'c-slideout-transition c-slideout-transition-out'
+						: undefined,
 			}}
 			id={`${id}-tabpanel-${keyValue}`}
 			in={activePanel === keyValue}
 			nodeRef={nodeRef}
 			onExited={() => {
-				onActivePanel(panelNext);
+				if (panelNext) {
+					onActivePanel(panelNext);
+					setPanelNext(null);
+				}
 			}}
 			role="tabpanel"
 			tabIndex={tabIndex}
@@ -132,4 +137,15 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 			</div>
 		</CSSTransition>
 	);
+}
+
+function usePrevious<T>(value: T) {
+	const ref = useRef<T>(value);
+
+	useEffect(() => {
+		ref.current = value;
+	}, [value]);
+
+	// eslint-disable-next-line
+	return ref.current;
 }

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Button from '@clayui/button';
+import Button, {ClayButtonWithIcon} from '@clayui/button';
 import Icon from '@clayui/icon';
 import React, {useState} from 'react';
 
@@ -163,45 +163,68 @@ export const DynamicContent = (args: any) => {
 		},
 	];
 
-	const [active, setActive] = useState('Tag');
+	const [active, setActive] = useState<React.Key | null>('Tag');
 
 	return (
-		<VerticalBar
-			active={active}
-			onActiveChange={(active) => setActive(active)}
-			resize
-		>
-			<VerticalBar.Content
-				displayType={args.contentDisplayType}
-				items={items}
+		<>
+			<Button
+				onClick={() => {
+					setActive('Effects');
+				}}
 			>
-				{(item) => (
-					<VerticalBar.Panel key={item.title} tabIndex={0}>
-						<div className="sidebar-header">
-							<div className="component-title">{item.title}</div>
-						</div>
-						<div className="sidebar-body">{item.bodyText}</div>
-					</VerticalBar.Panel>
-				)}
-			</VerticalBar.Content>
+				Go to Effects
+			</Button>
 
-			<VerticalBar.Bar
-				displayType={args.barDisplayType}
-				items={items}
-				virtualize
-			>
-				{(item) => (
-					<VerticalBar.Item divider={item.divider} key={item.title}>
-						<Button
-							aria-label={`${item.title} tab`}
-							displayType={null}
+			<VerticalBar active={active} onActiveChange={setActive} resize>
+				<VerticalBar.Content
+					displayType={args.contentDisplayType}
+					items={items}
+				>
+					{(item) => (
+						<VerticalBar.Panel key={item.title} tabIndex={0}>
+							<div className="sidebar-header">
+								<div className="autofit-row sidebar-section">
+									<div className="autofit-col autofit-col-expand">
+										<div className="component-title">
+											{item.title}
+										</div>
+									</div>
+									<div className="autofit-col">
+										<ClayButtonWithIcon
+											displayType={null}
+											onClick={() => setActive(null)}
+											symbol="times"
+											title="Close"
+										/>
+									</div>
+								</div>
+							</div>
+							<div className="sidebar-body">{item.bodyText}</div>
+						</VerticalBar.Panel>
+					)}
+				</VerticalBar.Content>
+
+				<VerticalBar.Bar
+					displayType={args.barDisplayType}
+					items={items}
+					virtualize
+				>
+					{(item) => (
+						<VerticalBar.Item
+							divider={item.divider}
+							key={item.title}
 						>
-							<Icon symbol={item.icon} />
-						</Button>
-					</VerticalBar.Item>
-				)}
-			</VerticalBar.Bar>
-		</VerticalBar>
+							<Button
+								aria-label={`${item.title} tab`}
+								displayType={null}
+							>
+								<Icon symbol={item.icon} />
+							</Button>
+						</VerticalBar.Item>
+					)}
+				</VerticalBar.Bar>
+			</VerticalBar>
+		</>
 	);
 };
 
