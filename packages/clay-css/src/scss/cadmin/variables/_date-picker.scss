@@ -383,8 +383,8 @@ $cadmin-date-picker-input-group-text: map-deep-merge(
 	$cadmin-date-picker-input-group-text
 );
 
-$date-picker-input-form-control: () !default;
-$date-picker-input-form-control: map-deep-merge(
+$cadmin-date-picker-input-form-control: () !default;
+$cadmin-date-picker-input-form-control: map-deep-merge(
 	(
 		media-breakpoint-down: (
 			xs: (
@@ -401,5 +401,5 @@ $date-picker-input-form-control: map-deep-merge(
 			),
 		),
 	),
-	$date-picker-input-form-control
+	$cadmin-date-picker-input-form-control
 );
