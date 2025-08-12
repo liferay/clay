@@ -424,6 +424,12 @@ $nav-tabs-link: map-deep-merge(
 			border-color: transparent,
 			color: $nav-link-disabled-color,
 		),
+		inline-item-after: (
+			margin-left: 0.25rem,
+		),
+		inline-item-before: (
+			margin-right: 0.25rem,
+		),
 	),
 	$nav-tabs-link
 );
