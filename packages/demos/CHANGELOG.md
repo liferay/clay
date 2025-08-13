@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.142.2](https://github.com/liferay/clay/compare/demos@3.142.1...demos@3.142.2) (2025-08-13)
+
+**Note:** Version bump only for package demos
+
 ## [3.142.1](https://github.com/liferay/clay/compare/demos@3.141.2...demos@3.142.1) (2025-08-07)
 
 **Note:** Version bump only for package demos

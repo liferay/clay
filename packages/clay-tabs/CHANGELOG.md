@@ -3,6 +3,229 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.142.2](https://github.com/liferay/clay/compare/@clayui/tabs@3.3.5...@clayui/tabs@3.142.2) (2025-08-13)
+
+### Bug Fixes
+
+-   **@clayui/css:** Bump version back ([cb58a7e](https://github.com/liferay/clay/commit/cb58a7e6a46881d26ee3014d083b32f0585d8e58))
+
+## 3.141.1 (2025-07-18)
+
+# 3.141.0 (2025-07-15)
+
+# 3.140.0 (2025-06-19)
+
+# 3.139.0 (2025-06-10)
+
+# 3.137.0 (2025-05-30)
+
+# 3.136.0 (2025-05-03)
+
+# 3.132.0 (2025-03-24)
+
+# 3.129.0 (2025-02-27)
+
+### Bug Fixes
+
+-   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+
+# 3.128.0 (2025-02-20)
+
+### Features
+
+-   **@clayui/tabs:** improves component typing to create API Tabs ([bab2322](https://github.com/liferay/clay/commit/bab23223a8e3e9d2fa4bcd49eabb8c48b4b78e2d))
+
+# 3.119.0 (2024-08-30)
+
+# 3.116.0 (2024-06-10)
+
+# 3.115.0 (2024-05-16)
+
+# 3.113.0 (2024-03-28)
+
+# 3.111.0 (2024-02-15)
+
+# 3.109.0 (2024-01-22)
+
+# 3.107.0 (2023-11-27)
+
+## 3.106.1 (2023-10-26)
+
+# 3.106.0 (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+# 3.104.0 (2023-08-25)
+
+## 3.103.1 (2023-08-15)
+
+# 3.101.0 (2023-07-28)
+
+# 3.100.0 (2023-07-13)
+
+# 3.96.0 (2023-05-29)
+
+## 3.95.2 (2023-05-17)
+
+# 3.95.0 (2023-05-15)
+
+# 3.94.0 (2023-05-03)
+
+# 3.93.0 (2023-04-19)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** displayType should output nav-tabs variants ([ff15ca2](https://github.com/liferay/clay/commit/ff15ca25d9d39e9479bacf9a78d5a2af9645ec79))
+-   **@clayui/tabs:** Output nav-tabs-light only if displayType equals light ([b599225](https://github.com/liferay/clay/commit/b59922542b7edd52750661139422b1df7d2fc1b5)), closes [/github.com/liferay/clay/pull/5463#discussion_r1161986963](https://github.com//github.com/liferay/clay/pull/5463/issues/discussion_r1161986963)
+
+# 3.92.0 (2023-04-06)
+
+# 3.91.0 (2023-03-24)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** Tabs deprecate `displayType` and `modern` attributes ([196abec](https://github.com/liferay/clay/commit/196abec5383d05f9af15af6893e9062fc32ba1c9))
+
+### Features
+
+-   **@clayui/tabs:** force style for tabs ([859ef65](https://github.com/liferay/clay/commit/859ef65a552c2b8ad04c04fec1ad505c53c6dd40))
+
+### BREAKING CHANGES
+
+-   **@clayui/tabs:** The default value for the `modern` attribute is now `false`. You will need to set the `modern` attribute on `ClayTabs` to get the `nav-underline` class.
+
+# 3.89.0 (2023-03-01)
+
+# 3.88.0 (2023-02-14)
+
+### Features
+
+-   **@clayui/tabs:** adds `forwardRef` to Tabs components ([a1792ce](https://github.com/liferay/clay/commit/a1792cea9a05d41ef177993a7c724fe673c9673f))
+
+# 3.87.0 (2023-02-08)
+
+### Features
+
+-   **@clayui/tabs:** adds the pattern of uncontrolled to the `active` property of Tabs.Item in the new composition ([fd5299a](https://github.com/liferay/clay/commit/fd5299a6148f67de85b4d8f565ce2331f137472e))
+
+## 3.86.1 (2023-02-02)
+
+# 3.86.0 (2023-01-31)
+
+# 3.85.0 (2023-01-23)
+
+## 3.83.1 (2022-12-20)
+
+# 3.83.0 (2022-12-20)
+
+# 3.82.0 (2022-12-07)
+
+# 3.81.0 (2022-11-30)
+
+## 3.80.1 (2022-11-22)
+
+# 3.80.0 (2022-11-21)
+
+# 3.79.0 (2022-11-08)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
+-   **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
+-   **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
+
+### Features
+
+-   **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
+
+## 3.78.2 (2022-10-25)
+
+## 3.78.1 (2022-10-25)
+
+# 3.78.0 (2022-10-25)
+
+### Features
+
+-   **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
+
+# 3.77.0 (2022-10-17)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** sets `tabIndex=-1` when not active and `tabIndex=0` for the tabpanel ([cbd8710](https://github.com/liferay/clay/commit/cbd8710491b4262000b0af43244977351429228b))
+
+## 3.75.2 (2022-09-29)
+
+# 3.75.0 (2022-09-28)
+
+# 3.73.0 (2022-09-13)
+
+# 3.71.0 (2022-08-30)
+
+## 3.70.3 (2022-08-30)
+
+## 3.70.2 (2022-08-30)
+
+# 3.70.0 (2022-08-23)
+
+# 3.69.0 (2022-08-16)
+
+# 3.67.0 (2022-07-25)
+
+## 3.65.1 (2022-07-11)
+
+# 3.65.0 (2022-07-11)
+
+# 3.58.0 (2022-05-23)
+
+# 3.56.0 (2022-05-09)
+
+# 3.55.0 (2022-05-02)
+
+# 3.52.0 (2022-04-04)
+
+### Bug Fixes
+
+-   **@clayui/clay-tabs:** Insert displayType for nav-tabs and nav-underline classes ([10ddb29](https://github.com/liferay/clay/commit/10ddb29a88884e05d4d4f71caec111a58c809bb7))
+
+### Features
+
+-   **@clayui/clay-tabs:** Adding additional new tests ([d74322c](https://github.com/liferay/clay/commit/d74322c4820ef1f0bbb9c0c64263f82c39d70576))
+-   **@clayui/clay-tabs:** Remain modern prop and overrides displayType. Update in BREAKING.md ([cb9eb31](https://github.com/liferay/clay/commit/cb9eb31d3da70de3ccdb653a9e574da497d6ee84))
+
+# 3.49.0 (2022-03-15)
+
+# 3.47.0 (2022-02-23)
+
+# 3.45.0 (2022-02-01)
+
+# 3.40.0 (2021-11-17)
+
+# 3.39.0 (2021-10-29)
+
+# 3.38.0 (2021-10-22)
+
+# 3.37.0 (2021-10-06)
+
+# 3.36.0 (2021-09-23)
+
+## 3.35.3 (2021-09-09)
+
+## 3.35.2 (2021-08-30)
+
+## 3.35.1 (2021-08-30)
+
+# 3.35.0 (2021-08-30)
+
+# 3.29.0 (2021-05-28)
+
+# 3.28.0 (2021-05-19)
+
+# 3.27.0 (2021-05-05)
+
 # [4.0.0](https://github.com/liferay/clay/compare/@clayui/tabs@3.3.5...@clayui/tabs@4.0.0) (2025-08-01)
 
 ## 3.141.1 (2025-07-18)

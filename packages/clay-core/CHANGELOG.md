@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.142.2](https://github.com/liferay/clay/compare/@clayui/core@3.142.0...@clayui/core@3.142.2) (2025-08-13)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-62562 Improve panel transition handling by also taking into account the previous value of panelNext ([ac2876a](https://github.com/liferay/clay/commit/ac2876a28b0d71576f046c440ead50b6b277735a))
+-   **@clayui/core:** LPD-62562 Only change active panel on exit if panelNext is set ([e32cdb3](https://github.com/liferay/clay/commit/e32cdb3a8da5c1eb1b9123cbb8ec888259a74578))
+
 # 3.142.0 (2025-08-01)
 
 ### Bug Fixes
