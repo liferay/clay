@@ -10,6 +10,12 @@
 			$cadmin-date-picker-input-group-text
 		);
 	}
+
+	.clay-time .form-control {
+		@include clay-form-control-variant(
+			$cadmin-date-picker-input-form-control
+		);
+	}
 }
 
 // Date Picker Dropdown Menu
