@@ -118,17 +118,6 @@ $cadmin-popovers: () !default;
 $cadmin-popovers: map-deep-merge(
 	(
 		popover: $cadmin-popover,
-		popover-secondary: (
-			box-shadow: 0 8px 16px 0 rgba($cadmin-primary, 0.16),
-			popover-header: (
-				background-color: transparent,
-				border-color: transparent,
-				padding-bottom: 0,
-			),
-			close: (
-				color: $cadmin-gray-600,
-			),
-		),
 	),
 	$cadmin-popovers
 );

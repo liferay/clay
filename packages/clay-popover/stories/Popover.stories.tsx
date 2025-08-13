@@ -15,10 +15,6 @@ export default {
 			control: {type: 'select'},
 			options: ALIGN_POSITIONS,
 		},
-		displayType: {
-			control: {type: 'select'},
-			options: ['secondary', undefined],
-		},
 		size: {
 			control: {type: 'select'},
 			options: ['lg', undefined],
