@@ -370,6 +370,12 @@ $cadmin-nav-tabs-link: map-deep-merge(
 			box-shadow: none,
 			color: $cadmin-nav-link-disabled-color,
 		),
+		inline-item-after: (
+			margin-left: 4px,
+		),
+		inline-item-before: (
+			margin-right: 4px,
+		),
 	),
 	$cadmin-nav-tabs-link
 );
