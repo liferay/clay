@@ -209,6 +209,8 @@ $list-group: map-deep-merge(
 
 // List Group Item Variants
 
+// @deprecated as of v3.142.2 with no replacement
+
 $list-group-item-theme-colors: () !default;
 $list-group-item-theme-colors: map-deep-merge(
 	(
