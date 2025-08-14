@@ -393,6 +393,8 @@
 
 // List Group Item Variants
 
+// @deprecated as of v3.142.2 with no replacement
+
 @each $color, $value in $list-group-item-theme-colors {
 	@if not clay-is-map-unset($value) {
 		.list-group-item-#{$color} {
