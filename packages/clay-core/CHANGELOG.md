@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-50722 LanguagePicker should display label untranslated if total is 0 ([8983f56](https://github.com/liferay/clay/commit/8983f56372f690619e25e79993826a5dc3f53a15))
+-   **@clayui/core:** LPD-62562 Improve panel transition handling by also taking into account the previous value of panelNext ([ac2876a](https://github.com/liferay/clay/commit/ac2876a28b0d71576f046c440ead50b6b277735a))
+-   **@clayui/core:** LPD-62562 Only change active panel on exit if panelNext is set ([e32cdb3](https://github.com/liferay/clay/commit/e32cdb3a8da5c1eb1b9123cbb8ec888259a74578))
+-   **clay-core:** export types explicitly ([9b0f45a](https://github.com/liferay/clay/commit/9b0f45a7dcbb52d6e1d4d0d3fc0161aa65a1760d))
+-   **clay-core:** export types used in DXP ([5f7d3a8](https://github.com/liferay/clay/commit/5f7d3a8bc242886e982657b6776b94df8fefa672))
+
+### Features
+
+-   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([4d9a36d](https://github.com/liferay/clay/commit/4d9a36dae4ebcb53fc25c0b3261b694cf49bf765))
+-   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/core@3.142.0...@clayui/core@3.142.2) (2025-08-13)
 
 ### Bug Fixes

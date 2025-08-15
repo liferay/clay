@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
+
+### Bug Fixes
+
+-   **data-provider:** fix types exported that are enums ([c85278e](https://github.com/liferay/clay/commit/c85278eb447aa578053c178ba3a9bf544a3c7526))
+-   **data-provider:** remove checks on the DOM because it is unpredictable due to React 18 batch updating, we only want to assert that polling is working as expected so we can just use jest.advanceTimersByTime ([ef6e68a](https://github.com/liferay/clay/commit/ef6e68aa57aa03a088434c8998191990da80ccde))
+-   **data-provider:** update exports and entry point ([8603947](https://github.com/liferay/clay/commit/8603947914ffb53b610ea23ca53a09146a2cad42))
+
+### Features
+
+-   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/data-provider@3.3.10...@clayui/data-provider@3.142.0) (2025-08-01)
 
 ### Bug Fixes

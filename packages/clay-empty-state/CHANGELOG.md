@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
+
+### Features
+
+-   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+
 # [3.129.0](https://github.com/liferay/clay/compare/@clayui/empty-state@3.2.0...@clayui/empty-state@3.129.0) (2025-08-01)
 
 # 3.128.0 (2025-02-20)

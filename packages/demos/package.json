@@ -3,16 +3,16 @@
 	"private": true,
 	"description": "Extended demos for Clay Components",
 	"dependencies": {
-		"@clayui/button": "^3.137.0",
-		"@clayui/form": "^3.142.0",
-		"@clayui/layout": "^3.129.0",
-		"@clayui/list": "^3.142.2",
-		"@clayui/management-toolbar": "^3.130.0",
-		"@clayui/multi-select": "^3.142.2",
-		"@clayui/nav": "^3.142.2",
-		"@clayui/pagination": "^3.142.2",
-		"@clayui/pagination-bar": "^3.142.2",
-		"@clayui/panel": "^3.142.0",
+		"@clayui/button": "^3.143.0",
+		"@clayui/form": "^3.143.0",
+		"@clayui/layout": "^3.143.0",
+		"@clayui/list": "^3.143.0",
+		"@clayui/management-toolbar": "^3.143.0",
+		"@clayui/multi-select": "^3.143.0",
+		"@clayui/nav": "^3.143.0",
+		"@clayui/pagination": "^3.143.0",
+		"@clayui/pagination-bar": "^3.143.0",
+		"@clayui/panel": "^3.143.0",
 		"classnames": "^2.2.6",
 		"react-dnd": "^11.1.1",
 		"react-dnd-html5-backend": "^11.1.1",
@@ -21,5 +21,5 @@
 	"devDependencies": {
 		"@types/recharts": "^1.8.23"
 	},
-	"version": "3.142.2"
+	"version": "3.143.0"
 }

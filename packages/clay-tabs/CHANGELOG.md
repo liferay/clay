@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
+
+### Bug Fixes
+
+-   **@clayui/css:** Bump version back ([cb58a7e](https://github.com/liferay/clay/commit/cb58a7e6a46881d26ee3014d083b32f0585d8e58))
+
+### Features
+
+-   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/tabs@3.3.5...@clayui/tabs@3.142.2) (2025-08-13)
 
 ### Bug Fixes
