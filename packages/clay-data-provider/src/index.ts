@@ -4,8 +4,8 @@
  */
 
 import {DataProvider} from './DataProvider';
-import {FetchPolicy, NetworkStatus, Sorting, useResource} from './useResource';
+import {FetchPolicy, NetworkStatus, useResource} from './useResource';
 
-export type {FetchPolicy, NetworkStatus, Sorting};
-export {DataProvider, useResource};
+export type {Sorting} from './useResource';
+export {DataProvider, FetchPolicy, NetworkStatus, useResource};
 export default DataProvider;
