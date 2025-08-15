@@ -15,20 +15,20 @@ export {
 } from '@clayui/modal';
 export {Provider, useProvider} from '@clayui/provider';
 
-export {IconSelector} from './icon-selector';
-export {Item} from './language-picker';
+export {Body, Cell, Head, Row, Table} from './table';
+export {FocusTrap} from './focus-trap';
 export {Heading, Text, TextHighlight} from './typography';
-export type {ColorType} from './typography';
+export {IconSelector} from './icon-selector';
+export {LanguagePicker} from './language-picker';
+export {Nav} from './nav';
 export {OverlayMask} from './overlay-mask';
+export {Picker, Option} from './picker';
+export {SidePanel} from './side-panel';
 export {TreeView} from './tree-view';
 export {VerticalBar} from './vertical-bar';
 export {VerticalNav} from './vertical-nav';
-export {Picker, Option} from './picker';
-export {FocusTrap} from './focus-trap';
-export {Nav} from './nav';
-export {Body, Cell, Head, Row, Table} from './table';
-export {LanguagePicker} from './language-picker';
-export {SidePanel} from './side-panel';
+export type {ColorType} from './typography';
+export type {Item} from './language-picker';
 export type {SidePanelProps} from './side-panel';
 
 // Experimental components
