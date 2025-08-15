@@ -4,15 +4,13 @@
  */
 
 import ClayButton from '@clayui/button';
-import {useResource} from '@clayui/data-provider';
+import {FetchPolicy, NetworkStatus, useResource} from '@clayui/data-provider';
 import ClayForm, {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
 import React, {useState} from 'react';
 
 import ClayMultiSelect from '../src';
-
-import type {FetchPolicy, NetworkStatus} from '@clayui/data-provider';
 
 export default {
 	argTypes: {
@@ -293,7 +291,7 @@ export const NestedData = () => {
 
 			return {
 				cursor: json.next,
-				results: items,
+				items,
 			};
 		},
 		fetchPolicy: FetchPolicy.CacheFirst,
