@@ -25,35 +25,6 @@
 	}
 }
 
-.list-group-bordered {
-	.list-group-item-flex {
-		padding: 0;
-
-		&.active {
-			.autofit-col {
-				border-color: $cadmin-list-group-active-border-color;
-			}
-		}
-	}
-
-	.autofit-col {
-		border-left: $cadmin-list-group-border-width solid
-			$cadmin-list-group-border-color;
-		border-right: $cadmin-list-group-border-width solid
-			$cadmin-list-group-border-color;
-		margin-left: math-sign($cadmin-list-group-border-width);
-		padding: $cadmin-list-group-item-padding-y
-			$cadmin-list-group-item-padding-x;
-
-		&:first-child,
-		&:last-child {
-			border-left-width: 0;
-			border-right-width: 0;
-			margin-left: 0;
-		}
-	}
-}
-
 // List Group Header
 
 .list-group-header {
@@ -413,13 +384,6 @@
 	}
 }
 
-.list-group-bordered .quick-action-menu {
-	margin-bottom: 0;
-	margin-top: 0;
-	padding-bottom: $cadmin-list-group-item-padding-y;
-	padding-top: $cadmin-list-group-item-padding-y;
-}
-
 .list-group-item-flex.active {
 	.quick-action-menu {
 		background-color: $cadmin-list-group-active-bg;
@@ -433,13 +397,6 @@
 // List Group Notification
 
 .list-group-notification {
-	&.list-group-bordered {
-		.quick-action-menu {
-			margin-bottom: $cadmin-list-group-notification-item-border-bottom-width;
-			margin-top: $cadmin-list-group-notification-item-border-top-width;
-		}
-	}
-
 	.list-group-item {
 		border-width: 0;
 
