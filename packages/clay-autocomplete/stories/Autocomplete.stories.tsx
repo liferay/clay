@@ -312,7 +312,7 @@ export const NestedData = () => {
 
 			return {
 				cursor: json.next,
-				results: items,
+				items,
 			};
 		},
 		fetchPolicy: FetchPolicy.CacheFirst,
