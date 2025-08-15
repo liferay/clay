@@ -5533,6 +5533,11 @@ babel-plugin-extract-import-names@1.6.22:
   dependencies:
     "@babel/helper-plugin-utils" "7.10.4"
 
+babel-plugin-fully-specified@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-fully-specified/-/babel-plugin-fully-specified-1.3.0.tgz#924ee3b569dc5e4a9a610966e01898de1db3839e"
+  integrity sha512-STW+rXLxwCB839gmwBizuipaDBb/iGZ5Vg0bmfynYLyXRTWgofXDrePuW5VvBJq2x8yB6xvT+3J7Z0U79uQYNw==
+
 babel-plugin-istanbul@^6.0.0, babel-plugin-istanbul@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-istanbul/-/babel-plugin-istanbul-6.1.1.tgz#fa88ec59232fd9b4e36dbbc540a8ec9a9b47da73"

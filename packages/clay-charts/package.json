@@ -2,12 +2,22 @@
 	"name": "@clayui/charts",
 	"version": "3.141.2",
 	"description": "React.js wrapper for D3 and billboard.js",
-	"main": "lib/index.js",
+	"main": "lib/cjs/index.js",
+	"module": "lib/esm/index.js",
+	"exports": {
+		"import": "./lib/esm/index.js",
+		"require": "./lib/cjs/index.js"
+	},
 	"types": "lib/index.d.ts",
 	"ts:main": "src/index.tsx",
+	"files": [
+		"lib"
+	],
 	"scripts": {
 		"buildTypes": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
-		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
+		"build": "yarn build:cjs && yarn build:esm",
+		"build:cjs": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib/cjs --extensions .ts,.tsx",
+		"build:esm": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib/esm --extensions .ts,.tsx --env-name esm",
 		"copySvg": "ncp src/svg lib/svg",
 		"prepublishOnly": "yarn sass && yarn build && yarn buildTypes && yarn copySvg",
 		"sass": "sass src/scss/main.scss lib/css/main.css --source-map",

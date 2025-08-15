@@ -35,17 +35,25 @@ async function main() {
 	const entryFiles = packages
 		.filter(({name}) => !WORKSPACE_PACKAGES_WHITELIST.includes(name))
 		.map(({name}) => {
-			return path.join(
-				import.meta.dirname,
-				'../../packages/',
-				name,
-				'lib/index.js'
-			);
+			return [
+				path.join(
+					import.meta.dirname,
+					'../../packages/',
+					name,
+					'lib/cjs/index.js'
+				),
+				path.join(
+					import.meta.dirname,
+					'../../packages/',
+					name,
+					'lib/esm/index.js'
+				),
+			];
 		});
 
 	const bundles = await esbuild.build({
 		bundle: true,
-		entryPoints: entryFiles,
+		entryPoints: entryFiles.flat(),
 		external: [
 			'@clayui/*',
 			'classnames',
@@ -68,13 +76,10 @@ async function main() {
 		(acc, key) => {
 			const item = bundles.metafile.outputs[key];
 
-			const name = item.entryPoint
-				.replace('packages/', '')
-				.replace('/lib/index.js', '');
+			const name = item.entryPoint.replace('packages/', '');
 
-			acc[name] = getGzipSize(
-				`../../.esbuild-ci-builds/${name}/lib/index.js`
-			);
+			acc[name.replace('lib/', '').replace('/index.js', '')] =
+				getGzipSize(`../../.esbuild-ci-builds/${name}`);
 
 			return acc;
 		},
