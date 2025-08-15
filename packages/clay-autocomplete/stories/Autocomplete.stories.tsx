@@ -4,15 +4,13 @@
  */
 
 import {Text, TextHighlight} from '@clayui/core';
-import {useResource} from '@clayui/data-provider';
+import {FetchPolicy, NetworkStatus, useResource} from '@clayui/data-provider';
 import DropDown from '@clayui/drop-down';
 import Layout from '@clayui/layout';
 import {FocusScope, useDebounce} from '@clayui/shared';
 import React, {useEffect, useRef, useState} from 'react';
 
 import ClayAutocomplete from '../src';
-
-import type {FetchPolicy, NetworkStatus} from '@clayui/data-provider';
 
 const LoadingWithDebounce = ({
 	loading,
@@ -314,7 +312,7 @@ export const NestedData = () => {
 
 			return {
 				cursor: json.next,
-				results: items,
+				items,
 			};
 		},
 		fetchPolicy: FetchPolicy.CacheFirst,
