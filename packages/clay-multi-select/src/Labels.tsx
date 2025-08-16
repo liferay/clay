@@ -13,7 +13,7 @@ import {
 	sub,
 	useId,
 } from '@clayui/shared';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import type {Item, LastChangeLiveRegion, Locators} from './types';
 
@@ -147,6 +147,23 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 			},
 			[labels]
 		);
+
+		useEffect(() => {
+			if (labelsRef.current) {
+				const focusableElements = Array.from<HTMLElement>(
+					labelsRef.current.querySelectorAll(
+						'.label [aria-describedby]'
+					)
+				);
+
+				const addedLabel =
+					focusableElements[focusableElements.length - 1];
+
+				if (addedLabel) {
+					setLastFocusedItem(addedLabel.getAttribute('id'));
+				}
+			}
+		}, [labels]);
 
 		return (
 			<ClayInput.GroupItem>
