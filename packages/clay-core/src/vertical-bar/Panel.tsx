@@ -4,8 +4,9 @@
  */
 
 import {useProvider} from '@clayui/provider';
+import {usePrevious} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useContext, useEffect, useRef} from 'react';
+import React, {useContext, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import {ContentContext} from './Content';
@@ -137,15 +138,4 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 			</div>
 		</CSSTransition>
 	);
-}
-
-function usePrevious<T>(value: T) {
-	const ref = useRef<T>(value);
-
-	useEffect(() => {
-		ref.current = value;
-	}, [value]);
-
-	// eslint-disable-next-line
-	return ref.current;
 }
