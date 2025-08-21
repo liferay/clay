@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {InternalDispatch} from '@clayui/shared';
+import {InternalDispatch, usePrevious} from '@clayui/shared';
 import classnames from 'classnames';
 import React from 'react';
 import {CSSTransition} from 'react-transition-group';
@@ -48,6 +48,13 @@ export function SidePanelWithDrilldown({
 	selectedPanelKey,
 	...otherProps
 }: Props) {
+	const previousSelectedPanel = usePrevious<keyof Panels>(selectedPanelKey);
+
+	const transitionDirection =
+		panels[previousSelectedPanel]?.parentKey === selectedPanelKey
+			? 'prev'
+			: 'next';
+
 	return (
 		<SidePanel {...otherProps} aria-label={panels[selectedPanelKey]?.title}>
 			<div className="drilldown-inner">
@@ -55,12 +62,23 @@ export function SidePanelWithDrilldown({
 					const active = selectedPanelKey === panelKey;
 					const parentPanelKey = panel.parentKey;
 
+					const initialClasses = classnames('transitioning', {
+						'drilldown-prev-initial':
+							transitionDirection === 'prev',
+					});
+
 					return (
 						<CSSTransition
 							aria-hidden={!active}
 							className={classnames('drilldown-item', {
 								'drilldown-current': active,
 							})}
+							classNames={{
+								enter: initialClasses,
+								enterActive: `drilldown-transition drilldown-${transitionDirection}-active`,
+								exit: initialClasses,
+								exitActive: `drilldown-transition drilldown-${transitionDirection}-active`,
+							}}
 							in={active}
 							key={panelKey}
 							timeout={250}
