@@ -45,7 +45,7 @@ export const PositionAbsolute = (args: any) => {
 	const sidePanelStartId = useId();
 	const sidebarTitleId = useId();
 
-	const ref = useRef<HTMLElement | null>(null);
+	const ref = useRef<HTMLDivElement | null>(null);
 
 	const options = [
 		{
@@ -251,7 +251,7 @@ export const PositionFixed = () => {
 	const sidePanelId = useId();
 	const sidePanelStartId = useId();
 
-	const ref = useRef<HTMLElement | null>(null);
+	const ref = useRef<HTMLDivElement | null>(null);
 
 	return (
 		<div className="m-n3 min-vh-100">
