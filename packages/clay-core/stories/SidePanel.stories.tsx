@@ -4,13 +4,14 @@
  */
 
 import Button from '@clayui/button';
+import {ClayCardWithNavigation} from '@clayui/card';
 import ClayForm, {ClayInput, ClaySelect} from '@clayui/form';
 import Panel from '@clayui/panel';
 import {useId} from '@clayui/shared';
 import Toolbar from '@clayui/toolbar';
 import React, {useRef, useState} from 'react';
 
-import {SidePanel} from '../src/side-panel';
+import {SidePanel, SidePanelWithDrilldown} from '../src/side-panel';
 
 export default {
 	title: 'Design System/Components/SidePanel',
@@ -127,14 +128,14 @@ export const PositionAbsolute = (args: any) => {
 
 				<div className="container-fluid">
 					{`Viennese flavour cup eu, percolator froth ristretto mazagran
-					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-					spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
-					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-					spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
-					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-					spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
-					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-					spoon acerbic to go macchiato strong.`}
+                    caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+                    spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+                    caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+                    spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+                    caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+                    spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+                    caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+                    spoon acerbic to go macchiato strong.`}
 					<br />
 					<img
 						alt="cat"
@@ -308,14 +309,14 @@ export const PositionFixed = () => {
 
 				<div className="container-fluid">
 					{`Viennese flavour cup eu, percolator froth ristretto mazagran
-					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-					spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
-					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-					spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
-					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-					spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
-					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-					spoon acerbic to go macchiato strong.`}
+                    caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+                    spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+                    caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+                    spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+                    caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+                    spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+                    caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+                    spoon acerbic to go macchiato strong.`}
 					<br />
 					<img
 						alt="cat"
@@ -348,6 +349,103 @@ export const PositionFixed = () => {
 						</Button.Group>
 					</SidePanel.Footer>
 				</SidePanel>
+			</div>
+		</div>
+	);
+};
+
+export const Drilldown = () => {
+	const [open, setOpen] = useState(true);
+	const [panelKey, setPanelKey] = useState<React.Key>('x1');
+
+	const sidePanelId = useId();
+
+	const ref = useRef<HTMLDivElement | null>(null);
+
+	return (
+		<div className="m-n3 min-vh-100">
+			<div className="side-panel-container" ref={ref}>
+				<Button
+					aria-controls={sidePanelId}
+					aria-pressed={open}
+					onClick={() => setOpen(!open)}
+				>
+					Open Panel
+				</Button>
+
+				<SidePanelWithDrilldown
+					containerRef={ref}
+					id={sidePanelId}
+					onOpenChange={setOpen}
+					onSelectedPanelKeyChange={setPanelKey}
+					open={open}
+					panels={{
+						x1: {
+							component: (
+								<SidePanel.Body>
+									<ClayCardWithNavigation
+										horizontal
+										horizontalSymbol="user"
+										onClick={() => setPanelKey('x2')}
+										title="Profile"
+									/>
+									<ClayCardWithNavigation
+										horizontal
+										horizontalSymbol="edit-layout"
+										onClick={() => setPanelKey('x3')}
+										title="Dashboard"
+									/>
+								</SidePanel.Body>
+							),
+							title: 'User',
+						},
+						x2: {
+							component: (
+								<SidePanel.Body>
+									This is the Profile panel
+									<ClayCardWithNavigation
+										className="mt-4"
+										horizontal
+										horizontalSymbol="pencil"
+										onClick={() => setPanelKey('x4')}
+										title="Edit Profile"
+									/>
+								</SidePanel.Body>
+							),
+							headerMessages: {
+								backAriaLabel: 'Go to the user panel.',
+							},
+							parentKey: 'x1',
+							title: 'Profile',
+						},
+						x3: {
+							component: (
+								<SidePanel.Body>
+									This is the Dashboard panel
+								</SidePanel.Body>
+							),
+							headerMessages: {
+								backAriaLabel: 'Go to the user panel.',
+							},
+							parentKey: 'x1',
+							title: 'Dashboard',
+						},
+						x4: {
+							component: (
+								<SidePanel.Body>
+									This the Edit Profile panel
+								</SidePanel.Body>
+							),
+							headerMessages: {
+								backAriaLabel: 'Go to the profile panel.',
+							},
+							parentKey: 'x2',
+							title: 'Edit Profile',
+						},
+					}}
+					position="fixed"
+					selectedPanelKey={panelKey}
+				/>
 			</div>
 		</div>
 	);
