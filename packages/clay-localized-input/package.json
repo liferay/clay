@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/localized-input",
-	"version": "3.143.0",
+	"version": "3.143.1",
 	"description": "ClayLocalizedInput component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -30,13 +30,13 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.143.0",
-		"@clayui/core": "^3.143.0",
-		"@clayui/drop-down": "^3.143.0",
-		"@clayui/form": "^3.143.0",
-		"@clayui/icon": "^3.143.0",
-		"@clayui/label": "^3.143.0",
-		"@clayui/layout": "^3.143.0",
+		"@clayui/button": "^3.143.1",
+		"@clayui/core": "^3.143.1",
+		"@clayui/drop-down": "^3.143.1",
+		"@clayui/form": "^3.143.1",
+		"@clayui/icon": "^3.143.1",
+		"@clayui/label": "^3.143.1",
+		"@clayui/layout": "^3.143.1",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {
