@@ -14,7 +14,8 @@ type DisplayType =
 	| 'success'
 	| 'warning'
 	| 'beta'
-	| 'beta-dark';
+	| 'beta-dark'
+	| 'foo';
 
 interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	/**
