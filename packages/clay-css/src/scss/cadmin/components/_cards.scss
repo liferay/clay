@@ -334,11 +334,6 @@
 	.custom-control-label {
 		position: absolute;
 		z-index: 1;
-
-		&::before,
-		&::after {
-			top: 0;
-		}
 	}
 
 	.form-check-input {

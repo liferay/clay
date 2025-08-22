@@ -3,7 +3,7 @@ $custom-control-indicator-border-color: $gray-600 !default;
 $custom-control-indicator-border-style: solid !default;
 $custom-control-indicator-border-width: 0.0625rem !default; // 1px
 $custom-control-indicator-box-shadow: none !default;
-$custom-control-indicator-position-top: 0.125rem !default;
+$custom-control-indicator-position-top: 0 !default;
 
 $custom-control-indicator-focus-border-color: $custom-control-indicator-border-color !default;
 $custom-control-indicator-focus-box-shadow: $component-focus-box-shadow !default;
@@ -56,7 +56,7 @@ $custom-control-indicator-indeterminate-border-color: $custom-control-indicator-
 
 // @deprecated after of v3.5.0 use the Sass map `$custom-control` instead
 
-$custom-control-margin-bottom: 1rem !default;
+$custom-control-margin-bottom: 0.5rem !default;
 
 // Custom Control Description
 
@@ -96,7 +96,10 @@ $custom-control-label: map-deep-merge(
 			border-width: $custom-control-indicator-border-width,
 			box-shadow:
 				clay-enable-shadows($custom-control-indicator-box-shadow),
-			top: $custom-control-indicator-position-top,
+			top: 0.125rem,
+		),
+		after: (
+			top: -0.125rem,
 		),
 	),
 	$custom-control-label
@@ -143,6 +146,8 @@ $custom-control-input: map-deep-merge(
 			custom-control-label: (
 				before: (
 					border-color: $custom-control-indicator-focus-border-color,
+				),
+				after: (
 					box-shadow: $custom-control-indicator-focus-box-shadow,
 				),
 			),
@@ -202,8 +207,8 @@ $custom-checkbox-indicator-icon-checked: clay-icon(
 	check-small,
 	$white
 ) !default;
-$custom-checkbox-indicator-icon-checked-bg-size: 100% !default;
-$custom-checkbox-indicator-icon-indeterminate-bg-size: 100% !default;
+$custom-checkbox-indicator-icon-checked-bg-size: 1rem !default;
+$custom-checkbox-indicator-icon-indeterminate-bg-size: 1rem !default;
 
 $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
 $custom-checkbox-indicator-indeterminate-box-shadow: c-unset !default;
@@ -327,7 +332,7 @@ $custom-checkbox: map-deep-merge(
 // .custom-radio
 
 $custom-radio-indicator-icon-checked: clay-icon(circle, $white) !default;
-$custom-radio-indicator-icon-checked-bg-size: 50% !default;
+$custom-radio-indicator-icon-checked-bg-size: 0.5rem !default;
 
 $custom-radio-indicator-disabled-border-color: $custom-control-indicator-disabled-bg !default;
 

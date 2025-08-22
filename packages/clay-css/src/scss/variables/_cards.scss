@@ -415,12 +415,6 @@ $form-check-card: map-deep-merge(
 				opacity: 0,
 				position: absolute,
 				z-index: 1,
-				before: (
-					top: 0,
-				),
-				after: (
-					top: 0,
-				),
 			),
 			custom-control-input: (
 				z-index: 2,
