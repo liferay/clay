@@ -406,6 +406,16 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 						event.preventDefault();
 
 						setActive(false);
+
+						if (
+							items.find(
+								(dropdownItem) =>
+									dropdownItem['value'] === item['value']
+							)
+						) {
+							return;
+						}
+
 						setItems([...items, item]);
 						setValue('');
 					}}
