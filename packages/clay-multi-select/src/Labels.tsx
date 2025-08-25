@@ -176,6 +176,8 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 						}
 						onKeyDown={(event) => {
 							if (KeysNavigation.includes(event.key)) {
+								event.preventDefault();
+
 								// Query labels and buttons to exclude the label that are
 								// focusable the navigation order depends on which orientation
 								// the navigation is happen.
@@ -222,6 +224,8 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 								event.key === Keys.Home ||
 								event.key === Keys.End
 							) {
+								event.preventDefault();
+
 								const isLabel =
 									lastFocusedItem!.includes('span');
 
