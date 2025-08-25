@@ -25,6 +25,8 @@
 	}
 }
 
+// @deprecated as of v3.142.2 with no replacement
+
 .list-group-bordered {
 	.list-group-item-flex {
 		padding: 0;
@@ -445,6 +447,8 @@
 		padding-top: $list-group-item-padding-y;
 	}
 }
+
+// @deprecated as of v3.142.2 with no replacement
 
 .list-group-bordered .quick-action-menu {
 	margin-bottom: 0;
