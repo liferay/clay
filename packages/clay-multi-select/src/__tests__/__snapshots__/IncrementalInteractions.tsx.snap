@@ -76,7 +76,7 @@ exports[`MultiSelect incremental interactions renders as disabled 1`] = `
               id="clay-id-8-label-1-span"
               role="gridcell"
               style="outline: none;"
-              tabindex="0"
+              tabindex="-1"
             >
               foo
             </span>
@@ -152,7 +152,7 @@ exports[`MultiSelect incremental interactions renders as disabled 1`] = `
               id="clay-id-8-label-3-span"
               role="gridcell"
               style="outline: none;"
-              tabindex="-1"
+              tabindex="0"
             >
               baz
             </span>
@@ -242,7 +242,7 @@ exports[`MultiSelect incremental interactions renders with items 1`] = `
               id="clay-id-4-label-1-span"
               role="gridcell"
               style="outline: none;"
-              tabindex="0"
+              tabindex="-1"
             >
               foo
             </span>
@@ -316,7 +316,7 @@ exports[`MultiSelect incremental interactions renders with items 1`] = `
               id="clay-id-4-label-3-span"
               role="gridcell"
               style="outline: none;"
-              tabindex="-1"
+              tabindex="0"
             >
               baz
             </span>
