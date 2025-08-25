@@ -395,6 +395,17 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 									(value as string).trim() &&
 									DELIMITER_KEYS.includes(key)
 								) {
+									if (
+										labels.find(
+											(label) => label.label === value
+										)
+									) {
+										// @ts-ignore
+										onChange!({target: {value: ''}});
+
+										return;
+									}
+
 									event.preventDefault();
 
 									lastChangesRef.current = {
