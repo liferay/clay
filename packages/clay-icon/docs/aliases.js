@@ -1473,6 +1473,10 @@ export const iconsData = [
 		name: 'plug',
 	},
 	{
+		aliases: ['add', 'create', 'new'],
+		name: 'plus-circle-full',
+	},
+	{
 		aliases: ['add', 'create', 'multiple', 'new'],
 		name: 'plus-squares',
 	},
