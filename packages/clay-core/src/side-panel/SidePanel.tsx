@@ -87,6 +87,12 @@ export type Props = {
 	displayType?: 'light' | 'dark';
 
 	/**
+	 * External reference for the side panel.
+	 */
+
+	externalSidePanelRef?: React.RefObject<HTMLDivElement>;
+
+	/**
 	 * The id of the component.
 	 */
 	id?: string;
@@ -114,14 +120,17 @@ export function SidePanel({
 	defaultOpen,
 	direction = 'right',
 	displayType = 'light',
+	externalSidePanelRef,
 	onOpenChange,
 	open: externalOpen,
 	position = 'absolute',
 	triggerRef,
 	...otherProps
 }: Props) {
-	const sidePanelRef = useRef<HTMLDivElement>(null);
+	const internalSidePanelRef = useRef<HTMLDivElement>(null);
 	const slideoutRef = useRef<HTMLDivElement>(null);
+
+	const sidePanelRef = externalSidePanelRef || internalSidePanelRef;
 
 	const {prefersReducedMotion} = useProvider();
 

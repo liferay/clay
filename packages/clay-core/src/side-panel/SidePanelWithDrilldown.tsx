@@ -5,7 +5,7 @@
 
 import {InternalDispatch, usePrevious} from '@clayui/shared';
 import classnames from 'classnames';
-import React from 'react';
+import React, {useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import {Messages} from './Header';
@@ -48,6 +48,7 @@ export function SidePanelWithDrilldown({
 	selectedPanelKey,
 	...otherProps
 }: Props) {
+	const panelRef = useRef<HTMLDivElement>(null);
 	const previousSelectedPanel = usePrevious<keyof Panels>(selectedPanelKey);
 
 	const transitionDirection =
@@ -56,7 +57,11 @@ export function SidePanelWithDrilldown({
 			: 'next';
 
 	return (
-		<SidePanel {...otherProps} aria-label={panels[selectedPanelKey]?.title}>
+		<SidePanel
+			{...otherProps}
+			aria-label={panels[selectedPanelKey]?.title}
+			externalSidePanelRef={panelRef}
+		>
 			<div className="drilldown-inner">
 				{Object.entries(panels).map(([panelKey, panel]) => {
 					const active = selectedPanelKey === panelKey;
@@ -81,6 +86,9 @@ export function SidePanelWithDrilldown({
 							}}
 							in={active}
 							key={panelKey}
+							onEntered={() => {
+								panelRef.current?.focus();
+							}}
 							timeout={250}
 						>
 							<div className="drilldown-item-inner">
