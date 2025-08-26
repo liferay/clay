@@ -180,14 +180,15 @@ Place them anywhere relative to your container using positional sticker classes 
 
 ## Sizes
 
-Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom size with the `sticker-size` mixin.
+Stickers come in 6 sizes `xs`, `sm`, default, `lg`, `xl`, and `xxl`. Create your own custom size with the `sticker-size` mixin.
 
 <div className="sheet-example">
-	<span className="sticker sticker-primary sticker-sm">133</span>
-	<span className="sticker sticker-secondary">133</span>
-	<span className="sticker sticker-lg sticker-success">133</span>
-	<span className="sticker sticker-danger sticker-xl">133</span>
-	<span className="sticker sticker-primary sticker-xl">
+	<span className="sticker sticker-outline-0 sticker-sm">133</span>
+	<span className="sticker sticker-outline-1">133</span>
+	<span className="sticker sticker-lg sticker-outline-2">133</span>
+	<span className="sticker sticker-outline-3 sticker-xl">133</span>
+	<span className="sticker sticker-outline-4 sticker-xxl">133</span>
+	<span className="sticker sticker-outline-5 sticker-xxl">
 		<span className="inline-item">
 			<svg
 				className="lexicon-icon lexicon-icon-format"
@@ -198,7 +199,7 @@ Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom s
 			</svg>
 		</span>
 	</span>
-	<span className="sticker sticker-lg sticker-secondary">
+	<span className="sticker sticker-outline-6 sticker-xl">
 		<span className="inline-item">
 			<svg
 				className="lexicon-icon lexicon-icon-format"
@@ -209,7 +210,7 @@ Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom s
 			</svg>
 		</span>
 	</span>
-	<span className="sticker sticker-success">
+	<span className="sticker sticker-outline-7 sticker-lg">
 		<span className="inline-item">
 			<svg
 				className="lexicon-icon lexicon-icon-format"
@@ -220,7 +221,18 @@ Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom s
 			</svg>
 		</span>
 	</span>
-	<span className="sticker sticker-danger sticker-sm">
+	<span className="sticker sticker-outline-8">
+		<span className="inline-item">
+			<svg
+				className="lexicon-icon lexicon-icon-format"
+				focusable="false"
+				role="presentation"
+			>
+				<use href="/images/icons/icons.svg#format"></use>
+			</svg>
+		</span>
+	</span>
+	<span className="sticker sticker-outline-9 sticker-sm">
 		<span className="inline-item">
 			<svg
 				className="lexicon-icon lexicon-icon-format"
@@ -234,11 +246,12 @@ Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom s
 </div>
 
 ```html
-<span className="sticker sticker-primary sticker-sm">133</span>
-<span className="sticker sticker-secondary">133</span>
-<span className="sticker sticker-lg sticker-success">133</span>
-<span className="sticker sticker-danger sticker-xl">133</span>
-<span className="sticker sticker-primary sticker-xl">
+<span className="sticker sticker-outline-0 sticker-sm">133</span>
+<span className="sticker sticker-outline-1">133</span>
+<span className="sticker sticker-lg sticker-outline-2">133</span>
+<span className="sticker sticker-outline-3 sticker-xl">133</span>
+<span className="sticker sticker-outline-4 sticker-xxl">133</span>
+<span className="sticker sticker-outline-5 sticker-xxl">
 	<span className="inline-item">
 		<svg
 			className="lexicon-icon lexicon-icon-format"
@@ -249,7 +262,7 @@ Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom s
 		</svg>
 	</span>
 </span>
-<span className="sticker sticker-lg sticker-secondary">
+<span className="sticker sticker-outline-6 sticker-xl">
 	<span className="inline-item">
 		<svg
 			className="lexicon-icon lexicon-icon-format"
@@ -260,7 +273,7 @@ Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom s
 		</svg>
 	</span>
 </span>
-<span className="sticker sticker-success">
+<span className="sticker sticker-outline-7 sticker-lg">
 	<span className="inline-item">
 		<svg
 			className="lexicon-icon lexicon-icon-format"
@@ -271,7 +284,18 @@ Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom s
 		</svg>
 	</span>
 </span>
-<span className="sticker sticker-danger sticker-sm">
+<span className="sticker sticker-outline-8">
+	<span className="inline-item">
+		<svg
+			className="lexicon-icon lexicon-icon-format"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#format"></use>
+		</svg>
+	</span>
+</span>
+<span className="sticker sticker-outline-9 sticker-sm">
 	<span className="inline-item">
 		<svg
 			className="lexicon-icon lexicon-icon-format"

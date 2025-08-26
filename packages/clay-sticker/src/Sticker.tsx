@@ -76,7 +76,7 @@ interface IClayStickerProps extends React.HTMLAttributes<HTMLSpanElement> {
 	/**
 	 * Sticker size.
 	 */
-	size?: 'lg' | 'sm' | 'xl' | 'xs';
+	size?: 'lg' | 'sm' | 'xl' | 'xxl' | 'xs';
 }
 
 interface IOverylayProps extends React.HTMLAttributes<HTMLSpanElement> {

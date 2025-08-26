@@ -100,6 +100,10 @@ export const Size = () => (
 			<ClayIcon symbol="user" />
 		</ClaySticker>
 
+		<ClaySticker className="mr-1" displayType="warning" size="xxl">
+			<ClayIcon symbol="user" />
+		</ClaySticker>
+
 		<div className="mt-3">
 			<ClaySticker className="mr-1" displayType="outline-0" size="xs">
 				S
@@ -114,6 +118,10 @@ export const Size = () => (
 				M
 			</ClaySticker>
 			<ClaySticker className="mr-1" displayType="outline-4" size="xl">
+				S
+			</ClaySticker>
+
+			<ClaySticker className="mr-1" displayType="outline-5" size="xxl">
 				S
 			</ClaySticker>
 		</div>

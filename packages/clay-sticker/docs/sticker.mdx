@@ -11,8 +11,6 @@ packageTypes: ['clay-sticker/src/Sticker.tsx']
 
 Stickers can be any color. Set sticker's color using [`displayType`](#api-displayType) property.
 
-Also, you can use the following sizes on your Sticker just setting up [`size`](#api-size):
-
 ```jsx preview
 import {Provider} from '@clayui/core';
 import Sticker from '@clayui/sticker';
@@ -26,31 +24,39 @@ export default function App() {
 		<Provider spritemap="/public/icons.svg">
 			<div className="bg-light p-4">
 				<>
-					<Sticker className="mr-1" displayType="danger" size="sm">
+					<Sticker className="mr-1" displayType="unstyled">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker className="mr-1" displayType="dark" size="md">
+					<Sticker className="mr-1" displayType="primary">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker className="mr-1" displayType="info" size="lg">
+					<Sticker className="mr-1" displayType="secondary">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker className="mr-1" displayType="light" size="xl">
+					<Sticker className="mr-1" displayType="info">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker className="mr-1" displayType="secondary" size="xl">
+					<Sticker className="mr-1" displayType="success">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker className="mr-1" displayType="success" size="lg">
+					<Sticker className="mr-1" displayType="warning">
 						<Icon symbol="user" />
 					</Sticker>
 
-					<Sticker className="mr-1" displayType="unstyled" size="md">
+					<Sticker className="mr-1" displayType="danger">
+						<Icon symbol="user" />
+					</Sticker>
+
+					<Sticker className="mr-1" displayType="light">
+						<Icon symbol="user" />
+					</Sticker>
+
+					<Sticker className="mr-1" displayType="dark">
 						<Icon symbol="user" />
 					</Sticker>
 
@@ -59,35 +65,19 @@ export default function App() {
 					</Sticker>
 
 					<div className="mt-3">
-						<Sticker
-							className="mr-1"
-							displayType="outline-0"
-							size="xs"
-						>
+						<Sticker className="mr-1" displayType="outline-0">
 							S
 						</Sticker>
-						<Sticker
-							className="mr-1"
-							displayType="outline-1"
-							size="sm"
-						>
+						<Sticker className="mr-1" displayType="outline-1">
 							M
 						</Sticker>
 						<Sticker className="mr-1" displayType="outline-2">
 							C
 						</Sticker>
-						<Sticker
-							className="mr-1"
-							displayType="outline-3"
-							size="lg"
-						>
+						<Sticker className="mr-1" displayType="outline-3">
 							M
 						</Sticker>
-						<Sticker
-							className="mr-1"
-							displayType="outline-4"
-							size="xl"
-						>
+						<Sticker className="mr-1" displayType="outline-4">
 							S
 						</Sticker>
 						<Sticker className="mr-1" displayType="outline-5">
@@ -137,6 +127,94 @@ export default function App() {
 					<Sticker shape="user-icon" size="xl">
 						BS
 					</Sticker>
+				</>
+			</div>
+		</Provider>
+	);
+}
+```
+
+## Size
+
+Also, you can use the following sizes on your Sticker just setting up [`size`](#api-size):
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Sticker from '@clayui/sticker';
+import Icon from '@clayui/icon';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="bg-light p-4">
+				<>
+					<Sticker className="mr-1" displayType="primary" size="xs">
+						<Icon symbol="user" />
+					</Sticker>
+
+					<Sticker className="mr-1" displayType="danger" size="sm">
+						<Icon symbol="user" />
+					</Sticker>
+
+					<Sticker className="mr-1" displayType="dark" size="md">
+						<Icon symbol="user" />
+					</Sticker>
+
+					<Sticker className="mr-1" displayType="info" size="lg">
+						<Icon symbol="user" />
+					</Sticker>
+
+					<Sticker className="mr-1" displayType="secondary" size="xl">
+						<Icon symbol="user" />
+					</Sticker>
+
+					<Sticker className="mr-1" displayType="success" size="xxl">
+						<Icon symbol="user" />
+					</Sticker>
+
+					<div className="mt-3">
+						<Sticker
+							className="mr-1"
+							displayType="outline-0"
+							size="xs"
+						>
+							S
+						</Sticker>
+						<Sticker
+							className="mr-1"
+							displayType="outline-1"
+							size="sm"
+						>
+							M
+						</Sticker>
+						<Sticker className="mr-1" displayType="outline-2">
+							C
+						</Sticker>
+						<Sticker
+							className="mr-1"
+							displayType="outline-3"
+							size="lg"
+						>
+							M
+						</Sticker>
+						<Sticker
+							className="mr-1"
+							displayType="outline-4"
+							size="xl"
+						>
+							S
+						</Sticker>
+						<Sticker
+							className="mr-1"
+							displayType="outline-5"
+							size="xxl"
+						>
+							S
+						</Sticker>
+					</div>
 				</>
 			</div>
 		</Provider>

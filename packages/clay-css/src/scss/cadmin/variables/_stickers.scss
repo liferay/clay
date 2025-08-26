@@ -92,6 +92,20 @@ $cadmin-sticker-xl: map-deep-merge(
 	$cadmin-sticker-xl
 );
 
+$cadmin-sticker-xxl: () !default;
+$cadmin-sticker-xxl: map-deep-merge(
+	(
+		font-size: 2.5rem,
+		height: 5rem,
+		line-height: 5rem,
+		width: 5rem,
+		lexicon-icon: (
+			font-size: 1.5rem,
+		),
+	),
+	$cadmin-sticker-xxl
+);
+
 $cadmin-sticker-sizes: () !default;
 $cadmin-sticker-sizes: map-deep-merge(
 	(
@@ -104,6 +118,7 @@ $cadmin-sticker-sizes: map-deep-merge(
 		sticker-sm: $cadmin-sticker-sm,
 		sticker-lg: $cadmin-sticker-lg,
 		sticker-xl: $cadmin-sticker-xl,
+		sticker-xxl: $cadmin-sticker-xxl,
 	),
 	$cadmin-sticker-sizes
 );
