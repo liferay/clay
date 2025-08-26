@@ -396,8 +396,11 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 									DELIMITER_KEYS.includes(key)
 								) {
 									if (
+										value &&
 										labels.find(
-											(label) => label.label === value
+											(label) =>
+												label.label?.toLowerCase() ===
+												`${value}`.toLowerCase()
 										)
 									) {
 										// @ts-ignore
