@@ -57,13 +57,3 @@
 .pagination-results {
 	@include clay-css($cadmin-pagination-results);
 }
-
-// Pagination Sizes
-
-.pagination-sm {
-	@include clay-pagination-variant($cadmin-pagination-sm);
-}
-
-.pagination-lg {
-	@include clay-pagination-variant($cadmin-pagination-lg);
-}
