@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.144.0](https://github.com/liferay/clay/compare/v3.143.2...v3.144.0) (2025-08-26)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-62338 Cadmin remove list-group color variants ([7319978](https://github.com/liferay/clay/commit/7319978d539449bd8cbeb523fd11ceebdba080b3))
+-   **@clayui/multi-select:** LPD-56334 Shift + tab should focus the most recently added label ([10078d7](https://github.com/liferay/clay/commit/10078d7e30b656d13f6bf549d0209eca58da1b48))
+-   **@clayui/multi-select:** LPD-63064 Up/Down/Home/End keys shouldn't scroll the page when navigating multi-select labels ([db881d7](https://github.com/liferay/clay/commit/db881d77a06329355e636c92f7a54a484f47679e))
+-   **@clayui/multi-select:** LPD-63065 Don't add items with the same value in controlled components ([a13b825](https://github.com/liferay/clay/commit/a13b8251f694b8971b539d5590eca3163f6d3be5))
+-   **@clayui/multi-select:** LPD-63065 Don't allow duplicate labels when dropdown items have custom rendering. ([0e6f84e](https://github.com/liferay/clay/commit/0e6f84e84f049a26574a407c069fb2d9d1637e78))
+-   **@clayui/multi-select:** LPD-63065 Ignore case when checking if the label already exists. ([2b063e0](https://github.com/liferay/clay/commit/2b063e0e711d42d4a709b08d45dd77c341f7d860))
+
+### Features
+
+-   **@clayui/css:** LPD-63316 Add plus-circle-full.svg ([56a67d3](https://github.com/liferay/clay/commit/56a67d3c9e29f0bb5dac7c9a9e595acba704c858))
+-   **@clayui/css:** LPD-63408 Custom Forms make checkbox and radio click area 24x24 ([6606076](https://github.com/liferay/clay/commit/6606076543a48251a984a0857a598ea81239450e))
+
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes

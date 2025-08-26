@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.144.0](https://github.com/liferay/clay/compare/v3.143.2...v3.144.0) (2025-08-26)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-62338 Cadmin remove list-group color variants ([7319978](https://github.com/liferay/clay/commit/7319978d539449bd8cbeb523fd11ceebdba080b3))
+
+
+### Features
+
+* **@clayui/css:** LPD-63316 Add plus-circle-full.svg ([56a67d3](https://github.com/liferay/clay/commit/56a67d3c9e29f0bb5dac7c9a9e595acba704c858))
+* **@clayui/css:** LPD-63408 Custom Forms make checkbox and radio click area 24x24 ([6606076](https://github.com/liferay/clay/commit/6606076543a48251a984a0857a598ea81239450e))
+
+
+
+
+
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/css@3.95.1...@clayui/css@3.142.2) (2025-08-13)
 
 
