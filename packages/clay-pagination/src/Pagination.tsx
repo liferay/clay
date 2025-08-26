@@ -9,13 +9,6 @@ import React from 'react';
 import {Ellipsis} from './Ellipsis';
 import {Item} from './Item';
 
-interface IProps extends React.HTMLAttributes<HTMLUListElement> {
-	/**
-	 * The size of pagination element.
-	 */
-	size?: 'lg' | 'sm';
-}
-
 interface IForwardRef<T, P = {}>
 	extends React.ForwardRefExoticComponent<P & React.RefAttributes<T>> {
 	Ellipsis: typeof Ellipsis;
@@ -26,27 +19,22 @@ function forwardRef<T, P = {}>(component: React.RefForwardingComponent<T, P>) {
 	return React.forwardRef<T, P>(component) as IForwardRef<T, P>;
 }
 
-export const Pagination = forwardRef<HTMLUListElement, IProps>(
-	({children, className, size, ...otherProps}: IProps, ref) => {
-		return (
-			<nav aria-label={otherProps['aria-label'] || 'Pagination'}>
-				<ul
-					{...otherProps}
-					className={classNames(
-						'pagination pagination-root',
-						className,
-						{
-							[`pagination-${size}`]: size,
-						}
-					)}
-					ref={ref}
-				>
-					{children}
-				</ul>
-			</nav>
-		);
-	}
-);
+export const Pagination = forwardRef<
+	HTMLUListElement,
+	React.HTMLAttributes<HTMLUListElement>
+>(({children, className, ...otherProps}, ref) => {
+	return (
+		<nav aria-label={otherProps['aria-label'] || 'Pagination'}>
+			<ul
+				{...otherProps}
+				className={classNames('pagination pagination-root', className)}
+				ref={ref}
+			>
+				{children}
+			</ul>
+		</nav>
+	);
+});
 
 Pagination.displayName = 'ClayPagination';
 

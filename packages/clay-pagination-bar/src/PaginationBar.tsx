@@ -9,13 +9,6 @@ import React from 'react';
 import {DropDown} from './DropDown';
 import {Results} from './Results';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
-	/**
-	 * The size of pagination element.
-	 */
-	size?: 'sm' | 'lg';
-}
-
 interface IForwardRef<T, P = {}>
 	extends React.ForwardRefExoticComponent<P & React.RefAttributes<T>> {
 	/**
@@ -29,21 +22,20 @@ function forwardRef<T, P = {}>(component: React.RefForwardingComponent<T, P>) {
 	return React.forwardRef<T, P>(component) as IForwardRef<T, P>;
 }
 
-export const PaginationBar = forwardRef<HTMLDivElement, IProps>(
-	({children, className, size, ...otherProps}: IProps, ref) => {
-		return (
-			<div
-				className={classNames('pagination-bar', className, {
-					[`pagination-${size}`]: size,
-				})}
-				{...otherProps}
-				ref={ref}
-			>
-				{children}
-			</div>
-		);
-	}
-);
+export const PaginationBar = forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(({children, className, ...otherProps}, ref) => {
+	return (
+		<div
+			className={classNames('pagination-bar', className)}
+			{...otherProps}
+			ref={ref}
+		>
+			{children}
+		</div>
+	);
+});
 
 PaginationBar.DropDown = DropDown;
 PaginationBar.Results = Results;

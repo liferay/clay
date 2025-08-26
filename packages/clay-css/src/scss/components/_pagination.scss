@@ -55,13 +55,3 @@
 .pagination-results {
 	@include clay-css($pagination-results);
 }
-
-// Pagination Sizes
-
-.pagination-sm {
-	@include clay-pagination-variant($pagination-sm);
-}
-
-.pagination-lg {
-	@include clay-pagination-variant($pagination-lg);
-}
