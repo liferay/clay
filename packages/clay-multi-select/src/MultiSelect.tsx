@@ -364,6 +364,24 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 
 	const memoizedChildren = useCallback(
 		(item: T) => {
+			const handleItemClick = (event: React.MouseEvent) => {
+				event.preventDefault();
+
+				setActive(false);
+
+				if (
+					items.find(
+						(dropdownItem) =>
+							dropdownItem['value'] === item['value']
+					)
+				) {
+					return;
+				}
+
+				setItems([...items, item]);
+				setValue('');
+			};
+
 			if (children && typeof children === 'function') {
 				const child = children(item) as React.ReactElement<
 					any,
@@ -387,11 +405,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 							return;
 						}
 
-						event.preventDefault();
-
-						setActive(false);
-						setItems([...items, item]);
-						setValue('');
+						handleItemClick(event);
 					},
 				});
 			}
@@ -402,13 +416,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 						item,
 						locator: locator.value,
 					})}
-					onClick={(event) => {
-						event.preventDefault();
-
-						setActive(false);
-						setItems([...items, item]);
-						setValue('');
-					}}
+					onClick={handleItemClick}
 				>
 					{getLocatorValue({
 						item,

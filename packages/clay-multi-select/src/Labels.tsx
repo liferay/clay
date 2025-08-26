@@ -416,6 +416,20 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 									(value as string).trim() &&
 									DELIMITER_KEYS.includes(key)
 								) {
+									if (
+										value &&
+										labels.find(
+											(label) =>
+												label.label?.toLowerCase() ===
+												`${value}`.toLowerCase()
+										)
+									) {
+										// @ts-ignore
+										onChange!({target: {value: ''}});
+
+										return;
+									}
+
 									event.preventDefault();
 
 									lastChangesRef.current = {
