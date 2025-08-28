@@ -298,7 +298,6 @@ export const ClayCardWithInfo = ({
 									<ClayButtonWithIcon
 										{...(dropDownTriggerProps as ButtonWithIconProps)}
 										className="component-action"
-										disabled={disabled}
 										displayType="unstyled"
 										spritemap={spritemap}
 										symbol="ellipsis-v"
