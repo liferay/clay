@@ -502,3 +502,69 @@ export const AsyncData = () => {
 		</div>
 	);
 };
+
+export const AddNewItem = () => {
+	const [items, setItems] = useState([
+		'Footwear',
+		'Historical Figures',
+		'Items in a Vending Machine',
+		'Reasons to Call 911',
+		"Something You're Afraid Of",
+		'Sports Played Indoors',
+		'Things You Do at Work',
+		'Things You Plug In',
+		'Things You Save Up to Buy',
+	]);
+
+	const [value, setValue] = useState('');
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<p>This example shows how to add new items to Autocomplete.</p>
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-add-new-item"
+							id="clay-autocomplete-label-add-new-item"
+						>
+							Categories
+						</label>
+						<ClayAutocomplete
+							allowsCustomValue
+							aria-labelledby="clay-autocomplete-label-add-new-item"
+							defaultItems={items}
+							id="clay-autocomplete-add-new-item"
+							messages={{
+								allowsCustomValue:
+									'<span class="text-primary">{0} <i>(Add New Category)</i></span>',
+								setAsHTML: true,
+							}}
+							onAddNewItem={() => {
+								if (items.indexOf(value) < 0) {
+									setItems(() => {
+										const newItems = [
+											...items,
+											value,
+										].sort();
+
+										return newItems;
+									});
+								}
+							}}
+							onChange={setValue}
+							placeholder="Enter a category"
+							value={value}
+						>
+							{items.map((item) => (
+								<ClayAutocomplete.Item key={item}>
+									{item}
+								</ClayAutocomplete.Item>
+							))}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
