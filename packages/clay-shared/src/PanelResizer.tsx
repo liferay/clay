@@ -4,9 +4,9 @@
  */
 
 import {Keys} from '@clayui/shared';
-import React, {useContext} from 'react';
+import React from 'react';
 
-import {VerticalBarContext} from './context';
+export type Position = 'left' | 'right';
 
 type Props = {
 	/**
@@ -15,19 +15,44 @@ type Props = {
 	className?: string;
 
 	/**
-	 * Reference to Panel
+	 * Reference to Panel.
 	 */
 	nodeRef?: React.RefObject<HTMLDivElement>;
+
+	/**
+	 * Callback is called every time the panel width changes.
+	 */
+
+	onPanelWidthChange: (width: number) => void;
+
+	/**
+	 * The maximum width for the panel.
+	 */
+	panelWidthMax: number;
+
+	/**
+	 * The minimum width for the panel.
+	 */
+	panelWidthMin: number;
+
+	/**
+	 * The side of the screen where the panel is located.
+	 */
+	position: Position;
 };
 
 const MAIN_MOUSE_BUTTON = 0;
 
 let keyDownCounter = 0;
 
-export function Resizer({nodeRef, ...otherProps}: Props) {
-	const {onPanelWidthChange, panelWidthMax, panelWidthMin, position} =
-		useContext(VerticalBarContext);
-
+export function PanelResizer({
+	nodeRef,
+	onPanelWidthChange,
+	panelWidthMax,
+	panelWidthMin,
+	position,
+	...otherProps
+}: Props) {
 	const positionLeft = position === 'left';
 
 	const getStartWidth = () => {
