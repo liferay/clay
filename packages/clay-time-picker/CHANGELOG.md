@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.144.1](https://github.com/liferay/clay/compare/v3.144.0...v3.144.1) (2025-08-29)
+
+### Bug Fixes
+
+-   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
