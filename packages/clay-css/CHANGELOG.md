@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.145.0](https://github.com/liferay/clay/compare/v3.144.1...v3.145.0) (2025-08-29)
+
+
+### Features
+
+* **@clayui/core:** LPD-60257 Remove sidebar header border ([848700d](https://github.com/liferay/clay/commit/848700db4412d0ffbfe4f7aa5ba585eed75a2cbc))
+
+
+
+
+
 # [3.144.0](https://github.com/liferay/clay/compare/v3.143.2...v3.144.0) (2025-08-26)
 
 

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.145.0](https://github.com/liferay/clay/compare/v3.144.1...v3.145.0) (2025-08-29)
+
+### Features
+
+-   **@clayui/core:** LPD-60257 Move usePrevious to @clayui/shared ([29c90c1](https://github.com/liferay/clay/commit/29c90c166951224c353dee2c20337a482cc7aad8))
+
 ## [3.144.1](https://github.com/liferay/clay/compare/v3.144.0...v3.144.1) (2025-08-29)
 
 ### Bug Fixes

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.145.0](https://github.com/liferay/clay/compare/v3.144.1...v3.145.0) (2025-08-29)
+
+### Bug Fixes
+
+-   **@clayui/card:** LPD-63811 Remove disabled attribute for drop down with items. ([b158624](https://github.com/liferay/clay/commit/b158624b0806ce4c6cba07d183a7ade592849161))
+-   **@clayui/core:** LPD-48310 Fix typescript errors ([5864f8e](https://github.com/liferay/clay/commit/5864f8ed2b7fa274ef0190f69953a4acd5387bc6))
+
+### Features
+
+-   **@clayui/core:** LPD-48310 Add new component for side panel with drilldown ([bf1b04f](https://github.com/liferay/clay/commit/bf1b04f083ca041c20133adc67ecf64cd2719518))
+-   **@clayui/core:** LPD-48310 Add new onBack prop to show a back button in the side panel header ([747adf6](https://github.com/liferay/clay/commit/747adf6d811b7da53b455d07a6834783b33dd444))
+-   **@clayui/core:** LPD-48310 Add stories ([06d358c](https://github.com/liferay/clay/commit/06d358c2cb5f384c11c56e9e2d9abec66d7fde1f))
+-   **@clayui/core:** LPD-48310 Add tests ([139a745](https://github.com/liferay/clay/commit/139a745edb65ae5b956fc753bb418d3113b54b9b))
+-   **@clayui/core:** LPD-48310 Add transitions ([a32de2e](https://github.com/liferay/clay/commit/a32de2ebac3613939fad8b8e461f43e7403204f5))
+-   **@clayui/core:** LPD-48310 Focus the panel when switching from one panel to another, keeping the focus when opening the side panel ([893d1d6](https://github.com/liferay/clay/commit/893d1d6131851f94429af1de629fd8c045f8f918))
+-   **@clayui/core:** LPD-60257 Move usePrevious to @clayui/shared ([29c90c1](https://github.com/liferay/clay/commit/29c90c166951224c353dee2c20337a482cc7aad8))
+-   **@clayui/core:** LPD-60257 Remove sidebar header border ([848700d](https://github.com/liferay/clay/commit/848700db4412d0ffbfe4f7aa5ba585eed75a2cbc))
+
 ## [3.144.1](https://github.com/liferay/clay/compare/v3.144.0...v3.144.1) (2025-08-29)
 
 ### Bug Fixes

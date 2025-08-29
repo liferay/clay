@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.145.0](https://github.com/liferay/clay/compare/v3.144.1...v3.145.0) (2025-08-29)
+
+### Bug Fixes
+
+-   **@clayui/card:** LPD-63811 Remove disabled attribute for drop down with items. ([b158624](https://github.com/liferay/clay/commit/b158624b0806ce4c6cba07d183a7ade592849161))
+
 ## [3.144.1](https://github.com/liferay/clay/compare/v3.144.0...v3.144.1) (2025-08-29)
 
 ### Bug Fixes
