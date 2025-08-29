@@ -4,4 +4,5 @@
  */
 
 export {SidePanel} from './SidePanel';
+export {SidePanelWithDrilldown} from './SidePanelWithDrilldown';
 export type {Props as SidePanelProps} from './SidePanel';

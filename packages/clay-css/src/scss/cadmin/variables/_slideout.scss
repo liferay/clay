@@ -95,9 +95,6 @@ $cadmin-c-slideout: map-deep-merge(
 			flex-shrink: 0,
 			position: relative,
 			width: $cadmin-c-slideout-sidebar-width,
-			sidebar-header: (
-				border-bottom-width: 1px,
-			),
 			sidebar-body: (
 				flex-grow: 1,
 				overflow: visible,

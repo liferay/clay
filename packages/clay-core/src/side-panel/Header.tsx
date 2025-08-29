@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button';
 import Icon from '@clayui/icon';
 import classnames from 'classnames';
 import React from 'react';
@@ -23,9 +24,7 @@ type Props = {
 	/**
 	 * Messages for the Side Panel Header.
 	 */
-	messages?: {
-		closeAriaLabel?: string;
-	};
+	messages?: Messages;
 
 	/**
 	 * Property to make the Header sticky. Absolutely positioned SidePanel's
@@ -33,15 +32,27 @@ type Props = {
 	 * for any fixed or sticky navigation bars on the page.
 	 */
 	sticky?: boolean;
+
+	/**
+	 * Function to execute when the back button is pressed.
+	 */
+	onBack?: () => void;
+};
+
+export type Messages = {
+	backAriaLabel?: string;
+	closeAriaLabel?: string;
 };
 
 export const Header = ({
 	children,
 	className,
 	messages = {
+		backAriaLabel: 'Go back.',
 		closeAriaLabel: 'Close the side panel.',
 	},
 	sticky,
+	onBack,
 }: Props) => {
 	const {onOpenChange} = useSidePanel();
 
@@ -56,6 +67,17 @@ export const Header = ({
 			)}
 		>
 			<div className="autofit-row">
+				{onBack ? (
+					<div className="autofit-col">
+						<ClayButtonWithIcon
+							aria-label={messages.backAriaLabel}
+							className="component-action ml-n2"
+							displayType={null}
+							onClick={onBack}
+							symbol="angle-left"
+						/>
+					</div>
+				) : null}
 				<div className="autofit-col autofit-col-expand">{children}</div>
 				<div className="autofit-col">
 					<button

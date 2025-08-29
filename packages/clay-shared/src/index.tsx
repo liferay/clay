@@ -28,6 +28,7 @@ export {useNavigation, isTypeahead, getFocusableList} from './useNavigation';
 export {useOverlayPosition} from './useOverlayPositon';
 export {useHover} from './useHover';
 export {useIsMobileDevice} from './useIsMobileDevice';
+export {usePrevious} from './usePrevious';
 export {useIsFirstRender} from './useIsFirstRender';
 export {isMac, isIPhone, isIPad, isIOS, isAppleDevice} from './platform';
 export {throttle} from './throttle';
