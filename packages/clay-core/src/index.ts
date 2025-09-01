@@ -24,6 +24,7 @@ export {Nav} from './nav';
 export {OverlayMask} from './overlay-mask';
 export {Picker, Option} from './picker';
 export {SidePanel} from './side-panel';
+export {SidePanelWithDrilldown} from './side-panel';
 export {TreeView} from './tree-view';
 export {VerticalBar} from './vertical-bar';
 export {VerticalNav} from './vertical-nav';
