@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.146.0](https://github.com/liferay/clay/compare/v3.145.0...v3.146.0) (2025-09-01)
+
+### Features
+
+-   **@clayui/core:** LPD-48310 Export the SidePanelWithDrilldown component in the clay-core module ([74ea535](https://github.com/liferay/clay/commit/74ea535f6555bd35e05bb1c035c23f1f28b70bbe))
+
 # [3.145.0](https://github.com/liferay/clay/compare/v3.144.1...v3.145.0) (2025-08-29)
 
 ### Bug Fixes
