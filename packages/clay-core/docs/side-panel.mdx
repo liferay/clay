@@ -8,6 +8,7 @@ storybookPath: 'design-system-components-sidepanel'
 packageTypes:
     [
         'clay-core/src/side-panel/SidePanel.tsx',
+        'clay-core/src/side-panel/SidePanelWithDrilldown.tsx',
         'clay-core/src/side-panel/Header.tsx',
         'clay-core/src/side-panel/Title.tsx',
         'clay-core/src/side-panel/Body.tsx',
@@ -162,3 +163,147 @@ The SidePanel is designed to use either `absolute` or `fixed` positioning.
 ```jsx
 <SidePanel position="fixed" />
 ```
+
+## Variants
+
+### Drilldown
+
+This variant provides a Drilldown in the Side Panel, allowing users to explore more detailed content without losing their navigation context. It facilitates the visualization of hierarchical or related information within the side panel.
+
+```jsx preview
+import Button from '@clayui/button';
+import {Provider, SidePanel, SidePanelWithDrilldown} from '@clayui/core';
+import React, {useRef, useState} from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	const [open, setOpen] = React.useState(true);
+	const [panelKey, setPanelKey] = useState('x1');
+
+	const ref = React.useRef();
+
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4" ref={ref} style={{minHeight: '100vh'}}>
+				<Button
+					aria-controls="sidepanel-example"
+					aria-pressed={open}
+					onClick={() => setOpen(!open)}
+				>
+					Open
+				</Button>
+				<SidePanelWithDrilldown
+					containerRef={ref}
+					id="sidepanel-example"
+					onOpenChange={setOpen}
+					onSelectedPanelKeyChange={setPanelKey}
+					open={open}
+					panels={{
+						x1: {
+							component: (
+								<SidePanel.Body>
+									<button
+										className="list-group-item list-group-item-action"
+										onClick={() => setPanelKey('x2')}
+									>
+										List Item 1
+									</button>
+									<button
+										className="list-group-item list-group-item-action"
+										onClick={() => setPanelKey('x3')}
+									>
+										List Item 2
+									</button>
+								</SidePanel.Body>
+							),
+							title: 'Drilldown Title',
+						},
+						x2: {
+							component: (
+								<SidePanel.Body>
+									This is more detailed content without losing
+									the navigation context.
+								</SidePanel.Body>
+							),
+							headerMessages: {
+								backAriaLabel: 'Back to previous panel',
+							},
+							parentKey: 'x1',
+							title: 'List Item 1 Detail',
+						},
+						x3: {
+							component: (
+								<SidePanel.Body>
+									This is more detailed content without losing
+									the navigation context.
+								</SidePanel.Body>
+							),
+							headerMessages: {
+								backAriaLabel: 'Back to previous panel',
+							},
+							parentKey: 'x1',
+							title: 'List Item 2 Detail',
+						},
+					}}
+					position="fixed"
+					selectedPanelKey={panelKey}
+				/>
+			</div>
+		</Provider>
+	);
+}
+```
+
+The Drilldown component establishes navigation by referencing panels through their keys, so each panel must have a unique `key`.
+
+```js
+const panels = {
+	of23: {
+		component: <SidePanel.Body>Drilldown Body</SidePanel.Body>,
+		title: 'Drilldown Title',
+	},
+};
+```
+
+Using the `key`, you can link a panel to its parent by setting its `parentKey` property.
+
+```js
+const panels = {
+	of23: {
+		component: (
+			<SidePanel.Body>
+				Drilldown Body
+				<button onClick={() => setPanelKey('of09')}>List Item</button>
+			</SidePanel.Body>
+		),
+		title: 'Drilldown Title',
+	},
+	of09: {
+		component: (
+			<SidePanel.Body>
+				This is more detailed content without losing the navigation
+				context.
+			</SidePanel.Body>
+		),
+		title: 'List Item Detail',
+		parentKey: 'of23',
+	},
+};
+```
+
+<div className="clay-site-alert alert alert-info">
+	<strong className="lead">Info</strong>
+	The <code className="language-text">SidePanelWithDrilldown</code> component always
+	displays a header. If a panel defines a <code className="language-text">
+		parentKey
+	</code> (i.e., it is part of a hierarchy), the header includes a back button
+	that lets users return to the parent panel.
+</div>
+
+<div className="clay-site-alert alert alert-warning">
+	An important thing to keep in mind is that the `SidePanelWithDrilldown`
+	component renders panels in the order in which they are defined. If the
+	panels are defined in the wrong order, the panel animation may not behave
+	correctly.
+</div>
