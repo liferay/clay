@@ -98,6 +98,11 @@ export type Props = {
 	id?: string;
 
 	/**
+	 * Sets a custom width on the sidebar panel.
+	 */
+	panelWidth?: number;
+
+	/**
 	 * Property to determine how the SidePanel will be positioned.
 	 */
 	position?: 'absolute' | 'fixed';
@@ -123,6 +128,7 @@ export function SidePanel({
 	externalSidePanelRef,
 	onOpenChange,
 	open: externalOpen,
+	panelWidth,
 	position = 'absolute',
 	triggerRef,
 	...otherProps
@@ -280,6 +286,7 @@ export function SidePanel({
 						!ariaLabelledby && !ariaLabel ? titleId : ariaLabelledby
 					}
 					ref={sidePanelRef}
+					style={{width: panelWidth}}
 					tabIndex={-1}
 				>
 					<SidePanelContext.Provider
