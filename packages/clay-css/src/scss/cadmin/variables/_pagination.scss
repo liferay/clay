@@ -486,6 +486,8 @@ $cadmin-pagination-results: map-deep-merge(
 	$cadmin-pagination-results
 );
 
+// @deprecated Pagination Sizes as of v3.146.0
+
 // .pagination-sm
 
 $cadmin-pagination-font-size-sm: 12px !default; // 12px
