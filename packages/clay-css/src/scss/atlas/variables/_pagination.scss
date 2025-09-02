@@ -223,12 +223,16 @@ $pagination-items-per-page-link: map-deep-merge(
 
 $pagination-results-color: $pagination-color !default;
 
-// Sizes
+// @deprecated Pagination Sizes as of v3.146.0
+
+// .pagination-sm
 
 $pagination-link-border-radius-sm: 0.3125rem !default;
 $pagination-font-size-sm: 0.75rem !default; // 12px
 $pagination-item-height-sm: 1.5rem !default; // 24px
 $pagination-padding-y-sm: 0 !default;
+
+// .pagination-lg
 
 $pagination-link-border-radius-lg: 0.3125rem !default; // 5px
 $pagination-font-size-lg: 1.125rem !default; // 18px
