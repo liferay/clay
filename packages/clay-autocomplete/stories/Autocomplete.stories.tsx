@@ -169,6 +169,10 @@ export const CustomItem = () => {
 		<div className="row">
 			<div className="col-md-5">
 				<div className="sheet">
+					<div className="alert alert-info">
+						This is an example of adding custom content to
+						`Autocomplete.Item`.
+					</div>
 					<div className="form-group">
 						<label
 							htmlFor="clay-autocomplete-2"
@@ -495,6 +499,108 @@ export const AsyncData = () => {
 								</DropDown.ItemList>
 							</ClayAutocomplete.DropDown>
 							{loading && <ClayAutocomplete.LoadingIndicator />}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export const AddNewItem = () => {
+	const [items, setItems] = useState([
+		'Things in a Medicine Cabinet',
+		'Cars',
+		'Words Ending in -S',
+		'Electronic Gadgets',
+		'Nicknames',
+		'Words Associated With Money',
+		'Things in a Grocery Store',
+		'Product Names',
+		'Dairy Products',
+		'Childrens Books',
+		'Things You See at the Zoo',
+	]);
+
+	const [items2, setItems2] = useState([
+		'Footwear',
+		'Historical Figures',
+		'Items in a Vending Machine',
+		'Reasons to Call 911',
+		"Something You're Afraid Of",
+		'Sports Played Indoors',
+		'Things You Do at Work',
+		'Things You Plug In',
+		'Things You Save Up to Buy',
+	]);
+
+	const [value2, setValue2] = useState('');
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="alert alert-info">
+						This controlled component is an example of adding
+						additional categories to the Autocomplete List.
+					</div>
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-add-new-item"
+							id="clay-autocomplete-label-add-new-item"
+						>
+							Categories (Controlled Component)
+						</label>
+						<ClayAutocomplete
+							allowsCustomValue
+							aria-labelledby="clay-autocomplete-label-add-new-item"
+							id="clay-autocomplete-add-new-item"
+							items={items}
+							onAddNewItem={(value) => {
+								if (items.indexOf(value) < 0) {
+									setItems([...items, value].sort());
+								}
+							}}
+							placeholder="Enter a category"
+						>
+							{items.map((item) => (
+								<ClayAutocomplete.Item key={item}>
+									{item}
+								</ClayAutocomplete.Item>
+							))}
+						</ClayAutocomplete>
+					</div>
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-add-new-item2"
+							id="clay-autocomplete-label-add-new-item2"
+						>
+							Categories (Uncontrolled Component)
+						</label>
+						<ClayAutocomplete
+							allowsCustomValue
+							aria-labelledby="clay-autocomplete-label-add-new-item2"
+							defaultItems={items2}
+							id="clay-autocomplete-add-new-item2"
+							messages={{
+								addCustomValue:
+									'<span class="text-primary">{0} <i>(Add New Category)</i></span>',
+								setAsHTML: true,
+							}}
+							onAddNewItem={(value) => {
+								if (items2.indexOf(value) < 0) {
+									setItems2([...items2, value].sort());
+								}
+							}}
+							onChange={setValue2}
+							placeholder="Enter a category"
+							value={value2}
+						>
+							{items2.map((item) => (
+								<ClayAutocomplete.Item key={item}>
+									{item}
+								</ClayAutocomplete.Item>
+							))}
 						</ClayAutocomplete>
 					</div>
 				</div>
