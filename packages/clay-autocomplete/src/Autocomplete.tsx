@@ -114,16 +114,23 @@ export interface IProps<T>
 	 * Messages for the Autocomplete.
 	 */
 	messages?: {
+		addCustomValue?: string;
 		listCount?: string;
 		listCountPlural?: string;
 		loading: string;
 		notFound: string;
+		setAsHTML?: boolean;
 	};
 
 	/**
 	 * Callback for when the active state changes (controlled).
 	 */
 	onActiveChange?: InternalDispatch<boolean>;
+
+	/**
+	 * Callback called when an item is added to the autocomplete list.
+	 */
+	onAddNewItem?: (val: T) => void;
 
 	/**
 	 * Callback called when input value changes (controlled).
@@ -189,10 +196,12 @@ function hasItem<T extends Item>(
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
 const defaultMessages = {
+	addCustomValue: 'Add {0}',
 	listCount: '{0} option available.',
 	listCountPlural: '{0} options available.',
 	loading: 'Loading...',
 	notFound: 'No results found',
+	setAsHTML: false,
 };
 
 function AutocompleteInner<T extends Item>(
@@ -214,6 +223,7 @@ function AutocompleteInner<T extends Item>(
 		menuTrigger = 'input',
 		messages,
 		onActiveChange,
+		onAddNewItem,
 		onChange,
 		onItemsChange,
 		onLoadMore,
@@ -227,7 +237,7 @@ function AutocompleteInner<T extends Item>(
 		...(messages ?? {}),
 	};
 
-	const [items, , isItemsUncontrolled] = useControlledState({
+	const [items, setItems, isItemsUncontrolled] = useControlledState({
 		defaultName: 'defaultItems',
 		defaultValue: defaultItems,
 		handleName: 'onItemsChange',
@@ -301,9 +311,8 @@ function AutocompleteInner<T extends Item>(
 	}, [items]);
 
 	useEffect(() => {
-		// Does not update state on first render, if the custom value is allowed
-		// or if the value is empty.
-		if (isFirst || allowsCustomValue || !value) {
+		// Does not update state on first render, if the value is empty.
+		if (isFirst || !value) {
 			return;
 		}
 
@@ -352,6 +361,8 @@ function AutocompleteInner<T extends Item>(
 		});
 	}, [debouncedLoadingChange, isItemsUncontrolled, items, filterFn]);
 
+	const [activeDescendant, setActiveDescendant] = useState<React.Key>('');
+
 	const virtualizer = useVirtual({
 		estimateSize: 37,
 		items: filteredItems,
@@ -392,6 +403,7 @@ function AutocompleteInner<T extends Item>(
 						setActive(false);
 
 						currentItemSelected.current = itemValue;
+
 						setValue(itemValue);
 
 						shouldIgnoreOpenMenuOnFocus.current = true;
@@ -405,18 +417,23 @@ function AutocompleteInner<T extends Item>(
 		items: filteredItems,
 		notFound: (
 			<DropDown.Item
-				aria-disabled="true"
-				className="disabled"
+				disabled={allowsCustomValue ? false : true}
 				roleItem="option"
 			>
-				{messages.notFound}
+				{allowsCustomValue && messages.addCustomValue ? (
+					<span
+						dangerouslySetInnerHTML={{
+							__html: sub(messages.addCustomValue, [value]),
+						}}
+					/>
+				) : (
+					messages.notFound
+				)}
 			</DropDown.Item>
 		),
 		suppressTextValueWarning: false,
 		virtualizer: items ? virtualizer : undefined,
 	});
-
-	const [activeDescendant, setActiveDescendant] = useState<React.Key>('');
 
 	useOverlayPosition(
 		{
@@ -554,6 +571,16 @@ function AutocompleteInner<T extends Item>(
 							break;
 						}
 						case Keys.Enter: {
+							if (allowsCustomValue && items && onAddNewItem) {
+								if (value !== '') {
+									if (!hasItem(items, value, filterKey) && isItemsUncontrolled) {
+										setItems([...items, value].sort());
+									}
+
+									onAddNewItem(value as T);
+								}
+							}
+
 							setActive(false);
 
 							if (active && activeDescendant) {
@@ -563,6 +590,7 @@ function AutocompleteInner<T extends Item>(
 							if (!active && event.key === Keys.Esc) {
 								setValue('');
 							}
+
 							break;
 						}
 						case Keys.Home:
@@ -607,6 +635,7 @@ function AutocompleteInner<T extends Item>(
 							}
 
 							navigationProps.onKeyDown(event);
+
 							break;
 						}
 						default:
@@ -657,6 +686,7 @@ function AutocompleteInner<T extends Item>(
 								onLoadMore={onLoadMore}
 								role="listbox"
 							>
+								{activeDescendant}
 								{debouncedLoadingChange ? (
 									<DropDown.Item
 										aria-disabled="true"
