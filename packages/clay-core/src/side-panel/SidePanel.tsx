@@ -93,6 +93,11 @@ export type Props = {
 	externalSidePanelRef?: React.RefObject<HTMLDivElement>;
 
 	/**
+	 * Property to determine whether the panel behaves in a fluid manner.
+	 */
+	fluid?: boolean;
+
+	/**
 	 * The id of the component.
 	 */
 	id?: string;
@@ -126,6 +131,7 @@ export function SidePanel({
 	direction = 'right',
 	displayType = 'light',
 	externalSidePanelRef,
+	fluid = false,
 	onOpenChange,
 	open: externalOpen,
 	panelWidth,
@@ -212,6 +218,7 @@ export function SidePanel({
 				`c-slideout c-slideout-${position} c-slideout-push`,
 				{
 					'c-slideout-end': direction === 'right',
+					'c-slideout-fluid': fluid,
 					'c-slideout-start': direction === 'left',
 				}
 			)}
@@ -286,7 +293,7 @@ export function SidePanel({
 						!ariaLabelledby && !ariaLabel ? titleId : ariaLabelledby
 					}
 					ref={sidePanelRef}
-					style={{width: panelWidth}}
+					{...(!fluid && {style: {width: panelWidth}})}
 					tabIndex={-1}
 				>
 					<SidePanelContext.Provider

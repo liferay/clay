@@ -6,6 +6,10 @@ $c-slideout-tbar-stacked-min-width: 40px !default;
 
 $c-slideout-tbar-stacked-min-width-mobile: 40px !default;
 
+$c-slideout-fluid-width-md: '50vw' !default;
+
+$c-slideout-fluid-width-xxl: '33vw' !default;
+
 // C Slideout Transitions
 
 $c-slideout-transition-in: () !default;
@@ -140,6 +144,38 @@ $c-slideout-sm-down: map-deep-merge(
 		),
 	),
 	$c-slideout-sm-down
+);
+
+$c-slideout-fluid: () !default;
+$c-slideout-fluid: map-deep-merge(
+	(
+		sidebar: (
+			width: 100vw,
+		),
+	),
+	$c-slideout-fluid
+);
+
+$c-slideout-fluid-md-up: () !default;
+$c-slideout-fluid-md-up: map-deep-merge(
+	(
+		sidebar: (
+			width: $c-slideout-fluid-width-md,
+			max-width: $c-slideout-fluid-width-md,
+		),
+	),
+	$c-slideout-fluid-md-up
+);
+
+$c-slideout-fluid-xxl-up: () !default;
+$c-slideout-fluid-xxl-up: map-deep-merge(
+	(
+		sidebar: (
+			width: $c-slideout-fluid-width-xxl,
+			max-width: $c-slideout-fluid-width-xxl,
+		),
+	),
+	$c-slideout-fluid-xxl-up
 );
 
 // C Slideout Start

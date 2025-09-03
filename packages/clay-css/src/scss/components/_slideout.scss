@@ -34,6 +34,18 @@
 	}
 }
 
+.c-slideout-fluid {
+	@include clay-slideout-variant($c-slideout-fluid);
+
+	@include media-breakpoint-up(md) {
+		@include clay-slideout-variant($c-slideout-fluid-md-up);
+	}
+
+	@include media-breakpoint-up(xxl) {
+		@include clay-slideout-variant($c-slideout-fluid-xxl-up);
+	}
+}
+
 .c-slideout-start {
 	@include clay-slideout-variant($c-slideout-start);
 
