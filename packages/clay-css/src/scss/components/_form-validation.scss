@@ -60,6 +60,10 @@
 	}
 }
 
+.form-help-text {
+	@include clay-css($form-help-text);
+}
+
 @if ($enable-bs4-deprecated) {
 	.was-validated .form-control:valid,
 	.was-validated .form-control.is-valid {
