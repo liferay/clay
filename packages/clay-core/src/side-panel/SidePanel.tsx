@@ -147,9 +147,8 @@ export function SidePanel({
 
 	const sidePanelRef = externalSidePanelRef || internalSidePanelRef;
 
+	const panelWidthMax = usePanelWidthMax(sidePanelRef);
 	const {prefersReducedMotion} = useProvider();
-
-	const panelWidthMax = window.innerWidth / 2;
 
 	const [open, setOpen] = useControlledState({
 		defaultName: 'defaultOpen',
@@ -299,7 +298,9 @@ export function SidePanel({
 					}
 					ref={sidePanelRef}
 					style={{
-						width: fluid ? resizeWidth : panelWidth,
+						width: fluid
+							? Math.min(panelWidthMax, resizeWidth)
+							: panelWidth,
 					}}
 					tabIndex={-1}
 				>
@@ -364,6 +365,30 @@ function useOffsetTop(ref: React.RefObject<HTMLElement>) {
 	}, []);
 
 	return offsetTop;
+}
+
+function usePanelWidthMax(ref: React.RefObject<HTMLElement>) {
+	const [maxWidth, setMaxWidth] = useState<number>(window.innerWidth / 2);
+
+	const handleResize = () => {
+		if (ref.current) {
+			setMaxWidth(
+				parseFloat(window.getComputedStyle(ref.current).maxWidth)
+			);
+		}
+	};
+
+	useEffect(() => {
+		handleResize();
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	return maxWidth;
 }
 
 SidePanel.Header = Header;
