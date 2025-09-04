@@ -4,7 +4,13 @@
  */
 
 import {useProvider} from '@clayui/provider';
-import {Keys, PanelResizer, useControlledState, useId} from '@clayui/shared';
+import {
+	Keys,
+	PanelResizer,
+	useControlledState,
+	useId,
+	useIsMobileDevice,
+} from '@clayui/shared';
 import classnames from 'classnames';
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
@@ -147,6 +153,7 @@ export function SidePanel({
 
 	const sidePanelRef = externalSidePanelRef || internalSidePanelRef;
 
+	const isMobile = useIsMobileDevice();
 	const panelWidthMax = usePanelWidthMax(sidePanelRef);
 	const {prefersReducedMotion} = useProvider();
 
@@ -298,9 +305,10 @@ export function SidePanel({
 					}
 					ref={sidePanelRef}
 					style={{
-						width: fluid
-							? Math.min(panelWidthMax, resizeWidth)
-							: panelWidth,
+						width:
+							!isMobile && fluid
+								? Math.min(panelWidthMax, resizeWidth)
+								: panelWidth,
 					}}
 					tabIndex={-1}
 				>
@@ -309,7 +317,7 @@ export function SidePanel({
 					>
 						{children}
 
-						{fluid && (
+						{!isMobile && fluid && (
 							<PanelResizer
 								aria-orientation="vertical"
 								aria-valuemax={panelWidthMax}
