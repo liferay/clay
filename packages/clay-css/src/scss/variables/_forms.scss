@@ -296,8 +296,19 @@ $input-label: map-deep-merge(
 		for: (
 			cursor: $input-label-for-cursor,
 		),
+		'+ .form-feedback-group': (
+			margin-bottom: 0.75rem,
+		),
 		form-text: (
 			margin-bottom: $input-label-margin-bottom,
+			margin-top: 0,
+		),
+		form-help-text: (
+			color: $secondary-l0,
+			display: inline,
+			font-size: 0.875rem,
+			font-weight: $font-weight-normal,
+			margin-left: 0.5rem,
 			margin-top: 0,
 		),
 		reference-mark: (
@@ -715,6 +726,17 @@ $form-text: map-merge(
 		),
 	),
 	$form-text
+);
+
+$form-help-text: () !default;
+$form-help-text: map-deep-merge(
+	(
+		color: $secondary,
+		display: block,
+		font-size: 0.875rem,
+		margin-top: 0.25rem,
+	),
+	$form-help-text
 );
 
 // .form-feedback-item

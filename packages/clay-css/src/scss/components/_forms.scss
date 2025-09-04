@@ -33,8 +33,24 @@ label {
 		@include clay-css(map-get($input-label, for));
 	}
 
+	$_form-feedback-group: map-get($input-label, '+ .form-feedback-group');
+
+	@if ($_form-feedback-group) {
+		+ .form-feedback-group {
+			@include clay-css($_form-feedback-group);
+		}
+	}
+
 	+ .form-text {
 		@include clay-css(map-get($input-label, form-text));
+	}
+
+	$_form-help-text: map-get($input-label, form-help-text);
+
+	@if ($_form-help-text) {
+		.form-help-text {
+			@include clay-css($_form-help-text);
+		}
 	}
 
 	.reference-mark {
