@@ -111,7 +111,7 @@ export type Props = {
 	id?: string;
 
 	/**
-	 * Sets a custom width on the sidebar panel.
+	 * Sets a custom width on the sidebar panel. The minimum width is 280px.
 	 */
 	panelWidth?: number;
 
@@ -308,7 +308,8 @@ export function SidePanel({
 						width:
 							!isMobile && fluid
 								? Math.min(panelWidthMax, resizeWidth)
-								: panelWidth,
+								: panelWidth &&
+								  Math.max(panelWidth, PANEL_WIDTH_MIN),
 					}}
 					tabIndex={-1}
 				>
