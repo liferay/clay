@@ -53,4 +53,10 @@ describe('SidePanel basic rendering', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it('render with custom width', () => {
+		const {container} = render(<SidePanelExample panelWidth={500} />);
+
+		expect(container).toMatchSnapshot();
+	});
 });
