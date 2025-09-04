@@ -4,9 +4,9 @@
  */
 
 import {useProvider} from '@clayui/provider';
-import {Keys, useControlledState, useId} from '@clayui/shared';
+import {Keys, PanelResizer, useControlledState, useId} from '@clayui/shared';
 import classnames from 'classnames';
-import React, {useEffect, useLayoutEffect, useRef} from 'react';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import {Body} from './Body';
@@ -14,6 +14,8 @@ import {Footer} from './Footer';
 import {Header} from './Header';
 import {Title} from './Title';
 import {SidePanelContext} from './context';
+
+const PANEL_WIDTH_MIN = 280;
 
 type ControlledState = {
 	open: boolean;
@@ -139,12 +141,15 @@ export function SidePanel({
 	triggerRef,
 	...otherProps
 }: Props) {
+	const [resizeWidth, setResizeWidth] = useState(window.innerWidth / 2);
 	const internalSidePanelRef = useRef<HTMLDivElement>(null);
 	const slideoutRef = useRef<HTMLDivElement>(null);
 
 	const sidePanelRef = externalSidePanelRef || internalSidePanelRef;
 
 	const {prefersReducedMotion} = useProvider();
+
+	const panelWidthMax = window.innerWidth / 2;
 
 	const [open, setOpen] = useControlledState({
 		defaultName: 'defaultOpen',
@@ -293,13 +298,30 @@ export function SidePanel({
 						!ariaLabelledby && !ariaLabel ? titleId : ariaLabelledby
 					}
 					ref={sidePanelRef}
-					{...(!fluid && {style: {width: panelWidth}})}
+					style={{
+						width: fluid ? resizeWidth : panelWidth,
+					}}
 					tabIndex={-1}
 				>
 					<SidePanelContext.Provider
 						value={{onOpenChange: setOpen, open, titleId}}
 					>
 						{children}
+
+						{fluid && (
+							<PanelResizer
+								aria-orientation="vertical"
+								aria-valuemax={panelWidthMax}
+								aria-valuemin={PANEL_WIDTH_MIN}
+								aria-valuenow={resizeWidth}
+								className="c-horizontal-resizer"
+								nodeRef={sidePanelRef}
+								onPanelWidthChange={setResizeWidth}
+								panelWidthMax={panelWidthMax}
+								panelWidthMin={PANEL_WIDTH_MIN}
+								position={direction}
+							/>
+						)}
 					</SidePanelContext.Provider>
 				</As>
 			</CSSTransition>
