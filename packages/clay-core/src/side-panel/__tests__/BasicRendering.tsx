@@ -59,4 +59,10 @@ describe('SidePanel basic rendering', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it('render with fluid width', () => {
+		const {container} = render(<SidePanelExample fluid />);
+
+		expect(container).toMatchSnapshot();
+	});
 });

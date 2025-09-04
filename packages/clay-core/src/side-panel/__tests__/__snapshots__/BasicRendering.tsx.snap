@@ -267,3 +267,70 @@ exports[`SidePanel basic rendering render with custom width 1`] = `
   </div>
 </div>
 `;
+
+exports[`SidePanel basic rendering render with fluid width 1`] = `
+<div>
+  <div
+    class="c-slideout-container"
+  >
+    <div
+      class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end c-slideout-fluid"
+    >
+      <div
+        aria-labelledby="clay-id-5"
+        class="sidebar sidebar-light"
+        id="sidepanel"
+        inert=""
+        tabindex="-1"
+      >
+        <div
+          class="sidebar-header"
+        >
+          <div
+            class="autofit-row"
+          >
+            <div
+              class="autofit-col autofit-col-expand"
+            >
+              <span
+                class="component-title"
+                id="clay-id-5"
+              >
+                Title
+              </span>
+            </div>
+            <div
+              class="autofit-col"
+            >
+              <button
+                aria-label="Close the Title side panel."
+                class="close"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times"
+                  role="presentation"
+                >
+                  <use
+                    href="icons.svg#times"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sidebar-body"
+        >
+          Body
+        </div>
+        <div
+          class="sidebar-footer"
+        >
+          Footer
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
