@@ -573,8 +573,11 @@ function AutocompleteInner<T extends Item>(
 						case Keys.Enter: {
 							if (allowsCustomValue && items && onAddNewItem) {
 								if (value !== '') {
-									if (!hasItem(items, value, filterKey) && isItemsUncontrolled) {
-										setItems([...items, value].sort());
+									if (
+										!hasItem(items, value, filterKey) &&
+										isItemsUncontrolled
+									) {
+										setItems([...items, value as T]);
 									}
 
 									onAddNewItem(value as T);
