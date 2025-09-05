@@ -40,6 +40,18 @@ describe('ClayForm', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
+	it('BlockquoteText renders', () => {
+		const testRenderer = TestRenderer.create(<ClayForm.BlockquoteText />);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('HelpText renders', () => {
+		const testRenderer = TestRenderer.create(<ClayForm.HelpText />);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
 	it('Text renders', () => {
 		const testRenderer = TestRenderer.create(<ClayForm.Text />);
 
