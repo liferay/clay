@@ -433,7 +433,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 				</AutocompleteItem>
 			);
 		},
-		[children, locator]
+		[children, locator, items, setItems]
 	);
 
 	return (
