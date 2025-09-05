@@ -32,6 +32,7 @@ The component is treated as controlled, use the [`onValueChange`](#api-onValueCh
 ```jsx preview
 import {Provider} from '@clayui/core';
 import DatePicker from '@clayui/date-picker';
+import Form from '@clayui/form';
 import React, {useState} from 'react';
 
 import '@clayui/css/lib/css/atlas.css';
@@ -42,7 +43,12 @@ export default function App() {
 	return (
 		<Provider spritemap="/public/icons.svg">
 			<div className="p-4">
+				<label htmlFor="datePickerDefault">
+					Date Picker
+					<Form.HelpText>(Not Localizable)</Form.HelpText>
+				</label>
 				<DatePicker
+					id="datePickerDefault"
 					onChange={setValue}
 					placeholder="YYYY-MM-DD"
 					value={value}
@@ -74,7 +80,9 @@ export default function App() {
 	return (
 		<Provider spritemap="/public/icons.svg">
 			<div className="p-4">
+				<label htmlFor="datePickerTime">Time</label>
 				<DatePicker
+					id="datePickerTime"
 					onChange={setValue}
 					placeholder="YYYY-MM-DD HH:mm"
 					time
@@ -117,7 +125,9 @@ export default function App() {
 	return (
 		<Provider spritemap="/public/icons.svg">
 			<div className="p-4">
+				<label htmlFor="datePickerRange">Range</label>
 				<DatePicker
+					id="datePickerRange"
 					onChange={setValue}
 					placeholder="YYYY-MM-DD - YYYY-MM-DD"
 					range
@@ -140,6 +150,7 @@ To set internationalization of the component, you need to configure the props ac
 ```jsx preview
 import {Provider} from '@clayui/core';
 import DatePicker from '@clayui/date-picker';
+import Form from '@clayui/form';
 import React, {useState} from 'react';
 
 import '@clayui/css/lib/css/atlas.css';
@@ -150,9 +161,16 @@ export default function App() {
 	return (
 		<Provider spritemap="/public/icons.svg">
 			<div className="p-4">
+				<label htmlFor="datePickerInternationalization">
+					Internationalization
+				</label>
+				<Form.FeedbackGroup>
+					<Form.HelpText>Help Text</Form.HelpText>
+				</Form.FeedbackGroup>
 				<DatePicker
 					dateFormat="dd.MM.yyyy"
 					firstDayOfWeek={1}
+					id="datePickerInternationalization"
 					months={[
 						'Январь',
 						'Февраль',
@@ -176,6 +194,9 @@ export default function App() {
 						start: 2008,
 					}}
 				/>
+				<Form.FeedbackGroup>
+					<Form.BlockquoteText>Date to localize</Form.BlockquoteText>
+				</Form.FeedbackGroup>
 			</div>
 		</Provider>
 	);
@@ -215,8 +236,10 @@ export default function App() {
 	return (
 		<Provider spritemap="/public/icons.svg">
 			<div className="p-4">
+				<label htmlFor="datePickerCustomFooter">Custom Footer</label>
 				<DatePicker
 					footerElement={() => <span>Footer Content</span>}
+					id="datePickerCustomFooter"
 					onChange={setValue}
 					placeholder="YYYY-MM-DD"
 					value={value}
