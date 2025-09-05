@@ -5,7 +5,7 @@
 
 import {createContext} from 'react';
 
-import type {InternalDispatch} from '@clayui/shared';
+import type {InternalDispatch, Position} from '@clayui/shared';
 import type {Key} from 'react';
 
 type Context = {
@@ -18,7 +18,7 @@ type Context = {
 	panelWidth: number;
 	panelWidthMax: number;
 	panelWidthMin: number;
-	position: string;
+	position: Position;
 	resize: boolean;
 	setPanelNext: React.Dispatch<React.SetStateAction<React.Key | null>>;
 };

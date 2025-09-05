@@ -7,6 +7,8 @@ import {Provider} from '@clayui/provider';
 import {cleanup, render} from '@testing-library/react';
 import React, {useRef} from 'react';
 
+import '@testing-library/jest-dom';
+
 import {SidePanel} from '../SidePanel';
 
 const SidePanelExample = (props: any) => {
@@ -52,5 +54,25 @@ describe('SidePanel basic rendering', () => {
 		);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it('render with custom width', () => {
+		const {container} = render(<SidePanelExample panelWidth={500} />);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('render with fluid width', () => {
+		const {container} = render(<SidePanelExample fluid />);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('does not allow setting a custom width less than 280px', () => {
+		render(<SidePanelExample panelWidth={100} />);
+
+		const sidebar = document.getElementById('sidepanel')!;
+
+		expect(sidebar).toHaveStyle({width: '280px'});
 	});
 });
