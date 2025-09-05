@@ -370,10 +370,18 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 				setActive(false);
 
 				if (
-					items.find(
-						(dropdownItem) =>
-							dropdownItem['value'] === item['value']
-					)
+					items.find((dropdownItem) => {
+						return (
+							getLocatorValue({
+								item: dropdownItem,
+								locator: locator.value,
+							}) ===
+							getLocatorValue({
+								item,
+								locator: locator.value,
+							})
+						);
+					})
 				) {
 					return;
 				}
