@@ -44,7 +44,13 @@ export const InputFeedback = () => (
 	<div className="sheet">
 		<ClayForm>
 			<ClayForm.Group className="has-error">
-				<label htmlFor="Feedback Input">Name</label>
+				<label htmlFor="Feedback Input">
+					Name
+					<ClayForm.HelpText>(More Help Text)</ClayForm.HelpText>
+				</label>
+				<ClayForm.FeedbackGroup>
+					<ClayForm.HelpText>Help Text</ClayForm.HelpText>
+				</ClayForm.FeedbackGroup>
 				<ClayInput
 					aria-describedby="input-group-error"
 					aria-invalid="true"

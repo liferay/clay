@@ -5,6 +5,7 @@
 
 import ClayButton from '@clayui/button';
 import ClayDropDown, {Align} from '@clayui/drop-down';
+import ClayForm from '@clayui/form';
 import React, {useRef, useState} from 'react';
 
 import ClayDatePicker, {FirstDayOfWeek} from '../src';
@@ -18,8 +19,14 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 	const [value, setValue] = useState<string>('');
 
 	return (
-		<>
-			<label>Date Picker</label>
+		<ClayForm.Group>
+			<label htmlFor="datePicker1">
+				Date Picker
+				<ClayForm.HelpText>(Not Localizable)</ClayForm.HelpText>
+			</label>
+			<ClayForm.FeedbackGroup>
+				<ClayForm.HelpText>Help Text</ClayForm.HelpText>
+			</ClayForm.FeedbackGroup>
 			<ClayDatePicker
 				{...props}
 				ariaLabels={{
@@ -37,10 +44,16 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 					selectMonth: 'Select a month',
 					selectYear: 'Select a year',
 				}}
+				id="datePicker1"
 				onChange={setValue}
 				value={value}
 			/>
-		</>
+			<ClayForm.FeedbackGroup>
+				<ClayForm.BlockquoteText>
+					Date to localize
+				</ClayForm.BlockquoteText>
+			</ClayForm.FeedbackGroup>
+		</ClayForm.Group>
 	);
 };
 
@@ -117,13 +130,22 @@ export const CustomExpand = () => {
 
 	return (
 		<>
-			<button onClick={() => setExpanded(true)}>Open Picker</button>
+			<ClayButton
+				displayType="secondary"
+				onClick={() => setExpanded(true)}
+			>
+				Open Picker
+			</ClayButton>
 
 			<br />
 			<br />
-
+			<label htmlFor="datePickerCustomExpand">
+				Date Picker
+				<ClayForm.HelpText>(Not Localizable)</ClayForm.HelpText>
+			</label>
 			<ClayDatePicker
 				expanded={expanded}
+				id="datePickerCustomExpand"
 				onChange={setValue}
 				onExpandedChange={setExpanded}
 				placeholder="YYYY-MM-DD"
