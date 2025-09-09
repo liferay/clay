@@ -5,6 +5,7 @@
 
 import ClayMultiSelect from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 global.ResizeObserver = require('resize-observer-polyfill');
@@ -44,10 +45,10 @@ const ClayMultiSelectWithState = (props: any) => {
 describe('Interactions', () => {
 	afterEach(cleanup);
 
-	xit('clicking on autocomplete item calls onItemsChange', () => {
+	it('clicking on autocomplete item calls onItemsChange', async () => {
 		const onItemsChangeFn = jest.fn();
 
-		render(
+		const {findByRole, getByRole} = render(
 			<ClayMultiSelectWithState
 				items={[items[0]]}
 				onItemsChange={onItemsChangeFn}
@@ -56,12 +57,15 @@ describe('Interactions', () => {
 			/>
 		);
 
+		const combobox = getByRole('combobox');
+
+		userEvent.click(combobox);
+
 		expect(onItemsChangeFn).not.toHaveBeenCalled();
 
-		fireEvent.click(
-			document.querySelectorAll('.dropdown-item')[0] as HTMLLIElement,
-			{}
-		);
+		const barOption = await findByRole('option', {name: 'bar'});
+
+		userEvent.click(barOption);
 
 		expect(onItemsChangeFn).toHaveBeenCalled();
 	});
