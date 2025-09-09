@@ -142,7 +142,7 @@ export function SidePanel({
 	fluid = false,
 	onOpenChange,
 	open: externalOpen,
-	panelWidth,
+	panelWidth: externalPanelWidth,
 	position = 'absolute',
 	triggerRef,
 	...otherProps
@@ -156,6 +156,8 @@ export function SidePanel({
 	const isMobile = useIsMobileDevice();
 	const panelWidthMax = usePanelWidthMax(sidePanelRef);
 	const {prefersReducedMotion} = useProvider();
+
+	const isResizable = fluid && !isMobile;
 
 	const [open, setOpen] = useControlledState({
 		defaultName: 'defaultOpen',
@@ -222,6 +224,10 @@ export function SidePanel({
 	const titleId = useId();
 
 	const offsetTop = useOffsetTop(containerRef);
+
+	const panelWidth = isResizable
+		? Math.min(panelWidthMax, resizeWidth)
+		: externalPanelWidth && Math.max(externalPanelWidth, PANEL_WIDTH_MIN);
 
 	return (
 		<div
@@ -304,13 +310,7 @@ export function SidePanel({
 						!ariaLabelledby && !ariaLabel ? titleId : ariaLabelledby
 					}
 					ref={sidePanelRef}
-					style={{
-						width:
-							!isMobile && fluid
-								? Math.min(panelWidthMax, resizeWidth)
-								: panelWidth &&
-								  Math.max(panelWidth, PANEL_WIDTH_MIN),
-					}}
+					style={panelWidth ? {width: panelWidth} : undefined}
 					tabIndex={-1}
 				>
 					<SidePanelContext.Provider
@@ -318,7 +318,7 @@ export function SidePanel({
 					>
 						{children}
 
-						{!isMobile && fluid && (
+						{isResizable && (
 							<PanelResizer
 								aria-orientation="vertical"
 								aria-valuemax={panelWidthMax}
