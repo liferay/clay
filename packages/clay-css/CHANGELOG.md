@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.147.0](https://github.com/liferay/clay/compare/v3.146.0...v3.147.0) (2025-09-09)
+
+
+### Features
+
+* **@clayui/css:** LPD-63912 Add sticker-xxl ([fbf361b](https://github.com/liferay/clay/commit/fbf361b85021b376d92b63dea6f78ff9777e10bb))
+
+
+
+
+
 # [3.145.0](https://github.com/liferay/clay/compare/v3.144.1...v3.145.0) (2025-08-29)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.147.0](https://github.com/liferay/clay/compare/v3.146.0...v3.147.0) (2025-09-09)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** Find item value based on locator ([3e4585b](https://github.com/liferay/clay/commit/3e4585b0fb462e5ba2f44e132c10882025cec847))
+-   **@clayui/multi-select:** Recalculate callback value when items change ([b0237e4](https://github.com/liferay/clay/commit/b0237e4d3d2428e66c4becfc6b616cf5798449ac))
+
+### Features
+
+-   **@clayui/multi-select:** add allowDuplicatedValues logic ([dd8bf4f](https://github.com/liferay/clay/commit/dd8bf4f5ffdb4b64882f310d1870206fabe554c4))
+
 # [3.146.0](https://github.com/liferay/clay/compare/v3.145.0...v3.146.0) (2025-09-01)
 
 **Note:** Version bump only for package @clayui/multi-select
