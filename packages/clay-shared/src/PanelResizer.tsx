@@ -10,20 +10,15 @@ export type Position = 'left' | 'right';
 
 type Props = {
 	/**
-	 * Sets the CSS className for the component.
-	 */
-	className?: string;
-
-	/**
-	 * Reference to Panel.
-	 */
-	nodeRef?: React.RefObject<HTMLDivElement>;
-
-	/**
-	 * Callback is called every time the panel width changes.
+	 * Callback is called every time the panel width changes (Controlled).
 	 */
 
 	onPanelWidthChange: (width: number) => void;
+
+	/**
+	 * Property to set the panel width (controlled).
+	 */
+	panelWidth?: number;
 
 	/**
 	 * The maximum width for the panel.
@@ -46,8 +41,8 @@ const MAIN_MOUSE_BUTTON = 0;
 let keyDownCounter = 0;
 
 export function PanelResizer({
-	nodeRef,
 	onPanelWidthChange,
+	panelWidth = 320,
 	panelWidthMax,
 	panelWidthMin,
 	position,
@@ -55,12 +50,8 @@ export function PanelResizer({
 }: Props) {
 	const positionLeft = position === 'left';
 
-	const getStartWidth = () => {
-		return nodeRef?.current?.offsetWidth || 320;
-	};
-
-	const decreasePanelWidth = (delta = 1, startWidth = getStartWidth()) => {
-		const width = Math.round(startWidth - delta);
+	const decreasePanelWidth = (delta = 1) => {
+		const width = Math.round(panelWidth - delta);
 
 		if (width > panelWidthMin - 100 && width < panelWidthMin) {
 			onPanelWidthChange(panelWidthMin);
@@ -69,8 +60,8 @@ export function PanelResizer({
 		}
 	};
 
-	const increasePanelWidth = (delta = 1, startWidth = getStartWidth()) => {
-		const width = Math.round(startWidth + delta);
+	const increasePanelWidth = (delta = 1) => {
+		const width = Math.round(panelWidth + delta);
 
 		if (width > panelWidthMax && width < panelWidthMax + 100) {
 			onPanelWidthChange(panelWidthMax);
@@ -81,6 +72,11 @@ export function PanelResizer({
 
 	return (
 		<div
+			aria-orientation="vertical"
+			aria-valuemax={panelWidthMax}
+			aria-valuemin={panelWidthMin}
+			aria-valuenow={panelWidth}
+			className="c-horizontal-resizer"
 			{...otherProps}
 			onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) => {
 				const delta = keyDownCounter > 7 ? 10 : 1;
@@ -125,7 +121,6 @@ export function PanelResizer({
 				keyDownCounter = 0;
 			}}
 			onPointerDown={(event) => {
-				const startWidth = getStartWidth();
 				const startXPos = event.pageX;
 
 				function onResizerMove(event: any) {
@@ -135,12 +130,12 @@ export function PanelResizer({
 						(event.pageX >= startXPos && positionLeft) ||
 						(event.pageX < startXPos && !positionLeft)
 					) {
-						increasePanelWidth(delta, startWidth);
+						increasePanelWidth(delta);
 					} else if (
 						(event.pageX < startXPos && positionLeft) ||
 						(event.pageX >= startXPos && !positionLeft)
 					) {
-						decreasePanelWidth(delta, startWidth);
+						decreasePanelWidth(delta);
 					}
 				}
 

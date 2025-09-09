@@ -17,13 +17,11 @@ const renderComponent = ({
 	onChange: () => void;
 	position?: Position;
 }) => {
-	const nodeRef = createNodeRef(500);
-
 	return render(
 		<PanelResizer
 			data-testid="resizer"
-			nodeRef={nodeRef}
 			onPanelWidthChange={onChange}
+			panelWidth={500}
 			panelWidthMax={600}
 			panelWidthMin={200}
 			position={position}
@@ -122,16 +120,6 @@ describe('PanelResizer', () => {
 		expect(onChange).toHaveBeenLastCalledWith(600);
 	});
 });
-
-function createNodeRef(width: number): React.RefObject<HTMLDivElement> {
-	const div = document.createElement('div');
-
-	Object.defineProperty(div, 'offsetWidth', {
-		value: width,
-	});
-
-	return {current: div};
-}
 
 function simulateMouseEvent(
 	target: Element | Document,

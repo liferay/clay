@@ -128,13 +128,8 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 				{resize && (
 					<PanelResizer
 						aria-controls={`${id}-tabpanel-${keyValue}`}
-						aria-orientation="vertical"
-						aria-valuemax={panelWidthMax}
-						aria-valuemin={panelWidthMin}
-						aria-valuenow={panelWidth}
-						className="c-horizontal-resizer"
-						nodeRef={nodeRef}
 						onPanelWidthChange={onPanelWidthChange}
+						panelWidth={panelWidth}
 						panelWidthMax={panelWidthMax}
 						panelWidthMin={panelWidthMin}
 						position={position}

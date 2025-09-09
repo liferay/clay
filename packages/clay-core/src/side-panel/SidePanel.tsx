@@ -320,13 +320,8 @@ export function SidePanel({
 
 						{isResizable && (
 							<PanelResizer
-								aria-orientation="vertical"
-								aria-valuemax={panelWidthMax}
-								aria-valuemin={PANEL_WIDTH_MIN}
-								aria-valuenow={resizeWidth}
-								className="c-horizontal-resizer"
-								nodeRef={sidePanelRef}
 								onPanelWidthChange={setResizeWidth}
+								panelWidth={panelWidth}
 								panelWidthMax={panelWidthMax}
 								panelWidthMin={PANEL_WIDTH_MIN}
 								position={direction}
