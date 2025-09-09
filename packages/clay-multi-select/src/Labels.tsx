@@ -19,6 +19,7 @@ import type {Item, LastChangeLiveRegion, Locators} from './types';
 
 interface IProps extends React.ComponentProps<typeof ClayInput> {
 	allowsCustomLabel?: boolean;
+	allowDuplicateValues?: boolean;
 	closeButtonAriaLabel: string;
 	inputName?: string;
 	labels: Array<Item>;
@@ -40,6 +41,7 @@ let counterUid = 0;
 export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 	function Labels(
 		{
+			allowDuplicateValues = true,
 			allowsCustomLabel,
 			'aria-activedescendant': activeDescendant,
 			ariaDescriptionId,
@@ -417,6 +419,7 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 									DELIMITER_KEYS.includes(key)
 								) {
 									if (
+										!allowDuplicateValues &&
 										value &&
 										labels.find(
 											(label) =>

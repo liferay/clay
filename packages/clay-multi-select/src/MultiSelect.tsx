@@ -63,6 +63,11 @@ export interface IProps<T extends Record<string, any> = Item>
 	allowsCustomLabel?: boolean;
 
 	/**
+	 * Whether the selected options may be duplicate items.
+	 */
+	allowDuplicateValues?: boolean;
+
+	/**
 	 * Flag to align the Autocomplete within the viewport.
 	 * @deprecated since v3.95.2 - it is no longer necessary...
 	 */
@@ -246,6 +251,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 	{
 		active: externalActive,
 		allowsCustomLabel = true,
+		allowDuplicateValues = true,
 		alignmentByViewport,
 		children,
 		clearAllTitle = 'Clear All',
@@ -370,10 +376,19 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 				setActive(false);
 
 				if (
-					items.find(
-						(dropdownItem) =>
-							dropdownItem['value'] === item['value']
-					)
+					!allowDuplicateValues &&
+					items.find((dropdownItem) => {
+						return (
+							getLocatorValue({
+								item: dropdownItem,
+								locator: locator.value,
+							}) ===
+							getLocatorValue({
+								item,
+								locator: locator.value,
+							})
+						);
+					})
 				) {
 					return;
 				}
@@ -425,7 +440,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 				</AutocompleteItem>
 			);
 		},
-		[children, locator]
+		[children, locator, items, setItems, allowDuplicateValues]
 	);
 
 	return (

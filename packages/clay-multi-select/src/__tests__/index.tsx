@@ -5,6 +5,7 @@
 
 import ClayMultiSelect from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 global.ResizeObserver = require('resize-observer-polyfill');
@@ -44,10 +45,10 @@ const ClayMultiSelectWithState = (props: any) => {
 describe('Interactions', () => {
 	afterEach(cleanup);
 
-	xit('clicking on autocomplete item calls onItemsChange', () => {
+	it('clicking on autocomplete item calls onItemsChange', async () => {
 		const onItemsChangeFn = jest.fn();
 
-		render(
+		const {findByRole, getByRole} = render(
 			<ClayMultiSelectWithState
 				items={[items[0]]}
 				onItemsChange={onItemsChangeFn}
@@ -56,14 +57,43 @@ describe('Interactions', () => {
 			/>
 		);
 
+		const combobox = getByRole('combobox');
+
+		userEvent.click(combobox);
+
 		expect(onItemsChangeFn).not.toHaveBeenCalled();
 
-		fireEvent.click(
-			document.querySelectorAll('.dropdown-item')[0] as HTMLLIElement,
-			{}
-		);
+		const barOption = await findByRole('option', {name: 'bar'});
+
+		userEvent.click(barOption);
 
 		expect(onItemsChangeFn).toHaveBeenCalled();
+	});
+
+	it('clicking on already selected item should not calls onItemsChange if duplicated items are not allowed', async () => {
+		const onItemsChangeFn = jest.fn();
+
+		const {findByRole, getByRole} = render(
+			<ClayMultiSelectWithState
+				allowDuplicateValues={false}
+				items={[items[0]]}
+				onItemsChange={onItemsChangeFn}
+				sourceItems={items}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		const combobox = getByRole('combobox');
+
+		userEvent.click(combobox);
+
+		expect(onItemsChangeFn).not.toHaveBeenCalled();
+
+		const fooOption = await findByRole('option', {name: 'foo'});
+
+		userEvent.click(fooOption);
+
+		expect(onItemsChangeFn).not.toHaveBeenCalled();
 	});
 
 	it('clicking the Clear All button removes items and text in the input', () => {

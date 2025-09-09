@@ -147,6 +147,77 @@ export const SourceItems = () => {
 	);
 };
 
+const locatorPropSourceItems = [
+	{
+		data: '1',
+		label: 'label',
+		name: 'one',
+		value: 'value',
+	},
+	{
+		data: '2',
+		label: 'label',
+		name: 'two',
+		value: 'value',
+	},
+	{
+		data: '3',
+		label: 'label',
+		name: 'three',
+		value: 'value',
+	},
+	{
+		data: '4',
+		label: 'label',
+		name: 'four',
+		value: 'value',
+	},
+];
+
+export const LocatorProp = () => {
+	const [value, setValue] = React.useState('');
+	const [items, setItems] = React.useState([
+		{
+			data: '1',
+			label: 'label',
+			name: 'one',
+			value: 'value',
+		},
+		{
+			data: '2',
+			label: 'label',
+			name: 'two',
+			value: 'value',
+		},
+	]);
+
+	return (
+		<>
+			<label
+				htmlFor="multiSelectLocatorProp"
+				id="multiSelectLabelLocatorProp"
+			>
+				Multi Select
+			</label>
+
+			<ClayMultiSelect
+				aria-labelledby="multi-select-label"
+				id="multiSelectLocatorProp"
+				inputName="multiSelectLocatorPropInput"
+				items={items}
+				locator={{
+					label: 'name',
+					value: 'data',
+				}}
+				onChange={setValue}
+				onItemsChange={(val) => setItems(val as any)}
+				sourceItems={locatorPropSourceItems}
+				value={value}
+			/>
+		</>
+	);
+};
+
 export const CustomMenu = () => {
 	const [items, setItems] = useState([
 		{
