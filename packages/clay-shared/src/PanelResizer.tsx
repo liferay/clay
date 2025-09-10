@@ -3,8 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Keys} from '@clayui/shared';
 import React from 'react';
+
+import {Keys} from './Keys';
 
 export type Position = 'left' | 'right';
 
