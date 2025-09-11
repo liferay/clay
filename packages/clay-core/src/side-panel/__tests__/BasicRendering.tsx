@@ -75,4 +75,37 @@ describe('SidePanel basic rendering', () => {
 
 		expect(sidebar).toHaveStyle({width: '280px'});
 	});
+
+	describe('Focus trap rendering', () => {
+		let clientWidthSpy: jest.SpyInstance;
+
+		const setClientWidth = (value: number) =>
+			jest
+				.spyOn(HTMLElement.prototype, 'clientWidth', 'get')
+				.mockReturnValue(value);
+
+		afterEach(() => {
+			clientWidthSpy.mockRestore();
+		});
+
+		it('renders focus trap on mobile devices', () => {
+			clientWidthSpy = setClientWidth(767);
+
+			render(<SidePanelExample defaultOpen />);
+
+			expect(
+				document.querySelector('[data-focus-scope-start="true"]')
+			).toBeInTheDocument();
+		});
+
+		it('does not render focus trap on non-mobile devices', () => {
+			clientWidthSpy = setClientWidth(768);
+
+			render(<SidePanelExample />);
+
+			expect(
+				document.querySelector('[data-focus-scope-start="true"]')
+			).not.toBeInTheDocument();
+		});
+	});
 });
