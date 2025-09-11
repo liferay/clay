@@ -53,7 +53,6 @@ exports[`BasicRendering renders by default 1`] = `
   <div>
     <span
       data-focus-scope-start="true"
-      tabindex="0"
     />
     <div>
       <div
@@ -826,7 +825,6 @@ exports[`BasicRendering renders by default 1`] = `
     </div>
     <span
       data-focus-scope-end="true"
-      tabindex="0"
     />
   </div>
 </body>
@@ -891,7 +889,6 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
       aria-hidden="true"
       data-aria-hidden="true"
       data-focus-scope-start="true"
-      tabindex="0"
     />
     <div>
       <div
@@ -1666,7 +1663,6 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
       aria-hidden="true"
       data-aria-hidden="true"
       data-focus-scope-end="true"
-      tabindex="0"
     />
   </div>
 </body>
@@ -1761,7 +1757,6 @@ exports[`BasicRendering renders date picker with time 1`] = `
       aria-hidden="true"
       data-aria-hidden="true"
       data-focus-scope-start="true"
-      tabindex="0"
     />
     <div>
       <div
@@ -2679,7 +2674,6 @@ exports[`BasicRendering renders date picker with time 1`] = `
       aria-hidden="true"
       data-aria-hidden="true"
       data-focus-scope-end="true"
-      tabindex="0"
     />
   </div>
 </body>
@@ -2744,7 +2738,6 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
       aria-hidden="true"
       data-aria-hidden="true"
       data-focus-scope-start="true"
-      tabindex="0"
     />
     <div>
       <div
@@ -3654,7 +3647,6 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
       aria-hidden="true"
       data-aria-hidden="true"
       data-focus-scope-end="true"
-      tabindex="0"
     />
   </div>
 </body>
