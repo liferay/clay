@@ -354,6 +354,82 @@ export const PositionFixed = () => {
 	);
 };
 
+export const FluidWidth = () => {
+	const [open, setOpen] = useState(true);
+	const sidePanelId = useId();
+
+	const ref = useRef<HTMLDivElement | null>(null);
+
+	return (
+		<div className="m-n3 min-vh-100">
+			<Toolbar className="bg-white sticky-top">
+				<Toolbar.Nav>
+					<Toolbar.Item className="ml-auto mr-2">
+						<Button
+							aria-controls={sidePanelId}
+							aria-pressed={open}
+							onClick={() => setOpen(!open)}
+						>
+							Open Right
+						</Button>
+					</Toolbar.Item>
+				</Toolbar.Nav>
+			</Toolbar>
+
+			<div className="side-panel-container vh-100" ref={ref}>
+				<div className="container-fluid">
+					<p>
+						Viennese flavour cup eu, percolator froth ristretto
+						mazagran caffeine. White roast seasonal, mocha trifecta,
+						dripper caffeine spoon acerbic to go macchiato strong.
+						Viennese flavour cup eu, percolator froth ristretto
+						mazagran caffeine. White roast seasonal, mocha trifecta,
+						dripper caffeine spoon acerbic to go macchiato strong.
+						Viennese flavour cup eu, percolator froth ristretto
+						mazagran caffeine. White roast seasonal, mocha trifecta,
+						dripper caffeine spoon acerbic to go macchiato strong.
+						Viennese flavour cup eu, percolator froth ristretto
+						mazagran caffeine. White roast seasonal, mocha trifecta,
+						dripper caffeine spoon acerbic to go macchiato strong
+					</p>
+
+					<img
+						alt="cat"
+						className="img-fluid"
+						src="https://cataas.com/cat/says/it has side panel"
+					/>
+				</div>
+
+				<SidePanel
+					containerRef={ref}
+					fluid
+					id={sidePanelId}
+					onOpenChange={setOpen}
+					open={open}
+					position="fixed"
+				>
+					<SidePanel.Header
+						messages={{
+							closeAriaLabel: 'Close the Right Panel side panel.',
+						}}
+					>
+						<SidePanel.Title>Right Panel</SidePanel.Title>
+					</SidePanel.Header>
+					<SidePanel.Body>
+						<BodyContent />
+					</SidePanel.Body>
+					<SidePanel.Footer>
+						<Button.Group spaced>
+							<Button displayType="secondary">Cancel</Button>
+							<Button>Save</Button>
+						</Button.Group>
+					</SidePanel.Footer>
+				</SidePanel>
+			</div>
+		</div>
+	);
+};
+
 export const Drilldown = () => {
 	const [open, setOpen] = useState(true);
 	const [panelKey, setPanelKey] = useState<React.Key>('x1');

@@ -4,13 +4,12 @@
  */
 
 import {useProvider} from '@clayui/provider';
-import {usePrevious} from '@clayui/shared';
+import {PanelResizer, usePrevious} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useContext, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import {ContentContext} from './Content';
-import {Resizer} from './Resizer';
 import {VerticalBarContext} from './context';
 
 function useIsFirstRender(): boolean {
@@ -48,10 +47,12 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 		activePanel,
 		id,
 		onActivePanel,
+		onPanelWidthChange,
 		panelNext,
 		panelWidth,
 		panelWidthMax,
 		panelWidthMin,
+		position,
 		resize,
 		setPanelNext,
 	} = useContext(VerticalBarContext);
@@ -125,14 +126,13 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 				{children}
 
 				{resize && (
-					<Resizer
+					<PanelResizer
 						aria-controls={`${id}-tabpanel-${keyValue}`}
-						aria-orientation="vertical"
-						aria-valuemax={panelWidthMax}
-						aria-valuemin={panelWidthMin}
-						aria-valuenow={panelWidth}
-						className="c-horizontal-resizer"
-						nodeRef={nodeRef}
+						onPanelWidthChange={onPanelWidthChange}
+						panelWidth={panelWidth}
+						panelWidthMax={panelWidthMax}
+						panelWidthMin={panelWidthMin}
+						position={position}
 					/>
 				)}
 			</div>

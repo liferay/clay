@@ -4,9 +4,15 @@
  */
 
 import {useProvider} from '@clayui/provider';
-import {Keys, useControlledState, useId} from '@clayui/shared';
+import {
+	Keys,
+	PanelResizer,
+	useControlledState,
+	useId,
+	useIsMobileDevice,
+} from '@clayui/shared';
 import classnames from 'classnames';
-import React, {useEffect, useLayoutEffect, useRef} from 'react';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import {Body} from './Body';
@@ -14,6 +20,8 @@ import {Footer} from './Footer';
 import {Header} from './Header';
 import {Title} from './Title';
 import {SidePanelContext} from './context';
+
+const PANEL_WIDTH_MIN = 280;
 
 type ControlledState = {
 	open: boolean;
@@ -93,9 +101,19 @@ export type Props = {
 	externalSidePanelRef?: React.RefObject<HTMLDivElement>;
 
 	/**
+	 * Property to determine whether the panel behaves in a fluid manner.
+	 */
+	fluid?: boolean;
+
+	/**
 	 * The id of the component.
 	 */
 	id?: string;
+
+	/**
+	 * Sets a custom width on the sidebar panel. The minimum width is 280px.
+	 */
+	panelWidth?: number;
 
 	/**
 	 * Property to determine how the SidePanel will be positioned.
@@ -121,18 +139,25 @@ export function SidePanel({
 	direction = 'right',
 	displayType = 'light',
 	externalSidePanelRef,
+	fluid = false,
 	onOpenChange,
 	open: externalOpen,
+	panelWidth: externalPanelWidth,
 	position = 'absolute',
 	triggerRef,
 	...otherProps
 }: Props) {
+	const [resizeWidth, setResizeWidth] = useState(window.innerWidth / 2);
 	const internalSidePanelRef = useRef<HTMLDivElement>(null);
 	const slideoutRef = useRef<HTMLDivElement>(null);
 
 	const sidePanelRef = externalSidePanelRef || internalSidePanelRef;
 
+	const isMobile = useIsMobileDevice();
+	const panelWidthMax = usePanelWidthMax(sidePanelRef);
 	const {prefersReducedMotion} = useProvider();
+
+	const isResizable = fluid && !isMobile;
 
 	const [open, setOpen] = useControlledState({
 		defaultName: 'defaultOpen',
@@ -200,12 +225,17 @@ export function SidePanel({
 
 	const offsetTop = useOffsetTop(containerRef);
 
+	const panelWidth = isResizable
+		? Math.min(panelWidthMax, resizeWidth)
+		: externalPanelWidth && Math.max(externalPanelWidth, PANEL_WIDTH_MIN);
+
 	return (
 		<div
 			className={classnames(
 				`c-slideout c-slideout-${position} c-slideout-push`,
 				{
 					'c-slideout-end': direction === 'right',
+					'c-slideout-fluid': fluid,
 					'c-slideout-start': direction === 'left',
 				}
 			)}
@@ -280,12 +310,23 @@ export function SidePanel({
 						!ariaLabelledby && !ariaLabel ? titleId : ariaLabelledby
 					}
 					ref={sidePanelRef}
+					style={panelWidth ? {width: panelWidth} : undefined}
 					tabIndex={-1}
 				>
 					<SidePanelContext.Provider
 						value={{onOpenChange: setOpen, open, titleId}}
 					>
 						{children}
+
+						{isResizable && (
+							<PanelResizer
+								onPanelWidthChange={setResizeWidth}
+								panelWidth={panelWidth}
+								panelWidthMax={panelWidthMax}
+								panelWidthMin={PANEL_WIDTH_MIN}
+								position={direction}
+							/>
+						)}
 					</SidePanelContext.Provider>
 				</As>
 			</CSSTransition>
@@ -328,6 +369,30 @@ function useOffsetTop(ref: React.RefObject<HTMLElement>) {
 	}, []);
 
 	return offsetTop;
+}
+
+function usePanelWidthMax(ref: React.RefObject<HTMLElement>) {
+	const [maxWidth, setMaxWidth] = useState<number>(window.innerWidth / 2);
+
+	const handleResize = () => {
+		if (ref.current) {
+			setMaxWidth(
+				parseFloat(window.getComputedStyle(ref.current).maxWidth)
+			);
+		}
+	};
+
+	useEffect(() => {
+		handleResize();
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	return maxWidth;
 }
 
 SidePanel.Header = Header;
