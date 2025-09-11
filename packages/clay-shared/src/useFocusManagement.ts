@@ -113,11 +113,7 @@ function collectDocumentFocusTargets() {
 }
 
 // https://github.com/facebook/react/pull/15849#diff-39a673d38713257d5fe7d90aac2acb5aR107
-const isFiberHostComponentFocusable = (fiber: any): boolean => {
-	if (fiber.tag !== HostComponent) {
-		return false;
-	}
-
+const isFiberFocusable = (fiber: any): boolean => {
 	const {memoizedProps, stateNode, type} = fiber;
 
 	// The element may be having an update in progress.
@@ -137,15 +133,26 @@ const isFiberHostComponentFocusable = (fiber: any): boolean => {
 	});
 };
 
-const collectFocusableElements = (node: any, focusableElements: Array<any>) => {
-	if (isFiberHostComponentFocusable(node)) {
+const isFiberFocusScopeMarker = (fiber: any): boolean => {
+	return (
+		fiber.stateNode.dataset['focusScopeEnd'] ||
+		fiber.stateNode.dataset['focusScopeStart']
+	);
+};
+
+const collectFocusTargets = (node: any, focusableElements: Array<any>) => {
+	const isFiberFocusTarget =
+		node.tag === HostComponent &&
+		(isFiberFocusable(node) || isFiberFocusScopeMarker(node));
+
+	if (isFiberFocusTarget) {
 		focusableElements.push(node.stateNode);
 	}
 
 	const child = node.child;
 
 	if (child !== null) {
-		collectFocusableElements(child, focusableElements);
+		collectFocusTargets(child, focusableElements);
 	}
 
 	const sibling = node.sibling;
@@ -153,7 +160,7 @@ const collectFocusableElements = (node: any, focusableElements: Array<any>) => {
 	if (sibling) {
 		hasSibling = true;
 
-		collectFocusableElements(sibling, focusableElements);
+		collectFocusTargets(sibling, focusableElements);
 	}
 };
 
@@ -180,7 +187,7 @@ const getFocusableElementsInScope = (fiberNode: any) => {
 	const {child} = fiberNode;
 
 	if (child !== null) {
-		collectFocusableElements(child, focusableElements);
+		collectFocusTargets(child, focusableElements);
 	}
 
 	return focusableElements;
