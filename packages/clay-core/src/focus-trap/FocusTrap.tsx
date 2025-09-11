@@ -69,23 +69,11 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 	return (
 		<FocusScope>
 			<div ref={childrenRef} style={{display: 'contents'}}>
-				{active ? (
-					<span
-						aria-hidden="true"
-						data-focus-scope-start="true"
-						tabIndex={-1}
-					/>
-				) : null}
+				{active ? <span data-focus-scope-start="true" /> : null}
 
 				{children}
 
-				{active ? (
-					<span
-						aria-hidden="true"
-						data-focus-scope-end="true"
-						tabIndex={-1}
-					/>
-				) : null}
+				{active ? <span data-focus-scope-end="true" /> : null}
 			</div>
 		</FocusScope>
 	);
