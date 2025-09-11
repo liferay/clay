@@ -25,7 +25,7 @@ export function isFocusable({
 	href?: string;
 	offsetParent?: Element | null;
 	rel?: string;
-	tabIndex?: string | number;
+	tabIndex?: number;
 	tagName?: string;
 	type?: string;
 }) {
