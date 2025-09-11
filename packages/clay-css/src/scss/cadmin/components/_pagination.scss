@@ -58,12 +58,14 @@
 	@include clay-css($cadmin-pagination-results);
 }
 
-// Pagination Sizes
+// @deprecated Pagination Sizes as of v3.146.0
 
-.pagination-sm {
-	@include clay-pagination-variant($cadmin-pagination-sm);
-}
+@if ($cadmin-enable-pagination-sizes) {
+	.pagination-sm {
+		@include clay-pagination-variant($cadmin-pagination-sm);
+	}
 
-.pagination-lg {
-	@include clay-pagination-variant($cadmin-pagination-lg);
+	.pagination-lg {
+		@include clay-pagination-variant($cadmin-pagination-lg);
+	}
 }

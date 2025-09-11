@@ -12,6 +12,7 @@ import {Item} from './Item';
 interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * The size of pagination element.
+	 * @deprecated since v3.146.0 with no replacement.
 	 */
 	size?: 'lg' | 'sm';
 }

@@ -56,12 +56,14 @@
 	@include clay-css($pagination-results);
 }
 
-// Pagination Sizes
+/// @deprecated Pagination Sizes as of v3.146.0
 
-.pagination-sm {
-	@include clay-pagination-variant($pagination-sm);
-}
+@if ($enable-pagination-sizes) {
+	.pagination-sm {
+		@include clay-pagination-variant($pagination-sm);
+	}
 
-.pagination-lg {
-	@include clay-pagination-variant($pagination-lg);
+	.pagination-lg {
+		@include clay-pagination-variant($pagination-lg);
+	}
 }
