@@ -15,6 +15,7 @@ import classnames from 'classnames';
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
+import {FocusTrap} from '../focus-trap';
 import {Body} from './Body';
 import {Footer} from './Footer';
 import {Header} from './Header';
@@ -316,7 +317,9 @@ export function SidePanel({
 					<SidePanelContext.Provider
 						value={{onOpenChange: setOpen, open, titleId}}
 					>
-						{children}
+						<FocusTrap active={isMobile && open}>
+							{children}
+						</FocusTrap>
 
 						{isResizable && (
 							<PanelResizer
