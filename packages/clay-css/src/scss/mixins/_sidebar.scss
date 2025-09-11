@@ -112,6 +112,12 @@
 			)
 		);
 
+		@each $key, $value in $base {
+			@if (type-of($value) != 'map') {
+				$map: map-remove($map, $key);
+			}
+		}
+
 		$panel: map-merge(
 			setter(map-get($map, sidebar-panel), ()),
 			setter(map-get($map, panel), ())
@@ -128,39 +134,56 @@
 			)
 		);
 
+		$map: map-remove($map, sidebar-panel, panel);
+
 		$header: map-merge(
 			setter(map-get($map, sidebar-header), ()),
 			setter(map-get($map, header), ())
 		);
+
+		$map: map-remove($map, sidebar-header, header);
 
 		$header-component-title: map-merge(
 			setter(map-get($header, component-title), ()),
 			setter(map-get($map, component-header-title), ())
 		);
 
+		$map: map-remove($map, component-title, component-header-title);
+
 		$header-component-subtitle: map-merge(
 			setter(map-get($header, component-subtitle), ()),
 			setter(map-get($map, component-header-subtitle), ())
 		);
+
+		$map: map-remove($map, component-subtitle, component-header-subtitle);
 
 		$body: map-merge(
 			setter(map-get($map, sidebar-body), ()),
 			setter(map-get($map, body), ())
 		);
 
+		$map: map-remove($map, sidebar-body, body);
+
 		$footer: map-merge(
 			setter(map-get($map, sidebar-footer), ()),
 			setter(map-get($map, footer), ())
 		);
 
+		$map: map-remove($map, sidebar-footer, footer);
+
 		$dt: map-merge(
 			setter(map-get($map, sidebar-dt), ()),
 			setter(map-get($map, dt), ())
 		);
+
+		$map: map-remove($map, sidebar-dt, dt);
+
 		$dd: map-merge(
 			setter(map-get($map, sidebar-dd), ()),
 			setter(map-get($map, dd), ())
 		);
+
+		$map: map-remove($map, sidebar-dd, dd);
 
 		$nav-nested: setter(map-get($map, nav-nested), ());
 
@@ -169,7 +192,11 @@
 			setter(map-get($map, nav-nested-link), ())
 		);
 
+		$map: map-remove($map, nav-link, nav-nested, nav-nested-link);
+
 		$sidebar-list-group: setter(map-get($map, sidebar-list-group), ());
+
+		$map: map-remove($map, sidebar-list-group);
 
 		$sidebar-list-group-item: setter(
 			map-get($sidebar-list-group, list-group-item),
@@ -199,14 +226,29 @@
 			)
 		);
 
+		$map: map-remove(
+			$map,
+			list-group-item,
+			sidebar-list-group-item-bg,
+			sidebar-list-group-item-border-color
+		);
+
 		$sidebar-list-group-title: map-merge(
 			setter(map-get($sidebar-list-group, list-group-title), ()),
 			setter(map-get($map, sidebar-list-group-title), ())
 		);
 
+		$map: map-remove($map, list-group-title, sidebar-list-group-title);
+
 		$sidebar-list-group-subtitle: map-merge(
 			setter(map-get($sidebar-list-group, list-group-subtitle), ()),
 			setter(map-get($map, sidebar-list-group-subtitle), ())
+		);
+
+		$map: map-remove(
+			$map,
+			list-group-subtitle,
+			sidebar-list-group-subtitle
 		);
 
 		$sidebar-list-group-text: map-merge(
@@ -214,19 +256,31 @@
 			setter(map-get($map, sidebar-list-group-text), ())
 		);
 
+		$map: map-remove($map, list-group-text, sidebar-list-group-text);
+
 		$sidebar-list-group-subtext: map-merge(
 			setter(map-get($sidebar-list-group, list-group-subtext), ()),
 			setter(map-get($map, sidebar-list-group-subtext), ())
 		);
+
+		$map: map-remove($map, list-group-subtext, sidebar-list-group-subtext);
 
 		$sidebar-list-group-sticker: map-deep-merge(
 			map-get($sidebar-list-group, sticker),
 			map-get($map, sidebar-list-group-sticker)
 		);
 
+		$map: map-remove($map, sticker, sidebar-list-group-sticker);
+
 		$sidebar-list-group-sticker-secondary: map-deep-merge(
 			map-get($sidebar-list-group, sticker-secondary),
 			map-get($map, sidebar-list-group-sticker-secondary)
+		);
+
+		$map: map-remove(
+			$map,
+			sticker-secondary,
+			sidebar-list-group-sticker-secondary
 		);
 
 		@if ($enabled) {
@@ -236,6 +290,7 @@
 
 			@at-root {
 				$_sidenav-start: map-get($map, sidenav-start);
+				$map: map-remove($map, sidenav-start);
 
 				@if ($_sidenav-start) {
 					#{clay-insert-before(clay-parent(&), '.sidenav-start ')},
@@ -255,6 +310,7 @@
 				}
 
 				$_sidenav-end: map-get($map, sidenav-right);
+				$map: map-remove($map, sidenav-right);
 
 				@if ($_sidenav-end) {
 					#{clay-insert-before(clay-parent(&), '.sidenav-end ')},
@@ -275,6 +331,7 @@
 			}
 
 			$_focus: map-get($map, focus);
+			$map: map-remove($map, focus);
 
 			@if ($_focus) {
 				@at-root {
@@ -287,6 +344,7 @@
 			}
 
 			$_component-link: map-get($map, component-link);
+			$map: map-remove($map, component-link);
 
 			@if ($_component-link) {
 				.component-link {
@@ -295,6 +353,7 @@
 			}
 
 			$_close: map-get($map, close);
+			$map: map-remove($map, close);
 
 			@if ($_close) {
 				.close {
@@ -427,6 +486,7 @@
 			}
 
 			$_panel-unstyled: map-get($map, panel-unstyled);
+			$map: map-remove($map, panel-unstyled);
 
 			@if ($_panel-unstyled) {
 				.panel-unstyled {
@@ -435,6 +495,7 @@
 			}
 
 			$_component-navigation-bar: map-get($map, component-navigation-bar);
+			$map: map-remove($map, component-navigation-bar);
 
 			@if ($_component-navigation-bar) {
 				.component-navigation-bar {
@@ -443,6 +504,7 @@
 			}
 
 			$_panel-group: map-get($map, panel-group);
+			$map: map-remove($map, panel-group);
 
 			@if ($_panel-group) {
 				.panel-group {
@@ -451,6 +513,7 @@
 			}
 
 			$_btn: map-get($map, btn);
+			$map: map-remove($map, btn);
 
 			@if ($_btn) {
 				.btn {
@@ -459,6 +522,7 @@
 			}
 
 			$_form-control: map-get($map, form-control);
+			$map: map-remove($map, form-control);
 
 			@if ($_form-control) {
 				.form-control {
@@ -467,6 +531,7 @@
 			}
 
 			$_form-control-select: map-get($map, form-control-select);
+			$map: map-remove($map, form-control-select);
 
 			@if ($_form-control-select) {
 				select.form-control,
@@ -476,6 +541,7 @@
 			}
 
 			$_form-control-tag-group: map-get($map, form-control-tag-group);
+			$map: map-remove($map, form-control-tag-group);
 
 			@if ($_form-control-tag-group) {
 				.form-control-tag-group {
@@ -484,6 +550,7 @@
 			}
 
 			$_input-group: map-get($map, input-group);
+			$map: map-remove($map, input-group);
 
 			@if ($_input-group) {
 				.input-group {
