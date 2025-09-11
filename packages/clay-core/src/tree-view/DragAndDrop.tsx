@@ -484,17 +484,9 @@ export function DragAndDropProvider<T>({
 
 			{state.mode === 'keyboard' ? (
 				<>
-					<span
-						aria-hidden="true"
-						data-focus-scope-start="true"
-						tabIndex={-1}
-					/>
+					<span data-focus-scope-start="true" />
 					{children}
-					<span
-						aria-hidden="true"
-						data-focus-scope-end="true"
-						tabIndex={-1}
-					/>
+					<span data-focus-scope-end="true" />
 				</>
 			) : (
 				children

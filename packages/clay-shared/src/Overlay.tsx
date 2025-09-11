@@ -222,9 +222,9 @@ export function Overlay({
 
 	return (
 		<ClayPortal className={menuClassName} subPortalRef={portalRef}>
-			{isModal && <span data-focus-scope-start="true" tabIndex={0} />}
+			{isModal && <span data-focus-scope-start="true" />}
 			{children}
-			{isModal && <span data-focus-scope-end="true" tabIndex={0} />}
+			{isModal && <span data-focus-scope-end="true" />}
 		</ClayPortal>
 	);
 }
