@@ -62,4 +62,18 @@ describe('FocusTrap incremental interactions', () => {
 
 		expect(screen.getByText('Second Button')).toHaveFocus();
 	});
+
+	it('keeps focus within trap', () => {
+		render(<Component active />);
+
+		expect(screen.getByText('First Button')).toHaveFocus();
+
+		userEvent.tab();
+
+		expect(screen.getByText('Second Button')).toHaveFocus();
+
+		userEvent.tab();
+
+		expect(screen.getByText('First Button')).toHaveFocus();
+	});
 });
