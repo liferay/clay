@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {cleanup, render} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {useRef, useState} from 'react';
 
@@ -11,79 +11,55 @@ import '@testing-library/jest-dom';
 
 import {Button, FocusTrap} from '../../';
 
+type Props = {
+	active?: boolean;
+	enableSecondButtonRef?: boolean;
+};
+
+const Component = ({
+	active: initialActive = false,
+	enableSecondButtonRef = false,
+}: Props) => {
+	const [active, setActive] = useState(initialActive);
+	const secondButtonRef = useRef<HTMLButtonElement>(null);
+
+	return (
+		<>
+			<Button onClick={() => setActive(true)}>Active Trap</Button>
+			<FocusTrap active={active} focusElementRef={secondButtonRef}>
+				<Button>First Button</Button>
+				<Button {...(enableSecondButtonRef && {ref: secondButtonRef})}>
+					Second Button
+				</Button>
+			</FocusTrap>
+		</>
+	);
+};
+
 describe('FocusTrap incremental interactions', () => {
-	afterEach(cleanup);
-
-	it('click trigger to activate the focus trap', () => {
-		function FocusTrapTrigger() {
-			const [active, setActive] = useState(false);
-
-			return (
-				<>
-					<Button
-						data-testid="activeButton"
-						onClick={() => setActive(true)}
-					>
-						Active Trap
-					</Button>
-					<FocusTrap active={active}>
-						<Button data-testid="firstButton">Button</Button>
-					</FocusTrap>
-				</>
-			);
-		}
-
-		const {container, getByTestId} = render(<FocusTrapTrigger />);
+	it('click trigger to activate the focus trap', async () => {
+		render(<Component />);
 
 		expect(
-			container.querySelector('[data-focus-scope-start="true"]')
+			document.querySelector('[data-focus-scope-start="true"]')
 		).not.toBeInTheDocument();
 
-		userEvent.click(getByTestId('activeButton'));
+		userEvent.click(screen.getByText('Active Trap'));
 
 		expect(
-			container.querySelector('[data-focus-scope-start="true"]')
+			document.querySelector('[data-focus-scope-start="true"]')
 		).toBeInTheDocument();
 	});
 
 	it('focus in the first focusable element when the focus trap is active', () => {
-		function FocusTrapTrigger() {
-			return (
-				<>
-					<FocusTrap active>
-						<Button data-testid="firstButton">Button</Button>
-						<Button>Button</Button>
-					</FocusTrap>
-				</>
-			);
-		}
+		render(<Component active />);
 
-		const {getByTestId} = render(<FocusTrapTrigger />);
-
-		expect(getByTestId('firstButton')).toHaveFocus();
+		expect(screen.getByText('First Button')).toHaveFocus();
 	});
 
 	it('focus an specific focusable element when the focus trap is active', () => {
-		function FocusTrapTrigger() {
-			const secondButtonRef = useRef(null);
+		render(<Component active enableSecondButtonRef />);
 
-			return (
-				<>
-					<FocusTrap active focusElementRef={secondButtonRef}>
-						<Button>Button</Button>
-						<Button
-							data-testid="secondButton"
-							ref={secondButtonRef}
-						>
-							Button
-						</Button>
-					</FocusTrap>
-				</>
-			);
-		}
-
-		const {getByTestId} = render(<FocusTrapTrigger />);
-
-		expect(getByTestId('secondButton')).toHaveFocus();
+		expect(screen.getByText('Second Button')).toHaveFocus();
 	});
 });
