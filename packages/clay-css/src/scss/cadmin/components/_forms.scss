@@ -43,10 +43,29 @@ label {
 		@include clay-css($for);
 	}
 
+	$_form-feedback-group: map-get(
+		$cadmin-input-label,
+		'+ .form-feedback-group'
+	);
+
+	@if ($_form-feedback-group) {
+		+ .form-feedback-group {
+			@include clay-css($_form-feedback-group);
+		}
+	}
+
 	+ .form-text {
 		$form-text: setter(map-get($cadmin-input-label, form-text), ());
 
 		@include clay-css($form-text);
+	}
+
+	$_form-help-text: map-get($cadmin-input-label, form-help-text);
+
+	@if ($_form-help-text) {
+		.form-help-text {
+			@include clay-css($_form-help-text);
+		}
 	}
 
 	.reference-mark {

@@ -25,14 +25,68 @@ export default function App() {
 				<Form>
 					<Form.Group className="form-group-sm">
 						<label htmlFor="basicInput">Name</label>
-						<ClayInput placeholder="Name" type="text"></ClayInput>
+						<ClayInput
+							id="basicInput"
+							placeholder="Name"
+							type="text"
+						/>
 					</Form.Group>
 					<Form.Group className="form-group-sm">
-						<label htmlFor="basicInput">Description</label>
+						<label htmlFor="basicInputDescription">
+							Description
+						</label>
 						<textarea
 							className="form-control"
+							id="basicInputDescription"
 							placeholder="Description"
-						></textarea>
+						/>
+					</Form.Group>
+				</Form>
+			</div>
+		</Provider>
+	);
+}
+```
+
+## Help Texts
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Form, {ClayInput} from '@clayui/form';
+import React, {useState} from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Form>
+					<Form.Group>
+						<label htmlFor="helpTextName">
+							Name
+							<Form.HelpText>
+								Please type your name in the input below.
+							</Form.HelpText>
+						</label>
+						<Form.FeedbackGroup>
+							<Form.HelpText>
+								Please type your name in the input below.
+							</Form.HelpText>
+						</Form.FeedbackGroup>
+						<ClayInput
+							id="helpTextName"
+							placeholder="Name"
+							type="text"
+						/>
+						<Form.FeedbackGroup>
+							<Form.HelpText>
+								Please type your name in the input above.
+							</Form.HelpText>
+							<Form.BlockquoteText>
+								Please type your name in the input above.
+							</Form.BlockquoteText>
+						</Form.FeedbackGroup>
 					</Form.Group>
 				</Form>
 			</div>
@@ -62,8 +116,12 @@ export default function App() {
 			<div className="p-4">
 				<Form>
 					<Form.Group className="has-success">
-						<label htmlFor="basicInput">Name</label>
-						<ClayInput placeholder="Name" type="text"></ClayInput>
+						<label htmlFor="basicInputValidationName">Name</label>
+						<ClayInput
+							id="basicInputValidationName"
+							placeholder="Name"
+							type="text"
+						/>
 						<Form.FeedbackGroup>
 							<Form.FeedbackItem>
 								This is a form-feedback-item.
@@ -76,11 +134,14 @@ export default function App() {
 						</Form.FeedbackGroup>
 					</Form.Group>
 					<Form.Group className="has-warning">
-						<label htmlFor="basicInput">Description</label>
+						<label htmlFor="basicInputValidationDescription">
+							Description
+						</label>
 						<textarea
 							className="form-control"
+							id="basicInputValidationDescription"
 							placeholder="Description"
-						></textarea>
+						/>
 						<Form.FeedbackGroup>
 							<Form.FeedbackItem>
 								This is a form-feedback-item.
@@ -93,11 +154,14 @@ export default function App() {
 						</Form.FeedbackGroup>
 					</Form.Group>
 					<Form.Group className="has-error">
-						<label htmlFor="basicInput">Password</label>
+						<label htmlFor="basicInputValidationPassword">
+							Password
+						</label>
 						<ClayInput
+							id="basicInputValidationPassword"
 							placeholder="Name"
 							type="password"
-						></ClayInput>
+						/>
 						<Form.FeedbackGroup>
 							<Form.FeedbackItem>
 								This is a form-feedback-item.
@@ -194,8 +258,12 @@ export default function App() {
 			<div className="p-4">
 				<Form>
 					<Form.Group className="has-success">
-						<label htmlFor="basicInput">Name</label>
-						<ClayInput placeholder="Name" type="text"></ClayInput>
+						<label htmlFor="groupCaptionName">Name</label>
+						<ClayInput
+							id="groupCaptionName"
+							placeholder="Name"
+							type="text"
+						/>
 						<Form.FeedbackGroup>
 							<Form.FeedbackItem>
 								This is a form-feedback-item.

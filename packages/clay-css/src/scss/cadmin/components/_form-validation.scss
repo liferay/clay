@@ -38,6 +38,10 @@
 	}
 }
 
+.form-help-text {
+	@include clay-css($cadmin-form-help-text);
+}
+
 // Non HTML5 Form Validator
 
 .has-error {
