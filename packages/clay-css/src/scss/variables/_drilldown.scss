@@ -14,7 +14,6 @@ $drilldown-inner: map-merge(
 	(
 		display: flex,
 		flex-grow: 1,
-		overflow: hidden,
 		transition: $drilldown-inner-transition,
 	),
 	$drilldown-inner
@@ -59,6 +58,7 @@ $drilldown-dropdown-menu-drilldown-inner: () !default;
 $drilldown-dropdown-menu-drilldown-inner: map-merge(
 	(
 		min-height: 266px,
+		overflow: hidden,
 	),
 	$drilldown-dropdown-menu-drilldown-inner
 );
