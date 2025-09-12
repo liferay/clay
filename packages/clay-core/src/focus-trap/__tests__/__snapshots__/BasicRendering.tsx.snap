@@ -7,9 +7,7 @@ exports[`FocusTrap basic rendering render static content when focus trap is acti
       style="display: contents;"
     >
       <span
-        aria-hidden="true"
         data-focus-scope-start="true"
-        tabindex="-1"
       />
       <button
         class="btn btn-primary"
@@ -18,9 +16,7 @@ exports[`FocusTrap basic rendering render static content when focus trap is acti
         Apple
       </button>
       <span
-        aria-hidden="true"
         data-focus-scope-end="true"
-        tabindex="-1"
       />
     </div>
   </div>

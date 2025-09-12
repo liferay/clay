@@ -25,7 +25,7 @@ export function isFocusable({
 	href?: string;
 	offsetParent?: Element | null;
 	rel?: string;
-	tabIndex?: string | number;
+	tabIndex?: number;
 	tagName?: string;
 	type?: string;
 }) {
@@ -71,6 +71,11 @@ export function isFocusable({
 	);
 }
 
+const FOCUS_SCOPE_MARKERS = [
+	'span[data-focus-scope-end="true"]',
+	'span[data-focus-scope-start="true"]',
+];
+
 export const FOCUSABLE_ELEMENTS = [
 	'a[href]',
 	'[contenteditable]',
@@ -89,11 +94,17 @@ export const FOCUSABLE_ELEMENTS = [
 // component's current fiber or the fiber in progress.
 let hasSibling = false;
 
-function collectDocumentFocusableElements() {
+function collectDocumentFocusTargets() {
+	const focusTargets = [...FOCUSABLE_ELEMENTS, ...FOCUS_SCOPE_MARKERS];
+
 	return Array.from<HTMLElement>(
-		document.querySelectorAll(FOCUSABLE_ELEMENTS.join(','))
+		document.querySelectorAll(focusTargets.join(','))
 	).filter((element) => {
-		if (isFocusable(element)) {
+		const isFocusScopeMarker =
+			element.dataset['focusScopeEnd'] ||
+			element.dataset['focusScopeStart'];
+
+		if (isFocusable(element) || isFocusScopeMarker) {
 			return window.getComputedStyle(element).visibility !== 'hidden';
 		}
 
@@ -102,11 +113,7 @@ function collectDocumentFocusableElements() {
 }
 
 // https://github.com/facebook/react/pull/15849#diff-39a673d38713257d5fe7d90aac2acb5aR107
-const isFiberHostComponentFocusable = (fiber: any): boolean => {
-	if (fiber.tag !== HostComponent) {
-		return false;
-	}
-
+const isFiberFocusable = (fiber: any): boolean => {
 	const {memoizedProps, stateNode, type} = fiber;
 
 	// The element may be having an update in progress.
@@ -126,15 +133,26 @@ const isFiberHostComponentFocusable = (fiber: any): boolean => {
 	});
 };
 
-const collectFocusableElements = (node: any, focusableElements: Array<any>) => {
-	if (isFiberHostComponentFocusable(node)) {
-		focusableElements.push(node.stateNode);
+const isFiberFocusScopeMarker = (fiber: any): boolean => {
+	return (
+		fiber.stateNode.dataset['focusScopeEnd'] ||
+		fiber.stateNode.dataset['focusScopeStart']
+	);
+};
+
+const collectFocusTargets = (node: any, focusTargets: Array<any>) => {
+	const isFiberFocusTarget =
+		node.tag === HostComponent &&
+		(isFiberFocusable(node) || isFiberFocusScopeMarker(node));
+
+	if (isFiberFocusTarget) {
+		focusTargets.push(node.stateNode);
 	}
 
 	const child = node.child;
 
 	if (child !== null) {
-		collectFocusableElements(child, focusableElements);
+		collectFocusTargets(child, focusTargets);
 	}
 
 	const sibling = node.sibling;
@@ -142,7 +160,7 @@ const collectFocusableElements = (node: any, focusableElements: Array<any>) => {
 	if (sibling) {
 		hasSibling = true;
 
-		collectFocusableElements(sibling, focusableElements);
+		collectFocusTargets(sibling, focusTargets);
 	}
 };
 
@@ -164,15 +182,15 @@ const getFiber = (scope: React.RefObject<HTMLElement | null>) => {
 	return null;
 };
 
-const getFocusableElementsInScope = (fiberNode: any) => {
-	const focusableElements: Array<any> = [];
+const getFocusTargetsInScope = (fiberNode: any) => {
+	const focusTargets: Array<any> = [];
 	const {child} = fiberNode;
 
 	if (child !== null) {
-		collectFocusableElements(child, focusableElements);
+		collectFocusTargets(child, focusTargets);
 	}
 
-	return focusableElements;
+	return focusTargets;
 };
 
 export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
@@ -184,21 +202,21 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		backwards: boolean = false,
 		persistOnScope: boolean = false
 	) => {
-		let fiberFocusElements = getFocusableElementsInScope(
+		let fiberFocusTargets = getFocusTargetsInScope(
 			scope.alternate ?? scope
 		);
 
 		// When browsing the alternate/in progress fiber if don't find sibling
 		// elements that might correspond to a React.Portal try searching for
-		// focusable elements using the current fiber.
+		// focus targets using the current fiber.
 		if (!hasSibling) {
-			fiberFocusElements = getFocusableElementsInScope(scope);
+			fiberFocusTargets = getFocusTargetsInScope(scope);
 		} else {
 			// Just resets the value for the next focus iteration.
 			hasSibling = false;
 		}
 
-		if (fiberFocusElements.length === 0) {
+		if (fiberFocusTargets.length === 0) {
 			return null;
 		}
 
@@ -208,21 +226,21 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 			return;
 		}
 
-		const docFocusElements = collectDocumentFocusableElements();
+		const docFocusTargets = collectDocumentFocusTargets();
 
-		const docPosition = docFocusElements.indexOf(activeElement);
-		const reactFiberPosition = fiberFocusElements.indexOf(activeElement);
+		const docPosition = docFocusTargets.indexOf(activeElement);
+		const reactFiberPosition = fiberFocusTargets.indexOf(activeElement);
 
-		const startFocusTrap = fiberFocusElements.find(
+		const startFocusTrap = fiberFocusTargets.find(
 			(element) =>
 				element.getAttribute('data-focus-scope-start') === 'true'
 		);
-		const endFocusTrap = fiberFocusElements.find(
+		const endFocusTrap = fiberFocusTargets.find(
 			(element) => element.getAttribute('data-focus-scope-end') === 'true'
 		);
 
-		const nextFocusInDoc = docFocusElements[docPosition + 1];
-		const prevFocusInDoc = docFocusElements[docPosition - 1];
+		const nextFocusInDoc = docFocusTargets[docPosition + 1];
+		const prevFocusInDoc = docFocusTargets[docPosition - 1];
 
 		// Ignore when the active element is not in the scope.
 		if (
@@ -235,8 +253,8 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 			return null;
 		}
 
-		let nextFocusInFiber = fiberFocusElements[reactFiberPosition + 1];
-		let prevFocusInFiber = fiberFocusElements[reactFiberPosition - 1];
+		let nextFocusInFiber = fiberFocusTargets[reactFiberPosition + 1];
+		let prevFocusInFiber = fiberFocusTargets[reactFiberPosition - 1];
 
 		// If the focus is moving within the focus trap, let the browser handle
 		// navigation and focus order.
@@ -252,7 +270,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		// Checks if the focus has reached the end of the scope and should
 		// go back to the beginning.
 		if (endFocusTrap && endFocusTrap === nextFocusInDoc) {
-			nextFocusInFiber = docFocusElements.find(
+			nextFocusInFiber = docFocusTargets.find(
 				(_, index, array) => array[index - 1] === startFocusTrap
 			);
 		}
@@ -260,7 +278,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		// Checks if the focus has arrived at the beginning of the scope and is
 		// returning moves the focus to the end of the scope.
 		if (startFocusTrap && startFocusTrap === prevFocusInDoc) {
-			prevFocusInFiber = docFocusElements.find(
+			prevFocusInFiber = docFocusTargets.find(
 				(_, index, array) => array[index + 1] === endFocusTrap
 			);
 		}
@@ -276,7 +294,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		// If these two nodes are not equal, that means React is likely using
 		// a portal to render the node in a different part of the DOM. When
 		// this happens, we want to track where the next node is in case we
-		// reach the end of the list of focusable nodes.
+		// reach the end of the list of focus targets.
 		if (nextFocusInFiber !== nextFocusInDoc) {
 			nextFocusInDocRef.current = nextFocusInDoc!;
 		}
@@ -302,7 +320,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		// render nodes whereever it would like in the document.
 		//
 		// If there is no `nextActive`, that means we are either at the beginning or end of the
-		// list of focusable elements in the React Tree. So we go back to the flow of the
+		// list of focus targets in the React Tree. So we go back to the flow of the
 		// document instead of the flow of the React Tree.
 		if (!nextActive) {
 			nextActive = backwards

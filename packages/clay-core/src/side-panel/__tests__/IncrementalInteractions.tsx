@@ -13,6 +13,19 @@ import '@testing-library/jest-dom';
 
 import {SidePanel} from '../SidePanel';
 
+// FocusTrap is mocked in this test because JSDOM does not fully simulate
+// browser focus behavior. In a real browser, closing the panel would
+// unmount the trap and restore focus to the trigger element. Mocking
+// FocusTrap prevents false negatives in tests caused by JSDOM's limitations.
+
+jest.mock('../../focus-trap/FocusTrap', () => {
+	const MockFocusTrap = ({children}: any) => <>{children}</>;
+
+	return {
+		FocusTrap: MockFocusTrap,
+	};
+});
+
 function Example({defaultOpen = false}: {defaultOpen?: boolean}) {
 	const [open, setOpen] = useState(defaultOpen);
 

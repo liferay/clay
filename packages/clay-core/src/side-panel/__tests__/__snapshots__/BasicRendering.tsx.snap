@@ -16,50 +16,54 @@ exports[`SidePanel basic rendering render basic content 1`] = `
         tabindex="-1"
       >
         <div
-          class="sidebar-header"
+          style="display: contents;"
         >
           <div
-            class="autofit-row"
+            class="sidebar-header"
           >
             <div
-              class="autofit-col autofit-col-expand"
+              class="autofit-row"
             >
-              <span
-                class="component-title"
-                id="clay-id-1"
+              <div
+                class="autofit-col autofit-col-expand"
               >
-                Title
-              </span>
-            </div>
-            <div
-              class="autofit-col"
-            >
-              <button
-                aria-label="Close the Title side panel."
-                class="close"
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-times"
-                  role="presentation"
+                <span
+                  class="component-title"
+                  id="clay-id-1"
                 >
-                  <use
-                    href="icons.svg#times"
-                  />
-                </svg>
-              </button>
+                  Title
+                </span>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-label="Close the Title side panel."
+                  class="close"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times"
+                    role="presentation"
+                  >
+                    <use
+                      href="icons.svg#times"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="sidebar-body"
-        >
-          Body
-        </div>
-        <div
-          class="sidebar-footer"
-        >
-          Footer
+          <div
+            class="sidebar-body"
+          >
+            Body
+          </div>
+          <div
+            class="sidebar-footer"
+          >
+            Footer
+          </div>
         </div>
       </div>
     </div>
@@ -82,50 +86,60 @@ exports[`SidePanel basic rendering render component with open state 1`] = `
         tabindex="-1"
       >
         <div
-          class="sidebar-header"
+          style="display: contents;"
         >
+          <span
+            data-focus-scope-start="true"
+          />
           <div
-            class="autofit-row"
+            class="sidebar-header"
           >
             <div
-              class="autofit-col autofit-col-expand"
+              class="autofit-row"
             >
-              <span
-                class="component-title"
-                id="clay-id-2"
+              <div
+                class="autofit-col autofit-col-expand"
               >
-                Title
-              </span>
-            </div>
-            <div
-              class="autofit-col"
-            >
-              <button
-                aria-label="Close the Title side panel."
-                class="close"
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-times"
-                  role="presentation"
+                <span
+                  class="component-title"
+                  id="clay-id-2"
                 >
-                  <use
-                    href="icons.svg#times"
-                  />
-                </svg>
-              </button>
+                  Title
+                </span>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-label="Close the Title side panel."
+                  class="close"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times"
+                    role="presentation"
+                  >
+                    <use
+                      href="icons.svg#times"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="sidebar-body"
-        >
-          Body
-        </div>
-        <div
-          class="sidebar-footer"
-        >
-          Footer
+          <div
+            class="sidebar-body"
+          >
+            Body
+          </div>
+          <div
+            class="sidebar-footer"
+          >
+            Footer
+          </div>
+          <span
+            data-focus-scope-end="true"
+          />
         </div>
       </div>
     </div>
@@ -149,50 +163,54 @@ exports[`SidePanel basic rendering render with custom aria-label 1`] = `
         tabindex="-1"
       >
         <div
-          class="sidebar-header"
+          style="display: contents;"
         >
           <div
-            class="autofit-row"
+            class="sidebar-header"
           >
             <div
-              class="autofit-col autofit-col-expand"
+              class="autofit-row"
             >
-              <span
-                class="component-title"
-                id="clay-id-3"
+              <div
+                class="autofit-col autofit-col-expand"
               >
-                Title
-              </span>
-            </div>
-            <div
-              class="autofit-col"
-            >
-              <button
-                aria-label="Close the Title side panel."
-                class="close"
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-times"
-                  role="presentation"
+                <span
+                  class="component-title"
+                  id="clay-id-3"
                 >
-                  <use
-                    href="icons.svg#times"
-                  />
-                </svg>
-              </button>
+                  Title
+                </span>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-label="Close the Title side panel."
+                  class="close"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times"
+                    role="presentation"
+                  >
+                    <use
+                      href="icons.svg#times"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="sidebar-body"
-        >
-          Body
-        </div>
-        <div
-          class="sidebar-footer"
-        >
-          Footer
+          <div
+            class="sidebar-body"
+          >
+            Body
+          </div>
+          <div
+            class="sidebar-footer"
+          >
+            Footer
+          </div>
         </div>
       </div>
     </div>
@@ -217,50 +235,54 @@ exports[`SidePanel basic rendering render with custom width 1`] = `
         tabindex="-1"
       >
         <div
-          class="sidebar-header"
+          style="display: contents;"
         >
           <div
-            class="autofit-row"
+            class="sidebar-header"
           >
             <div
-              class="autofit-col autofit-col-expand"
+              class="autofit-row"
             >
-              <span
-                class="component-title"
-                id="clay-id-4"
+              <div
+                class="autofit-col autofit-col-expand"
               >
-                Title
-              </span>
-            </div>
-            <div
-              class="autofit-col"
-            >
-              <button
-                aria-label="Close the Title side panel."
-                class="close"
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-times"
-                  role="presentation"
+                <span
+                  class="component-title"
+                  id="clay-id-4"
                 >
-                  <use
-                    href="icons.svg#times"
-                  />
-                </svg>
-              </button>
+                  Title
+                </span>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-label="Close the Title side panel."
+                  class="close"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times"
+                    role="presentation"
+                  >
+                    <use
+                      href="icons.svg#times"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="sidebar-body"
-        >
-          Body
-        </div>
-        <div
-          class="sidebar-footer"
-        >
-          Footer
+          <div
+            class="sidebar-body"
+          >
+            Body
+          </div>
+          <div
+            class="sidebar-footer"
+          >
+            Footer
+          </div>
         </div>
       </div>
     </div>
@@ -284,50 +306,54 @@ exports[`SidePanel basic rendering render with fluid width 1`] = `
         tabindex="-1"
       >
         <div
-          class="sidebar-header"
+          style="display: contents;"
         >
           <div
-            class="autofit-row"
+            class="sidebar-header"
           >
             <div
-              class="autofit-col autofit-col-expand"
+              class="autofit-row"
             >
-              <span
-                class="component-title"
-                id="clay-id-5"
+              <div
+                class="autofit-col autofit-col-expand"
               >
-                Title
-              </span>
-            </div>
-            <div
-              class="autofit-col"
-            >
-              <button
-                aria-label="Close the Title side panel."
-                class="close"
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-times"
-                  role="presentation"
+                <span
+                  class="component-title"
+                  id="clay-id-5"
                 >
-                  <use
-                    href="icons.svg#times"
-                  />
-                </svg>
-              </button>
+                  Title
+                </span>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-label="Close the Title side panel."
+                  class="close"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times"
+                    role="presentation"
+                  >
+                    <use
+                      href="icons.svg#times"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="sidebar-body"
-        >
-          Body
-        </div>
-        <div
-          class="sidebar-footer"
-        >
-          Footer
+          <div
+            class="sidebar-body"
+          >
+            Body
+          </div>
+          <div
+            class="sidebar-footer"
+          >
+            Footer
+          </div>
         </div>
       </div>
     </div>
