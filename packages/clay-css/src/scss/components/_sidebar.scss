@@ -19,6 +19,12 @@
 
 	@include clay-css($sidebar-header);
 
+	&.sticky-top {
+		@media (max-height: 700px) {
+			position: static;
+		}
+	}
+
 	.component-title {
 		@include clay-text-typography(
 			map-get($sidebar-header, component-title)
@@ -58,6 +64,12 @@
 
 .sidebar-footer {
 	@include clay-css(map-get($sidebar, sidebar-footer));
+
+	&.sticky-bottom {
+		@media (max-height: 700px) {
+			position: static;
+		}
+	}
 }
 
 // Sidebar Body
