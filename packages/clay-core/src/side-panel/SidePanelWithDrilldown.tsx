@@ -33,7 +33,7 @@ export type Props = {
 
 type Panel = {
 	component: React.ReactNode;
-	headerMessages?: Messages;
+	headerProps?: {className?: string; messages?: Messages; sticky?: boolean};
 	parentKey?: string;
 	title: string;
 };
@@ -93,7 +93,7 @@ export function SidePanelWithDrilldown({
 						>
 							<div className="drilldown-item-inner">
 								<SidePanel.Header
-									messages={panel.headerMessages}
+									{...panel.headerProps}
 									{...(parentPanelKey && {
 										onBack: () =>
 											onSelectedPanelKeyChange(
