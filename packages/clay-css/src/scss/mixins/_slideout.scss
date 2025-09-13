@@ -25,6 +25,22 @@
 				@include clay-css($map);
 			}
 
+			$_c-slideout-push-start: map-get($map, '&.c-slideout-push-start');
+
+			@if ($_c-slideout-push-start) {
+				&.c-slideout-push-start {
+					@include clay-css($_c-slideout-push-start);
+				}
+			}
+
+			$_c-slideout-push-end: map-get($map, '&.c-slideout-push-end');
+
+			@if ($_c-slideout-push-end) {
+				&.c-slideout-push-end {
+					@include clay-css($_c-slideout-push-end);
+				}
+			}
+
 			$_c-slideout-shown: map-get($map, c-slideout-shown);
 
 			@if ($_c-slideout-shown) {

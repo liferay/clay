@@ -6,9 +6,9 @@ $c-slideout-tbar-stacked-min-width: 40px !default;
 
 $c-slideout-tbar-stacked-min-width-mobile: 40px !default;
 
-$c-slideout-fluid-width-md: '50vw' !default;
+$c-slideout-fluid-sidebar-width-md: '50vw' !default;
 
-$c-slideout-fluid-width-xxl: '33vw' !default;
+$c-slideout-fluid-sidebar-width: '33vw' !default;
 
 // C Slideout Transitions
 
@@ -149,33 +149,44 @@ $c-slideout-sm-down: map-deep-merge(
 $c-slideout-fluid: () !default;
 $c-slideout-fluid: map-deep-merge(
 	(
+		'&.c-slideout-push-start': (
+			padding-left: $c-slideout-fluid-sidebar-width,
+		),
+		'&.c-slideout-push-end': (
+			padding-right: $c-slideout-fluid-sidebar-width,
+		),
 		sidebar: (
-			width: 100vw,
+			max-width: $c-slideout-fluid-sidebar-width,
+			width: $c-slideout-fluid-sidebar-width,
+		),
+		media-breakpoint-down: (
+			md: (
+				'&.c-slideout-push-start': (
+					padding-left: $c-slideout-fluid-sidebar-width-md,
+				),
+				'&.c-slideout-push-end': (
+					padding-right: $c-slideout-fluid-sidebar-width-md,
+				),
+				sidebar: (
+					max-width: $c-slideout-fluid-sidebar-width-md,
+					width: $c-slideout-fluid-sidebar-width-md,
+				),
+			),
+			sm: (
+				'&.c-slideout-push-start': (
+					padding-left: 0,
+				),
+				'&.c-slideout-push-end': (
+					padding-right: 0,
+				),
+				sidebar: (
+					max-width: none,
+					width: 100vw,
+				),
+			),
 		),
 	),
 	$c-slideout-fluid
-);
-
-$c-slideout-fluid-md-up: () !default;
-$c-slideout-fluid-md-up: map-deep-merge(
-	(
-		sidebar: (
-			width: $c-slideout-fluid-width-md,
-			max-width: $c-slideout-fluid-width-md,
-		),
-	),
-	$c-slideout-fluid-md-up
-);
-
-$c-slideout-fluid-xxl-up: () !default;
-$c-slideout-fluid-xxl-up: map-deep-merge(
-	(
-		sidebar: (
-			width: $c-slideout-fluid-width-xxl,
-			max-width: $c-slideout-fluid-width-xxl,
-		),
-	),
-	$c-slideout-fluid-xxl-up
 );
 
 // C Slideout Start
