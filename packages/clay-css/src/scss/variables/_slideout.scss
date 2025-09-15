@@ -83,6 +83,16 @@ $c-slideout-push-end: map-deep-merge(
 	$c-slideout-push-end
 );
 
+$c-slideout-sm-down: () !default;
+$c-slideout-sm-down: map-deep-merge(
+	(
+		sidebar: (
+			width: $c-slideout-sidebar-width-mobile,
+		),
+	),
+	$c-slideout-sm-down
+);
+
 // C Slideout Base
 
 $c-slideout: () !default;
@@ -105,6 +115,16 @@ $c-slideout: map-deep-merge(
 			),
 			sidebar-footer: (
 				border-top-width: 1px,
+			),
+			'@supports (position: sticky)': (
+				'@media (max-height: 700px)': (
+					'.sidebar-header.sticky-top': (
+						position: static,
+					),
+					'.sidebar-footer.sticky-bottom': (
+						position: static,
+					),
+				),
 			),
 		),
 		sidebar-c-slideout-show: (
@@ -132,18 +152,11 @@ $c-slideout: map-deep-merge(
 		tbar-stacked-c-slideout-transition: (
 			display: flex,
 		),
-	),
-	$c-slideout
-);
-
-$c-slideout-sm-down: () !default;
-$c-slideout-sm-down: map-deep-merge(
-	(
-		sidebar: (
-			width: $c-slideout-sidebar-width-mobile,
+		media-breakpoint-down: (
+			sm: $c-slideout-sm-down,
 		),
 	),
-	$c-slideout-sm-down
+	$c-slideout
 );
 
 $c-slideout-fluid: () !default;
@@ -191,6 +204,24 @@ $c-slideout-fluid: map-deep-merge(
 
 // C Slideout Start
 
+$c-slideout-start-sm-down: () !default;
+$c-slideout-start-sm-down: map-deep-merge(
+	(
+		c-slideout-tbar-shown-sidebar: (
+			left: math-sign($c-slideout-sidebar-width-mobile),
+		),
+		sidebar: (
+			left: #{math-sign($c-slideout-sidebar-width-mobile) +
+				math-sign($c-slideout-tbar-stacked-min-width-mobile)},
+			width: $c-slideout-sidebar-width-mobile,
+		),
+		tbar-stacked: (
+			left: math-sign($c-slideout-tbar-stacked-min-width-mobile),
+		),
+	),
+	$c-slideout-start-sm-down
+);
+
 $c-slideout-start: () !default;
 $c-slideout-start: map-deep-merge(
 	(
@@ -214,29 +245,31 @@ $c-slideout-start: map-deep-merge(
 		tbar-stacked-c-slideout-show: (
 			left: 0,
 		),
+		media-breakpoint-down: (
+			sm: $c-slideout-start-sm-down,
+		),
 	),
 	$c-slideout-start
 );
 
-$c-slideout-start-sm-down: () !default;
-$c-slideout-start-sm-down: map-deep-merge(
+// C Slideout End
+
+$c-slideout-end-sm-down: () !default;
+$c-slideout-end-sm-down: map-deep-merge(
 	(
 		c-slideout-tbar-shown-sidebar: (
-			left: math-sign($c-slideout-sidebar-width-mobile),
+			right: math-sign($c-slideout-sidebar-width-mobile),
 		),
 		sidebar: (
-			left: #{math-sign($c-slideout-sidebar-width-mobile) +
+			right: #{math-sign($c-slideout-sidebar-width-mobile) +
 				math-sign($c-slideout-tbar-stacked-min-width-mobile)},
-			width: $c-slideout-sidebar-width-mobile,
 		),
 		tbar-stacked: (
-			left: math-sign($c-slideout-tbar-stacked-min-width-mobile),
+			right: math-sign($c-slideout-tbar-stacked-min-width-mobile),
 		),
 	),
-	$c-slideout-start-sm-down
+	$c-slideout-end-sm-down
 );
-
-// C Slideout End
 
 $c-slideout-end: () !default;
 $c-slideout-end: map-deep-merge(
@@ -264,25 +297,11 @@ $c-slideout-end: map-deep-merge(
 			left: 0,
 			right: auto,
 		),
+		media-breakpoint-down: (
+			sm: $c-slideout-end-sm-down,
+		),
 	),
 	$c-slideout-end
-);
-
-$c-slideout-end-sm-down: () !default;
-$c-slideout-end-sm-down: map-deep-merge(
-	(
-		c-slideout-tbar-shown-sidebar: (
-			right: math-sign($c-slideout-sidebar-width-mobile),
-		),
-		sidebar: (
-			right: #{math-sign($c-slideout-sidebar-width-mobile) +
-				math-sign($c-slideout-tbar-stacked-min-width-mobile)},
-		),
-		tbar-stacked: (
-			right: math-sign($c-slideout-tbar-stacked-min-width-mobile),
-		),
-	),
-	$c-slideout-end-sm-down
 );
 
 $c-slideout-height-full: () !default;
