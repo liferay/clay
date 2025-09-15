@@ -6,6 +6,10 @@ $cadmin-c-slideout-tbar-stacked-min-width: 40px !default;
 
 $cadmin-c-slideout-tbar-stacked-min-width-mobile: 40px !default;
 
+$cadmin-c-slideout-fluid-sidebar-width-md: '50vw' !default;
+
+$cadmin-c-slideout-fluid-sidebar-width: '33vw' !default;
+
 // C Slideout Transitions
 
 $cadmin-c-slideout-transition-in: () !default;
@@ -140,6 +144,49 @@ $cadmin-c-slideout-sm-down: map-deep-merge(
 		),
 	),
 	$cadmin-c-slideout-sm-down
+);
+
+$cadmin-c-slideout-fluid: () !default;
+$cadmin-c-slideout-fluid: map-deep-merge(
+	(
+		'&.c-slideout-push-start': (
+			padding-left: $cadmin-c-slideout-fluid-sidebar-width,
+		),
+		'&.c-slideout-push-end': (
+			padding-right: $cadmin-c-slideout-fluid-sidebar-width,
+		),
+		sidebar: (
+			max-width: $cadmin-c-slideout-fluid-sidebar-width,
+			width: $cadmin-c-slideout-fluid-sidebar-width,
+		),
+		media-breakpoint-down: (
+			md: (
+				'&.c-slideout-push-start': (
+					padding-left: $cadmin-c-slideout-fluid-sidebar-width-md,
+				),
+				'&.c-slideout-push-end': (
+					padding-right: $cadmin-c-slideout-fluid-sidebar-width-md,
+				),
+				sidebar: (
+					max-width: $cadmin-c-slideout-fluid-sidebar-width-md,
+					width: $cadmin-c-slideout-fluid-sidebar-width-md,
+				),
+			),
+			sm: (
+				'&.c-slideout-push-start': (
+					padding-left: 0,
+				),
+				'&.c-slideout-push-end': (
+					padding-right: 0,
+				),
+				sidebar: (
+					max-width: none,
+					width: 100vw,
+				),
+			),
+		),
+	),
+	$cadmin-c-slideout-fluid
 );
 
 // C Slideout Start

@@ -293,10 +293,10 @@ exports[`SidePanel basic rendering render with custom width 1`] = `
 exports[`SidePanel basic rendering render with fluid width 1`] = `
 <div>
   <div
-    class="c-slideout-container"
+    class="c-slideout-container c-slideout-fluid"
   >
     <div
-      class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end c-slideout-fluid"
+      class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
       <div
         aria-labelledby="clay-id-5"

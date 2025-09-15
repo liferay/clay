@@ -195,6 +195,10 @@ export function SidePanel({
 
 	useLayoutEffect(() => {
 		containerRef.current?.classList.add('c-slideout-container');
+
+		if (fluid) {
+			containerRef.current?.classList.add('c-slideout-fluid');
+		}
 	}, [containerRef.current]);
 
 	useEffect(() => {
@@ -236,7 +240,6 @@ export function SidePanel({
 				`c-slideout c-slideout-${position} c-slideout-push`,
 				{
 					'c-slideout-end': direction === 'right',
-					'c-slideout-fluid': fluid,
 					'c-slideout-start': direction === 'left',
 				}
 			)}
