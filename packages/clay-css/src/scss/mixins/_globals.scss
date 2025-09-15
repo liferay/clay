@@ -451,6 +451,14 @@
 							}
 						}
 					}
+				} @else if (starts-with($selector, '@supports ')) {
+					@supports #{clay-str-replace(
+							'#{$selector}',
+							'@supports ',
+							''
+						)} {
+						@include clay-map-to-css($value);
+					}
 				} @else {
 					#{$selector} {
 						@include clay-map-to-css($value);
