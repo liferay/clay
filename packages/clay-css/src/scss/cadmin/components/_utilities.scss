@@ -19,6 +19,10 @@
 	}
 }
 
+.c-focus-trap {
+	@include clay-map-to-css($cadmin-c-focus-trap);
+}
+
 // Autofit Row
 
 %autofit-row {

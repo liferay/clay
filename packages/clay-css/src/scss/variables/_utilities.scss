@@ -1,5 +1,16 @@
 $bg-checkered-fg: $gray-200 !default;
 
+$c-focus-trap: () !default;
+$c-focus-trap: map-merge(
+	(
+		background: inherit,
+		color: inherit,
+		display: contents,
+		font: inherit,
+	),
+	$c-focus-trap
+);
+
 // .inline-scroller
 
 $inline-scroller-max-height: 125px !default;

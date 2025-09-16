@@ -1,5 +1,16 @@
 $cadmin-bg-checkered-fg: $cadmin-gray-300 !default;
 
+$cadmin-c-focus-trap: () !default;
+$cadmin-c-focus-trap: map-merge(
+	(
+		background: inherit,
+		color: inherit,
+		display: contents,
+		font: inherit,
+	),
+	$cadmin-c-focus-trap
+);
+
 // .inline-scroller
 
 $cadmin-inline-scroller-max-height: 125px !default;
