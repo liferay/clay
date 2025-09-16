@@ -10,7 +10,7 @@ import React from 'react';
 const ItemTitle = React.forwardRef<
 	HTMLDivElement,
 	React.BaseHTMLAttributes<HTMLAnchorElement>
->(({children, className, href, ...otherProps}, ref) => {
+>(({children, className, href, id, ...otherProps}, ref) => {
 	const TagName = href ? 'div' : 'p';
 
 	const content = href ? (
@@ -24,6 +24,7 @@ const ItemTitle = React.forwardRef<
 	return (
 		<TagName
 			className={classNames('list-group-title', className)}
+			id={id}
 			ref={ref}
 		>
 			{content}

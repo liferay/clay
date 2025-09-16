@@ -77,6 +77,11 @@ export interface IClayAlertProps
 	autoClose?: boolean | number;
 
 	/**
+	 * Aria label for the dismissable alert close button.
+	 */
+	closeButtonAriaLabel?: string;
+
+	/**
 	 * Callback function for when the 'x' is clicked.
 	 */
 	onClose?: () => void;
@@ -133,6 +138,7 @@ const ClayAlert = ({
 	autoClose,
 	children,
 	className,
+	closeButtonAriaLabel = 'Close',
 	displayType = 'info',
 	hideCloseIcon = false,
 	onClose,
@@ -219,7 +225,7 @@ const ClayAlert = ({
 
 				{showDismissible && (
 					<button
-						aria-label="Close"
+						aria-label={closeButtonAriaLabel}
 						className="close"
 						onClick={onClose}
 						type="button"

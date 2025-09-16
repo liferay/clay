@@ -7,6 +7,7 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
+import {useId} from '@clayui/shared';
 import ClaySticker from '@clayui/sticker';
 import classNames from 'classnames';
 import React from 'react';
@@ -120,12 +121,14 @@ const ListItem = ({
 	onSelectChange?: any;
 	spritemap?: string;
 }) => {
+	const titleId = useId();
+
 	return (
 		<ClayList.Item active={selected} flex>
 			{onSelectChange && (
 				<ClayList.ItemField>
 					<ClayCheckbox
-						aria-label="checkbox"
+						aria-labelledby={titleId}
 						checked={selected}
 						onChange={() => {
 							onSelectChange(!selected);
@@ -141,7 +144,12 @@ const ListItem = ({
 			</ClayList.ItemField>
 
 			<ClayList.ItemField expand>
-				<ClayList.ItemTitle href={href}>{title}</ClayList.ItemTitle>
+				<ClayList.ItemTitle
+					href={href}
+					id={onSelectChange ? titleId : undefined}
+				>
+					{title}
+				</ClayList.ItemTitle>
 
 				<ClayList.ItemText>{description}</ClayList.ItemText>
 
