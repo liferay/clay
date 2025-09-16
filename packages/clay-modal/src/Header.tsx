@@ -120,10 +120,11 @@ const ICON_MAP = {
 
 const HighLevel = ({
 	children,
+	closeButtonAriaLabel = 'Close',
 	onClose,
 	spritemap,
 	status,
-}: IContext & {children?: React.ReactNode}) => (
+}: IContext & {children?: React.ReactNode; closeButtonAriaLabel?: string}) => (
 	<>
 		<Title>
 			{status && (
@@ -135,7 +136,7 @@ const HighLevel = ({
 		</Title>
 
 		<ClayButton
-			aria-label="close"
+			aria-label={closeButtonAriaLabel}
 			className="close"
 			displayType="unstyled"
 			onClick={onClose}
@@ -157,19 +158,30 @@ const ClayModalHeader = ({
 
 export interface IHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
+	 * Aria label for the modal close button.
+	 */
+	closeButtonAriaLabel?: string;
+
+	/**
 	 * Flag for indicating if you want to use the Header its children being the title.
 	 * Set to `false` if you want to use this as a low-level component.
 	 */
 	withTitle?: boolean;
 }
 
-const Header = ({children, withTitle = true, ...otherProps}: IHeaderProps) => {
+const Header = ({
+	children,
+	closeButtonAriaLabel,
+	withTitle = true,
+	...otherProps
+}: IHeaderProps) => {
 	const {onClose, spritemap, status} = React.useContext(Context);
 
 	return (
 		<ClayModalHeader {...otherProps}>
 			{withTitle && (
 				<HighLevel
+					closeButtonAriaLabel={closeButtonAriaLabel}
 					onClose={onClose}
 					spritemap={spritemap}
 					status={status}

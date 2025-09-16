@@ -96,8 +96,10 @@ type Props<T> = {
 	 * Messages for the Picker.
 	 */
 	messages?: {
-		itemSelected: string;
-		itemDescribedby: string;
+		itemSelected?: string;
+		itemDescribedby?: string;
+		scrollToBottomAriaLabel?: string;
+		scrollToTopAriaLabel?: string;
 	};
 
 	/**
@@ -149,6 +151,14 @@ type Props<T> = {
 	[key: string]: any;
 } & Omit<ICollectionProps<T, unknown>, 'virtualize'>;
 
+const defaultMessages = {
+	itemDescribedby:
+		'You are currently on a text element, inside of a list box.',
+	itemSelected: '{0}, selected',
+	scrollToBottomAriaLabel: 'Scroll to bottom',
+	scrollToTopAriaLabel: 'Scroll to top',
+};
+
 export function Picker<T extends Record<string, any> | string | number>({
 	UNSAFE_behavior,
 	UNSAFE_menuClassName,
@@ -162,11 +172,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 	disabled,
 	id,
 	items,
-	messages = {
-		itemDescribedby:
-			'You are currently on a text element, inside of a list box.',
-		itemSelected: '{0}, selected',
-	},
+	messages: externalMessages,
 	native = false,
 	onActiveChange,
 	onSelectionChange,
@@ -176,6 +182,11 @@ export function Picker<T extends Record<string, any> | string | number>({
 	width,
 	...otherProps
 }: Props<T>) {
+	const messages = {
+		...defaultMessages,
+		...(externalMessages ?? {}),
+	};
+
 	const [active, setActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
@@ -560,7 +571,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 								isArrowVisible === 'both') && (
 								<Button
 									aria-hidden="true"
-									aria-label="Scroll to top"
+									aria-label={messages.scrollToTopAriaLabel}
 									className="dropdown-item dropdown-item-scroll dropdown-item-scroll-up"
 									displayType="unstyled"
 									onClick={() => {
@@ -601,7 +612,9 @@ export function Picker<T extends Record<string, any> | string | number>({
 								isArrowVisible === 'both') && (
 								<Button
 									aria-hidden="true"
-									aria-label="Scroll to bottom"
+									aria-label={
+										messages.scrollToBottomAriaLabel
+									}
 									className="dropdown-item dropdown-item-scroll dropdown-item-scroll-down"
 									displayType="unstyled"
 									onClick={() => {

@@ -205,7 +205,7 @@ describe('Modal -> IncrementalInteractions', () => {
 
 		const backdropEl = document.querySelector(backdropElSelector);
 		const modalEl = document.querySelector(modalElSelector);
-		const buttonHeaderCloseEl = getByLabelText('close');
+		const buttonHeaderCloseEl = getByLabelText('Close');
 
 		expect(backdropEl).toBeDefined();
 		expect(modalEl).toBeDefined();
