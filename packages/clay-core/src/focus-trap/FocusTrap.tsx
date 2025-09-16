@@ -68,7 +68,7 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 
 	return (
 		<FocusScope>
-			<div ref={childrenRef} style={{display: 'contents'}}>
+			<div className="c-focus-trap" ref={childrenRef}>
 				{active ? <span data-focus-scope-start="true" /> : null}
 
 				{children}
