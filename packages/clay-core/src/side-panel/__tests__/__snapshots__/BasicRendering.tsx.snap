@@ -16,7 +16,7 @@ exports[`SidePanel basic rendering render basic content 1`] = `
         tabindex="-1"
       >
         <div
-          style="display: contents;"
+          class="c-focus-trap"
         >
           <div
             class="sidebar-header"
@@ -86,7 +86,7 @@ exports[`SidePanel basic rendering render component with open state 1`] = `
         tabindex="-1"
       >
         <div
-          style="display: contents;"
+          class="c-focus-trap"
         >
           <span
             data-focus-scope-start="true"
@@ -163,7 +163,7 @@ exports[`SidePanel basic rendering render with custom aria-label 1`] = `
         tabindex="-1"
       >
         <div
-          style="display: contents;"
+          class="c-focus-trap"
         >
           <div
             class="sidebar-header"
@@ -235,7 +235,7 @@ exports[`SidePanel basic rendering render with custom width 1`] = `
         tabindex="-1"
       >
         <div
-          style="display: contents;"
+          class="c-focus-trap"
         >
           <div
             class="sidebar-header"
@@ -306,7 +306,7 @@ exports[`SidePanel basic rendering render with fluid width 1`] = `
         tabindex="-1"
       >
         <div
-          style="display: contents;"
+          class="c-focus-trap"
         >
           <div
             class="sidebar-header"

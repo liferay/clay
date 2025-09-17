@@ -4,7 +4,7 @@ exports[`FocusTrap basic rendering render static content when focus trap is acti
 <body>
   <div>
     <div
-      style="display: contents;"
+      class="c-focus-trap"
     >
       <span
         data-focus-scope-start="true"
@@ -27,7 +27,7 @@ exports[`FocusTrap basic rendering render static content when focus trap is not 
 <body>
   <div>
     <div
-      style="display: contents;"
+      class="c-focus-trap"
     >
       <button
         class="btn btn-primary"
