@@ -164,6 +164,25 @@ The SidePanel is designed to use either `absolute` or `fixed` positioning.
 <SidePanel position="fixed" />
 ```
 
+## Fluid Width
+
+The SidePanel is designed to adapt fluidly to the screen size, with its width automatically set as a percentage of the container. It does not rely on a fixed width and integrates seamlessly across different resolutions.
+
+```jsx
+<SidePanel fluid />
+```
+
+In addition to the fluid width, the SidePanel supports manual resizing, allowing users to customize the panel width for better readability and workflow efficiency:
+
+-   On **small screens** manual resizing is disabled.
+-   On **all other screens** the panel can be freely resized.
+
+<div className="clay-site-alert alert alert-info">
+	<strong className="lead">Info</strong>
+	Manual resizing is only available when using the fluid width. If the panel has
+	a fixed width, users cannot resize it manually.
+</div>
+
 ## Variants
 
 ### Drilldown
