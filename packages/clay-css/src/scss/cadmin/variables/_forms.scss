@@ -264,8 +264,19 @@ $cadmin-input-label: map-deep-merge(
 		for: (
 			cursor: $cadmin-input-label-for-cursor,
 		),
+		'+ .form-feedback-group': (
+			margin-bottom: 12px,
+		),
 		form-text: (
 			margin-bottom: $cadmin-input-label-margin-bottom,
+			margin-top: 0,
+		),
+		form-help-text: (
+			color: $cadmin-secondary-l0,
+			display: inline,
+			font-size: 14px,
+			font-weight: $cadmin-font-weight-normal,
+			margin-left: 8px,
 			margin-top: 0,
 		),
 		reference-mark: (
@@ -651,6 +662,17 @@ $cadmin-form-text: map-merge(
 		),
 	),
 	$cadmin-form-text
+);
+
+$cadmin-form-help-text: () !default;
+$cadmin-form-help-text: map-deep-merge(
+	(
+		color: $cadmin-secondary,
+		display: block,
+		font-size: 14px,
+		margin-top: 4px,
+	),
+	$cadmin-form-help-text
 );
 
 // .form-feedback-item

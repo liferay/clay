@@ -14,6 +14,21 @@ interface IGroup extends React.HTMLAttributes<HTMLDivElement> {
 	small?: boolean;
 }
 
+const BlockquoteText = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(({children, className, ...otherProps}, ref) => (
+	<div
+		{...otherProps}
+		className={classNames('blockquote form-text', className)}
+		ref={ref}
+	>
+		{children}
+	</div>
+));
+
+BlockquoteText.displayName = 'ClayFormBlockquoteText';
+
 const Group = React.forwardRef<HTMLDivElement, IGroup>(
 	({children, className, small, ...otherProps}: IGroup, ref) => (
 		<div
@@ -33,6 +48,21 @@ const Group = React.forwardRef<HTMLDivElement, IGroup>(
 );
 
 Group.displayName = 'ClayFormGroup';
+
+const HelpText = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(({children, className, ...otherProps}, ref) => (
+	<span
+		{...otherProps}
+		className={classNames('form-help-text', className)}
+		ref={ref}
+	>
+		{children}
+	</span>
+));
+
+HelpText.displayName = 'ClayFormHelpText';
 
 const Text = React.forwardRef<
 	HTMLDivElement,
@@ -128,9 +158,11 @@ const ClayForm = React.forwardRef<
 ClayForm.displayName = 'ClayForm';
 
 export default Object.assign(ClayForm, {
+	BlockquoteText,
 	FeedbackGroup,
 	FeedbackIndicator,
 	FeedbackItem,
 	Group,
+	HelpText,
 	Text,
 });
