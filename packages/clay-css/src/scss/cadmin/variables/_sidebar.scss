@@ -235,11 +235,11 @@ $cadmin-sidebar-light: map-deep-merge(
 		box-shadow: -4px 0 8px -4px rgba(0, 0, 0, 0.1),
 		color: $cadmin-gray-900,
 		sidebar-header: (
-			background-color: inherit,
+			background-color: $cadmin-white,
 			border: 0px solid $cadmin-gray-300,
 		),
 		sidebar-footer: (
-			background-color: inherit,
+			background-color: $cadmin-white,
 			border: 0px solid $cadmin-gray-300,
 		),
 		sidenav-start: (

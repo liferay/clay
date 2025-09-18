@@ -34,8 +34,10 @@ function Component({
 				},
 				x2: {
 					component: <div>Hello!</div>,
-					headerMessages: {
-						backAriaLabel: 'Go to the main panel',
+					headerProps: {
+						messages: {
+							backAriaLabel: 'Go to the main panel',
+						},
 					},
 					parentKey: 'x1',
 					title: 'Child Panel',

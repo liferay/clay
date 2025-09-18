@@ -488,8 +488,10 @@ export const Drilldown = () => {
 									/>
 								</SidePanel.Body>
 							),
-							headerMessages: {
-								backAriaLabel: 'Go to the user panel.',
+							headerProps: {
+								messages: {
+									backAriaLabel: 'Go to the user panel.',
+								},
 							},
 							parentKey: 'x1',
 							title: 'Profile',
@@ -500,8 +502,10 @@ export const Drilldown = () => {
 									This is the Dashboard panel
 								</SidePanel.Body>
 							),
-							headerMessages: {
-								backAriaLabel: 'Go to the user panel.',
+							headerProps: {
+								messages: {
+									backAriaLabel: 'Go to the user panel.',
+								},
 							},
 							parentKey: 'x1',
 							title: 'Dashboard',
@@ -512,8 +516,10 @@ export const Drilldown = () => {
 									This the Edit Profile panel
 								</SidePanel.Body>
 							),
-							headerMessages: {
-								backAriaLabel: 'Go to the profile panel.',
+							headerProps: {
+								messages: {
+									backAriaLabel: 'Go to the profile panel.',
+								},
 							},
 							parentKey: 'x2',
 							title: 'Edit Profile',
