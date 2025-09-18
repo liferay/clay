@@ -480,9 +480,12 @@ const ColorPicker = ({
 									const newColor = tinycolor(value);
 
 									if (newColor.isValid()) {
+										const colorFormat =
+											newColor.getFormat();
+
 										if (
-											newColor.getFormat() ===
-											('hex' || 'hex8')
+											colorFormat === 'hex' ||
+											colorFormat === 'hex8'
 										) {
 											value = internalToHex(newColor);
 										} else if (
