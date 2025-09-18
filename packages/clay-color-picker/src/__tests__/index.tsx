@@ -183,6 +183,19 @@ describe('Interactions', () => {
 		expect(input.value).toBe('FFFFFF');
 	});
 
+	it('typing in the input it accepts 8 digit hex values', () => {
+		const {getByLabelText} = render(<ClayColorPickerWithState />);
+
+		const input = getByLabelText(/Color selection is/) as HTMLInputElement;
+
+		const hex8Value = '00800055';
+
+		fireEvent.change(input, {target: {value: hex8Value}});
+		fireEvent.blur(input);
+
+		expect(input.value).toBe(hex8Value);
+	});
+
 	it('typing an invalid color in the input sets the input to an empty value', () => {
 		const {getByLabelText} = render(<ClayColorPickerWithState />);
 
