@@ -401,6 +401,8 @@ $pagination-results: map-merge(
 	$pagination-results
 );
 
+/// @deprecated Pagination Sizes as of v3.146.0
+
 // .pagination-sm
 
 $pagination-font-size-sm: $font-size-sm !default;

@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {number} from '@storybook/addon-knobs';
 import React from 'react';
 
 import ClayPagination, {ClayPaginationWithBasicItems} from '../src';
@@ -53,43 +52,6 @@ NoHref.args = {
 	ellipsisBuffer: 2,
 	totalPages: 25,
 };
-
-export const Sizes = () => (
-	<>
-		<ClayPaginationWithBasicItems
-			defaultActive={number('Active Page', 8)}
-			ellipsisBuffer={number('Ellipsis Buffer', 2)}
-			ellipsisProps={{
-				'aria-label': 'More {0} through {1}',
-				title: 'More {0} through {1}',
-			}}
-			hrefConstructor={(page) => `#${page}`}
-			size="sm"
-			totalPages={25}
-		/>
-		<ClayPaginationWithBasicItems
-			defaultActive={number('Active Page', 8)}
-			ellipsisBuffer={number('Ellipsis Buffer', 2)}
-			ellipsisProps={{
-				'aria-label': 'More {0} through {1}',
-				title: 'More {0} through {1}',
-			}}
-			hrefConstructor={(page) => `#${page}`}
-			totalPages={25}
-		/>
-		<ClayPaginationWithBasicItems
-			defaultActive={number('Active Page', 8)}
-			ellipsisBuffer={number('Ellipsis Buffer', 2)}
-			ellipsisProps={{
-				'aria-label': 'More {0} through {1}',
-				title: 'More {0} through {1}',
-			}}
-			hrefConstructor={(page) => `#${page}`}
-			size="lg"
-			totalPages={25}
-		/>
-	</>
-);
 
 export const DisabledPages = () => (
 	<ClayPaginationWithBasicItems
