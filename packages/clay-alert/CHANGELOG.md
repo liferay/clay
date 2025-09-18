@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
+
+### Bug Fixes
+
+-   LPD-65537 - Aria Labels must be translatable. ([26f074d](https://github.com/liferay/clay/commit/26f074de8a346d8fa47a41f621757818185276ff))
+
 ## [3.144.1](https://github.com/liferay/clay/compare/v3.144.0...v3.144.1) (2025-08-29)
 
 ### Bug Fixes

@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-64729 SidePanel moves c-slideout-fluid class to container ([7d52b80](https://github.com/liferay/clay/commit/7d52b80d465d3da861dc868ac5b972dee79e902b))
+-   **@clayui/core:** LPD-64908 Add test to check that the focus keeps inside the trap ([aaa9257](https://github.com/liferay/clay/commit/aaa9257bd9f15dba54c8bb0d54750085223054d4))
+-   **@clayui/core:** LPD-64908 Ensure the focus scope marker is not focusable ([bd0e35c](https://github.com/liferay/clay/commit/bd0e35c686de54e695b407006c70ea8743fd6eb4))
+-   **@clayui/core:** LPD-64908 Refactor test ([fdca139](https://github.com/liferay/clay/commit/fdca1397201da54f02458228beb8d504a985a9e7))
+-   **@clayui/core:** LPD-64908 Remove aria-hidden and tabIndex from other uses of scope focus markers ([42b5021](https://github.com/liferay/clay/commit/42b502138a9a057b30e35d2039003d1b82a11e94))
+-   **@clayui/core:** LPD-64908 Update snapshots ([07c53bc](https://github.com/liferay/clay/commit/07c53bc363c9bc8d501da16b883eaae65f1d2194))
+-   **@clayui/core:** LPD-65265 Use focus trap CSS class for property inheritance ([362c155](https://github.com/liferay/clay/commit/362c155f889be3fae7776b1d5953009f25faa4e1))
+-   LPD-65537 - Aria Labels must be translatable. ([26f074d](https://github.com/liferay/clay/commit/26f074de8a346d8fa47a41f621757818185276ff))
+
+### Features
+
+-   **@clayui/core:** LPD-48313 Adapt tests ([81a8f68](https://github.com/liferay/clay/commit/81a8f68cb669d19e1665cd7977250d13c22ca158))
+-   **@clayui/core:** LPD-48313 Add focus trap only for mobile ([a3e0132](https://github.com/liferay/clay/commit/a3e0132aea73a57f3177da9aabdd17c98d47c0fa))
+-   **@clayui/core:** LPD-53842 Add fluid behaviour ([7009245](https://github.com/liferay/clay/commit/70092459e935d55554b82e0d2ff316c807396e85))
+-   **@clayui/core:** LPD-53842 Add hook to calculate the maximum panel width ([4be879e](https://github.com/liferay/clay/commit/4be879e0594c5f01dbd59a95b7eae89a8d979953))
+-   **@clayui/core:** LPD-53842 Add resizer to the side panel ([2e77f6f](https://github.com/liferay/clay/commit/2e77f6f9cd84affd08ced8a1af4ed180862459ca))
+-   **@clayui/core:** LPD-53842 Add stories for fluid width ([7b2b3b2](https://github.com/liferay/clay/commit/7b2b3b24d6aa9c4958d7eda1676426d4aeb140b1))
+-   **@clayui/core:** LPD-53842 Add test for fluid width ([ae6f358](https://github.com/liferay/clay/commit/ae6f358da60c9cd3b7cf74e2f9be0f9b5e1dd970))
+-   **@clayui/core:** LPD-53842 Add test for panel width ([3958563](https://github.com/liferay/clay/commit/3958563fa258b7201129bc346e2a51b9356b740a))
+-   **@clayui/core:** LPD-53842 Add test to check custom minimum width of the panel ([00df454](https://github.com/liferay/clay/commit/00df4546092e00eee0d23dff7006ae79d86e1090))
+-   **@clayui/core:** LPD-53842 Add variables to improve readability. ([aa0a5ad](https://github.com/liferay/clay/commit/aa0a5adbc50c1806392373c6738405223858e908))
+-   **@clayui/core:** LPD-53842 Allow setting a custom width ([16dd9f7](https://github.com/liferay/clay/commit/16dd9f7675585bcb2995ab8a5d9dfd9715ed1584))
+-   **@clayui/core:** LPD-53842 Disable fluid mode on mobile ([dde19db](https://github.com/liferay/clay/commit/dde19db7bd7d7f15dcd28d80e9746c1f3c252f76))
+-   **@clayui/core:** LPD-53842 Do not allow setting a panel width smaller than 280px ([4067979](https://github.com/liferay/clay/commit/406797938a1c78e8293ee2f0ed63de92abc13479))
+-   **@clayui/core:** LPD-53842 Simplify the PanelResizer API and make it a controlled component so that we no longer need to pass it a ref. ([af1157d](https://github.com/liferay/clay/commit/af1157ddf2d9dd898676604eba944d520f0ba7da))
+-   **@clayui/core:** LPD-65265 Adapt test ([68fc60c](https://github.com/liferay/clay/commit/68fc60cf92a1725a3675e74499c3903bb4dea377))
+-   **@clayui/core:** LPD-65265 Allow the same props from the SidePanel.Header in the SidePanelDrilldown component ([f2461d8](https://github.com/liferay/clay/commit/f2461d8ceabdc38f8c1d0abec59397475edea1a0))
+-   **@clayui/core:** LPD-65265 Update documentation ([5fb6ca1](https://github.com/liferay/clay/commit/5fb6ca1df5221ef913ae6543e0bff688c6c41c04))
+-   **@clayui/core:** LPD-65265 Update stories ([7582f6a](https://github.com/liferay/clay/commit/7582f6a674d7e5fb2e8ffb1e1eb59a989bd145c5))
+-   **@clayui/shared:** LPD-53842 Isolate resizer component to reuse it ([18e64a0](https://github.com/liferay/clay/commit/18e64a0ed2f7d8967d754385200df01379ba1ed9))
+
 # [3.146.0](https://github.com/liferay/clay/compare/v3.145.0...v3.146.0) (2025-09-01)
 
 ### Features

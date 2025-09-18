@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-64908 Fix typescript error ([e4e7c0b](https://github.com/liferay/clay/commit/e4e7c0bbaa4250a6ad7a19d1ba1371206fdab6e2))
+-   **@clayui/core:** LPD-64908 Include focus scope markers when checking document focus targets ([e432b1e](https://github.com/liferay/clay/commit/e432b1e4c02dea408dc7266287e3e54ac74ccd77))
+-   **@clayui/core:** LPD-64908 Include focus scope markers when checking fibers ([6c0d480](https://github.com/liferay/clay/commit/6c0d480ea0ea7c4d2a38a8db0961cb66ae8141a1))
+-   **@clayui/core:** LPD-64908 Remove aria-hidden and tabIndex from other uses of scope focus markers ([42b5021](https://github.com/liferay/clay/commit/42b502138a9a057b30e35d2039003d1b82a11e94))
+-   **@clayui/core:** LPD-64908 Rename variables to improve code clarity ([98100be](https://github.com/liferay/clay/commit/98100bea797885b221068a39680f5149f23902aa))
+-   **@clayui/shared:** LPD-53842 Use relative import to avoid adding a dependency on itself. ([0c02a72](https://github.com/liferay/clay/commit/0c02a7223f82cadc0eef35d187f460ccde7dcb3e))
+
+### Features
+
+-   **@clayui/core:** LPD-53842 Set the correct mobile breakpoint ([180ed57](https://github.com/liferay/clay/commit/180ed57394322106b7bf8c1c27a562f1de980228))
+-   **@clayui/core:** LPD-53842 Simplify the PanelResizer API and make it a controlled component so that we no longer need to pass it a ref. ([af1157d](https://github.com/liferay/clay/commit/af1157ddf2d9dd898676604eba944d520f0ba7da))
+-   **@clayui/shared:** LPD-53842 Add test for PanelResizer ([d18050a](https://github.com/liferay/clay/commit/d18050a62703dd598623ad217bd513c7f7dcec1d))
+-   **@clayui/shared:** LPD-53842 Isolate resizer component to reuse it ([18e64a0](https://github.com/liferay/clay/commit/18e64a0ed2f7d8967d754385200df01379ba1ed9))
+
 # [3.145.0](https://github.com/liferay/clay/compare/v3.144.1...v3.145.0) (2025-08-29)
 
 ### Features

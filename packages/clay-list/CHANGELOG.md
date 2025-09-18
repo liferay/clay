@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
+
+### Bug Fixes
+
+-   LPD-65537 - Use aria-labelledby instead of a redundant aria-label. ([e22b65c](https://github.com/liferay/clay/commit/e22b65c27b9bef8b8754299425fc80d1fc2b044a))
+
 # [3.147.0](https://github.com/liferay/clay/compare/v3.146.0...v3.147.0) (2025-09-09)
 
 **Note:** Version bump only for package @clayui/list

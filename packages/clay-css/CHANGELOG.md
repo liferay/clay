@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-63668 Deprecate and remove styles for pagination-sm and pagination-lg ([1d958ba](https://github.com/liferay/clay/commit/1d958ba4d9436852d21a83a8fabe40a8aeb65280))
+* **@clayui/css:** LPD-64729 c-slideout-fluid should push content the correct amount ([3406a13](https://github.com/liferay/clay/commit/3406a1358de6c05edeb2e4eefd369cd83f25a6e4))
+* **@clayui/css:** LPD-64729 Removes xxl breakpoint, it generates too many selectors ([3586e1b](https://github.com/liferay/clay/commit/3586e1bcedae7c0759a6c274ef6ab716f28636e2))
+* **@clayui/css:** LPD-64729 Sidebar prints properties twice ([de7f4b8](https://github.com/liferay/clay/commit/de7f4b869c8efecdeb9735cf3161e3e5989d7b93))
+* **@clayui/css:** LPD-65265 c-slideout unsticky sidebar header and footer in small height screens ([c730a87](https://github.com/liferay/clay/commit/c730a871609b77e604ef795313deebbe0b8efc54))
+* **@clayui/css:** LPD-65265 Global Mixins adds [@supports](https://github.com/supports) to clay-map-to-css ([8546879](https://github.com/liferay/clay/commit/8546879a5de80a86c46c7cadd34537c54a876b1f))
+
+
+### Features
+
+* **@clayui/core:** LPD-53842 Add fluid behaviour ([7009245](https://github.com/liferay/clay/commit/70092459e935d55554b82e0d2ff316c807396e85))
+* **@clayui/core:** LPD-53842 Add xxl size to grid-breakpoints ([001cede](https://github.com/liferay/clay/commit/001cede317124ee76b3e5cabfd1bc1caba85e636))
+* **@clayui/css:** LPD-63981 Forms adds form-help-text ([c37f012](https://github.com/liferay/clay/commit/c37f01289012b2b278770dff88032f895ed537a7))
+* **@clayui/css:** LPD-65265 Adds c-focus-trap utility so we can control inheritance by component ([c5abbcf](https://github.com/liferay/clay/commit/c5abbcf2b3311705359ece45468d3595df2596b3))
+* **@clayui/css:** LPD-65265 Disable sticky header/footer under 700px height ([da771b5](https://github.com/liferay/clay/commit/da771b54f41e9931b6a015f794cfc5ae4c9d075b))
+* **@clayui/css:** LPD-65287 Restrict drilldown scrolling to dropdown menu only ([f609821](https://github.com/liferay/clay/commit/f6098216a920ad6e9a2d8eff8e9b64d35cf444fc))
+
+
+### BREAKING CHANGES
+
+* **@clayui/css:** This removes styles for pagination-sm and pagination-lg. If you need this, set `$enable-pagination-sizes: true;`
+
+
+
+
+
 # [3.147.0](https://github.com/liferay/clay/compare/v3.146.0...v3.147.0) (2025-09-09)
 
 

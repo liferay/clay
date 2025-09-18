@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
+
+### Features
+
+-   **@clayui/form:** LPD-63981 Add HelpText and BlockquoteText to use with DatePicker ([6478a71](https://github.com/liferay/clay/commit/6478a714c9bf925784bdfe5c19574661afeb2007))
+
 # [3.145.0](https://github.com/liferay/clay/compare/v3.144.1...v3.145.0) (2025-08-29)
 
 **Note:** Version bump only for package @clayui/form
