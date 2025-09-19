@@ -639,4 +639,92 @@ describe('Autocomplete incremental interactions', () => {
 			expect(queryByRole('listbox')).toBeFalsy();
 		});
 	});
+
+	describe('Primary Action interactions', () => {
+		it('renders', async () => {
+			const {getByRole, getByText} = render(
+				<ClayAutocomplete
+					messages={messages}
+					placeholder="Enter a number from One to Five"
+					primaryAction={{
+						label: 'Create',
+						onClick: () => {},
+					}}
+				>
+					{['one', 'two', 'three'].map((item) => (
+						<ClayAutocomplete.Item key={item}>
+							{item}
+						</ClayAutocomplete.Item>
+					))}
+				</ClayAutocomplete>
+			);
+
+			const input = getByRole('combobox');
+
+			userEvent.click(input);
+			userEvent.type(input, '{arrowdown}');
+
+			expect(getByText('Create')).toBeTruthy();
+		});
+
+		it('onClick fires when item is selected', async () => {
+			const onClickMock = jest.fn();
+
+			const {getByRole} = render(
+				<ClayAutocomplete
+					primaryAction={{
+						label: 'Create',
+						onClick: onClickMock,
+					}}
+				>
+					{['one', 'two', 'three'].map((item) => (
+						<ClayAutocomplete.Item key={item}>
+							{item}
+						</ClayAutocomplete.Item>
+					))}
+				</ClayAutocomplete>
+			);
+
+			const input = getByRole('combobox');
+
+			userEvent.click(input);
+			userEvent.type(input, '{arrowdown}');
+			userEvent.type(input, '{enter}');
+
+			expect(onClickMock).toHaveBeenCalled();
+		});
+
+		it('renders when autocomplete uses dynamic rendering', async () => {
+			const onClickMock = jest.fn();
+
+			const {getByRole, getByText} = render(
+				<ClayAutocomplete
+					defaultItems={['one', 'two', 'three']}
+					primaryAction={{
+						label: 'Create',
+						onClick: onClickMock,
+					}}
+				>
+					{(item) => (
+						<ClayAutocomplete.Item key={item}>
+							{item}
+						</ClayAutocomplete.Item>
+					)}
+				</ClayAutocomplete>
+			);
+
+			expect(onClickMock).not.toHaveBeenCalled();
+
+			const input = getByRole('combobox');
+
+			userEvent.click(input);
+
+			userEvent.type(input, '{arrowdown}');
+
+			expect(getByText('Create')).toBeTruthy();
+
+			userEvent.type(input, '{enter}');
+			expect(onClickMock).toHaveBeenCalled();
+		});
+	});
 });

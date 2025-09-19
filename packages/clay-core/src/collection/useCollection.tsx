@@ -86,6 +86,10 @@ export function useCollection<
 				return false;
 			}
 
+			if (child.props['data-collection-no-filter']) {
+				return false;
+			}
+
 			if (typeof child.props.children === 'string') {
 				return !filter(child.props.children);
 			}
