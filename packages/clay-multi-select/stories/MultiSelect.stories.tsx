@@ -457,3 +457,38 @@ export const Group = (args: any) => {
 Group.args = {
 	isValid: false,
 };
+
+export const WithPrimaryAction = () => {
+	const [value, setValue] = React.useState('');
+	const [items, setItems] = React.useState([
+		{
+			label: 'one',
+			value: '1',
+		},
+	]);
+
+	return (
+		<>
+			<label htmlFor="multiSelect" id="multi-select-label">
+				Multi Select
+			</label>
+
+			<ClayMultiSelect
+				aria-labelledby="multi-select-label"
+				inputName="myInput"
+				items={items}
+				onChange={setValue}
+				onItemsChange={(val) => setItems(val as any)}
+				primaryAction={{
+					label: 'Create',
+					onClick: () => {
+						alert('create!');
+					},
+					symbolLeft: 'plus',
+				}}
+				sourceItems={sourceItems}
+				value={value}
+			/>
+		</>
+	);
+};
