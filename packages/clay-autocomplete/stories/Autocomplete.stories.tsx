@@ -529,7 +529,6 @@ export const CreationActionWithStaticRendering = () => {
 									setItems([...items, value]);
 									setValue('');
 								},
-								symbolLeft: 'plus',
 							}}
 							value={value}
 						>
@@ -569,7 +568,6 @@ export const CreationActionWithDynamicRendering = () => {
 								onClick: () => {
 									alert('create!');
 								},
-								symbolLeft: 'plus',
 							}}
 							value={value}
 						>

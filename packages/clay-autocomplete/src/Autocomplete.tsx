@@ -24,7 +24,6 @@ import {
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
-import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
@@ -149,8 +148,6 @@ export interface IProps<T>
 	primaryAction?: {
 		label: React.ReactNode;
 		onClick: () => void;
-		symbolLeft?: string;
-		symbolRight?: string;
 	};
 
 	/**
@@ -689,15 +686,7 @@ function AutocompleteInner<T extends Item>(
 					triggerRef={inputElementRef}
 				>
 					<div
-						className={classNames(
-							'dropdown-menu dropdown-menu-select show',
-							{
-								'dropdown-menu-indicator-end':
-									primaryAction?.symbolRight,
-								'dropdown-menu-indicator-start':
-									primaryAction?.symbolLeft,
-							}
-						)}
+						className="dropdown-menu dropdown-menu-select show"
 						ref={menuRef}
 						role="presentation"
 						style={{

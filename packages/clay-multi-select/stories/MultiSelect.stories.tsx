@@ -484,7 +484,6 @@ export const WithPrimaryAction = () => {
 					onClick: () => {
 						alert('create!');
 					},
-					symbolLeft: 'plus',
 				}}
 				sourceItems={sourceItems}
 				value={value}
