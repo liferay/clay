@@ -383,6 +383,7 @@ function AutocompleteInner<T extends Item>(
 			{...primaryAction}
 			className="text-primary"
 			data-collection-no-filter
+			highlightMatch={false}
 			key="__PRIMARY_ACTION__"
 			onClick={(event) => {
 				event.preventDefault();

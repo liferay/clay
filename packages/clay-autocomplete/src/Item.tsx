@@ -31,6 +31,11 @@ export interface IProps
 	'data-index'?: number;
 
 	/**
+	 * Flag to indicate if matched text is highlighted
+	 */
+	highlightMatch?: boolean;
+
+	/**
 	 * Path for item to link to.
 	 */
 	href?: string;
@@ -95,6 +100,7 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 		children,
 		className,
 		disabled,
+		highlightMatch = true,
 		innerRef,
 		keyValue,
 		match = '',
@@ -134,7 +140,10 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 			ref={ref}
 			tabIndex={-1}
 		>
-			{match && fuzzyMatch && typeof children === 'string'
+			{highlightMatch &&
+			match &&
+			fuzzyMatch &&
+			typeof children === 'string'
 				? fuzzyMatch.rendered
 						.split('|')
 						.map((item, index) => {
