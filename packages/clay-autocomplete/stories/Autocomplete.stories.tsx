@@ -532,8 +532,8 @@ export const CreationActionWithStaticRendering = () => {
 							}}
 							value={value}
 						>
-							{items.map((item) => (
-								<ClayAutocomplete.Item key={item}>
+							{items.map((item, i) => (
+								<ClayAutocomplete.Item key={item + i}>
 									{item}
 								</ClayAutocomplete.Item>
 							))}
@@ -571,8 +571,8 @@ export const CreationActionWithDynamicRendering = () => {
 							}}
 							value={value}
 						>
-							{(item) => (
-								<ClayAutocomplete.Item key={item}>
+							{(item, i) => (
+								<ClayAutocomplete.Item key={item + i}>
 									{item}
 								</ClayAutocomplete.Item>
 							)}
