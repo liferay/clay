@@ -362,6 +362,10 @@
 			str-length($var) - 1
 		);
 
+		@if (is-css-var($fallback-value)) {
+			$fallback-value: clay-get-fallback($fallback-value);
+		}
+
 		$units: 'px'
 			'cm'
 			'mm'
@@ -379,7 +383,7 @@
 			'vmax';
 
 		@each $unit in $units {
-			@if (str-index($fallback-value, $unit)) {
+			@if (str-index('#{$fallback-value}', $unit)) {
 				@return to-number($fallback-value);
 			}
 		}
