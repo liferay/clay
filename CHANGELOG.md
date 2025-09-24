@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.149.0](https://github.com/liferay/clay/compare/v3.148.0...v3.149.0) (2025-09-24)
+
+### Bug Fixes
+
+-   **autocomplete:** remove icon options ([76f2d87](https://github.com/liferay/clay/commit/76f2d878ae4b7cd4e635af7c5315e37f0a813657))
+-   make sure storybook is always pointing to source files ([8d5a5f7](https://github.com/liferay/clay/commit/8d5a5f703b9099876738e74604dc541f11ae5a92))
+-   use LTS version of node for github actions ([722de5e](https://github.com/liferay/clay/commit/722de5efd6338a28f52c4e8b0ae0af79f4634a97))
+
+### Features
+
+-   **autocomplete:** add new prop for adding a primary action to take in the drop down ([2d06f4f](https://github.com/liferay/clay/commit/2d06f4fe558632b603998453773f7e4f688f9a44))
+-   **autocomplete:** disable text matching highlights for primaryAction in autocomplete ([a2ea94f](https://github.com/liferay/clay/commit/a2ea94f9f2891897950d0d3ae52f665569c464af))
+-   **clay-core:** add data attribute API for removing item from filtering ([57d5e2c](https://github.com/liferay/clay/commit/57d5e2c0bea412dc85572804f18d45c120d97aef))
+
 # [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
 
 ### Bug Fixes

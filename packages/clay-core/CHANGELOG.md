@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.149.0](https://github.com/liferay/clay/compare/v3.148.0...v3.149.0) (2025-09-24)
+
+### Features
+
+-   **clay-core:** add data attribute API for removing item from filtering ([57d5e2c](https://github.com/liferay/clay/commit/57d5e2c0bea412dc85572804f18d45c120d97aef))
+
 # [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
 
 ### Bug Fixes

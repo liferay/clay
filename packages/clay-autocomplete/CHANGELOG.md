@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.149.0](https://github.com/liferay/clay/compare/v3.148.0...v3.149.0) (2025-09-24)
+
+### Bug Fixes
+
+-   **autocomplete:** remove icon options ([76f2d87](https://github.com/liferay/clay/commit/76f2d878ae4b7cd4e635af7c5315e37f0a813657))
+
+### Features
+
+-   **autocomplete:** add new prop for adding a primary action to take in the drop down ([2d06f4f](https://github.com/liferay/clay/commit/2d06f4fe558632b603998453773f7e4f688f9a44))
+-   **autocomplete:** disable text matching highlights for primaryAction in autocomplete ([a2ea94f](https://github.com/liferay/clay/commit/a2ea94f9f2891897950d0d3ae52f665569c464af))
+
 # [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
 
 **Note:** Version bump only for package @clayui/autocomplete

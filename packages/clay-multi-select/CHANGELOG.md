@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.149.0](https://github.com/liferay/clay/compare/v3.148.0...v3.149.0) (2025-09-24)
+
+### Bug Fixes
+
+-   **autocomplete:** remove icon options ([76f2d87](https://github.com/liferay/clay/commit/76f2d878ae4b7cd4e635af7c5315e37f0a813657))
+
 # [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
 
 **Note:** Version bump only for package @clayui/multi-select
