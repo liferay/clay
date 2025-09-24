@@ -502,3 +502,84 @@ export const AsyncData = () => {
 		</div>
 	);
 };
+
+export const CreationActionWithStaticRendering = () => {
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState(['Small', 'Medium', 'Large']);
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-1"
+							id="clay-autocomplete-label-1"
+						>
+							Tags
+						</label>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-1"
+							id="clay-autocomplete-1"
+							onChange={setValue}
+							placeholder="Add a tag or create a new one"
+							primaryAction={{
+								label: 'Create New Tag',
+								onClick: () => {
+									setItems([...items, value]);
+									setValue('');
+								},
+							}}
+							value={value}
+						>
+							{items.map((item, i) => (
+								<ClayAutocomplete.Item key={item + i}>
+									{item}
+								</ClayAutocomplete.Item>
+							))}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export const CreationActionWithDynamicRendering = () => {
+	const [value, setValue] = useState('');
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-1"
+							id="clay-autocomplete-label-1"
+						>
+							Tags
+						</label>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-1"
+							defaultItems={['Small', 'Medium', 'Large']}
+							onChange={setValue}
+							primaryAction={{
+								label: 'Create New Tag',
+								onClick: () => {
+									alert('create!');
+								},
+							}}
+							value={value}
+						>
+							{(item, i) => (
+								<ClayAutocomplete.Item key={item + i}>
+									{item}
+								</ClayAutocomplete.Item>
+							)}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};

@@ -27,6 +27,7 @@ import {
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
+import Item from './Item';
 
 import type {AnnouncerAPI, ICollectionProps} from '@clayui/core';
 import type {Locator} from '@clayui/shared';
@@ -142,6 +143,14 @@ export interface IProps<T>
 	onLoadMore?: () => Promise<any> | null;
 
 	/**
+	 * Config for showing a default action as the first item in the dropdown
+	 */
+	primaryAction?: {
+		label: React.ReactNode;
+		onClick: () => void;
+	};
+
+	/**
 	 * The current value of the input (controlled).
 	 */
 	value?: string;
@@ -217,6 +226,7 @@ function AutocompleteInner<T extends Item>(
 		onChange,
 		onItemsChange,
 		onLoadMore,
+		primaryAction,
 		value: externalValue,
 		...otherProps
 	}: IProps<T>,
@@ -352,16 +362,60 @@ function AutocompleteInner<T extends Item>(
 		});
 	}, [debouncedLoadingChange, isItemsUncontrolled, items, filterFn]);
 
+	const dynamicCollection = children instanceof Function;
+
+	const filteredItemsWithPrimaryAction =
+		primaryAction && dynamicCollection
+			? ['__PRIMARY_ACTION__' as T, ...filteredItems]
+			: filteredItems;
+
 	const virtualizer = useVirtual({
 		estimateSize: 37,
-		items: filteredItems,
+		items: filteredItemsWithPrimaryAction,
 		parentRef: menuRef,
 	});
+
+	const primaryActionChild = (
+		<Item
+			{...primaryAction}
+			className="text-primary"
+			data-collection-no-filter
+			highlightMatch={false}
+			key="__PRIMARY_ACTION__"
+			onClick={(event) => {
+				event.preventDefault();
+
+				if (primaryAction?.onClick) {
+					primaryAction.onClick();
+				}
+			}}
+		>
+			{primaryAction?.label}
+		</Item>
+	);
+
+	let wrappedChildren = children;
+
+	if (primaryAction) {
+		if (dynamicCollection) {
+			wrappedChildren = (item: T, ...args: Array<any>) => {
+				if (item === '__PRIMARY_ACTION__') {
+					return primaryActionChild;
+				}
+
+				return children(item, ...args);
+			};
+		} else if (Array.isArray(children)) {
+			wrappedChildren = [primaryActionChild, ...children];
+		} else {
+			wrappedChildren = [primaryActionChild, children];
+		}
+	}
 
 	// We initialize the collection in the picker and then pass it down so the
 	// collection can be cached even before the listbox is not mounted.
 	const collection = useCollection<T, unknown>({
-		children,
+		children: wrappedChildren,
 		filter: isItemsUncontrolled ? filterFn : undefined,
 		filterKey: 'value',
 		itemContainer: useCallback(
@@ -402,7 +456,7 @@ function AutocompleteInner<T extends Item>(
 			},
 			[value]
 		),
-		items: filteredItems,
+		items: filteredItemsWithPrimaryAction,
 		notFound: (
 			<DropDown.Item
 				aria-disabled="true"
