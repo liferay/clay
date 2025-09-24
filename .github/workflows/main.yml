@@ -17,7 +17,7 @@ jobs:
             - uses: actions/cache@v4
               with:
                   path: '**/node_modules'
-                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}-1
             - name: Install Dependencies
               run: yarn install && cd ./www && yarn install
             - name: Lint
