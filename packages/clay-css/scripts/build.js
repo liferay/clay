@@ -274,12 +274,7 @@ async function build() {
 	await buildIconsSvg(svgFiles);
 	await buildScssIcons(svgFiles);
 
-	const fileNames = [
-		'atlas.scss',
-		'bootstrap.scss',
-		'base.scss',
-		'cadmin.scss',
-	];
+	const fileNames = ['atlas.scss', 'base.scss', 'cadmin.scss'];
 
 	await ensureDirectory(CSS_OUTPUT_DIRECTORY);
 
