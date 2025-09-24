@@ -516,10 +516,6 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 					if (days) {
 						const [startDate, endDate] = days;
 
-						changeMonth(startDate!);
-
-						setDaysSelected([startDate!, endDate!]);
-
 						if (time) {
 							setCurrentTime(
 								startDate!.getHours(),
@@ -531,6 +527,10 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 									  ) as Input['ampm'])
 									: undefined
 							);
+						} else {
+							changeMonth(startDate!);
+
+							setDaysSelected([startDate!, endDate!]);
 						}
 					}
 				}
