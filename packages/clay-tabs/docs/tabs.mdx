@@ -181,135 +181,161 @@ const DropDownWithState = ({children, trigger, ...others}) => {
 
 export default function App() {
 	const [active, setActive] = useState(0);
+	const [dropdownTabActive, setDropdownTabActive] = useState(active);
 
 	const dropdownTabsItems = [
 		{
 			disabled: true,
 			label: 'Tab 5',
-			tabkey: 5,
+			tabkey: 4,
 		},
 		{
 			label: 'Tab 6',
-			tabkey: 6,
+			tabkey: 5,
 		},
 		{
 			label: 'Tab 7',
+			tabkey: 6,
+		},
+		{
+			label: 'Tab 8',
 			tabkey: 7,
 		},
 	];
+
+	useEffect(() => {
+		setActive(dropdownTabActive);
+	}, [dropdownTabActive]);
 
 	return (
 		<Provider spritemap="/public/icons.svg">
 			<div className="p-4">
 				<>
-					<Tabs active={active} onActiveChange={setActive}>
-						<Tabs.Item
+					<ClayTabs active={active} onActiveChange={setActive}>
+						<ClayTabs.Item
 							innerProps={{
 								'aria-controls': 'tabpanel-1',
+								id: 'tab-1',
 							}}
 						>
 							Tab 1
-						</Tabs.Item>
-						<Tabs.Item
+						</ClayTabs.Item>
+						<ClayTabs.Item
 							innerProps={{
 								'aria-controls': 'tabpanel-2',
+								id: 'tab-2',
 							}}
 						>
 							Tab 2
-						</Tabs.Item>
-						<Tabs.Item
+						</ClayTabs.Item>
+						<ClayTabs.Item
 							innerProps={{
 								'aria-controls': 'tabpanel-3',
+								id: 'tab-3',
 							}}
 						>
 							Tab 3
-						</Tabs.Item>
-						<Tabs.Item
+						</ClayTabs.Item>
+						<ClayTabs.Item
 							innerProps={{
 								'aria-controls': 'tabpanel-4',
+								id: 'tab-4',
 							}}
 						>
 							Tab 4
-						</Tabs.Item>
+						</ClayTabs.Item>
+						<ClayTabs.Item>
+							<DropDown
+								hasRightSymbols
+								role="none"
+								trigger={
+									<ClayButton
+										active={[5, 6, 7].includes(active)}
+										aria-label="Expand to select more tab items"
+										className="nav-link"
+										displayType={null}
+									>
+										More
+										<span className="inline-item inline-item-after">
+											<Icon symbol="caret-bottom" />
+										</span>
+									</ClayButton>
+								}
+							>
+								<DropDown.ItemList>
+									{dropdownTabsItems.map(
+										(
+											{disabled = false, label, tabkey},
+											i
+										) => {
+											i = i + 4;
 
-						<DropDownWithState
-							trigger={
-								<Tabs.Item
-									active={[5, 6, 7].includes(active)}
-									innerProps={{
-										'aria-controls': 'tabpanel-5',
-									}}
-								>
-									More
-									<span class="inline-item inline-item-after">
-										<Icon symbol="caret-bottom" />
-									</span>
-								</Tabs.Item>
-							}
-						>
-							<DropDown.ItemList>
-								{dropdownTabsItems.map(
-									({disabled = false, label, tabkey}, i) => {
-										return (
-											<DropDown.Item
-												active={active === tabkey}
-												aria-selected={
-													active === tabkey
-												}
-												disabled={disabled}
-												key={i}
-												onClick={() =>
-													setActive(tabkey)
-												}
-												role="tab"
-												symbolRight={
-													active === tabkey
-														? 'check'
-														: undefined
-												}
-											>
-												{label}
-											</DropDown.Item>
-										);
-									}
-								)}
-							</DropDown.ItemList>
-						</DropDownWithState>
-					</Tabs>
-					<Tabs.Content activeIndex={active} fade>
-						<Tabs.TabPane aria-labelledby="tab-1">
+											return (
+												<DropDown.Item
+													active={active === tabkey}
+													aria-controls={`tabpanel-${i}`}
+													aria-selected={
+														active === tabkey
+													}
+													disabled={disabled}
+													id={`tab-${i}`}
+													key={i}
+													onClick={() => {
+														setDropdownTabActive(
+															tabkey
+														);
+													}}
+													role="none"
+													roleItem="tab"
+													symbolRight={
+														active === tabkey
+															? 'check'
+															: undefined
+													}
+												>
+													{label}
+												</DropDown.Item>
+											);
+										}
+									)}
+								</DropDown.ItemList>
+							</DropDown>
+						</ClayTabs.Item>
+					</ClayTabs>
+					<ClayTabs.Content activeIndex={active} fade>
+						<ClayTabs.TabPane aria-labelledby="tab-1">
 							1. Proin efficitur imperdiet dolor, a iaculis orci
 							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-2">
+						</ClayTabs.TabPane>
+						<ClayTabs.TabPane aria-labelledby="tab-2">
 							2. Proin efficitur imperdiet dolor, a iaculis orci
 							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-3">
+						</ClayTabs.TabPane>
+						<ClayTabs.TabPane aria-labelledby="tab-3">
 							3. Proin efficitur imperdiet dolor, a iaculis orci
 							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-4">
+						</ClayTabs.TabPane>
+						<ClayTabs.TabPane aria-labelledby="tab-4">
 							4. Proin efficitur imperdiet dolor, a iaculis orci
 							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-5">
+						</ClayTabs.TabPane>
+						<ClayTabs.TabPane aria-labelledby="tab-5">
 							5. Proin efficitur imperdiet dolor, a iaculis orci
 							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-6">
+						</ClayTabs.TabPane>
+						<ClayTabs.TabPane aria-labelledby="tab-6">
 							6. Proin efficitur imperdiet dolor, a iaculis orci
 							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-7">
+						</ClayTabs.TabPane>
+						<ClayTabs.TabPane aria-labelledby="tab-7">
 							7. Proin efficitur imperdiet dolor, a iaculis orci
 							lacinia eu.
-						</Tabs.TabPane>
-						<Tabs.TabPane aria-labelledby="tab-8">
+						</ClayTabs.TabPane>
+						<ClayTabs.TabPane aria-labelledby="tab-8">
 							8. Proin efficitur imperdiet dolor, a iaculis orci
 							lacinia eu.
-						</Tabs.TabPane>
-					</Tabs.Content>
+						</ClayTabs.TabPane>
+					</ClayTabs.Content>
 				</>
 			</div>
 		</Provider>

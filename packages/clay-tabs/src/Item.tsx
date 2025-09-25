@@ -47,7 +47,7 @@ const Item = React.forwardRef<any, IProps>(
 			className,
 			disabled = false,
 			href,
-			innerProps = {},
+			innerProps,
 			onClick,
 			...otherProps
 		}: IProps,
@@ -58,25 +58,29 @@ const Item = React.forwardRef<any, IProps>(
 			className={classNames('nav-item', className)}
 			role="none"
 		>
-			<LinkOrButton
-				{...innerProps}
-				aria-selected={active}
-				buttonDisplayType="unstyled"
-				buttonType="button"
-				className={classNames('nav-link', {
-					active,
-					disabled,
-				})}
-				data-testid="tabItem"
-				disabled={disabled}
-				href={href}
-				onClick={onClick}
-				ref={ref}
-				role="tab"
-				tabIndex={!active ? -1 : 0}
-			>
-				{children}
-			</LinkOrButton>
+			{!React.isValidElement(children) ? (
+				<LinkOrButton
+					{...innerProps}
+					aria-selected={active}
+					buttonDisplayType="unstyled"
+					buttonType="button"
+					className={classNames('nav-link', {
+						active,
+						disabled,
+					})}
+					data-testid="tabItem"
+					disabled={disabled}
+					href={href}
+					onClick={onClick}
+					ref={ref}
+					role="tab"
+					tabIndex={!active ? -1 : 0}
+				>
+					{children}
+				</LinkOrButton>
+			) : (
+				children
+			)}
 		</li>
 	)
 );
