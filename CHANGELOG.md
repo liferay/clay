@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.149.1](https://github.com/liferay/clay/compare/v3.149.0...v3.149.1) (2025-09-25)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-63935 Nav Tabs dropdow-trigger should inherit font-size and border bottom shouldn't show ([cb05d9a](https://github.com/liferay/clay/commit/cb05d9a6e2964a2d65d4a1059662e63d1f17689e))
+-   **@clayui/css:** LPD-66425 Nested CSS variables shouldn't cause errors ([9719e69](https://github.com/liferay/clay/commit/9719e69cde69ab8cbaa697dd714c20b4cdd2b386))
+-   **@clayui/date-picker:** LPD-66553 Using arrow keys to change time shouldn't move focus to date ([ae4d398](https://github.com/liferay/clay/commit/ae4d39894fddb7eab2f81eef0e24dee589028ff0))
+-   **@clayui/tabs:** LPD-63935 Item should only render linkOrButton if it's not a React element ([fddf5de](https://github.com/liferay/clay/commit/fddf5de31d2f493ae5b3af33386a48644f1eba4c))
+
 # [3.149.0](https://github.com/liferay/clay/compare/v3.148.0...v3.149.0) (2025-09-24)
 
 ### Bug Fixes

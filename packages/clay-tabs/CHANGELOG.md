@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.149.1](https://github.com/liferay/clay/compare/v3.149.0...v3.149.1) (2025-09-25)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** LPD-63935 Item should only render linkOrButton if it's not a React element ([fddf5de](https://github.com/liferay/clay/commit/fddf5de31d2f493ae5b3af33386a48644f1eba4c))
+
 # [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
 
 **Note:** Version bump only for package @clayui/tabs

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.149.1](https://github.com/liferay/clay/compare/v3.149.0...v3.149.1) (2025-09-25)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-63935 Nav Tabs dropdow-trigger should inherit font-size and border bottom shouldn't show ([cb05d9a](https://github.com/liferay/clay/commit/cb05d9a6e2964a2d65d4a1059662e63d1f17689e))
+* **@clayui/css:** LPD-66425 Nested CSS variables shouldn't cause errors ([9719e69](https://github.com/liferay/clay/commit/9719e69cde69ab8cbaa697dd714c20b4cdd2b386))
+
+
+
+
+
 # [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
 
 

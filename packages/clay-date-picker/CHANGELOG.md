@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.149.1](https://github.com/liferay/clay/compare/v3.149.0...v3.149.1) (2025-09-25)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** LPD-66553 Using arrow keys to change time shouldn't move focus to date ([ae4d398](https://github.com/liferay/clay/commit/ae4d39894fddb7eab2f81eef0e24dee589028ff0))
+
 # [3.149.0](https://github.com/liferay/clay/compare/v3.148.0...v3.149.0) (2025-09-24)
 
 **Note:** Version bump only for package @clayui/date-picker
