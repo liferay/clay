@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import classNames from 'classnames';
 import React from 'react';
 
 import {ClayInput} from '../src';
@@ -91,4 +92,33 @@ Textarea.args = {
 	disabled: false,
 	readOnly: false,
 	sizing: undefined,
+};
+
+export const InlineText = (args: any) => (
+	<div className="sheet">
+		<ClayForm.Group
+			className={classNames({
+				['has-error']: args.hasError,
+				['has-success']: args.hasSuccess,
+				['has-warning']: args.hasWarning,
+			})}
+		>
+			<label htmlFor="inlineText">Inline Text Example</label>
+			<ClayInput.InlineText
+				defaultValue="Initial Value"
+				id="inlineText"
+				name="inlineText"
+				placeholder="Placeholder Text"
+				readonly={args.readonly}
+				required
+			/>
+		</ClayForm.Group>
+	</div>
+);
+
+InlineText.args = {
+	hasError: false,
+	hasSuccess: false,
+	hasWarning: false,
+	readonly: false,
 };

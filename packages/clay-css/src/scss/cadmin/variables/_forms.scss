@@ -129,6 +129,59 @@ $cadmin-input-palette: map-deep-merge(
 			white-space: nowrap,
 			width: min-content,
 		),
+		'.form-control-fit-content': (
+			max-width: 100%,
+			'.form-control': (
+				display: inline-flex,
+				width: auto,
+			),
+			'.form-control-inset': (
+				margin: 0,
+				min-height: 0,
+				min-width: 50px,
+				width: auto,
+				'&:empty:before': (
+					color: $cadmin-secondary,
+					content: unquote("'\\FEFF' attr(placeholder)"),
+					cursor: text,
+					pointer-events: none,
+				),
+				'&:focus:empty:before': (
+					content: none,
+				),
+			),
+			'.form-control-hidden': (
+				width: 0,
+			),
+		),
+		'.inline-text-input': (
+			'.form-control': (
+				background-color: transparent,
+				border-color: transparent,
+				font-size: 28px,
+				font-weight: $cadmin-font-weight-semi-bold,
+				line-height: 1,
+				padding: 5px 0 5px 16px,
+				'&:hover': (
+					border-color: $cadmin-secondary-l3,
+				),
+			),
+			'.form-control-inset': (
+				padding-right: 16px,
+				'&:focus ~ .form-control-indicator': (
+					display: none,
+				),
+				'&[contenteditable="false"] ~ .form-control-indicator': (
+					display: none,
+				),
+			),
+			'.form-control-item': (
+				padding-right: 16px,
+			),
+			'.lexicon-icon': (
+				font-size: 16px,
+			),
+		),
 	),
 	$cadmin-input-palette
 );
@@ -432,9 +485,10 @@ $cadmin-form-control-inset: map-deep-merge(
 		margin-bottom: $cadmin-form-control-inset-margin-y,
 		margin-left: 8px,
 		margin-top: $cadmin-form-control-inset-margin-y,
+		max-width: 100%,
 		min-height: $cadmin-form-control-inset-min-height,
+		min-width: 50px,
 		padding: 0,
-		width: 50px,
 		focus: (
 			outline: 0,
 		),
@@ -886,6 +940,14 @@ $cadmin-has-error: map-deep-merge(
 				),
 			),
 		),
+		'.inline-text-input': (
+			'.form-control': (
+				border-color: $cadmin-input-danger-border-color,
+			),
+			'.form-control-indicator': (
+				display: none,
+			),
+		),
 	),
 	$cadmin-has-error
 );
@@ -1062,6 +1124,14 @@ $cadmin-has-warning: map-deep-merge(
 				),
 			),
 		),
+		'.inline-text-input': (
+			'.form-control': (
+				border-color: $cadmin-input-warning-border-color,
+			),
+			'.form-control-indicator': (
+				display: none,
+			),
+		),
 	),
 	$cadmin-has-warning
 );
@@ -1236,6 +1306,14 @@ $cadmin-has-success: map-deep-merge(
 							),
 					),
 				),
+			),
+		),
+		'.inline-text-input': (
+			'.form-control': (
+				border-color: $cadmin-input-success-border-color,
+			),
+			'.form-control-indicator': (
+				display: none,
 			),
 		),
 	),
