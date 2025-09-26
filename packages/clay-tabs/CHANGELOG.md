@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.149.2](https://github.com/liferay/clay/compare/v3.149.1...v3.149.2) (2025-09-26)
+
+### Reverts
+
+-   Revert "chore(@clayui/tabs): LPD-63935 Add storybook example of tabs with dropdown" ([99434e2](https://github.com/liferay/clay/commit/99434e2ce37d79537a25ba7342fc73c088138a83))
+-   Revert "docs(clayui.com): LPD-63935 Fix Tabs with dropdown menu example" ([b3cf994](https://github.com/liferay/clay/commit/b3cf9946bd04f2681636ae793d4726a8b17e9de0))
+-   Revert "fix(@clayui/tabs): LPD-63935 Item should only render linkOrButton if it's not a React element" ([5c5731e](https://github.com/liferay/clay/commit/5c5731e7de028b820ee4b0d57740d26eabe1e5fe))
+
 ## [3.149.1](https://github.com/liferay/clay/compare/v3.149.0...v3.149.1) (2025-09-25)
 
 ### Bug Fixes

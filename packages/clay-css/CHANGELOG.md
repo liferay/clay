@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.149.2](https://github.com/liferay/clay/compare/v3.149.1...v3.149.2) (2025-09-26)
+
+
+### Reverts
+
+* Revert "fix(@clayui/css): LPD-63935 Nav Tabs dropdow-trigger should inherit font-size and border bottom shouldn't show" ([ff889dc](https://github.com/liferay/clay/commit/ff889dce3916c3b9578b21ec63fcaf275463a3ba))
+
+
+
+
+
 ## [3.149.1](https://github.com/liferay/clay/compare/v3.149.0...v3.149.1) (2025-09-25)
 
 
