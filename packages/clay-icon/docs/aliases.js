@@ -1841,6 +1841,10 @@ export const iconsData = [
 		name: 'tap-ahead',
 	},
 	{
+		aliases: [''],
+		name: 'task-status',
+	},
+	{
 		aliases: ['experiment', 'lab'],
 		name: 'test',
 	},
