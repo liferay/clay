@@ -424,6 +424,11 @@ $form-control-select-palette: map-deep-merge(
 				background-image: clay-icon(caret-double-l, $gray-900),
 				color: $gray-900,
 			),
+			input-group-inset-item: (
+				background-color: $white,
+				border-color: $secondary-l0,
+				color: $gray-600,
+			),
 		),
 	),
 	$form-control-select-palette

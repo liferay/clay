@@ -1353,6 +1353,11 @@ $cadmin-form-control-select-palette: map-deep-merge(
 				background-image: clay-icon(caret-double-l, $cadmin-gray-900),
 				color: $cadmin-gray-900,
 			),
+			input-group-inset-item: (
+				background-color: $cadmin-white,
+				border-color: $cadmin-secondary-l0,
+				color: $cadmin-gray-600,
+			),
 		),
 		'.form-control-select-shrink': (
 			max-width: 100%,
