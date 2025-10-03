@@ -245,7 +245,10 @@
 		@include border-right-radius(0);
 
 		border-right-width: 0;
-		padding-right: 0;
+
+		&:not(.form-control-select) {
+			padding-right: 0;
+		}
 	}
 
 	.input-group-inset-item-after {
