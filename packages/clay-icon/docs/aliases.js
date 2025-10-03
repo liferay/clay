@@ -1633,6 +1633,10 @@ export const iconsData = [
 		name: 'select',
 	},
 	{
+		aliases: ['find', 'identify', 'interpretive', 'locate', 'suggestion'],
+		name: 'semantic-search',
+	},
+	{
 		aliases: [''],
 		name: 'send',
 	},
