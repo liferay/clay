@@ -331,7 +331,7 @@ export const ClayDropDownWithDrilldown = ({
 			menuHeight={menuHeight}
 			menuWidth={menuWidth}
 			offsetFn={offsetFn}
-			onActiveChange={(value: boolean) => {
+			onActiveChange={(value) => {
 				if (!active) {
 					setActiveMenu(defaultActiveMenu);
 					focusHistory.current = [];
