@@ -777,6 +777,10 @@ export const iconsData = [
 		name: 'cut',
 	},
 	{
+		aliases: ['archive', 'catalog', 'datastore', 'hub', 'index', 'record'],
+		name: 'database',
+	},
+	{
 		aliases: [''],
 		name: 'date-time',
 	},
