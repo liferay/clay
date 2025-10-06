@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.150.0](https://github.com/liferay/clay/compare/v3.149.2...v3.150.0) (2025-10-06)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-66602 Lower sticky-* z-index to 989 ([1ebe5dc](https://github.com/liferay/clay/commit/1ebe5dcb74df9c3c472f54941123a5343aa44163))
+* **@clayui/css:** LPD-66700 Adjust custom checkbox and radio vertical alignment ([41af20f](https://github.com/liferay/clay/commit/41af20f2adab86cf757ceceb9b5f9f4a8c23e34e))
+
+
+### chore
+
+* **@clayui/css:** LPD-65524 Remove Bootstrap files ([b8edf1e](https://github.com/liferay/clay/commit/b8edf1e3e50600e4e4c483a3802266c60d81f25e))
+
+
+### Features
+
+* **@clayui/css:** LPD-66411 Add semantic-search.svg ([2232e7f](https://github.com/liferay/clay/commit/2232e7fd976991969cf9dbe827326c3324dae2ee))
+* **@clayui/css:** LPD-66645 Add task-status.svg ([522a3a7](https://github.com/liferay/clay/commit/522a3a7f92b1da74ac8de6bf8e2387f939b16d49))
+* **@clayui/css:** LPD-67527 Add database.svg ([c3c2424](https://github.com/liferay/clay/commit/c3c24241ffb4611c2d09a87892b4561cde519a66))
+
+
+### BREAKING CHANGES
+
+* **@clayui/css:** Please use base or atlas if you depended on these files.
+
+
+
+
+
 ## [3.149.2](https://github.com/liferay/clay/compare/v3.149.1...v3.149.2) (2025-09-26)
 
 
