@@ -6,12 +6,7 @@
 import {useCallback, useRef, useState} from 'react';
 import warning from 'warning';
 
-export type InternalDispatch<Value> =
-	| ((value: Value) => void)
-	| ((value?: Value) => void)
-	| ((value: Value | (() => Value)) => void)
-	| ((value?: Value | (() => Value)) => void)
-	| React.Dispatch<React.SetStateAction<Value>>;
+export type InternalDispatch<Value> = (value: Value) => void;
 
 type Props<Value> = {
 	defaultName: string;

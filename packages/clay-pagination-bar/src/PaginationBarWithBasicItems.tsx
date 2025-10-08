@@ -240,9 +240,9 @@ export const ClayPaginationBarWithBasicItems = ({
 						as={Trigger}
 						items={deltas}
 						labels={labels}
-						onSelectionChange={(key: React.Key) =>
-							onDeltaChange && onDeltaChange(Number(key))
-						}
+						onSelectionChange={(key) => {
+							onDeltaChange && onDeltaChange(Number(key));
+						}}
 						selectedKey={String(activeDelta)}
 						spritemap={spritemap}
 					>

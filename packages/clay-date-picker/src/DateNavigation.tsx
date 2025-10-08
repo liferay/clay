@@ -105,11 +105,11 @@ const ClayDatePickerDateNavigation = ({
 										: 'PageDown';
 							}
 						}}
-						onSelectionChange={(key: React.Key) =>
+						onSelectionChange={(key) => {
 							onMonthChange(
 								new Date(Number(key), currentMonth.getMonth())
-							)
-						}
+							);
+						}}
 						selectedKey={String(currentMonth.getFullYear())}
 						width={95}
 					>
