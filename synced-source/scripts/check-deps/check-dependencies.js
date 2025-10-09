@@ -96,10 +96,8 @@ function getDependencies(config) {
 }
 
 const WORKSPACE_PACKAGES_WHITELIST = new Set([
-	'browserslist-config-clay',
 	'clay-css',
 	'demos',
-	'generator-clay-component',
 ]);
 
 /**

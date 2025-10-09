@@ -28,7 +28,6 @@
 	"include": ["packages/**/*"],
 	"exclude": [
 		"node_modules",
-		"packages/**/lib",
-		"packages/generator-clay-component"
+		"packages/**/lib"
 	]
 }

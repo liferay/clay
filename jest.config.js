@@ -252,11 +252,8 @@ module.exports = {
 		`${process.cwd()}/**/?(*.)+(spec|test).[jt]s?(x)`,
 	],
 	testPathIgnorePatterns: [
-		'browserslist-config-clay',
 		'fixtures',
-		'generator-clay-component',
 		'lib',
-		'clayui.com',
 	],
 	timers: 'legacy',
 	transform: {
