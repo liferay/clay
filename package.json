@@ -1,16 +1,6 @@
 {
 	"private": true,
 	"repository": "https://github.com/liferay/clay",
-	"size-limit": [
-		{
-			"path": "all.js",
-			"limit": "165 kb",
-			"ignore": [
-				"react",
-				"react-dom"
-			]
-		}
-	],
 	"scripts": {
 		"build:csb": "yarn build && yarn buildTypes",
 		"build": "turbo run build --filter=@clayui/*",
@@ -33,7 +23,6 @@
 		"lint:typescript": "tsc --project ./tsconfig.global.json",
 		"lint": "eslint \".*.js\" \"!(www)/**/*.{js,ts,tsx}\"",
 		"site": "cd www && yarn && yarn build",
-		"sizeLimit": "size-limit",
 		"storybook:build": "NODE_OPTIONS=--max_old_space_size=8192 build-storybook -c .storybook -o .storybook-static",
 		"storybook": "start-storybook -p 8888",
 		"test": "jest",
@@ -47,7 +36,6 @@
 		"@babel/preset-react": "^7.14.5",
 		"@babel/preset-typescript": "^7.15.0",
 		"@liferay/eslint-plugin": "^1.0.0",
-		"@size-limit/preset-small-lib": "^6.0.3",
 		"@storybook/addon-a11y": "^6.5.10",
 		"@storybook/addon-controls": "^6.5.10",
 		"@storybook/addon-essentials": "^6.5.10",
@@ -98,7 +86,6 @@
 		"react-test-renderer": "^18.2.0",
 		"resize-observer-polyfill": "^1.5.1",
 		"sass-loader": "^7.1.0",
-		"size-limit": "^6.0.3",
 		"source-map-loader": "^0.2.4",
 		"storybook": "^8.5.8",
 		"style-loader": "^0.23.1",
