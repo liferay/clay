@@ -5,16 +5,16 @@
 		"build:csb": "yarn build && yarn buildTypes",
 		"build": "turbo run build --filter=@clayui/*",
 		"buildTypes": "turbo run buildTypes --filter=@clayui/*",
-		"checkDeps": "turbo run build --filter=@clayui/* && node scripts/check-deps/check-dependencies.js",
+		"checkDeps": "turbo run build --filter=@clayui/* && node synced-source/scripts/check-deps/check-dependencies.js",
 		"ci": "yarn lint && yarn format:check && yarn test && yarn checkDeps",
 		"coverage": "jest --coverage",
 		"format": "prettier --write \"**/*.{js,ts,mjs,tsx,md,mdx,json,scss}\"",
 		"format:all": "yarn lint:fix && yarn format",
 		"format:changed": "git ls-files -mz \"*.js\" \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" \"*.md\" \"**/*.md\" \"**/*.mdx\" \"*.json\" \"**/*.json\" \"**/*.scss\" | xargs -0 prettier --write --",
 		"format:check": "prettier --list-different -- \"**/*.{js,ts,tsx,md,mdx,json,scss}\"",
-		"genBuildSize:compare": "NODE_ENV=production node scripts/check-size/index.mjs --compare",
-		"genBuildSize": "NODE_ENV=production node scripts/check-size/index.mjs",
-		"genGlobalChangeLog": "node scripts/generate-global-changelog.js && prettier --write -- \"CHANGELOG.md\"",
+		"genBuildSize:compare": "NODE_ENV=production node synced-source/scripts/check-size/index.mjs --compare",
+		"genBuildSize": "NODE_ENV=production node synced-source/scripts/check-size/index.mjs",
+		"genGlobalChangeLog": "node synced-source/scripts/generate-global-changelog.js && prettier --write -- \"CHANGELOG.md\"",
 		"lerna:version": "lerna version --conventional-commits",
 		"lerna:publish": "lerna publish from-package --no-verify-access --yes",
 		"lint:changed": "git ls-files -mz \"*.js\" \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" | xargs -0 eslint",
@@ -23,10 +23,10 @@
 		"lint:typescript": "tsc --project ./tsconfig.global.json",
 		"lint": "eslint \".*.js\" \"!(www)/**/*.{js,ts,tsx}\"",
 		"site": "cd www && yarn && yarn build",
-		"storybook:build": "NODE_OPTIONS=--max_old_space_size=8192 build-storybook -c .storybook -o .storybook-static",
+		"storybook:build": "NODE_OPTIONS=--max_old_space_size=8192 build-storybook -c ./synced-source/.storybook -o ./synced-source/.storybook-static",
 		"storybook": "start-storybook -p 8888",
 		"test": "jest",
-		"version": "prettier --write -- \"**/CHANGELOG.md\" \"lerna.json\" && git add -- \"packages/clay-css/src/scss/_license-text.scss\"",
+		"version": "prettier --write -- \"**/CHANGELOG.md\" \"lerna.json\" && git add -- \"synced-source/packages/clay-css/src/scss/_license-text.scss\"",
 		"chromatic": "chromatic --exit-zero-on-changes --build-script-name=storybook:build"
 	},
 	"devDependencies": {
@@ -97,7 +97,7 @@
 	},
 	"workspaces": {
 		"packages": [
-			"packages/*"
+			"synced-source/packages/*"
 		],
 		"nohoist": [
 			"gatsby",
