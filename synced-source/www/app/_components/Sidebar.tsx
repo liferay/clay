@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type {FileSystemSource, Collection} from 'renoun/collections';
 import type {AllCollection, ComponentDocumentsSchema} from '@/data';
 
-import ClayLink from '../_components/Link';
+import ClayLink from './Link';
 import styles from './sidebar.module.css';
 import {SidebarMobile} from './SidebarMobile';
 

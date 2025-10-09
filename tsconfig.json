@@ -22,7 +22,7 @@
 		"target": "es2015",
 		"paths": {
 			"@clayui/*": ["node_modules/@clayui/*/src"],
-			"*": ["custom-types/*", "node_modules/*", "packages/*"]
+			"*": ["synced-source/custom-types/*", "node_modules/*", "packages/*"]
 		}
 	},
 	"include": ["packages/**/*"],
