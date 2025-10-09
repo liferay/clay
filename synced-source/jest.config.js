@@ -251,10 +251,7 @@ module.exports = {
 		`${process.cwd()}/**/__tests__/**/*.[jt]s?(x)`,
 		`${process.cwd()}/**/?(*.)+(spec|test).[jt]s?(x)`,
 	],
-	testPathIgnorePatterns: [
-		'fixtures',
-		'lib',
-	],
+	testPathIgnorePatterns: ['fixtures', 'lib'],
 	timers: 'legacy',
 	transform: {
 		'.(ts|tsx)$': 'ts-jest',

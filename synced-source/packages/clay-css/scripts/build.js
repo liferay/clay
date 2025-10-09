@@ -263,7 +263,7 @@ async function build() {
 		path.join(OUTPUT_DIRECTORY, 'images/icons')
 	);
 	copyRecursiveSync(
-		path.join('..', '..', 'LICENSES'),
+		path.join('..', '..', '..', 'LICENSES'),
 		path.resolve('./LICENSES')
 	);
 

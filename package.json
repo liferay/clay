@@ -25,7 +25,7 @@
 		"site": "cd www && yarn && yarn build",
 		"storybook:build": "NODE_OPTIONS=--max_old_space_size=8192 build-storybook -c ./synced-source/.storybook -o ./synced-source/.storybook-static",
 		"storybook": "start-storybook -p 8888",
-		"test": "jest",
+		"test": "jest --config ./synced-source/jest.config.js",
 		"version": "prettier --write -- \"**/CHANGELOG.md\" \"lerna.json\" && git add -- \"synced-source/packages/clay-css/src/scss/_license-text.scss\"",
 		"chromatic": "chromatic --exit-zero-on-changes --build-script-name=storybook:build"
 	},
