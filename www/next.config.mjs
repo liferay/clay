@@ -34,6 +34,11 @@ const nextConfig = {
 				permanent: true,
 			},
 			{
+				destination: '/docs/css/scss',
+				source: '/docs/scss',
+				permanent: true,
+			},
+			{
 				destination: '/docs/components/alert',
 				permanent: true,
 				source: '/docs/components/alert.html',
