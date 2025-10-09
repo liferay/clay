@@ -29,6 +29,11 @@ const nextConfig = {
 	async redirects() {
 		const redirects = [
 			{
+				destination: '/docs/css/scss',
+				source: '/docs/css',
+				permanent: true,
+			},
+			{
 				destination: '/docs/components/alert',
 				permanent: true,
 				source: '/docs/components/alert.html',
