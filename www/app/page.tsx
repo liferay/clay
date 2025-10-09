@@ -191,15 +191,6 @@ export default function Home() {
 										Codesandbox
 									</a>
 								</li>
-								<li>
-									<a
-										href="https://lexicondesign.io/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										Lexicon
-									</a>
-								</li>
 							</ul>
 						</div>
 					</div>
