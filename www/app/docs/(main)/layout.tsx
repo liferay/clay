@@ -19,11 +19,7 @@ export default function MainDocsLayout({
 							{
 								name: 'Releases',
 								href: 'https://github.com/liferay/clay/releases',
-							},
-							{
-								name: 'Lexicon',
-								href: 'https://liferay.design/lexicon',
-							},
+							}
 						],
 					},
 					{
