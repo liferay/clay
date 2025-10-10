@@ -47,6 +47,7 @@ export const Default = (args: any) => (
 					</label>
 					<ClayAutocomplete
 						aria-labelledby="clay-autocomplete-label-1"
+						displayType="select"
 						id="clay-autocomplete-1"
 						menuTrigger={args.menuTrigger}
 						messages={{
