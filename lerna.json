@@ -9,9 +9,7 @@
 				"**/*.md",
 				"**/*.mdx",
 				"**/docs/*",
-				"**/packages/demos/**",
-				"**/packages/generator-clay-component/**",
-				"**/packages/browserslist-config-clay/**"
+				"**/packages/demos/**"
 			],
 			"message": "chore(release): publish %s packages"
 		}

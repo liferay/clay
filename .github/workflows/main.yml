@@ -30,8 +30,6 @@ jobs:
               run: yarn checkDeps
             - name: Run Jest
               env:
-                  BROWSERSLIST_CONFIG: './packages/browserslist-config-clay/config'
-                  BROWSERSLIST_DISABLE_CACHE: 1
                   CI: true
               run: yarn test --coverage
             - name: Push to Coveralls

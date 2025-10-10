@@ -1,0 +1,119 @@
+name: Nightly Sync from liferay-portal
+
+on:
+    push:
+    workflow_dispatch:
+
+env:
+    CLAY_REPO_BRANCH: master-test
+    DEST_DIR: synced-source
+    PORTAL_REPO_BRANCH: master
+    PORTAL_REPO: liferay/liferay-portal
+    SOURCE_DIR: modules/apps/frontend-js/frontend-js-clay-web/clay
+    TAG_PREFIX: 7.4
+
+jobs:
+    sync:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Clay repo
+              uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  ref: ${{ env.CLAY_REPO_BRANCH }}
+
+            - name: Copy clay source to repo
+              run: |
+                  git clone \
+                    --filter=blob:none --no-checkout \
+                    --branch ${{ env.PORTAL_REPO_BRANCH }} \
+                    --single-branch \
+                    --depth 1 \
+                    https://github.com/${{ env.PORTAL_REPO }}.git liferay-portal
+                  cd liferay-portal
+                  git sparse-checkout init --cone
+                  git sparse-checkout set ${{ env.SOURCE_DIR }}
+                  git checkout ${{ env.PORTAL_REPO_BRANCH }}
+
+                  cd ..
+                  rsync -av --ignore-times --exclude=".git" "liferay-portal/${{ env.SOURCE_DIR }}/" "${{ env.DEST_DIR }}"
+                  rm -rf liferay-portal
+
+            - name: Diff
+              run: |
+                  git diff --name-only
+
+            - name: Check if there are changes
+              run: |
+                  git config user.name "github-actions"
+                  git config user.email "github-actions@github.com"
+                  if git diff --quiet; then
+                    echo "No changes to commit"
+                    exit 0
+                  fi
+
+            - name: Commit and push changes
+              run: |
+                  git add ${{ env.DEST_DIR }}
+                  git commit -m "Nightly sync from liferay-portal"
+                  git push origin ${{ env.CLAY_REPO_BRANCH }}
+
+    update-version:
+        needs: sync
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Clay repo
+              uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  ref: ${{ env.CLAY_REPO_BRANCH }}
+
+            - name: Get latest version of liferay-portal from release.properties
+              run: |
+                  # Download release.properties from the portal repo
+                  curl -sL https://raw.githubusercontent.com/${{ env.PORTAL_REPO }}/${{ env.PORTAL_REPO_BRANCH }}/release.properties -o release.properties
+
+                  MAJOR=$(grep -E 'release\.info\.version\.major=' release.properties | cut -d= -f2)
+                  MINOR=$(grep -E 'release\.info\.version\.minor=' release.properties | cut -d= -f2)
+                  BUGFIX=$(grep -E 'release\.info\.version\.bug\.fix=' release.properties | cut -d= -f2)
+                  TRIVIAL=$(grep -E 'release\.info\.version\.trivial=' release.properties | cut -d= -f2)
+
+                  rm release.properties
+
+                  # Build full version string
+                  LATEST_VERSION="$MAJOR.$MINOR.$BUGFIX.$TRIVIAL"
+                  echo "LATEST_VERSION=$LATEST_VERSION" >> $GITHUB_ENV
+                  echo "Latest version: $LATEST_VERSION"
+
+            - name: Update version in lerna.json
+              run: |
+                  echo "Updating lerna.json version to $LATEST_VERSION"
+                  sed -i -E "s/([[:space:]]*\"version\"[[:space:]]*:[[:space:]]*\")[^\"]+(\")/\1$LATEST_VERSION\2/" lerna.json
+
+            - name: Check for changes
+              id: changes
+              run: |
+                  if git diff --quiet; then
+                    echo "changes=false" >> $GITHUB_ENV
+                  else
+                    echo "changes=true" >> $GITHUB_ENV
+                  fi
+
+            - name: Commit and push changes
+              if: env.changes == 'true'
+              run: |
+                  git config user.name "github-actions"
+                  git config user.email "github-actions@github.com"
+                  git add lerna.json
+                  git commit -m "Update lerna.json version to $LATEST_VERSION"
+                  git push origin ${{ env.CLAY_REPO_BRANCH }}
+
+            # TODO:
+            # - name: Trigger release workflow
+            #   if: env.changes == 'true'
+            #   run: |
+            #     gh workflow run release.yml \
+            #       --ref ${{ env.CLAY_REPO_BRANCH }} \
+            #       --repo ${{ github.repository }}
