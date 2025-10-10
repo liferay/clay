@@ -19,7 +19,7 @@ export default function MainDocsLayout({
 							{
 								name: 'Releases',
 								href: 'https://github.com/liferay/clay/releases',
-							}
+							},
 						],
 					},
 					{
