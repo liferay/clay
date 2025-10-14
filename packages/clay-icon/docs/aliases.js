@@ -693,6 +693,10 @@ export const iconsData = [
 		name: 'circle',
 	},
 	{
+		aliases: ['choose', 'event', 'press', 'select', 'trigger'],
+		name: 'click',
+	},
+	{
 		aliases: [''],
 		name: 'closed-book',
 	},
@@ -777,7 +781,7 @@ export const iconsData = [
 		name: 'cut',
 	},
 	{
-		aliases: ['archive', 'catalog', 'datastore', 'hub', 'index', 'record'],
+		aliases: ['archive', 'catalog', 'data store', 'hub', 'index', 'record'],
 		name: 'database',
 	},
 	{
