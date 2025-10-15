@@ -25,6 +25,20 @@ export default function App() {
 	const moveBoxesOptions = [
 		[
 			{
+				label: 'Reddit',
+				value: 'reddit',
+			},
+			{
+				label: 'Slack',
+				value: 'slack',
+			},
+			{
+				label: 'Twitter',
+				value: 'twitter',
+			},
+		],
+		[
+			{
 				label: 'Discord',
 				value: 'discord',
 			},
@@ -39,20 +53,6 @@ export default function App() {
 			{
 				label: 'LinkedIn',
 				value: 'linkedin',
-			},
-		],
-		[
-			{
-				label: 'Reddit',
-				value: 'reddit',
-			},
-			{
-				label: 'Slack',
-				value: 'slack',
-			},
-			{
-				label: 'Twitter',
-				value: 'twitter',
 			},
 		],
 	];
@@ -71,13 +71,13 @@ export default function App() {
 					disableRTL={secondSelectBoxItems.length === 0}
 					items={items}
 					left={{
-						label: 'In Use',
+						label: 'Available',
 						onSelectChange: setLeftSelected,
 						selected: leftSelected,
 					}}
 					onItemsChange={setItems}
 					right={{
-						label: 'Available',
+						label: 'In Use',
 						onSelectChange: setRightSelected,
 						selected: rightSelected,
 					}}
