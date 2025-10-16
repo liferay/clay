@@ -108,6 +108,11 @@ export interface IProps<T>
 	filterKey?: Locator;
 
 	/**
+	 * Property to add elements at the start of the input.
+	 */
+	insetItemBefore?: React.ReactNode;
+
+	/**
 	 * Property to render content with dynamic data.
 	 */
 	items?: Array<T> | null;
@@ -225,6 +230,7 @@ function AutocompleteInner<T extends Item>(
 		direction = 'bottom',
 		displayType,
 		filterKey,
+		insetItemBefore,
 		items: externalItems,
 		loadingState,
 		menuTrigger = 'input',
@@ -577,6 +583,7 @@ function AutocompleteInner<T extends Item>(
 						displayType === 'select-secondary',
 				})}
 				insetAfter={isLoading}
+				insetBefore={insetItemBefore ? true : undefined}
 				onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
 					const {value} = event.target;
 
@@ -739,6 +746,12 @@ function AutocompleteInner<T extends Item>(
 						</AutocompleteContext.Provider>
 					</div>
 				</Overlay>
+			)}
+
+			{insetItemBefore && (
+				<div className="input-group-inset-item input-group-inset-item-before">
+					{insetItemBefore}
+				</div>
 			)}
 
 			{isLoading && (
