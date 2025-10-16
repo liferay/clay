@@ -13,8 +13,8 @@ import {SidePanelWithDrilldown} from '../SidePanelWithDrilldown';
 
 function Component({
 	selectedPanelKey = 'x1',
-}: {selectedPanelKey?: React.Key} = {}) {
-	const [panelKey, setPanelKey] = useState<React.Key>(selectedPanelKey);
+}: {selectedPanelKey?: string} = {}) {
+	const [panelKey, setPanelKey] = useState(selectedPanelKey);
 
 	const ref = useRef<HTMLDivElement | null>(null);
 
