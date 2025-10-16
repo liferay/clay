@@ -205,7 +205,7 @@ export const ClayPaginationWithBasicItems = React.forwardRef(
 							key={page as number}
 							onClick={() => setActive(page as number)}
 						>
-							{page}
+							{page as React.ReactNode}
 						</Pagination.Item>
 					)
 				)}
