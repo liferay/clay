@@ -126,7 +126,6 @@ describe('TreeView incremental interactions', () => {
 								{item.name}
 							</TreeView.ItemStack>
 							<TreeView.Group items={item.children}>
-								\
 								{(item) => (
 									<TreeView.Item>{item.name}</TreeView.Item>
 								)}
