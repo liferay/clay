@@ -24,6 +24,7 @@ import {
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
@@ -96,10 +97,20 @@ export interface IProps<T>
 	direction?: 'bottom' | 'top';
 
 	/**
+	 * Flag to toggle the use of Picker input styles.
+	 */
+	displayType?: 'select' | 'select-secondary';
+
+	/**
 	 * Defines the name of the property key that is used in the items filter
 	 * test (Dynamic content).
 	 */
 	filterKey?: Locator;
+
+	/**
+	 * Property to add elements at the start of the input.
+	 */
+	insetItemBefore?: React.ReactNode;
 
 	/**
 	 * Property to render content with dynamic data.
@@ -217,7 +228,9 @@ function AutocompleteInner<T extends Item>(
 		defaultItems,
 		defaultValue,
 		direction = 'bottom',
+		displayType,
 		filterKey,
+		insetItemBefore,
 		items: externalItems,
 		loadingState,
 		menuTrigger = 'input',
@@ -563,7 +576,14 @@ function AutocompleteInner<T extends Item>(
 				aria-expanded={active}
 				autoComplete="off"
 				autoCorrect="off"
+				className={classNames({
+					'form-control-select':
+						displayType === 'select' || 'select-secondary',
+					'form-control-select-secondary':
+						displayType === 'select-secondary',
+				})}
 				insetAfter={isLoading}
+				insetBefore={insetItemBefore ? true : undefined}
 				onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
 					const {value} = event.target;
 
@@ -726,6 +746,12 @@ function AutocompleteInner<T extends Item>(
 						</AutocompleteContext.Provider>
 					</div>
 				</Overlay>
+			)}
+
+			{insetItemBefore && (
+				<div className="input-group-inset-item input-group-inset-item-before">
+					{insetItemBefore}
+				</div>
 			)}
 
 			{isLoading && (

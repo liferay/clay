@@ -8,6 +8,7 @@ import {FetchPolicy, NetworkStatus, useResource} from '@clayui/data-provider';
 import DropDown from '@clayui/drop-down';
 import Layout from '@clayui/layout';
 import {FocusScope, useDebounce} from '@clayui/shared';
+import Sticker from '@clayui/sticker';
 import React, {useEffect, useRef, useState} from 'react';
 
 import ClayAutocomplete from '../src';
@@ -163,7 +164,31 @@ export const Dynamic = () => (
 );
 
 export const CustomItem = () => {
+	const defaultItems = [
+		'Access Board',
+		'Debt and Claims',
+		'Farm Service',
+		'Fish and Wildlife',
+		'Marine Mammal Commission',
+		'Science and Technology',
+	];
+	const [sticker, setSticker] = useState(null);
 	const [value, setValue] = useState('');
+
+	useEffect(() => {
+		const department = value[0];
+		const index = defaultItems.indexOf(value);
+
+		if (department && index >= 0) {
+			setSticker(
+				<Sticker displayType={`outline-${index}`} size="sm">
+					{department}
+				</Sticker>
+			);
+		} else {
+			setSticker(null);
+		}
+	}, [value]);
 
 	return (
 		<div className="row">
@@ -174,18 +199,15 @@ export const CustomItem = () => {
 							htmlFor="clay-autocomplete-2"
 							id="clay-autocomplete-label-2"
 						>
-							Numbers (one-five)
+							Space
 						</label>
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-2"
-							defaultItems={[
-								'one',
-								'two',
-								'three',
-								'four',
-								'five',
-							]}
+							defaultItems={defaultItems}
+							displayType="select"
 							id="clay-autocomplete-2"
+							insetItemBefore={sticker}
+							menuTrigger="focus"
 							messages={{
 								listCount: '{0} option available.',
 								listCountPlural: '{0} options available.',
@@ -193,28 +215,41 @@ export const CustomItem = () => {
 								notFound: 'No results found',
 							}}
 							onChange={setValue}
-							placeholder="Enter a number from One to Five"
+							placeholder="Select a Space"
 							value={value}
 						>
-							{(item) => (
-								<ClayAutocomplete.Item
-									key={item}
-									textValue={item}
-								>
-									<Layout.ContentRow>
-										<Layout.ContentCol expand>
-											<Text size={3}>
-												<TextHighlight match={value}>
-													{item}
-												</TextHighlight>
-											</Text>
-										</Layout.ContentCol>
-										<Layout.ContentCol>
-											<Text size={2}>Description</Text>
-										</Layout.ContentCol>
-									</Layout.ContentRow>
-								</ClayAutocomplete.Item>
-							)}
+							{(item) => {
+								const deptLetter = item[0];
+
+								return (
+									<ClayAutocomplete.Item
+										key={item}
+										textValue={item}
+									>
+										<Layout.ContentRow>
+											<Layout.ContentCol>
+												<Sticker
+													displayType={`outline-${defaultItems.indexOf(
+														item
+													)}`}
+													size="sm"
+												>
+													{deptLetter}
+												</Sticker>
+											</Layout.ContentCol>
+											<Layout.ContentCol expand>
+												<Text size={3}>
+													<TextHighlight
+														match={value}
+													>
+														{item}
+													</TextHighlight>
+												</Text>
+											</Layout.ContentCol>
+										</Layout.ContentRow>
+									</ClayAutocomplete.Item>
+								);
+							}}
 						</ClayAutocomplete>
 					</div>
 				</div>

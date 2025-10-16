@@ -936,6 +936,16 @@
 				);
 			}
 
+			$_input-group-inset-item: map-get($map, input-group-inset-item);
+
+			@if ($_input-group-inset-item) {
+				@at-root {
+					.input-group & ~ .input-group-inset-item {
+						@include clay-css($_input-group-inset-item);
+					}
+				}
+			}
+
 			@if (length($hover) != 0) {
 				&:hover,
 				&.hover {
@@ -961,6 +971,19 @@
 								&:checked {
 									@include clay-css($_checked);
 								}
+							}
+						}
+					}
+
+					$_input-group-inset-item: map-get(
+						$hover,
+						input-group-inset-item
+					);
+
+					@if ($_input-group-inset-item) {
+						@at-root {
+							.input-group & ~ .input-group-inset-item {
+								@include clay-css($_input-group-inset-item);
 							}
 						}
 					}
@@ -994,6 +1017,19 @@
 									&:checked {
 										@include clay-css($_checked);
 									}
+								}
+							}
+						}
+
+						$_input-group-inset-item: map-get(
+							$focus,
+							input-group-inset-item
+						);
+
+						@if ($_input-group-inset-item) {
+							@at-root {
+								.input-group & ~ .input-group-inset-item {
+									@include clay-css($_input-group-inset-item);
 								}
 							}
 						}
@@ -1096,6 +1132,19 @@
 								&:checked {
 									@include clay-css($_checked);
 								}
+							}
+						}
+					}
+
+					$_input-group-inset-item: map-get(
+						$disabled,
+						input-group-inset-item
+					);
+
+					@if ($_input-group-inset-item) {
+						@at-root {
+							.input-group & ~ .input-group-inset-item {
+								@include clay-css($_input-group-inset-item);
 							}
 						}
 					}
