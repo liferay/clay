@@ -390,7 +390,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 					className
 				)}
 				onChange={(event) => setSelectedKey(event.target.value)}
-				value={selectedKey}
+				value={selectedKey ? String(selectedKey) : undefined}
 			>
 				<PickerContext.Provider value={context}>
 					<Collection<T> collection={collection} />

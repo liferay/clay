@@ -227,30 +227,33 @@ export function TreeView<T extends Record<string, any>>({
 				role="tree"
 				tabIndex={-1}
 			>
-				<DndProvider
-					backend={HTML5Backend}
-					context={dragAndDropContext}
-				>
-					<TreeViewContext.Provider value={context}>
-						<DragAndDropProvider<T>
-							messages={messages}
-							nestedKey={nestedKey}
-							onItemHover={onItemHover}
-							onItemMove={onItemMove}
-							rootRef={rootRef}
-						>
-							<FocusWithinProvider
-								containerRef={rootRef}
-								focusableElements={focusableElements}
+				{
+					// @ts-ignore
+					<DndProvider
+						backend={HTML5Backend}
+						context={dragAndDropContext}
+					>
+						<TreeViewContext.Provider value={context}>
+							<DragAndDropProvider<T>
+								messages={messages}
+								nestedKey={nestedKey}
+								onItemHover={onItemHover}
+								onItemMove={onItemMove}
+								rootRef={rootRef}
 							>
-								<Collection<T> items={state.items}>
-									{children}
-								</Collection>
-								<DragLayer itemNameKey={itemNameKey} />
-							</FocusWithinProvider>
-						</DragAndDropProvider>
-					</TreeViewContext.Provider>
-				</DndProvider>
+								<FocusWithinProvider
+									containerRef={rootRef}
+									focusableElements={focusableElements}
+								>
+									<Collection<T> items={state.items}>
+										{children}
+									</Collection>
+									<DragLayer itemNameKey={itemNameKey} />
+								</FocusWithinProvider>
+							</DragAndDropProvider>
+						</TreeViewContext.Provider>
+					</DndProvider>
+				}
 			</ul>
 		</Container>
 	);

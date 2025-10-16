@@ -254,7 +254,11 @@ function VerticalNav<T extends Record<string, any> | string>({
 							? null
 							: undefined,
 					ariaCurrent: ariaCurrent ? 'page' : null,
-					childrenRoot: childrenRootRef,
+					childrenRoot:
+						childrenRootRef as React.MutableRefObject<ChildrenFunction<
+							Object,
+							null
+						> | null>,
 					close,
 					expandedKeys,
 					firstKey: collection.getFirstItem().key,
