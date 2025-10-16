@@ -39,7 +39,11 @@ const Header = React.forwardRef<HTMLLIElement, HeaderProps>(
 const useIsomorphicEffect =
 	typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
-interface IProps<T> extends React.TableHTMLAttributes<HTMLTableSectionElement> {
+interface IProps<T>
+	extends Omit<
+		React.TableHTMLAttributes<HTMLTableSectionElement>,
+		'children'
+	> {
 	/**
 	 * Children content to render a dynamic or static content.
 	 */
