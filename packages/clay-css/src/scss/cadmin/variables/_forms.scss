@@ -1630,8 +1630,8 @@ $cadmin-input-group-item-focusable: map-deep-merge(
 // Input Group Inset
 
 $cadmin-input-group-inset-item-color: $cadmin-input-group-addon-color !default;
-$cadmin-input-group-inset-item-padding-left: 5px !default;
-$cadmin-input-group-inset-item-padding-right: 5px !default;
+$cadmin-input-group-inset-item-padding-left: 4px !default;
+$cadmin-input-group-inset-item-padding-right: 4px !default;
 
 $cadmin-input-group-inset-item-btn: () !default;
 $cadmin-input-group-inset-item-btn: map-deep-merge(
@@ -1641,8 +1641,8 @@ $cadmin-input-group-inset-item-btn: map-deep-merge(
 		height: 75%,
 		justify-content: center,
 		line-height: 1,
-		margin-left: 3px,
-		margin-right: 3px,
+		margin-left: 4px,
+		margin-right: 4px,
 		padding-bottom: 0,
 		padding-left: 8px,
 		padding-right: 8px,
