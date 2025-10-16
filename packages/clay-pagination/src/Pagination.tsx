@@ -9,7 +9,7 @@ import React from 'react';
 import {Ellipsis} from './Ellipsis';
 import {Item} from './Item';
 
-interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * The size of pagination element.
 	 * @deprecated since v3.146.0 with no replacement.

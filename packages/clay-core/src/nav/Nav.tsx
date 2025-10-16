@@ -9,7 +9,7 @@ import React from 'react';
 import {Item} from './Item';
 import {Link} from './Link';
 
-interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface IPropsNav extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * Flag to indicate if `nav-nested` class should be applied. Adds padding to indent each nested navigation.
 	 */
@@ -26,7 +26,7 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	stacked?: boolean;
 }
 
-const NavComponent = React.forwardRef<HTMLUListElement, IProps>(function Nav(
+const NavComponent = React.forwardRef<HTMLUListElement, IPropsNav>(function Nav(
 	{children, className, nestMargins, nested, stacked, ...otherProps},
 	ref
 ) {
