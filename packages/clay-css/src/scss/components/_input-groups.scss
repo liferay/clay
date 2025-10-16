@@ -259,6 +259,11 @@
 				@include clay-button-size($input-group-inset-form-file-btn);
 			}
 		}
+
+		.sticker {
+			margin-left: 0.75rem;
+			margin-right: 0.5rem;
+		}
 	}
 
 	.input-group-inset-icon {
