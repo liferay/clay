@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
 import {ClayInput} from '../src';
@@ -116,6 +117,32 @@ export const GroupMixed = () => (
 					<button className="btn btn-secondary" type="submit">
 						Submit
 					</button>
+				</ClayInput.GroupItem>
+			</ClayInput.Group>
+		</ClayForm.Group>
+	</div>
+);
+
+export const Spaces = () => (
+	<div className="sheet">
+		<ClayForm.Group>
+			<label htmlFor="selectASpace">Select a Space</label>
+			<ClayInput.Group>
+				<ClayInput.GroupItem>
+					<ClayInput
+						aria-label="Select a space"
+						className="form-control-select"
+						id="selectASpace"
+						insetBefore
+						placeholder="Select a Space"
+						type="text"
+						value="Space Program"
+					/>
+					<ClayInput.GroupInsetItem before>
+						<ClaySticker displayType="outline-2" size="sm">
+							S
+						</ClaySticker>
+					</ClayInput.GroupInsetItem>
 				</ClayInput.GroupItem>
 			</ClayInput.Group>
 		</ClayForm.Group>
