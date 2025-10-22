@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-69497 btn-sm should be 32px tall instead of 32.09px ([e40edd5](https://github.com/liferay/clay/commit/e40edd55fd1cb92ee753a5e2993ee5e80e5828da))
+-   **@clayui/date-picker:** LPD-63674 Apply InternalDispatch fix ([6939a35](https://github.com/liferay/clay/commit/6939a35addfcb0e6b1930a5e9ec9f901ef4918e8))
+-   **@clayui/drop-down:** LPD-63674 Apply InternalDispatch fix ([5687bee](https://github.com/liferay/clay/commit/5687beee95b2cb6dd973dec0d4d01aba4fcb949b))
+-   **@clayui/pagination-bar:** LPD-63674 Apply InternalDispatch fix ([5e89a6b](https://github.com/liferay/clay/commit/5e89a6ba36f3dffd7af8df39e015027ca00f8c9b))
+-   **@clayui/shared:** LPD-63674 Fix InternalDispatch type definition ([35bbe11](https://github.com/liferay/clay/commit/35bbe118e0691f59db2c8613d545e28e6cda6667))
+-   **www:** fix redirect ([d12725a](https://github.com/liferay/clay/commit/d12725a083776bcb157f4d2d39e814f37beb7f0f))
+-   **www:** fix redirect ([415960a](https://github.com/liferay/clay/commit/415960ab331dd9c8856d1d8451c849f292f830e7))
+-   **www:** Remove lexicon website link ([6dbf384](https://github.com/liferay/clay/commit/6dbf38431da16e91df16f4ce49595f8b0b7835b5))
+
+### Features
+
+-   **@clayui/css:** LPD-68006 Adds click.svg ([2a37cfe](https://github.com/liferay/clay/commit/2a37cfe995b9eb95d8c9b0186e6275d19e26cee1))
+-   **clayui.com:** LPD-68127 Disable lexicon links ([d65ed8b](https://github.com/liferay/clay/commit/d65ed8b80eef9b9083c18d96d36f151001043017))
+-   **clayui.com:** LPD-68127 Remove lexicon link from main docs layout ([e45cfe1](https://github.com/liferay/clay/commit/e45cfe14937d1f1098375b5d6b10ccca66ac1455))
+
 # [3.150.0](https://github.com/liferay/clay/compare/v3.149.2...v3.150.0) (2025-10-06)
 
 ### Bug Fixes

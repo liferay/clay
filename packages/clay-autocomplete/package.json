@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/autocomplete",
-	"version": "3.149.0",
+	"version": "3.151.0",
 	"description": "ClayAutocomplete component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -30,11 +30,11 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/core": "^3.149.0",
-		"@clayui/drop-down": "^3.149.0",
-		"@clayui/form": "^3.148.0",
+		"@clayui/core": "^3.151.0",
+		"@clayui/drop-down": "^3.151.0",
+		"@clayui/form": "^3.151.0",
 		"@clayui/loading-indicator": "^3.144.1",
-		"@clayui/shared": "^3.148.0",
+		"@clayui/shared": "^3.151.0",
 		"classnames": "^2.2.6",
 		"fuzzy": "^0.1.3"
 	},

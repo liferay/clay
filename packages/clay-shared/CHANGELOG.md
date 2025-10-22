@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
+
+### Bug Fixes
+
+-   **@clayui/shared:** LPD-63674 Fix InternalDispatch type definition ([35bbe11](https://github.com/liferay/clay/commit/35bbe118e0691f59db2c8613d545e28e6cda6667))
+
 # [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
 
 ### Bug Fixes
