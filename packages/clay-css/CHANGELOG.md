@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-69497 btn-sm should be 32px tall instead of 32.09px ([e40edd5](https://github.com/liferay/clay/commit/e40edd55fd1cb92ee753a5e2993ee5e80e5828da))
+
+
+### Features
+
+* **@clayui/css:** LPD-68006 Adds click.svg ([2a37cfe](https://github.com/liferay/clay/commit/2a37cfe995b9eb95d8c9b0186e6275d19e26cee1))
+
+
+
+
+
 # [3.150.0](https://github.com/liferay/clay/compare/v3.149.2...v3.150.0) (2025-10-06)
 
 
