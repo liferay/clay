@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.152.0](https://github.com/liferay/clay/compare/v3.151.0...v3.152.0) (2025-10-23)
+
+### Features
+
+-   **@clayui/css:** LPD-66883 Add spacing for stickers in input-group-inset-before ([c8d2ed3](https://github.com/liferay/clay/commit/c8d2ed3ed72d452e6eb4e0ae3e9bb91a837d440c))
+
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
 ### Bug Fixes
