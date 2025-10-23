@@ -167,6 +167,48 @@ export default function App() {
 }
 ```
 
+### Inset Before
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Form, {ClayInput} from '@clayui/form';
+import ClayButton from '@clayui/button';
+import ClaySticker from '@clayui/sticker';
+import React, {useState} from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Form.Group>
+					<label htmlFor="selectASpace">Select a Space</label>
+					<ClayInput.Group>
+						<ClayInput.GroupItem>
+							<ClayInput
+								aria-label="Select a space"
+								className="form-control-select"
+								id="selectASpace"
+								insetBefore
+								placeholder="Select a Space"
+								type="text"
+								value="Space Program"
+							/>
+							<ClayInput.GroupInsetItem before>
+								<ClaySticker displayType="outline-2" size="sm">
+									S
+								</ClaySticker>
+							</ClayInput.GroupInsetItem>
+						</ClayInput.GroupItem>
+					</ClayInput.Group>
+				</Form.Group>
+			</div>
+		</Provider>
+	);
+}
+```
+
 ### Stacked
 
 For creating a stack of the items inside a item group, use `stacked` property in the `<ClayInput.Group>` and use `shrink` property for using in screens sizes less than 576px.
