@@ -184,8 +184,8 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 		nav-link: (
 			border-radius: $cadmin-border-radius,
 			color: $cadmin-gray-600,
-			letter-spacing: 0.016rem,
-			line-height: 1.25rem,
+			letter-spacing: 0.32px,
+			line-height: 24px,
 			margin-bottom: 4px,
 			transition: #{color 0.15s ease-in-out,
 			background-color 0.15s ease-in-out,
@@ -242,7 +242,7 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 				box-shadow: none,
 				color: rgba($cadmin-black, 0.3),
 				font-weight: $cadmin-font-weight-normal,
-				letter-spacing: 0.016rem,
+				letter-spacing: 0.32px,
 				before: (
 					content: none,
 				),
@@ -451,7 +451,7 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 		nav-link: (
 			border-radius: $cadmin-border-radius,
 			color: $cadmin-gray-600,
-			letter-spacing: 0.016rem,
+			letter-spacing: 0.32px,
 			margin-bottom: 4px,
 			transition: #{color 0.15s ease-in-out,
 			background-color 0.15s ease-in-out,
@@ -506,7 +506,7 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 				box-shadow: none,
 				color: rgba($cadmin-black, 0.3),
 				font-weight: $cadmin-font-weight-normal,
-				letter-spacing: 0.016rem,
+				letter-spacing: 0.32px,
 				before: (
 					content: none,
 				),
