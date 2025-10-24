@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.153.0](https://github.com/liferay/clay/compare/v3.152.0...v3.153.0) (2025-10-24)
+
+
+### Features
+
+* **@clayui/css:** LPD-68820 Adds dividers for solid color buttons in btn-group ([932f7f8](https://github.com/liferay/clay/commit/932f7f836c68f791d4f42b1d3ed2bef1b99188b8))
+
+
+
+
+
 # [3.152.0](https://github.com/liferay/clay/compare/v3.151.0...v3.152.0) (2025-10-23)
 
 
