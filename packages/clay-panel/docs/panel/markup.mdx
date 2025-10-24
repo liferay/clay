@@ -19,13 +19,13 @@ packageUse: "import Panel from '@clayui/panel';"
 </div>
 
 ```html
-<div className="panel">
-	<div className="panel-header">
-		<span className="panel-title">Title</span>
+<div class="panel">
+	<div class="panel-header">
+		<span class="panel-title">Title</span>
 	</div>
-	<div className="panel-header">Header!</div>
-	<div className="panel-body">Body!</div>
-	<div className="panel-footer">Footer!</div>
+	<div class="panel-header">Header!</div>
+	<div class="panel-body">Body!</div>
+	<div class="panel-footer">Footer!</div>
 </div>
 ```
 
@@ -42,12 +42,12 @@ packageUse: "import Panel from '@clayui/panel';"
 </div>
 
 ```html
-<div className="panel panel-secondary">
-	<div className="panel-header">
-		<span className="panel-title">Title</span>
+<div class="panel panel-secondary">
+	<div class="panel-header">
+		<span class="panel-title">Title</span>
 	</div>
-	<div className="panel-body">Body!</div>
-	<div className="panel-footer">Footer!</div>
+	<div class="panel-body">Body!</div>
+	<div class="panel-footer">Footer!</div>
 </div>
 ```
 
@@ -64,12 +64,12 @@ packageUse: "import Panel from '@clayui/panel';"
 </div>
 
 ```html
-<div className="panel panel-unstyled">
-	<div className="panel-header">
-		<span className="panel-title">Title</span>
+<div class="panel panel-unstyled">
+	<div class="panel-header">
+		<span class="panel-title">Title</span>
 	</div>
-	<div className="panel-body">Body!</div>
-	<div className="panel-footer">Footer!</div>
+	<div class="panel-body">Body!</div>
+	<div class="panel-footer">Footer!</div>
 </div>
 ```
 
@@ -127,36 +127,36 @@ Collapsable panels provide you with the ability to expand and collapse content a
 </div>
 
 ```html
-<div className="panel">
+<div class="panel">
 	<button
 		aria-controls="collapsePanel"
 		aria-expanded="false"
-		className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+		class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
 		data-target="#collapsablePanel"
 		data-toggle="collapse"
 	>
-		<span className="panel-title">Toggle me for expanding!</span>
-		<span className="collapse-icon-closed">
+		<span class="panel-title">Toggle me for expanding!</span>
+		<span class="collapse-icon-closed">
 			<svg
-				className="lexicon-icon lexicon-icon-angle-right"
+				class="lexicon-icon lexicon-icon-angle-right"
 				role="presentation"
 			>
 				<use xlink:href="/images/icons/icons.svg#angle-right"></use>
 			</svg>
 		</span>
-		<span className="collapse-icon-open">
+		<span class="collapse-icon-open">
 			<svg
-				className="lexicon-icon lexicon-icon-angle-down"
+				class="lexicon-icon lexicon-icon-angle-down"
 				role="presentation"
 			>
 				<use xlink:href="/images/icons/icons.svg#angle-down"></use>
 			</svg>
 		</span>
 	</button>
-	<div className="panel-collapse collapse" id="collapsablePanel">
-		<div className="panel-header">Header!</div>
-		<div className="panel-body">Body!</div>
-		<div className="panel-footer">Footer!</div>
+	<div class="panel-collapse collapse" id="collapsablePanel">
+		<div class="panel-header">Header!</div>
+		<div class="panel-body">Body!</div>
+		<div class="panel-footer">Footer!</div>
 	</div>
 </div>
 ```
@@ -267,99 +267,99 @@ Grouped panels provide you with the ability of making accordion-like elements wi
 </div>
 
 ```html
-<div className="panel-group">
-	<div className="panel panel-secondary">
+<div class="panel-group">
+	<div class="panel panel-secondary">
 		<button
 			aria-controls="collapsePanelOne"
 			aria-expanded="false"
-			className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+			class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
 			data-target="#collapsePanelOne"
 			data-toggle="collapse"
 		>
-			<span className="panel-title">One</span>
-			<span className="collapse-icon-closed">
+			<span class="panel-title">One</span>
+			<span class="collapse-icon-closed">
 				<svg
-					className="lexicon-icon lexicon-icon-angle-right"
+					class="lexicon-icon lexicon-icon-angle-right"
 					role="presentation"
 				>
 					<use xlink:href="/images/icons/icons.svg#angle-right"></use>
 				</svg>
 			</span>
-			<span className="collapse-icon-open">
+			<span class="collapse-icon-open">
 				<svg
-					className="lexicon-icon lexicon-icon-angle-down"
+					class="lexicon-icon lexicon-icon-angle-down"
 					role="presentation"
 				>
 					<use xlink:href="/images/icons/icons.svg#angle-down"></use>
 				</svg>
 			</span>
 		</button>
-		<div className="panel-collapse collapse" id="collapsePanelOne">
-			<div className="panel-body">
+		<div class="panel-collapse collapse" id="collapsePanelOne">
+			<div class="panel-body">
 				Here is some content inside for number One
 			</div>
 		</div>
 	</div>
-	<div className="panel panel-secondary">
+	<div class="panel panel-secondary">
 		<button
 			aria-controls="collapsePanelTwo"
 			aria-expanded="false"
-			className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+			class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
 			data-target="#collapsePanelTwo"
 			data-toggle="collapse"
 		>
-			<span className="panel-title">Two</span>
-			<span className="collapse-icon-closed">
+			<span class="panel-title">Two</span>
+			<span class="collapse-icon-closed">
 				<svg
-					className="lexicon-icon lexicon-icon-angle-right"
+					class="lexicon-icon lexicon-icon-angle-right"
 					role="presentation"
 				>
 					<use xlink:href="/images/icons/icons.svg#angle-right"></use>
 				</svg>
 			</span>
-			<span className="collapse-icon-open">
+			<span class="collapse-icon-open">
 				<svg
-					className="lexicon-icon lexicon-icon-angle-down"
+					class="lexicon-icon lexicon-icon-angle-down"
 					role="presentation"
 				>
 					<use xlink:href="/images/icons/icons.svg#angle-down"></use>
 				</svg>
 			</span>
 		</button>
-		<div className="panel-collapse collapse" id="collapsePanelTwo">
-			<div className="panel-body">
+		<div class="panel-collapse collapse" id="collapsePanelTwo">
+			<div class="panel-body">
 				Here is some content inside for number Two
 			</div>
 		</div>
 	</div>
-	<div className="panel panel-secondary">
+	<div class="panel panel-secondary">
 		<button
 			aria-controls="collapsePanelThree"
 			aria-expanded="false"
-			className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+			class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
 			data-target="#collapsePanelThree"
 			data-toggle="collapse"
 		>
-			<span className="panel-title">Three</span>
-			<span className="collapse-icon-closed">
+			<span class="panel-title">Three</span>
+			<span class="collapse-icon-closed">
 				<svg
-					className="lexicon-icon lexicon-icon-angle-right"
+					class="lexicon-icon lexicon-icon-angle-right"
 					role="presentation"
 				>
 					<use xlink:href="/images/icons/icons.svg#angle-right"></use>
 				</svg>
 			</span>
-			<span className="collapse-icon-open">
+			<span class="collapse-icon-open">
 				<svg
-					className="lexicon-icon lexicon-icon-angle-down"
+					class="lexicon-icon lexicon-icon-angle-down"
 					role="presentation"
 				>
 					<use xlink:href="/images/icons/icons.svg#angle-down"></use>
 				</svg>
 			</span>
 		</button>
-		<div className="panel-collapse collapse" id="collapsePanelThree">
-			<div className="panel-body">
+		<div class="panel-collapse collapse" id="collapsePanelThree">
+			<div class="panel-body">
 				Here is some content inside for number Three
 			</div>
 		</div>
@@ -487,23 +487,23 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 </div>
 
 ```html
-<div className="sheet">
-	<div className="sheet-header">
-		<h4 className="sheet-title">Sheet Title</h4>
+<div class="sheet">
+	<div class="sheet-header">
+		<h4 class="sheet-title">Sheet Title</h4>
 	</div>
-	<div className="panel-group panel-group-flush">
-		<div className="panel panel-unstyled">
+	<div class="panel-group panel-group-flush">
+		<div class="panel panel-unstyled">
 			<button
 				aria-controls="collapseSheetPanelOne"
 				aria-expanded="false"
-				className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
 				data-target="#collapseSheetPanelOne"
 				data-toggle="collapse"
 			>
-				<span className="panel-title">One</span>
-				<span className="collapse-icon-closed">
+				<span class="panel-title">One</span>
+				<span class="collapse-icon-closed">
 					<svg
-						className="lexicon-icon lexicon-icon-angle-right"
+						class="lexicon-icon lexicon-icon-angle-right"
 						role="presentation"
 					>
 						<use
@@ -511,9 +511,9 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 						></use>
 					</svg>
 				</span>
-				<span className="collapse-icon-open">
+				<span class="collapse-icon-open">
 					<svg
-						className="lexicon-icon lexicon-icon-angle-down"
+						class="lexicon-icon lexicon-icon-angle-down"
 						role="presentation"
 					>
 						<use
@@ -522,24 +522,24 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 					</svg>
 				</span>
 			</button>
-			<div className="panel-collapse collapse" id="collapseSheetPanelOne">
-				<div className="panel-body">
+			<div class="panel-collapse collapse" id="collapseSheetPanelOne">
+				<div class="panel-body">
 					Here is some content inside for number One
 				</div>
 			</div>
 		</div>
-		<div className="panel panel-unstyled">
+		<div class="panel panel-unstyled">
 			<button
 				aria-controls="collapseSheetPanelTwo"
 				aria-expanded="false"
-				className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
 				data-target="#collapseSheetPanelTwo"
 				data-toggle="collapse"
 			>
-				<span className="panel-title">Two</span>
-				<span className="collapse-icon-closed">
+				<span class="panel-title">Two</span>
+				<span class="collapse-icon-closed">
 					<svg
-						className="lexicon-icon lexicon-icon-angle-right"
+						class="lexicon-icon lexicon-icon-angle-right"
 						role="presentation"
 					>
 						<use
@@ -547,9 +547,9 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 						></use>
 					</svg>
 				</span>
-				<span className="collapse-icon-open">
+				<span class="collapse-icon-open">
 					<svg
-						className="lexicon-icon lexicon-icon-angle-down"
+						class="lexicon-icon lexicon-icon-angle-down"
 						role="presentation"
 					>
 						<use
@@ -558,24 +558,24 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 					</svg>
 				</span>
 			</button>
-			<div className="panel-collapse collapse" id="collapseSheetPanelTwo">
-				<div className="panel-body">
+			<div class="panel-collapse collapse" id="collapseSheetPanelTwo">
+				<div class="panel-body">
 					Here is some content inside for number Two
 				</div>
 			</div>
 		</div>
-		<div className="panel panel-unstyled">
+		<div class="panel panel-unstyled">
 			<button
 				aria-controls="collapseSheetPanelThree"
 				aria-expanded="false"
-				className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+				class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
 				data-target="#collapseSheetPanelThree"
 				data-toggle="collapse"
 			>
-				<span className="panel-title">Three</span>
-				<span className="collapse-icon-closed">
+				<span class="panel-title">Three</span>
+				<span class="collapse-icon-closed">
 					<svg
-						className="lexicon-icon lexicon-icon-angle-right"
+						class="lexicon-icon lexicon-icon-angle-right"
 						role="presentation"
 					>
 						<use
@@ -583,9 +583,9 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 						></use>
 					</svg>
 				</span>
-				<span className="collapse-icon-open">
+				<span class="collapse-icon-open">
 					<svg
-						className="lexicon-icon lexicon-icon-angle-down"
+						class="lexicon-icon lexicon-icon-angle-down"
 						role="presentation"
 					>
 						<use
@@ -595,10 +595,10 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 				</span>
 			</button>
 			<div
-				className="panel-collapse collapse"
+				class="panel-collapse collapse"
 				id="collapseSheetPanelThree"
 			>
-				<div className="panel-body">
+				<div class="panel-body">
 					Here is some content inside for number Three
 				</div>
 			</div>
@@ -669,53 +669,53 @@ Sometimes you want to have some custom content that's not a string or a number i
 </div>
 
 ```html
-<div className="panel panel-secondary">
+<div class="panel panel-secondary">
 	<button
 		aria-controls="panelWithCustomTitle"
 		aria-expanded="false"
-		className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+		class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
 		data-target="#collapsePanelWithCustomTitle"
 		data-toggle="collapse"
 	>
 		<div>
 			<h3>Title</h3>
 			<span>If field </span>
-			<span className="label label-success">
-				<span className="label-item label-item-expand">Country</span>
+			<span class="label label-success">
+				<span class="label-item label-item-expand">Country</span>
 			</span>
-			<span className="label label-secondary">
-				<span className="label-item label-item-expand"
+			<span class="label label-secondary">
+				<span class="label-item label-item-expand"
 					>Is Equal To</span
 				>
 			</span>
 			<span>value </span>
-			<span className="label label-info">
-				<span className="label-item label-item-expand">Brazil</span>
+			<span class="label label-info">
+				<span class="label-item label-item-expand">Brazil</span>
 			</span>
 			<span>enable </span>
-			<span className="label label-success">
-				<span className="label-item label-item-expand">State</span>
+			<span class="label label-success">
+				<span class="label-item label-item-expand">State</span>
 			</span>
 		</div>
-		<span className="collapse-icon-closed">
+		<span class="collapse-icon-closed">
 			<svg
-				className="lexicon-icon lexicon-icon-angle-right"
+				class="lexicon-icon lexicon-icon-angle-right"
 				role="presentation"
 			>
 				<use xlink:href="/images/icons/icons.svg#angle-right"></use>
 			</svg>
 		</span>
-		<span className="collapse-icon-open">
+		<span class="collapse-icon-open">
 			<svg
-				className="lexicon-icon lexicon-icon-angle-down"
+				class="lexicon-icon lexicon-icon-angle-down"
 				role="presentation"
 			>
 				<use xlink:href="/images/icons/icons.svg#angle-down"></use>
 			</svg>
 		</span>
 	</button>
-	<div className="panel-collapse collapse" id="collapsePanelWithCustomTitle">
-		<div className="panel-body">Body!</div>
+	<div class="panel-collapse collapse" id="collapsePanelWithCustomTitle">
+		<div class="panel-body">Body!</div>
 	</div>
 </div>
 ```
