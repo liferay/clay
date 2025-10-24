@@ -31,6 +31,7 @@ function debounce(callback, wait) {
 function runBuild() {
 	if (isBuilding) {
 		console.log('Build already in progress, skipping...');
+
 		return;
 	}
 
@@ -44,6 +45,7 @@ function runBuild() {
 
 		if (error) {
 			console.error(error.message);
+
 			console.error(`❌ Build failed after ${duration}ms:`);
 		} else {
 			if (stdout) {
@@ -85,6 +87,7 @@ function watchDirectory(dir) {
 		return watcher;
 	} catch (error) {
 		console.error(`Failed to watch directory ${dir}:`, error.message);
+
 		return null;
 	}
 }
