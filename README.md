@@ -101,6 +101,14 @@ yarn build
 yarn workspace @clayui/css run build && yarn storybook
 ```
 
+> **Development tip**: For continuous development, you can run the CSS watch command in a separate terminal to automatically rebuild SCSS files when they change:
+
+```
+yarn workspace @clayui/css run watch
+```
+
+This will monitor all SCSS files and rebuild the CSS automatically, eliminating the need to manually run the build command after each change.
+
 > Additionally, you can run the tests for all packages with the following command:
 
 ```
