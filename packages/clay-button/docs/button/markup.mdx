@@ -39,13 +39,13 @@ packageUse: "import Button from '@clayui/button';"
 </div>
 
 ```html
-<button className="btn btn-primary" type="button">Primary</button>
-<button className="btn btn-secondary" type="button">Secondary</button>
-<button className="btn btn-info" type="button">Info</button>
-<button className="btn btn-success" type="button">Success</button>
-<button className="btn btn-warning" type="button">Warning</button>
-<button className="btn btn-danger" type="button">Danger</button>
-<button className="btn btn-link" type="button">Link</button>
+<button class="btn btn-primary" type="button">Primary</button>
+<button class="btn btn-secondary" type="button">Secondary</button>
+<button class="btn btn-info" type="button">Info</button>
+<button class="btn btn-success" type="button">Success</button>
+<button class="btn btn-warning" type="button">Warning</button>
+<button class="btn btn-danger" type="button">Danger</button>
+<button class="btn btn-link" type="button">Link</button>
 ```
 
 ### Button Variant Sass API
@@ -97,9 +97,9 @@ Outputs:
 </div>
 
 ```html
-<button className="btn btn-primary" type="button">Default</button>
-<button className="btn btn-primary btn-sm" type="button">Small</button>
-<button className="btn btn-primary btn-xs" type="button">Extra Small</button>
+<button class="btn btn-primary" type="button">Default</button>
+<button class="btn btn-primary btn-sm" type="button">Small</button>
+<button class="btn btn-primary btn-xs" type="button">Extra Small</button>
 ```
 
 Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
@@ -117,13 +117,13 @@ Create block level buttons—those that span the full width of a parent—by add
 </div>
 
 ```html
-<button className="btn btn-block btn-secondary btn-xs" type="button">
+<button class="btn btn-block btn-secondary btn-xs" type="button">
 	Extra Small Block Level Button
 </button>
-<button className="btn btn-block btn-secondary btn-sm" type="button">
+<button class="btn btn-block btn-secondary btn-sm" type="button">
 	Small Block Level Button
 </button>
-<button className="btn btn-block btn-secondary" type="button">
+<button class="btn btn-block btn-secondary" type="button">
 	Normal Block Level Button
 </button>
 ```
@@ -176,8 +176,8 @@ Buttons will appear pressed when active. However, you can still force the same a
 </div>
 
 ```html
-<button className="active btn btn-primary" type="button">Primary</button>
-<button className="active btn btn-secondary" type="button">Secondary</button>
+<button class="active btn btn-primary" type="button">Primary</button>
+<button class="active btn btn-secondary" type="button">Secondary</button>
 ```
 
 ## Disabled State
@@ -194,10 +194,8 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 </div>
 
 ```html
-<button className="btn btn-primary" disabled="" type="button">Primary</button>
-<button className="btn btn-secondary" disabled="" type="button">
-	Secondary
-</button>
+<button class="btn btn-primary" disabled="" type="button">Primary</button>
+<button class="btn btn-secondary" disabled="" type="button">Secondary</button>
 ```
 
 ## Group
@@ -268,17 +266,17 @@ Split buttons are used when you need to offer the user a quick main action along
 </div>
 
 ```html
-<div className="btn-group dropdown" role="group">
-	<button className="btn btn-primary" type="button">Primary</button>
+<div class="btn-group dropdown" role="group">
+	<button class="btn btn-primary" type="button">Primary</button>
 	<button
 		aria-expanded="false"
 		aria-haspopup="true"
-		className="btn btn-primary btn-monospaced dropdown-toggle"
+		class="btn btn-primary btn-monospaced dropdown-toggle"
 		data-toggle="dropdown"
 		type="button"
 	>
 		<svg
-			className="lexicon-icon lexicon-icon-caret-bottom"
+			class="lexicon-icon lexicon-icon-caret-bottom"
 			focusable="false"
 			role="presentation"
 		>
@@ -325,10 +323,10 @@ Button groups are used to switch between complementary views for example, but th
 </div>
 
 ```html
-<div className="btn-group" role="group">
-	<button className="btn btn-secondary" type="button">Day</button>
-	<button className="active btn btn-secondary" type="button">Month</button>
-	<button className="btn" type="button">Year</button>
+<div class="btn-group" role="group">
+	<button class="btn btn-secondary" type="button">Day</button>
+	<button class="active btn btn-secondary" type="button">Month</button>
+	<button class="btn" type="button">Year</button>
 </div>
 ```
 
@@ -435,11 +433,11 @@ Try adding the modifier class `.btn-monospaced`.
 <button
 	aria-label="Blogs"
 	title="Blogs"
-	className="btn btn-monospaced btn-primary btn-xs"
+	class="btn btn-monospaced btn-primary btn-xs"
 	type="button"
 >
 	<svg
-		className="lexicon-icon lexicon-icon-blogs"
+		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
 		role="presentation"
 	>
@@ -450,11 +448,11 @@ Try adding the modifier class `.btn-monospaced`.
 <button
 	aria-label="Blogs"
 	title="Blogs"
-	className="btn btn-monospaced btn-secondary btn-xs"
+	class="btn btn-monospaced btn-secondary btn-xs"
 	type="button"
 >
 	<svg
-		className="lexicon-icon lexicon-icon-blogs"
+		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
 		role="presentation"
 	>
@@ -465,11 +463,11 @@ Try adding the modifier class `.btn-monospaced`.
 <button
 	aria-label="Blogs"
 	title="Blogs"
-	className="btn btn-monospaced btn-primary btn-sm"
+	class="btn btn-monospaced btn-primary btn-sm"
 	type="button"
 >
 	<svg
-		className="lexicon-icon lexicon-icon-blogs"
+		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
 		role="presentation"
 	>
@@ -480,11 +478,11 @@ Try adding the modifier class `.btn-monospaced`.
 <button
 	aria-label="Blogs"
 	title="Blogs"
-	className="btn btn-monospaced btn-secondary btn-sm"
+	class="btn btn-monospaced btn-secondary btn-sm"
 	type="button"
 >
 	<svg
-		className="lexicon-icon lexicon-icon-blogs"
+		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
 		role="presentation"
 	>
@@ -495,11 +493,11 @@ Try adding the modifier class `.btn-monospaced`.
 <button
 	aria-label="Blogs"
 	title="Blogs"
-	className="btn btn-monospaced btn-primary"
+	class="btn btn-monospaced btn-primary"
 	type="button"
 >
 	<svg
-		className="lexicon-icon lexicon-icon-blogs"
+		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
 		role="presentation"
 	>
@@ -510,11 +508,11 @@ Try adding the modifier class `.btn-monospaced`.
 <button
 	aria-label="Blogs"
 	title="Blogs"
-	className="btn btn-monospaced btn-secondary"
+	class="btn btn-monospaced btn-secondary"
 	type="button"
 >
 	<svg
-		className="lexicon-icon lexicon-icon-blogs"
+		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
 		role="presentation"
 	>
@@ -603,10 +601,10 @@ Wrap the icon with the `<span />` tag and adding the [Inline Item](/docs/css/inl
 </div>
 
 ```html
-<button className="btn btn-secondary" type="button">
-	<span className="inline-item inline-item-before">
+<button class="btn btn-secondary" type="button">
+	<span class="inline-item inline-item-before">
 		<svg
-			className="lexicon-icon lexicon-icon-blogs"
+			class="lexicon-icon lexicon-icon-blogs"
 			focusable="false"
 			role="presentation"
 		>
@@ -616,10 +614,10 @@ Wrap the icon with the `<span />` tag and adding the [Inline Item](/docs/css/inl
 	Share
 </button>
 
-<button className="btn btn-secondary btn-sm" type="button">
-	<span className="inline-item inline-item-before">
+<button class="btn btn-secondary btn-sm" type="button">
+	<span class="inline-item inline-item-before">
 		<svg
-			className="lexicon-icon lexicon-icon-blogs"
+			class="lexicon-icon lexicon-icon-blogs"
 			focusable="false"
 			role="presentation"
 		>
@@ -629,10 +627,10 @@ Wrap the icon with the `<span />` tag and adding the [Inline Item](/docs/css/inl
 	Share
 </button>
 
-<button className="btn btn-secondary btn-xs" type="button">
-	<span className="inline-item inline-item-before">
+<button class="btn btn-secondary btn-xs" type="button">
+	<span class="inline-item inline-item-before">
 		<svg
-			className="lexicon-icon lexicon-icon-blogs"
+			class="lexicon-icon lexicon-icon-blogs"
 			focusable="false"
 			role="presentation"
 		>
@@ -689,10 +687,10 @@ The class `rounded-pill` will make the button pill shaped.
 </div>
 
 ```html
-<button className="btn btn-secondary rounded-pill" type="button">
-	<span className="inline-item inline-item-before">
+<button class="btn btn-secondary rounded-pill" type="button">
+	<span class="inline-item inline-item-before">
 		<svg
-			className="lexicon-icon lexicon-icon-blogs"
+			class="lexicon-icon lexicon-icon-blogs"
 			focusable="false"
 			role="presentation"
 		>
@@ -701,10 +699,10 @@ The class `rounded-pill` will make the button pill shaped.
 	</span>
 	Share
 </button>
-<button className="btn btn-secondary btn-sm rounded-pill" type="button">
-	<span className="inline-item inline-item-before">
+<button class="btn btn-secondary btn-sm rounded-pill" type="button">
+	<span class="inline-item inline-item-before">
 		<svg
-			className="lexicon-icon lexicon-icon-blogs"
+			class="lexicon-icon lexicon-icon-blogs"
 			focusable="false"
 			role="presentation"
 		>
@@ -713,10 +711,10 @@ The class `rounded-pill` will make the button pill shaped.
 	</span>
 	Share
 </button>
-<button className="btn btn-secondary btn-xs rounded-pill" type="button">
-	<span className="inline-item inline-item-before">
+<button class="btn btn-secondary btn-xs rounded-pill" type="button">
+	<span class="inline-item inline-item-before">
 		<svg
-			className="lexicon-icon lexicon-icon-blogs"
+			class="lexicon-icon lexicon-icon-blogs"
 			focusable="false"
 			role="presentation"
 		>
