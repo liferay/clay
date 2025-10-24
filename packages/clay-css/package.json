@@ -24,7 +24,8 @@
 		"build": "yarn compile",
 		"compile": "node ./scripts/build",
 		"link": "npm link",
-		"prepublish": "yarn compile"
+		"prepublish": "yarn compile",
+		"watch": "node ./scripts/watch"
 	},
 	"repository": {
 		"type": "git",
