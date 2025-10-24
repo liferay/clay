@@ -386,6 +386,44 @@ $btn-group-spaced: map-merge(
 	$btn-group-spaced
 );
 
+$clay-btn-group-divider: () !default;
+$clay-btn-group-divider: map-deep-merge(
+	(
+		'&:not(:first-of-type)': (
+			border-left-color: $white,
+		),
+		'&:not(:last-of-type)': (
+			border-right-color: $white,
+		),
+	),
+	$clay-btn-group-divider
+);
+
+$btn-group-palette: () !default;
+$btn-group-palette: map-deep-merge(
+	(
+		'> .btn-primary': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-info': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-success': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-warning': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-danger': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-dark': (
+			extend: '%clay-btn-group-divider',
+		),
+	),
+	$btn-group-palette
+);
+
 // Button Toolbar
 
 $btn-toolbar-spacer-x: 0.5rem !default; // 8px

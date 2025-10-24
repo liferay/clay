@@ -148,3 +148,43 @@
 		}
 	}
 }
+
+%clay-btn-group-divider {
+	$_not-first-of-type: map-get(
+		$cadmin-clay-btn-group-divider,
+		'&:not(:first-of-type)'
+	);
+
+	@if ($_not-first-of-type) {
+		&:not(:first-of-type) {
+			@include clay-css($_not-first-of-type);
+		}
+	}
+
+	$_not-last-of-type: map-get(
+		$cadmin-clay-btn-group-divider,
+		'&:not(:last-of-type)'
+	);
+
+	@if ($_not-last-of-type) {
+		&:not(:last-of-type) {
+			@include clay-css($_not-last-of-type);
+		}
+	}
+}
+
+.btn-group {
+	@each $name, $value in $cadmin-btn-group-palette {
+		@if not clay-is-map-unset($value) {
+			$selector: if(
+				starts-with($name, 'btn'),
+				str-insert($name, '.', 1),
+				$name
+			);
+
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
+		}
+	}
+}

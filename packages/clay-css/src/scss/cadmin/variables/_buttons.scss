@@ -394,6 +394,44 @@ $cadmin-btn-group-spaced: map-merge(
 	$cadmin-btn-group-spaced
 );
 
+$cadmin-clay-btn-group-divider: () !default;
+$cadmin-clay-btn-group-divider: map-deep-merge(
+	(
+		'&:not(:first-of-type)': (
+			border-left-color: $cadmin-white,
+		),
+		'&:not(:last-of-type)': (
+			border-right-color: $cadmin-white,
+		),
+	),
+	$cadmin-clay-btn-group-divider
+);
+
+$cadmin-btn-group-palette: () !default;
+$cadmin-btn-group-palette: map-deep-merge(
+	(
+		'> .btn-primary': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-info': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-success': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-warning': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-danger': (
+			extend: '%clay-btn-group-divider',
+		),
+		'> .btn-dark': (
+			extend: '%clay-btn-group-divider',
+		),
+	),
+	$cadmin-btn-group-palette
+);
+
 // Button Toolbar
 
 $cadmin-btn-toolbar-spacer-x: 8px !default; // 8px

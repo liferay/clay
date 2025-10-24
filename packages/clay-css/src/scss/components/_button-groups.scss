@@ -28,6 +28,11 @@
 		margin-left: math-sign($btn-border-width);
 	}
 
+	> .btn::after {
+		content: '';
+		display: block;
+	}
+
 	> .btn:not(:last-child):not(.dropdown-toggle),
 	> .btn-group:not(:last-child) > .btn {
 		@include border-right-radius(0);
@@ -203,6 +208,46 @@
 			clip: rect(0, 0, 0, 0);
 			pointer-events: none;
 			position: absolute;
+		}
+	}
+}
+
+%clay-btn-group-divider {
+	$_not-first-of-type: map-get(
+		$clay-btn-group-divider,
+		'&:not(:first-of-type)'
+	);
+
+	@if ($_not-first-of-type) {
+		&:not(:first-of-type) {
+			@include clay-css($_not-first-of-type);
+		}
+	}
+
+	$_not-last-of-type: map-get(
+		$clay-btn-group-divider,
+		'&:not(:last-of-type)'
+	);
+
+	@if ($_not-last-of-type) {
+		&:not(:last-of-type) {
+			@include clay-css($_not-last-of-type);
+		}
+	}
+}
+
+.btn-group {
+	@each $name, $value in $btn-group-palette {
+		@if not clay-is-map-unset($value) {
+			$selector: if(
+				starts-with($name, 'btn'),
+				str-insert($name, '.', 1),
+				$name
+			);
+
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
 		}
 	}
 }
