@@ -215,6 +215,11 @@ export interface IProps<T extends Record<string, any> = Item>
 	onLoadMore?: () => Promise<any> | null;
 
 	/**
+	 * Placeholder text for autocomplete input
+	 */
+	placeholder?: string;
+
+	/**
 	 * Determines the size of the Multi Select component.
 	 */
 	size?: null | 'sm';

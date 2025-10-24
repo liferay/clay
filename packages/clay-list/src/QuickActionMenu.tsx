@@ -8,16 +8,7 @@ import React from 'react';
 
 import QuickActionMenuItem from './QuickActionMenuItem';
 
-export interface IForwardRef<T, P = {}>
-	extends React.ForwardRefExoticComponent<P & React.RefAttributes<T>> {
-	Item: typeof QuickActionMenuItem;
-}
-
-function forwardRef<T, P = {}>(component: React.RefForwardingComponent<T, P>) {
-	return React.forwardRef<T, P>(component) as IForwardRef<T, P>;
-}
-
-const QuickActionMenu = forwardRef<
+const QuickActionMenuComponent = React.forwardRef<
 	HTMLDivElement,
 	React.HTMLAttributes<HTMLDivElement>
 >(({children, className, ...otherProps}, ref) => {
@@ -32,7 +23,10 @@ const QuickActionMenu = forwardRef<
 	);
 });
 
-QuickActionMenu.displayName = 'ClayListQuickActionMenu';
-QuickActionMenu.Item = QuickActionMenuItem;
+QuickActionMenuComponent.displayName = 'ClayListQuickActionMenu';
+
+const QuickActionMenu = Object.assign(QuickActionMenuComponent, {
+	Item: QuickActionMenuItem,
+});
 
 export default QuickActionMenu;

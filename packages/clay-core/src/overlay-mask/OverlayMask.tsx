@@ -154,7 +154,7 @@ type Props<T> = {
 	onBoundsChange?: InternalDispatch<Bounds>;
 };
 
-export function OverlayMask<T>({
+export function OverlayMask<T extends HTMLElement>({
 	defaultBounds = initialBounds,
 	bounds,
 	children,
@@ -172,7 +172,7 @@ export function OverlayMask<T>({
 		value: bounds,
 	});
 
-	const childrenRef = useRef<HTMLElement | null>(null);
+	const childrenRef = useRef<T | null>(null);
 
 	useIsomorphicLayoutEffect(() => {
 		if (childrenRef.current) {
@@ -181,13 +181,14 @@ export function OverlayMask<T>({
 					return;
 				}
 
-				const {height, width, x, y} =
-					childrenRef.current.getBoundingClientRect();
+				const {height, width, x, y} = (
+					childrenRef.current as HTMLElement
+				).getBoundingClientRect();
 
 				setBounds({height, width, x, y});
 			};
 
-			return observeRect(childrenRef.current, updater);
+			return observeRect(childrenRef.current as HTMLElement, updater);
 		}
 	}, [setBounds]);
 
@@ -196,7 +197,7 @@ export function OverlayMask<T>({
 			{children &&
 				typeof children !== 'function' &&
 				React.cloneElement(children as React.ReactElement, {
-					ref: (node: HTMLElement) => {
+					ref: (node: T) => {
 						childrenRef.current = node;
 
 						// @ts-ignore

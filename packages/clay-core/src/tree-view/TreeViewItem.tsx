@@ -865,6 +865,14 @@ export function ItemStack({
 
 ItemStack.displayName = 'TreeViewItemStack';
 
+const isElement = (n: React.ReactNode): n is React.ReactElement =>
+	React.isValidElement(n);
+
+const elementDisplayNameIs = (node: React.ReactElement, name: string) =>
+	typeof node.type === 'function' || typeof node.type === 'object'
+		? ((node.type as any).displayName as string) === name
+		: false;
+
 type TreeViewItemActionsProps = {
 	children: React.ReactElement;
 	tabIndex: number;
@@ -878,7 +886,11 @@ function Actions({children, tabIndex}: TreeViewItemActionsProps) {
 	return (
 		<>
 			{childrenArray.map((child, index) => {
-				if (child.type.displayName === 'ClayButton') {
+				if (!isElement(child)) {
+					return child;
+				}
+
+				if (elementDisplayNameIs(child, 'ClayButton')) {
 					return (
 						<Layout.ContentCol key={index}>
 							{React.cloneElement(child, {
@@ -912,7 +924,9 @@ function Actions({children, tabIndex}: TreeViewItemActionsProps) {
 							})}
 						</Layout.ContentCol>
 					);
-				} else if (child.type.displayName === 'ClayDropDownWithItems') {
+				} else if (
+					elementDisplayNameIs(child, 'ClayDropDownWithItems')
+				) {
 					return (
 						<Layout.ContentCol key={index}>
 							{React.cloneElement(child, {
