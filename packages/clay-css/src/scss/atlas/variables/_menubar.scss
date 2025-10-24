@@ -5,7 +5,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 	(
 		nav-link: (
 			border-radius: $border-radius,
-			letter-spacing: 0.016rem,
+			letter-spacing: 0.02rem,
 			line-height: 1.25rem,
 			margin-bottom: 0.25rem,
 			transition: #{color 0.15s ease-in-out,
@@ -62,7 +62,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 				background-color: transparent,
 				box-shadow: none,
 				font-weight: $font-weight-normal,
-				letter-spacing: 0.016rem,
+				letter-spacing: 0.02rem,
 				before: (
 					content: none,
 				),
@@ -140,7 +140,7 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 	(
 		nav-link: (
 			border-radius: $border-radius,
-			letter-spacing: 0.016rem,
+			letter-spacing: 0.02rem,
 			margin-bottom: 0.25rem,
 			transition: #{color 0.15s ease-in-out,
 			background-color 0.15s ease-in-out,
@@ -195,7 +195,7 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 				background-color: transparent,
 				box-shadow: none,
 				font-weight: $font-weight-normal,
-				letter-spacing: 0.016rem,
+				letter-spacing: 0.02rem,
 				before: (
 					content: none,
 				),
