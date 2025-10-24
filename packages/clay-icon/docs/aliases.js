@@ -781,6 +781,10 @@ export const iconsData = [
 		name: 'cut',
 	},
 	{
+		aliases: [''],
+		name: 'data-privacy',
+	},
+	{
 		aliases: ['archive', 'catalog', 'data store', 'hub', 'index', 'record'],
 		name: 'database',
 	},
