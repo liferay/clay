@@ -3,11 +3,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+/* eslint-disable no-console */
+
 'use strict';
 
+const {exec} = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const {exec} = require('child_process');
 
 const SASS_SOURCE_DIRECTORY = path.resolve('src/scss');
 
@@ -41,11 +43,14 @@ function runBuild() {
 		const duration = Date.now() - startTime;
 
 		if (error) {
-			console.error(`❌ Build failed after ${duration}ms:`);
 			console.error(error.message);
+			console.error(`❌ Build failed after ${duration}ms:`);
 		} else {
+			if (stdout) {
+				console.log(stdout);
+			}
+
 			console.log(`✅ Build completed successfully in ${duration}ms`);
-			if (stdout) console.log(stdout);
 		}
 
 		if (stderr) {
