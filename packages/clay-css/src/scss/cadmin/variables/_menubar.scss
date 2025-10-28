@@ -101,9 +101,11 @@ $cadmin-menubar-primary: map-deep-merge(
 				font-weight: $cadmin-font-weight-semi-bold,
 				text-transform: uppercase,
 				collapse-icon-closed: (
+					font-size: 14px,
 					top: calc(22px - (1em / 2)),
 				),
 				collapse-icon-open: (
+					font-size: 14px,
 					top: calc(22px - (1em / 2)),
 				),
 			),
