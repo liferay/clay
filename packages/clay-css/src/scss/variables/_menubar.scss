@@ -101,9 +101,11 @@ $menubar-primary: map-deep-merge(
 				font-weight: $font-weight-semi-bold,
 				text-transform: uppercase,
 				collapse-icon-closed: (
+					font-size: 0.875rem,
 					top: calc(22px - (1em / 2)),
 				),
 				collapse-icon-open: (
+					font-size: 0.875rem,
 					top: calc(22px - (1em / 2)),
 				),
 			),
