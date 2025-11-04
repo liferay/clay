@@ -1,4 +1,4 @@
-import '@clayui/css/lib/css/atlas.css';
+import '@clayui/css/src/scss/atlas.scss';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import React, {useEffect} from 'react';
 import svg4everybody from 'svg4everybody';
