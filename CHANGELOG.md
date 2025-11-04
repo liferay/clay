@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.154.0](https://github.com/liferay/clay/compare/v3.153.0...v3.154.0) (2025-11-04)
+
+### Bug Fixes
+
+-   **@clayui/charts:** LPD-69988 Add fix for billboard. ([6dd7c74](https://github.com/liferay/clay/commit/6dd7c7430b7dbc3803f1f6e8a8e8a45cf555f6dd))
+-   **@clayui/css:** LPD-59282 Vertical Nav adjust letter-spacing ([d94e8c1](https://github.com/liferay/clay/commit/d94e8c1cdd2f285d99b0db267e8a10fe08e5a8d2))
+-   **@clayui/css:** LPD-66331 menubar-primary collapse icon should be 14px ([18b11f1](https://github.com/liferay/clay/commit/18b11f1d3f73dfc3648c3a11a0aaf0eb217d0aaa))
+
+### Features
+
+-   **@clayui/css:** LPD-69017 Add data-privacy.svg ([8224504](https://github.com/liferay/clay/commit/82245044d8e49bab5768784f26f281647466dff3))
+
 # [3.153.0](https://github.com/liferay/clay/compare/v3.152.0...v3.153.0) (2025-10-24)
 
 ### Features
