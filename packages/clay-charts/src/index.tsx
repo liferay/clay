@@ -3,19 +3,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {
-	ChartTypes,
-	Data,
-	Grid,
-	LineOptions,
-	PointOptions,
-	bb,
-} from 'billboard.js';
+import {ChartTypes, Data, Grid, LineOptions, PointOptions} from 'billboard.js';
 import React from 'react';
 
 import BillboardWrapper from './BillboardWrapper';
 import GeoMap from './GeoMap';
 import Predictive from './Predictive';
+import bb from './bb-patched';
 import {
 	DEFAULT_COLORS,
 	DEFAULT_GRID_OBJECT,

@@ -3,8 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ChartOptions, bb} from 'billboard.js';
+import {ChartOptions} from 'billboard.js';
 import React from 'react';
+
+import bb from './bb-patched';
 
 interface IProps extends ChartOptions {
 	forwardRef: React.MutableRefObject<any>;
