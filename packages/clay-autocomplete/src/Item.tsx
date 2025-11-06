@@ -16,6 +16,36 @@ export interface IProps
 		HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
 	> {
 	/**
+	 * The global aria-describedby attribute identifies the element (or elements)
+	 * that describes the element on which the attribute is set.
+	 */
+	'aria-describedby'?: string;
+
+	/**
+	 * The `aria-label` attribute defines a string value that labels an interactive
+	 * element.
+	 */
+	'aria-label'?: string;
+
+	/**
+	 * The `aria-labelledby` attribute identifies the element (or elements) that
+	 * labels the element it is applied to.
+	 */
+	'aria-labelledby'?: string;
+
+	/**
+	 * Sets the number or position in the current set of listitems
+	 * or treeitems when not all items are present in the DOM.
+	 */
+	'aria-posinset'?: number;
+
+	/**
+	 * Sets the number of items in the current set of listitems
+	 * or treeitems when not all items in the set are present in the DOM.
+	 */
+	'aria-setsize'?: number;
+
+	/**
 	 * Flag that indicates if item is selected.
 	 */
 	active?: boolean;
@@ -97,6 +127,11 @@ const optionsFuzzy = {post: '|}', pre: '}|'};
 
 const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 	{
+		'aria-describedby': ariaDescribedby,
+		'aria-label': ariaLabel,
+		'aria-labelledby': ariaLabelledby,
+		'aria-posinset': ariaPosInset,
+		'aria-setsize': ariaSetSize,
 		children,
 		className,
 		disabled,
@@ -130,7 +165,12 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 		<DropDown.Item
 			{...otherProps}
 			{...hoverProps}
-			aria-selected={activeDescendant === keyValue}
+			aria-describedby={ariaDescribedby}
+			aria-label={ariaLabel}
+			aria-labelledby={ariaLabelledby}
+			aria-posinset={ariaPosInset}
+			aria-selected={otherProps.active}
+			aria-setsize={ariaSetSize}
 			className={classnames(className, {
 				focus: activeDescendant === keyValue && isFocus,
 				hover: activeDescendant === keyValue && !isFocus,

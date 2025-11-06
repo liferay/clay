@@ -24,6 +24,7 @@ import {
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
@@ -110,6 +111,11 @@ export interface IProps<T>
 	 * Property to set the initial value of `items` (uncontrolled).
 	 */
 	defaultItems?: Array<T> | null;
+
+	/**
+	 * The currently selected keys (controlled).
+	 */
+	selectedKeys?: Array<React.Key>;
 
 	/**
 	 * Messages for the Autocomplete.
@@ -228,6 +234,7 @@ function AutocompleteInner<T extends Item>(
 		onLoadMore,
 		primaryAction,
 		value: externalValue,
+		selectedKeys,
 		...otherProps
 	}: IProps<T>,
 	ref: React.Ref<HTMLInputElement>
@@ -411,7 +418,6 @@ function AutocompleteInner<T extends Item>(
 			wrappedChildren = [primaryActionChild, children];
 		}
 	}
-
 	// We initialize the collection in the picker and then pass it down so the
 	// collection can be cached even before the listbox is not mounted.
 	const collection = useCollection<T, unknown>({
@@ -425,9 +431,12 @@ function AutocompleteInner<T extends Item>(
 					children.props.value ??
 					children.props.children;
 
+				const isActive = selectedKeys?.includes(keyValue) ?? false;
+
 				return React.cloneElement(children, {
+					active: isActive,
 					keyValue,
-					match: value,
+					match: String(value),
 					onClick: (
 						event: React.MouseEvent<
 							| HTMLSpanElement
@@ -452,9 +461,10 @@ function AutocompleteInner<T extends Item>(
 						inputElementRef.current?.focus();
 					},
 					roleItem: 'option',
+					...(isActive ? {symbolLeft: 'check-small'} : {}),
 				}) as React.ReactElement;
 			},
-			[value]
+			[value, selectedKeys]
 		),
 		items: filteredItemsWithPrimaryAction,
 		notFound: (
@@ -686,7 +696,12 @@ function AutocompleteInner<T extends Item>(
 					triggerRef={inputElementRef}
 				>
 					<div
-						className="dropdown-menu dropdown-menu-select show"
+						className={classNames(
+							'dropdown-menu dropdown-menu-select show',
+							{
+								'dropdown-menu-indicator-start': !!selectedKeys,
+							}
+						)}
 						ref={menuRef}
 						role="presentation"
 						style={{
