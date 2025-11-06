@@ -18,7 +18,7 @@ import {
 	useId,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {Labels} from './Labels';
 
@@ -331,6 +331,17 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 		value: externalActive,
 	});
 
+	const selectedKeys = useMemo(() => {
+		return items.map((item) =>
+			String(
+				getLocatorValue({
+					item,
+					locator: locator.value,
+				})
+			)
+		);
+	}, [items, locator.value]);
+
 	const inputElementRef =
 		(ref as React.RefObject<HTMLInputElement>) || inputRef;
 
@@ -501,6 +512,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 					onLoadMore={onLoadMore}
 					placeholder={placeholder}
 					ref={inputElementRef}
+					selectedKeys={selectedKeys}
 					spritemap={spritemap}
 					suggestionList={sourceItems ?? []}
 					value={value}
