@@ -76,6 +76,55 @@ Default.argTypes = {
 	},
 };
 
+export const SelectedState = (args: any) => {
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-1"
+							id="clay-autocomplete-label-1"
+						>
+							Numbers (one-five)
+						</label>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-1"
+							defaultActive
+							defaultItems={[
+								'Apples',
+								'Bananas',
+								'Cantaloupe',
+								'Mangos',
+							]}
+							id="clay-autocomplete-1"
+							messages={{
+								loading: 'Loading...',
+								notFound: 'No results found',
+							}}
+							placeholder="Enter the name of a fruit"
+							selectedKeys={args.selectedKeys}
+						>
+							{(item) => (
+								<ClayAutocomplete.Item key={item}>
+									{item}
+								</ClayAutocomplete.Item>
+							)}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+SelectedState.argTypes = {
+	selectedKeys: {
+		control: {type: 'check'},
+		options: ['Apples', 'Bananas', 'Cantaloupe', 'Mangos'],
+	},
+};
+
 export const Dynamic = () => (
 	<div className="row">
 		<div className="col-md-5">
