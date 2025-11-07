@@ -18,7 +18,7 @@ import {
 	useId,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {Labels} from './Labels';
 
@@ -341,6 +341,19 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 	const Container = MenuRenderer ? FocusScope : React.Fragment;
 	const containerProps = MenuRenderer ? {arrowKeysUpDown: false} : {};
 
+	const itemsKeys = useMemo(
+		() =>
+			items
+				.map((item) =>
+					getLocatorValue({
+						item,
+						locator: locator.value,
+					})
+				)
+				.filter((key): key is string => !!key),
+		[items, locator]
+	);
+
 	// Throws the warning only when the component is mounted and avoids
 	// throwing it every time a rerender happens.
 	useEffect(() => {
@@ -501,6 +514,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 					onLoadMore={onLoadMore}
 					placeholder={placeholder}
 					ref={inputElementRef}
+					selectedKeys={itemsKeys}
 					spritemap={spritemap}
 					suggestionList={sourceItems ?? []}
 					value={value}
