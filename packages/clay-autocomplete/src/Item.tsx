@@ -125,8 +125,9 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 		),
 	});
 
-	const isSelected =
+	const isKeySelected =
 		keyValue !== undefined && selectedKeys?.includes(keyValue);
+	const isSelected = activeDescendant === keyValue || isKeySelected;
 	const currentValue = textValue ?? value ?? String(children);
 	const fuzzyMatch = fuzzy.match(match, currentValue, optionsFuzzy);
 
@@ -134,9 +135,9 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 		<DropDown.Item
 			{...otherProps}
 			{...hoverProps}
-			aria-selected={activeDescendant === keyValue}
+			aria-selected={isSelected}
 			className={classnames(className, {
-				active: isSelected,
+				active: isKeySelected,
 				focus: activeDescendant === keyValue && isFocus,
 				hover: activeDescendant === keyValue && !isFocus,
 			})}
