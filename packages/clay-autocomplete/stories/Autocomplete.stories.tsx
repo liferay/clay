@@ -223,6 +223,55 @@ export const CustomItem = () => {
 	);
 };
 
+export const SelectedKeys = () => {
+	const [value, setValue] = useState('');
+	const selectedKeys = [value];
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-2"
+							id="clay-autocomplete-label-2"
+						>
+							Numbers (one-five)
+						</label>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-2"
+							defaultItems={[
+								'one',
+								'two',
+								'three',
+								'four',
+								'five',
+							]}
+							id="clay-autocomplete-2"
+							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
+								loading: 'Loading...',
+								notFound: 'No results found',
+							}}
+							onChange={setValue}
+							placeholder="Enter a number from One to Five"
+							selectedKeys={selectedKeys}
+							value={value}
+						>
+							{(item) => (
+								<ClayAutocomplete.Item key={item}>
+									{item}
+								</ClayAutocomplete.Item>
+							)}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
 type RickandMorty = {
 	id: number;
 	name: string;
