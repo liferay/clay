@@ -197,6 +197,69 @@ function Example() {
 }
 ```
 
+## Selection Feedback
+
+Autocomplete supports providing visual feedback to users about which items are in a selected state by using the `selectedKeys` prop. This prop accepts an array of keys corresponding to the items that should be marked as selected with a checkmark indicator.
+
+**Important**: The `selectedKeys` prop only provides visual feedback and does not control the actual value of the input. It works only in a controlled manner and must be managed by the parent component.
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Autocomplete from '@clayui/autocomplete';
+import Form from '@clayui/form';
+import React, {useState} from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	const [value, setValue] = useState('');
+	const selectedItems = ['Bananas', 'Oranges'];
+
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Form.Group>
+					<label
+						htmlFor="clay-autocomplete-selected"
+						id="clay-autocomplete-label-selected"
+					>
+						Fruits (Bananas and Oranges are pre-selected)
+					</label>
+					<Autocomplete
+						aria-labelledby="clay-autocomplete-label-selected"
+						id="clay-autocomplete-selected"
+						defaultItems={[
+							'Apples',
+							'Bananas',
+							'Cantaloupe',
+							'Mangos',
+							'Oranges',
+							'Strawberries',
+						]}
+						messages={{
+							loading: 'Loading...',
+							notFound: 'No results found',
+						}}
+						onChange={setValue}
+						placeholder="Enter the name of a fruit"
+						selectedKeys={selectedItems}
+						value={value}
+					>
+						{(item) => (
+							<Autocomplete.Item key={item}>
+								{item}
+							</Autocomplete.Item>
+						)}
+					</Autocomplete>
+				</Form.Group>
+			</div>
+		</Provider>
+	);
+}
+```
+
+This is particularly useful when the Autocomplete is used in scenarios where multiple selections have been made elsewhere in your application, and you want to show users which items are already selected without changing the input value.
+
 ## Asynchronous loading
 
 Autocomplete supports loading data asynchronously, and displays the loading indicator reflecting the current loading state, by setting the `loadingState` prop.
