@@ -4,6 +4,7 @@
  */
 
 import DropDown from '@clayui/drop-down';
+import Icon from '@clayui/icon';
 import {useHover, useInteractionFocus} from '@clayui/shared';
 import classnames from 'classnames';
 import fuzzy from 'fuzzy';
@@ -110,7 +111,8 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 	}: IProps,
 	ref
 ) {
-	const {activeDescendant, onActiveDescendant} = useAutocompleteState();
+	const {activeDescendant, onActiveDescendant, selectedKeys} =
+		useAutocompleteState();
 	const {isFocusVisible} = useInteractionFocus();
 
 	const isFocus = isFocusVisible();
@@ -123,6 +125,8 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 		),
 	});
 
+	const isSelected =
+		keyValue !== undefined && selectedKeys?.includes(keyValue);
 	const currentValue = textValue ?? value ?? String(children);
 	const fuzzyMatch = fuzzy.match(match, currentValue, optionsFuzzy);
 
@@ -132,6 +136,7 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 			{...hoverProps}
 			aria-selected={activeDescendant === keyValue}
 			className={classnames(className, {
+				active: isSelected,
 				focus: activeDescendant === keyValue && isFocus,
 				hover: activeDescendant === keyValue && !isFocus,
 			})}
@@ -140,6 +145,12 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 			ref={ref}
 			tabIndex={-1}
 		>
+			{isSelected && (
+				<span className="dropdown-item-indicator-start">
+					<Icon symbol="check-small" />
+				</span>
+			)}
+
 			{highlightMatch &&
 			match &&
 			fuzzyMatch &&

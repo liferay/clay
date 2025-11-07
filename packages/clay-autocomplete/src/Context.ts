@@ -29,6 +29,8 @@ LegacyContext.displayName = 'ClayAutocompleteLegacyContext';
 
 type AutocompleteContext = {
 	activeDescendant?: React.Key;
+	selectedKeys?: Array<React.Key>;
+
 	onActiveDescendant: (value: React.Key) => void;
 	onClick: (value: string) => void;
 };

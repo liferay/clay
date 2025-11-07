@@ -24,6 +24,7 @@ import {
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
@@ -166,6 +167,11 @@ export interface IProps<T>
 	 */
 	loadingState?: number;
 
+	/**
+	 * Indicates the keys of the items collection that are currently selected.
+	 */
+	selectedKeys?: Array<React.Key>;
+
 	[key: string]: any;
 }
 
@@ -227,6 +233,7 @@ function AutocompleteInner<T extends Item>(
 		onItemsChange,
 		onLoadMore,
 		primaryAction,
+		selectedKeys,
 		value: externalValue,
 		...otherProps
 	}: IProps<T>,
@@ -271,6 +278,7 @@ function AutocompleteInner<T extends Item>(
 	const inputElementRef =
 		(ref as React.RefObject<HTMLInputElement>) || inputRef;
 
+	const isSelectionFeedbackEnabled = selectedKeys !== undefined;
 	const isLoading = Boolean(loadingState !== undefined && loadingState === 1);
 	const debouncedLoadingChange = useDebounce(isLoading, 500);
 
@@ -686,7 +694,13 @@ function AutocompleteInner<T extends Item>(
 					triggerRef={inputElementRef}
 				>
 					<div
-						className="dropdown-menu dropdown-menu-select show"
+						className={classNames(
+							'dropdown-menu dropdown-menu-select show',
+							{
+								'dropdown-menu-indicator-start':
+									isSelectionFeedbackEnabled,
+							}
+						)}
 						ref={menuRef}
 						role="presentation"
 						style={{
@@ -699,6 +713,7 @@ function AutocompleteInner<T extends Item>(
 								activeDescendant,
 								onActiveDescendant: setActiveDescendant,
 								onClick: setValue,
+								selectedKeys,
 							}}
 						>
 							<Collection<T>
