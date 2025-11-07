@@ -580,12 +580,15 @@ describe('Autocomplete incremental interactions', () => {
 
 			expect(one?.querySelector(checkmarkSelector)).toBeDefined();
 			expect(one?.querySelector(checkmarkSelector)).toBeNull();
+			expect(one?.getAttribute('aria-selected')).toBe('false');
 
 			expect(two?.querySelector(checkmarkSelector)).toBeDefined();
 			expect(two?.querySelector(checkmarkSelector)).not.toBeNull();
+			expect(two?.getAttribute('aria-selected')).toBe('true');
 
 			expect(four?.querySelector(checkmarkSelector)).toBeDefined();
 			expect(four?.querySelector(checkmarkSelector)).not.toBeNull();
+			expect(four?.getAttribute('aria-selected')).toBe('true');
 		});
 	});
 
