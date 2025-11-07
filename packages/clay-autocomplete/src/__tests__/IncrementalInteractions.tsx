@@ -308,24 +308,28 @@ describe('Autocomplete incremental interactions', () => {
 
 		userEvent.keyboard('[ArrowDown]');
 
+		expect(input.getAttribute('aria-activedescendant')).toBe('two');
 		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
 			'true'
 		);
 
 		userEvent.keyboard('[ArrowLeft]');
 
+		expect(input.getAttribute('aria-activedescendant')).toBe('');
 		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
 			'false'
 		);
 
 		userEvent.keyboard('[ArrowDown]');
 
+		expect(input.getAttribute('aria-activedescendant')).toBe('two');
 		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
 			'true'
 		);
 
 		userEvent.keyboard('[ArrowRight]');
 
+		expect(input.getAttribute('aria-activedescendant')).toBe('');
 		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
 			'false'
 		);

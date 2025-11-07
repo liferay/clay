@@ -126,7 +126,7 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 	});
 
 	const isKeySelected =
-		keyValue !== undefined && selectedKeys?.includes(keyValue);
+		keyValue !== undefined && (selectedKeys?.includes(keyValue) ?? false);
 	const isSelected = activeDescendant === keyValue || isKeySelected;
 	const currentValue = textValue ?? value ?? String(children);
 	const fuzzyMatch = fuzzy.match(match, currentValue, optionsFuzzy);
@@ -146,7 +146,7 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 			ref={ref}
 			tabIndex={-1}
 		>
-			{isSelected && (
+			{isKeySelected && (
 				<span className="dropdown-item-indicator-start">
 					<Icon symbol="check-small" />
 				</span>
