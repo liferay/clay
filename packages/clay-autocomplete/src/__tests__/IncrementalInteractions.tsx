@@ -547,6 +547,46 @@ describe('Autocomplete incremental interactions', () => {
 			expect(input.value).toBe('two');
 			expect(queryByRole('listbox')).toBeFalsy();
 		});
+
+		it('shows a checkmark when an item is explicitly marked as selected', () => {
+			const items = ['one', 'two', 'three', 'four', 'five'];
+			const selectedItems = ['two', 'four'];
+
+			const {getAllByRole, getByRole} = render(
+				<ClayAutocomplete
+					messages={messages}
+					placeholder="Enter a number from One to Five"
+					selectedKeys={selectedItems}
+				>
+					{items.map((item) => (
+						<ClayAutocomplete.Item key={item}>
+							{item}
+						</ClayAutocomplete.Item>
+					))}
+				</ClayAutocomplete>
+			);
+
+			const input = getByRole('combobox');
+
+			userEvent.type(input, 'o');
+
+			const listbox = getByRole('listbox');
+
+			expect(listbox.parentElement!.classList).toContain('show');
+			expect(listbox.children).toHaveLength(3);
+
+			const [one, two, four] = getAllByRole('option');
+			const checkmarkSelector = '.dropdown-item-indicator-start';
+
+			expect(one?.querySelector(checkmarkSelector)).toBeDefined();
+			expect(one?.querySelector(checkmarkSelector)).toBeNull();
+
+			expect(two?.querySelector(checkmarkSelector)).toBeDefined();
+			expect(two?.querySelector(checkmarkSelector)).not.toBeNull();
+
+			expect(four?.querySelector(checkmarkSelector)).toBeDefined();
+			expect(four?.querySelector(checkmarkSelector)).not.toBeNull();
+		});
 	});
 
 	describe('Option not selected', () => {
