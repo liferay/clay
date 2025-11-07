@@ -212,7 +212,7 @@ import '@clayui/css/lib/css/atlas.css';
 export default function App() {
 	const fruits = ['Apples', 'Bananas', 'Cantaloupe', 'Mangos'];
 	const [value, setValue] = useState('');
-	const [selectedKeys, setSelectedKeys] = useState < Array < string >> [];
+	const [selectedKeys, setSelectedKeys] = useState([]);
 
 	const handleValueChange = (newValue: string) => {
 		setValue(newValue);
