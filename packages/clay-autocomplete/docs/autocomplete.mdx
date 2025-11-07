@@ -210,7 +210,25 @@ import React, {useState} from 'react';
 import '@clayui/css/lib/css/atlas.css';
 
 export default function App() {
-	const [selectedKeys] = useState(['Apples']);
+	const fruits = ['Apples', 'Bananas', 'Cantaloupe', 'Mangos'];
+	const [value, setValue] = useState('');
+	const [selectedKeys, setSelectedKeys] = useState < Array < string >> [];
+
+	const handleValueChange = (newValue: string) => {
+		setValue(newValue);
+
+		const matchedItem = fruits.find(
+			(item) => item.toLowerCase() === newValue.toLowerCase()
+		);
+
+		if (matchedItem) {
+			if (selectedKeys.includes(matchedItem)) {
+				return;
+			}
+
+			setSelectedKeys([matchedItem]);
+		}
+	};
 
 	return (
 		<Provider spritemap="/public/icons.svg">
@@ -226,12 +244,7 @@ export default function App() {
 						aria-labelledby="clay-autocomplete-label-2"
 						id="clay-autocomplete-2"
 						defaultActive
-						defaultItems={[
-							'Apples',
-							'Bananas',
-							'Cantaloupe',
-							'Mangos',
-						]}
+						defaultItems={fruits}
 						messages={{
 							loading: 'Loading...',
 							notFound: 'No results found',

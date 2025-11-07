@@ -76,7 +76,27 @@ Default.argTypes = {
 	},
 };
 
-export const SelectedState = (args: any) => {
+export const SelectedState = () => {
+	const fruits = ['Apples', 'Bananas', 'Cantaloupe', 'Mangos'];
+	const [value, setValue] = useState('');
+	const [selectedKeys, setSelectedKeys] = useState<Array<string>>([]);
+
+	const handleValueChange = (newValue: string) => {
+		setValue(newValue);
+
+		const matchedItem = fruits.find(
+			(item) => item.toLowerCase() === newValue.toLowerCase()
+		);
+
+		if (matchedItem) {
+			if (selectedKeys.includes(matchedItem)) {
+				return;
+			}
+
+			setSelectedKeys([matchedItem]);
+		}
+	};
+
 	return (
 		<div className="row">
 			<div className="col-md-5">
@@ -86,24 +106,20 @@ export const SelectedState = (args: any) => {
 							htmlFor="clay-autocomplete-1"
 							id="clay-autocomplete-label-1"
 						>
-							Numbers (one-five)
+							Fruits
 						</label>
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
-							defaultActive
-							defaultItems={[
-								'Apples',
-								'Bananas',
-								'Cantaloupe',
-								'Mangos',
-							]}
+							defaultItems={fruits}
 							id="clay-autocomplete-1"
 							messages={{
 								loading: 'Loading...',
 								notFound: 'No results found',
 							}}
-							placeholder="Enter the name of a fruit"
-							selectedKeys={args.selectedKeys}
+							onChange={handleValueChange}
+							placeholder="Select a fruit from the list"
+							selectedKeys={selectedKeys}
+							value={value}
 						>
 							{(item) => (
 								<ClayAutocomplete.Item key={item}>
@@ -116,13 +132,6 @@ export const SelectedState = (args: any) => {
 			</div>
 		</div>
 	);
-};
-
-SelectedState.argTypes = {
-	selectedKeys: {
-		control: {type: 'check'},
-		options: ['Apples', 'Bananas', 'Cantaloupe', 'Mangos'],
-	},
 };
 
 export const Dynamic = () => (
