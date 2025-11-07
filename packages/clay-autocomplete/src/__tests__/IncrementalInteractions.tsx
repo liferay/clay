@@ -286,7 +286,7 @@ describe('Autocomplete incremental interactions', () => {
 	});
 
 	it('pressing left or right arrow key moves focus to input', () => {
-		const {getAllByRole, getByRole} = render(
+		const {getByRole} = render(
 			<ClayAutocomplete
 				messages={messages}
 				placeholder="Enter a number from One to Five"
@@ -308,31 +308,23 @@ describe('Autocomplete incremental interactions', () => {
 
 		userEvent.keyboard('[ArrowDown]');
 
-		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
-			'true'
-		);
+		expect(input.getAttribute('aria-activedescendant')).toBe('two');
 
 		userEvent.keyboard('[ArrowLeft]');
 
-		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
-			'false'
-		);
+		expect(input.getAttribute('aria-activedescendant')).toBe('');
 
 		userEvent.keyboard('[ArrowDown]');
 
-		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
-			'true'
-		);
+		expect(input.getAttribute('aria-activedescendant')).toBe('two');
 
 		userEvent.keyboard('[ArrowRight]');
 
-		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
-			'false'
-		);
+		expect(input.getAttribute('aria-activedescendant')).toBe('');
 	});
 
 	it('pressing the up arrow key opens the menu and moves the visual focus to the last element in the list', () => {
-		const {getAllByRole, getByRole, queryByRole} = render(
+		const {getByRole, queryByRole} = render(
 			<ClayAutocomplete
 				messages={messages}
 				placeholder="Enter a number from One to Five"
@@ -352,13 +344,10 @@ describe('Autocomplete incremental interactions', () => {
 
 		expect(queryByRole('listbox')).toBeDefined();
 		expect(input.getAttribute('aria-activedescendant')).toBe('three');
-		expect(getAllByRole('option')[2]!.getAttribute('aria-selected')).toBe(
-			'true'
-		);
 	});
 
 	it('pressing the down arrow key opens the menu and moves the visual focus to the first element in the list', () => {
-		const {getAllByRole, getByRole, queryByRole} = render(
+		const {getByRole, queryByRole} = render(
 			<ClayAutocomplete
 				messages={messages}
 				placeholder="Enter a number from One to Five"
@@ -378,9 +367,6 @@ describe('Autocomplete incremental interactions', () => {
 
 		expect(queryByRole('listbox')).toBeDefined();
 		expect(input.getAttribute('aria-activedescendant')).toBe('one');
-		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
-			'true'
-		);
 	});
 
 	it('cycle through options in loop when run out of options', () => {
@@ -546,6 +532,46 @@ describe('Autocomplete incremental interactions', () => {
 
 			expect(input.value).toBe('two');
 			expect(queryByRole('listbox')).toBeFalsy();
+		});
+
+		it('shows marker and visual feedback when an item is selected', () => {
+			const {getAllByRole, getByRole} = render(
+				<ClayAutocomplete
+					messages={messages}
+					placeholder="Enter a number from One to Five"
+					selectedKeys={['one', 'two']}
+				>
+					{['one', 'two', 'three', 'four', 'five'].map((item) => (
+						<ClayAutocomplete.Item key={item}>
+							{item}
+						</ClayAutocomplete.Item>
+					))}
+				</ClayAutocomplete>
+			);
+
+			const input = getByRole('combobox');
+
+			userEvent.type(input, 'o');
+
+			expect(getByRole('listbox')).toBeDefined();
+
+			const [one, two, four] = getAllByRole('option');
+
+			expect(one?.getAttribute('aria-selected')).toBe('true');
+			expect(one?.classList.contains('active')).toBe(true);
+			expect(
+				one?.querySelector('.lexicon-icon-check-small')
+			).toBeDefined();
+
+			expect(two?.getAttribute('aria-selected')).toBe('true');
+			expect(two?.classList.contains('active')).toBe(true);
+			expect(
+				two?.querySelector('.lexicon-icon-check-small')
+			).toBeDefined();
+
+			expect(four?.getAttribute('aria-selected')).toBe('false');
+			expect(four?.classList.contains('active')).toBe(false);
+			expect(four?.querySelector('.lexicon-icon-check-small')).toBeNull();
 		});
 	});
 

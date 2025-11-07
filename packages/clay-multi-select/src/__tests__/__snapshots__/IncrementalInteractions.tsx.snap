@@ -8,17 +8,30 @@ exports[`MultiSelect incremental interactions renders a custom item 1`] = `
   style="height: 0px; position: relative; width: 100%;"
 >
   <li
+    aria-selected="true"
     data-index="0"
     role="presentation"
     style="left: 0px; position: absolute; top: 0px; transform: translateY(0px); width: 100%;"
   >
     <button
-      aria-selected="false"
-      class="dropdown-item"
+      aria-selected="true"
+      class="dropdown-item active"
       id="1"
       role="option"
       tabindex="-1"
     >
+      <span
+        class="dropdown-item-indicator-start"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-check-small"
+          role="presentation"
+        >
+          <use
+            href="#check-small"
+          />
+        </svg>
+      </span>
       <strong>
         one
       </strong>
@@ -28,17 +41,30 @@ exports[`MultiSelect incremental interactions renders a custom item 1`] = `
     </button>
   </li>
   <li
+    aria-selected="true"
     data-index="1"
     role="presentation"
     style="left: 0px; position: absolute; top: 0px; transform: translateY(37px); width: 100%;"
   >
     <button
-      aria-selected="false"
-      class="dropdown-item"
+      aria-selected="true"
+      class="dropdown-item active"
       id="2"
       role="option"
       tabindex="-1"
     >
+      <span
+        class="dropdown-item-indicator-start"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-check-small"
+          role="presentation"
+        >
+          <use
+            href="#check-small"
+          />
+        </svg>
+      </span>
       <strong>
         two
       </strong>
