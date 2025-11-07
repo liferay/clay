@@ -186,6 +186,35 @@ describe('Interactions', () => {
 		).toMatchSnapshot();
 	});
 
+	it('selected items have a checkmark', async () => {
+		const {getAllByRole, getByRole} = render(
+			<ClayMultiSelectWithState
+				items={[items[0], items[1]]}
+				sourceItems={items}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		const combobox = getByRole('combobox');
+
+		userEvent.click(combobox);
+
+		const [foo, bar, baz] = getAllByRole('option');
+		const checkmarkSelector = '.dropdown-item-indicator-start';
+
+		expect(foo?.querySelector(checkmarkSelector)).toBeDefined();
+		expect(foo?.querySelector(checkmarkSelector)).not.toBeNull();
+		expect(foo?.getAttribute('aria-selected')).toBe('true');
+
+		expect(bar?.querySelector(checkmarkSelector)).toBeDefined();
+		expect(bar?.querySelector(checkmarkSelector)).not.toBeNull();
+		expect(bar?.getAttribute('aria-selected')).toBe('true');
+
+		expect(baz?.querySelector(checkmarkSelector)).toBeDefined();
+		expect(baz?.querySelector(checkmarkSelector)).toBeNull();
+		expect(baz?.getAttribute('aria-selected')).toBe('false');
+	});
+
 	xit('allows for async sourceItems', () => {
 		jest.useFakeTimers();
 		const callbackFn = jest.fn();
