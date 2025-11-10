@@ -8,7 +8,6 @@ exports[`MultiSelect incremental interactions renders a custom item 1`] = `
   style="height: 0px; position: relative; width: 100%;"
 >
   <li
-    aria-selected="true"
     data-index="0"
     role="presentation"
     style="left: 0px; position: absolute; top: 0px; transform: translateY(0px); width: 100%;"
@@ -41,7 +40,6 @@ exports[`MultiSelect incremental interactions renders a custom item 1`] = `
     </button>
   </li>
   <li
-    aria-selected="true"
     data-index="1"
     role="presentation"
     style="left: 0px; position: absolute; top: 0px; transform: translateY(37px); width: 100%;"

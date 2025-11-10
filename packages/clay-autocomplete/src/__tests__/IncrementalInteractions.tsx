@@ -569,7 +569,7 @@ describe('Autocomplete incremental interactions', () => {
 				two?.querySelector('.lexicon-icon-check-small')
 			).toBeDefined();
 
-			expect(four?.getAttribute('aria-selected')).toBe('false');
+			expect(four?.getAttribute('aria-selected')).toBeNull();
 			expect(four?.classList.contains('active')).toBe(false);
 			expect(four?.querySelector('.lexicon-icon-check-small')).toBeNull();
 		});
