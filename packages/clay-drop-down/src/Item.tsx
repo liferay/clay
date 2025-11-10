@@ -86,14 +86,9 @@ const Item = React.forwardRef<HTMLLIElement, IProps>(
 		const {close, closeOnClick, tabFocus} = useContext(DropDownContext);
 
 		return (
-			<li
-				aria-selected={active}
-				data-index={dataIndex}
-				ref={ref}
-				role={role}
-				style={style}
-			>
+			<li data-index={dataIndex} ref={ref} role={role} style={style}>
 				<ItemElement
+					aria-selected={active}
 					{...otherProps}
 					className={classNames('dropdown-item', className, {
 						active,

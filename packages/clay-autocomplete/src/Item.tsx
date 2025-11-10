@@ -169,7 +169,6 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 			aria-label={ariaLabel}
 			aria-labelledby={ariaLabelledby}
 			aria-posinset={ariaPosInset}
-			aria-selected={otherProps.active}
 			aria-setsize={ariaSetSize}
 			className={classnames(className, {
 				focus: activeDescendant === keyValue && isFocus,

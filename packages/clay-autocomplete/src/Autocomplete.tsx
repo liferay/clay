@@ -431,10 +431,14 @@ function AutocompleteInner<T extends Item>(
 					children.props.value ??
 					children.props.children;
 
-				const isActive = selectedKeys?.includes(keyValue) ?? false;
+				const isSelectionFeedbackEnabled = selectedKeys !== undefined;
+
+				const isActive =
+					isSelectionFeedbackEnabled &&
+					selectedKeys.includes(keyValue);
 
 				return React.cloneElement(children, {
-					active: isActive,
+					...(isActive ? {active: isActive} : {}),
 					keyValue,
 					match: String(value),
 					onClick: (
