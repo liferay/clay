@@ -440,7 +440,7 @@ function AutocompleteInner<T extends Item>(
 				return React.cloneElement(children, {
 					...(isActive ? {active: isActive} : {}),
 					keyValue,
-					match: String(value),
+					match: value,
 					onClick: (
 						event: React.MouseEvent<
 							| HTMLSpanElement

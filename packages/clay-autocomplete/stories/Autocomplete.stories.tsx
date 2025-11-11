@@ -84,6 +84,10 @@ export const SelectedState = () => {
 	const handleValueChange = (newValue: string) => {
 		setValue(newValue);
 
+		if (!newValue) {
+			return setSelectedKeys([]);
+		}
+
 		const matchedItem = fruits.find(
 			(item) => item.toLowerCase() === newValue.toLowerCase()
 		);
