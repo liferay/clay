@@ -1,4 +1,15 @@
-import '@clayui/css/src/scss/atlas.scss';
+(async () => {
+	try {
+		if (process.env.NODE_ENV === 'development') {
+			await import('@clayui/css/src/scss/atlas.scss');
+		} else {
+			await import('@clayui/css/lib/css/atlas.css');
+		}
+	} catch (error) {
+		console.error(`${error.name}: ${error.message}`);
+	}
+})();
+
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import React, {useEffect} from 'react';
 import svg4everybody from 'svg4everybody';
