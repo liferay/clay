@@ -31,6 +31,7 @@ type AutocompleteContext = {
 	activeDescendant?: React.Key;
 	onActiveDescendant: (value: React.Key) => void;
 	onClick: (value: string) => void;
+	selectedKeys?: Array<React.Key>;
 };
 
 export const AutocompleteContext = createContext({} as AutocompleteContext);

@@ -145,10 +145,16 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 	}: IProps,
 	ref
 ) {
-	const {activeDescendant, onActiveDescendant} = useAutocompleteState();
+	const {activeDescendant, onActiveDescendant, selectedKeys} =
+		useAutocompleteState();
 	const {isFocusVisible} = useInteractionFocus();
 
 	const isFocus = isFocusVisible();
+
+	const isSelectionFeedbackEnabled = selectedKeys !== undefined;
+
+	const isActive =
+		isSelectionFeedbackEnabled && selectedKeys.includes(keyValue!);
 
 	const hoverProps = useHover({
 		disabled,
@@ -165,6 +171,8 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 		<DropDown.Item
 			{...otherProps}
 			{...hoverProps}
+			{...(isActive ? {active: isActive} : {})}
+			{...(isActive ? {symbolLeft: 'check-small'} : {})}
 			aria-describedby={ariaDescribedby}
 			aria-label={ariaLabel}
 			aria-labelledby={ariaLabelledby}

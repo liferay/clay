@@ -431,14 +431,7 @@ function AutocompleteInner<T extends Item>(
 					children.props.value ??
 					children.props.children;
 
-				const isSelectionFeedbackEnabled = selectedKeys !== undefined;
-
-				const isActive =
-					isSelectionFeedbackEnabled &&
-					selectedKeys.includes(keyValue);
-
 				return React.cloneElement(children, {
-					...(isActive ? {active: isActive} : {}),
 					keyValue,
 					match: String(value),
 					onClick: (
@@ -465,10 +458,9 @@ function AutocompleteInner<T extends Item>(
 						inputElementRef.current?.focus();
 					},
 					roleItem: 'option',
-					...(isActive ? {symbolLeft: 'check-small'} : {}),
 				}) as React.ReactElement;
 			},
-			[value, selectedKeys]
+			[value]
 		),
 		items: filteredItemsWithPrimaryAction,
 		notFound: (
@@ -718,6 +710,7 @@ function AutocompleteInner<T extends Item>(
 								activeDescendant,
 								onActiveDescendant: setActiveDescendant,
 								onClick: setValue,
+								selectedKeys,
 							}}
 						>
 							<Collection<T>
