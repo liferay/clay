@@ -225,12 +225,8 @@ export default function App() {
 			(item) => item.toLowerCase() === newValue.toLowerCase()
 		);
 
-		if (matchedItem) {
-			if (selectedKeys.includes(matchedItem)) {
-				return;
-			}
-
-			setSelectedKeys([matchedItem]);
+		if (exactMatch && !selectedKeys.includes(exactMatch)) {
+			setSelectedKeys([exactMatch]);
 		}
 	};
 
