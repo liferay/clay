@@ -153,7 +153,7 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 
 	const isSelectionFeedbackEnabled = selectedKeys !== undefined;
 
-	const isActive =
+	const isSelected =
 		isSelectionFeedbackEnabled && selectedKeys.includes(keyValue!);
 
 	const hoverProps = useHover({
@@ -171,8 +171,8 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 		<DropDown.Item
 			{...otherProps}
 			{...hoverProps}
-			{...(isActive ? {active: isActive} : {})}
-			{...(isActive ? {symbolLeft: 'check-small'} : {})}
+			{...(isSelected ? {active: isSelected} : {})}
+			{...(isSelected ? {symbolLeft: 'check-small'} : {})}
 			aria-describedby={ariaDescribedby}
 			aria-label={ariaLabel}
 			aria-labelledby={ariaLabelledby}
