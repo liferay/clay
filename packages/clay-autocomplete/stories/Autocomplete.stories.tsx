@@ -92,11 +92,7 @@ export const SelectedState = () => {
 			(item) => item.toLowerCase() === newValue.toLowerCase()
 		);
 
-		if (matchedItem) {
-			if (selectedKeys.includes(matchedItem)) {
-				return;
-			}
-
+		if (matchedItem && !selectedKeys.includes(matchedItem)) {
 			setSelectedKeys([matchedItem]);
 		}
 	};
