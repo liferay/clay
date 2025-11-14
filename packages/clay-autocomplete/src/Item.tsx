@@ -123,7 +123,7 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 	const hoverProps = useHover({
 		disabled,
 		onHover: useCallback(
-			() => !isFocus && onActiveDescendant(keyValue!),
+			() => !isFocus && keyValue && onActiveDescendant(keyValue),
 			[keyValue, isFocus]
 		),
 	});
