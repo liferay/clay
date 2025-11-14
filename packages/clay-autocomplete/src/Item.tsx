@@ -118,7 +118,7 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 
 	const isFocus = isFocusVisible();
 
-	const isSelected = selectedKeys?.includes(keyValue!) ?? false;
+	const isSelected = (keyValue && selectedKeys?.includes(keyValue)) ?? false;
 
 	const hoverProps = useHover({
 		disabled,
