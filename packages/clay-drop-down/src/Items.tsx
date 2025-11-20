@@ -52,6 +52,7 @@ interface IInternalItem {
 const Checkbox = ({
 	checked = false,
 	onChange = () => {},
+	title,
 	...otherProps
 }: Item & IInternalItem) => {
 	const [value, setValue] = useState<boolean>(checked);
@@ -63,6 +64,7 @@ const Checkbox = ({
 			<ClayCheckbox
 				{...otherProps}
 				checked={value}
+				label={title}
 				onChange={() => {
 					setValue((val) => !val);
 					onChange(!value);
@@ -76,7 +78,7 @@ const Checkbox = ({
 type Context = {
 	back?: () => void;
 	close: () => void;
-	onForward?: (label: string, id: string) => void;
+	onForward?: (title: string, id: string) => void;
 	messages?: Record<string, string>;
 };
 
@@ -89,17 +91,20 @@ const Item = ({
 	label,
 	onClick,
 	spritemap,
+	title,
 	...props
 }: Omit<Item, 'onChange'> & IInternalItem) => {
 	const {back, close, messages, onForward} = useContext(ClayDropDownContext);
+
+	title = label || title;
 
 	return (
 		<DropDown.Item
 			{...props}
 			onClick={(event) => {
-				if (onForward && child && label) {
+				if (onForward && child && title) {
 					event.preventDefault();
-					onForward(label, child);
+					onForward(title, child);
 
 					return;
 				}
@@ -117,13 +122,13 @@ const Item = ({
 			}}
 			spritemap={spritemap}
 		>
-			{label}
+			{title}
 
 			{child && (
 				<span
-					aria-label={`${messages!['goTo']} ${label}`}
+					aria-label={`${messages!['goTo']} ${title}`}
 					className="dropdown-item-indicator-end"
-					title={`${messages!['goTo']} ${label}`}
+					title={`${messages!['goTo']} ${title}`}
 				>
 					<Icon spritemap={spritemap} symbol="angle-right" />
 				</span>
@@ -132,10 +137,12 @@ const Item = ({
 	);
 };
 
-const Group = ({items, label, spritemap}: Item & IInternalItem) => {
+const Group = ({items, label, spritemap, title}: Item & IInternalItem) => {
+	title = label || title;
+
 	warning(
 		typeof items !== 'undefined',
-		`ClayDropDownWithItems -> The '${label}' group contains no items to render.`
+		`ClayDropDownWithItems -> The '${title}' group contains no items to render.`
 	);
 
 	if (typeof items === 'undefined') {
@@ -143,7 +150,7 @@ const Group = ({items, label, spritemap}: Item & IInternalItem) => {
 	}
 
 	return (
-		<DropDownGroup header={label}>
+		<DropDownGroup header={title}>
 			{items && <Items items={items} spritemap={spritemap} />}
 		</DropDownGroup>
 	);
@@ -180,6 +187,7 @@ const Contextual = ({
 	items,
 	label,
 	spritemap,
+	title,
 	...otherProps
 }: Omit<Item, 'onChange'> & IInternalItem) => {
 	const [visible, setVisible] = useState(false);
@@ -214,6 +222,8 @@ const Contextual = ({
 		throttle((value: boolean) => setVisible(value), 100),
 		[]
 	);
+
+	title = label || title;
 
 	return (
 		<DropDown.Item
@@ -263,7 +273,7 @@ const Contextual = ({
 			spritemap={spritemap}
 			symbolRight="angle-right"
 		>
-			{label}
+			{title}
 
 			{items && (
 				<DropDown.Menu
@@ -331,7 +341,7 @@ interface IRadioContext {
 
 const RadioGroupContext = React.createContext({} as IRadioContext);
 
-const Radio = ({value = '', ...otherProps}: Item & IInternalItem) => {
+const Radio = ({title, value = '', ...otherProps}: Item & IInternalItem) => {
 	const {checked, name, onChange} = useContext(RadioGroupContext);
 
 	const {tabFocus} = useContext(DropDownContext);
@@ -342,6 +352,7 @@ const Radio = ({value = '', ...otherProps}: Item & IInternalItem) => {
 				{...otherProps}
 				checked={checked === value}
 				inline
+				label={title}
 				name={name}
 				onChange={() => onChange(value as string)}
 				tabIndex={!tabFocus ? -1 : undefined}
@@ -357,6 +368,7 @@ const RadioGroup = ({
 	name,
 	onChange = () => {},
 	spritemap,
+	title,
 	value: defaultValue = '',
 }: Item & IInternalItem) => {
 	const [value, setValue] = useState(defaultValue);
@@ -370,13 +382,15 @@ const RadioGroup = ({
 		},
 	};
 
+	title = label || title;
+
 	warning(
 		items && items.filter((item) => item.type !== 'radio').length === 0,
 		'ClayDropDownWithItems -> Items of type `radiogroup` should be used `radio` if you need to use others, it is recommended to use type `group`.'
 	);
 
 	return (
-		<DropDownGroup header={label} role="radiogroup">
+		<DropDownGroup header={title} role="radiogroup">
 			{items && (
 				<RadioGroupContext.Provider value={params}>
 					<Items items={items} spritemap={spritemap} />
