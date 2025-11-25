@@ -17,7 +17,7 @@ import {useVertical} from './context';
 interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if item is active.
-	 * @deprecated since version 3.94.0 - uses the `active` property on the
+	 * @deprecated since version 3.94.0 - use the `active` property on the
 	 * root component.
 	 */
 	active?: boolean;

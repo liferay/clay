@@ -17,6 +17,8 @@ export interface IProps
 	> {
 	/**
 	 * Flag that indicates if item is selected.
+	 * @deprecated since v3.151.0 - use the `selectedKeys` property on the
+	 * root component.
 	 */
 	active?: boolean;
 
@@ -110,15 +112,18 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 	}: IProps,
 	ref
 ) {
-	const {activeDescendant, onActiveDescendant} = useAutocompleteState();
+	const {activeDescendant, onActiveDescendant, selectedKeys} =
+		useAutocompleteState();
 	const {isFocusVisible} = useInteractionFocus();
 
 	const isFocus = isFocusVisible();
 
+	const isSelected = (keyValue && selectedKeys?.includes(keyValue)) ?? false;
+
 	const hoverProps = useHover({
 		disabled,
 		onHover: useCallback(
-			() => !isFocus && onActiveDescendant(keyValue!),
+			() => !isFocus && keyValue && onActiveDescendant(keyValue),
 			[keyValue, isFocus]
 		),
 	});
@@ -130,7 +135,8 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 		<DropDown.Item
 			{...otherProps}
 			{...hoverProps}
-			aria-selected={activeDescendant === keyValue}
+			{...(isSelected ? {active: isSelected} : {})}
+			{...(isSelected ? {symbolLeft: 'check-small'} : {})}
 			className={classnames(className, {
 				focus: activeDescendant === keyValue && isFocus,
 				hover: activeDescendant === keyValue && !isFocus,

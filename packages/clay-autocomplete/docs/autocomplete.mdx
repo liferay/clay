@@ -197,6 +197,74 @@ function Example() {
 }
 ```
 
+## Selected Keys
+
+By default, the Autocomplete does not display selected items. However, the selection state can be controlled by providing the `selectedKeys` property (an array of keys).
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Autocomplete from '@clayui/autocomplete';
+import Form from '@clayui/form';
+import React, {useState} from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	const fruits = ['Apples', 'Bananas', 'Cantaloupe', 'Mangos'];
+	const [value, setValue] = useState('');
+	const [selectedKeys, setSelectedKeys] = useState([]);
+
+	const handleValueChange = (newValue: string) => {
+		setValue(newValue);
+
+		if (!newValue) {
+			return setSelectedKeys([]);
+		}
+
+		const matchedItem = fruits.find(
+			(item) => item.toLowerCase() === newValue.toLowerCase()
+		);
+
+		if (matchedItem && !selectedKeys.includes(matchedItem)) {
+			setSelectedKeys([matchedItem]);
+		}
+	};
+
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Form.Group>
+					<label
+						htmlFor="clay-autocomplete-2"
+						id="clay-autocomplete-label-2"
+					>
+						Fruits
+					</label>
+					<Autocomplete
+						aria-labelledby="clay-autocomplete-label-2"
+						id="clay-autocomplete-2"
+						defaultActive
+						defaultItems={fruits}
+						messages={{
+							loading: 'Loading...',
+							notFound: 'No results found',
+						}}
+						placeholder="Enter the name of a fruit"
+						selectedKeys={selectedKeys}
+					>
+						{(item) => (
+							<Autocomplete.Item key={item}>
+								{item}
+							</Autocomplete.Item>
+						)}
+					</Autocomplete>
+				</Form.Group>
+			</div>
+		</Provider>
+	);
+}
+```
+
 ## Asynchronous loading
 
 Autocomplete supports loading data asynchronously, and displays the loading indicator reflecting the current loading state, by setting the `loadingState` prop.
@@ -346,14 +414,14 @@ export default function App() {
 			<div className="p-4">
 				<Form.Group>
 					<label
-						htmlFor="clay-autocomplete-2"
-						id="clay-autocomplete-label-2"
+						htmlFor="clay-autocomplete-3"
+						id="clay-autocomplete-label-3"
 					>
 						Fruits
 					</label>
 					<Autocomplete
-						aria-labelledby="clay-autocomplete-label-2"
-						id="clay-autocomplete-2"
+						aria-labelledby="clay-autocomplete-label-3"
+						id="clay-autocomplete-3"
 						defaultItems={[
 							'Apples',
 							'Bananas',

@@ -76,6 +76,64 @@ Default.argTypes = {
 	},
 };
 
+export const SelectedState = () => {
+	const fruits = ['Apples', 'Bananas', 'Cantaloupe', 'Mangos'];
+	const [value, setValue] = useState('');
+	const [selectedKeys, setSelectedKeys] = useState<Array<string>>([]);
+
+	const handleValueChange = (newValue: string) => {
+		setValue(newValue);
+
+		if (!newValue) {
+			return setSelectedKeys([]);
+		}
+
+		const matchedItem = fruits.find(
+			(item) => item.toLowerCase() === newValue.toLowerCase()
+		);
+
+		if (matchedItem && !selectedKeys.includes(matchedItem)) {
+			setSelectedKeys([matchedItem]);
+		}
+	};
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-1"
+							id="clay-autocomplete-label-1"
+						>
+							Fruits
+						</label>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-1"
+							defaultItems={fruits}
+							id="clay-autocomplete-1"
+							messages={{
+								loading: 'Loading...',
+								notFound: 'No results found',
+							}}
+							onChange={handleValueChange}
+							placeholder="Select a fruit from the list"
+							selectedKeys={selectedKeys}
+							value={value}
+						>
+							{(item) => (
+								<ClayAutocomplete.Item key={item}>
+									{item}
+								</ClayAutocomplete.Item>
+							)}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
 export const Dynamic = () => (
 	<div className="row">
 		<div className="col-md-5">
