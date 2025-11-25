@@ -17,7 +17,7 @@ export interface IProps
 	> {
 	/**
 	 * Flag that indicates if item is selected.
-	 * @deprecated since v3.151.0 - uses the `selectedKeys` property on the
+	 * @deprecated since v3.151.0 - use the `selectedKeys` property on the
 	 * root component.
 	 */
 	active?: boolean;
