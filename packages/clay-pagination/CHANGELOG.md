@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
+
+**Note:** Version bump only for package @clayui/pagination
+
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
 **Note:** Version bump only for package @clayui/pagination

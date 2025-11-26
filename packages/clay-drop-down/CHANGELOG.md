@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** LPD-66892 Fix aria-selected to be in the 'button' instead of 'li' ([73edd10](https://github.com/liferay/clay/commit/73edd101139688920b5d8b060b7785c71c398fba))
+
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
 ### Bug Fixes

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** LPD-66892 Fix visual feedback when an item is selected test ([4b4d449](https://github.com/liferay/clay/commit/4b4d449b1a468fea969162356490e217a2bb7bcd))
+
+### Features
+
+-   **@clayui/multi-select:** LPD-66892 Apply selectedKeys prop to MultiSelect Autocomplete ([6c27e41](https://github.com/liferay/clay/commit/6c27e4113060ecb17caee0c79d15b6be11feaa84))
+
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
 **Note:** Version bump only for package @clayui/multi-select

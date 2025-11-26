@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
+
+### Bug Fixes
+
+-   **@clayui.com:** LPD-66892 Fix Autocomplete visual feedback example ([559f991](https://github.com/liferay/clay/commit/559f9914e92f712e433bd7aaaf5f2490895bd7bd))
+-   **@clayui/autocomplete:** LPD-66892 Adjust variable name that controls selected state feedback only if selectedKeys is defined and includes the item ([92d5718](https://github.com/liferay/clay/commit/92d57180f5c3237e1b1895f8af446724b3b600c0))
+-   **@clayui/autocomplete:** LPD-66892 Change isSelected logic to improve readability ([93ce187](https://github.com/liferay/clay/commit/93ce187e255a0882e2078ed269b17148cc7f8ce6))
+-   **@clayui/autocomplete:** LPD-66892 Deprecating `active` prop in ClayAutocomplete.Item because it is no longer needed due to the use of `selectKeys` in the root component. ([3111bc5](https://github.com/liferay/clay/commit/3111bc5fce1ba050a36b4e661bf7ad0e6df6b34e))
+-   **@clayui/autocomplete:** LPD-66892 Fix aria-selected to be in the 'button' instead of 'li' ([73edd10](https://github.com/liferay/clay/commit/73edd101139688920b5d8b060b7785c71c398fba))
+-   **@clayui/autocomplete:** LPD-66892 Fix Autocomplete.Item match property to accept options of type number ([9a5c561](https://github.com/liferay/clay/commit/9a5c5615be9ead30ac43d827973e5e37e24adc95))
+-   **@clayui/autocomplete:** LPD-66892 Fix visual feedback storybook example ([451a8f9](https://github.com/liferay/clay/commit/451a8f957fb94cb6ee3620e14487efa56318463d))
+-   **@clayui/autocomplete:** LPD-66892 Fix visual feedback when an item is selected test ([4b4d449](https://github.com/liferay/clay/commit/4b4d449b1a468fea969162356490e217a2bb7bcd))
+-   **@clayui/autocomplete:** LPD-66892 Move selectedKeys handle responsibility to Autocomplete.Item ([dd2b368](https://github.com/liferay/clay/commit/dd2b3685d87a4a4c73e4f6178d6bc5c7fba45f41))
+-   **@clayui/autocomplete:** LPD-66892 Rollback not required accesibility changes ([bd1a23d](https://github.com/liferay/clay/commit/bd1a23d4fee0ad7c2a73e0a404fd9fea079f788c))
+
+### Features
+
+-   **@clayui/autocomplete:** LPD-66892 Add selectedKeys prop to improve selected state ([13b6bea](https://github.com/liferay/clay/commit/13b6bea83071b59b5dfda67cb58adaee11568046))
+
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
 **Note:** Version bump only for package @clayui/autocomplete
