@@ -681,6 +681,7 @@ export const InfiniteScrolling = () => {
 			},
 			link: 'https://rickandmortyapi.com/api/character',
 			onNetworkStatusChange: setNetworkStatus,
+			variables: {pageSize},
 		});
 
 	return (
@@ -690,7 +691,7 @@ export const InfiniteScrolling = () => {
 					<div className="form-group">
 						<label>Name (with query)</label>
 						<ClayAutocomplete
-							batchLoadCount={20}
+							batchLoadCount={pageSize}
 							loadingState={networkStatus}
 							onChange={setValueWithQuery}
 							onLoadMore={loadMoreWithQuery}
@@ -708,7 +709,7 @@ export const InfiniteScrolling = () => {
 					<div className="form-group">
 						<label>Name (without query)</label>
 						<ClayAutocomplete
-							batchLoadCount={20}
+							batchLoadCount={pageSize}
 							loadingState={networkStatus}
 							onChange={setValueWithoutQuery}
 							onLoadMore={loadMoreWithoutQuery}
