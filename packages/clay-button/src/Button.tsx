@@ -89,16 +89,7 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	translucent?: boolean;
 }
 
-export interface IForwardRef<T, P = {}>
-	extends React.ForwardRefExoticComponent<P & React.RefAttributes<T>> {
-	Group: typeof Group;
-}
-
-function forwardRef<T, P = {}>(component: React.RefForwardingComponent<T, P>) {
-	return React.forwardRef<T, P>(component) as IForwardRef<T, P>;
-}
-
-const Button = forwardRef(
+const ButtonComponent = React.forwardRef<HTMLButtonElement, IProps>(
 	(
 		{
 			alert,
@@ -117,8 +108,8 @@ const Button = forwardRef(
 			translucent,
 			type = 'button',
 			...otherProps
-		}: IProps,
-		ref: React.Ref<HTMLButtonElement>
+		},
+		ref
 	) => {
 		const childArray = React.Children.toArray(children);
 
@@ -174,7 +165,10 @@ const Button = forwardRef(
 	}
 );
 
-Button.Group = Group;
-Button.displayName = 'ClayButton';
+ButtonComponent.displayName = 'ClayButton';
+
+const Button = Object.assign(ButtonComponent, {
+	Group,
+});
 
 export default Button;

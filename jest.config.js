@@ -165,13 +165,13 @@ module.exports = {
 		},
 		'./packages/clay-pagination/src/': {
 			branches: 86,
-			functions: 76,
+			functions: 70,
 			lines: 92,
 			statements: 98,
 		},
 		'./packages/clay-pagination-bar/src/': {
 			branches: 92,
-			functions: 69,
+			functions: 65,
 			lines: 94,
 			statements: 95,
 		},

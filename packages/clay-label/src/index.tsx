@@ -135,18 +135,10 @@ interface IProps extends IBaseProps {
 	withClose?: boolean;
 }
 
-interface IForwardRef<T, P = {}>
-	extends React.ForwardRefExoticComponent<P & React.RefAttributes<T>> {
-	ItemAfter: typeof ItemAfter;
-	ItemBefore: typeof ItemBefore;
-	ItemExpand: typeof ItemExpand;
-}
-
-function forwardRef<T, P = {}>(component: React.RefForwardingComponent<T, P>) {
-	return React.forwardRef<T, P>(component) as IForwardRef<T, P>;
-}
-
-const Label = forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
+const LabelComponent = React.forwardRef<
+	HTMLAnchorElement | HTMLSpanElement,
+	IProps
+>(
 	(
 		{
 			children,
@@ -197,10 +189,12 @@ const Label = forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
 	}
 );
 
-Label.displayName = 'ClayLabel';
+LabelComponent.displayName = 'ClayLabel';
 
-Label.ItemAfter = ItemAfter;
-Label.ItemBefore = ItemBefore;
-Label.ItemExpand = ItemExpand;
+const Label = Object.assign(LabelComponent, {
+	ItemAfter,
+	ItemBefore,
+	ItemExpand,
+});
 
 export default Label;

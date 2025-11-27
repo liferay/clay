@@ -13,7 +13,8 @@ import {useForwardRef} from '../hooks';
 import {Cell} from './Cell';
 import {RowContext, useBody, useTable} from './context';
 
-interface IProps<T> extends React.HTMLAttributes<HTMLTableRowElement> {
+interface IProps<T>
+	extends Omit<React.HTMLAttributes<HTMLTableRowElement>, 'children'> {
 	/**
 	 * Children content to render a dynamic or static content.
 	 */
