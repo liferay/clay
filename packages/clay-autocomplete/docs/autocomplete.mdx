@@ -249,8 +249,10 @@ export default function App() {
 							loading: 'Loading...',
 							notFound: 'No results found',
 						}}
-						placeholder="Enter the name of a fruit"
+						onChange={handleValueChange}
+						placeholder="Select a fruit from the list"
 						selectedKeys={selectedKeys}
+						value={value}
 					>
 						{(item) => (
 							<Autocomplete.Item key={item}>
