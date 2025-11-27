@@ -4,8 +4,9 @@
  */
 
 import {AnnouncerAPI} from '@clayui/core';
+import LoadingIndicator from '@clayui/loading-indicator';
 import {sub} from '@clayui/shared';
-import {RefObject, useEffect, useRef} from 'react';
+import React, {RefObject, useEffect, useRef} from 'react';
 
 import {AutocompleteMessages} from './Autocomplete';
 
@@ -15,20 +16,24 @@ interface IProps {
 	currentCount: number;
 	loadCount?: number;
 	loadingState?: number;
+	menuRef: RefObject<HTMLDivElement>;
 	messages: Required<AutocompleteMessages>;
 	onLoadMore?: () => Promise<any> | null;
 }
 
-export function useInfiniteScrollingAccessibility({
+export function useInfiniteScrolling({
 	active,
 	announcer,
 	currentCount,
 	loadCount,
 	loadingState,
+	menuRef,
 	messages,
 	onLoadMore: externalOnLoadMore,
 }: IProps) {
 	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
+
+	const triggerRef = useRef<HTMLDivElement>(null);
 
 	const isInitialLoadAnnouncementPending = useRef<boolean>(true);
 	const isFetchingMoreData = useRef<boolean>(false);
@@ -85,5 +90,30 @@ export function useInfiniteScrollingAccessibility({
 		isInitialLoadAnnouncementPending.current = !active;
 	}, [active, isLoading]);
 
-	return onLoadMore;
+	useEffect(() => {
+		if (active && triggerRef.current && menuRef.current) {
+			const callback: IntersectionObserverCallback = (entries) => {
+				if (entries[0]?.isIntersecting && loadingState !== 1) {
+					onLoadMore();
+				}
+			};
+
+			const observer = new IntersectionObserver(callback, {
+				root: menuRef.current,
+				threshold: 1.0,
+			});
+
+			observer.observe(triggerRef.current);
+
+			return () => observer.disconnect();
+		}
+	}, [active, onLoadMore, loadingState]);
+
+	const InfiniteScrollingTrigger = () => (
+		<div aria-hidden="true" className="mt-2" ref={triggerRef}>
+			{isLoading && <LoadingIndicator className="mb-2" size="sm" />}
+		</div>
+	);
+
+	return InfiniteScrollingTrigger;
 }

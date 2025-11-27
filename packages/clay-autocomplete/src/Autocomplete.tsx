@@ -29,7 +29,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
 import Item from './Item';
-import {useInfiniteScrollingAccessibility} from './useInfiniteScrollingAccessibility';
+import {useInfiniteScrolling} from './useInfiniteScrolling';
 
 import type {AnnouncerAPI, ICollectionProps} from '@clayui/core';
 import type {Locator} from '@clayui/shared';
@@ -535,12 +535,13 @@ function AutocompleteInner<T extends Item>(
 	const optionCount = collection.getItems().length;
 	const lastSize = useRef(optionCount);
 
-	const onLoadMore = useInfiniteScrollingAccessibility({
+	const InfiniteScrollingTrigger = useInfiniteScrolling({
 		active,
 		announcer: announcerAPI,
 		currentCount: optionCount,
 		loadCount: batchLoadCount,
 		loadingState,
+		menuRef,
 		messages,
 		onLoadMore: externalOnLoadMore,
 	});
@@ -752,7 +753,6 @@ function AutocompleteInner<T extends Item>(
 								collection={collection}
 								id={ariaControlsId}
 								isLoading={isLoading}
-								onLoadMore={onLoadMore}
 								role="listbox"
 							>
 								{debouncedLoadingChange ? (
@@ -768,6 +768,8 @@ function AutocompleteInner<T extends Item>(
 								)}
 							</Collection>
 						</AutocompleteContext.Provider>
+
+						<InfiniteScrollingTrigger />
 					</div>
 				</Overlay>
 			)}

@@ -643,7 +643,10 @@ export const CreationActionWithDynamicRendering = () => {
 };
 
 export const InfiniteScrolling = () => {
+	const pageSize = 20;
+
 	const containerElementRef = useRef<HTMLDivElement | null>(null);
+
 	const [value, setValue] = useState('');
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
 		NetworkStatus.Unused
@@ -662,7 +665,7 @@ export const InfiniteScrolling = () => {
 			},
 			link: 'https://rickandmortyapi.com/api/character',
 			onNetworkStatusChange: setNetworkStatus,
-			variables: {name: value},
+			variables: {name: value, pageSize},
 		}
 	);
 
@@ -679,6 +682,7 @@ export const InfiniteScrolling = () => {
 			},
 			link: 'https://rickandmortyapi.com/api/character',
 			onNetworkStatusChange: setNetworkStatus,
+			variables: {pageSize},
 		});
 
 	return (
@@ -688,7 +692,7 @@ export const InfiniteScrolling = () => {
 					<div className="form-group" ref={containerElementRef}>
 						<label>Name (with query)</label>
 						<ClayAutocomplete
-							batchLoadCount={20}
+							batchLoadCount={pageSize}
 							loadingState={networkStatus}
 							onChange={setValue}
 							onLoadMore={loadMoreWithQuery}
@@ -706,7 +710,7 @@ export const InfiniteScrolling = () => {
 					<div className="form-group" ref={containerElementRef}>
 						<label>Name (without query)</label>
 						<ClayAutocomplete
-							batchLoadCount={20}
+							batchLoadCount={pageSize}
 							loadingState={networkStatus}
 							onChange={setValue}
 							onLoadMore={loadMoreWithoutQuery}
