@@ -641,3 +641,87 @@ export const CreationActionWithDynamicRendering = () => {
 		</div>
 	);
 };
+
+export const InfiniteScrolling = () => {
+	const containerElementRef = useRef<HTMLDivElement | null>(null);
+	const [value, setValue] = useState('');
+	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
+		NetworkStatus.Unused
+	);
+
+	const {loadMore: loadMoreWithQuery, resource: itemsWithQuery} = useResource(
+		{
+			fetch: async (link: string) => {
+				const result = await fetch(link);
+				const json = await result.json();
+
+				return {
+					cursor: json.info.next,
+					items: json.results,
+				};
+			},
+			link: 'https://rickandmortyapi.com/api/character',
+			onNetworkStatusChange: setNetworkStatus,
+			variables: {name: value},
+		}
+	);
+
+	const {loadMore: loadMoreWithoutQuery, resource: itemsWithoutQuery} =
+		useResource({
+			fetch: async (link: string) => {
+				const result = await fetch(link);
+				const json = await result.json();
+
+				return {
+					cursor: json.info.next,
+					items: json.results,
+				};
+			},
+			link: 'https://rickandmortyapi.com/api/character',
+			onNetworkStatusChange: setNetworkStatus,
+		});
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group" ref={containerElementRef}>
+						<label>Name (with query)</label>
+						<ClayAutocomplete
+							batchLoadCount={20}
+							loadingState={networkStatus}
+							onChange={setValue}
+							onLoadMore={loadMoreWithQuery}
+							placeholder="Enter a name"
+							value={value}
+						>
+							{itemsWithQuery?.map((item: RickandMorty) => (
+								<ClayAutocomplete.Item key={item.id}>
+									{item.name}
+								</ClayAutocomplete.Item>
+							))}
+						</ClayAutocomplete>
+					</div>
+
+					<div className="form-group" ref={containerElementRef}>
+						<label>Name (without query)</label>
+						<ClayAutocomplete
+							batchLoadCount={20}
+							loadingState={networkStatus}
+							onChange={setValue}
+							onLoadMore={loadMoreWithoutQuery}
+							placeholder="Enter a name"
+							value={value}
+						>
+							{itemsWithoutQuery?.map((item: RickandMorty) => (
+								<ClayAutocomplete.Item key={item.id}>
+									{item.name}
+								</ClayAutocomplete.Item>
+							))}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
