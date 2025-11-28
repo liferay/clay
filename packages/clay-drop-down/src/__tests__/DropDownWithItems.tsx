@@ -5,7 +5,7 @@
 
 import {ClayDropDownWithItems} from '..';
 import ClayButton from '@clayui/button';
-import {cleanup, render} from '@testing-library/react';
+import {cleanup, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 const spritemap = 'icons.svg';
@@ -177,5 +177,60 @@ describe('ClayDropDownWithItems', () => {
 		);
 
 		expect(document.body).toMatchSnapshot();
+	});
+
+	it('renders a DropDownWithItems using title', () => {
+		render(
+			<ClayDropDownWithItems
+				items={[
+					{
+						href: '#',
+						title: 'linkable',
+					},
+					{
+						items: [
+							{
+								checked: true,
+								title: 'checkbox',
+								type: 'checkbox' as const,
+							},
+							{
+								checked: false,
+								title: 'checkbox 1',
+								type: 'checkbox' as const,
+							},
+						],
+						title: 'checkbox',
+						type: 'group' as const,
+					},
+					{
+						items: [
+							{
+								title: 'one',
+								type: 'radio' as const,
+								value: 'one',
+							},
+							{
+								title: 'two',
+								type: 'radio' as const,
+								value: 'two',
+							},
+						],
+						name: 'radio',
+						title: 'radio',
+						type: 'radiogroup' as const,
+					},
+				]}
+				renderMenuOnClick
+				spritemap={spritemap}
+				trigger={<ClayButton>Click Me</ClayButton>}
+			/>
+		);
+
+		const toggleButton = document.querySelector('.dropdown-toggle');
+
+		fireEvent.click(toggleButton as HTMLButtonElement, {});
+
+		expect(screen.getByText('linkable')).toBeDefined();
 	});
 });

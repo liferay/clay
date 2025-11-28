@@ -16,10 +16,12 @@ import ClayDropDown, {
 
 const ITEMS = [
 	{
-		label: 'clickable',
-		onClick: () => {
+		onClick: (event) => {
+			event.preventDefault();
+
 			alert('you clicked!');
 		},
+		title: 'clickable',
 	},
 	{
 		type: 'divider' as const,
@@ -27,42 +29,42 @@ const ITEMS = [
 	{
 		items: [
 			{
-				label: 'one',
+				title: 'one',
 				type: 'radio' as const,
 				value: 'one',
 			},
 			{
-				label: 'two',
+				title: 'two',
 				type: 'radio' as const,
 				value: 'two',
 			},
 		],
-		label: 'radio',
 		name: 'radio',
 		onChange: (value: string) => alert(`New Radio checked ${value}`),
+		title: 'radio',
 		type: 'radiogroup' as const,
 	},
 	{
 		items: [
 			{
 				checked: true,
-				label: 'checkbox',
 				onChange: () => alert('checkbox changed'),
+				title: 'checkbox',
 				type: 'checkbox' as const,
 			},
 			{
 				checked: true,
-				label: 'checkbox 1',
 				onChange: () => alert('checkbox changed'),
+				title: 'checkbox 1',
 				type: 'checkbox' as const,
 			},
 		],
-		label: 'checkbox',
+		title: 'checkbox',
 		type: 'group' as const,
 	},
 	{
 		href: '#',
-		label: 'linkable',
+		title: 'linkable',
 	},
 ];
 
@@ -95,18 +97,18 @@ export const Default = (args: any) => (
 	>
 		<ClayDropDown.ItemList>
 			{[
-				{href: '#one', label: 'one'},
-				{href: '#two', label: 'two'},
-				{disabled: true, href: '#three', label: 'three'},
-				{href: '#four', label: 'four'},
-			].map(({href, label, ...otherProps}, i) => (
+				{href: '#one', title: 'one'},
+				{href: '#two', title: 'two'},
+				{disabled: true, href: '#three', title: 'three'},
+				{href: '#four', title: 'four'},
+			].map(({href, title, ...otherProps}, i) => (
 				<ClayDropDown.Item
 					href={href}
 					key={i}
 					onClick={() => {}}
 					{...otherProps}
 				>
-					{label}
+					{title}
 				</ClayDropDown.Item>
 			))}
 		</ClayDropDown.ItemList>
@@ -212,24 +214,24 @@ export const Groups = () => (
 		<ClayDropDown.ItemList>
 			<ClayDropDown.Group header="Group #1">
 				{[
-					{href: '#one', label: 'one'},
-					{href: '#two', label: 'two'},
-					{href: '#three', label: 'three'},
+					{href: '#one', title: 'one'},
+					{href: '#two', title: 'two'},
+					{href: '#three', title: 'three'},
 				].map((item, i) => (
 					<ClayDropDown.Item href={item.href} key={i}>
-						{item.label}
+						{item.title}
 					</ClayDropDown.Item>
 				))}
 			</ClayDropDown.Group>
 
 			<ClayDropDown.Group header="Group #2">
 				{[
-					{href: '#one', label: 'one'},
-					{href: '#two', label: 'two'},
-					{href: '#three', label: 'three'},
+					{href: '#one', title: 'one'},
+					{href: '#two', title: 'two'},
+					{href: '#three', title: 'three'},
 				].map((item, i) => (
 					<ClayDropDown.Item href={item.href} key={i}>
-						{item.label}
+						{item.title}
 					</ClayDropDown.Item>
 				))}
 			</ClayDropDown.Group>
@@ -247,8 +249,8 @@ export const Checkbox = () => (
 			<ClayDropDown.Section>
 				<ClayCheckbox
 					checked
-					label="I'm a checkbox!"
 					onChange={() => {}}
+					title="I'm a checkbox!"
 				/>
 			</ClayDropDown.Section>
 		</ClayDropDown.ItemList>
@@ -271,15 +273,15 @@ export const Search = () => {
 
 			<ClayDropDown.ItemList>
 				{[
-					{href: '#one', label: 'one'},
-					{href: '#two', label: 'two'},
-					{disabled: true, href: '#three', label: 'three'},
-					{href: '#four', label: 'four'},
+					{href: '#one', title: 'one'},
+					{href: '#two', title: 'two'},
+					{disabled: true, href: '#three', title: 'three'},
+					{href: '#four', title: 'four'},
 				]
-					.filter(({label}) => label.match(query))
-					.map(({href, label, ...otherProps}, i) => (
+					.filter(({title}) => title.match(query))
+					.map(({href, title, ...otherProps}, i) => (
 						<ClayDropDown.Item href={href} key={i} {...otherProps}>
-							{label}
+							{title}
 						</ClayDropDown.Item>
 					))}
 			</ClayDropDown.ItemList>
@@ -296,10 +298,10 @@ export const Radio = () => (
 		<ClayDropDown.ItemList>
 			<ClayDropDown.Group header="Order">
 				<ClayDropDown.Section>
-					<ClayRadio checked label="Ascending" value="asc" />
+					<ClayRadio checked title="Ascending" value="asc" />
 				</ClayDropDown.Section>
 				<ClayDropDown.Section>
-					<ClayRadio label="Descending" value="desc" />
+					<ClayRadio title="Descending" value="desc" />
 				</ClayDropDown.Section>
 			</ClayDropDown.Group>
 		</ClayDropDown.ItemList>
@@ -316,12 +318,12 @@ export const CaptionAndHelp = () => (
 
 		<ClayDropDown.ItemList>
 			{[
-				{href: '#one', label: 'one'},
-				{href: '#two', label: 'two'},
-				{href: '#three', label: 'three'},
+				{href: '#one', title: 'one'},
+				{href: '#two', title: 'two'},
+				{href: '#three', title: 'three'},
 			].map((item, i) => (
 				<ClayDropDown.Item href={item.href} key={i}>
-					{item.label}
+					{item.title}
 				</ClayDropDown.Item>
 			))}
 		</ClayDropDown.ItemList>
@@ -340,9 +342,9 @@ export const ItemsWithIcons = () => (
 	>
 		<ClayDropDown.ItemList>
 			{[
-				{label: 'Left', left: 'trash'},
-				{label: 'Right', right: 'check'},
-				{label: 'Both', left: 'trash', right: 'check'},
+				{left: 'trash', title: 'Left'},
+				{right: 'check', title: 'Right'},
+				{left: 'trash', right: 'check', title: 'Both'},
 			].map((item, i) => (
 				<ClayDropDown.Item
 					key={i}
@@ -350,7 +352,7 @@ export const ItemsWithIcons = () => (
 					symbolLeft={item.left}
 					symbolRight={item.right}
 				>
-					{item.label}
+					{item.title}
 				</ClayDropDown.Item>
 			))}
 		</ClayDropDown.ItemList>
@@ -366,13 +368,13 @@ export const CustomOffset = () => (
 	>
 		<ClayDropDown.ItemList>
 			{[
-				{href: '#one', label: 'one'},
-				{href: '#two', label: 'two'},
-				{disabled: true, href: '#three', label: 'three'},
-				{href: '#four', label: 'four'},
-			].map(({href, label, ...otherProps}, i) => (
+				{href: '#one', title: 'one'},
+				{href: '#two', title: 'two'},
+				{disabled: true, href: '#three', title: 'three'},
+				{href: '#four', title: 'four'},
+			].map(({href, title, ...otherProps}, i) => (
 				<ClayDropDown.Item href={href} key={i} {...otherProps}>
-					{label}
+					{title}
 				</ClayDropDown.Item>
 			))}
 		</ClayDropDown.ItemList>
@@ -388,10 +390,10 @@ export const AlignmentPositions = () => (
 						Align[alignPosition as keyof typeof Align]
 					}
 					items={[
-						{href: '#one', label: 'one'},
-						{href: '#two', label: 'two'},
-						{disabled: true, href: '#three', label: 'three'},
-						{href: '#four', label: 'four'},
+						{href: '#one', title: 'one'},
+						{href: '#two', title: 'two'},
+						{disabled: true, href: '#three', title: 'three'},
+						{href: '#four', title: 'four'},
 					]}
 					key={alignPosition}
 					trigger={<ClayButton>{alignPosition}</ClayButton>}
@@ -619,25 +621,25 @@ export const InModal = () => {
 export const CascadingMenu = () => (
 	<ClayDropDownWithItems
 		items={[
-			{label: 'Folder'},
+			{title: 'Folder'},
 			{type: 'divider'},
 			{
 				items: [
 					{
-						label: 'Basic Document',
 						symbolLeft: 'document',
 						symbolRight: 'check',
+						title: 'Basic Document',
 					},
-					{label: 'Contract'},
-					{label: 'Marketing Banner'},
-					{label: 'Spreadsheet'},
-					{label: 'Presentation'},
+					{title: 'Contract'},
+					{title: 'Marketing Banner'},
+					{title: 'Spreadsheet'},
+					{title: 'Presentation'},
 				],
-				label: 'Document',
+				title: 'Document',
 				type: 'contextual',
 			},
-			{label: 'Shortcut'},
-			{label: 'Repository'},
+			{title: 'Shortcut'},
+			{title: 'Repository'},
 		]}
 		trigger={<ClayButton>Cascading Menu</ClayButton>}
 		triggerIcon="caret-bottom"
