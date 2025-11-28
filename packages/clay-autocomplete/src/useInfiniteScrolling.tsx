@@ -7,6 +7,7 @@ import {AnnouncerAPI} from '@clayui/core';
 import {CollectionState} from '@clayui/core/src/collection/types';
 import LoadingIndicator from '@clayui/loading-indicator';
 import {sub, useDebounce} from '@clayui/shared';
+import classNames from 'classnames';
 import React, {RefObject, useEffect, useRef, useState} from 'react';
 
 import {AutocompleteMessages} from './Autocomplete';
@@ -71,6 +72,7 @@ export function useInfiniteScrolling({
 }: IProps) {
 	const [isLoadingMore, setIsLoadingMore] = useState(false);
 	const debouncedIsLoadingMore = useDebounce(isLoadingMore, 200);
+	const isInfiniteScrollingEnabled = Boolean(externalOnLoadMore);
 
 	const onLoadMore = async () => {
 		setIsLoadingMore(Boolean(externalOnLoadMore));
@@ -104,7 +106,6 @@ export function useInfiniteScrolling({
 
 			lastPositionBeforeLoad.current = menuRef.current?.scrollTop ?? null;
 			menuRef.current?.scrollTo({
-				behavior: 'instant',
 				top: menuRef.current?.scrollHeight,
 			});
 		}
@@ -133,7 +134,6 @@ export function useInfiniteScrolling({
 
 				if (lastPositionBeforeLoad.current !== null) {
 					menuRef.current?.scrollTo({
-						behavior: 'instant',
 						top: lastPositionBeforeLoad.current,
 					});
 
@@ -186,7 +186,11 @@ export function useInfiniteScrolling({
 	}, [active, isLoading, onLoadMore]);
 
 	const InfiniteScrollingTrigger = () => (
-		<div aria-hidden="true" className="mt-2" ref={triggerRef}>
+		<div
+			aria-hidden="true"
+			className={classNames({'mt-2': isInfiniteScrollingEnabled})}
+			ref={triggerRef}
+		>
 			{(isLoadingMore || debouncedIsLoadingMore) && (
 				<LoadingIndicator className="mb-2" size="sm" />
 			)}
