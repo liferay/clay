@@ -641,3 +641,126 @@ export const CreationActionWithDynamicRendering = () => {
 		</div>
 	);
 };
+
+export const InfiniteScrolling = () => {
+	const pageSize = 20;
+
+	const containerElementRef = useRef<HTMLDivElement | null>(null);
+
+	const [value, setValue] = useState('');
+	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
+		NetworkStatus.Unused
+	);
+
+	const {loadMore: loadMoreWithQuery, resource: itemsWithQuery} = useResource(
+		{
+			fetch: async (link: string) => {
+				const result = await fetch(link);
+				const json = await result.json();
+
+				return {
+					cursor: json.info.next,
+					items: json.results,
+				};
+			},
+			link: 'https://rickandmortyapi.com/api/character',
+			onNetworkStatusChange: setNetworkStatus,
+			variables: {name: value, pageSize},
+		}
+	);
+
+	const {loadMore: loadMoreWithoutQuery, resource: itemsWithoutQuery} =
+		useResource({
+			fetch: async (link: string) => {
+				const result = await fetch(link);
+				const json = await result.json();
+
+				return {
+					cursor: json.info.next,
+					items: json.results,
+				};
+			},
+			link: 'https://rickandmortyapi.com/api/character',
+			onNetworkStatusChange: setNetworkStatus,
+			variables: {pageSize},
+		});
+
+	const {loadMore: loadMoreNumbers, resource: numbers} = useResource({
+		fetch: async (link: string) => {
+			const pagePattern = /\?page=(\d+)/;
+			const pageMatch = link.match(pagePattern);
+			const page = pageMatch ? parseInt(pageMatch[1] ?? '1', 10) : 1;
+
+			const cursor = `https://numbers.local/?page=${page + 1}`;
+			const items = Array(pageSize)
+				.fill(null)
+				.map((_, index) => (page - 1) * pageSize + index + 1)
+				.map((id) => ({id, name: `#${id}`})) as any;
+
+			return await new Promise<{cursor: string; items: any}>((resolve) =>
+				setTimeout(() => resolve({cursor, items}), 100)
+			);
+		},
+		link: 'https://numbers.local/',
+		onNetworkStatusChange: setNetworkStatus,
+	});
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group" ref={containerElementRef}>
+						<label>Name (with query)</label>
+						<ClayAutocomplete
+							batchLoadCount={pageSize}
+							loadingState={networkStatus}
+							onChange={setValue}
+							onLoadMore={loadMoreWithQuery}
+							placeholder="Enter a name"
+							value={value}
+						>
+							{itemsWithQuery?.map((item: RickandMorty) => (
+								<ClayAutocomplete.Item key={item.id}>
+									{item.name}
+								</ClayAutocomplete.Item>
+							))}
+						</ClayAutocomplete>
+					</div>
+
+					<div className="form-group" ref={containerElementRef}>
+						<label>Name (without query)</label>
+						<ClayAutocomplete
+							batchLoadCount={pageSize}
+							loadingState={networkStatus}
+							onChange={setValue}
+							onLoadMore={loadMoreWithoutQuery}
+							placeholder="Enter a name"
+							value={value}
+						>
+							{itemsWithoutQuery?.map((item: RickandMorty) => (
+								<ClayAutocomplete.Item key={item.id}>
+									{item.name}
+								</ClayAutocomplete.Item>
+							))}
+						</ClayAutocomplete>
+					</div>
+
+					<div className="form-group" ref={containerElementRef}>
+						<label>Numbers</label>
+						<ClayAutocomplete
+							batchLoadCount={pageSize}
+							loadingState={networkStatus}
+							onLoadMore={loadMoreNumbers}
+						>
+							{numbers?.map((item: any) => (
+								<ClayAutocomplete.Item key={item.id}>
+									{item.name}
+								</ClayAutocomplete.Item>
+							))}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};

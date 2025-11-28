@@ -29,6 +29,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
 import Item from './Item';
+import {useInfiniteScrolling} from './useInfiniteScrolling';
 
 import type {AnnouncerAPI, ICollectionProps} from '@clayui/core';
 import type {Locator} from '@clayui/shared';
@@ -43,6 +44,20 @@ type ItemProps<T extends Item> = {
 	index: number;
 	item: T;
 	keyValue: React.Key;
+};
+
+export type AutocompleteMessages = {
+	infiniteScrollingInitialLoad?: string;
+	infiniteScrollingInitialLoadPlural?: string;
+	infiniteScrollingOnLoad?: string;
+	infiniteScrollingOnLoadPlural?: string;
+	infiniteScrollingOnLoadIndeterminate?: string;
+	infiniteScrollingOnLoaded?: string;
+	infiniteScrollingOnLoadedPlural?: string;
+	listCount?: string;
+	listCountPlural?: string;
+	loading: string;
+	notFound: string;
 };
 
 export interface IProps<T>
@@ -108,6 +123,12 @@ export interface IProps<T>
 	items?: Array<T> | null;
 
 	/**
+	 * Number of items it expects to load on each batch when using infinite scrolling.
+	 */
+
+	batchLoadCount?: number;
+
+	/**
 	 * Property to set the initial value of `items` (uncontrolled).
 	 */
 	defaultItems?: Array<T> | null;
@@ -120,12 +141,7 @@ export interface IProps<T>
 	/**
 	 * Messages for the Autocomplete.
 	 */
-	messages?: {
-		listCount?: string;
-		listCountPlural?: string;
-		loading: string;
-		notFound: string;
-	};
+	messages?: AutocompleteMessages;
 
 	/**
 	 * Callback for when the active state changes (controlled).
@@ -203,7 +219,16 @@ function hasItem<T extends Item>(
 
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
-const defaultMessages = {
+const defaultMessages: Required<AutocompleteMessages> = {
+	infiniteScrollingInitialLoad:
+		'{0} item loaded. Reach the last item to load more.',
+	infiniteScrollingInitialLoadPlural:
+		'{0} items loaded. Reach the last item to load more.',
+	infiniteScrollingOnLoad: 'Loading {0} more item.',
+	infiniteScrollingOnLoadIndeterminate: 'Loading more items.',
+	infiniteScrollingOnLoadPlural: 'Loading {0} more items.',
+	infiniteScrollingOnLoaded: '{0} item loaded.',
+	infiniteScrollingOnLoadedPlural: '{0} items loaded.',
 	listCount: '{0} option available.',
 	listCountPlural: '{0} options available.',
 	loading: 'Loading...',
@@ -217,6 +242,7 @@ function AutocompleteInner<T extends Item>(
 		alignmentByViewport: _,
 		allowsCustomValue,
 		as: As = Input,
+		batchLoadCount,
 		children,
 		containerElementRef,
 		defaultActive,
@@ -227,11 +253,11 @@ function AutocompleteInner<T extends Item>(
 		items: externalItems,
 		loadingState,
 		menuTrigger = 'input',
-		messages,
+		messages: externalMessages,
 		onActiveChange,
 		onChange,
 		onItemsChange,
-		onLoadMore,
+		onLoadMore: externalOnLoadMore,
 		primaryAction,
 		value: externalValue,
 		selectedKeys,
@@ -239,9 +265,9 @@ function AutocompleteInner<T extends Item>(
 	}: IProps<T>,
 	ref: React.Ref<HTMLInputElement>
 ) {
-	messages = {
+	const messages = {
 		...defaultMessages,
-		...(messages ?? {}),
+		...(externalMessages ?? {}),
 	};
 
 	const [items, , isItemsUncontrolled] = useControlledState({
@@ -513,6 +539,18 @@ function AutocompleteInner<T extends Item>(
 	const optionCount = collection.getItems().length;
 	const lastSize = useRef(optionCount);
 
+	const InfiniteScrollingTrigger = useInfiniteScrolling({
+		active,
+		activeDescendant,
+		announcer: announcerAPI,
+		collection,
+		loadCount: batchLoadCount,
+		loadingState,
+		menuRef,
+		messages,
+		onLoadMore: externalOnLoadMore,
+	});
+
 	useEffect(() => {
 		// Only announces the number of options available when the menu is open
 		// if there is no item with focus, with the exception of Voice Over
@@ -720,7 +758,6 @@ function AutocompleteInner<T extends Item>(
 								collection={collection}
 								id={ariaControlsId}
 								isLoading={isLoading}
-								onLoadMore={onLoadMore}
 								role="listbox"
 							>
 								{debouncedLoadingChange ? (
@@ -732,10 +769,12 @@ function AutocompleteInner<T extends Item>(
 										{messages.loading}
 									</DropDown.Item>
 								) : (
-									children
+									{children}
 								)}
 							</Collection>
 						</AutocompleteContext.Provider>
+
+						<InfiniteScrollingTrigger />
 					</div>
 				</Overlay>
 			)}
