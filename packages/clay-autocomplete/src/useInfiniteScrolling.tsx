@@ -12,14 +12,49 @@ import React, {RefObject, useEffect, useRef, useState} from 'react';
 import {AutocompleteMessages} from './Autocomplete';
 
 interface IProps {
+	/**
+	 * Reference to the announcer API.
+	 */
 	announcer: RefObject<AnnouncerAPI>;
+
+	/**
+	 * Flag to indicate if the autocomplete is active (i.e., the menu is open)
+	 */
 	active: boolean;
+
+	/**
+	 * The key of the currently active descendant item.
+	 */
 	activeDescendant?: React.Key;
+
+	/**
+	 * The collection state of the autocomplete items.
+	 */
 	collection: CollectionState;
+
+	/**
+	 * Number of items loaded for each batch.
+	 */
 	loadCount?: number;
+
+	/**
+	 * Loading state of the autocomplete.
+	 */
 	loadingState?: number;
+
+	/**
+	 * Reference to the menu element.
+	 */
 	menuRef: RefObject<HTMLDivElement>;
+
+	/**
+	 * Localized messages for the autocomplete.
+	 */
 	messages: Required<AutocompleteMessages>;
+
+	/**
+	 * Callback function to load more items.
+	 */
 	onLoadMore?: () => Promise<any> | null;
 }
 
