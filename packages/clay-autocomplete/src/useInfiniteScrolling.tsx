@@ -7,7 +7,7 @@ import {AnnouncerAPI} from '@clayui/core';
 import {CollectionState} from '@clayui/core/src/collection/types';
 import LoadingIndicator from '@clayui/loading-indicator';
 import {sub, useDebounce} from '@clayui/shared';
-import React, {RefObject, useEffect, useRef} from 'react';
+import React, {RefObject, useEffect, useRef, useState} from 'react';
 
 import {AutocompleteMessages} from './Autocomplete';
 
@@ -34,17 +34,14 @@ export function useInfiniteScrolling({
 	messages,
 	onLoadMore: externalOnLoadMore,
 }: IProps) {
-	const isInfiniteScrollingEnabled = Boolean(externalOnLoadMore);
-	const isFetchingMoreData = useRef<boolean>(false);
+	const [isFetchingMoreData, setIsFetchingMoreData] = useState(false);
 
 	const onLoadMore = async () => {
-		if (isInfiniteScrollingEnabled) {
-			isFetchingMoreData.current = true;
+		setIsFetchingMoreData(Boolean(externalOnLoadMore));
 
-			await externalOnLoadMore?.();
+		await externalOnLoadMore?.();
 
-			isFetchingMoreData.current = false;
-		}
+		setIsFetchingMoreData(false);
 	};
 
 	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
@@ -55,7 +52,7 @@ export function useInfiniteScrolling({
 	const lastPositionBeforeLoad = useRef<number | null>(null);
 
 	useEffect(() => {
-		if (active && isLoading && isFetchingMoreData.current) {
+		if (active && isFetchingMoreData) {
 			let message = messages.infiniteScrollingOnLoadIndeterminate;
 
 			if (loadCount !== undefined) {
@@ -76,12 +73,12 @@ export function useInfiniteScrolling({
 				top: menuRef.current?.scrollHeight,
 			});
 		}
-	}, [active, isLoading]);
+	}, [active, isFetchingMoreData]);
 
 	const currentCount = collection.getSize();
 
 	useEffect(() => {
-		if (active && isInfiniteScrollingEnabled) {
+		if (active) {
 			if (!isLoading && lastCountAnnounced.current !== currentCount) {
 				const singular = isInitialLoadAnnouncementPending.current
 					? messages.infiniteScrollingInitialLoad
@@ -111,7 +108,7 @@ export function useInfiniteScrolling({
 		} else {
 			isInitialLoadAnnouncementPending.current = true;
 		}
-	}, [active, isInfiniteScrollingEnabled, isLoading]);
+	}, [active, isLoading]);
 
 	const triggerRef = useRef<HTMLDivElement>(null);
 	const isTriggerActive = useRef<boolean>(false);
