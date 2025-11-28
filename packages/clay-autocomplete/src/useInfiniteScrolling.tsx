@@ -9,11 +9,13 @@ import {sub, useDebounce} from '@clayui/shared';
 import React, {RefObject, useEffect, useRef} from 'react';
 
 import {AutocompleteMessages} from './Autocomplete';
+import {CollectionState} from '@clayui/core/src/collection/types';
 
 interface IProps {
 	announcer: RefObject<AnnouncerAPI>;
 	active: boolean;
-	currentCount: number;
+	activeDescendant?: React.Key;
+	collection: CollectionState;
 	loadCount?: number;
 	loadingState?: number;
 	menuRef: RefObject<HTMLDivElement>;
@@ -23,25 +25,16 @@ interface IProps {
 
 export function useInfiniteScrolling({
 	active,
+	activeDescendant,
 	announcer,
-	currentCount,
+	collection,
 	loadCount,
 	loadingState,
 	menuRef,
 	messages,
 	onLoadMore: externalOnLoadMore,
 }: IProps) {
-	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
-	const debouncedLoading = useDebounce(isLoading, 200);
-
-	const triggerRef = useRef<HTMLDivElement>(null);
-
 	const isFetchingMoreData = useRef<boolean>(false);
-	const isInitialLoadAnnouncementPending = useRef<boolean>(true);
-	const isTriggerActive = useRef<boolean>(false);
-	const lastCountAnnounced = useRef<number | null>(null);
-	const lastPositionBeforeLoad = useRef<number | null>(null);
-	const lastTriggerCount = useRef<number | null>(null);
 
 	const onLoadMore = async () => {
 		isFetchingMoreData.current = externalOnLoadMore !== undefined;
@@ -50,6 +43,13 @@ export function useInfiniteScrolling({
 
 		isFetchingMoreData.current = false;
 	};
+
+	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
+	const debouncedLoading = useDebounce(isLoading, 200);
+
+	const isInitialLoadAnnouncementPending = useRef<boolean>(true);
+	const lastCountAnnounced = useRef<number | null>(null);
+	const lastPositionBeforeLoad = useRef<number | null>(null);
 
 	useEffect(() => {
 		if (active && isLoading && isFetchingMoreData.current) {
@@ -72,6 +72,8 @@ export function useInfiniteScrolling({
 			});
 		}
 	}, [active, isLoading]);
+
+	const currentCount = collection.getSize();
 
 	useEffect(() => {
 		if (active) {
@@ -105,6 +107,10 @@ export function useInfiniteScrolling({
 			isInitialLoadAnnouncementPending.current = true;
 		}
 	}, [active, isLoading]);
+
+	const triggerRef = useRef<HTMLDivElement>(null);
+	const isTriggerActive = useRef<boolean>(false);
+	const lastTriggerCount = useRef<number | null>(null);
 
 	useEffect(() => {
 		if (active && triggerRef.current && menuRef.current) {
@@ -149,6 +155,16 @@ export function useInfiniteScrolling({
 			)}
 		</div>
 	);
+
+	const lastItem = currentCount > 0 ? collection.getLastItem() : null;
+	const isLastItemActive =
+		activeDescendant && lastItem && activeDescendant === lastItem.key;
+
+	useEffect(() => {
+		if (isLastItemActive && !isLoading) {
+			onLoadMore();
+		}
+	}, [isLastItemActive, isLoading]);
 
 	return InfiniteScrollingTrigger;
 }
