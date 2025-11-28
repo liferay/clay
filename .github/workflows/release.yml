@@ -119,6 +119,9 @@ jobs:
             - name: Types
               run: yarn buildTypes
             - name: Git
-              run: git restore packages/clay-css/src/scss/_license-text.scss
+              run: |
+                  git add packages/clay-css/src/scss/_license-text.scss
+                  git commit -m "chore(@clayui/css): Update License Text to ${{ inputs.version }}"
+                  git push
             - name: Publish
               run: yarn lerna:publish
