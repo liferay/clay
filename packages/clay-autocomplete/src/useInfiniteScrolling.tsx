@@ -62,7 +62,6 @@ export function useInfiniteScrolling({
 						  ])
 					: messages.infiniteScrollingOnLoadIndeterminate;
 
-			console.log(message);
 			announcer.current?.announce(message);
 			lastCountAnnounced.current = null;
 
@@ -89,7 +88,6 @@ export function useInfiniteScrolling({
 					currentCount,
 				]);
 
-				console.log(message);
 				announcer.current?.announce(message);
 				lastCountAnnounced.current = currentCount;
 				isInitialLoadAnnouncementPending.current = false;
