@@ -685,6 +685,26 @@ export const InfiniteScrolling = () => {
 			variables: {pageSize},
 		});
 
+	const {loadMore: loadMoreNumbers, resource: numbers} = useResource({
+		fetch: async (link: string) => {
+			const pagePattern = /\?page=(\d+)/;
+			const pageMatch = link.match(pagePattern);
+			const page = pageMatch ? parseInt(pageMatch[1] ?? '1', 10) : 1;
+
+			const cursor = `https://numbers.local/?page=${page + 1}`;
+			const items = Array(pageSize)
+				.fill(null)
+				.map((_, index) => (page - 1) * pageSize + index + 1)
+				.map((id) => ({id, name: `#${id}`})) as any;
+
+			return await new Promise<{cursor: string; items: any}>((resolve) =>
+				setTimeout(() => resolve({cursor, items}), 100)
+			);
+		},
+		link: 'https://numbers.local/',
+		onNetworkStatusChange: setNetworkStatus,
+	});
+
 	return (
 		<div className="row">
 			<div className="col-md-5">
@@ -718,6 +738,21 @@ export const InfiniteScrolling = () => {
 							value={value}
 						>
 							{itemsWithoutQuery?.map((item: RickandMorty) => (
+								<ClayAutocomplete.Item key={item.id}>
+									{item.name}
+								</ClayAutocomplete.Item>
+							))}
+						</ClayAutocomplete>
+					</div>
+
+					<div className="form-group" ref={containerElementRef}>
+						<label>Numbers</label>
+						<ClayAutocomplete
+							batchLoadCount={pageSize}
+							loadingState={networkStatus}
+							onLoadMore={loadMoreNumbers}
+						>
+							{numbers?.map((item: any) => (
 								<ClayAutocomplete.Item key={item.id}>
 									{item.name}
 								</ClayAutocomplete.Item>
