@@ -4,12 +4,12 @@
  */
 
 import {AnnouncerAPI} from '@clayui/core';
+import {CollectionState} from '@clayui/core/src/collection/types';
 import LoadingIndicator from '@clayui/loading-indicator';
 import {sub, useDebounce} from '@clayui/shared';
 import React, {RefObject, useEffect, useRef} from 'react';
 
 import {AutocompleteMessages} from './Autocomplete';
-import {CollectionState} from '@clayui/core/src/collection/types';
 
 interface IProps {
 	announcer: RefObject<AnnouncerAPI>;
