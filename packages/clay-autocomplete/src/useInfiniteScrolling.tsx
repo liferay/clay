@@ -34,14 +34,17 @@ export function useInfiniteScrolling({
 	messages,
 	onLoadMore: externalOnLoadMore,
 }: IProps) {
+	const isInfiniteScrollingEnabled = Boolean(externalOnLoadMore);
 	const isFetchingMoreData = useRef<boolean>(false);
 
 	const onLoadMore = async () => {
-		isFetchingMoreData.current = externalOnLoadMore !== undefined;
+		if (isInfiniteScrollingEnabled) {
+			isFetchingMoreData.current = true;
 
-		await externalOnLoadMore?.();
+			await externalOnLoadMore?.();
 
-		isFetchingMoreData.current = false;
+			isFetchingMoreData.current = false;
+		}
 	};
 
 	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
@@ -78,7 +81,7 @@ export function useInfiniteScrolling({
 	const currentCount = collection.getSize();
 
 	useEffect(() => {
-		if (active) {
+		if (active && isInfiniteScrollingEnabled) {
 			if (!isLoading && lastCountAnnounced.current !== currentCount) {
 				const singular = isInitialLoadAnnouncementPending.current
 					? messages.infiniteScrollingInitialLoad
@@ -108,7 +111,7 @@ export function useInfiniteScrolling({
 		} else {
 			isInitialLoadAnnouncementPending.current = true;
 		}
-	}, [active, isLoading]);
+	}, [active, isInfiniteScrollingEnabled, isLoading]);
 
 	const triggerRef = useRef<HTMLDivElement>(null);
 	const isTriggerActive = useRef<boolean>(false);
