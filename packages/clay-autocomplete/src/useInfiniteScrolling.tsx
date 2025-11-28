@@ -69,25 +69,25 @@ export function useInfiniteScrolling({
 	messages,
 	onLoadMore: externalOnLoadMore,
 }: IProps) {
-	const [isFetchingMoreData, setIsFetchingMoreData] = useState(false);
+	const [isLoadingMore, setIsLoadingMore] = useState(false);
+	const debouncedIsLoadingMore = useDebounce(isLoadingMore, 200);
 
 	const onLoadMore = async () => {
-		setIsFetchingMoreData(Boolean(externalOnLoadMore));
+		setIsLoadingMore(Boolean(externalOnLoadMore));
 
 		await externalOnLoadMore?.();
 
-		setIsFetchingMoreData(false);
+		setIsLoadingMore(false);
 	};
 
 	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
-	const debouncedLoading = useDebounce(isLoading, 200);
 
 	const isInitialLoadAnnouncementPending = useRef<boolean>(true);
 	const lastCountAnnounced = useRef<number | null>(null);
 	const lastPositionBeforeLoad = useRef<number | null>(null);
 
 	useEffect(() => {
-		if (active && isFetchingMoreData) {
+		if (active && isLoadingMore) {
 			const message =
 				loadCount !== undefined
 					? loadCount === 1
@@ -106,7 +106,7 @@ export function useInfiniteScrolling({
 				top: menuRef.current?.scrollHeight,
 			});
 		}
-	}, [active, isFetchingMoreData]);
+	}, [active, isLoadingMore]);
 
 	const currentCount = collection.getSize();
 
@@ -141,7 +141,7 @@ export function useInfiniteScrolling({
 		} else {
 			isInitialLoadAnnouncementPending.current = true;
 		}
-	}, [active, isLoading]);
+	}, [active, isLoading, currentCount]);
 
 	const triggerRef = useRef<HTMLDivElement>(null);
 	const isTriggerActive = useRef<boolean>(false);
@@ -185,7 +185,7 @@ export function useInfiniteScrolling({
 
 	const InfiniteScrollingTrigger = () => (
 		<div aria-hidden="true" className="mt-2" ref={triggerRef}>
-			{(isLoading || debouncedLoading) && (
+			{(isLoadingMore || debouncedIsLoadingMore) && (
 				<LoadingIndicator className="mb-2" size="sm" />
 			)}
 		</div>
