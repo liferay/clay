@@ -537,8 +537,9 @@ function AutocompleteInner<T extends Item>(
 
 	const InfiniteScrollingTrigger = useInfiniteScrolling({
 		active,
+		activeDescendant,
 		announcer: announcerAPI,
-		currentCount: optionCount,
+		collection,
 		loadCount: batchLoadCount,
 		loadingState,
 		menuRef,
