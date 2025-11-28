@@ -371,8 +371,16 @@ const nextConfig = {
 		];
 	},
 	sassOptions: {
-		includePaths: [clay.includePaths[0]],
-		precision: 8,
+		includePaths: [
+			clay.includePaths[0],
+			path.join(clay.includePaths[0], 'atlas'),
+			path.join(clay.includePaths[0], 'variables'),
+		],
+		outputStyle:
+			process.env.NODE_ENV === 'development' ? 'expanded' : 'compressed',
+		precision: 5,
+		sourceMap: true,
+		sourceMapContents: true,
 	},
 	transpilePackages: ['renoun'],
 	webpack(config) {
