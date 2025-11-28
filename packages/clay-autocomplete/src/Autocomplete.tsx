@@ -122,6 +122,10 @@ export interface IProps<T>
 	 */
 	items?: Array<T> | null;
 
+	/**
+	 * Number of items it expects to load on each batch when using infinite scrolling.
+	 */
+
 	batchLoadCount?: number;
 
 	/**
