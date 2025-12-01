@@ -66,6 +66,16 @@ const ProgressBar = ({
 		status = 'success';
 	}
 
+	let accessibleLabel: string;
+
+	if (warn) {
+		accessibleLabel = `Attention: Value is at ${value}%`;
+	} else if (value === 100) {
+		accessibleLabel = 'Complete';
+	} else {
+		accessibleLabel = `Progress: ${value}%`;
+	}
+
 	return (
 		<div
 			{...otherProps}
@@ -75,6 +85,7 @@ const ProgressBar = ({
 		>
 			<div className="progress">
 				<div
+					aria-label={accessibleLabel}
 					aria-valuemax={100}
 					aria-valuemin={0}
 					aria-valuenow={value}
