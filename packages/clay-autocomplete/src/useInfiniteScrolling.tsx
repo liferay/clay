@@ -6,9 +6,14 @@
 import {AnnouncerAPI} from '@clayui/core';
 import {CollectionState} from '@clayui/core/src/collection/types';
 import LoadingIndicator from '@clayui/loading-indicator';
-import {sub, useDebounce} from '@clayui/shared';
-import classNames from 'classnames';
-import React, {RefObject, useEffect, useRef, useState} from 'react';
+import {sub} from '@clayui/shared';
+import React, {
+	RefObject,
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+} from 'react';
 
 import {AutocompleteMessages} from './Autocomplete';
 
@@ -71,16 +76,17 @@ export function useInfiniteScrolling({
 	onLoadMore: externalOnLoadMore,
 }: IProps) {
 	const [isLoadingMore, setIsLoadingMore] = useState(false);
-	const debouncedIsLoadingMore = useDebounce(isLoadingMore, 200);
 	const isInfiniteScrollingEnabled = Boolean(externalOnLoadMore);
 
-	const onLoadMore = async () => {
-		setIsLoadingMore(Boolean(externalOnLoadMore));
+	const onLoadMore = useCallback(async () => {
+		if (isInfiniteScrollingEnabled) {
+			setIsLoadingMore(true);
 
-		await externalOnLoadMore?.();
+			await externalOnLoadMore?.();
 
-		setIsLoadingMore(false);
-	};
+			setIsLoadingMore(false);
+		}
+	}, [isInfiniteScrollingEnabled, externalOnLoadMore]);
 
 	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
 
@@ -146,55 +152,60 @@ export function useInfiniteScrolling({
 	}, [active, isLoading, currentCount]);
 
 	const triggerRef = useRef<HTMLDivElement>(null);
-	const isTriggerActive = useRef<boolean>(false);
 	const lastTriggerCount = useRef<number | null>(null);
 
 	useEffect(() => {
-		if (active && triggerRef.current && menuRef.current) {
+		const menuElement = menuRef.current;
+		const triggerElement = triggerRef.current;
+
+		if (!isLoading && active && menuElement && triggerElement) {
 			let timeoutId: NodeJS.Timeout | null = null;
 
-			const handleIntersect: IntersectionObserverCallback = (entries) => {
+			const onIntersection: IntersectionObserverCallback = (entries) => {
 				if (timeoutId) {
 					clearTimeout(timeoutId);
 				}
 
 				timeoutId = setTimeout(() => {
 					const isIntersecting = entries[0]?.isIntersecting ?? false;
-					const countHasChanged =
-						currentCount !== lastTriggerCount.current;
+					const countChanged =
+						lastTriggerCount.current !== currentCount;
 
-					if (!isLoading && isIntersecting && countHasChanged) {
-						isTriggerActive.current = true;
+					if (isIntersecting && countChanged) {
 						lastTriggerCount.current = currentCount;
 
-						onLoadMore().finally(() => {
-							isTriggerActive.current = false;
-						});
+						onLoadMore();
 					}
 				}, 200);
 			};
 
-			const observer = new IntersectionObserver(handleIntersect, {
-				root: menuRef.current,
+			const observer = new IntersectionObserver(onIntersection, {
+				root: menuElement,
 				threshold: 1.0,
 			});
 
-			observer.observe(triggerRef.current);
+			observer.observe(triggerElement);
 
-			return () => observer.disconnect();
+			return () => {
+				if (timeoutId) {
+					clearTimeout(timeoutId);
+				}
+
+				observer.disconnect();
+			};
 		}
-	}, [active, isLoading, onLoadMore]);
+	}, [active, currentCount, isLoading, onLoadMore]);
 
-	const InfiniteScrollingTrigger = () => (
-		<div
-			aria-hidden="true"
-			className={classNames({'mt-2': isInfiniteScrollingEnabled})}
-			ref={triggerRef}
-		>
-			{(isLoadingMore || debouncedIsLoadingMore) && (
-				<LoadingIndicator className="mb-2" size="sm" />
-			)}
-		</div>
+	const InfiniteScrollingTrigger = useCallback(
+		() =>
+			isInfiniteScrollingEnabled ? (
+				<div aria-hidden="true" className="pt-2" ref={triggerRef}>
+					{isLoading && (
+						<LoadingIndicator className="mb-2" size="sm" />
+					)}
+				</div>
+			) : null,
+		[isInfiniteScrollingEnabled, isLoading]
 	);
 
 	const lastItem = currentCount > 0 ? collection.getLastItem() : null;
@@ -205,7 +216,7 @@ export function useInfiniteScrolling({
 		if (isLastItemActive && !isLoading) {
 			onLoadMore();
 		}
-	}, [isLastItemActive, isLoading]);
+	}, [isLastItemActive, isLoading, onLoadMore]);
 
 	return InfiniteScrollingTrigger;
 }
