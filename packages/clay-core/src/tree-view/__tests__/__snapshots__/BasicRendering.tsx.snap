@@ -38,6 +38,7 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
                 <button
                   aria-controls="Root"
                   aria-expanded="false"
+                  aria-labelledby="clay-id-15"
                   class="component-expander btn btn-monospaced"
                   tabindex="-1"
                   type="button"
@@ -123,6 +124,7 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
                 <button
                   aria-controls="Foo"
                   aria-expanded="false"
+                  aria-labelledby="clay-id-25"
                   class="component-expander btn btn-monospaced"
                   tabindex="-1"
                   type="button"
@@ -208,6 +210,7 @@ exports[`TreeView basic rendering render static content 1`] = `
                 <button
                   aria-controls="$.0"
                   aria-expanded="false"
+                  aria-labelledby="clay-id-5"
                   class="component-expander btn btn-monospaced"
                   tabindex="-1"
                   type="button"
@@ -271,7 +274,6 @@ exports[`TreeView basic rendering render with actions 1`] = `
       >
         <div
           aria-labelledby="clay-id-65"
-          aria-owns="clay-id-66"
           class="treeview-link"
           data-id="string,$.0"
           role="treeitem"
@@ -387,6 +389,7 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
                 <button
                   aria-controls="$.0"
                   aria-expanded="false"
+                  aria-labelledby="clay-id-96"
                   class="component-expander btn btn-monospaced"
                   tabindex="-1"
                   type="button"
@@ -490,6 +493,7 @@ exports[`TreeView basic rendering render with item active 1`] = `
                 <button
                   aria-controls="$.0"
                   aria-expanded="false"
+                  aria-labelledby="clay-id-160"
                   class="component-expander btn btn-monospaced"
                   tabindex="-1"
                   type="button"
@@ -593,6 +597,7 @@ exports[`TreeView basic rendering render with text 1`] = `
                 <button
                   aria-controls="$.0"
                   aria-expanded="false"
+                  aria-labelledby="clay-id-106"
                   class="component-expander btn btn-monospaced"
                   tabindex="-1"
                   type="button"
