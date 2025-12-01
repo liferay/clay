@@ -728,6 +728,7 @@ export function ItemStack({
 					<Button
 						aria-controls={`${item.key}`}
 						aria-expanded={expandedKeys.has(item.key)}
+						aria-labelledby={labelId}
 						className={classNames(
 							'component-expander',
 							expanderClassName,
