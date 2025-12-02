@@ -827,7 +827,7 @@ export function ItemStack({
 				} else {
 					content = React.cloneElement(child as React.ReactElement, {
 						...(child as React.ReactElement)?.props,
-						id: (child as React.ReactElement)?.props?.id || labelId,
+						id: (child as React.ReactElement)?.props?.id,
 					});
 				}
 
