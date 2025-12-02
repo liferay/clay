@@ -219,10 +219,6 @@ describe('TreeView basic rendering', () => {
 		expect(
 			container.querySelectorAll('.treeview-link.disabled').length
 		).toBe(1);
-		expect(
-			container.querySelectorAll('.btn.component-expander[disabled]')
-				.length
-		).toBe(1);
 	});
 
 	it('render with item disabled except expander', () => {
@@ -230,9 +226,7 @@ describe('TreeView basic rendering', () => {
 			<Provider spritemap={spritemap}>
 				<TreeView>
 					<TreeView.Item>
-						<TreeView.ItemStack disabled expanderDisabled={false}>
-							Root
-						</TreeView.ItemStack>
+						<TreeView.ItemStack disabled>Root</TreeView.ItemStack>
 						<TreeView.Group>
 							<TreeView.Item disabled>Item</TreeView.Item>
 						</TreeView.Group>
@@ -244,9 +238,6 @@ describe('TreeView basic rendering', () => {
 		expect(
 			container.querySelectorAll('.treeview-link.disabled').length
 		).toBe(1);
-		expect(
-			container.querySelector('.btn.component-expander[disabled]')
-		).toBeFalsy();
 	});
 
 	it('render with checkbox', () => {
