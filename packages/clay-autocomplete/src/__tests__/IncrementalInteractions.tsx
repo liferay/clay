@@ -4,7 +4,7 @@
  */
 
 import ClayAutocomplete from '..';
-import {cleanup, fireEvent, render} from '@testing-library/react';
+import {cleanup, fireEvent, render, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
@@ -751,6 +751,120 @@ describe('Autocomplete incremental interactions', () => {
 
 			userEvent.type(input, '{enter}');
 			expect(onClickMock).toHaveBeenCalled();
+		});
+	});
+
+	describe('Infinite scrolling interactions', () => {
+		it('calls onLoadMore when last item is active using keyboard', async () => {
+			const onLoadMoreMock = jest.fn();
+
+			const {getByRole} = render(
+				<ClayAutocomplete onLoadMore={onLoadMoreMock}>
+					{Array(20)
+						.fill(0)
+						.map((_, index) => (
+							<ClayAutocomplete.Item
+								key={index}
+								textValue={`Item ${index + 1}`}
+							>
+								Item {index + 1}
+							</ClayAutocomplete.Item>
+						))}
+				</ClayAutocomplete>
+			);
+
+			const combobox = getByRole('combobox');
+
+			userEvent.click(combobox);
+
+			expect(onLoadMoreMock).not.toHaveBeenCalled();
+
+			userEvent.type(combobox, '{arrowup}');
+
+			await waitFor(() => {
+				expect(onLoadMoreMock).toHaveBeenCalled();
+			});
+		});
+
+		it('announces the initial amount of items', async () => {
+			const itemsCount = 5;
+
+			const {getAllByRole, getByRole} = render(
+				<ClayAutocomplete>
+					{Array(itemsCount)
+						.fill(0)
+						.map((_, index) => (
+							<ClayAutocomplete.Item
+								key={index}
+								textValue={`Item ${index + 1}`}
+							>
+								Item {index + 1}
+							</ClayAutocomplete.Item>
+						))}
+				</ClayAutocomplete>
+			);
+
+			const combobox = getByRole('combobox');
+
+			userEvent.click(combobox);
+
+			userEvent.type(combobox, '{arrowdown}');
+
+			const [announcer] = getAllByRole('log');
+
+			await waitFor(() => {
+				expect(announcer?.innerHTML).toContain(
+					`${itemsCount} items loaded. Reach the last item to load more.`
+				);
+			});
+		});
+
+		it('announces when more items are loaded', async () => {
+			const initialCount = 10;
+			const batchLoadCount = 20;
+			const onLoadMoreMock = jest.fn().mockImplementation(() => {
+				return new Promise<void>((resolve) => {
+					setTimeout(() => {
+						resolve();
+					}, 500);
+				});
+			});
+
+			const {getAllByRole, getByRole} = render(
+				<ClayAutocomplete
+					batchLoadCount={batchLoadCount}
+					onLoadMore={onLoadMoreMock}
+				>
+					{Array(initialCount)
+						.fill(0)
+						.map((_, index) => (
+							<ClayAutocomplete.Item
+								key={index}
+								textValue={`Item ${index + 1}`}
+							>
+								Item {index + 1}
+							</ClayAutocomplete.Item>
+						))}
+				</ClayAutocomplete>
+			);
+
+			const combobox = getByRole('combobox');
+
+			userEvent.click(combobox);
+
+			userEvent.type(combobox, '{arrowup}');
+
+			const [announcer] = getAllByRole('log');
+
+			await waitFor(() => {
+				expect(announcer?.innerHTML).toContain(
+					`Loading ${batchLoadCount} more items.`
+				);
+
+				expect(announcer?.innerHTML).toContain(
+					`${initialCount} items loaded.`
+				);
+			});
 		});
 	});
 });

@@ -111,7 +111,7 @@ export function useInfiniteScrolling({
 			lastCountAnnounced.current = null;
 
 			lastPositionBeforeLoad.current = menuRef.current?.scrollTop ?? null;
-			menuRef.current?.scrollTo({
+			menuRef.current?.scrollTo?.({
 				top: menuRef.current?.scrollHeight,
 			});
 		}
@@ -139,7 +139,7 @@ export function useInfiniteScrolling({
 				isInitialLoadAnnouncementPending.current = false;
 
 				if (lastPositionBeforeLoad.current !== null) {
-					menuRef.current?.scrollTo({
+					menuRef.current?.scrollTo?.({
 						top: lastPositionBeforeLoad.current,
 					});
 
@@ -198,7 +198,7 @@ export function useInfiniteScrolling({
 
 	const InfiniteScrollingTrigger = useCallback(
 		() =>
-			isInfiniteScrollingEnabled ? (
+			isInfiniteScrollingEnabled && window.IntersectionObserver ? (
 				<div aria-hidden="true" className="pt-2" ref={triggerRef}>
 					{isLoading && (
 						<LoadingIndicator className="mb-2" size="sm" />
