@@ -645,7 +645,12 @@ export const PreSelectedItems = (args: any) => {
 	);
 
 	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+	const OptionalCheckbox = Object.assign(
+		(props: any) => <Checkbox {...props} />,
+		{
+			displayName: 'ClayCheckbox',
+		}
+	);
 
 	return (
 		<TreeView
@@ -691,7 +696,12 @@ PreSelectedItems.args = {
 
 export const Disabled = () => {
 	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+	const OptionalCheckbox = Object.assign(
+		(props: any) => <Checkbox {...props} />,
+		{
+			displayName: 'ClayCheckbox',
+		}
+	);
 
 	return (
 		<TreeView
@@ -728,7 +738,12 @@ export const MultipleSelection = (args: any) => {
 	);
 
 	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+	const OptionalCheckbox = Object.assign(
+		(props: any) => <Checkbox {...props} />,
+		{
+			displayName: 'ClayCheckbox',
+		}
+	);
 
 	return (
 		<TreeView
@@ -779,7 +794,12 @@ export const MultipleSelectionWithAsyncLoad = (args: any) => {
 	);
 
 	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+	const OptionalCheckbox = Object.assign(
+		(props: any) => <Checkbox {...props} />,
+		{
+			displayName: 'ClayCheckbox',
+		}
+	);
 
 	return (
 		<TreeView
@@ -905,7 +925,12 @@ export const ExpandOnCheck = (args: any) => {
 	);
 
 	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+	const OptionalCheckbox = Object.assign(
+		(props: any) => <Checkbox {...props} />,
+		{
+			displayName: 'ClayCheckbox',
+		}
+	);
 
 	return (
 		<TreeView
@@ -1226,7 +1251,12 @@ export const SelectionWithFilter = () => {
 	const [value, setValue] = useState('');
 	const [items, setItems] = useState(ITEMS_DRIVE);
 
-	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+	const OptionalCheckbox = Object.assign(
+		(props: any) => <Checkbox {...props} />,
+		{
+			displayName: 'ClayCheckbox',
+		}
+	);
 
 	const itemsFiltered = useMemo<any>(() => {
 		if (!value) {
@@ -1291,7 +1321,12 @@ export const PerformanceTest = () => {
 	const [value, setValue] = useState('');
 
 	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+	const OptionalCheckbox = Object.assign(
+		(props: any) => <Checkbox {...props} />,
+		{
+			displayName: 'ClayCheckbox',
+		}
+	);
 
 	const itemsFiltered = useMemo<Data>(() => {
 		if (!value) {
@@ -1506,7 +1541,12 @@ export const DemoCategoriesSingle = () => {
 
 export const DemoCategoriesMultiple = () => {
 	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+	const OptionalCheckbox = Object.assign(
+		(props: any) => <Checkbox {...props} />,
+		{
+			displayName: 'ClayCheckbox',
+		}
+	);
 
 	return (
 		<TreeView
@@ -1655,7 +1695,12 @@ export const DemoCategoriesMultiple = () => {
 
 export const DemoDocumentsMultiple = () => {
 	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+	const OptionalCheckbox = Object.assign(
+		(props: any) => <Checkbox {...props} />,
+		{
+			displayName: 'ClayCheckbox',
+		}
+	);
 
 	const MAPPING_ICON = {
 		article: 'web-content',
