@@ -234,7 +234,7 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 							group ? expandedKeys.has(item.key) : undefined
 						}
 						aria-labelledby={labelId}
-						{...(isExpand ? {'aria-owns': ariaOwns} : {})}
+						aria-owns={isExpand ? ariaOwns : undefined}
 						className={classNames(
 							'treeview-link',
 							itemStackProps.className,
