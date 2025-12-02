@@ -90,7 +90,9 @@ export function useInfiniteScrolling({
 
 	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
 
-	const isInitialLoadAnnouncementPending = useRef<boolean>(true);
+	const isInitialLoadAnnouncementPending = useRef<boolean>(
+		isInfiniteScrollingEnabled
+	);
 	const lastCountAnnounced = useRef<number | null>(null);
 	const lastPositionBeforeLoad = useRef<number | null>(null);
 
@@ -147,7 +149,8 @@ export function useInfiniteScrolling({
 				}
 			}
 		} else {
-			isInitialLoadAnnouncementPending.current = true;
+			isInitialLoadAnnouncementPending.current =
+				isInfiniteScrollingEnabled;
 		}
 	}, [active, isLoading, currentCount]);
 

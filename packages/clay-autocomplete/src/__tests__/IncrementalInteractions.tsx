@@ -790,7 +790,7 @@ describe('Autocomplete incremental interactions', () => {
 			const itemsCount = 5;
 
 			const {getAllByRole, getByRole} = render(
-				<ClayAutocomplete>
+				<ClayAutocomplete onLoadMore={() => Promise.resolve()}>
 					{Array(itemsCount)
 						.fill(0)
 						.map((_, index) => (
