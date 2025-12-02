@@ -323,18 +323,17 @@ describe('TreeView incremental interactions', () => {
 					</Provider>
 				);
 
-				const rootExpander = container.querySelector(
-					'.component-expander'
-				) as HTMLButtonElement;
-
 				const root = container.querySelector(
+					'div.treeview-link[role="treeitem"]'
+				) as HTMLElement;
+
+				const rootCheckbox = container.querySelector(
 					'input.custom-control-input[type=checkbox]'
 				) as HTMLInputElement;
 
 				fireEvent.click(root);
-				fireEvent.click(rootExpander);
 
-				expect(root.checked).toBeTruthy();
+				expect(rootCheckbox.checked).toBeTruthy();
 
 				const [, item] = container.querySelectorAll<HTMLInputElement>(
 					'input.custom-control-input[type=checkbox]'
