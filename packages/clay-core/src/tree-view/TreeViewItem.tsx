@@ -230,6 +230,7 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 						{...itemStackProps}
 						{...nodeProps}
 						{...focusWithinProps}
+						aria-controls={isExpand ? `${item.key}` : undefined}
 						aria-expanded={
 							group ? expandedKeys.has(item.key) : undefined
 						}
@@ -555,7 +556,6 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 									isNonDraggrable={isNonDraggrable}
 									labelId={labelId}
 									loading={loading}
-									onLoadMore={!group ? loadMore : undefined}
 									tabIndex={focusWithinProps.tabIndex}
 								>
 									{children}
@@ -698,11 +698,9 @@ export function ItemStack({
 	children,
 	disabled,
 	expandable = false,
-	expanderDisabled,
 	isNonDraggrable,
 	labelId,
 	loading = false,
-	onLoadMore,
 	tabIndex,
 	...otherProps
 }: ITreeViewItemStackProps) {
@@ -714,7 +712,6 @@ export function ItemStack({
 		onSelect,
 		open,
 		selection,
-		toggle,
 	} = useTreeViewContext();
 
 	const item = useItem();
@@ -725,39 +722,21 @@ export function ItemStack({
 		<Layout.ContentRow {...otherProps}>
 			{expandable && !loading && (
 				<Layout.ContentCol>
-					<Button
-						aria-controls={`${item.key}`}
-						aria-expanded={expandedKeys.has(item.key)}
-						aria-labelledby={labelId}
+					<span
+						aria-hidden="true"
 						className={classNames(
 							'component-expander',
+							'c-inner',
+							'c-mx-2',
 							expanderClassName,
 							{
 								collapsed: expandedKeys.has(item.key),
 							}
 						)}
-						disabled={
-							typeof expanderDisabled === 'undefined'
-								? disabled
-								: expanderDisabled
-						}
-						displayType={null}
-						monospaced
-						onClick={(event) => {
-							event.stopPropagation();
-
-							if (onLoadMore) {
-								onLoadMore();
-							} else {
-								toggle(item.key);
-							}
-						}}
 						tabIndex={-1}
 					>
-						<span className="c-inner" tabIndex={-2}>
-							<Expander expanderIcons={expanderIcons} />
-						</span>
-					</Button>
+						<Expander expanderIcons={expanderIcons} />
+					</span>
 				</Layout.ContentCol>
 			)}
 
