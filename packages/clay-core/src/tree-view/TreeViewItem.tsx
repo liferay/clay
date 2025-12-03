@@ -726,7 +726,6 @@ export function ItemStack({
 						aria-hidden="true"
 						className={classNames(
 							'component-expander',
-							'c-mx-2',
 							expanderClassName,
 							{
 								collapsed: expandedKeys.has(item.key),
