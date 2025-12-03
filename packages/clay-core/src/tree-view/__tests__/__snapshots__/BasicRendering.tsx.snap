@@ -38,7 +38,7 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
               >
                 <span
                   aria-hidden="true"
-                  class="component-expander c-inner c-mx-2"
+                  class="component-expander"
                   tabindex="-1"
                 >
                   <svg
@@ -117,7 +117,7 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
               >
                 <span
                   aria-hidden="true"
-                  class="component-expander c-inner c-mx-2"
+                  class="component-expander"
                   tabindex="-1"
                 >
                   <svg
@@ -196,7 +196,7 @@ exports[`TreeView basic rendering render static content 1`] = `
               >
                 <span
                   aria-hidden="true"
-                  class="component-expander c-inner c-mx-2"
+                  class="component-expander"
                   tabindex="-1"
                 >
                   <svg
@@ -368,7 +368,7 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
               >
                 <span
                   aria-hidden="true"
-                  class="component-expander c-inner c-mx-2"
+                  class="component-expander"
                   tabindex="-1"
                 >
                   <svg
@@ -465,7 +465,7 @@ exports[`TreeView basic rendering render with item active 1`] = `
               >
                 <span
                   aria-hidden="true"
-                  class="component-expander c-inner c-mx-2"
+                  class="component-expander"
                   tabindex="-1"
                 >
                   <svg
@@ -562,7 +562,7 @@ exports[`TreeView basic rendering render with text 1`] = `
               >
                 <span
                   aria-hidden="true"
-                  class="component-expander c-inner c-mx-2"
+                  class="component-expander"
                   tabindex="-1"
                 >
                   <svg
