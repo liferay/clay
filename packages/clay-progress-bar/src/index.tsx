@@ -85,7 +85,7 @@ const ProgressBar = ({
 		>
 			<div className="progress">
 				<div
-					aria-label={otherProps['aria-label'] ?? ariaLabel}
+					aria-label={otherProps['aria-label'] || ariaLabel}
 					aria-valuemax={100}
 					aria-valuemin={0}
 					aria-valuenow={value}
