@@ -39,11 +39,6 @@ interface IProps {
 	collection: CollectionState;
 
 	/**
-	 * Number of items loaded for each batch.
-	 */
-	loadCount?: number;
-
-	/**
 	 * Loading state of the autocomplete.
 	 */
 	loadingState?: number;

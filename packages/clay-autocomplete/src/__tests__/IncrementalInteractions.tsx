@@ -821,7 +821,6 @@ describe('Autocomplete incremental interactions', () => {
 
 		it('announces when more items are loaded', async () => {
 			const initialCount = 10;
-			const batchLoadCount = 20;
 			const onLoadMoreMock = jest.fn().mockImplementation(() => {
 				return new Promise<void>((resolve) => {
 					setTimeout(() => {
@@ -831,10 +830,7 @@ describe('Autocomplete incremental interactions', () => {
 			});
 
 			const {getAllByRole, getByRole} = render(
-				<ClayAutocomplete
-					batchLoadCount={batchLoadCount}
-					onLoadMore={onLoadMoreMock}
-				>
+				<ClayAutocomplete onLoadMore={onLoadMoreMock}>
 					{Array(initialCount)
 						.fill(0)
 						.map((_, index) => (

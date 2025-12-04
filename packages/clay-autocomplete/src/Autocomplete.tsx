@@ -121,12 +121,6 @@ export interface IProps<T>
 	items?: Array<T> | null;
 
 	/**
-	 * Number of items it expects to load on each batch when using infinite scroll.
-	 */
-
-	batchLoadCount?: number;
-
-	/**
 	 * Property to set the initial value of `items` (uncontrolled).
 	 */
 	defaultItems?: Array<T> | null;
@@ -238,7 +232,6 @@ function AutocompleteInner<T extends Item>(
 		alignmentByViewport: _,
 		allowsCustomValue,
 		as: As = Input,
-		batchLoadCount,
 		children,
 		containerElementRef,
 		defaultActive,
@@ -540,7 +533,6 @@ function AutocompleteInner<T extends Item>(
 		activeDescendant,
 		announcer: announcerAPI,
 		collection,
-		loadCount: batchLoadCount,
 		loadingState,
 		menuRef,
 		messages,
