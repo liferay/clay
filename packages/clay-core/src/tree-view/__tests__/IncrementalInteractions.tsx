@@ -301,6 +301,7 @@ describe('TreeView incremental interactions', () => {
 									name: 'Root',
 								},
 							]}
+							expandOnCheck
 							selectionMode="multiple-recursive"
 						>
 							{(item) => (

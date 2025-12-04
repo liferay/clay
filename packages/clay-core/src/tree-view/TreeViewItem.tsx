@@ -178,6 +178,12 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 		const hasChildren =
 			nestedKey && item[nestedKey] && item[nestedKey].length > 0;
 
+		const hasCheckbox =
+			// @ts-ignore
+			React.Children.toArray(left?.props?.children).some(
+				(child: any) => child.type?.displayName === 'ClayCheckbox'
+			) || itemStackProps.hasCheckbox;
+
 		const isExpand =
 			expandable ||
 			itemStackProps.expandable ||
@@ -320,8 +326,12 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 								return;
 							}
 
-							if (onSelect) {
-								onSelect(removeItemInternalProps(item));
+							if (!hasCheckbox) {
+								selection.toggleSelection(item.key);
+
+								if (onSelect) {
+									onSelect(removeItemInternalProps(item));
+								}
 							}
 
 							if (
