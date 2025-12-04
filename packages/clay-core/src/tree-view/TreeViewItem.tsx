@@ -320,8 +320,6 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 								return;
 							}
 
-							selection.toggleSelection(item.key);
-
 							if (onSelect) {
 								onSelect(removeItemInternalProps(item));
 							}
