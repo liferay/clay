@@ -29,7 +29,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
 import Item from './Item';
-import {useInfiniteScrolling} from './useInfiniteScrolling';
+import {useInfiniteScroll} from './useInfiniteScroll';
 
 import type {AnnouncerAPI, ICollectionProps} from '@clayui/core';
 import type {Locator} from '@clayui/shared';
@@ -47,13 +47,11 @@ type ItemProps<T extends Item> = {
 };
 
 export type AutocompleteMessages = {
-	infiniteScrollingInitialLoad?: string;
-	infiniteScrollingInitialLoadPlural?: string;
-	infiniteScrollingOnLoad?: string;
-	infiniteScrollingOnLoadPlural?: string;
-	infiniteScrollingOnLoadIndeterminate?: string;
-	infiniteScrollingOnLoaded?: string;
-	infiniteScrollingOnLoadedPlural?: string;
+	infiniteScrollInitialLoad?: string;
+	infiniteScrollInitialLoadPlural?: string;
+	infiniteScrollOnLoad?: string;
+	infiniteScrollOnLoaded?: string;
+	infiniteScrollOnLoadedPlural?: string;
 	listCount?: string;
 	listCountPlural?: string;
 	loading: string;
@@ -123,7 +121,7 @@ export interface IProps<T>
 	items?: Array<T> | null;
 
 	/**
-	 * Number of items it expects to load on each batch when using infinite scrolling.
+	 * Number of items it expects to load on each batch when using infinite scroll.
 	 */
 
 	batchLoadCount?: number;
@@ -220,15 +218,13 @@ function hasItem<T extends Item>(
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
 const defaultMessages: Required<AutocompleteMessages> = {
-	infiniteScrollingInitialLoad:
+	infiniteScrollInitialLoad:
 		'{0} item loaded. Reach the last item to load more.',
-	infiniteScrollingInitialLoadPlural:
+	infiniteScrollInitialLoadPlural:
 		'{0} items loaded. Reach the last item to load more.',
-	infiniteScrollingOnLoad: 'Loading {0} more item.',
-	infiniteScrollingOnLoadIndeterminate: 'Loading more items.',
-	infiniteScrollingOnLoadPlural: 'Loading {0} more items.',
-	infiniteScrollingOnLoaded: '{0} item loaded.',
-	infiniteScrollingOnLoadedPlural: '{0} items loaded.',
+	infiniteScrollOnLoad: 'Loading more items.',
+	infiniteScrollOnLoaded: '{0} item loaded.',
+	infiniteScrollOnLoadedPlural: '{0} items loaded.',
 	listCount: '{0} option available.',
 	listCountPlural: '{0} options available.',
 	loading: 'Loading...',
@@ -539,7 +535,7 @@ function AutocompleteInner<T extends Item>(
 	const optionCount = collection.getItems().length;
 	const lastSize = useRef(optionCount);
 
-	const InfiniteScrollingTrigger = useInfiniteScrolling({
+	const InfiniteScrollTrigger = useInfiniteScroll({
 		active,
 		activeDescendant,
 		announcer: announcerAPI,
@@ -774,7 +770,7 @@ function AutocompleteInner<T extends Item>(
 							</Collection>
 						</AutocompleteContext.Provider>
 
-						<InfiniteScrollingTrigger />
+						<InfiniteScrollTrigger />
 					</div>
 				</Overlay>
 			)}

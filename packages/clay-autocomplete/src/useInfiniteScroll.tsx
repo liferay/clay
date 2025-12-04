@@ -64,52 +64,40 @@ interface IProps {
 	onLoadMore?: () => Promise<any> | null;
 }
 
-export function useInfiniteScrolling({
+export function useInfiniteScroll({
 	active,
 	activeDescendant,
 	announcer,
 	collection,
-	loadCount,
 	loadingState,
 	menuRef,
 	messages,
 	onLoadMore: externalOnLoadMore,
 }: IProps) {
 	const [isLoadingMore, setIsLoadingMore] = useState(false);
-	const isInfiniteScrollingEnabled = Boolean(externalOnLoadMore);
+	const isInfiniteScrollEnabled = Boolean(externalOnLoadMore);
 
 	const onLoadMore = useCallback(async () => {
-		if (isInfiniteScrollingEnabled) {
+		if (isInfiniteScrollEnabled) {
 			setIsLoadingMore(true);
 
 			await externalOnLoadMore?.();
 
 			setIsLoadingMore(false);
 		}
-	}, [isInfiniteScrollingEnabled, externalOnLoadMore]);
+	}, [isInfiniteScrollEnabled, externalOnLoadMore]);
 
 	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
 
 	const isInitialLoadAnnouncementPending = useRef<boolean>(
-		isInfiniteScrollingEnabled
+		isInfiniteScrollEnabled
 	);
 	const lastCountAnnounced = useRef<number | null>(null);
 	const lastPositionBeforeLoad = useRef<number | null>(null);
 
 	useEffect(() => {
 		if (active && isLoadingMore) {
-			let message = messages.infiniteScrollingOnLoadIndeterminate;
-
-			if (loadCount !== undefined) {
-				message = sub(
-					loadCount === 1
-						? messages.infiniteScrollingOnLoad
-						: messages.infiniteScrollingOnLoadPlural,
-					[loadCount]
-				);
-			}
-
-			announcer.current?.announce(message);
+			announcer.current?.announce(messages.infiniteScrollOnLoad);
 			lastCountAnnounced.current = null;
 
 			lastPositionBeforeLoad.current = menuRef.current?.scrollTop ?? null;
@@ -125,12 +113,12 @@ export function useInfiniteScrolling({
 		if (active) {
 			if (!isLoading && lastCountAnnounced.current !== currentCount) {
 				const singular = isInitialLoadAnnouncementPending.current
-					? messages.infiniteScrollingInitialLoad
-					: messages.infiniteScrollingOnLoaded;
+					? messages.infiniteScrollInitialLoad
+					: messages.infiniteScrollOnLoaded;
 
 				const plural = isInitialLoadAnnouncementPending.current
-					? messages.infiniteScrollingInitialLoadPlural
-					: messages.infiniteScrollingOnLoadedPlural;
+					? messages.infiniteScrollInitialLoadPlural
+					: messages.infiniteScrollOnLoadedPlural;
 
 				const message = sub(currentCount === 1 ? singular : plural, [
 					currentCount,
@@ -149,8 +137,7 @@ export function useInfiniteScrolling({
 				}
 			}
 		} else {
-			isInitialLoadAnnouncementPending.current =
-				isInfiniteScrollingEnabled;
+			isInitialLoadAnnouncementPending.current = isInfiniteScrollEnabled;
 		}
 	}, [active, isLoading, currentCount]);
 
@@ -199,16 +186,16 @@ export function useInfiniteScrolling({
 		}
 	}, [active, currentCount, isLoading, onLoadMore]);
 
-	const InfiniteScrollingTrigger = useCallback(
+	const InfiniteScrollTrigger = useCallback(
 		() =>
-			isInfiniteScrollingEnabled && window.IntersectionObserver ? (
+			isInfiniteScrollEnabled && window.IntersectionObserver ? (
 				<div aria-hidden="true" className="pt-2" ref={triggerRef}>
 					{isLoading && (
 						<LoadingIndicator className="mb-2" size="sm" />
 					)}
 				</div>
 			) : null,
-		[isInfiniteScrollingEnabled, isLoading]
+		[isInfiniteScrollEnabled, isLoading]
 	);
 
 	const lastItem = currentCount > 0 ? collection.getLastItem() : null;
@@ -221,5 +208,5 @@ export function useInfiniteScrolling({
 		}
 	}, [isLastItemActive, isLoading, onLoadMore]);
 
-	return InfiniteScrollingTrigger;
+	return InfiniteScrollTrigger;
 }

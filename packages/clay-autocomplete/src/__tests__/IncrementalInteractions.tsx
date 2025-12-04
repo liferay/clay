@@ -754,7 +754,7 @@ describe('Autocomplete incremental interactions', () => {
 		});
 	});
 
-	describe('Infinite scrolling interactions', () => {
+	describe('Infinite scroll interactions', () => {
 		it('calls onLoadMore when last item is active using keyboard', async () => {
 			const onLoadMoreMock = jest.fn();
 
@@ -857,9 +857,7 @@ describe('Autocomplete incremental interactions', () => {
 			const [announcer] = getAllByRole('log');
 
 			await waitFor(() => {
-				expect(announcer?.innerHTML).toContain(
-					`Loading ${batchLoadCount} more items.`
-				);
+				expect(announcer?.innerHTML).toContain(`Loading more items.`);
 
 				expect(announcer?.innerHTML).toContain(
 					`${initialCount} items loaded.`

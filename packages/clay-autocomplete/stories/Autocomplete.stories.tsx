@@ -642,7 +642,7 @@ export const CreationActionWithDynamicRendering = () => {
 	);
 };
 
-export const InfiniteScrolling = () => {
+export const InfiniteScroll = () => {
 	const pageSize = 20;
 
 	const [valueWithQuery, setValueWithQuery] = useState('');
