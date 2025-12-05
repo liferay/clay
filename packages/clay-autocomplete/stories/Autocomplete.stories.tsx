@@ -643,11 +643,12 @@ export const CreationActionWithDynamicRendering = () => {
 };
 
 export const InfiniteScroll = () => {
-	const [valueWithQuery, setValueWithQuery] = useState('');
-	const [valueWithoutQuery, setValueWithoutQuery] = useState('');
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
 		NetworkStatus.Unused
 	);
+
+	const [valueWithQuery, setValueWithQuery] = useState('');
+	const [valueWithoutQuery, setValueWithoutQuery] = useState('');
 
 	const {loadMore: loadMoreWithQuery, resource: itemsWithQuery} = useResource(
 		{
