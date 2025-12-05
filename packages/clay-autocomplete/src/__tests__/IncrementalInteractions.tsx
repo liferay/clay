@@ -787,50 +787,21 @@ describe('Autocomplete incremental interactions', () => {
 			});
 		});
 
-		it('announces the initial amount of items', async () => {
-			const itemsCount = 5;
-
-			const {getAllByRole, getByRole} = render(
-				<ClayAutocomplete onLoadMore={() => Promise.resolve()}>
-					{Array(itemsCount)
-						.fill(0)
-						.map((_, index) => (
-							<ClayAutocomplete.Item
-								key={index}
-								textValue={`Item ${index + 1}`}
-							>
-								Item {index + 1}
-							</ClayAutocomplete.Item>
-						))}
-				</ClayAutocomplete>
-			);
-
-			const combobox = getByRole('combobox');
-
-			userEvent.click(combobox);
-
-			userEvent.type(combobox, '{arrowdown}');
-
-			const [announcer] = getAllByRole('log');
-
-			await waitFor(() => {
-				expect(announcer?.innerHTML).toContain(
-					`${itemsCount} items loaded. Reach the last item to load more.`
-				);
-			});
-		});
-
-		it('announces when more items are loaded', async () => {
+		it('announces count of initially loaded items and when more items are loaded', async () => {
 			const initialCount = 10;
+			const step = 5;
 
 			const TestComponent = () => {
+				const [count, setCount] = React.useState(initialCount);
 				const [networkStatus, setNetworkStatus] =
 					React.useState<NetworkStatus>(NetworkStatus.Unused);
 
 				const onLoadMore = jest.fn().mockImplementation(() => {
 					return new Promise<void>((resolve) => {
 						setNetworkStatus(NetworkStatus.Loading);
+
 						setTimeout(() => {
+							setCount((count) => count + step);
 							setNetworkStatus(NetworkStatus.Unused);
 							resolve();
 						}, 100);
@@ -842,7 +813,7 @@ describe('Autocomplete incremental interactions', () => {
 						loadingState={networkStatus}
 						onLoadMore={onLoadMore}
 					>
-						{Array(initialCount)
+						{Array(count)
 							.fill(0)
 							.map((_, index) => (
 								<ClayAutocomplete.Item
@@ -862,15 +833,23 @@ describe('Autocomplete incremental interactions', () => {
 
 			userEvent.click(combobox);
 
-			userEvent.type(combobox, '{arrowup}');
+			userEvent.type(combobox, '{arrowdown}');
 
 			const [announcer] = getAllByRole('log');
+
+			await waitFor(() => {
+				expect(announcer?.innerHTML).toContain(
+					`${initialCount} items loaded. Reach the last item to load more.`
+				);
+			});
+
+			userEvent.type(combobox, '{arrowup}');
 
 			await waitFor(() => {
 				expect(announcer?.innerHTML).toContain(`Loading more items.`);
 
 				expect(announcer?.innerHTML).toContain(
-					`${initialCount} items loaded.`
+					`${initialCount + step} items loaded.`
 				);
 			});
 		});
