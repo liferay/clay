@@ -170,13 +170,11 @@ export function Collection<
 	const isVirtual = collection?.virtualize;
 	const Container = as ? as : isVirtual ? 'div' : React.Fragment;
 
-	const onScroll = useCallback(
-		(event: Event) => {
-			const target = event.target as HTMLElement;
-
+	const onElementScrolled = useCallback(
+		(element: HTMLElement) => {
 			if (
-				target.scrollTop + target.clientHeight >=
-					target.scrollHeight - 40 &&
+				element.scrollTop + element.clientHeight >=
+					element.scrollHeight - 40 &&
 				!isLoading
 			) {
 				onLoadMore?.();
@@ -188,13 +186,20 @@ export function Collection<
 	useEffect(() => {
 		if (onLoadMore && containerRef.current) {
 			const element = containerRef.current.parentElement!;
+			const onScroll = (event: Event) =>
+				onElementScrolled(event.target as HTMLElement);
+
 			element.addEventListener('scroll', onScroll, true);
+
+			// Calling proactively in case the element is already scrolled to the
+			// bottom on mount or the list is short and the element isn't scrollable.
+			onElementScrolled(element);
 
 			return () => {
 				element.removeEventListener('scroll', onScroll, true);
 			};
 		}
-	}, [onScroll]);
+	}, [onElementScrolled]);
 
 	let content;
 
