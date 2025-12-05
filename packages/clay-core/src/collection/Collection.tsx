@@ -179,7 +179,7 @@ export function Collection<
 					target.scrollHeight - 40 &&
 				!isLoading
 			) {
-				onLoadMore!();
+				onLoadMore?.();
 			}
 		},
 		[onLoadMore, isLoading]

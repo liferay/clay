@@ -209,6 +209,13 @@ export function useNavigation<T extends HTMLElement | null>({
 							position = (items as Array<React.Key>).indexOf(
 								active!
 							);
+
+							if (position === -1) {
+								item =
+									event.key === key
+										? collection.getLastItem().key
+										: collection.getFirstItem().key;
+							}
 						} else if (collection) {
 							const activeElement =
 								document.activeElement as HTMLElement;
