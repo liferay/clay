@@ -530,7 +530,6 @@ function AutocompleteInner<T extends Item>(
 
 	const InfiniteScrollFeedback = useInfiniteScroll({
 		active,
-		activeDescendant,
 		announcer: announcerAPI,
 		collection,
 		loadingState,

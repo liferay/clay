@@ -23,11 +23,6 @@ interface IProps {
 	active: boolean;
 
 	/**
-	 * The key of the currently active descendant item.
-	 */
-	activeDescendant?: React.Key;
-
-	/**
 	 * The collection state of the autocomplete items.
 	 */
 	collection: CollectionState;
@@ -50,7 +45,6 @@ interface IProps {
 
 export function useInfiniteScroll({
 	active,
-	activeDescendant,
 	announcer,
 	collection,
 	loadingState,
@@ -100,16 +94,6 @@ export function useInfiniteScroll({
 			) : null,
 		[isInfiniteScrollEnabled, isLoading]
 	);
-
-	const lastItem = currentCount > 0 ? collection.getLastItem() : null;
-	const isLastItemActive =
-		activeDescendant && lastItem && activeDescendant === lastItem.key;
-
-	useEffect(() => {
-		if (isLastItemActive && !isLoading) {
-			onLoadMore?.();
-		}
-	}, [isLastItemActive, isLoading, onLoadMore]);
 
 	return InfiniteScrollFeedback;
 }
