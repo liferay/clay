@@ -5,6 +5,7 @@
 
 import {AnnouncerAPI} from '@clayui/core';
 import {CollectionState} from '@clayui/core/src/collection/types';
+import {NetworkStatus} from '@clayui/data-provider';
 import LoadingIndicator from '@clayui/loading-indicator';
 import {sub} from '@clayui/shared';
 import React, {RefObject, useCallback, useEffect, useRef} from 'react';
@@ -47,13 +48,13 @@ export function useInfiniteScroll({
 	active,
 	announcer,
 	collection,
-	loadingState,
+	loadingState = NetworkStatus.Unused,
 	messages,
 	onLoadMore,
 }: IProps) {
 	const currentCount = collection.getSize();
 	const isInfiniteScrollEnabled = Boolean(onLoadMore);
-	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
+	const isLoading = Boolean(loadingState < NetworkStatus.Unused);
 
 	const isInitialLoadAnnouncementPending = useRef<boolean>(
 		isInfiniteScrollEnabled
