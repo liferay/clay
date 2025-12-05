@@ -88,17 +88,11 @@ export function useInfiniteScroll({
 		isInfiniteScrollEnabled
 	);
 	const lastCountAnnounced = useRef<number | null>(null);
-	const lastPositionBeforeLoad = useRef<number | null>(null);
 
 	useEffect(() => {
 		if (active && isLoadingMore) {
 			announcer.current?.announce(messages.infiniteScrollOnLoad);
 			lastCountAnnounced.current = null;
-
-			lastPositionBeforeLoad.current = menuRef.current?.scrollTop ?? null;
-			menuRef.current?.scrollTo?.({
-				top: menuRef.current?.scrollHeight,
-			});
 		}
 	}, [active, isLoadingMore]);
 
@@ -122,14 +116,6 @@ export function useInfiniteScroll({
 				announcer.current?.announce(message);
 				lastCountAnnounced.current = currentCount;
 				isInitialLoadAnnouncementPending.current = false;
-
-				if (lastPositionBeforeLoad.current !== null) {
-					menuRef.current?.scrollTo?.({
-						top: lastPositionBeforeLoad.current,
-					});
-
-					lastPositionBeforeLoad.current = null;
-				}
 			}
 		} else {
 			isInitialLoadAnnouncementPending.current = isInfiniteScrollEnabled;
