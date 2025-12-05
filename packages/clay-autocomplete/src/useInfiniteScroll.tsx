@@ -7,13 +7,7 @@ import {AnnouncerAPI} from '@clayui/core';
 import {CollectionState} from '@clayui/core/src/collection/types';
 import LoadingIndicator from '@clayui/loading-indicator';
 import {sub} from '@clayui/shared';
-import React, {
-	RefObject,
-	useCallback,
-	useEffect,
-	useRef,
-	useState,
-} from 'react';
+import React, {RefObject, useCallback, useEffect, useRef} from 'react';
 
 import {AutocompleteMessages} from './Autocomplete';
 
@@ -67,21 +61,9 @@ export function useInfiniteScroll({
 	loadingState,
 	menuRef,
 	messages,
-	onLoadMore: externalOnLoadMore,
+	onLoadMore,
 }: IProps) {
-	const [isLoadingMore, setIsLoadingMore] = useState(false);
-	const isInfiniteScrollEnabled = Boolean(externalOnLoadMore);
-
-	const onLoadMore = useCallback(async () => {
-		if (isInfiniteScrollEnabled) {
-			setIsLoadingMore(true);
-
-			await externalOnLoadMore?.();
-
-			setIsLoadingMore(false);
-		}
-	}, [isInfiniteScrollEnabled, externalOnLoadMore]);
-
+	const isInfiniteScrollEnabled = Boolean(onLoadMore);
 	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
 
 	const isInitialLoadAnnouncementPending = useRef<boolean>(
@@ -89,18 +71,14 @@ export function useInfiniteScroll({
 	);
 	const lastCountAnnounced = useRef<number | null>(null);
 
-	useEffect(() => {
-		if (active && isLoadingMore) {
-			announcer.current?.announce(messages.infiniteScrollOnLoad);
-			lastCountAnnounced.current = null;
-		}
-	}, [active, isLoadingMore]);
-
 	const currentCount = collection.getSize();
 
 	useEffect(() => {
 		if (active) {
-			if (!isLoading && lastCountAnnounced.current !== currentCount) {
+			if (isLoading) {
+				announcer.current?.announce(messages.infiniteScrollOnLoad);
+				lastCountAnnounced.current = null;
+			} else if (lastCountAnnounced.current !== currentCount) {
 				const singular = isInitialLoadAnnouncementPending.current
 					? messages.infiniteScrollInitialLoad
 					: messages.infiniteScrollOnLoaded;
@@ -145,7 +123,7 @@ export function useInfiniteScroll({
 					if (isIntersecting && countChanged) {
 						lastTriggerCount.current = currentCount;
 
-						onLoadMore();
+						onLoadMore?.();
 					}
 				}, 200);
 			};
@@ -185,7 +163,7 @@ export function useInfiniteScroll({
 
 	useEffect(() => {
 		if (isLastItemActive && !isLoading) {
-			onLoadMore();
+			onLoadMore?.();
 		}
 	}, [isLastItemActive, isLoading, onLoadMore]);
 

@@ -4,6 +4,7 @@
  */
 
 import ClayAutocomplete from '..';
+import {NetworkStatus} from '@clayui/data-provider';
 import {cleanup, fireEvent, render, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -756,10 +757,10 @@ describe('Autocomplete incremental interactions', () => {
 
 	describe('Infinite scroll interactions', () => {
 		it('calls onLoadMore when last item is active using keyboard', async () => {
-			const onLoadMoreMock = jest.fn();
+			const onLoadMore = jest.fn();
 
 			const {getByRole} = render(
-				<ClayAutocomplete onLoadMore={onLoadMoreMock}>
+				<ClayAutocomplete onLoadMore={onLoadMore}>
 					{Array(20)
 						.fill(0)
 						.map((_, index) => (
@@ -777,12 +778,12 @@ describe('Autocomplete incremental interactions', () => {
 
 			userEvent.click(combobox);
 
-			expect(onLoadMoreMock).not.toHaveBeenCalled();
+			expect(onLoadMore).not.toHaveBeenCalled();
 
 			userEvent.type(combobox, '{arrowup}');
 
 			await waitFor(() => {
-				expect(onLoadMoreMock).toHaveBeenCalled();
+				expect(onLoadMore).toHaveBeenCalled();
 			});
 		});
 
@@ -821,28 +822,41 @@ describe('Autocomplete incremental interactions', () => {
 
 		it('announces when more items are loaded', async () => {
 			const initialCount = 10;
-			const onLoadMoreMock = jest.fn().mockImplementation(() => {
-				return new Promise<void>((resolve) => {
-					setTimeout(() => {
-						resolve();
-					}, 500);
-				});
-			});
 
-			const {getAllByRole, getByRole} = render(
-				<ClayAutocomplete onLoadMore={onLoadMoreMock}>
-					{Array(initialCount)
-						.fill(0)
-						.map((_, index) => (
-							<ClayAutocomplete.Item
-								key={index}
-								textValue={`Item ${index + 1}`}
-							>
-								Item {index + 1}
-							</ClayAutocomplete.Item>
-						))}
-				</ClayAutocomplete>
-			);
+			const TestComponent = () => {
+				const [networkStatus, setNetworkStatus] =
+					React.useState<NetworkStatus>(NetworkStatus.Unused);
+
+				const onLoadMore = jest.fn().mockImplementation(() => {
+					return new Promise<void>((resolve) => {
+						setNetworkStatus(NetworkStatus.Loading);
+						setTimeout(() => {
+							setNetworkStatus(NetworkStatus.Unused);
+							resolve();
+						}, 100);
+					});
+				});
+
+				return (
+					<ClayAutocomplete
+						loadingState={networkStatus}
+						onLoadMore={onLoadMore}
+					>
+						{Array(initialCount)
+							.fill(0)
+							.map((_, index) => (
+								<ClayAutocomplete.Item
+									key={index}
+									textValue={`Item ${index + 1}`}
+								>
+									Item {index + 1}
+								</ClayAutocomplete.Item>
+							))}
+					</ClayAutocomplete>
+				);
+			};
+
+			const {getAllByRole, getByRole} = render(<TestComponent />);
 
 			const combobox = getByRole('combobox');
 
