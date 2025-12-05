@@ -38,11 +38,6 @@ interface IProps {
 	loadingState?: number;
 
 	/**
-	 * Reference to the menu element.
-	 */
-	menuRef: RefObject<HTMLDivElement>;
-
-	/**
 	 * Localized messages for the autocomplete.
 	 */
 	messages: Required<AutocompleteMessages>;
@@ -59,10 +54,10 @@ export function useInfiniteScroll({
 	announcer,
 	collection,
 	loadingState,
-	menuRef,
 	messages,
 	onLoadMore,
 }: IProps) {
+	const currentCount = collection.getSize();
 	const isInfiniteScrollEnabled = Boolean(onLoadMore);
 	const isLoading = Boolean(loadingState !== undefined && loadingState < 4);
 
@@ -70,8 +65,6 @@ export function useInfiniteScroll({
 		isInfiniteScrollEnabled
 	);
 	const lastCountAnnounced = useRef<number | null>(null);
-
-	const currentCount = collection.getSize();
 
 	useEffect(() => {
 		if (active) {
@@ -100,59 +93,10 @@ export function useInfiniteScroll({
 		}
 	}, [active, isLoading, currentCount]);
 
-	const triggerRef = useRef<HTMLDivElement>(null);
-	const lastTriggerCount = useRef<number | null>(null);
-
-	useEffect(() => {
-		const menuElement = menuRef.current;
-		const triggerElement = triggerRef.current;
-
-		if (!isLoading && active && menuElement && triggerElement) {
-			let timeoutId: NodeJS.Timeout | null = null;
-
-			const onIntersection: IntersectionObserverCallback = (entries) => {
-				if (timeoutId) {
-					clearTimeout(timeoutId);
-				}
-
-				timeoutId = setTimeout(() => {
-					const isIntersecting = entries[0]?.isIntersecting ?? false;
-					const countChanged =
-						lastTriggerCount.current !== currentCount;
-
-					if (isIntersecting && countChanged) {
-						lastTriggerCount.current = currentCount;
-
-						onLoadMore?.();
-					}
-				}, 200);
-			};
-
-			const observer = new IntersectionObserver(onIntersection, {
-				root: menuElement,
-				threshold: 1.0,
-			});
-
-			observer.observe(triggerElement);
-
-			return () => {
-				if (timeoutId) {
-					clearTimeout(timeoutId);
-				}
-
-				observer.disconnect();
-			};
-		}
-	}, [active, currentCount, isLoading, onLoadMore]);
-
-	const InfiniteScrollTrigger = useCallback(
+	const InfiniteScrollFeedback = useCallback(
 		() =>
-			isInfiniteScrollEnabled && window.IntersectionObserver ? (
-				<div aria-hidden="true" className="pt-2" ref={triggerRef}>
-					{isLoading && (
-						<LoadingIndicator className="mb-2" size="sm" />
-					)}
-				</div>
+			isInfiniteScrollEnabled && isLoading ? (
+				<LoadingIndicator className="my-2" size="sm" />
 			) : null,
 		[isInfiniteScrollEnabled, isLoading]
 	);
@@ -167,5 +111,5 @@ export function useInfiniteScroll({
 		}
 	}, [isLastItemActive, isLoading, onLoadMore]);
 
-	return InfiniteScrollTrigger;
+	return InfiniteScrollFeedback;
 }

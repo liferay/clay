@@ -528,13 +528,12 @@ function AutocompleteInner<T extends Item>(
 	const optionCount = collection.getItems().length;
 	const lastSize = useRef(optionCount);
 
-	const InfiniteScrollTrigger = useInfiniteScroll({
+	const InfiniteScrollFeedback = useInfiniteScroll({
 		active,
 		activeDescendant,
 		announcer: announcerAPI,
 		collection,
 		loadingState,
-		menuRef,
 		messages,
 		onLoadMore: externalOnLoadMore,
 	});
@@ -762,7 +761,7 @@ function AutocompleteInner<T extends Item>(
 							</Collection>
 						</AutocompleteContext.Provider>
 
-						<InfiniteScrollTrigger />
+						<InfiniteScrollFeedback />
 					</div>
 				</Overlay>
 			)}
