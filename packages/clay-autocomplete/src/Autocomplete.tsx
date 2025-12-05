@@ -246,7 +246,7 @@ function AutocompleteInner<T extends Item>(
 		onActiveChange,
 		onChange,
 		onItemsChange,
-		onLoadMore: externalOnLoadMore,
+		onLoadMore,
 		primaryAction,
 		value: externalValue,
 		selectedKeys,
@@ -535,7 +535,7 @@ function AutocompleteInner<T extends Item>(
 		collection,
 		loadingState,
 		messages,
-		onLoadMore: externalOnLoadMore,
+		onLoadMore,
 	});
 
 	useEffect(() => {
@@ -745,6 +745,7 @@ function AutocompleteInner<T extends Item>(
 								collection={collection}
 								id={ariaControlsId}
 								isLoading={isLoading}
+								onLoadMore={onLoadMore}
 								role="listbox"
 							>
 								{debouncedLoadingChange ? (
