@@ -7,7 +7,7 @@ import ClayAlert from '@clayui/alert';
 import Badge from '@clayui/badge';
 import Button from '@clayui/button';
 import {ClayDropDownWithItems as DropDownWithItems} from '@clayui/drop-down';
-import {ClayCheckbox as Checkbox, ClayInput as Input} from '@clayui/form';
+import {ClayCheckbox, ClayInput as Input} from '@clayui/form';
 import Icon from '@clayui/icon';
 import Sticker from '@clayui/sticker';
 import React, {useCallback, useMemo, useRef, useState} from 'react';
@@ -644,14 +644,6 @@ export const PreSelectedItems = (args: any) => {
 		new Set(['3', '15', '17', '18'])
 	);
 
-	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = Object.assign(
-		(props: any) => <Checkbox {...props} />,
-		{
-			displayName: 'ClayCheckbox',
-		}
-	);
-
 	return (
 		<TreeView
 			defaultItems={ITEMS_DRIVE}
@@ -664,14 +656,14 @@ export const PreSelectedItems = (args: any) => {
 			{(item) => (
 				<TreeView.Item>
 					<TreeView.ItemStack>
-						<OptionalCheckbox />
+						<ClayCheckbox />
 						<Icon symbol="folder" />
 						{item.name}
 					</TreeView.ItemStack>
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
-								<OptionalCheckbox />
+								<ClayCheckbox />
 								<Icon symbol="folder" />
 								{item.name}
 							</TreeView.Item>
@@ -695,14 +687,6 @@ PreSelectedItems.args = {
 };
 
 export const Disabled = () => {
-	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = Object.assign(
-		(props: any) => <Checkbox {...props} />,
-		{
-			displayName: 'ClayCheckbox',
-		}
-	);
-
 	return (
 		<TreeView
 			defaultItems={ITEMS_DRIVE}
@@ -713,14 +697,14 @@ export const Disabled = () => {
 			{(item) => (
 				<TreeView.Item>
 					<TreeView.ItemStack disabled={item.disabled}>
-						<OptionalCheckbox />
+						<ClayCheckbox />
 						<Icon symbol="folder" />
 						{item.name}
 					</TreeView.ItemStack>
 					<TreeView.Group items={item.children}>
 						{(item: any) => (
 							<TreeView.Item disabled={item.disabled}>
-								<OptionalCheckbox />
+								<ClayCheckbox />
 								<Icon symbol="folder" />
 								{item.name}
 							</TreeView.Item>
@@ -737,14 +721,6 @@ export const MultipleSelection = (args: any) => {
 		new Set()
 	);
 
-	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = Object.assign(
-		(props: any) => <Checkbox {...props} />,
-		{
-			displayName: 'ClayCheckbox',
-		}
-	);
-
 	return (
 		<TreeView
 			defaultItems={ITEMS_DRIVE}
@@ -758,14 +734,14 @@ export const MultipleSelection = (args: any) => {
 			{(item) => (
 				<TreeView.Item>
 					<TreeView.ItemStack>
-						<OptionalCheckbox />
+						<ClayCheckbox />
 						<Icon symbol="folder" />
 						{item.name}
 					</TreeView.ItemStack>
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
-								<OptionalCheckbox />
+								<ClayCheckbox />
 								<Icon symbol="folder" />
 								{item.name}
 							</TreeView.Item>
@@ -791,14 +767,6 @@ MultipleSelection.args = {
 export const MultipleSelectionWithAsyncLoad = (args: any) => {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()
-	);
-
-	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = Object.assign(
-		(props: any) => <Checkbox {...props} />,
-		{
-			displayName: 'ClayCheckbox',
-		}
 	);
 
 	return (
@@ -834,14 +802,14 @@ export const MultipleSelectionWithAsyncLoad = (args: any) => {
 			{(item) => (
 				<TreeView.Item>
 					<TreeView.ItemStack>
-						<OptionalCheckbox />
+						<ClayCheckbox />
 						<Icon symbol="folder" />
 						{item.name}
 					</TreeView.ItemStack>
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
-								<OptionalCheckbox />
+								<ClayCheckbox />
 								<Icon symbol="folder" />
 								{item.name}
 							</TreeView.Item>
@@ -924,14 +892,6 @@ export const ExpandOnCheck = (args: any) => {
 		new Set()
 	);
 
-	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = Object.assign(
-		(props: any) => <Checkbox {...props} />,
-		{
-			displayName: 'ClayCheckbox',
-		}
-	);
-
 	return (
 		<TreeView
 			defaultItems={ITEMS_DRIVE}
@@ -946,14 +906,14 @@ export const ExpandOnCheck = (args: any) => {
 			{(item) => (
 				<TreeView.Item>
 					<TreeView.ItemStack>
-						<OptionalCheckbox />
+						<ClayCheckbox />
 						<Icon symbol="folder" />
 						{item.name}
 					</TreeView.ItemStack>
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
-								<OptionalCheckbox />
+								<ClayCheckbox />
 								<Icon symbol="folder" />
 								{item.name}
 							</TreeView.Item>
@@ -1251,13 +1211,6 @@ export const SelectionWithFilter = () => {
 	const [value, setValue] = useState('');
 	const [items, setItems] = useState(ITEMS_DRIVE);
 
-	const OptionalCheckbox = Object.assign(
-		(props: any) => <Checkbox {...props} />,
-		{
-			displayName: 'ClayCheckbox',
-		}
-	);
-
 	const itemsFiltered = useMemo<any>(() => {
 		if (!value) {
 			return items;
@@ -1286,13 +1239,13 @@ export const SelectionWithFilter = () => {
 				{(item) => (
 					<TreeView.Item>
 						<TreeView.ItemStack>
-							<OptionalCheckbox />
+							<ClayCheckbox />
 							{item.name}
 						</TreeView.ItemStack>
 						<TreeView.Group items={item.children}>
 							{(item) => (
 								<TreeView.Item>
-									<OptionalCheckbox />
+									<ClayCheckbox />
 									{item.name}
 								</TreeView.Item>
 							)}
@@ -1319,14 +1272,6 @@ export const PerformanceTest = () => {
 	const [items, setItems] = useState(largeData as Data);
 
 	const [value, setValue] = useState('');
-
-	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = Object.assign(
-		(props: any) => <Checkbox {...props} />,
-		{
-			displayName: 'ClayCheckbox',
-		}
-	);
 
 	const itemsFiltered = useMemo<Data>(() => {
 		if (!value) {
@@ -1364,12 +1309,12 @@ export const PerformanceTest = () => {
 				{(item) => (
 					<TreeView.Item>
 						<TreeView.ItemStack>
-							<OptionalCheckbox /> {item.label}
+							<ClayCheckbox /> {item.label}
 						</TreeView.ItemStack>
 						<TreeView.Group items={item.itemSubtypes}>
 							{(item) => (
 								<TreeView.Item>
-									<OptionalCheckbox /> {item.label}
+									<ClayCheckbox /> {item.label}
 								</TreeView.Item>
 							)}
 						</TreeView.Group>
@@ -1540,14 +1485,6 @@ export const DemoCategoriesSingle = () => {
 };
 
 export const DemoCategoriesMultiple = () => {
-	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = Object.assign(
-		(props: any) => <Checkbox {...props} />,
-		{
-			displayName: 'ClayCheckbox',
-		}
-	);
-
 	return (
 		<TreeView
 			defaultItems={[
@@ -1650,7 +1587,7 @@ export const DemoCategoriesMultiple = () => {
 							}
 						}}
 					>
-						{!item.vocabulary && <OptionalCheckbox />}
+						{!item.vocabulary && <ClayCheckbox />}
 						<Icon
 							symbol={
 								item.vocabulary ? 'vocabulary' : 'categories'
@@ -1681,7 +1618,7 @@ export const DemoCategoriesMultiple = () => {
 							<TreeView.Item
 								onClick={() => selection.toggle(item.id)}
 							>
-								<OptionalCheckbox />
+								<ClayCheckbox />
 								<Icon symbol="categories" />
 								{item.name}
 							</TreeView.Item>
@@ -1694,14 +1631,6 @@ export const DemoCategoriesMultiple = () => {
 };
 
 export const DemoDocumentsMultiple = () => {
-	// Just to avoid TypeScript error with required props
-	const OptionalCheckbox = Object.assign(
-		(props: any) => <Checkbox {...props} />,
-		{
-			displayName: 'ClayCheckbox',
-		}
-	);
-
 	const MAPPING_ICON = {
 		article: 'web-content',
 		documents: 'documents-and-media',
@@ -1738,7 +1667,7 @@ export const DemoDocumentsMultiple = () => {
 			{(item) => (
 				<TreeView.Item>
 					<TreeView.ItemStack>
-						<OptionalCheckbox />
+						<ClayCheckbox />
 						{MAPPING_ICON[item.type] && (
 							<Icon symbol={MAPPING_ICON[item.type]} />
 						)}
@@ -1750,7 +1679,7 @@ export const DemoDocumentsMultiple = () => {
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
-								<OptionalCheckbox />
+								<ClayCheckbox />
 								{item.name}
 							</TreeView.Item>
 						)}
