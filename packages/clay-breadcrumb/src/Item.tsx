@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLink from '@clayui/link';
+import {LinkOrButton} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -36,12 +36,14 @@ const Item = ({active, href, label, onClick, ...otherProps}: IItem) => (
 		})}
 		{...otherProps}
 	>
-		<ClayLink
+		<LinkOrButton
 			aria-current={active ? 'page' : undefined}
+			buttonDisplayType="unstyled"
+			buttonType="button"
 			className="breadcrumb-link"
 			data-testid={`testId${label}`}
 			href={active ? '#' : href}
-			onClick={(event) => {
+			onClick={(event: React.SyntheticEvent) => {
 				if (onClick) {
 					event.preventDefault();
 					onClick(event);
@@ -49,7 +51,7 @@ const Item = ({active, href, label, onClick, ...otherProps}: IItem) => (
 			}}
 		>
 			{label}
-		</ClayLink>
+		</LinkOrButton>
 	</li>
 );
 

@@ -28,22 +28,24 @@ exports[`ClayBreadcrumb calls callback when an item is clicked 1`] = `
       <li
         class="breadcrumb-item"
       >
-        <a
-          class="breadcrumb-link"
+        <button
+          class="breadcrumb-link btn btn-unstyled"
           data-testid="testId4"
+          type="button"
         >
           4
-        </a>
+        </button>
       </li>
       <li
         class="breadcrumb-item"
       >
-        <a
-          class="breadcrumb-link"
+        <button
+          class="breadcrumb-link btn btn-unstyled"
           data-testid="testId5"
+          type="button"
         >
           5
-        </a>
+        </button>
       </li>
     </ol>
   </nav>
