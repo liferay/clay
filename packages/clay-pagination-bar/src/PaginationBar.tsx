@@ -16,20 +16,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	size?: 'sm' | 'lg';
 }
 
-interface IForwardRef<T, P = {}>
-	extends React.ForwardRefExoticComponent<P & React.RefAttributes<T>> {
-	/**
-	 * @deprecated since v3.84.0 - use `Picker` component instead.
-	 */
-	DropDown: typeof DropDown;
-	Results: typeof Results;
-}
-
-function forwardRef<T, P = {}>(component: React.RefForwardingComponent<T, P>) {
-	return React.forwardRef<T, P>(component) as IForwardRef<T, P>;
-}
-
-export const PaginationBar = forwardRef<HTMLDivElement, IProps>(
+const PaginationBarComponent = React.forwardRef<HTMLDivElement, IProps>(
 	({children, className, size, ...otherProps}: IProps, ref) => {
 		return (
 			<div
@@ -45,7 +32,9 @@ export const PaginationBar = forwardRef<HTMLDivElement, IProps>(
 	}
 );
 
-PaginationBar.DropDown = DropDown;
-PaginationBar.Results = Results;
+PaginationBarComponent.displayName = 'ClayPaginationBar';
 
-PaginationBar.displayName = 'ClayPaginationBar';
+export const PaginationBar = Object.assign(PaginationBarComponent, {
+	DropDown,
+	Results,
+});

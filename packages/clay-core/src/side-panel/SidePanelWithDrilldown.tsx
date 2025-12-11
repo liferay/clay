@@ -39,7 +39,7 @@ type Panel = {
 };
 
 type Panels = {
-	[key: React.Key]: Panel;
+	[key: string | number | symbol]: Panel;
 };
 
 export function SidePanelWithDrilldown({

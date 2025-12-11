@@ -5,6 +5,7 @@
 
 import {useId} from '@clayui/shared';
 import React, {
+	ReactNode,
 	useCallback,
 	useContext,
 	useEffect,
@@ -241,7 +242,7 @@ export function useCollection<
 
 					registerItem(key, child, index);
 				}
-			} else {
+			} else if (typeof children !== 'function') {
 				React.Children.forEach(children, (child, index) => {
 					if (!React.isValidElement(child)) {
 						return;
@@ -351,27 +352,30 @@ export function useCollection<
 				});
 			}
 
-			return React.Children.map(children, (child, index) => {
-				if (!React.isValidElement(child)) {
-					return null;
+			return React.Children.map(
+				children as Iterable<ReactNode>,
+				(child, index) => {
+					if (!React.isValidElement(child)) {
+						return null;
+					}
+
+					const key = getKey(index, child.key, parentKey);
+
+					if (
+						visibleKeys &&
+						((Array.isArray(visibleKeys) &&
+							visibleKeys.length > 0 &&
+							!visibleKeys.includes(index)) ||
+							(visibleKeys instanceof Set &&
+								visibleKeys.size > 0 &&
+								!visibleKeys.has(key)))
+					) {
+						return null;
+					}
+
+					return performItemRender(child as ChildElement, key, index);
 				}
-
-				const key = getKey(index, child.key, parentKey);
-
-				if (
-					visibleKeys &&
-					((Array.isArray(visibleKeys) &&
-						visibleKeys.length > 0 &&
-						!visibleKeys.includes(index)) ||
-						(visibleKeys instanceof Set &&
-							visibleKeys.size > 0 &&
-							!visibleKeys.has(key)))
-				) {
-					return null;
-				}
-
-				return performItemRender(child as ChildElement, key, index);
-			});
+			);
 		},
 		[
 			performItemRender,
@@ -391,7 +395,7 @@ export function useCollection<
 	}, []);
 
 	const getFirstItem = useCallback(() => {
-		const key = layout.current.keys().next().value;
+		const key = layout.current.keys().next().value!;
 
 		return {
 			key,
@@ -443,7 +447,7 @@ export function useCollection<
 	// - Data: We get the data of the item to consume later
 	// - Rendering: We render each element in memory
 	const rendered = useMemo(() => {
-		const list = performCollectionRender({children, items});
+		const list = performCollectionRender({children, items})!;
 
 		if (list.length === 0 && notFound) {
 			return notFound;

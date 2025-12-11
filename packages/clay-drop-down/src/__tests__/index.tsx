@@ -378,9 +378,14 @@ describe('ClayDropDown', () => {
 			<ClayDropDown trigger={<button>Click Me</button>}>
 				<ClayDropDown.Search placeholder="Type to filter" />
 				<ClayDropDown.ItemList items={['one', 'two', 'three']}>
-					{(item: string) => (
-						<ClayDropDown.Item key={item}>{item}</ClayDropDown.Item>
-					)}
+					{
+						// @ts-ignore
+						(item: string) => (
+							<ClayDropDown.Item key={item}>
+								{item}
+							</ClayDropDown.Item>
+						)
+					}
 				</ClayDropDown.ItemList>
 			</ClayDropDown>
 		);

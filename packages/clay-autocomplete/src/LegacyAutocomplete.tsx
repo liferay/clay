@@ -31,12 +31,12 @@ AutocompleteMarkup.displayName = 'ClayAutocompleteMarkup';
  * Temporary helper function to determine which version of autocomplete
  * is being used.
  */
-const hasItems = (children?: React.ReactNode) => {
-	if (!children) {
+const hasItems = (children?: React.ReactNode | Function) => {
+	if (!children || typeof children === 'function') {
 		return [];
 	}
 
-	return React.Children.map(children, (child) => {
+	const mappedChildren = React.Children.map(children, (child) => {
 		if (
 			React.isValidElement(child) &&
 			// @ts-ignore
@@ -46,7 +46,9 @@ const hasItems = (children?: React.ReactNode) => {
 		}
 
 		return false;
-	}).filter(Boolean);
+	});
+
+	return (mappedChildren || []).filter(Boolean);
 };
 
 export interface IProps<T> extends IAutocompleteProps<T> {

@@ -11,7 +11,11 @@ import {createImmutableTree} from '../tree-view/useTree';
 import {Scope, ScopeContext} from './ScopeContext';
 import {BodyContext, useTable} from './context';
 
-interface IProps<T> extends React.TableHTMLAttributes<HTMLTableSectionElement> {
+interface IProps<T>
+	extends Omit<
+		React.TableHTMLAttributes<HTMLTableSectionElement>,
+		'children'
+	> {
 	/**
 	 * Children content to render a dynamic or static content.
 	 */

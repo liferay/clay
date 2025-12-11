@@ -112,7 +112,7 @@ export function Option({
 				{...otherProps}
 				aria-describedby={ariaDescribedby}
 				disabled={disabled}
-				value={keyValue}
+				value={keyValue ? String(keyValue) : undefined}
 			>
 				{typeof children === 'string' ? children : textValue}
 			</option>

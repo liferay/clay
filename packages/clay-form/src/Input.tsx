@@ -177,19 +177,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	sizing?: 'lg' | 'regular' | 'sm';
 }
 
-interface IForwardRef<T, P = {}>
-	extends React.ForwardRefExoticComponent<P & React.RefAttributes<T>> {
-	Group: typeof Group;
-	GroupInsetItem: typeof GroupInsetItem;
-	GroupItem: typeof GroupItem;
-	GroupText: typeof GroupText;
-}
-
-function forwardRef<T, P = {}>(component: React.RefForwardingComponent<T, P>) {
-	return React.forwardRef<T, P>(component) as IForwardRef<T, P>;
-}
-
-export const Input = forwardRef<HTMLInputElement, IProps>(
+const InputComponent = React.forwardRef<HTMLInputElement, IProps>(
 	(
 		{
 			className,
@@ -199,7 +187,7 @@ export const Input = forwardRef<HTMLInputElement, IProps>(
 			sizing = 'regular',
 			type = 'text',
 			...otherProps
-		}: IProps,
+		},
 		ref
 	) => (
 		<Component
@@ -216,10 +204,13 @@ export const Input = forwardRef<HTMLInputElement, IProps>(
 	)
 );
 
-Input.displayName = 'ClayInput';
-Input.Group = Group;
-Input.GroupInsetItem = GroupInsetItem;
-Input.GroupItem = GroupItem;
-Input.GroupText = GroupText;
+InputComponent.displayName = 'ClayInput';
+
+export const Input = Object.assign(InputComponent, {
+	Group,
+	GroupInsetItem,
+	GroupItem,
+	GroupText,
+});
 
 export default Input;
