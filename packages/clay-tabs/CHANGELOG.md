@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-11)
+
+**Note:** Version bump only for package @clayui/tabs
+
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
 **Note:** Version bump only for package @clayui/tabs

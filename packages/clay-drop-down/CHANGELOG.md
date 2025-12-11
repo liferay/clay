@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-11)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** LPD-71044 Items should use `title` instead of deprecated `label` ([93e1fba](https://github.com/liferay/clay/commit/93e1fba3ece3f7379e12bff8aa97a323355eabae))
+
 # [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
 
 ### Bug Fixes
