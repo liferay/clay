@@ -4,7 +4,8 @@
  */
 
 import ClayAutocomplete from '..';
-import {cleanup, fireEvent, render} from '@testing-library/react';
+import {NetworkStatus} from '@clayui/data-provider';
+import {cleanup, fireEvent, render, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
@@ -751,6 +752,109 @@ describe('Autocomplete incremental interactions', () => {
 
 			userEvent.type(input, '{enter}');
 			expect(onClickMock).toHaveBeenCalled();
+		});
+	});
+
+	describe('Infinite scroll interactions', () => {
+		it('calls onLoadMore when last item is active using keyboard', async () => {
+			const onLoadMore = jest.fn();
+
+			const {getByRole} = render(
+				<ClayAutocomplete onLoadMore={onLoadMore}>
+					{Array(20)
+						.fill(0)
+						.map((_, index) => (
+							<ClayAutocomplete.Item
+								key={index}
+								textValue={`Item ${index + 1}`}
+							>
+								Item {index + 1}
+							</ClayAutocomplete.Item>
+						))}
+				</ClayAutocomplete>
+			);
+
+			const combobox = getByRole('combobox');
+
+			userEvent.click(combobox);
+
+			expect(onLoadMore).not.toHaveBeenCalled();
+
+			// Navigates to the last item
+			userEvent.type(combobox, '{arrowup}');
+
+			await waitFor(() => {
+				expect(onLoadMore).toHaveBeenCalled();
+			});
+		});
+
+		it('announces count of initially loaded items and when more items are loaded', async () => {
+			const initialCount = 10;
+			const step = 5;
+
+			const TestComponent = () => {
+				const [count, setCount] = React.useState(initialCount);
+				const [networkStatus, setNetworkStatus] =
+					React.useState<NetworkStatus>(NetworkStatus.Unused);
+
+				const onLoadMore = jest.fn().mockImplementation(() => {
+					return new Promise<void>((resolve) => {
+						setNetworkStatus(NetworkStatus.Loading);
+
+						setTimeout(() => {
+							setCount((count) => count + step);
+							setNetworkStatus(NetworkStatus.Unused);
+							resolve();
+						}, 100);
+					});
+				});
+
+				return (
+					<ClayAutocomplete
+						loadingState={networkStatus}
+						onLoadMore={onLoadMore}
+					>
+						{Array(count)
+							.fill(0)
+							.map((_, index) => (
+								<ClayAutocomplete.Item
+									key={index}
+									textValue={`Item ${index + 1}`}
+								>
+									Item {index + 1}
+								</ClayAutocomplete.Item>
+							))}
+					</ClayAutocomplete>
+				);
+			};
+
+			const {getAllByRole, getByRole} = render(<TestComponent />);
+
+			const combobox = getByRole('combobox');
+
+			userEvent.click(combobox);
+
+			// Display the listbox
+			userEvent.type(combobox, '{arrowdown}');
+
+			const [announcer] = getAllByRole('log');
+
+			await waitFor(() => {
+				expect(announcer?.innerHTML).toContain(
+					`${initialCount} items loaded. Reach the last item to load more.`
+				);
+			});
+
+			// Navigates to the last item
+			userEvent.type(combobox, '{arrowup}');
+
+			await waitFor(() => {
+				expect(announcer?.innerHTML).toContain(`Loading more items.`);
+
+				expect(announcer?.innerHTML).toContain(
+					`${initialCount + step} items loaded.`
+				);
+			});
 		});
 	});
 });

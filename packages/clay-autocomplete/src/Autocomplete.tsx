@@ -29,6 +29,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
 import Item from './Item';
+import {useInfiniteScroll} from './useInfiniteScroll';
 
 import type {AnnouncerAPI, ICollectionProps} from '@clayui/core';
 import type {Locator} from '@clayui/shared';
@@ -43,6 +44,18 @@ type ItemProps<T extends Item> = {
 	index: number;
 	item: T;
 	keyValue: React.Key;
+};
+
+export type AutocompleteMessages = {
+	infiniteScrollInitialLoad?: string;
+	infiniteScrollInitialLoadPlural?: string;
+	infiniteScrollOnLoad?: string;
+	infiniteScrollOnLoaded?: string;
+	infiniteScrollOnLoadedPlural?: string;
+	listCount?: string;
+	listCountPlural?: string;
+	loading: string;
+	notFound: string;
 };
 
 export interface IProps<T>
@@ -120,12 +133,7 @@ export interface IProps<T>
 	/**
 	 * Messages for the Autocomplete.
 	 */
-	messages?: {
-		listCount?: string;
-		listCountPlural?: string;
-		loading: string;
-		notFound: string;
-	};
+	messages?: AutocompleteMessages;
 
 	/**
 	 * Callback for when the active state changes (controlled).
@@ -203,7 +211,14 @@ function hasItem<T extends Item>(
 
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
-const defaultMessages = {
+const defaultMessages: Required<AutocompleteMessages> = {
+	infiniteScrollInitialLoad:
+		'{0} item loaded. Reach the last item to load more.',
+	infiniteScrollInitialLoadPlural:
+		'{0} items loaded. Reach the last item to load more.',
+	infiniteScrollOnLoad: 'Loading more items.',
+	infiniteScrollOnLoaded: '{0} item loaded.',
+	infiniteScrollOnLoadedPlural: '{0} items loaded.',
 	listCount: '{0} option available.',
 	listCountPlural: '{0} options available.',
 	loading: 'Loading...',
@@ -227,7 +242,7 @@ function AutocompleteInner<T extends Item>(
 		items: externalItems,
 		loadingState,
 		menuTrigger = 'input',
-		messages,
+		messages: externalMessages,
 		onActiveChange,
 		onChange,
 		onItemsChange,
@@ -239,9 +254,9 @@ function AutocompleteInner<T extends Item>(
 	}: IProps<T>,
 	ref: React.Ref<HTMLInputElement>
 ) {
-	messages = {
+	const messages = {
 		...defaultMessages,
-		...(messages ?? {}),
+		...(externalMessages ?? {}),
 	};
 
 	const [items, , isItemsUncontrolled] = useControlledState({
@@ -513,6 +528,15 @@ function AutocompleteInner<T extends Item>(
 	const optionCount = collection.getItems().length;
 	const lastSize = useRef(optionCount);
 
+	const InfiniteScrollFeedback = useInfiniteScroll({
+		active,
+		announcer: announcerAPI,
+		collection,
+		loadingState,
+		messages,
+		onLoadMore,
+	});
+
 	useEffect(() => {
 		// Only announces the number of options available when the menu is open
 		// if there is no item with focus, with the exception of Voice Over
@@ -736,6 +760,8 @@ function AutocompleteInner<T extends Item>(
 								)}
 							</Collection>
 						</AutocompleteContext.Provider>
+
+						<InfiniteScrollFeedback />
 					</div>
 				</Overlay>
 			)}
