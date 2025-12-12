@@ -664,10 +664,10 @@
   resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-5.9.4.tgz#ed6a6846eb1ee60927ae4c07ecc6a1c9832007a5"
   integrity sha512-Q9qyhGUxFuM3kuWmoaj4yHPUfHhOsZmwdsQv4kIXkBWVu8FOe0RFHRP0A0EXciSVFGwq+XAo3H5jEtVSANAOWw==
 
-"@next/env@15.1.9":
-  version "15.1.9"
-  resolved "https://registry.yarnpkg.com/@next/env/-/env-15.1.9.tgz#3569b6dd6a9b0af998fc6e4902da6b9ed2fc36c9"
-  integrity sha512-Te1wbiJ//I40T7UePOUG8QBwh+VVMCc0OTuqesOcD3849TVOVOyX4Hdrkx7wcpLpy/LOABIcGyLX5P/SzzXhFA==
+"@next/env@15.1.11":
+  version "15.1.11"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-15.1.11.tgz#599a126f7ce56decc39cea46668cb60d96b66bc6"
+  integrity sha512-yp++FVldfLglEG5LoS2rXhGypPyoSOyY0kxZQJ2vnlYJeP8o318t5DrDu5Tqzr03qAhDWllAID/kOCsXNLcwKw==
 
 "@next/eslint-plugin-next@15.1.2":
   version "15.1.2"
@@ -3868,12 +3868,12 @@ next-tick@^1.1.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.1.0.tgz#1836ee30ad56d67ef281b22bd199f709449b35eb"
   integrity sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==
 
-next@~15.1.9:
-  version "15.1.9"
-  resolved "https://registry.yarnpkg.com/next/-/next-15.1.9.tgz#eaab46d7a57c881fadf748d8ba2a8c65ec27ad8f"
-  integrity sha512-OoQpDPV2i3o5Hnn46nz2x6fzdFxFO+JsU4ZES12z65/feMjPHKKHLDVQ2NuEvTaXTRisix/G5+6hyTkwK329kA==
+next@~15.1.11:
+  version "15.1.11"
+  resolved "https://registry.yarnpkg.com/next/-/next-15.1.11.tgz#8a70a236e02d8dd62fb0569bedfd5e4290e7af55"
+  integrity sha512-UiVJaOGhKST58AadwbFUZThlNBmYhKqaCs8bVtm4plTxsgKq0mJ0zTsp7t7j/rzsbAEj9WcAMdZCztjByi4EoQ==
   dependencies:
-    "@next/env" "15.1.9"
+    "@next/env" "15.1.11"
     "@swc/counter" "0.1.3"
     "@swc/helpers" "0.5.15"
     busboy "1.6.0"
@@ -4235,10 +4235,10 @@ react-devtools-inline@4.4.0:
   dependencies:
     es6-symbol "^3"
 
-react-dom@19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0.tgz#43446f1f01c65a4cd7f7588083e686a6726cfb57"
-  integrity sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==
+react-dom@19.0.3:
+  version "19.0.3"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.3.tgz#517de15717f686dd6e39488434b6dd18f01ef1fb"
+  integrity sha512-a7ezLfxibhu6fZBVLwy6WEd3Jn/4H8JYVO8K8GtBfRf1Pl+ox7KFoMCzAGlxLZUXo0t44YZShzhhoDH3yMVdxQ==
   dependencies:
     scheduler "^0.25.0"
 
@@ -4262,10 +4262,10 @@ react-transition-group@^4.4.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-19.0.0.tgz#6e1969251b9f108870aa4bff37a0ce9ddfaaabdd"
-  integrity sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==
+react@19.0.3:
+  version "19.0.3"
+  resolved "https://registry.yarnpkg.com/react/-/react-19.0.3.tgz#dc803a2316a97d8a1619bf460353c8ccdb7d3a60"
+  integrity sha512-owzQanTgpB8GF7pVL6mUwZZyhKzFePi9++GkFk54i9PRU0jq+z7v9Mwg7PAZJYCiYl5YwcyQGGq5/PLkesd8nw==
 
 readability-scores@^1.0.0:
   version "1.0.8"
