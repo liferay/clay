@@ -3,30 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-11)
-
-### Bug Fixes
-
--   **@clayui/drop-down:** LPD-71044 Items should use `title` instead of deprecated `label` ([93e1fba](https://github.com/liferay/clay/commit/93e1fba3ece3f7379e12bff8aa97a323355eabae))
--   **clayui.com:** LPD-59466 Colors hex value should be hex ([e559b22](https://github.com/liferay/clay/commit/e559b22f0a8a5ac62e695d28be28216922fd132f))
--   **clayui.com:** LPD-72729 Fix Autocomplete Selected Keys example ([39d9731](https://github.com/liferay/clay/commit/39d973152cedd2ac53fc57cb1b5c7d9fb742b98b))
--   **www:** bump next for vuln fix ([b8c6f55](https://github.com/liferay/clay/commit/b8c6f55eef9eb419033d19ff2c5a55b4276d9f9d))
-
-### Features
-
--   **@clayui/autocomplete:** LPD-55597 Add infinite scrolling SR announcements ([58b4e47](https://github.com/liferay/clay/commit/58b4e47780da4a02ff34e73e9b9b5d5aba38210f))
--   **@clayui/autocomplete:** LPD-55597 Add infinite scrolling trigger ([3a5bd11](https://github.com/liferay/clay/commit/3a5bd114d170bcc2d9143f23e0c4f1b339710512))
--   **@clayui/autocomplete:** LPD-55597 Allow infinite scrolling to auto load more using keyboard navigation ([70fbbaf](https://github.com/liferay/clay/commit/70fbbaf0d05fce41dab2a624de1a1f9942831522))
--   **@clayui/autocomplete:** LPD-55597 Avoid announcing initial load message if infinite scrolling is disabled ([3c9aae4](https://github.com/liferay/clay/commit/3c9aae44e8a7e61d6f28cf2e148ebd057e18ec22))
--   **@clayui/autocomplete:** LPD-55597 Change infinite scrolling so it works even if user doesn't inform the loading state ([871edc1](https://github.com/liferay/clay/commit/871edc1bd65af180fd0c024ae17e5adca3f6ce00))
--   **@clayui/autocomplete:** LPD-55597 Enable infinite scroll for cases where the list is short and scrolling isn't available, by proactively checking if it is at the trigger zone ([cc51f2c](https://github.com/liferay/clay/commit/cc51f2c6b58c545a73078e256a59774c68e398e4))
--   **@clayui/autocomplete:** LPD-55597 Improve referential stability ([aa1be84](https://github.com/liferay/clay/commit/aa1be84c9a70cc230ec3395025fbebadf0889f5d))
--   **@clayui/autocomplete:** LPD-55597 Only announce when infinite scrolling is enabled ([73bbecf](https://github.com/liferay/clay/commit/73bbecfcf16db28dafab98ab79e65d1bf36caa0f))
--   **@clayui/autocomplete:** LPD-55597 Remove code to load more while focusing the last item, letting the scroll handle this case as well ([ffedef7](https://github.com/liferay/clay/commit/ffedef73ca51ed60816d7566fa24f6e6aa9755a8))
--   **@clayui/autocomplete:** LPD-55597 Remove custom infinite scroll trigger ([697c1de](https://github.com/liferay/clay/commit/697c1dec2135adc6f697cc53f446c8245b50564f))
--   **@clayui/autocomplete:** LPD-55597 Remove unwanted auto scrolling ([07163e1](https://github.com/liferay/clay/commit/07163e173aed21b23c5e7bca8e5fca39bdba8d57))
--   **@clayui/autocomplete:** LPD-55597 Rollback to use Collection inifinite scroll trigger ([5e49a25](https://github.com/liferay/clay/commit/5e49a255611557a417aa082b6a829b011d691b91))
-
 # [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
 
 ### Bug Fixes
