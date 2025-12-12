@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
+
+### Bug Fixes
+
+-   **@clayui/breadcrumb:** LPD-73358 Add missing clay-link dependency ([b7f6646](https://github.com/liferay/clay/commit/b7f664689be0cf2af8dc34d55482b039a8b6a133))
+-   **@clayui/breadcrumb:** LPD-73358 Using onClick on an item should use the button tag ([8364915](https://github.com/liferay/clay/commit/83649156c595ed970700a599c0e8256e040ebcf0))
+
+### Reverts
+
+-   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+
 ## [3.144.1](https://github.com/liferay/clay/compare/v3.144.0...v3.144.1) (2025-08-29)
 
 ### Bug Fixes
