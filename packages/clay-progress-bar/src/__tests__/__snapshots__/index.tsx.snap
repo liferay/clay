@@ -8,6 +8,7 @@ exports[`ClayProgressBar renders 1`] = `
     className="progress"
   >
     <div
+      aria-label="Progress: 50%"
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={50}
@@ -36,6 +37,7 @@ exports[`ClayProgressBar renders as a different status 1`] = `
     className="progress"
   >
     <div
+      aria-label="Attention: Value is at 50%"
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={50}
@@ -64,6 +66,36 @@ exports[`ClayProgressBar renders with additional content 1`] = `
     className="progress"
   >
     <div
+      aria-label="Progress: 50%"
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={50}
+      className="progress-bar"
+      role="progressbar"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="progress-group-addon"
+  >
+    50%
+  </div>
+</div>
+`;
+
+exports[`ClayProgressBar renders with custom aria messages 1`] = `
+<div
+  className="progress-group"
+>
+  <div
+    className="progress"
+  >
+    <div
+      aria-label="Current Value: 50% of the total"
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={50}
@@ -92,6 +124,7 @@ exports[`ClayProgressBar renders with success 1`] = `
     className="progress"
   >
     <div
+      aria-label="Complete"
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={100}
@@ -131,6 +164,7 @@ exports[`ClayProgressBar with feedback wraping class 1`] = `
     className="progress"
   >
     <div
+      aria-label="Progress: 50%"
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={50}

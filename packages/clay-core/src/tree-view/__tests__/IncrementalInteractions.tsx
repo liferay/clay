@@ -148,6 +148,84 @@ describe('TreeView incremental interactions', () => {
 
 	describe('selection', () => {
 		describe('checkbox', () => {
+			it('clicking the checkbox stops propagation and prevents item expansion', () => {
+				const {container, getByRole} = render(
+					<Provider spritemap={spritemap}>
+						<TreeView>
+							<TreeView.Item key="Root">
+								<TreeView.ItemStack>
+									<OptionalCheckbox />
+									Root
+								</TreeView.ItemStack>
+								<TreeView.Group>
+									<TreeView.Item key="Item">
+										Item
+									</TreeView.Item>
+								</TreeView.Group>
+							</TreeView.Item>
+						</TreeView>
+					</Provider>
+				);
+
+				const rootItem = getByRole('treeitem');
+				const rootCheckbox = container.querySelector(
+					'input.custom-control-input[type=checkbox]'
+				) as HTMLInputElement;
+
+				fireEvent.click(rootCheckbox);
+
+				expect(rootCheckbox.checked).toBeTruthy();
+
+				expect(rootItem.getAttribute('aria-expanded')).not.toBe('true');
+				expect(container.querySelector('.collapse.show')).toBeFalsy();
+			});
+
+			it('permanently disabled item ignores click and key interaction', () => {
+				const {getByText} = render(
+					<Provider spritemap={spritemap}>
+						<TreeView>
+							<TreeView.Item disabled key="DisabledItem">
+								<TreeView.ItemStack>
+									Disabled Item
+								</TreeView.ItemStack>
+							</TreeView.Item>
+						</TreeView>
+					</Provider>
+				);
+
+				const disabledItem = getByText('Disabled Item').closest(
+					'[role="treeitem"]'
+				) as HTMLDivElement;
+
+				fireEvent.click(disabledItem);
+
+				fireEvent.keyDown(disabledItem, {key: ' '});
+
+				expect(disabledItem.classList).toContain('disabled');
+			});
+
+			it('clicking a non-expandable (leaf) item container does nothing', () => {
+				const {getByText} = render(
+					<Provider spritemap={spritemap}>
+						<TreeView>
+							<TreeView.Item key="Leaf">
+								<TreeView.ItemStack>
+									Leaf Item
+								</TreeView.ItemStack>
+							</TreeView.Item>
+						</TreeView>
+					</Provider>
+				);
+
+				const leafItem = getByText('Leaf Item').closest(
+					'[role="treeitem"]'
+				) as HTMLDivElement;
+
+				fireEvent.click(leafItem);
+
+				expect(leafItem.getAttribute('aria-expanded')).toBeFalsy();
+			});
+
 			it("uncheck the checkbox when a sibling item is indeterminate preserve the parent's indeterminate state", () => {
 				const {container} = render(
 					<Provider spritemap={spritemap}>
@@ -300,6 +378,7 @@ describe('TreeView incremental interactions', () => {
 									name: 'Root',
 								},
 							]}
+							expandOnCheck
 							selectionMode="multiple-recursive"
 						>
 							{(item) => (
@@ -322,18 +401,13 @@ describe('TreeView incremental interactions', () => {
 					</Provider>
 				);
 
-				const rootExpander = container.querySelector(
-					'.component-expander'
-				) as HTMLButtonElement;
-
-				const root = container.querySelector(
+				const rootCheckbox = container.querySelector(
 					'input.custom-control-input[type=checkbox]'
 				) as HTMLInputElement;
 
-				fireEvent.click(root);
-				fireEvent.click(rootExpander);
+				fireEvent.click(rootCheckbox);
 
-				expect(root.checked).toBeTruthy();
+				expect(rootCheckbox.checked).toBeTruthy();
 
 				const [, item] = container.querySelectorAll<HTMLInputElement>(
 					'input.custom-control-input[type=checkbox]'
