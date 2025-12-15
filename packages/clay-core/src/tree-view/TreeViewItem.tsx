@@ -230,11 +230,12 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 						{...itemStackProps}
 						{...nodeProps}
 						{...focusWithinProps}
+						aria-controls={isExpand ? item.key : undefined}
 						aria-expanded={
 							group ? expandedKeys.has(item.key) : undefined
 						}
 						aria-labelledby={labelId}
-						aria-owns={ariaOwns}
+						aria-owns={isExpand ? ariaOwns : undefined}
 						className={classNames(
 							'treeview-link',
 							itemStackProps.className,
@@ -319,10 +320,12 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 								return;
 							}
 
-							selection.toggleSelection(item.key);
+							if (selectionMode === 'single') {
+								selection.toggleSelection(item.key);
 
-							if (onSelect) {
-								onSelect(removeItemInternalProps(item));
+								if (onSelect) {
+									onSelect(removeItemInternalProps(item));
+								}
 							}
 
 							if (
@@ -555,7 +558,6 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 									isNonDraggrable={isNonDraggrable}
 									labelId={labelId}
 									loading={loading}
-									onLoadMore={!group ? loadMore : undefined}
 									tabIndex={focusWithinProps.tabIndex}
 								>
 									{children}
@@ -698,11 +700,9 @@ export function ItemStack({
 	children,
 	disabled,
 	expandable = false,
-	expanderDisabled,
 	isNonDraggrable,
 	labelId,
 	loading = false,
-	onLoadMore,
 	tabIndex,
 	...otherProps
 }: ITreeViewItemStackProps) {
@@ -714,7 +714,6 @@ export function ItemStack({
 		onSelect,
 		open,
 		selection,
-		toggle,
 	} = useTreeViewContext();
 
 	const item = useItem();
@@ -725,9 +724,7 @@ export function ItemStack({
 		<Layout.ContentRow {...otherProps}>
 			{expandable && !loading && (
 				<Layout.ContentCol>
-					<Button
-						aria-controls={`${item.key}`}
-						aria-expanded={expandedKeys.has(item.key)}
+					<span
 						className={classNames(
 							'component-expander',
 							expanderClassName,
@@ -735,28 +732,9 @@ export function ItemStack({
 								collapsed: expandedKeys.has(item.key),
 							}
 						)}
-						disabled={
-							typeof expanderDisabled === 'undefined'
-								? disabled
-								: expanderDisabled
-						}
-						displayType={null}
-						monospaced
-						onClick={(event) => {
-							event.stopPropagation();
-
-							if (onLoadMore) {
-								onLoadMore();
-							} else {
-								toggle(item.key);
-							}
-						}}
-						tabIndex={-1}
 					>
-						<span className="c-inner" tabIndex={-2}>
-							<Expander expanderIcons={expanderIcons} />
-						</span>
-					</Button>
+						<Expander expanderIcons={expanderIcons} />
+					</span>
 				</Layout.ContentCol>
 			)}
 
@@ -847,7 +825,6 @@ export function ItemStack({
 				} else {
 					content = React.cloneElement(child as React.ReactElement, {
 						...(child as React.ReactElement)?.props,
-						id: (child as React.ReactElement)?.props?.id || labelId,
 					});
 				}
 
