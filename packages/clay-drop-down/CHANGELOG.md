@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-15)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** LPD-71044 Items should use `title` instead of deprecated `label` ([93e1fba](https://github.com/liferay/clay/commit/93e1fba3ece3f7379e12bff8aa97a323355eabae))
+
+### Reverts
+
+-   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts

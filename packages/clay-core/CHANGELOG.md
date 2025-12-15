@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-15)
+
+### Features
+
+-   **@clayui/autocomplete:** LPD-55597 Enable infinite scroll for cases where the list is short and scrolling isn't available, by proactively checking if it is at the trigger zone ([cc51f2c](https://github.com/liferay/clay/commit/cc51f2c6b58c545a73078e256a59774c68e398e4))
+
+### Reverts
+
+-   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
