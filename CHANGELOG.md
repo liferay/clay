@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.156.1](https://github.com/liferay/clay/compare/v3.156.0...v3.156.1) (2025-12-22)
+
+### Bug Fixes
+
+-   **@clayui/progressbar:** LPD-72488 Fix Progress Bar accessibility issues ([2e5d7e1](https://github.com/liferay/clay/commit/2e5d7e17d0a7a22354d9365d6f31cf0dfe142e7d))
+-   **@clayui/treeview:** LPD-72486 Fix Treeview accessibility issues ([801caf5](https://github.com/liferay/clay/commit/801caf50a65cef2b1496ff80788838b426f52e18))
+
 # [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-15)
 
 ### Bug Fixes
