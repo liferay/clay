@@ -125,7 +125,7 @@ jobs:
                   if ! git diff --exit-code packages/clay-css/src/scss/_license-text.scss; then
                     git add packages/clay-css/src/scss/_license-text.scss
                     git commit -m "chore(@clayui/css): Update License Text to ${{ inputs.version }}"
-                    git push
+                    git push origin HEAD:master
                   fi
             - name: Publish
               run: yarn lerna:publish
