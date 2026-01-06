@@ -8,6 +8,9 @@ on:
                 description: 'Defines a specific version (e.g 3.70.0)'
                 type: string
 
+permissions:
+    id-token: write # Required for NPM publishing
+
 jobs:
     test:
         name: Unit tests and lint
@@ -95,9 +98,11 @@ jobs:
         name: Publish
         needs: version
         runs-on: ubuntu-latest
-        env:
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        id_tokens:
+            NPM_ID_TOKEN:
+                aud: 'npm:registry.npmjs.org' # Required for NPM
+            SIGSTORE_ID_TOKEN:
+                aud: sigstore # Required for NPM
         steps:
             - uses: actions/checkout@v2
               with:
@@ -112,8 +117,6 @@ jobs:
               with:
                   path: '**/node_modules'
                   key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}-1
-            - name: NPM Identity
-              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
             - name: Build
               run: yarn build
             - name: Types
