@@ -9,7 +9,8 @@ on:
                 type: string
 
 permissions:
-    id-token: write # Required for NPM publishing
+    id-token: write # Required for OIDC
+    contents: read
 
 jobs:
     test:
@@ -98,11 +99,6 @@ jobs:
         name: Publish
         needs: version
         runs-on: ubuntu-latest
-        id_tokens:
-            NPM_ID_TOKEN:
-                aud: 'npm:registry.npmjs.org' # Required for NPM
-            SIGSTORE_ID_TOKEN:
-                aud: sigstore # Required for NPM
         steps:
             - uses: actions/checkout@v2
               with:
