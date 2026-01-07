@@ -26,7 +26,7 @@
 		"genBuildSize": "NODE_ENV=production node scripts/check-size/index.mjs",
 		"genGlobalChangeLog": "node scripts/generate-global-changelog.js && prettier --write -- \"CHANGELOG.md\"",
 		"lerna:version": "lerna version --conventional-commits",
-		"lerna:publish": "lerna publish from-package --no-verify-access --yes",
+		"lerna:publish": "lerna publish from-package --yes",
 		"lint:changed": "git ls-files -mz \"*.js\" \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" | xargs -0 eslint",
 		"lint:fix": "eslint --fix \".*.js\" \"**/*.{js,ts,tsx}\"",
 		"lint:quiet": "eslint --quiet \".*.js\" \"**/*.{js,ts,tsx}\"",
