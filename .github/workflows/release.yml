@@ -104,11 +104,9 @@ jobs:
               with:
                   ref: ${{ needs.version.outputs.new_sha }}
                   fetch-depth: 0
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v4
               with:
                   node-version: '22.x'
-                  registry-url: 'https://registry.npmjs.org'
-                  scope: '@clayui'
             - uses: actions/cache@v4
               with:
                   path: '**/node_modules'
@@ -127,5 +125,7 @@ jobs:
                     git commit -m "chore(@clayui/css): Update License Text to ${{ inputs.version }}"
                     git push origin HEAD:master
                   fi
+            - name: Debug npm auth
+              run: npm whoami
             - name: Publish
               run: yarn lerna:publish
