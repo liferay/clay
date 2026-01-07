@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.156.5](https://github.com/liferay/clay/compare/v3.156.4...v3.156.5) (2026-01-07)
+
+**Note:** Version bump only for package @clayui/css
+
+
+
+
+
 ## [3.156.4](https://github.com/liferay/clay/compare/v3.156.3...v3.156.4) (2026-01-07)
 
 **Note:** Version bump only for package @clayui/css
