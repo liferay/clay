@@ -125,7 +125,5 @@ jobs:
                     git commit -m "chore(@clayui/css): Update License Text to ${{ inputs.version }}"
                     git push origin HEAD:master
                   fi
-            - name: Debug npm auth
-              run: npm whoami
             - name: Publish
               run: yarn lerna:publish
