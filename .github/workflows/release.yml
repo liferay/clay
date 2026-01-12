@@ -82,7 +82,7 @@ jobs:
                   git config user.email github-actions@github.com
             - name: Version
               run: yarn lerna:version ${{ github.event.inputs.version }} --no-push --yes
-            - run: git push origin master --follow-tags
+            - run: git push origin 3.133.x --follow-tags
             - name: Get SHA
               id: sha
               run: |
@@ -119,6 +119,11 @@ jobs:
             - name: Types
               run: yarn buildTypes
             - name: Git
-              run: git restore packages/clay-css/src/scss/_license-text.scss
+              run: |
+                  if ! git diff --exit-code packages/clay-css/src/scss/_license-text.scss; then
+                    git add packages/clay-css/src/scss/_license-text.scss
+                    git commit -m "chore(@clayui/css): Update License Text to ${{ inputs.version }}"
+                    git push origin HEAD:3.133.x
+                  fi
             - name: Publish
               run: yarn lerna:publish
