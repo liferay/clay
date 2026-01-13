@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.133.1](https://github.com/liferay/clay/compare/v3.133.0...v3.133.1) (2026-01-13)
+
+### Bug Fixes
+
+-   **@clayui:** LPD-75978 v3.133.1 should use latest patch version instead of minor ([151b938](https://github.com/liferay/clay/commit/151b9383234bd5d8bb54eec161e4bf57f865005b))
+
 # [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
 
 **Note:** Version bump only for package @clayui/popover
