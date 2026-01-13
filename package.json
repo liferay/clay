@@ -1,9 +1,6 @@
 {
 	"private": true,
 	"repository": "https://github.com/liferay/clay",
-	"engines": {
-		"node": "18.x"
-	},
 	"size-limit": [
 		{
 			"path": "all.js",
@@ -30,7 +27,7 @@
 		"genGlobalChangeLog": "node scripts/generate-global-changelog.js && prettier --write -- \"CHANGELOG.md\"",
 		"lerna": "lerna bootstrap -- --no-optional --no-package-lock",
 		"lerna:version": "lerna version --conventional-commits",
-		"lerna:publish": "lerna publish from-package --no-verify-access --yes",
+		"lerna:publish": "lerna publish from-package --yes",
 		"lint:changed": "git ls-files -mz \"*.js\" \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" | xargs -0 eslint",
 		"lint:fix": "eslint --fix \".*.js\" \"**/*.{js,ts,tsx}\"",
 		"lint:quiet": "eslint --quiet \".*.js\" \"**/*.{js,ts,tsx}\"",
@@ -91,7 +88,7 @@
 		"fork-ts-checker-webpack-plugin": "^4.0.3",
 		"jest": "27.5.1",
 		"jest-fetch-mock": "^3.0.3",
-		"lerna": "6.6.2",
+		"lerna": "^9.0.3",
 		"ncp": "^2.0.0",
 		"parcel-bundler": "^1.12.4",
 		"prettier": "^2.4.1",
