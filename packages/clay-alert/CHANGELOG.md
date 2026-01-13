@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.136.1](https://github.com/liferay/clay/compare/v3.136.0...v3.136.1) (2026-01-13)
+
+### Bug Fixes
+
+-   LPD-75978 Clay component dependencies should use latest patch version ([06ba2a6](https://github.com/liferay/clay/commit/06ba2a68e21a19a0f7d77a48bf624949e33054ed))
+
 ## [3.129.1](https://github.com/liferay/clay/compare/v3.129.0...v3.129.1) (2025-02-27)
 
 ### Bug Fixes

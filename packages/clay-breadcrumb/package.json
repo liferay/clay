@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/breadcrumb",
-	"version": "3.136.0",
+	"version": "3.136.1",
 	"description": "ClayBreadcrumb component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -24,7 +24,7 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "~3.136.0",
+		"@clayui/button": "^3.136.1",
 		"@clayui/icon": "~3.128.0",
 		"@clayui/link": "~3.128.0",
 		"classnames": "^2.2.6",
