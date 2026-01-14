@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.136.2](https://github.com/liferay/clay/compare/v3.136.1...v3.136.2) (2026-01-14)
+
+**Note:** Version bump only for package @clayui/shared
+
 ## [3.136.1](https://github.com/liferay/clay/compare/v3.136.0...v3.136.1) (2026-01-13)
 
 ### Bug Fixes
