@@ -3,6 +3,7 @@
 	"npmClient": "yarn",
 	"command": {
 		"publish": {
+			"distTag": "3.136.x",
 			"ignoreChanges": [
 				"**/stories/*",
 				"**/__tests__/**",
