@@ -15,7 +15,6 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
         role="none"
       >
         <div
-          aria-controls="Root"
           aria-expanded="false"
           aria-labelledby="clay-id-15"
           aria-owns="clay-id-16"
@@ -36,26 +35,36 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
               <div
                 class="autofit-col"
               >
-                <span
-                  class="component-expander"
+                <button
+                  aria-controls="Root"
+                  aria-expanded="false"
+                  aria-labelledby="clay-id-15"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
+                  <span
+                    class="c-inner"
+                    tabindex="-2"
                   >
-                    <use
-                      href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      href="icons.svg#angle-right"
-                    />
-                  </svg>
-                </span>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
               </div>
               <div
                 class="autofit-col autofit-col-expand"
@@ -92,7 +101,6 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
         role="none"
       >
         <div
-          aria-controls="Foo"
           aria-expanded="false"
           aria-labelledby="clay-id-25"
           aria-owns="clay-id-26"
@@ -113,26 +121,36 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
               <div
                 class="autofit-col"
               >
-                <span
-                  class="component-expander"
+                <button
+                  aria-controls="Foo"
+                  aria-expanded="false"
+                  aria-labelledby="clay-id-25"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
+                  <span
+                    class="c-inner"
+                    tabindex="-2"
                   >
-                    <use
-                      href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      href="icons.svg#angle-right"
-                    />
-                  </svg>
-                </span>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
               </div>
               <div
                 class="autofit-col autofit-col-expand"
@@ -169,7 +187,6 @@ exports[`TreeView basic rendering render static content 1`] = `
         role="none"
       >
         <div
-          aria-controls="$.0"
           aria-expanded="false"
           aria-labelledby="clay-id-5"
           aria-owns="clay-id-6"
@@ -190,26 +207,36 @@ exports[`TreeView basic rendering render static content 1`] = `
               <div
                 class="autofit-col"
               >
-                <span
-                  class="component-expander"
+                <button
+                  aria-controls="$.0"
+                  aria-expanded="false"
+                  aria-labelledby="clay-id-5"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
+                  <span
+                    class="c-inner"
+                    tabindex="-2"
                   >
-                    <use
-                      href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      href="icons.svg#angle-right"
-                    />
-                  </svg>
-                </span>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
               </div>
               <div
                 class="autofit-col autofit-col-expand"
@@ -339,7 +366,6 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
         role="none"
       >
         <div
-          aria-controls="$.0"
           aria-expanded="false"
           aria-labelledby="clay-id-96"
           aria-owns="clay-id-97"
@@ -360,26 +386,36 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
               <div
                 class="autofit-col"
               >
-                <span
-                  class="component-expander"
+                <button
+                  aria-controls="$.0"
+                  aria-expanded="false"
+                  aria-labelledby="clay-id-96"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
+                  <span
+                    class="c-inner"
+                    tabindex="-2"
                   >
-                    <use
-                      href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      href="icons.svg#angle-right"
-                    />
-                  </svg>
-                </span>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
               </div>
               <div
                 class="autofit-col"
@@ -434,7 +470,6 @@ exports[`TreeView basic rendering render with item active 1`] = `
         role="none"
       >
         <div
-          aria-controls="$.0"
           aria-expanded="false"
           aria-labelledby="clay-id-160"
           aria-owns="clay-id-161"
@@ -455,26 +490,36 @@ exports[`TreeView basic rendering render with item active 1`] = `
               <div
                 class="autofit-col"
               >
-                <span
-                  class="component-expander"
+                <button
+                  aria-controls="$.0"
+                  aria-expanded="false"
+                  aria-labelledby="clay-id-160"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
+                  <span
+                    class="c-inner"
+                    tabindex="-2"
                   >
-                    <use
-                      href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      href="icons.svg#angle-right"
-                    />
-                  </svg>
-                </span>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
               </div>
               <div
                 class="autofit-col"
@@ -529,7 +574,6 @@ exports[`TreeView basic rendering render with text 1`] = `
         role="none"
       >
         <div
-          aria-controls="$.0"
           aria-expanded="false"
           aria-labelledby="clay-id-106"
           aria-owns="clay-id-107"
@@ -550,26 +594,36 @@ exports[`TreeView basic rendering render with text 1`] = `
               <div
                 class="autofit-col"
               >
-                <span
-                  class="component-expander"
+                <button
+                  aria-controls="$.0"
+                  aria-expanded="false"
+                  aria-labelledby="clay-id-106"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
+                  <span
+                    class="c-inner"
+                    tabindex="-2"
                   >
-                    <use
-                      href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      href="icons.svg#angle-right"
-                    />
-                  </svg>
-                </span>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
               </div>
               <div
                 class="autofit-col"

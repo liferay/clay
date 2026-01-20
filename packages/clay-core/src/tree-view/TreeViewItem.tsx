@@ -230,7 +230,6 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 						{...itemStackProps}
 						{...nodeProps}
 						{...focusWithinProps}
-						aria-controls={isExpand ? item.key : undefined}
 						aria-expanded={
 							group ? expandedKeys.has(item.key) : undefined
 						}
@@ -320,12 +319,10 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 								return;
 							}
 
-							if (selectionMode === 'single') {
-								selection.toggleSelection(item.key);
+							selection.toggleSelection(item.key);
 
-								if (onSelect) {
-									onSelect(removeItemInternalProps(item));
-								}
+							if (onSelect) {
+								onSelect(removeItemInternalProps(item));
 							}
 
 							if (
@@ -558,6 +555,7 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 									isNonDraggrable={isNonDraggrable}
 									labelId={labelId}
 									loading={loading}
+									onLoadMore={!group ? loadMore : undefined}
 									tabIndex={focusWithinProps.tabIndex}
 								>
 									{children}
@@ -634,7 +632,7 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 
 	/**
 	 * Flag to indicate if the item should be expanded when clicking the
-	 * node itself (not the expander)
+	 * node itself (not the expander).
 	 */
 	expandOnClick?: boolean;
 
@@ -700,9 +698,11 @@ export function ItemStack({
 	children,
 	disabled,
 	expandable = false,
+	expanderDisabled,
 	isNonDraggrable,
 	labelId,
 	loading = false,
+	onLoadMore,
 	tabIndex,
 	...otherProps
 }: ITreeViewItemStackProps) {
@@ -714,6 +714,7 @@ export function ItemStack({
 		onSelect,
 		open,
 		selection,
+		toggle,
 	} = useTreeViewContext();
 
 	const item = useItem();
@@ -724,7 +725,12 @@ export function ItemStack({
 		<Layout.ContentRow {...otherProps}>
 			{expandable && !loading && (
 				<Layout.ContentCol>
-					<span
+					<Button
+						aria-controls={
+							expandable ? String(item.key) : undefined
+						}
+						aria-expanded={expandedKeys.has(item.key)}
+						aria-labelledby={labelId}
 						className={classNames(
 							'component-expander',
 							expanderClassName,
@@ -732,9 +738,28 @@ export function ItemStack({
 								collapsed: expandedKeys.has(item.key),
 							}
 						)}
+						disabled={
+							typeof expanderDisabled === 'undefined'
+								? disabled
+								: expanderDisabled
+						}
+						displayType={null}
+						monospaced
+						onClick={(event) => {
+							event.stopPropagation();
+
+							if (onLoadMore) {
+								onLoadMore();
+							} else {
+								toggle(item.key);
+							}
+						}}
+						tabIndex={-1}
 					>
-						<Expander expanderIcons={expanderIcons} />
-					</span>
+						<span className="c-inner" tabIndex={-2}>
+							<Expander expanderIcons={expanderIcons} />
+						</span>
+					</Button>
 				</Layout.ContentCol>
 			)}
 
