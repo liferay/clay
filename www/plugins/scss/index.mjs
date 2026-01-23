@@ -1,4 +1,3 @@
-import clay from '@clayui/css';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
@@ -6,7 +5,7 @@ import fs from 'node:fs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export function buildIcons() {
-	const path = join(clay.srcDir, 'images', 'icons');
+	const path = join('..', 'packages', 'clay-css', 'src', 'images', 'icons');
 	const staticPath = join(__dirname, '../..', 'public');
 
 	const REGEX_FILE_EXT_SVG = /(?:flags-|\.svg$)/g;
