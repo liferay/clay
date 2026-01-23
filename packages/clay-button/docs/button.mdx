@@ -41,6 +41,157 @@ export default function App() {
 }
 ```
 
+## Outline Borderless
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Button from '@clayui/button';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Button
+					borderless
+					className="mr-2"
+					displayType="primary"
+					outline
+				>
+					Primary
+				</Button>
+				<Button
+					borderless
+					className="mr-2"
+					displayType="secondary"
+					outline
+				>
+					Secondary
+				</Button>
+			</div>
+		</Provider>
+	);
+}
+```
+
+## Outline Borderless Dark
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Button from '@clayui/button';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="bg-dark p-4 ">
+				<Button
+					borderless
+					className="mr-2"
+					dark
+					displayType="primary"
+					outline
+				>
+					Primary
+				</Button>
+				<Button
+					borderless
+					className="mr-2"
+					dark
+					displayType="secondary"
+					outline
+				>
+					Secondary
+				</Button>
+			</div>
+		</Provider>
+	);
+}
+```
+
+## Translucent
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Button from '@clayui/button';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Button className="mr-2" displayType="primary" translucent>
+					Primary
+				</Button>
+				<Button className="mr-2" displayType="secondary" translucent>
+					Secondary
+				</Button>
+				<Button className="mr-2" displayType="info" translucent>
+					Info
+				</Button>
+				<Button className="mr-2" displayType="success" translucent>
+					Success
+				</Button>
+				<Button className="mr-2" displayType="warning" translucent>
+					Warning
+				</Button>
+				<Button className="mr-2" displayType="danger" translucent>
+					Danger
+				</Button>
+			</div>
+		</Provider>
+	);
+}
+```
+
+## Translucent Dark
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Button from '@clayui/button';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="bg-dark p-4">
+				<Button className="mr-2" dark displayType="primary" translucent>
+					Primary
+				</Button>
+				<Button
+					className="mr-2"
+					dark
+					displayType="secondary"
+					translucent
+				>
+					Secondary
+				</Button>
+				<Button className="mr-2" dark displayType="info" translucent>
+					Info
+				</Button>
+				<Button className="mr-2" dark displayType="success" translucent>
+					Success
+				</Button>
+				<Button className="mr-2" dark displayType="warning" translucent>
+					Warning
+				</Button>
+				<Button className="mr-2" dark displayType="danger" translucent>
+					Danger
+				</Button>
+			</div>
+		</Provider>
+	);
+}
+```
+
 ## Group
 
 You can use the variant `Button.Group` for creating button groups:
