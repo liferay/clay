@@ -765,6 +765,10 @@ export const iconsData = [
 		name: 'credit-card',
 	},
 	{
+		aliases: ['enterprise', 'exclusive', 'premium'],
+		name: 'crown',
+	},
+	{
 		aliases: [''],
 		name: 'cursor',
 	},
