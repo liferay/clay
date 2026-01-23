@@ -371,19 +371,18 @@ $btn-outline-primary: () !default;
 $btn-outline-primary: map-deep-merge(
 	(
 		hover: (
-			background-color: $primary-l3,
-			color: $primary,
+			background-color: rgba($primary, 0.06),
+			color: $primary-d1,
 		),
 		focus: (
-			background-color: $primary-l3,
+			background-color: rgba($primary, 0.06),
 			box-shadow: map-deep-get($btn-primary, focus, box-shadow),
-			color: $primary,
+			color: $primary-d1,
 		),
 		active: (
-			background-color:
-				clay-lighten(clay-desaturate($primary, 42.05), 41.76),
-			color: $primary,
+			background-color: rgba($primary, 0.12),
 			box-shadow: map-deep-get($btn-primary, active, box-shadow),
+			color: $primary-d1,
 			focus: (
 				box-shadow:
 					map-deep-get($btn-primary, active, focus, box-shadow),
@@ -404,12 +403,12 @@ $btn-outline-secondary: map-deep-merge(
 		background-color: c-unset,
 		border-color: $secondary-l2,
 		hover: (
-			background-color: rgba($gray-900, 0.03),
+			background-color: rgba($gray-900, 0.06),
 			border-color: transparent,
 			color: map-deep-get($btn-secondary, hover, color),
 		),
 		focus: (
-			background-color: rgba($gray-900, 0.03),
+			background-color: rgba($gray-900, 0.06),
 			border-color: transparent,
 			box-shadow: map-deep-get($btn-secondary, focus, box-shadow),
 			color: map-deep-get($btn-secondary, focus, color),
@@ -420,7 +419,7 @@ $btn-outline-secondary: map-deep-merge(
 			color: $secondary,
 		),
 		active: (
-			background-color: rgba($gray-900, 0.06),
+			background-color: rgba($gray-900, 0.12),
 			border-color: transparent,
 			box-shadow: map-deep-get($btn-secondary, active, box-shadow),
 			color: map-deep-get($btn-secondary, active, color),

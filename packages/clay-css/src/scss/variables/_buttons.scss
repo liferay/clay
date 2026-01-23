@@ -1457,6 +1457,9 @@ $btn-outline-borderless: map-deep-merge(
 		focus: (
 			border-color: transparent,
 		),
+		active: (
+			border-color: transparent,
+		),
 		disabled: (
 			border-color: transparent,
 		),
@@ -1475,6 +1478,52 @@ $btn-outline-palette: map-deep-merge(
 		danger: $btn-outline-danger,
 		light: $btn-outline-light,
 		dark: $btn-outline-dark,
+		'%clay-dark-btn-outline-primary': (
+			background-color: transparent,
+			color: $primary-l1,
+			hover: (
+				background-color: rgba($primary-l1, 0.06),
+				color: $primary-l2,
+			),
+			focus: (
+				background-color: rgba($primary-l1, 0.06),
+				color: $primary-l2,
+			),
+			active: (
+				background-color: rgba($primary-l1, 0.12),
+				color: $primary-l2,
+			),
+			disabled: (
+				background-color: transparent,
+				color: $primary-l1,
+			),
+		),
+		'.clay-dark .btn-outline-primary, .clay-dark.btn-outline-primary': (
+			extend: '%clay-dark-btn-outline-primary',
+		),
+		'%clay-dark-btn-outline-secondary': (
+			background-color: transparent,
+			color: $secondary-l1,
+			hover: (
+				background-color: rgba($white, 0.06),
+				color: $white,
+			),
+			focus: (
+				background-color: rgba($white, 0.06),
+				color: $white,
+			),
+			active: (
+				background-color: rgba($white, 0.12),
+				color: $white,
+			),
+			disabled: (
+				background-color: transparent,
+				color: $secondary-l1,
+			),
+		),
+		'.clay-dark .btn-outline-secondary, .clay-dark.btn-outline-secondary': (
+			extend: '%clay-dark-btn-outline-secondary',
+		),
 	),
 	$btn-outline-palette
 );
