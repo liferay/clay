@@ -1537,6 +1537,10 @@ export const iconsData = [
 		name: 'question-circle',
 	},
 	{
+		aliases: ['shortcuts'],
+		name: 'question-mark',
+	},
+	{
 		aliases: ['"', 'commas'],
 		name: 'quote-left',
 	},
