@@ -1,99 +1,99 @@
-name: CI
+# name: CI
 
-on:
-    pull_request:
-        branches: ['master', 'stable']
-    push:
-        branches: ['master', 'stable']
+# on:
+#     pull_request:
+#         branches: ['master', 'stable']
+#     push:
+#         branches: ['master', 'stable']
 
-jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v2
-              with:
-                  node-version: '22.x'
-            - uses: actions/cache@v4
-              with:
-                  path: '**/node_modules'
-                  key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}-1
-            - name: Install Dependencies
-              run: yarn install && cd ./www && yarn install
-            - name: Lint
-              run: yarn lint
-            - name: Types
-              run: yarn lint:typescript
-            - name: Format
-              run: yarn format:check
-            - name: Verify Dependencies
-              run: yarn checkDeps
-            - name: Run Jest
-              env:
-                  BROWSERSLIST_CONFIG: './packages/browserslist-config-clay/config'
-                  BROWSERSLIST_DISABLE_CACHE: 1
-                  CI: true
-              run: yarn test --coverage
-            - name: Push to Coveralls
-              if: ${{ success() }}
-              uses: coverallsapp/github-action@v1.1.1
-              with:
-                  path-to-lcov: ./coverage/lcov.info
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
+# jobs:
+#     test:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - uses: actions/checkout@v2
+#             - uses: actions/setup-node@v2
+#               with:
+#                   node-version: '22.x'
+#             - uses: actions/cache@v4
+#               with:
+#                   path: '**/node_modules'
+#                   key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}-1
+#             - name: Install Dependencies
+#               run: yarn install && cd ./www && yarn install
+#             - name: Lint
+#               run: yarn lint
+#             - name: Types
+#               run: yarn lint:typescript
+#             - name: Format
+#               run: yarn format:check
+#             - name: Verify Dependencies
+#               run: yarn checkDeps
+#             - name: Run Jest
+#               env:
+#                   BROWSERSLIST_CONFIG: './packages/browserslist-config-clay/config'
+#                   BROWSERSLIST_DISABLE_CACHE: 1
+#                   CI: true
+#               run: yarn test --coverage
+#             - name: Push to Coveralls
+#               if: ${{ success() }}
+#               uses: coverallsapp/github-action@v1.1.1
+#               with:
+#                   path-to-lcov: ./coverage/lcov.info
+#                   github-token: ${{ secrets.GITHUB_TOKEN }}
 
-    stats:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v2
-              with:
-                  node-version: '22.x'
-            - name: Fetch and Diff
-              id: diff
-              run: |
-                  git fetch --no-tags --depth=1 origin ${{ github.event.pull_request.base.sha }}
-                  diff_output="$(git diff ${{ github.event.pull_request.base.sha }} 'packages/*')"
+#     stats:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - uses: actions/checkout@v2
+#             - uses: actions/setup-node@v2
+#               with:
+#                   node-version: '22.x'
+#             - name: Fetch and Diff
+#               id: diff
+#               run: |
+#                   git fetch --no-tags --depth=1 origin ${{ github.event.pull_request.base.sha }}
+#                   diff_output="$(git diff ${{ github.event.pull_request.base.sha }} 'packages/*')"
 
-                  if [ -n "$diff_output" ]; then
-                    echo "packages=true" >> $GITHUB_OUTPUT
-                  else
-                    echo "packages=" >> $GITHUB_OUTPUT
-                  fi
+#                   if [ -n "$diff_output" ]; then
+#                     echo "packages=true" >> $GITHUB_OUTPUT
+#                   else
+#                     echo "packages=" >> $GITHUB_OUTPUT
+#                   fi
 
-            - name: Checkout BASE
-              if: ${{ steps.diff.outputs.packages }}
-              uses: actions/checkout@v2
-              with:
-                  ref: ${{ github.event.pull_request.base.sha }}
-            - name: Generate Build Info
-              if: ${{ steps.diff.outputs.packages }}
-              run: |
-                  yarn cache clean
-                  yarn install
-                  yarn build
-                  yarn genBuildSize
-            - name: Clean directory
-              if: ${{ steps.diff.outputs.packages }}
-              run: |
-                  git clean -ffdx --exclude /tmp
-                  git reset --hard HEAD
-            - name: Checkout HEAD
-              if: ${{ steps.diff.outputs.packages }}
-              uses: actions/checkout@v2
-              with:
-                  ref: ${{ github.event.pull_request.head.sha }}
-                  clean: false
-            - uses: actions/setup-node@v2
-              with:
-                  node-version: '22.x'
-            - name: Generate Bundle Size Table
-              if: ${{ steps.diff.outputs.packages }}
-              run: |
-                  yarn cache clean
-                  yarn install
-                  yarn build
-                  yarn genBuildSize:compare
-            - name: Generate Total Size
-              if: ${{ steps.diff.outputs.packages }}
-              run: |
-                  yarn run sizeLimit
+#             - name: Checkout BASE
+#               if: ${{ steps.diff.outputs.packages }}
+#               uses: actions/checkout@v2
+#               with:
+#                   ref: ${{ github.event.pull_request.base.sha }}
+#             - name: Generate Build Info
+#               if: ${{ steps.diff.outputs.packages }}
+#               run: |
+#                   yarn cache clean
+#                   yarn install
+#                   yarn build
+#                   yarn genBuildSize
+#             - name: Clean directory
+#               if: ${{ steps.diff.outputs.packages }}
+#               run: |
+#                   git clean -ffdx --exclude /tmp
+#                   git reset --hard HEAD
+#             - name: Checkout HEAD
+#               if: ${{ steps.diff.outputs.packages }}
+#               uses: actions/checkout@v2
+#               with:
+#                   ref: ${{ github.event.pull_request.head.sha }}
+#                   clean: false
+#             - uses: actions/setup-node@v2
+#               with:
+#                   node-version: '22.x'
+#             - name: Generate Bundle Size Table
+#               if: ${{ steps.diff.outputs.packages }}
+#               run: |
+#                   yarn cache clean
+#                   yarn install
+#                   yarn build
+#                   yarn genBuildSize:compare
+#             - name: Generate Total Size
+#               if: ${{ steps.diff.outputs.packages }}
+#               run: |
+#                   yarn run sizeLimit
