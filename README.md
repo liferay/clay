@@ -1,3 +1,7 @@
+> :warning: This repo is has moved. ClayUI is still actively developed, but it has been moved into the [liferay-portal](https://github.com/liferay/liferay-portal/tree/master/modules/apps/frontend-js/frontend-js-clay-web/clay) monorepo. All future commits here are auto-synced from liferay-portal for read-only purposes
+
+---
+
 <div align="center">
     <div>
         <img src="https://github.com/liferay/clay/blob/6ae276a67e7e2c9954d72dcae15266b2458f58f9/clayui.com/static/images/clay_logo_w.png?raw=true"> 
