@@ -6,6 +6,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
+console.log('test')
+
 export function ClayAlertFooter({
 	children,
 	className,
