@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {TreeView} from '@clayui/core';
@@ -11,7 +11,10 @@ import {axe, toHaveNoViolations} from 'jest-axe';
 import React from 'react';
 
 // Just to avoid TypeScript error with required props
-const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+function OptionalCheckbox(props: any) {
+	return <Checkbox {...props} />;
+}
 
 OptionalCheckbox.displayName = 'ClayCheckbox';
 
@@ -36,12 +39,15 @@ describe('Clay Components Accessibility Compliance', () => {
 					<TreeView.Item>
 						<TreeView.ItemStack>
 							<OptionalCheckbox />
+
 							{item.name}
 						</TreeView.ItemStack>
+
 						<TreeView.Group items={item.children}>
 							{(item) => (
 								<TreeView.Item>
 									<OptionalCheckbox />
+
 									{item.name}
 								</TreeView.Item>
 							)}
@@ -69,8 +75,11 @@ describe('Clay Components Accessibility Compliance', () => {
 		const {container} = render(
 			<div>
 				<ProgressBar value={100} />
+
 				<ProgressBar value={50} />
+
 				<ProgressBar value={50}>50%</ProgressBar>
+
 				<ProgressBar value={50} warn />
 			</div>
 		);

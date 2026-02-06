@@ -3,33 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.156.6](https://github.com/liferay/clay/compare/v3.156.0...v3.156.6) (2026-01-07)
-
-**Note:** Version bump only for package @clayui/pagination-bar
-
-## [3.156.3](https://github.com/liferay/clay/compare/v3.156.0...v3.156.3) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/pagination-bar
-
-## [3.156.2](https://github.com/liferay/clay/compare/v3.156.0...v3.156.2) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/pagination-bar
-
-## [3.156.1](https://github.com/liferay/clay/compare/v3.156.0...v3.156.1) (2025-12-22)
-
-**Note:** Version bump only for package @clayui/pagination-bar
-
 # [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-15)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
 
@@ -39,7 +23,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** LPD-63674 Apply InternalDispatch fix ([5e89a6b](https://github.com/liferay/clay/commit/5e89a6ba36f3dffd7af8df39e015027ca00f8c9b))
+- **@clayui/pagination-bar:** LPD-63674 Apply InternalDispatch fix ([5e89a6b](https://github.com/liferay/clay/commit/5e89a6ba36f3dffd7af8df39e015027ca00f8c9b))
 
 # [3.149.0](https://github.com/liferay/clay/compare/v3.148.0...v3.149.0) (2025-09-24)
 
@@ -61,25 +45,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/pagination-bar@3.142.0...@clayui/pagination-bar@3.142.2) (2025-08-13)
 
@@ -123,7 +107,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/pagination-bar:** improves component typing to create API PaginationBar ([52f0303](https://github.com/liferay/clay/commit/52f030345bd616ab8e66384b68c1fd77a227ad7e))
+- **@clayui/pagination-bar:** improves component typing to create API PaginationBar ([52f0303](https://github.com/liferay/clay/commit/52f030345bd616ab8e66384b68c1fd77a227ad7e))
 
 # 3.127.0 (2025-01-23)
 
@@ -139,7 +123,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** LPD-38518 - Add case test for pagination bar ([0294c7d](https://github.com/liferay/clay/commit/0294c7ddfe4ec96f0a064c748938c2c27076173a))
+- **@clayui/pagination-bar:** LPD-38518 - Add case test for pagination bar ([0294c7d](https://github.com/liferay/clay/commit/0294c7ddfe4ec96f0a064c748938c2c27076173a))
 
 # 3.121.0 (2024-10-17)
 
@@ -163,7 +147,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** LPD-17368 Follow up - Add aria-label ([ba21e0e](https://github.com/liferay/clay/commit/ba21e0e1408bfe3a267c504edb21527f95cbafdb))
+- **@clayui/pagination-bar:** LPD-17368 Follow up - Add aria-label ([ba21e0e](https://github.com/liferay/clay/commit/ba21e0e1408bfe3a267c504edb21527f95cbafdb))
 
 # 3.113.0 (2024-03-28)
 
@@ -173,8 +157,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination:** LPD-17368 Add aria-label on pagination picker to ideentify the combobox ([7df8b4c](https://github.com/liferay/clay/commit/7df8b4ce7bcf3502c162c29d842b44cf8e6e2e6c))
--   **@clayui/pagination:** LPD-17368 Update snapshot ([74f3f21](https://github.com/liferay/clay/commit/74f3f21bcaa53c53566fa81a2bb977afa064365f))
+- **@clayui/pagination:** LPD-17368 Add aria-label on pagination picker to ideentify the combobox ([7df8b4c](https://github.com/liferay/clay/commit/7df8b4ce7bcf3502c162c29d842b44cf8e6e2e6c))
+- **@clayui/pagination:** LPD-17368 Update snapshot ([74f3f21](https://github.com/liferay/clay/commit/74f3f21bcaa53c53566fa81a2bb977afa064365f))
 
 # 3.111.0 (2024-02-15)
 
@@ -192,8 +176,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.105.0 (2023-09-15)
 
@@ -233,7 +217,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** fix bug in documentation example ([8924412](https://github.com/liferay/clay/commit/8924412729baa8a35f4e3729a632d5399fcab93f))
+- **@clayui/pagination-bar:** fix bug in documentation example ([8924412](https://github.com/liferay/clay/commit/8924412729baa8a35f4e3729a632d5399fcab93f))
 
 # 3.90.0 (2023-03-15)
 
@@ -251,13 +235,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** PaginationBarWithBasicItems shouldn't render if totalItems is 0 ([13519e8](https://github.com/liferay/clay/commit/13519e89e5c381627574e06b9bdf0277737e91ee))
--   **@clayui/pagination:** fix error when `totalPages` is 0 ([16d6094](https://github.com/liferay/clay/commit/16d60941ecd7d5f50c0cd5d51ff6bb925cc26707))
--   **@clayui/pagination:** remove link from Prev and Next when disabled ([6552d93](https://github.com/liferay/clay/commit/6552d93a6c103c9c8e9bfc1fbcc654821afeaea0))
+- **@clayui/pagination-bar:** PaginationBarWithBasicItems shouldn't render if totalItems is 0 ([13519e8](https://github.com/liferay/clay/commit/13519e89e5c381627574e06b9bdf0277737e91ee))
+- **@clayui/pagination:** fix error when `totalPages` is 0 ([16d6094](https://github.com/liferay/clay/commit/16d60941ecd7d5f50c0cd5d51ff6bb925cc26707))
+- **@clayui/pagination:** remove link from Prev and Next when disabled ([6552d93](https://github.com/liferay/clay/commit/6552d93a6c103c9c8e9bfc1fbcc654821afeaea0))
 
 ### Features
 
--   **@clayui/pagination-bar:** change the DropDown component to the Picker in the high-level component ([6a641d4](https://github.com/liferay/clay/commit/6a641d48cfa14630d68c146527b7afbfff836d21))
+- **@clayui/pagination-bar:** change the DropDown component to the Picker in the high-level component ([6a641d4](https://github.com/liferay/clay/commit/6a641d48cfa14630d68c146527b7afbfff836d21))
 
 # 3.84.0 (2022-12-23)
 
@@ -269,7 +253,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** add `aria-label` and `title` to ellipsis ([c1124ac](https://github.com/liferay/clay/commit/c1124acc7c82c0bd3b736c506804a7aa4b356b3c))
+- **@clayui/pagination-bar:** add `aria-label` and `title` to ellipsis ([c1124ac](https://github.com/liferay/clay/commit/c1124acc7c82c0bd3b736c506804a7aa4b356b3c))
 
 # 3.81.0 (2022-11-30)
 
@@ -327,7 +311,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/pagination-bar:** Add flag disableEllipsis to PaginationBarWithBasicItems ([5cb8105](https://github.com/liferay/clay/commit/5cb8105c84b6623b84ab63dd87b02e9d358969de)), closes [#4886](https://github.com/liferay/clay/issues/4886)
+- **@clayui/pagination-bar:** Add flag disableEllipsis to PaginationBarWithBasicItems ([5cb8105](https://github.com/liferay/clay/commit/5cb8105c84b6623b84ab63dd87b02e9d358969de)), closes [#4886](https://github.com/liferay/clay/issues/4886)
 
 # 3.58.0 (2022-05-23)
 
@@ -337,7 +321,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/pagination-bar:** standardizes properties for the controlled and uncontrolled component ([bd25cf6](https://github.com/liferay/clay/commit/bd25cf6a28eff89ddf203140af7b59af506ca6e0))
+- **@clayui/pagination-bar:** standardizes properties for the controlled and uncontrolled component ([bd25cf6](https://github.com/liferay/clay/commit/bd25cf6a28eff89ddf203140af7b59af506ca6e0))
 
 # 3.52.0 (2022-04-04)
 
@@ -345,17 +329,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
+- **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
 
 # 3.48.0 (2022-03-07)
 
 ### Bug Fixes
 
--   **@clayui/pagination:** LPS-148048 regen snapshots ([4367010](https://github.com/liferay/clay/commit/4367010721180d2a9b5afaa44d88ad72947ebf5f))
+- **@clayui/pagination:** LPS-148048 regen snapshots ([4367010](https://github.com/liferay/clay/commit/4367010721180d2a9b5afaa44d88ad72947ebf5f))
 
 ### Features
 
--   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+- **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
 
 # 3.47.0 (2022-02-23)
 
@@ -391,14 +375,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/pagination-bar:** Add the `alignmentPosition` API to PaginationBarWithBasicItems component ([eca557f](https://github.com/liferay/clay/commit/eca557fbbbb3a20da550571994af906076509cc7))
--   **@clayui/pagination-bar:** Add the `showDeltasDropDown` prop ([6c65f43](https://github.com/liferay/clay/commit/6c65f43da7e64c3ed271539f776cb6ab7d0df633)), closes [#4175](https://github.com/liferay/clay/issues/4175)
+- **@clayui/pagination-bar:** Add the `alignmentPosition` API to PaginationBarWithBasicItems component ([eca557f](https://github.com/liferay/clay/commit/eca557fbbbb3a20da550571994af906076509cc7))
+- **@clayui/pagination-bar:** Add the `showDeltasDropDown` prop ([6c65f43](https://github.com/liferay/clay/commit/6c65f43da7e64c3ed271539f776cb6ab7d0df633)), closes [#4175](https://github.com/liferay/clay/issues/4175)
 
 # 3.31.0 (2021-06-30)
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** spritemap should be optional ([38638e5](https://github.com/liferay/clay/commit/38638e5683866da5f427310720bc20e60013eb3e))
+- **@clayui/pagination-bar:** spritemap should be optional ([38638e5](https://github.com/liferay/clay/commit/38638e5683866da5f427310720bc20e60013eb3e))
 
 # 3.30.0 (2021-06-16)
 
@@ -480,7 +464,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/pagination-bar:** improves component typing to create API PaginationBar ([52f0303](https://github.com/liferay/clay/commit/52f030345bd616ab8e66384b68c1fd77a227ad7e))
+- **@clayui/pagination-bar:** improves component typing to create API PaginationBar ([52f0303](https://github.com/liferay/clay/commit/52f030345bd616ab8e66384b68c1fd77a227ad7e))
 
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
@@ -506,7 +490,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** LPD-38518 - Add case test for pagination bar ([0294c7d](https://github.com/liferay/clay/commit/0294c7ddfe4ec96f0a064c748938c2c27076173a))
+- **@clayui/pagination-bar:** LPD-38518 - Add case test for pagination bar ([0294c7d](https://github.com/liferay/clay/commit/0294c7ddfe4ec96f0a064c748938c2c27076173a))
 
 # [3.121.0](https://github.com/liferay/clay/compare/v3.120.0...v3.121.0) (2024-10-17)
 
@@ -548,7 +532,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** LPD-17368 Follow up - Add aria-label ([ba21e0e](https://github.com/liferay/clay/commit/ba21e0e1408bfe3a267c504edb21527f95cbafdb))
+- **@clayui/pagination-bar:** LPD-17368 Follow up - Add aria-label ([ba21e0e](https://github.com/liferay/clay/commit/ba21e0e1408bfe3a267c504edb21527f95cbafdb))
 
 # [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
 
@@ -562,8 +546,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination:** LPD-17368 Add aria-label on pagination picker to ideentify the combobox ([7df8b4c](https://github.com/liferay/clay/commit/7df8b4ce7bcf3502c162c29d842b44cf8e6e2e6c))
--   **@clayui/pagination:** LPD-17368 Update snapshot ([74f3f21](https://github.com/liferay/clay/commit/74f3f21bcaa53c53566fa81a2bb977afa064365f))
+- **@clayui/pagination:** LPD-17368 Add aria-label on pagination picker to ideentify the combobox ([7df8b4c](https://github.com/liferay/clay/commit/7df8b4ce7bcf3502c162c29d842b44cf8e6e2e6c))
+- **@clayui/pagination:** LPD-17368 Update snapshot ([74f3f21](https://github.com/liferay/clay/commit/74f3f21bcaa53c53566fa81a2bb977afa064365f))
 
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
@@ -593,8 +577,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
 
@@ -668,7 +652,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** fix bug in documentation example ([8924412](https://github.com/liferay/clay/commit/8924412729baa8a35f4e3729a632d5399fcab93f))
+- **@clayui/pagination-bar:** fix bug in documentation example ([8924412](https://github.com/liferay/clay/commit/8924412729baa8a35f4e3729a632d5399fcab93f))
 
 # [3.90.0](https://github.com/liferay/clay/compare/v3.89.0...v3.90.0) (2023-03-15)
 
@@ -698,13 +682,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** PaginationBarWithBasicItems shouldn't render if totalItems is 0 ([13519e8](https://github.com/liferay/clay/commit/13519e89e5c381627574e06b9bdf0277737e91ee))
--   **@clayui/pagination:** fix error when `totalPages` is 0 ([16d6094](https://github.com/liferay/clay/commit/16d60941ecd7d5f50c0cd5d51ff6bb925cc26707))
--   **@clayui/pagination:** remove link from Prev and Next when disabled ([6552d93](https://github.com/liferay/clay/commit/6552d93a6c103c9c8e9bfc1fbcc654821afeaea0))
+- **@clayui/pagination-bar:** PaginationBarWithBasicItems shouldn't render if totalItems is 0 ([13519e8](https://github.com/liferay/clay/commit/13519e89e5c381627574e06b9bdf0277737e91ee))
+- **@clayui/pagination:** fix error when `totalPages` is 0 ([16d6094](https://github.com/liferay/clay/commit/16d60941ecd7d5f50c0cd5d51ff6bb925cc26707))
+- **@clayui/pagination:** remove link from Prev and Next when disabled ([6552d93](https://github.com/liferay/clay/commit/6552d93a6c103c9c8e9bfc1fbcc654821afeaea0))
 
 ### Features
 
--   **@clayui/pagination-bar:** change the DropDown component to the Picker in the high-level component ([6a641d4](https://github.com/liferay/clay/commit/6a641d48cfa14630d68c146527b7afbfff836d21))
+- **@clayui/pagination-bar:** change the DropDown component to the Picker in the high-level component ([6a641d4](https://github.com/liferay/clay/commit/6a641d48cfa14630d68c146527b7afbfff836d21))
 
 # [3.84.0](https://github.com/liferay/clay/compare/v3.83.1...v3.84.0) (2022-12-23)
 
@@ -722,7 +706,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** add `aria-label` and `title` to ellipsis ([c1124ac](https://github.com/liferay/clay/commit/c1124acc7c82c0bd3b736c506804a7aa4b356b3c))
+- **@clayui/pagination-bar:** add `aria-label` and `title` to ellipsis ([c1124ac](https://github.com/liferay/clay/commit/c1124acc7c82c0bd3b736c506804a7aa4b356b3c))
 
 # [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
 
@@ -832,7 +816,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/pagination-bar:** Add flag disableEllipsis to PaginationBarWithBasicItems ([5cb8105](https://github.com/liferay/clay/commit/5cb8105c84b6623b84ab63dd87b02e9d358969de)), closes [#4886](https://github.com/liferay/clay/issues/4886)
+- **@clayui/pagination-bar:** Add flag disableEllipsis to PaginationBarWithBasicItems ([5cb8105](https://github.com/liferay/clay/commit/5cb8105c84b6623b84ab63dd87b02e9d358969de)), closes [#4886](https://github.com/liferay/clay/issues/4886)
 
 # [3.58.0](https://github.com/liferay/clay/compare/v3.57.0...v3.58.0) (2022-05-23)
 
@@ -846,7 +830,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/pagination-bar:** standardizes properties for the controlled and uncontrolled component ([bd25cf6](https://github.com/liferay/clay/commit/bd25cf6a28eff89ddf203140af7b59af506ca6e0))
+- **@clayui/pagination-bar:** standardizes properties for the controlled and uncontrolled component ([bd25cf6](https://github.com/liferay/clay/commit/bd25cf6a28eff89ddf203140af7b59af506ca6e0))
 
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
@@ -856,17 +840,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
+- **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
 
 # [3.48.0](https://github.com/liferay/clay/compare/v3.47.0...v3.48.0) (2022-03-07)
 
 ### Bug Fixes
 
--   **@clayui/pagination:** LPS-148048 regen snapshots ([4367010](https://github.com/liferay/clay/commit/4367010721180d2a9b5afaa44d88ad72947ebf5f))
+- **@clayui/pagination:** LPS-148048 regen snapshots ([4367010](https://github.com/liferay/clay/commit/4367010721180d2a9b5afaa44d88ad72947ebf5f))
 
 ### Features
 
--   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+- **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
 
 # [3.47.0](https://github.com/liferay/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
 
@@ -932,19 +916,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/pagination-bar:** Add the `alignmentPosition` API to PaginationBarWithBasicItems component ([eca557f](https://github.com/liferay/clay/commit/eca557f))
+- **@clayui/pagination-bar:** Add the `alignmentPosition` API to PaginationBarWithBasicItems component ([eca557f](https://github.com/liferay/clay/commit/eca557f))
 
 # [3.32.0](https://github.com/liferay/clay/compare/v3.31.0...v3.32.0) (2021-07-28)
 
 ### Features
 
--   **@clayui/pagination-bar:** Add the `showDeltasDropDown` prop ([6c65f43](https://github.com/liferay/clay/commit/6c65f43)), closes [#4175](https://github.com/liferay/clay/issues/4175)
+- **@clayui/pagination-bar:** Add the `showDeltasDropDown` prop ([6c65f43](https://github.com/liferay/clay/commit/6c65f43)), closes [#4175](https://github.com/liferay/clay/issues/4175)
 
 # [3.31.0](https://github.com/liferay/clay/compare/v3.30.0...v3.31.0) (2021-06-30)
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** spritemap should be optional ([38638e5](https://github.com/liferay/clay/commit/38638e5))
+- **@clayui/pagination-bar:** spritemap should be optional ([38638e5](https://github.com/liferay/clay/commit/38638e5))
 
 # [3.30.0](https://github.com/liferay/clay/compare/v3.29.0...v3.30.0) (2021-06-16)
 
@@ -998,8 +982,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
--   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
 
 ## [3.1.12](https://github.com/liferay/clay/compare/@clayui/pagination-bar@3.1.11...@clayui/pagination-bar@3.1.12) (2020-08-28)
 
@@ -1021,13 +1005,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+- update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
 
 ## [3.1.7](https://github.com/liferay/clay/compare/@clayui/pagination-bar@3.1.6...@clayui/pagination-bar@3.1.7) (2020-07-14)
 
 ### Bug Fixes
 
--   **@clayui/pagination-bar:** automatically go to page 1 if active page exceeds delta ([3229087](https://github.com/liferay/clay/commit/3229087))
+- **@clayui/pagination-bar:** automatically go to page 1 if active page exceeds delta ([3229087](https://github.com/liferay/clay/commit/3229087))
 
 ## [3.1.6](https://github.com/liferay/clay/compare/@clayui/pagination-bar@3.1.5...@clayui/pagination-bar@3.1.6) (2020-07-07)
 
@@ -1045,7 +1029,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+- Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
 
 ## [3.1.2](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.1.1...@clayui/pagination-bar@3.1.2) (2020-03-26)
 
@@ -1059,14 +1043,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination:** add button type for pagination ([84e8628](https://github.com/liferay/clay/commit/84e8628))
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
--   **pagination-bar:** remove unused interface items ([3686e40](https://github.com/liferay/clay/commit/3686e40))
--   **pagination-bar:** we forgot to add the ref argument ([50a61c8](https://github.com/liferay/clay/commit/50a61c8))
+- **@clayui/pagination:** add button type for pagination ([84e8628](https://github.com/liferay/clay/commit/84e8628))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- **pagination-bar:** remove unused interface items ([3686e40](https://github.com/liferay/clay/commit/3686e40))
+- **pagination-bar:** we forgot to add the ref argument ([50a61c8](https://github.com/liferay/clay/commit/50a61c8))
 
 ### Features
 
--   **pagination-bar:** move Paginationbar to its own package for consistency ([7592e84](https://github.com/liferay/clay/commit/7592e84))
+- **pagination-bar:** move Paginationbar to its own package for consistency ([7592e84](https://github.com/liferay/clay/commit/7592e84))
 
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.6...@clayui/pagination-bar@3.0.7) (2020-02-13)
 
@@ -1076,20 +1060,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
--   **pagination-bar:** remove unused interface items ([3686e40](https://github.com/liferay/clay/commit/3686e40))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- **pagination-bar:** remove unused interface items ([3686e40](https://github.com/liferay/clay/commit/3686e40))
 
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.3...@clayui/pagination-bar@3.0.5) (2020-01-20)
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.3...@clayui/pagination-bar@3.0.4) (2019-12-05)
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.2...@clayui/pagination-bar@3.0.3) (2019-11-07)
 
@@ -1103,4 +1087,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **pagination-bar:** we forgot to add the ref argument ([50a61c8](https://github.com/liferay/clay/commit/50a61c8))
+- **pagination-bar:** we forgot to add the ref argument ([50a61c8](https://github.com/liferay/clay/commit/50a61c8))

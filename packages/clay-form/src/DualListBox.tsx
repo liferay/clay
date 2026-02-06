@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
@@ -33,6 +33,7 @@ function swapArrayItems(
 }
 
 type BoxProps = {
+
 	/**
 	 * Id of the selectbox to be used with the label
 	 */
@@ -55,6 +56,7 @@ type BoxProps = {
 };
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Labels for the aria attributes
 	 */
@@ -65,9 +67,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	};
 
 	/**
-	 * Disables the component.
+	 * Disables the button responsible for moving items from left to right box.
 	 */
-	disabled?: boolean;
+	disableLTR?: boolean;
 
 	/**
 	 * Disables the button responsible for moving items from right to left box.
@@ -75,9 +77,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	disableRTL?: boolean;
 
 	/**
-	 * Disables the button responsible for moving items from left to right box.
+	 * Disables the component.
 	 */
-	disableLTR?: boolean;
+	disabled?: boolean;
 
 	/**
 	 * Items spread across two arrays that will be displayed in the two Select Boxes.
@@ -85,19 +87,29 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	items: Array<Array<TItem>>;
 
 	/**
-	 * Handler that triggers when the content of the items prop are changed. Caused by either reordering or transfering of items.
-	 */
-	onItemsChange: (value: Array<Array<TItem>>) => void;
-
-	/**
 	 * Props for the left Select Box.
 	 */
 	left?: BoxProps;
 
 	/**
+	 * Sets the maximum value of items on the left side.
+	 */
+	leftMaxItems?: number;
+
+	/**
+	 * Handler that triggers when the content of the items prop are changed. Caused by either reordering or transfering of items.
+	 */
+	onItemsChange: (value: Array<Array<TItem>>) => void;
+
+	/**
 	 * Props for the right Select Box.
 	 */
 	right?: BoxProps;
+
+	/**
+	 * Sets the maximum value of items on the right side.
+	 */
+	rightMaxItems?: number;
 
 	/**
 	 * Amount of items that can fit inside the both Select Boxes before a scrollbar is introduced.
@@ -108,21 +120,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Path to the spritemap that Icon should use when referencing symbols.
 	 */
 	spritemap?: string;
-
-	/**
-	 * Sets the maximum value of items on the left side.
-	 */
-	leftMaxItems?: number;
-
-	/**
-	 * Sets the maximum value of items on the right side.
-	 */
-	rightMaxItems?: number;
 }
 
 const defaultError = 'The maximum number of items for {0} is {1}';
 
-const DualListBox = ({
+function DualListBox({
 	ariaLabels = {
 		error: defaultError,
 		transferLTR: 'Transfer Item Left to Right',
@@ -141,27 +143,22 @@ const DualListBox = ({
 	size,
 	spritemap,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const [internalLeftSelected, setInternalLeftSelected] = React.useState(
 		left.selected || []
 	);
 	const [internalRightSelected, setInternalRightSelected] = React.useState(
 		right.selected || []
 	);
-
 	const handleLeftSelectedChange =
 		left.onSelectChange || setInternalLeftSelected;
 	const handleRightSelectedChange =
 		right.onSelectChange || setInternalRightSelected;
-
 	const leftSelected = left.selected || internalLeftSelected;
 	const rightSelected = right.selected || internalRightSelected;
-
 	const [leftItems, rightItems] = items;
-
 	const selectedIndexesLeft = getSelectedIndexes(leftItems!, leftSelected);
 	const selectedIndexesRight = getSelectedIndexes(rightItems!, rightSelected);
-
 	const isLeftError = leftMaxItems
 		? rightSelected.length + leftItems!.length > leftMaxItems
 		: false;
@@ -210,7 +207,6 @@ const DualListBox = ({
 								[leftItems!, rightItems!],
 								selectedIndexesLeft
 							);
-
 							onItemsChange([arrayLeft!, arrayRight!]);
 						}}
 						small
@@ -234,7 +230,6 @@ const DualListBox = ({
 								[rightItems!, leftItems!],
 								selectedIndexesRight
 							);
-
 							onItemsChange([arrayLeft!, arrayRight!]);
 						}}
 						small
@@ -273,6 +268,6 @@ const DualListBox = ({
 			)}
 		</div>
 	);
-};
+}
 
 export default DualListBox;

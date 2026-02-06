@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayInput} from '@clayui/form';
@@ -18,17 +18,17 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import type {Item, LastChangeLiveRegion, Locators} from './types';
 
 interface IProps extends React.ComponentProps<typeof ClayInput> {
-	allowsCustomLabel?: boolean;
 	allowDuplicateValues?: boolean;
+	allowsCustomLabel?: boolean;
+	ariaDescriptionId: string;
 	closeButtonAriaLabel: string;
 	inputName?: string;
 	labels: Array<Item>;
-	locator: Locators;
-	onLabelsChange: InternalDispatch<Array<Item>>;
-	onFocusChange: (value: boolean) => void;
-	spritemap?: string;
-	ariaDescriptionId: string;
 	lastChangesRef: React.MutableRefObject<LastChangeLiveRegion | null>;
+	locator: Locators;
+	onFocusChange: (value: boolean) => void;
+	onLabelsChange: InternalDispatch<Array<Item>>;
+	spritemap?: string;
 	suggestionList: Array<Item>;
 }
 
@@ -48,7 +48,7 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 			closeButtonAriaLabel,
 			disabled,
 			inputName,
-			insetAfter: _,
+			'insetAfter': _,
 			labels,
 			lastChangesRef,
 			locator,
@@ -132,7 +132,8 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 					if (closeElement) {
 						closeElement.focus();
 						setLastFocusedItem(closeElement.getAttribute('id'));
-					} else {
+					}
+					else {
 						inputElementRef.current?.focus();
 						setLastFocusedItem(null);
 					}
@@ -186,16 +187,17 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 								// - Left and Right. Query all elements.
 								// - Up and Down. Query for elements of the same type as the
 								//   last focused element.
+
 								const focusableElements =
 									Array.from<HTMLElement>(
 										event.currentTarget.querySelectorAll(
 											KeysSides.includes(event.key)
 												? '[role=gridcell][tabindex], button'
 												: lastFocusedItem?.includes(
-														'span'
-												  )
-												? '[role=gridcell][tabindex]'
-												: 'button'
+															'span'
+													  )
+													? '[role=gridcell][tabindex]'
+													: 'button'
 										)
 									);
 
@@ -427,7 +429,9 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 												`${value}`.toLowerCase()
 										)
 									) {
+
 										// @ts-ignore
+
 										onChange!({target: {value: ''}});
 
 										return;
@@ -446,8 +450,10 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 									]);
 
 									// @ts-ignore
+
 									onChange!({target: {value: ''}});
-								} else if (
+								}
+								else if (
 									!value &&
 									key === Keys.Backspace &&
 									inputElementRef.current &&
@@ -476,10 +482,7 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 									)
 									.filter(Boolean);
 
-								if (
-									allowsCustomLabel &&
-									pastedItems.length > 0
-								) {
+								if (allowsCustomLabel && !!pastedItems.length) {
 									event.preventDefault();
 
 									onLabelsChange([...labels, ...pastedItems]);

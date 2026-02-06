@@ -1,5 +1,9 @@
 {
 	"bracketSpacing": false,
+	"endOfLine": "lf",
+	"jsxSingleQuote": false,
+	"plugins": ["@liferay/prettier-plugin"],
+	"quoteProps": "consistent",
 	"singleQuote": true,
 	"tabWidth": 4,
 	"trailingComma": "es5",

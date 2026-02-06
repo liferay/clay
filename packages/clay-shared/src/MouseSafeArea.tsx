@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React from 'react';
@@ -22,23 +22,26 @@ interface IPositions {
 	y: number;
 }
 
-const getLeft = ({mouseX, x}: IPositions) =>
-	mouseX > x ? undefined : `${x - Math.max(x - mouseX, 10)}px`;
+function getLeft({mouseX, x}: IPositions) {
+	return mouseX > x ? undefined : `${x - Math.max(x - mouseX, 10)}px`;
+}
 
-const getRight = ({mouseX, ownerW, w, x}: IPositions) =>
-	mouseX > x
+function getRight({mouseX, ownerW, w, x}: IPositions) {
+	return mouseX > x
 		? `${ownerW - (x + w) - Math.max(mouseX - (x + w), 10)}px`
 		: undefined;
+}
 
-const getWidth = ({mouseX, w, x}: IPositions) =>
-	`${Math.max(mouseX > x ? mouseX - (x + w) : x - mouseX, 10)}px`;
+function getWidth({mouseX, w, x}: IPositions) {
+	return `${Math.max(mouseX > x ? mouseX - (x + w) : x - mouseX, 10)}px`;
+}
 
-const getClipPath = ({h, mouseX, mouseY, x, y}: IPositions) =>
-	mouseX > x
+function getClipPath({h, mouseX, mouseY, x, y}: IPositions) {
+	return mouseX > x
 		? `polygon(0% 0%, 0% 100%, 100% ${(100 * (mouseY - y)) / h}%)`
 		: `polygon(100% 0%, 0% ${(100 * (mouseY - y)) / h}%, 100% 100%)`;
-
-export const MouseSafeArea = ({parentRef}: Props) => {
+}
+export function MouseSafeArea({parentRef}: Props) {
 	const [mouseX, mouseY] = useMousePosition();
 
 	const {
@@ -70,4 +73,4 @@ export const MouseSafeArea = ({parentRef}: Props) => {
 			/>
 		</ClayPortal>
 	);
-};
+}

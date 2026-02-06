@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -41,8 +41,7 @@ const sourceItems = [
 		value: '4',
 	},
 ];
-
-export const Default = (args: any) => {
+export function Default(args: any) {
 	const [items, setItems] = useState([
 		{
 			label: 'one',
@@ -69,7 +68,7 @@ export const Default = (args: any) => {
 			/>
 		</>
 	);
-};
+}
 
 Default.args = {
 	disabled: false,
@@ -77,8 +76,7 @@ Default.args = {
 	isValid: false,
 	size: null,
 };
-
-export const ComparingItems = () => {
+export function ComparingItems() {
 	const [items, setItems] = useState([
 		{
 			label: 'one',
@@ -117,9 +115,8 @@ export const ComparingItems = () => {
 			/>
 		</>
 	);
-};
-
-export const SourceItems = () => {
+}
+export function SourceItems() {
 	const [value, setValue] = React.useState('');
 	const [items, setItems] = React.useState([
 		{
@@ -145,7 +142,7 @@ export const SourceItems = () => {
 			/>
 		</>
 	);
-};
+}
 
 const locatorPropSourceItems = [
 	{
@@ -173,8 +170,7 @@ const locatorPropSourceItems = [
 		value: 'value',
 	},
 ];
-
-export const LocatorProp = () => {
+export function LocatorProp() {
 	const [value, setValue] = React.useState('');
 	const [items, setItems] = React.useState([
 		{
@@ -216,9 +212,8 @@ export const LocatorProp = () => {
 			/>
 		</>
 	);
-};
-
-export const CustomMenu = () => {
+}
+export function CustomMenu() {
 	const [items, setItems] = useState([
 		{
 			email: 'one@example.com',
@@ -266,8 +261,10 @@ export const CustomMenu = () => {
 									<ClayIcon symbol="user" />
 								</ClaySticker>
 							</div>
+
 							<div className="autofit-col">
 								<strong>{item.label}</strong>
+
 								<span>{item.email}</span>
 							</div>
 						</div>
@@ -276,9 +273,8 @@ export const CustomMenu = () => {
 			</ClayMultiSelect>
 		</>
 	);
-};
-
-export const CustomFilter = () => {
+}
+export function CustomFilter() {
 	const [value, setValue] = useState('');
 	const [items, setItems] = useState<Array<{label: string; value: string}>>(
 		[]
@@ -293,15 +289,14 @@ export const CustomFilter = () => {
 			value={value}
 		/>
 	);
-};
+}
 
 type RickandMorty = {
 	id: number;
 	name: string;
 	[key: string]: any;
 };
-
-export const Async = () => {
+export function Async() {
 	const [value, setValue] = useState('');
 	const [items, setItems] = useState<Array<RickandMorty>>([]);
 
@@ -332,15 +327,14 @@ export const Async = () => {
 			)}
 		</ClayMultiSelect>
 	);
-};
+}
 
 type RickandMortyNested = RickandMorty & {
 	nested: {
 		name: string;
 	};
 };
-
-export const NestedData = () => {
+export function NestedData() {
 	const [value, setValue] = useState('');
 	const [items, setItems] = useState<Array<RickandMorty>>([]);
 
@@ -393,9 +387,8 @@ export const NestedData = () => {
 			)}
 		</ClayMultiSelect>
 	);
-};
-
-export const Group = (args: any) => {
+}
+export function Group(args: any) {
 	const [items, setItems] = useState([
 		{
 			label: 'one',
@@ -452,13 +445,12 @@ export const Group = (args: any) => {
 			</ClayForm.Group>
 		</div>
 	);
-};
+}
 
 Group.args = {
 	isValid: false,
 };
-
-export const WithPrimaryAction = () => {
+export function WithPrimaryAction() {
 	const [value, setValue] = React.useState('');
 	const [items, setItems] = React.useState([
 		{
@@ -490,4 +482,4 @@ export const WithPrimaryAction = () => {
 			/>
 		</>
 	);
-};
+}

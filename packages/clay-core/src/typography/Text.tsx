@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -27,6 +27,7 @@ export type ColorType =
 	| 'info';
 
 type Props = {
+
 	/**
 	 * State indicates whether the component will be exposed to an
 	 * accessibility API.
@@ -36,51 +37,51 @@ type Props = {
 	/**
 	 * Determine the way in which a text is displayed.
 	 */
-	as?: 'p' | 'span';
+	'as'?: 'p' | 'span';
 
 	/**
 	 * Text content.
 	 */
-	children?: React.ReactNode;
+	'children'?: React.ReactNode;
 
 	/**
 	 * Determine the color text.
 	 */
-	color?: ColorType;
+	'color'?: ColorType;
 
 	/**
 	 * The id global attribute defines an identifier (ID) which must be unique
 	 * in the whole document.
 	 */
-	id?: string;
+	'id'?: string;
 
 	/**
 	 * Set the text in italic style.
 	 */
-	italic?: boolean;
+	'italic'?: boolean;
 
 	/**
 	 * Set the text in monospace style.
 	 */
-	monospace?: boolean;
+	'monospace'?: boolean;
 
 	/**
 	 * Number to set the text size.
 	 */
-	size?: TextSize;
+	'size'?: TextSize;
 
 	/**
 	 * Set the text in truncate style.
 	 */
-	truncate?: boolean;
+	'truncate'?: boolean;
 
 	/**
 	 * Determines the weight of the font.
 	 */
-	weight?: WeightFont;
+	'weight'?: WeightFont;
 };
 
-export const Text = ({
+export function Text({
 	'aria-hidden': ariaHidden,
 	as = 'span',
 	children,
@@ -91,7 +92,7 @@ export const Text = ({
 	size = 4,
 	truncate,
 	weight,
-}: Props) => {
+}: Props) {
 	const TextTag = as as ElementType;
 
 	return (
@@ -109,6 +110,6 @@ export const Text = ({
 			{children}
 		</TextTag>
 	);
-};
+}
 
 Text.displayName = 'Text';

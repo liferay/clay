@@ -4,18 +4,18 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<rect y="64" fill="#B0BEC9" width="512" height="384"></rect>
-	<rect x="16" y="80" fill="#0035A0" width="480" height="39.1"></rect>
-	<rect x="16" y="119.1" fill="#FFFFFF" width="480" height="39.1"></rect>
-	<rect x="16" y="197.3" fill="#FFFFFF" width="480" height="39.1"></rect>
-	<rect x="16" y="236.4" fill="#0035A0" width="480" height="39.1"></rect>
-	<rect x="16" y="275.6" fill="#FFFFFF" width="480" height="39.1"></rect>
-	<rect x="16" y="314.7" fill="#0035A0" width="480" height="39.1"></rect>
-	<rect x="16" y="353.8" fill="#FFFFFF" width="480" height="39.1"></rect>
-	<rect x="16" y="392.9" fill="#0035A0" width="480" height="39.1"></rect>
-	<rect x="16.1" y="80" fill="#0035A0" width="207.9" height="195.6"></rect>
-	<rect x="16" y="158.2" fill="#0035A0" width="480" height="39.1"></rect>
-	<rect x="100.2" y="80" fill="#FFFFFF" width="39.1" height="195.6"></rect>
-	<rect x="16.5" y="158.2" fill="#FFFFFF" width="207.8" height="39.1"></rect>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+	<rect fill="#B0BEC9" height="384" width="512" y="64"></rect>
+	<rect fill="#0035A0" height="39.1" width="480" x="16" y="80"></rect>
+	<rect fill="#FFFFFF" height="39.1" width="480" x="16" y="119.1"></rect>
+	<rect fill="#FFFFFF" height="39.1" width="480" x="16" y="197.3"></rect>
+	<rect fill="#0035A0" height="39.1" width="480" x="16" y="236.4"></rect>
+	<rect fill="#FFFFFF" height="39.1" width="480" x="16" y="275.6"></rect>
+	<rect fill="#0035A0" height="39.1" width="480" x="16" y="314.7"></rect>
+	<rect fill="#FFFFFF" height="39.1" width="480" x="16" y="353.8"></rect>
+	<rect fill="#0035A0" height="39.1" width="480" x="16" y="392.9"></rect>
+	<rect fill="#0035A0" height="195.6" width="207.9" x="16.1" y="80"></rect>
+	<rect fill="#0035A0" height="39.1" width="480" x="16" y="158.2"></rect>
+	<rect fill="#FFFFFF" height="195.6" width="39.1" x="100.2" y="80"></rect>
+	<rect fill="#FFFFFF" height="39.1" width="207.8" x="16.5" y="158.2"></rect>
 </svg>

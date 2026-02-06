@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {bb} from 'billboard.js';
@@ -8,6 +8,7 @@ import {bb} from 'billboard.js';
 import bbPatched from '../bb-patched';
 
 // Mock the original bb.generate function to intercept calls
+
 const originalGenerate = jest.spyOn(bb, 'generate');
 const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
@@ -15,15 +16,20 @@ describe('bb-patched', () => {
 	let pollutedProperty: any;
 
 	beforeAll(() => {
+
 		// Store the original value of a potential pollution target, if any
+
 		pollutedProperty = (Object.prototype as any).polluted;
 	});
 
 	afterEach(() => {
+
 		// Clean up any potential pollution after each test
+
 		if (pollutedProperty === undefined) {
 			delete (Object.prototype as any).polluted;
-		} else {
+		}
+		else {
 			(Object.prototype as any).polluted = pollutedProperty;
 		}
 
@@ -51,12 +57,14 @@ describe('bb-patched', () => {
 		);
 
 		// @ts-ignore
+
 		expect({}.__proto__.polluted).toBeUndefined();
 		expect((Object.prototype as any).polluted).toBeUndefined();
 
 		bb.generate(maliciousOptions);
 
 		// @ts-ignore
+
 		expect({}.__proto__.polluted).toBe('polutedValue');
 		expect((Object.prototype as any).polluted).toBe('polutedValue');
 	});
@@ -73,6 +81,7 @@ describe('bb-patched', () => {
 		);
 
 		// @ts-ignore
+
 		expect({}.__proto__.polluted).toBeUndefined();
 	});
 
@@ -84,6 +93,7 @@ describe('bb-patched', () => {
 		bbPatched.generate(maliciousOptions);
 
 		// @ts-ignore
+
 		expect({}.__proto__.polluted).toBeUndefined();
 	});
 
@@ -132,6 +142,7 @@ describe('bb-patched', () => {
 		};
 
 		// @ts-ignore
+
 		bbPatched.generate(maliciousOptions);
 
 		expect((Object.prototype as any).polluted).toBeUndefined();

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayDropDownWithItems} from '@clayui/drop-down';
@@ -15,10 +15,16 @@ import React from 'react';
 import ClayList from './List';
 
 export interface IListItem {
+
 	/**
 	 * Description of item.
 	 */
 	description?: string;
+
+	/**
+	 * Props to add to the dropdown trigger element
+	 */
+	dropDownTriggerProps?: React.HTMLAttributes<HTMLButtonElement>;
 
 	/**
 	 * List of actions to include in dropdown.
@@ -26,11 +32,6 @@ export interface IListItem {
 	dropdownActions?: React.ComponentProps<
 		typeof ClayDropDownWithItems
 	>['items'];
-
-	/**
-	 * Props to add to the dropdown trigger element
-	 */
-	dropDownTriggerProps?: React.HTMLAttributes<HTMLButtonElement>;
 
 	/**
 	 * Value to display if item is a header.
@@ -78,6 +79,7 @@ interface IBooleanMap {
 }
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Property of item that makes it unique from other items.
 	 * Defaults to 'id'.
@@ -105,7 +107,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 }
 
-const ListItem = ({
+function ListItem({
 	description,
 	dropDownTriggerProps,
 	dropdownActions,
@@ -117,10 +119,10 @@ const ListItem = ({
 	spritemap,
 	title,
 }: IListItem & {
-	selected?: boolean;
 	onSelectChange?: any;
+	selected?: boolean;
 	spritemap?: string;
-}) => {
+}) {
 	const titleId = useId();
 
 	return (
@@ -199,9 +201,9 @@ const ListItem = ({
 			</ClayList.ItemField>
 		</ClayList.Item>
 	);
-};
+}
 
-export const ListWithItems = ({
+export function ListWithItems({
 	className,
 	itemIdentifier = 'id',
 	items = [],
@@ -209,7 +211,7 @@ export const ListWithItems = ({
 	onSelectedItemsChange,
 	spritemap,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	return (
 		<div {...otherProps} className={classNames(className)}>
 			<ClayList>
@@ -237,7 +239,7 @@ export const ListWithItems = ({
 																	],
 																}
 															);
-													  }
+														}
 													: undefined
 											}
 											selected={selectedItemsMap[key]}
@@ -248,7 +250,6 @@ export const ListWithItems = ({
 							</React.Fragment>
 						);
 					}
-
 					const key = item[itemIdentifier];
 
 					return (
@@ -262,7 +263,7 @@ export const ListWithItems = ({
 												...selectedItemsMap,
 												[key]: !selectedItemsMap[key],
 											});
-									  }
+										}
 									: undefined
 							}
 							selected={selectedItemsMap[key]}
@@ -273,4 +274,4 @@ export const ListWithItems = ({
 			</ClayList>
 		</div>
 	);
-};
+}

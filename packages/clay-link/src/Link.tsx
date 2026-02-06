@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -32,11 +32,12 @@ const LINK_PRESETS = {
 } as const;
 
 const FONT_WEIGHTS = {
-	normal: 'font-weight-normal',
+	'normal': 'font-weight-normal',
 	'semi-bold': 'font-weight-semi-bold',
 };
 
 interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+
 	/**
 	 * Renders the button as a block element.
 	 */
@@ -135,7 +136,7 @@ const Link = React.forwardRef<HTMLAnchorElement, IProps>(
 			button = button === true ? {} : button;
 
 			classes = {
-				btn: !!button,
+				'btn': !!button,
 				'btn-block': button.block || block,
 				'btn-monospaced': button.monospaced || monospaced,
 				'btn-outline-borderless': borderless,
@@ -147,7 +148,8 @@ const Link = React.forwardRef<HTMLAnchorElement, IProps>(
 				[`text-${fontSize}`]: fontSize,
 				[`text-decoration-${decoration}`]: decoration,
 			};
-		} else {
+		}
+		else {
 			decoration =
 				decoration === null || outline
 					? undefined
@@ -178,6 +180,7 @@ const Link = React.forwardRef<HTMLAnchorElement, IProps>(
 				{...otherProps}
 			>
 				{children}
+
 				{target === '_blank' && (
 					<span className="sr-only">{messages.opensNewWindow}</span>
 				)}

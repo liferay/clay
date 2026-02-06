@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -14,6 +14,7 @@ import {DropDownContext} from './DropDownContext';
 
 export interface IProps
 	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
+
 	/**
 	 * Initial value of the input (uncontrolled).
 	 */
@@ -45,14 +46,16 @@ export interface IProps
 	value?: string;
 }
 
-const defaultOnSubmit = (event: React.SyntheticEvent) => event.preventDefault();
+function defaultOnSubmit(event: React.SyntheticEvent) {
+	return event.preventDefault();
+}
 
 const defaultSubmitProps = {
 	'aria-label': 'Search',
-	type: 'button',
+	'type': 'button',
 };
 
-const Search = ({
+function Search({
 	className,
 	defaultValue = '',
 	formProps = {},
@@ -61,9 +64,8 @@ const Search = ({
 	submitProps = defaultSubmitProps,
 	value: valueProp,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const {className: formClassName, onSubmit, ...otherFormProps} = formProps;
-
 	const [value, setValue, isUncontrolled] = useControlledState({
 		defaultName: 'defaultValue',
 		defaultValue,
@@ -72,9 +74,7 @@ const Search = ({
 		onChange,
 		value: valueProp,
 	});
-
 	const {onSearch, tabFocus} = useContext(DropDownContext);
-
 	useEffect(() => {
 		if (isUncontrolled) {
 			onSearch(value);
@@ -116,6 +116,6 @@ const Search = ({
 			</div>
 		</form>
 	);
-};
+}
 
 export default Search;

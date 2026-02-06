@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useContext} from 'react';
@@ -16,7 +16,6 @@ type Context = {
 	expandedKeys: Set<React.Key>;
 	headCellsCount: number;
 	itemIdKey: string;
-	visibleColumns: Map<React.Key, number>;
 	messages: Record<string, string>;
 	nestedKey?: string;
 	onExpandedChange: (keys: Set<React.Key>) => void;
@@ -30,6 +29,7 @@ type Context = {
 	sort: Sorting | null;
 	sortDescriptionId: string;
 	treegrid: boolean;
+	visibleColumns: Map<React.Key, number>;
 };
 
 export const TableContext = React.createContext<Context>({} as Context);

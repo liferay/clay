@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -23,6 +23,7 @@ import {Header} from './Header';
 import {Title} from './Title';
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Flag to indicate that Panel is collapsable.
 	 */
@@ -144,8 +145,8 @@ function Panel({
 							{
 								'collapse-icon': showCollapseIcon,
 								'collapse-icon-middle': showCollapseIcon,
-								collapsed: !internalExpanded,
-								show: internalExpanded,
+								'collapsed': !internalExpanded,
+								'show': internalExpanded,
 							}
 						)}
 						displayType="unstyled"

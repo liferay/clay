@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 const print = require('./print');
@@ -14,9 +14,11 @@ async function main(callback) {
 	const status = await callback();
 	if (typeof status === 'number') {
 		process.exit(status);
-	} else if (status == null) {
+	}
+	else if (status == null) {
 		process.exit(0);
-	} else {
+	}
+	else {
 		process.exit(status ? 0 : 1);
 	}
 }

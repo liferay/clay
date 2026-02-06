@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {LanguagePicker} from '@clayui/core';
@@ -19,6 +19,7 @@ interface ITranslations {
 }
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+
 	/**
 	 * Labels for the aria attributes
 	 */
@@ -40,11 +41,6 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	label?: React.ReactText;
 
 	/**
-	 * Content to be prepended in case you want to localize a URL.
-	 */
-	prependContent?: React.ReactText;
-
-	/**
 	 * List of locales to allow localization for
 	 */
 	locales: Array<IItem>;
@@ -58,6 +54,11 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * Callback that gets called when a translation of the selected locale gets changed
 	 */
 	onTranslationsChange: (val: ITranslations) => void;
+
+	/**
+	 * Content to be prepended in case you want to localize a URL.
+	 */
+	prependContent?: React.ReactText;
 
 	/**
 	 * Allows specifying custom formatter, for example for formatting URLs, to be output after translating
@@ -158,6 +159,7 @@ const LocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 							value={translations[selectedLocale.label] || ''}
 						/>
 					</ClayInput.GroupItem>
+
 					<ClayInput.GroupItem shrink>
 						<LanguagePicker
 							defaultLocaleId={defaultLanguage.id}

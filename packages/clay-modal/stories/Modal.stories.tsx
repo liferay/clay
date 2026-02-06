@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayAutocomplete from '@clayui/autocomplete';
@@ -26,8 +26,7 @@ export default {
 	component: ClayModal,
 	title: 'Design System/Components/Modal',
 };
-
-export const Default = (args: any) => {
+export function Default(args: any) {
 	const {observer, onOpenChange, open} = useModal();
 
 	return (
@@ -41,6 +40,7 @@ export const Default = (args: any) => {
 					status={args.status}
 				>
 					<ClayModal.Header>{args.title}</ClayModal.Header>
+
 					<ClayModal.Body
 						iFrameProps={{
 							'aria-label': 'Hello World',
@@ -66,6 +66,7 @@ export const Default = (args: any) => {
 							dictum ut eu velit.
 						</p>
 					</ClayModal.Body>
+
 					<ClayModal.Footer
 						last={
 							<ClayButton.Group spaced>
@@ -75,6 +76,7 @@ export const Default = (args: any) => {
 								>
 									Cancel
 								</ClayButton>
+
 								<ClayButton onClick={() => onOpenChange(false)}>
 									Save changes
 								</ClayButton>
@@ -91,7 +93,7 @@ export const Default = (args: any) => {
 			</ClayButton>
 		</>
 	);
-};
+}
 
 Default.args = {
 	autoClose: false,
@@ -102,8 +104,7 @@ Default.args = {
 	title: 'Modal Title',
 	url: '',
 };
-
-export const CustomHeader = () => {
+export function CustomHeader() {
 	const {observer, onOpenChange, open} = useModal();
 
 	return (
@@ -122,6 +123,7 @@ export const CustomHeader = () => {
 									</ClayModal.Title>
 								</ClayModal.TitleSection>
 							</ClayModal.Item>
+
 							<ClayModal.Item shrink>
 								<ClayModal.SubtitleSection>
 									<ClayModal.Subtitle>
@@ -140,6 +142,7 @@ export const CustomHeader = () => {
 							<ClayIcon symbol="times" />
 						</ClayButton>
 					</ClayModal.Header>
+
 					<ClayModal.Body />
 				</ClayModal>
 			)}
@@ -152,7 +155,7 @@ export const CustomHeader = () => {
 			</ClayButton>
 		</>
 	);
-};
+}
 
 const dropDownItems = [
 	{
@@ -177,6 +180,7 @@ const dropDownItems = [
 				value: 'two',
 			},
 		],
+
 		label: 'radio',
 		name: 'radio',
 		onChange: (value: string) => alert(`New Radio checked ${value}`),
@@ -197,6 +201,7 @@ const dropDownItems = [
 				type: 'checkbox' as const,
 			},
 		],
+
 		label: 'checkbox',
 		type: 'group' as const,
 	},
@@ -206,11 +211,10 @@ const dropDownItems = [
 	},
 ];
 
-const Autocomplete = () => {
+function Autocomplete() {
 	const inputRef = useRef<HTMLInputElement | null>(null);
 	const [value, setValue] = useState('');
 	const [active, setActive] = useState(!!value);
-
 	const filteredItems = ['one', 'two', 'three', 'four', 'five'].filter(
 		(item) => item.match(value)
 	);
@@ -248,9 +252,8 @@ const Autocomplete = () => {
 			</ClayAutocomplete.DropDown>
 		</ClayAutocomplete>
 	);
-};
-
-export const AutocompleteAndDropDown = () => {
+}
+export function AutocompleteAndDropDown() {
 	const {observer, onOpenChange, open} = useModal();
 
 	return (
@@ -258,6 +261,7 @@ export const AutocompleteAndDropDown = () => {
 			{open && (
 				<ClayModal observer={observer} size="lg">
 					<ClayModal.Header>Title</ClayModal.Header>
+
 					<ClayModal.Body
 						iFrameProps={{
 							'aria-label': 'Hello World',
@@ -267,6 +271,7 @@ export const AutocompleteAndDropDown = () => {
 							<div className="col-md-3">
 								<Autocomplete />
 							</div>
+
 							<div className="col-md-3">
 								<ClayDropDownWithItems
 									items={dropDownItems}
@@ -285,9 +290,9 @@ export const AutocompleteAndDropDown = () => {
 			</ClayButton>
 		</>
 	);
-};
+}
 
-const MyApp = () => {
+function MyApp() {
 	const [state, dispatch] = useContext(Context);
 
 	return (
@@ -314,9 +319,9 @@ const MyApp = () => {
 			Open modal
 		</ClayButton>
 	);
-};
+}
 
-const MyAppWithoutFooterAndHeader = () => {
+function MyAppWithoutFooterAndHeader() {
 	const [, dispatch] = useContext(Context);
 
 	return (
@@ -335,17 +340,17 @@ const MyAppWithoutFooterAndHeader = () => {
 			Open modal without Footer and Header
 		</ClayButton>
 	);
-};
+}
+export function Provider() {
+	return (
+		<ClayModalProvider>
+			<MyApp />
 
-export const Provider = () => (
-	<ClayModalProvider>
-		<MyApp />
-
-		<MyAppWithoutFooterAndHeader />
-	</ClayModalProvider>
-);
-
-export const CardStyleModal = (args: any) => {
+			<MyAppWithoutFooterAndHeader />
+		</ClayModalProvider>
+	);
+}
+export function CardStyleModal(args: any) {
 	const {observer, onOpenChange, open} = useModal();
 
 	return (
@@ -371,6 +376,7 @@ export const CardStyleModal = (args: any) => {
 						>
 							<ClayIcon symbol="times" />
 						</ClayButton>
+
 						<div className="aspect-ratio aspect-ratio-16-to-9 bg-primary-l3 modal-banner-img">
 							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid">
 								<img
@@ -379,7 +385,9 @@ export const CardStyleModal = (args: any) => {
 								/>
 							</div>
 						</div>
+
 						<ClayModal.Title>{args.title}</ClayModal.Title>
+
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Curabitur dignissim eu ante eget lobortis.
@@ -387,6 +395,7 @@ export const CardStyleModal = (args: any) => {
 							lobortis massa hendrerit sagittis.
 						</p>
 					</ClayModal.Body>
+
 					<ClayModal.Footer
 						last={
 							<ClayButton.Group spaced>
@@ -396,6 +405,7 @@ export const CardStyleModal = (args: any) => {
 								>
 									Cancel
 								</ClayButton>
+
 								<ClayButton onClick={() => onOpenChange(false)}>
 									<span className="inline-item inline-item-before">
 										<ClayIcon symbol="marketplace" />
@@ -415,7 +425,7 @@ export const CardStyleModal = (args: any) => {
 			</ClayButton>
 		</>
 	);
-};
+}
 
 CardStyleModal.args = {
 	autoClose: false,

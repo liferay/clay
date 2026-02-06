@@ -64,8 +64,8 @@
 	.nav-item .dropdown {
 		align-items: center;
 		display: flex;
-		word-wrap: normal;
 		max-width: 100%;
+		word-wrap: normal;
 	}
 
 	.nav-item {
@@ -141,8 +141,8 @@
 // Navbar Toggler
 
 .navbar-toggler-icon {
-	background-size: 100% 100%;
 	background: no-repeat center center;
+	background-size: 100% 100%;
 	content: '';
 	display: inline-block;
 	height: 1.5em;
@@ -176,17 +176,17 @@
 
 .navbar-toggler-link {
 	align-items: center;
-	display: flex;
 	border-width: 0;
+	display: flex;
 	line-height: $cadmin-line-height-base;
 	max-width: 100%;
 	padding: $cadmin-navbar-brand-padding-y $cadmin-navbar-nav-link-padding-x;
 	position: relative;
 
 	.lexicon-icon {
-		min-width: 1em;
 		margin-left: 3px;
 		margin-top: 0;
+		min-width: 1em;
 	}
 }
 

@@ -4,9 +4,13 @@ $toggle-switch-font-weight: if(
 	$input-label-font-weight,
 	null
 ) !default;
-$toggle-switch-transition: background-color 100ms ease-in,
-	border-color 100ms ease-in, box-shadow 150ms ease-in-out,
-	color 100ms ease-in, left 100ms ease-in, opacity 100ms ease-in,
+$toggle-switch-transition:
+	background-color 100ms ease-in,
+	border-color 100ms ease-in,
+	box-shadow 150ms ease-in-out,
+	color 100ms ease-in,
+	left 100ms ease-in,
+	opacity 100ms ease-in,
 	right 100ms ease-in !default;
 
 // must all be same units--start

@@ -7,13 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
@@ -31,25 +31,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/toolbar@3.0.6...@clayui/toolbar@3.142.0) (2025-08-01)
 
@@ -73,7 +73,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/toolbar:** improves component typing to create API Toolbar ([09e74ea](https://github.com/liferay/clay/commit/09e74ea468c6412d6b8094bbf450af00b01b7380))
+- **@clayui/toolbar:** improves component typing to create API Toolbar ([09e74ea](https://github.com/liferay/clay/commit/09e74ea468c6412d6b8094bbf450af00b01b7380))
 
 # 3.125.0 (2025-01-13)
 
@@ -99,8 +99,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.104.0 (2023-08-25)
 
@@ -218,7 +218,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/toolbar:** spritemap should be optional ([77a6216](https://github.com/liferay/clay/commit/77a6216638b2dffeae683e6d23832681bcd8f5d6))
+- **@clayui/toolbar:** spritemap should be optional ([77a6216](https://github.com/liferay/clay/commit/77a6216638b2dffeae683e6d23832681bcd8f5d6))
 
 # 3.29.0 (2021-05-28)
 
@@ -262,7 +262,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/toolbar:** improves component typing to create API Toolbar ([09e74ea](https://github.com/liferay/clay/commit/09e74ea468c6412d6b8094bbf450af00b01b7380))
+- **@clayui/toolbar:** improves component typing to create API Toolbar ([09e74ea](https://github.com/liferay/clay/commit/09e74ea468c6412d6b8094bbf450af00b01b7380))
 
 # [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
 
@@ -308,8 +308,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
@@ -543,7 +543,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/toolbar:** spritemap should be optional ([77a6216](https://github.com/liferay/clay/commit/77a6216))
+- **@clayui/toolbar:** spritemap should be optional ([77a6216](https://github.com/liferay/clay/commit/77a6216))
 
 # [3.29.0](https://github.com/liferay/clay/compare/v3.28.0...v3.29.0) (2021-05-28)
 
@@ -585,7 +585,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
 
 # [3.0.0-alpha.3](https://github.com/liferay/clay/compare/@clayui/toolbar@3.0.0-alpha.2...@clayui/toolbar@3.0.0-alpha.3) (2020-08-28)
 
@@ -595,16 +595,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/toolbar:** Remove obsolete Prop extension, up the version of form package, and simplify light prop consumation ([46e8e16](https://github.com/liferay/clay/commit/46e8e16))
+- **@clayui/toolbar:** Remove obsolete Prop extension, up the version of form package, and simplify light prop consumation ([46e8e16](https://github.com/liferay/clay/commit/46e8e16))
 
 ### Features
 
--   **@clayui/toolbar:** Add clayui/form to deps, Add low-level components to Toolbar ([719b71f](https://github.com/liferay/clay/commit/719b71f))
--   **@clayui/toolbar:** Add new Action low level component ([cbbe435](https://github.com/liferay/clay/commit/cbbe435))
--   **@clayui/toolbar:** Improve low level components ([35728eb](https://github.com/liferay/clay/commit/35728eb))
--   **@clayui/toolbar:** Make component-\* classes be there by default, add missing JSDoc ([6d05bf8](https://github.com/liferay/clay/commit/6d05bf8))
--   **@clayui/toolbar:** Make stories match examples from markup ([10503b1](https://github.com/liferay/clay/commit/10503b1))
--   **@clayui/toolbar:** Squashed Initialize ClayToolbar and it's low-level components ([58d8d30](https://github.com/liferay/clay/commit/58d8d30))
--   **clayui.com:** Add composition example for @clayui/toolbar documentation ([5f85e7d](https://github.com/liferay/clay/commit/5f85e7d))
--   **clayui.com:** Add documentation for @clayui/toolbar ([d52e2bc](https://github.com/liferay/clay/commit/d52e2bc))
--   **clayui.com:** Make @clayui/toolbar documentation draft and add `ClayToolbar.*` to low-level component mentions ([f5e3146](https://github.com/liferay/clay/commit/f5e3146))
+- **@clayui/toolbar:** Add clayui/form to deps, Add low-level components to Toolbar ([719b71f](https://github.com/liferay/clay/commit/719b71f))
+- **@clayui/toolbar:** Add new Action low level component ([cbbe435](https://github.com/liferay/clay/commit/cbbe435))
+- **@clayui/toolbar:** Improve low level components ([35728eb](https://github.com/liferay/clay/commit/35728eb))
+- **@clayui/toolbar:** Make component-\* classes be there by default, add missing JSDoc ([6d05bf8](https://github.com/liferay/clay/commit/6d05bf8))
+- **@clayui/toolbar:** Make stories match examples from markup ([10503b1](https://github.com/liferay/clay/commit/10503b1))
+- **@clayui/toolbar:** Squashed Initialize ClayToolbar and it's low-level components ([58d8d30](https://github.com/liferay/clay/commit/58d8d30))
+- **clayui.com:** Add composition example for @clayui/toolbar documentation ([5f85e7d](https://github.com/liferay/clay/commit/5f85e7d))
+- **clayui.com:** Add documentation for @clayui/toolbar ([d52e2bc](https://github.com/liferay/clay/commit/d52e2bc))
+- **clayui.com:** Make @clayui/toolbar documentation draft and add `ClayToolbar.*` to low-level component mentions ([f5e3146](https://github.com/liferay/clay/commit/f5e3146))

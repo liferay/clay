@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useState} from 'react';
@@ -38,8 +38,7 @@ const locales = [
 		symbol: 'nl-nl',
 	},
 ];
-
-export const Default = (args: any) => {
+export function Default(args: any) {
 	const [selectedLocaleId, setSelectedLocaleId] = useState<any>(
 		locales[0]!.id
 	);
@@ -55,7 +54,7 @@ export const Default = (args: any) => {
 			small={args.small}
 		/>
 	);
-};
+}
 
 Default.args = {
 	hideTriggerText: false,
@@ -131,8 +130,7 @@ const localesLong = [
 		symbol: 'nl-nl',
 	},
 ];
-
-export const LanguagePickerWithTranslations = (args: any) => {
+export function LanguagePickerWithTranslations(args: any) {
 	const [selectedLocaleId, setSelectedLocaleId] = useState<any>(
 		localesLong[0]!.id
 	);
@@ -153,7 +151,7 @@ export const LanguagePickerWithTranslations = (args: any) => {
 			translations={translations}
 		/>
 	);
-};
+}
 
 LanguagePickerWithTranslations.args = {
 	hideTriggerText: false,

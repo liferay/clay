@@ -2,9 +2,9 @@
 
 Cards are a specific form of data visualization focused mainly on displaying images.
 
--   [Documentation](https://clayui.com/docs/components/card.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/card.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

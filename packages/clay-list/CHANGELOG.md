@@ -3,33 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.156.6](https://github.com/liferay/clay/compare/v3.156.0...v3.156.6) (2026-01-07)
-
-**Note:** Version bump only for package @clayui/list
-
-## [3.156.3](https://github.com/liferay/clay/compare/v3.156.0...v3.156.3) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/list
-
-## [3.156.2](https://github.com/liferay/clay/compare/v3.156.0...v3.156.2) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/list
-
-## [3.156.1](https://github.com/liferay/clay/compare/v3.156.0...v3.156.1) (2025-12-22)
-
-**Note:** Version bump only for package @clayui/list
-
 # [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-15)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
 
@@ -47,7 +31,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   LPD-65537 - Use aria-labelledby instead of a redundant aria-label. ([e22b65c](https://github.com/liferay/clay/commit/e22b65c27b9bef8b8754299425fc80d1fc2b044a))
+- LPD-65537 - Use aria-labelledby instead of a redundant aria-label. ([e22b65c](https://github.com/liferay/clay/commit/e22b65c27b9bef8b8754299425fc80d1fc2b044a))
 
 # [3.147.0](https://github.com/liferay/clay/compare/v3.146.0...v3.147.0) (2025-09-09)
 
@@ -65,25 +49,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/list@3.142.0...@clayui/list@3.142.2) (2025-08-13)
 
@@ -127,8 +111,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/list:** improves component typing to create API List ([de91472](https://github.com/liferay/clay/commit/de9147272917fd0b0b66b7b23ad231826fe943dc))
--   **@clayui/loading-indicator:** improves component typing to create API Loading Indicator ([b1ee1f0](https://github.com/liferay/clay/commit/b1ee1f02ce397bc6a8f5cbe4ce08b519f5ee611f))
+- **@clayui/list:** improves component typing to create API List ([de91472](https://github.com/liferay/clay/commit/de9147272917fd0b0b66b7b23ad231826fe943dc))
+- **@clayui/loading-indicator:** improves component typing to create API Loading Indicator ([b1ee1f0](https://github.com/liferay/clay/commit/b1ee1f02ce397bc6a8f5cbe4ce08b519f5ee611f))
 
 # 3.127.0 (2025-01-23)
 
@@ -182,8 +166,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.105.0 (2023-09-15)
 
@@ -339,11 +323,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/list:** fix error when building types ([b20f62c](https://github.com/liferay/clay/commit/b20f62c34cb5941494742ba6eb2acf5df273787f))
+- **@clayui/list:** fix error when building types ([b20f62c](https://github.com/liferay/clay/commit/b20f62c34cb5941494742ba6eb2acf5df273787f))
 
 ### Features
 
--   **@clayui/list:** Add forwardRef to ClayList components ([6dbccf7](https://github.com/liferay/clay/commit/6dbccf7b590d26b06e012924aca307124947bd59))
+- **@clayui/list:** Add forwardRef to ClayList components ([6dbccf7](https://github.com/liferay/clay/commit/6dbccf7b590d26b06e012924aca307124947bd59))
 
 # 3.30.0 (2021-06-16)
 
@@ -425,8 +409,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/list:** improves component typing to create API List ([de91472](https://github.com/liferay/clay/commit/de9147272917fd0b0b66b7b23ad231826fe943dc))
--   **@clayui/loading-indicator:** improves component typing to create API Loading Indicator ([b1ee1f0](https://github.com/liferay/clay/commit/b1ee1f02ce397bc6a8f5cbe4ce08b519f5ee611f))
+- **@clayui/list:** improves component typing to create API List ([de91472](https://github.com/liferay/clay/commit/de9147272917fd0b0b66b7b23ad231826fe943dc))
+- **@clayui/loading-indicator:** improves component typing to create API Loading Indicator ([b1ee1f0](https://github.com/liferay/clay/commit/b1ee1f02ce397bc6a8f5cbe4ce08b519f5ee611f))
 
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
@@ -528,8 +512,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
 
@@ -839,11 +823,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/list:** fix error when building types ([b20f62c](https://github.com/liferay/clay/commit/b20f62c))
+- **@clayui/list:** fix error when building types ([b20f62c](https://github.com/liferay/clay/commit/b20f62c))
 
 ### Features
 
--   **@clayui/list:** Add forwardRef to ClayList components ([6dbccf7](https://github.com/liferay/clay/commit/6dbccf7))
+- **@clayui/list:** Add forwardRef to ClayList components ([6dbccf7](https://github.com/liferay/clay/commit/6dbccf7))
 
 # [3.30.0](https://github.com/liferay/clay/compare/v3.29.0...v3.30.0) (2021-06-16)
 
@@ -877,7 +861,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/list:** make sure <button> has a type ([a27ce37](https://github.com/liferay/clay/commit/a27ce37))
+- **@clayui/list:** make sure <button> has a type ([a27ce37](https://github.com/liferay/clay/commit/a27ce37))
 
 ## [3.4.5](https://github.com/liferay/clay/compare/@clayui/list@3.4.4...@clayui/list@3.4.5) (2021-01-13)
 
@@ -903,7 +887,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
 
 ## [3.3.4](https://github.com/liferay/clay/compare/@clayui/list@3.3.3...@clayui/list@3.3.4) (2020-08-28)
 
@@ -925,7 +909,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/sticker:** add more low level components ([a6dd36f](https://github.com/liferay/clay/commit/a6dd36f))
+- **@clayui/sticker:** add more low level components ([a6dd36f](https://github.com/liferay/clay/commit/a6dd36f))
 
 ## [3.2.8](https://github.com/liferay/clay/compare/@clayui/list@3.2.7...@clayui/list@3.2.8) (2020-07-14)
 
@@ -943,19 +927,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/list:** add dev warning for child elements ([717db76](https://github.com/liferay/clay/commit/717db76))
+- **@clayui/list:** add dev warning for child elements ([717db76](https://github.com/liferay/clay/commit/717db76))
 
 ## [3.2.4](https://github.com/liferay/clay/compare/@clayui/list@3.2.3...@clayui/list@3.2.4) (2020-05-21)
 
 ### Bug Fixes
 
--   apply @clayui/layout to other components ([e8a6d0e](https://github.com/liferay/clay/commit/e8a6d0e))
+- apply @clayui/layout to other components ([e8a6d0e](https://github.com/liferay/clay/commit/e8a6d0e))
 
 ## [3.2.3](https://github.com/liferay/clay/compare/@clayui/list@3.2.2...@clayui/list@3.2.3) (2020-04-24)
 
 ### Bug Fixes
 
--   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+- Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
 
 ## [3.2.2](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.2.1...@clayui/list@3.2.2) (2020-03-26)
 
@@ -965,50 +949,50 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/list:** use ClayLink over anchor tag ([4393714](https://github.com/liferay/clay/commit/4393714))
+- **@clayui/list:** use ClayLink over anchor tag ([4393714](https://github.com/liferay/clay/commit/4393714))
 
 # 3.2.0 (2020-02-28)
 
 ### Bug Fixes
 
--   **@clayui/list:** add missing dependencies ([74426ac](https://github.com/liferay/clay/commit/74426ac))
--   **list:** add keyboard access to quick actions ([e0bd55b](https://github.com/liferay/clay/commit/e0bd55b))
--   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
--   bump all components to alpha.1 ([afabdec](https://github.com/liferay/clay/commit/afabdec))
--   normalize names of components ([3a0abea](https://github.com/liferay/clay/commit/3a0abea))
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+- **@clayui/list:** add missing dependencies ([74426ac](https://github.com/liferay/clay/commit/74426ac))
+- **list:** add keyboard access to quick actions ([e0bd55b](https://github.com/liferay/clay/commit/e0bd55b))
+- add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
+- bump all components to alpha.1 ([afabdec](https://github.com/liferay/clay/commit/afabdec))
+- normalize names of components ([3a0abea](https://github.com/liferay/clay/commit/3a0abea))
+- update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
 
 ### Features
 
--   **@clayui/demos:** Drag & Drop Example ([362f976](https://github.com/liferay/clay/commit/362f976))
--   **form:** add helper components for markup ([3ce63d4](https://github.com/liferay/clay/commit/3ce63d4))
--   **list:** create high-level ClayListWithItems component ([0ac5ed5](https://github.com/liferay/clay/commit/0ac5ed5))
+- **@clayui/demos:** Drag & Drop Example ([362f976](https://github.com/liferay/clay/commit/362f976))
+- **form:** add helper components for markup ([3ce63d4](https://github.com/liferay/clay/commit/3ce63d4))
+- **list:** create high-level ClayListWithItems component ([0ac5ed5](https://github.com/liferay/clay/commit/0ac5ed5))
 
 # [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.0.6...@clayui/list@3.1.0) (2020-02-13)
 
 ### Features
 
--   **@clayui/demos:** Drag & Drop Example ([362f976](https://github.com/liferay/clay/commit/362f976))
+- **@clayui/demos:** Drag & Drop Example ([362f976](https://github.com/liferay/clay/commit/362f976))
 
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.0.3...@clayui/list@3.0.6) (2020-01-31)
 
 ### Bug Fixes
 
--   **list:** add keyboard access to quick actions ([e0bd55b](https://github.com/liferay/clay/commit/e0bd55b))
--   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
+- **list:** add keyboard access to quick actions ([e0bd55b](https://github.com/liferay/clay/commit/e0bd55b))
+- add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
 
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.0.3...@clayui/list@3.0.5) (2020-01-20)
 
 ### Bug Fixes
 
--   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
--   **list:** add keyboard access to quick actions ([e0bd55b](https://github.com/liferay/clay/commit/e0bd55b))
+- add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
+- **list:** add keyboard access to quick actions ([e0bd55b](https://github.com/liferay/clay/commit/e0bd55b))
 
 ## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.0.3...@clayui/list@3.0.4) (2019-12-05)
 
 ### Bug Fixes
 
--   **list:** add keyboard access to quick actions ([e0bd55b](https://github.com/liferay/clay/commit/e0bd55b))
+- **list:** add keyboard access to quick actions ([e0bd55b](https://github.com/liferay/clay/commit/e0bd55b))
 
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.0.2...@clayui/list@3.0.3) (2019-11-07)
 

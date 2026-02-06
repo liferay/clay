@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {Key, useCallback, useRef} from 'react';
@@ -14,6 +14,7 @@ export type Cursor = Array<React.Key>;
 
 export type LayoutInfo = {
 	children: Set<Key>;
+	cursor: Cursor;
 
 	/**
 	 * Lazy Child means that the current Node has children but they were not
@@ -21,7 +22,6 @@ export type LayoutInfo = {
 	 */
 	lazyChild: boolean;
 	loc: Array<number>;
-	cursor: Cursor;
 	parentKey?: Key;
 };
 
@@ -38,7 +38,7 @@ export type Layout = {
 };
 
 export function useLayout(): Layout {
-	const layoutKeys = useRef(new Map<Key, LayoutInfo>());
+	const layoutKeysRef = useRef(new Map<Key, LayoutInfo>());
 
 	/**
 	 * The method creates the mirror of the tree in a hashmap structure with a
@@ -62,33 +62,36 @@ export function useLayout(): Layout {
 			cursor: Cursor,
 			parentKey?: Key
 		) => {
-			const keyMap = layoutKeys.current.get(key);
+			const keyMap = layoutKeysRef.current.get(key);
 
 			if (!keyMap) {
-				layoutKeys.current.set(key, {
+				layoutKeysRef.current.set(key, {
 					children: new Set(),
 					cursor,
 					lazyChild,
 					loc,
 					parentKey,
 				});
-			} else if (keyMap.parentKey !== parentKey) {
-				layoutKeys.current.set(key, {
+			}
+			else if (keyMap.parentKey !== parentKey) {
+				layoutKeysRef.current.set(key, {
 					...keyMap,
 					parentKey,
 				});
 			}
 
 			if (parentKey) {
-				const keyMap = layoutKeys.current.get(parentKey);
+				const keyMap = layoutKeysRef.current.get(parentKey);
 
 				if (keyMap) {
-					layoutKeys.current.set(parentKey, {
+					layoutKeysRef.current.set(parentKey, {
 						...keyMap,
 						children: new Set([...keyMap.children, key]),
 						lazyChild: false,
 					});
-				} else {
+				}
+				else {
+
 					// Pre-initializes the parent layout, as this is linked to
 					// React rendering, the mount is used inside `useEffect`
 					// this causes callbacks from the last rendering to be
@@ -96,7 +99,8 @@ export function useLayout(): Layout {
 					//
 					// We just add an initial value then update the parentKey
 					// when the corresponding one is called.
-					layoutKeys.current.set(parentKey, {
+
+					layoutKeysRef.current.set(parentKey, {
 						children: new Set([key]),
 						cursor: cursor.slice(0, -1),
 						lazyChild: false,
@@ -107,10 +111,10 @@ export function useLayout(): Layout {
 			}
 
 			return function unmount() {
-				layoutKeys.current.delete(key);
+				layoutKeysRef.current.delete(key);
 
-				if (parentKey && layoutKeys.current.has(parentKey)) {
-					const keyMap = layoutKeys.current.get(
+				if (parentKey && layoutKeysRef.current.has(parentKey)) {
+					const keyMap = layoutKeysRef.current.get(
 						parentKey
 					) as LayoutInfo;
 
@@ -118,7 +122,7 @@ export function useLayout(): Layout {
 
 					children.delete(key);
 
-					layoutKeys.current.set(parentKey, {
+					layoutKeysRef.current.set(parentKey, {
 						...keyMap,
 						children,
 						lazyChild: children.size === 0,
@@ -126,23 +130,23 @@ export function useLayout(): Layout {
 				}
 			};
 		},
-		[layoutKeys]
+		[layoutKeysRef]
 	);
 
 	const patchItem = useCallback(
 		(key: Key, cursor: Cursor, loc: Array<number>) => {
-			const keyMap = layoutKeys.current.get(key);
+			const keyMap = layoutKeysRef.current.get(key);
 
 			if (keyMap) {
-				layoutKeys.current.set(key, {
+				layoutKeysRef.current.set(key, {
 					...keyMap,
 					cursor,
 					loc,
 				});
 			}
 		},
-		[layoutKeys]
+		[layoutKeysRef]
 	);
 
-	return {createPartialLayoutItem, layoutKeys, patchItem};
+	return {createPartialLayoutItem, layoutKeys: layoutKeysRef, patchItem};
 }

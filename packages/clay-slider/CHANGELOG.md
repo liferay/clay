@@ -7,13 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
@@ -31,25 +31,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/slider@3.2.0...@clayui/slider@3.142.0) (2025-08-01)
 
@@ -71,7 +71,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/slider:** improves component typing to create API Slider ([39b0d28](https://github.com/liferay/clay/commit/39b0d28507a3e5ff98447cccbcea4d83236a51a8))
+- **@clayui/slider:** improves component typing to create API Slider ([39b0d28](https://github.com/liferay/clay/commit/39b0d28507a3e5ff98447cccbcea4d83236a51a8))
 
 # 3.119.0 (2024-08-30)
 
@@ -93,8 +93,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.104.0 (2023-08-25)
 
@@ -178,7 +178,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/slider:** standardizes properties for the controlled and uncontrolled component ([6c1cae3](https://github.com/liferay/clay/commit/6c1cae3f2cf2192fbd5d1a20e0c76c8c7081fe8e))
+- **@clayui/slider:** standardizes properties for the controlled and uncontrolled component ([6c1cae3](https://github.com/liferay/clay/commit/6c1cae3f2cf2192fbd5d1a20e0c76c8c7081fe8e))
 
 # 3.40.0 (2021-11-17)
 
@@ -192,11 +192,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/slider:** use isomorphic helper for useLayoutEffect ([33910de](https://github.com/liferay/clay/commit/33910dea1c6fcad8d1149d03d4c6ae92796123f1))
+- **@clayui/slider:** use isomorphic helper for useLayoutEffect ([33910de](https://github.com/liferay/clay/commit/33910dea1c6fcad8d1149d03d4c6ae92796123f1))
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9bbaf2163f25a3d3a2e570bf5928051906))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9bbaf2163f25a3d3a2e570bf5928051906))
 
 ## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
 
@@ -230,7 +230,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/slider:** improves component typing to create API Slider ([39b0d28](https://github.com/liferay/clay/commit/39b0d28507a3e5ff98447cccbcea4d83236a51a8))
+- **@clayui/slider:** improves component typing to create API Slider ([39b0d28](https://github.com/liferay/clay/commit/39b0d28507a3e5ff98447cccbcea4d83236a51a8))
 
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
@@ -268,8 +268,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
@@ -431,7 +431,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/slider:** standardizes properties for the controlled and uncontrolled component ([6c1cae3](https://github.com/liferay/clay/commit/6c1cae3f2cf2192fbd5d1a20e0c76c8c7081fe8e))
+- **@clayui/slider:** standardizes properties for the controlled and uncontrolled component ([6c1cae3](https://github.com/liferay/clay/commit/6c1cae3f2cf2192fbd5d1a20e0c76c8c7081fe8e))
 
 # [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
 
@@ -457,32 +457,32 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/slider:** use isomorphic helper for useLayoutEffect ([33910de](https://github.com/liferay/clay/commit/33910dea1c6fcad8d1149d03d4c6ae92796123f1))
+- **@clayui/slider:** use isomorphic helper for useLayoutEffect ([33910de](https://github.com/liferay/clay/commit/33910dea1c6fcad8d1149d03d4c6ae92796123f1))
 
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/slider@3.1.1...@clayui/slider@3.2.0) (2020-05-21)
 
 ### Features
 
--   **clayui.com:** Improve component docs by updating content - Pagination, Popover, Progress Bar, Slider, Toggle & Tooltip ([01b555a](https://github.com/liferay/clay/commit/01b555a))
--   **clayui.com:** Improve component docs by updating content - Typos, wording, and variable names ([f1d795c](https://github.com/liferay/clay/commit/f1d795c))
+- **clayui.com:** Improve component docs by updating content - Pagination, Popover, Progress Bar, Slider, Toggle & Tooltip ([01b555a](https://github.com/liferay/clay/commit/01b555a))
+- **clayui.com:** Improve component docs by updating content - Typos, wording, and variable names ([f1d795c](https://github.com/liferay/clay/commit/f1d795c))
 
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/slider@3.1.0...@clayui/slider@3.1.1) (2020-04-24)
 
 ### Bug Fixes
 
--   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+- Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
 
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
 
--   replace npm in favor of yarn in new packages ([e366fbb](https://github.com/liferay/clay/commit/e366fbb))
--   **@clayui/slider:** avoid async rendering to render synchronous changes before repaint ([9069169](https://github.com/liferay/clay/commit/9069169))
--   **@clayui/slider:** updates width of range progress after value change ([24d75c0](https://github.com/liferay/clay/commit/24d75c0))
+- replace npm in favor of yarn in new packages ([e366fbb](https://github.com/liferay/clay/commit/e366fbb))
+- **@clayui/slider:** avoid async rendering to render synchronous changes before repaint ([9069169](https://github.com/liferay/clay/commit/9069169))
+- **@clayui/slider:** updates width of range progress after value change ([24d75c0](https://github.com/liferay/clay/commit/24d75c0))
 
 ### Features
 
--   **@clayui/slider:** add ClaySlider component ([e9d35ab](https://github.com/liferay/clay/commit/e9d35ab))
+- **@clayui/slider:** add ClaySlider component ([e9d35ab](https://github.com/liferay/clay/commit/e9d35ab))
 
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-slider/compare/@clayui/slider@3.0.2...@clayui/slider@3.0.5) (2020-01-31)
 
@@ -504,4 +504,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/slider:** avoid async rendering to render synchronous changes before repaint ([9069169](https://github.com/liferay/clay/commit/9069169))
+- **@clayui/slider:** avoid async rendering to render synchronous changes before repaint ([9069169](https://github.com/liferay/clay/commit/9069169))

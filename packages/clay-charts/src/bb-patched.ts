@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ChartOptions, bb} from 'billboard.js';
@@ -22,11 +22,14 @@ function sanitizeObject(object: any): any {
 
 	const newObj: {[key: string]: any} = {};
 	for (const key in object) {
+
 		// Ensure the key is an own property to avoid iterating prototype chain
+
 		if (Object.prototype.hasOwnProperty.call(object, key)) {
 			if (!/^(__proto__|constructor|prototype)$/i.test(key)) {
 				newObj[key] = object[key];
-			} else {
+			}
+			else {
 				console.warn(
 					`<ClayChart />: The key "${key}" has been removed from an object passed to a Clay Chart because it may be an attempted prototype pollution attack. Please update the data removing the key: "${key}".`
 				);
@@ -38,7 +41,9 @@ function sanitizeObject(object: any): any {
 }
 
 function patchedGenerate(options: ChartOptions) {
+
 	// @ts-ignore
+
 	return bb.generate(sanitizeObject(options));
 }
 

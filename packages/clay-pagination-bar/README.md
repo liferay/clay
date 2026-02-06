@@ -2,9 +2,9 @@
 
 Pagination bar provides navigation through datasets
 
--   [Documentation](https://clayui.com/docs/components/pagination-bar.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/pagination-bar.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

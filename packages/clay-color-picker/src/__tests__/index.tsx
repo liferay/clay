@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayColorPicker from '..';
@@ -9,7 +9,7 @@ import React from 'react';
 
 import getMouseEvent from '../../tests-util';
 
-const mockClientRect = (element: HTMLElement) => {
+function mockClientRect(element: HTMLElement) {
 	element.getBoundingClientRect = () => ({
 		bottom: 0,
 		height: 128,
@@ -21,11 +21,11 @@ const mockClientRect = (element: HTMLElement) => {
 		x: 0,
 		y: 0,
 	});
-};
+}
 
-const ClayColorPickerWithState = (
+function ClayColorPickerWithState(
 	props: React.ComponentProps<typeof ClayColorPicker>
-) => {
+) {
 	const [value, setValue] = React.useState('');
 
 	return (
@@ -39,9 +39,9 @@ const ClayColorPickerWithState = (
 			{...props}
 		/>
 	);
-};
+}
 
-const ClayColorPickerWithCustomColors = (props: any) => {
+function ClayColorPickerWithCustomColors(props: any) {
 	const [customColors, setCustoms] = React.useState([
 		'008000',
 		'00FFFF',
@@ -50,7 +50,6 @@ const ClayColorPickerWithCustomColors = (props: any) => {
 		'black',
 		'var(--blue)',
 	]);
-
 	const [color, setColor] = React.useState('');
 
 	return (
@@ -62,7 +61,7 @@ const ClayColorPickerWithCustomColors = (props: any) => {
 			value={color}
 		/>
 	);
-};
+}
 
 describe('Rendering', () => {
 	afterEach(cleanup);
@@ -359,6 +358,7 @@ describe('Interactions', () => {
 		});
 
 		// LPS-193699 Skiping this test because it's not updating value and needs deeper investigation'
+
 		it.skip('changes the transparancy by changing the alpha', () => {
 			const [alphaSlider] = getAllByRole(
 				document.body,

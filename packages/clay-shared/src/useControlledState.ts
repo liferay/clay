@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {useCallback, useRef, useState} from 'react';
@@ -10,9 +10,9 @@ export type InternalDispatch<Value> = (value: Value) => void;
 
 type Props<Value> = {
 	defaultName: string;
+	defaultValue?: Value | (() => Value);
 	handleName: string;
 	name: string;
-	defaultValue?: Value | (() => Value);
 	onChange?: InternalDispatch<Value>;
 	value?: Value;
 };
@@ -70,6 +70,6 @@ export function useControlledState<Value>({
 	return [value, setValue, !isControlled] as [
 		Value,
 		InternalDispatch<Value>,
-		boolean
+		boolean,
 	];
 }

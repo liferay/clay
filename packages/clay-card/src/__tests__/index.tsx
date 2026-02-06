@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayCheckbox} from '@clayui/form';
@@ -17,7 +17,7 @@ import ClayCard, {
 	ClayCardWithUser,
 } from '../index';
 
-const ClayCheckboxWithState = (props: any) => {
+function ClayCheckboxWithState(props: any) {
 	const [value, setValue] = React.useState<boolean>(false);
 
 	return (
@@ -29,7 +29,7 @@ const ClayCheckboxWithState = (props: any) => {
 			{props.children}
 		</ClayCheckbox>
 	);
-};
+}
 
 describe('ClayCard', () => {
 	afterEach(cleanup);
@@ -47,6 +47,7 @@ describe('ClayCard', () => {
 								/>
 							</ClaySticker>
 						</div>
+
 						<div className="autofit-col autofit-col-expand autofit-col-gutters">
 							<div className="autofit-section">
 								<ClayCard.Description displayType="title">
@@ -76,6 +77,7 @@ describe('ClayCard', () => {
 									/>
 								</ClaySticker>
 							</div>
+
 							<div className="autofit-col autofit-col-expand autofit-col-gutters">
 								<ClayCard.Description displayType="title">
 									Very Large Folder
@@ -104,6 +106,7 @@ describe('ClayCard', () => {
 									/>
 								</ClaySticker>
 							</div>
+
 							<div className="autofit-col autofit-col-expand autofit-col-gutters">
 								<ClayCard.Description displayType="title">
 									Very Large Folder
@@ -127,6 +130,7 @@ describe('ClayCard', () => {
 						className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
 						src="https://via.placeholder.com/256"
 					/>
+
 					<ClaySticker displayType="danger" position="bottom-left">
 						<ClayIcon
 							spritemap="/path/to/some/resource.svg"
@@ -141,9 +145,11 @@ describe('ClayCard', () => {
 							<ClayCard.Description displayType="title">
 								thumbnail_coffee.jpg
 							</ClayCard.Description>
+
 							<ClayCard.Description displayType="subtitle">
 								Author Action
 							</ClayCard.Description>
+
 							<ClayCard.Caption>
 								<ClayLabel displayType="success">
 									Approved
@@ -170,6 +176,7 @@ describe('ClayCard', () => {
 								src="https://via.placeholder.com/256"
 							/>
 						</ClayCard.AspectRatio>
+
 						<ClaySticker
 							displayType="danger"
 							position="bottom-left"
@@ -188,9 +195,11 @@ describe('ClayCard', () => {
 							<ClayCard.Description displayType="title">
 								thumbnail_coffee.jpg
 							</ClayCard.Description>
+
 							<ClayCard.Description displayType="subtitle">
 								Author Action
 							</ClayCard.Description>
+
 							<ClayCard.Caption>
 								<ClayLabel displayType="success">
 									Approved
@@ -215,10 +224,12 @@ describe('ClayCard', () => {
 							symbol="documents-and-media"
 						/>
 					</div>
+
 					<ClaySticker displayType="danger" position="bottom-left">
 						DOC
 					</ClaySticker>
 				</ClayCard.AspectRatio>
+
 				<ClayCard.Body>
 					<ClayCard.Row>
 						<div className="autofit-col autofit-col-expand">
@@ -226,9 +237,11 @@ describe('ClayCard', () => {
 								<ClayCard.Description displayType="title">
 									deliverable.doc
 								</ClayCard.Description>
+
 								<ClayCard.Description displayType="subtitle">
 									Stevie Ray Vaughn
 								</ClayCard.Description>
+
 								<ClayCard.Caption>
 									<ClayLabel displayType="success">
 										Approved
@@ -255,6 +268,7 @@ describe('ClayCard', () => {
 								symbol="documents-and-media"
 							/>
 						</div>
+
 						<ClaySticker
 							displayType="danger"
 							position="bottom-left"
@@ -263,6 +277,7 @@ describe('ClayCard', () => {
 						</ClaySticker>
 					</ClayCheckboxWithState>
 				</ClayCard.AspectRatio>
+
 				<ClayCard.Body>
 					<ClayCard.Row>
 						<div className="autofit-col autofit-col-expand">
@@ -270,9 +285,11 @@ describe('ClayCard', () => {
 								<ClayCard.Description displayType="title">
 									deliverable.doc
 								</ClayCard.Description>
+
 								<ClayCard.Description displayType="subtitle">
 									Stevie Ray Vaughn
 								</ClayCard.Description>
+
 								<ClayCard.Caption>
 									<ClayLabel displayType="success">
 										Approved
@@ -299,10 +316,12 @@ describe('ClayCard', () => {
 						/>
 					</span>
 				</ClayCard.AspectRatio>
+
 				<ClayCard.Body>
 					<ClayCard.Description displayType="title">
 						Widget Page
 					</ClayCard.Description>
+
 					<ClayCard.Description displayType="text">
 						Build a page by adding widgets and content.
 					</ClayCard.Description>
@@ -324,10 +343,12 @@ describe('ClayCard', () => {
 						/>
 					</span>
 				</ClayCard.AspectRatio>
+
 				<ClayCard.Body>
 					<ClayCard.Description displayType="title">
 						Content Page
 					</ClayCard.Description>
+
 					<ClayCard.Description displayType="text" truncate={false}>
 						This is an example of card-type-template using an anchor
 						tag.
@@ -350,6 +371,7 @@ describe('ClayCard', () => {
 						/>
 					</span>
 				</ClayCard.AspectRatio>
+
 				<ClayCard.Body>
 					<ClayCard.Description displayType="title">
 						Blog
@@ -374,6 +396,7 @@ describe('ClayCard', () => {
 								/>
 							</ClaySticker>
 						</span>
+
 						<span className="autofit-col autofit-col-expand">
 							<span className="autofit-section">
 								<ClayCard.Description
@@ -416,9 +439,11 @@ describe('ClayCard', () => {
 							<ClayCard.Description displayType="title">
 								Adélaide
 							</ClayCard.Description>
+
 							<ClayCard.Description displayType="subtitle">
 								Author Action
 							</ClayCard.Description>
+
 							<ClayCard.Caption>
 								<ClayLabel displayType="success">
 									Approved
@@ -461,9 +486,11 @@ describe('ClayCard', () => {
 							<ClayCard.Description displayType="title">
 								Adélaide
 							</ClayCard.Description>
+
 							<ClayCard.Description displayType="subtitle">
 								Author Action
 							</ClayCard.Description>
+
 							<ClayCard.Caption>
 								<ClayLabel displayType="warning">
 									Rejected
@@ -490,6 +517,7 @@ describe('ClayCard', () => {
 									symbol="documents-and-media"
 								/>
 							</div>
+
 							<ClaySticker
 								displayType="danger"
 								position="bottom-left"
@@ -497,6 +525,7 @@ describe('ClayCard', () => {
 								DOC
 							</ClaySticker>
 						</ClayCard.AspectRatio>
+
 						<ClayCard.Body>
 							<ClayCard.Row>
 								<div className="autofit-col autofit-col-expand">
@@ -504,9 +533,11 @@ describe('ClayCard', () => {
 										<ClayCard.Description displayType="title">
 											deliverable.doc
 										</ClayCard.Description>
+
 										<ClayCard.Description displayType="subtitle">
 											Stevie Ray Vaughn
 										</ClayCard.Description>
+
 										<ClayCard.Caption>
 											<ClayLabel displayType="success">
 												Approved
@@ -517,6 +548,7 @@ describe('ClayCard', () => {
 							</ClayCard.Row>
 						</ClayCard.Body>
 					</ClayCard>
+
 					<ClayCard displayType="file">
 						<ClayCard.AspectRatio className="card-item-first">
 							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -525,6 +557,7 @@ describe('ClayCard', () => {
 									symbol="documents-and-media"
 								/>
 							</div>
+
 							<ClaySticker
 								displayType="danger"
 								position="bottom-left"
@@ -532,6 +565,7 @@ describe('ClayCard', () => {
 								DOC
 							</ClaySticker>
 						</ClayCard.AspectRatio>
+
 						<ClayCard.Body>
 							<ClayCard.Row>
 								<div className="autofit-col autofit-col-expand">
@@ -539,9 +573,11 @@ describe('ClayCard', () => {
 										<ClayCard.Description displayType="title">
 											deliverable.doc
 										</ClayCard.Description>
+
 										<ClayCard.Description displayType="subtitle">
 											Stevie Ray Vaughn
 										</ClayCard.Description>
+
 										<ClayCard.Caption>
 											<ClayLabel displayType="success">
 												Approved
@@ -576,9 +612,11 @@ describe('ClayCard', () => {
 									<ClayCard.Description displayType="title">
 										Adélaide
 									</ClayCard.Description>
+
 									<ClayCard.Description displayType="subtitle">
 										Author Action
 									</ClayCard.Description>
+
 									<ClayCard.Caption>
 										<ClayLabel displayType="success">
 											Approved
@@ -588,6 +626,7 @@ describe('ClayCard', () => {
 							</ClayCard.Row>
 						</ClayCard.Body>
 					</ClayCard>
+
 					<ClayCard displayType="user">
 						<ClayCard.AspectRatio className="card-item-first">
 							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -610,9 +649,11 @@ describe('ClayCard', () => {
 									<ClayCard.Description displayType="title">
 										Adélaide
 									</ClayCard.Description>
+
 									<ClayCard.Description displayType="subtitle">
 										Author Action
 									</ClayCard.Description>
+
 									<ClayCard.Caption>
 										<ClayLabel displayType="success">
 											Approved

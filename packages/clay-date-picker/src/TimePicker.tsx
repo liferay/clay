@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayTimePicker, {Input} from '@clayui/time-picker';
@@ -26,14 +26,14 @@ type Props = {
 
 const DEFAULT_VALUE = '--';
 
-const ClayDatePickerTimePicker = ({
+function ClayDatePickerTimePicker({
 	currentTime,
 	disabled,
 	onTimeChange,
 	spritemap,
 	timezone,
 	use12Hours,
-}: Props) => {
+}: Props) {
 	const [values, setValues] = React.useState<Input>({
 		ampm: DEFAULT_VALUE,
 		hours: DEFAULT_VALUE,
@@ -53,16 +53,12 @@ const ClayDatePickerTimePicker = ({
 				? DEFAULT_VALUE
 				: Number(values.minutes);
 		const ampm = values.ampm ? values.ampm : DEFAULT_VALUE;
-
 		setValues(values);
 		onTimeChange(hours, minutes, ampm);
 	};
-
 	React.useEffect(() => {
 		const [hours, minutesAndAmpm] = currentTime.split(':');
-
 		const [minutes, ampm] = minutesAndAmpm!.split(' ');
-
 		setValues((prevValues) => ({
 			...prevValues,
 			ampm: ampm as Input['ampm'],
@@ -84,6 +80,6 @@ const ClayDatePickerTimePicker = ({
 			/>
 		</div>
 	);
-};
+}
 
 export default ClayDatePickerTimePicker;

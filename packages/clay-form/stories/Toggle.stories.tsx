@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useState} from 'react';
@@ -17,8 +17,7 @@ export default {
 	component: ClayToggle,
 	title: 'Design System/Components/Toggle',
 };
-
-export const Checkbox = (args: any) => {
+export function Checkbox(args: any) {
 	const [toggled1, setToggle1, toggled2, setToggle2, toggled3, setToggle3] =
 		useState<boolean>(false);
 
@@ -60,9 +59,8 @@ export const Checkbox = (args: any) => {
 			/>
 		</>
 	);
-};
-
-export const RadioGroup = (args: any) => {
+}
+export function RadioGroup(args: any) {
 	const [value, setValue] = useState<string>('foo');
 
 	return (
@@ -92,4 +90,4 @@ export const RadioGroup = (args: any) => {
 			/>
 		</ClayRadioGroup>
 	);
-};
+}

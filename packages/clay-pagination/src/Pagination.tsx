@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -10,6 +10,7 @@ import {Ellipsis} from './Ellipsis';
 import {Item} from './Item';
 
 export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+
 	/**
 	 * The size of pagination element.
 	 * @deprecated since v3.146.0 with no replacement.

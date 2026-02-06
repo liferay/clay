@@ -4,19 +4,19 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<rect y="64" fill="#C0CFD8" width="512" height="384"></rect>
-	<rect x="16" y="80" fill="#E03232" width="480" height="32"></rect>
-	<rect x="16" y="112" fill="#FFFFFF" width="480" height="32"></rect>
-	<rect x="16" y="144" fill="#E03232" width="480" height="32"></rect>
-	<rect x="16" y="176" fill="#FFFFFF" width="480" height="32"></rect>
-	<rect x="16" y="208" fill="#E03232" width="480" height="32"></rect>
-	<rect x="16" y="240" fill="#FFFFFF" width="480" height="32"></rect>
-	<rect x="16" y="272" fill="#E03232" width="480" height="32"></rect>
-	<rect x="16" y="304" fill="#FFFFFF" width="480" height="32"></rect>
-	<rect x="16" y="336" fill="#E03232" width="480" height="32"></rect>
-	<rect x="16" y="368" fill="#FFFFFF" width="480" height="32"></rect>
-	<rect x="16" y="400" fill="#E03232" width="480" height="32"></rect>
-	<rect x="16" y="80" fill="#66A1CC" width="256" height="192"></rect>
-	<rect x="16" y="80" fill="#0035A0" width="256" height="192"></rect>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+	<rect fill="#C0CFD8" height="384" width="512" y="64"></rect>
+	<rect fill="#E03232" height="32" width="480" x="16" y="80"></rect>
+	<rect fill="#FFFFFF" height="32" width="480" x="16" y="112"></rect>
+	<rect fill="#E03232" height="32" width="480" x="16" y="144"></rect>
+	<rect fill="#FFFFFF" height="32" width="480" x="16" y="176"></rect>
+	<rect fill="#E03232" height="32" width="480" x="16" y="208"></rect>
+	<rect fill="#FFFFFF" height="32" width="480" x="16" y="240"></rect>
+	<rect fill="#E03232" height="32" width="480" x="16" y="272"></rect>
+	<rect fill="#FFFFFF" height="32" width="480" x="16" y="304"></rect>
+	<rect fill="#E03232" height="32" width="480" x="16" y="336"></rect>
+	<rect fill="#FFFFFF" height="32" width="480" x="16" y="368"></rect>
+	<rect fill="#E03232" height="32" width="480" x="16" y="400"></rect>
+	<rect fill="#66A1CC" height="192" width="256" x="16" y="80"></rect>
+	<rect fill="#0035A0" height="192" width="256" x="16" y="80"></rect>
 </svg>

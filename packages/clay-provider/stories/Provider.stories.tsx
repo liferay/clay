@@ -1,10 +1,10 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Button from '@clayui/button';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+const spritemap = require('@clayui/css/src/images/icons/icons.svg');
 import DropDown from '@clayui/drop-down';
 import Icon from '@clayui/icon';
 import React, {useState} from 'react';
@@ -15,15 +15,16 @@ export default {
 	component: Provider,
 	title: 'Design System/Application/Provider',
 };
+export function Spritemap() {
+	return (
+		<Provider spritemap={spritemap}>
+			<Icon symbol="books" />
 
-export const Spritemap = () => (
-	<Provider spritemap={spritemap}>
-		<Icon symbol="books" />
-		<Icon symbol="times" />
-	</Provider>
-);
-
-export const Theme = () => {
+			<Icon symbol="times" />
+		</Provider>
+	);
+}
+export function Theme() {
 	const [active, setActive] = useState(false);
 
 	return (
@@ -49,4 +50,4 @@ export const Theme = () => {
 			</DropDown>
 		</Provider>
 	);
-};
+}

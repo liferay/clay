@@ -4,9 +4,9 @@
 
 Upper toolbar is a guidance pattern to allow designers create their own toolbars for edition with preview pages.
 
--   [Documentation](https://clayui.com/docs/components/upper-toolbar.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/upper-toolbar.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

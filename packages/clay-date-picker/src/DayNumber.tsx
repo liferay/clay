@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {Keys} from '@clayui/shared';
@@ -19,7 +19,7 @@ type Props = {
 	range?: boolean;
 };
 
-const ClayDatePickerDayNumber = ({
+function ClayDatePickerDayNumber({
 	day,
 	daysSelected,
 	disabled,
@@ -27,10 +27,9 @@ const ClayDatePickerDayNumber = ({
 	isFocused,
 	onClick,
 	range,
-}: Props) => {
+}: Props) {
 	const {date, nextMonth, previousMonth} = day;
 	const [startDate, endDate] = daysSelected;
-
 	const isStartAndEndDateRange =
 		startDate.toDateString() !== endDate.toDateString() &&
 		isWithinInterval(date, daysSelected);
@@ -67,7 +66,7 @@ const ClayDatePickerDayNumber = ({
 				className={classnames(
 					'date-picker-date date-picker-calendar-item',
 					{
-						active:
+						'active':
 							hasStartDateSelected ||
 							(range && hasEndDateSelected),
 						disabled,
@@ -79,9 +78,11 @@ const ClayDatePickerDayNumber = ({
 				disabled={disabled}
 				onClick={() => onClick(date)}
 				onKeyDown={(event) => {
+
 					// When tabbing and selecting a DayNumber using
 					// SPACE key the active state it's not being removed.
 					// See https://github.com/liferay/clay/issues/3374 for more details.
+
 					if (event.key === Keys.Spacebar) {
 						event.preventDefault();
 					}
@@ -98,7 +99,7 @@ const ClayDatePickerDayNumber = ({
 			</button>
 		</div>
 	);
-};
+}
 
 function isWithinInterval(date: Date, interval: readonly [Date, Date]) {
 	const [start, end] = interval;

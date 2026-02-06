@@ -1146,6 +1146,133 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@clayui/autocomplete@^3.156.6":
+  version "3.156.6"
+  resolved "https://registry.yarnpkg.com/@clayui/autocomplete/-/autocomplete-3.156.6.tgz#de35de6182d87b5e58d1c37e1af734a8b2a00cad"
+  integrity sha512-LrfVQ3btn/7HMa6MZc57b0hH0i2X6pCJrPsevaBguXadTvkwlpr3HLSCXfPceSXohLYLSI2eK31MvCaXP5aBaA==
+  dependencies:
+    "@clayui/core" "^3.156.6"
+    "@clayui/data-provider" "^3.156.0"
+    "@clayui/drop-down" "^3.156.6"
+    "@clayui/form" "^3.156.0"
+    "@clayui/loading-indicator" "^3.144.1"
+    "@clayui/shared" "^3.156.0"
+    classnames "^2.2.6"
+    fuzzy "^0.1.3"
+
+"@clayui/core@^3.156.6":
+  version "3.156.6"
+  resolved "https://registry.yarnpkg.com/@clayui/core/-/core-3.156.6.tgz#fa56010507630ca609f74956a0073ddf08fa53ca"
+  integrity sha512-bchTNohmGxXMyhFsOI/aI7J4ZZ4g6Bjn7xFHU7nmTGsz8/CsLAcix3iPEuHV7Oy9PFEUEgh4zzGt2mIW0YsqUQ==
+  dependencies:
+    "@clayui/button" "^3.156.0"
+    "@clayui/data-provider" "^3.156.0"
+    "@clayui/form" "^3.156.0"
+    "@clayui/icon" "^3.144.1"
+    "@clayui/label" "^3.156.0"
+    "@clayui/layout" "^3.144.1"
+    "@clayui/link" "^3.144.1"
+    "@clayui/loading-indicator" "^3.144.1"
+    "@clayui/modal" "^3.156.0"
+    "@clayui/provider" "^3.144.1"
+    "@clayui/shared" "^3.156.0"
+    "@clayui/table" "^3.144.1"
+    "@clayui/tooltip" "^3.156.0"
+    "@tanstack/react-virtual" "3.0.0-beta.54"
+    aria-hidden "^1.2.2"
+    classnames "^2.2.6"
+    fuzzy "^0.1.3"
+    react-dnd "^11.1.1"
+    react-dnd-html5-backend "^11.1.1"
+    react-transition-group "^4.4.1"
+    warning "^4.0.3"
+
+"@clayui/drop-down@^3.156.6":
+  version "3.156.6"
+  resolved "https://registry.yarnpkg.com/@clayui/drop-down/-/drop-down-3.156.6.tgz#801ad04ef2e57c2cf6928163d946bed07e3fe0f7"
+  integrity sha512-PJdtp54r3HuIABCrqZVHEvGWoyNeDoj6djO36FBJ8VpAyx2FSrKQpf25mwWIUuvs6xb98d+cBdxmlOmNix1zAg==
+  dependencies:
+    "@clayui/button" "^3.156.0"
+    "@clayui/core" "^3.156.6"
+    "@clayui/form" "^3.156.0"
+    "@clayui/icon" "^3.144.1"
+    "@clayui/link" "^3.144.1"
+    "@clayui/shared" "^3.156.0"
+    classnames "^2.2.6"
+    react-transition-group "^4.4.1"
+    warning "^4.0.3"
+
+"@clayui/list@^3.156.6":
+  version "3.156.6"
+  resolved "https://registry.yarnpkg.com/@clayui/list/-/list-3.156.6.tgz#f5457791790673b0f80986a4d32439922e2e81b3"
+  integrity sha512-CiVH6KxJfg8OM9rcHydKnfV9vna9Dn9Zawhmd5+E+tZ+TMC1lh3dVohR2taZI5ZUHFnmGoD9IsbdmyAKyZ94xg==
+  dependencies:
+    "@clayui/drop-down" "^3.156.6"
+    "@clayui/form" "^3.156.0"
+    "@clayui/icon" "^3.144.1"
+    "@clayui/label" "^3.156.0"
+    "@clayui/layout" "^3.144.1"
+    "@clayui/link" "^3.144.1"
+    "@clayui/shared" "^3.156.0"
+    "@clayui/sticker" "^3.147.0"
+    classnames "^2.2.6"
+    warning "^4.0.3"
+
+"@clayui/multi-select@^3.156.6":
+  version "3.156.6"
+  resolved "https://registry.yarnpkg.com/@clayui/multi-select/-/multi-select-3.156.6.tgz#4419d017459d2ce63284dff72f6c67158a9eebc3"
+  integrity sha512-VfR4t8gPbQYYpT9UcLN8mD8idATXMZx+WQVC8wUFCXISZrttMFZ0EnyI58QZprFR8+Jc7E0GadyLTCrI9sxPtQ==
+  dependencies:
+    "@clayui/autocomplete" "^3.156.6"
+    "@clayui/button" "^3.156.0"
+    "@clayui/drop-down" "^3.156.6"
+    "@clayui/form" "^3.156.0"
+    "@clayui/icon" "^3.144.1"
+    "@clayui/label" "^3.156.0"
+    "@clayui/loading-indicator" "^3.144.1"
+    "@clayui/shared" "^3.156.0"
+    classnames "^2.2.6"
+    fuzzy "^0.1.3"
+
+"@clayui/nav@^3.156.6":
+  version "3.156.6"
+  resolved "https://registry.yarnpkg.com/@clayui/nav/-/nav-3.156.6.tgz#e51e0895f7c5058beaddf8520e46f92164814986"
+  integrity sha512-PgYmBOdf3OZJq6JAEqTdfCungnFYf6aj5RFyqsY8a//xLlnwzgsm/FRXSvf2sG55YUgzclvQSl9u8ZGzu3LCZA==
+  dependencies:
+    "@clayui/button" "^3.156.0"
+    "@clayui/core" "^3.156.6"
+    "@clayui/icon" "^3.144.1"
+    "@clayui/shared" "^3.156.0"
+    classnames "^2.2.6"
+    react-transition-group "^4.4.1"
+    warning "^4.0.3"
+
+"@clayui/pagination-bar@^3.156.6":
+  version "3.156.6"
+  resolved "https://registry.yarnpkg.com/@clayui/pagination-bar/-/pagination-bar-3.156.6.tgz#27c37cf20449a15895f70e84a587649859925792"
+  integrity sha512-+FEWMUY9hJ3P+UDgzc1CQILGyLACjjHvomGJd9ar5ELewhw/RyXwG9aix+wFVmEcBeTuO+CiTt2OOmjHaKetGw==
+  dependencies:
+    "@clayui/button" "^3.156.0"
+    "@clayui/core" "^3.156.6"
+    "@clayui/drop-down" "^3.156.6"
+    "@clayui/icon" "^3.144.1"
+    "@clayui/pagination" "^3.156.6"
+    "@clayui/shared" "^3.156.0"
+    classnames "^2.2.6"
+
+"@clayui/pagination@^3.156.6":
+  version "3.156.6"
+  resolved "https://registry.yarnpkg.com/@clayui/pagination/-/pagination-3.156.6.tgz#b2d8baa6ab6eb1be86267113bac8efa4bf7e87d9"
+  integrity sha512-6UjK1DsdB/G1QFUWzZ79pDYU2PyncCDSo54/Tb80ky55MDwn0z66ZjI644BqciyvAA9ElnoVlnVf5ysqu6NUjg==
+  dependencies:
+    "@clayui/button" "^3.156.0"
+    "@clayui/core" "^3.156.6"
+    "@clayui/drop-down" "^3.156.6"
+    "@clayui/icon" "^3.144.1"
+    "@clayui/link" "^3.144.1"
+    "@clayui/shared" "^3.156.0"
+    classnames "^2.2.6"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -2145,6 +2272,13 @@
     eslint-plugin-react "7.23.1"
     eslint-plugin-react-hooks "4.2.0"
     eslint-plugin-sort-destructure-keys "^1.3.5"
+
+"@liferay/prettier-plugin@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@liferay/prettier-plugin/-/prettier-plugin-1.1.5.tgz#896d8030e7c47ee9baf725f6e9fa873f96e69a1b"
+  integrity sha512-Cw5XCyZDGzHBhwTryEeINRaJBeUdSyLvPVXEvIO9F1QPuNlpV5YvF+JTLhuqDz5SOHZzPYvmUgqh1v3jagbulA==
+  dependencies:
+    prettier "3.2.5"
 
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
@@ -6962,7 +7096,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5, classnames@^2.2.6:
+classnames@2.3.1, classnames@^2.2.5, classnames@^2.2.6:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
   integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
@@ -8619,7 +8753,7 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-dnd-core@^11.1.3:
+dnd-core@^11.1.1, dnd-core@^11.1.3:
   version "11.1.3"
   resolved "https://registry.yarnpkg.com/dnd-core/-/dnd-core-11.1.3.tgz#f92099ba7245e49729d2433157031a6267afcc98"
   integrity sha512-QugF55dNW+h+vzxVJ/LSJeTeUw9MCJ2cllhmVThVPEtF16ooBkxj0WBE5RB+AceFxMFo1rO6bJKXtqKl+JNnyA==
@@ -16643,15 +16777,15 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
 
+prettier@3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.5.tgz#e52bc3090586e824964a8813b09aba6233b28368"
+  integrity sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==
+
 "prettier@>=2.2.1 <=2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.0.tgz#b6a5bf1284026ae640f17f7ff5658a7567fc0d18"
   integrity sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==
-
-prettier@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
-  integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
 
 pretty-bytes@^1.0.2:
   version "1.0.4"
@@ -17057,12 +17191,29 @@ react-colorful@^5.1.2:
   resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.5.0.tgz#8359f218984a927095477a190ab9927eaf865c0c"
   integrity sha512-BuzrlrM0ylg7coPkXOrRqlf2BgHLw5L44sybbr9Lg4xy7w9e5N7fGYbojOO0s8J0nvrM3PERN2rVFkvSa24lnQ==
 
+react-dnd-html5-backend@11.1.1:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-11.1.1.tgz#794f81a53abeccca1bb56f021ec2aca4b34bf3d9"
+  integrity sha512-2cdi5P0HdZwjOq7iuX6cIOVzKukPgVJKNNxRLvZj/fDz5dHwCu/IOHj4e3SypZ+q37jAcd6+BHvCp1hRiGFNOg==
+  dependencies:
+    dnd-core "^11.1.1"
+
 react-dnd-html5-backend@^11.1.1:
   version "11.1.3"
   resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-11.1.3.tgz#2749f04f416ec230ea193f5c1fbea2de7dffb8f7"
   integrity sha512-/1FjNlJbW/ivkUxlxQd7o3trA5DE33QiRZgxent3zKme8DwF4Nbw3OFVhTRFGaYhHFNL1rZt6Rdj1D78BjnNLw==
   dependencies:
     dnd-core "^11.1.3"
+
+react-dnd@11.1.1:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/react-dnd/-/react-dnd-11.1.1.tgz#eb20db4eee3ab3c48c8147e083248552fcbd9aef"
+  integrity sha512-THjjpXGfSHmZTGI/tT0fLdOGLEVikVEeeTcNuJw7/caUECYvhNnbsle+cz6O0j0/k7Pumy3p8fwBw9m4SbJSzw==
+  dependencies:
+    "@react-dnd/shallowequal" "^2.0.0"
+    "@types/hoist-non-react-statics" "^3.3.1"
+    dnd-core "^11.1.1"
+    hoist-non-react-statics "^3.3.0"
 
 react-dnd@^11.1.1:
   version "11.1.3"

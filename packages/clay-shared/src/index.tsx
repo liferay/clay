@@ -1,40 +1,38 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
-export const noop = () => {};
-export {ClayPortal} from './Portal';
-export {delegate} from './delegate';
-export {doAlign} from './doAlign';
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */ export function noop() {}
 export {FocusScope} from './FocusScope';
-export {getEllipsisItems} from './getEllipsisItems';
-export {getLocatorValue} from './getLocatorValue';
 export {Keys} from './Keys';
 export {LinkOrButton} from './LinkOrButton';
 export {MouseSafeArea} from './MouseSafeArea';
-export {observeRect} from './observeRect';
 export {Overlay} from './Overlay';
 export {PanelResizer} from './PanelResizer';
-export {stack} from './stack';
+export type {Position} from './PanelResizer';
+export {ClayPortal} from './Portal';
+export type {IBaseProps as IPortalBaseProps} from './Portal';
+export {delegate} from './delegate';
+export {doAlign} from './doAlign';
+export {getEllipsisItems} from './getEllipsisItems';
+export {getLocatorValue} from './getLocatorValue';
+export type {Locator} from './getLocatorValue';
+export {observeRect} from './observeRect';
+export {isMac, isIPhone, isIPad, isIOS, isAppleDevice} from './platform';
 export {setElementFullHeight} from './setElementFullHeight';
+export {stack} from './stack';
 export {sub} from './sub';
+export {throttle} from './throttle';
+export {useControlledState} from './useControlledState';
+export type {InternalDispatch} from './useControlledState';
 export {useDebounce} from './useDebounce';
 export {useFocusManagement, FOCUSABLE_ELEMENTS} from './useFocusManagement';
+export {useHover} from './useHover';
 export {useId} from './useId';
 export {useInteractionFocus, useFocusVisible} from './useInteractionFocus';
-export {useControlledState} from './useControlledState';
+export {useIsFirstRender} from './useIsFirstRender';
+export {useIsMobileDevice} from './useIsMobileDevice';
 export {useMousePosition} from './useMousePosition';
 export {useNavigation, isTypeahead, getFocusableList} from './useNavigation';
 export {useOverlayPosition} from './useOverlayPositon';
-export {useHover} from './useHover';
-export {useIsMobileDevice} from './useIsMobileDevice';
-export {usePrevious} from './usePrevious';
-export {useIsFirstRender} from './useIsFirstRender';
-export {isMac, isIPhone, isIPad, isIOS, isAppleDevice} from './platform';
-export {throttle} from './throttle';
 export type {AlignPoints} from './useOverlayPositon';
-export type {IBaseProps as IPortalBaseProps} from './Portal';
-export type {InternalDispatch} from './useControlledState';
-export type {Locator} from './getLocatorValue';
-export type {Position} from './PanelResizer';
+export {usePrevious} from './usePrevious';

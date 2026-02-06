@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {InternalDispatch, useControlledState, useId} from '@clayui/shared';
@@ -14,6 +14,7 @@ import {Panel} from './Panel';
 import {VerticalBarContext} from './context';
 
 type Props = {
+
 	/**
 	 * Flag to position the component using absolute rather than a
 	 * fixed position.
@@ -30,6 +31,11 @@ type Props = {
 	activation?: 'manual' | 'automatic';
 
 	/**
+	 * Sets the current active panel (controlled).
+	 */
+	active?: React.Key | null;
+
+	/**
 	 * The VerticalBar content.
 	 */
 	children: React.ReactNode;
@@ -40,24 +46,14 @@ type Props = {
 	className?: string;
 
 	/**
-	 * Panel width initial value (uncontrolled).
-	 */
-	defaultPanelWidth?: number;
-
-	/**
-	 * Sets the position of the vertical bar.
-	 */
-	position?: 'left' | 'right';
-
-	/**
-	 * Sets the current active panel (controlled).
-	 */
-	active?: React.Key | null;
-
-	/**
 	 * Sets the default active panel (uncontrolled).
 	 */
 	defaultActive?: React.Key | null;
+
+	/**
+	 * Panel width initial value (uncontrolled).
+	 */
+	defaultPanelWidth?: number;
 
 	/**
 	 * Callback is called when the active state changes (controlled).
@@ -83,6 +79,11 @@ type Props = {
 	 * Sets a minimum width on the sidebar panel.
 	 */
 	panelWidthMin?: number;
+
+	/**
+	 * Sets the position of the vertical bar.
+	 */
+	position?: 'left' | 'right';
 
 	/**
 	 * Flag to enable resizing the sidebar panel.

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React from 'react';
@@ -10,6 +10,7 @@ import {Keys} from './Keys';
 export type Position = 'left' | 'right';
 
 type Props = {
+
 	/**
 	 * Callback is called every time the panel width changes (Controlled).
 	 */
@@ -56,7 +57,8 @@ export function PanelResizer({
 
 		if (width > panelWidthMin - 100 && width < panelWidthMin) {
 			onPanelWidthChange(panelWidthMin);
-		} else if (width > panelWidthMin) {
+		}
+		else if (width > panelWidthMin) {
 			onPanelWidthChange(width);
 		}
 	};
@@ -66,7 +68,8 @@ export function PanelResizer({
 
 		if (width > panelWidthMax && width < panelWidthMax + 100) {
 			onPanelWidthChange(panelWidthMax);
-		} else if (width < panelWidthMax) {
+		}
+		else if (width < panelWidthMax) {
 			onPanelWidthChange(width);
 		}
 	};
@@ -93,7 +96,8 @@ export function PanelResizer({
 					case Keys.Left: {
 						if (positionLeft) {
 							decreasePanelWidth(delta);
-						} else {
+						}
+						else {
 							increasePanelWidth(delta);
 						}
 
@@ -102,7 +106,8 @@ export function PanelResizer({
 					case Keys.Right: {
 						if (positionLeft) {
 							increasePanelWidth(delta);
-						} else {
+						}
+						else {
 							decreasePanelWidth(delta);
 						}
 
@@ -132,7 +137,8 @@ export function PanelResizer({
 						(event.pageX < startXPos && !positionLeft)
 					) {
 						increasePanelWidth(delta);
-					} else if (
+					}
+					else if (
 						(event.pageX < startXPos && positionLeft) ||
 						(event.pageX >= startXPos && !positionLeft)
 					) {

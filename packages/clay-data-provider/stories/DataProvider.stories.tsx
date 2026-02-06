@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useContext, useState} from 'react';
@@ -14,92 +14,118 @@ export default {
 	},
 	title: 'Design System/Components/DataProvider',
 };
+export function PollingExample(args: any) {
+	return (
+		<ClayDataProvider
+			link="https://api-public.sandbox.pro.coinbase.com/products/BTC-USD/trades"
+			notifyOnNetworkStatusChange
+			pollInterval={args.pollInterval}
+			variables={{limit: 10}}
+		>
+			{(props) => (
+				<div className="container">
+					<div className="autofit-padded-no-gutters-x autofit-row">
+						<div className="autofit-col">
+							<h3>
+								{'Coinbase Trades '}
 
-export const PollingExample = (args: any) => (
-	<ClayDataProvider
-		link="https://api-public.sandbox.pro.coinbase.com/products/BTC-USD/trades"
-		notifyOnNetworkStatusChange
-		pollInterval={args.pollInterval}
-		variables={{limit: 10}}
-	>
-		{(props) => (
-			<div className="container">
-				<div className="autofit-padded-no-gutters-x autofit-row">
-					<div className="autofit-col">
-						<h3>
-							{'Coinbase Trades '}
-							<small>
-								{props.networkStatus === 1 && 'Loading'}
-								{props.networkStatus === 2 && 'Refetch'}
-								{props.networkStatus === 3 && 'Polling'}
-								{props.networkStatus === 4 && 'Ready'}
-								{props.networkStatus === 5 && 'Error'}
-							</small>
-						</h3>
+								<small>
+									{props.networkStatus === 1 && 'Loading'}
+
+									{props.networkStatus === 2 && 'Refetch'}
+
+									{props.networkStatus === 3 && 'Polling'}
+
+									{props.networkStatus === 4 && 'Ready'}
+
+									{props.networkStatus === 5 && 'Error'}
+								</small>
+							</h3>
+						</div>
+
+						<div className="autofit-col">
+							<button
+								className="btn"
+								onClick={() => props.refetch()}
+								type="button"
+							>
+								Refetch
+							</button>
+						</div>
 					</div>
-					<div className="autofit-col">
-						<button
-							className="btn"
-							onClick={() => props.refetch()}
-							type="button"
-						>
-							Refetch
-						</button>
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-md-5">
-						<p className="text-truncate-inline">
-							<small>
-								{`The polling is enabled with an interval of
+
+					<div className="row">
+						<div className="col-md-5">
+							<p className="text-truncate-inline">
+								<small>
+									{`The polling is enabled with an interval of
 								5s, modify the values through the Storybook
 								knobs. This markup is for testing purposes
 								only with the ClayDataProvider component.`}
-							</small>
-						</p>
+								</small>
+							</p>
+						</div>
 					</div>
-				</div>
-				<ul className="list-group">
-					<li className="list-group-item list-group-item-flex">
-						<div className="autofit-col" />
-						<div className="autofit-col">
-							<p className="list-group-title">Trade Size</p>
-						</div>
-						<div className="autofit-col">
-							<p className="list-group-title">Price (USD)</p>
-						</div>
-						<div className="autofit-col">
-							<p className="list-group-title">Time (ISO)</p>
-						</div>
-					</li>
-					{props.networkStatus === 1 && (
-						<li className="disabled list-group-item list-group-item-flex">
-							Loading...
+
+					<ul className="list-group">
+						<li className="list-group-item list-group-item-flex">
+							<div className="autofit-col" />
+
+							<div className="autofit-col">
+								<p className="list-group-title">Trade Size</p>
+							</div>
+
+							<div className="autofit-col">
+								<p className="list-group-title">Price (USD)</p>
+							</div>
+
+							<div className="autofit-col">
+								<p className="list-group-title">Time (ISO)</p>
+							</div>
 						</li>
-					)}
-					{props.error && (
-						<li className="disabled list-group-item list-group-item-flex">
-							Error
-						</li>
-					)}
-					{props.data &&
-						!props.error &&
-						props.data.map((item: any) => (
-							<li
-								className="list-group-item list-group-item-flex"
-								key={item.trade_id}
-							>
-								<div className="autofit-col">{item.side}</div>
-								<div className="autofit-col">{item.size}</div>
-								<div className="autofit-col">{item.price}</div>
-								<div className="autofit-col">{item.time}</div>
+
+						{props.networkStatus === 1 && (
+							<li className="disabled list-group-item list-group-item-flex">
+								Loading...
 							</li>
-						))}
-				</ul>
-			</div>
-		)}
-	</ClayDataProvider>
-);
+						)}
+
+						{props.error && (
+							<li className="disabled list-group-item list-group-item-flex">
+								Error
+							</li>
+						)}
+
+						{props.data &&
+							!props.error &&
+							props.data.map((item: any) => (
+								<li
+									className="list-group-item list-group-item-flex"
+									key={item.trade_id}
+								>
+									<div className="autofit-col">
+										{item.side}
+									</div>
+
+									<div className="autofit-col">
+										{item.size}
+									</div>
+
+									<div className="autofit-col">
+										{item.price}
+									</div>
+
+									<div className="autofit-col">
+										{item.time}
+									</div>
+								</li>
+							))}
+					</ul>
+				</div>
+			)}
+		</ClayDataProvider>
+	);
+}
 
 PollingExample.args = {
 	pollInterval: 5000,
@@ -108,8 +134,7 @@ PollingExample.args = {
 const Store = React.createContext({});
 
 Store.displayName = 'DemoStoreContext';
-
-export const VariableChange = () => {
+export function VariableChange() {
 	const [value, setValue] = useState<undefined | string>('');
 	const store = useContext(Store);
 
@@ -129,15 +154,21 @@ export const VariableChange = () => {
 								<div className="autofit-col">
 									<h3>
 										{'The Rick and Morty '}
+
 										<small>
 											{networkStatus === 1 && 'Loading'}
+
 											{networkStatus === 2 && 'Refetch'}
+
 											{networkStatus === 3 && 'Polling'}
+
 											{networkStatus === 4 && 'Ready'}
+
 											{networkStatus === 5 && 'Error'}
 										</small>
 									</h3>
 								</div>
+
 								<div className="autofit-col">
 									<button
 										className="btn"
@@ -153,6 +184,7 @@ export const VariableChange = () => {
 									<label htmlFor="searchCharacterInput">
 										Search Character
 									</label>
+
 									<input
 										className="form-control"
 										id="searchCharacterInput"
@@ -164,17 +196,20 @@ export const VariableChange = () => {
 										value={value}
 									/>
 								</div>
+
 								<ul className="list-group">
 									{networkStatus === 1 && (
 										<li className="disabled list-group-item list-group-item-flex">
 											Loading...
 										</li>
 									)}
+
 									{error && (
 										<li className="disabled list-group-item list-group-item-flex">
 											Result is not found
 										</li>
 									)}
+
 									{!error &&
 										data &&
 										data.results &&
@@ -187,6 +222,7 @@ export const VariableChange = () => {
 													<p className="list-group-title text-truncate">
 														Name
 													</p>
+
 													<p className="list-group-subtitle text-truncate">
 														{item.name}
 													</p>
@@ -201,9 +237,8 @@ export const VariableChange = () => {
 			</ClayDataProvider>
 		</div>
 	);
-};
-
-export const PollingDisable = () => {
+}
+export function PollingDisable() {
 	const [poll, setPoll] = useState(false);
 
 	useResource({
@@ -215,11 +250,13 @@ export const PollingDisable = () => {
 	return (
 		<div className="pb-4 sheet">
 			<h3>{`Polling  ${poll ? 'enable' : 'disable'}`}</h3>
+
 			<div className="row">
 				<div className="col-md-5">
 					<p>Open your console to see the network tab.</p>
 				</div>
 			</div>
+
 			<div className="row">
 				<div className="col-md-5">
 					<button
@@ -232,9 +269,8 @@ export const PollingDisable = () => {
 			</div>
 		</div>
 	);
-};
-
-export const CustomFetcher = () => {
+}
+export function CustomFetcher() {
 	const customFetcher = (url: string, options?: RequestInit | undefined) =>
 		fetch(url, {...options, headers: {'x-clay': 'Clay'}}).then((res) =>
 			res.json()
@@ -249,6 +285,7 @@ export const CustomFetcher = () => {
 	return (
 		<div className="pb-4 sheet">
 			<h3>Custom Fetcher</h3>
+
 			<div className="row">
 				<div className="col-md-5">
 					<p>Open your console to see the network tab.</p>
@@ -256,4 +293,4 @@ export const CustomFetcher = () => {
 			</div>
 		</div>
 	);
-};
+}

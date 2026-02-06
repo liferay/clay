@@ -1,14 +1,21 @@
 {
-	"name": "@clayui/css",
-	"version": "3.156.6",
-	"description": "Liferay's web implementation of the Lexicon Design Language",
-	"main": "index.js",
-	"files": [
-		"index.js",
-		"lib",
-		"src/images/icons",
-		"src/js",
-		"src/scss"
+	"author": {
+		"email": "nathan.cavanaugh@liferay.com",
+		"name": "Nate Cavanaugh",
+		"url": "https://github.com/natecavanaugh"
+	},
+	"bugs": "https://github.com/liferay/clay/issues",
+	"contributors": [
+		{
+			"email": "patrick.yeo@liferay.com",
+			"name": "Patrick Yeo",
+			"web": "https://github.com/pat270"
+		},
+		{
+			"email": "rob.g.frampton@gmail.com",
+			"name": "Rob Frampton",
+			"web": "https://github.com/Robert-Frampton"
+		}
 	],
 	"csfConfig": {
 		"js": {
@@ -16,44 +23,38 @@
 				"globals": {
 					"jQuery": true
 				},
-				"rules": {}
+				"rules": {
+				}
 			}
 		}
 	},
-	"scripts": {
-		"build": "yarn compile",
-		"compile": "node ./scripts/build",
-		"link": "npm link",
-		"prepublish": "yarn compile"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/liferay/clay/tree/master/packages/clay-css"
-	},
-	"bugs": "https://github.com/liferay/clay/issues",
-	"homepage": "http://clayui.com",
-	"author": {
-		"name": "Nate Cavanaugh",
-		"email": "nathan.cavanaugh@liferay.com",
-		"url": "https://github.com/natecavanaugh"
-	},
-	"contributors": [
-		{
-			"name": "Patrick Yeo",
-			"email": "patrick.yeo@liferay.com",
-			"web": "https://github.com/pat270"
-		},
-		{
-			"name": "Rob Frampton",
-			"email": "rob.g.frampton@gmail.com",
-			"web": "https://github.com/Robert-Frampton"
-		}
-	],
-	"license": "MIT",
+	"description": "Liferay's web implementation of the Lexicon Design Language",
 	"devDependencies": {
 		"jsdom": "^18.0.0",
 		"sass": "^1.42.0",
 		"sassdoc": "^2.5.1",
 		"svgo": "^2.7.0"
-	}
+	},
+	"files": [
+		"index.js",
+		"lib",
+		"src/images/icons",
+		"src/js",
+		"src/scss"
+	],
+	"homepage": "http://clayui.com",
+	"license": "MIT",
+	"name": "@clayui/css",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/liferay/clay/tree/master/packages/clay-css"
+	},
+	"scripts": {
+		"build": "yarn compile",
+		"buildIcons": "node ./scripts/buildIcons",
+		"compile": "node ./scripts/build",
+		"link": "npm link",
+		"prepublish": "yarn compile"
+	},
+	"version": "3.154.0"
 }

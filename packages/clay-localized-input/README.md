@@ -2,9 +2,9 @@
 
 A text input variation used in fields that can be translated into multiple languages.
 
--   [Documentation](https://clayui.com/docs/components/localized-input.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/localized-input.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

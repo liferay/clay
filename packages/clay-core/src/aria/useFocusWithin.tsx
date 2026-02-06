@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {getFocusableList} from '@clayui/shared';
@@ -39,7 +39,9 @@ export function FocusWithinProvider<T extends HTMLElement>({
 	const [focusId, setFocusId] = useState<React.Key | null>(null);
 
 	useEffect(() => {
+
 		// TODO: Get this information using the collection API
+
 		const item = getFocusableList(containerRef, focusableElements)[0];
 
 		if (!item) {
@@ -50,12 +52,14 @@ export function FocusWithinProvider<T extends HTMLElement>({
 	}, []);
 
 	// Revalidates the focus if the item no longer exists in the list.
+
 	useEffect(() => {
 		if (!focusId) {
 			return;
 		}
 
 		// TODO: Get this information using the collection API
+
 		const items = getFocusableList(containerRef, focusableElements);
 
 		const hasItem = items.find((item) => focusId === getId(item));
@@ -73,8 +77,8 @@ export function FocusWithinProvider<T extends HTMLElement>({
 }
 
 type FocusWithinProps = {
-	id: React.Key;
 	disabled: boolean;
+	id: React.Key;
 	onFocusChange?: (isFocused: boolean) => void;
 };
 

@@ -1,20 +1,20 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {useCallback, useEffect, useRef} from 'react';
 
 export function useIsMounted() {
-	const isMounted = useRef(false);
+	const isMountedRef = useRef(false);
 
 	useEffect(() => {
-		isMounted.current = true;
+		isMountedRef.current = true;
 
 		return () => {
-			isMounted.current = false;
+			isMountedRef.current = false;
 		};
 	}, []);
 
-	return useCallback(() => isMounted.current, []);
+	return useCallback(() => isMountedRef.current, []);
 }

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 /* eslint-disable no-sparse-arrays */
@@ -14,15 +14,11 @@ import ReactDOM from 'react-dom';
 const spritemap = 'icons.svg';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
-	initialVisible?: boolean;
 	children?: any;
+	initialVisible?: boolean;
 }
 
-const ModalWithState = ({
-	children,
-	initialVisible = false,
-	...props
-}: IProps) => {
+function ModalWithState({children, initialVisible = false, ...props}: IProps) {
 	const [visible, setVisible] = React.useState(initialVisible);
 	const {observer} = useModal({onClose: () => setVisible(false)});
 
@@ -38,9 +34,9 @@ const ModalWithState = ({
 			</Button>
 		</>
 	);
-};
+}
 
-const ModalWithHookState = () => {
+function ModalWithHookState() {
 	const {observer, onOpenChange, open} = useModal();
 
 	return (
@@ -51,7 +47,7 @@ const ModalWithHookState = () => {
 			</Button>
 		</>
 	);
-};
+}
 
 describe('Modal -> IncrementalInteractions', () => {
 	afterEach(() => {
@@ -64,6 +60,7 @@ describe('Modal -> IncrementalInteractions', () => {
 		jest.useFakeTimers();
 
 		// @ts-ignore
+
 		ReactDOM.createPortal = jest.fn((element) => {
 			return element;
 		});
@@ -275,6 +272,7 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 		jest.useFakeTimers();
 
 		// @ts-ignore
+
 		ReactDOM.createPortal = jest.fn((element) => {
 			return element;
 		});

@@ -1,7 +1,7 @@
 :root {
 	--max-width: 1056px;
 	--border-radius: 12px;
-	--font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+	--font-mono: ui-monospace, menlo, monaco, 'Cascadia Mono', 'Segoe UI Mono',
 		'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
 		'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
@@ -9,7 +9,7 @@
 	--background-rgb: 255, 255, 255;
 	--docsearch-muted-color: #6b6c7e !important;
 	--docsearch-text-color: #757575 !important;
-	--docsearch-searchbox-background: #ffffff !important;
+	--docsearch-searchbox-background: #fff !important;
 	--docsearch-searchbox-shadow: inset 0 0 0 2px #b3472d !important;
 	--docsearch-key-gradient: transparent !important;
 	--docsearch-key-shadow: transparent !important;
@@ -17,8 +17,8 @@
 
 * {
 	box-sizing: border-box;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 html,
@@ -28,8 +28,8 @@ body {
 }
 
 body {
-	color: rgb(var(--foreground-rgb));
 	background: rgb(var(--background-rgb));
+	color: rgb(var(--foreground-rgb));
 }
 
 a {
@@ -58,11 +58,11 @@ a {
 }
 
 .sheet-example {
-	position: relative;
-	box-shadow: 0 0 0 1px #e1e4e8;
 	border-radius: 5px;
-	padding: 16px;
+	box-shadow: 0 0 0 1px #e1e4e8;
 	margin-bottom: 16px;
+	padding: 16px;
+	position: relative;
 }
 
 .clay-site-dropdown-menu-container {
@@ -112,8 +112,8 @@ a {
 .clay-site-tooltip-display {
 	.tooltip {
 		display: inline-block;
-		opacity: 1;
 		margin: 10px 20px;
+		opacity: 1;
 		position: relative;
 		z-index: 1;
 	}
@@ -146,18 +146,18 @@ a {
 
 .clay-docs-design h2,
 .clay-docs-design h1 {
-	margin-top: 3rem !important;
 	margin-bottom: 1.5rem !important;
+	margin-top: 3rem !important;
 }
 
 .clay-docs-design h3 {
-	margin-top: 1.5rem !important;
 	margin-bottom: 1rem !important;
+	margin-top: 1.5rem !important;
 }
 
 .clay-docs-design h4 {
-	margin-top: 1rem !important;
 	margin-bottom: 0.5rem !important;
+	margin-top: 1rem !important;
 }
 
 .clay-docs-design img {

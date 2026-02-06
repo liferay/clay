@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -16,71 +16,79 @@ export default {
 	component: ClayEmptyState,
 	title: 'Design System/Components/EmptyState',
 };
-
-export const Default = () => (
-	<ClayEmptyState>
-		<ClayButton displayType="primary">Button</ClayButton>
-	</ClayEmptyState>
-);
-
-export const Title = () => (
-	<ClayEmptyState title={null}>
-		<ClayButton displayType="primary">Button</ClayButton>
-	</ClayEmptyState>
-);
-
-export const EmptyState = (args: any) => (
-	<ClayEmptyState imgSrc={emptyImage} small={args.small}>
-		<ClayButton displayType="secondary">Button</ClayButton>
-	</ClayEmptyState>
-);
+export function Default() {
+	return (
+		<ClayEmptyState>
+			<ClayButton displayType="primary">Button</ClayButton>
+		</ClayEmptyState>
+	);
+}
+export function Title() {
+	return (
+		<ClayEmptyState title={null}>
+			<ClayButton displayType="primary">Button</ClayButton>
+		</ClayEmptyState>
+	);
+}
+export function EmptyState(args: any) {
+	return (
+		<ClayEmptyState imgSrc={emptyImage} small={args.small}>
+			<ClayButton displayType="secondary">Button</ClayButton>
+		</ClayEmptyState>
+	);
+}
 
 EmptyState.args = {
 	small: false,
 };
-
-export const SearchState = () => (
-	<ClayEmptyState
-		description="This is a description of what the button will allow you to do"
-		imgSrc={searchImage}
-		title="No content yet"
-	/>
-);
-
-export const SuccessState = () => (
-	<ClayEmptyState
-		description="You don't have more notifications to review"
-		imgSrc={successImage}
-		title="Hurray"
-	/>
-);
-
-export const WithImage = () => (
-	<ClayEmptyState
-		description="You don't have more notifications to review"
-		imgSrc={successImage}
-		title="Hurray"
-	/>
-);
-
-export const WithReducedMotion = () => (
-	<div className="c-prefers-reduced-motion">
+export function SearchState() {
+	return (
+		<ClayEmptyState
+			description="This is a description of what the button will allow you to do"
+			imgSrc={searchImage}
+			title="No content yet"
+		/>
+	);
+}
+export function SuccessState() {
+	return (
 		<ClayEmptyState
 			description="You don't have more notifications to review"
 			imgSrc={successImage}
-			imgSrcReducedMotion={emptyImageReducedMotion}
 			title="Hurray"
 		/>
-	</div>
-);
-
-export const WithReducedMotionNull = () => (
-	<div className="c-prefers-reduced-motion">
+	);
+}
+export function WithImage() {
+	return (
 		<ClayEmptyState
 			description="You don't have more notifications to review"
 			imgSrc={successImage}
-			imgSrcReducedMotion={null}
 			title="Hurray"
 		/>
-	</div>
-);
+	);
+}
+export function WithReducedMotion() {
+	return (
+		<div className="c-prefers-reduced-motion">
+			<ClayEmptyState
+				description="You don't have more notifications to review"
+				imgSrc={successImage}
+				imgSrcReducedMotion={emptyImageReducedMotion}
+				title="Hurray"
+			/>
+		</div>
+	);
+}
+export function WithReducedMotionNull() {
+	return (
+		<div className="c-prefers-reduced-motion">
+			<ClayEmptyState
+				description="You don't have more notifications to review"
+				imgSrc={successImage}
+				imgSrcReducedMotion={null}
+				title="Hurray"
+			/>
+		</div>
+	);
+}

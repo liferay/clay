@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useCallback, useEffect, useRef} from 'react';
@@ -12,18 +12,20 @@ import type {Virtualizer} from '@tanstack/react-virtual';
 
 // TODO: To avoid circular dependency we are just copying but we must remove this
 // when moving this into the core package.
+
 type CollectionState = {
 	UNSAFE_virtualizer?: Virtualizer<HTMLElement, Element>;
 	collection: JSX.Element;
-	getFirstItem: () => {key: React.Key; value: string; index: number};
-	getItem: (key: React.Key) => {value: string; index: number};
+	getFirstItem: () => {index: number; key: React.Key; value: string};
+	getItem: (key: React.Key) => {index: number; value: string};
 	getItems: () => Array<React.Key>;
-	getLastItem: () => {key: React.Key; value: string; index: number};
+	getLastItem: () => {index: number; key: React.Key; value: string};
 	size?: number;
 	virtualize: boolean;
 };
 
 type Props<T> = {
+
 	/**
 	 * Flag to indicate the navigation behavior in the tab.
 	 *
@@ -40,15 +42,15 @@ type Props<T> = {
 	active?: React.Key;
 
 	/**
-	 * Reference of the parent element of the focusable elements.
-	 */
-	containerRef: React.MutableRefObject<T>;
-
-	/**
 	 * Defines that the navigation is done with the collection API when
 	 * it's declared.
 	 */
 	collection?: CollectionState;
+
+	/**
+	 * Reference of the parent element of the focusable elements.
+	 */
+	containerRef: React.MutableRefObject<T>;
 
 	focusableElements?: Array<string>;
 
@@ -101,9 +103,10 @@ export function useNavigation<T extends HTMLElement | null>({
 
 	// An event can be scheduled when the content is not visible in the DOM, it
 	// will be executed in sequence after the element is visible in the DOM.
-	const pendingEventStack = useRef<Array<React.KeyboardEvent<HTMLElement>>>(
-		[]
-	);
+
+	const pendingEventStackRef = useRef<
+		Array<React.KeyboardEvent<HTMLElement>>
+	>([]);
 
 	useEffect(() => {
 		if (!visible) {
@@ -175,7 +178,7 @@ export function useNavigation<T extends HTMLElement | null>({
 		(event: React.KeyboardEvent<HTMLElement>) => {
 			if (!containerRef.current) {
 				event.persist();
-				pendingEventStack.current.push(event);
+				pendingEventStackRef.current.push(event);
 
 				return;
 			}
@@ -216,7 +219,8 @@ export function useNavigation<T extends HTMLElement | null>({
 										? collection.getLastItem().key
 										: collection.getFirstItem().key;
 							}
-						} else if (collection) {
+						}
+						else if (collection) {
 							const activeElement =
 								document.activeElement as HTMLElement;
 
@@ -233,7 +237,8 @@ export function useNavigation<T extends HTMLElement | null>({
 										? collection.getLastItem().key
 										: collection.getFirstItem().key;
 							}
-						} else {
+						}
+						else {
 							const activeElement =
 								document.activeElement as HTMLElement;
 
@@ -293,7 +298,7 @@ export function useNavigation<T extends HTMLElement | null>({
 						}
 
 						if (
-							stringRef.current.length > 0 &&
+							!!stringRef.current.length &&
 							stringRef.current[0] !== Keys.Spacebar
 						) {
 							if (event.key === Keys.Spacebar) {
@@ -350,7 +355,9 @@ export function useNavigation<T extends HTMLElement | null>({
 						});
 
 						if (item) {
+
 							// @ts-ignore
+
 							matchIndexRef.current = items.indexOf(item);
 						}
 						break;
@@ -366,7 +373,8 @@ export function useNavigation<T extends HTMLElement | null>({
 
 					if (onNavigate || !element) {
 						accessibilityFocus(item, items);
-					} else {
+					}
+					else {
 						element.focus();
 					}
 
@@ -380,7 +388,9 @@ export function useNavigation<T extends HTMLElement | null>({
 	);
 
 	useEffect(() => {
+
 		// Moves the scroll to the element with visual "focus" if it exists.
+
 		if (
 			visible &&
 			containerRef.current &&
@@ -396,7 +406,8 @@ export function useNavigation<T extends HTMLElement | null>({
 			if (activeElement && isScrollable(child)) {
 				maintainScrollVisibility(activeElement, child);
 			}
-		} else if (visible && active && collection?.virtualize) {
+		}
+		else if (visible && active && collection?.virtualize) {
 			collection.UNSAFE_virtualizer!.scrollToIndex(
 				collection.getItem(active).index,
 				{align: 'center', behavior: 'auto'}
@@ -405,13 +416,13 @@ export function useNavigation<T extends HTMLElement | null>({
 	}, [visible]);
 
 	useEffect(() => {
-		if (visible && pendingEventStack.current.length !== 0) {
+		if (visible && pendingEventStackRef.current.length !== 0) {
 			for (
 				let index = 0;
-				index < pendingEventStack.current.length;
+				index < pendingEventStackRef.current.length;
 				index++
 			) {
-				const event = pendingEventStack.current.shift();
+				const event = pendingEventStackRef.current.shift();
 
 				onKeyDown(event!);
 			}
@@ -482,7 +493,8 @@ function maintainScrollVisibility(
 
 	if (isAbove) {
 		scrollParent.scrollTo(0, offsetTop);
-	} else if (isBelow) {
+	}
+	else if (isBelow) {
 		scrollParent.scrollTo(0, offsetTop - parentOffsetHeight + offsetHeight);
 	}
 }

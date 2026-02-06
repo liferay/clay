@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 'use client';
@@ -16,12 +16,12 @@ const spritemap = '/images/icons/icons.svg';
  * @param {Array[Object]} source - Path to the source JSON. Needs to follow pattern of [{name: String, aliases: Array<String>}]
  * @param {string} type - Type of icons being provided, supports "icons" and "flags"
  */
-export const IconSearch = ({
+export function IconSearch({
 	label = 'Search Icons',
 	placeholder = 'Search Icons...',
 	source,
 	type = 'icon',
-}) => {
+}) {
 	const [searchQuery, setSearchQuery] = useState('');
 
 	const filteredIcons = useMemo(() => {
@@ -76,4 +76,4 @@ export const IconSearch = ({
 			)}
 		</>
 	);
-};
+}

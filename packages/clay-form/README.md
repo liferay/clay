@@ -2,16 +2,16 @@
 
 Forms obtain user data and transmit it to the system to either store the data, produce an action, or both.
 
--   [Form documentation](https://clayui.com/docs/components/form.html)
--   [Checkbox documentation](https://clayui.com/docs/components/checkbox.html)
--   [Dual List Box documentation](https://clayui.com/docs/components/dual-list_box.html)
--   [Input documentation](https://clayui.com/docs/components/input.html)
--   [Radio Group documentation](https://clayui.com/docs/components/radio-group.html)
--   [Select documentation](https://clayui.com/docs/components/select.html)
--   [Select Box documentation](https://clayui.com/docs/components/select-box.html)
--   [Toggle Switch documentation](https://clayui.com/docs/components/toggle-switch.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Form documentation](https://clayui.com/docs/components/form.html)
+- [Checkbox documentation](https://clayui.com/docs/components/checkbox.html)
+- [Dual List Box documentation](https://clayui.com/docs/components/dual-list_box.html)
+- [Input documentation](https://clayui.com/docs/components/input.html)
+- [Radio Group documentation](https://clayui.com/docs/components/radio-group.html)
+- [Select documentation](https://clayui.com/docs/components/select.html)
+- [Select Box documentation](https://clayui.com/docs/components/select-box.html)
+- [Toggle Switch documentation](https://clayui.com/docs/components/toggle-switch.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

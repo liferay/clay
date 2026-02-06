@@ -18,9 +18,20 @@ export async function generateStaticParams() {
 	const remoteCollection = await lxc.getResources();
 
 	return [
-		...collection.map((entry) => ({
-			slug: entry.getPath().split('/').slice(1),
-		})),
+		...collection
+			.map((entry) => ({
+				slug: entry.getPath().split('/').slice(1),
+			}))
+			// Exclude oversized pages that exceed Vercel's ISR limit (19.07 MB)
+			// These pages will be dynamically rendered instead
+			.filter(
+				({slug}) =>
+					!(
+						slug[0] === 'components' &&
+						slug[1] === 'tree-view' &&
+						slug[2] === 'markup'
+					)
+			),
 		...remoteCollection.map((item) => ({
 			slug: ['components', item.slug.slice(1), 'design'],
 		})),

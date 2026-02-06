@@ -1,8 +1,12 @@
 $cadmin-toggle-switch-cursor: $cadmin-link-cursor !default;
 $cadmin-toggle-switch-font-weight: $cadmin-input-label-font-weight !default;
-$cadmin-toggle-switch-transition: background-color 100ms ease-in,
-	border-color 100ms ease-in, box-shadow 150ms ease-in-out,
-	color 100ms ease-in, left 100ms ease-in, opacity 100ms ease-in,
+$cadmin-toggle-switch-transition:
+	background-color 100ms ease-in,
+	border-color 100ms ease-in,
+	box-shadow 150ms ease-in-out,
+	color 100ms ease-in,
+	left 100ms ease-in,
+	opacity 100ms ease-in,
 	right 100ms ease-in !default;
 
 // must all be same units--start

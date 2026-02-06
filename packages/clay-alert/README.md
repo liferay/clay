@@ -2,9 +2,9 @@
 
 Alerts are used to capture the attention of the user in an intrusive way.
 
--   [Documentation](https://clayui.com/docs/components/alert.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/alert.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

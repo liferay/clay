@@ -2,9 +2,9 @@
 
 Icons are a visual representation of an idea and/or action.
 
--   [Documentation](https://clayui.com/docs/components/icon.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/icon.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

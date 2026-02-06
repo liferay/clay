@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayIcon from '@clayui/icon';
@@ -22,11 +22,6 @@ interface IProps
 	description?: React.ReactText;
 
 	/**
-	 * Path or url for click through
-	 */
-	href?: string;
-
-	/**
 	 * Flag to indicate if card should be the `horizontal` variant
 	 */
 	horizontal?: boolean;
@@ -35,6 +30,11 @@ interface IProps
 	 * Icon to display when card is `horizontal`
 	 */
 	horizontalSymbol?: string;
+
+	/**
+	 * Path or url for click through
+	 */
+	href?: string;
 
 	/**
 	 * Callback for when card is clicked on
@@ -62,9 +62,9 @@ interface IProps
 	title?: string;
 }
 
-const noop = () => {};
+function noop() {}
 
-export const ClayCardWithNavigation = ({
+export function ClayCardWithNavigation({
 	'aria-label': ariaLabel,
 	children,
 	description,
@@ -77,7 +77,7 @@ export const ClayCardWithNavigation = ({
 	stickerTitle,
 	title,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	return (
 		<ClayCardNavigation
 			{...otherProps}
@@ -90,12 +90,10 @@ export const ClayCardWithNavigation = ({
 					(event && event.key === Keys.Spacebar)
 				) {
 					event.preventDefault();
-
 					if (onClick) {
 						onClick(event);
 					}
 				}
-
 				onKeyDown(event);
 			}}
 			tabIndex={0}
@@ -143,6 +141,7 @@ export const ClayCardWithNavigation = ({
 									/>
 								</ClaySticker>
 							</ClayLayout.ContentCol>
+
 							{title && (
 								<ClayLayout.ContentCol expand>
 									<ClayLayout.ContentSection>
@@ -162,4 +161,4 @@ export const ClayCardWithNavigation = ({
 			)}
 		</ClayCardNavigation>
 	);
-};
+}

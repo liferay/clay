@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {
@@ -51,7 +51,7 @@ interface IAction extends Partial<IState> {
 	type: 'reset' | 'update';
 }
 
-const reducer = (state: IState, {type, ...payload}: IAction): IState => {
+function reducer(state: IState, {type, ...payload}: IAction): IState {
 	switch (type) {
 		case 'update':
 			return {...state, ...payload};
@@ -64,7 +64,7 @@ const reducer = (state: IState, {type, ...payload}: IAction): IState => {
 		default:
 			throw new TypeError();
 	}
-};
+}
 
 type TContentRenderer = (props: {
 	targetNode?: HTMLElement | null;
@@ -72,10 +72,13 @@ type TContentRenderer = (props: {
 }) => React.ReactElement | React.ReactNode;
 
 type Props = {
+
 	/**
 	 * Flag to indicate if tooltip should automatically align based on the window
 	 */
 	autoAlign?: boolean;
+
+	children?: React.ReactElement;
 
 	/**
 	 * Props to add to the `<ClayPortal/>`.
@@ -92,8 +95,6 @@ type Props = {
 	 */
 	delay?: number;
 
-	children?: React.ReactElement;
-
 	/**
 	 * CSS selector to scope provider to. All titles within this scope will be
 	 * rendered in the tooltip. Titles outside of this scope will be styled
@@ -102,46 +103,40 @@ type Props = {
 	scope?: string;
 };
 
-export const ClayTooltipProvider = ({
+export function ClayTooltipProvider({
 	autoAlign = true,
 	children,
 	containerProps = {},
 	contentRenderer = (props) => props.title,
 	delay = 600,
 	scope,
-}: Props) => {
+}: Props) {
 	const [{align, floating, setAsHTML, title = ''}, dispatch] = useReducer(
 		reducer,
 		initialState
 	);
-
 	const tooltipRef = useRef<HTMLElement>(null);
-
 	const {getInteraction, isFocusVisible} = useInteractionFocus();
-
-	const isHovered = useRef(false);
-	const isFocused = useRef(false);
-
+	const isHoveredRef = useRef(false);
+	const isFocusedRef = useRef(false);
 	const {close, isOpen, open} = useTooltipState({delay});
-
 	const {forceHide, getProps, onHide, target, titleNode} = useClosestTitle({
 		forceHide: useCallback(() => {
 			dispatch({type: 'reset'});
 			close();
 		}, []),
 		onClick: useCallback(() => {
-			isFocused.current = false;
-			isHovered.current = false;
+			isFocusedRef.current = false;
+			isHoveredRef.current = false;
 		}, []),
 		onHide: useCallback(() => {
-			if (!isHovered.current && !isFocused.current) {
+			if (!isHoveredRef.current && !isFocusedRef.current) {
 				dispatch({type: 'reset'});
 				close();
 			}
 		}, []),
 		tooltipRef,
 	});
-
 	useAlign({
 		align,
 		autoAlign,
@@ -152,12 +147,10 @@ export const ClayTooltipProvider = ({
 		targetElement: titleNode,
 		title,
 	});
-
 	const onShow = useCallback(
 		(event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-			if (isHovered.current || isFocused.current) {
-				const props = getProps(event, isHovered.current);
-
+			if (isHoveredRef.current || isFocusedRef.current) {
+				const props = getProps(event, isHoveredRef.current);
 				if (props) {
 					dispatch({
 						align: (props.align as any) ?? align,
@@ -167,7 +160,7 @@ export const ClayTooltipProvider = ({
 						type: 'update',
 					});
 					open(
-						isFocused.current,
+						isFocusedRef.current,
 						props.delay ? Number(props.delay) : undefined
 					);
 				}
@@ -175,53 +168,42 @@ export const ClayTooltipProvider = ({
 		},
 		[align]
 	);
-
 	useEffect(() => {
 		const handleEsc = (event: KeyboardEvent) => {
 			if (isOpen && event.key === Keys.Esc) {
 				event.stopImmediatePropagation();
-
 				forceHide();
 			}
 		};
-
 		document.addEventListener('keyup', handleEsc, true);
 
 		return () => document.removeEventListener('keyup', handleEsc, true);
 	}, [isOpen]);
-
 	const onHoverStart = (event: any) => {
 		if (getInteraction() === 'pointer') {
-			isHovered.current = true;
-		} else {
-			isHovered.current = false;
+			isHoveredRef.current = true;
 		}
-
+		else {
+			isHoveredRef.current = false;
+		}
 		onShow(event);
 	};
-
 	const onHoverEnd = (event: any) => {
-		isFocused.current = false;
-		isHovered.current = false;
-
+		isFocusedRef.current = false;
+		isHoveredRef.current = false;
 		onHide(event);
 	};
-
 	const onFocus = (event: any) => {
 		if (isFocusVisible()) {
-			isFocused.current = true;
-
+			isFocusedRef.current = true;
 			onShow(event);
 		}
 	};
-
 	const onBlur = (event: any) => {
-		isFocused.current = false;
-		isHovered.current = false;
-
+		isFocusedRef.current = false;
+		isHoveredRef.current = false;
 		onHide(event);
 	};
-
 	useEffect(() => {
 		if (scope) {
 			const disposeShowEvents = TRIGGER_SHOW_EVENTS.map((eventName) =>
@@ -235,7 +217,6 @@ export const ClayTooltipProvider = ({
 					onHoverEnd
 				)
 			);
-
 			const disposeShowFocus = delegate(
 				document.body,
 				'focus',
@@ -254,34 +235,28 @@ export const ClayTooltipProvider = ({
 			return () => {
 				disposeShowEvents.forEach(({dispose}) => dispose());
 				disposeHideEvents.forEach(({dispose}) => dispose());
-
 				disposeShowFocus.dispose();
 				disposeCloseBlur.dispose();
 			};
 		}
 	}, [onShow]);
-
 	warning(
 		(typeof children === 'undefined' && typeof scope !== 'undefined') ||
 			(typeof scope === 'undefined' && typeof children !== 'undefined'),
 		'<TooltipProvider />: You must use at least one of the following props: `children` or `scope`.'
 	);
-
 	warning(
 		typeof children !== 'undefined' || typeof scope !== 'undefined',
 		'<TooltipProvider />: If you want to use `scope`, use <TooltipProvider /> as a singleton and do not pass `children`.'
 	);
-
 	warning(
 		children?.type !== React.Fragment,
 		'<TooltipProvider />: React Fragment is not allowed as a child to TooltipProvider. Child must be a single HTML element that accepts `onMouseOver` and `onMouseOut`.'
 	);
-
 	const titleContent = contentRenderer({
 		targetNode: target.current,
 		title,
 	});
-
 	const tooltip = isOpen && (
 		<ClayPortal {...containerProps}>
 			<Tooltip alignPosition={align} ref={tooltipRef} show>
@@ -323,4 +298,4 @@ export const ClayTooltipProvider = ({
 			)}
 		</>
 	);
-};
+}

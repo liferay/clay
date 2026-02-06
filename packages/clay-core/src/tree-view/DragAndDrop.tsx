@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {Keys, useId} from '@clayui/shared';
@@ -35,7 +35,6 @@ export type DragAndDropMessages = {
 };
 
 export type Value = {
-	[propName: string]: any;
 	cursor: Array<React.Key>;
 	indexes: Array<number>;
 	itemRef: React.RefObject<HTMLDivElement>;
@@ -43,22 +42,23 @@ export type Value = {
 	nextKey?: React.Key;
 	parentItemRef: React.RefObject<HTMLDivElement>;
 	prevKey?: React.Key;
+	[propName: string]: any;
 };
 
 type ContextProps = {
-	mode: 'keyboard' | 'mouse' | null;
-	position: 'bottom' | 'middle' | 'top' | null;
 	currentDrag: React.Key | null;
+	currentTarget: React.Key | null;
+	dragCancelDescribedBy: string;
 	dragDescribedBy: string;
 	dragDropDescribedBy: string;
-	dragCancelDescribedBy: string;
-	currentTarget: React.Key | null;
 	messages: DragAndDropMessages;
+	mode: 'keyboard' | 'mouse' | null;
 	onCancel: () => void;
-	onEnd: () => void;
 	onDragStart: (mode: 'keyboard' | 'mouse', target: React.Key) => void;
-	onPositionChange: (key: React.Key, position: Position) => void;
 	onDrop: () => void;
+	onEnd: () => void;
+	onPositionChange: (key: React.Key, position: Position) => void;
+	position: 'bottom' | 'middle' | 'top' | null;
 };
 
 type State = Pick<
@@ -184,7 +184,8 @@ export function DragAndDropProvider<T>({
 					mode: 'mouse',
 					status: null,
 				}));
-			} else {
+			}
+			else {
 				const nextTargetKey = getNextTarget(rootRef, dragKey);
 
 				if (nextTargetKey === null) {
@@ -375,23 +376,27 @@ export function DragAndDropProvider<T>({
 								event.key === Keys.Up ? 'top' : 'bottom';
 							newState.currentTarget =
 								type === 'number' ? Number(key) : key!;
-						} else if (
+						}
+						else if (
 							(event.key === Keys.Up &&
 								state.position === 'bottom') ||
 							(event.key === Keys.Down &&
 								state.position === 'top')
 						) {
 							newState.position = 'middle';
-						} else if (
+						}
+						else if (
 							event.key === Keys.Down &&
 							state.position === 'middle'
 						) {
 							newState.position = 'bottom';
-						} else {
+						}
+						else {
 							if (!item) {
 								newState.position =
 									position === 0 ? 'top' : 'bottom';
-							} else {
+							}
+							else {
 								const [type, key] = item
 									.getAttribute('data-id')!
 									.split(',');
@@ -431,6 +436,7 @@ export function DragAndDropProvider<T>({
 									any,
 									any
 								>,
+
 								{
 									next: indexes[indexes.length - 1]!,
 									previous: dragNode.index,
@@ -438,11 +444,14 @@ export function DragAndDropProvider<T>({
 							);
 
 							if (!isHovered) {
+
 								// Removes the item from the list so that the next function
 								// call looks for the next element.
+
 								denylist.add(newState.currentTarget!);
 
 								// Try moving to the next item.
+
 								onKeyDown(event);
 
 								return;
@@ -566,7 +575,6 @@ export function getNewItemPath(path: Array<number>, overPosition: Position) {
 
 	return indexes;
 }
-
-export const useDnD = () => {
+export function useDnD() {
 	return useContext(DnDContext);
-};
+}

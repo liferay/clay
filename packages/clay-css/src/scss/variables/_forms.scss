@@ -18,7 +18,9 @@ $input-height: 2.375rem !default;
 $input-line-height: $input-btn-line-height !default;
 $input-padding-x: $input-btn-padding-x !default;
 $input-padding-y: $input-btn-padding-y !default;
-$input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$input-transition:
+	border-color 0.15s ease-in-out,
+	box-shadow 0.15s ease-in-out !default;
 
 $input-font-size-mobile: null !default;
 $input-height-mobile: null !default;
@@ -460,9 +462,10 @@ $form-control-label-size: map-deep-merge(
 // Form Control Tag Group
 
 $form-control-tag-group-padding-y: (
-		$input-height - $input-border-bottom-width - $input-border-top-width -
-			map-get($form-control-label-size, min-height) -
-			(map-get($form-control-label-size, margin-bottom)) -
+		$input-height - $input-border-bottom-width - $input-border-top-width - map-get(
+				$form-control-label-size,
+				min-height
+			) - (map-get($form-control-label-size, margin-bottom)) -
 			(map-get($form-control-label-size, margin-top))
 	) * 0.5 !default;
 

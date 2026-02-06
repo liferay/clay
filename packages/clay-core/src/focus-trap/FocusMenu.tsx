@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {
@@ -12,8 +12,8 @@ import React, {useEffect} from 'react';
 
 type FocusMenuProps<T, E extends HTMLElement> = {
 	children: T;
-	menuRef: React.MutableRefObject<E> | React.RefObject<E>;
 	focusableElements?: Array<string>;
+	menuRef: React.MutableRefObject<E> | React.RefObject<E>;
 };
 
 /**
@@ -37,6 +37,7 @@ export function FocusMenu<T, E extends HTMLElement>({
 		// rendered yet only after the menu is opened, React needs
 		// to commit the changes to the DOM so that the elements are
 		// visible and we can move the focus.
+
 		setTimeout(() => {
 			const list = getFocusableList(menuRef, focusableElements);
 

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {Nav, VerticalNav} from '@clayui/core';
@@ -10,15 +10,11 @@ import warning from 'warning';
 export type DisplayType = null | 'primary';
 
 interface IItem extends React.ComponentProps<typeof Nav.Item> {
+
 	/**
 	 * Flag to indicate if item is active.
 	 */
 	active?: boolean | undefined;
-
-	/**
-	 * Callback for when item is clicked.
-	 */
-	onClick?: () => void;
 
 	/**
 	 * Link href for item.
@@ -29,9 +25,15 @@ interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	 * Value of item.
 	 */
 	label?: string | React.ReactNode;
+
+	/**
+	 * Callback for when item is clicked.
+	 */
+	onClick?: () => void;
 }
 
 interface IItemWithItems extends IItem {
+
 	/**
 	 * Flag to indicate if nested items are expanded and shown.
 	 */
@@ -44,11 +46,6 @@ interface IItemWithItems extends IItem {
 }
 
 interface IProps extends React.ComponentProps<typeof VerticalNav> {
-	/**
-	 * Flag to define if the item represents the current page. Disable this
-	 * attribute only if there are multiple navigations on the page.
-	 */
-	itemAriaCurrent?: boolean;
 
 	/**
 	 * Flag to indicate the navigation behavior in the menu.
@@ -66,19 +63,20 @@ interface IProps extends React.ComponentProps<typeof VerticalNav> {
 	activeLabel?: string;
 
 	/**
-	 * Determines the Vertical Nav variant to use.
-	 */
-	displayType?: DisplayType;
-
-	/**
 	 * Flag to activate the Decorator variation.
 	 */
 	decorated?: boolean;
 
 	/**
-	 * Label of the button that appears on smaller resolutions to open the vertical navigation.
+	 * Determines the Vertical Nav variant to use.
 	 */
-	triggerLabel?: string;
+	displayType?: DisplayType;
+
+	/**
+	 * Flag to define if the item represents the current page. Disable this
+	 * attribute only if there are multiple navigations on the page.
+	 */
+	itemAriaCurrent?: boolean;
 
 	/**
 	 * List of items.
@@ -91,14 +89,19 @@ interface IProps extends React.ComponentProps<typeof VerticalNav> {
 	large?: boolean;
 
 	/**
+	 * Path to the spritemap that Icon should use when referencing symbols.
+	 */
+	spritemap?: string;
+
+	/**
 	 * Custom component that will be displayed on mobile resolutions that toggles the visibility of the navigation.
 	 */
 	trigger?: typeof VerticalNav.Trigger;
 
 	/**
-	 * Path to the spritemap that Icon should use when referencing symbols.
+	 * Label of the button that appears on smaller resolutions to open the vertical navigation.
 	 */
-	spritemap?: string;
+	triggerLabel?: string;
 }
 
 function ClayVerticalNav({

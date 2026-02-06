@@ -135,13 +135,13 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-	padding-right: calc(#{$btn-padding-x-sm} * 0.75);
 	padding-left: calc(#{$btn-padding-x-sm} * 0.75);
+	padding-right: calc(#{$btn-padding-x-sm} * 0.75);
 }
 
 .btn-lg + .dropdown-toggle-split {
-	padding-right: calc(#{$btn-padding-x-lg} * 0.75);
 	padding-left: calc(#{$btn-padding-x-lg} * 0.75);
+	padding-right: calc(#{$btn-padding-x-lg} * 0.75);
 }
 
 // Button Group Vertical

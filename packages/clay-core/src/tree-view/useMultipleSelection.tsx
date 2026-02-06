@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {useControlledState} from '@clayui/shared';
@@ -14,10 +14,16 @@ import type {ICollectionProps} from './Collection';
 import type {LayoutInfo} from './useLayout';
 
 export interface IMultipleSelection {
+
 	/**
 	 * Property to set the initial value of `selectedKeys`.
 	 */
 	defaultSelectedKeys?: Set<Key>;
+
+	/**
+	 * Flag to disable indeterminate state when selectionMode is multiple-recursive.
+	 */
+	indeterminate?: boolean;
 
 	/**
 	 * Handler that is called when the selection changes.
@@ -28,18 +34,13 @@ export interface IMultipleSelection {
 	 * The currently selected keys in the collection.
 	 */
 	selectedKeys?: Set<Key>;
-
-	/**
-	 * Flag to disable indeterminate state when selectionMode is multiple-recursive.
-	 */
-	indeterminate?: boolean;
 }
 
 type SelectionMode = 'single' | 'multiple' | 'multiple-recursive' | null;
 
 type SelectionToggleOptions = {
-	selectionMode?: SelectionMode;
 	parentSelection?: boolean;
+	selectionMode?: SelectionMode;
 };
 
 export interface IMultipleSelectionState {
@@ -53,8 +54,8 @@ export interface IMultipleSelectionProps<T extends Record<string, any>>
 	extends IMultipleSelection,
 		Pick<ITreeProps<T>, 'nestedKey'>,
 		Pick<ICollectionProps<T>, 'items'> {
-	selectionMode?: SelectionMode;
 	layoutKeys: React.MutableRefObject<Map<React.Key, LayoutInfo>>;
+	selectionMode?: SelectionMode;
 }
 
 /**
@@ -113,7 +114,7 @@ export function useMultipleSelection<T extends Record<string, any>>(
 ): IMultipleSelectionState {
 	const selectionMode = props.selectionMode;
 
-	const indeterminateKeys = useRef(new Set<Key>());
+	const indeterminateKeysRef = useRef(new Set<Key>());
 
 	const [selectedKeys, setSelectionKeys, isUncontrolled] = useControlledState<
 		Set<Key>
@@ -134,9 +135,9 @@ export function useMultipleSelection<T extends Record<string, any>>(
 	 */
 	useMemo(() => {
 		if (props.selectionMode === 'multiple-recursive' && !isUncontrolled) {
-			const indeterminates = Array.from(indeterminateKeys.current);
+			const indeterminates = Array.from(indeterminateKeysRef.current);
 
-			indeterminateKeys.current = new Set(
+			indeterminateKeysRef.current = new Set(
 				indeterminates.filter((key) => {
 					const keyMap = props.layoutKeys.current.get(
 						key
@@ -157,14 +158,16 @@ export function useMultipleSelection<T extends Record<string, any>>(
 							children.some(
 								(key) =>
 									selectedKeys.has(key) ||
-									indeterminateKeys.current.has(key)
+									indeterminateKeysRef.current.has(key)
 							)
 						) {
 							return true;
-						} else {
+						}
+						else {
 							return false;
 						}
-					} else {
+					}
+					else {
 						return false;
 					}
 				})
@@ -198,13 +201,15 @@ export function useMultipleSelection<T extends Record<string, any>>(
 
 				if (children.every((key) => selectedKeys.has(key))) {
 					newSelectedKeys.add(key);
-					indeterminateKeys.current.delete(key);
-				} else if (children.some((key) => selectedKeys.has(key))) {
+					indeterminateKeysRef.current.delete(key);
+				}
+				else if (children.some((key) => selectedKeys.has(key))) {
 					newSelectedKeys.delete(key);
-					indeterminateKeys.current.add(key);
-				} else {
+					indeterminateKeysRef.current.add(key);
+				}
+				else {
 					newSelectedKeys.delete(key);
-					indeterminateKeys.current.delete(key);
+					indeterminateKeysRef.current.delete(key);
 				}
 			});
 
@@ -228,6 +233,7 @@ export function useMultipleSelection<T extends Record<string, any>>(
 
 			// Support variable for indeterminate state during recursive flow when
 			// visual indeterminate state is disabled.
+
 			let isIndeterminate = false;
 
 			// Root
@@ -241,46 +247,53 @@ export function useMultipleSelection<T extends Record<string, any>>(
 			// to up, if the item's parent was already marked as indeterminate, from
 			// here we start to mark all the parents as indeterminate to avoid
 			// unnecessary operations.
+
 			if (hasIndeterminate) {
 				if (props.indeterminate) {
-					indeterminateKeys.current.add(keyMap.parentKey);
+					indeterminateKeysRef.current.add(keyMap.parentKey);
 				}
 
 				isIndeterminate = true;
 				selecteds.delete(keyMap.parentKey);
-			} else {
+			}
+			else {
 				const children = [...parentKeyMap.children];
 
 				// Instead of using `every` method to check if all items are
 				// selected, we look for any not selected, which means we don't have
 				// all the items selected and we don't always need to go through the
 				// entire array.
+
 				const unselected = children.some((key) => !selecteds.has(key));
 
 				if (unselected) {
+
 					// An item can only be indeterminate when there is at least
 					// one selected or indeterminate item in its tree. We don't need
 					// to sweep the tree because we have the recursive effect.
+
 					if (
 						children.some(
 							(key) =>
 								selecteds.has(key) ||
-								indeterminateKeys.current.has(key)
+								indeterminateKeysRef.current.has(key)
 						)
 					) {
 						if (props.indeterminate) {
-							indeterminateKeys.current.add(keyMap.parentKey);
+							indeterminateKeysRef.current.add(keyMap.parentKey);
 						}
 
 						isIndeterminate = true;
-					} else {
-						indeterminateKeys.current.delete(keyMap.parentKey);
+					}
+					else {
+						indeterminateKeysRef.current.delete(keyMap.parentKey);
 						isIndeterminate = false;
 					}
 
 					selecteds.delete(keyMap.parentKey);
-				} else {
-					indeterminateKeys.current.delete(keyMap.parentKey);
+				}
+				else {
+					indeterminateKeysRef.current.delete(keyMap.parentKey);
 					isIndeterminate = false;
 					selecteds.add(keyMap.parentKey);
 				}
@@ -288,7 +301,7 @@ export function useMultipleSelection<T extends Record<string, any>>(
 
 			toggleParentSelection(isIndeterminate, parentKeyMap, selecteds);
 		},
-		[props.layoutKeys, indeterminateKeys, props.indeterminate]
+		[props.layoutKeys, indeterminateKeysRef, props.indeterminate]
 	);
 
 	const toggleLazyChildrenSelection = useCallback(
@@ -305,13 +318,16 @@ export function useMultipleSelection<T extends Record<string, any>>(
 			}
 
 			children.forEach((item, index) => {
+
 				// TODO: The `key` property of the component that the developer
 				// can set is not being considered.
+
 				const key = getKey(index, item['id'], currentKey);
 
 				if (select) {
 					selecteds.add(key);
-				} else {
+				}
+				else {
 					selecteds.delete(key);
 				}
 
@@ -357,7 +373,8 @@ export function useMultipleSelection<T extends Record<string, any>>(
 			keyMap.children.forEach((key) => {
 				if (select) {
 					selecteds.add(key);
-				} else {
+				}
+				else {
 					selecteds.delete(key);
 				}
 
@@ -386,7 +403,8 @@ export function useMultipleSelection<T extends Record<string, any>>(
 
 					if (selecteds.has(key)) {
 						selecteds.delete(key);
-					} else {
+					}
+					else {
 						selecteds.add(key);
 					}
 
@@ -402,13 +420,15 @@ export function useMultipleSelection<T extends Record<string, any>>(
 
 					if (selecteds.has(key)) {
 						selecteds.delete(key);
-					} else if (!indeterminateKeys.current.has(key)) {
+					}
+					else if (!indeterminateKeysRef.current.has(key)) {
 						selecteds.add(key);
 					}
 
 					// Resets the indeterminate state because its selected state
 					// will change.
-					indeterminateKeys.current.delete(key);
+
+					indeterminateKeysRef.current.delete(key);
 
 					toggleChildrenSelection(
 						keyMap,
@@ -427,7 +447,8 @@ export function useMultipleSelection<T extends Record<string, any>>(
 				default: {
 					if (selectedKeys.has(key)) {
 						setSelectionKeys(new Set<Key>());
-					} else {
+					}
+					else {
 						setSelectionKeys(new Set<Key>([key]));
 					}
 					break;
@@ -436,7 +457,7 @@ export function useMultipleSelection<T extends Record<string, any>>(
 		},
 		[
 			props.layoutKeys,
-			indeterminateKeys,
+			indeterminateKeysRef,
 			selectedKeys,
 			selectionMode,
 			toggleChildrenSelection,
@@ -445,15 +466,15 @@ export function useMultipleSelection<T extends Record<string, any>>(
 	);
 
 	const isIndeterminate = useCallback(
-		(key: Key) => indeterminateKeys.current.has(key),
-		[indeterminateKeys]
+		(key: Key) => indeterminateKeysRef.current.has(key),
+		[indeterminateKeysRef]
 	);
 
 	const replaceIndeterminateKeys = useCallback(
 		(keys: Array<Key>) => {
-			indeterminateKeys.current = new Set(keys);
+			indeterminateKeysRef.current = new Set(keys);
 		},
-		[indeterminateKeys]
+		[indeterminateKeysRef]
 	);
 
 	return {

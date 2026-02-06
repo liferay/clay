@@ -7,13 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
@@ -31,25 +31,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/panel@3.3.6...@clayui/panel@3.142.0) (2025-08-01)
 
@@ -71,13 +71,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+- exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
 
 # 3.128.0 (2025-02-20)
 
 ### Features
 
--   **@clayui/panel:** improves component typing to create API Panel ([e7156da](https://github.com/liferay/clay/commit/e7156da41622c12a454f7c921de17b841c932df8))
+- **@clayui/panel:** improves component typing to create API Panel ([e7156da](https://github.com/liferay/clay/commit/e7156da41622c12a454f7c921de17b841c932df8))
 
 # 3.119.0 (2024-08-30)
 
@@ -95,13 +95,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/panel:** Update displayType and size props (LPS-202818) ([cda77e2](https://github.com/liferay/clay/commit/cda77e25e440876235ea3cec4c3cd8909eb66a96))
+- **@clayui/panel:** Update displayType and size props (LPS-202818) ([cda77e2](https://github.com/liferay/clay/commit/cda77e25e440876235ea3cec4c3cd8909eb66a96))
 
 # 3.108.0 (2023-12-12)
 
 ### Bug Fixes
 
--   **@clayui/panel:** Disclosure Pattern to Clay Panel Component ([6ffa238](https://github.com/liferay/clay/commit/6ffa2381da4ef3d6e6a98c30b8fd4841ff0edd63))
+- **@clayui/panel:** Disclosure Pattern to Clay Panel Component ([6ffa238](https://github.com/liferay/clay/commit/6ffa2381da4ef3d6e6a98c30b8fd4841ff0edd63))
 
 # 3.107.0 (2023-11-27)
 
@@ -111,8 +111,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.104.0 (2023-08-25)
 
@@ -122,7 +122,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/panel:** Allow passing classNames to collapse header ([a41cb1d](https://github.com/liferay/clay/commit/a41cb1d55dca735ce91e57860ad57dd33ff0e090))
+- **@clayui/panel:** Allow passing classNames to collapse header ([a41cb1d](https://github.com/liferay/clay/commit/a41cb1d55dca735ce91e57860ad57dd33ff0e090))
 
 # 3.101.0 (2023-07-28)
 
@@ -140,7 +140,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/panel:** add motion reduction ([cb5c69a](https://github.com/liferay/clay/commit/cb5c69a63e2fd73763b21a708a84aa548bf88d69))
+- **@clayui/panel:** add motion reduction ([cb5c69a](https://github.com/liferay/clay/commit/cb5c69a63e2fd73763b21a708a84aa548bf88d69))
 
 # 3.92.0 (2023-04-06)
 
@@ -164,7 +164,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/panel:** Remove fixed height after panel is shown ([07aea35](https://github.com/liferay/clay/commit/07aea35a767dd85a9e927df0fc4b3671174907e5))
+- **@clayui/panel:** Remove fixed height after panel is shown ([07aea35](https://github.com/liferay/clay/commit/07aea35a767dd85a9e927df0fc4b3671174907e5))
 
 # 3.81.0 (2022-11-30)
 
@@ -244,13 +244,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/panel:** adds the small API to Panel.Group ([b8428dc](https://github.com/liferay/clay/commit/b8428dc1a9c164e0c47aac9021bf9085a08cb0d8))
+- **@clayui/panel:** adds the small API to Panel.Group ([b8428dc](https://github.com/liferay/clay/commit/b8428dc1a9c164e0c47aac9021bf9085a08cb0d8))
 
 # 3.25.0 (2021-02-23)
 
 ### Features
 
--   **@clayui/panel:** add 'show' class to collapsable panel's button ([1e7f64a](https://github.com/liferay/clay/commit/1e7f64ad12b2550224c348b830247ed5860666a8))
+- **@clayui/panel:** add 'show' class to collapsable panel's button ([1e7f64a](https://github.com/liferay/clay/commit/1e7f64ad12b2550224c348b830247ed5860666a8))
 
 ## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
 
@@ -284,13 +284,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+- exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
 
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features
 
--   **@clayui/panel:** improves component typing to create API Panel ([e7156da](https://github.com/liferay/clay/commit/e7156da41622c12a454f7c921de17b841c932df8))
+- **@clayui/panel:** improves component typing to create API Panel ([e7156da](https://github.com/liferay/clay/commit/e7156da41622c12a454f7c921de17b841c932df8))
 
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
@@ -316,7 +316,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/panel:** Update displayType and size props (LPS-202818) ([cda77e2](https://github.com/liferay/clay/commit/cda77e25e440876235ea3cec4c3cd8909eb66a96))
+- **@clayui/panel:** Update displayType and size props (LPS-202818) ([cda77e2](https://github.com/liferay/clay/commit/cda77e25e440876235ea3cec4c3cd8909eb66a96))
 
 # [3.109.0](https://github.com/liferay/clay/compare/v3.108.0...v3.109.0) (2024-01-22)
 
@@ -326,7 +326,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/panel:** Disclosure Pattern to Clay Panel Component ([6ffa238](https://github.com/liferay/clay/commit/6ffa2381da4ef3d6e6a98c30b8fd4841ff0edd63))
+- **@clayui/panel:** Disclosure Pattern to Clay Panel Component ([6ffa238](https://github.com/liferay/clay/commit/6ffa2381da4ef3d6e6a98c30b8fd4841ff0edd63))
 
 # [3.107.0](https://github.com/liferay/clay/compare/v3.106.1...v3.107.0) (2023-11-27)
 
@@ -340,8 +340,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
@@ -355,7 +355,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/panel:** Allow passing classNames to collapse header ([a41cb1d](https://github.com/liferay/clay/commit/a41cb1d55dca735ce91e57860ad57dd33ff0e090))
+- **@clayui/panel:** Allow passing classNames to collapse header ([a41cb1d](https://github.com/liferay/clay/commit/a41cb1d55dca735ce91e57860ad57dd33ff0e090))
 
 # [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
 
@@ -385,7 +385,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/panel:** add motion reduction ([cb5c69a](https://github.com/liferay/clay/commit/cb5c69a63e2fd73763b21a708a84aa548bf88d69))
+- **@clayui/panel:** add motion reduction ([cb5c69a](https://github.com/liferay/clay/commit/cb5c69a63e2fd73763b21a708a84aa548bf88d69))
 
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
@@ -427,7 +427,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/panel:** Remove fixed height after panel is shown ([07aea35](https://github.com/liferay/clay/commit/07aea35a767dd85a9e927df0fc4b3671174907e5))
+- **@clayui/panel:** Remove fixed height after panel is shown ([07aea35](https://github.com/liferay/clay/commit/07aea35a767dd85a9e927df0fc4b3671174907e5))
 
 # [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
 
@@ -585,13 +585,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/panel:** adds the small API to Panel.Group ([b8428dc](https://github.com/liferay/clay/commit/b8428dc))
+- **@clayui/panel:** adds the small API to Panel.Group ([b8428dc](https://github.com/liferay/clay/commit/b8428dc))
 
 # [3.25.0](https://github.com/liferay/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
 
 ### Features
 
--   **@clayui/panel:** add 'show' class to collapsable panel's button ([1e7f64a](https://github.com/liferay/clay/commit/1e7f64a))
+- **@clayui/panel:** add 'show' class to collapsable panel's button ([1e7f64a](https://github.com/liferay/clay/commit/1e7f64a))
 
 ## [3.3.6](https://github.com/liferay/clay/compare/@clayui/panel@3.3.5...@clayui/panel@3.3.6) (2021-02-11)
 
@@ -601,19 +601,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/panel:** make sure <button> has a type ([361f151](https://github.com/liferay/clay/commit/361f151))
+- **@clayui/panel:** make sure <button> has a type ([361f151](https://github.com/liferay/clay/commit/361f151))
 
 ## [3.3.4](https://github.com/liferay/clay/compare/@clayui/panel@3.3.3...@clayui/panel@3.3.4) (2021-01-14)
 
 ### Bug Fixes
 
--   **@clayui/panel:** allow for the panel to be expanded on first render ([28b7ae4](https://github.com/liferay/clay/commit/28b7ae4))
+- **@clayui/panel:** allow for the panel to be expanded on first render ([28b7ae4](https://github.com/liferay/clay/commit/28b7ae4))
 
 ## [3.3.3](https://github.com/liferay/clay/compare/@clayui/panel@3.3.2...@clayui/panel@3.3.3) (2021-01-13)
 
 ### Bug Fixes
 
--   **@clayui/panel:** add ability to be a controlled component for expanding ([6bf6358](https://github.com/liferay/clay/commit/6bf6358))
+- **@clayui/panel:** add ability to be a controlled component for expanding ([6bf6358](https://github.com/liferay/clay/commit/6bf6358))
 
 ## [3.3.2](https://github.com/liferay/clay/compare/@clayui/panel@3.3.0...@clayui/panel@3.3.2) (2020-12-16)
 
@@ -627,11 +627,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/shared:** removes the onTransitionEnd listener from elements by setTimeout ([4cf740a](https://github.com/liferay/clay/commit/4cf740a))
+- **@clayui/shared:** removes the onTransitionEnd listener from elements by setTimeout ([4cf740a](https://github.com/liferay/clay/commit/4cf740a))
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
 
 ## [3.2.5](https://github.com/liferay/clay/compare/@clayui/panel@3.2.4...@clayui/panel@3.2.5) (2020-08-28)
 
@@ -645,7 +645,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+- update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
 
 ## [3.2.2](https://github.com/liferay/clay/compare/@clayui/panel@3.2.1...@clayui/panel@3.2.2) (2020-07-07)
 
@@ -659,22 +659,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/panel:** Add sanity check for displayTitle ([b2e298d](https://github.com/liferay/clay/commit/b2e298d))
--   **@clayui/panel:** Add specific type to displayTitle and streamline type checking before rendering ([c6cdd9b](https://github.com/liferay/clay/commit/c6cdd9b))
--   **@clayui/panel:** Add test & snapshot for the usage of the new ClayPanelTitle ([e6a6b77](https://github.com/liferay/clay/commit/e6a6b77))
--   **@clayui/panel:** Add Title sub-component, expand the Panel to include a custom Panel Title, and add a new story showcasing the new feature ([119eaed](https://github.com/liferay/clay/commit/119eaed))
--   **@clayui/panel:** Properly wrap sanity check and add test when displayTitle is omitted ([d35cacb](https://github.com/liferay/clay/commit/d35cacb))
+- **@clayui/panel:** Add sanity check for displayTitle ([b2e298d](https://github.com/liferay/clay/commit/b2e298d))
+- **@clayui/panel:** Add specific type to displayTitle and streamline type checking before rendering ([c6cdd9b](https://github.com/liferay/clay/commit/c6cdd9b))
+- **@clayui/panel:** Add test & snapshot for the usage of the new ClayPanelTitle ([e6a6b77](https://github.com/liferay/clay/commit/e6a6b77))
+- **@clayui/panel:** Add Title sub-component, expand the Panel to include a custom Panel Title, and add a new story showcasing the new feature ([119eaed](https://github.com/liferay/clay/commit/119eaed))
+- **@clayui/panel:** Properly wrap sanity check and add test when displayTitle is omitted ([d35cacb](https://github.com/liferay/clay/commit/d35cacb))
 
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
 
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
--   **panel:** collapsing doesn't work well when there is more than one child element ([f16fd86](https://github.com/liferay/clay/commit/f16fd86))
+- update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+- **panel:** collapsing doesn't work well when there is more than one child element ([f16fd86](https://github.com/liferay/clay/commit/f16fd86))
 
 ### Features
 
--   update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
+- update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
 
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-panel/compare/@clayui/panel@3.0.4...@clayui/panel@3.0.7) (2020-01-31)
 

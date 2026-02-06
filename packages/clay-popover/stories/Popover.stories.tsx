@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
@@ -23,18 +23,20 @@ export default {
 	component: ClayPopover,
 	title: 'Design System/Components/Popover',
 };
-
-export const Default = (args: any) => (
-	<ClayPopover
-		alignPosition={args.alignPosition}
-		disableScroll={args.disableScroll}
-		displayType={args.displayType}
-		header="Popover"
-		size={args.size}
-	>
-		Viennese flavour cup eu, percolator froth ristretto mazagran caffeine.
-	</ClayPopover>
-);
+export function Default(args: any) {
+	return (
+		<ClayPopover
+			alignPosition={args.alignPosition}
+			disableScroll={args.disableScroll}
+			displayType={args.displayType}
+			header="Popover"
+			size={args.size}
+		>
+			Viennese flavour cup eu, percolator froth ristretto mazagran
+			caffeine.
+		</ClayPopover>
+	);
+}
 
 Default.args = {
 	alignPosition: 'bottom',
@@ -42,22 +44,22 @@ Default.args = {
 	displayType: undefined,
 	size: undefined,
 };
-
-export const Trigger = (args: any) => (
-	<div>
-		<ClayPopover
-			alignPosition="right"
-			closeOnClickOutside={args.closeOnClickOutside}
-			disableScroll={args.disableScroll}
-			header="Popover"
-			trigger={
-				<ClayButtonWithIcon
-					aria-label="Information button"
-					symbol="info-circle-open"
-				/>
-			}
-		>
-			{`Viennese flavour cup eu, percolator froth ristretto mazagran
+export function Trigger(args: any) {
+	return (
+		<div>
+			<ClayPopover
+				alignPosition="right"
+				closeOnClickOutside={args.closeOnClickOutside}
+				disableScroll={args.disableScroll}
+				header="Popover"
+				trigger={
+					<ClayButtonWithIcon
+						aria-label="Information button"
+						symbol="info-circle-open"
+					/>
+				}
+			>
+				{`Viennese flavour cup eu, percolator froth ristretto mazagran
 		caffeine. White roast seasonal, mocha trifecta, dripper caffeine
 		spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
 		caffeine. White roast seasonal, mocha trifecta, dripper caffeine
@@ -66,16 +68,16 @@ export const Trigger = (args: any) => (
 		spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
 		caffeine. White roast seasonal, mocha trifecta, dripper caffeine
 		spoon acerbic to go macchiato strong.`}
-		</ClayPopover>
-	</div>
-);
+			</ClayPopover>
+		</div>
+	);
+}
 
 Trigger.args = {
 	closeOnClickOutside: true,
 	disableScroll: false,
 };
-
-export const ManualShow = () => {
+export function ManualShow() {
 	const [show, setShow] = useState(false);
 
 	return (
@@ -111,9 +113,8 @@ export const ManualShow = () => {
 			</ClayPopover>
 		</>
 	);
-};
-
-export const RecalculatePosition = () => {
+}
+export function RecalculatePosition() {
 	const {observer, onOpenChange, open} = useModal();
 
 	return (
@@ -121,6 +122,7 @@ export const RecalculatePosition = () => {
 			{open && (
 				<ClayModal observer={observer} size="lg" status="info">
 					<ClayModal.Header>Title</ClayModal.Header>
+
 					<ClayModal.Body scrollable>
 						<ClayPopover
 							header="Popover"
@@ -142,22 +144,27 @@ export const RecalculatePosition = () => {
 						caffeine. White roast seasonal, mocha trifecta, dripper caffeine
 						spoon acerbic to go macchiato strong.`}
 						</ClayPopover>
+
 						<br />
+
 						<img
 							alt="cat"
 							src="https://cataas.com/cat/says/it will have"
 						/>
+
 						<img
 							alt="cat"
 							src="https://cataas.com/cat/says/a scroll"
 						/>
 					</ClayModal.Body>
+
 					<ClayModal.Footer
 						first={
 							<ClayButton.Group spaced>
 								<ClayButton displayType="secondary">
 									Secondary
 								</ClayButton>
+
 								<ClayButton displayType="secondary">
 									Secondary
 								</ClayButton>
@@ -180,4 +187,4 @@ export const RecalculatePosition = () => {
 			</ClayButton>
 		</>
 	);
-};
+}

@@ -2,9 +2,9 @@
 
 Labels are a visual pattern used to categorize information providing quick and easy recognition.
 
--   [Documentation](https://clayui.com/docs/components/label.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/label.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

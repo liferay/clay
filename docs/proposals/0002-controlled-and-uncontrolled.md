@@ -104,12 +104,14 @@ Define consistent naming and behavior for the two groups with minor differences 
 ```typescript
 type Props<Value> =
 	| {
+
 			/**
 			 * Property to set the default value. (uncontrolled)
 			 */
 			defaultValue: Value;
 	  }
 	| {
+
 			/**
 			 * Handler property reactivates the user's action to modify the value. (controlled)
 			 */
@@ -133,12 +135,14 @@ The components linked to the presentation have the difference that they are not 
 ```typescript
 type Props<Value> =
 	| {
+
 			/**
 			 * Property to set the default value of the `items`. (uncontrolled)
 			 */
 			defaultItems: Value;
 	  }
 	| {
+
 			/**
 			 * Handler property reactivates the user's action to modify the `items` value. (controlled)
 			 */
@@ -156,12 +160,14 @@ The type above is an example following the naming pattern for this purpose, othe
 ```typescript
 type Props<Value> =
 	| {
+
 			/**
 			 * Property to set the default value of the `expand`. (uncontrolled)
 			 */
 			defaultExpand: Value;
 	  }
 	| {
+
 			/**
 			 * The handler property is reactivates the user action when clicking expand menu. (controlled)
 			 */

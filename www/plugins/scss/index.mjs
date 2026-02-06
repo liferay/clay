@@ -1,3 +1,4 @@
+import clay from '@clayui/css';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
@@ -5,7 +6,7 @@ import fs from 'node:fs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export function buildIcons() {
-	const path = join('..', 'packages', 'clay-css', 'src', 'images', 'icons');
+	const path = join(clay.srcDir, 'images', 'icons');
 	const staticPath = join(__dirname, '../..', 'public');
 
 	const REGEX_FILE_EXT_SVG = /(?:flags-|\.svg$)/g;
@@ -28,7 +29,8 @@ export function buildIcons() {
 			if (!viewBox) {
 				throw `Viewbox attribute not found for icon: ${id}`;
 			}
-		} catch (error) {
+		}
+		catch (error) {
 			console.warn(error);
 		}
 

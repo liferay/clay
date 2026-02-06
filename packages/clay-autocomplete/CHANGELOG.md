@@ -3,70 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.156.6](https://github.com/liferay/clay/compare/v3.156.0...v3.156.6) (2026-01-07)
-
-**Note:** Version bump only for package @clayui/autocomplete
-
-## [3.156.3](https://github.com/liferay/clay/compare/v3.156.0...v3.156.3) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/autocomplete
-
-## [3.156.2](https://github.com/liferay/clay/compare/v3.156.0...v3.156.2) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/autocomplete
-
-## [3.156.1](https://github.com/liferay/clay/compare/v3.156.0...v3.156.1) (2025-12-22)
-
-**Note:** Version bump only for package @clayui/autocomplete
-
 # [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-15)
 
 ### Bug Fixes
 
--   **clayui.com:** LPD-72729 Fix Autocomplete Selected Keys example ([39d9731](https://github.com/liferay/clay/commit/39d973152cedd2ac53fc57cb1b5c7d9fb742b98b))
+- **clayui.com:** LPD-72729 Fix Autocomplete Selected Keys example ([39d9731](https://github.com/liferay/clay/commit/39d973152cedd2ac53fc57cb1b5c7d9fb742b98b))
 
 ### Features
 
--   **@clayui/autocomplete:** LPD-55597 Add infinite scrolling SR announcements ([58b4e47](https://github.com/liferay/clay/commit/58b4e47780da4a02ff34e73e9b9b5d5aba38210f))
--   **@clayui/autocomplete:** LPD-55597 Add infinite scrolling trigger ([3a5bd11](https://github.com/liferay/clay/commit/3a5bd114d170bcc2d9143f23e0c4f1b339710512))
--   **@clayui/autocomplete:** LPD-55597 Allow infinite scrolling to auto load more using keyboard navigation ([70fbbaf](https://github.com/liferay/clay/commit/70fbbaf0d05fce41dab2a624de1a1f9942831522))
--   **@clayui/autocomplete:** LPD-55597 Avoid announcing initial load message if infinite scrolling is disabled ([3c9aae4](https://github.com/liferay/clay/commit/3c9aae44e8a7e61d6f28cf2e148ebd057e18ec22))
--   **@clayui/autocomplete:** LPD-55597 Change infinite scrolling so it works even if user doesn't inform the loading state ([871edc1](https://github.com/liferay/clay/commit/871edc1bd65af180fd0c024ae17e5adca3f6ce00))
--   **@clayui/autocomplete:** LPD-55597 Improve referential stability ([aa1be84](https://github.com/liferay/clay/commit/aa1be84c9a70cc230ec3395025fbebadf0889f5d))
--   **@clayui/autocomplete:** LPD-55597 Only announce when infinite scrolling is enabled ([73bbecf](https://github.com/liferay/clay/commit/73bbecfcf16db28dafab98ab79e65d1bf36caa0f))
--   **@clayui/autocomplete:** LPD-55597 Remove code to load more while focusing the last item, letting the scroll handle this case as well ([ffedef7](https://github.com/liferay/clay/commit/ffedef73ca51ed60816d7566fa24f6e6aa9755a8))
--   **@clayui/autocomplete:** LPD-55597 Remove custom infinite scroll trigger ([697c1de](https://github.com/liferay/clay/commit/697c1dec2135adc6f697cc53f446c8245b50564f))
--   **@clayui/autocomplete:** LPD-55597 Remove unwanted auto scrolling ([07163e1](https://github.com/liferay/clay/commit/07163e173aed21b23c5e7bca8e5fca39bdba8d57))
--   **@clayui/autocomplete:** LPD-55597 Rollback to use Collection inifinite scroll trigger ([5e49a25](https://github.com/liferay/clay/commit/5e49a255611557a417aa082b6a829b011d691b91))
+- **@clayui/autocomplete:** LPD-55597 Add infinite scrolling SR announcements ([58b4e47](https://github.com/liferay/clay/commit/58b4e47780da4a02ff34e73e9b9b5d5aba38210f))
+- **@clayui/autocomplete:** LPD-55597 Add infinite scrolling trigger ([3a5bd11](https://github.com/liferay/clay/commit/3a5bd114d170bcc2d9143f23e0c4f1b339710512))
+- **@clayui/autocomplete:** LPD-55597 Allow infinite scrolling to auto load more using keyboard navigation ([70fbbaf](https://github.com/liferay/clay/commit/70fbbaf0d05fce41dab2a624de1a1f9942831522))
+- **@clayui/autocomplete:** LPD-55597 Avoid announcing initial load message if infinite scrolling is disabled ([3c9aae4](https://github.com/liferay/clay/commit/3c9aae44e8a7e61d6f28cf2e148ebd057e18ec22))
+- **@clayui/autocomplete:** LPD-55597 Change infinite scrolling so it works even if user doesn't inform the loading state ([871edc1](https://github.com/liferay/clay/commit/871edc1bd65af180fd0c024ae17e5adca3f6ce00))
+- **@clayui/autocomplete:** LPD-55597 Improve referential stability ([aa1be84](https://github.com/liferay/clay/commit/aa1be84c9a70cc230ec3395025fbebadf0889f5d))
+- **@clayui/autocomplete:** LPD-55597 Only announce when infinite scrolling is enabled ([73bbecf](https://github.com/liferay/clay/commit/73bbecfcf16db28dafab98ab79e65d1bf36caa0f))
+- **@clayui/autocomplete:** LPD-55597 Remove code to load more while focusing the last item, letting the scroll handle this case as well ([ffedef7](https://github.com/liferay/clay/commit/ffedef73ca51ed60816d7566fa24f6e6aa9755a8))
+- **@clayui/autocomplete:** LPD-55597 Remove custom infinite scroll trigger ([697c1de](https://github.com/liferay/clay/commit/697c1dec2135adc6f697cc53f446c8245b50564f))
+- **@clayui/autocomplete:** LPD-55597 Remove unwanted auto scrolling ([07163e1](https://github.com/liferay/clay/commit/07163e173aed21b23c5e7bca8e5fca39bdba8d57))
+- **@clayui/autocomplete:** LPD-55597 Rollback to use Collection inifinite scroll trigger ([5e49a25](https://github.com/liferay/clay/commit/5e49a255611557a417aa082b6a829b011d691b91))
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
 
 ### Bug Fixes
 
--   **@clayui.com:** LPD-66892 Fix Autocomplete visual feedback example ([559f991](https://github.com/liferay/clay/commit/559f9914e92f712e433bd7aaaf5f2490895bd7bd))
--   **@clayui/autocomplete:** LPD-66892 Adjust variable name that controls selected state feedback only if selectedKeys is defined and includes the item ([92d5718](https://github.com/liferay/clay/commit/92d57180f5c3237e1b1895f8af446724b3b600c0))
--   **@clayui/autocomplete:** LPD-66892 Change isSelected logic to improve readability ([93ce187](https://github.com/liferay/clay/commit/93ce187e255a0882e2078ed269b17148cc7f8ce6))
--   **@clayui/autocomplete:** LPD-66892 Deprecating `active` prop in ClayAutocomplete.Item because it is no longer needed due to the use of `selectKeys` in the root component. ([3111bc5](https://github.com/liferay/clay/commit/3111bc5fce1ba050a36b4e661bf7ad0e6df6b34e))
--   **@clayui/autocomplete:** LPD-66892 Fix aria-selected to be in the 'button' instead of 'li' ([73edd10](https://github.com/liferay/clay/commit/73edd101139688920b5d8b060b7785c71c398fba))
--   **@clayui/autocomplete:** LPD-66892 Fix Autocomplete.Item match property to accept options of type number ([9a5c561](https://github.com/liferay/clay/commit/9a5c5615be9ead30ac43d827973e5e37e24adc95))
--   **@clayui/autocomplete:** LPD-66892 Fix visual feedback storybook example ([451a8f9](https://github.com/liferay/clay/commit/451a8f957fb94cb6ee3620e14487efa56318463d))
--   **@clayui/autocomplete:** LPD-66892 Fix visual feedback when an item is selected test ([4b4d449](https://github.com/liferay/clay/commit/4b4d449b1a468fea969162356490e217a2bb7bcd))
--   **@clayui/autocomplete:** LPD-66892 Move selectedKeys handle responsibility to Autocomplete.Item ([dd2b368](https://github.com/liferay/clay/commit/dd2b3685d87a4a4c73e4f6178d6bc5c7fba45f41))
--   **@clayui/autocomplete:** LPD-66892 Rollback not required accesibility changes ([bd1a23d](https://github.com/liferay/clay/commit/bd1a23d4fee0ad7c2a73e0a404fd9fea079f788c))
+- **@clayui.com:** LPD-66892 Fix Autocomplete visual feedback example ([559f991](https://github.com/liferay/clay/commit/559f9914e92f712e433bd7aaaf5f2490895bd7bd))
+- **@clayui/autocomplete:** LPD-66892 Adjust variable name that controls selected state feedback only if selectedKeys is defined and includes the item ([92d5718](https://github.com/liferay/clay/commit/92d57180f5c3237e1b1895f8af446724b3b600c0))
+- **@clayui/autocomplete:** LPD-66892 Change isSelected logic to improve readability ([93ce187](https://github.com/liferay/clay/commit/93ce187e255a0882e2078ed269b17148cc7f8ce6))
+- **@clayui/autocomplete:** LPD-66892 Deprecating `active` prop in ClayAutocomplete.Item because it is no longer needed due to the use of `selectKeys` in the root component. ([3111bc5](https://github.com/liferay/clay/commit/3111bc5fce1ba050a36b4e661bf7ad0e6df6b34e))
+- **@clayui/autocomplete:** LPD-66892 Fix aria-selected to be in the 'button' instead of 'li' ([73edd10](https://github.com/liferay/clay/commit/73edd101139688920b5d8b060b7785c71c398fba))
+- **@clayui/autocomplete:** LPD-66892 Fix Autocomplete.Item match property to accept options of type number ([9a5c561](https://github.com/liferay/clay/commit/9a5c5615be9ead30ac43d827973e5e37e24adc95))
+- **@clayui/autocomplete:** LPD-66892 Fix visual feedback storybook example ([451a8f9](https://github.com/liferay/clay/commit/451a8f957fb94cb6ee3620e14487efa56318463d))
+- **@clayui/autocomplete:** LPD-66892 Fix visual feedback when an item is selected test ([4b4d449](https://github.com/liferay/clay/commit/4b4d449b1a468fea969162356490e217a2bb7bcd))
+- **@clayui/autocomplete:** LPD-66892 Move selectedKeys handle responsibility to Autocomplete.Item ([dd2b368](https://github.com/liferay/clay/commit/dd2b3685d87a4a4c73e4f6178d6bc5c7fba45f41))
+- **@clayui/autocomplete:** LPD-66892 Rollback not required accesibility changes ([bd1a23d](https://github.com/liferay/clay/commit/bd1a23d4fee0ad7c2a73e0a404fd9fea079f788c))
 
 ### Features
 
--   **@clayui/autocomplete:** LPD-66892 Add selectedKeys prop to improve selected state ([13b6bea](https://github.com/liferay/clay/commit/13b6bea83071b59b5dfda67cb58adaee11568046))
+- **@clayui/autocomplete:** LPD-66892 Add selectedKeys prop to improve selected state ([13b6bea](https://github.com/liferay/clay/commit/13b6bea83071b59b5dfda67cb58adaee11568046))
 
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
@@ -76,12 +60,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **autocomplete:** remove icon options ([76f2d87](https://github.com/liferay/clay/commit/76f2d878ae4b7cd4e635af7c5315e37f0a813657))
+- **autocomplete:** remove icon options ([76f2d87](https://github.com/liferay/clay/commit/76f2d878ae4b7cd4e635af7c5315e37f0a813657))
 
 ### Features
 
--   **autocomplete:** add new prop for adding a primary action to take in the drop down ([2d06f4f](https://github.com/liferay/clay/commit/2d06f4fe558632b603998453773f7e4f688f9a44))
--   **autocomplete:** disable text matching highlights for primaryAction in autocomplete ([a2ea94f](https://github.com/liferay/clay/commit/a2ea94f9f2891897950d0d3ae52f665569c464af))
+- **autocomplete:** add new prop for adding a primary action to take in the drop down ([2d06f4f](https://github.com/liferay/clay/commit/2d06f4fe558632b603998453773f7e4f688f9a44))
+- **autocomplete:** disable text matching highlights for primaryAction in autocomplete ([a2ea94f](https://github.com/liferay/clay/commit/a2ea94f9f2891897950d0d3ae52f665569c464af))
 
 # [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
 
@@ -99,30 +83,30 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Bug Fixes
 
--   **data-provider:** fix types exported that are enums ([c85278e](https://github.com/liferay/clay/commit/c85278eb447aa578053c178ba3a9bf544a3c7526))
--   **data-provider:** update exports and entry point ([8603947](https://github.com/liferay/clay/commit/8603947914ffb53b610ea23ca53a09146a2cad42))
+- **data-provider:** fix types exported that are enums ([c85278e](https://github.com/liferay/clay/commit/c85278eb447aa578053c178ba3a9bf544a3c7526))
+- **data-provider:** update exports and entry point ([8603947](https://github.com/liferay/clay/commit/8603947914ffb53b610ea23ca53a09146a2cad42))
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/autocomplete@3.142.0...@clayui/autocomplete@3.142.2) (2025-08-13)
 
@@ -138,12 +122,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([75a8b73](https://github.com/liferay/clay/commit/75a8b7307ceabacc5ef0b2af436d7eac9df023c4))
--   **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([5bea09c](https://github.com/liferay/clay/commit/5bea09c3d9f566911e41e84d2fd4d8198253851a))
+- **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([75a8b73](https://github.com/liferay/clay/commit/75a8b7307ceabacc5ef0b2af436d7eac9df023c4))
+- **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([5bea09c](https://github.com/liferay/clay/commit/5bea09c3d9f566911e41e84d2fd4d8198253851a))
 
 ### Features
 
--   **@clayui/autocomplete:** LPD-56059 Update the autocomplete to allow filtering data that may be deeply nested. ([85d76ed](https://github.com/liferay/clay/commit/85d76ed0e5916d7317b16c02325e8cf631006b92))
+- **@clayui/autocomplete:** LPD-56059 Update the autocomplete to allow filtering data that may be deeply nested. ([85d76ed](https://github.com/liferay/clay/commit/85d76ed0e5916d7317b16c02325e8cf631006b92))
 
 ## 3.139.1 (2025-06-16)
 
@@ -175,24 +159,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fixes typescript lint bug on Item component ([31d3869](https://github.com/liferay/clay/commit/31d3869f449727dfd1a570bf691c4e5c8080f1f0))
+- **@clayui/autocomplete:** fixes typescript lint bug on Item component ([31d3869](https://github.com/liferay/clay/commit/31d3869f449727dfd1a570bf691c4e5c8080f1f0))
 
 ## 3.128.1 (2025-02-21)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fixes typescript lint bug ([0a7b319](https://github.com/liferay/clay/commit/0a7b319f1e509b8812294a55799585a668afca59))
+- **@clayui/autocomplete:** fixes typescript lint bug ([0a7b319](https://github.com/liferay/clay/commit/0a7b319f1e509b8812294a55799585a668afca59))
 
 # 3.128.0 (2025-02-20)
 
 ### Bug Fixes
 
--   fixes bug in components with generic types and sub components ([4dd37e6](https://github.com/liferay/clay/commit/4dd37e654b22206aad190d6ce5558dab1dfd2d36))
--   **www:** fixes bug in build ([aa63833](https://github.com/liferay/clay/commit/aa63833462810249e896cb9da30629275f500b0b))
+- fixes bug in components with generic types and sub components ([4dd37e6](https://github.com/liferay/clay/commit/4dd37e654b22206aad190d6ce5558dab1dfd2d36))
+- **www:** fixes bug in build ([aa63833](https://github.com/liferay/clay/commit/aa63833462810249e896cb9da30629275f500b0b))
 
 ### Features
 
--   **@clayui/autocomplete:** improves component typing to create API Table ([674b3aa](https://github.com/liferay/clay/commit/674b3aa5fe060a1b6cd8a19ee5cd9f7428fa5d47))
+- **@clayui/autocomplete:** improves component typing to create API Table ([674b3aa](https://github.com/liferay/clay/commit/674b3aa5fe060a1b6cd8a19ee5cd9f7428fa5d47))
 
 # 3.127.0 (2025-01-23)
 
@@ -228,7 +212,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **clay-autocomplete:** Remove autocomplete async filter paginated example ([6366d29](https://github.com/liferay/clay/commit/6366d296e17be2f8aac6474951cc1728a208eca5))
+- **clay-autocomplete:** Remove autocomplete async filter paginated example ([6366d29](https://github.com/liferay/clay/commit/6366d296e17be2f8aac6474951cc1728a208eca5))
 
 # 3.113.0 (2024-03-28)
 
@@ -236,7 +220,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** update component highlight ([b6fd6a9](https://github.com/liferay/clay/commit/b6fd6a969099a5c89bc48bfa06b2ec1ccf1a28cc))
+- **@clayui/autocomplete:** update component highlight ([b6fd6a9](https://github.com/liferay/clay/commit/b6fd6a969099a5c89bc48bfa06b2ec1ccf1a28cc))
 
 # 3.111.0 (2024-02-15)
 
@@ -254,14 +238,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.105.0 (2023-09-15)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when navigating via keyboard with the mouse over the item ([f13e062](https://github.com/liferay/clay/commit/f13e062033445f70df32bdf31d068646215c9a78))
+- **@clayui/autocomplete:** fix error when navigating via keyboard with the mouse over the item ([f13e062](https://github.com/liferay/clay/commit/f13e062033445f70df32bdf31d068646215c9a78))
 
 # 3.104.0 (2023-08-25)
 
@@ -271,18 +255,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** does not revalidate the value if it is reset by the controlled state ([73ec258](https://github.com/liferay/clay/commit/73ec258196572004430780bc4330137437e36377))
--   **@clayui/autocomplete:** improves value matching behavior with suggestion list when state is controlled ([5f33f5c](https://github.com/liferay/clay/commit/5f33f5c42a4dc2cef85de01743baebe2d6d1f829))
+- **@clayui/autocomplete:** does not revalidate the value if it is reset by the controlled state ([73ec258](https://github.com/liferay/clay/commit/73ec258196572004430780bc4330137437e36377))
+- **@clayui/autocomplete:** improves value matching behavior with suggestion list when state is controlled ([5f33f5c](https://github.com/liferay/clay/commit/5f33f5c42a4dc2cef85de01743baebe2d6d1f829))
 
 # 3.101.0 (2023-07-28)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when not validating value with items ([ab4421e](https://github.com/liferay/clay/commit/ab4421ede3b8b97084e694e3500b07f4ff1957f1))
+- **@clayui/autocomplete:** fix error when not validating value with items ([ab4421e](https://github.com/liferay/clay/commit/ab4421ede3b8b97084e694e3500b07f4ff1957f1))
 
 ### Features
 
--   **@clayui/autocomplete:** adds new API to allow custom value ([516de02](https://github.com/liferay/clay/commit/516de02e9cd2d8dbbecc60d7fc79935e377decf1))
+- **@clayui/autocomplete:** adds new API to allow custom value ([516de02](https://github.com/liferay/clay/commit/516de02e9cd2d8dbbecc60d7fc79935e377decf1))
 
 # 3.100.0 (2023-07-13)
 
@@ -290,27 +274,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/multi-select:** fix loading indicator markup in MultiSelect ([b883824](https://github.com/liferay/clay/commit/b8838247d1638524691fda2a74934e0676e6597d))
+- **@clayui/multi-select:** fix loading indicator markup in MultiSelect ([b883824](https://github.com/liferay/clay/commit/b8838247d1638524691fda2a74934e0676e6597d))
 
 ## 3.99.2 (2023-07-05)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** makes new `messages` properties optional ([94eceb6](https://github.com/liferay/clay/commit/94eceb6261334272d0b3a000052a7a9592505284))
+- **@clayui/autocomplete:** makes new `messages` properties optional ([94eceb6](https://github.com/liferay/clay/commit/94eceb6261334272d0b3a000052a7a9592505284))
 
 ## 3.99.1 (2023-07-04)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** adds warning when `filterKey` is not defined and tries to filter an option that is object ([48dd887](https://github.com/liferay/clay/commit/48dd887b7fb6afbade67a98e6d325d1068ddc6b7))
--   **@clayui/autocomplete:** fixes type inference for properties and generic type ([cfc4309](https://github.com/liferay/clay/commit/cfc4309313b46bea777ddae3f9d810ae032b2a3c))
+- **@clayui/autocomplete:** adds warning when `filterKey` is not defined and tries to filter an option that is object ([48dd887](https://github.com/liferay/clay/commit/48dd887b7fb6afbade67a98e6d325d1068ddc6b7))
+- **@clayui/autocomplete:** fixes type inference for properties and generic type ([cfc4309](https://github.com/liferay/clay/commit/cfc4309313b46bea777ddae3f9d810ae032b2a3c))
 
 # 3.99.0 (2023-06-28)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix bug not announcing available options when autocomplete is open ([1dc9581](https://github.com/liferay/clay/commit/1dc9581bd2e96b7cdf250bf02c4858c5df4eb833))
--   **@clayui/autocomplete:** fixes suppressing the `+` from the value when filtering the list ([1ba8356](https://github.com/liferay/clay/commit/1ba8356fce973dce24a63b5154e9ae9370c43562))
+- **@clayui/autocomplete:** fix bug not announcing available options when autocomplete is open ([1dc9581](https://github.com/liferay/clay/commit/1dc9581bd2e96b7cdf250bf02c4858c5df4eb833))
+- **@clayui/autocomplete:** fixes suppressing the `+` from the value when filtering the list ([1ba8356](https://github.com/liferay/clay/commit/1ba8356fce973dce24a63b5154e9ae9370c43562))
 
 # 3.98.0 (2023-06-20)
 
@@ -318,9 +302,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error keeping menu open after selecting option with `menuTrigger="focus"` ([5f305f7](https://github.com/liferay/clay/commit/5f305f7962677c5e0c2b1b7a366f507755fc9947))
--   **@clayui/autocomplete:** fixes error when losing reference to nodes at each rerender ([a28aa05](https://github.com/liferay/clay/commit/a28aa050ab3dbe8d337518361289f4a4fbc87cac))
--   **@clayui/autocomplete:** fixes error when not resetting visual focus when menu is closed by custom logic ([b45c87e](https://github.com/liferay/clay/commit/b45c87e15456639def329731a0fc0a038df87906))
+- **@clayui/autocomplete:** fix error keeping menu open after selecting option with `menuTrigger="focus"` ([5f305f7](https://github.com/liferay/clay/commit/5f305f7962677c5e0c2b1b7a366f507755fc9947))
+- **@clayui/autocomplete:** fixes error when losing reference to nodes at each rerender ([a28aa05](https://github.com/liferay/clay/commit/a28aa050ab3dbe8d337518361289f4a4fbc87cac))
+- **@clayui/autocomplete:** fixes error when not resetting visual focus when menu is closed by custom logic ([b45c87e](https://github.com/liferay/clay/commit/b45c87e15456639def329731a0fc0a038df87906))
 
 ## 3.97.1 (2023-06-14)
 
@@ -328,24 +312,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** removes unnecessary use of the `dropdown-menu-indicator-start` CSS class ([ce09cd8](https://github.com/liferay/clay/commit/ce09cd814bf547e3437a45956f315a0588c52114))
--   **@clayui/multi-select:** explicitly add the `active` API in the component's typing ([e956828](https://github.com/liferay/clay/commit/e95682814d3ec7ab45e65e41bba291a2da023e74))
+- **@clayui/autocomplete:** removes unnecessary use of the `dropdown-menu-indicator-start` CSS class ([ce09cd8](https://github.com/liferay/clay/commit/ce09cd814bf547e3437a45956f315a0588c52114))
+- **@clayui/multi-select:** explicitly add the `active` API in the component's typing ([e956828](https://github.com/liferay/clay/commit/e95682814d3ec7ab45e65e41bba291a2da023e74))
 
 ## 3.96.1 (2023-05-31)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when rendering two collections ([03473be](https://github.com/liferay/clay/commit/03473be98f22d52613b741528cbebec64073b771))
+- **@clayui/autocomplete:** fix error when rendering two collections ([03473be](https://github.com/liferay/clay/commit/03473be98f22d52613b741528cbebec64073b771))
 
 # 3.96.0 (2023-05-29)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** don't open menu if items is null ([300fb73](https://github.com/liferay/clay/commit/300fb73452613c588d613e8d9cc687faaab99b68))
+- **@clayui/autocomplete:** don't open menu if items is null ([300fb73](https://github.com/liferay/clay/commit/300fb73452613c588d613e8d9cc687faaab99b68))
 
 ### Features
 
--   **@clayui/autocomplete:** adds new API to customize input ([b6a213b](https://github.com/liferay/clay/commit/b6a213b325e82d2472977463e76762252a519fe6))
+- **@clayui/autocomplete:** adds new API to customize input ([b6a213b](https://github.com/liferay/clay/commit/b6a213b325e82d2472977463e76762252a519fe6))
 
 ## 3.95.2 (2023-05-17)
 
@@ -355,9 +339,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** add list virtualization for dynamic content ([9710fd7](https://github.com/liferay/clay/commit/9710fd7693f9ba14d1b2b617fc12e15f71a311e3))
--   **@clayui/autocomplete:** refactors autocomplete implementation with accessibility improvements ([1dc82e6](https://github.com/liferay/clay/commit/1dc82e63b0d51e6cc3bf2cb1c7d08f4e698e6ba1))
--   **@clayui/core:** add infinite scroll to autocomplete ([d3358b4](https://github.com/liferay/clay/commit/d3358b47f8ff872f941e4eba64abd219189110c9))
+- **@clayui/autocomplete:** add list virtualization for dynamic content ([9710fd7](https://github.com/liferay/clay/commit/9710fd7693f9ba14d1b2b617fc12e15f71a311e3))
+- **@clayui/autocomplete:** refactors autocomplete implementation with accessibility improvements ([1dc82e6](https://github.com/liferay/clay/commit/1dc82e63b0d51e6cc3bf2cb1c7d08f4e698e6ba1))
+- **@clayui/core:** add infinite scroll to autocomplete ([d3358b4](https://github.com/liferay/clay/commit/d3358b47f8ff872f941e4eba64abd219189110c9))
 
 # 3.93.0 (2023-04-19)
 
@@ -375,7 +359,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when filtering autocomplete with regex special character ([079e4f7](https://github.com/liferay/clay/commit/079e4f7985a50a54dfbda36e1460204a0562a922))
+- **@clayui/autocomplete:** fix error when filtering autocomplete with regex special character ([079e4f7](https://github.com/liferay/clay/commit/079e4f7985a50a54dfbda36e1460204a0562a922))
 
 ## 3.86.1 (2023-02-02)
 
@@ -393,7 +377,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   removes duplication of implementation of accessibility features for menu using Overlay component ([9d60eb9](https://github.com/liferay/clay/commit/9d60eb9670cb5dc9fc18e02e3a97f139f1db4cfd))
+- removes duplication of implementation of accessibility features for menu using Overlay component ([9d60eb9](https://github.com/liferay/clay/commit/9d60eb9670cb5dc9fc18e02e3a97f139f1db4cfd))
 
 # 3.81.0 (2022-11-30)
 
@@ -413,32 +397,32 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** add the Collection pattern and loading state ([ab44b4a](https://github.com/liferay/clay/commit/ab44b4affed2202020d3b8b75124e423e9668f7e))
--   **@clayui/autocomplete:** adds support for paginated data integrated with the `useResource` hook ([cfb35c1](https://github.com/liferay/clay/commit/cfb35c17f311e75c6aee06250953abfdfd422bc3))
+- **@clayui/autocomplete:** add the Collection pattern and loading state ([ab44b4a](https://github.com/liferay/clay/commit/ab44b4affed2202020d3b8b75124e423e9668f7e))
+- **@clayui/autocomplete:** adds support for paginated data integrated with the `useResource` hook ([cfb35c1](https://github.com/liferay/clay/commit/cfb35c17f311e75c6aee06250953abfdfd422bc3))
 
 ## 3.75.3 (2022-09-29)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** changes the way to identify the new behavior ([037b17c](https://github.com/liferay/clay/commit/037b17c8debd56420f9af873203ddb2847067f7a))
+- **@clayui/autocomplete:** changes the way to identify the new behavior ([037b17c](https://github.com/liferay/clay/commit/037b17c8debd56420f9af873203ddb2847067f7a))
 
 ## 3.75.2 (2022-09-29)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix of switching the owner of otherProps on Autocomplete ([d5ced5e](https://github.com/liferay/clay/commit/d5ced5e6d85266e25f7955249fedf904fb46de66))
+- **@clayui/autocomplete:** fix of switching the owner of otherProps on Autocomplete ([d5ced5e](https://github.com/liferay/clay/commit/d5ced5e6d85266e25f7955249fedf904fb46de66))
 
 # 3.75.0 (2022-09-28)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when moving focus when pressing alt + arrowdown ([b260984](https://github.com/liferay/clay/commit/b260984484f25617d2f3010ce5b8211e2075ff0f))
+- **@clayui/autocomplete:** fix error when moving focus when pressing alt + arrowdown ([b260984](https://github.com/liferay/clay/commit/b260984484f25617d2f3010ce5b8211e2075ff0f))
 
 ### Features
 
--   **@clayui/autocomplete:** adds accessibility to new autocomplete behavior ([f2ad617](https://github.com/liferay/clay/commit/f2ad617f8f19ad15630f8fd7afd83a126a241e4c))
--   **@clayui/autocomplete:** adds new less verbose composition with more OOTB features ([37e9e89](https://github.com/liferay/clay/commit/37e9e8977fa3b741b0619ba41607beaa97d0d976))
--   **@clayui/autocomplete:** deprecated the `onSetActive` API and replaced it with `onActiveChange` ([9ad5bcb](https://github.com/liferay/clay/commit/9ad5bcb72f057909bdac83789bb4e96a2dd28aff))
+- **@clayui/autocomplete:** adds accessibility to new autocomplete behavior ([f2ad617](https://github.com/liferay/clay/commit/f2ad617f8f19ad15630f8fd7afd83a126a241e4c))
+- **@clayui/autocomplete:** adds new less verbose composition with more OOTB features ([37e9e89](https://github.com/liferay/clay/commit/37e9e8977fa3b741b0619ba41607beaa97d0d976))
+- **@clayui/autocomplete:** deprecated the `onSetActive` API and replaced it with `onActiveChange` ([9ad5bcb](https://github.com/liferay/clay/commit/9ad5bcb72f057909bdac83789bb4e96a2dd28aff))
 
 # 3.74.0 (2022-09-19)
 
@@ -466,7 +450,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error of `alignment By Viewport` not positioning properly ([4ea771b](https://github.com/liferay/clay/commit/4ea771b2726a0ba469edca4d0e7548cbeb74d01e))
+- **@clayui/autocomplete:** fix error of `alignment By Viewport` not positioning properly ([4ea771b](https://github.com/liferay/clay/commit/4ea771b2726a0ba469edca4d0e7548cbeb74d01e))
 
 ## 3.65.1 (2022-07-11)
 
@@ -478,7 +462,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** Support menu alignment by Viewport ([1409c4b](https://github.com/liferay/clay/commit/1409c4b8d22073e642e12f951ebdcb76c9474669))
+- **@clayui/autocomplete:** Support menu alignment by Viewport ([1409c4b](https://github.com/liferay/clay/commit/1409c4b8d22073e642e12f951ebdcb76c9474669))
 
 # 3.60.0 (2022-06-06)
 
@@ -516,7 +500,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** adds `closeOnClickOutside` API support to DropDown ([ece1061](https://github.com/liferay/clay/commit/ece1061e709dae1f2431f356516fb99089272d7b))
+- **@clayui/autocomplete:** adds `closeOnClickOutside` API support to DropDown ([ece1061](https://github.com/liferay/clay/commit/ece1061e709dae1f2431f356516fb99089272d7b))
 
 ## 3.35.3 (2021-09-09)
 
@@ -528,7 +512,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fixes a potential XSS vulnerability in autocomplete by removing the use of `dangerouslySetInnerHTML` ([675910c](https://github.com/liferay/clay/commit/675910cb503da91b579b9a5f208afc18567c3107))
+- **@clayui/autocomplete:** fixes a potential XSS vulnerability in autocomplete by removing the use of `dangerouslySetInnerHTML` ([675910c](https://github.com/liferay/clay/commit/675910cb503da91b579b9a5f208afc18567c3107))
 
 # 3.30.0 (2021-06-16)
 
@@ -554,12 +538,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([75a8b73](https://github.com/liferay/clay/commit/75a8b7307ceabacc5ef0b2af436d7eac9df023c4))
--   **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([5bea09c](https://github.com/liferay/clay/commit/5bea09c3d9f566911e41e84d2fd4d8198253851a))
+- **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([75a8b73](https://github.com/liferay/clay/commit/75a8b7307ceabacc5ef0b2af436d7eac9df023c4))
+- **@clayui/autocomplete:** Add a warning when an external starting value cannot be set due to items being objects and filterKey not being set. ([5bea09c](https://github.com/liferay/clay/commit/5bea09c3d9f566911e41e84d2fd4d8198253851a))
 
 ### Features
 
--   **@clayui/autocomplete:** LPD-56059 Update the autocomplete to allow filtering data that may be deeply nested. ([85d76ed](https://github.com/liferay/clay/commit/85d76ed0e5916d7317b16c02325e8cf631006b92))
+- **@clayui/autocomplete:** LPD-56059 Update the autocomplete to allow filtering data that may be deeply nested. ([85d76ed](https://github.com/liferay/clay/commit/85d76ed0e5916d7317b16c02325e8cf631006b92))
 
 ## [3.139.1](https://github.com/liferay/clay/compare/v3.139.0...v3.139.1) (2025-06-16)
 
@@ -617,24 +601,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fixes typescript lint bug on Item component ([31d3869](https://github.com/liferay/clay/commit/31d3869f449727dfd1a570bf691c4e5c8080f1f0))
+- **@clayui/autocomplete:** fixes typescript lint bug on Item component ([31d3869](https://github.com/liferay/clay/commit/31d3869f449727dfd1a570bf691c4e5c8080f1f0))
 
 ## [3.128.1](https://github.com/liferay/clay/compare/v3.128.0...v3.128.1) (2025-02-21)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fixes typescript lint bug ([0a7b319](https://github.com/liferay/clay/commit/0a7b319f1e509b8812294a55799585a668afca59))
+- **@clayui/autocomplete:** fixes typescript lint bug ([0a7b319](https://github.com/liferay/clay/commit/0a7b319f1e509b8812294a55799585a668afca59))
 
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Bug Fixes
 
--   fixes bug in components with generic types and sub components ([4dd37e6](https://github.com/liferay/clay/commit/4dd37e654b22206aad190d6ce5558dab1dfd2d36))
--   **www:** fixes bug in build ([aa63833](https://github.com/liferay/clay/commit/aa63833462810249e896cb9da30629275f500b0b))
+- fixes bug in components with generic types and sub components ([4dd37e6](https://github.com/liferay/clay/commit/4dd37e654b22206aad190d6ce5558dab1dfd2d36))
+- **www:** fixes bug in build ([aa63833](https://github.com/liferay/clay/commit/aa63833462810249e896cb9da30629275f500b0b))
 
 ### Features
 
--   **@clayui/autocomplete:** improves component typing to create API Table ([674b3aa](https://github.com/liferay/clay/commit/674b3aa5fe060a1b6cd8a19ee5cd9f7428fa5d47))
+- **@clayui/autocomplete:** improves component typing to create API Table ([674b3aa](https://github.com/liferay/clay/commit/674b3aa5fe060a1b6cd8a19ee5cd9f7428fa5d47))
 
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
@@ -700,7 +684,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **clay-autocomplete:** Remove autocomplete async filter paginated example ([6366d29](https://github.com/liferay/clay/commit/6366d296e17be2f8aac6474951cc1728a208eca5))
+- **clay-autocomplete:** Remove autocomplete async filter paginated example ([6366d29](https://github.com/liferay/clay/commit/6366d296e17be2f8aac6474951cc1728a208eca5))
 
 # [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
 
@@ -710,7 +694,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** update component highlight ([b6fd6a9](https://github.com/liferay/clay/commit/b6fd6a969099a5c89bc48bfa06b2ec1ccf1a28cc))
+- **@clayui/autocomplete:** update component highlight ([b6fd6a9](https://github.com/liferay/clay/commit/b6fd6a969099a5c89bc48bfa06b2ec1ccf1a28cc))
 
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
@@ -740,14 +724,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when navigating via keyboard with the mouse over the item ([f13e062](https://github.com/liferay/clay/commit/f13e062033445f70df32bdf31d068646215c9a78))
+- **@clayui/autocomplete:** fix error when navigating via keyboard with the mouse over the item ([f13e062](https://github.com/liferay/clay/commit/f13e062033445f70df32bdf31d068646215c9a78))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
@@ -761,18 +745,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** does not revalidate the value if it is reset by the controlled state ([73ec258](https://github.com/liferay/clay/commit/73ec258196572004430780bc4330137437e36377))
--   **@clayui/autocomplete:** improves value matching behavior with suggestion list when state is controlled ([5f33f5c](https://github.com/liferay/clay/commit/5f33f5c42a4dc2cef85de01743baebe2d6d1f829))
+- **@clayui/autocomplete:** does not revalidate the value if it is reset by the controlled state ([73ec258](https://github.com/liferay/clay/commit/73ec258196572004430780bc4330137437e36377))
+- **@clayui/autocomplete:** improves value matching behavior with suggestion list when state is controlled ([5f33f5c](https://github.com/liferay/clay/commit/5f33f5c42a4dc2cef85de01743baebe2d6d1f829))
 
 # [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when not validating value with items ([ab4421e](https://github.com/liferay/clay/commit/ab4421ede3b8b97084e694e3500b07f4ff1957f1))
+- **@clayui/autocomplete:** fix error when not validating value with items ([ab4421e](https://github.com/liferay/clay/commit/ab4421ede3b8b97084e694e3500b07f4ff1957f1))
 
 ### Features
 
--   **@clayui/autocomplete:** adds new API to allow custom value ([516de02](https://github.com/liferay/clay/commit/516de02e9cd2d8dbbecc60d7fc79935e377decf1))
+- **@clayui/autocomplete:** adds new API to allow custom value ([516de02](https://github.com/liferay/clay/commit/516de02e9cd2d8dbbecc60d7fc79935e377decf1))
 
 # [3.100.0](https://github.com/liferay/clay/compare/v3.99.4...v3.100.0) (2023-07-13)
 
@@ -782,27 +766,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/multi-select:** fix loading indicator markup in MultiSelect ([b883824](https://github.com/liferay/clay/commit/b8838247d1638524691fda2a74934e0676e6597d))
+- **@clayui/multi-select:** fix loading indicator markup in MultiSelect ([b883824](https://github.com/liferay/clay/commit/b8838247d1638524691fda2a74934e0676e6597d))
 
 ## [3.99.2](https://github.com/liferay/clay/compare/v3.99.1...v3.99.2) (2023-07-05)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** makes new `messages` properties optional ([94eceb6](https://github.com/liferay/clay/commit/94eceb6261334272d0b3a000052a7a9592505284))
+- **@clayui/autocomplete:** makes new `messages` properties optional ([94eceb6](https://github.com/liferay/clay/commit/94eceb6261334272d0b3a000052a7a9592505284))
 
 ## [3.99.1](https://github.com/liferay/clay/compare/v3.99.0...v3.99.1) (2023-07-04)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** adds warning when `filterKey` is not defined and tries to filter an option that is object ([48dd887](https://github.com/liferay/clay/commit/48dd887b7fb6afbade67a98e6d325d1068ddc6b7))
--   **@clayui/autocomplete:** fixes type inference for properties and generic type ([cfc4309](https://github.com/liferay/clay/commit/cfc4309313b46bea777ddae3f9d810ae032b2a3c))
+- **@clayui/autocomplete:** adds warning when `filterKey` is not defined and tries to filter an option that is object ([48dd887](https://github.com/liferay/clay/commit/48dd887b7fb6afbade67a98e6d325d1068ddc6b7))
+- **@clayui/autocomplete:** fixes type inference for properties and generic type ([cfc4309](https://github.com/liferay/clay/commit/cfc4309313b46bea777ddae3f9d810ae032b2a3c))
 
 # [3.99.0](https://github.com/liferay/clay/compare/v3.98.0...v3.99.0) (2023-06-28)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix bug not announcing available options when autocomplete is open ([1dc9581](https://github.com/liferay/clay/commit/1dc9581bd2e96b7cdf250bf02c4858c5df4eb833))
--   **@clayui/autocomplete:** fixes suppressing the `+` from the value when filtering the list ([1ba8356](https://github.com/liferay/clay/commit/1ba8356fce973dce24a63b5154e9ae9370c43562))
+- **@clayui/autocomplete:** fix bug not announcing available options when autocomplete is open ([1dc9581](https://github.com/liferay/clay/commit/1dc9581bd2e96b7cdf250bf02c4858c5df4eb833))
+- **@clayui/autocomplete:** fixes suppressing the `+` from the value when filtering the list ([1ba8356](https://github.com/liferay/clay/commit/1ba8356fce973dce24a63b5154e9ae9370c43562))
 
 # [3.98.0](https://github.com/liferay/clay/compare/v3.97.2...v3.98.0) (2023-06-20)
 
@@ -812,9 +796,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error keeping menu open after selecting option with `menuTrigger="focus"` ([5f305f7](https://github.com/liferay/clay/commit/5f305f7962677c5e0c2b1b7a366f507755fc9947))
--   **@clayui/autocomplete:** fixes error when losing reference to nodes at each rerender ([a28aa05](https://github.com/liferay/clay/commit/a28aa050ab3dbe8d337518361289f4a4fbc87cac))
--   **@clayui/autocomplete:** fixes error when not resetting visual focus when menu is closed by custom logic ([b45c87e](https://github.com/liferay/clay/commit/b45c87e15456639def329731a0fc0a038df87906))
+- **@clayui/autocomplete:** fix error keeping menu open after selecting option with `menuTrigger="focus"` ([5f305f7](https://github.com/liferay/clay/commit/5f305f7962677c5e0c2b1b7a366f507755fc9947))
+- **@clayui/autocomplete:** fixes error when losing reference to nodes at each rerender ([a28aa05](https://github.com/liferay/clay/commit/a28aa050ab3dbe8d337518361289f4a4fbc87cac))
+- **@clayui/autocomplete:** fixes error when not resetting visual focus when menu is closed by custom logic ([b45c87e](https://github.com/liferay/clay/commit/b45c87e15456639def329731a0fc0a038df87906))
 
 ## [3.97.1](https://github.com/liferay/clay/compare/v3.97.0...v3.97.1) (2023-06-14)
 
@@ -824,24 +808,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** removes unnecessary use of the `dropdown-menu-indicator-start` CSS class ([ce09cd8](https://github.com/liferay/clay/commit/ce09cd814bf547e3437a45956f315a0588c52114))
--   **@clayui/multi-select:** explicitly add the `active` API in the component's typing ([e956828](https://github.com/liferay/clay/commit/e95682814d3ec7ab45e65e41bba291a2da023e74))
+- **@clayui/autocomplete:** removes unnecessary use of the `dropdown-menu-indicator-start` CSS class ([ce09cd8](https://github.com/liferay/clay/commit/ce09cd814bf547e3437a45956f315a0588c52114))
+- **@clayui/multi-select:** explicitly add the `active` API in the component's typing ([e956828](https://github.com/liferay/clay/commit/e95682814d3ec7ab45e65e41bba291a2da023e74))
 
 ## [3.96.1](https://github.com/liferay/clay/compare/v3.96.0...v3.96.1) (2023-05-31)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when rendering two collections ([03473be](https://github.com/liferay/clay/commit/03473be98f22d52613b741528cbebec64073b771))
+- **@clayui/autocomplete:** fix error when rendering two collections ([03473be](https://github.com/liferay/clay/commit/03473be98f22d52613b741528cbebec64073b771))
 
 # [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** don't open menu if items is null ([300fb73](https://github.com/liferay/clay/commit/300fb73452613c588d613e8d9cc687faaab99b68))
+- **@clayui/autocomplete:** don't open menu if items is null ([300fb73](https://github.com/liferay/clay/commit/300fb73452613c588d613e8d9cc687faaab99b68))
 
 ### Features
 
--   **@clayui/autocomplete:** adds new API to customize input ([b6a213b](https://github.com/liferay/clay/commit/b6a213b325e82d2472977463e76762252a519fe6))
+- **@clayui/autocomplete:** adds new API to customize input ([b6a213b](https://github.com/liferay/clay/commit/b6a213b325e82d2472977463e76762252a519fe6))
 
 ## [3.95.2](https://github.com/liferay/clay/compare/v3.95.0...v3.95.2) (2023-05-17)
 
@@ -855,9 +839,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** add list virtualization for dynamic content ([9710fd7](https://github.com/liferay/clay/commit/9710fd7693f9ba14d1b2b617fc12e15f71a311e3))
--   **@clayui/autocomplete:** refactors autocomplete implementation with accessibility improvements ([1dc82e6](https://github.com/liferay/clay/commit/1dc82e63b0d51e6cc3bf2cb1c7d08f4e698e6ba1))
--   **@clayui/core:** add infinite scroll to autocomplete ([d3358b4](https://github.com/liferay/clay/commit/d3358b47f8ff872f941e4eba64abd219189110c9))
+- **@clayui/autocomplete:** add list virtualization for dynamic content ([9710fd7](https://github.com/liferay/clay/commit/9710fd7693f9ba14d1b2b617fc12e15f71a311e3))
+- **@clayui/autocomplete:** refactors autocomplete implementation with accessibility improvements ([1dc82e6](https://github.com/liferay/clay/commit/1dc82e63b0d51e6cc3bf2cb1c7d08f4e698e6ba1))
+- **@clayui/core:** add infinite scroll to autocomplete ([d3358b4](https://github.com/liferay/clay/commit/d3358b47f8ff872f941e4eba64abd219189110c9))
 
 # [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
 
@@ -887,7 +871,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when filtering autocomplete with regex special character ([079e4f7](https://github.com/liferay/clay/commit/079e4f7985a50a54dfbda36e1460204a0562a922))
+- **@clayui/autocomplete:** fix error when filtering autocomplete with regex special character ([079e4f7](https://github.com/liferay/clay/commit/079e4f7985a50a54dfbda36e1460204a0562a922))
 
 ## [3.86.1](https://github.com/liferay/clay/compare/v3.86.0...v3.86.1) (2023-02-02)
 
@@ -917,7 +901,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   removes duplication of implementation of accessibility features for menu using Overlay component ([9d60eb9](https://github.com/liferay/clay/commit/9d60eb9670cb5dc9fc18e02e3a97f139f1db4cfd))
+- removes duplication of implementation of accessibility features for menu using Overlay component ([9d60eb9](https://github.com/liferay/clay/commit/9d60eb9670cb5dc9fc18e02e3a97f139f1db4cfd))
 
 # [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
 
@@ -951,32 +935,32 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** add the Collection pattern and loading state ([ab44b4a](https://github.com/liferay/clay/commit/ab44b4affed2202020d3b8b75124e423e9668f7e))
--   **@clayui/autocomplete:** adds support for paginated data integrated with the `useResource` hook ([cfb35c1](https://github.com/liferay/clay/commit/cfb35c17f311e75c6aee06250953abfdfd422bc3))
+- **@clayui/autocomplete:** add the Collection pattern and loading state ([ab44b4a](https://github.com/liferay/clay/commit/ab44b4affed2202020d3b8b75124e423e9668f7e))
+- **@clayui/autocomplete:** adds support for paginated data integrated with the `useResource` hook ([cfb35c1](https://github.com/liferay/clay/commit/cfb35c17f311e75c6aee06250953abfdfd422bc3))
 
 ## [3.75.3](https://github.com/liferay/clay/compare/v3.75.2...v3.75.3) (2022-09-29)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** changes the way to identify the new behavior ([037b17c](https://github.com/liferay/clay/commit/037b17c8debd56420f9af873203ddb2847067f7a))
+- **@clayui/autocomplete:** changes the way to identify the new behavior ([037b17c](https://github.com/liferay/clay/commit/037b17c8debd56420f9af873203ddb2847067f7a))
 
 ## [3.75.2](https://github.com/liferay/clay/compare/v3.75.1...v3.75.2) (2022-09-29)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix of switching the owner of otherProps on Autocomplete ([d5ced5e](https://github.com/liferay/clay/commit/d5ced5e6d85266e25f7955249fedf904fb46de66))
+- **@clayui/autocomplete:** fix of switching the owner of otherProps on Autocomplete ([d5ced5e](https://github.com/liferay/clay/commit/d5ced5e6d85266e25f7955249fedf904fb46de66))
 
 # [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error when moving focus when pressing alt + arrowdown ([b260984](https://github.com/liferay/clay/commit/b260984484f25617d2f3010ce5b8211e2075ff0f))
+- **@clayui/autocomplete:** fix error when moving focus when pressing alt + arrowdown ([b260984](https://github.com/liferay/clay/commit/b260984484f25617d2f3010ce5b8211e2075ff0f))
 
 ### Features
 
--   **@clayui/autocomplete:** adds accessibility to new autocomplete behavior ([f2ad617](https://github.com/liferay/clay/commit/f2ad617f8f19ad15630f8fd7afd83a126a241e4c))
--   **@clayui/autocomplete:** adds new less verbose composition with more OOTB features ([37e9e89](https://github.com/liferay/clay/commit/37e9e8977fa3b741b0619ba41607beaa97d0d976))
--   **@clayui/autocomplete:** deprecated the `onSetActive` API and replaced it with `onActiveChange` ([9ad5bcb](https://github.com/liferay/clay/commit/9ad5bcb72f057909bdac83789bb4e96a2dd28aff))
+- **@clayui/autocomplete:** adds accessibility to new autocomplete behavior ([f2ad617](https://github.com/liferay/clay/commit/f2ad617f8f19ad15630f8fd7afd83a126a241e4c))
+- **@clayui/autocomplete:** adds new less verbose composition with more OOTB features ([37e9e89](https://github.com/liferay/clay/commit/37e9e8977fa3b741b0619ba41607beaa97d0d976))
+- **@clayui/autocomplete:** deprecated the `onSetActive` API and replaced it with `onActiveChange` ([9ad5bcb](https://github.com/liferay/clay/commit/9ad5bcb72f057909bdac83789bb4e96a2dd28aff))
 
 # [3.74.0](https://github.com/liferay/clay/compare/v3.73.0...v3.74.0) (2022-09-19)
 
@@ -1026,7 +1010,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fix error of `alignment By Viewport` not positioning properly ([4ea771b](https://github.com/liferay/clay/commit/4ea771b2726a0ba469edca4d0e7548cbeb74d01e))
+- **@clayui/autocomplete:** fix error of `alignment By Viewport` not positioning properly ([4ea771b](https://github.com/liferay/clay/commit/4ea771b2726a0ba469edca4d0e7548cbeb74d01e))
 
 ## [3.65.1](https://github.com/liferay/clay/compare/v3.65.0...v3.65.1) (2022-07-11)
 
@@ -1044,7 +1028,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** Support menu alignment by Viewport ([1409c4b](https://github.com/liferay/clay/commit/1409c4b8d22073e642e12f951ebdcb76c9474669))
+- **@clayui/autocomplete:** Support menu alignment by Viewport ([1409c4b](https://github.com/liferay/clay/commit/1409c4b8d22073e642e12f951ebdcb76c9474669))
 
 # [3.60.0](https://github.com/liferay/clay/compare/v3.59.0...v3.60.0) (2022-06-06)
 
@@ -1114,7 +1098,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/autocomplete:** adds `closeOnClickOutside` API support to DropDown ([ece1061](https://github.com/liferay/clay/commit/ece1061))
+- **@clayui/autocomplete:** adds `closeOnClickOutside` API support to DropDown ([ece1061](https://github.com/liferay/clay/commit/ece1061))
 
 ## [3.35.3](https://github.com/liferay/clay/compare/v3.35.2...v3.35.3) (2021-09-09)
 
@@ -1136,7 +1120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** fixes a potential XSS vulnerability in autocomplete by removing the use of `dangerouslySetInnerHTML` ([675910c](https://github.com/liferay/clay/commit/675910c))
+- **@clayui/autocomplete:** fixes a potential XSS vulnerability in autocomplete by removing the use of `dangerouslySetInnerHTML` ([675910c](https://github.com/liferay/clay/commit/675910c))
 
 # [3.30.0](https://github.com/liferay/clay/compare/v3.29.0...v3.30.0) (2021-06-16)
 
@@ -1190,8 +1174,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
--   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
 
 ## [3.1.12](https://github.com/liferay/clay/compare/@clayui/autocomplete@3.1.11...@clayui/autocomplete@3.1.12) (2020-08-28)
 
@@ -1237,7 +1221,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/autocomplete:** Adds missing `aria-label` attr on Autocomplete stories ([b56a68a](https://github.com/liferay/clay/commit/b56a68a))
+- **@clayui/autocomplete:** Adds missing `aria-label` attr on Autocomplete stories ([b56a68a](https://github.com/liferay/clay/commit/b56a68a))
 
 ## [3.1.1](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/compare/@clayui/autocomplete@3.1.0...@clayui/autocomplete@3.1.1) (2020-03-12)
 
@@ -1247,23 +1231,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   add displayName to context for dev tools ([82e1e8c](https://github.com/liferay/clay/commit/82e1e8c))
--   bump all components to alpha.1 ([afabdec](https://github.com/liferay/clay/commit/afabdec))
--   normalize names of components ([3a0abea](https://github.com/liferay/clay/commit/3a0abea))
--   **@clayui/autocomplete:** adds React.forwardRef to Autocomplete for FocusScope to have reference from element ([0bbde5a](https://github.com/liferay/clay/commit/0bbde5a))
--   **@clayui/autocomplete:** use FocusScope component ([5e481d4](https://github.com/liferay/clay/commit/5e481d4))
--   ref callbacks are first calling with null. https://reactjs.org/docs/refs-and-the-dom.html#caveats-with-callback-refs ([fec52cb](https://github.com/liferay/clay/commit/fec52cb))
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
--   **@clayui/button:** fix error when using private name when generating declaration files ([e8d8027](https://github.com/liferay/clay/commit/e8d8027)), closes [/github.com/Microsoft/TypeScript/issues/6307#issuecomment-360182089](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/issues/issuecomment-360182089)
+- add displayName to context for dev tools ([82e1e8c](https://github.com/liferay/clay/commit/82e1e8c))
+- bump all components to alpha.1 ([afabdec](https://github.com/liferay/clay/commit/afabdec))
+- normalize names of components ([3a0abea](https://github.com/liferay/clay/commit/3a0abea))
+- **@clayui/autocomplete:** adds React.forwardRef to Autocomplete for FocusScope to have reference from element ([0bbde5a](https://github.com/liferay/clay/commit/0bbde5a))
+- **@clayui/autocomplete:** use FocusScope component ([5e481d4](https://github.com/liferay/clay/commit/5e481d4))
+- ref callbacks are first calling with null. https://reactjs.org/docs/refs-and-the-dom.html#caveats-with-callback-refs ([fec52cb](https://github.com/liferay/clay/commit/fec52cb))
+- update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+- **@clayui/button:** fix error when using private name when generating declaration files ([e8d8027](https://github.com/liferay/clay/commit/e8d8027)), closes [/github.com/Microsoft/TypeScript/issues/6307#issuecomment-360182089](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/issues/issuecomment-360182089)
 
 ### Features
 
--   **Autocomplete:** Create ClayAutocomplete component ([6752c6d](https://github.com/liferay/clay/commit/6752c6d))
--   **clay-form:** create high-level InputWithAutocomplete component ([692610a](https://github.com/liferay/clay/commit/692610a))
--   **clay-shared:** add keyboard hooks for lists and add demo under autocomplete ([3622453](https://github.com/liferay/clay/commit/3622453))
--   **ClayAutocomplete.Item:** add Item component to match values inserted in the input element ([372594c](https://github.com/liferay/clay/commit/372594c))
--   update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
--   **form:** add helper components for markup ([3ce63d4](https://github.com/liferay/clay/commit/3ce63d4))
+- **Autocomplete:** Create ClayAutocomplete component ([6752c6d](https://github.com/liferay/clay/commit/6752c6d))
+- **clay-form:** create high-level InputWithAutocomplete component ([692610a](https://github.com/liferay/clay/commit/692610a))
+- **clay-shared:** add keyboard hooks for lists and add demo under autocomplete ([3622453](https://github.com/liferay/clay/commit/3622453))
+- **ClayAutocomplete.Item:** add Item component to match values inserted in the input element ([372594c](https://github.com/liferay/clay/commit/372594c))
+- update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
+- **form:** add helper components for markup ([3ce63d4](https://github.com/liferay/clay/commit/3ce63d4))
 
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/compare/@clayui/autocomplete@3.0.6...@clayui/autocomplete@3.0.7) (2020-02-13)
 
@@ -1273,19 +1257,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/button:** fix error when using private name when generating declaration files ([e8d8027](https://github.com/liferay/clay/commit/e8d8027)), closes [/github.com/Microsoft/TypeScript/issues/6307#issuecomment-360182089](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/issues/issuecomment-360182089)
+- **@clayui/button:** fix error when using private name when generating declaration files ([e8d8027](https://github.com/liferay/clay/commit/e8d8027)), closes [/github.com/Microsoft/TypeScript/issues/6307#issuecomment-360182089](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/issues/issuecomment-360182089)
 
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/compare/@clayui/autocomplete@3.0.3...@clayui/autocomplete@3.0.5) (2020-01-20)
 
 ### Bug Fixes
 
--   **@clayui/button:** fix error when using private name when generating declaration files ([e8d8027](https://github.com/liferay/clay/commit/e8d8027)), closes [/github.com/Microsoft/TypeScript/issues/6307#issuecomment-360182089](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/issues/issuecomment-360182089)
+- **@clayui/button:** fix error when using private name when generating declaration files ([e8d8027](https://github.com/liferay/clay/commit/e8d8027)), closes [/github.com/Microsoft/TypeScript/issues/6307#issuecomment-360182089](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/issues/issuecomment-360182089)
 
 ## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/compare/@clayui/autocomplete@3.0.3...@clayui/autocomplete@3.0.4) (2019-12-05)
 
 ### Bug Fixes
 
--   **@clayui/button:** fix error when using private name when generating declaration files ([e8d8027](https://github.com/liferay/clay/commit/e8d8027)), closes [/github.com/Microsoft/TypeScript/issues/6307#issuecomment-360182089](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/issues/issuecomment-360182089)
+- **@clayui/button:** fix error when using private name when generating declaration files ([e8d8027](https://github.com/liferay/clay/commit/e8d8027)), closes [/github.com/Microsoft/TypeScript/issues/6307#issuecomment-360182089](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/issues/issuecomment-360182089)
 
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/compare/@clayui/autocomplete@3.0.2...@clayui/autocomplete@3.0.3) (2019-11-07)
 
@@ -1299,4 +1283,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   ref callbacks are first calling with null. https://reactjs.org/docs/refs-and-the-dom.html#caveats-with-callback-refs ([fec52cb](https://github.com/liferay/clay/commit/fec52cb))
+- ref callbacks are first calling with null. https://reactjs.org/docs/refs-and-the-dom.html#caveats-with-callback-refs ([fec52cb](https://github.com/liferay/clay/commit/fec52cb))

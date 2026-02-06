@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {Text, TextHighlight} from '@clayui/core';
@@ -12,62 +12,65 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import ClayAutocomplete from '../src';
 
-const LoadingWithDebounce = ({
+function LoadingWithDebounce({
 	loading,
 	networkStatus,
 	render,
 }: {
-	networkStatus?: NetworkStatus;
 	loading: boolean;
+	networkStatus?: NetworkStatus;
 	render: any;
-}) => {
+}) {
 	const debouncedLoadingChange = useDebounce(loading, 500);
-
 	if (networkStatus === 1 || debouncedLoadingChange) {
 		return <DropDown.Item className="disabled">Loading...</DropDown.Item>;
 	}
 
 	return render;
-};
+}
 
 export default {
 	title: 'Design System/Components/Autocomplete',
 };
+export function Default(args: any) {
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-1"
+							id="clay-autocomplete-label-1"
+						>
+							Numbers (one-five)
+						</label>
 
-export const Default = (args: any) => (
-	<div className="row">
-		<div className="col-md-5">
-			<div className="sheet">
-				<div className="form-group">
-					<label
-						htmlFor="clay-autocomplete-1"
-						id="clay-autocomplete-label-1"
-					>
-						Numbers (one-five)
-					</label>
-					<ClayAutocomplete
-						aria-labelledby="clay-autocomplete-label-1"
-						id="clay-autocomplete-1"
-						menuTrigger={args.menuTrigger}
-						messages={{
-							listCount: '{0} option available.',
-							listCountPlural: '{0} options available.',
-							loading: 'Loading...',
-							notFound: 'No results found',
-						}}
-						placeholder="Enter a number from One to Five"
-					>
-						{['one', 'two', 'three', 'four', 'five'].map((item) => (
-							<ClayAutocomplete.Item key={item}>
-								{item}
-							</ClayAutocomplete.Item>
-						))}
-					</ClayAutocomplete>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-1"
+							id="clay-autocomplete-1"
+							menuTrigger={args.menuTrigger}
+							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
+								loading: 'Loading...',
+								notFound: 'No results found',
+							}}
+							placeholder="Enter a number from One to Five"
+						>
+							{['one', 'two', 'three', 'four', 'five'].map(
+								(item) => (
+									<ClayAutocomplete.Item key={item}>
+										{item}
+									</ClayAutocomplete.Item>
+								)
+							)}
+						</ClayAutocomplete>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-);
+	);
+}
 
 Default.argTypes = {
 	menuTrigger: {
@@ -75,8 +78,7 @@ Default.argTypes = {
 		options: ['focus', 'input'],
 	},
 };
-
-export const SelectedState = () => {
+export function SelectedState() {
 	const fruits = ['Apples', 'Bananas', 'Cantaloupe', 'Mangos'];
 	const [value, setValue] = useState('');
 	const [selectedKeys, setSelectedKeys] = useState<Array<string>>([]);
@@ -108,6 +110,7 @@ export const SelectedState = () => {
 						>
 							Fruits
 						</label>
+
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							defaultItems={fruits}
@@ -132,95 +135,96 @@ export const SelectedState = () => {
 			</div>
 		</div>
 	);
-};
+}
+export function Dynamic() {
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-1"
+							id="clay-autocomplete-label-1"
+						>
+							States
+						</label>
 
-export const Dynamic = () => (
-	<div className="row">
-		<div className="col-md-5">
-			<div className="sheet">
-				<div className="form-group">
-					<label
-						htmlFor="clay-autocomplete-1"
-						id="clay-autocomplete-label-1"
-					>
-						States
-					</label>
-					<ClayAutocomplete
-						aria-labelledby="clay-autocomplete-label-1"
-						defaultItems={[
-							'Alabama',
-							'Alaska',
-							'Arizona',
-							'Arkansas',
-							'California',
-							'Colorado',
-							'Connecticut',
-							'Delaware',
-							'Florida',
-							'Georgia',
-							'Hawaii',
-							'Idaho',
-							'Illinois',
-							'Indiana',
-							'Iowa',
-							'Kansas',
-							'Kentucky',
-							'Louisiana',
-							'Maine',
-							'Maryland',
-							'Massachusetts',
-							'Michigan',
-							'Minnesota',
-							'Mississippi',
-							'Missouri',
-							'Montana',
-							'Nebraska',
-							'Nevada',
-							'New Hampshire',
-							'New Jersey',
-							'New Mexico',
-							'New York',
-							'North Carolina',
-							'North Dakota',
-							'Ohio',
-							'Oklahoma',
-							'Oregon',
-							'Pennsylvania',
-							'Rhode Island',
-							'South Carolina',
-							'South Dakota',
-							'Tennessee',
-							'Texas',
-							'Utah',
-							'Vermont',
-							'Virginia',
-							'Washington',
-							'West Virginia',
-							'Wisconsin',
-							'Wyoming',
-						]}
-						id="clay-autocomplete-1"
-						messages={{
-							listCount: '{0} option available.',
-							listCountPlural: '{0} options available.',
-							loading: 'Loading...',
-							notFound: 'No results found',
-						}}
-						placeholder="Enter a US state name"
-					>
-						{(item) => (
-							<ClayAutocomplete.Item key={item}>
-								{item}
-							</ClayAutocomplete.Item>
-						)}
-					</ClayAutocomplete>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-1"
+							defaultItems={[
+								'Alabama',
+								'Alaska',
+								'Arizona',
+								'Arkansas',
+								'California',
+								'Colorado',
+								'Connecticut',
+								'Delaware',
+								'Florida',
+								'Georgia',
+								'Hawaii',
+								'Idaho',
+								'Illinois',
+								'Indiana',
+								'Iowa',
+								'Kansas',
+								'Kentucky',
+								'Louisiana',
+								'Maine',
+								'Maryland',
+								'Massachusetts',
+								'Michigan',
+								'Minnesota',
+								'Mississippi',
+								'Missouri',
+								'Montana',
+								'Nebraska',
+								'Nevada',
+								'New Hampshire',
+								'New Jersey',
+								'New Mexico',
+								'New York',
+								'North Carolina',
+								'North Dakota',
+								'Ohio',
+								'Oklahoma',
+								'Oregon',
+								'Pennsylvania',
+								'Rhode Island',
+								'South Carolina',
+								'South Dakota',
+								'Tennessee',
+								'Texas',
+								'Utah',
+								'Vermont',
+								'Virginia',
+								'Washington',
+								'West Virginia',
+								'Wisconsin',
+								'Wyoming',
+							]}
+							id="clay-autocomplete-1"
+							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
+								loading: 'Loading...',
+								notFound: 'No results found',
+							}}
+							placeholder="Enter a US state name"
+						>
+							{(item) => (
+								<ClayAutocomplete.Item key={item}>
+									{item}
+								</ClayAutocomplete.Item>
+							)}
+						</ClayAutocomplete>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-);
-
-export const CustomItem = () => {
+	);
+}
+export function CustomItem() {
 	const [value, setValue] = useState('');
 
 	return (
@@ -234,6 +238,7 @@ export const CustomItem = () => {
 						>
 							Numbers (one-five)
 						</label>
+
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-2"
 							defaultItems={[
@@ -267,6 +272,7 @@ export const CustomItem = () => {
 												</TextHighlight>
 											</Text>
 										</Layout.ContentCol>
+
 										<Layout.ContentCol>
 											<Text size={2}>Description</Text>
 										</Layout.ContentCol>
@@ -279,15 +285,14 @@ export const CustomItem = () => {
 			</div>
 		</div>
 	);
-};
+}
 
 type RickandMorty = {
 	id: number;
 	name: string;
 	[key: string]: any;
 };
-
-export const AsyncFilter = () => {
+export function AsyncFilter() {
 	const [value, setValue] = useState('Magma-Q');
 
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
@@ -311,6 +316,7 @@ export const AsyncFilter = () => {
 						>
 							Name
 						</label>
+
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							filterKey="name"
@@ -341,15 +347,14 @@ export const AsyncFilter = () => {
 			</div>
 		</div>
 	);
-};
+}
 
 type RickandMortyNested = RickandMorty & {
 	nested: {
 		name: string;
 	};
 };
-
-export const NestedData = () => {
+export function NestedData() {
 	const [value, setValue] = useState('Morty Smith');
 
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
@@ -390,6 +395,7 @@ export const NestedData = () => {
 						>
 							Name
 						</label>
+
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							filterKey={(item: RickandMortyNested) =>
@@ -423,9 +429,8 @@ export const NestedData = () => {
 			</div>
 		</div>
 	);
-};
-
-export const Keyboard = () => {
+}
+export function Keyboard() {
 	const inputRef = useRef<HTMLInputElement | null>(null);
 	const [value, setValue] = useState('');
 	const [active, setActive] = useState(!!value);
@@ -444,6 +449,7 @@ export const Keyboard = () => {
 				<div className="sheet">
 					<div className="form-group">
 						<label>Numbers (one-five)</label>
+
 						<FocusScope>
 							<ClayAutocomplete>
 								<ClayAutocomplete.Input
@@ -477,9 +483,8 @@ export const Keyboard = () => {
 			</div>
 		</div>
 	);
-};
-
-export const AsyncData = () => {
+}
+export function AsyncData() {
 	const [value, setValue] = useState('');
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
 		NetworkStatus.Unused
@@ -501,6 +506,7 @@ export const AsyncData = () => {
 				<div className="sheet">
 					<div className="form-group">
 						<label>Name</label>
+
 						<ClayAutocomplete>
 							<ClayAutocomplete.Input
 								aria-label="Enter a name:"
@@ -552,6 +558,7 @@ export const AsyncData = () => {
 									/>
 								</DropDown.ItemList>
 							</ClayAutocomplete.DropDown>
+
 							{loading && <ClayAutocomplete.LoadingIndicator />}
 						</ClayAutocomplete>
 					</div>
@@ -559,9 +566,8 @@ export const AsyncData = () => {
 			</div>
 		</div>
 	);
-};
-
-export const CreationActionWithStaticRendering = () => {
+}
+export function CreationActionWithStaticRendering() {
 	const [value, setValue] = useState('');
 	const [items, setItems] = useState(['Small', 'Medium', 'Large']);
 
@@ -576,6 +582,7 @@ export const CreationActionWithStaticRendering = () => {
 						>
 							Tags
 						</label>
+
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							id="clay-autocomplete-1"
@@ -601,9 +608,8 @@ export const CreationActionWithStaticRendering = () => {
 			</div>
 		</div>
 	);
-};
-
-export const CreationActionWithDynamicRendering = () => {
+}
+export function CreationActionWithDynamicRendering() {
 	const [value, setValue] = useState('');
 
 	return (
@@ -617,6 +623,7 @@ export const CreationActionWithDynamicRendering = () => {
 						>
 							Tags
 						</label>
+
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							defaultItems={['Small', 'Medium', 'Large']}
@@ -640,9 +647,8 @@ export const CreationActionWithDynamicRendering = () => {
 			</div>
 		</div>
 	);
-};
-
-export const InfiniteScroll = () => {
+}
+export function InfiniteScroll() {
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
 		NetworkStatus.Unused
 	);
@@ -688,6 +694,7 @@ export const InfiniteScroll = () => {
 				<div className="sheet">
 					<div className="form-group">
 						<label>Name (with query)</label>
+
 						<ClayAutocomplete
 							loadingState={networkStatus}
 							onChange={setValueWithQuery}
@@ -705,6 +712,7 @@ export const InfiniteScroll = () => {
 
 					<div className="form-group">
 						<label>Name (without query)</label>
+
 						<ClayAutocomplete
 							loadingState={networkStatus}
 							onChange={setValueWithoutQuery}
@@ -723,4 +731,4 @@ export const InfiniteScroll = () => {
 			</div>
 		</div>
 	);
-};
+}

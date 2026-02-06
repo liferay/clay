@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -34,6 +34,7 @@ const defaultDeltas = [
 ];
 
 interface IDelta {
+
 	/**
 	 * Path or URL to be used for some SPA focused use cases.
 	 */
@@ -46,6 +47,7 @@ interface IDelta {
 }
 
 interface IProps extends React.ComponentProps<typeof PaginationBar> {
+
 	/**
 	 * Sets the currently active page (controlled).
 	 */
@@ -69,14 +71,14 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	alignmentPosition?: number | AlignPoints;
 
 	/**
-	 * Possible values of items per page.
-	 */
-	deltas?: Array<IDelta>;
-
-	/**
 	 * Sets the default active page (uncontrolled).
 	 */
 	defaultActive?: number;
+
+	/**
+	 * Possible values of items per page.
+	 */
+	deltas?: Array<IDelta>;
 
 	/**
 	 * Flag to disable ellipsis button
@@ -179,7 +181,7 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 
 Trigger.displayName = 'Trigger';
 
-export const ClayPaginationBarWithBasicItems = ({
+export function ClayPaginationBarWithBasicItems({
 	active,
 	activeDelta,
 	activePage,
@@ -199,11 +201,10 @@ export const ClayPaginationBarWithBasicItems = ({
 	spritemap,
 	totalItems,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	if (totalItems === 0) {
 		totalItems = 1;
 	}
-
 	const [internalActive, setActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
@@ -212,21 +213,16 @@ export const ClayPaginationBarWithBasicItems = ({
 		onChange: onActiveChange ?? onPageChange,
 		value: typeof active === 'undefined' ? activePage : active,
 	});
-
 	labels = {...DEFAULT_LABELS, ...labels};
-
 	if (!activeDelta) {
 		activeDelta = deltas[0]!.label;
 	}
-
 	const totalPages = Math.ceil(totalItems / activeDelta);
-
 	useEffect(() => {
 		if (internalActive > totalPages) {
 			setActive(1);
 		}
 	}, [totalPages]);
-
 	const ariaDescribedby = useId();
 
 	return (
@@ -281,4 +277,4 @@ export const ClayPaginationBarWithBasicItems = ({
 			/>
 		</PaginationBar>
 	);
-};
+}

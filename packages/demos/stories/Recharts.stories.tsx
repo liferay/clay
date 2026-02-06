@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayRadio, ClayRadioGroup} from '@clayui/form';
@@ -34,6 +34,7 @@ import {
 import {COLORS, ClayRechartsTooltip} from '../src/recharts';
 
 // Temporary hack until Recharts gets proper types exported
+
 const PolarAngleAxis = PolarAngleAxisTest as any;
 const ReferenceArea = ReferenceAreaTest as any;
 

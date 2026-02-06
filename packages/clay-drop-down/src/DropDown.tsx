@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {__NOT_PUBLIC_COLLECTION} from '@clayui/core';
@@ -37,17 +37,6 @@ interface IProps<T>
 		React.HTMLAttributes<HTMLDivElement | HTMLLIElement>,
 		'children'
 	> {
-	/**
-	 * Children content to render a dynamic or static content.
-	 */
-	children:
-		| React.ReactNode
-		| ((item: T, index?: number) => React.ReactElement);
-
-	/**
-	 * Property to render content with dynamic data.
-	 */
-	items?: Array<T>;
 
 	/**
 	 * Flag to indicate if the DropDown menu is active or not (controlled).
@@ -69,9 +58,11 @@ interface IProps<T>
 	alignmentPosition?: number | AlignPoints;
 
 	/**
-	 * HTML element tag that the container should render.
+	 * Children content to render a dynamic or static content.
 	 */
-	containerElement?: React.JSXElementConstructor<any> | 'div' | 'li';
+	children:
+		| React.ReactNode
+		| ((item: T, index?: number) => React.ReactElement);
 
 	/**
 	 * Flag that indicates whether to close DropDown when clicking on the item.
@@ -79,6 +70,11 @@ interface IProps<T>
 	closeOnClick?: boolean;
 
 	closeOnClickOutside?: boolean;
+
+	/**
+	 * HTML element tag that the container should render.
+	 */
+	containerElement?: React.JSXElementConstructor<any> | 'div' | 'li';
 
 	/**
 	 *  Property to set the default value of `active` (uncontrolled).
@@ -92,14 +88,19 @@ interface IProps<T>
 	filterKey?: string;
 
 	/**
+	 * Flag to indicate if menu contains icon symbols on the left side.
+	 */
+	hasLeftSymbols?: boolean;
+
+	/**
 	 * Flag to indicate if menu contains icon symbols on the right side.
 	 */
 	hasRightSymbols?: boolean;
 
 	/**
-	 * Flag to indicate if menu contains icon symbols on the left side.
+	 * Property to render content with dynamic data.
 	 */
-	hasLeftSymbols?: boolean;
+	items?: Array<T>;
 
 	/**
 	 * Prop to pass DOM element attributes to DropDown.Menu.
@@ -123,6 +124,11 @@ interface IProps<T>
 	menuWidth?: 'sm' | 'shrink' | 'full';
 
 	/**
+	 * Function for setting the offset of the menu from the trigger.
+	 */
+	offsetFn?: (points: AlignPoints) => [number, number];
+
+	/**
 	 * Callback for when the active state changes (controlled).
 	 *
 	 * This API is generally used in conjunction with `closeOnClickOutside=true`
@@ -132,19 +138,9 @@ interface IProps<T>
 	onActiveChange?: InternalDispatch<boolean>;
 
 	/**
-	 * Function for setting the offset of the menu from the trigger.
-	 */
-	offsetFn?: (points: AlignPoints) => [number, number];
-
-	/**
 	 * Flag indicating if the menu should be rendered lazily
 	 */
 	renderMenuOnClick?: boolean;
-
-	/**
-	 * Flag indicating if the caret icon should be displayed on the right side.
-	 */
-	triggerIcon?: string | null;
 
 	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
@@ -152,6 +148,11 @@ interface IProps<T>
 	trigger: React.ReactElement & {
 		ref?: (node: HTMLButtonElement | null) => void;
 	};
+
+	/**
+	 * Flag indicating if the caret icon should be displayed on the right side.
+	 */
+	triggerIcon?: string | null;
 }
 
 const List = React.forwardRef<
@@ -243,9 +244,11 @@ function DropDown<T>({
 				'aria-controls': ariaControls,
 				'aria-expanded': internalActive,
 				'aria-haspopup': 'true',
-				children:
+				'children':
 					React.isValidElement(trigger) &&
+
 					// @ts-ignore
+
 					trigger?.type.displayName === 'ClayButton' &&
 					triggerIcon ? (
 						<>
@@ -255,18 +258,20 @@ function DropDown<T>({
 					) : (
 						trigger.props.children
 					),
-				className: classNames(
+				'className': classNames(
 					'dropdown-toggle',
 					trigger.props.className
 				),
-				onClick: (event: React.MouseEvent<HTMLButtonElement>) => {
+				'onClick': (event: React.MouseEvent<HTMLButtonElement>) => {
 					if (trigger.props.onClick) {
 						trigger.props.onClick(event);
 					}
 
 					openMenu(!internalActive);
 				},
-				onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) => {
+				'onKeyDown': (
+					event: React.KeyboardEvent<HTMLButtonElement>
+				) => {
 					if (trigger.props.onKeyDown) {
 						trigger.props.onKeyDown(event);
 					}
@@ -297,9 +302,11 @@ function DropDown<T>({
 						event.preventDefault();
 					}
 				},
-				ref: (node: HTMLButtonElement) => {
+				'ref': (node: HTMLButtonElement) => {
 					triggerElementRef.current = node;
+
 					// Call the original ref, if any.
+
 					const {ref} = trigger;
 					if (typeof ref === 'function') {
 						ref(node);
@@ -357,11 +364,13 @@ function DropDown<T>({
 					<FocusMenu
 						condition={internalActive}
 						onRender={() => {
+
 							// After a few milliseconds querying the elements in the DOM
 							// inside the menu. This especially when the menu is not
 							// rendered yet only after the menu is opened, React needs
 							// to commit the changes to the DOM so that the elements are
 							// visible and we can move the focus.
+
 							setTimeout(() => {
 								const list = getFocusableList(menuElementRef);
 

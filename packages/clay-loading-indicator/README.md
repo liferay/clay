@@ -2,9 +2,9 @@
 
 The loading indicator shows the user that an external process, like a connection, is being executed.
 
--   [Documentation](https://clayui.com/docs/components/loading-indicator.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/loading-indicator.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

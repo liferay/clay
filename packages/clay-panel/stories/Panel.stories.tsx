@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayLabel from '@clayui/label';
@@ -22,25 +22,27 @@ export default {
 	component: ClayPanel,
 	title: 'Design System/Components/Panel',
 };
+export function Default(args: any) {
+	return (
+		<ClayPanel
+			displayTitle={args.displayTitle}
+			displayType={args.displayType}
+			size={args.size}
+		>
+			<ClayPanel.Header>Header!</ClayPanel.Header>
 
-export const Default = (args: any) => (
-	<ClayPanel
-		displayTitle={args.displayTitle}
-		displayType={args.displayType}
-		size={args.size}
-	>
-		<ClayPanel.Header>Header!</ClayPanel.Header>
-		<ClayPanel.Body>Body!</ClayPanel.Body>
-		<ClayPanel.Footer>Footer!</ClayPanel.Footer>
-	</ClayPanel>
-);
+			<ClayPanel.Body>Body!</ClayPanel.Body>
+
+			<ClayPanel.Footer>Footer!</ClayPanel.Footer>
+		</ClayPanel>
+	);
+}
 
 Default.args = {
 	displayTitle: 'Title',
 	displayType: undefined,
 };
-
-export const Collapsable = (args: any) => {
+export function Collapsable(args: any) {
 	const [expanded, setExpanded] = useState(true);
 
 	return (
@@ -53,7 +55,9 @@ export const Collapsable = (args: any) => {
 				size={args.size}
 			>
 				<ClayPanel.Header>Header!</ClayPanel.Header>
+
 				<ClayPanel.Body>Body!</ClayPanel.Body>
+
 				<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 			</ClayPanel>
 
@@ -73,44 +77,27 @@ export const Collapsable = (args: any) => {
 				size={args.size}
 			>
 				<ClayPanel.Header>Header!</ClayPanel.Header>
+
 				<ClayPanel.Body>Body!</ClayPanel.Body>
+
 				<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 			</ClayPanel>
 		</>
 	);
-};
+}
 
 Collapsable.args = {
 	displayTitle: 'Title',
 	displayType: undefined,
 	showCollapseIcon: true,
 };
-
-export const Groups = () => (
-	<ClayPanel.Group>
-		{['One', 'Two', 'Three'].map((item) => (
-			<ClayPanel
-				collapsable
-				displayTitle={item}
-				key={item}
-				showCollapseIcon
-			>
-				<ClayPanel.Body>
-					{`Here is some content inside for number ${item}`}
-				</ClayPanel.Body>
-			</ClayPanel>
-		))}
-	</ClayPanel.Group>
-);
-
-export const Sheet = (args: any) => (
-	<div className="sheet">
-		<ClayPanel.Group fluid={args.fluid}>
+export function Groups() {
+	return (
+		<ClayPanel.Group>
 			{['One', 'Two', 'Three'].map((item) => (
 				<ClayPanel
 					collapsable
 					displayTitle={item}
-					displayType="unstyled"
 					key={item}
 					showCollapseIcon
 				>
@@ -120,51 +107,83 @@ export const Sheet = (args: any) => (
 				</ClayPanel>
 			))}
 		</ClayPanel.Group>
-	</div>
-);
+	);
+}
+export function Sheet(args: any) {
+	return (
+		<div className="sheet">
+			<ClayPanel.Group fluid={args.fluid}>
+				{['One', 'Two', 'Three'].map((item) => (
+					<ClayPanel
+						collapsable
+						displayTitle={item}
+						displayType="unstyled"
+						key={item}
+						showCollapseIcon
+					>
+						<ClayPanel.Body>
+							{`Here is some content inside for number ${item}`}
+						</ClayPanel.Body>
+					</ClayPanel>
+				))}
+			</ClayPanel.Group>
+		</div>
+	);
+}
 
 Sheet.args = {
 	fluid: true,
 };
+export function CollapsableWithTitle(args: any) {
+	return (
+		<ClayPanel
+			collapsable
+			displayTitle={
+				<ClayPanel.Title>
+					<h3>Rule Name</h3>
 
-export const CollapsableWithTitle = (args: any) => (
-	<ClayPanel
-		collapsable
-		displayTitle={
-			<ClayPanel.Title>
-				<h3>Rule Name</h3>
-				<span>{'If field '}</span>
-				<ClayLabel displayType="success">Country</ClayLabel>
-				<ClayLabel>Is Equal To</ClayLabel>
-				<span>{'value '}</span>
-				<ClayLabel displayType="info">Brazil</ClayLabel>
-				<span>{'enable '}</span>
-				<ClayLabel displayType="success">State</ClayLabel>
-			</ClayPanel.Title>
-		}
-		displayType={args.displayType}
-		showCollapseIcon
-		size={args.size}
-	>
-		<ClayPanel.Header>Header!</ClayPanel.Header>
-		<ClayPanel.Body>Body!</ClayPanel.Body>
-		<ClayPanel.Footer>Footer!</ClayPanel.Footer>
-	</ClayPanel>
-);
+					<span>{'If field '}</span>
 
-export const Small = () => (
-	<ClayPanel.Group small>
-		{['One', 'Two', 'Three'].map((item) => (
-			<ClayPanel
-				collapsable
-				displayTitle={item}
-				key={item}
-				showCollapseIcon
-			>
-				<ClayPanel.Body>
-					{`Here is some content inside for number ${item}`}
-				</ClayPanel.Body>
-			</ClayPanel>
-		))}
-	</ClayPanel.Group>
-);
+					<ClayLabel displayType="success">Country</ClayLabel>
+
+					<ClayLabel>Is Equal To</ClayLabel>
+
+					<span>{'value '}</span>
+
+					<ClayLabel displayType="info">Brazil</ClayLabel>
+
+					<span>{'enable '}</span>
+
+					<ClayLabel displayType="success">State</ClayLabel>
+				</ClayPanel.Title>
+			}
+			displayType={args.displayType}
+			showCollapseIcon
+			size={args.size}
+		>
+			<ClayPanel.Header>Header!</ClayPanel.Header>
+
+			<ClayPanel.Body>Body!</ClayPanel.Body>
+
+			<ClayPanel.Footer>Footer!</ClayPanel.Footer>
+		</ClayPanel>
+	);
+}
+export function Small() {
+	return (
+		<ClayPanel.Group small>
+			{['One', 'Two', 'Three'].map((item) => (
+				<ClayPanel
+					collapsable
+					displayTitle={item}
+					key={item}
+					showCollapseIcon
+				>
+					<ClayPanel.Body>
+						{`Here is some content inside for number ${item}`}
+					</ClayPanel.Body>
+				</ClayPanel>
+			))}
+		</ClayPanel.Group>
+	);
+}

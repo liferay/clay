@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {useNavigation} from '@clayui/shared';
@@ -13,20 +13,23 @@ import {VerticalBarContext} from './context';
 import type {ICollectionProps} from '../collection';
 
 interface IProps<T> extends ICollectionProps<T, unknown> {
+
 	/**
 	 * Flag to determine which style the Bar will display.
 	 */
 	displayType?: 'light' | 'dark';
 }
 
-const List = ({
+function List({
 	children,
 	...otherProps
-}: React.HTMLAttributes<HTMLUListElement>) => (
-	<ul {...otherProps} className="tbar-nav">
-		{children}
-	</ul>
-);
+}: React.HTMLAttributes<HTMLUListElement>) {
+	return (
+		<ul {...otherProps} className="tbar-nav">
+			{children}
+		</ul>
+	);
+}
 
 export function Bar<T>({
 	children,

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -13,8 +13,7 @@ export default {
 	component: FocusTrap,
 	title: 'Design System/Components/FocusTrap',
 };
-
-export const Default = () => {
+export function Default() {
 	const [active, setActive] = useState(false);
 	const activateButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -33,7 +32,9 @@ export const Default = () => {
 				<FocusTrap active={active}>
 					<ClayCard className="mt-4 p-4">
 						<ClayButton displayType="link">Button 1</ClayButton>
+
 						<ClayButton displayType="link">Button 2</ClayButton>
+
 						<div className="mt-4">
 							<ClayButton onClick={() => setActive(false)}>
 								Leave trap
@@ -44,9 +45,8 @@ export const Default = () => {
 			)}
 		</>
 	);
-};
-
-export const FocusOnSpecificElement = () => {
+}
+export function FocusOnSpecificElement() {
 	const [active, setActive] = useState(false);
 	const activateButtonRef = useRef<HTMLButtonElement>(null);
 	const thirdButtonRef = useRef<HTMLButtonElement>(null);
@@ -66,10 +66,13 @@ export const FocusOnSpecificElement = () => {
 				<FocusTrap active={active} focusElementRef={thirdButtonRef}>
 					<ClayCard className="mt-4 p-4">
 						<ClayButton displayType="link">Button 1</ClayButton>
+
 						<ClayButton displayType="link">Button 2</ClayButton>
+
 						<ClayButton displayType="link" ref={thirdButtonRef}>
 							Button 3
 						</ClayButton>
+
 						<div className="mt-4">
 							<ClayButton onClick={() => setActive(false)}>
 								Leave trap
@@ -80,4 +83,4 @@ export const FocusOnSpecificElement = () => {
 			)}
 		</>
 	);
-};
+}

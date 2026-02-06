@@ -3,33 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.156.6](https://github.com/liferay/clay/compare/v3.156.0...v3.156.6) (2026-01-07)
-
-**Note:** Version bump only for package @clayui/localized-input
-
-## [3.156.3](https://github.com/liferay/clay/compare/v3.156.0...v3.156.3) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/localized-input
-
-## [3.156.2](https://github.com/liferay/clay/compare/v3.156.0...v3.156.2) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/localized-input
-
-## [3.156.1](https://github.com/liferay/clay/compare/v3.156.0...v3.156.1) (2025-12-22)
-
-**Note:** Version bump only for package @clayui/localized-input
-
 # [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-15)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
 
@@ -59,26 +43,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([4d9a36d](https://github.com/liferay/clay/commit/4d9a36dae4ebcb53fc25c0b3261b694cf49bf765))
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([4d9a36d](https://github.com/liferay/clay/commit/4d9a36dae4ebcb53fc25c0b3261b694cf49bf765))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/localized-input@3.142.0...@clayui/localized-input@3.142.2) (2025-08-13)
 
@@ -88,26 +72,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([4d9a36d](https://github.com/liferay/clay/commit/4d9a36dae4ebcb53fc25c0b3261b694cf49bf765))
+- **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([4d9a36d](https://github.com/liferay/clay/commit/4d9a36dae4ebcb53fc25c0b3261b694cf49bf765))
 
 ## 3.141.1 (2025-07-18)
 
 ### Reverts
 
--   Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([4cd7f1c](https://github.com/liferay/clay/commit/4cd7f1c0860cbdd1434f29ffda4c297801cbc34b))
--   Revert "chore(@clayui/localized-input): LPD-50722 SF" ([4d30415](https://github.com/liferay/clay/commit/4d30415aadfbcc8b6d14e670705a6fb9867042cd))
--   Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([64f5ae5](https://github.com/liferay/clay/commit/64f5ae57fa03faf53f97286de1dd82425020e87d))
--   Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([e976ac8](https://github.com/liferay/clay/commit/e976ac85c1f5de0df8afba7a589bb8791caaa85e))
+- Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([4cd7f1c](https://github.com/liferay/clay/commit/4cd7f1c0860cbdd1434f29ffda4c297801cbc34b))
+- Revert "chore(@clayui/localized-input): LPD-50722 SF" ([4d30415](https://github.com/liferay/clay/commit/4d30415aadfbcc8b6d14e670705a6fb9867042cd))
+- Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([64f5ae5](https://github.com/liferay/clay/commit/64f5ae57fa03faf53f97286de1dd82425020e87d))
+- Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([e976ac8](https://github.com/liferay/clay/commit/e976ac85c1f5de0df8afba7a589bb8791caaa85e))
 
 # 3.141.0 (2025-07-15)
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([4ed74ad](https://github.com/liferay/clay/commit/4ed74ade7a1feea0cebad55b8027e8e2f524f83f))
+- **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([4ed74ad](https://github.com/liferay/clay/commit/4ed74ade7a1feea0cebad55b8027e8e2f524f83f))
 
 ### Features
 
--   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([b6a8726](https://github.com/liferay/clay/commit/b6a8726392fcaf0a7ce6d07eb13a16e74d229544))
+- **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([b6a8726](https://github.com/liferay/clay/commit/b6a8726392fcaf0a7ce6d07eb13a16e74d229544))
 
 # 3.140.0 (2025-06-19)
 
@@ -115,21 +99,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([8d45148](https://github.com/liferay/clay/commit/8d45148882f99c246f6a0e2c8bf175eef33d076c))
--   Revert "chore(@clayui/localized-input): LPD-50722 SF" ([e8817d3](https://github.com/liferay/clay/commit/e8817d3c336dda51cbf6e232092b700888440499))
--   Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([564ffb6](https://github.com/liferay/clay/commit/564ffb61cb5531621384e545b439f81786e9f1cd))
--   Revert "chore(@clayui/core): LPD-50722 Add @clayui/tooltip to dependencies" ([183e5f1](https://github.com/liferay/clay/commit/183e5f186dfec323d9c276e58b0dbdb51259a9c2))
--   Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([69b7a22](https://github.com/liferay/clay/commit/69b7a22cdbe26befc77e336e7e97ace0c333aff0))
+- Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([8d45148](https://github.com/liferay/clay/commit/8d45148882f99c246f6a0e2c8bf175eef33d076c))
+- Revert "chore(@clayui/localized-input): LPD-50722 SF" ([e8817d3](https://github.com/liferay/clay/commit/e8817d3c336dda51cbf6e232092b700888440499))
+- Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([564ffb6](https://github.com/liferay/clay/commit/564ffb61cb5531621384e545b439f81786e9f1cd))
+- Revert "chore(@clayui/core): LPD-50722 Add @clayui/tooltip to dependencies" ([183e5f1](https://github.com/liferay/clay/commit/183e5f186dfec323d9c276e58b0dbdb51259a9c2))
+- Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([69b7a22](https://github.com/liferay/clay/commit/69b7a22cdbe26befc77e336e7e97ace0c333aff0))
 
 # 3.139.0 (2025-06-10)
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([59cca59](https://github.com/liferay/clay/commit/59cca59f9cb87acbd5c600be40db553c5f045849))
+- **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([59cca59](https://github.com/liferay/clay/commit/59cca59f9cb87acbd5c600be40db553c5f045849))
 
 ### Features
 
--   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([2d04fc5](https://github.com/liferay/clay/commit/2d04fc5085932149803837df6772adb0789d7ca0))
+- **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([2d04fc5](https://github.com/liferay/clay/commit/2d04fc5085932149803837df6772adb0789d7ca0))
 
 # 3.138.0 (2025-06-02)
 
@@ -137,11 +121,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** LPD-51801 Don't use ClayForm.Group ([8a5feb0](https://github.com/liferay/clay/commit/8a5feb0b979487fe456c0b29c162830dea50e2a0))
+- **@clayui/localized-input:** LPD-51801 Don't use ClayForm.Group ([8a5feb0](https://github.com/liferay/clay/commit/8a5feb0b979487fe456c0b29c162830dea50e2a0))
 
 ### Features
 
--   **@clayui/localized-input:** LPD-51801 use blockquote form-text for default language translation ([83343ad](https://github.com/liferay/clay/commit/83343ad37c97221c5c74191ab2460024768dbff6))
+- **@clayui/localized-input:** LPD-51801 use blockquote form-text for default language translation ([83343ad](https://github.com/liferay/clay/commit/83343ad37c97221c5c74191ab2460024768dbff6))
 
 # 3.136.0 (2025-05-03)
 
@@ -165,7 +149,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/localized-input:** improves component typing to create API Localized Input ([f5a9ceb](https://github.com/liferay/clay/commit/f5a9ceb240b244d61a91cc305750e27384752fb1))
+- **@clayui/localized-input:** improves component typing to create API Localized Input ([f5a9ceb](https://github.com/liferay/clay/commit/f5a9ceb240b244d61a91cc305750e27384752fb1))
 
 # 3.127.0 (2025-01-23)
 
@@ -177,7 +161,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "feat(@clayui/dropdown): LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed" ([7d9f443](https://github.com/liferay/clay/commit/7d9f443586d32b854953a24ae82318628e7a3676))
+- Revert "feat(@clayui/dropdown): LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed" ([7d9f443](https://github.com/liferay/clay/commit/7d9f443586d32b854953a24ae82318628e7a3676))
 
 # 3.123.0 (2024-11-21)
 
@@ -185,9 +169,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/dropdown:** LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed ([1805059](https://github.com/liferay/clay/commit/18050596e1599f15aeb5959e395360910cba0250))
--   **@clayui/dropdown:** LPD-41310 Adds caret icon only for trigger that is button ([aebf2f3](https://github.com/liferay/clay/commit/aebf2f3658851cdbb417da69d4376289b4702dd7))
--   **@clayui/dropdown:** LPD-41310 Update spanshots ([56dfcd7](https://github.com/liferay/clay/commit/56dfcd72015021861504e632294441a51c3b9d0b))
+- **@clayui/dropdown:** LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed ([1805059](https://github.com/liferay/clay/commit/18050596e1599f15aeb5959e395360910cba0250))
+- **@clayui/dropdown:** LPD-41310 Adds caret icon only for trigger that is button ([aebf2f3](https://github.com/liferay/clay/commit/aebf2f3658851cdbb417da69d4376289b4702dd7))
+- **@clayui/dropdown:** LPD-41310 Update spanshots ([56dfcd7](https://github.com/liferay/clay/commit/56dfcd72015021861504e632294441a51c3b9d0b))
 
 # 3.121.0 (2024-10-17)
 
@@ -229,8 +213,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.105.0 (2023-09-15)
 
@@ -354,19 +338,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
+- **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
 
 # 3.48.0 (2022-03-07)
 
 ### Features
 
--   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+- **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
 
 # 3.47.0 (2022-02-23)
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** fix typo ([7c2957f](https://github.com/liferay/clay/commit/7c2957f7e4d5272ab17cb99808df7e9fe8226790))
+- **@clayui/localized-input:** fix typo ([7c2957f](https://github.com/liferay/clay/commit/7c2957f7e4d5272ab17cb99808df7e9fe8226790))
 
 # 3.45.0 (2022-02-01)
 
@@ -412,20 +396,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([4cd7f1c](https://github.com/liferay/clay/commit/4cd7f1c0860cbdd1434f29ffda4c297801cbc34b))
--   Revert "chore(@clayui/localized-input): LPD-50722 SF" ([4d30415](https://github.com/liferay/clay/commit/4d30415aadfbcc8b6d14e670705a6fb9867042cd))
--   Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([64f5ae5](https://github.com/liferay/clay/commit/64f5ae57fa03faf53f97286de1dd82425020e87d))
--   Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([e976ac8](https://github.com/liferay/clay/commit/e976ac85c1f5de0df8afba7a589bb8791caaa85e))
+- Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([4cd7f1c](https://github.com/liferay/clay/commit/4cd7f1c0860cbdd1434f29ffda4c297801cbc34b))
+- Revert "chore(@clayui/localized-input): LPD-50722 SF" ([4d30415](https://github.com/liferay/clay/commit/4d30415aadfbcc8b6d14e670705a6fb9867042cd))
+- Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([64f5ae5](https://github.com/liferay/clay/commit/64f5ae57fa03faf53f97286de1dd82425020e87d))
+- Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([e976ac8](https://github.com/liferay/clay/commit/e976ac85c1f5de0df8afba7a589bb8791caaa85e))
 
 # [3.141.0](https://github.com/liferay/clay/compare/v3.140.0...v3.141.0) (2025-07-15)
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([4ed74ad](https://github.com/liferay/clay/commit/4ed74ade7a1feea0cebad55b8027e8e2f524f83f))
+- **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([4ed74ad](https://github.com/liferay/clay/commit/4ed74ade7a1feea0cebad55b8027e8e2f524f83f))
 
 ### Features
 
--   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([b6a8726](https://github.com/liferay/clay/commit/b6a8726392fcaf0a7ce6d07eb13a16e74d229544))
+- **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([b6a8726](https://github.com/liferay/clay/commit/b6a8726392fcaf0a7ce6d07eb13a16e74d229544))
 
 # [3.140.0](https://github.com/liferay/clay/compare/v3.139.1...v3.140.0) (2025-06-19)
 
@@ -435,31 +419,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([8d45148](https://github.com/liferay/clay/commit/8d45148882f99c246f6a0e2c8bf175eef33d076c))
--   Revert "chore(@clayui/localized-input): LPD-50722 SF" ([e8817d3](https://github.com/liferay/clay/commit/e8817d3c336dda51cbf6e232092b700888440499))
--   Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([564ffb6](https://github.com/liferay/clay/commit/564ffb61cb5531621384e545b439f81786e9f1cd))
--   Revert "chore(@clayui/core): LPD-50722 Add @clayui/tooltip to dependencies" ([183e5f1](https://github.com/liferay/clay/commit/183e5f186dfec323d9c276e58b0dbdb51259a9c2))
--   Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([69b7a22](https://github.com/liferay/clay/commit/69b7a22cdbe26befc77e336e7e97ace0c333aff0))
+- Revert "feat(@clayui/localized-input): LPD-50722 Use Language Picker for switching languages" ([8d45148](https://github.com/liferay/clay/commit/8d45148882f99c246f6a0e2c8bf175eef33d076c))
+- Revert "chore(@clayui/localized-input): LPD-50722 SF" ([e8817d3](https://github.com/liferay/clay/commit/e8817d3c336dda51cbf6e232092b700888440499))
+- Revert "fix(@clayui/localized-input): LPD-50722 LanguagePicker requires all messages to be declared" ([564ffb6](https://github.com/liferay/clay/commit/564ffb61cb5531621384e545b439f81786e9f1cd))
+- Revert "chore(@clayui/core): LPD-50722 Add @clayui/tooltip to dependencies" ([183e5f1](https://github.com/liferay/clay/commit/183e5f186dfec323d9c276e58b0dbdb51259a9c2))
+- Revert "chore(@clayui/localized-input): LPD-50722 Update tests" ([69b7a22](https://github.com/liferay/clay/commit/69b7a22cdbe26befc77e336e7e97ace0c333aff0))
 
 # [3.139.0](https://github.com/liferay/clay/compare/v3.138.0...v3.139.0) (2025-06-10)
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([59cca59](https://github.com/liferay/clay/commit/59cca59f9cb87acbd5c600be40db553c5f045849))
+- **@clayui/localized-input:** LPD-50722 LanguagePicker requires all messages to be declared ([59cca59](https://github.com/liferay/clay/commit/59cca59f9cb87acbd5c600be40db553c5f045849))
 
 ### Features
 
--   **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([2d04fc5](https://github.com/liferay/clay/commit/2d04fc5085932149803837df6772adb0789d7ca0))
+- **@clayui/localized-input:** LPD-50722 Use Language Picker for switching languages ([2d04fc5](https://github.com/liferay/clay/commit/2d04fc5085932149803837df6772adb0789d7ca0))
 
 # [3.138.0](https://github.com/liferay/clay/compare/v3.137.0...v3.138.0) (2025-06-02)
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** LPD-51801 Don't use ClayForm.Group ([8a5feb0](https://github.com/liferay/clay/commit/8a5feb0b979487fe456c0b29c162830dea50e2a0))
+- **@clayui/localized-input:** LPD-51801 Don't use ClayForm.Group ([8a5feb0](https://github.com/liferay/clay/commit/8a5feb0b979487fe456c0b29c162830dea50e2a0))
 
 ### Features
 
--   **@clayui/localized-input:** LPD-51801 use blockquote form-text for default language translation ([83343ad](https://github.com/liferay/clay/commit/83343ad37c97221c5c74191ab2460024768dbff6))
+- **@clayui/localized-input:** LPD-51801 use blockquote form-text for default language translation ([83343ad](https://github.com/liferay/clay/commit/83343ad37c97221c5c74191ab2460024768dbff6))
 
 # [3.137.0](https://github.com/liferay/clay/compare/v3.136.0...v3.137.0) (2025-05-30)
 
@@ -505,7 +489,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/localized-input:** improves component typing to create API Localized Input ([f5a9ceb](https://github.com/liferay/clay/commit/f5a9ceb240b244d61a91cc305750e27384752fb1))
+- **@clayui/localized-input:** improves component typing to create API Localized Input ([f5a9ceb](https://github.com/liferay/clay/commit/f5a9ceb240b244d61a91cc305750e27384752fb1))
 
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
@@ -523,7 +507,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "feat(@clayui/dropdown): LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed" ([7d9f443](https://github.com/liferay/clay/commit/7d9f443586d32b854953a24ae82318628e7a3676))
+- Revert "feat(@clayui/dropdown): LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed" ([7d9f443](https://github.com/liferay/clay/commit/7d9f443586d32b854953a24ae82318628e7a3676))
 
 # [3.123.0](https://github.com/liferay/clay/compare/v3.122.0...v3.123.0) (2024-11-21)
 
@@ -533,9 +517,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/dropdown:** LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed ([1805059](https://github.com/liferay/clay/commit/18050596e1599f15aeb5959e395360910cba0250))
--   **@clayui/dropdown:** LPD-41310 Adds caret icon only for trigger that is button ([aebf2f3](https://github.com/liferay/clay/commit/aebf2f3658851cdbb417da69d4376289b4702dd7))
--   **@clayui/dropdown:** LPD-41310 Update spanshots ([56dfcd7](https://github.com/liferay/clay/commit/56dfcd72015021861504e632294441a51c3b9d0b))
+- **@clayui/dropdown:** LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed ([1805059](https://github.com/liferay/clay/commit/18050596e1599f15aeb5959e395360910cba0250))
+- **@clayui/dropdown:** LPD-41310 Adds caret icon only for trigger that is button ([aebf2f3](https://github.com/liferay/clay/commit/aebf2f3658851cdbb417da69d4376289b4702dd7))
+- **@clayui/dropdown:** LPD-41310 Update spanshots ([56dfcd7](https://github.com/liferay/clay/commit/56dfcd72015021861504e632294441a51c3b9d0b))
 
 # [3.121.0](https://github.com/liferay/clay/compare/v3.120.0...v3.121.0) (2024-10-17)
 
@@ -613,8 +597,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
 
@@ -856,19 +840,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
+- **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
 
 # [3.48.0](https://github.com/liferay/clay/compare/v3.47.0...v3.48.0) (2022-03-07)
 
 ### Features
 
--   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+- **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
 
 # [3.47.0](https://github.com/liferay/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** fix typo ([7c2957f](https://github.com/liferay/clay/commit/7c2957f7e4d5272ab17cb99808df7e9fe8226790))
+- **@clayui/localized-input:** fix typo ([7c2957f](https://github.com/liferay/clay/commit/7c2957f7e4d5272ab17cb99808df7e9fe8226790))
 
 # [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
 
@@ -982,8 +966,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
--   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
 
 ## [3.1.8](https://github.com/liferay/clay/compare/@clayui/localized-input@3.1.7...@clayui/localized-input@3.1.8) (2020-08-28)
 
@@ -997,8 +981,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** Add separate state for the URL example and SF ([8d55a80](https://github.com/liferay/clay/commit/8d55a80))
--   **@clayui/localized-input:** Dropdown Item should use autofit pattern to position labels ([e6d8ff4](https://github.com/liferay/clay/commit/e6d8ff4))
+- **@clayui/localized-input:** Add separate state for the URL example and SF ([8d55a80](https://github.com/liferay/clay/commit/8d55a80))
+- **@clayui/localized-input:** Dropdown Item should use autofit pattern to position labels ([e6d8ff4](https://github.com/liferay/clay/commit/e6d8ff4))
 
 ## [3.1.5](https://github.com/liferay/clay/compare/@clayui/localized-input@3.1.4...@clayui/localized-input@3.1.5) (2020-08-11)
 
@@ -1024,15 +1008,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Improve component docs by updating content - Badge, Breadcrumb, Dual List Box, Loading Indicator, Localized Input & Multi Step Nav ([c4ad126](https://github.com/liferay/clay/commit/c4ad126))
+- **clayui.com:** Improve component docs by updating content - Badge, Breadcrumb, Dual List Box, Loading Indicator, Localized Input & Multi Step Nav ([c4ad126](https://github.com/liferay/clay/commit/c4ad126))
 
 # 3.0.0 (2020-04-24)
 
 ### Bug Fixes
 
--   **@clayui/localized-input:** Add missing spritemap value for Localized Input story ([5164f04](https://github.com/liferay/clay/commit/5164f04))
+- **@clayui/localized-input:** Add missing spritemap value for Localized Input story ([5164f04](https://github.com/liferay/clay/commit/5164f04))
 
 ### Features
 
--   **@clayui/localized-input:** create LocalizedInput component ([693293c](https://github.com/liferay/clay/commit/693293c))
--   move localized input docs to its respective package ([ab24cb8](https://github.com/liferay/clay/commit/ab24cb8))
+- **@clayui/localized-input:** create LocalizedInput component ([693293c](https://github.com/liferay/clay/commit/693293c))
+- move localized input docs to its respective package ([ab24cb8](https://github.com/liferay/clay/commit/ab24cb8))

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Icon from '@clayui/icon';
@@ -22,10 +22,6 @@ import {VerticalNavContext} from './context';
 import type {ChildrenFunction} from '../collection';
 
 type Props<T extends Record<string, any> | string> = {
-	/**
-	 * Flag to define which item has the active state/current page.
-	 */
-	active?: React.Key;
 
 	/**
 	 * Flag to indicate the navigation behavior in the menu.
@@ -34,7 +30,12 @@ type Props<T extends Record<string, any> | string> = {
 	 * by pressing space or enter.
 	 * - automatic - moves the focus to the menuitem and activates the menu.
 	 */
-	activation?: 'manual' | 'automatic';
+	'activation'?: 'manual' | 'automatic';
+
+	/**
+	 * Flag to define which item has the active state/current page.
+	 */
+	'active'?: React.Key;
 
 	/**
 	 * Flag to define aria-label.
@@ -44,66 +45,66 @@ type Props<T extends Record<string, any> | string> = {
 	/**
 	 * The component contents.
 	 */
-	children?: React.ReactNode | ChildrenFunction<T, null>;
-
-	/**
-	 * Determines the Vertical Nav variant to use.
-	 */
-	displayType?: null | 'primary';
+	'children'?: React.ReactNode | ChildrenFunction<T, null>;
 
 	/**
 	 * Flag to activate the Decorator variation.
 	 */
-	decorated?: boolean;
+	'decorated'?: boolean;
 
 	/**
 	 * Property to set the initial value of `expandedKeys` (uncontrolled).
 	 */
-	defaultExpandedKeys?: Set<React.Key>;
+	'defaultExpandedKeys'?: Set<React.Key>;
+
+	/**
+	 * Determines the Vertical Nav variant to use.
+	 */
+	'displayType'?: null | 'primary';
 
 	/**
 	 * The currently expanded keys in the collection (controlled).
 	 */
-	expandedKeys?: Set<React.Key>;
+	'expandedKeys'?: Set<React.Key>;
 
 	/**
 	 * Flag to define if the item represents the current page. Disable this
 	 * attribute only if there are multiple navigations on the page.
 	 */
-	itemAriaCurrent?: boolean;
+	'itemAriaCurrent'?: boolean;
 
 	/**
 	 * Property to inform the dynamic data of the tree.
 	 */
-	items?: Array<T>;
+	'items'?: Array<T>;
 
 	/**
 	 * Flag to indicate if `menubar-vertical-expand-lg` class is applied.
 	 */
-	large?: boolean;
+	'large'?: boolean;
 
 	/**
 	 * A callback that is called when items are expanded or collapsed
 	 * (controlled).
 	 */
-	onExpandedChange?: InternalDispatch<Set<React.Key>>;
+	'onExpandedChange'?: InternalDispatch<Set<React.Key>>;
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
 	 */
-	spritemap?: string;
+	'spritemap'?: string;
 
 	/**
 	 * Custom component that will be displayed on mobile resolutions that
 	 * toggles the visibility of the navigation.
 	 */
-	trigger?: typeof Trigger;
+	'trigger'?: typeof Trigger;
 
 	/**
 	 * Label of the button that appears on smaller resolutions to open the
 	 * vertical navigation.
 	 */
-	triggerLabel?: string;
+	'triggerLabel'?: string;
 };
 
 function depthActive<T extends Record<string, any>>(
@@ -125,8 +126,8 @@ function depthActive<T extends Record<string, any>>(
 function VerticalNav<T extends Record<string, any> | string>(
 	props: Props<T>
 ): JSX.Element & {
-	Trigger: typeof Trigger;
 	Item: typeof Item;
+	Trigger: typeof Trigger;
 };
 
 function VerticalNav<T extends Record<string, any> | string>({
@@ -137,13 +138,13 @@ function VerticalNav<T extends Record<string, any> | string>({
 	decorated,
 	displayType,
 	defaultExpandedKeys = new Set(),
-	expandedKeys: externalExpandedKeys,
-	itemAriaCurrent: ariaCurrent = true,
+	'expandedKeys': externalExpandedKeys,
+	'itemAriaCurrent': ariaCurrent = true,
 	items,
 	large,
 	onExpandedChange,
 	spritemap,
-	trigger: CustomTrigger = Trigger,
+	'trigger': CustomTrigger = Trigger,
 	triggerLabel = 'Menu',
 }: Props<T>) {
 	const [isOpen, setIsOpen] = useState(false);
@@ -165,7 +166,8 @@ function VerticalNav<T extends Record<string, any> | string>({
 
 			if (expanded.has(key)) {
 				expanded.delete(key);
-			} else {
+			}
+			else {
 				expanded.add(key);
 			}
 
@@ -222,6 +224,7 @@ function VerticalNav<T extends Record<string, any> | string>({
 		// Avoid collection list is obsolete because we have collection nesting
 		// which is not based on group primitive like Picker with groups
 		// or DropDown.
+
 		forceDeepRootUpdate: true,
 		items,
 		suppressTextValueWarning: false,
@@ -229,6 +232,7 @@ function VerticalNav<T extends Record<string, any> | string>({
 
 	// Checks if the `active` property exists in the items tree to maintain
 	// compatibility with the previous version.
+
 	const hasDepthActive = useMemo(() => {
 		if (typeof active !== 'undefined' || !items) {
 			return undefined;
@@ -251,8 +255,8 @@ function VerticalNav<T extends Record<string, any> | string>({
 						active && collection.hasItem(active)
 							? active
 							: hasDepthActive
-							? null
-							: undefined,
+								? null
+								: undefined,
 					ariaCurrent: ariaCurrent ? 'page' : null,
 					childrenRoot:
 						childrenRootRef as React.MutableRefObject<ChildrenFunction<

@@ -1,8 +1,10 @@
 ---
+
 title: Home
 heading: Clay CSS
 subHeading: A Web Implementation of Liferay's Experience Language
 navIndex: 0
+
 ---
 
 ### About
@@ -17,4 +19,5 @@ We are moving away from [Bootstrap 4's Utility System](http://getbootstrap.com/d
 - [https://github.com/liferay/clay/issues/381](https://github.com/liferay/clay/issues/381)
 
 ### Contributing
+
 If you would like to contribute to the project, view the source or file an issue, please visit the [GitHub repo](https://github.com/liferay/clay).

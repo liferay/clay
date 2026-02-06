@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Button from '@clayui/button';
@@ -55,6 +55,7 @@ enum FirstDayOfWeek {
 
 interface IProps
 	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
+
 	/**
 	 * Labels for the aria attributes
 	 */
@@ -231,8 +232,9 @@ const TIME_FORMAT = 'HH:mm';
 
 const TIME_FORMAT_12H = 'hh:mm aa';
 
-const normalizeTime = (date: Date) =>
-	setDate(date, {hours: 12, milliseconds: 0, minutes: 0, seconds: 0});
+function normalizeTime(date: Date) {
+	return setDate(date, {hours: 12, milliseconds: 0, minutes: 0, seconds: 0});
+}
 
 const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 	(
@@ -341,8 +343,10 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		 * Indicates the current month rendered on the screen.
 		 */
 		const [currentMonth, setCurrentMonth] = useState(() =>
+
 			// Normalize the date to always set noon to avoid time zone problems
 			// and to the 1st of the month.
+
 			setDate(daysSelected[0], {date: 1, ...DEFAULT_DATE_TIME})
 		);
 
@@ -418,6 +422,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 
 			// It is not necessary to update the weeks when the native
 			// date is enabled. Unnecessary rendering and processing.
+
 			if (!useNative) {
 				setWeeks(dateNormalized);
 			}
@@ -457,9 +462,11 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 			if (range) {
 				if (startDate.toString() !== endDate.toString()) {
 					newDaysSelected = [date, date];
-				} else if (date < startDate) {
+				}
+				else if (date < startDate) {
 					newDaysSelected = [date, endDate];
-				} else {
+				}
+				else {
 					newDaysSelected = [startDate, date];
 				}
 
@@ -473,7 +480,8 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 				if (newStartDate.getMonth() !== newEndDate.getMonth()) {
 					changeMonth(startDate);
 				}
-			} else {
+			}
+			else {
 				newDaysSelected = [date, date];
 
 				daysSelectedToString = formatDate(date, dateFormat);
@@ -503,7 +511,8 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 							use12Hours ? '--' : undefined
 						);
 					}
-				} else {
+				}
+				else {
 					const days = hasDaysSelected({
 						checkRangeYears: yearsCheck,
 						dateFormat,
@@ -524,10 +533,11 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 									? (formatDate(
 											startDate!,
 											'a'
-									  ) as Input['ampm'])
+										) as Input['ampm'])
 									: undefined
 							);
-						} else {
+						}
+						else {
 							changeMonth(startDate!);
 
 							setDaysSelected([startDate!, endDate!]);
@@ -576,7 +586,8 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 
 			if (range) {
 				dateFormatted = fromRangeToString(newDaysSelected, dateFormat);
-			} else if (time) {
+			}
+			else if (time) {
 				dateFormatted = `${formatDate(
 					currentDateTime,
 					dateFormat
@@ -587,7 +598,8 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 						? (formatDate(currentDateTime, 'a') as Input['ampm'])
 						: undefined
 				)}`;
-			} else {
+			}
+			else {
 				dateFormatted = formatDate(currentDateTime, dateFormat);
 			}
 
@@ -617,7 +629,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 						: formatDate(
 								setDate(day, {hours, minutes}),
 								`${dateFormat} ${TIME_FORMAT}`
-						  );
+							);
 
 				if (use12Hours) {
 					date += ` ${ampm}`;
@@ -645,7 +657,8 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 							year: currentMonth.getFullYear() + year,
 						})
 					);
-				} else {
+				}
+				else {
 					const date = setMonth(memoizedYears, month, currentMonth);
 
 					if (date) {
@@ -675,6 +688,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 								useNative={useNative}
 								value={internalValue}
 							/>
+
 							{!useNative && (
 								<ClayInput.GroupInsetItem after>
 									<Button
@@ -733,6 +747,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 									spritemap={spritemap}
 									years={memoizedYears}
 								/>
+
 								<div
 									{...calendarNavigation.gridProps}
 									className="date-picker-calendar-body"
@@ -749,6 +764,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 											/>
 										)}
 									</WeekdayHeader>
+
 									<DaysTable weeks={weeks}>
 										{({day, key}) => (
 											<DayNumber
@@ -766,6 +782,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 										)}
 									</DaysTable>
 								</div>
+
 								{(footerElement || time) && (
 									<div className="date-picker-calendar-footer">
 										{time && (
@@ -778,6 +795,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, IProps>(
 												use12Hours={use12Hours}
 											/>
 										)}
+
 										{!time &&
 											footerElement &&
 											React.Children.only(
@@ -844,7 +862,7 @@ function hasDaysSelected({
 
 	const isValidYear = checkRangeYears
 		? isYearWithinYears(startDate.getFullYear(), years) &&
-		  isYearWithinYears(endDate.getFullYear(), years)
+			isYearWithinYears(endDate.getFullYear(), years)
 		: true;
 
 	if (isValid(startDate) && isValid(endDate) && isValidYear) {

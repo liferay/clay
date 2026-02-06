@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React from 'react';
@@ -24,14 +24,15 @@ export default {
 	component: ClayBadge,
 	title: 'Design System/Components/Badge',
 };
-
-export const Default = (args: any) => (
-	<ClayBadge
-		displayType={args.displayType}
-		label={args.label}
-		translucent={args.translucent}
-	/>
-);
+export function Default(args: any) {
+	return (
+		<ClayBadge
+			displayType={args.displayType}
+			label={args.label}
+			translucent={args.translucent}
+		/>
+	);
+}
 
 Default.args = {
 	displayType: 'primary',

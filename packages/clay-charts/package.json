@@ -1,46 +1,36 @@
 {
-	"name": "@clayui/charts",
-	"version": "3.156.0",
-	"description": "React.js wrapper for D3 and billboard.js",
-	"main": "lib/cjs/index.js",
-	"module": "lib/esm/index.js",
-	"exports": {
-		".": {
-			"types": "./lib/index.d.ts",
-			"import": "./lib/esm/index.js",
-			"require": "./lib/cjs/index.js"
-		}
+	"browserslist": [
+		"extends browserslist-config-clay"
+	],
+	"dependencies": {
+		"billboard.js": "^1.8.0",
+		"classnames": "2.3.1",
+		"d3": "^5.9.2"
 	},
-	"types": "lib/index.d.ts",
-	"ts:main": "src/index.tsx",
+	"description": "React.js wrapper for D3 and billboard.js",
 	"files": [
 		"lib"
 	],
+	"keywords": [
+		"clay",
+		"react"
+	],
+	"main": "src/index.tsx",
+	"name": "@clayui/charts",
+	"peerDependencies": {
+		"@clayui/css": "*",
+		"react": "^16.0.0 || ^17.0.0 || ^18.0.0",
+		"react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
+	},
 	"scripts": {
-		"buildTypes": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"build": "yarn build:cjs && yarn build:esm",
 		"build:cjs": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib/cjs --extensions .ts,.tsx",
 		"build:esm": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib/esm --extensions .ts,.tsx --env-name esm",
+		"buildTypes": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"copySvg": "ncp src/svg lib/svg",
 		"prepublishOnly": "yarn sass && yarn build && yarn buildTypes && yarn copySvg",
 		"sass": "sass src/scss/main.scss lib/css/main.css --source-map",
 		"test": "jest --config ../../jest.config.js"
 	},
-	"keywords": [
-		"clay",
-		"react"
-	],
-	"dependencies": {
-		"billboard.js": "^1.8.0",
-		"classnames": "^2.2.6",
-		"d3": "^5.9.2"
-	},
-	"peerDependencies": {
-		"@clayui/css": "3.x",
-		"react": "^16.0.0 || ^17.0.0 || ^18.0.0",
-		"react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
-	},
-	"browserslist": [
-		"extends browserslist-config-clay"
-	]
+	"version": "3.156.0"
 }

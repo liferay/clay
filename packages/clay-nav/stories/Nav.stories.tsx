@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayIcon from '@clayui/icon';
@@ -20,6 +20,7 @@ const items = [
 				label: 'Nested1',
 			},
 		],
+
 		label: 'Home',
 	},
 	{
@@ -43,6 +44,7 @@ const items = [
 				label: 'Six',
 			},
 		],
+
 		label: 'Projects',
 	},
 	{
@@ -50,53 +52,59 @@ const items = [
 		label: 'Seven',
 	},
 ];
+export function Default() {
+	return (
+		<ClayNav>
+			<ClayNav.Item>
+				<ClayNav.Link active href="#">
+					Active
+				</ClayNav.Link>
+			</ClayNav.Item>
 
-export const Default = () => (
-	<ClayNav>
-		<ClayNav.Item>
-			<ClayNav.Link active href="#">
-				Active
-			</ClayNav.Link>
-		</ClayNav.Item>
-		<ClayNav.Item>
-			<ClayNav.Link href="#">Normal</ClayNav.Link>
-		</ClayNav.Item>
-		<ClayNav.Item>
-			<ClayNav.Link disabled href="#">
-				Disabled
-			</ClayNav.Link>
-		</ClayNav.Item>
-	</ClayNav>
-);
+			<ClayNav.Item>
+				<ClayNav.Link href="#">Normal</ClayNav.Link>
+			</ClayNav.Item>
 
-export const VerticalNav = (args: any) => (
-	<ClayVerticalNav
-		aria-label="vertical navbar"
-		items={items}
-		large={args.large}
-	/>
-);
+			<ClayNav.Item>
+				<ClayNav.Link disabled href="#">
+					Disabled
+				</ClayNav.Link>
+			</ClayNav.Item>
+		</ClayNav>
+	);
+}
+export function VerticalNav(args: any) {
+	return (
+		<ClayVerticalNav
+			aria-label="vertical navbar"
+			items={items}
+			large={args.large}
+		/>
+	);
+}
 
 VerticalNav.args = {
 	large: false,
 };
-
-export const CustomTrigger = () => (
-	<ClayVerticalNav
-		aria-label="vertical navbar"
-		items={items}
-		trigger={(props) => (
-			<ClayVerticalNav.Trigger {...props}>
-				<ClayIcon
-					focusable="false"
-					role="presentation"
-					symbol="ellipsis-v"
-				/>
-			</ClayVerticalNav.Trigger>
-		)}
-	/>
-);
-
-export const WithDecorator = () => (
-	<ClayVerticalNav aria-label="vertical navbar" decorated items={items} />
-);
+export function CustomTrigger() {
+	return (
+		<ClayVerticalNav
+			aria-label="vertical navbar"
+			items={items}
+			trigger={(props) => (
+				<ClayVerticalNav.Trigger {...props}>
+					<ClayIcon
+						focusable="false"
+						role="presentation"
+						symbol="ellipsis-v"
+					/>
+				</ClayVerticalNav.Trigger>
+			)}
+		/>
+	);
+}
+export function WithDecorator() {
+	return (
+		<ClayVerticalNav aria-label="vertical navbar" decorated items={items} />
+	);
+}

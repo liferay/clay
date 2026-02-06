@@ -3,10 +3,8 @@ import {
 	isFileSystemSource,
 	CompositeCollection,
 } from 'renoun/collections';
-import {Directory, isDirectory, isFile, withSchema} from 'renoun/file-system';
 import type {MDXContent, MDXHeadings} from 'renoun/mdx';
 import {z} from 'zod';
-
 const frontmatterSchema = z.object({
 	title: z.string(),
 	description: z.string(),
@@ -90,63 +88,26 @@ export const CSSDocumentsCollection = new Collection<ComponentDocumentsSchema>(
 	(slug) => import(`./docs/css/${slug}.mdx`)
 );
 
-const PATHS = [
-	'core',
-	'alert',
-	'form',
-	'autocomplete',
-	'badge',
-	'breadcrumb',
-	'button',
-	'card',
-	'color-picker',
-	'data-provider',
-	'date-picker',
-	'drop-down',
-	'empty-state',
-	'icon',
-	'label',
-	'layout',
-	'link',
-	'list',
-	'loading-indicator',
-	'localized-input',
-	'management-toolbar',
-	'modal',
-	'multi-select',
-	'multi-step-nav',
-	'nav',
-	'navigation-bar',
-	'pagination',
-	'pagination-bar',
-	'panel',
-	'popover',
-	'progress-bar',
-	'provider',
-	'slider',
-	'sticker',
-	'table',
-	'tabs',
-	'time-picker',
-	'toolbar',
-	'tooltip',
-	'upper-toolbar',
-];
+const IGNORE_LIST = [
+	'clay-charts'
+]
 
 export const ComponentDocumentsCollection =
 	new Collection<ComponentDocumentsSchema>(
 		{
 			filePattern: 'clay-*/docs/**/*.mdx',
-			baseDirectory: '../packages',
+			baseDirectory: '../',
 			basePath: 'components',
 			filter: (source) => {
 				const path = source.getEditPath();
+				
+				const ignored = IGNORE_LIST.find(ignore => path.includes(ignore))
 
-				return (
-					isFileSystemSource(source) &&
-					source.isFile() &&
-					PATHS.some((item) => path.includes(item))
-				);
+				if (ignored) {
+					return false;
+				}
+
+				return isFileSystemSource(source) && source.isFile();
 			},
 			schema: {
 				frontmatter: frontmatterSchema.parse,
@@ -156,7 +117,20 @@ export const ComponentDocumentsCollection =
 			},
 			tsConfigFilePath: './tsconfig.json',
 		},
-		(slug) => import(`../packages/${slug}.mdx`)
+		(slug) => {
+			const parts = slug.split('/');
+			const [packageName, ...pathParts] = parts;
+
+			if (packageName === 'clay-core') {
+				return import(`../clay-core/${pathParts.join('/')}.mdx`);
+			}
+
+			const normalizedPackageName = packageName.replace(/^clay-/, '');
+
+			return import(
+				`../clay-${normalizedPackageName}/${pathParts.join('/')}.mdx`
+			);
+		}
 	);
 
 export const AllCollection = new CompositeCollection(
@@ -165,29 +139,8 @@ export const AllCollection = new CompositeCollection(
 	CSSDocumentsCollection
 );
 
-type ComponentSchema = Record<string, React.ComponentType>;
-
-export const ComponentsCollection = new Directory({
-	path: '../packages/clay-core/src/table',
-	tsConfigPath: '../packages/tsconfig.json',
-	loaders: {
-		ts: withSchema<ComponentSchema>((path) =>
-			require(`../packages/clay-core/src/table/${path}.ts`)
-		),
-		tsx: withSchema<ComponentSchema>((path) =>
-			require(`../packages/clay-core/src/table/${path}.tsx`)
-		),
-	},
-	include: (entry) => {
-		if (isFile(entry, ['ts', 'tsx'])) {
-			const path = entry.getPath();
-
-			return PATHS.some((item) => path.includes(item));
-		}
-
-		return isDirectory(entry);
-	},
-});
+// ComponentsCollection moved to components-collection.ts to avoid webpack bundling issues
+// Import it from there only when needed for API reference generation
 
 export type AllCollection = typeof AllCollection;
 

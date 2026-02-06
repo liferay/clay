@@ -7,13 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
@@ -31,37 +31,37 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Bug Fixes
 
--   **data-provider:** fix types exported that are enums ([c85278e](https://github.com/liferay/clay/commit/c85278eb447aa578053c178ba3a9bf544a3c7526))
--   **data-provider:** remove checks on the DOM because it is unpredictable due to React 18 batch updating, we only want to assert that polling is working as expected so we can just use jest.advanceTimersByTime ([ef6e68a](https://github.com/liferay/clay/commit/ef6e68aa57aa03a088434c8998191990da80ccde))
--   **data-provider:** update exports and entry point ([8603947](https://github.com/liferay/clay/commit/8603947914ffb53b610ea23ca53a09146a2cad42))
+- **data-provider:** fix types exported that are enums ([c85278e](https://github.com/liferay/clay/commit/c85278eb447aa578053c178ba3a9bf544a3c7526))
+- **data-provider:** remove checks on the DOM because it is unpredictable due to React 18 batch updating, we only want to assert that polling is working as expected so we can just use jest.advanceTimersByTime ([ef6e68a](https://github.com/liferay/clay/commit/ef6e68aa57aa03a088434c8998191990da80ccde))
+- **data-provider:** update exports and entry point ([8603947](https://github.com/liferay/clay/commit/8603947914ffb53b610ea23ca53a09146a2cad42))
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/data-provider@3.3.10...@clayui/data-provider@3.142.0) (2025-08-01)
 
 ### Bug Fixes
 
--   **data-provider:** remove checks on the DOM because it is unpredictable due to React 18 batch updating, we only want to assert that polling is working as expected so we can just use jest.advanceTimersByTime ([ef6e68a](https://github.com/liferay/clay/commit/ef6e68aa57aa03a088434c8998191990da80ccde))
+- **data-provider:** remove checks on the DOM because it is unpredictable due to React 18 batch updating, we only want to assert that polling is working as expected so we can just use jest.advanceTimersByTime ([ef6e68a](https://github.com/liferay/clay/commit/ef6e68aa57aa03a088434c8998191990da80ccde))
 
 ## 3.141.1 (2025-07-18)
 
@@ -81,7 +81,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/data-provider:** improves component typing to create API DataProvider ([00ae6b8](https://github.com/liferay/clay/commit/00ae6b8d56f776a2638a1d5507ad1df9c7ca534f))
+- **@clayui/data-provider:** improves component typing to create API DataProvider ([00ae6b8](https://github.com/liferay/clay/commit/00ae6b8d56f776a2638a1d5507ad1df9c7ca534f))
 
 # 3.119.0 (2024-08-30)
 
@@ -103,12 +103,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 ### Features
 
--   **@clayui/data-provider:** adds sortable support ([a202306](https://github.com/liferay/clay/commit/a202306426b6bc5fa1d6b41bf3418d0a6f489b38))
+- **@clayui/data-provider:** adds sortable support ([a202306](https://github.com/liferay/clay/commit/a202306426b6bc5fa1d6b41bf3418d0a6f489b38))
 
 # 3.104.0 (2023-08-25)
 
@@ -166,12 +166,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** fix error when grouping data in refetch ([64cfa70](https://github.com/liferay/clay/commit/64cfa7071e07ca71d540664b36ff19b333b35054))
--   **@clayui/data-provider:** reset cursor when refetch without cache policy ([98e2ce3](https://github.com/liferay/clay/commit/98e2ce3fcc72486352ef97df3a2cdcb719cc1e1c))
+- **@clayui/data-provider:** fix error when grouping data in refetch ([64cfa70](https://github.com/liferay/clay/commit/64cfa7071e07ca71d540664b36ff19b333b35054))
+- **@clayui/data-provider:** reset cursor when refetch without cache policy ([98e2ce3](https://github.com/liferay/clay/commit/98e2ce3fcc72486352ef97df3a2cdcb719cc1e1c))
 
 ### Features
 
--   **@clayui/data-provider:** add `useResource` controlled AbortController ([146f53b](https://github.com/liferay/clay/commit/146f53b51bcd5dbb1a48a1ae9e573e6c4424a971))
+- **@clayui/data-provider:** add `useResource` controlled AbortController ([146f53b](https://github.com/liferay/clay/commit/146f53b51bcd5dbb1a48a1ae9e573e6c4424a971))
 
 ## 3.75.2 (2022-09-29)
 
@@ -181,19 +181,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** fixes error when not activating suspense ([a563a87](https://github.com/liferay/clay/commit/a563a872ffdaa9d825ba796ee2e99bb8c625b917))
+- **@clayui/data-provider:** fixes error when not activating suspense ([a563a87](https://github.com/liferay/clay/commit/a563a872ffdaa9d825ba796ee2e99bb8c625b917))
 
 # 3.72.0 (2022-09-05)
 
 ### Features
 
--   **@clayui/data-provider:** improves the creation of the unique identifier of the request ([c9e753c](https://github.com/liferay/clay/commit/c9e753c0a8531afd7a275b474c295bf86ec1cf61))
+- **@clayui/data-provider:** improves the creation of the unique identifier of the request ([c9e753c](https://github.com/liferay/clay/commit/c9e753c0a8531afd7a275b474c295bf86ec1cf61))
 
 # 3.71.0 (2022-08-30)
 
 ### Features
 
--   **@clayui/data-provider:** instantiates the DataClient locally if the Provider is not declared ([536dd34](https://github.com/liferay/clay/commit/536dd345759c88181dea19f59a71da3655d6f64a))
+- **@clayui/data-provider:** instantiates the DataClient locally if the Provider is not declared ([536dd34](https://github.com/liferay/clay/commit/536dd345759c88181dea19f59a71da3655d6f64a))
 
 ## 3.70.3 (2022-08-30)
 
@@ -201,19 +201,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** fixes error of not retrieving initial cache value when there are multiple instances for the same endpoint ([9a37620](https://github.com/liferay/clay/commit/9a376200153cdbd2dd4e61339dae3b9ac282443a))
+- **@clayui/data-provider:** fixes error of not retrieving initial cache value when there are multiple instances for the same endpoint ([9a37620](https://github.com/liferay/clay/commit/9a376200153cdbd2dd4e61339dae3b9ac282443a))
 
 # 3.70.0 (2022-08-23)
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** fix the tests ([71672be](https://github.com/liferay/clay/commit/71672bebe69e3dd62d005398b015e8422dade399))
+- **@clayui/data-provider:** fix the tests ([71672be](https://github.com/liferay/clay/commit/71672bebe69e3dd62d005398b015e8422dade399))
 
 ### Features
 
--   **@clayui/data-provider:** adds functionality to load paginated data ([b2acb27](https://github.com/liferay/clay/commit/b2acb2729939cbb7e23621987a9b95b4d4004bd4))
--   **@clayui/data-provider:** adds integration with React.Suspense and ErrorBoundary ([0c604fe](https://github.com/liferay/clay/commit/0c604fe9126133eab54423dba99962bb97e566e4))
--   **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
+- **@clayui/data-provider:** adds functionality to load paginated data ([b2acb27](https://github.com/liferay/clay/commit/b2acb2729939cbb7e23621987a9b95b4d4004bd4))
+- **@clayui/data-provider:** adds integration with React.Suspense and ErrorBoundary ([0c604fe](https://github.com/liferay/clay/commit/0c604fe9126133eab54423dba99962bb97e566e4))
+- **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
 
 # 3.69.0 (2022-08-16)
 
@@ -291,7 +291,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/data-provider:** improves component typing to create API DataProvider ([00ae6b8](https://github.com/liferay/clay/commit/00ae6b8d56f776a2638a1d5507ad1df9c7ca534f))
+- **@clayui/data-provider:** improves component typing to create API DataProvider ([00ae6b8](https://github.com/liferay/clay/commit/00ae6b8d56f776a2638a1d5507ad1df9c7ca534f))
 
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
@@ -329,12 +329,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 ### Features
 
--   **@clayui/data-provider:** adds sortable support ([a202306](https://github.com/liferay/clay/commit/a202306426b6bc5fa1d6b41bf3418d0a6f489b38))
+- **@clayui/data-provider:** adds sortable support ([a202306](https://github.com/liferay/clay/commit/a202306426b6bc5fa1d6b41bf3418d0a6f489b38))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
@@ -444,12 +444,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** fix error when grouping data in refetch ([64cfa70](https://github.com/liferay/clay/commit/64cfa7071e07ca71d540664b36ff19b333b35054))
--   **@clayui/data-provider:** reset cursor when refetch without cache policy ([98e2ce3](https://github.com/liferay/clay/commit/98e2ce3fcc72486352ef97df3a2cdcb719cc1e1c))
+- **@clayui/data-provider:** fix error when grouping data in refetch ([64cfa70](https://github.com/liferay/clay/commit/64cfa7071e07ca71d540664b36ff19b333b35054))
+- **@clayui/data-provider:** reset cursor when refetch without cache policy ([98e2ce3](https://github.com/liferay/clay/commit/98e2ce3fcc72486352ef97df3a2cdcb719cc1e1c))
 
 ### Features
 
--   **@clayui/data-provider:** add `useResource` controlled AbortController ([146f53b](https://github.com/liferay/clay/commit/146f53b51bcd5dbb1a48a1ae9e573e6c4424a971))
+- **@clayui/data-provider:** add `useResource` controlled AbortController ([146f53b](https://github.com/liferay/clay/commit/146f53b51bcd5dbb1a48a1ae9e573e6c4424a971))
 
 ## [3.75.2](https://github.com/liferay/clay/compare/v3.75.1...v3.75.2) (2022-09-29)
 
@@ -463,19 +463,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** fixes error when not activating suspense ([a563a87](https://github.com/liferay/clay/commit/a563a872ffdaa9d825ba796ee2e99bb8c625b917))
+- **@clayui/data-provider:** fixes error when not activating suspense ([a563a87](https://github.com/liferay/clay/commit/a563a872ffdaa9d825ba796ee2e99bb8c625b917))
 
 # [3.72.0](https://github.com/liferay/clay/compare/v3.71.0...v3.72.0) (2022-09-05)
 
 ### Features
 
--   **@clayui/data-provider:** improves the creation of the unique identifier of the request ([c9e753c](https://github.com/liferay/clay/commit/c9e753c0a8531afd7a275b474c295bf86ec1cf61))
+- **@clayui/data-provider:** improves the creation of the unique identifier of the request ([c9e753c](https://github.com/liferay/clay/commit/c9e753c0a8531afd7a275b474c295bf86ec1cf61))
 
 # [3.71.0](https://github.com/liferay/clay/compare/v3.70.3...v3.71.0) (2022-08-30)
 
 ### Features
 
--   **@clayui/data-provider:** instantiates the DataClient locally if the Provider is not declared ([536dd34](https://github.com/liferay/clay/commit/536dd345759c88181dea19f59a71da3655d6f64a))
+- **@clayui/data-provider:** instantiates the DataClient locally if the Provider is not declared ([536dd34](https://github.com/liferay/clay/commit/536dd345759c88181dea19f59a71da3655d6f64a))
 
 ## [3.70.3](https://github.com/liferay/clay/compare/v3.70.2...v3.70.3) (2022-08-30)
 
@@ -485,19 +485,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** fixes error of not retrieving initial cache value when there are multiple instances for the same endpoint ([9a37620](https://github.com/liferay/clay/commit/9a376200153cdbd2dd4e61339dae3b9ac282443a))
+- **@clayui/data-provider:** fixes error of not retrieving initial cache value when there are multiple instances for the same endpoint ([9a37620](https://github.com/liferay/clay/commit/9a376200153cdbd2dd4e61339dae3b9ac282443a))
 
 # [3.70.0](https://github.com/liferay/clay/compare/v3.69.0...v3.70.0) (2022-08-23)
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** fix the tests ([71672be](https://github.com/liferay/clay/commit/71672bebe69e3dd62d005398b015e8422dade399))
+- **@clayui/data-provider:** fix the tests ([71672be](https://github.com/liferay/clay/commit/71672bebe69e3dd62d005398b015e8422dade399))
 
 ### Features
 
--   **@clayui/data-provider:** adds functionality to load paginated data ([b2acb27](https://github.com/liferay/clay/commit/b2acb2729939cbb7e23621987a9b95b4d4004bd4))
--   **@clayui/data-provider:** adds integration with React.Suspense and ErrorBoundary ([0c604fe](https://github.com/liferay/clay/commit/0c604fe9126133eab54423dba99962bb97e566e4))
--   **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
+- **@clayui/data-provider:** adds functionality to load paginated data ([b2acb27](https://github.com/liferay/clay/commit/b2acb2729939cbb7e23621987a9b95b4d4004bd4))
+- **@clayui/data-provider:** adds integration with React.Suspense and ErrorBoundary ([0c604fe](https://github.com/liferay/clay/commit/0c604fe9126133eab54423dba99962bb97e566e4))
+- **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
 
 # [3.69.0](https://github.com/liferay/clay/compare/v3.68.0...v3.69.0) (2022-08-16)
 
@@ -627,19 +627,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** checks if the request body is read using request.bodyUsed ([315ada3](https://github.com/liferay/clay/commit/315ada3))
+- **@clayui/data-provider:** checks if the request body is read using request.bodyUsed ([315ada3](https://github.com/liferay/clay/commit/315ada3))
 
 ## [3.3.1](https://github.com/liferay/clay/compare/@clayui/data-provider@3.3.0...@clayui/data-provider@3.3.1) (2020-07-28)
 
 ### Bug Fixes
 
--   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+- update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
 
 # [3.3.0](https://github.com/liferay/clay/compare/@clayui/data-provider@3.2.1...@clayui/data-provider@3.3.0) (2020-07-14)
 
 ### Features
 
--   **@clayui/data-provider:** Adds the new fetcher API and deprecated the link behavior in accepting async function ([#3417](https://github.com/liferay/clay/issues/3417)) ([733a89f](https://github.com/liferay/clay/commit/733a89f))
+- **@clayui/data-provider:** Adds the new fetcher API and deprecated the link behavior in accepting async function ([#3417](https://github.com/liferay/clay/issues/3417)) ([733a89f](https://github.com/liferay/clay/commit/733a89f))
 
 ## [3.2.1](https://github.com/liferay/clay/compare/@clayui/data-provider@3.2.0...@clayui/data-provider@3.2.1) (2020-07-07)
 
@@ -649,46 +649,46 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Improve API docs - Make displayNames consistent ([5a33822](https://github.com/liferay/clay/commit/5a33822))
+- **clayui.com:** Improve API docs - Make displayNames consistent ([5a33822](https://github.com/liferay/clay/commit/5a33822))
 
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/data-provider@3.1.0...@clayui/data-provider@3.1.1) (2020-04-24)
 
 ### Bug Fixes
 
--   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+- Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
 
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** add LRUCache implementation ([e3794c4](https://github.com/liferay/clay/commit/e3794c4))
--   **@clayui/data-provider:** fix warning message ([eebfec4](https://github.com/liferay/clay/commit/eebfec4))
--   **@clayui/data-provider:** replace setInterval in favor of setTimeout and polling engine improvements ([a028394](https://github.com/liferay/clay/commit/a028394))
--   **clay-data-provider:** remove metal-uri dependency in favor of URL ([192a1c8](https://github.com/liferay/clay/commit/192a1c8))
--   **clay-data-provider:** use more explicit types in tests ([35fc37c](https://github.com/liferay/clay/commit/35fc37c))
--   **DataProvider:** export useResource hook ([22c9509](https://github.com/liferay/clay/commit/22c9509))
--   **DataProvider:** Make children required ([3c50e75](https://github.com/liferay/clay/commit/3c50e75))
--   **DataProvider:** stop giving error of no definition when generating the API in the documentation ([5fcf296](https://github.com/liferay/clay/commit/5fcf296))
--   **useResource:** Add firstRender reference to avoid two API fetch ([28ee861](https://github.com/liferay/clay/commit/28ee861))
--   **useResource:** Only check if the fetchOptions.method is GET if exits ([cb1be84](https://github.com/liferay/clay/commit/cb1be84))
--   add displayName to context for dev tools ([82e1e8c](https://github.com/liferay/clay/commit/82e1e8c))
--   Makes fetchRetry properties optional ([67f5b22](https://github.com/liferay/clay/commit/67f5b22))
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+- **@clayui/data-provider:** add LRUCache implementation ([e3794c4](https://github.com/liferay/clay/commit/e3794c4))
+- **@clayui/data-provider:** fix warning message ([eebfec4](https://github.com/liferay/clay/commit/eebfec4))
+- **@clayui/data-provider:** replace setInterval in favor of setTimeout and polling engine improvements ([a028394](https://github.com/liferay/clay/commit/a028394))
+- **clay-data-provider:** remove metal-uri dependency in favor of URL ([192a1c8](https://github.com/liferay/clay/commit/192a1c8))
+- **clay-data-provider:** use more explicit types in tests ([35fc37c](https://github.com/liferay/clay/commit/35fc37c))
+- **DataProvider:** export useResource hook ([22c9509](https://github.com/liferay/clay/commit/22c9509))
+- **DataProvider:** Make children required ([3c50e75](https://github.com/liferay/clay/commit/3c50e75))
+- **DataProvider:** stop giving error of no definition when generating the API in the documentation ([5fcf296](https://github.com/liferay/clay/commit/5fcf296))
+- **useResource:** Add firstRender reference to avoid two API fetch ([28ee861](https://github.com/liferay/clay/commit/28ee861))
+- **useResource:** Only check if the fetchOptions.method is GET if exits ([cb1be84](https://github.com/liferay/clay/commit/cb1be84))
+- add displayName to context for dev tools ([82e1e8c](https://github.com/liferay/clay/commit/82e1e8c))
+- Makes fetchRetry properties optional ([67f5b22](https://github.com/liferay/clay/commit/67f5b22))
+- update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
 
 ### Features
 
--   Add metal-uri and custom types ([ec6854e](https://github.com/liferay/clay/commit/ec6854e))
--   Create DataProvider component and useResource hook in React ([086c3c0](https://github.com/liferay/clay/commit/086c3c0))
--   Move useDebounce to clay-shared ([fcf1ceb](https://github.com/liferay/clay/commit/fcf1ceb))
--   update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
--   **@clayui/data-provider:** pass formatted variables when link is a function ([5fbbefc](https://github.com/liferay/clay/commit/5fbbefc))
+- Add metal-uri and custom types ([ec6854e](https://github.com/liferay/clay/commit/ec6854e))
+- Create DataProvider component and useResource hook in React ([086c3c0](https://github.com/liferay/clay/commit/086c3c0))
+- Move useDebounce to clay-shared ([fcf1ceb](https://github.com/liferay/clay/commit/fcf1ceb))
+- update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
+- **@clayui/data-provider:** pass formatted variables when link is a function ([5fbbefc](https://github.com/liferay/clay/commit/5fbbefc))
 
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-data-provider/compare/@clayui/data-provider@3.0.6...@clayui/data-provider@3.0.7) (2020-02-13)
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** fix warning message ([eebfec4](https://github.com/liferay/clay/commit/eebfec4))
--   **useResource:** Only check if the fetchOptions.method is GET if exits ([cb1be84](https://github.com/liferay/clay/commit/cb1be84))
+- **@clayui/data-provider:** fix warning message ([eebfec4](https://github.com/liferay/clay/commit/eebfec4))
+- **useResource:** Only check if the fetchOptions.method is GET if exits ([cb1be84](https://github.com/liferay/clay/commit/cb1be84))
 
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-data-provider/compare/@clayui/data-provider@3.0.3...@clayui/data-provider@3.0.6) (2020-01-31)
 
@@ -706,7 +706,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/data-provider:** replace setInterval in favor of setTimeout and polling engine improvements ([a028394](https://github.com/liferay/clay/commit/a028394))
+- **@clayui/data-provider:** replace setInterval in favor of setTimeout and polling engine improvements ([a028394](https://github.com/liferay/clay/commit/a028394))
 
 ## [3.0.2](https://github.com/liferay/clay/tree/master/packages/clay-data-provider/compare/@clayui/data-provider@3.0.1...@clayui/data-provider@3.0.2) (2019-11-01)
 

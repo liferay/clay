@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {useCallback, useEffect, useRef, useState} from 'react';
@@ -8,6 +8,7 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 import {Observer, ObserverType} from './types';
 
 type Props = {
+
 	/**
 	 * Set the default value of the state of the modal dialog.
 	 */
@@ -22,6 +23,7 @@ type Props = {
 };
 
 type Return = {
+
 	/**
 	 * Observer is an internal property that must be connected to the <ClayModal /> component.
 	 */
@@ -43,23 +45,18 @@ type Return = {
 	open: boolean;
 };
 
-const delay = (fn: Function) => {
+function delay(fn: Function) {
 	return setTimeout(() => {
 		fn();
 	}, 100);
-};
+}
 
 const modalOpenClassName = 'modal-open';
 
-export const useModal = ({
-	defaultOpen = false,
-	onClose,
-}: Props = {}): Return => {
+export function useModal({defaultOpen = false, onClose}: Props = {}): Return {
 	const [open, setOpen] = useState(defaultOpen);
-
 	const [visible, setVisible] = useState<[boolean, boolean]>([false, false]);
 	const timerIdRef = useRef<NodeJS.Timeout | null>(null);
-
 	const restoreTriggerRef = useRef<HTMLElement | null>(null);
 
 	/**
@@ -69,28 +66,23 @@ export const useModal = ({
 	const handleCloseModal = () => {
 		document.body.classList.remove(modalOpenClassName);
 		setVisible([false, true]);
-
 		timerIdRef.current = delay(() => {
 			if (onClose) {
 				onClose();
 			}
-
 			if (restoreTriggerRef.current) {
 				restoreTriggerRef.current.focus();
 				restoreTriggerRef.current = null;
 			}
-
 			setOpen(false);
 			setVisible([false, false]);
 		});
 	};
-
 	const handleOpenModal = () => {
 		document.body.classList.add(modalOpenClassName);
 		setOpen(true);
 		timerIdRef.current = delay(() => setVisible([true, true]));
 	};
-
 	const handleObserverDispatch = (
 		type: ObserverType,
 		payload: HTMLElement
@@ -109,19 +101,17 @@ export const useModal = ({
 				break;
 		}
 	};
-
 	const onOpenChange = useCallback((value: boolean) => {
 		if (value) {
 			handleOpenModal();
-		} else {
+		}
+		else {
 			handleCloseModal();
 		}
 	}, []);
-
 	useEffect(() => {
 		return () => {
 			document.body.classList.remove(modalOpenClassName);
-
 			if (timerIdRef.current) {
 				clearTimeout(timerIdRef.current);
 			}
@@ -137,4 +127,4 @@ export const useModal = ({
 		onOpenChange,
 		open,
 	};
-};
+}

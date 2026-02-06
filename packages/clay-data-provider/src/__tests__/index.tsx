@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 /* global fetchMock*/
@@ -21,9 +21,11 @@ describe('ClayDataProvider', () => {
 	// https://github.com/testing-library/react/issues/281
 	// eslint-disable-next-line no-console
 	const originalError = console.error;
+
 	// eslint-disable-next-line no-console
 	const originalWarn = console.warn;
 	beforeAll(() => {
+
 		// eslint-disable-next-line no-console
 		console.error = (...args: any) => {
 			if (
@@ -34,6 +36,7 @@ describe('ClayDataProvider', () => {
 			}
 			originalError.call(console, ...args);
 		};
+
 		// eslint-disable-next-line no-console
 		console.warn = (...args: any) => {
 			if (/DataProvider: Trying/.test(args[0])) {
@@ -44,8 +47,10 @@ describe('ClayDataProvider', () => {
 	});
 
 	afterAll(() => {
+
 		// eslint-disable-next-line no-console
 		console.error = originalError;
+
 		// eslint-disable-next-line no-console
 		console.warn = originalWarn;
 	});
@@ -606,7 +611,8 @@ describe('ClayDataProvider', () => {
 
 						if (cmd['/foo/query']) {
 							resolve(JSON.stringify([{name: 'Foo'}]));
-						} else if (cmd['/bar/query']) {
+						}
+						else if (cmd['/bar/query']) {
 							resolve(JSON.stringify([{name: 'Baz'}]));
 						}
 					}, reject)

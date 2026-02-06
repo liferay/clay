@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
@@ -16,6 +16,7 @@ import ClayCard from './Card';
 import type {ButtonWithIconProps} from '@clayui/button';
 
 interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * List of actions in the dropdown menu
 	 */
@@ -79,6 +80,11 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	stickerTitle?: string;
 
 	/**
+	 * Flag to indicate if the card text is truncated
+	 */
+	truncate?: boolean;
+
+	/**
 	 * Displays the color of the user icon
 	 */
 	userDisplayType?: IClayStickerProps['displayType'];
@@ -97,11 +103,6 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Icon name to use for user avatar
 	 */
 	userSymbol?: string;
-
-	/**
-	 * Flag to indicate if the card text is truncated
-	 */
-	truncate?: boolean;
 }
 
 /**
@@ -121,7 +122,7 @@ type RadioProps = {
 	selectableType: 'radio';
 };
 
-export const ClayCardWithUser = ({
+export function ClayCardWithUser({
 	'aria-label': ariaLabel,
 	actions,
 	checkboxProps = {},
@@ -144,7 +145,7 @@ export const ClayCardWithUser = ({
 	userSymbol = 'user',
 	truncate = true,
 	...otherProps
-}: IProps & (RadioProps | CheckboxProps)) => {
+}: IProps & (RadioProps | CheckboxProps)) {
 	const content = (
 		<div className="aspect-ratio-item-center-middle card-type-asset-icon">
 			<ClaySticker
@@ -156,6 +157,7 @@ export const ClayCardWithUser = ({
 				{userImageSrc && (
 					<ClaySticker.Image alt={userImageAlt} src={userImageSrc} />
 				)}
+
 				{!userImageSrc && (
 					<ClayIcon spritemap={spritemap} symbol={userSymbol} />
 				)}
@@ -242,4 +244,4 @@ export const ClayCardWithUser = ({
 			</ClayCard.Body>
 		</ClayCard>
 	);
-};
+}

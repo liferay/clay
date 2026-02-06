@@ -114,7 +114,8 @@ async function main() {
 
 			process.exit(1);
 		}
-	} else {
+	}
+	else {
 		fs.writeFileSync(
 			path.join(TEMP_DIR, '/.esbuild-ci-build.json'),
 			JSON.stringify(packageStats)

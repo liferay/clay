@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -17,6 +17,7 @@ type DisplayType =
 	| 'beta-dark';
 
 interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
+
 	/**
 	 * Flag to indicate if the badge should use the clay-dark variant.
 	 */
@@ -55,7 +56,8 @@ const Badge = React.forwardRef<HTMLSpanElement, IProps>(
 		if (displayType === 'beta') {
 			displayType = 'info';
 			translucent = true;
-		} else if (displayType === 'beta-dark') {
+		}
+		else if (displayType === 'beta-dark') {
 			dark = true;
 			displayType = 'info';
 			translucent = true;

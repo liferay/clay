@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
@@ -15,6 +15,7 @@ import {Nav} from '../nav';
 import {useVertical} from './context';
 
 interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
+
 	/**
 	 * Flag to indicate if item is active.
 	 * @deprecated since version 3.94.0 - use the `active` property on the
@@ -31,6 +32,17 @@ interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	 * Link href for item.
 	 */
 	href?: string;
+
+	/**
+	 * @ignore
+	 */
+	index?: number;
+
+	/**
+	 * @ignore
+	 * @deprecated
+	 */
+	initialExpanded?: boolean;
 
 	/**
 	 * Property to inform the dynamic data of the tree.
@@ -51,17 +63,6 @@ interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	 * @ignore
 	 */
 	textValue?: string;
-
-	/**
-	 * @ignore
-	 */
-	index?: number;
-
-	/**
-	 * @ignore
-	 * @deprecated
-	 */
-	initialExpanded?: boolean;
 }
 
 function findSelectedNested<T extends object>(items: Array<T>): T | undefined {
@@ -117,6 +118,7 @@ export function Item<T extends Record<string, any>>({
 
 	// State only for compatibility with the old compositing version where state
 	// was kept on each Item instead of centralized with `expandedKeys`.
+
 	const [expanded, setExpanded] = useState(initialExpanded);
 	const isOldVersion = typeof initialExpanded !== 'undefined';
 
@@ -156,7 +158,8 @@ export function Item<T extends Record<string, any>>({
 
 					if (isOldVersion) {
 						setExpanded(!expanded);
-					} else {
+					}
+					else {
 						toggle(keyValue!);
 					}
 				}}
@@ -166,10 +169,12 @@ export function Item<T extends Record<string, any>>({
 							if (items && !isExpanded) {
 								if (isOldVersion) {
 									setExpanded(true);
-								} else {
+								}
+								else {
 									open(keyValue!);
 								}
-							} else if (items && menusRef.current) {
+							}
+							else if (items && menusRef.current) {
 								const firstItemElement =
 									menusRef.current.querySelector<HTMLElement>(
 										'.nav-link:not([disabled])'
@@ -182,10 +187,12 @@ export function Item<T extends Record<string, any>>({
 							if (items && isExpanded) {
 								if (isOldVersion) {
 									setExpanded(false);
-								} else {
+								}
+								else {
 									close(keyValue!);
 								}
-							} else if (!items && parentItemRef) {
+							}
+							else if (!items && parentItemRef) {
 								parentItemRef.current?.focus();
 							}
 							break;

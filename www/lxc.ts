@@ -24,9 +24,11 @@ async function fetchLiferay(slug: string, siteId: string, host: string) {
 		throw new Error('Error calling Liferay fetch.', {
 			cause: new Error(error),
 		});
-	} else if (response.ok && responseContentType === 'application/json') {
+	}
+	else if (response.ok && responseContentType === 'application/json') {
 		return response.json();
-	} else {
+	}
+	else {
 		const data = await response.text();
 
 		return data;
@@ -73,7 +75,8 @@ async function getResource(siteId: string, host: string) {
 
 							if (element.tagName === 'IMG') {
 								element.setAttribute('src', url);
-							} else {
+							}
+							else {
 								element.setAttribute('srcset', url);
 							}
 						}
@@ -91,7 +94,8 @@ async function getResource(siteId: string, host: string) {
 					};
 				})
 		);
-	} catch (error) {
+	}
+	catch (error) {
 		return [];
 	}
 }

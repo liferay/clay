@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {Key, useCallback, useContext} from 'react';
@@ -9,8 +9,8 @@ import type {ChildrenFunction} from './Collection';
 import type {ITreeState} from './useTree';
 
 export type Icons = {
-	open: React.ReactElement;
 	close: React.ReactElement;
+	open: React.ReactElement;
 };
 
 type LoadMoreCursor = {
@@ -37,11 +37,11 @@ export interface ITreeViewContext<T extends Record<string, any>>
 	expanderClassName?: string;
 	expanderIcons?: Icons;
 	nestedKey?: string;
-	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
 	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
+	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
 	onLoadMore?: OnLoadMore<T>;
-	onSelect?: (item: T) => void;
 	onRenameItem?: (item: T) => Promise<any>;
+	onSelect?: (item: T) => void;
 	rootRef: React.RefObject<HTMLUListElement>;
 	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
 	showExpanderOnHover?: boolean;
@@ -56,18 +56,18 @@ export function useTreeViewContext(): ITreeViewContext<Record<string, any>> {
 }
 
 type SelectionToggleOptions = {
-	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
 	parentSelection?: boolean;
+	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
 };
 
 export type Selection = {
-	toggle: (key: Key, options?: SelectionToggleOptions) => void;
 	has: (key: Key) => boolean;
+	toggle: (key: Key, options?: SelectionToggleOptions) => void;
 };
 
 export type Expand = {
-	toggle: (key: Key) => void;
 	has: (key: Key) => boolean;
+	toggle: (key: Key) => void;
 };
 
 export type LoadMore = {
@@ -120,7 +120,8 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 						if (willToggle) {
 							toggle(id);
 						}
-					} else if (items.items) {
+					}
+					else if (items.items) {
 						cursors.current.set(id, items.cursor);
 						insert([...layoutItem.loc, 0], items.items);
 

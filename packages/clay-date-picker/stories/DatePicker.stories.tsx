@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -15,7 +15,7 @@ export default {
 	title: 'Design System/Components/DatePicker',
 };
 
-const ClayDatePickerWithState = (props: {[key: string]: any}) => {
+function ClayDatePickerWithState(props: {[key: string]: any}) {
 	const [value, setValue] = useState<string>('');
 
 	return (
@@ -24,15 +24,15 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 				Date Picker
 				<ClayForm.HelpText>(Not Localizable)</ClayForm.HelpText>
 			</label>
+
 			<ClayForm.FeedbackGroup>
 				<ClayForm.HelpText>Help Text</ClayForm.HelpText>
 			</ClayForm.FeedbackGroup>
+
 			<ClayDatePicker
 				{...props}
 				ariaLabels={{
-					buttonChooseDate: `Choose Date, selected date is ${
-						value.toLocaleString() ?? value
-					}`,
+					buttonChooseDate: `Choose Date, selected date is ${value.toLocaleString() ?? value}`,
 					buttonDot: 'Go to today',
 					buttonNextMonth: 'Next month',
 					buttonPreviousMonth: 'Previous month',
@@ -48,6 +48,7 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 				onChange={setValue}
 				value={value}
 			/>
+
 			<ClayForm.FeedbackGroup>
 				<ClayForm.BlockquoteText>
 					Date to localize
@@ -55,76 +56,79 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 			</ClayForm.FeedbackGroup>
 		</ClayForm.Group>
 	);
-};
-
-export const Default = () => (
-	<ClayDatePickerWithState
-		placeholder="YYYY-MM-DD"
-		years={{
-			end: new Date().getFullYear(),
-			start: 1998,
-		}}
-	/>
-);
-
-export const Disabled = () => (
-	<ClayDatePickerWithState
-		disabled
-		placeholder="YYYY-MM-DD"
-		years={{
-			end: new Date().getFullYear(),
-			start: 1998,
-		}}
-	/>
-);
-
-export const Time = (args: any) => (
-	<ClayDatePickerWithState
-		placeholder={`YYYY-MM-DD --:-- ${args.use12Hours ? '--' : ''}`}
-		time
-		timezone="GMT+01:00"
-		use12Hours={args.use12Hours}
-		years={{
-			end: new Date().getFullYear(),
-			start: 1998,
-		}}
-	/>
-);
+}
+export function Default() {
+	return (
+		<ClayDatePickerWithState
+			placeholder="YYYY-MM-DD"
+			years={{
+				end: new Date().getFullYear(),
+				start: 1998,
+			}}
+		/>
+	);
+}
+export function Disabled() {
+	return (
+		<ClayDatePickerWithState
+			disabled
+			placeholder="YYYY-MM-DD"
+			years={{
+				end: new Date().getFullYear(),
+				start: 1998,
+			}}
+		/>
+	);
+}
+export function Time(args: any) {
+	return (
+		<ClayDatePickerWithState
+			placeholder={`YYYY-MM-DD --:-- ${args.use12Hours ? '--' : ''}`}
+			time
+			timezone="GMT+01:00"
+			use12Hours={args.use12Hours}
+			years={{
+				end: new Date().getFullYear(),
+				start: 1998,
+			}}
+		/>
+	);
+}
 
 Time.args = {
 	use12Hours: false,
 };
-
-export const Locale = () => (
-	<ClayDatePickerWithState
-		dateFormat="dd.MM.yyyy"
-		firstDayOfWeek={FirstDayOfWeek.Monday}
-		months={[
-			'Январь',
-			'Февраль',
-			'Март',
-			'Апрель',
-			'Май',
-			'Июнь',
-			'Июль',
-			'Август',
-			'Сентябрь',
-			'Октябрь',
-			'Ноябрь',
-			'Декабрь',
-		]}
-		placeholder="YYYY-MM-DD HH:mm"
-		time
-		timezone="GMT+03:00"
-		weekdaysShort={['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']}
-		years={{
-			end: new Date().getFullYear(),
-			start: 1998,
-		}}
-	/>
-);
-
-export const CustomExpand = () => {
+export function Locale() {
+	return (
+		<ClayDatePickerWithState
+			dateFormat="dd.MM.yyyy"
+			firstDayOfWeek={FirstDayOfWeek.Monday}
+			months={[
+				'Январь',
+				'Февраль',
+				'Март',
+				'Апрель',
+				'Май',
+				'Июнь',
+				'Июль',
+				'Август',
+				'Сентябрь',
+				'Октябрь',
+				'Ноябрь',
+				'Декабрь',
+			]}
+			placeholder="YYYY-MM-DD HH:mm"
+			time
+			timezone="GMT+03:00"
+			weekdaysShort={['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']}
+			years={{
+				end: new Date().getFullYear(),
+				start: 1998,
+			}}
+		/>
+	);
+}
+export function CustomExpand() {
 	const [expanded, setExpanded] = useState(false);
 	const [value, setValue] = useState<string>('');
 
@@ -157,25 +161,24 @@ export const CustomExpand = () => {
 			/>
 		</>
 	);
-};
-
-export const Native = () => (
-	<ClayDatePickerWithState placeholder="YYYY-MM-DD" useNative />
-);
-
-export const DateRange = () => (
-	<ClayDatePickerWithState
-		dateFormat="yyyy/MM/dd"
-		placeholder="YYYY/MM/DD - YYYY/MM/DD"
-		range
-		years={{
-			end: new Date().getFullYear(),
-			start: 1998,
-		}}
-	/>
-);
-
-export const DynamicYears = () => {
+}
+export function Native() {
+	return <ClayDatePickerWithState placeholder="YYYY-MM-DD" useNative />;
+}
+export function DateRange() {
+	return (
+		<ClayDatePickerWithState
+			dateFormat="yyyy/MM/dd"
+			placeholder="YYYY/MM/DD - YYYY/MM/DD"
+			range
+			years={{
+				end: new Date().getFullYear(),
+				start: 1998,
+			}}
+		/>
+	);
+}
+export function DynamicYears() {
 	const [value, setValue] = useState<string>('');
 
 	const initialMonthRef = useRef(new Date());
@@ -195,6 +198,7 @@ export const DynamicYears = () => {
 				buttonChooseDate: `Choose Date, selected date is ${
 					value.toLocaleString() ?? value
 				}`,
+
 				buttonDot: 'Go to today',
 				buttonNextMonth: 'Next month',
 				buttonPreviousMonth: 'Previous month',
@@ -236,43 +240,46 @@ export const DynamicYears = () => {
 			yearsCheck={false}
 		/>
 	);
-};
+}
+export function InDropdownMenu() {
+	return (
+		<>
+			<ClayDatePickerWithState
+				placeholder="YYYY-MM-DD"
+				years={{
+					end: new Date().getFullYear(),
+					start: 1998,
+				}}
+			/>
 
-export const InDropdownMenu = () => (
-	<>
-		<ClayDatePickerWithState
-			placeholder="YYYY-MM-DD"
-			years={{
-				end: new Date().getFullYear(),
-				start: 1998,
-			}}
-		/>
-		<ClayDropDown
-			alignmentPosition={Align.BottomLeft}
-			trigger={
-				<ClayButton>
-					Open this and the Date Picker Menu first
-				</ClayButton>
-			}
-			triggerIcon="caret-bottom"
-		>
-			<ClayDropDown.ItemList>
-				<ClayDropDown.Section>
-					<ClayDatePickerWithState
-						placeholder="YYYY-MM-DD"
-						years={{
-							end: new Date().getFullYear(),
-							start: 1998,
-						}}
-					/>
-				</ClayDropDown.Section>
-			</ClayDropDown.ItemList>
-		</ClayDropDown>
-		<ClayDropDown trigger={<ClayButton>second dropdown</ClayButton>}>
-			<ClayDropDown.Item onClick={() => alert('it worked!')}>
-				This should be clickable but isn't due to aria-hidden plugin not
-				working when using a mix of hideOthers and suppressOthers
-			</ClayDropDown.Item>
-		</ClayDropDown>
-	</>
-);
+			<ClayDropDown
+				alignmentPosition={Align.BottomLeft}
+				trigger={
+					<ClayButton>
+						Open this and the Date Picker Menu first
+					</ClayButton>
+				}
+				triggerIcon="caret-bottom"
+			>
+				<ClayDropDown.ItemList>
+					<ClayDropDown.Section>
+						<ClayDatePickerWithState
+							placeholder="YYYY-MM-DD"
+							years={{
+								end: new Date().getFullYear(),
+								start: 1998,
+							}}
+						/>
+					</ClayDropDown.Section>
+				</ClayDropDown.ItemList>
+			</ClayDropDown>
+			<ClayDropDown trigger={<ClayButton>second dropdown</ClayButton>}>
+				<ClayDropDown.Item onClick={() => alert('it worked!')}>
+					This should be clickable but isnt due to aria-hidden plugin
+					not working when using a mix of hideOthers and
+					suppressOthers
+				</ClayDropDown.Item>
+			</ClayDropDown>
+		</>
+	);
+}

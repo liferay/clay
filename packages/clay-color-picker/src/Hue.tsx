@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayInput} from '@clayui/form';
@@ -9,6 +9,7 @@ import React from 'react';
 
 import {LimitValue} from './Editor';
 type Props = {
+
 	/**
 	 * Callback function for when the hue value changes
 	 */
@@ -23,7 +24,7 @@ type Props = {
 /**
  * Renders Hue component
  */
-const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
+function ClayColorPickerHue({value = 0, onChange = () => {}}: Props) {
 	return (
 		<div className="clay-color-form-group">
 			<ClaySlider
@@ -39,6 +40,7 @@ const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 				}}
 				value={value}
 			/>
+
 			<ClayInput.Group>
 				<ClayInput.GroupItem>
 					<ClayInput
@@ -48,12 +50,11 @@ const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 						min="0"
 						onChange={(event) => {
 							const value = event.target.value;
-
 							let newVal = Number(value);
-
 							if (newVal < 0) {
 								newVal = 0;
-							} else if (newVal > 360) {
+							}
+							else if (newVal > 360) {
 								newVal = 360;
 							}
 							onChange(newVal);
@@ -61,6 +62,7 @@ const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 						type="number"
 						value={value}
 					/>
+
 					<ClayInput.GroupInsetItem before tag="label">
 						H
 					</ClayInput.GroupInsetItem>
@@ -68,6 +70,6 @@ const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 			</ClayInput.Group>
 		</div>
 	);
-};
+}
 
 export default ClayColorPickerHue;

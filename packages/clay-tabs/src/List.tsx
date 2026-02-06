@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {InternalDispatch, useNavigation} from '@clayui/shared';
@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import React, {useEffect, useImperativeHandle, useRef} from 'react';
 
 export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+
 	/**
 	 * @ignore
 	 */
@@ -86,9 +87,11 @@ export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
 	useImperativeHandle(ref, () => tabsRef.current!, [tabsRef]);
 
 	useEffect(() => {
+
 		// Internal API to maintain compatibility with the old Tabs pattern and to
 		// only update the initial state when the component is in
 		// uncontrolled mode.
+
 		if (!shouldUseActive) {
 			return;
 		}
@@ -97,6 +100,7 @@ export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
 
 		// The `active` API in the new pattern has uncontrolled behavior, working
 		// just like defaultActive as in the prop declared in the root component.
+
 		for (let index = 0; index < childrenArray.length; index++) {
 			const child = childrenArray[index];
 
@@ -134,7 +138,7 @@ export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
 					innerProps: {
 						'aria-controls':
 							tabsId && `${tabsId}-tabpanel-${index}`,
-						id: tabsId && `${tabsId}-tab-${index}`,
+						'id': tabsId && `${tabsId}-tab-${index}`,
 						...(child.props.innerProps ?? {}),
 					},
 					onClick: (
@@ -144,7 +148,8 @@ export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
 
 						if (onClick) {
 							onClick(event);
-						} else {
+						}
+						else {
 							onActiveChange!(index);
 						}
 					},

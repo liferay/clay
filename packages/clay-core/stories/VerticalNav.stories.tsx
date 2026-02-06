@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Button from '@clayui/button';
@@ -11,11 +11,11 @@ import React, {useState} from 'react';
 import {VerticalNav} from '../src';
 
 type Item = {
-	id: string;
-	href?: string;
-	label: string;
 	active?: boolean;
+	href?: string;
+	id: string;
 	items?: Array<Item>;
+	label: string;
 };
 
 const items = [
@@ -28,6 +28,7 @@ const items = [
 				label: 'Nested1',
 			},
 		],
+
 		label: 'Home',
 	},
 	{
@@ -54,6 +55,7 @@ const items = [
 				label: 'Six',
 			},
 		],
+
 		label: 'Projects',
 	},
 	{
@@ -75,6 +77,7 @@ const items_long = [
 					{label: 'Roles'},
 					{label: 'Monitoring'},
 				],
+
 				label: 'Users',
 			},
 			{
@@ -87,6 +90,7 @@ const items_long = [
 					{label: 'Account Users'},
 					{label: 'Account Groups'},
 				],
+
 				label: 'Accounts',
 			},
 			{
@@ -98,6 +102,7 @@ const items_long = [
 					{label: 'Job Scheduler'},
 					{label: 'Countries Management'},
 				],
+
 				label: 'Configuration',
 			},
 			{
@@ -106,6 +111,7 @@ const items_long = [
 					{label: 'Datasets'},
 					{label: 'Picklists'},
 				],
+
 				label: 'Object',
 			},
 			{
@@ -122,6 +128,7 @@ const items_long = [
 					{label: 'Server Logs'},
 					{label: 'Service Access Policy'},
 				],
+
 				label: 'Security',
 			},
 			{
@@ -133,6 +140,7 @@ const items_long = [
 				label: 'Marketplace',
 			},
 		],
+
 		label: 'Control Panel',
 	},
 	{
@@ -146,6 +154,7 @@ const items_long = [
 					{label: 'Subscriptions'},
 					{label: 'Terms and Conditions'},
 				],
+
 				label: 'Order Management',
 			},
 			{
@@ -160,6 +169,7 @@ const items_long = [
 					{label: 'Product Groups'},
 					{label: 'Tax Categories'},
 				],
+
 				label: 'Pricing',
 			},
 			{
@@ -169,6 +179,7 @@ const items_long = [
 					{label: 'Options'},
 					{label: 'Product Specification Labels'},
 				],
+
 				label: 'Product Management',
 			},
 			{
@@ -183,9 +194,11 @@ const items_long = [
 					{label: 'Avalara Connector'},
 					{label: 'Health Check'},
 				],
+
 				label: 'Settings',
 			},
 		],
+
 		label: 'Commerce',
 	},
 	{
@@ -195,6 +208,7 @@ const items_long = [
 					{label: 'Asset Libraries'},
 					{label: 'Content Dashboard'},
 				],
+
 				label: 'Content',
 			},
 			{
@@ -226,6 +240,7 @@ const items_long = [
 				label: 'Import / Export',
 			},
 		],
+
 		label: 'Applications Menu',
 	},
 	{
@@ -237,6 +252,7 @@ const items_long = [
 					{label: 'Templates'},
 					{label: 'Page Templates'},
 				],
+
 				label: 'Design',
 			},
 			{
@@ -245,6 +261,7 @@ const items_long = [
 					{label: 'Navigation Menus'},
 					{label: 'Collections'},
 				],
+
 				label: 'Site Builder',
 			},
 			{
@@ -265,6 +282,7 @@ const items_long = [
 					{label: 'Wiki'},
 					{label: 'Translation Processes'},
 				],
+
 				label: 'Content & Data',
 			},
 			{
@@ -281,6 +299,7 @@ const items_long = [
 					{label: 'Teams'},
 					{label: 'Segments'},
 				],
+
 				label: 'People',
 			},
 			{
@@ -292,6 +311,7 @@ const items_long = [
 					{label: 'Asset Library Settings'},
 					{label: 'Workflow'},
 				],
+
 				label: 'Configuration',
 			},
 			{
@@ -301,6 +321,7 @@ const items_long = [
 					{label: 'Import'},
 					{label: 'Site Initializer'},
 				],
+
 				label: 'Publishing',
 			},
 			{
@@ -416,9 +437,11 @@ const items_long = [
 					{label: 'Wish List Content'},
 					{label: 'Wish Lists'},
 				],
+
 				label: 'Applications',
 			},
 		],
+
 		label: 'Site and Asset Library Administration',
 	},
 	{
@@ -432,6 +455,7 @@ const items_long = [
 			{label: 'My Organizations'},
 			{label: 'My Subscriptions'},
 		],
+
 		label: 'User',
 	},
 ];
@@ -439,20 +463,24 @@ const items_long = [
 export default {
 	title: 'Design System/Components/VerticalNav',
 };
-
-export const Default = () => (
-	<VerticalNav active="6" aria-label="vertical navbar" items={items}>
-		{(item) => (
-			<VerticalNav.Item href={item.href} items={item.items} key={item.id}>
-				{item.label}
-			</VerticalNav.Item>
-		)}
-	</VerticalNav>
-);
+export function Default() {
+	return (
+		<VerticalNav active="6" aria-label="vertical navbar" items={items}>
+			{(item) => (
+				<VerticalNav.Item
+					href={item.href}
+					items={item.items}
+					key={item.id}
+				>
+					{item.label}
+				</VerticalNav.Item>
+			)}
+		</VerticalNav>
+	);
+}
 
 const defaultExpandedKeys = ['Control Panel', 'Commerce', 'Applications Menu'];
-
-export const ControlledExpandedKeys = () => {
+export function ControlledExpandedKeys() {
 	const [active] = useState('General Permissions');
 	const [expandAll, setExpandAll] = useState(false);
 	const [expandedKeys, setExpandedKeys] = useState<Set<React.Key>>(
@@ -487,24 +515,24 @@ export const ControlledExpandedKeys = () => {
 			</VerticalNav>
 		</>
 	);
-};
+}
 
 type ProductMenuItem = {
-	id: string;
-	href?: string;
-	label: string;
 	active?: boolean;
+	href?: string;
 	icon?: string;
+	id: string;
 	itemClass?: string;
-	sticker?: {
-		displayType: string;
-		label: string;
-	};
+	items?: Array<ProductMenuItem>;
+	label: string;
 	menubarAction?: {
 		ariaLabel: string;
 		title: string;
 	};
-	items?: Array<ProductMenuItem>;
+	sticker?: {
+		displayType: string;
+		label: string;
+	};
 };
 
 const items_cms_product_menu = [
@@ -538,6 +566,7 @@ const items_cms_product_menu = [
 				label: 'Files',
 			},
 		],
+
 		label: 'Assets',
 	},
 	{
@@ -571,6 +600,7 @@ const items_cms_product_menu = [
 				label: 'Workflow',
 			},
 		],
+
 		label: 'Admin',
 	},
 	{
@@ -599,13 +629,14 @@ const items_cms_product_menu = [
 				label: 'All Spaces',
 			},
 		],
+
 		label: 'Spaces',
 		menubarAction: {
 			'aria-label': 'New Space',
-			onClick: () => {
+			'onClick': () => {
 				alert('it works!');
 			},
-			title: 'New Space',
+			'title': 'New Space',
 		},
 	},
 	{
@@ -615,8 +646,7 @@ const items_cms_product_menu = [
 		label: 'Recycle Bin',
 	},
 ] as Array<ProductMenuItem>;
-
-export const Primary = () => {
+export function Primary() {
 	return (
 		<VerticalNav
 			active="Home"
@@ -657,4 +687,4 @@ export const Primary = () => {
 			)}
 		</VerticalNav>
 	);
-};
+}

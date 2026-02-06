@@ -1,12 +1,13 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
 import React from 'react';
 
 interface IGroupItemProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Flag to indicate if `input-group-append` class should
 	 * be applied
@@ -55,6 +56,7 @@ export const GroupItem = React.forwardRef<HTMLDivElement, IGroupItemProps>(
 GroupItem.displayName = 'ClayInputGroupItem';
 
 interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Flag to indicate if `input-group-sm` class should
 	 * be applied
@@ -107,6 +109,7 @@ interface IGroupInsetProps
 	extends React.HTMLAttributes<
 		HTMLDivElement | HTMLSpanElement | HTMLLabelElement
 	> {
+
 	/**
 	 * Flag to indicate if `input-group-inset-item-after` class
 	 * should be applied.
@@ -156,6 +159,7 @@ const GroupInsetItem = React.forwardRef<
 GroupInsetItem.displayName = 'ClayInputGroupInsetItem';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+
 	/**
 	 * Input component to render. Can either be a string like 'input' or 'textarea' or a component.
 	 */

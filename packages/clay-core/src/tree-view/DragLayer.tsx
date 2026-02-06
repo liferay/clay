@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {CSSProperties} from 'react';
@@ -32,7 +32,7 @@ function getItemStyles(currentOffset: XYCoord | null): CSSProperties {
 	};
 }
 
-const DragLayer = ({itemNameKey}: {itemNameKey: string}) => {
+function DragLayer({itemNameKey}: {itemNameKey: string}) {
 	const {currentOffset, isDragging, item} = useDragLayer(
 		(monitor: DragLayerMonitor) => ({
 			currentOffset: monitor.getClientOffset(),
@@ -40,11 +40,9 @@ const DragLayer = ({itemNameKey}: {itemNameKey: string}) => {
 			item: monitor.getItem(),
 		})
 	);
-
 	if (!isDragging || item.type !== 'treeViewItem') {
 		return null;
 	}
-
 	const name = item.item[itemNameKey];
 
 	return (
@@ -57,6 +55,6 @@ const DragLayer = ({itemNameKey}: {itemNameKey: string}) => {
 			</div>
 		</div>
 	);
-};
+}
 
 export default DragLayer;

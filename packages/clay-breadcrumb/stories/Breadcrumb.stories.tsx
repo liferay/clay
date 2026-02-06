@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useState} from 'react';
@@ -11,72 +11,72 @@ export default {
 	component: ClayBreadcrumb,
 	title: 'Design System/Components/Breadcrumb',
 };
-
-export const Default = (args: any) => (
-	<ClayBreadcrumb
-		ellipsisBuffer={args.ellipsisBuffer}
-		ellipsisProps={{'aria-label': 'More', title: 'More'}}
-		items={[
-			{
-				href: '#1',
-				label: 'Home',
-			},
-			{
-				href: '#2',
-				label: 'About',
-			},
-			{
-				href: '#3',
-				label: 'Contact',
-			},
-			{
-				href: '#4',
-				label: 'Projects',
-			},
-			{
-				href: '#5',
-				label: 'Five',
-			},
-			{
-				href: '#6',
-				label: 'Six',
-			},
-			{
-				href: '#7',
-				label: 'Seven',
-			},
-			{
-				href: '#8',
-				label: 'Eight',
-			},
-			{
-				href: '#9',
-				label: 'Nine',
-			},
-			{
-				href: '#10',
-				label: 'Ten',
-			},
-			{
-				active: true,
-				href: '#11',
-				label: 'Eleven',
-			},
-		]}
-	/>
-);
+export function Default(args: any) {
+	return (
+		<ClayBreadcrumb
+			ellipsisBuffer={args.ellipsisBuffer}
+			ellipsisProps={{'aria-label': 'More', 'title': 'More'}}
+			items={[
+				{
+					href: '#1',
+					label: 'Home',
+				},
+				{
+					href: '#2',
+					label: 'About',
+				},
+				{
+					href: '#3',
+					label: 'Contact',
+				},
+				{
+					href: '#4',
+					label: 'Projects',
+				},
+				{
+					href: '#5',
+					label: 'Five',
+				},
+				{
+					href: '#6',
+					label: 'Six',
+				},
+				{
+					href: '#7',
+					label: 'Seven',
+				},
+				{
+					href: '#8',
+					label: 'Eight',
+				},
+				{
+					href: '#9',
+					label: 'Nine',
+				},
+				{
+					href: '#10',
+					label: 'Ten',
+				},
+				{
+					active: true,
+					href: '#11',
+					label: 'Eleven',
+				},
+			]}
+		/>
+	);
+}
 
 Default.args = {
 	ellipsisBuffer: 3,
 };
-
-export const Buttons = (args: any) => {
+export function Buttons(args: any) {
 	const onItemClick = (event: any) => alert(event.target.parentElement.title);
 
 	return (
 		<ClayBreadcrumb
 			ellipsisBuffer={args.ellipsisBuffer}
-			ellipsisProps={{'aria-label': 'More', title: 'More'}}
+			ellipsisProps={{'aria-label': 'More', 'title': 'More'}}
 			items={[
 				{
 					label: 'Home',
@@ -126,13 +126,12 @@ export const Buttons = (args: any) => {
 			]}
 		/>
 	);
-};
+}
 
 Buttons.args = {
 	ellipsisBuffer: 3,
 };
-
-export const ActiveState = () => {
+export function ActiveState() {
 	const [active, setActive] = useState<number>(4);
 
 	const items = [
@@ -166,8 +165,8 @@ export const ActiveState = () => {
 	return (
 		<ClayBreadcrumb
 			ellipsisBuffer={1}
-			ellipsisProps={{'aria-label': 'More', title: 'More'}}
+			ellipsisProps={{'aria-label': 'More', 'title': 'More'}}
 			items={items}
 		/>
 	);
-};
+}

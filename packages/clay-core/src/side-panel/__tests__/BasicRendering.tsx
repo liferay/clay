@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {Provider} from '@clayui/provider';
@@ -11,7 +11,7 @@ import '@testing-library/jest-dom';
 
 import {SidePanel} from '../SidePanel';
 
-const SidePanelExample = (props: any) => {
+function SidePanelExample(props: any) {
 	const ref = useRef(null);
 
 	return (
@@ -25,13 +25,15 @@ const SidePanelExample = (props: any) => {
 					>
 						<SidePanel.Title>Title</SidePanel.Title>
 					</SidePanel.Header>
+
 					<SidePanel.Body>Body</SidePanel.Body>
+
 					<SidePanel.Footer>Footer</SidePanel.Footer>
 				</SidePanel>
 			</div>
 		</Provider>
 	);
-};
+}
 
 describe('SidePanel basic rendering', () => {
 	afterEach(cleanup);

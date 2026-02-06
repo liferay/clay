@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {InternalDispatch, useControlledState} from '@clayui/shared';
@@ -9,6 +9,7 @@ import React from 'react';
 
 interface IProps
 	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
+
 	/**
 	 * Property to set the default value (uncontrolled).
 	 */
@@ -61,37 +62,34 @@ interface IProps
 	value?: number;
 }
 
-const calcProgressWidth = (
+function calcProgressWidth(
 	element: HTMLInputElement,
 	thumbWidth: number,
 	value: number,
 	min: number,
 	max: number,
 	step: number
-) => {
+) {
 	const currentStep = (value - min) / step;
 	const totalSteps = (max - min) / step;
-
 	const progressWidth = (currentStep / totalSteps) * 100;
 	const rangeWidth = element.clientWidth;
-
 	const ratio =
 		(((1 - progressWidth * 0.01) * (thumbWidth / 1.001)) / rangeWidth) *
 		100;
 	let offsetWidth = progressWidth;
-
 	if (progressWidth !== 50) {
 		offsetWidth =
 			progressWidth - (thumbWidth / 2 / rangeWidth) * 100 + ratio;
 	}
 
 	return offsetWidth;
-};
+}
 
 const useIsomorphicLayoutEffect =
 	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
 
-const Slider = ({
+function Slider({
 	className,
 	defaultValue,
 	disabled,
@@ -104,7 +102,7 @@ const Slider = ({
 	tooltipPosition = 'top',
 	value,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const [internalValue, setValue] = useControlledState({
 		defaultName: 'defaultValue',
 		defaultValue,
@@ -113,15 +111,12 @@ const Slider = ({
 		onChange: onChange ?? onValueChange,
 		value,
 	});
-
 	const [offsetWidth, setOffsetWidth] = React.useState<number>(0);
 	const sliderRef = React.useRef<HTMLInputElement | null>(null);
 	const thumbRef = React.useRef<HTMLDivElement | null>(null);
-
 	useIsomorphicLayoutEffect(() => {
 		if (sliderRef.current && thumbRef.current) {
 			const thumbWidth = thumbRef.current.clientWidth;
-
 			setOffsetWidth(
 				calcProgressWidth(
 					sliderRef.current,
@@ -150,7 +145,9 @@ const Slider = ({
 					type="range"
 					value={internalValue}
 				/>
+
 				<div className="clay-range-track" />
+
 				<div
 					className="clay-range-progress"
 					style={{width: `${offsetWidth}%`}}
@@ -165,6 +162,7 @@ const Slider = ({
 								role="tooltip"
 							>
 								<div className="tooltip-arrow" />
+
 								<div className="tooltip-inner">
 									<div className="clay-range-value">
 										{internalValue}
@@ -177,6 +175,6 @@ const Slider = ({
 			</div>
 		</div>
 	);
-};
+}
 
 export default Slider;

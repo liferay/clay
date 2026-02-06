@@ -7,13 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
@@ -23,15 +23,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(@clayui/tabs): LPD-63935 Add storybook example of tabs with dropdown" ([99434e2](https://github.com/liferay/clay/commit/99434e2ce37d79537a25ba7342fc73c088138a83))
--   Revert "docs(clayui.com): LPD-63935 Fix Tabs with dropdown menu example" ([b3cf994](https://github.com/liferay/clay/commit/b3cf9946bd04f2681636ae793d4726a8b17e9de0))
--   Revert "fix(@clayui/tabs): LPD-63935 Item should only render linkOrButton if it's not a React element" ([5c5731e](https://github.com/liferay/clay/commit/5c5731e7de028b820ee4b0d57740d26eabe1e5fe))
+- Revert "chore(@clayui/tabs): LPD-63935 Add storybook example of tabs with dropdown" ([99434e2](https://github.com/liferay/clay/commit/99434e2ce37d79537a25ba7342fc73c088138a83))
+- Revert "docs(clayui.com): LPD-63935 Fix Tabs with dropdown menu example" ([b3cf994](https://github.com/liferay/clay/commit/b3cf9946bd04f2681636ae793d4726a8b17e9de0))
+- Revert "fix(@clayui/tabs): LPD-63935 Item should only render linkOrButton if it's not a React element" ([5c5731e](https://github.com/liferay/clay/commit/5c5731e7de028b820ee4b0d57740d26eabe1e5fe))
 
 ## [3.149.1](https://github.com/liferay/clay/compare/v3.149.0...v3.149.1) (2025-09-25)
 
 ### Bug Fixes
 
--   **@clayui/tabs:** LPD-63935 Item should only render linkOrButton if it's not a React element ([fddf5de](https://github.com/liferay/clay/commit/fddf5de31d2f493ae5b3af33386a48644f1eba4c))
+- **@clayui/tabs:** LPD-63935 Item should only render linkOrButton if it's not a React element ([fddf5de](https://github.com/liferay/clay/commit/fddf5de31d2f493ae5b3af33386a48644f1eba4c))
 
 # [3.148.0](https://github.com/liferay/clay/compare/v3.147.0...v3.148.0) (2025-09-18)
 
@@ -45,35 +45,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Bug Fixes
 
--   **@clayui/css:** Bump version back ([cb58a7e](https://github.com/liferay/clay/commit/cb58a7e6a46881d26ee3014d083b32f0585d8e58))
+- **@clayui/css:** Bump version back ([cb58a7e](https://github.com/liferay/clay/commit/cb58a7e6a46881d26ee3014d083b32f0585d8e58))
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/tabs@3.3.5...@clayui/tabs@3.142.2) (2025-08-13)
 
 ### Bug Fixes
 
--   **@clayui/css:** Bump version back ([cb58a7e](https://github.com/liferay/clay/commit/cb58a7e6a46881d26ee3014d083b32f0585d8e58))
+- **@clayui/css:** Bump version back ([cb58a7e](https://github.com/liferay/clay/commit/cb58a7e6a46881d26ee3014d083b32f0585d8e58))
 
 ## 3.141.1 (2025-07-18)
 
@@ -93,13 +93,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+- exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
 
 # 3.128.0 (2025-02-20)
 
 ### Features
 
--   **@clayui/tabs:** improves component typing to create API Tabs ([bab2322](https://github.com/liferay/clay/commit/bab23223a8e3e9d2fa4bcd49eabb8c48b4b78e2d))
+- **@clayui/tabs:** improves component typing to create API Tabs ([bab2322](https://github.com/liferay/clay/commit/bab23223a8e3e9d2fa4bcd49eabb8c48b4b78e2d))
 
 # 3.119.0 (2024-08-30)
 
@@ -121,8 +121,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.104.0 (2023-08-25)
 
@@ -144,8 +144,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tabs:** displayType should output nav-tabs variants ([ff15ca2](https://github.com/liferay/clay/commit/ff15ca25d9d39e9479bacf9a78d5a2af9645ec79))
--   **@clayui/tabs:** Output nav-tabs-light only if displayType equals light ([b599225](https://github.com/liferay/clay/commit/b59922542b7edd52750661139422b1df7d2fc1b5)), closes [/github.com/liferay/clay/pull/5463#discussion_r1161986963](https://github.com//github.com/liferay/clay/pull/5463/issues/discussion_r1161986963)
+- **@clayui/tabs:** displayType should output nav-tabs variants ([ff15ca2](https://github.com/liferay/clay/commit/ff15ca25d9d39e9479bacf9a78d5a2af9645ec79))
+- **@clayui/tabs:** Output nav-tabs-light only if displayType equals light ([b599225](https://github.com/liferay/clay/commit/b59922542b7edd52750661139422b1df7d2fc1b5)), closes [/github.com/liferay/clay/pull/5463#discussion_r1161986963](https://github.com//github.com/liferay/clay/pull/5463/issues/discussion_r1161986963)
 
 # 3.92.0 (2023-04-06)
 
@@ -153,15 +153,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tabs:** Tabs deprecate `displayType` and `modern` attributes ([196abec](https://github.com/liferay/clay/commit/196abec5383d05f9af15af6893e9062fc32ba1c9))
+- **@clayui/tabs:** Tabs deprecate `displayType` and `modern` attributes ([196abec](https://github.com/liferay/clay/commit/196abec5383d05f9af15af6893e9062fc32ba1c9))
 
 ### Features
 
--   **@clayui/tabs:** force style for tabs ([859ef65](https://github.com/liferay/clay/commit/859ef65a552c2b8ad04c04fec1ad505c53c6dd40))
+- **@clayui/tabs:** force style for tabs ([859ef65](https://github.com/liferay/clay/commit/859ef65a552c2b8ad04c04fec1ad505c53c6dd40))
 
 ### BREAKING CHANGES
 
--   **@clayui/tabs:** The default value for the `modern` attribute is now `false`. You will need to set the `modern` attribute on `ClayTabs` to get the `nav-underline` class.
+- **@clayui/tabs:** The default value for the `modern` attribute is now `false`. You will need to set the `modern` attribute on `ClayTabs` to get the `nav-underline` class.
 
 # 3.89.0 (2023-03-01)
 
@@ -169,13 +169,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tabs:** adds `forwardRef` to Tabs components ([a1792ce](https://github.com/liferay/clay/commit/a1792cea9a05d41ef177993a7c724fe673c9673f))
+- **@clayui/tabs:** adds `forwardRef` to Tabs components ([a1792ce](https://github.com/liferay/clay/commit/a1792cea9a05d41ef177993a7c724fe673c9673f))
 
 # 3.87.0 (2023-02-08)
 
 ### Features
 
--   **@clayui/tabs:** adds the pattern of uncontrolled to the `active` property of Tabs.Item in the new composition ([fd5299a](https://github.com/liferay/clay/commit/fd5299a6148f67de85b4d8f565ce2331f137472e))
+- **@clayui/tabs:** adds the pattern of uncontrolled to the `active` property of Tabs.Item in the new composition ([fd5299a](https://github.com/liferay/clay/commit/fd5299a6148f67de85b4d8f565ce2331f137472e))
 
 ## 3.86.1 (2023-02-02)
 
@@ -199,13 +199,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
--   **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
--   **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
+- **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
+- **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
+- **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
 
 ### Features
 
--   **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
+- **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
 
 ## 3.78.2 (2022-10-25)
 
@@ -215,13 +215,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
+- **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
 
 # 3.77.0 (2022-10-17)
 
 ### Bug Fixes
 
--   **@clayui/tabs:** sets `tabIndex=-1` when not active and `tabIndex=0` for the tabpanel ([cbd8710](https://github.com/liferay/clay/commit/cbd8710491b4262000b0af43244977351429228b))
+- **@clayui/tabs:** sets `tabIndex=-1` when not active and `tabIndex=0` for the tabpanel ([cbd8710](https://github.com/liferay/clay/commit/cbd8710491b4262000b0af43244977351429228b))
 
 ## 3.75.2 (2022-09-29)
 
@@ -255,12 +255,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/clay-tabs:** Insert displayType for nav-tabs and nav-underline classes ([10ddb29](https://github.com/liferay/clay/commit/10ddb29a88884e05d4d4f71caec111a58c809bb7))
+- **@clayui/clay-tabs:** Insert displayType for nav-tabs and nav-underline classes ([10ddb29](https://github.com/liferay/clay/commit/10ddb29a88884e05d4d4f71caec111a58c809bb7))
 
 ### Features
 
--   **@clayui/clay-tabs:** Adding additional new tests ([d74322c](https://github.com/liferay/clay/commit/d74322c4820ef1f0bbb9c0c64263f82c39d70576))
--   **@clayui/clay-tabs:** Remain modern prop and overrides displayType. Update in BREAKING.md ([cb9eb31](https://github.com/liferay/clay/commit/cb9eb31d3da70de3ccdb653a9e574da497d6ee84))
+- **@clayui/clay-tabs:** Adding additional new tests ([d74322c](https://github.com/liferay/clay/commit/d74322c4820ef1f0bbb9c0c64263f82c39d70576))
+- **@clayui/clay-tabs:** Remain modern prop and overrides displayType. Update in BREAKING.md ([cb9eb31](https://github.com/liferay/clay/commit/cb9eb31d3da70de3ccdb653a9e574da497d6ee84))
 
 # 3.49.0 (2022-03-15)
 
@@ -312,13 +312,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+- exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
 
 # 3.128.0 (2025-02-20)
 
 ### Features
 
--   **@clayui/tabs:** improves component typing to create API Tabs ([bab2322](https://github.com/liferay/clay/commit/bab23223a8e3e9d2fa4bcd49eabb8c48b4b78e2d))
+- **@clayui/tabs:** improves component typing to create API Tabs ([bab2322](https://github.com/liferay/clay/commit/bab23223a8e3e9d2fa4bcd49eabb8c48b4b78e2d))
 
 # 3.119.0 (2024-08-30)
 
@@ -340,8 +340,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.104.0 (2023-08-25)
 
@@ -363,8 +363,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tabs:** displayType should output nav-tabs variants ([ff15ca2](https://github.com/liferay/clay/commit/ff15ca25d9d39e9479bacf9a78d5a2af9645ec79))
--   **@clayui/tabs:** Output nav-tabs-light only if displayType equals light ([b599225](https://github.com/liferay/clay/commit/b59922542b7edd52750661139422b1df7d2fc1b5)), closes [/github.com/liferay/clay/pull/5463#discussion_r1161986963](https://github.com//github.com/liferay/clay/pull/5463/issues/discussion_r1161986963)
+- **@clayui/tabs:** displayType should output nav-tabs variants ([ff15ca2](https://github.com/liferay/clay/commit/ff15ca25d9d39e9479bacf9a78d5a2af9645ec79))
+- **@clayui/tabs:** Output nav-tabs-light only if displayType equals light ([b599225](https://github.com/liferay/clay/commit/b59922542b7edd52750661139422b1df7d2fc1b5)), closes [/github.com/liferay/clay/pull/5463#discussion_r1161986963](https://github.com//github.com/liferay/clay/pull/5463/issues/discussion_r1161986963)
 
 # 3.92.0 (2023-04-06)
 
@@ -372,15 +372,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tabs:** Tabs deprecate `displayType` and `modern` attributes ([196abec](https://github.com/liferay/clay/commit/196abec5383d05f9af15af6893e9062fc32ba1c9))
+- **@clayui/tabs:** Tabs deprecate `displayType` and `modern` attributes ([196abec](https://github.com/liferay/clay/commit/196abec5383d05f9af15af6893e9062fc32ba1c9))
 
 ### Features
 
--   **@clayui/tabs:** force style for tabs ([859ef65](https://github.com/liferay/clay/commit/859ef65a552c2b8ad04c04fec1ad505c53c6dd40))
+- **@clayui/tabs:** force style for tabs ([859ef65](https://github.com/liferay/clay/commit/859ef65a552c2b8ad04c04fec1ad505c53c6dd40))
 
 ### BREAKING CHANGES
 
--   **@clayui/tabs:** The default value for the `modern` attribute is now `false`. You will need to set the `modern` attribute on `ClayTabs` to get the `nav-underline` class.
+- **@clayui/tabs:** The default value for the `modern` attribute is now `false`. You will need to set the `modern` attribute on `ClayTabs` to get the `nav-underline` class.
 
 # 3.89.0 (2023-03-01)
 
@@ -388,13 +388,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tabs:** adds `forwardRef` to Tabs components ([a1792ce](https://github.com/liferay/clay/commit/a1792cea9a05d41ef177993a7c724fe673c9673f))
+- **@clayui/tabs:** adds `forwardRef` to Tabs components ([a1792ce](https://github.com/liferay/clay/commit/a1792cea9a05d41ef177993a7c724fe673c9673f))
 
 # 3.87.0 (2023-02-08)
 
 ### Features
 
--   **@clayui/tabs:** adds the pattern of uncontrolled to the `active` property of Tabs.Item in the new composition ([fd5299a](https://github.com/liferay/clay/commit/fd5299a6148f67de85b4d8f565ce2331f137472e))
+- **@clayui/tabs:** adds the pattern of uncontrolled to the `active` property of Tabs.Item in the new composition ([fd5299a](https://github.com/liferay/clay/commit/fd5299a6148f67de85b4d8f565ce2331f137472e))
 
 ## 3.86.1 (2023-02-02)
 
@@ -418,13 +418,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
--   **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
--   **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
+- **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
+- **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
+- **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
 
 ### Features
 
--   **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
+- **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
 
 ## 3.78.2 (2022-10-25)
 
@@ -434,13 +434,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
+- **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
 
 # 3.77.0 (2022-10-17)
 
 ### Bug Fixes
 
--   **@clayui/tabs:** sets `tabIndex=-1` when not active and `tabIndex=0` for the tabpanel ([cbd8710](https://github.com/liferay/clay/commit/cbd8710491b4262000b0af43244977351429228b))
+- **@clayui/tabs:** sets `tabIndex=-1` when not active and `tabIndex=0` for the tabpanel ([cbd8710](https://github.com/liferay/clay/commit/cbd8710491b4262000b0af43244977351429228b))
 
 ## 3.75.2 (2022-09-29)
 
@@ -474,12 +474,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/clay-tabs:** Insert displayType for nav-tabs and nav-underline classes ([10ddb29](https://github.com/liferay/clay/commit/10ddb29a88884e05d4d4f71caec111a58c809bb7))
+- **@clayui/clay-tabs:** Insert displayType for nav-tabs and nav-underline classes ([10ddb29](https://github.com/liferay/clay/commit/10ddb29a88884e05d4d4f71caec111a58c809bb7))
 
 ### Features
 
--   **@clayui/clay-tabs:** Adding additional new tests ([d74322c](https://github.com/liferay/clay/commit/d74322c4820ef1f0bbb9c0c64263f82c39d70576))
--   **@clayui/clay-tabs:** Remain modern prop and overrides displayType. Update in BREAKING.md ([cb9eb31](https://github.com/liferay/clay/commit/cb9eb31d3da70de3ccdb653a9e574da497d6ee84))
+- **@clayui/clay-tabs:** Adding additional new tests ([d74322c](https://github.com/liferay/clay/commit/d74322c4820ef1f0bbb9c0c64263f82c39d70576))
+- **@clayui/clay-tabs:** Remain modern prop and overrides displayType. Update in BREAKING.md ([cb9eb31](https://github.com/liferay/clay/commit/cb9eb31d3da70de3ccdb653a9e574da497d6ee84))
 
 # 3.49.0 (2022-03-15)
 
@@ -543,13 +543,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+- exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
 
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features
 
--   **@clayui/tabs:** improves component typing to create API Tabs ([bab2322](https://github.com/liferay/clay/commit/bab23223a8e3e9d2fa4bcd49eabb8c48b4b78e2d))
+- **@clayui/tabs:** improves component typing to create API Tabs ([bab2322](https://github.com/liferay/clay/commit/bab23223a8e3e9d2fa4bcd49eabb8c48b4b78e2d))
 
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
@@ -587,8 +587,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
@@ -626,8 +626,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tabs:** displayType should output nav-tabs variants ([ff15ca2](https://github.com/liferay/clay/commit/ff15ca25d9d39e9479bacf9a78d5a2af9645ec79))
--   **@clayui/tabs:** Output nav-tabs-light only if displayType equals light ([b599225](https://github.com/liferay/clay/commit/b59922542b7edd52750661139422b1df7d2fc1b5)), closes [/github.com/liferay/clay/pull/5463#discussion_r1161986963](https://github.com//github.com/liferay/clay/pull/5463/issues/discussion_r1161986963)
+- **@clayui/tabs:** displayType should output nav-tabs variants ([ff15ca2](https://github.com/liferay/clay/commit/ff15ca25d9d39e9479bacf9a78d5a2af9645ec79))
+- **@clayui/tabs:** Output nav-tabs-light only if displayType equals light ([b599225](https://github.com/liferay/clay/commit/b59922542b7edd52750661139422b1df7d2fc1b5)), closes [/github.com/liferay/clay/pull/5463#discussion_r1161986963](https://github.com//github.com/liferay/clay/pull/5463/issues/discussion_r1161986963)
 
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
@@ -637,15 +637,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tabs:** Tabs deprecate `displayType` and `modern` attributes ([196abec](https://github.com/liferay/clay/commit/196abec5383d05f9af15af6893e9062fc32ba1c9))
+- **@clayui/tabs:** Tabs deprecate `displayType` and `modern` attributes ([196abec](https://github.com/liferay/clay/commit/196abec5383d05f9af15af6893e9062fc32ba1c9))
 
 ### Features
 
--   **@clayui/tabs:** force style for tabs ([859ef65](https://github.com/liferay/clay/commit/859ef65a552c2b8ad04c04fec1ad505c53c6dd40))
+- **@clayui/tabs:** force style for tabs ([859ef65](https://github.com/liferay/clay/commit/859ef65a552c2b8ad04c04fec1ad505c53c6dd40))
 
 ### BREAKING CHANGES
 
--   **@clayui/tabs:** The default value for the `modern` attribute is now `false`. You will need to set the `modern` attribute on `ClayTabs` to get the `nav-underline` class.
+- **@clayui/tabs:** The default value for the `modern` attribute is now `false`. You will need to set the `modern` attribute on `ClayTabs` to get the `nav-underline` class.
 
 # [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
 
@@ -655,13 +655,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tabs:** adds `forwardRef` to Tabs components ([a1792ce](https://github.com/liferay/clay/commit/a1792cea9a05d41ef177993a7c724fe673c9673f))
+- **@clayui/tabs:** adds `forwardRef` to Tabs components ([a1792ce](https://github.com/liferay/clay/commit/a1792cea9a05d41ef177993a7c724fe673c9673f))
 
 # [3.87.0](https://github.com/liferay/clay/compare/v3.86.1...v3.87.0) (2023-02-08)
 
 ### Features
 
--   **@clayui/tabs:** adds the pattern of uncontrolled to the `active` property of Tabs.Item in the new composition ([fd5299a](https://github.com/liferay/clay/commit/fd5299a6148f67de85b4d8f565ce2331f137472e))
+- **@clayui/tabs:** adds the pattern of uncontrolled to the `active` property of Tabs.Item in the new composition ([fd5299a](https://github.com/liferay/clay/commit/fd5299a6148f67de85b4d8f565ce2331f137472e))
 
 ## [3.86.1](https://github.com/liferay/clay/compare/v3.86.0...v3.86.1) (2023-02-02)
 
@@ -703,13 +703,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
--   **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
--   **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
+- **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
+- **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
+- **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
 
 ### Features
 
--   **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
+- **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
 
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
@@ -723,13 +723,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
+- **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
 
 # [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
 
 ### Bug Fixes
 
--   **@clayui/tabs:** sets `tabIndex=-1` when not active and `tabIndex=0` for the tabpanel ([cbd8710](https://github.com/liferay/clay/commit/cbd8710491b4262000b0af43244977351429228b))
+- **@clayui/tabs:** sets `tabIndex=-1` when not active and `tabIndex=0` for the tabpanel ([cbd8710](https://github.com/liferay/clay/commit/cbd8710491b4262000b0af43244977351429228b))
 
 ## [3.75.2](https://github.com/liferay/clay/compare/v3.75.1...v3.75.2) (2022-09-29)
 
@@ -791,12 +791,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/clay-tabs:** Insert displayType for nav-tabs and nav-underline classes ([10ddb29](https://github.com/liferay/clay/commit/10ddb29a88884e05d4d4f71caec111a58c809bb7))
+- **@clayui/clay-tabs:** Insert displayType for nav-tabs and nav-underline classes ([10ddb29](https://github.com/liferay/clay/commit/10ddb29a88884e05d4d4f71caec111a58c809bb7))
 
 ### Features
 
--   **@clayui/clay-tabs:** Adding additional new tests ([d74322c](https://github.com/liferay/clay/commit/d74322c4820ef1f0bbb9c0c64263f82c39d70576))
--   **@clayui/clay-tabs:** Remain modern prop and overrides displayType. Update in BREAKING.md ([cb9eb31](https://github.com/liferay/clay/commit/cb9eb31d3da70de3ccdb653a9e574da497d6ee84))
+- **@clayui/clay-tabs:** Adding additional new tests ([d74322c](https://github.com/liferay/clay/commit/d74322c4820ef1f0bbb9c0c64263f82c39d70576))
+- **@clayui/clay-tabs:** Remain modern prop and overrides displayType. Update in BREAKING.md ([cb9eb31](https://github.com/liferay/clay/commit/cb9eb31d3da70de3ccdb653a9e574da497d6ee84))
 
 # [3.49.0](https://github.com/liferay/clay/compare/v3.48.0...v3.49.0) (2022-03-15)
 
@@ -886,8 +886,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
--   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
 
 ## [3.2.5](https://github.com/liferay/clay/compare/@clayui/tabs@3.2.4...@clayui/tabs@3.2.5) (2020-08-28)
 
@@ -901,47 +901,47 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+- update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
 
 ## [3.2.2](https://github.com/liferay/clay/compare/@clayui/tabs@3.2.1...@clayui/tabs@3.2.2) (2020-07-07)
 
 ### Bug Fixes
 
--   **@clayui/tabs:** check if child is truthy first before cloning ([c357b7d](https://github.com/liferay/clay/commit/c357b7d))
+- **@clayui/tabs:** check if child is truthy first before cloning ([c357b7d](https://github.com/liferay/clay/commit/c357b7d))
 
 ## [3.2.1](https://github.com/liferay/clay/compare/@clayui/tabs@3.2.0...@clayui/tabs@3.2.1) (2020-06-18)
 
 ### Bug Fixes
 
--   **@clayui/tabs:** Make sure we use strict equation ([ad8dd39](https://github.com/liferay/clay/commit/ad8dd39))
+- **@clayui/tabs:** Make sure we use strict equation ([ad8dd39](https://github.com/liferay/clay/commit/ad8dd39))
 
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/tabs@3.1.1...@clayui/tabs@3.2.0) (2020-05-21)
 
 ### Features
 
--   **@clayui/tabs:** add TabPanel as an alias for TabPane ([924ae4e](https://github.com/liferay/clay/commit/924ae4e))
--   **clayui.com:** Revert the change made to headings used, rename stickers and tables to sticker and table respectively, also change some wording ([791dabe](https://github.com/liferay/clay/commit/791dabe))
--   **clayui.com:** Update content structure: Checkbox, Management Toolbar, Select Box, Sticker, Table & Tabs ([0fcd54a](https://github.com/liferay/clay/commit/0fcd54a))
+- **@clayui/tabs:** add TabPanel as an alias for TabPane ([924ae4e](https://github.com/liferay/clay/commit/924ae4e))
+- **clayui.com:** Revert the change made to headings used, rename stickers and tables to sticker and table respectively, also change some wording ([791dabe](https://github.com/liferay/clay/commit/791dabe))
+- **clayui.com:** Update content structure: Checkbox, Management Toolbar, Select Box, Sticker, Table & Tabs ([0fcd54a](https://github.com/liferay/clay/commit/0fcd54a))
 
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/tabs@3.1.0...@clayui/tabs@3.1.1) (2020-04-24)
 
 ### Bug Fixes
 
--   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+- Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
 
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
 
--   replace npm in favor of yarn in new packages ([e366fbb](https://github.com/liferay/clay/commit/e366fbb))
--   **@clayui/tabs:** add the relationship between tab and tabpane in stories ([ee9edc4](https://github.com/liferay/clay/commit/ee9edc4))
--   **@clayui/tabs:** adjust class name timing so that it the tab properly fades in ([b0df6b8](https://github.com/liferay/clay/commit/b0df6b8))
--   **@clayui/tabs:** fix the use of React.forwardRef ([a7ce7e0](https://github.com/liferay/clay/commit/a7ce7e0))
--   **tabs:** Turns `active` property optional when using Item, default value is `false` ([bb1ae86](https://github.com/liferay/clay/commit/bb1ae86))
+- replace npm in favor of yarn in new packages ([e366fbb](https://github.com/liferay/clay/commit/e366fbb))
+- **@clayui/tabs:** add the relationship between tab and tabpane in stories ([ee9edc4](https://github.com/liferay/clay/commit/ee9edc4))
+- **@clayui/tabs:** adjust class name timing so that it the tab properly fades in ([b0df6b8](https://github.com/liferay/clay/commit/b0df6b8))
+- **@clayui/tabs:** fix the use of React.forwardRef ([a7ce7e0](https://github.com/liferay/clay/commit/a7ce7e0))
+- **tabs:** Turns `active` property optional when using Item, default value is `false` ([bb1ae86](https://github.com/liferay/clay/commit/bb1ae86))
 
 ### Features
 
--   **tabs:** Creates Tabs component ([4418cc2](https://github.com/liferay/clay/commit/4418cc2))
+- **tabs:** Creates Tabs component ([4418cc2](https://github.com/liferay/clay/commit/4418cc2))
 
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-tabs/compare/@clayui/tabs@3.0.3...@clayui/tabs@3.0.6) (2020-01-31)
 

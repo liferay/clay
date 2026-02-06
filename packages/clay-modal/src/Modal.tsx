@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayPortal, IPortalBaseProps, stack} from '@clayui/shared';
@@ -27,6 +27,7 @@ import {Observer, ObserverType} from './types';
 interface IProps
 	extends React.HTMLAttributes<HTMLDivElement>,
 		Omit<IContext, 'onClose' | 'ariaLabelledby'> {
+
 	/**
 	 * Flag indicating to vertically center the modal.
 	 */
@@ -50,15 +51,15 @@ interface IProps
 	disableAutoClose?: boolean;
 
 	/**
-	 * The size of element modal.
-	 */
-	size?: 'full-screen' | 'lg' | 'sm';
-
-	/**
 	 * Observer is Modal's communication system with `useModal`
 	 * hook, adds observer from `useModal` hook here.
 	 */
 	observer: Observer;
+
+	/**
+	 * The size of element modal.
+	 */
+	size?: 'full-screen' | 'lg' | 'sm';
 
 	/**
 	 * Allows setting a custom z-index value, overriding the default one which is 1040, modal body z-index will be +10 of this value
@@ -79,7 +80,7 @@ const warningMessage = `You need to pass the 'observer' prop to ClayModal for ev
 
 let counter = 0;
 
-const Modal = ({
+function Modal({
 	center,
 	children,
 	className,
@@ -93,15 +94,12 @@ const Modal = ({
 	status,
 	zIndex,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const modalElementRef = useRef<HTMLDivElement | null>(null);
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
-
 	const [show, content] =
 		observer && observer.mutation ? observer.mutation : [false, false];
-
 	warning(observer !== undefined, warningMessage);
-
 	useUserInteractions(
 		modalElementRef,
 		modalBodyElementRef,
@@ -109,31 +107,27 @@ const Modal = ({
 		show,
 		content
 	);
-
 	useEffect(() => {
 		observer.dispatch(ObserverType.RestoreFocus, document.activeElement);
 		observer.dispatch(ObserverType.Open);
 	}, []);
-
 	useEffect(() => {
 		if (modalBodyElementRef.current && show && content) {
 			const focusedElement =
 				modalBodyElementRef.current.querySelector('h1');
-
 			if (focusedElement) {
 				focusedElement.focus();
-			} else {
+			}
+			else {
 				modalBodyElementRef.current.focus();
 			}
 		}
 	}, [show, content]);
-
 	const ariaLabelledby = useMemo(() => {
 		counter++;
 
 		return `clay-modal-label-${counter}`;
 	}, []);
-
 	useEffect(() => {
 		if (show && content) {
 			stack.push(modalElementRef);
@@ -141,20 +135,20 @@ const Modal = ({
 
 		return () => {
 			const index = stack.indexOf(modalElementRef);
-
 			if (index >= 0) {
 				stack.splice(index, 1);
 			}
 		};
 	}, [show, modalElementRef, content]);
-
 	useEffect(() => {
 		if (
 			modalElementRef.current &&
 			show &&
 			stack[stack.length - 1] === modalElementRef
 		) {
+
 			// Hide everything from ARIA except the Modal Body
+
 			return suppressOthers(modalElementRef.current);
 		}
 	}, [show]);
@@ -172,6 +166,7 @@ const Modal = ({
 				})}
 				style={{zIndex}}
 			/>
+
 			<div
 				{...otherProps}
 				className={classNames('fade modal d-block', className, {
@@ -211,7 +206,7 @@ const Modal = ({
 			</div>
 		</ClayPortal>
 	);
-};
+}
 
 Modal.Body = Body;
 Modal.Footer = Footer;

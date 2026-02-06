@@ -2,9 +2,9 @@
 
 Badges help highlight important information, such as notifications or new and unread messages.
 
--   [Documentation](https://clayui.com/docs/components/badge.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/badge.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

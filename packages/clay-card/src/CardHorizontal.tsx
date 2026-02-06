@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -9,6 +9,7 @@ import React from 'react';
 import Context from './Context';
 
 interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Flag that indicates if `active` class is applied
 	 */
@@ -20,18 +21,20 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	selectable?: boolean;
 }
 
-const Body = ({
+function Body({
 	children,
 	className,
 	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) => (
-	<div
-		className={classNames('card card-horizontal', className)}
-		{...otherProps}
-	>
-		{children}
-	</div>
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+	return (
+		<div
+			className={classNames('card card-horizontal', className)}
+			{...otherProps}
+		>
+			{children}
+		</div>
+	);
+}
 
 export function ClayCardHorizontal({
 	active,

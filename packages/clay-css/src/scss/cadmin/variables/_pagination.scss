@@ -57,7 +57,8 @@ $cadmin-pagination-link-cursor: null !default;
 
 // @deprecated as of v2 use the Sass map `$cadmin-pagination-link` instead
 
-$cadmin-pagination-link-transition: background-color 0.15s ease-in-out,
+$cadmin-pagination-link-transition:
+	background-color 0.15s ease-in-out,
 	border-color 0.15s ease-in-out !default;
 
 $cadmin-pagination-link-first-border-radius: $cadmin-pagination-link-border-radius !default;

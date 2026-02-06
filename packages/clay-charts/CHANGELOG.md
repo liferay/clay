@@ -7,43 +7,43 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.154.0](https://github.com/liferay/clay/compare/v3.153.0...v3.154.0) (2025-11-04)
 
 ### Bug Fixes
 
--   **@clayui/charts:** LPD-69988 Add fix for billboard. ([6dd7c74](https://github.com/liferay/clay/commit/6dd7c7430b7dbc3803f1f6e8a8e8a45cf555f6dd))
+- **@clayui/charts:** LPD-69988 Add fix for billboard. ([6dd7c74](https://github.com/liferay/clay/commit/6dd7c7430b7dbc3803f1f6e8a8e8a45cf555f6dd))
 
 ## [3.144.1](https://github.com/liferay/clay/compare/v3.144.0...v3.144.1) (2025-08-29)
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 ## [3.141.2](https://github.com/liferay/clay/compare/@clayui/charts@3.2.0...@clayui/charts@3.141.2) (2025-08-01)
 
@@ -53,7 +53,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/charts:** LPD-44040 Update Clay Chart colors for accessibility ([63575e3](https://github.com/liferay/clay/commit/63575e3b8a3009e0d3d9d975028e0f7a18027611))
+- **@clayui/charts:** LPD-44040 Update Clay Chart colors for accessibility ([63575e3](https://github.com/liferay/clay/commit/63575e3b8a3009e0d3d9d975028e0f7a18027611))
 
 ## 3.106.1 (2023-10-26)
 
@@ -61,7 +61,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.65.0 (2022-07-11)
 
@@ -75,7 +75,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/css:** remove `node-sass` and add new build file ([80f6ec2](https://github.com/liferay/clay/commit/80f6ec2457b290865f5cf0c58f3dedb2bf822085))
+- **@clayui/css:** remove `node-sass` and add new build file ([80f6ec2](https://github.com/liferay/clay/commit/80f6ec2457b290865f5cf0c58f3dedb2bf822085))
 
 # 3.37.0 (2021-10-06)
 
@@ -83,7 +83,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/charts:** use isomorphic helper for useLayoutEffect ([6599030](https://github.com/liferay/clay/commit/6599030ee4b9c615db73dd8dc47302ff911d547b))
+- **@clayui/charts:** use isomorphic helper for useLayoutEffect ([6599030](https://github.com/liferay/clay/commit/6599030ee4b9c615db73dd8dc47302ff911d547b))
 
 ## [3.141.1](https://github.com/liferay/clay/compare/v3.141.0...v3.141.1) (2025-07-18)
 
@@ -93,7 +93,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/charts:** LPD-44040 Update Clay Chart colors for accessibility ([63575e3](https://github.com/liferay/clay/commit/63575e3b8a3009e0d3d9d975028e0f7a18027611))
+- **@clayui/charts:** LPD-44040 Update Clay Chart colors for accessibility ([63575e3](https://github.com/liferay/clay/commit/63575e3b8a3009e0d3d9d975028e0f7a18027611))
 
 ## [3.106.1](https://github.com/matuzalemsteles/clay/compare/v3.106.0...v3.106.1) (2023-10-26)
 
@@ -103,7 +103,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
 
@@ -125,7 +125,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/css:** remove `node-sass` and add new build file ([80f6ec2](https://github.com/matuzalemsteles/clay/commit/80f6ec2457b290865f5cf0c58f3dedb2bf822085))
+- **@clayui/css:** remove `node-sass` and add new build file ([80f6ec2](https://github.com/matuzalemsteles/clay/commit/80f6ec2457b290865f5cf0c58f3dedb2bf822085))
 
 # [3.37.0](https://github.com/julien/clay/compare/v3.36.0...v3.37.0) (2021-10-06)
 
@@ -139,14 +139,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/charts:** use isomorphic helper for useLayoutEffect ([6599030](https://github.com/ambrinchaudhary/clay/commit/6599030ee4b9c615db73dd8dc47302ff911d547b))
+- **@clayui/charts:** use isomorphic helper for useLayoutEffect ([6599030](https://github.com/ambrinchaudhary/clay/commit/6599030ee4b9c615db73dd8dc47302ff911d547b))
 
 # [3.2.0](https://github.com/bryceosterhaus/clay/compare/@clayui/charts@3.1.2...@clayui/charts@3.2.0) (2020-10-01)
 
 ### Features
 
--   add displayName for all components ([cc3211d](https://github.com/bryceosterhaus/clay/commit/cc3211d))
--   **@clayui/charts:** Split API into it's file, add notice we're switching to Recharts, and cast props to IProps ([9ca4e27](https://github.com/bryceosterhaus/clay/commit/9ca4e27))
+- add displayName for all components ([cc3211d](https://github.com/bryceosterhaus/clay/commit/cc3211d))
+- **@clayui/charts:** Split API into it's file, add notice we're switching to Recharts, and cast props to IProps ([9ca4e27](https://github.com/bryceosterhaus/clay/commit/9ca4e27))
 
 ## [3.1.2](https://github.com/bryceosterhaus/clay/compare/@clayui/charts@3.1.1...@clayui/charts@3.1.2) (2020-06-18)
 
@@ -160,16 +160,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   unbreak d3 types ([5bed461](https://github.com/liferay/clay/commit/5bed461))
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
--   **@clayui/charts:** fix broken charts build ([acc6c74](https://github.com/liferay/clay/commit/acc6c74))
--   **clay-charts:** allow users to pass attribute to the container element by using elementProps ([f4cd679](https://github.com/liferay/clay/commit/f4cd679))
--   **clay-charts:** asyncronously call 'onafterinit' prop in order to have access to ref ([129fd42](https://github.com/liferay/clay/commit/129fd42))
--   **clay-charts:** update tests ([92e5506](https://github.com/liferay/clay/commit/92e5506))
+- unbreak d3 types ([5bed461](https://github.com/liferay/clay/commit/5bed461))
+- update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+- **@clayui/charts:** fix broken charts build ([acc6c74](https://github.com/liferay/clay/commit/acc6c74))
+- **clay-charts:** allow users to pass attribute to the container element by using elementProps ([f4cd679](https://github.com/liferay/clay/commit/f4cd679))
+- **clay-charts:** asyncronously call 'onafterinit' prop in order to have access to ref ([129fd42](https://github.com/liferay/clay/commit/129fd42))
+- **clay-charts:** update tests ([92e5506](https://github.com/liferay/clay/commit/92e5506))
 
 ### Features
 
--   update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
+- update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
 
 ## [3.0.4](https://github.com/liferay/clay/compare/@clayui/charts@3.0.2...@clayui/charts@3.0.4) (2020-01-31)
 
@@ -187,4 +187,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   unbreak d3 types ([5bed461](https://github.com/matuzalemsteles/clay/commit/5bed461))
+- unbreak d3 types ([5bed461](https://github.com/matuzalemsteles/clay/commit/5bed461))

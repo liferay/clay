@@ -3,33 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.156.6](https://github.com/liferay/clay/compare/v3.156.0...v3.156.6) (2026-01-07)
-
-**Note:** Version bump only for package @clayui/multi-step-nav
-
-## [3.156.3](https://github.com/liferay/clay/compare/v3.156.0...v3.156.3) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/multi-step-nav
-
-## [3.156.2](https://github.com/liferay/clay/compare/v3.156.0...v3.156.2) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/multi-step-nav
-
-## [3.156.1](https://github.com/liferay/clay/compare/v3.156.0...v3.156.1) (2025-12-22)
-
-**Note:** Version bump only for package @clayui/multi-step-nav
-
 # [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-15)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
 
@@ -59,25 +43,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/multi-step-nav@3.142.0...@clayui/multi-step-nav@3.142.2) (2025-08-13)
 
@@ -121,7 +105,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/multi-step-nav:** improves component typing to create API MultiStepNav ([00e0082](https://github.com/liferay/clay/commit/00e008265f2467cd96449f04673dc425bef887d8))
+- **@clayui/multi-step-nav:** improves component typing to create API MultiStepNav ([00e0082](https://github.com/liferay/clay/commit/00e008265f2467cd96449f04673dc425bef887d8))
 
 # 3.127.0 (2025-01-23)
 
@@ -129,7 +113,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/multi-step-nav:** LPD-36816 Adds prop center to center the nav ([4a2de61](https://github.com/liferay/clay/commit/4a2de61b8d201616bf8fca2b22ba77b93f8b9054))
+- **@clayui/multi-step-nav:** LPD-36816 Adds prop center to center the nav ([4a2de61](https://github.com/liferay/clay/commit/4a2de61b8d201616bf8fca2b22ba77b93f8b9054))
 
 # 3.124.0 (2024-12-18)
 
@@ -179,8 +163,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.105.0 (2023-09-15)
 
@@ -218,7 +202,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/multi-step-nav:** adds new API for error indicator ([6187657](https://github.com/liferay/clay/commit/6187657d8172f5812c83d3a794bb49cf31c7cff5))
+- **@clayui/multi-step-nav:** adds new API for error indicator ([6187657](https://github.com/liferay/clay/commit/6187657d8172f5812c83d3a794bb49cf31c7cff5))
 
 # 3.91.0 (2023-03-24)
 
@@ -302,13 +286,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   updates broken storybook links in documentation ([22fc1c6](https://github.com/liferay/clay/commit/22fc1c684a92ada9aac73c9c7090c6cbca960f9d))
+- updates broken storybook links in documentation ([22fc1c6](https://github.com/liferay/clay/commit/22fc1c684a92ada9aac73c9c7090c6cbca960f9d))
 
 # 3.55.0 (2022-05-02)
 
 ### Features
 
--   **@clayui/multi-step-nav:** adds controlled component standardization and deprecates properties with inconsistent naming ([da60dad](https://github.com/liferay/clay/commit/da60dad783d11d6abd8f8ed38d1a1bd44e9832e0))
+- **@clayui/multi-step-nav:** adds controlled component standardization and deprecates properties with inconsistent naming ([da60dad](https://github.com/liferay/clay/commit/da60dad783d11d6abd8f8ed38d1a1bd44e9832e0))
 
 # 3.52.0 (2022-04-04)
 
@@ -324,7 +308,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/multi-step-nav:** add the new `indicatorLabel` API to indicate the position of the indicator label ([bb43ff8](https://github.com/liferay/clay/commit/bb43ff8d538e96e9ac5d6b635ef937abc112657a))
+- **@clayui/multi-step-nav:** add the new `indicatorLabel` API to indicate the position of the indicator label ([bb43ff8](https://github.com/liferay/clay/commit/bb43ff8d538e96e9ac5d6b635ef937abc112657a))
 
 # 3.42.0 (2021-12-15)
 
@@ -428,7 +412,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/multi-step-nav:** improves component typing to create API MultiStepNav ([00e0082](https://github.com/liferay/clay/commit/00e008265f2467cd96449f04673dc425bef887d8))
+- **@clayui/multi-step-nav:** improves component typing to create API MultiStepNav ([00e0082](https://github.com/liferay/clay/commit/00e008265f2467cd96449f04673dc425bef887d8))
 
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
@@ -438,7 +422,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/multi-step-nav:** LPD-36816 Adds prop center to center the nav ([4a2de61](https://github.com/liferay/clay/commit/4a2de61b8d201616bf8fca2b22ba77b93f8b9054))
+- **@clayui/multi-step-nav:** LPD-36816 Adds prop center to center the nav ([4a2de61](https://github.com/liferay/clay/commit/4a2de61b8d201616bf8fca2b22ba77b93f8b9054))
 
 # [3.124.0](https://github.com/liferay/clay/compare/v3.123.1...v3.124.0) (2024-12-18)
 
@@ -532,8 +516,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
 
@@ -603,7 +587,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/multi-step-nav:** adds new API for error indicator ([6187657](https://github.com/liferay/clay/commit/6187657d8172f5812c83d3a794bb49cf31c7cff5))
+- **@clayui/multi-step-nav:** adds new API for error indicator ([6187657](https://github.com/liferay/clay/commit/6187657d8172f5812c83d3a794bb49cf31c7cff5))
 
 # [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
 
@@ -765,13 +749,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   updates broken storybook links in documentation ([22fc1c6](https://github.com/liferay/clay/commit/22fc1c684a92ada9aac73c9c7090c6cbca960f9d))
+- updates broken storybook links in documentation ([22fc1c6](https://github.com/liferay/clay/commit/22fc1c684a92ada9aac73c9c7090c6cbca960f9d))
 
 # [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
 
 ### Features
 
--   **@clayui/multi-step-nav:** adds controlled component standardization and deprecates properties with inconsistent naming ([da60dad](https://github.com/liferay/clay/commit/da60dad783d11d6abd8f8ed38d1a1bd44e9832e0))
+- **@clayui/multi-step-nav:** adds controlled component standardization and deprecates properties with inconsistent naming ([da60dad](https://github.com/liferay/clay/commit/da60dad783d11d6abd8f8ed38d1a1bd44e9832e0))
 
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
@@ -797,7 +781,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/multi-step-nav:** add the new `indicatorLabel` API to indicate the position of the indicator label ([bb43ff8](https://github.com/liferay/clay/commit/bb43ff8d538e96e9ac5d6b635ef937abc112657a))
+- **@clayui/multi-step-nav:** add the new `indicatorLabel` API to indicate the position of the indicator label ([bb43ff8](https://github.com/liferay/clay/commit/bb43ff8d538e96e9ac5d6b635ef937abc112657a))
 
 # [3.42.0](https://github.com/liferay/clay/compare/v3.41.0...v3.42.0) (2021-12-15)
 
@@ -879,7 +863,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/multi-step-nav:** make sure <button> has a type ([dfd17aa](https://github.com/liferay/clay/commit/dfd17aa))
+- **@clayui/multi-step-nav:** make sure <button> has a type ([dfd17aa](https://github.com/liferay/clay/commit/dfd17aa))
 
 ## [3.3.4](https://github.com/liferay/clay/compare/@clayui/multi-step-nav@3.3.3...@clayui/multi-step-nav@3.3.4) (2021-01-13)
 
@@ -901,8 +885,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
--   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
 
 ## [3.2.8](https://github.com/liferay/clay/compare/@clayui/multi-step-nav@3.2.7...@clayui/multi-step-nav@3.2.8) (2020-08-28)
 
@@ -940,7 +924,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Improve component docs by updating content - Badge, Breadcrumb, Dual List Box, Loading Indicator, Localized Input & Multi Step Nav ([c4ad126](https://github.com/liferay/clay/commit/c4ad126))
+- **clayui.com:** Improve component docs by updating content - Badge, Breadcrumb, Dual List Box, Loading Indicator, Localized Input & Multi Step Nav ([c4ad126](https://github.com/liferay/clay/commit/c4ad126))
 
 ## [3.1.3](https://github.com/liferay/clay/compare/@clayui/multi-step-nav@3.1.2...@clayui/multi-step-nav@3.1.3) (2020-04-24)
 
@@ -958,14 +942,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/multi-step-nav:** Adds missing types for making APIDocs work ([f5cf8b5](https://github.com/liferay/clay/commit/f5cf8b5))
--   **@clayui/multi-step-nav:** fixes wrong import of MultiStepNav that breaks this package ([9d96087](https://github.com/liferay/clay/commit/9d96087))
--   **@clayui/multi-step-nav:** update Indicator trigger for reference to be button ([9e14062](https://github.com/liferay/clay/commit/9e14062))
+- **@clayui/multi-step-nav:** Adds missing types for making APIDocs work ([f5cf8b5](https://github.com/liferay/clay/commit/f5cf8b5))
+- **@clayui/multi-step-nav:** fixes wrong import of MultiStepNav that breaks this package ([9d96087](https://github.com/liferay/clay/commit/9d96087))
+- **@clayui/multi-step-nav:** update Indicator trigger for reference to be button ([9e14062](https://github.com/liferay/clay/commit/9e14062))
 
 ### Features
 
--   **multi-step-nav:** create high-level MultiStepNavWithBasicItems component ([ab341b5](https://github.com/liferay/clay/commit/ab341b5))
--   **multi-step-nav:** create multi-step-nav component ([63a3677](https://github.com/liferay/clay/commit/63a3677))
+- **multi-step-nav:** create high-level MultiStepNavWithBasicItems component ([ab341b5](https://github.com/liferay/clay/commit/ab341b5))
+- **multi-step-nav:** create multi-step-nav component ([63a3677](https://github.com/liferay/clay/commit/63a3677))
 
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-multi-step-nav/compare/@clayui/multi-step-nav@3.0.6...@clayui/multi-step-nav@3.0.7) (2020-02-13)
 
@@ -995,4 +979,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/multi-step-nav:** Adds missing types for making APIDocs work ([f5cf8b5](https://github.com/liferay/clay/commit/f5cf8b5))
+- **@clayui/multi-step-nav:** Adds missing types for making APIDocs work ([f5cf8b5](https://github.com/liferay/clay/commit/f5cf8b5))

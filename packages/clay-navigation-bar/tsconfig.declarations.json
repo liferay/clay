@@ -3,7 +3,11 @@
 		"baseUrl": ".",
 		"declarationDir": "./lib"
 	},
+	"exclude": [
+		"**/__tests__/**"
+	],
 	"extends": "../../tsconfig.declarations.json",
-	"include": ["src"],
-	"exclude": ["**/__tests__/**"]
+	"include": [
+		"src"
+	]
 }

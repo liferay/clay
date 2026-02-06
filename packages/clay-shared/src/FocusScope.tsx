@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {Children} from 'react';
@@ -19,6 +19,7 @@ type ChildrenFunction =
 	| ((focusManager: ReturnType<typeof useFocusManagement>) => Children);
 
 type Props = {
+
 	/**
 	 * Flag indicates whether the focus will also be controlled with the right
 	 * and left arrow keys.
@@ -48,49 +49,49 @@ const FocusConflictContext = React.createContext<boolean>(false);
  * for children's key down events, since the component handles the `onKeyDown`
  * event.
  */
-export const FocusScope = ({
+
+/**
+ * FocusScope is a component only for controlling focus and listening
+ * for children's key down events, since the component handles the `onKeyDown`
+ * event.
+ */
+export function FocusScope({
 	arrowKeysLeftRight = false,
 	arrowKeysUpDown = true,
 	children,
 	onFocus,
-}: Props) => {
+}: Props) {
 	const elRef = React.useRef<null | HTMLElement>(null);
 	const focusManager = useFocusManagement(elRef);
-
 	const onKeyDown = (event: React.KeyboardEvent<any>) => {
 		const {key, shiftKey} = event;
-
 		if (
 			(arrowKeysUpDown && key === Keys.Down) ||
 			(arrowKeysLeftRight && key === Keys.Right) ||
 			(key === Keys.Tab && !shiftKey)
 		) {
 			const next = focusManager.focusNext();
-
 			if (next) {
 				event.preventDefault();
-
 				if (onFocus) {
 					onFocus(next);
 				}
 			}
-		} else if (
+		}
+		else if (
 			(arrowKeysUpDown && key === Keys.Up) ||
 			(arrowKeysLeftRight && key === Keys.Left) ||
 			(key === Keys.Tab && shiftKey)
 		) {
 			const previous = focusManager.focusPrevious();
-
 			if (previous) {
 				event.preventDefault();
-
 				if (onFocus) {
 					onFocus(previous);
 				}
 			}
 		}
 	};
-
 	const child =
 		typeof children === 'function' ? children(focusManager) : children;
 
@@ -102,6 +103,7 @@ export const FocusScope = ({
 
 					// If the element already exists a `onKeyDown` event should
 					// invoke it as well.
+
 					if (child.props.onKeyDown) {
 						child.props.onKeyDown(event);
 					}
@@ -111,12 +113,13 @@ export const FocusScope = ({
 					if (r) {
 						elRef.current = r;
 						const {ref} = child;
-
 						if (ref) {
 							if (typeof ref === 'object') {
+
 								// eslint-disable-next-line react-compiler/react-compiler
 								ref.current = r;
-							} else if (typeof ref === 'function') {
+							}
+							else if (typeof ref === 'function') {
 								ref(r);
 							}
 						}
@@ -125,4 +128,4 @@ export const FocusScope = ({
 			})}
 		</FocusConflictContext.Provider>
 	);
-};
+}

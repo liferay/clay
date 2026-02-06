@@ -1,4 +1,5 @@
 import {promises as fs} from 'fs';
+import path from 'path';
 import {
 	SandpackProvider,
 	SandpackLayout,
@@ -16,7 +17,7 @@ type Props = {
 
 export async function Sandpack({language, children}: Props) {
 	const file = await fs.readFile(
-		process.cwd() + '/node_modules/@clayui/css/lib/images/icons/icons.svg',
+		path.join(process.cwd(), '..', 'clay-css/src/images/icons/icons.svg'),
 		'utf-8'
 	);
 
@@ -27,7 +28,7 @@ export async function Sandpack({language, children}: Props) {
 			template={language === 'jsx' ? 'react' : undefined}
 			customSetup={{
 				dependencies: {
-					react: '^16.12.0',
+					'react': '^16.12.0',
 					'react-dom': '^16.12.0',
 					'@clayui/core': 'latest',
 					'@clayui/icon': 'latest',

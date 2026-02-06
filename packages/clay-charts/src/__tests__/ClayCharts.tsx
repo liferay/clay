@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayChart from '..';
@@ -14,7 +14,7 @@ const COLUMNS = [
 	['data2', 20, 70, 100],
 ];
 
-const ChartWithRef = () => {
+function ChartWithRef() {
 	const chartRef = React.useRef<any>(null);
 
 	return (
@@ -26,7 +26,7 @@ const ChartWithRef = () => {
 			ref={chartRef}
 		/>
 	);
-};
+}
 
 /**
  * These tests need to be revisited at a later date.

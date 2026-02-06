@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useCallback, useState} from 'react';
@@ -52,20 +52,21 @@ const items = [
 						type: 'Vector',
 					},
 				],
+
 				id: 3,
 				name: 'Folder 1',
 				type: 'Folder',
 			},
 			{id: 4, name: 'Image Document', type: 'Image'},
 		],
+
 		id: 2,
 		name: 'Folder B',
 		type: 'Folder',
 	},
 	{id: 10, name: 'Folder C', type: 'Folder'},
 ];
-
-export const Dynamic = () => {
+export function Dynamic() {
 	return (
 		<Table>
 			<Head items={columns}>
@@ -76,13 +77,14 @@ export const Dynamic = () => {
 				{(row) => (
 					<Row>
 						<Cell>{row.name}</Cell>
+
 						<Cell>{row.type}</Cell>
 					</Row>
 				)}
 			</Body>
 		</Table>
 	);
-};
+}
 
 const columns2 = [
 	{
@@ -99,8 +101,7 @@ const rows2 = [
 	{id: 1, name: 'Games', type: 'File folder'},
 	{id: 2, name: 'Program Files', type: 'File folder'},
 ];
-
-export const DynamicCells = () => {
+export function DynamicCells() {
 	return (
 		<Table>
 			<Head items={columns2}>
@@ -116,13 +117,13 @@ export const DynamicCells = () => {
 			</Body>
 		</Table>
 	);
-};
-
-export const Sections = () => {
+}
+export function Sections() {
 	return (
 		<Table>
 			<Head items={columns}>
 				<Cell key="name">Name</Cell>
+
 				<Cell key="type">Type</Cell>
 			</Head>
 
@@ -130,40 +131,50 @@ export const Sections = () => {
 				<Row divider>
 					<Cell>Folders</Cell>
 				</Row>
+
 				<Row>
 					<Cell>Games</Cell>
+
 					<Cell>File folder</Cell>
 				</Row>
+
 				<Row>
 					<Cell>Program Files</Cell>
+
 					<Cell>File folder</Cell>
 				</Row>
+
 				<Row>
 					<Cell>Core</Cell>
+
 					<Cell>File folder</Cell>
 				</Row>
+
 				<Row divider>
 					<Cell>Folders</Cell>
 				</Row>
+
 				<Row>
 					<Cell>Games</Cell>
+
 					<Cell>File folder</Cell>
 				</Row>
+
 				<Row>
 					<Cell>Program Files</Cell>
+
 					<Cell>File folder</Cell>
 				</Row>
 			</Body>
 		</Table>
 	);
-};
+}
 
 type Sorting = {
 	column: React.Key;
 	direction: 'ascending' | 'descending';
 };
-
-export const Sorting = () => {
+export function Sorting() {
 	const [sort, setSort] = useState<Sorting | null>(null);
 	const [items, setItems] = useState([
 		{files: 22, id: 1, name: 'Games', type: 'File folder'},
@@ -197,9 +208,11 @@ export const Sorting = () => {
 				<Cell key="name" sortable>
 					Name
 				</Cell>
+
 				<Cell key="files" sortable>
 					Files
 				</Cell>
+
 				<Cell key="type" sortable>
 					Type
 				</Cell>
@@ -209,16 +222,17 @@ export const Sorting = () => {
 				{(row) => (
 					<Row>
 						<Cell>{row['name']}</Cell>
+
 						<Cell>{row['files']}</Cell>
+
 						<Cell>{row['type']}</Cell>
 					</Row>
 				)}
 			</Body>
 		</Table>
 	);
-};
-
-export const Treegrid = () => {
+}
+export function Treegrid() {
 	const [expandedKeys, setExpandedKeys] = useState<Set<React.Key>>(
 		new Set([2, 3])
 	);
@@ -261,63 +275,69 @@ export const Treegrid = () => {
 					<Row>
 						<Cell key={`${row.id}:name`}>
 							{ICON_TYPES[row['type']]}
+
 							<Text size={3} weight="semi-bold">
 								{row['name']}
 							</Text>
 						</Cell>
+
 						<Cell key={`${row.id}:type`}>{row['type']}</Cell>
 					</Row>
 				)}
 			</Body>
 		</Table>
 	);
-};
+}
+export function AsyncLoad() {
+	return (
+		<Table
+			aria-label="File Explorer"
+			nestedKey="children"
+			onLoadMore={async (item: any) => {
 
-export const AsyncLoad = () => (
-	<Table
-		aria-label="File Explorer"
-		nestedKey="children"
-		onLoadMore={async (item: any) => {
-			// Delay to simulate loading of new data
-			await new Promise((resolve) => {
-				setTimeout(() => resolve(''), 1000);
-			});
+				// Delay to simulate loading of new data
 
-			return [
-				{
-					id: Math.random(),
-					name: `${item.name} ${Math.random()}`,
-				},
-				{
-					id: Math.random(),
-					name: `${item.name} ${Math.random()}`,
-				},
-				{
-					id: Math.random(),
-					name: `${item.name} ${Math.random()}`,
-				},
-			];
-		}}
-	>
-		<Head items={columns}>
-			{(column) => (
-				<Cell className="table-cell-minw-300" key={column.id}>
-					{column.name}
-				</Cell>
-			)}
-		</Head>
+				await new Promise((resolve) => {
+					setTimeout(() => resolve(''), 1000);
+				});
 
-		<Body defaultItems={items}>
-			{(row) => (
-				<Row lazy>
-					<Cell key={`${row.id}:name`}>
-						<Text size={3} weight="semi-bold">
-							{row['name']}
-						</Text>
+				return [
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+				];
+			}}
+		>
+			<Head items={columns}>
+				{(column) => (
+					<Cell className="table-cell-minw-300" key={column.id}>
+						{column.name}
 					</Cell>
-					<Cell key={`${row.id}:type`}>{row['type']}</Cell>
-				</Row>
-			)}
-		</Body>
-	</Table>
-);
+				)}
+			</Head>
+
+			<Body defaultItems={items}>
+				{(row) => (
+					<Row lazy>
+						<Cell key={`${row.id}:name`}>
+							<Text size={3} weight="semi-bold">
+								{row['name']}
+							</Text>
+						</Cell>
+
+						<Cell key={`${row.id}:type`}>{row['type']}</Cell>
+					</Row>
+				)}
+			</Body>
+		</Table>
+	);
+}

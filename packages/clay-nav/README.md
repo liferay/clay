@@ -2,9 +2,9 @@
 
 Clay Nav provides a clear and semantic navigation for your site
 
--   [Documentation](https://clayui.com/docs/components/nav.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/nav.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

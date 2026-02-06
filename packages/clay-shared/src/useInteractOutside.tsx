@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useEffect, useRef} from 'react';
@@ -55,6 +55,7 @@ export function useInteractOutside({
 		};
 
 		// Use pointer events if available. Otherwise, fall back to mouse and touch events.
+
 		if (typeof PointerEvent !== 'undefined') {
 			const onPointerUp = (event: Event) => {
 				if (
@@ -80,11 +81,13 @@ export function useInteractOutside({
 				document.removeEventListener('pointerup', onPointerUp, true);
 				window.removeEventListener('blur', onBlur, true);
 			};
-		} else {
+		}
+		else {
 			const onMouseUp = (event: Event) => {
 				if (state.ignoreEmulatedMouseEvents) {
 					state.ignoreEmulatedMouseEvents = false;
-				} else if (
+				}
+				else if (
 					state.isPointerDown &&
 					state.onInteract &&
 					isValidEvent(event, ref, triggerRef)
@@ -129,14 +132,19 @@ function isValidEvent(
 	ref: React.RefObject<HTMLElement>,
 	trigger: React.RefObject<HTMLElement>
 ) {
+
 	// @ts-ignore
+
 	if (event.button > 0) {
 		return false;
 	}
 
 	// if the event target is no longer in the document
+
 	if (event.target) {
+
 		// @ts-ignore
+
 		const ownerDocument = event.target.ownerDocument;
 
 		if (
@@ -149,6 +157,7 @@ function isValidEvent(
 
 	// We disregard the trigger click because we already have an event that
 	// toggles the state of the overlay on the trigger.
+
 	if (
 		trigger.current &&
 		trigger.current.contains(event.target as HTMLElement)

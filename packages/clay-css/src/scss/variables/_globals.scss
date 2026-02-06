@@ -374,8 +374,10 @@ $embed-responsive-aspect-ratios: join(
 	$embed-responsive-aspect-ratios
 );
 
-$component-transition: color 0.15s ease-in-out,
-	background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+$component-transition:
+	color 0.15s ease-in-out,
+	background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out,
 	box-shadow 0.15s ease-in-out !default;
 
 $component-focus-box-shadow: 0 0 0 0.2rem rgba($primary, 0.25) !default;
