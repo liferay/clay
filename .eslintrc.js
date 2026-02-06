@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2019 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 const path = require('path');
@@ -37,7 +37,8 @@ module.exports = {
 			},
 		],
 		'prefer-template': 'error',
-		'react/display-name': 'error',
+		'quote-props': 'off',
+		'react/display-name': 'off',
 		'react/jsx-boolean-value': 'error',
 		'react/jsx-no-bind': [
 			'error',

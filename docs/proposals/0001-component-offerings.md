@@ -28,7 +28,7 @@ This boils down to two main goals:
 	<Card.Body onClick={handleBodyClick}>
 		<Card.Description>{'Some cool descriptors'}</Card.Description>
 	</Card.Body>
-</Card>
+</Card>;
 ```
 
 vs
@@ -40,7 +40,7 @@ vs
 	onBodyClick={handleBodyClick}
 	description="foo bar baz"
 	title="hello world"
-/>
+/>;
 ```
 
 ## Proposed solution
@@ -69,7 +69,7 @@ The decision going forward is to create 2 sets of components:
 			</DropDown.Item>
 		))}
 	</DropDown.ItemList>
-</DropDown>
+</DropDown>;
 ```
 
 Composing gives the user more control over the layout and interactions. Our "sell" here for the low-level components are for cases where users need to create other behaviors or customize their components in more detail.
@@ -83,7 +83,7 @@ Composing gives the user more control over the layout and interactions. Our "sel
 	items={items} // Array of objects with `label` and `href`
 	message={'Showing {0} of {1} Structures'}
 	title="Folder"
-/>
+/>;
 ```
 
 Compare if this component was composed of low-level components:
@@ -106,7 +106,7 @@ Compare if this component was composed of low-level components:
 	<DropDown.Action onClick={() => setPage(page + 1)}>
 		{'Show More'}
 	</DropDown.Action>
-</DropDown>
+</DropDown>;
 ```
 
 You'll notice that the high-level component handles much of the interactions internally. It will handle the click of the `show more`, paginate, and update language as necessary. In fact, even this high-level component will be made from the smaller low-level building blocks.

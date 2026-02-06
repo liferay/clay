@@ -2,10 +2,12 @@
 	try {
 		if (process.env.NODE_ENV === 'development') {
 			await import('@clayui/css/src/scss/atlas.scss');
-		} else {
+		}
+		else {
 			await import('@clayui/css/lib/css/atlas.css');
 		}
-	} catch (error) {
+	}
+	catch (error) {
 		console.error(`${error.name}: ${error.message}`);
 	}
 })();

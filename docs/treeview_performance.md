@@ -34,6 +34,7 @@ The DnD implementation would also be a place where we would be using tree traver
 ```ts
 // Operation of `add` value to the document structure.
 // RFC 6902 (JSON Patch) 4.1
+
 type PatchAdd = {
 	op: 'add';
 	path: Array<number>;
@@ -43,6 +44,7 @@ type PatchAdd = {
 // Operation of `move` value to the same document structure, removing from
 // `from` and then adding to `path`.
 // RFC 6902 (JSON Patch) 4.4
+
 type PatchMove = {
 	op: 'move';
 	from: Array<number>;

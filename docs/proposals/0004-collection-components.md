@@ -39,7 +39,7 @@ type Props<Items> = {
 ```tsx
 // (!) Approximate internal use
 
-<Collection<Items> items={items}>{children}</Collection>
+<Collection<Items> items={items}>{children}</Collection>;
 ```
 
 The component must be markup independent to allow adapting to the markups of each component. We also ensure that the behavior is consistent as well as APIs and composition.
@@ -68,7 +68,7 @@ As [described in the motivation we have some problems with this design](#motivat
 			<DropDown.Item key={item.id}>{item.label}</DropDown.Item>
 		))}
 	</DropDown.ItemList>
-</DropDown>
+</DropDown>;
 ```
 
 In the case of high-level, you define the rendering of the component defining an object according to the specified data the problem is that this data is opinionated for each component, and for teams, the data can be different, in many situations where the implementation is simple developers prefer low-level rendering because it allows the data to be agnostic and is more advantageous than transforming the data to adapt to the component structure which will require a performance loss in initial rendering in smaller scenarios this may not be an issue but with a lot of use cases within the application starting to become, in other scenarios the transform would also be necessary to add a listener like `onClick` to listen for an item specific event.
@@ -176,6 +176,7 @@ function DropDown<Items>({trigger, items, children}: Props<Items>) {
 
 // (!) Approximate usage example
 /// Static content
+
 function Example() {
 	return (
 		<DropDown>
@@ -187,6 +188,7 @@ function Example() {
 }
 
 /// Dynamic content
+
 function Example() {
 	return <DropDown<Items> items={items}>{(item) => <Item />}</DropDown>;
 }
@@ -203,7 +205,7 @@ Static collections are like the hardcoded list, usually used for elements like a
 	<Item>List</Item>
 	<Item>Table</Item>
 	<Item>Card</Item>
-</DropDown>
+</DropDown>;
 ```
 
 ### Dynamic collection
@@ -213,7 +215,7 @@ Unlike static collections, dynamic collections are data rendered in the list usi
 The `items` property is reactive, this can change according to the implementation and criteria of the component, for example `<TreeView />` data can be modified with user interaction, such as moving, deleting, or renaming the item, in this case, the items property follows [RFC 0002 Controlled and uncontrolled components](./0002-controlled-and-uncontrolled.md).
 
 ```tsx
-<DropDown<Items> items={items}>{(item) => <Item>{item.name}</Item>}</DropDown>
+<DropDown<Items> items={items}>{(item) => <Item>{item.name}</Item>}</DropDown>;
 ```
 
 #### Virtualization
@@ -245,6 +247,7 @@ For a list being rendered in React.js it is necessary that a [`key`](https://rea
 ```tsx
 // When there is an `id` or `key` property in the data it is
 // not necessary to define the property.
+
 const items = [
 	{id: 1, name: 'Item 1'},
 	{id: 2, name: 'Item 2'},
@@ -260,6 +263,7 @@ function Example() {
 }
 
 // If the key is not defined.
+
 const items = [{name: 'Item 1'}, {name: 'Item 2'}, {name: 'Item 3'}];
 
 function Example() {
@@ -384,7 +388,7 @@ When suspense is enabled when a network error occurs for the first request of th
 
 <ErrorBoundary exceptionElement={<Exception />}>
 	<DropDownUsers />
-</ErrorBoundary>
+</ErrorBoundary>;
 ```
 
 In this scenario, it is possible to catch the exception and render a UI as a fallback. Who takes care of this integration and thrown the exceptions is the [`useResource`](https://clayui.com/docs/components/data-provider.html) itself.
@@ -400,7 +404,7 @@ In this scenario, it is possible to catch the exception and render a UI as a fal
 	<Suspense fallback={<FileExplorerSkeleton />}>
 		<FileExplorer />
 	</Suspense>
-</ErrorBoundary>
+</ErrorBoundary>;
 ```
 
 Adding `Suspense` in this example above causes a fallback in the UI to be rendered on the first render when the request is made, it would also be feasible to add a `Suspense` located in the item together with the `ErrorBoundary` for cases where the node request can be slow, this triggers a fallback in the UI just for the item instead of triggering for the entire component.

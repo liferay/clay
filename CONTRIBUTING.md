@@ -157,6 +157,7 @@ Clay uses [TypeScript](https://www.typescriptlang.org/), obviating the need to w
 
 ```typescript
 interface IProps {
+
 	/**
 	 * Default position of menu element. Values come from `metal-position`.
 	 */
