@@ -383,12 +383,17 @@ $embed-responsive-aspect-ratios: join(
 	$embed-responsive-aspect-ratios
 );
 
-$component-transition: color 0.15s ease-in-out,
-	background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+$component-transition:
+	color 0.15s ease-in-out,
+	background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out,
 	box-shadow 0.15s ease-in-out !default;
 
-$component-focus-box-shadow: #{0 0 0 0.125rem $white, 0 0 0 0.25rem $primary-l0} !default;
-$component-focus-inset-box-shadow: #{inset 0 0 0 0.125rem $primary-l0,
+$component-focus-box-shadow:
+	#{0 0 0 0.125rem $white,
+	0 0 0 0.25rem $primary-l0} !default;
+$component-focus-inset-box-shadow:
+	#{inset 0 0 0 0.125rem $primary-l0,
 	inset 0 0 0 0.25rem $white} !default;
 
 $component-active-color: #fff !default;
@@ -456,9 +461,21 @@ $webkit-font-smoothing: antialiased !default;
 
 $font-import-url: null !default;
 
-$font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont,
-	'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial,
-	sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$font-family-sans-serif:
+	system-ui,
+	-apple-system,
+	BlinkMacSystemFont,
+	'Segoe UI',
+	Roboto,
+	Oxygen-Sans,
+	Ubuntu,
+	Cantarell,
+	'Helvetica Neue',
+	Arial,
+	sans-serif,
+	'Apple Color Emoji',
+	'Segoe UI Emoji',
+	'Segoe UI Symbol' !default;
 $font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 	'Liberation Mono', 'Courier New', monospace !default;

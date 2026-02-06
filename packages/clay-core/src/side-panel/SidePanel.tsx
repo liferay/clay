@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {useProvider} from '@clayui/provider';
@@ -25,16 +25,17 @@ import {SidePanelContext} from './context';
 const PANEL_WIDTH_MIN = 280;
 
 type ControlledState = {
-	open: boolean;
 	onOpenChange: (open: boolean) => void;
+	open: boolean;
 };
 
 type UncontrolledState = {
-	open?: boolean;
 	onOpenChange?: (open: boolean) => void;
+	open?: boolean;
 };
 
 export type Props = {
+
 	/**
 	 * The global `aria-describedby` attribute identifies the element that
 	 * describes the component.
@@ -61,78 +62,78 @@ export type Props = {
 	 * contains primary actions like important forms or sidebar is the
 	 * only important content.
 	 */
-	as?: 'aside' | 'div' | 'nav' | 'section';
-
-	/**
-	 * Sets the CSS className for the component.
-	 */
-	className?: string;
+	'as'?: 'aside' | 'div' | 'nav' | 'section';
 
 	/**
 	 * Children content to render a content.
 	 */
-	children: React.ReactNode;
+	'children': React.ReactNode;
+
+	/**
+	 * Sets the CSS className for the component.
+	 */
+	'className'?: string;
 
 	/**
 	 * Element reference to the container of the SidePanel and primary content.
 	 * NOTE: The containerRef is needed to properly handle layout and
 	 * transitions of the SidePanel.
 	 */
-	containerRef: React.RefObject<HTMLElement>;
+	'containerRef': React.RefObject<HTMLElement>;
 
 	/**
 	 * Property to set the default value (uncontrolled).
 	 */
-	defaultOpen?: boolean;
+	'defaultOpen'?: boolean;
 
 	/**
 	 * Direction the panel will render.
 	 */
-	direction?: 'left' | 'right';
+	'direction'?: 'left' | 'right';
 
 	/**
 	 * Flag to determine which style the SidePanel will display.
 	 */
-	displayType?: 'light' | 'dark';
+	'displayType'?: 'light' | 'dark';
 
 	/**
 	 * External reference for the side panel.
 	 */
 
-	externalSidePanelRef?: React.RefObject<HTMLDivElement>;
+	'externalSidePanelRef'?: React.RefObject<HTMLDivElement>;
 
 	/**
 	 * Property to determine whether the panel behaves in a fluid manner.
 	 */
-	fluid?: boolean;
+	'fluid'?: boolean;
 
 	/**
 	 * The id of the component.
 	 */
-	id?: string;
+	'id'?: string;
 
 	/**
 	 * Sets a custom width on the sidebar panel. The minimum width is 280px.
 	 */
-	panelWidth?: number;
+	'panelWidth'?: number;
 
 	/**
 	 * Property to determine how the SidePanel will be positioned.
 	 */
-	position?: 'absolute' | 'fixed';
+	'position'?: 'absolute' | 'fixed';
 
 	/**
 	 * Element reference to open the SidePanel.
 	 * NOTE: SidePanel automatically identifies the trigger but it may not
 	 * work in some cases when the element disappears from the DOM.
 	 */
-	triggerRef?: React.RefObject<HTMLElement>;
+	'triggerRef'?: React.RefObject<HTMLElement>;
 } & (UncontrolledState | ControlledState);
 
 export function SidePanel({
 	'aria-label': ariaLabel,
 	'aria-labelledby': ariaLabelledby,
-	as: As = 'div',
+	'as': As = 'div',
 	children,
 	className,
 	containerRef,
@@ -142,8 +143,8 @@ export function SidePanel({
 	externalSidePanelRef,
 	fluid = false,
 	onOpenChange,
-	open: externalOpen,
-	panelWidth: externalPanelWidth,
+	'open': externalOpen,
+	'panelWidth': externalPanelWidth,
 	position = 'absolute',
 	triggerRef,
 	...otherProps
@@ -170,7 +171,9 @@ export function SidePanel({
 	});
 
 	useEffect(() => {
+
 		// Ensures SidePanel is open when initial state is open.
+
 		if (open) {
 			containerRef.current?.classList.add(
 				`c-slideout-push-${direction === 'left' ? 'start' : 'end'}`
@@ -180,8 +183,10 @@ export function SidePanel({
 
 	useEffect(() => {
 		if (open) {
+
 			// Saves the last element that has focus before moving to the
 			// sidepanel to regain focus when closing the sidepanel.
+
 			const element =
 				(document.activeElement as HTMLElement | null) ||
 				triggerRef?.current ||
@@ -213,6 +218,7 @@ export function SidePanel({
 			};
 
 			// Add Side Panel content to DOM focus management
+
 			sidePanelRef.current?.removeAttribute('inert');
 
 			document.addEventListener('keydown', onKeyDown, true);
@@ -220,8 +226,11 @@ export function SidePanel({
 			return () => {
 				document.removeEventListener('keydown', onKeyDown, true);
 			};
-		} else {
+		}
+		else {
+
 			// Remove Side Panel content from DOM focus management
+
 			sidePanelRef.current?.setAttribute('inert', '');
 		}
 	}, [open]);
@@ -280,8 +289,10 @@ export function SidePanel({
 					);
 
 					if (!isAppearing) {
+
 						// Move focus to sidepanel when opening but not if
 						// opened on first load.
+
 						sidePanelRef.current?.focus({preventScroll: true});
 					}
 				}}

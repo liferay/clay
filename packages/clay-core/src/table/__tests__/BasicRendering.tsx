@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {cleanup, render} from '@testing-library/react';
@@ -16,20 +16,26 @@ describe('Table basic rendering', () => {
 			<Table>
 				<Head>
 					<Cell key="name">Name</Cell>
+
 					<Cell key="type">Type</Cell>
 				</Head>
 
 				<Body>
 					<Row>
 						<Cell>Foo</Cell>
+
 						<Cell>Foo</Cell>
 					</Row>
+
 					<Row>
 						<Cell>Bar</Cell>
+
 						<Cell>Bar</Cell>
 					</Row>
+
 					<Row>
 						<Cell>Baz</Cell>
+
 						<Cell>Baz</Cell>
 					</Row>
 				</Body>
@@ -60,7 +66,9 @@ describe('Table basic rendering', () => {
 				<Body items={items}>
 					{(row) => (
 						<Row items={columns}>
+
 							{/** @ts-ignore */}
+
 							{(column) => <Cell>{row[column.id]}</Cell>}
 						</Row>
 					)}
@@ -78,6 +86,7 @@ describe('Table basic rendering', () => {
 					<Cell key="name" sortable>
 						Name
 					</Cell>
+
 					<Cell key="type" sortable>
 						Type
 					</Cell>
@@ -86,14 +95,19 @@ describe('Table basic rendering', () => {
 				<Body>
 					<Row>
 						<Cell>Foo</Cell>
+
 						<Cell>Foo</Cell>
 					</Row>
+
 					<Row>
 						<Cell>Bar</Cell>
+
 						<Cell>Bar</Cell>
 					</Row>
+
 					<Row>
 						<Cell>Baz</Cell>
+
 						<Cell>Baz</Cell>
 					</Row>
 				</Body>
@@ -170,6 +184,7 @@ describe('Table basic rendering', () => {
 					{(row) => (
 						<Row>
 							<Cell key={`${row.id}:name`}>{row['name']}</Cell>
+
 							<Cell key={`${row.id}:type`}>{row['type']}</Cell>
 						</Row>
 					)}

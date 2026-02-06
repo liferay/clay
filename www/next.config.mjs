@@ -3,9 +3,12 @@ import rehypeMdxCodeProps from 'rehype-mdx-code-props';
 import {remarkPlugins, rehypePlugins} from 'renoun/mdx';
 import webpack from 'webpack';
 import path from 'path';
+import {createRequire} from 'node:module';
 
 import {unwrapMdxBlockElements} from './plugins/remark-unwrap-paragraphs/index.mjs';
 import {buildIcons} from './plugins/scss/index.mjs';
+
+const require = createRequire(import.meta.url);
 
 // @ts-ignore
 import clay from '@clayui/css';
@@ -22,10 +25,25 @@ const withMDX = createMDXPlugin({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	outputFileTracingRoot: process.cwd(),
 	images: {
 		unoptimized: true,
 	},
 	pageExtensions: ['mdx', 'ts', 'tsx'],
+	experimental: {
+		optimizePackageImports: [
+			'@clayui/css',
+			'@clayui/form',
+			'@clayui/icon',
+			'@clayui/link',
+			'@clayui/navigation-bar',
+			'@codesandbox/sandpack-react',
+			'@docsearch/react',
+		],
+	},
+	compiler: {
+		removeConsole: process.env.NODE_ENV === 'production',
+	},
 	async redirects() {
 		const redirects = [
 			{
@@ -383,9 +401,24 @@ const nextConfig = {
 		sourceMapContents: true,
 	},
 	transpilePackages: ['renoun'],
-	webpack(config) {
+	webpack(config, {dev, isServer}) {
+		const reactPath = require.resolve('react');
+		const reactDomPath = require.resolve('react-dom');
+
+		config.resolve = {
+			...config.resolve,
+			alias: {
+				...config.resolve.alias,
+				'react$': reactPath,
+				'react-dom$': reactDomPath,
+			},
+		};
+		// Only apply "use client" loader to specific Clay component packages (not clay-core or other packages)
+		const clayPackages = ['alert', 'form', 'autocomplete', 'badge', 'breadcrumb', 'button', 'card', 'color-picker', 'data-provider', 'date-picker', 'drop-down', 'empty-state', 'icon', 'label', 'layout', 'link', 'list', 'loading-indicator', 'localized-input', 'management-toolbar', 'modal', 'multi-select', 'multi-step-nav', 'nav', 'navigation-bar', 'pagination', 'pagination-bar', 'panel', 'popover', 'progress-bar', 'provider', 'slider', 'sticker', 'table', 'tabs', 'time-picker', 'toolbar', 'tooltip', 'upper-toolbar'];
+		const clayPackagePattern = new RegExp(`[\\\\/]clay-(${clayPackages.join('|')})[\\\\/.].*\\.(ts|tsx)`);
+		
 		config.module.rules.push({
-			test: [/packages[\\/]clay-.*[\\/.].*\.(ts|tsx)/],
+			test: clayPackagePattern,
 			loader: path.resolve('./use-client-loader.mjs'),
 		});
 
@@ -400,6 +433,39 @@ const nextConfig = {
 				}
 			)
 		);
+		
+		// Exclude clay-core files from bundling - they're loaded dynamically at runtime
+		config.externals = config.externals || [];
+		if (Array.isArray(config.externals)) {
+			// Exclude clay-core from all bundling to prevent webpack context creation
+			config.externals.push(function(ctx, callback) {
+				if (ctx.request && ctx.request.includes('clay-core')) {
+					return callback(null, 'commonjs ' + ctx.request);
+				}
+				callback();
+			});
+		}
+		
+		// Replace dynamic contexts for clay-core to prevent bundling
+		// This prevents webpack from bundling all clay-core MDX files
+		config.plugins.push(
+			new webpack.ContextReplacementPlugin(
+				/clay-core[\\/]docs/,
+				false,
+				/^$/
+			)
+		);
+		
+		// Enable webpack persistent caching for faster rebuilds
+		if (!dev && !isServer) {
+			config.cache = {
+				type: 'filesystem',
+				buildDependencies: {
+					config: [import.meta.filename],
+				},
+			};
+		}
+		
 		return config;
 	},
 };

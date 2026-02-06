@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
@@ -26,8 +26,8 @@ import type {Item} from './Items';
 import type {IProps as SearchProps} from './Search';
 
 type Messages = {
-	goTo: string;
 	back: string;
+	goTo: string;
 };
 
 type TriggerElement = React.ReactElement & {
@@ -35,6 +35,7 @@ type TriggerElement = React.ReactElement & {
 };
 
 export type Props = {
+
 	/**
 	 * Flag to indicate if the menu should be initially open (controlled).
 	 */
@@ -96,6 +97,11 @@ export type Props = {
 	footerContent?: React.ReactElement;
 
 	/**
+	 * Add informational text at the top of DropDown.
+	 */
+	helpText?: string;
+
+	/**
 	 * The unique identifier of the menu that should be active on mount.
 	 * @deprecated since v3.51.0 - use `defaultActiveMenu` instead.
 	 */
@@ -123,16 +129,16 @@ export type Props = {
 	menuWidth?: 'sm' | 'shrink' | 'full';
 
 	/**
-	 * Messages for drilldown.
-	 */
-	messages?: Messages;
-
-	/**
 	 * Map of menus and items to be used in the drilldown. Each key should be a unique identifier for the menu.
 	 */
 	menus: {
 		[id: string]: Array<Item>;
 	};
+
+	/**
+	 * Messages for drilldown.
+	 */
+	messages?: Messages;
 
 	/**
 	 * Function for setting the offset of the menu from the trigger.
@@ -145,39 +151,14 @@ export type Props = {
 	onActiveChange?: InternalDispatch<boolean>;
 
 	/**
-	 * Path to spritemap
-	 */
-	spritemap?: string;
-
-	/**
-	 * Flag indicating if the menu should be rendered lazily
-	 */
-	renderMenuOnClick?: boolean;
-
-	/**
-	 * Element that is used as the trigger which will activate the dropdown on click.
-	 */
-	trigger: TriggerElement;
-
-	/**
-	 * Flag indicating if the caret icon should be displayed on the right side.
-	 */
-	triggerIcon?: string | null;
-
-	/**
-	 * Add informational text at the top of DropDown.
-	 */
-	helpText?: string;
-
-	/**
 	 * Callback will always be called when the user is interacting with search.
 	 */
 	onSearchValueChange?: (newValue: string) => void;
 
 	/**
-	 * Flag to show search at the top of the DropDown.
+	 * Flag indicating if the menu should be rendered lazily
 	 */
-	searchable?: boolean;
+	renderMenuOnClick?: boolean;
 
 	/**
 	 * Pass the props to the Search component.
@@ -188,6 +169,26 @@ export type Props = {
 	 * The value that will be passed to the search input element.
 	 */
 	searchValue?: string;
+
+	/**
+	 * Flag to show search at the top of the DropDown.
+	 */
+	searchable?: boolean;
+
+	/**
+	 * Path to spritemap
+	 */
+	spritemap?: string;
+
+	/**
+	 * Element that is used as the trigger which will activate the dropdown on click.
+	 */
+	trigger: TriggerElement;
+
+	/**
+	 * Flag indicating if the caret icon should be displayed on the right side.
+	 */
+	triggerIcon?: string | null;
 };
 
 type History = {
@@ -195,7 +196,7 @@ type History = {
 	title: string;
 };
 
-export const ClayDropDownWithDrilldown = ({
+export function ClayDropDownWithDrilldown({
 	active: externalActive,
 	alignmentByViewport,
 	alignmentPosition,
@@ -225,17 +226,14 @@ export const ClayDropDownWithDrilldown = ({
 	spritemap,
 	trigger,
 	triggerIcon = null,
-}: Props) => {
+}: Props) {
 	const [activeMenu, setActiveMenu] = useState(
 		defaultActiveMenu ?? initialActiveMenu
 	);
 	const [direction, setDirection] = useState<'prev' | 'next'>();
 	const [history, setHistory] = useState<Array<History>>([]);
-
 	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
-
 	const {isFocusVisible} = useInteractionFocus();
-
 	const [active, setActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
@@ -244,52 +242,41 @@ export const ClayDropDownWithDrilldown = ({
 		onChange: onActiveChange,
 		value: externalActive,
 	});
-
-	const focusHistory = useRef<Array<HTMLElement>>([]);
-
+	const focusHistoryRef = useRef<Array<HTMLElement>>([]);
 	const innerRef = useRef<HTMLDivElement>(null);
-
 	const menuIds = Object.keys(menus);
-
 	const Wrap = footerContent ? 'form' : React.Fragment;
-
 	useEffect(() => {
 		if (!isFocusVisible()) {
 			return;
 		}
-
 		if (innerRef.current) {
 			if (direction === 'prev') {
-				const [previous] = focusHistory.current.slice(-1);
-
-				focusHistory.current = focusHistory.current.slice(
+				const [previous] = focusHistoryRef.current.slice(-1);
+				focusHistoryRef.current = focusHistoryRef.current.slice(
 					0,
-					focusHistory.current.length - 1
+					focusHistoryRef.current.length - 1
 				);
-
 				previous?.focus();
-			} else {
+			}
+			else {
 				const itemEl = innerRef.current.querySelector<HTMLElement>(
 					'.drilldown-current a.dropdown-item, .drilldown-current button.dropdown-item'
 				);
-
-				focusHistory.current = [
-					...focusHistory.current,
+				focusHistoryRef.current = [
+					...focusHistoryRef.current,
 					document.activeElement as HTMLElement,
 				];
 				itemEl?.focus();
 			}
 		}
-	}, [activeMenu, direction, innerRef, focusHistory, menus]);
-
+	}, [activeMenu, direction, innerRef, focusHistoryRef, menus]);
 	const onBack = useCallback(() => {
 		const [parent] = history.slice(-1);
-
 		setHistory(history.slice(0, history.length - 1));
 		setDirection('prev');
 		setActiveMenu(parent!.id);
 	}, [history]);
-
 	const onForward = useCallback(
 		(label: string, id: string) => {
 			setHistory((history) => [
@@ -301,12 +288,10 @@ export const ClayDropDownWithDrilldown = ({
 		},
 		[activeMenu]
 	);
-
 	const onClose = useCallback(() => {
 		setActive(false);
 		triggerElementRef.current?.focus();
 	}, []);
-
 	const hasLeftSymbols = useMemo(
 		() =>
 			menus[activeMenu!]
@@ -334,11 +319,10 @@ export const ClayDropDownWithDrilldown = ({
 			onActiveChange={(value) => {
 				if (!active) {
 					setActiveMenu(defaultActiveMenu);
-					focusHistory.current = [];
+					focusHistoryRef.current = [];
 					setHistory([]);
 					setDirection('prev');
 				}
-
 				setActive(value);
 			}}
 			renderMenuOnClick={renderMenuOnClick}
@@ -346,7 +330,9 @@ export const ClayDropDownWithDrilldown = ({
 				ref: (node: HTMLButtonElement) => {
 					if (node) {
 						triggerElementRef.current = node;
+
 						// Call the original ref, if any.
+
 						const {ref} = trigger;
 						if (typeof ref === 'function') {
 							ref(node);
@@ -371,7 +357,6 @@ export const ClayDropDownWithDrilldown = ({
 								label: label || title,
 							})
 						);
-
 						const header =
 							activeMenu === menuKey && !!history.length
 								? history.slice(-1)[0]!.title
@@ -379,7 +364,6 @@ export const ClayDropDownWithDrilldown = ({
 						const initialClasses = classNames('transitioning', {
 							'drilldown-prev-initial': direction === 'prev',
 						});
-
 						const active = activeMenu === menuKey;
 
 						return (
@@ -487,6 +471,6 @@ export const ClayDropDownWithDrilldown = ({
 			</ClayDropDownContext.Provider>
 		</DropDown>
 	);
-};
+}
 
 ClayDropDownWithDrilldown.displayName = 'ClayDropDownWithDrilldown';

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -23,9 +23,8 @@ export default {
 	title: 'Design System/Components/Card',
 };
 
-const ClayCheckboxWithState = (props: any) => {
+function ClayCheckboxWithState(props: any) {
 	const [value, setValue] = React.useState<boolean>(false);
-
 	const checked = props.value || value;
 	const onChange = props.onChange || setValue;
 
@@ -39,9 +38,8 @@ const ClayCheckboxWithState = (props: any) => {
 			{props.children}
 		</ClayCheckbox>
 	);
-};
-
-export const CardWithInfo = (args: any) => {
+}
+export function CardWithInfo(args: any) {
 	const [value, setValue] = useState<boolean>(false);
 	const [radioValue, setRadioValue] = useState<string>('');
 
@@ -123,6 +121,7 @@ export const CardWithInfo = (args: any) => {
 							title="Radio Card 1"
 							truncate={false}
 						/>
+
 						<ClayCardWithInfo
 							description="A cool description"
 							labels={[
@@ -144,13 +143,12 @@ export const CardWithInfo = (args: any) => {
 			</div>
 		</>
 	);
-};
+}
 
 CardWithInfo.args = {
 	disabled: false,
 };
-
-export const CardWithInfoImage = (args: any) => {
+export function CardWithInfoImage(args: any) {
 	const [value, setValue] = useState(false);
 
 	return (
@@ -205,15 +203,14 @@ export const CardWithInfoImage = (args: any) => {
 			</div>
 		</div>
 	);
-};
+}
 
 CardWithInfoImage.args = {
 	disabled: false,
 	flushHorizontal: false,
 	flushVertical: false,
 };
-
-export const CardWithHorizontal = (args: any) => {
+export function CardWithHorizontal(args: any) {
 	const [value, setValue] = useState<boolean>(false);
 	const [radioValue, setRadioValue] = useState<string>('');
 
@@ -275,6 +272,7 @@ export const CardWithHorizontal = (args: any) => {
 							selected={radioValue === 'radio1'}
 							title="Radio Selectable Folder 1"
 						/>
+
 						<ClayCardWithHorizontal
 							actions={[
 								{
@@ -302,42 +300,44 @@ export const CardWithHorizontal = (args: any) => {
 			</div>
 		</>
 	);
-};
+}
 
 CardWithHorizontal.args = {
 	disabled: false,
 };
+export function CardWithNavigation() {
+	return (
+		<div className="row">
+			<div className="col-md-4">
+				<ClayCardWithNavigation
+					description="Pick and choose your layout..."
+					onClick={() => alert('clicked')}
+					title="onClick Card with icon"
+				>
+					<ClayIcon symbol="page-template" />
+				</ClayCardWithNavigation>
+			</div>
 
-export const CardWithNavigation = () => (
-	<div className="row">
-		<div className="col-md-4">
-			<ClayCardWithNavigation
-				description="Pick and choose your layout..."
-				onClick={() => alert('clicked')}
-				title="onClick Card with icon"
-			>
-				<ClayIcon symbol="page-template" />
-			</ClayCardWithNavigation>
-		</div>
-		<div className="col-md-4">
-			<ClayCardWithNavigation href="#">
-				<img alt="portlet image" src={portletImage} />
-			</ClayCardWithNavigation>
-		</div>
-		<div className="col-md-4">
-			<ClayCardWithNavigation
-				description="Pick and choose your layout..."
-				horizontal
-				horizontalSymbol="page"
-				href="#"
-				stickerTitle="Page"
-				title="Layout Page"
-			/>
-		</div>
-	</div>
-);
+			<div className="col-md-4">
+				<ClayCardWithNavigation href="#">
+					<img alt="portlet image" src={portletImage} />
+				</ClayCardWithNavigation>
+			</div>
 
-export const CardWithUser = (args: any) => {
+			<div className="col-md-4">
+				<ClayCardWithNavigation
+					description="Pick and choose your layout..."
+					horizontal
+					horizontalSymbol="page"
+					href="#"
+					stickerTitle="Page"
+					title="Layout Page"
+				/>
+			</div>
+		</div>
+	);
+}
+export function CardWithUser(args: any) {
 	const [value, setValue] = useState<boolean>(false);
 	const [radioValue, setRadioValue] = useState<string>('');
 
@@ -368,6 +368,7 @@ export const CardWithUser = (args: any) => {
 						stickerTitle="User Icon"
 					/>
 				</div>
+
 				<div className="col-md-4">
 					<ClayCardWithUser
 						description="Assistant to the regional manager"
@@ -393,6 +394,7 @@ export const CardWithUser = (args: any) => {
 							stickerTitle="User Icon"
 							userImageSrc="https://via.placeholder.com/256"
 						/>
+
 						<ClayCardWithUser
 							description="Assistant to the regional manager"
 							disabled={args.disabled}
@@ -409,13 +411,12 @@ export const CardWithUser = (args: any) => {
 			</div>
 		</>
 	);
-};
+}
 
 CardWithUser.args = {
 	disabled: false,
 };
-
-export const LowLevelWithGroups = () => {
+export function LowLevelWithGroups() {
 	const [selected, setSelected] = useState(false);
 
 	return (
@@ -426,6 +427,7 @@ export const LowLevelWithGroups = () => {
 						<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 							<ClayIcon symbol="documents-and-media" />
 						</div>
+
 						<ClaySticker
 							displayType="danger"
 							position="bottom-left"
@@ -433,6 +435,7 @@ export const LowLevelWithGroups = () => {
 							DOC
 						</ClaySticker>
 					</ClayCard.AspectRatio>
+
 					<ClayCard.Body>
 						<ClayCard.Row>
 							<div className="autofit-col autofit-col-expand">
@@ -440,9 +443,11 @@ export const LowLevelWithGroups = () => {
 									<ClayCard.Description displayType="title">
 										deliverable.doc
 									</ClayCard.Description>
+
 									<ClayCard.Description displayType="subtitle">
 										Stevie Ray Vaughn
 									</ClayCard.Description>
+
 									<ClayCard.Caption>
 										<ClayLabel displayType="success">
 											Approved
@@ -453,6 +458,7 @@ export const LowLevelWithGroups = () => {
 						</ClayCard.Row>
 					</ClayCard.Body>
 				</ClayCard>
+
 				<ClayCard active={selected} displayType="file" selectable>
 					<ClayCard.AspectRatio className="card-item-first">
 						<ClayCheckboxWithState
@@ -462,6 +468,7 @@ export const LowLevelWithGroups = () => {
 							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<ClayIcon symbol="documents-and-media" />
 							</div>
+
 							<ClaySticker
 								displayType="danger"
 								position="bottom-left"
@@ -470,6 +477,7 @@ export const LowLevelWithGroups = () => {
 							</ClaySticker>
 						</ClayCheckboxWithState>
 					</ClayCard.AspectRatio>
+
 					<ClayCard.Body>
 						<ClayCard.Row>
 							<div className="autofit-col autofit-col-expand">
@@ -477,9 +485,11 @@ export const LowLevelWithGroups = () => {
 									<ClayCard.Description displayType="title">
 										deliverable.doc
 									</ClayCard.Description>
+
 									<ClayCard.Description displayType="subtitle">
 										Stevie Ray Vaughn
 									</ClayCard.Description>
+
 									<ClayCard.Caption>
 										<ClayLabel displayType="success">
 											Approved
@@ -499,6 +509,7 @@ export const LowLevelWithGroups = () => {
 							className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
 							src="https://via.placeholder.com/256"
 						/>
+
 						<ClaySticker
 							displayType="danger"
 							position="bottom-left"
@@ -513,9 +524,11 @@ export const LowLevelWithGroups = () => {
 								<ClayCard.Description displayType="title">
 									thumbnail_coffee.jpg
 								</ClayCard.Description>
+
 								<ClayCard.Description displayType="subtitle">
 									Author Action
 								</ClayCard.Description>
+
 								<ClayCard.Caption>
 									<ClayLabel displayType="success">
 										Approved
@@ -525,6 +538,7 @@ export const LowLevelWithGroups = () => {
 						</ClayCard.Row>
 					</ClayCard.Body>
 				</ClayCard>
+
 				<ClayCard displayType="image">
 					<ClayCard.AspectRatio className="card-item-first">
 						<img
@@ -532,6 +546,7 @@ export const LowLevelWithGroups = () => {
 							className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
 							src="https://via.placeholder.com/256"
 						/>
+
 						<ClaySticker
 							displayType="danger"
 							position="bottom-left"
@@ -546,9 +561,11 @@ export const LowLevelWithGroups = () => {
 								<ClayCard.Description displayType="title">
 									thumbnail_coffee.jpg
 								</ClayCard.Description>
+
 								<ClayCard.Description displayType="subtitle">
 									Author Action
 								</ClayCard.Description>
+
 								<ClayCard.Caption>
 									<ClayLabel displayType="success">
 										Approved
@@ -561,9 +578,8 @@ export const LowLevelWithGroups = () => {
 			</ClayCard.Group>
 		</>
 	);
-};
-
-export const ProductCard = () => {
+}
+export function ProductCard() {
 	const [dropdownActive, setDropdownActive] = useState(false);
 
 	return (
@@ -602,6 +618,7 @@ export const ProductCard = () => {
 
 							<ClayCard.Description displayType="text">
 								<s>$99.00</s>
+
 								<span>$70.00</span>
 							</ClayCard.Description>
 						</div>
@@ -652,6 +669,7 @@ export const ProductCard = () => {
 									</div>
 								</div>
 							</div>
+
 							<div className="autofit-col">
 								<div className="autofit-section">
 									<ClayDropDown
@@ -720,4 +738,4 @@ export const ProductCard = () => {
 			</div>
 		</div>
 	);
-};
+}

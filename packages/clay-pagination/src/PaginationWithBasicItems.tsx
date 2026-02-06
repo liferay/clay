@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayIcon from '@clayui/icon';
@@ -18,6 +18,7 @@ import {Pagination} from './Pagination';
 const ELLIPSIS_BUFFER = 2;
 
 interface IProps extends React.ComponentProps<typeof Pagination> {
+
 	/**
 	 * Sets the currently active page (controlled).
 	 */
@@ -40,20 +41,9 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	 */
 	ariaLabels?: {
 		link: string;
-		previous: string;
 		next: string;
+		previous: string;
 	};
-
-	/**
-	 * The number of pages to show on each side of the active page before
-	 * using an ellipsis dropdown.
-	 */
-	ellipsisBuffer?: number;
-
-	/**
-	 * Properties to pass to the ellipsis trigger.
-	 */
-	ellipsisProps?: {} | undefined;
 
 	/**
 	 * Sets the default active page (uncontrolled).
@@ -69,6 +59,17 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	 * The page numbers that should be disabled. For example, `[2,5,6]`.
 	 */
 	disabledPages?: Array<number>;
+
+	/**
+	 * The number of pages to show on each side of the active page before
+	 * using an ellipsis dropdown.
+	 */
+	ellipsisBuffer?: number;
+
+	/**
+	 * Properties to pass to the ellipsis trigger.
+	 */
+	ellipsisProps?: {} | undefined;
 
 	/**
 	 * Function used to create the href provided for each page link.
@@ -89,14 +90,14 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	onPageChange?: InternalDispatch<number>;
 
 	/**
-	 * The total number of pages in the pagination list.
-	 */
-	totalPages: number;
-
-	/**
 	 * Path to spritemap from clay-css.
 	 */
 	spritemap?: string;
+
+	/**
+	 * The total number of pages in the pagination list.
+	 */
+	totalPages: number;
 }
 
 export const ClayPaginationWithBasicItems = React.forwardRef(
@@ -116,7 +117,7 @@ export const ClayPaginationWithBasicItems = React.forwardRef(
 			ellipsisBuffer = ELLIPSIS_BUFFER,
 			ellipsisProps = {
 				'aria-label': 'Show pages {0} through {1}',
-				title: 'Show pages {0} through {1}',
+				'title': 'Show pages {0} through {1}',
 			},
 			hrefConstructor,
 			onActiveChange,
@@ -188,7 +189,7 @@ export const ClayPaginationWithBasicItems = React.forwardRef(
 							},
 							ellipsisBuffer,
 							internalActive - 1
-					  )
+						)
 					: pages
 				).map((page: number | JSX.Element | Object, index: number) =>
 					React.isValidElement(page) ? (

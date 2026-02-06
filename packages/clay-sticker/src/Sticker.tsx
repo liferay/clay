@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -28,6 +28,7 @@ export type DisplayType =
 	| 'outline-9';
 
 interface IClayStickerProps extends React.HTMLAttributes<HTMLSpanElement> {
+
 	/**
 	 * Determines the color of the sticker.
 	 */
@@ -80,34 +81,39 @@ interface IClayStickerProps extends React.HTMLAttributes<HTMLSpanElement> {
 }
 
 interface IOverylayProps extends React.HTMLAttributes<HTMLSpanElement> {
+
 	/**
 	 * Flag to indicate if `inline-item` class should be applied
 	 */
 	inline?: boolean;
 }
 
-export const Overlay = ({
+export function Overlay({
 	children,
 	className,
 	inline,
 	...otherProps
-}: IOverylayProps) => (
-	<span
-		className={classNames(className, 'sticker-overlay', {
-			'inline-item': inline,
-		})}
-		{...otherProps}
-	>
-		{children}
-	</span>
-);
+}: IOverylayProps) {
+	return (
+		<span
+			className={classNames(className, 'sticker-overlay', {
+				'inline-item': inline,
+			})}
+			{...otherProps}
+		>
+			{children}
+		</span>
+	);
+}
 
-export const Image = ({
+export function Image({
 	className,
 	...otherProps
-}: React.ImgHTMLAttributes<HTMLImageElement>) => (
-	<img className={classNames(className, 'sticker-img')} {...otherProps} />
-);
+}: React.ImgHTMLAttributes<HTMLImageElement>) {
+	return (
+		<img className={classNames(className, 'sticker-img')} {...otherProps} />
+	);
+}
 
 function Sticker({
 	children,

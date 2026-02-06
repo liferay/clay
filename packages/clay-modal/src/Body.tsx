@@ -1,12 +1,13 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
 export interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Props to add to the iframe element
 	 */
@@ -23,16 +24,15 @@ export interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 	url?: string;
 }
 
-const Body = ({
+function Body({
 	children,
 	className,
 	iFrameProps = {},
 	scrollable,
 	url,
 	...otherProps
-}: IBodyProps) => {
+}: IBodyProps) {
 	const elementRef = useRef<HTMLDivElement | null>(null);
-
 	useEffect(() => {
 		const onKeyDown = (event: KeyboardEvent) => {
 			if (
@@ -43,11 +43,9 @@ const Body = ({
 				if (event.defaultPrevented) {
 					return;
 				}
-
 				elementRef.current.focus();
 			}
 		};
-
 		document.addEventListener('keydown', onKeyDown);
 
 		return () => {
@@ -68,6 +66,6 @@ const Body = ({
 			{url ? <iframe {...iFrameProps} src={url} title={url} /> : children}
 		</div>
 	);
-};
+}
 
 export default Body;

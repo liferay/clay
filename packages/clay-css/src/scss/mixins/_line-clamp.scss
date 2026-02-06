@@ -14,8 +14,8 @@
 ) {
 	display: block;
 	height: calc(#{$font-size} * #{$line-height} * #{$lines});
-	position: relative;
 	overflow: hidden;
+	position: relative;
 
 	@supports (-webkit-line-clamp: #{$lines}) {
 		-webkit-box-orient: vertical;

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayForm from '@clayui/form';
@@ -12,8 +12,7 @@ export default {
 	component: ClayColorPicker,
 	title: 'Design System/Components/ColorPicker',
 };
-
-export const Default = (args: any) => {
+export function Default(args: any) {
 	const [color, setColor] = useState('FFFFFF');
 
 	return (
@@ -28,7 +27,7 @@ export const Default = (args: any) => {
 			value={color}
 		/>
 	);
-};
+}
 
 Default.args = {
 	disabled: false,
@@ -37,8 +36,7 @@ Default.args = {
 	small: false,
 	title: 'Default',
 };
-
-export const CustomColors = (args: any) => {
+export function CustomColors(args: any) {
 	const [customColors, setCustoms] = useState([
 		'008000',
 		'00FFFF',
@@ -64,7 +62,7 @@ export const CustomColors = (args: any) => {
 			value={color}
 		/>
 	);
-};
+}
 
 CustomColors.args = {
 	disabled: false,
@@ -73,8 +71,7 @@ CustomColors.args = {
 	small: false,
 	title: 'Default',
 };
-
-export const CustomAndPredefinedColors = (args: any) => {
+export function CustomAndPredefinedColors(args: any) {
 	const [customColors, setCustoms] = useState([
 		'008000',
 		'00FFFF',
@@ -101,7 +98,7 @@ export const CustomAndPredefinedColors = (args: any) => {
 			value={color}
 		/>
 	);
-};
+}
 
 CustomAndPredefinedColors.args = {
 	disabled: false,
@@ -109,8 +106,7 @@ CustomAndPredefinedColors.args = {
 	small: false,
 	title: 'Default',
 };
-
-export const CustomPalette = (args: any) => {
+export function CustomPalette(args: any) {
 	const [customColors, setCustoms] = useState([
 		'008000',
 		'00FFFF',
@@ -137,7 +133,7 @@ export const CustomPalette = (args: any) => {
 			value={color}
 		/>
 	);
-};
+}
 
 CustomPalette.args = {
 	disabled: false,
@@ -146,8 +142,7 @@ CustomPalette.args = {
 	small: false,
 	title: 'Default',
 };
-
-export const Native = (args: any) => {
+export function Native(args: any) {
 	const [color, setColor] = React.useState('FFFFFF');
 
 	return (
@@ -162,7 +157,7 @@ export const Native = (args: any) => {
 			value={color}
 		/>
 	);
-};
+}
 
 Native.args = {
 	disabled: false,
@@ -171,8 +166,7 @@ Native.args = {
 	small: false,
 	title: 'Default',
 };
-
-export const Validation = () => {
+export function Validation() {
 	const [color, setColor] = useState('');
 
 	const valid = color.length === 8;
@@ -191,4 +185,4 @@ export const Validation = () => {
 			)}
 		</ClayForm.Group>
 	);
-};
+}

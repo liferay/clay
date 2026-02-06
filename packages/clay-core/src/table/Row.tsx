@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {Keys} from '@clayui/shared';
@@ -15,6 +15,37 @@ import {RowContext, useBody, useTable} from './context';
 
 interface IProps<T>
 	extends Omit<React.HTMLAttributes<HTMLTableRowElement>, 'children'> {
+
+	/**
+	 * @ignore
+	 */
+	_expandable?: boolean;
+
+	/**
+	 * @ignore
+	 */
+	_index?: number;
+
+	/**
+	 * @ignore
+	 */
+	_item?: T;
+
+	/**
+	 * @ignore
+	 */
+	_level?: number;
+
+	/**
+	 * @ignore
+	 */
+	_loc?: Array<number>;
+
+	/**
+	 * @ignore
+	 */
+	_size?: number;
+
 	/**
 	 * Children content to render a dynamic or static content.
 	 */
@@ -46,36 +77,6 @@ interface IProps<T>
 	 * `onLoadMore` is set.
 	 */
 	lazy?: boolean;
-
-	/**
-	 * @ignore
-	 */
-	_expandable?: boolean;
-
-	/**
-	 * @ignore
-	 */
-	_index?: number;
-
-	/**
-	 * @ignore
-	 */
-	_level?: number;
-
-	/**
-	 * @ignore
-	 */
-	_size?: number;
-
-	/**
-	 * @ignore
-	 */
-	_item?: T;
-
-	/**
-	 * @ignore
-	 */
-	_loc?: Array<number>;
 }
 
 export function Row<T extends Record<string, any>>(
@@ -145,8 +146,10 @@ export function Row<T extends Record<string, any>>(
 	const ref = useForwardRef(outRef);
 
 	const visibleKeys = useMemo(() => {
+
 		// This is a speculation/inference about the size of items to decide
 		// to render a last cell as an action.
+
 		const count = items ? items.length : React.Children.count(children);
 
 		return [
@@ -202,7 +205,8 @@ export function Row<T extends Record<string, any>>(
 					case Keys.Right: {
 						if (onLoadMore && lazy && !_expandable) {
 							loadMore();
-						} else {
+						}
+						else {
 							if (!expandedKeys.has(keyValue!)) {
 								const newExpandedKeys = new Set(expandedKeys);
 								newExpandedKeys.add(keyValue!);
@@ -247,8 +251,8 @@ export function Row<T extends Record<string, any>>(
 }
 
 type ForwardRef = {
-	displayName: string;
 	<T>(props: IProps<T> & {ref?: React.Ref<HTMLTableRowElement>}): JSX.Element;
+	displayName: string;
 };
 
 export const ForwardRow = React.forwardRef(Row) as ForwardRef;
@@ -256,4 +260,5 @@ export const ForwardRow = React.forwardRef(Row) as ForwardRef;
 ForwardRow.displayName = 'TableRow';
 
 // @ts-ignore
+
 ForwardRow.passthroughKey = true;

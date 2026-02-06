@@ -7,47 +7,47 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** LPD-73358 Add missing clay-link dependency ([b7f6646](https://github.com/liferay/clay/commit/b7f664689be0cf2af8dc34d55482b039a8b6a133))
--   **@clayui/breadcrumb:** LPD-73358 Using onClick on an item should use the button tag ([8364915](https://github.com/liferay/clay/commit/83649156c595ed970700a599c0e8256e040ebcf0))
+- **@clayui/breadcrumb:** LPD-73358 Add missing clay-link dependency ([b7f6646](https://github.com/liferay/clay/commit/b7f664689be0cf2af8dc34d55482b039a8b6a133))
+- **@clayui/breadcrumb:** LPD-73358 Using onClick on an item should use the button tag ([8364915](https://github.com/liferay/clay/commit/83649156c595ed970700a599c0e8256e040ebcf0))
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** LPD-73358 Add missing clay-link dependency ([b7f6646](https://github.com/liferay/clay/commit/b7f664689be0cf2af8dc34d55482b039a8b6a133))
--   **@clayui/breadcrumb:** LPD-73358 Using onClick on an item should use the button tag ([8364915](https://github.com/liferay/clay/commit/83649156c595ed970700a599c0e8256e040ebcf0))
+- **@clayui/breadcrumb:** LPD-73358 Add missing clay-link dependency ([b7f6646](https://github.com/liferay/clay/commit/b7f664689be0cf2af8dc34d55482b039a8b6a133))
+- **@clayui/breadcrumb:** LPD-73358 Using onClick on an item should use the button tag ([8364915](https://github.com/liferay/clay/commit/83649156c595ed970700a599c0e8256e040ebcf0))
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.144.1](https://github.com/liferay/clay/compare/v3.144.0...v3.144.1) (2025-08-29)
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/breadcrumb@3.3.6...@clayui/breadcrumb@3.142.0) (2025-08-01)
 
@@ -59,13 +59,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** LPD-51678 Use breadcrumb-bar instead of utility classes ([c59d9fc](https://github.com/liferay/clay/commit/c59d9fc06a25143041d8ca6d97ee85fadd96f650))
+- **@clayui/breadcrumb:** LPD-51678 Use breadcrumb-bar instead of utility classes ([c59d9fc](https://github.com/liferay/clay/commit/c59d9fc06a25143041d8ca6d97ee85fadd96f650))
 
 # 3.128.0 (2025-02-20)
 
 ### Features
 
--   **@clayui/breadcrumb:** improves component typing to create API Breadcrumb ([0da37ce](https://github.com/liferay/clay/commit/0da37cee0656624b98c7f08dd1666dc06b237ca1))
+- **@clayui/breadcrumb:** improves component typing to create API Breadcrumb ([0da37ce](https://github.com/liferay/clay/commit/0da37cee0656624b98c7f08dd1666dc06b237ca1))
 
 # 3.116.0 (2024-06-10)
 
@@ -83,22 +83,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.104.0 (2023-08-25)
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** the active item must not have the href ([4482a15](https://github.com/liferay/clay/commit/4482a15494fa4aef807bb4b023f18281e8cf54ed))
--   **@clayui/breadcrumb:** updates colors to active state with link and expand button ([0313029](https://github.com/liferay/clay/commit/0313029dfe39c7689315919d9c3f36fdea8b97f9))
--   **@clayui/breadcrumb:** use `breadcrumb-toggle` instead of `breadcrumb-item-expand` ([a94ba61](https://github.com/liferay/clay/commit/a94ba614e9742ea83767d93573fc75608871c95f))
+- **@clayui/breadcrumb:** the active item must not have the href ([4482a15](https://github.com/liferay/clay/commit/4482a15494fa4aef807bb4b023f18281e8cf54ed))
+- **@clayui/breadcrumb:** updates colors to active state with link and expand button ([0313029](https://github.com/liferay/clay/commit/0313029dfe39c7689315919d9c3f36fdea8b97f9))
+- **@clayui/breadcrumb:** use `breadcrumb-toggle` instead of `breadcrumb-item-expand` ([a94ba61](https://github.com/liferay/clay/commit/a94ba614e9742ea83767d93573fc75608871c95f))
 
 # 3.101.0 (2023-07-28)
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** fix focus visible in breadcrumb ([62b1a24](https://github.com/liferay/clay/commit/62b1a241b390f0e4bcea9aa97322f14dacb539db))
+- **@clayui/breadcrumb:** fix focus visible in breadcrumb ([62b1a24](https://github.com/liferay/clay/commit/62b1a241b390f0e4bcea9aa97322f14dacb539db))
 
 # 3.100.0 (2023-07-13)
 
@@ -106,8 +106,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/breadcrumb:** changes the ellipse implementation to collapse ([5bbc5fc](https://github.com/liferay/clay/commit/5bbc5fc20572dce091e5dfb64836b83041014ab4))
--   **@clayui/breadcrumb:** improve breadcrumb accessibility ([f3c6131](https://github.com/liferay/clay/commit/f3c61311dd55c68e3aeb772d8dff0c77a1287362))
+- **@clayui/breadcrumb:** changes the ellipse implementation to collapse ([5bbc5fc](https://github.com/liferay/clay/commit/5bbc5fc20572dce091e5dfb64836b83041014ab4))
+- **@clayui/breadcrumb:** improve breadcrumb accessibility ([f3c6131](https://github.com/liferay/clay/commit/f3c61311dd55c68e3aeb772d8dff0c77a1287362))
 
 # 3.91.0 (2023-03-24)
 
@@ -135,7 +135,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** add `aria-label` and `title` to ellipsis ([7905087](https://github.com/liferay/clay/commit/7905087c927396c74f5a9230d9d5b29a6aeebb30))
+- **@clayui/breadcrumb:** add `aria-label` and `title` to ellipsis ([7905087](https://github.com/liferay/clay/commit/7905087c927396c74f5a9230d9d5b29a6aeebb30))
 
 # 3.81.0 (2022-11-30)
 
@@ -201,13 +201,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
+- **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
 
 # 3.48.0 (2022-03-07)
 
 ### Features
 
--   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+- **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
 
 # 3.47.0 (2022-02-23)
 
@@ -261,13 +261,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** LPD-51678 Use breadcrumb-bar instead of utility classes ([c59d9fc](https://github.com/liferay/clay/commit/c59d9fc06a25143041d8ca6d97ee85fadd96f650))
+- **@clayui/breadcrumb:** LPD-51678 Use breadcrumb-bar instead of utility classes ([c59d9fc](https://github.com/liferay/clay/commit/c59d9fc06a25143041d8ca6d97ee85fadd96f650))
 
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features
 
--   **@clayui/breadcrumb:** improves component typing to create API Breadcrumb ([0da37ce](https://github.com/liferay/clay/commit/0da37cee0656624b98c7f08dd1666dc06b237ca1))
+- **@clayui/breadcrumb:** improves component typing to create API Breadcrumb ([0da37ce](https://github.com/liferay/clay/commit/0da37cee0656624b98c7f08dd1666dc06b237ca1))
 
 # [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
 
@@ -297,22 +297,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** the active item must not have the href ([4482a15](https://github.com/liferay/clay/commit/4482a15494fa4aef807bb4b023f18281e8cf54ed))
--   **@clayui/breadcrumb:** updates colors to active state with link and expand button ([0313029](https://github.com/liferay/clay/commit/0313029dfe39c7689315919d9c3f36fdea8b97f9))
--   **@clayui/breadcrumb:** use `breadcrumb-toggle` instead of `breadcrumb-item-expand` ([a94ba61](https://github.com/liferay/clay/commit/a94ba614e9742ea83767d93573fc75608871c95f))
+- **@clayui/breadcrumb:** the active item must not have the href ([4482a15](https://github.com/liferay/clay/commit/4482a15494fa4aef807bb4b023f18281e8cf54ed))
+- **@clayui/breadcrumb:** updates colors to active state with link and expand button ([0313029](https://github.com/liferay/clay/commit/0313029dfe39c7689315919d9c3f36fdea8b97f9))
+- **@clayui/breadcrumb:** use `breadcrumb-toggle` instead of `breadcrumb-item-expand` ([a94ba61](https://github.com/liferay/clay/commit/a94ba614e9742ea83767d93573fc75608871c95f))
 
 # [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** fix focus visible in breadcrumb ([62b1a24](https://github.com/liferay/clay/commit/62b1a241b390f0e4bcea9aa97322f14dacb539db))
+- **@clayui/breadcrumb:** fix focus visible in breadcrumb ([62b1a24](https://github.com/liferay/clay/commit/62b1a241b390f0e4bcea9aa97322f14dacb539db))
 
 # [3.100.0](https://github.com/liferay/clay/compare/v3.99.4...v3.100.0) (2023-07-13)
 
@@ -322,8 +322,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/breadcrumb:** changes the ellipse implementation to collapse ([5bbc5fc](https://github.com/liferay/clay/commit/5bbc5fc20572dce091e5dfb64836b83041014ab4))
--   **@clayui/breadcrumb:** improve breadcrumb accessibility ([f3c6131](https://github.com/liferay/clay/commit/f3c61311dd55c68e3aeb772d8dff0c77a1287362))
+- **@clayui/breadcrumb:** changes the ellipse implementation to collapse ([5bbc5fc](https://github.com/liferay/clay/commit/5bbc5fc20572dce091e5dfb64836b83041014ab4))
+- **@clayui/breadcrumb:** improve breadcrumb accessibility ([f3c6131](https://github.com/liferay/clay/commit/f3c61311dd55c68e3aeb772d8dff0c77a1287362))
 
 # [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
 
@@ -373,7 +373,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** add `aria-label` and `title` to ellipsis ([7905087](https://github.com/liferay/clay/commit/7905087c927396c74f5a9230d9d5b29a6aeebb30))
+- **@clayui/breadcrumb:** add `aria-label` and `title` to ellipsis ([7905087](https://github.com/liferay/clay/commit/7905087c927396c74f5a9230d9d5b29a6aeebb30))
 
 # [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
 
@@ -499,13 +499,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
+- **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
 
 # [3.48.0](https://github.com/liferay/clay/compare/v3.47.0...v3.48.0) (2022-03-07)
 
 ### Features
 
--   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+- **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
 
 # [3.47.0](https://github.com/liferay/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
 
@@ -619,7 +619,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
 
 ## [3.2.8](https://github.com/liferay/clay/compare/@clayui/breadcrumb@3.2.7...@clayui/breadcrumb@3.2.8) (2020-08-28)
 
@@ -641,7 +641,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+- update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
 
 ## [3.2.3](https://github.com/liferay/clay/compare/@clayui/breadcrumb@3.2.2...@clayui/breadcrumb@3.2.3) (2020-07-14)
 
@@ -659,7 +659,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Improve component docs by updating content - Badge, Breadcrumb, Dual List Box, Loading Indicator, Localized Input & Multi Step Nav ([c4ad126](https://github.com/liferay/clay/commit/c4ad126))
+- **clayui.com:** Improve component docs by updating content - Badge, Breadcrumb, Dual List Box, Loading Indicator, Localized Input & Multi Step Nav ([c4ad126](https://github.com/liferay/clay/commit/c4ad126))
 
 ## [3.1.3](https://github.com/liferay/clay/compare/@clayui/breadcrumb@3.1.2...@clayui/breadcrumb@3.1.3) (2020-04-24)
 
@@ -673,18 +673,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** use ClayLink over anchor tag ([047c3be](https://github.com/liferay/clay/commit/047c3be))
+- **@clayui/breadcrumb:** use ClayLink over anchor tag ([047c3be](https://github.com/liferay/clay/commit/047c3be))
 
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
--   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
 
 ### Features
 
--   **breadcrumb:** move breadcrumb to its own package ([0994158](https://github.com/liferay/clay/commit/0994158))
+- **breadcrumb:** move breadcrumb to its own package ([0994158](https://github.com/liferay/clay/commit/0994158))
 
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/compare/@clayui/breadcrumb@3.0.6...@clayui/breadcrumb@3.0.7) (2020-02-13)
 
@@ -694,21 +694,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
--   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
 
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/compare/@clayui/breadcrumb@3.0.3...@clayui/breadcrumb@3.0.5) (2020-01-20)
 
 ### Bug Fixes
 
--   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/compare/@clayui/breadcrumb@3.0.3...@clayui/breadcrumb@3.0.4) (2019-12-05)
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/compare/@clayui/breadcrumb@3.0.2...@clayui/breadcrumb@3.0.3) (2019-11-07)
 

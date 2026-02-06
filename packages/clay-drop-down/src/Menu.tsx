@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {IPortalBaseProps, Overlay, useOverlayPosition} from '@clayui/shared';
@@ -25,6 +25,7 @@ export const Align = {
 } as const;
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Flag to indicate if menu is showing or not.
 	 */
@@ -39,11 +40,6 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Flag to align the DropDown menu within the viewport.
 	 */
 	alignmentByViewport?: boolean;
-
-	/**
-	 * Flag to suggest or not the best region to align menu element.
-	 */
-	autoBestAlign?: boolean;
 
 	/**
 	 * Default position of menu element. Values come from above.
@@ -68,6 +64,11 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	alignmentPosition?: number | AlignPoints;
 
 	/**
+	 * Flag to suggest or not the best region to align menu element.
+	 */
+	autoBestAlign?: boolean;
+
+	/**
 	 * Flag to indicate if clicking outside of the menu should automatically close it.
 	 */
 	closeOnClickOutside?: boolean;
@@ -81,6 +82,12 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * @ignore
 	 */
 	deps?: Array<any>;
+
+	/**
+	 * Element ref to call focus() on after menu is closed via Escape key
+	 * @deprecated since v3.80.0 - use `triggerRef` instead.
+	 */
+	focusRefOnEsc?: React.RefObject<HTMLElement>;
 
 	/**
 	 * Flag to indicate if menu is displaying a clay-icon on the left.
@@ -101,12 +108,6 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Flag to lock focus within the scope.
 	 */
 	lock?: boolean;
-
-	/**
-	 * Element ref to call focus() on after menu is closed via Escape key
-	 * @deprecated since v3.80.0 - use `triggerRef` instead.
-	 */
-	focusRefOnEsc?: React.RefObject<HTMLElement>;
 
 	/**
 	 * Function for setting the offset of the menu from the trigger.
@@ -220,7 +221,7 @@ const Menu = React.forwardRef<HTMLDivElement, IProps>(
 							'dropdown-menu-indicator-start': hasLeftSymbols,
 							[`dropdown-menu-height-${height}`]: height,
 							[`dropdown-menu-width-${width}`]: width,
-							show: active,
+							'show': active,
 						})}
 						ref={menuRef}
 						role={role}

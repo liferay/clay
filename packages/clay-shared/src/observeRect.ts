@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 const rectAttrs: Array<keyof DOMRect> = [
@@ -13,35 +13,30 @@ const rectAttrs: Array<keyof DOMRect> = [
 ];
 
 interface IRectState {
-	rect: DOMRect | undefined;
-	hasRectChanged: boolean;
 	callback: (rect?: DOMRect) => void;
+	hasRectChanged: boolean;
+	rect: DOMRect | undefined;
 }
 
-const rectChanged = (a: DOMRect = {} as DOMRect, b: DOMRect = {} as DOMRect) =>
-	rectAttrs.some((prop) => a[prop] !== b[prop]);
+function rectChanged(a: DOMRect = {} as DOMRect, b: DOMRect = {} as DOMRect) {
+	return rectAttrs.some((prop) => a[prop] !== b[prop]);
+}
 
 let rafId: number;
 
-const run = (node: Element, state: IRectState) => {
+function run(node: Element, state: IRectState) {
 	const newRect = node.getBoundingClientRect();
-
 	if (rectChanged(newRect, state.rect)) {
 		state.rect = newRect;
-
 		state.callback(state.rect);
 	}
-
 	rafId = window.requestAnimationFrame(() => run(node, state));
-};
+}
 
-export const observeRect = (
-	node: Element,
-	callback: (rect?: DOMRect) => void
-) => {
+export function observeRect(node: Element, callback: (rect?: DOMRect) => void) {
 	run(node, {callback, hasRectChanged: false, rect: undefined});
 
 	return () => {
 		cancelAnimationFrame(rafId);
 	};
-};
+}

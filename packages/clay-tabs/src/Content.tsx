@@ -1,12 +1,13 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
 import React from 'react';
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * @ignore
 	 */
@@ -59,7 +60,7 @@ const Content = React.forwardRef<HTMLDivElement, IProps>(function Content(
 
 				return React.cloneElement(child, {
 					...child.props,
-					active:
+					'active':
 						typeof active === 'number'
 							? active === index
 							: activeIndex === index,
@@ -67,8 +68,10 @@ const Content = React.forwardRef<HTMLDivElement, IProps>(function Content(
 						? `${tabsId}-tab-${index}`
 						: child.props['aria-labelledby'],
 					fade,
-					id: tabsId ? `${tabsId}-tabpanel-${index}` : child.props.id,
-					key: index,
+					'id': tabsId
+						? `${tabsId}-tabpanel-${index}`
+						: child.props.id,
+					'key': index,
 				});
 			})}
 		</div>

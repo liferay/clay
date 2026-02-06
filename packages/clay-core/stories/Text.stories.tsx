@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React from 'react';
@@ -46,8 +46,7 @@ export default {
 	component: Text,
 	title: 'Design System/Components/Typography',
 };
-
-export const TextTypography = (args: any) => {
+export function TextTypography(args: any) {
 	return (
 		<Text
 			as={args.as}
@@ -67,7 +66,7 @@ export const TextTypography = (args: any) => {
 			carajillo robust cream.
 		</Text>
 	);
-};
+}
 
 TextTypography.args = {
 	as: 'span',
@@ -75,10 +74,9 @@ TextTypography.args = {
 	monospace: false,
 	truncate: false,
 };
-
-export const TextHighlightTypography = (args: any) => (
-	<TextHighlight match={args.match}>{args.value}</TextHighlight>
-);
+export function TextHighlightTypography(args: any) {
+	return <TextHighlight match={args.match}>{args.value}</TextHighlight>;
+}
 
 TextHighlightTypography.args = {
 	match: 'Ri s',

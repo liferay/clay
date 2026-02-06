@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -17,6 +17,7 @@ export type WeightFont =
 	| 'bolder';
 
 type Props = {
+
 	/**
 	 * Heading content.
 	 */
@@ -38,14 +39,13 @@ type Props = {
 	weight?: WeightFont;
 };
 
-export const Heading = ({
+export function Heading({
 	children,
 	fontSize,
 	level = 1,
 	weight = 'bold',
-}: Props) => {
+}: Props) {
 	const HeadingTag = `h${level}` as React.ElementType;
-
 	const size = fontSize ?? level;
 
 	return (
@@ -57,6 +57,6 @@ export const Heading = ({
 			{children}
 		</HeadingTag>
 	);
-};
+}
 
 Heading.displayName = 'Heading';

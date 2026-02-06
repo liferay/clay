@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React from 'react';
@@ -24,6 +24,7 @@ interface IProps {
 }
 
 type TState = {
+
 	/**
 	 * Renders an element in the modal body.
 	 */
@@ -64,7 +65,7 @@ type TState = {
 };
 
 type TAction =
-	| {type: Action.Open | 1; payload: TState}
+	| {payload: TState; type: Action.Open | 1}
 	| {type: Action.Close | 0};
 
 type TProvider = [TState & {onClose: () => void}, React.Dispatch<TAction>];
@@ -76,10 +77,12 @@ const initialState = {
 	visible: false,
 };
 
-const reducer = (
+function reducer(
 	_state: TState,
 	action: TAction
-): TState & {visible: boolean} => {
+): TState & {
+	visible: boolean;
+} {
 	switch (action.type) {
 		case 1:
 		case Action.Open:
@@ -90,11 +93,11 @@ const reducer = (
 		default:
 			throw new TypeError();
 	}
-};
+}
 
 const Context = React.createContext<TProvider>([initialState, () => {}]);
 
-const ModalProvider = ({children, spritemap}: IProps) => {
+function ModalProvider({children, spritemap}: IProps) {
 	const [{visible, ...otherState}, dispatch] = React.useReducer(
 		reducer,
 		initialState
@@ -120,7 +123,9 @@ const ModalProvider = ({children, spritemap}: IProps) => {
 					status={status}
 				>
 					{header && <ClayModal.Header>{header}</ClayModal.Header>}
+
 					<ClayModal.Body url={url}>{body}</ClayModal.Body>
+
 					{!!footer.length && (
 						<ClayModal.Footer
 							first={first}
@@ -135,7 +140,7 @@ const ModalProvider = ({children, spritemap}: IProps) => {
 			</Context.Provider>
 		</>
 	);
-};
+}
 
 export {Context};
 export default ModalProvider;

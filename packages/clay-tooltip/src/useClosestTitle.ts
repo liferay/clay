@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useCallback, useRef} from 'react';
@@ -13,11 +13,14 @@ function matches(
 ) {
 	if (element.matches) {
 		return element.matches(selectorString);
-	} else if (element.msMatchesSelector) {
+	}
+	else if (element.msMatchesSelector) {
 		return element.msMatchesSelector(selectorString);
-	} else if (element.webkitMatchesSelector) {
+	}
+	else if (element.webkitMatchesSelector) {
 		return element.webkitMatchesSelector(selectorString);
-	} else {
+	}
+	else {
 		return false;
 	}
 }
@@ -43,8 +46,8 @@ function closestAncestor(node: HTMLElement, s: string) {
 
 type Props = {
 	forceHide: () => void;
-	onHide: () => void;
 	onClick: () => void;
+	onHide: () => void;
 	tooltipRef: React.MutableRefObject<HTMLElement | null>;
 };
 
@@ -58,7 +61,8 @@ export function useClosestTitle(props: Props) {
 		if (title) {
 			element.setAttribute('data-restore-title', title);
 			element.removeAttribute('title');
-		} else if (element.tagName === 'svg') {
+		}
+		else if (element.tagName === 'svg') {
 			const titleTag = element.querySelector('title');
 
 			if (titleTag) {
@@ -85,7 +89,8 @@ export function useClosestTitle(props: Props) {
 				titleTag.innerHTML = title;
 
 				element.appendChild(titleTag);
-			} else {
+			}
+			else {
 				element.setAttribute('title', title);
 			}
 
@@ -103,6 +108,7 @@ export function useClosestTitle(props: Props) {
 
 	const onClick = useCallback((event?: any) => {
 		props.onClick();
+
 		// eslint-disable-next-line @typescript-eslint/no-use-before-define
 		onHide(event);
 	}, []);

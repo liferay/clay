@@ -1,6 +1,7 @@
 $btn-border-width: $input-btn-border-width !default;
 $btn-border-radius: $border-radius !default;
-$btn-box-shadow: #{inset 0 1px 0 rgba($white, 0.15),
+$btn-box-shadow:
+	#{inset 0 1px 0 rgba($white, 0.15),
 	0 1px 1px rgba($black, 0.075)} !default;
 $btn-cursor: $link-cursor !default;
 $btn-font-family: $input-btn-font-family !default;
@@ -57,6 +58,7 @@ $btn: map-deep-merge(
 		user-select: none,
 		vertical-align: middle,
 		white-space: $btn-white-space,
+
 		mobile: (
 			font-size: $btn-font-size-mobile,
 			padding-bottom: $btn-padding-y-mobile,
@@ -64,41 +66,51 @@ $btn: map-deep-merge(
 			padding-right: $btn-padding-x-mobile,
 			padding-top: $btn-padding-y-mobile,
 		),
+
 		hover: (
 			color: $body-color,
 			text-decoration: none,
 		),
+
 		focus: (
 			box-shadow: $btn-focus-box-shadow,
 			outline: 0,
 		),
+
 		active: (
 			box-shadow: clay-enable-shadows($btn-active-box-shadow),
 			focus: (
 				box-shadow: clay-enable-shadows($btn-focus-box-shadow),
 			),
 		),
+
 		active-class: (
 			box-shadow: clay-enable-shadows($btn-active-box-shadow),
 		),
+
 		disabled: (
 			cursor: $btn-disabled-cursor,
 			opacity: $btn-disabled-opacity,
+
 			focus: (
 				box-shadow: none,
 			),
+
 			active: (
 				pointer-events: none,
 			),
 		),
+
 		inline-item: (
 			font-size: $btn-inline-item-font-size,
 			line-height: 1,
 			margin-top: -3px,
+
 			lexicon-icon: (
 				margin-top: 0,
 			),
 		),
+
 		btn-section: (
 			display: block,
 			font-size: $btn-section-font-size,
@@ -133,6 +145,7 @@ $btn-lg: map-deep-merge(
 		padding-left: $btn-padding-x-lg,
 		padding-right: $btn-padding-x-lg,
 		padding-top: $btn-padding-y-lg,
+
 		mobile: (
 			font-size: $btn-font-size-lg-mobile,
 			padding-bottom: $btn-padding-y-lg-mobile,
@@ -140,9 +153,11 @@ $btn-lg: map-deep-merge(
 			padding-right: $btn-padding-x-lg-mobile,
 			padding-top: $btn-padding-y-lg-mobile,
 		),
+
 		inline-item: (
 			font-size: $btn-inline-item-font-size-lg,
 		),
+
 		btn-section: (
 			font-size: $btn-section-font-size-lg,
 		),
@@ -174,6 +189,7 @@ $btn-sm: map-deep-merge(
 		padding-left: $btn-padding-x-sm,
 		padding-right: $btn-padding-x-sm,
 		padding-top: $btn-padding-y-sm,
+
 		mobile: (
 			font-size: $btn-font-size-sm-mobile,
 			padding-bottom: $btn-padding-y-sm-mobile,
@@ -181,9 +197,11 @@ $btn-sm: map-deep-merge(
 			padding-right: $btn-padding-x-sm-mobile,
 			padding-top: $btn-padding-y-sm-mobile,
 		),
+
 		inline-item: (
 			font-size: $btn-inline-item-font-size-sm,
 		),
+
 		btn-section: (
 			font-size: $btn-section-font-size-sm,
 		),
@@ -203,24 +221,31 @@ $btn-sizes: map-deep-merge(
 			padding-left: 0.5rem,
 			padding-right: 0.5rem,
 			padding-top: 0.125rem,
+
 			inline-item: (
 				font-size: inherit,
 				margin-top: -0.16em,
 			),
+
 			inline-item-before: (
 				margin-right: 0.25rem,
 			),
+
 			inline-item-after: (
 				margin-left: 0.25rem,
 			),
+
 			btn-section: (
 				font-size: 0.375rem,
 			),
+
 			lexicon-icon: (
 				font-size: inherit,
 			),
 		),
+
 		btn-lg: $btn-lg,
+
 		btn-sm: $btn-sm,
 	),
 	$btn-sizes
@@ -252,16 +277,20 @@ $btn-monospaced: map-deep-merge(
 		white-space: normal,
 		width: $btn-monospaced-size,
 		word-wrap: break-word,
+
 		mobile: (
 			height: $btn-monospaced-size-mobile,
 			width: $btn-monospaced-size-mobile,
 		),
+
 		inline-item: (
 			margin-top: 0,
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
+
 		c-inner: (
 			align-items: center,
 			display: flex,
@@ -292,6 +321,7 @@ $btn-monospaced-lg: map-deep-merge(
 		padding-right: $btn-monospaced-padding-x-lg,
 		padding-top: $btn-monospaced-padding-y-lg,
 		width: $btn-monospaced-size-lg,
+
 		mobile: (
 			height: $btn-monospaced-size-lg-mobile,
 			width: $btn-monospaced-size-lg-mobile,
@@ -317,6 +347,7 @@ $btn-monospaced-sm: map-deep-merge(
 		padding-right: $btn-monospaced-padding-x-sm,
 		padding-top: $btn-monospaced-padding-y-sm,
 		width: $btn-monospaced-size-sm,
+
 		mobile: (
 			height: $btn-monospaced-size-sm-mobile,
 			width: $btn-monospaced-size-sm-mobile,
@@ -334,8 +365,11 @@ $btn-monospaced-sizes: map-deep-merge(
 			height: 1.5rem,
 			width: 1.5rem,
 		),
+
 		btn-monospaced: $btn-monospaced,
+
 		btn-monospaced-lg: $btn-monospaced-lg,
+
 		btn-monospaced-sm: $btn-monospaced-sm,
 	),
 	$btn-monospaced-sizes
@@ -362,6 +396,7 @@ $btn-unstyled: map-deep-merge(
 		text-align: left,
 		text-transform: inherit,
 		vertical-align: baseline,
+
 		c-inner: (
 			margin: 0,
 			max-width: none,
@@ -392,6 +427,7 @@ $clay-btn-group-divider: map-deep-merge(
 		'&:not(:first-of-type)': (
 			border-left-color: $white,
 		),
+
 		'&:not(:last-of-type)': (
 			border-right-color: $white,
 		),
@@ -405,18 +441,23 @@ $btn-group-palette: map-deep-merge(
 		'> .btn-primary': (
 			extend: '%clay-btn-group-divider',
 		),
+
 		'> .btn-info': (
 			extend: '%clay-btn-group-divider',
 		),
+
 		'> .btn-success': (
 			extend: '%clay-btn-group-divider',
 		),
+
 		'> .btn-warning': (
 			extend: '%clay-btn-group-divider',
 		),
+
 		'> .btn-danger': (
 			extend: '%clay-btn-group-divider',
 		),
+
 		'> .btn-dark': (
 			extend: '%clay-btn-group-divider',
 		),
@@ -445,6 +486,7 @@ $btn-primary: map-deep-merge(
 			border-color: clay-darken($primary, 10%),
 			color: color-yiq(clay-darken($primary, 7.5%)),
 		),
+
 		focus: (
 			background-color: clay-darken($primary, 7.5%),
 			background-image: clay-enable-gradients(clay-darken($primary, 7.5%)),
@@ -459,6 +501,7 @@ $btn-primary: map-deep-merge(
 				),
 			color: color-yiq(clay-darken($primary, 7.5%)),
 		),
+
 		active: (
 			background-color: clay-darken($primary, 10%),
 			background-image: clay-enable-gradients(none),
@@ -481,6 +524,7 @@ $btn-primary: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: $primary,
 			background-image: clay-enable-gradients($primary),
@@ -506,6 +550,7 @@ $btn-secondary: map-deep-merge(
 			border-color: clay-darken($secondary, 10%),
 			color: color-yiq(clay-darken($secondary, 7.5%)),
 		),
+
 		focus: (
 			background-color: clay-darken($secondary, 7.5%),
 			background-image:
@@ -527,6 +572,7 @@ $btn-secondary: map-deep-merge(
 				),
 			color: color-yiq(clay-darken($secondary, 7.5%)),
 		),
+
 		active: (
 			background-color: clay-darken($secondary, 10%),
 			background-image: clay-enable-gradients(none),
@@ -557,6 +603,7 @@ $btn-secondary: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: $secondary,
 			background-image: clay-enable-gradients($secondary),
@@ -581,6 +628,7 @@ $btn-success: map-deep-merge(
 			border-color: clay-darken($success, 10%),
 			color: color-yiq(clay-darken($success, 7.5%)),
 		),
+
 		focus: (
 			background-color: clay-darken($success, 7.5%),
 			background-image: clay-enable-gradients(clay-darken($success, 7.5%)),
@@ -595,6 +643,7 @@ $btn-success: map-deep-merge(
 				),
 			color: color-yiq(clay-darken($success, 7.5%)),
 		),
+
 		active: (
 			background-color: clay-darken($success, 10%),
 			background-image: clay-enable-gradients(none),
@@ -617,6 +666,7 @@ $btn-success: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: $success,
 			background-image: clay-enable-gradients($success),
@@ -641,6 +691,7 @@ $btn-info: map-deep-merge(
 			border-color: clay-darken($info, 10%),
 			color: color-yiq(clay-darken($info, 7.5%)),
 		),
+
 		focus: (
 			background-color: clay-darken($info, 7.5%),
 			background-image: clay-enable-gradients(clay-darken($info, 7.5%)),
@@ -655,6 +706,7 @@ $btn-info: map-deep-merge(
 				),
 			color: color-yiq(clay-darken($info, 7.5%)),
 		),
+
 		active: (
 			background-color: clay-darken($info, 10%),
 			background-image: clay-enable-gradients(none),
@@ -671,6 +723,7 @@ $btn-info: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: $info,
 			background-image: clay-enable-gradients($info),
@@ -695,6 +748,7 @@ $btn-warning: map-deep-merge(
 			border-color: clay-darken($warning, 10%),
 			color: color-yiq(clay-darken($warning, 7.5%)),
 		),
+
 		focus: (
 			background-color: clay-darken($warning, 7.5%),
 			background-image: clay-enable-gradients(clay-darken($warning, 7.5%)),
@@ -709,6 +763,7 @@ $btn-warning: map-deep-merge(
 				),
 			color: color-yiq(clay-darken($warning, 7.5%)),
 		),
+
 		active: (
 			background-color: clay-darken($warning, 10%),
 			background-image: clay-enable-gradients(clay-darken($warning, 10%)),
@@ -731,6 +786,7 @@ $btn-warning: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: $warning,
 			background-image: clay-enable-gradients($warning),
@@ -755,6 +811,7 @@ $btn-danger: map-deep-merge(
 			border-color: clay-darken($danger, 10%),
 			color: color-yiq(clay-darken($danger, 7.5%)),
 		),
+
 		focus: (
 			background-color: clay-darken($danger, 7.5%),
 			background-image: clay-enable-gradients(clay-darken($danger, 7.5%)),
@@ -769,6 +826,7 @@ $btn-danger: map-deep-merge(
 				),
 			color: color-yiq(clay-darken($danger, 7.5%)),
 		),
+
 		active: (
 			background-color: clay-darken($danger, 10%),
 			background-image: clay-enable-gradients(none),
@@ -791,6 +849,7 @@ $btn-danger: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: $danger,
 			background-image: clay-enable-gradients(none),
@@ -815,6 +874,7 @@ $btn-light: map-deep-merge(
 			border-color: clay-darken($light, 10%),
 			color: color-yiq(clay-darken($light, 7.5%)),
 		),
+
 		focus: (
 			background-color: clay-darken($light, 7.5%),
 			background-image: clay-enable-gradients(clay-darken($light, 7.5%)),
@@ -829,6 +889,7 @@ $btn-light: map-deep-merge(
 				),
 			color: color-yiq(clay-darken($light, 7.5%)),
 		),
+
 		active: (
 			background-color: clay-darken($light, 10%),
 			background-image: clay-enable-gradients(none),
@@ -845,6 +906,7 @@ $btn-light: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: $light,
 			background-image: clay-enable-gradients($light),
@@ -869,6 +931,7 @@ $btn-dark: map-deep-merge(
 			border-color: clay-darken($dark, 10%),
 			color: color-yiq(clay-darken($dark, 7.5%)),
 		),
+
 		focus: (
 			background-color: clay-darken($dark, 7.5%),
 			background-image: clay-enable-gradients(clay-darken($dark, 7.5%)),
@@ -883,6 +946,7 @@ $btn-dark: map-deep-merge(
 				),
 			color: color-yiq(clay-darken($dark, 7.5%)),
 		),
+
 		active: (
 			background-color: clay-darken($dark, 10%),
 			background-image: clay-enable-gradients(none),
@@ -899,6 +963,7 @@ $btn-dark: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: $dark,
 			background-image: clay-enable-gradients($dark),
@@ -919,14 +984,17 @@ $btn-link: map-deep-merge(
 		color: $link-color,
 		font-weight: $font-weight-normal,
 		text-decoration: $link-decoration,
+
 		hover: (
 			color: $link-hover-color,
 			text-decoration: $link-hover-decoration,
 		),
+
 		focus: (
 			box-shadow: $btn-focus-box-shadow,
 			text-decoration: $link-decoration,
 		),
+
 		disabled: (
 			box-shadow: none,
 			color: $btn-link-disabled-color,
@@ -940,232 +1008,296 @@ $btn-palette: () !default;
 $btn-palette: map-deep-merge(
 	(
 		primary: $btn-primary,
+
 		secondary: $btn-secondary,
+
 		success: $btn-success,
+
 		info: $btn-info,
+
 		warning: $btn-warning,
+
 		danger: $btn-danger,
+
 		light: $btn-light,
+
 		dark: $btn-dark,
+
 		link: $btn-link,
+
 		'.btn-translucent': (
 			extend: '%clay-btn-xs',
+
 			border-radius: $rounded-pill,
 		),
+
 		'.btn-translucent.btn-primary': (
 			background-color: rgba($primary-d1, 0.04),
 			border-color: transparent,
 			color: $primary-d1,
+
 			hover: (
 				background-color: rgba($primary-d1, 0.06),
 				color: $primary-d1,
 			),
+
 			focus: (
 				background-color: rgba($primary-d1, 0.06),
 				color: $primary-d1,
 			),
+
 			active: (
 				background-color: rgba($primary-d1, 0.08),
 				color: $primary-d1,
 			),
 		),
+
 		'.btn-translucent.btn-secondary': (
 			background-color: rgba($dark-l2, 0.04),
 			border-color: transparent,
 			color: $secondary,
+
 			hover: (
 				background-color: rgba($dark-l2, 0.06),
 				color: $secondary,
 			),
+
 			focus: (
 				background-color: rgba($dark-l2, 0.06),
 				color: $secondary,
 			),
+
 			active: (
 				background-color: rgba($dark-l2, 0.08),
 				color: $secondary,
 			),
 		),
+
 		'.btn-translucent.btn-info, .btn-beta': (
 			background-color: rgba($info-d1, 0.04),
 			border-color: transparent,
 			color: $info-d1,
+
 			hover: (
 				background-color: rgba($info-d1, 0.06),
 				color: $info-d1,
 			),
+
 			focus: (
 				background-color: rgba($info-d1, 0.06),
 				color: $info-d1,
 			),
+
 			active: (
 				background-color: rgba($info-d1, 0.08),
 				color: $info-d1,
 			),
 		),
+
 		'.btn-translucent.btn-success': (
 			background-color: rgba($success-d1, 0.04),
 			border-color: transparent,
 			color: $success-d1,
+
 			hover: (
 				background-color: rgba($success-d1, 0.06),
 				color: $success-d1,
 			),
+
 			focus: (
 				background-color: rgba($success-d1, 0.06),
 				color: $success-d1,
 			),
+
 			active: (
 				background-color: rgba($success-d1, 0.08),
 				color: $success-d1,
 			),
 		),
+
 		'.btn-translucent.btn-warning': (
 			background-color: rgba($warning-d1, 0.04),
 			border-color: transparent,
 			color: $warning-d1,
+
 			hover: (
 				background-color: rgba($warning-d1, 0.06),
 				color: $warning-d1,
 			),
+
 			focus: (
 				background-color: rgba($warning-d1, 0.06),
 				color: $warning-d1,
 			),
+
 			active: (
 				background-color: rgba($warning-d1, 0.08),
 				color: $warning-d1,
 			),
 		),
+
 		'.btn-translucent.btn-danger': (
 			background-color: rgba($danger-d1, 0.04),
 			border-color: transparent,
 			color: $danger-d1,
+
 			hover: (
 				background-color: rgba($danger-d1, 0.06),
 				color: $danger-d1,
 			),
+
 			focus: (
 				background-color: rgba($danger-d1, 0.06),
 				color: $danger-d1,
 			),
+
 			active: (
 				background-color: rgba($danger-d1, 0.08),
 				color: $danger-d1,
 			),
 		),
+
 		'%clay-dark-btn-translucent-primary': (
 			background-color: rgba($primary-l2, 0.04),
 			border-color: transparent,
 			color: $primary-l1,
+
 			hover: (
 				background-color: rgba($primary-l2, 0.06),
 				color: $primary-l1,
 			),
+
 			focus: (
 				background-color: rgba($primary-l2, 0.06),
 				color: $primary-l1,
 			),
+
 			active: (
 				background-color: rgba($primary-l2, 0.08),
 				color: $primary-l1,
 			),
 		),
+
 		'.clay-dark .btn-translucent.btn-primary': (
 			extend: '%clay-dark-btn-translucent-primary',
 		),
+
 		'.clay-dark.btn-translucent.btn-primary': (
 			extend: '%clay-dark-btn-translucent-primary',
 		),
+
 		'%clay-dark-btn-translucent-info': (
 			background-color: rgba($info-l2, 0.04),
 			border-color: transparent,
 			color: $info-l1,
+
 			hover: (
 				background-color: rgba($info-l2, 0.06),
 				color: $info-l1,
 			),
+
 			focus: (
 				background-color: rgba($info-l2, 0.06),
 				color: $info-l1,
 			),
+
 			active: (
 				background-color: rgba($info-l2, 0.08),
 				color: $info-l1,
 			),
 		),
+
 		'.clay-dark .btn-translucent.btn-info, .btn-beta-dark': (
 			extend: '%clay-dark-btn-translucent-info',
 		),
+
 		'.clay-dark.btn-translucent.btn-info': (
 			extend: '%clay-dark-btn-translucent-info',
 		),
+
 		'%clay-dark-btn-translucent-success': (
 			background-color: rgba($success-l2, 0.04),
 			border-color: transparent,
 			color: $success-l1,
+
 			hover: (
 				background-color: rgba($success-l2, 0.06),
 				color: $success-l1,
 			),
+
 			focus: (
 				background-color: rgba($success-l2, 0.06),
 				color: $success-l1,
 			),
+
 			active: (
 				background-color: rgba($success-l2, 0.08),
 				color: $success-l1,
 			),
 		),
+
 		'.clay-dark .btn-translucent.btn-success': (
 			extend: '%clay-dark-btn-translucent-success',
 		),
+
 		'.clay-dark.btn-translucent.btn-success': (
 			extend: '%clay-dark-btn-translucent-success',
 		),
+
 		'%clay-dark-btn-translucent-warning': (
 			background-color: rgba($warning-l2, 0.04),
 			border-color: transparent,
 			color: $warning-l1,
+
 			hover: (
 				background-color: rgba($warning-l2, 0.06),
 				color: $warning-l1,
 			),
+
 			focus: (
 				background-color: rgba($warning-l2, 0.06),
 				color: $warning-l1,
 			),
+
 			active: (
 				background-color: rgba($warning-l2, 0.08),
 				color: $warning-l1,
 			),
 		),
+
 		'.clay-dark .btn-translucent.btn-warning': (
 			extend: '%clay-dark-btn-translucent-warning',
 		),
+
 		'.clay-dark.btn-translucent.btn-warning': (
 			extend: '%clay-dark-btn-translucent-warning',
 		),
+
 		'%clay-dark-btn-translucent-danger': (
 			background-color: rgba($danger-l2, 0.04),
 			border-color: transparent,
 			color: $danger-l1,
+
 			hover: (
 				background-color: rgba($danger-l2, 0.06),
 				color: $danger-l1,
 			),
+
 			focus: (
 				background-color: rgba($danger-l2, 0.06),
 				color: $danger-l1,
 			),
+
 			active: (
 				background-color: rgba($danger-l2, 0.08),
 				color: $danger-l1,
 			),
 		),
+
 		'.clay-dark .btn-translucent.btn-danger': (
 			extend: '%clay-dark-btn-translucent-danger',
 		),
+
 		'.clay-dark.btn-translucent.btn-danger': (
 			extend: '%clay-dark-btn-translucent-danger',
 		),
@@ -1180,14 +1312,17 @@ $btn-outline-primary: map-deep-merge(
 	(
 		border-color: $primary,
 		color: $primary,
+
 		hover: (
 			background-color: $primary,
 			border-color: $primary,
 			color: color-yiq($primary),
 		),
+
 		focus: (
 			box-shadow: 0 0 0 $btn-focus-width rgba($primary, 0.5),
 		),
+
 		active: (
 			background-color: $primary,
 			border-color: $primary,
@@ -1201,6 +1336,7 @@ $btn-outline-primary: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $primary,
@@ -1214,14 +1350,17 @@ $btn-outline-secondary: map-deep-merge(
 	(
 		border-color: $secondary,
 		color: $secondary,
+
 		hover: (
 			background-color: $secondary,
 			border-color: $secondary,
 			color: color-yiq($secondary),
 		),
+
 		focus: (
 			box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
 		),
+
 		active: (
 			background-color: $secondary,
 			border-color: $secondary,
@@ -1235,6 +1374,7 @@ $btn-outline-secondary: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $secondary,
@@ -1248,14 +1388,17 @@ $btn-outline-success: map-deep-merge(
 	(
 		border-color: $success,
 		color: $success,
+
 		hover: (
 			background-color: $success,
 			border-color: $success,
 			color: color-yiq($success),
 		),
+
 		focus: (
 			box-shadow: 0 0 0 $btn-focus-width rgba($success, 0.5),
 		),
+
 		active: (
 			background-color: $success,
 			border-color: $success,
@@ -1269,6 +1412,7 @@ $btn-outline-success: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $success,
@@ -1282,14 +1426,17 @@ $btn-outline-info: map-deep-merge(
 	(
 		border-color: $info,
 		color: $info,
+
 		hover: (
 			background-color: $info,
 			border-color: $info,
 			color: color-yiq($info),
 		),
+
 		focus: (
 			box-shadow: 0 0 0 $btn-focus-width rgba($info, 0.5),
 		),
+
 		active: (
 			background-color: $info,
 			border-color: $info,
@@ -1303,6 +1450,7 @@ $btn-outline-info: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $info,
@@ -1316,14 +1464,17 @@ $btn-outline-warning: map-deep-merge(
 	(
 		border-color: $warning,
 		color: $warning,
+
 		hover: (
 			background-color: $warning,
 			border-color: $warning,
 			color: color-yiq($warning),
 		),
+
 		focus: (
 			box-shadow: 0 0 0 $btn-focus-width rgba($warning, 0.5),
 		),
+
 		active: (
 			background-color: $warning,
 			border-color: $warning,
@@ -1337,6 +1488,7 @@ $btn-outline-warning: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $warning,
@@ -1350,14 +1502,17 @@ $btn-outline-danger: map-deep-merge(
 	(
 		border-color: $danger,
 		color: $danger,
+
 		hover: (
 			background-color: $danger,
 			border-color: $danger,
 			color: color-yiq($danger),
 		),
+
 		focus: (
 			box-shadow: 0 0 0 $btn-focus-width rgba($danger, 0.5),
 		),
+
 		active: (
 			background-color: $danger,
 			border-color: $danger,
@@ -1371,6 +1526,7 @@ $btn-outline-danger: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $danger,
@@ -1384,14 +1540,17 @@ $btn-outline-light: map-deep-merge(
 	(
 		border-color: $light,
 		color: $light,
+
 		hover: (
 			background-color: $light,
 			border-color: $light,
 			color: color-yiq($light),
 		),
+
 		focus: (
 			box-shadow: 0 0 0 $btn-focus-width rgba($light, 0.5),
 		),
+
 		active: (
 			background-color: $light,
 			border-color: $light,
@@ -1405,6 +1564,7 @@ $btn-outline-light: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $light,
@@ -1418,14 +1578,17 @@ $btn-outline-dark: map-deep-merge(
 	(
 		border-color: $dark,
 		color: $dark,
+
 		hover: (
 			background-color: $dark,
 			border-color: $dark,
 			color: color-yiq($dark),
 		),
+
 		focus: (
 			box-shadow: 0 0 0 $btn-focus-width rgba($dark, 0.5),
 		),
+
 		active: (
 			background-color: $dark,
 			border-color: $dark,
@@ -1439,6 +1602,7 @@ $btn-outline-dark: map-deep-merge(
 					),
 			),
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $dark,
@@ -1451,12 +1615,19 @@ $btn-outline-borderless: () !default;
 $btn-outline-borderless: map-deep-merge(
 	(
 		border-color: transparent,
+
 		hover: (
 			border-color: transparent,
 		),
+
 		focus: (
 			border-color: transparent,
 		),
+
+		active: (
+			border-color: transparent,
+		),
+
 		disabled: (
 			border-color: transparent,
 		),
@@ -1468,13 +1639,78 @@ $btn-outline-palette: () !default;
 $btn-outline-palette: map-deep-merge(
 	(
 		primary: $btn-outline-primary,
+
 		secondary: $btn-outline-secondary,
+
 		success: $btn-outline-success,
+
 		info: $btn-outline-info,
+
 		warning: $btn-outline-warning,
+
 		danger: $btn-outline-danger,
+
 		light: $btn-outline-light,
+
 		dark: $btn-outline-dark,
+
+		'%clay-dark-btn-outline-primary': (
+			background-color: transparent,
+			color: $primary-l1,
+
+			hover: (
+				background-color: rgba($primary-l1, 0.06),
+				color: $primary-l2,
+			),
+
+			focus: (
+				background-color: rgba($primary-l1, 0.06),
+				color: $primary-l2,
+			),
+
+			active: (
+				background-color: rgba($primary-l1, 0.12),
+				color: $primary-l2,
+			),
+
+			disabled: (
+				background-color: transparent,
+				color: $primary-l1,
+			),
+		),
+
+		'.clay-dark .btn-outline-primary, .clay-dark.btn-outline-primary': (
+			extend: '%clay-dark-btn-outline-primary',
+		),
+
+		'%clay-dark-btn-outline-secondary': (
+			background-color: transparent,
+			color: $secondary-l1,
+
+			hover: (
+				background-color: rgba($white, 0.06),
+				color: $white,
+			),
+
+			focus: (
+				background-color: rgba($white, 0.06),
+				color: $white,
+			),
+
+			active: (
+				background-color: rgba($white, 0.12),
+				color: $white,
+			),
+
+			disabled: (
+				background-color: transparent,
+				color: $secondary-l1,
+			),
+		),
+
+		'.clay-dark .btn-outline-secondary, .clay-dark.btn-outline-secondary': (
+			extend: '%clay-dark-btn-outline-secondary',
+		),
 	),
 	$btn-outline-palette
 );

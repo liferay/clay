@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Button from '@clayui/button';
@@ -29,7 +29,7 @@ type Props = {
 	years: Array<ISelectOption>;
 };
 
-const ClayDatePickerDateNavigation = ({
+function ClayDatePickerDateNavigation({
 	ariaLabels,
 	currentMonth,
 	disabled,
@@ -38,14 +38,14 @@ const ClayDatePickerDateNavigation = ({
 	onMonthChange,
 	spritemap,
 	years,
-}: Props) => {
+}: Props) {
+
 	/**
 	 * Handles the change of the month from the available
 	 * years in the range
 	 */
 	function handleChangeMonth(month: number) {
 		const date = setMonth(years, month, currentMonth);
-
 		if (date) {
 			onMonthChange(date);
 		}
@@ -82,6 +82,7 @@ const ClayDatePickerDateNavigation = ({
 						value={currentMonth.getMonth()}
 					/>
 				</div>
+
 				<div className="date-picker-nav-item input-date-picker-year">
 					<Picker
 						UNSAFE_behavior="secondary"
@@ -132,6 +133,7 @@ const ClayDatePickerDateNavigation = ({
 					>
 						<Icon spritemap={spritemap} symbol="angle-left" />
 					</Button>
+
 					<Button
 						aria-label={ariaLabels.buttonDot}
 						className="nav-btn nav-btn-monospaced"
@@ -142,6 +144,7 @@ const ClayDatePickerDateNavigation = ({
 					>
 						<Icon spritemap={spritemap} symbol="simple-circle" />
 					</Button>
+
 					<Button
 						aria-label={ariaLabels.buttonNextMonth}
 						className="nav-btn nav-btn-monospaced"
@@ -156,6 +159,6 @@ const ClayDatePickerDateNavigation = ({
 			</div>
 		</div>
 	);
-};
+}
 
 export default ClayDatePickerDateNavigation;

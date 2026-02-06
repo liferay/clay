@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {cleanup, fireEvent, render} from '@testing-library/react';
@@ -15,7 +15,9 @@ describe('Rendering', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayRadioGroup defaultValue="one">
 				<ClayRadio label="One" value="one" />
+
 				<ClayRadio label="Two" value="two" />
+
 				<ClayRadio label="Three" value="three" />
 			</ClayRadioGroup>
 		);
@@ -36,7 +38,9 @@ describe('Interactions', () => {
 				selectedValue="one"
 			>
 				<ClayRadio label="One" value="one" />
+
 				<ClayRadio label="Two" value="two" />
+
 				<ClayRadio label="Three" value="three" />
 			</ClayRadioGroup>
 		);
@@ -55,7 +59,9 @@ describe('Interactions', () => {
 		const {getByLabelText} = render(
 			<ClayRadioGroup onChange={onChange} value="one">
 				<ClayRadio label="One" value="one" />
+
 				<ClayRadio label="Two" value="two" />
+
 				<ClayRadio label="Three" value="three" />
 			</ClayRadioGroup>
 		);
@@ -72,7 +78,9 @@ describe('Interactions', () => {
 		const {getByLabelText} = render(
 			<ClayRadioGroup defaultValue="one">
 				<ClayRadio label="One" value="one" />
+
 				<ClayRadio label="Two" value="two" />
+
 				<ClayRadio label="Three" value="three" />
 			</ClayRadioGroup>
 		);

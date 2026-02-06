@@ -9,6 +9,7 @@
 - Alphabetize CSS Properties
 
 - CSS Properties with browser prefixes such as `-webkit-` should be alphabetized by the property name and vendor prefixes should be alphabetized.
+
 ```
 .my-selector {
 	align-items: center;
@@ -21,6 +22,7 @@
 ```
 
 - Sass mixins using the `@include` directive should be ordered alphabetically by mixin name with the exception of mixins relating to media-queries, pseudo elements, or pseudo classes, such as `::before`, `:hover`, `:focus`, or `:active`. Those should be placed at the end of of the declaration block with a new line between the last declaration and mixin.
+
 ```
 .my-selector {
 	align-items: center;
@@ -43,6 +45,7 @@
 - The `:hover` pseudo class should always be declared before `:focus`, so that the hover style won't clobber the focus style. Pseudo classes should be declared in this order: `:hover`, `:focus`, `:active`, `:active:focus`, `:disabled`.
 
 - There should be one CSS selector and declaration per line.
+
 ```
 .my-selector1,
 .my-selector2 {
@@ -58,6 +61,7 @@
 - Prefix all decimal values with 0 (e.g., `rgba(255, 255, 255, 0.5)`)
 
 - Parameters inside a CSS function or Sass function should be separated by a comma followed by a space
+
 ```
 .my-selector {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -146,7 +150,6 @@
 
 - Use the property `order` sparingly for the same reason as above.
 
-
 #### Aria Attributes
 
 TODO
@@ -172,6 +175,7 @@ TODO
 - Limit declaring and using "global" variables (variables that touch almost every component), such as `$border-color`, `$border-width`, `$border-radius`, or `$component-active-bg`. The idea of globally modifying the look and feel through a single variable seems like a good idea at first, but doesn't work very well in practice. Designs vary wildly and `$border-width: 2px` only works if you want Bootstrap with 2px borders.
 
 - When defining "global" variables there should always be an option to override it at the component level.
+
 ```
 $border-color: red !default;
 $alert-border-color: $border-color !default;
@@ -182,6 +186,7 @@ $input-border-color: $border-color !default;
 - Scope variables to a specific component and limit its use in other components only if it makes sense. We can modify it without worrying about it impacting too many components (e.g., `$input-border-color`, `$input-bg`, or `$input-focus-bg`).
 
 - Shorthand CSS declarations limit our ability to provide a highly customizable framework. Declarations should be in longhand form as well as variables. Properties `border-color`, `border-style`, `border-radius` and `transition` are an exception, they can be declared using shorthand.
+
 ```
 $border-width: 0 !default;
 
@@ -200,6 +205,7 @@ $border-top-width: 0 !default;
 - Mixin names should be prefixed with `clay-` to avoid collisions with other Sass mixin libraries.
 
 - When defining parameters in a Sass mixin, make sure each parameter sets a default value. If there is no default value set it to `null`. This reduces the chance of Sass compile errors due to value changes and allows the mixin to be called with no parameters.
+
 ```
 @mixin clay-some-sass-mixin($param1: red, $param2: null) {
 	background-color: $param2;
@@ -218,6 +224,7 @@ $border-top-width: 0 !default;
 ```
 
 - If a mixin has more than 2 parameters, consider passing in a Sass map and assigning a variable for each key value pair.
+
 ```
 $clay-component-variant: () !default;
 $clay-component-variant: map-merge((
@@ -246,6 +253,7 @@ $clay-component-variant: map-merge((
 ### Sass Extends
 
 - Use the Sass `@extend` directive sparingly. The `@extend` directive is very aggressive and may cause unwanted selectors to be output. This is especially the case when extending selectors. In the example below we only want to extend `.form-control-sm`, but because `.form-control-sm` is declared in several places Sass will create a new selector for every instance of `.form-control-sm`.
+
 ```
 .form-control-sm {
 	height: 36px;
@@ -271,6 +279,7 @@ $clay-component-variant: map-merge((
 ```
 
 - If you need to use `@extend` consider using a Sass placeholder selector. Sass doesn't output placeholder styles to CSS unless it's called via `@extend`.
+
 ```
 %form-control-sm {
 	height: 36px;
@@ -308,6 +317,7 @@ $clay-component-variant: map-merge((
 ## CSS Hacks
 
 - Sometimes there is no way to work around a particular CSS issue and we need some hacks. Use these as a last resort:
+
 ```
 // Target IE10 and IE11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -340,7 +350,3 @@ _:-ms-fullscreen,
 ## Commits and Pull Requests
 
 TODO
-
-
-
-

@@ -1,14 +1,13 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 const SPLIT_REGEX = /({\d+})/g;
 
 /**
  * Utility function for substituting variables into language keys.
- */
-export const sub = (langKey: string, args: Array<React.ReactText>) => {
+ */ export function sub(langKey: string, args: Array<React.ReactText>) {
 	const keyArray = langKey
 		.split(SPLIT_REGEX)
 		.filter((val) => val.length !== 0);
@@ -28,4 +27,4 @@ export const sub = (langKey: string, args: Array<React.ReactText>) => {
 	}
 
 	return keyArray.join('');
-};
+}

@@ -7,7 +7,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
@@ -21,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 # 3.129.0 (2025-08-01)
 
@@ -29,7 +29,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/provider:** improves component typing to create API Provider ([536b6fa](https://github.com/liferay/clay/commit/536b6fa29c6f4c64b7a2bfec5b96a7c73e8b55fe))
+- **@clayui/provider:** improves component typing to create API Provider ([536b6fa](https://github.com/liferay/clay/commit/536b6fa29c6f4c64b7a2bfec5b96a7c73e8b55fe))
 
 # 3.111.0 (2024-02-15)
 
@@ -39,14 +39,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.93.0 (2023-04-19)
 
 ### Features
 
--   **@clayui/provider:** add motion reduction config ([fcd2849](https://github.com/liferay/clay/commit/fcd2849a17106ef6f037c5fb5e56d4d0a52e13a5))
+- **@clayui/provider:** add motion reduction config ([fcd2849](https://github.com/liferay/clay/commit/fcd2849a17106ef6f037c5fb5e56d4d0a52e13a5))
 
 # 3.77.0 (2022-10-17)
 
@@ -54,31 +54,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/data-provider:** instantiates the DataClient locally if the Provider is not declared ([536dd34](https://github.com/liferay/clay/commit/536dd345759c88181dea19f59a71da3655d6f64a))
+- **@clayui/data-provider:** instantiates the DataClient locally if the Provider is not declared ([536dd34](https://github.com/liferay/clay/commit/536dd345759c88181dea19f59a71da3655d6f64a))
 
 ## 3.70.2 (2022-08-30)
 
 ### Bug Fixes
 
--   **@clayui/provider:** stabilizes the DataClient reference ([319bff8](https://github.com/liferay/clay/commit/319bff8a771a847eb53d399090065f197670d46b))
+- **@clayui/provider:** stabilizes the DataClient reference ([319bff8](https://github.com/liferay/clay/commit/319bff8a771a847eb53d399090065f197670d46b))
 
 # 3.70.0 (2022-08-23)
 
 ### Features
 
--   **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
+- **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
 
 # 3.56.0 (2022-05-09)
 
 ### Bug Fixes
 
--   updates broken storybook links in documentation ([22fc1c6](https://github.com/liferay/clay/commit/22fc1c684a92ada9aac73c9c7090c6cbca960f9d))
+- updates broken storybook links in documentation ([22fc1c6](https://github.com/liferay/clay/commit/22fc1c684a92ada9aac73c9c7090c6cbca960f9d))
 
 # 3.40.0 (2021-11-17)
 
 ### Bug Fixes
 
--   **@clayui/provider:** removes dependency from ClayModal to avoid circular dependency issues ([0b8eade](https://github.com/liferay/clay/commit/0b8eade03bc6a12284662cb5e42d7b1fdb87c20f))
+- **@clayui/provider:** removes dependency from ClayModal to avoid circular dependency issues ([0b8eade](https://github.com/liferay/clay/commit/0b8eade03bc6a12284662cb5e42d7b1fdb87c20f))
 
 # 3.39.0 (2021-10-29)
 
@@ -102,7 +102,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/provider:** improves component typing to create API Provider ([536b6fa](https://github.com/liferay/clay/commit/536b6fa29c6f4c64b7a2bfec5b96a7c73e8b55fe))
+- **@clayui/provider:** improves component typing to create API Provider ([536b6fa](https://github.com/liferay/clay/commit/536b6fa29c6f4c64b7a2bfec5b96a7c73e8b55fe))
 
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
@@ -116,14 +116,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
 
 ### Features
 
--   **@clayui/provider:** add motion reduction config ([fcd2849](https://github.com/liferay/clay/commit/fcd2849a17106ef6f037c5fb5e56d4d0a52e13a5))
+- **@clayui/provider:** add motion reduction config ([fcd2849](https://github.com/liferay/clay/commit/fcd2849a17106ef6f037c5fb5e56d4d0a52e13a5))
 
 # [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
 
@@ -133,31 +133,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/data-provider:** instantiates the DataClient locally if the Provider is not declared ([536dd34](https://github.com/liferay/clay/commit/536dd345759c88181dea19f59a71da3655d6f64a))
+- **@clayui/data-provider:** instantiates the DataClient locally if the Provider is not declared ([536dd34](https://github.com/liferay/clay/commit/536dd345759c88181dea19f59a71da3655d6f64a))
 
 ## [3.70.2](https://github.com/liferay/clay/compare/v3.70.1...v3.70.2) (2022-08-30)
 
 ### Bug Fixes
 
--   **@clayui/provider:** stabilizes the DataClient reference ([319bff8](https://github.com/liferay/clay/commit/319bff8a771a847eb53d399090065f197670d46b))
+- **@clayui/provider:** stabilizes the DataClient reference ([319bff8](https://github.com/liferay/clay/commit/319bff8a771a847eb53d399090065f197670d46b))
 
 # [3.70.0](https://github.com/liferay/clay/compare/v3.69.0...v3.70.0) (2022-08-23)
 
 ### Features
 
--   **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
+- **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
 
 # [3.56.0](https://github.com/liferay/clay/compare/v3.55.0...v3.56.0) (2022-05-09)
 
 ### Bug Fixes
 
--   updates broken storybook links in documentation ([22fc1c6](https://github.com/liferay/clay/commit/22fc1c684a92ada9aac73c9c7090c6cbca960f9d))
+- updates broken storybook links in documentation ([22fc1c6](https://github.com/liferay/clay/commit/22fc1c684a92ada9aac73c9c7090c6cbca960f9d))
 
 # [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
 
 ### Bug Fixes
 
--   **@clayui/provider:** removes dependency from ClayModal to avoid circular dependency issues ([0b8eade](https://github.com/liferay/clay/commit/0b8eade03bc6a12284662cb5e42d7b1fdb87c20f))
+- **@clayui/provider:** removes dependency from ClayModal to avoid circular dependency issues ([0b8eade](https://github.com/liferay/clay/commit/0b8eade03bc6a12284662cb5e42d7b1fdb87c20f))
 
 # [3.39.0](https://github.com/liferay/clay/compare/v3.38.0...v3.39.0) (2021-10-29)
 

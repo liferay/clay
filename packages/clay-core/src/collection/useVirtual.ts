@@ -1,12 +1,13 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {useVirtualizer} from '@tanstack/react-virtual';
 import {useEffect, useRef} from 'react';
 
 type Props<T> = {
+
 	/**
 	 * Flag to estimate the default height of a list item in pixels.
 	 */
@@ -36,7 +37,7 @@ export function useVirtual<T>({estimateSize, items = [], parentRef}: Props<T>) {
 	const previousLengthRef = useRef(items.length);
 
 	useEffect(() => {
-		if (items.length < previousLengthRef.current && items.length > 0) {
+		if (items.length < previousLengthRef.current && !!items.length) {
 			virtualizer.scrollToIndex(0, {behavior: 'auto'});
 		}
 

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
@@ -11,6 +11,7 @@ import React from 'react';
 import {useSidePanel} from './context';
 
 type Props = {
+
 	/**
 	 * Children content to render a content.
 	 */
@@ -27,16 +28,16 @@ type Props = {
 	messages?: Messages;
 
 	/**
+	 * Function to execute when the back button is pressed.
+	 */
+	onBack?: () => void;
+
+	/**
 	 * Property to make the Header sticky. Absolutely positioned SidePanel's
 	 * should have the `sidebar-header` `top` CSS property adjusted to account
 	 * for any fixed or sticky navigation bars on the page.
 	 */
 	sticky?: boolean;
-
-	/**
-	 * Function to execute when the back button is pressed.
-	 */
-	onBack?: () => void;
 };
 
 export type Messages = {
@@ -44,7 +45,7 @@ export type Messages = {
 	closeAriaLabel?: string;
 };
 
-export const Header = ({
+export function Header({
 	children,
 	className,
 	messages = {
@@ -53,7 +54,7 @@ export const Header = ({
 	},
 	sticky,
 	onBack,
-}: Props) => {
+}: Props) {
 	const {onOpenChange} = useSidePanel();
 
 	return (
@@ -78,7 +79,9 @@ export const Header = ({
 						/>
 					</div>
 				) : null}
+
 				<div className="autofit-col autofit-col-expand">{children}</div>
+
 				<div className="autofit-col">
 					<button
 						aria-label={messages.closeAriaLabel}
@@ -92,4 +95,4 @@ export const Header = ({
 			</div>
 		</div>
 	);
-};
+}

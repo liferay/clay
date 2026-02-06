@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayDropDown, {ClayDropDownWithItems} from '..';
@@ -10,7 +10,7 @@ import React from 'react';
 
 import '@testing-library/jest-dom';
 
-const DropDownWithState = ({children, ...others}: any) => {
+function DropDownWithState({children, ...others}: any) {
 	const [active, setActive] = React.useState(false);
 
 	return (
@@ -24,7 +24,7 @@ const DropDownWithState = ({children, ...others}: any) => {
 			{children}
 		</ClayDropDown>
 	);
-};
+}
 
 describe('ClayDropDown', () => {
 	afterEach(cleanup);
@@ -356,7 +356,9 @@ describe('ClayDropDown', () => {
 			<ClayDropDown trigger={<button>Click Me</button>}>
 				<ClayDropDown.ItemList>
 					<ClayDropDown.Item>one</ClayDropDown.Item>
+
 					<ClayDropDown.Item>two</ClayDropDown.Item>
+
 					<ClayDropDown.Item>three</ClayDropDown.Item>
 				</ClayDropDown.ItemList>
 			</ClayDropDown>
@@ -377,9 +379,12 @@ describe('ClayDropDown', () => {
 		const {getAllByRole, getByRole} = render(
 			<ClayDropDown trigger={<button>Click Me</button>}>
 				<ClayDropDown.Search placeholder="Type to filter" />
+
 				<ClayDropDown.ItemList items={['one', 'two', 'three']}>
 					{
+
 						// @ts-ignore
+
 						(item: string) => (
 							<ClayDropDown.Item key={item}>
 								{item}
@@ -479,6 +484,7 @@ describe('ClayDropDown', () => {
 		const {getAllByRole: cGetAllByRole, getByRole} = render(
 			<ClayDropDown trigger={<button>Click Me</button>}>
 				<ClayDropDown.Search placeholder="Type to filter" />
+
 				<ClayDropDown.ItemList
 					items={[
 						{

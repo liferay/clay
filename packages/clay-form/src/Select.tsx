@@ -1,26 +1,27 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
 import React from 'react';
 
-export const OptGroup = ({
+export function OptGroup({
 	children,
 	...otherProps
-}: React.OptgroupHTMLAttributes<HTMLOptGroupElement>) => (
-	<optgroup {...otherProps}>{children}</optgroup>
-);
+}: React.OptgroupHTMLAttributes<HTMLOptGroupElement>) {
+	return <optgroup {...otherProps}>{children}</optgroup>;
+}
 
-export const Option = ({
+export function Option({
 	label,
 	...otherProps
-}: React.OptionHTMLAttributes<HTMLOptionElement>) => (
-	<option {...otherProps}>{label}</option>
-);
+}: React.OptionHTMLAttributes<HTMLOptionElement>) {
+	return <option {...otherProps}>{label}</option>;
+}
 
 interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+
 	/**
 	 * Flag to make the Select component only as wide as its contents.
 	 */

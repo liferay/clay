@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {useMemo, useRef} from 'react';
@@ -8,9 +8,9 @@ import {useMemo, useRef} from 'react';
 type PointerType = 'mouse' | 'pen' | 'touch';
 
 type Event = {
-	type: string;
-	target: HTMLElement;
 	pointerType: PointerType;
+	target: HTMLElement;
+	type: string;
 };
 
 type Props = {
@@ -27,6 +27,7 @@ type State = {
 
 // Handles pointer hover interactions for an element.
 // Adapted from https://github.com/adobe/react-spectrum/blob/0182ad0748bcdddf7eb010540c453f9a35a7c753/packages/%40react-aria/interactions/src/useHover.ts
+
 export function useHover<T extends HTMLElement>({disabled, onHover}: Props) {
 	const state = useRef<State>({
 		isEmulatedMouseEvents: false,
@@ -86,7 +87,8 @@ export function useHover<T extends HTMLElement>({disabled, onHover}: Props) {
 					onEnd(event.pointerType);
 				}
 			};
-		} else {
+		}
+		else {
 			props.onTouchStart = () => {
 				state.isEmulatedMouseEvents = true;
 			};

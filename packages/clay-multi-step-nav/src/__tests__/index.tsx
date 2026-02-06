@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import '@testing-library/jest-dom';
@@ -10,9 +10,8 @@ import React from 'react';
 
 const spritemap = 'path/to/spritemap';
 
-const ClayMultiStepNavWithState = () => {
+function ClayMultiStepNavWithState() {
 	const [value, setValue] = React.useState<number>(1);
-
 	const steps = [
 		{
 			active: value === 0,
@@ -55,7 +54,9 @@ const ClayMultiStepNavWithState = () => {
 						key={i}
 					>
 						<ClayMultiStepNav.Title>{title}</ClayMultiStepNav.Title>
+
 						<ClayMultiStepNav.Divider />
+
 						<ClayMultiStepNav.Indicator
 							complete={complete}
 							label={1 + i}
@@ -68,9 +69,9 @@ const ClayMultiStepNavWithState = () => {
 			)}
 		</ClayMultiStepNav>
 	);
-};
+}
 
-const ClayMultiStepNavWithBasicItemsWithState = (props: any) => {
+function ClayMultiStepNavWithBasicItemsWithState(props: any) {
 	const [active, setActive] = React.useState(0);
 
 	return (
@@ -81,7 +82,7 @@ const ClayMultiStepNavWithBasicItemsWithState = (props: any) => {
 			{...props}
 		/>
 	);
-};
+}
 
 describe('ClayMultiStepNav', () => {
 	afterEach(cleanup);

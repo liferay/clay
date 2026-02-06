@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -45,6 +45,7 @@ interface IProps
 		React.HTMLAttributes<HTMLDivElement>,
 		'onChange' | 'defaultValue'
 	> {
+
 	/**
 	 * Add the labels for the input elements and the input clear button,
 	 * use this to provide accessibility and internationalization.
@@ -52,9 +53,9 @@ interface IProps
 	 */
 	ariaLabels?: {
 		ampm: string;
+		clear: string;
 		hours: string;
 		minutes: string;
-		clear: string;
 		timeDown: string;
 		timeUp: string;
 	};
@@ -68,14 +69,14 @@ interface IProps
 	};
 
 	/**
-	 * Flag to disable user interactions on the component.
-	 */
-	disabled?: boolean;
-
-	/**
 	 * Property to set the default value (uncontrolled).
 	 */
 	defaultValue?: Input;
+
+	/**
+	 * Flag to disable user interactions on the component.
+	 */
+	disabled?: boolean;
 
 	/**
 	 * Flag to indicate if show time icon or not.
@@ -88,6 +89,11 @@ interface IProps
 	id?: string;
 
 	/**
+	 * Name attribute for the hidden input (used for form submission).
+	 */
+	name?: string;
+
+	/**
 	 * Called when input values change hour, minutes or ampm (controlled).
 	 */
 	onChange?: InternalDispatch<Input>;
@@ -97,11 +103,6 @@ interface IProps
 	 * @deprecated since v3.52.0 - use `onChange` instead.
 	 */
 	onInputChange?: InternalDispatch<Input>;
-
-	/**
-	 * Name attribute for the hidden input (used for form submission).
-	 */
-	name?: string;
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
@@ -120,14 +121,14 @@ interface IProps
 
 	/**
 	 * Sets the values for the hour, minute, or am/pm input (controlled).
-	 * @deprecated since v3.52.0 - use `value` instead.
 	 */
-	values?: Input;
+	value?: Input;
 
 	/**
 	 * Sets the values for the hour, minute, or am/pm input (controlled).
+	 * @deprecated since v3.52.0 - use `value` instead.
 	 */
-	value?: Input;
+	values?: Input;
 }
 
 const DEFAULT_VALUE = '--';
@@ -164,7 +165,7 @@ const DEFAULT_CONFIG = {
 
 const regex = /^\d+$/;
 
-const TimePicker = ({
+function TimePicker({
 	ariaLabels = {
 		ampm: 'Select time of day (AM/PM) using up (PM) and down (AM) arrow keys',
 		clear: 'Delete the entered time',
@@ -189,7 +190,7 @@ const TimePicker = ({
 	use12Hours = false,
 	value,
 	values,
-}: IProps) => {
+}: IProps) {
 	const [internalValue, setValue] = useControlledState({
 		defaultName: 'defaultValue',
 		defaultValue,
@@ -198,35 +199,29 @@ const TimePicker = ({
 		onChange: onChange ?? onInputChange,
 		value: value ?? values,
 	});
-
 	const useConfig: Config = config[use12Hours ? 'use12Hours' : 'use24Hours'];
-
 	const [actionVisible, setActionVisible] = useState(false);
 	const elementRef = useRef<null | HTMLDivElement>(null);
-
 	const defaultFocused = {
 		configName: TimeType.hours,
 		focused: false,
 	};
-
 	const [currentInputFocused, setCurrentInputFocused] = useState<{
 		configName: TimeType;
 		focused: boolean;
 	}>(defaultFocused);
-
 	const handleMaxAndMin = (value: string, config: ConfigMaxMin) => {
 		const newValue = value.substring(value.length - 2, value.length);
 		const intrinsicValue = Number(newValue);
-
 		if (intrinsicValue > config.max) {
 			return String(config.min);
-		} else if (intrinsicValue < config.min) {
+		}
+		else if (intrinsicValue < config.min) {
 			return String(config.max);
 		}
 
 		return newValue;
 	};
-
 	const handleKeyDown = (
 		event: React.KeyboardEvent<HTMLInputElement>,
 		value: string,
@@ -242,11 +237,11 @@ const TimePicker = ({
 
 			return setValue({
 				...internalValue,
+
 				// eslint-disable-next-line sort-keys
 				[configName]: String(newVal).padStart(2, '0'),
 			});
 		};
-
 		switch (event.key) {
 			case 'Backspace':
 				onValue(DEFAULT_VALUE);
@@ -254,10 +249,10 @@ const TimePicker = ({
 			case 'ArrowUp':
 				event.preventDefault();
 				event.stopPropagation();
-
 				if (configName === TimeType.ampm) {
 					onValue((config as ConfigAmpm).pm);
-				} else {
+				}
+				else {
 					onValue(
 						value !== DEFAULT_VALUE
 							? intrinsicValue + 1
@@ -268,10 +263,10 @@ const TimePicker = ({
 			case 'ArrowDown':
 				event.preventDefault();
 				event.stopPropagation();
-
 				if (configName === TimeType.ampm) {
 					onValue((config as ConfigAmpm).am);
-				} else {
+				}
+				else {
 					onValue(
 						value !== DEFAULT_VALUE
 							? intrinsicValue - 1
@@ -284,22 +279,19 @@ const TimePicker = ({
 					const maxSecondDigit = Math.floor(
 						(config as ConfigMaxMin).max / 10
 					);
-
 					const minFirstDigit = (config as ConfigMaxMin).min;
-
 					const keyVal =
 						intrinsicValue < minFirstDigit
 							? minFirstDigit
 							: event.key;
-
 					const newVal =
 						Number(value) > maxSecondDigit
 							? `0${keyVal}`
 							: (value && value !== DEFAULT_VALUE ? value : '') +
-							  keyVal;
-
+								keyVal;
 					onValue(newVal);
-				} else if (
+				}
+				else if (
 					configName === TimeType.ampm &&
 					(event.key === 'a' || event.key === 'p')
 				) {
@@ -312,42 +304,40 @@ const TimePicker = ({
 				break;
 		}
 	};
-
 	const handleAction = (direction: number) => {
 		const {configName} = currentInputFocused;
 		const config = useConfig[configName];
 		const prevValue = internalValue[configName];
 		let value;
-
 		if (configName === TimeType.ampm) {
 			value =
 				direction === 1
 					? (config as ConfigAmpm).pm
 					: (config as ConfigAmpm).am;
-		} else {
+		}
+		else {
 			value = handleMaxAndMin(
 				String(
 					prevValue !== DEFAULT_VALUE
 						? Number(prevValue) + direction
 						: direction === -1
-						? (config as ConfigMaxMin).max
-						: 0
+							? (config as ConfigMaxMin).max
+							: 0
 				),
 				config as ConfigMaxMin
 			);
 		}
-
 		setCurrentInputFocused({
 			configName,
 			focused: true,
 		});
 		setValue({
 			...internalValue,
+
 			// eslint-disable-next-line sort-keys
 			[configName]: String(value).padStart(2, '0'),
 		});
 	};
-
 	const handleDocumentClick = (event: Event) => {
 		if (
 			elementRef.current &&
@@ -358,7 +348,6 @@ const TimePicker = ({
 			setCurrentInputFocused(defaultFocused);
 		}
 	};
-
 	const handleInputFocus = (configName: TimeType) => {
 		setActionVisible(true);
 		setCurrentInputFocused({
@@ -366,7 +355,6 @@ const TimePicker = ({
 			focused: true,
 		});
 	};
-
 	useEffect(() => {
 		document.addEventListener('click', handleDocumentClick);
 
@@ -374,10 +362,10 @@ const TimePicker = ({
 			document.removeEventListener('click', handleDocumentClick);
 		};
 	}, []);
-
 	const visibleActionReset =
 		actionVisible &&
-		((internalValue.ampm !== DEFAULT_VALUE && internalValue.ampm != null) ||
+		((internalValue.ampm !== DEFAULT_VALUE &&
+			internalValue.ampm !== null) ||
 			internalValue.hours !== DEFAULT_VALUE ||
 			internalValue.minutes !== DEFAULT_VALUE);
 
@@ -391,6 +379,7 @@ const TimePicker = ({
 						</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 				)}
+
 				<FocusScope arrowKeysLeftRight arrowKeysUpDown={false}>
 					<ClayInput.GroupItem>
 						<div
@@ -440,7 +429,9 @@ const TimePicker = ({
 									type="text"
 									value={internalValue.hours}
 								/>
+
 								<span className="clay-time-divider">:</span>
+
 								<input
 									aria-label={ariaLabels.minutes}
 									className={classNames(
@@ -468,6 +459,7 @@ const TimePicker = ({
 									type="text"
 									value={internalValue.minutes}
 								/>
+
 								{use12Hours && (
 									<input
 										aria-label={ariaLabels.ampm}
@@ -499,6 +491,7 @@ const TimePicker = ({
 										}
 									/>
 								)}
+
 								{name && (
 									<input
 										name={name}
@@ -507,6 +500,7 @@ const TimePicker = ({
 									/>
 								)}
 							</div>
+
 							<div className="clay-time-action-group">
 								<div
 									className="clay-time-action-group-item"
@@ -531,12 +525,12 @@ const TimePicker = ({
 															hours: DEFAULT_VALUE,
 															minutes:
 																DEFAULT_VALUE,
-													  }
+														}
 													: {
 															hours: DEFAULT_VALUE,
 															minutes:
 																DEFAULT_VALUE,
-													  }
+														}
 											)
 										}
 										tabIndex={visibleActionReset ? 0 : -1}
@@ -547,6 +541,7 @@ const TimePicker = ({
 										/>
 									</ClayButton>
 								</div>
+
 								<div
 									className="clay-time-action-group-item"
 									data-testid="containerSpin"
@@ -571,6 +566,7 @@ const TimePicker = ({
 												symbol="angle-up"
 											/>
 										</ClayButton>
+
 										<ClayButton
 											aria-label={ariaLabels.timeDown}
 											className="clay-time-inner-spin-btn clay-time-inner-spin-btn-dec"
@@ -590,6 +586,7 @@ const TimePicker = ({
 						</div>
 					</ClayInput.GroupItem>
 				</FocusScope>
+
 				{timezone && (
 					<ClayInput.GroupItem shrink>
 						<ClayInput.GroupText>{`(${timezone})`}</ClayInput.GroupText>
@@ -598,6 +595,6 @@ const TimePicker = ({
 			</ClayInput.Group>
 		</div>
 	);
-};
+}
 
 export default TimePicker;

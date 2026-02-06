@@ -2,8 +2,8 @@
 
 Buttons communicate an action to happen on user interaction.
 
--   [Button Documentation](https://clayui.com/docs/components/button.html)
--   [Button Group Documentation](https://clayui.com/docs/components/button-group.html)
+- [Button Documentation](https://clayui.com/docs/components/button.html)
+- [Button Group Documentation](https://clayui.com/docs/components/button-group.html)
 
 ## Install
 

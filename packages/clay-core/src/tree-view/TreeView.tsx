@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {isAppleDevice, useNavigation} from '@clayui/shared';
@@ -25,6 +25,7 @@ interface ITreeViewProps<T extends Record<string, any>>
 		>,
 		ITreeProps<T>,
 		ICollectionProps<T> {
+
 	/**
 	 * Flag to determine which style the TreeView will display.
 	 */
@@ -93,16 +94,16 @@ interface ITreeViewProps<T extends Record<string, any>>
 	onLoadMore?: OnLoadMore<T>;
 
 	/**
+	 * Calback is called when the user presses the R or F2 hotkey.
+	 */
+	onRenameItem?: (item: T) => Promise<T>;
+
+	/**
 	 * Callback called whenever an item is selected. Similar to the `onSelectionChange`
 	 * callback but instead of passing the selected keys it is called with the current
 	 * item being selected.
 	 */
 	onSelect?: (item: T) => void;
-
-	/**
-	 * Calback is called when the user presses the R or F2 hotkey.
-	 */
-	onRenameItem?: (item: T) => Promise<T>;
 
 	/**
 	 * Flag changes the Node selection behavior when a checkbox is rendered on the Node.
@@ -120,9 +121,9 @@ interface ITreeViewProps<T extends Record<string, any>>
 
 const focusableElements = ['.treeview-link[tabindex]'];
 
-const Application = ({children}: {children: React.ReactNode}) => (
-	<div role="application">{children}</div>
-);
+function Application({children}: {children: React.ReactNode}) {
+	return <div role="application">{children}</div>;
+}
 
 export function TreeView<T extends Record<string, any>>({
 	children,
@@ -228,7 +229,9 @@ export function TreeView<T extends Record<string, any>>({
 				tabIndex={-1}
 			>
 				{
+
 					// @ts-ignore
+
 					<DndProvider
 						backend={HTML5Backend}
 						context={dragAndDropContext}
@@ -248,6 +251,7 @@ export function TreeView<T extends Record<string, any>>({
 									<Collection<T> items={state.items}>
 										{children}
 									</Collection>
+
 									<DragLayer itemNameKey={itemNameKey} />
 								</FocusWithinProvider>
 							</DragAndDropProvider>

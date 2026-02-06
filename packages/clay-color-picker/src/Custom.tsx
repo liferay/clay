@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Icon from '@clayui/icon';
@@ -28,6 +28,14 @@ type Props = {
 	label?: string;
 
 	/**
+	 * Messages for the Color Picker.
+	 */
+	messages?: {
+		close: string;
+		customColor: string;
+	};
+
+	/**
 	 * Callback for when a color is changed
 	 */
 	onChange: (color: tinycolor.Instance, value: string) => void;
@@ -46,14 +54,6 @@ type Props = {
 	 */
 	showPalette?: boolean;
 
-	/**
-	 * Messages for the Color Picker.
-	 */
-	messages?: {
-		close: string;
-		customColor: string;
-	};
-
 	splotch?: number;
 
 	/**
@@ -69,7 +69,7 @@ const defaultMessages = {
 	customColor: 'custom color',
 };
 
-const ClayColorPickerCustom = ({
+function ClayColorPickerCustom({
 	color,
 	colors,
 	editorActive,
@@ -82,7 +82,7 @@ const ClayColorPickerCustom = ({
 	showPalette,
 	splotch,
 	spritemap,
-}: Props) => {
+}: Props) {
 	const previousColorRef = useRef(color);
 
 	return (
@@ -98,9 +98,7 @@ const ClayColorPickerCustom = ({
 									? messages.close
 									: messages.customColor
 							}
-							className={`${
-								editorActive ? 'close' : ''
-							} component-action`}
+							className={`${editorActive ? 'close' : ''} component-action`}
 							onClick={() => onEditorActiveChange(!editorActive)}
 							type="button"
 						>
@@ -129,11 +127,13 @@ const ClayColorPickerCustom = ({
 									// the custom, clicking on an empty slot will replace that
 									// slot with the new color if don't have an active slot
 									// being edited.
+
 									if (hex === DEFAULT_SPLOTCH_COLOR) {
 										onEditorActiveChange(true);
 
 										// Replaces the slot color with the color entered in the
 										// input if it does not have an active slot being edited.
+
 										if (
 											previousColorRef.current !==
 												tinycolor(
@@ -151,19 +151,18 @@ const ClayColorPickerCustom = ({
 												color,
 												color.getOriginalInput() as string
 											);
-										} else {
+										}
+										else {
 											const newColor = tinycolor(hex);
-
 											onColorsChange(hex, index);
 											onChange(newColor, hex);
 										}
-									} else {
+									}
+									else {
 										const newColor = hex!.includes('var(')
 											? getCSSVariableColor(hex!)
 											: tinycolor(hex);
-
 										previousColorRef.current = newColor;
-
 										onChange(newColor, hex);
 									}
 								}}
@@ -175,6 +174,6 @@ const ClayColorPickerCustom = ({
 			)}
 		</div>
 	);
-};
+}
 
 export default ClayColorPickerCustom;

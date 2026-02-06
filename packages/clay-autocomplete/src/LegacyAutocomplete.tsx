@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayInput} from '@clayui/form';
@@ -31,15 +31,16 @@ AutocompleteMarkup.displayName = 'ClayAutocompleteMarkup';
  * Temporary helper function to determine which version of autocomplete
  * is being used.
  */
-const hasItems = (children?: React.ReactNode | Function) => {
+function hasItems(children?: React.ReactNode | Function) {
 	if (!children || typeof children === 'function') {
 		return [];
 	}
-
 	const mappedChildren = React.Children.map(children, (child) => {
 		if (
 			React.isValidElement(child) &&
+
 			// @ts-ignore
+
 			child.type.displayName === 'Item'
 		) {
 			return true;
@@ -49,9 +50,10 @@ const hasItems = (children?: React.ReactNode | Function) => {
 	});
 
 	return (mappedChildren || []).filter(Boolean);
-};
+}
 
 export interface IProps<T> extends IAutocompleteProps<T> {
+
 	/**
 	 * Div component to render. It can be a one component that will replace the markup.
 	 */
@@ -63,7 +65,7 @@ type Component = <T extends Record<string, any> | string | number>(
 ) => React.ReactElement | null;
 
 export const ClayAutocomplete = React.forwardRef(function AutocompleteInner<
-	T extends Record<string, any> | string | number
+	T extends Record<string, any> | string | number,
 >(
 	{
 		children,
@@ -92,7 +94,8 @@ export const ClayAutocomplete = React.forwardRef(function AutocompleteInner<
 
 						if (typeof ref === 'function') {
 							ref(r);
-						} else if (ref !== null) {
+						}
+						else if (ref !== null) {
 							(ref as React.MutableRefObject<any>).current = r;
 						}
 					}

@@ -1,13 +1,16 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
+
+/* eslint-env node */
 
 import Editor from '$clayui.com/src/components/Editor';
 import mapData from '$clayui.com/static/map.json';
 import React from 'react';
 
 // Workaround for building gatsby's SSR with since Billboard.js references `window`
+
 const ClayChart =
 	typeof window !== `undefined`
 		? require('@clayui/charts').default
@@ -36,13 +39,12 @@ const chartCode = `const Component = () => {
 }
 
 render(<Component />);`;
-
-export const Chart = () => {
+export function Chart() {
 	const scope = {ClayChart};
 	const code = chartCode;
 
 	return <Editor code={code} imports={chartImportsCode} scope={scope} />;
-};
+}
 
 const geoMapImportsCode = `import ClayChart from '@clayui/charts';
 import React from 'react';
@@ -68,13 +70,12 @@ const geoMapCode = `const Component = () => (
 );
 
 render(<Component />);`;
-
-export const GeoMap = () => {
+export function GeoMap() {
 	const scope = {ClayChart, mapData};
 	const code = geoMapCode;
 
 	return <Editor code={code} imports={geoMapImportsCode} scope={scope} />;
-};
+}
 
 const predictiveImportsCode = `import ClayChart from '@clayui/charts';
 `;
@@ -146,10 +147,9 @@ const predictiveCode = `const Component = () => (
 );
 
 render(<Component />);`;
-
-export const Predictive = () => {
+export function Predictive() {
 	const scope = {ClayChart};
 	const code = predictiveCode;
 
 	return <Editor code={code} imports={predictiveImportsCode} scope={scope} />;
-};
+}

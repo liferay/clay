@@ -19,7 +19,8 @@ $cadmin-input-height: 40px !default; // 40px
 $cadmin-input-line-height: $cadmin-input-btn-line-height !default;
 $cadmin-input-padding-x: 16px !default; // 16px
 $cadmin-input-padding-y: 7px !default; // 7px
-$cadmin-input-transition: border-color 0.15s ease-in-out,
+$cadmin-input-transition:
+	border-color 0.15s ease-in-out,
 	box-shadow 0.15s ease-in-out !default;
 
 $cadmin-input-font-size-mobile: 16px !default; // 16px
@@ -407,9 +408,10 @@ $cadmin-form-control-label-size: map-deep-merge(
 
 $cadmin-form-control-tag-group-padding-y: (
 		$cadmin-input-height - $cadmin-input-border-bottom-width -
-			$cadmin-input-border-top-width -
-			map-get($cadmin-form-control-label-size, min-height) -
-			(map-get($cadmin-form-control-label-size, margin-bottom)) -
+			$cadmin-input-border-top-width - map-get(
+				$cadmin-form-control-label-size,
+				min-height
+			) - (map-get($cadmin-form-control-label-size, margin-bottom)) -
 			(map-get($cadmin-form-control-label-size, margin-top))
 	) * 0.5 !default;
 

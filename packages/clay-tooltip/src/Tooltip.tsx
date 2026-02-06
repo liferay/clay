@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -18,10 +18,11 @@ export const ALIGN_POSITIONS = [
 ] as const;
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Position in which the tooltip will be aligned to the element.
 	 */
-	alignPosition?: typeof ALIGN_POSITIONS[number];
+	alignPosition?: (typeof ALIGN_POSITIONS)[number];
 
 	/**
 	 * Flag to indicate if tooltip is displayed.

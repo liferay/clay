@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {
@@ -17,23 +17,27 @@ type Bounds = {
 	y: number;
 };
 
-const MoveTo = (x: number, y: number) => `M ${x} ${y}`;
-const LineTo = (x: number, y: number) => `L ${x} ${y}`;
-const EllipticalArcCurve = (toX: number, toY: number) =>
-	`A 0,0 0 0 0 ${toX},${toY}`;
+function MoveTo(x: number, y: number) {
+	return `M ${x} ${y}`;
+}
+function LineTo(x: number, y: number) {
+	return `L ${x} ${y}`;
+}
+function EllipticalArcCurve(toX: number, toY: number) {
+	return `A 0,0 0 0 0 ${toX},${toY}`;
+}
 
-const createClipPath = (
+function createClipPath(
 	bounds: Bounds,
 	containerBounds: Bounds,
 	padding: number
-) => {
+) {
 	const parentBounds = {
 		endX: containerBounds.width,
 		endY: containerBounds.height,
 		startX: 0,
 		startY: 0,
 	};
-
 	const startX = bounds.x - padding;
 	const endX = startX + bounds.width + padding * 2;
 	const startY = bounds.y - padding;
@@ -55,7 +59,7 @@ const createClipPath = (
 		LineTo(startX, startY),
 		EllipticalArcCurve(startX, startY),
 	].join(' ');
-};
+}
 
 const initialBounds = {
 	height: 0,
@@ -118,6 +122,7 @@ function SVG({children}: ContainerProps) {
 }
 
 type Props<T> = {
+
 	/**
 	 * Sets the current value of bounds to define the highlight area (controlled).
 	 */
@@ -127,6 +132,16 @@ type Props<T> = {
 	 * Sets the element that will receive the highlight.
 	 */
 	children?: React.ReactNode | ((ref: React.RefObject<T>) => React.ReactNode);
+
+	/**
+	 * Sets the default value of bounds (uncontrolled).
+	 */
+	defaultBounds?: Bounds;
+
+	/**
+	 * Callback is called when the bounds changes (controlled).
+	 */
+	onBoundsChange?: InternalDispatch<Bounds>;
 
 	/**
 	 * Callback is called when the overlay is clicked.
@@ -142,16 +157,6 @@ type Props<T> = {
 	 * Sets the current visibility of the overlay.
 	 */
 	visible?: boolean;
-
-	/**
-	 * Sets the default value of bounds (uncontrolled).
-	 */
-	defaultBounds?: Bounds;
-
-	/**
-	 * Callback is called when the bounds changes (controlled).
-	 */
-	onBoundsChange?: InternalDispatch<Bounds>;
 };
 
 export function OverlayMask<T extends HTMLElement>({
@@ -201,11 +206,14 @@ export function OverlayMask<T extends HTMLElement>({
 						childrenRef.current = node;
 
 						// @ts-ignore
+
 						const {ref} = children;
 
 						if (typeof ref === 'function') {
 							ref(node);
-						} else if (ref !== null) {
+						}
+						else if (ref !== null) {
+
 							// eslint-disable-next-line react-compiler/react-compiler
 							(ref as React.MutableRefObject<any>).current = node;
 						}

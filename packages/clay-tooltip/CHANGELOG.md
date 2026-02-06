@@ -7,13 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
@@ -31,25 +31,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/tooltip@3.4.5...@clayui/tooltip@3.142.0) (2025-08-01)
 
@@ -71,7 +71,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tooltip:** improves component typing to create API Tooltip ([eb82afe](https://github.com/liferay/clay/commit/eb82afe50a3765087f5db4ea56bd9fd6f5cf1b5a))
+- **@clayui/tooltip:** improves component typing to create API Tooltip ([eb82afe](https://github.com/liferay/clay/commit/eb82afe50a3765087f5db4ea56bd9fd6f5cf1b5a))
 
 # 3.119.0 (2024-08-30)
 
@@ -89,7 +89,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** Fix close tooltip when pressing Escape key ([6f40c16](https://github.com/liferay/clay/commit/6f40c16ad2556a99c839822c1486a2e0b2ee710c))
+- **@clayui/tooltip:** Fix close tooltip when pressing Escape key ([6f40c16](https://github.com/liferay/clay/commit/6f40c16ad2556a99c839822c1486a2e0b2ee710c))
 
 # 3.107.0 (2023-11-27)
 
@@ -99,8 +99,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.104.0 (2023-08-25)
 
@@ -114,7 +114,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** fix error not showing tooltip on nested elements ([cf31736](https://github.com/liferay/clay/commit/cf31736b5515af8c2e906443c86c6cdd4c11631d))
+- **@clayui/tooltip:** fix error not showing tooltip on nested elements ([cf31736](https://github.com/liferay/clay/commit/cf31736b5515af8c2e906443c86c6cdd4c11631d))
 
 # 3.96.0 (2023-05-29)
 
@@ -154,13 +154,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** persist the title attribute when navigate via keyboard ([44fe7c4](https://github.com/liferay/clay/commit/44fe7c4113a0889a109f3d71435800468b9ab94a))
+- **@clayui/tooltip:** persist the title attribute when navigate via keyboard ([44fe7c4](https://github.com/liferay/clay/commit/44fe7c4113a0889a109f3d71435800468b9ab94a))
 
 # 3.79.0 (2022-11-08)
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** fixes error when not aligning the tooltip with focus in sequence of elements ([0d3e415](https://github.com/liferay/clay/commit/0d3e415746f33e62b7eb68e798c19c3ce5173b23))
+- **@clayui/tooltip:** fixes error when not aligning the tooltip with focus in sequence of elements ([0d3e415](https://github.com/liferay/clay/commit/0d3e415746f33e62b7eb68e798c19c3ce5173b23))
 
 ## 3.78.2 (2022-10-25)
 
@@ -188,21 +188,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip): Revert "fix(@clayui/tooltip:** adds the option to disappear the floating tooltip after a while" ([43b64b9](https://github.com/liferay/clay/commit/43b64b9e0ca7b503b022f69f2aa710dd51770114))
--   **@clayui/tooltip:** adds the option to disappear the floating tooltip after a while ([7438e62](https://github.com/liferay/clay/commit/7438e62797131336b6547ffd986ff977c7a59d0d))
--   **@clayui/tooltip:** remove the behavior of moving the tooltip when the mouse moves ([51585ff](https://github.com/liferay/clay/commit/51585ffb16fe0dea68086ed9c320db381d788215))
+- **@clayui/tooltip): Revert "fix(@clayui/tooltip:** adds the option to disappear the floating tooltip after a while" ([43b64b9](https://github.com/liferay/clay/commit/43b64b9e0ca7b503b022f69f2aa710dd51770114))
+- **@clayui/tooltip:** adds the option to disappear the floating tooltip after a while ([7438e62](https://github.com/liferay/clay/commit/7438e62797131336b6547ffd986ff977c7a59d0d))
+- **@clayui/tooltip:** remove the behavior of moving the tooltip when the mouse moves ([51585ff](https://github.com/liferay/clay/commit/51585ffb16fe0dea68086ed9c320db381d788215))
 
 # 3.67.0 (2022-07-25)
 
 ### Features
 
--   **@clayui/tooltip:** adds new properties to configure the tooltip to be floating ([c598ca3](https://github.com/liferay/clay/commit/c598ca335b96cafe01848fabdf020135126c9ff9))
+- **@clayui/tooltip:** adds new properties to configure the tooltip to be floating ([c598ca3](https://github.com/liferay/clay/commit/c598ca335b96cafe01848fabdf020135126c9ff9))
 
 # 3.65.0 (2022-07-11)
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** adds the possibility to hover over the tooltip ([8b9b256](https://github.com/liferay/clay/commit/8b9b256db39be0a8f7708648946cec6faeb92bb1))
+- **@clayui/tooltip:** adds the possibility to hover over the tooltip ([8b9b256](https://github.com/liferay/clay/commit/8b9b256db39be0a8f7708648946cec6faeb92bb1))
 
 # 3.58.0 (2022-05-23)
 
@@ -210,7 +210,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** cancel scheduled tooltip before scheduling new one ([62551b8](https://github.com/liferay/clay/commit/62551b87af77d6b15d95d80c47525c1071237605))
+- **@clayui/tooltip:** cancel scheduled tooltip before scheduling new one ([62551b8](https://github.com/liferay/clay/commit/62551b87af77d6b15d95d80c47525c1071237605))
 
 # 3.55.0 (2022-05-02)
 
@@ -234,9 +234,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** forces tooltip to be repositioned when the x-axis is modified ([b62313c](https://github.com/liferay/clay/commit/b62313c01a3bd94812b03c5d754653e927b3cfcf))
--   **@clayui/tooltip:** stop the always showing warnings ([3858bfe](https://github.com/liferay/clay/commit/3858bfe835fb39733bf5e75181d46079a1358d85))
--   **@clyaui/tooltip:** fixes error when not forcing Tooltip repositioning when X axis is modified ([187f1ef](https://github.com/liferay/clay/commit/187f1ef1f0cad070597c8b9888fb082f9c09cec4))
+- **@clayui/tooltip:** forces tooltip to be repositioned when the x-axis is modified ([b62313c](https://github.com/liferay/clay/commit/b62313c01a3bd94812b03c5d754653e927b3cfcf))
+- **@clayui/tooltip:** stop the always showing warnings ([3858bfe](https://github.com/liferay/clay/commit/3858bfe835fb39733bf5e75181d46079a1358d85))
+- **@clyaui/tooltip:** fixes error when not forcing Tooltip repositioning when X axis is modified ([187f1ef](https://github.com/liferay/clay/commit/187f1ef1f0cad070597c8b9888fb082f9c09cec4))
 
 ## 3.35.3 (2021-09-09)
 
@@ -248,11 +248,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** Hide tooltip on `dragstart` ([70d78da](https://github.com/liferay/clay/commit/70d78daa7d49287f7afb3981dae3c22ac9294bf3))
+- **@clayui/tooltip:** Hide tooltip on `dragstart` ([70d78da](https://github.com/liferay/clay/commit/70d78daa7d49287f7afb3981dae3c22ac9294bf3))
 
 ### Features
 
--   **@clayui/tooltip:** replaces direct use of dom-align with doAlign with RTL support ([2afa54c](https://github.com/liferay/clay/commit/2afa54ce9b24501cfa34898454dfa6346e8dac83))
+- **@clayui/tooltip:** replaces direct use of dom-align with doAlign with RTL support ([2afa54c](https://github.com/liferay/clay/commit/2afa54ce9b24501cfa34898454dfa6346e8dac83))
 
 # 3.29.0 (2021-05-28)
 
@@ -260,8 +260,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tooltip:** Add the new ContainerProps API ([728600c](https://github.com/liferay/clay/commit/728600c021008c5ed923951c2fa4ea8298d3fd1b))
--   **@clayui/tooltip:** update logic to handle scoping and a global listener ([1c83d30](https://github.com/liferay/clay/commit/1c83d30fc1a0ea1aa86977d7c86c5b6269b3ab68))
+- **@clayui/tooltip:** Add the new ContainerProps API ([728600c](https://github.com/liferay/clay/commit/728600c021008c5ed923951c2fa4ea8298d3fd1b))
+- **@clayui/tooltip:** update logic to handle scoping and a global listener ([1c83d30](https://github.com/liferay/clay/commit/1c83d30fc1a0ea1aa86977d7c86c5b6269b3ab68))
 
 # 3.27.0 (2021-05-05)
 
@@ -297,7 +297,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tooltip:** improves component typing to create API Tooltip ([eb82afe](https://github.com/liferay/clay/commit/eb82afe50a3765087f5db4ea56bd9fd6f5cf1b5a))
+- **@clayui/tooltip:** improves component typing to create API Tooltip ([eb82afe](https://github.com/liferay/clay/commit/eb82afe50a3765087f5db4ea56bd9fd6f5cf1b5a))
 
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
@@ -327,7 +327,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** Fix close tooltip when pressing Escape key ([6f40c16](https://github.com/liferay/clay/commit/6f40c16ad2556a99c839822c1486a2e0b2ee710c))
+- **@clayui/tooltip:** Fix close tooltip when pressing Escape key ([6f40c16](https://github.com/liferay/clay/commit/6f40c16ad2556a99c839822c1486a2e0b2ee710c))
 
 # [3.107.0](https://github.com/liferay/clay/compare/v3.106.1...v3.107.0) (2023-11-27)
 
@@ -341,8 +341,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
@@ -364,7 +364,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** fix error not showing tooltip on nested elements ([cf31736](https://github.com/liferay/clay/commit/cf31736b5515af8c2e906443c86c6cdd4c11631d))
+- **@clayui/tooltip:** fix error not showing tooltip on nested elements ([cf31736](https://github.com/liferay/clay/commit/cf31736b5515af8c2e906443c86c6cdd4c11631d))
 
 # [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
 
@@ -438,13 +438,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** persist the title attribute when navigate via keyboard ([44fe7c4](https://github.com/liferay/clay/commit/44fe7c4113a0889a109f3d71435800468b9ab94a))
+- **@clayui/tooltip:** persist the title attribute when navigate via keyboard ([44fe7c4](https://github.com/liferay/clay/commit/44fe7c4113a0889a109f3d71435800468b9ab94a))
 
 # [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** fixes error when not aligning the tooltip with focus in sequence of elements ([0d3e415](https://github.com/liferay/clay/commit/0d3e415746f33e62b7eb68e798c19c3ce5173b23))
+- **@clayui/tooltip:** fixes error when not aligning the tooltip with focus in sequence of elements ([0d3e415](https://github.com/liferay/clay/commit/0d3e415746f33e62b7eb68e798c19c3ce5173b23))
 
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
@@ -494,21 +494,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip): Revert "fix(@clayui/tooltip:** adds the option to disappear the floating tooltip after a while" ([43b64b9](https://github.com/liferay/clay/commit/43b64b9e0ca7b503b022f69f2aa710dd51770114))
--   **@clayui/tooltip:** adds the option to disappear the floating tooltip after a while ([7438e62](https://github.com/liferay/clay/commit/7438e62797131336b6547ffd986ff977c7a59d0d))
--   **@clayui/tooltip:** remove the behavior of moving the tooltip when the mouse moves ([51585ff](https://github.com/liferay/clay/commit/51585ffb16fe0dea68086ed9c320db381d788215))
+- **@clayui/tooltip): Revert "fix(@clayui/tooltip:** adds the option to disappear the floating tooltip after a while" ([43b64b9](https://github.com/liferay/clay/commit/43b64b9e0ca7b503b022f69f2aa710dd51770114))
+- **@clayui/tooltip:** adds the option to disappear the floating tooltip after a while ([7438e62](https://github.com/liferay/clay/commit/7438e62797131336b6547ffd986ff977c7a59d0d))
+- **@clayui/tooltip:** remove the behavior of moving the tooltip when the mouse moves ([51585ff](https://github.com/liferay/clay/commit/51585ffb16fe0dea68086ed9c320db381d788215))
 
 # [3.67.0](https://github.com/liferay/clay/compare/v3.66.0...v3.67.0) (2022-07-25)
 
 ### Features
 
--   **@clayui/tooltip:** adds new properties to configure the tooltip to be floating ([c598ca3](https://github.com/liferay/clay/commit/c598ca335b96cafe01848fabdf020135126c9ff9))
+- **@clayui/tooltip:** adds new properties to configure the tooltip to be floating ([c598ca3](https://github.com/liferay/clay/commit/c598ca335b96cafe01848fabdf020135126c9ff9))
 
 # [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** adds the possibility to hover over the tooltip ([8b9b256](https://github.com/liferay/clay/commit/8b9b256db39be0a8f7708648946cec6faeb92bb1))
+- **@clayui/tooltip:** adds the possibility to hover over the tooltip ([8b9b256](https://github.com/liferay/clay/commit/8b9b256db39be0a8f7708648946cec6faeb92bb1))
 
 # [3.58.0](https://github.com/liferay/clay/compare/v3.57.0...v3.58.0) (2022-05-23)
 
@@ -518,7 +518,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** cancel scheduled tooltip before scheduling new one ([62551b8](https://github.com/liferay/clay/commit/62551b87af77d6b15d95d80c47525c1071237605))
+- **@clayui/tooltip:** cancel scheduled tooltip before scheduling new one ([62551b8](https://github.com/liferay/clay/commit/62551b87af77d6b15d95d80c47525c1071237605))
 
 # [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
 
@@ -560,9 +560,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** forces tooltip to be repositioned when the x-axis is modified ([b62313c](https://github.com/liferay/clay/commit/b62313c))
--   **@clayui/tooltip:** stop the always showing warnings ([3858bfe](https://github.com/liferay/clay/commit/3858bfe))
--   **@clyaui/tooltip:** fixes error when not forcing Tooltip repositioning when X axis is modified ([187f1ef](https://github.com/liferay/clay/commit/187f1ef))
+- **@clayui/tooltip:** forces tooltip to be repositioned when the x-axis is modified ([b62313c](https://github.com/liferay/clay/commit/b62313c))
+- **@clayui/tooltip:** stop the always showing warnings ([3858bfe](https://github.com/liferay/clay/commit/3858bfe))
+- **@clyaui/tooltip:** fixes error when not forcing Tooltip repositioning when X axis is modified ([187f1ef](https://github.com/liferay/clay/commit/187f1ef))
 
 ## [3.35.3](https://github.com/liferay/clay/compare/v3.35.2...v3.35.3) (2021-09-09)
 
@@ -580,13 +580,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tooltip:** replaces direct use of dom-align with doAlign with RTL support ([2afa54c](https://github.com/liferay/clay/commit/2afa54c))
+- **@clayui/tooltip:** replaces direct use of dom-align with doAlign with RTL support ([2afa54c](https://github.com/liferay/clay/commit/2afa54c))
 
 # [3.32.0](https://github.com/liferay/clay/compare/v3.31.0...v3.32.0) (2021-07-28)
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** Hide tooltip on `dragstart` ([70d78da](https://github.com/liferay/clay/commit/70d78da))
+- **@clayui/tooltip:** Hide tooltip on `dragstart` ([70d78da](https://github.com/liferay/clay/commit/70d78da))
 
 # [3.29.0](https://github.com/liferay/clay/compare/v3.28.0...v3.29.0) (2021-05-28)
 
@@ -596,8 +596,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/tooltip:** Add the new ContainerProps API ([728600c](https://github.com/liferay/clay/commit/728600c))
--   **@clayui/tooltip:** update logic to handle scoping and a global listener ([1c83d30](https://github.com/liferay/clay/commit/1c83d30))
+- **@clayui/tooltip:** Add the new ContainerProps API ([728600c](https://github.com/liferay/clay/commit/728600c))
+- **@clayui/tooltip:** update logic to handle scoping and a global listener ([1c83d30](https://github.com/liferay/clay/commit/1c83d30))
 
 # [3.27.0](https://github.com/liferay/clay/compare/v3.26.0...v3.27.0) (2021-05-05)
 
@@ -627,8 +627,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
--   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
 
 ## [3.3.5](https://github.com/liferay/clay/compare/@clayui/tooltip@3.3.4...@clayui/tooltip@3.3.5) (2020-08-28)
 
@@ -642,7 +642,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+- update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
 
 ## [3.3.2](https://github.com/liferay/clay/compare/@clayui/tooltip@3.3.1...@clayui/tooltip@3.3.2) (2020-07-07)
 
@@ -656,8 +656,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Improve component docs by updating content - Pagination, Popover, Progress Bar, Slider, Toggle & Tooltip ([01b555a](https://github.com/liferay/clay/commit/01b555a))
--   **clayui.com:** Improve component docs by updating content - Typos, wording, and variable names ([f1d795c](https://github.com/liferay/clay/commit/f1d795c))
+- **clayui.com:** Improve component docs by updating content - Pagination, Popover, Progress Bar, Slider, Toggle & Tooltip ([01b555a](https://github.com/liferay/clay/commit/01b555a))
+- **clayui.com:** Improve component docs by updating content - Typos, wording, and variable names ([f1d795c](https://github.com/liferay/clay/commit/f1d795c))
 
 ## [3.2.3](https://github.com/liferay/clay/compare/@clayui/tooltip@3.2.2...@clayui/tooltip@3.2.3) (2020-04-24)
 
@@ -667,52 +667,52 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** remove polyfill in favor of ponyfill(ponyfill.com) ([3a149e0](https://github.com/liferay/clay/commit/3a149e0))
+- **@clayui/tooltip:** remove polyfill in favor of ponyfill(ponyfill.com) ([3a149e0](https://github.com/liferay/clay/commit/3a149e0))
 
 ## [3.2.1](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.2.0...@clayui/tooltip@3.2.1) (2020-03-12)
 
 ### Bug Fixes
 
--   **@clayui/tooltip:** add polyfill for element.matches ([a16ff00](https://github.com/liferay/clay/commit/a16ff00))
+- **@clayui/tooltip:** add polyfill for element.matches ([a16ff00](https://github.com/liferay/clay/commit/a16ff00))
 
 # 3.2.0 (2020-02-28)
 
 ### Bug Fixes
 
--   **css:** allow newline characters to display properly for tooltips ([2265d10](https://github.com/liferay/clay/commit/2265d10))
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
--   **tooltip:** add missing dependency ([7203e50](https://github.com/liferay/clay/commit/7203e50))
--   **tooltip:** find closest node with title attribute ([7dc7fb0](https://github.com/liferay/clay/commit/7dc7fb0))
--   **tooltip+popover:** stories should be nested under Components ([f9799f9](https://github.com/liferay/clay/commit/f9799f9))
+- **css:** allow newline characters to display properly for tooltips ([2265d10](https://github.com/liferay/clay/commit/2265d10))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- **tooltip:** add missing dependency ([7203e50](https://github.com/liferay/clay/commit/7203e50))
+- **tooltip:** find closest node with title attribute ([7dc7fb0](https://github.com/liferay/clay/commit/7dc7fb0))
+- **tooltip+popover:** stories should be nested under Components ([f9799f9](https://github.com/liferay/clay/commit/f9799f9))
 
 ### Features
 
--   **tooltip:** allow custom renderer for TooltipProvider content ([bf64914](https://github.com/liferay/clay/commit/bf64914))
--   **tooltip:** create Tooltip component ([cb41eef](https://github.com/liferay/clay/commit/cb41eef))
+- **tooltip:** allow custom renderer for TooltipProvider content ([bf64914](https://github.com/liferay/clay/commit/bf64914))
+- **tooltip:** create Tooltip component ([cb41eef](https://github.com/liferay/clay/commit/cb41eef))
 
 # [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.0.4...@clayui/tooltip@3.1.0) (2020-01-31)
 
 ### Bug Fixes
 
--   **css:** allow newline characters to display properly for tooltips ([2265d10](https://github.com/liferay/clay/commit/2265d10))
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- **css:** allow newline characters to display properly for tooltips ([2265d10](https://github.com/liferay/clay/commit/2265d10))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ### Features
 
--   **tooltip:** allow custom renderer for TooltipProvider content ([bf64914](https://github.com/liferay/clay/commit/bf64914))
+- **tooltip:** allow custom renderer for TooltipProvider content ([bf64914](https://github.com/liferay/clay/commit/bf64914))
 
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.0.4...@clayui/tooltip@3.0.6) (2020-01-20)
 
 ### Bug Fixes
 
--   **css:** allow newline characters to display properly for tooltips ([2265d10](https://github.com/liferay/clay/commit/2265d10))
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- **css:** allow newline characters to display properly for tooltips ([2265d10](https://github.com/liferay/clay/commit/2265d10))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.0.4...@clayui/tooltip@3.0.5) (2019-12-05)
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+- **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.0.3...@clayui/tooltip@3.0.4) (2019-11-07)
 
@@ -726,4 +726,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **tooltip:** find closest node with title attribute ([7dc7fb0](https://github.com/liferay/clay/commit/7dc7fb0))
+- **tooltip:** find closest node with title attribute ([7dc7fb0](https://github.com/liferay/clay/commit/7dc7fb0))

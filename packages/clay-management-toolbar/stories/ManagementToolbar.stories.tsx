@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
@@ -40,8 +40,7 @@ const viewTypes = [
 		symbolLeft: 'cards2',
 	},
 ];
-
-export const Default = () => {
+export function Default() {
 	const [searchMobile, setSearchMobile] = useState<boolean>(false);
 	const [checked, setChecked] = useState<boolean>(false);
 	const viewTypeActive = viewTypes.find((type) => type.active);
@@ -74,6 +73,7 @@ export const Default = () => {
 											Filter and Order
 										</span>
 									</span>
+
 									<span className="navbar-breakpoint-d-none">
 										<ClayIcon symbol="filter" />
 									</span>
@@ -104,6 +104,7 @@ export const Default = () => {
 								defaultValue="Red"
 								type="text"
 							/>
+
 							<ClayInput.GroupInsetItem after tag="span">
 								<ClayButtonWithIcon
 									aria-label="Clear search button"
@@ -112,6 +113,7 @@ export const Default = () => {
 									onClick={() => setSearchMobile(false)}
 									symbol="times"
 								/>
+
 								<ClayButtonWithIcon
 									aria-label="Search button"
 									displayType="unstyled"
@@ -185,6 +187,7 @@ export const Default = () => {
 						</span>
 					</span>
 				</ClayResultsBar.Item>
+
 				<ClayResultsBar.Item expand>
 					<ClayLabel
 						className="component-label tbar-label"
@@ -193,6 +196,7 @@ export const Default = () => {
 						Filter
 					</ClayLabel>
 				</ClayResultsBar.Item>
+
 				<ClayResultsBar.Item>
 					<ClayButton
 						className="component-link tbar-link"
@@ -204,4 +208,4 @@ export const Default = () => {
 			</ClayResultsBar>
 		</>
 	);
-};
+}

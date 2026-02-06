@@ -17,7 +17,8 @@ $pagination-link-border-radius: 4px !default;
 
 // @deprecated as of v2 use the Sass map `$pagination-link` instead
 
-$pagination-link-transition: background-color 0.15s ease-in-out,
+$pagination-link-transition:
+	background-color 0.15s ease-in-out,
 	border-color 0.15s ease-in-out !default;
 
 $pagination-link-first-border-radius: $pagination-link-border-radius !default;

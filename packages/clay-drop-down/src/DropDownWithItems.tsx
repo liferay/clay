@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {useControlledState, useIsMobileDevice} from '@clayui/shared';
@@ -20,6 +20,7 @@ import type {Item} from './Items';
 import type {IProps as SearchProps} from './Search';
 
 export type Props = {
+
 	/**
 	 * Flag to indicate if the DropDown menu is active or not (controlled).
 	 */
@@ -63,16 +64,14 @@ export type Props = {
 	footerContent?: React.ReactElement;
 
 	/**
-	 * Element that is used as the trigger which will activate the dropdown on click.
-	 */
-	trigger: React.ReactElement & {
-		ref?: (node: HTMLButtonElement | null) => void;
-	};
-
-	/**
 	 * Add informational text at the top of DropDown.
 	 */
 	helpText?: string;
+
+	/**
+	 * List of items to display in drop down menu
+	 */
+	items: Array<Item>;
 
 	/**
 	 * Prop to pass DOM element attributes to DropDown.Menu.
@@ -121,11 +120,6 @@ export type Props = {
 	renderMenuOnClick?: boolean;
 
 	/**
-	 * Flag to show search at the top of the DropDown.
-	 */
-	searchable?: boolean;
-
-	/**
 	 * Pass the props to the Search component.
 	 */
 	searchProps?: SearchProps;
@@ -136,14 +130,21 @@ export type Props = {
 	searchValue?: string;
 
 	/**
+	 * Flag to show search at the top of the DropDown.
+	 */
+	searchable?: boolean;
+
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 */
 	spritemap?: string;
 
 	/**
-	 * List of items to display in drop down menu
+	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
-	items: Array<Item>;
+	trigger: React.ReactElement & {
+		ref?: (node: HTMLButtonElement | null) => void;
+	};
 
 	/**
 	 * Flag indicating if the caret icon should be displayed on the right side.
@@ -157,25 +158,22 @@ function getId() {
 	return `id-${counter++}`;
 }
 
-const transformTreeToLinkedList = (items: any, id: string, menu: any = {}) => {
+function transformTreeToLinkedList(items: any, id: string, menu: any = {}) {
 	menu[id] = [];
-
 	items?.forEach((item: any, index: number) => {
 		const keys = Object.keys(item);
-
 		menu[id][index] = {};
-
 		keys.forEach((key) => {
 			if (item['type'] === 'contextual' && Array.isArray(item[key])) {
 				const childId = getId();
-
 				menu[id][index].child = childId;
-
 				transformTreeToLinkedList(item[key], childId, menu);
-			} else {
+			}
+			else {
 				if (item[key] === 'contextual') {
 					menu[id][index].type = 'item';
-				} else {
+				}
+				else {
 					menu[id][index][key] = item[key];
 				}
 			}
@@ -183,9 +181,9 @@ const transformTreeToLinkedList = (items: any, id: string, menu: any = {}) => {
 	});
 
 	return menu;
-};
+}
 
-export const ClayDropDownWithItems = ({
+export function ClayDropDownWithItems({
 	active,
 	alignmentByViewport,
 	alignmentPosition,
@@ -210,9 +208,8 @@ export const ClayDropDownWithItems = ({
 	triggerIcon = null,
 	spritemap,
 	trigger,
-}: Props) => {
+}: Props) {
 	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
-
 	const [internalActive, setInternalActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
@@ -221,7 +218,6 @@ export const ClayDropDownWithItems = ({
 		onChange: onActiveChange,
 		value: active,
 	});
-
 	const hasRightSymbols = useMemo(
 		() => !!findNested(items, 'symbolRight'),
 		[items]
@@ -230,24 +226,18 @@ export const ClayDropDownWithItems = ({
 		() => !!findNested(items, 'symbolLeft'),
 		[items]
 	);
-
 	const hasContextual = useMemo(
 		() => items.some((item) => item.type === 'contextual'),
 		[items]
 	);
-
 	const Wrap = footerContent ? 'form' : React.Fragment;
-
 	const isMobile = useIsMobileDevice();
-
 	const activeMenu = useMemo(() => getId(), []);
-
 	const linkedList = useMemo(() => {
 		if (isMobile && hasContextual) {
 			return transformTreeToLinkedList(items, activeMenu);
 		}
 	}, [items, hasContextual, isMobile]);
-
 	if (hasContextual && isMobile) {
 		return (
 			<ClayDropDownWithDrilldown
@@ -275,7 +265,8 @@ export const ClayDropDownWithItems = ({
 				triggerIcon={triggerIcon}
 			/>
 		);
-	} else {
+	}
+	else {
 		return (
 			<ClayDropDown
 				active={internalActive}
@@ -296,7 +287,9 @@ export const ClayDropDownWithItems = ({
 					ref: (node: HTMLButtonElement) => {
 						if (node) {
 							triggerElementRef.current = node;
+
 							// Call the original ref, if any.
+
 							const {ref} = trigger;
 							if (typeof ref === 'function') {
 								ref(node);
@@ -355,6 +348,6 @@ export const ClayDropDownWithItems = ({
 			</ClayDropDown>
 		);
 	}
-};
+}
 
 ClayDropDownWithItems.displayName = 'ClayDropDownWithItems';

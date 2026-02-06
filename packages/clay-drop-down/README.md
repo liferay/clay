@@ -2,9 +2,9 @@
 
 A dropdown menu displays a list of options for the element that triggers it.
 
--   [Documentation](https://clayui.com/docs/components/drop-down.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/drop-down.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

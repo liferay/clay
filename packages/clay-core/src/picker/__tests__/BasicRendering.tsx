@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Icon from '@clayui/icon';
@@ -19,7 +19,9 @@ describe('Picker basic rendering', () => {
 		render(
 			<Picker>
 				<Option key="apple">Apple</Option>
+
 				<Option key="banana">Banana</Option>
+
 				<Option key="blueberry">Blueberry</Option>
 			</Picker>
 		);
@@ -55,7 +57,9 @@ describe('Picker basic rendering', () => {
 		const {container} = render(
 			<Picker native>
 				<Option key="apple">Apple</Option>
+
 				<Option key="banana">Banana</Option>
+
 				<Option key="blueberry">Blueberry</Option>
 			</Picker>
 		);
@@ -69,7 +73,9 @@ describe('Picker basic rendering', () => {
 		const {getByRole} = render(
 			<Picker defaultSelectedKey="apple" native>
 				<Option key="apple">Apple</Option>
+
 				<Option key="banana">Banana</Option>
+
 				<Option key="blueberry">Blueberry</Option>
 			</Picker>
 		);
@@ -188,6 +194,7 @@ describe('Picker basic rendering', () => {
 		>(({children, ...otherProps}, ref) => (
 			<div ref={ref} {...otherProps} tabIndex={0}>
 				<Icon className="mr-2" symbol="user" />
+
 				{children}
 			</div>
 		));

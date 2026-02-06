@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -15,6 +15,7 @@ type Context = {
 export const ItemContext = React.createContext<Context>({});
 
 export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
+
 	/**
 	 * Flag to indicate if `active` classname should be applied
 	 */
@@ -42,7 +43,7 @@ export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	state?: State;
 }
 
-const Item = ({
+function Item({
 	active,
 	children,
 	className,
@@ -50,7 +51,7 @@ const Item = ({
 	expand,
 	state,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	return (
 		<li
 			className={classNames('multi-step-item', {
@@ -67,6 +68,6 @@ const Item = ({
 			</ItemContext.Provider>
 		</li>
 	);
-};
+}
 
 export default Item;

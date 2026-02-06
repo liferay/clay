@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {hideOthers, supportsInert, suppressOthers} from 'aria-hidden';
@@ -96,9 +96,11 @@ export function Overlay({
 					event.preventDefault();
 
 					if (triggerRef.current) {
+
 						// When inert is used to suppress user interaction with the rest of
 						// the document, to retrieve the focus in the trigger we need to
 						// first undo and then move the focus.
+
 						if (unsuppressCallbackRef.current) {
 							unsuppressCallbackRef.current();
 							unsuppressCallbackRef.current = null;
@@ -120,7 +122,9 @@ export function Overlay({
 	useInteractOutside({
 		isDisabled: isOpen ? !isCloseOnInteractOutside : true,
 		onInteract: (event) => {
+
 			// @ts-ignore
+
 			if (event.button === 0) {
 				onHide('blur');
 			}
@@ -192,9 +196,11 @@ export function Overlay({
 			// Inert is a new native feature to better handle DOM arias that are not
 			// assertive to a SR or that should ignore any user interaction.
 			// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert
+
 			if (isInert) {
 				unsuppressCallbackRef.current = suppressOthers(elements);
-			} else {
+			}
+			else {
 				unsuppressCallbackRef.current = hideOthers(elements);
 			}
 
@@ -207,7 +213,8 @@ export function Overlay({
 					document.querySelectorAll('[inert]').forEach((element) => {
 						element.removeAttribute('inert');
 					});
-				} else if (!isInert && !previouslyHidden) {
+				}
+				else if (!isInert && !previouslyHidden) {
 					document
 						.querySelectorAll('[aria-hidden]')
 						.forEach((element) => {
@@ -223,7 +230,9 @@ export function Overlay({
 	return (
 		<ClayPortal className={menuClassName} subPortalRef={portalRef}>
 			{isModal && <span data-focus-scope-start="true" />}
+
 			{children}
+
 			{isModal && <span data-focus-scope-end="true" />}
 		</ClayPortal>
 	);
@@ -237,8 +246,10 @@ function useEvent<T extends keyof DocumentEventMap>(
 	deps: Array<any> = []
 ) {
 	useEffect(() => {
+
 		// This check should go away when the Overlay is shown using conditional
 		// instead of class CSS.
+
 		if (conditional) {
 			document.addEventListener(name, onEvent, capture);
 

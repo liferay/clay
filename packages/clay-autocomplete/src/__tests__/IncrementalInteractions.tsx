@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayAutocomplete from '..';
@@ -781,6 +781,7 @@ describe('Autocomplete incremental interactions', () => {
 			expect(onLoadMore).not.toHaveBeenCalled();
 
 			// Navigates to the last item
+
 			userEvent.type(combobox, '{arrowup}');
 
 			await waitFor(() => {
@@ -835,6 +836,7 @@ describe('Autocomplete incremental interactions', () => {
 			userEvent.click(combobox);
 
 			// Display the listbox
+
 			userEvent.type(combobox, '{arrowdown}');
 
 			const [announcer] = getAllByRole('log');
@@ -846,6 +848,7 @@ describe('Autocomplete incremental interactions', () => {
 			});
 
 			// Navigates to the last item
+
 			userEvent.type(combobox, '{arrowup}');
 
 			await waitFor(() => {

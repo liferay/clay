@@ -147,8 +147,8 @@ fieldset[disabled] {
 
 	&.form-control-sm,
 	&.form-control-lg {
-		padding-right: 0;
 		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -661,8 +661,8 @@ textarea.form-control-sm,
 			.form-group {
 				align-items: center;
 				display: flex;
-				flex-flow: row wrap;
 				flex: 0 0 auto;
+				flex-flow: row wrap;
 				margin-bottom: 0;
 			}
 

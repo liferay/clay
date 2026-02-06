@@ -2,9 +2,9 @@
 
 Charts is a React wrapper around the Billboard.js library with a few additional charts provided.
 
--   [Documentation](https://clayui.com/docs/components/charts.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/charts.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import '@testing-library/jest-dom';
@@ -8,28 +8,32 @@ import ClayTabs from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
 
-const ClayTabsWithItems = () => {
+function ClayTabsWithItems() {
 	const [active, setActive] = React.useState<number>(0);
 
 	return (
 		<>
 			<ClayTabs active={active} onActiveChange={setActive}>
 				<ClayTabs.Item>Dummy1</ClayTabs.Item>
+
 				<ClayTabs.Item data-testid="tabItem2">Dummy2</ClayTabs.Item>
+
 				<ClayTabs.Item>Dummy3</ClayTabs.Item>
 			</ClayTabs>
 			<ClayTabs.Content activeIndex={active}>
 				<ClayTabs.TabPane data-testid="tabPane1">
 					Tab Content 1
 				</ClayTabs.TabPane>
+
 				<ClayTabs.TabPane data-testid="tabPane2">
 					Tab Content 2
 				</ClayTabs.TabPane>
+
 				<ClayTabs.TabPane>Tab Content 3</ClayTabs.TabPane>
 			</ClayTabs.Content>
 		</>
 	);
-};
+}
 
 describe('ClayTabs', () => {
 	afterEach(cleanup);
@@ -83,12 +87,14 @@ describe('ClayTabs', () => {
 					<ClayTabs.Item active href="https://clay.dev/foo">
 						One
 					</ClayTabs.Item>
+
 					<ClayTabs.Item href="https://clay.dev/bar">
 						Two
 					</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeIndex={1}>
 					<ClayTabs.TabPane>Content One</ClayTabs.TabPane>
+
 					<ClayTabs.TabPane>Content Two</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
@@ -105,12 +111,16 @@ describe('ClayTabs', () => {
 			<>
 				<ClayTabs>
 					<ClayTabs.Item active>One</ClayTabs.Item>
+
 					<ClayTabs.Item>Two</ClayTabs.Item>
+
 					<ClayTabs.Item disabled>Three</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeIndex={1}>
 					<ClayTabs.TabPane>Content One</ClayTabs.TabPane>
+
 					<ClayTabs.TabPane>Content Two</ClayTabs.TabPane>
+
 					<ClayTabs.TabPane>Content Three</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
@@ -131,10 +141,12 @@ describe('ClayTabs', () => {
 					<ClayTabs.Item active onClick={onClick}>
 						One
 					</ClayTabs.Item>
+
 					<ClayTabs.Item onClick={onClick}>Two</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeIndex={1}>
 					<ClayTabs.TabPane>Content One</ClayTabs.TabPane>
+
 					<ClayTabs.TabPane>Content Two</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
@@ -154,10 +166,12 @@ describe('ClayTabs', () => {
 			<>
 				<ClayTabs>
 					{false && <ClayTabs.Item active>One</ClayTabs.Item>}
+
 					<ClayTabs.Item>Two</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeIndex={1}>
 					{false && <ClayTabs.TabPane>Content One</ClayTabs.TabPane>}
+
 					<ClayTabs.TabPane>Content Two</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
@@ -178,12 +192,17 @@ describe('ClayTabs', () => {
 			<ClayTabs>
 				<ClayTabs.List>
 					<ClayTabs.Item>Tab 1</ClayTabs.Item>
+
 					<ClayTabs.Item>Tab 2</ClayTabs.Item>
+
 					<ClayTabs.Item>Tab 3</ClayTabs.Item>
 				</ClayTabs.List>
+
 				<ClayTabs.Panels>
 					<ClayTabs.TabPanel>Tab Content 1</ClayTabs.TabPanel>
+
 					<ClayTabs.TabPanel>Tab Content 2</ClayTabs.TabPanel>
+
 					<ClayTabs.TabPanel>Tab Content 3</ClayTabs.TabPanel>
 				</ClayTabs.Panels>
 			</ClayTabs>
@@ -198,12 +217,17 @@ describe('ClayTabs', () => {
 			<ClayTabs>
 				<ClayTabs.List>
 					<ClayTabs.Item>Tab 1</ClayTabs.Item>
+
 					<ClayTabs.Item active>Tab 2</ClayTabs.Item>
+
 					<ClayTabs.Item>Tab 3</ClayTabs.Item>
 				</ClayTabs.List>
+
 				<ClayTabs.Panels>
 					<ClayTabs.TabPanel>Tab Content 1</ClayTabs.TabPanel>
+
 					<ClayTabs.TabPanel>Tab Content 2</ClayTabs.TabPanel>
+
 					<ClayTabs.TabPanel>Tab Content 3</ClayTabs.TabPanel>
 				</ClayTabs.Panels>
 			</ClayTabs>

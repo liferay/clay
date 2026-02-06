@@ -2,9 +2,9 @@
 
 Progress bar indicates the percentage completed of a task.
 
--   [Documentation](https://clayui.com/docs/components/progress-bar.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/progress-bar.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

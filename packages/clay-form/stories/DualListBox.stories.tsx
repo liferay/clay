@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React, {useState} from 'react';
@@ -37,6 +37,7 @@ const moveBoxesOptions = [
 			value: 'twitter',
 		},
 	],
+
 	[
 		{
 			label: 'Discord',
@@ -56,8 +57,7 @@ const moveBoxesOptions = [
 		},
 	],
 ];
-
-export const Default = (args: any) => {
+export function Default(args: any) {
 	const [items, setItems] = useState(moveBoxesOptions);
 
 	const [leftSelected, setLeftSelected] = useState<Array<string>>([]);
@@ -91,7 +91,7 @@ export const Default = (args: any) => {
 			size={8}
 		/>
 	);
-};
+}
 
 Default.args = {
 	disableLTR: false,

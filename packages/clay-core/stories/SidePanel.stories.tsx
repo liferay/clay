@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2025 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Button from '@clayui/button';
@@ -17,7 +17,7 @@ export default {
 	title: 'Design System/Components/SidePanel',
 };
 
-const BodyContent = () => {
+function BodyContent() {
 	return (
 		<>
 			Body
@@ -36,9 +36,8 @@ const BodyContent = () => {
 			strong.
 		</>
 	);
-};
-
-export const PositionAbsolute = (args: any) => {
+}
+export function PositionAbsolute(args: any) {
 	const [open, setOpen] = useState(false);
 	const [openStart, setOpenStart] = useState(false);
 	const sidePanelId = useId();
@@ -83,7 +82,9 @@ export const PositionAbsolute = (args: any) => {
 							Open Left
 						</Button>
 					</Toolbar.Item>
+
 					<Toolbar.Item expand>Position: Absolute</Toolbar.Item>
+
 					<Toolbar.Item className="mr-2">
 						<Button
 							aria-controls={sidePanelId}
@@ -115,12 +116,15 @@ export const PositionAbsolute = (args: any) => {
 							<div>Left Panel</div>
 						</SidePanel.Title>
 					</SidePanel.Header>
+
 					<SidePanel.Body>
 						<BodyContent />
 					</SidePanel.Body>
+
 					<SidePanel.Footer sticky={args.footerSticky}>
 						<Button.Group spaced>
 							<Button>Primary</Button>
+
 							<Button displayType="secondary">Secondary</Button>
 						</Button.Group>
 					</SidePanel.Footer>
@@ -136,7 +140,9 @@ export const PositionAbsolute = (args: any) => {
                     spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
                     caffeine. White roast seasonal, mocha trifecta, dripper caffeine
                     spoon acerbic to go macchiato strong.`}
+
 					<br />
+
 					<img
 						alt="cat"
 						className="img-fluid"
@@ -158,6 +164,7 @@ export const PositionAbsolute = (args: any) => {
 					>
 						<SidePanel.Title>Title</SidePanel.Title>
 					</SidePanel.Header>
+
 					<SidePanel.Body>
 						<Panel.Group flush small>
 							<Panel displayTitle="DETAIL" displayType="unstyled">
@@ -166,11 +173,13 @@ export const PositionAbsolute = (args: any) => {
 										<label htmlFor="decimalQuantity">
 											Decimal Quantity
 										</label>
+
 										<ClayInput
 											id="decimalQuantity"
 											type="number"
 										></ClayInput>
 									</ClayForm.Group>
+
 									<ClayForm.Group>
 										<label
 											htmlFor="measurementUnits"
@@ -178,6 +187,7 @@ export const PositionAbsolute = (args: any) => {
 										>
 											Measurement Units
 										</label>
+
 										<ClaySelect
 											aria-label="Select measurement unit"
 											id="measurementUnitsLabel"
@@ -191,33 +201,41 @@ export const PositionAbsolute = (args: any) => {
 											))}
 										</ClaySelect>
 									</ClayForm.Group>
+
 									<ClayForm.Group>
 										<label htmlFor="price">Price</label>
+
 										<ClayInput
 											id="price"
 											type="number"
 										></ClayInput>
 									</ClayForm.Group>
+
 									<ClayForm.Group>
 										<label htmlFor="discount">
 											Discount
 										</label>
+
 										<ClayInput
 											id="discount"
 											type="number"
 										></ClayInput>
 									</ClayForm.Group>
+
 									<ClayForm.Group>
 										<label htmlFor="total">Total</label>
+
 										<ClayInput
 											id="total"
 											type="number"
 										></ClayInput>
 									</ClayForm.Group>
+
 									<ClayForm.Group>
 										<label htmlFor="deliveryGroup">
 											Delivery Group
 										</label>
+
 										<textarea
 											className="form-control"
 											id="deliveryGroup"
@@ -228,9 +246,11 @@ export const PositionAbsolute = (args: any) => {
 							</Panel>
 						</Panel.Group>
 					</SidePanel.Body>
+
 					<SidePanel.Footer sticky={args.footerSticky}>
 						<Button.Group spaced>
 							<Button>Primary</Button>
+
 							<Button displayType="secondary">Secondary</Button>
 						</Button.Group>
 					</SidePanel.Footer>
@@ -238,14 +258,13 @@ export const PositionAbsolute = (args: any) => {
 			</div>
 		</div>
 	);
-};
+}
 
 PositionAbsolute.args = {
 	footerSticky: false,
 	headerSticky: false,
 };
-
-export const PositionFixed = () => {
+export function PositionFixed() {
 	const [open, setOpen] = useState(true);
 	const [openStart, setOpenStart] = useState(false);
 	const sidePanelId = useId();
@@ -266,7 +285,9 @@ export const PositionFixed = () => {
 							Open Left
 						</Button>
 					</Toolbar.Item>
+
 					<Toolbar.Item expand>Position: Fixed</Toolbar.Item>
+
 					<Toolbar.Item className="mr-2">
 						<Button
 							aria-controls={sidePanelId}
@@ -296,12 +317,15 @@ export const PositionFixed = () => {
 					>
 						<SidePanel.Title>Left Panel</SidePanel.Title>
 					</SidePanel.Header>
+
 					<SidePanel.Body>
 						<BodyContent />
 					</SidePanel.Body>
+
 					<SidePanel.Footer>
 						<Button.Group spaced>
 							<Button>Primary</Button>
+
 							<Button displayType="secondary">Secondary</Button>
 						</Button.Group>
 					</SidePanel.Footer>
@@ -317,7 +341,9 @@ export const PositionFixed = () => {
                     spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
                     caffeine. White roast seasonal, mocha trifecta, dripper caffeine
                     spoon acerbic to go macchiato strong.`}
+
 					<br />
+
 					<img
 						alt="cat"
 						className="img-fluid"
@@ -339,12 +365,15 @@ export const PositionFixed = () => {
 					>
 						<SidePanel.Title>Right Panel</SidePanel.Title>
 					</SidePanel.Header>
+
 					<SidePanel.Body>
 						<BodyContent />
 					</SidePanel.Body>
+
 					<SidePanel.Footer>
 						<Button.Group spaced>
 							<Button displayType="secondary">Cancel</Button>
+
 							<Button>Save</Button>
 						</Button.Group>
 					</SidePanel.Footer>
@@ -352,9 +381,8 @@ export const PositionFixed = () => {
 			</div>
 		</div>
 	);
-};
-
-export const FluidWidth = () => {
+}
+export function FluidWidth() {
 	const [open, setOpen] = useState(true);
 	const sidePanelId = useId();
 
@@ -415,12 +443,15 @@ export const FluidWidth = () => {
 					>
 						<SidePanel.Title>Right Panel</SidePanel.Title>
 					</SidePanel.Header>
+
 					<SidePanel.Body>
 						<BodyContent />
 					</SidePanel.Body>
+
 					<SidePanel.Footer>
 						<Button.Group spaced>
 							<Button displayType="secondary">Cancel</Button>
+
 							<Button>Save</Button>
 						</Button.Group>
 					</SidePanel.Footer>
@@ -428,9 +459,8 @@ export const FluidWidth = () => {
 			</div>
 		</div>
 	);
-};
-
-export const Drilldown = () => {
+}
+export function Drilldown() {
 	const [open, setOpen] = useState(true);
 	const [panelKey, setPanelKey] = useState<React.Key>('x1');
 
@@ -465,6 +495,7 @@ export const Drilldown = () => {
 										onClick={() => setPanelKey('x2')}
 										title="Profile"
 									/>
+
 									<ClayCardWithNavigation
 										horizontal
 										horizontalSymbol="edit-layout"
@@ -473,6 +504,7 @@ export const Drilldown = () => {
 									/>
 								</SidePanel.Body>
 							),
+
 							title: 'User',
 						},
 						x2: {
@@ -488,6 +520,7 @@ export const Drilldown = () => {
 									/>
 								</SidePanel.Body>
 							),
+
 							headerProps: {
 								messages: {
 									backAriaLabel: 'Go to the user panel.',
@@ -502,6 +535,7 @@ export const Drilldown = () => {
 									This is the Dashboard panel
 								</SidePanel.Body>
 							),
+
 							headerProps: {
 								messages: {
 									backAriaLabel: 'Go to the user panel.',
@@ -516,6 +550,7 @@ export const Drilldown = () => {
 									This the Edit Profile panel
 								</SidePanel.Body>
 							),
+
 							headerProps: {
 								messages: {
 									backAriaLabel: 'Go to the profile panel.',
@@ -531,4 +566,4 @@ export const Drilldown = () => {
 			</div>
 		</div>
 	);
-};
+}

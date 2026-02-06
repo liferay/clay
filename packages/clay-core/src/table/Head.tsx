@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Button from '@clayui/button';
@@ -16,8 +16,8 @@ import {Scope, ScopeContext} from './ScopeContext';
 import {useTable} from './context';
 
 type HeaderProps = {
-	name: string;
 	description: string;
+	name: string;
 };
 
 const Header = React.forwardRef<HTMLLIElement, HeaderProps>(
@@ -27,9 +27,11 @@ const Header = React.forwardRef<HTMLLIElement, HeaderProps>(
 				<div className="dropdown-subheader mb-0">
 					{name.toUpperCase()}
 				</div>
+
 				<div className="dropdown-section py-0 text-secondary">
 					{description}
 				</div>
+
 				<div className="dropdown-divider" />
 			</li>
 		);
@@ -44,6 +46,7 @@ interface IProps<T>
 		React.TableHTMLAttributes<HTMLTableSectionElement>,
 		'children'
 	> {
+
 	/**
 	 * Children content to render a dynamic or static content.
 	 */
@@ -171,6 +174,7 @@ export function Head<T extends Record<string, any>>(
 															.value
 													}
 												</Layout.ContentCol>
+
 												<Layout.ContentCol float="end">
 													<Toggle
 														containerProps={{
@@ -230,10 +234,10 @@ export function Head<T extends Record<string, any>>(
 }
 
 type ForwardRef = {
-	displayName: string;
 	<T>(
 		props: IProps<T> & {ref?: React.Ref<HTMLTableSectionElement>}
 	): JSX.Element;
+	displayName: string;
 };
 
 export const ForwardHead = React.forwardRef(Head) as ForwardRef;

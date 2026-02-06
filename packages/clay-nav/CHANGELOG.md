@@ -3,33 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.156.6](https://github.com/liferay/clay/compare/v3.156.0...v3.156.6) (2026-01-07)
-
-**Note:** Version bump only for package @clayui/nav
-
-## [3.156.3](https://github.com/liferay/clay/compare/v3.156.0...v3.156.3) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/nav
-
-## [3.156.2](https://github.com/liferay/clay/compare/v3.156.0...v3.156.2) (2026-01-06)
-
-**Note:** Version bump only for package @clayui/nav
-
-## [3.156.1](https://github.com/liferay/clay/compare/v3.156.0...v3.156.1) (2025-12-22)
-
-**Note:** Version bump only for package @clayui/nav
-
 # [3.156.0](https://github.com/liferay/clay/compare/v3.155.0...v3.156.0) (2025-12-15)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.155.0](https://github.com/liferay/clay/compare/v3.154.0...v3.155.0) (2025-11-26)
 
@@ -59,25 +43,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 ## [3.142.2](https://github.com/liferay/clay/compare/@clayui/nav@3.142.0...@clayui/nav@3.142.2) (2025-08-13)
 
@@ -115,15 +99,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/core:** improves component typing to create API Nav ([3d82db0](https://github.com/liferay/clay/commit/3d82db02d81c9c7d3768648909ccd2a688674fa1))
--   **@clayui/nav:** improves component typing to create API Vertical Nav Input ([9218ca1](https://github.com/liferay/clay/commit/9218ca1ac9e96b66d5b04fd21fc3213116ab4eea))
+- **@clayui/core:** improves component typing to create API Nav ([3d82db0](https://github.com/liferay/clay/commit/3d82db02d81c9c7d3768648909ccd2a688674fa1))
+- **@clayui/nav:** improves component typing to create API Vertical Nav Input ([9218ca1](https://github.com/liferay/clay/commit/9218ca1ac9e96b66d5b04fd21fc3213116ab4eea))
 
 # 3.127.0 (2025-01-23)
 
 ### Features
 
--   **@clayui/vertical-nav:** LPD-46396 - Update stories ([2fc9c3d](https://github.com/liferay/clay/commit/2fc9c3d80f028f8c0d26da2fb28db33532a60d88))
--   **@clayui/vertical-nav:** LPD-46396 - Update tests and snapshots ([859c893](https://github.com/liferay/clay/commit/859c893ea28d7dbeaf8719e594ebe5ae3b294ba6))
+- **@clayui/vertical-nav:** LPD-46396 - Update stories ([2fc9c3d](https://github.com/liferay/clay/commit/2fc9c3d80f028f8c0d26da2fb28db33532a60d88))
+- **@clayui/vertical-nav:** LPD-46396 - Update tests and snapshots ([859c893](https://github.com/liferay/clay/commit/859c893ea28d7dbeaf8719e594ebe5ae3b294ba6))
 
 # 3.125.0 (2025-01-13)
 
@@ -131,7 +115,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/css:** LPD-40160 Adds menubar-primary for CMS Product Menu variant ([5144840](https://github.com/liferay/clay/commit/514484057c7192019919b1c13cdd29e1800ae789))
+- **@clayui/css:** LPD-40160 Adds menubar-primary for CMS Product Menu variant ([5144840](https://github.com/liferay/clay/commit/514484057c7192019919b1c13cdd29e1800ae789))
 
 # 3.123.0 (2024-11-21)
 
@@ -167,7 +151,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/vertical-nav:** Update tests and snapshots ([714281d](https://github.com/liferay/clay/commit/714281ddce37d70fcb6cf716bfdaf2f1bbe142cc))
+- **@clayui/vertical-nav:** Update tests and snapshots ([714281d](https://github.com/liferay/clay/commit/714281ddce37d70fcb6cf716bfdaf2f1bbe142cc))
 
 # 3.108.0 (2023-12-12)
 
@@ -181,8 +165,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.104.0 (2023-08-25)
 
@@ -212,11 +196,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/nav:** fix overlapping items in VerticalNav ([53352e9](https://github.com/liferay/clay/commit/53352e97fb6830977c6f076f4195e6f6f271667a))
+- **@clayui/nav:** fix overlapping items in VerticalNav ([53352e9](https://github.com/liferay/clay/commit/53352e97fb6830977c6f076f4195e6f6f271667a))
 
 ### Features
 
--   **@clayui/nav:** add new composition to Vertical Nav with collection API ([80d1a6e](https://github.com/liferay/clay/commit/80d1a6ec88de531af6595d7bdec61f0d8af8fe6e))
+- **@clayui/nav:** add new composition to Vertical Nav with collection API ([80d1a6e](https://github.com/liferay/clay/commit/80d1a6ec88de531af6595d7bdec61f0d8af8fe6e))
 
 # 3.94.0 (2023-05-03)
 
@@ -238,7 +222,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/nav:** add prop to remove `aria-current` from `VerticalNav` component ([5502734](https://github.com/liferay/clay/commit/5502734d034e8584307b1c30692e84cae7e2886a))
+- **@clayui/nav:** add prop to remove `aria-current` from `VerticalNav` component ([5502734](https://github.com/liferay/clay/commit/5502734d034e8584307b1c30692e84cae7e2886a))
 
 ## 3.83.1 (2022-12-20)
 
@@ -256,12 +240,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/nav:** fix bug when reversing `initialExpanded` state ([6fefa44](https://github.com/liferay/clay/commit/6fefa4490defbc3172eb5b163d472fd5b7094f84))
+- **@clayui/nav:** fix bug when reversing `initialExpanded` state ([6fefa44](https://github.com/liferay/clay/commit/6fefa4490defbc3172eb5b163d472fd5b7094f84))
 
 ### Features
 
--   **@clayui/nav:** add accessibility to the Vertical Nav component ([7b4ddfe](https://github.com/liferay/clay/commit/7b4ddfeb462c2d2df4b606e97ce9a3d6e0b3d3a7))
--   **@clayui/nav:** adds keyboard interaction when moving through nested elements in VerticalNav ([626633c](https://github.com/liferay/clay/commit/626633c8af356bfa49b9228af7ef4a1226768cef))
+- **@clayui/nav:** add accessibility to the Vertical Nav component ([7b4ddfe](https://github.com/liferay/clay/commit/7b4ddfeb462c2d2df4b606e97ce9a3d6e0b3d3a7))
+- **@clayui/nav:** adds keyboard interaction when moving through nested elements in VerticalNav ([626633c](https://github.com/liferay/clay/commit/626633c8af356bfa49b9228af7ef4a1226768cef))
 
 ## 3.78.2 (2022-10-25)
 
@@ -329,11 +313,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/nav:** Adjust condition, to avoid set Boolean values in className property ([e3af0e3](https://github.com/liferay/clay/commit/e3af0e367dd0229ae1045f1e23f150162c09cd6c)), closes [#4120](https://github.com/liferay/clay/issues/4120)
+- **@clayui/nav:** Adjust condition, to avoid set Boolean values in className property ([e3af0e3](https://github.com/liferay/clay/commit/e3af0e367dd0229ae1045f1e23f150162c09cd6c)), closes [#4120](https://github.com/liferay/clay/issues/4120)
 
 ### Features
 
--   **@clayui/nav:** Add an optional type to Label property in Vertical Component ([fa64c1d](https://github.com/liferay/clay/commit/fa64c1d3ae14bfb5f9829cb20f7c1e44c953220b)), closes [#4121](https://github.com/liferay/clay/issues/4121)
+- **@clayui/nav:** Add an optional type to Label property in Vertical Component ([fa64c1d](https://github.com/liferay/clay/commit/fa64c1d3ae14bfb5f9829cb20f7c1e44c953220b)), closes [#4121](https://github.com/liferay/clay/issues/4121)
 
 # 3.29.0 (2021-05-28)
 
@@ -397,15 +381,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/core:** improves component typing to create API Nav ([3d82db0](https://github.com/liferay/clay/commit/3d82db02d81c9c7d3768648909ccd2a688674fa1))
--   **@clayui/nav:** improves component typing to create API Vertical Nav Input ([9218ca1](https://github.com/liferay/clay/commit/9218ca1ac9e96b66d5b04fd21fc3213116ab4eea))
+- **@clayui/core:** improves component typing to create API Nav ([3d82db0](https://github.com/liferay/clay/commit/3d82db02d81c9c7d3768648909ccd2a688674fa1))
+- **@clayui/nav:** improves component typing to create API Vertical Nav Input ([9218ca1](https://github.com/liferay/clay/commit/9218ca1ac9e96b66d5b04fd21fc3213116ab4eea))
 
 # [3.127.0](https://github.com/liferay/clay/compare/v3.126.0...v3.127.0) (2025-01-23)
 
 ### Features
 
--   **@clayui/vertical-nav:** LPD-46396 - Update stories ([2fc9c3d](https://github.com/liferay/clay/commit/2fc9c3d80f028f8c0d26da2fb28db33532a60d88))
--   **@clayui/vertical-nav:** LPD-46396 - Update tests and snapshots ([859c893](https://github.com/liferay/clay/commit/859c893ea28d7dbeaf8719e594ebe5ae3b294ba6))
+- **@clayui/vertical-nav:** LPD-46396 - Update stories ([2fc9c3d](https://github.com/liferay/clay/commit/2fc9c3d80f028f8c0d26da2fb28db33532a60d88))
+- **@clayui/vertical-nav:** LPD-46396 - Update tests and snapshots ([859c893](https://github.com/liferay/clay/commit/859c893ea28d7dbeaf8719e594ebe5ae3b294ba6))
 
 # [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
 
@@ -415,7 +399,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/css:** LPD-40160 Adds menubar-primary for CMS Product Menu variant ([5144840](https://github.com/liferay/clay/commit/514484057c7192019919b1c13cdd29e1800ae789))
+- **@clayui/css:** LPD-40160 Adds menubar-primary for CMS Product Menu variant ([5144840](https://github.com/liferay/clay/commit/514484057c7192019919b1c13cdd29e1800ae789))
 
 # [3.123.0](https://github.com/liferay/clay/compare/v3.122.0...v3.123.0) (2024-11-21)
 
@@ -481,7 +465,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/vertical-nav:** Update tests and snapshots ([714281d](https://github.com/liferay/clay/commit/714281ddce37d70fcb6cf716bfdaf2f1bbe142cc))
+- **@clayui/vertical-nav:** Update tests and snapshots ([714281d](https://github.com/liferay/clay/commit/714281ddce37d70fcb6cf716bfdaf2f1bbe142cc))
 
 # [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
 
@@ -503,8 +487,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
@@ -558,11 +542,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/nav:** fix overlapping items in VerticalNav ([53352e9](https://github.com/liferay/clay/commit/53352e97fb6830977c6f076f4195e6f6f271667a))
+- **@clayui/nav:** fix overlapping items in VerticalNav ([53352e9](https://github.com/liferay/clay/commit/53352e97fb6830977c6f076f4195e6f6f271667a))
 
 ### Features
 
--   **@clayui/nav:** add new composition to Vertical Nav with collection API ([80d1a6e](https://github.com/liferay/clay/commit/80d1a6ec88de531af6595d7bdec61f0d8af8fe6e))
+- **@clayui/nav:** add new composition to Vertical Nav with collection API ([80d1a6e](https://github.com/liferay/clay/commit/80d1a6ec88de531af6595d7bdec61f0d8af8fe6e))
 
 # [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
 
@@ -600,7 +584,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/nav:** add prop to remove `aria-current` from `VerticalNav` component ([5502734](https://github.com/liferay/clay/commit/5502734d034e8584307b1c30692e84cae7e2886a))
+- **@clayui/nav:** add prop to remove `aria-current` from `VerticalNav` component ([5502734](https://github.com/liferay/clay/commit/5502734d034e8584307b1c30692e84cae7e2886a))
 
 ## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
 
@@ -630,12 +614,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/nav:** fix bug when reversing `initialExpanded` state ([6fefa44](https://github.com/liferay/clay/commit/6fefa4490defbc3172eb5b163d472fd5b7094f84))
+- **@clayui/nav:** fix bug when reversing `initialExpanded` state ([6fefa44](https://github.com/liferay/clay/commit/6fefa4490defbc3172eb5b163d472fd5b7094f84))
 
 ### Features
 
--   **@clayui/nav:** add accessibility to the Vertical Nav component ([7b4ddfe](https://github.com/liferay/clay/commit/7b4ddfeb462c2d2df4b606e97ce9a3d6e0b3d3a7))
--   **@clayui/nav:** adds keyboard interaction when moving through nested elements in VerticalNav ([626633c](https://github.com/liferay/clay/commit/626633c8af356bfa49b9228af7ef4a1226768cef))
+- **@clayui/nav:** add accessibility to the Vertical Nav component ([7b4ddfe](https://github.com/liferay/clay/commit/7b4ddfeb462c2d2df4b606e97ce9a3d6e0b3d3a7))
+- **@clayui/nav:** adds keyboard interaction when moving through nested elements in VerticalNav ([626633c](https://github.com/liferay/clay/commit/626633c8af356bfa49b9228af7ef4a1226768cef))
 
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
@@ -769,11 +753,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/nav:** Adjust condition, to avoid set Boolean values in className property ([e3af0e3](https://github.com/liferay/clay/commit/e3af0e3)), closes [#4120](https://github.com/liferay/clay/issues/4120)
+- **@clayui/nav:** Adjust condition, to avoid set Boolean values in className property ([e3af0e3](https://github.com/liferay/clay/commit/e3af0e3)), closes [#4120](https://github.com/liferay/clay/issues/4120)
 
 ### Features
 
--   **@clayui/nav:** Add an optional type to Label property in Vertical Component ([fa64c1d](https://github.com/liferay/clay/commit/fa64c1d)), closes [#4121](https://github.com/liferay/clay/issues/4121)
+- **@clayui/nav:** Add an optional type to Label property in Vertical Component ([fa64c1d](https://github.com/liferay/clay/commit/fa64c1d)), closes [#4121](https://github.com/liferay/clay/issues/4121)
 
 # [3.29.0](https://github.com/liferay/clay/compare/v3.28.0...v3.29.0) (2021-05-28)
 
@@ -799,30 +783,30 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/nav:** use react-transition-group instead of custom hook for animations ([a9b5e6f](https://github.com/liferay/clay/commit/a9b5e6f))
+- **@clayui/nav:** use react-transition-group instead of custom hook for animations ([a9b5e6f](https://github.com/liferay/clay/commit/a9b5e6f))
 
 ## [3.4.2](https://github.com/liferay/clay/compare/@clayui/nav@3.4.0...@clayui/nav@3.4.2) (2020-12-16)
 
 ### Bug Fixes
 
--   **@clayui/nav:** fix documentation typo ([6c6bb46](https://github.com/liferay/clay/commit/6c6bb46))
+- **@clayui/nav:** fix documentation typo ([6c6bb46](https://github.com/liferay/clay/commit/6c6bb46))
 
 ## [3.4.1](https://github.com/liferay/clay/compare/@clayui/nav@3.4.0...@clayui/nav@3.4.1) (2020-12-02)
 
 ### Bug Fixes
 
--   **@clayui/nav:** fix documentation typo ([6c6bb46](https://github.com/liferay/clay/commit/6c6bb46))
+- **@clayui/nav:** fix documentation typo ([6c6bb46](https://github.com/liferay/clay/commit/6c6bb46))
 
 # [3.4.0](https://github.com/liferay/clay/compare/@clayui/nav@3.3.2...@clayui/nav@3.4.0) (2020-10-01)
 
 ### Bug Fixes
 
--   **@clayui/shared:** removes the onTransitionEnd listener from elements by setTimeout ([4cf740a](https://github.com/liferay/clay/commit/4cf740a))
+- **@clayui/shared:** removes the onTransitionEnd listener from elements by setTimeout ([4cf740a](https://github.com/liferay/clay/commit/4cf740a))
 
 ### Features
 
--   **@clayui/nav:** Adds support for Decorator variation in ClayVerticalNav ([a0bf0a2](https://github.com/liferay/clay/commit/a0bf0a2))
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- **@clayui/nav:** Adds support for Decorator variation in ClayVerticalNav ([a0bf0a2](https://github.com/liferay/clay/commit/a0bf0a2))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
 
 ## [3.3.2](https://github.com/liferay/clay/compare/@clayui/nav@3.3.1...@clayui/nav@3.3.2) (2020-08-28)
 
@@ -836,21 +820,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/nav:** Add Vertical Nav story with custom triggerContent ([3becaac](https://github.com/liferay/clay/commit/3becaac))
+- **@clayui/nav:** Add Vertical Nav story with custom triggerContent ([3becaac](https://github.com/liferay/clay/commit/3becaac))
 
 ### Features
 
--   **@clayui/nav:** Add a new story featuring a custom Trigger ([cff245c](https://github.com/liferay/clay/commit/cff245c))
--   **@clayui/nav:** Add breaking change notice ([bb3daf0](https://github.com/liferay/clay/commit/bb3daf0))
--   **@clayui/nav:** Add Trigger low-level component ([f00c8c8](https://github.com/liferay/clay/commit/f00c8c8))
--   **@clayui/nav:** Import Trigger and adapt API to fit the new requirements ([6f0183b](https://github.com/liferay/clay/commit/6f0183b))
--   **@clayui/nav:** simplifies the use of `ClayVerticalNav.Trigger` and adds deprecated warn from the `activeLabel` API ([5ba8204](https://github.com/liferay/clay/commit/5ba8204))
+- **@clayui/nav:** Add a new story featuring a custom Trigger ([cff245c](https://github.com/liferay/clay/commit/cff245c))
+- **@clayui/nav:** Add breaking change notice ([bb3daf0](https://github.com/liferay/clay/commit/bb3daf0))
+- **@clayui/nav:** Add Trigger low-level component ([f00c8c8](https://github.com/liferay/clay/commit/f00c8c8))
+- **@clayui/nav:** Import Trigger and adapt API to fit the new requirements ([6f0183b](https://github.com/liferay/clay/commit/6f0183b))
+- **@clayui/nav:** simplifies the use of `ClayVerticalNav.Trigger` and adds deprecated warn from the `activeLabel` API ([5ba8204](https://github.com/liferay/clay/commit/5ba8204))
 
 ## [3.2.2](https://github.com/liferay/clay/compare/@clayui/nav@3.2.1...@clayui/nav@3.2.2) (2020-07-28)
 
 ### Bug Fixes
 
--   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+- update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
 
 ## [3.2.1](https://github.com/liferay/clay/compare/@clayui/nav@3.2.0...@clayui/nav@3.2.1) (2020-07-07)
 
@@ -860,21 +844,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **clayui.com:** Update Navigation docs ([d2bf07e](https://github.com/liferay/clay/commit/d2bf07e))
--   **clayui.com:** Update Navigation docs - Revert adding Pills, Justified and Unstyled props ([27c6a87](https://github.com/liferay/clay/commit/27c6a87))
--   **clayui.com:** Update Navigation docs - Revert naming back to Nav and remove docs for Pills and Justified ([5b6007a](https://github.com/liferay/clay/commit/5b6007a))
+- **clayui.com:** Update Navigation docs ([d2bf07e](https://github.com/liferay/clay/commit/d2bf07e))
+- **clayui.com:** Update Navigation docs - Revert adding Pills, Justified and Unstyled props ([27c6a87](https://github.com/liferay/clay/commit/27c6a87))
+- **clayui.com:** Update Navigation docs - Revert naming back to Nav and remove docs for Pills and Justified ([5b6007a](https://github.com/liferay/clay/commit/5b6007a))
 
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/nav@3.1.0...@clayui/nav@3.1.1) (2020-04-24)
 
 ### Bug Fixes
 
--   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+- Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
 
 # 3.1.0 (2020-02-28)
 
 ### Features
 
--   **nav:** rename navigation to just nav ([b58ed3e](https://github.com/liferay/clay/commit/b58ed3e))
+- **nav:** rename navigation to just nav ([b58ed3e](https://github.com/liferay/clay/commit/b58ed3e))
 
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-nav/compare/@clayui/nav@3.0.3...@clayui/nav@3.0.6) (2020-01-31)
 

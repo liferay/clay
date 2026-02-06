@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import DropDown from '@clayui/drop-down';
@@ -15,17 +15,18 @@ export interface IProps
 	extends React.HTMLAttributes<
 		HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
 	> {
+
 	/**
 	 * Flag that indicates if item is selected.
 	 * @deprecated since v3.151.0 - use the `selectedKeys` property on the
 	 * root component.
 	 */
-	active?: boolean;
+	'active'?: boolean;
 
 	/**
-	 * Flag that indicates if item is disabled or not.
+	 * The item content.
 	 */
-	disabled?: boolean;
+	'children'?: React.ReactNode;
 
 	/**
 	 * @ignore
@@ -33,66 +34,66 @@ export interface IProps
 	'data-index'?: number;
 
 	/**
+	 * Flag that indicates if item is disabled or not.
+	 */
+	'disabled'?: boolean;
+
+	/**
 	 * Flag to indicate if matched text is highlighted
 	 */
-	highlightMatch?: boolean;
+	'highlightMatch'?: boolean;
 
 	/**
 	 * Path for item to link to.
 	 */
-	href?: string;
+	'href'?: string;
+
+	'innerRef'?: React.Ref<HTMLAnchorElement>;
+
+	/**
+	 * Internal property.
+	 * @ignore
+	 */
+	'keyValue'?: React.Key;
+
+	/**
+	 * Match is the string that will be compared with value.
+	 */
+	'match'?: string;
 
 	/**
 	 * Sets the role accessibility property of the item. Set the item's
 	 * container (<li />) role use the role="" prop instead of roleItem="".
 	 */
-	roleItem?: string;
+	'roleItem'?: string;
 
 	/**
 	 * Path to icon spritemap from clay-css.
 	 */
-	spritemap?: string;
+	'spritemap'?: string;
 
 	/**
 	 * Flag that indicates if there is an icon symbol on the left side.
 	 */
-	symbolLeft?: string;
+	'symbolLeft'?: string;
 
 	/**
 	 * Flag that indicates if there is an icon symbol on the right side.
 	 */
-	symbolRight?: string;
+	'symbolRight'?: string;
 
 	/**
-	 * The item content.
+	 * Sets a text value if the component's content is not plain text. This value
+	 * is used in the combobox element to show the selected option.
 	 */
-	children?: React.ReactNode;
-
-	innerRef?: React.Ref<HTMLAnchorElement>;
-
-	/**
-	 * Match is the string that will be compared with value.
-	 */
-	match?: string;
+	'textValue'?: string;
 
 	/**
 	 * Value is the string that will be compared to the characters of
 	 * the match property.
 	 * @deprecated since v3.74.0 - use `children` instead.
 	 */
-	value?: string;
-
-	/**
-	 * Internal property.
-	 * @ignore
-	 */
-	keyValue?: React.Key;
-
-	/**
-	 * Sets a text value if the component's content is not plain text. This value
-	 * is used in the combobox element to show the selected option.
-	 */
-	textValue?: string;
+	'value'?: string;
 }
 
 const optionsFuzzy = {post: '|}', pre: '}|'};

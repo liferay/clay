@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import React from 'react';
@@ -8,6 +8,7 @@ import React from 'react';
 import Select from './Select';
 
 interface IProps extends React.ComponentProps<typeof Select> {
+
 	/**
 	 * Options of the select.
 	 */
@@ -22,23 +23,25 @@ interface IProps extends React.ComponentProps<typeof Select> {
 	>;
 }
 
-const ClaySelectWithOption = ({options = [], ...otherProps}: IProps) => (
-	<Select {...otherProps}>
-		{options.map((option, index) => {
-			if (option.type === 'group') {
-				return (
-					<Select.OptGroup key={index} label={option.label}>
-						{option.options &&
-							option.options.map((item, j) => (
-								<Select.Option {...item} key={j} />
-							))}
-					</Select.OptGroup>
-				);
-			}
+function ClaySelectWithOption({options = [], ...otherProps}: IProps) {
+	return (
+		<Select {...otherProps}>
+			{options.map((option, index) => {
+				if (option.type === 'group') {
+					return (
+						<Select.OptGroup key={index} label={option.label}>
+							{option.options &&
+								option.options.map((item, j) => (
+									<Select.Option {...item} key={j} />
+								))}
+						</Select.OptGroup>
+					);
+				}
 
-			return <Select.Option {...option} key={index} />;
-		})}
-	</Select>
-);
+				return <Select.Option {...option} key={index} />;
+			})}
+		</Select>
+	);
+}
 
 export default ClaySelectWithOption;

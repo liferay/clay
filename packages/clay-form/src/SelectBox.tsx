@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
@@ -56,12 +56,13 @@ function reorderDown(array: Array<TItem>, selectedIndexes: Array<number>) {
 }
 
 interface IProps extends React.HTMLAttributes<HTMLSelectElement> {
+
 	/**
 	 * Labels for aria attributes
 	 */
 	ariaLabels?: {
-		reorderUp: string;
 		reorderDown: string;
+		reorderUp: string;
 	};
 
 	/**
@@ -88,6 +89,7 @@ interface IProps extends React.HTMLAttributes<HTMLSelectElement> {
 	 * Defines whether the Select Box supports selection of multiple items.
 	 */
 	multiple?: boolean;
+
 	/**
 	 * Handler that triggers when the content of the items prop are changed caused by reordering of items.
 	 */
@@ -104,38 +106,40 @@ interface IProps extends React.HTMLAttributes<HTMLSelectElement> {
 	selectedIndexes?: Array<number>;
 
 	/**
-	 * Amount of items that can fit inside the both Select Boxes before a scrollbar is introduced.
-	 */
-	size?: number;
-	/**
 	 * Defines whether the component should render buttons that allow reordering of items.
 	 */
 	showArrows?: boolean;
 
 	/**
-	 * Value of the component.
+	 * Amount of items that can fit inside the both Select Boxes before a scrollbar is introduced.
 	 */
-	value: string | Array<string>;
+	size?: number;
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
 	 */
 	spritemap?: string;
+
+	/**
+	 * Value of the component.
+	 */
+	value: string | Array<string>;
 }
 
-export const getSelectedIndexes = (
+export function getSelectedIndexes(
 	items: Array<TItem>,
 	selectedValues: Array<number | string>
-) =>
-	items.reduce((acc: Array<number>, item: TItem, index) => {
+) {
+	return items.reduce((acc: Array<number>, item: TItem, index) => {
 		if (selectedValues.includes(item.value)) {
 			return [...acc, index];
 		}
 
 		return acc;
 	}, []);
+}
 
-const SelectBox = ({
+function SelectBox({
 	ariaLabels = {
 		reorderDown: 'Reorder Down',
 		reorderUp: 'Reorder Up',
@@ -154,18 +158,14 @@ const SelectBox = ({
 	spritemap,
 	value,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const selectedIndexes = getSelectedIndexes(
 		items,
 		Array.isArray(value) ? value : [value]
 	);
-
 	const noItems = !items.length;
-
 	const noItemsSelected = !selectedIndexes.length;
-
 	const firstItemSelected = selectedIndexes.includes(0);
-
 	const lastItemSelected = selectedIndexes.includes(items.length - 1);
 
 	return (
@@ -196,7 +196,6 @@ const SelectBox = ({
 						const selectedItems = [...event.target.options]
 							.filter(({selected}) => selected)
 							.map((item) => item.value);
-
 						onSelectChange(selectedItems);
 					}}
 					onKeyDown={(event) =>
@@ -272,6 +271,6 @@ const SelectBox = ({
 			</div>
 		</div>
 	);
-};
+}
 
 export default SelectBox;

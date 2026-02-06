@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
@@ -22,14 +22,14 @@ import {DropDownContext} from './DropDownContext';
 import {FocusMenu} from './FocusMenu';
 import DropDownGroup from './Group';
 
-export const findNested = <
-	T extends {items?: Array<T>; [key: string]: any},
-	K extends keyof T
->(
-	items: Array<T>,
-	key: K
-): boolean =>
-	items.some((item) => {
+export function findNested<
+	T extends {
+		items?: Array<T>;
+		[key: string]: any;
+	},
+	K extends keyof T,
+>(items: Array<T>, key: K): boolean {
+	return items.some((item) => {
 		if (item[key]) {
 			return true;
 		}
@@ -38,25 +38,26 @@ export const findNested = <
 		// because it will be in another menu and the current menu does not need
 		// to know the information of what exists inside the contextual one, like
 		// knowing if there is an icon.
+
 		if (item.items && item['type'] !== 'contextual') {
 			return findNested(item.items, key);
 		}
 
 		return false;
 	});
+}
 
 interface IInternalItem {
 	spritemap?: string;
 }
 
-const Checkbox = ({
+function Checkbox({
 	checked = false,
 	onChange = () => {},
 	title,
 	...otherProps
-}: Item & IInternalItem) => {
+}: Item & IInternalItem) {
 	const [value, setValue] = useState<boolean>(checked);
-
 	const {tabFocus} = useContext(DropDownContext);
 
 	return (
@@ -73,29 +74,28 @@ const Checkbox = ({
 			/>
 		</DropDown.Section>
 	);
-};
+}
 
 type Context = {
 	back?: () => void;
 	close: () => void;
-	onForward?: (title: string, id: string) => void;
 	messages?: Record<string, string>;
+	onForward?: (title: string, id: string) => void;
 };
 
 export const ClayDropDownContext = React.createContext({
 	close: () => {},
 } as Context);
 
-const Item = ({
+function Item({
 	child,
 	label,
 	onClick,
 	spritemap,
 	title,
 	...props
-}: Omit<Item, 'onChange'> & IInternalItem) => {
+}: Omit<Item, 'onChange'> & IInternalItem) {
 	const {back, close, messages, onForward} = useContext(ClayDropDownContext);
-
 	title = label || title;
 
 	return (
@@ -108,11 +108,9 @@ const Item = ({
 
 					return;
 				}
-
 				if (onClick) {
 					onClick(event);
 				}
-
 				close();
 			}}
 			onKeyDown={(event) => {
@@ -135,16 +133,14 @@ const Item = ({
 			)}
 		</DropDown.Item>
 	);
-};
+}
 
-const Group = ({items, label, spritemap, title}: Item & IInternalItem) => {
+function Group({items, label, spritemap, title}: Item & IInternalItem) {
 	title = label || title;
-
 	warning(
 		typeof items !== 'undefined',
 		`ClayDropDownWithItems -> The '${title}' group contains no items to render.`
 	);
-
 	if (typeof items === 'undefined') {
 		return null;
 	}
@@ -154,7 +150,7 @@ const Group = ({items, label, spritemap, title}: Item & IInternalItem) => {
 			{items && <Items items={items} spritemap={spritemap} />}
 		</DropDownGroup>
 	);
-};
+}
 
 const BOTTOM_OFFSET = [0, 1] as const;
 const LEFT_OFFSET = [-1, 6] as const;
@@ -179,26 +175,23 @@ const OFFSET_MAP = {
 function offsetFn(points: any) {
 	return OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
 		number,
-		number
+		number,
 	];
 }
 
-const Contextual = ({
+function Contextual({
 	items,
 	label,
 	spritemap,
 	title,
 	...otherProps
-}: Omit<Item, 'onChange'> & IInternalItem) => {
+}: Omit<Item, 'onChange'> & IInternalItem) {
 	const [visible, setVisible] = useState(false);
 	const {close} = useContext(ClayDropDownContext);
-
 	const triggerElementRef = useRef<HTMLLIElement | null>(null);
 	const menuElementRef = useRef<HTMLDivElement>(null);
 	const timeoutHandleRef = useRef<any>(null);
-
 	const keyboardRef = useRef(false);
-
 	const hasRightSymbols = React.useMemo(
 		() => items && findNested(items, 'symbolRight'),
 		[items]
@@ -207,7 +200,6 @@ const Contextual = ({
 		() => items && findNested(items, 'symbolLeft'),
 		[items]
 	);
-
 	const {navigationProps} = useNavigation({
 		activation: 'manual',
 		containerRef: menuElementRef,
@@ -216,13 +208,12 @@ const Contextual = ({
 		typeahead: true,
 		visible,
 	});
-
 	const setThrottleVisible = useCallback(
+
 		// eslint-disable-next-line react-compiler/react-compiler
 		throttle((value: boolean) => setVisible(value), 100),
 		[]
 	);
-
 	title = label || title;
 
 	return (
@@ -237,7 +228,6 @@ const Contextual = ({
 				keyboardRef.current = false;
 				if (event.currentTarget === event.target) {
 					setVisible(true);
-
 					clearTimeout(timeoutHandleRef.current);
 					timeoutHandleRef.current = null;
 				}
@@ -265,7 +255,6 @@ const Contextual = ({
 			onMouseLeave={() => {
 				keyboardRef.current = false;
 				setThrottleVisible(false);
-
 				clearTimeout(timeoutHandleRef.current);
 				timeoutHandleRef.current = null;
 			}}
@@ -288,6 +277,7 @@ const Contextual = ({
 					ref={menuElementRef}
 				>
 					{visible && <MouseSafeArea parentRef={menuElementRef} />}
+
 					<ClayDropDownContext.Provider
 						value={{
 							back: () => {
@@ -314,7 +304,6 @@ const Contextual = ({
 										menuElementRef.current.querySelector<HTMLElement>(
 											FOCUSABLE_ELEMENTS.join(',')
 										);
-
 									if (first) {
 										first.focus();
 									}
@@ -331,7 +320,7 @@ const Contextual = ({
 			)}
 		</DropDown.Item>
 	);
-};
+}
 
 interface IRadioContext {
 	checked: string;
@@ -341,9 +330,8 @@ interface IRadioContext {
 
 const RadioGroupContext = React.createContext({} as IRadioContext);
 
-const Radio = ({title, value = '', ...otherProps}: Item & IInternalItem) => {
+function Radio({title, value = '', ...otherProps}: Item & IInternalItem) {
 	const {checked, name, onChange} = useContext(RadioGroupContext);
-
 	const {tabFocus} = useContext(DropDownContext);
 
 	return (
@@ -360,9 +348,9 @@ const Radio = ({title, value = '', ...otherProps}: Item & IInternalItem) => {
 			/>
 		</DropDown.Section>
 	);
-};
+}
 
-const RadioGroup = ({
+function RadioGroup({
 	items,
 	label,
 	name,
@@ -370,9 +358,8 @@ const RadioGroup = ({
 	spritemap,
 	title,
 	value: defaultValue = '',
-}: Item & IInternalItem) => {
+}: Item & IInternalItem) {
 	const [value, setValue] = useState(defaultValue);
-
 	const params = {
 		checked: value,
 		name,
@@ -381,11 +368,9 @@ const RadioGroup = ({
 			setValue(value);
 		},
 	};
-
 	title = label || title;
-
 	warning(
-		items && items.filter((item) => item.type !== 'radio').length === 0,
+		items && !items.filter((item) => item.type !== 'radio').length,
 		'ClayDropDownWithItems -> Items of type `radiogroup` should be used `radio` if you need to use others, it is recommended to use type `group`.'
 	);
 
@@ -398,9 +383,11 @@ const RadioGroup = ({
 			)}
 		</DropDownGroup>
 	);
-};
+}
 
-const DividerWithItem = () => <Divider />;
+function DividerWithItem() {
+	return <Divider />;
+}
 
 const TYPE_MAP = {
 	checkbox: Checkbox,
@@ -415,13 +402,13 @@ const TYPE_MAP = {
 export type Item = {
 	active?: boolean;
 	checked?: boolean;
-	disabled?: boolean;
-	href?: string;
+
 	/**
 	 * The unique id that references the next menu.
 	 */
 	child?: string;
-	title?: string;
+	disabled?: boolean;
+	href?: string;
 	items?: Array<Item>;
 
 	/**
@@ -434,6 +421,7 @@ export type Item = {
 	symbolLeft?: string;
 	symbolRight?: string;
 	target?: string;
+	title?: string;
 	type?:
 		| 'checkbox'
 		| 'contextual'
@@ -449,30 +437,27 @@ export type Props = {
 	'aria-label'?: string;
 
 	/**
-	 * The path to the SVG spritemap file containing the icons.
-	 */
-	spritemap?: string;
-
-	/**
 	 * List of items to display in drop down menu
 	 */
-	items: Array<Item>;
+	'items': Array<Item>;
 
-	role?: string;
+	'role'?: string;
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 */
+	'spritemap'?: string;
 };
 
-export const DropDownItems = ({
-	items,
-	role,
-	spritemap,
-	...otherProps
-}: Props) => (
-	<DropDown.ItemList aria-label={otherProps['aria-label']} role={role}>
-		<Items items={items} spritemap={spritemap} />
-	</DropDown.ItemList>
-);
+export function DropDownItems({items, role, spritemap, ...otherProps}: Props) {
+	return (
+		<DropDown.ItemList aria-label={otherProps['aria-label']} role={role}>
+			<Items items={items} spritemap={spritemap} />
+		</DropDown.ItemList>
+	);
+}
 
-const Items = ({items, spritemap}: Props) => {
+function Items({items, spritemap}: Props) {
 	return (
 		<>
 			{items.map(({type, ...item}, key) => {
@@ -482,4 +467,4 @@ const Items = ({items, spritemap}: Props) => {
 			})}
 		</>
 	);
-};
+}

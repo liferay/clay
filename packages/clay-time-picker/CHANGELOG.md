@@ -7,13 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
@@ -31,25 +31,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/time-picker@3.2.6...@clayui/time-picker@3.142.0) (2025-08-01)
 
@@ -69,8 +69,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/date-picker:** LPD-52380 Update snapshot ([16921f3](https://github.com/liferay/clay/commit/16921f3c9dce13c5a95aa656f2313e05f5869c9b))
--   **@clayui/time-picker:** LPD-52380 Add tabIndex on clear button to prevent focus when element not present ([7c42c82](https://github.com/liferay/clay/commit/7c42c82935c6111206c6d2e0750f5a5feb2c9731))
+- **@clayui/date-picker:** LPD-52380 Update snapshot ([16921f3](https://github.com/liferay/clay/commit/16921f3c9dce13c5a95aa656f2313e05f5869c9b))
+- **@clayui/time-picker:** LPD-52380 Add tabIndex on clear button to prevent focus when element not present ([7c42c82](https://github.com/liferay/clay/commit/7c42c82935c6111206c6d2e0750f5a5feb2c9731))
 
 # 3.132.0 (2025-03-24)
 
@@ -80,7 +80,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/time-picker:** improves component typing to create API Time Picker ([b1e1e23](https://github.com/liferay/clay/commit/b1e1e230f0ba27d2b2910034be8a066eb49dc69c))
+- **@clayui/time-picker:** improves component typing to create API Time Picker ([b1e1e23](https://github.com/liferay/clay/commit/b1e1e230f0ba27d2b2910034be8a066eb49dc69c))
 
 # 3.125.0 (2025-01-13)
 
@@ -106,20 +106,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.105.0 (2023-09-15)
 
 ### Bug Fixes
 
--   **@clayui/time-picker:** Removes focus class, no longer needed with focus-within ([059eaf8](https://github.com/liferay/clay/commit/059eaf8d10904f5163e7406fabd2c480a718d0d3))
+- **@clayui/time-picker:** Removes focus class, no longer needed with focus-within ([059eaf8](https://github.com/liferay/clay/commit/059eaf8d10904f5163e7406fabd2c480a718d0d3))
 
 # 3.104.0 (2023-08-25)
 
 ### Features
 
--   **@clayui/css:** modifies DatePicker size to new default of 352px ([6ace393](https://github.com/liferay/clay/commit/6ace393fd30661ff8c0632f9d9ea2c7926be3c06))
+- **@clayui/css:** modifies DatePicker size to new default of 352px ([6ace393](https://github.com/liferay/clay/commit/6ace393fd30661ff8c0632f9d9ea2c7926be3c06))
 
 ## 3.103.1 (2023-08-15)
 
@@ -167,7 +167,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/time-picker:** Add id prop that sets id on `clay-time-hours` ([63a151b](https://github.com/liferay/clay/commit/63a151bb5168f776caf6bd22ac8edf1c207945e4))
+- **@clayui/time-picker:** Add id prop that sets id on `clay-time-hours` ([63a151b](https://github.com/liferay/clay/commit/63a151bb5168f776caf6bd22ac8edf1c207945e4))
 
 # 3.79.0 (2022-11-08)
 
@@ -209,7 +209,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/time-picker:** standardizes properties for the controlled and uncontrolled component ([882ab9d](https://github.com/liferay/clay/commit/882ab9d2fb709fc997d0c364a5651d5aa7029fe9))
+- **@clayui/time-picker:** standardizes properties for the controlled and uncontrolled component ([882ab9d](https://github.com/liferay/clay/commit/882ab9d2fb709fc997d0c364a5651d5aa7029fe9))
 
 # 3.52.0 (2022-04-04)
 
@@ -273,8 +273,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/date-picker:** LPD-52380 Update snapshot ([16921f3](https://github.com/liferay/clay/commit/16921f3c9dce13c5a95aa656f2313e05f5869c9b))
--   **@clayui/time-picker:** LPD-52380 Add tabIndex on clear button to prevent focus when element not present ([7c42c82](https://github.com/liferay/clay/commit/7c42c82935c6111206c6d2e0750f5a5feb2c9731))
+- **@clayui/date-picker:** LPD-52380 Update snapshot ([16921f3](https://github.com/liferay/clay/commit/16921f3c9dce13c5a95aa656f2313e05f5869c9b))
+- **@clayui/time-picker:** LPD-52380 Add tabIndex on clear button to prevent focus when element not present ([7c42c82](https://github.com/liferay/clay/commit/7c42c82935c6111206c6d2e0750f5a5feb2c9731))
 
 # [3.132.0](https://github.com/liferay/clay/compare/v3.131.0...v3.132.0) (2025-03-24)
 
@@ -288,7 +288,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/time-picker:** improves component typing to create API Time Picker ([b1e1e23](https://github.com/liferay/clay/commit/b1e1e230f0ba27d2b2910034be8a066eb49dc69c))
+- **@clayui/time-picker:** improves component typing to create API Time Picker ([b1e1e23](https://github.com/liferay/clay/commit/b1e1e230f0ba27d2b2910034be8a066eb49dc69c))
 
 # [3.125.0](https://github.com/liferay/clay/compare/v3.124.0...v3.125.0) (2025-01-13)
 
@@ -334,20 +334,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
 
 ### Bug Fixes
 
--   **@clayui/time-picker:** Removes focus class, no longer needed with focus-within ([059eaf8](https://github.com/liferay/clay/commit/059eaf8d10904f5163e7406fabd2c480a718d0d3))
+- **@clayui/time-picker:** Removes focus class, no longer needed with focus-within ([059eaf8](https://github.com/liferay/clay/commit/059eaf8d10904f5163e7406fabd2c480a718d0d3))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
 ### Features
 
--   **@clayui/css:** modifies DatePicker size to new default of 352px ([6ace393](https://github.com/liferay/clay/commit/6ace393fd30661ff8c0632f9d9ea2c7926be3c06))
+- **@clayui/css:** modifies DatePicker size to new default of 352px ([6ace393](https://github.com/liferay/clay/commit/6ace393fd30661ff8c0632f9d9ea2c7926be3c06))
 
 ## [3.103.1](https://github.com/liferay/clay/compare/v3.103.0...v3.103.1) (2023-08-15)
 
@@ -437,7 +437,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/time-picker:** Add id prop that sets id on `clay-time-hours` ([63a151b](https://github.com/liferay/clay/commit/63a151bb5168f776caf6bd22ac8edf1c207945e4))
+- **@clayui/time-picker:** Add id prop that sets id on `clay-time-hours` ([63a151b](https://github.com/liferay/clay/commit/63a151bb5168f776caf6bd22ac8edf1c207945e4))
 
 # [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
 
@@ -515,7 +515,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/time-picker:** standardizes properties for the controlled and uncontrolled component ([882ab9d](https://github.com/liferay/clay/commit/882ab9d2fb709fc997d0c364a5651d5aa7029fe9))
+- **@clayui/time-picker:** standardizes properties for the controlled and uncontrolled component ([882ab9d](https://github.com/liferay/clay/commit/882ab9d2fb709fc997d0c364a5651d5aa7029fe9))
 
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
@@ -593,7 +593,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/time-picker:** stop propagating key events in time picker ([0e0d89b](https://github.com/liferay/clay/commit/0e0d89b))
+- **@clayui/time-picker:** stop propagating key events in time picker ([0e0d89b](https://github.com/liferay/clay/commit/0e0d89b))
 
 ## [3.2.5](https://github.com/liferay/clay/compare/@clayui/time-picker@3.2.4...@clayui/time-picker@3.2.5) (2021-01-27)
 
@@ -611,23 +611,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/time-picker:** make sure hours can't be 0 when its a 12 hour clock ([47a582c](https://github.com/liferay/clay/commit/47a582c))
--   **@clayui/time-picker:** make sure input always has a leading 0 for single digits ([5c9f410](https://github.com/liferay/clay/commit/5c9f410))
--   **@clayui/time-picker:** Use 12 for AM/PM mode and allow keystroke for AM/PM change ([05900cb](https://github.com/liferay/clay/commit/05900cb))
+- **@clayui/time-picker:** make sure hours can't be 0 when its a 12 hour clock ([47a582c](https://github.com/liferay/clay/commit/47a582c))
+- **@clayui/time-picker:** make sure input always has a leading 0 for single digits ([5c9f410](https://github.com/liferay/clay/commit/5c9f410))
+- **@clayui/time-picker:** Use 12 for AM/PM mode and allow keystroke for AM/PM change ([05900cb](https://github.com/liferay/clay/commit/05900cb))
 
 ## [3.2.1](https://github.com/liferay/clay/compare/@clayui/time-picker@3.2.0...@clayui/time-picker@3.2.1) (2020-12-02)
 
 ### Bug Fixes
 
--   **@clayui/time-picker:** make sure hours can't be 0 when its a 12 hour clock ([47a582c](https://github.com/liferay/clay/commit/47a582c))
--   **@clayui/time-picker:** make sure input always has a leading 0 for single digits ([5c9f410](https://github.com/liferay/clay/commit/5c9f410))
--   **@clayui/time-picker:** Use 12 for AM/PM mode and allow keystroke for AM/PM change ([05900cb](https://github.com/liferay/clay/commit/05900cb))
+- **@clayui/time-picker:** make sure hours can't be 0 when its a 12 hour clock ([47a582c](https://github.com/liferay/clay/commit/47a582c))
+- **@clayui/time-picker:** make sure input always has a leading 0 for single digits ([5c9f410](https://github.com/liferay/clay/commit/5c9f410))
+- **@clayui/time-picker:** Use 12 for AM/PM mode and allow keystroke for AM/PM change ([05900cb](https://github.com/liferay/clay/commit/05900cb))
 
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/time-picker@3.1.10...@clayui/time-picker@3.2.0) (2020-10-01)
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
 
 ## [3.1.10](https://github.com/liferay/clay/compare/@clayui/time-picker@3.1.9...@clayui/time-picker@3.1.10) (2020-08-28)
 
@@ -645,7 +645,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+- update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
 
 ## [3.1.6](https://github.com/liferay/clay/compare/@clayui/time-picker@3.1.5...@clayui/time-picker@3.1.6) (2020-07-14)
 
@@ -667,29 +667,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+- Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
 
 ## [3.1.1](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/compare/@clayui/time-picker@3.1.0...@clayui/time-picker@3.1.1) (2020-03-26)
 
 ### Bug Fixes
 
--   **@clayui/time-picker:** prevent scroll when using arrow keys to cycle numbers ([7e4db38](https://github.com/liferay/clay/commit/7e4db38))
+- **@clayui/time-picker:** prevent scroll when using arrow keys to cycle numbers ([7e4db38](https://github.com/liferay/clay/commit/7e4db38))
 
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
 
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
--   **@clayui/shared:** add focus control by left and right arrow keys ([e314419](https://github.com/liferay/clay/commit/e314419))
--   **@clayui/time-picker:** add focus to input marked as focused for change ([6c64aaf](https://github.com/liferay/clay/commit/6c64aaf))
--   **@clayui/time-picker:** add support for name property ([dc8af07](https://github.com/liferay/clay/commit/dc8af07))
--   **@clayui/time-picker:** format ([ae0f9d6](https://github.com/liferay/clay/commit/ae0f9d6))
--   **@clayui/time-picker:** use FocusScope component ([2a36f27](https://github.com/liferay/clay/commit/2a36f27))
+- update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+- **@clayui/shared:** add focus control by left and right arrow keys ([e314419](https://github.com/liferay/clay/commit/e314419))
+- **@clayui/time-picker:** add focus to input marked as focused for change ([6c64aaf](https://github.com/liferay/clay/commit/6c64aaf))
+- **@clayui/time-picker:** add support for name property ([dc8af07](https://github.com/liferay/clay/commit/dc8af07))
+- **@clayui/time-picker:** format ([ae0f9d6](https://github.com/liferay/clay/commit/ae0f9d6))
+- **@clayui/time-picker:** use FocusScope component ([2a36f27](https://github.com/liferay/clay/commit/2a36f27))
 
 ### Features
 
--   **@clayui/time-picker:** add the ariaLabels API to label inputs and buttons ([da0544f](https://github.com/liferay/clay/commit/da0544f))
--   **form:** add helper components for markup ([3ce63d4](https://github.com/liferay/clay/commit/3ce63d4))
+- **@clayui/time-picker:** add the ariaLabels API to label inputs and buttons ([da0544f](https://github.com/liferay/clay/commit/da0544f))
+- **form:** add helper components for markup ([3ce63d4](https://github.com/liferay/clay/commit/3ce63d4))
 
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/compare/@clayui/time-picker@3.0.6...@clayui/time-picker@3.0.7) (2020-02-13)
 

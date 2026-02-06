@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayIconSpriteContext} from '@clayui/icon';
@@ -11,6 +11,7 @@ import {useReducedMotion} from './useReducedMotion';
 
 interface IProviderProps
 	extends Omit<IProviderContext, 'client' | 'prefersReducedMotion'> {
+
 	/**
 	 * The content of the Provider.
 	 */
@@ -48,17 +49,18 @@ interface IProviderContext {
 const Context = React.createContext<IProviderContext>({} as IProviderContext);
 
 Context.displayName = 'ClayProviderContext';
-
-export const Provider = ({
+export function Provider({
 	children,
 	reducedMotion = 'user',
 	spritemap,
 	storageMaxSize = 20,
 	theme,
 	...otherProps
-}: IProviderProps) => {
+}: IProviderProps) {
+
 	// Use `useMemo` to instantiate the DataClient only once and when
 	// updating the property.
+
 	const client = useMemo(
 		() => new DataClient({storageMaxSize}),
 		[storageMaxSize]
@@ -80,8 +82,7 @@ export const Provider = ({
 			</ClayIconSpriteContext.Provider>
 		</Context.Provider>
 	);
-};
-
-export const useProvider = () => {
+}
+export function useProvider() {
 	return useContext(Context);
-};
+}

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayCheckbox} from '@clayui/form';
@@ -76,96 +76,51 @@ const items = [
 						value: 'Crazy',
 					},
 				],
+
 				quickActions: [
 					{
 						onClick: () => alert('Clicked the cog!'),
 						symbol: 'trash',
 					},
 				],
+
 				symbol: '',
 				title: 'Account Example Two',
 			},
 		],
 	},
 ];
+export function Simple() {
+	return (
+		<ClayList>
+			<ClayList.Header>This is a header</ClayList.Header>
 
-export const Simple = () => (
-	<ClayList>
-		<ClayList.Header>This is a header</ClayList.Header>
-		<ClayList.Item flex>
-			<ClayList.ItemField>Item 1</ClayList.ItemField>
+			<ClayList.Item flex>
+				<ClayList.ItemField>Item 1</ClayList.ItemField>
 
-			<ClayList.ItemField>ItemField</ClayList.ItemField>
-
-			<ClayList.ItemField expand>
-				<ClayList.ItemTitle>Item Title and expanded</ClayList.ItemTitle>
-				<ClayList.ItemText>Item Text</ClayList.ItemText>
-			</ClayList.ItemField>
-
-			<ClayList.ItemField>ItemField</ClayList.ItemField>
-		</ClayList.Item>
-
-		<ClayList.Item flex>
-			<ClayList.ItemField>Item 2</ClayList.ItemField>
-			<ClayList.ItemField expand>
-				<ClayList.ItemTitle>Item Title and expanded</ClayList.ItemTitle>
-				<ClayList.ItemText>
-					Hover this item for action menu
-				</ClayList.ItemText>
-			</ClayList.ItemField>
-			<ClayList.ItemField>
-				<ClayList.QuickActionMenu>
-					<ClayList.QuickActionMenu.Item
-						aria-label="Delete"
-						onClick={() => alert('Clicked the trash!')}
-						symbol="trash"
-						title="Delete"
-					/>
-
-					<ClayList.QuickActionMenu.Item
-						aria-label="Settings"
-						onClick={() => alert('Clicked the cog!')}
-						symbol="cog"
-						title="Settings"
-					/>
-				</ClayList.QuickActionMenu>
-			</ClayList.ItemField>
-		</ClayList.Item>
-
-		<ClayList.Header>This is another header</ClayList.Header>
-		<ClayList.Item flex>
-			<ClayList.ItemField>Item 3</ClayList.ItemField>
-
-			<ClayList.ItemField>ItemField</ClayList.ItemField>
-		</ClayList.Item>
-	</ClayList>
-);
-
-export const Complex = (args: any) => (
-	<ClayList>
-		{[1, 2, 3, 4].map((item) => (
-			<ClayList.Item active={item === args.activeIndex} flex key={item}>
-				<ClayList.ItemField>
-					<ClayCheckbox
-						aria-label="checkbox"
-						checked={item === args.activeIndex}
-						onChange={() => {}}
-					/>
-				</ClayList.ItemField>
-
-				<ClayList.ItemField>
-					<ClaySticker displayType="secondary">
-						<ClayIcon symbol="folder" />
-					</ClaySticker>
-				</ClayList.ItemField>
+				<ClayList.ItemField>ItemField</ClayList.ItemField>
 
 				<ClayList.ItemField expand>
 					<ClayList.ItemTitle>
-						{`Toggle knob ${item}`}
+						Item Title and expanded
+					</ClayList.ItemTitle>
+
+					<ClayList.ItemText>Item Text</ClayList.ItemText>
+				</ClayList.ItemField>
+
+				<ClayList.ItemField>ItemField</ClayList.ItemField>
+			</ClayList.Item>
+
+			<ClayList.Item flex>
+				<ClayList.ItemField>Item 2</ClayList.ItemField>
+
+				<ClayList.ItemField expand>
+					<ClayList.ItemTitle>
+						Item Title and expanded
 					</ClayList.ItemTitle>
 
 					<ClayList.ItemText>
-						This is subtitle information...
+						Hover this item for action menu
 					</ClayList.ItemText>
 				</ClayList.ItemField>
 
@@ -187,9 +142,72 @@ export const Complex = (args: any) => (
 					</ClayList.QuickActionMenu>
 				</ClayList.ItemField>
 			</ClayList.Item>
-		))}
-	</ClayList>
-);
+
+			<ClayList.Header>This is another header</ClayList.Header>
+
+			<ClayList.Item flex>
+				<ClayList.ItemField>Item 3</ClayList.ItemField>
+
+				<ClayList.ItemField>ItemField</ClayList.ItemField>
+			</ClayList.Item>
+		</ClayList>
+	);
+}
+export function Complex(args: any) {
+	return (
+		<ClayList>
+			{[1, 2, 3, 4].map((item) => (
+				<ClayList.Item
+					active={item === args.activeIndex}
+					flex
+					key={item}
+				>
+					<ClayList.ItemField>
+						<ClayCheckbox
+							aria-label="checkbox"
+							checked={item === args.activeIndex}
+							onChange={() => {}}
+						/>
+					</ClayList.ItemField>
+
+					<ClayList.ItemField>
+						<ClaySticker displayType="secondary">
+							<ClayIcon symbol="folder" />
+						</ClaySticker>
+					</ClayList.ItemField>
+
+					<ClayList.ItemField expand>
+						<ClayList.ItemTitle>
+							{`Toggle knob ${item}`}
+						</ClayList.ItemTitle>
+
+						<ClayList.ItemText>
+							This is subtitle information...
+						</ClayList.ItemText>
+					</ClayList.ItemField>
+
+					<ClayList.ItemField>
+						<ClayList.QuickActionMenu>
+							<ClayList.QuickActionMenu.Item
+								aria-label="Delete"
+								onClick={() => alert('Clicked the trash!')}
+								symbol="trash"
+								title="Delete"
+							/>
+
+							<ClayList.QuickActionMenu.Item
+								aria-label="Settings"
+								onClick={() => alert('Clicked the cog!')}
+								symbol="cog"
+								title="Settings"
+							/>
+						</ClayList.QuickActionMenu>
+					</ClayList.ItemField>
+				</ClayList.Item>
+			))}
+		</ClayList>
+	);
+}
 
 Complex.argTypes = {
 	activeIndex: {
@@ -201,12 +219,10 @@ Complex.argTypes = {
 Complex.args = {
 	activeIndex: 1,
 };
-
-export const ListWithItems = () => (
-	<ClayListWithItems itemIdentifier="classPK" items={items} />
-);
-
-export const ListWithSelectable = () => {
+export function ListWithItems() {
+	return <ClayListWithItems itemIdentifier="classPK" items={items} />;
+}
+export function ListWithSelectable() {
 	const [selectedMap, setSelectedMap] = React.useState({});
 
 	return (
@@ -217,4 +233,4 @@ export const ListWithSelectable = () => {
 			selectedItemsMap={selectedMap}
 		/>
 	);
-};
+}

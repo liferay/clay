@@ -2,8 +2,10 @@
 /// @group customForms
 ////
 
-$custom-forms-transition: background-color 0.15s ease-in-out,
-	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$custom-forms-transition:
+	background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out,
+	box-shadow 0.15s ease-in-out !default;
 
 // Form File
 
@@ -861,7 +863,8 @@ $custom-range-thumb-height: $custom-range-thumb-width !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg,
+$custom-range-thumb-focus-box-shadow:
+	0 0 0 1px $body-bg,
 	if(
 		variable-exists(input-focus-box-shadow),
 		$input-focus-box-shadow,

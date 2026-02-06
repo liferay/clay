@@ -7,13 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 ## [3.155.1](https://github.com/liferay/clay/compare/v3.156.0...v3.155.1) (2025-12-12)
 
 ### Reverts
 
--   Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
+- Revert "chore(release): publish v3.156.0 packages" ([51b2c71](https://github.com/liferay/clay/commit/51b2c71adc59804525369a37b461f15fcaa593dc))
 
 # [3.151.0](https://github.com/liferay/clay/compare/v3.150.0...v3.151.0) (2025-10-22)
 
@@ -31,25 +31,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
+- make sure peerDependencies for react aren't too greedy ([72c4612](https://github.com/liferay/clay/commit/72c4612944bcfe61c51c0d224ac145f76a819a62))
 
 ## [3.143.2](https://github.com/liferay/clay/compare/v3.143.1...v3.143.2) (2025-08-22)
 
 ### Bug Fixes
 
--   types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
+- types should always be first ([b1fcc40](https://github.com/liferay/clay/commit/b1fcc40a68d9a6bd2d285820baea4b17d1045ab6))
 
 ## [3.143.1](https://github.com/liferay/clay/compare/v3.143.0...v3.143.1) (2025-08-22)
 
 ### Bug Fixes
 
--   include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
+- include types in the npm exports configuration ([ad973f0](https://github.com/liferay/clay/commit/ad973f0faea57569480d802096a689889ac036c9))
 
 # [3.143.0](https://github.com/liferay/clay/compare/v3.141.1...v3.143.0) (2025-08-15)
 
 ### Features
 
--   publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
+- publish clay as both CJS and ESM ([32cb387](https://github.com/liferay/clay/commit/32cb3872e825d937d2807637efdee62ff7977d7c))
 
 # [3.142.0](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.3.5...@clayui/navigation-bar@3.142.0) (2025-08-01)
 
@@ -71,26 +71,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+- exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
 
 # 3.128.0 (2025-02-20)
 
 ### Features
 
--   **@clayui/navigation-bar:** improves component typing to create API Navigation Bar ([7eac095](https://github.com/liferay/clay/commit/7eac09524d84c1fffe97c067dc9a310a3e1478d1))
+- **@clayui/navigation-bar:** improves component typing to create API Navigation Bar ([7eac095](https://github.com/liferay/clay/commit/7eac09524d84c1fffe97c067dc9a310a3e1478d1))
 
 ## 3.123.1 (2024-11-27)
 
 ### Bug Fixes
 
--   **@clayui/core:** Adapt snapshots ([c218410](https://github.com/liferay/clay/commit/c218410398160abb942b68c2a73d42fe058cfe74))
--   **@clayui/core:** Remove navbar-text-truncate class ([3ca40d6](https://github.com/liferay/clay/commit/3ca40d6b7b26de39ed1c8089f21047c2f749d160))
+- **@clayui/core:** Adapt snapshots ([c218410](https://github.com/liferay/clay/commit/c218410398160abb942b68c2a73d42fe058cfe74))
+- **@clayui/core:** Remove navbar-text-truncate class ([3ca40d6](https://github.com/liferay/clay/commit/3ca40d6b7b26de39ed1c8089f21047c2f749d160))
 
 # 3.119.0 (2024-08-30)
 
 ### Features
 
--   **@clayui/navigation-bar:** Add sr-only description for mobile view ([fd7f4c7](https://github.com/liferay/clay/commit/fd7f4c7ed9f0279f680d2dfa19478fb9f4d66e36))
+- **@clayui/navigation-bar:** Add sr-only description for mobile view ([fd7f4c7](https://github.com/liferay/clay/commit/fd7f4c7ed9f0279f680d2dfa19478fb9f4d66e36))
 
 # 3.116.0 (2024-06-10)
 
@@ -100,7 +100,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** fixes navbar size bug when resizing ([42bd090](https://github.com/liferay/clay/commit/42bd090b354173234b270ce49bfba7b58431f9c5))
+- **@clayui/navigation-bar:** fixes navbar size bug when resizing ([42bd090](https://github.com/liferay/clay/commit/42bd090b354173234b270ce49bfba7b58431f9c5))
 
 # 3.113.0 (2024-03-28)
 
@@ -116,8 +116,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # 3.104.0 (2023-08-25)
 
@@ -127,7 +127,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/navigation-bar:** Adds fluidSize prop to customize container-fluid width ([5787c1d](https://github.com/liferay/clay/commit/5787c1de07b7129bc9059832d7bde1b411835c7b))
+- **@clayui/navigation-bar:** Adds fluidSize prop to customize container-fluid width ([5787c1d](https://github.com/liferay/clay/commit/5787c1de07b7129bc9059832d7bde1b411835c7b))
 
 # 3.101.0 (2023-07-28)
 
@@ -145,7 +145,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/navigation-bar:** add motion reduction ([a49132d](https://github.com/liferay/clay/commit/a49132d883d65ce7bc3a2f3db1cfc1e2ffbe7df5))
+- **@clayui/navigation-bar:** add motion reduction ([a49132d](https://github.com/liferay/clay/commit/a49132d883d65ce7bc3a2f3db1cfc1e2ffbe7df5))
 
 # 3.92.0 (2023-04-06)
 
@@ -153,7 +153,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** Mobile nav should push content down instead of overlaying ([0176e40](https://github.com/liferay/clay/commit/0176e40536a6c07eca67ef88651f8e9abcf44677))
+- **@clayui/navigation-bar:** Mobile nav should push content down instead of overlaying ([0176e40](https://github.com/liferay/clay/commit/0176e40536a6c07eca67ef88651f8e9abcf44677))
 
 # 3.89.0 (2023-03-01)
 
@@ -169,11 +169,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** Removes classes btn-unstyled and link-unstyled from nav-link ([10419a7](https://github.com/liferay/clay/commit/10419a73920cf9c6138c8198007b45e1fa39546f))
+- **@clayui/navigation-bar:** Removes classes btn-unstyled and link-unstyled from nav-link ([10419a7](https://github.com/liferay/clay/commit/10419a73920cf9c6138c8198007b45e1fa39546f))
 
 ### Features
 
--   **@clayui/navigation-bar:** add prop to remove `aria-current` from `NavigationBar` component ([a872c2c](https://github.com/liferay/clay/commit/a872c2c65c90def154b3b60343603875663b05de))
+- **@clayui/navigation-bar:** add prop to remove `aria-current` from `NavigationBar` component ([a872c2c](https://github.com/liferay/clay/commit/a872c2c65c90def154b3b60343603875663b05de))
 
 ## 3.83.1 (2022-12-20)
 
@@ -217,8 +217,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** set aria-current based off of the status of active ([81bcc8f](https://github.com/liferay/clay/commit/81bcc8fb2e6578e4656da520666f85b25884e2f5))
--   **@clayui/navigation-bar:** set it to 'page', not just 'true' ([80bf118](https://github.com/liferay/clay/commit/80bf11806e2a455daf4c15daacd4a6de19b69ca1))
+- **@clayui/navigation-bar:** set aria-current based off of the status of active ([81bcc8f](https://github.com/liferay/clay/commit/81bcc8fb2e6578e4656da520666f85b25884e2f5))
+- **@clayui/navigation-bar:** set it to 'page', not just 'true' ([80bf118](https://github.com/liferay/clay/commit/80bf11806e2a455daf4c15daacd4a6de19b69ca1))
 
 ## 3.65.1 (2022-07-11)
 
@@ -234,12 +234,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** add truncate text OOTB to ClayNavigationBar.Item ([b8a53a2](https://github.com/liferay/clay/commit/b8a53a20d81e10fa065997d740fc000f58334a0c))
--   **@clayui/navigator-bar:** Long text in Item is truncated ([587171d](https://github.com/liferay/clay/commit/587171d48bcfff641135176a2fae493c695d95b6))
+- **@clayui/navigation-bar:** add truncate text OOTB to ClayNavigationBar.Item ([b8a53a2](https://github.com/liferay/clay/commit/b8a53a20d81e10fa065997d740fc000f58334a0c))
+- **@clayui/navigator-bar:** Long text in Item is truncated ([587171d](https://github.com/liferay/clay/commit/587171d48bcfff641135176a2fae493c695d95b6))
 
 ### Features
 
--   **@clayui/navigation-bar:** add the `nav-link` class by default for Clay components ([c6cff02](https://github.com/liferay/clay/commit/c6cff020911b8080112f0b97199b353f996836f7))
+- **@clayui/navigation-bar:** add the `nav-link` class by default for Clay components ([c6cff02](https://github.com/liferay/clay/commit/c6cff020911b8080112f0b97199b353f996836f7))
 
 # 3.49.0 (2022-03-15)
 
@@ -251,8 +251,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** fix error when rendering only one Item ([b3917bb](https://github.com/liferay/clay/commit/b3917bb980ac672ba2a4505d4c249c43102a06fa))
--   **@clayui/navigation-bar:** let children be an array or a single child ([5ed78ae](https://github.com/liferay/clay/commit/5ed78ae68f3baa98cbb8b3ccfba19be0f037ebe4))
+- **@clayui/navigation-bar:** fix error when rendering only one Item ([b3917bb](https://github.com/liferay/clay/commit/b3917bb980ac672ba2a4505d4c249c43102a06fa))
+- **@clayui/navigation-bar:** let children be an array or a single child ([5ed78ae](https://github.com/liferay/clay/commit/5ed78ae68f3baa98cbb8b3ccfba19be0f037ebe4))
 
 # 3.40.0 (2021-11-17)
 
@@ -312,26 +312,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
+- exports the missing types ([1ff3486](https://github.com/liferay/clay/commit/1ff3486779a9e8ef31dd8aab0ac43c8066d85dd7))
 
 # [3.128.0](https://github.com/liferay/clay/compare/v3.127.0...v3.128.0) (2025-02-20)
 
 ### Features
 
--   **@clayui/navigation-bar:** improves component typing to create API Navigation Bar ([7eac095](https://github.com/liferay/clay/commit/7eac09524d84c1fffe97c067dc9a310a3e1478d1))
+- **@clayui/navigation-bar:** improves component typing to create API Navigation Bar ([7eac095](https://github.com/liferay/clay/commit/7eac09524d84c1fffe97c067dc9a310a3e1478d1))
 
 ## [3.123.1](https://github.com/liferay/clay/compare/v3.123.0...v3.123.1) (2024-11-27)
 
 ### Bug Fixes
 
--   **@clayui/core:** Adapt snapshots ([c218410](https://github.com/liferay/clay/commit/c218410398160abb942b68c2a73d42fe058cfe74))
--   **@clayui/core:** Remove navbar-text-truncate class ([3ca40d6](https://github.com/liferay/clay/commit/3ca40d6b7b26de39ed1c8089f21047c2f749d160))
+- **@clayui/core:** Adapt snapshots ([c218410](https://github.com/liferay/clay/commit/c218410398160abb942b68c2a73d42fe058cfe74))
+- **@clayui/core:** Remove navbar-text-truncate class ([3ca40d6](https://github.com/liferay/clay/commit/3ca40d6b7b26de39ed1c8089f21047c2f749d160))
 
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
 ### Features
 
--   **@clayui/navigation-bar:** Add sr-only description for mobile view ([fd7f4c7](https://github.com/liferay/clay/commit/fd7f4c7ed9f0279f680d2dfa19478fb9f4d66e36))
+- **@clayui/navigation-bar:** Add sr-only description for mobile view ([fd7f4c7](https://github.com/liferay/clay/commit/fd7f4c7ed9f0279f680d2dfa19478fb9f4d66e36))
 
 # [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
 
@@ -345,7 +345,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** fixes navbar size bug when resizing ([42bd090](https://github.com/liferay/clay/commit/42bd090b354173234b270ce49bfba7b58431f9c5))
+- **@clayui/navigation-bar:** fixes navbar size bug when resizing ([42bd090](https://github.com/liferay/clay/commit/42bd090b354173234b270ce49bfba7b58431f9c5))
 
 # [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
 
@@ -371,8 +371,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
--   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+- remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+- use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
 
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
@@ -386,7 +386,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/navigation-bar:** Adds fluidSize prop to customize container-fluid width ([5787c1d](https://github.com/liferay/clay/commit/5787c1de07b7129bc9059832d7bde1b411835c7b))
+- **@clayui/navigation-bar:** Adds fluidSize prop to customize container-fluid width ([5787c1d](https://github.com/liferay/clay/commit/5787c1de07b7129bc9059832d7bde1b411835c7b))
 
 # [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
 
@@ -416,7 +416,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **@clayui/navigation-bar:** add motion reduction ([a49132d](https://github.com/liferay/clay/commit/a49132d883d65ce7bc3a2f3db1cfc1e2ffbe7df5))
+- **@clayui/navigation-bar:** add motion reduction ([a49132d](https://github.com/liferay/clay/commit/a49132d883d65ce7bc3a2f3db1cfc1e2ffbe7df5))
 
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
@@ -426,7 +426,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** Mobile nav should push content down instead of overlaying ([0176e40](https://github.com/liferay/clay/commit/0176e40536a6c07eca67ef88651f8e9abcf44677))
+- **@clayui/navigation-bar:** Mobile nav should push content down instead of overlaying ([0176e40](https://github.com/liferay/clay/commit/0176e40536a6c07eca67ef88651f8e9abcf44677))
 
 # [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
 
@@ -452,11 +452,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** Removes classes btn-unstyled and link-unstyled from nav-link ([10419a7](https://github.com/liferay/clay/commit/10419a73920cf9c6138c8198007b45e1fa39546f))
+- **@clayui/navigation-bar:** Removes classes btn-unstyled and link-unstyled from nav-link ([10419a7](https://github.com/liferay/clay/commit/10419a73920cf9c6138c8198007b45e1fa39546f))
 
 ### Features
 
--   **@clayui/navigation-bar:** add prop to remove `aria-current` from `NavigationBar` component ([a872c2c](https://github.com/liferay/clay/commit/a872c2c65c90def154b3b60343603875663b05de))
+- **@clayui/navigation-bar:** add prop to remove `aria-current` from `NavigationBar` component ([a872c2c](https://github.com/liferay/clay/commit/a872c2c65c90def154b3b60343603875663b05de))
 
 ## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
 
@@ -538,8 +538,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** set aria-current based off of the status of active ([81bcc8f](https://github.com/liferay/clay/commit/81bcc8fb2e6578e4656da520666f85b25884e2f5))
--   **@clayui/navigation-bar:** set it to 'page', not just 'true' ([80bf118](https://github.com/liferay/clay/commit/80bf11806e2a455daf4c15daacd4a6de19b69ca1))
+- **@clayui/navigation-bar:** set aria-current based off of the status of active ([81bcc8f](https://github.com/liferay/clay/commit/81bcc8fb2e6578e4656da520666f85b25884e2f5))
+- **@clayui/navigation-bar:** set it to 'page', not just 'true' ([80bf118](https://github.com/liferay/clay/commit/80bf11806e2a455daf4c15daacd4a6de19b69ca1))
 
 ## [3.65.1](https://github.com/liferay/clay/compare/v3.65.0...v3.65.1) (2022-07-11)
 
@@ -565,12 +565,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** add truncate text OOTB to ClayNavigationBar.Item ([b8a53a2](https://github.com/liferay/clay/commit/b8a53a20d81e10fa065997d740fc000f58334a0c))
--   **@clayui/navigator-bar:** Long text in Item is truncated ([587171d](https://github.com/liferay/clay/commit/587171d48bcfff641135176a2fae493c695d95b6))
+- **@clayui/navigation-bar:** add truncate text OOTB to ClayNavigationBar.Item ([b8a53a2](https://github.com/liferay/clay/commit/b8a53a20d81e10fa065997d740fc000f58334a0c))
+- **@clayui/navigator-bar:** Long text in Item is truncated ([587171d](https://github.com/liferay/clay/commit/587171d48bcfff641135176a2fae493c695d95b6))
 
 ### Features
 
--   **@clayui/navigation-bar:** add the `nav-link` class by default for Clay components ([c6cff02](https://github.com/liferay/clay/commit/c6cff020911b8080112f0b97199b353f996836f7))
+- **@clayui/navigation-bar:** add the `nav-link` class by default for Clay components ([c6cff02](https://github.com/liferay/clay/commit/c6cff020911b8080112f0b97199b353f996836f7))
 
 # [3.49.0](https://github.com/liferay/clay/compare/v3.48.0...v3.49.0) (2022-03-15)
 
@@ -588,8 +588,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** fix error when rendering only one Item ([b3917bb](https://github.com/liferay/clay/commit/b3917bb980ac672ba2a4505d4c249c43102a06fa))
--   **@clayui/navigation-bar:** let children be an array or a single child ([5ed78ae](https://github.com/liferay/clay/commit/5ed78ae68f3baa98cbb8b3ccfba19be0f037ebe4))
+- **@clayui/navigation-bar:** fix error when rendering only one Item ([b3917bb](https://github.com/liferay/clay/commit/b3917bb980ac672ba2a4505d4c249c43102a06fa))
+- **@clayui/navigation-bar:** let children be an array or a single child ([5ed78ae](https://github.com/liferay/clay/commit/5ed78ae68f3baa98cbb8b3ccfba19be0f037ebe4))
 
 # [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
 
@@ -659,7 +659,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/navigation-bar:** use react-transition-group instead of custom hook for animations ([a51c3ec](https://github.com/liferay/clay/commit/a51c3ec))
+- **@clayui/navigation-bar:** use react-transition-group instead of custom hook for animations ([a51c3ec](https://github.com/liferay/clay/commit/a51c3ec))
 
 ## [3.3.2](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.3.0...@clayui/navigation-bar@3.3.2) (2020-12-16)
 
@@ -673,11 +673,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/shared:** removes the onTransitionEnd listener from elements by setTimeout ([4cf740a](https://github.com/liferay/clay/commit/4cf740a))
+- **@clayui/shared:** removes the onTransitionEnd listener from elements by setTimeout ([4cf740a](https://github.com/liferay/clay/commit/4cf740a))
 
 ### Features
 
--   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+- **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
 
 ## [3.2.5](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.2.4...@clayui/navigation-bar@3.2.5) (2020-08-28)
 
@@ -695,7 +695,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+- update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
 
 ## [3.2.1](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.2.0...@clayui/navigation-bar@3.2.1) (2020-07-14)
 
@@ -705,11 +705,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **clayui.com:** Remove obsolete property from JSP code example in Navigation Bar ([8d9c9d5](https://github.com/liferay/clay/commit/8d9c9d5))
+- **clayui.com:** Remove obsolete property from JSP code example in Navigation Bar ([8d9c9d5](https://github.com/liferay/clay/commit/8d9c9d5))
 
 ### Features
 
--   **clayui.com:** Add JSP code example to Navigation Bar ([81ae0e5](https://github.com/liferay/clay/commit/81ae0e5))
+- **clayui.com:** Add JSP code example to Navigation Bar ([81ae0e5](https://github.com/liferay/clay/commit/81ae0e5))
 
 ## [3.1.3](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.1.2...@clayui/navigation-bar@3.1.3) (2020-06-18)
 
@@ -719,26 +719,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   apply @clayui/layout to other components ([e8a6d0e](https://github.com/liferay/clay/commit/e8a6d0e))
+- apply @clayui/layout to other components ([e8a6d0e](https://github.com/liferay/clay/commit/e8a6d0e))
 
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.1.0...@clayui/navigation-bar@3.1.1) (2020-04-24)
 
 ### Bug Fixes
 
--   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+- Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
 
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
 
--   normalize names of components ([3a0abea](https://github.com/liferay/clay/commit/3a0abea))
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
--   **@clayui/navigation-bar:** replace ClayLink with ClayButton and add truncated text ([00536a0](https://github.com/liferay/clay/commit/00536a0))
--   **clay-navigation-bar:** fix warnings in tests ([ef2a2b5](https://github.com/liferay/clay/commit/ef2a2b5))
+- normalize names of components ([3a0abea](https://github.com/liferay/clay/commit/3a0abea))
+- update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+- **@clayui/navigation-bar:** replace ClayLink with ClayButton and add truncated text ([00536a0](https://github.com/liferay/clay/commit/00536a0))
+- **clay-navigation-bar:** fix warnings in tests ([ef2a2b5](https://github.com/liferay/clay/commit/ef2a2b5))
 
 ### Features
 
--   update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
+- update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
 
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-navigation-bar/compare/@clayui/navigation-bar@3.0.3...@clayui/navigation-bar@3.0.6) (2020-01-31)
 

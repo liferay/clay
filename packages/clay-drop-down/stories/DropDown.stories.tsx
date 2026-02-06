@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -39,6 +39,7 @@ const ITEMS = [
 				value: 'two',
 			},
 		],
+
 		name: 'radio',
 		onChange: (value: string) => alert(`New Radio checked ${value}`),
 		title: 'radio',
@@ -59,6 +60,7 @@ const ITEMS = [
 				type: 'checkbox' as const,
 			},
 		],
+
 		title: 'checkbox',
 		type: 'group' as const,
 	},
@@ -85,35 +87,36 @@ export default {
 	},
 	title: 'Design System/Components/DropDown',
 };
-
-export const Default = (args: any) => (
-	<ClayDropDown
-		alignmentPosition={args.alignmentPosition}
-		menuHeight={args.height}
-		menuWidth={args.width}
-		renderMenuOnClick={args.renderMenuOnClick}
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	>
-		<ClayDropDown.ItemList>
-			{[
-				{href: '#one', title: 'one'},
-				{href: '#two', title: 'two'},
-				{disabled: true, href: '#three', title: 'three'},
-				{href: '#four', title: 'four'},
-			].map(({href, title, ...otherProps}, i) => (
-				<ClayDropDown.Item
-					href={href}
-					key={i}
-					onClick={() => {}}
-					{...otherProps}
-				>
-					{title}
-				</ClayDropDown.Item>
-			))}
-		</ClayDropDown.ItemList>
-	</ClayDropDown>
-);
+export function Default(args: any) {
+	return (
+		<ClayDropDown
+			alignmentPosition={args.alignmentPosition}
+			menuHeight={args.height}
+			menuWidth={args.width}
+			renderMenuOnClick={args.renderMenuOnClick}
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
+			<ClayDropDown.ItemList>
+				{[
+					{href: '#one', title: 'one'},
+					{href: '#two', title: 'two'},
+					{disabled: true, href: '#three', title: 'three'},
+					{href: '#four', title: 'four'},
+				].map(({href, title, ...otherProps}, i) => (
+					<ClayDropDown.Item
+						href={href}
+						key={i}
+						onClick={() => {}}
+						{...otherProps}
+					>
+						{title}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+}
 
 Default.args = {
 	alignmentPosition: 5,
@@ -121,28 +124,29 @@ Default.args = {
 	renderMenuOnClick: false,
 	width: '',
 };
-
-export const Dynamic = () => (
-	<ClayDropDown
-		items={['one', 'two', 'three', 'four']}
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	>
-		{(item) => (
-			<ClayDropDown.Item key={item} onClick={() => {}}>
-				{item}
-			</ClayDropDown.Item>
-		)}
-	</ClayDropDown>
-);
-
-export const DynamicWithSearch = () => {
+export function Dynamic() {
+	return (
+		<ClayDropDown
+			items={['one', 'two', 'three', 'four']}
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
+			{(item) => (
+				<ClayDropDown.Item key={item} onClick={() => {}}>
+					{item}
+				</ClayDropDown.Item>
+			)}
+		</ClayDropDown>
+	);
+}
+export function DynamicWithSearch() {
 	return (
 		<ClayDropDown
 			trigger={<ClayButton>Click Me</ClayButton>}
 			triggerIcon="caret-bottom"
 		>
 			<ClayDropDown.Search placeholder="Type to filter" />
+
 			<ClayDropDown.ItemList items={['one', 'two', 'three', 'four']}>
 				{(item: string) => (
 					<ClayDropDown.Item key={item} onClick={() => {}}>
@@ -152,9 +156,8 @@ export const DynamicWithSearch = () => {
 			</ClayDropDown.ItemList>
 		</ClayDropDown>
 	);
-};
-
-export const DynamicGroup = () => {
+}
+export function DynamicGroup() {
 	const items = [
 		{
 			children: [
@@ -162,6 +165,7 @@ export const DynamicGroup = () => {
 				{id: 3, name: 'Banana'},
 				{id: 4, name: 'Mangos'},
 			],
+
 			id: 1,
 			name: 'Fruit',
 		},
@@ -171,6 +175,7 @@ export const DynamicGroup = () => {
 				{id: 7, name: 'Tomatoes'},
 				{id: 8, name: 'Onions'},
 			],
+
 			id: 5,
 			name: 'Vegetable',
 		},
@@ -183,6 +188,7 @@ export const DynamicGroup = () => {
 			triggerIcon="caret-bottom"
 		>
 			<ClayDropDown.Search placeholder="Type to filter" />
+
 			<ClayDropDown.ItemList items={items}>
 				{(item: any) => (
 					<ClayDropDown.Group
@@ -203,61 +209,62 @@ export const DynamicGroup = () => {
 			</ClayDropDown.ItemList>
 		</ClayDropDown>
 	);
-};
+}
+export function Groups() {
+	return (
+		<ClayDropDown
+			alignmentPosition={Align.BottomLeft}
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
+			<ClayDropDown.ItemList>
+				<ClayDropDown.Group header="Group #1">
+					{[
+						{href: '#one', title: 'one'},
+						{href: '#two', title: 'two'},
+						{href: '#three', title: 'three'},
+					].map((item, i) => (
+						<ClayDropDown.Item href={item.href} key={i}>
+							{item.title}
+						</ClayDropDown.Item>
+					))}
+				</ClayDropDown.Group>
 
-export const Groups = () => (
-	<ClayDropDown
-		alignmentPosition={Align.BottomLeft}
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	>
-		<ClayDropDown.ItemList>
-			<ClayDropDown.Group header="Group #1">
-				{[
-					{href: '#one', title: 'one'},
-					{href: '#two', title: 'two'},
-					{href: '#three', title: 'three'},
-				].map((item, i) => (
-					<ClayDropDown.Item href={item.href} key={i}>
-						{item.title}
-					</ClayDropDown.Item>
-				))}
-			</ClayDropDown.Group>
-
-			<ClayDropDown.Group header="Group #2">
-				{[
-					{href: '#one', title: 'one'},
-					{href: '#two', title: 'two'},
-					{href: '#three', title: 'three'},
-				].map((item, i) => (
-					<ClayDropDown.Item href={item.href} key={i}>
-						{item.title}
-					</ClayDropDown.Item>
-				))}
-			</ClayDropDown.Group>
-		</ClayDropDown.ItemList>
-	</ClayDropDown>
-);
-
-export const Checkbox = () => (
-	<ClayDropDown
-		alignmentPosition={Align.BottomLeft}
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	>
-		<ClayDropDown.ItemList>
-			<ClayDropDown.Section>
-				<ClayCheckbox
-					checked
-					onChange={() => {}}
-					title="I'm a checkbox!"
-				/>
-			</ClayDropDown.Section>
-		</ClayDropDown.ItemList>
-	</ClayDropDown>
-);
-
-export const Search = () => {
+				<ClayDropDown.Group header="Group #2">
+					{[
+						{href: '#one', title: 'one'},
+						{href: '#two', title: 'two'},
+						{href: '#three', title: 'three'},
+					].map((item, i) => (
+						<ClayDropDown.Item href={item.href} key={i}>
+							{item.title}
+						</ClayDropDown.Item>
+					))}
+				</ClayDropDown.Group>
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+}
+export function Checkbox() {
+	return (
+		<ClayDropDown
+			alignmentPosition={Align.BottomLeft}
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
+			<ClayDropDown.ItemList>
+				<ClayDropDown.Section>
+					<ClayCheckbox
+						checked
+						onChange={() => {}}
+						title="I'm a checkbox!"
+					/>
+				</ClayDropDown.Section>
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+}
+export function Search() {
 	const [query, setQuery] = useState('');
 
 	return (
@@ -287,157 +294,166 @@ export const Search = () => {
 			</ClayDropDown.ItemList>
 		</ClayDropDown>
 	);
-};
+}
+export function Radio() {
+	return (
+		<ClayDropDown
+			alignmentPosition={Align.BottomLeft}
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
+			<ClayDropDown.ItemList>
+				<ClayDropDown.Group header="Order">
+					<ClayDropDown.Section>
+						<ClayRadio checked title="Ascending" value="asc" />
+					</ClayDropDown.Section>
 
-export const Radio = () => (
-	<ClayDropDown
-		alignmentPosition={Align.BottomLeft}
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	>
-		<ClayDropDown.ItemList>
-			<ClayDropDown.Group header="Order">
-				<ClayDropDown.Section>
-					<ClayRadio checked title="Ascending" value="asc" />
-				</ClayDropDown.Section>
-				<ClayDropDown.Section>
-					<ClayRadio title="Descending" value="desc" />
-				</ClayDropDown.Section>
-			</ClayDropDown.Group>
-		</ClayDropDown.ItemList>
-	</ClayDropDown>
-);
+					<ClayDropDown.Section>
+						<ClayRadio title="Descending" value="desc" />
+					</ClayDropDown.Section>
+				</ClayDropDown.Group>
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+}
+export function CaptionAndHelp() {
+	return (
+		<ClayDropDown
+			alignmentPosition={Align.BottomLeft}
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
+			<ClayDropDown.Help>Can I help you?</ClayDropDown.Help>
 
-export const CaptionAndHelp = () => (
-	<ClayDropDown
-		alignmentPosition={Align.BottomLeft}
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	>
-		<ClayDropDown.Help>Can I help you?</ClayDropDown.Help>
+			<ClayDropDown.ItemList>
+				{[
+					{href: '#one', title: 'one'},
+					{href: '#two', title: 'two'},
+					{href: '#three', title: 'three'},
+				].map((item, i) => (
+					<ClayDropDown.Item href={item.href} key={i}>
+						{item.title}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
 
-		<ClayDropDown.ItemList>
-			{[
-				{href: '#one', title: 'one'},
-				{href: '#two', title: 'two'},
-				{href: '#three', title: 'three'},
-			].map((item, i) => (
-				<ClayDropDown.Item href={item.href} key={i}>
-					{item.title}
-				</ClayDropDown.Item>
+			<ClayDropDown.Caption>... or maybe not.</ClayDropDown.Caption>
+		</ClayDropDown>
+	);
+}
+export function ItemsWithIcons() {
+	return (
+		<ClayDropDown
+			alignmentPosition={Align.BottomLeft}
+			hasLeftSymbols
+			hasRightSymbols
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
+			<ClayDropDown.ItemList>
+				{[
+					{left: 'trash', title: 'Left'},
+					{right: 'check', title: 'Right'},
+					{left: 'trash', right: 'check', title: 'Both'},
+				].map((item, i) => (
+					<ClayDropDown.Item
+						key={i}
+						onClick={() => {}}
+						symbolLeft={item.left}
+						symbolRight={item.right}
+					>
+						{item.title}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+}
+export function CustomOffset() {
+	return (
+		<ClayDropDown
+			alignmentPosition={Align.BottomLeft}
+			offsetFn={() => [20, 20]}
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
+			<ClayDropDown.ItemList>
+				{[
+					{href: '#one', title: 'one'},
+					{href: '#two', title: 'two'},
+					{disabled: true, href: '#three', title: 'three'},
+					{href: '#four', title: 'four'},
+				].map(({href, title, ...otherProps}, i) => (
+					<ClayDropDown.Item href={href} key={i} {...otherProps}>
+						{title}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+}
+export function AlignmentPositions() {
+	return (
+		<div style={{margin: '200px 300px'}}>
+			{Object.keys(Align).map((alignPosition) => (
+				<>
+					<ClayDropDownWithItems
+						alignmentPosition={
+							Align[alignPosition as keyof typeof Align]
+						}
+						items={[
+							{href: '#one', title: 'one'},
+							{href: '#two', title: 'two'},
+							{disabled: true, href: '#three', title: 'three'},
+							{href: '#four', title: 'four'},
+						]}
+						key={alignPosition}
+						trigger={<ClayButton>{alignPosition}</ClayButton>}
+						triggerIcon="caret-bottom"
+					/>
+
+					<br />
+				</>
 			))}
-		</ClayDropDown.ItemList>
+		</div>
+	);
+}
+export function Drilldown(args: any) {
+	return (
+		<ClayDropDownWithDrilldown
+			defaultActiveMenu="x0a3"
+			menus={{
+				x0a3: [
+					{href: '#', title: 'Hash Link'},
+					{type: 'divider'},
+					{onClick: () => alert('test'), title: 'Alert!'},
+					{type: 'divider'},
+					{child: 'x0a4', title: 'Subnav'},
+				],
 
-		<ClayDropDown.Caption>... or maybe not.</ClayDropDown.Caption>
-	</ClayDropDown>
-);
+				x0a4: [
+					{href: '#', title: '2nd hash link'},
+					{type: 'divider'},
+					{child: 'x0a5', title: 'Subnav'},
+				],
 
-export const ItemsWithIcons = () => (
-	<ClayDropDown
-		alignmentPosition={Align.BottomLeft}
-		hasLeftSymbols
-		hasRightSymbols
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	>
-		<ClayDropDown.ItemList>
-			{[
-				{left: 'trash', title: 'Left'},
-				{right: 'check', title: 'Right'},
-				{left: 'trash', right: 'check', title: 'Both'},
-			].map((item, i) => (
-				<ClayDropDown.Item
-					key={i}
-					onClick={() => {}}
-					symbolLeft={item.left}
-					symbolRight={item.right}
-				>
-					{item.title}
-				</ClayDropDown.Item>
-			))}
-		</ClayDropDown.ItemList>
-	</ClayDropDown>
-);
-
-export const CustomOffset = () => (
-	<ClayDropDown
-		alignmentPosition={Align.BottomLeft}
-		offsetFn={() => [20, 20]}
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	>
-		<ClayDropDown.ItemList>
-			{[
-				{href: '#one', title: 'one'},
-				{href: '#two', title: 'two'},
-				{disabled: true, href: '#three', title: 'three'},
-				{href: '#four', title: 'four'},
-			].map(({href, title, ...otherProps}, i) => (
-				<ClayDropDown.Item href={href} key={i} {...otherProps}>
-					{title}
-				</ClayDropDown.Item>
-			))}
-		</ClayDropDown.ItemList>
-	</ClayDropDown>
-);
-
-export const AlignmentPositions = () => (
-	<div style={{margin: '200px 300px'}}>
-		{Object.keys(Align).map((alignPosition) => (
-			<>
-				<ClayDropDownWithItems
-					alignmentPosition={
-						Align[alignPosition as keyof typeof Align]
-					}
-					items={[
-						{href: '#one', title: 'one'},
-						{href: '#two', title: 'two'},
-						{disabled: true, href: '#three', title: 'three'},
-						{href: '#four', title: 'four'},
-					]}
-					key={alignPosition}
-					trigger={<ClayButton>{alignPosition}</ClayButton>}
-					triggerIcon="caret-bottom"
-				/>
-				<br />
-			</>
-		))}
-	</div>
-);
-
-export const Drilldown = (args: any) => (
-	<ClayDropDownWithDrilldown
-		defaultActiveMenu="x0a3"
-		menus={{
-			x0a3: [
-				{href: '#', title: 'Hash Link'},
-				{type: 'divider'},
-				{onClick: () => alert('test'), title: 'Alert!'},
-				{type: 'divider'},
-				{child: 'x0a4', title: 'Subnav'},
-			],
-			x0a4: [
-				{href: '#', title: '2nd hash link'},
-				{type: 'divider'},
-				{child: 'x0a5', title: 'Subnav'},
-			],
-			x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
-		}}
-		messages={{
-			back: 'Back',
-			goTo: 'Go to',
-		}}
-		renderMenuOnClick={args.renderMenuOnClick}
-		trigger={<ClayButton>Click Me</ClayButton>}
-		triggerIcon="caret-bottom"
-	/>
-);
+				x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
+			}}
+			messages={{
+				back: 'Back',
+				goTo: 'Go to',
+			}}
+			renderMenuOnClick={args.renderMenuOnClick}
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		/>
+	);
+}
 
 Drilldown.args = {
 	renderMenuOnClick: false,
 };
-
-export const DrillDownWithActive = () => {
+export function DrillDownWithActive() {
 	const [active, setActive] = useState(true);
 
 	const onActiveChange = () => {
@@ -460,10 +476,12 @@ export const DrillDownWithActive = () => {
 					},
 					{child: 'x0a4', title: 'Subnav'},
 				],
+
 				x0a4: [
 					{href: '#', title: '2nd hash link'},
 					{child: 'x0a5', title: 'Subnav'},
 				],
+
 				x0a5: [{title: 'The'}, {title: 'End'}],
 			}}
 			messages={{
@@ -475,9 +493,8 @@ export const DrillDownWithActive = () => {
 			triggerIcon="caret-bottom"
 		/>
 	);
-};
-
-export const DropDownWithItems = (args: any) => {
+}
+export function DropDownWithItems(args: any) {
 	const [value, setValue] = useState('');
 
 	return (
@@ -507,14 +524,13 @@ export const DropDownWithItems = (args: any) => {
 			triggerIcon="caret-bottom"
 		/>
 	);
-};
+}
 
 DropDownWithItems.args = {
 	renderMenuOnClick: false,
 	searchable: true,
 };
-
-export const DropDownWithItemsWithCustomActive = () => {
+export function DropDownWithItemsWithCustomActive() {
 	const [value, setValue] = useState('');
 	const [active, setActive] = useState(false);
 
@@ -553,9 +569,8 @@ export const DropDownWithItemsWithCustomActive = () => {
 			</button>
 		</>
 	);
-};
-
-export const InModal = () => {
+}
+export function InModal() {
 	const [visible, setVisible] = useState(false);
 	const {observer, onClose} = useModal({
 		onClose: () => setVisible(false),
@@ -569,12 +584,14 @@ export const InModal = () => {
 			{visible && (
 				<ClayModal observer={observer} size="lg" status="info">
 					<ClayModal.Header>Title</ClayModal.Header>
+
 					<ClayModal.Body scrollable>
 						<ClayInput
 							onClick={() => setPanelVisibility(!panelVisibility)}
 							placeholder="meow"
 							ref={inputRef}
 						/>
+
 						<ClayDropDown.Menu
 							active={panelVisibility}
 							alignElementRef={inputRef}
@@ -585,21 +602,28 @@ export const InModal = () => {
 						>
 							<ClayDropDown.Item>my panel item</ClayDropDown.Item>
 						</ClayDropDown.Menu>
+
 						<img alt="cat" src="https://cataas.com/cat/says/it" />
+
 						<img alt="cat" src="https://cataas.com/cat/says/will" />
+
 						<img alt="cat" src="https://cataas.com/cat/says/have" />
+
 						<img alt="cat" src="https://cataas.com/cat/says/a" />
+
 						<img
 							alt="cat"
 							src="https://cataas.com/cat/says/scroll"
 						/>
 					</ClayModal.Body>
+
 					<ClayModal.Footer
 						first={
 							<ClayButton.Group spaced>
 								<ClayButton displayType="secondary">
 									Secondary
 								</ClayButton>
+
 								<ClayButton displayType="secondary">
 									Secondary
 								</ClayButton>
@@ -616,32 +640,34 @@ export const InModal = () => {
 			</ClayButton>
 		</>
 	);
-};
+}
+export function CascadingMenu() {
+	return (
+		<ClayDropDownWithItems
+			items={[
+				{title: 'Folder'},
+				{type: 'divider'},
+				{
+					items: [
+						{
+							symbolLeft: 'document',
+							symbolRight: 'check',
+							title: 'Basic Document',
+						},
+						{title: 'Contract'},
+						{title: 'Marketing Banner'},
+						{title: 'Spreadsheet'},
+						{title: 'Presentation'},
+					],
 
-export const CascadingMenu = () => (
-	<ClayDropDownWithItems
-		items={[
-			{title: 'Folder'},
-			{type: 'divider'},
-			{
-				items: [
-					{
-						symbolLeft: 'document',
-						symbolRight: 'check',
-						title: 'Basic Document',
-					},
-					{title: 'Contract'},
-					{title: 'Marketing Banner'},
-					{title: 'Spreadsheet'},
-					{title: 'Presentation'},
-				],
-				title: 'Document',
-				type: 'contextual',
-			},
-			{title: 'Shortcut'},
-			{title: 'Repository'},
-		]}
-		trigger={<ClayButton>Cascading Menu</ClayButton>}
-		triggerIcon="caret-bottom"
-	/>
-);
+					title: 'Document',
+					type: 'contextual',
+				},
+				{title: 'Shortcut'},
+				{title: 'Repository'},
+			]}
+			trigger={<ClayButton>Cascading Menu</ClayButton>}
+			triggerIcon="caret-bottom"
+		/>
+	);
+}

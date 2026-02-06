@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Button from '@clayui/button';
@@ -26,10 +26,6 @@ import {useItem} from './useItem';
 
 export interface ITreeViewItemProps
 	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'children'> {
-	/**
-	 * Flag to set the node to the active state.
-	 */
-	active?: boolean;
 
 	/**
 	 * Property for rendering actions on a Node.
@@ -37,19 +33,24 @@ export interface ITreeViewItemProps
 	actions?: React.ReactElement;
 
 	/**
+	 * Flag to set the node to the active state.
+	 */
+	active?: boolean;
+
+	/**
 	 * Item content.
 	 */
 	children: React.ReactNode;
 
 	/**
-	 * Flag to define if the item is draggable and dropable.
-	 */
-	draggable?: boolean;
-
-	/**
 	 * Flag indicating that the component is disabled.
 	 */
 	disabled?: boolean;
+
+	/**
+	 * Flag to define if the item is draggable and dropable.
+	 */
+	draggable?: boolean;
 
 	/**
 	 * Flag to indicate if the item is expandable. This renders the arrow
@@ -124,7 +125,9 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 			React.Children.toArray(children);
 
 		const group =
+
 			// @ts-ignore
+
 			right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
 		useEffect(() => {
@@ -170,13 +173,14 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 		// The ownership of TreeView properties changes according to the component
 		// declaration that helps in inferring the visual intuition of which
 		// component is Node.
+
 		const propsOwnership = group ? 'item' : 'node';
 
 		const itemProps = propsOwnership === 'item' ? otherProps : {};
 		const nodeProps = propsOwnership === 'node' ? otherProps : {};
 
 		const hasChildren =
-			nestedKey && item[nestedKey] && item[nestedKey].length > 0;
+			nestedKey && item[nestedKey] && !!item[nestedKey].length;
 
 		const isExpand =
 			expandable ||
@@ -226,11 +230,11 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 						labelId={labelId}
 						target={{dropPosition: 'top', key: item.key}}
 					/>
+
 					<div
 						{...itemStackProps}
 						{...nodeProps}
 						{...focusWithinProps}
-						aria-controls={isExpand ? item.key : undefined}
 						aria-expanded={
 							group ? expandedKeys.has(item.key) : undefined
 						}
@@ -241,13 +245,14 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 							itemStackProps.className,
 							nodeProps.className,
 							{
-								active:
+								'active':
 									(selectionMode === 'single' &&
 										selection.selectedKeys.has(item.key)) ||
 									itemStackProps.active ||
 									nodeProps.active,
-								collapsed: group && expandedKeys.has(item.key),
-								disabled:
+								'collapsed':
+									group && expandedKeys.has(item.key),
+								'disabled':
 									itemStackProps.disabled ||
 									nodeProps.disabled,
 								focus,
@@ -285,6 +290,7 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 
 							// Any click that happened outside the item does not trigger the
 							// node expansion. For example click on a DropDown item.
+
 							if (
 								!item.itemRef.current?.contains(
 									event.target as Node
@@ -316,16 +322,15 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 							// element to know how many clicks were triggered.
 							// https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
 							// @ts-ignore
+
 							if (expandDoubleClick && event.detail !== 2) {
 								return;
 							}
 
-							if (selectionMode === 'single') {
-								selection.toggleSelection(item.key);
+							selection.toggleSelection(item.key);
 
-								if (onSelect) {
-									onSelect(removeItemInternalProps(item));
-								}
+							if (onSelect) {
+								onSelect(removeItemInternalProps(item));
 							}
 
 							if (
@@ -333,7 +338,8 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 								itemStackProps.expandOnClick !== false
 							) {
 								toggle(item.key);
-							} else {
+							}
+							else {
 								loadMore();
 							}
 						}}
@@ -376,6 +382,7 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 							// `onKeyDown` it can ignore the default behavior of the browser
 							// and the default behavior of the TreeView when this is not done
 							// by default we ignore the default browser behavior by default.
+
 							event.preventDefault();
 
 							const {key} = event;
@@ -401,7 +408,8 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 											promise.then(() =>
 												setLoading(false)
 											);
-										} else {
+										}
+										else {
 											return;
 										}
 									}
@@ -420,7 +428,8 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 											);
 
 										firstItemElement?.focus();
-									} else {
+									}
+									else {
 										item.itemRef.current?.focus();
 									}
 									break;
@@ -504,6 +513,7 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 							labelId={labelId}
 							target={{dropPosition: 'middle', key: item.key}}
 						/>
+
 						<span
 							className="c-inner"
 							style={{
@@ -558,6 +568,7 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 									isNonDraggrable={isNonDraggrable}
 									labelId={labelId}
 									loading={loading}
+									onLoadMore={!group ? loadMore : undefined}
 									tabIndex={focusWithinProps.tabIndex}
 								>
 									{children}
@@ -574,7 +585,7 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 					{group &&
 						React.cloneElement(group as React.ReactElement, {
 							'aria-labelledby': labelId,
-							id: ariaOwns,
+							'id': ariaOwns,
 						})}
 
 					{left && group && Boolean(otherElements.length) && (
@@ -595,10 +606,6 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 Item.displayName = 'ClayTreeViewItem';
 
 interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
-	/**
-	 * Flag to set the node to the active state.
-	 */
-	active?: boolean;
 
 	/**
 	 * @ignore
@@ -606,14 +613,14 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	actions?: React.ReactElement;
 
 	/**
+	 * Flag to set the node to the active state.
+	 */
+	active?: boolean;
+
+	/**
 	 * Item content.
 	 */
 	children: React.ReactNode;
-
-	/**
-	 * Flag to define if the item is draggable and dropable.
-	 */
-	draggable?: boolean;
 
 	/**
 	 * Flag indicating that the component is disabled.
@@ -621,16 +628,9 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	disabled?: boolean;
 
 	/**
-	 * Flag indicating if Expander is disabled, by default it has the
-	 * value of the disabled prop.
+	 * Flag to define if the item is draggable and dropable.
 	 */
-	expanderDisabled?: boolean;
-
-	/**
-	 * Flag to indicate if the item is expandable. This renders the arrow
-	 * button on the item.
-	 */
-	expandable?: boolean;
+	draggable?: boolean;
 
 	/**
 	 * Flag to indicate if the item should be expanded when clicking the
@@ -639,9 +639,21 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	expandOnClick?: boolean;
 
 	/**
-	 * Flag to remove the visual of the hover over the item.
+	 * Flag to indicate if the item is expandable. This renders the arrow
+	 * button on the item.
 	 */
-	noHover?: boolean;
+	expandable?: boolean;
+
+	/**
+	 * Flag indicating if Expander is disabled, by default it has the
+	 * value of the disabled prop.
+	 */
+	expanderDisabled?: boolean;
+
+	/**
+	 * @ignore
+	 */
+	isNonDraggrable?: boolean;
 
 	/**
 	 * @ignore
@@ -654,6 +666,11 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	loading?: boolean;
 
 	/**
+	 * Flag to remove the visual of the hover over the item.
+	 */
+	noHover?: boolean;
+
+	/**
 	 * @ignore
 	 */
 	onLoadMore?: () => void;
@@ -662,11 +679,6 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * @ignore
 	 */
 	tabIndex?: number;
-
-	/**
-	 * @ignore
-	 */
-	isNonDraggrable?: boolean;
 }
 
 type ExpanderProps = {
@@ -700,9 +712,11 @@ export function ItemStack({
 	children,
 	disabled,
 	expandable = false,
+	expanderDisabled,
 	isNonDraggrable,
 	labelId,
 	loading = false,
+	onLoadMore,
 	tabIndex,
 	...otherProps
 }: ITreeViewItemStackProps) {
@@ -714,6 +728,7 @@ export function ItemStack({
 		onSelect,
 		open,
 		selection,
+		toggle,
 	} = useTreeViewContext();
 
 	const item = useItem();
@@ -724,7 +739,12 @@ export function ItemStack({
 		<Layout.ContentRow {...otherProps}>
 			{expandable && !loading && (
 				<Layout.ContentCol>
-					<span
+					<Button
+						aria-controls={
+							expandable ? String(item.key) : undefined
+						}
+						aria-expanded={expandedKeys.has(item.key)}
+						aria-labelledby={labelId}
 						className={classNames(
 							'component-expander',
 							expanderClassName,
@@ -732,9 +752,29 @@ export function ItemStack({
 								collapsed: expandedKeys.has(item.key),
 							}
 						)}
+						disabled={
+							typeof expanderDisabled === 'undefined'
+								? disabled
+								: expanderDisabled
+						}
+						displayType={null}
+						monospaced
+						onClick={(event) => {
+							event.stopPropagation();
+
+							if (onLoadMore) {
+								onLoadMore();
+							}
+							else {
+								toggle(item.key);
+							}
+						}}
+						tabIndex={-1}
 					>
-						<Expander expanderIcons={expanderIcons} />
-					</span>
+						<span className="c-inner" tabIndex={-2}>
+							<Expander expanderIcons={expanderIcons} />
+						</span>
+					</Button>
 				</Layout.ContentCol>
 			)}
 
@@ -755,10 +795,16 @@ export function ItemStack({
 					return null;
 				}
 
+				// @ts-ignore
+
+				const displayName = child?.type?.displayName;
+
 				if (
 					typeof child === 'string' ||
 					typeof child === 'number' ||
+
 					// @ts-ignore
+
 					child?.type.displayName === 'Text'
 				) {
 					content = (
@@ -770,19 +816,17 @@ export function ItemStack({
 							{child}
 						</span>
 					);
-
-					// @ts-ignore
-				} else if (child?.type.displayName === 'ClayIcon') {
+				}
+				else if (displayName === 'ClayIcon') {
 					content = <div className="component-icon">{child}</div>;
-
-					// @ts-ignore
-				} else if (child?.type.displayName === 'ClayCheckbox') {
+				}
+				else if (displayName === 'ClayCheckbox') {
 					content = React.cloneElement(child as React.ReactElement, {
 						'aria-labelledby': labelId,
-						checked: selection.selectedKeys.has(item.key),
-						disabled: loading || disabled,
-						indeterminate: selection.isIndeterminate(item.key),
-						onChange: (
+						'checked': selection.selectedKeys.has(item.key),
+						'disabled': loading || disabled,
+						'indeterminate': selection.isIndeterminate(item.key),
+						'onChange': (
 							event: React.ChangeEvent<HTMLInputElement>
 						) => {
 							const {onChange} = (child as React.ReactElement)
@@ -806,7 +850,7 @@ export function ItemStack({
 								open(item.key);
 							}
 						},
-						onClick: (
+						'onClick': (
 							event: React.MouseEvent<
 								HTMLInputElement,
 								MouseEvent
@@ -822,9 +866,11 @@ export function ItemStack({
 							}
 						},
 					});
-				} else {
+				}
+				else {
 					content = React.cloneElement(child as React.ReactElement, {
 						...(child as React.ReactElement)?.props,
+						id: (child as React.ReactElement)?.props?.id || labelId,
 					});
 				}
 
@@ -842,13 +888,15 @@ export function ItemStack({
 
 ItemStack.displayName = 'TreeViewItemStack';
 
-const isElement = (n: React.ReactNode): n is React.ReactElement =>
-	React.isValidElement(n);
+function isElement(n: React.ReactNode): n is React.ReactElement {
+	return React.isValidElement(n);
+}
 
-const elementDisplayNameIs = (node: React.ReactElement, name: string) =>
-	typeof node.type === 'function' || typeof node.type === 'object'
+function elementDisplayNameIs(node: React.ReactElement, name: string) {
+	return typeof node.type === 'function' || typeof node.type === 'object'
 		? ((node.type as any).displayName as string) === name
 		: false;
+}
 
 type TreeViewItemActionsProps = {
 	children: React.ReactElement;
@@ -901,7 +949,8 @@ function Actions({children, tabIndex}: TreeViewItemActionsProps) {
 							})}
 						</Layout.ContentCol>
 					);
-				} else if (
+				}
+				else if (
 					elementDisplayNameIs(child, 'ClayDropDownWithItems')
 				) {
 					return (
@@ -958,8 +1007,8 @@ function Actions({children, tabIndex}: TreeViewItemActionsProps) {
 Actions.displayName = 'TreeViewItemActions';
 
 type TargetDrop = {
-	key: React.Key;
 	dropPosition: 'bottom' | 'middle' | 'top';
+	key: React.Key;
 };
 
 type ItemIndicatorProps = {
@@ -1091,7 +1140,8 @@ function Drag({labelId, tabIndex}: DragProps) {
 
 					if (mode === 'keyboard') {
 						onCancel();
-					} else {
+					}
+					else {
 						onDragStart('keyboard', item.key);
 					}
 				}}

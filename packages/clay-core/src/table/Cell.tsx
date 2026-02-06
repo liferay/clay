@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Button from '@clayui/button';
@@ -18,6 +18,24 @@ import {useRow, useTable} from './context';
 interface IProps
 	extends React.ThHTMLAttributes<HTMLTableCellElement>,
 		React.TdHTMLAttributes<HTMLTableCellElement> {
+
+	/**
+	 * @ignore
+	 */
+	UNSAFE_resizable?: boolean;
+
+	/**
+	 * @ignore
+	 */
+	UNSAFE_resizerClassName?: string;
+
+	/**
+	 * @ignore
+	 */
+	UNSAFE_resizerOnMouseDown?: (
+		event: React.MouseEvent<HTMLDivElement, MouseEvent>
+	) => void;
+
 	/**
 	 * Aligns the text inside the Cell.
 	 */
@@ -61,41 +79,24 @@ interface IProps
 	textAlign?: 'center' | 'end' | 'start';
 
 	/**
+	 * Sets a text value if the component's content is not plain text.
+	 */
+	textValue?: string;
+
+	/**
 	 * Truncates the text inside a Cell.
 	 */
 	truncate?: boolean;
-
-	/*
-	 * Break the text into lines when necessary.
-	 */
-	wrap?: boolean;
 
 	/**
 	 * Sets the column width.
 	 */
 	width?: string;
 
-	/**
-	 * Sets a text value if the component's content is not plain text.
+	/*
+	 * Break the text into lines when necessary.
 	 */
-	textValue?: string;
-
-	/**
-	 * @ignore
-	 */
-	UNSAFE_resizable?: boolean;
-
-	/**
-	 * @ignore
-	 */
-	UNSAFE_resizerClassName?: string;
-
-	/**
-	 * @ignore
-	 */
-	UNSAFE_resizerOnMouseDown?: (
-		event: React.MouseEvent<HTMLDivElement, MouseEvent>
-	) => void;
+	wrap?: boolean;
 }
 
 export const Cell = React.forwardRef(
@@ -156,7 +157,8 @@ export const Cell = React.forwardRef(
 
 				if (newExpandedKeys.has(key)) {
 					newExpandedKeys.delete(key);
-				} else {
+				}
+				else {
 					newExpandedKeys.add(key);
 				}
 
@@ -201,13 +203,13 @@ export const Cell = React.forwardRef(
 				className={classNames(className, {
 					'order-arrow-down-active': isSortable
 						? sort &&
-						  keyValue === sort.column &&
-						  sort.direction === 'descending'
+							keyValue === sort.column &&
+							sort.direction === 'descending'
 						: undefined,
 					'order-arrow-up-active': isSortable
 						? sort &&
-						  keyValue === sort.column &&
-						  sort.direction === 'ascending'
+							keyValue === sort.column &&
+							sort.direction === 'ascending'
 						: undefined,
 					'table-cell-expand': truncate || expanded,
 					[`table-cell-${delimiter}`]: delimiter,
@@ -265,6 +267,7 @@ export const Cell = React.forwardRef(
 								</span>
 							</span>
 						</Layout.ContentCol>
+
 						<Layout.ContentCol>
 							<button
 								className="component-action"
@@ -296,7 +299,8 @@ export const Cell = React.forwardRef(
 									onClick={() => {
 										if (expandable) {
 											toggle(key);
-										} else {
+										}
+										else {
 											loadMore();
 										}
 									}}
@@ -333,7 +337,9 @@ export const Cell = React.forwardRef(
 									className={classNames({
 										'autofit-col-checkbox':
 											React.isValidElement(child) &&
+
 											// @ts-ignore
+
 											child?.type.displayName ===
 												'ClayIcon',
 									})}

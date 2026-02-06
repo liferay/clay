@@ -2,9 +2,9 @@
 
 An autocomplete text field is an input that offers the user text suggestions while they type.
 
--   [Documentation](https://clayui.com/docs/components/autocomplete.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/autocomplete.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

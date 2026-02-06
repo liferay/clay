@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Icon from '@clayui/icon';
@@ -10,6 +10,7 @@ import React from 'react';
 import warning from 'warning';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Flag to indicate if `children` should be wrapped as `feedback`.
 	 */
@@ -25,14 +26,14 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	};
 
 	/**
-	 * The current value of the progress bar. Should range from 0 to 100.
-	 */
-	value: number;
-
-	/**
 	 * Path to spritemap for icon symbol.
 	 */
 	spritemap?: string;
+
+	/**
+	 * The current value of the progress bar. Should range from 0 to 100.
+	 */
+	value: number;
 
 	/**
 	 * Flag to indicate whether a "warning" color for the bar.
@@ -84,7 +85,8 @@ const ProgressBar = ({
 
 	if (warn) {
 		status = 'warning';
-	} else if (value === 100) {
+	}
+	else if (value === 100) {
 		status = 'success';
 	}
 
@@ -92,9 +94,11 @@ const ProgressBar = ({
 
 	if (warn) {
 		ariaLabel = sub(messages.ariaLabelAttention, [value]);
-	} else if (value === 100) {
+	}
+	else if (value === 100) {
 		ariaLabel = messages.ariaLabelComplete;
-	} else {
+	}
+	else {
 		ariaLabel = sub(messages.ariaLabelInProgress, [value]);
 	}
 

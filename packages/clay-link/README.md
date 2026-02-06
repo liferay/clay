@@ -2,9 +2,9 @@
 
 Also known as a hyperlink, a link is a clickable (text or image) element used for navigation purposes.
 
--   [Documentation](https://clayui.com/docs/components/link.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/link.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

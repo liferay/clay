@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
@@ -16,47 +16,50 @@ type Props = {
 };
 
 // Use only for demo.
-const Dot = ({onClick}: Props) => (
-	<div
-		onClick={onClick}
-		style={{
-			alignItems: 'center',
-			backgroundColor: '#ffffff',
-			border: '2px solid #0053F0',
-			borderRadius: '100%',
-			cursor: 'pointer',
-			display: 'flex',
-			height: '32px',
-			justifyContent: 'center',
-			marginLeft: '-10px',
-			marginTop: '-10px',
-			position: 'absolute',
-			width: '32px',
-		}}
-	>
+
+function Dot({onClick}: Props) {
+	return (
 		<div
+			onClick={onClick}
 			style={{
-				backgroundColor: '#004AD7',
+				alignItems: 'center',
+				backgroundColor: '#ffffff',
+				border: '2px solid #0053F0',
 				borderRadius: '100%',
-				height: '24px',
-				width: '24px',
+				cursor: 'pointer',
+				display: 'flex',
+				height: '32px',
+				justifyContent: 'center',
+				marginLeft: '-10px',
+				marginTop: '-10px',
+				position: 'absolute',
+				width: '32px',
 			}}
-		/>
-	</div>
-);
+		>
+			<div
+				style={{
+					backgroundColor: '#004AD7',
+					borderRadius: '100%',
+					height: '24px',
+					width: '24px',
+				}}
+			/>
+		</div>
+	);
+}
 
 export default {
 	component: OverlayMask,
 	title: 'Design System/Components/OverlayMask',
 };
-
-export const Default = () => (
-	<OverlayMask visible>
-		<ClayButton>Button</ClayButton>
-	</OverlayMask>
-);
-
-export const WithPopover = () => {
+export function Default() {
+	return (
+		<OverlayMask visible>
+			<ClayButton>Button</ClayButton>
+		</OverlayMask>
+	);
+}
+export function WithPopover() {
 	const [visible, setVisible] = useState(false);
 
 	return (
@@ -77,6 +80,7 @@ export const WithPopover = () => {
 								<ClayLayout.ContentCol expand>
 									<span>Step 1 of 3: Customize logo</span>
 								</ClayLayout.ContentCol>
+
 								<ClayLayout.ContentCol>
 									<ClayButtonWithIcon
 										aria-label="close"
@@ -107,11 +111,13 @@ export const WithPopover = () => {
 									onChange={() => {}}
 								/>
 							</ClayLayout.ContentCol>
+
 							<ClayLayout.ContentCol>
 								<ClayButton.Group spaced>
 									<ClayButton displayType="secondary" small>
 										Previous
 									</ClayButton>
+
 									<ClayButton
 										onClick={() => setVisible(false)}
 										small
@@ -126,4 +132,4 @@ export const WithPopover = () => {
 			</OverlayMask>
 		</div>
 	);
-};
+}

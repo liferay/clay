@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayLink from '@clayui/link';
@@ -9,20 +9,20 @@ import React from 'react';
 
 export interface IPaginationItemProps
 	extends React.HTMLAttributes<HTMLAnchorElement | HTMLDivElement> {
-	as?: 'div' | typeof ClayLink;
 	active?: boolean;
+	as?: 'div' | typeof ClayLink;
 	disabled?: boolean;
 	href?: string;
 }
 
-export const Item = ({
+export function Item({
 	as: As = ClayLink,
 	active = false,
 	children,
 	disabled = false,
 	href,
 	...otherProps
-}: IPaginationItemProps) => {
+}: IPaginationItemProps) {
 	return (
 		<li className={classNames('page-item', {active, disabled})}>
 			{As === 'div' ? (
@@ -39,7 +39,6 @@ export const Item = ({
 						if (!href) {
 							event.preventDefault();
 						}
-
 						if (otherProps.onClick) {
 							otherProps.onClick(event as any);
 						}
@@ -51,4 +50,4 @@ export const Item = ({
 			)}
 		</li>
 	);
-};
+}

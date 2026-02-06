@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayIcon from '@clayui/icon';
@@ -14,15 +14,11 @@ export interface IProps
 	extends React.HTMLAttributes<
 		HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
 	> {
+
 	/**
 	 * Flag that indicates if item is selected.
 	 */
-	active?: boolean;
-
-	/**
-	 * Flag that indicates if item is disabled or not.
-	 */
-	disabled?: boolean;
+	'active'?: boolean;
 
 	/**
 	 * @ignore
@@ -30,32 +26,37 @@ export interface IProps
 	'data-index'?: number;
 
 	/**
+	 * Flag that indicates if item is disabled or not.
+	 */
+	'disabled'?: boolean;
+
+	/**
 	 * Path for item to link to.
 	 */
-	href?: string;
+	'href'?: string;
 
-	innerRef?: React.Ref<any>;
+	'innerRef'?: React.Ref<any>;
 
 	/**
 	 * Sets the role accessibility property of the item. Set the item's
 	 * container (<li />) role use the role="" prop instead of roleItem="".
 	 */
-	roleItem?: string;
+	'roleItem'?: string;
 
 	/**
 	 * Path to icon spritemap from clay-css.
 	 */
-	spritemap?: string;
+	'spritemap'?: string;
 
 	/**
 	 * Flag that indicates if there is an icon symbol on the left side.
 	 */
-	symbolLeft?: string;
+	'symbolLeft'?: string;
 
 	/**
 	 * Flag that indicates if there is an icon symbol on the right side.
 	 */
-	symbolRight?: string;
+	'symbolRight'?: string;
 }
 
 const Item = React.forwardRef<HTMLLIElement, IProps>(

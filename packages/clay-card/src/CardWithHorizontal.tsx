@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
@@ -43,12 +43,22 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	href?: string;
 
 	/**
+	 * Callback for when item is selected.
+	 */
+	onSelectChange?: (value: boolean | string) => void;
+
+	/**
 	 * Props to add to the radio element
 	 */
 	radioProps?: React.HTMLAttributes<HTMLInputElement> & {
 		name: string;
 		value: string;
 	};
+
+	/**
+	 * Determines what type of selectable it is.
+	 */
+	selectableType?: 'checkbox' | 'radio';
 
 	/**
 	 * Flag to indicate if card is selected
@@ -74,19 +84,9 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Flag to indicate if the card text is truncated
 	 */
 	truncate?: boolean;
-
-	/**
-	 * Callback for when item is selected.
-	 */
-	onSelectChange?: (value: boolean | string) => void;
-
-	/**
-	 * Determines what type of selectable it is.
-	 */
-	selectableType?: 'checkbox' | 'radio';
 }
 
-export const ClayCardWithHorizontal = ({
+export function ClayCardWithHorizontal({
 	'aria-label': ariaLabel,
 	actions,
 	checkboxProps = {},
@@ -104,7 +104,7 @@ export const ClayCardWithHorizontal = ({
 	title,
 	truncate = true,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const content = (
 		<ClayCard.Body>
 			<ClayCard.Row>
@@ -182,4 +182,4 @@ export const ClayCardWithHorizontal = ({
 			{!onSelectChange && content}
 		</ClayCardHorizontal>
 	);
-};
+}

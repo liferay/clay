@@ -2,9 +2,9 @@
 
 Simple but very powerful client, it was designed to help you consume data easily.
 
--   [Documentation](https://clayui.com/docs/components/data-provider.html)
--   [Changelog](./CHANGELOG.md)
--   [Breaking change schedule](./BREAKING.md)
+- [Documentation](https://clayui.com/docs/components/data-provider.html)
+- [Changelog](./CHANGELOG.md)
+- [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

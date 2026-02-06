@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayButton from '@clayui/button';
@@ -10,57 +10,62 @@ import React from 'react';
 
 import Context, {IContext} from './Context';
 
-export const ItemGroup = ({
+export function ItemGroup({
 	children,
 	className,
 	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) => (
-	<div className={classNames('modal-item-group', className)} {...otherProps}>
-		{children}
-	</div>
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+	return (
+		<div
+			className={classNames('modal-item-group', className)}
+			{...otherProps}
+		>
+			{children}
+		</div>
+	);
+}
 
 export interface IItemProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Flag for indicating if item should autofitting the width
 	 */
 	shrink?: boolean;
 }
 
-export const Item = ({
-	children,
-	className,
-	shrink,
-	...otherProps
-}: IItemProps) => (
-	<div
-		className={classNames('modal-item', className, {
-			'modal-item-shrink': shrink,
-		})}
-		{...otherProps}
-	>
-		{children}
-	</div>
-);
+export function Item({children, className, shrink, ...otherProps}: IItemProps) {
+	return (
+		<div
+			className={classNames('modal-item', className, {
+				'modal-item-shrink': shrink,
+			})}
+			{...otherProps}
+		>
+			{children}
+		</div>
+	);
+}
 
-export const TitleSection = ({
+export function TitleSection({
 	children,
 	className,
 	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) => (
-	<div
-		className={classNames('modal-title-section', className)}
-		{...otherProps}
-	>
-		{children}
-	</div>
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+	return (
+		<div
+			className={classNames('modal-title-section', className)}
+			{...otherProps}
+		>
+			{children}
+		</div>
+	);
+}
 
-export const Title = ({
+export function Title({
 	children,
 	className,
 	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) => {
+}: React.HTMLAttributes<HTMLDivElement>) {
 	const {ariaLabelledby} = React.useContext(Context);
 
 	return (
@@ -73,43 +78,52 @@ export const Title = ({
 			{children}
 		</h1>
 	);
-};
+}
 
-export const TitleIndicator = ({
+export function TitleIndicator({
 	children,
 	className,
 	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) => (
-	<div
-		className={classNames('modal-title-indicator', className)}
-		{...otherProps}
-	>
-		{children}
-	</div>
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+	return (
+		<div
+			className={classNames('modal-title-indicator', className)}
+			{...otherProps}
+		>
+			{children}
+		</div>
+	);
+}
 
-export const SubtitleSection = ({
+export function SubtitleSection({
 	children,
 	className,
 	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) => (
-	<div
-		className={classNames('modal-subtitle-section', className)}
-		{...otherProps}
-	>
-		{children}
-	</div>
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+	return (
+		<div
+			className={classNames('modal-subtitle-section', className)}
+			{...otherProps}
+		>
+			{children}
+		</div>
+	);
+}
 
-export const Subtitle = ({
+export function Subtitle({
 	children,
 	className,
 	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) => (
-	<div className={classNames('modal-subtitle', className)} {...otherProps}>
-		{children}
-	</div>
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+	return (
+		<div
+			className={classNames('modal-subtitle', className)}
+			{...otherProps}
+		>
+			{children}
+		</div>
+	);
+}
 
 const ICON_MAP = {
 	danger: 'exclamation-full',
@@ -118,45 +132,57 @@ const ICON_MAP = {
 	warning: 'warning-full',
 };
 
-const HighLevel = ({
+function HighLevel({
 	children,
 	closeButtonAriaLabel = 'Close',
 	onClose,
 	spritemap,
 	status,
-}: IContext & {children?: React.ReactNode; closeButtonAriaLabel?: string}) => (
-	<>
-		<Title>
-			{status && (
-				<TitleIndicator>
-					<ClayIcon spritemap={spritemap} symbol={ICON_MAP[status]} />
-				</TitleIndicator>
-			)}
-			{children}
-		</Title>
+}: IContext & {
+	children?: React.ReactNode;
+	closeButtonAriaLabel?: string;
+}) {
+	return (
+		<>
+			<Title>
+				{status && (
+					<TitleIndicator>
+						<ClayIcon
+							spritemap={spritemap}
+							symbol={ICON_MAP[status]}
+						/>
+					</TitleIndicator>
+				)}
 
-		<ClayButton
-			aria-label={closeButtonAriaLabel}
-			className="close"
-			displayType="unstyled"
-			onClick={onClose}
-		>
-			<ClayIcon spritemap={spritemap} symbol="times" />
-		</ClayButton>
-	</>
-);
+				{children}
+			</Title>
 
-const ClayModalHeader = ({
+			<ClayButton
+				aria-label={closeButtonAriaLabel}
+				className="close"
+				displayType="unstyled"
+				onClick={onClose}
+			>
+				<ClayIcon spritemap={spritemap} symbol="times" />
+			</ClayButton>
+		</>
+	);
+}
+
+function ClayModalHeader({
 	children,
 	className,
 	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) => (
-	<div className={classNames('modal-header', className)} {...otherProps}>
-		{children}
-	</div>
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+	return (
+		<div className={classNames('modal-header', className)} {...otherProps}>
+			{children}
+		</div>
+	);
+}
 
 export interface IHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Aria label for the modal close button.
 	 */
@@ -169,12 +195,12 @@ export interface IHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 	withTitle?: boolean;
 }
 
-const Header = ({
+function Header({
 	children,
 	closeButtonAriaLabel,
 	withTitle = true,
 	...otherProps
-}: IHeaderProps) => {
+}: IHeaderProps) {
 	const {onClose, spritemap, status} = React.useContext(Context);
 
 	return (
@@ -193,6 +219,6 @@ const Header = ({
 			{!withTitle && children}
 		</ClayModalHeader>
 	);
-};
+}
 
 export default Header;

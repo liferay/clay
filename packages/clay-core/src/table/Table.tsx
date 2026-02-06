@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {sub, useControlledState, useId} from '@clayui/shared';
@@ -18,11 +18,28 @@ import {useTreeNavigation} from './useTreeNavigation';
 import type {AnnouncerAPI} from '../live-announcer';
 
 interface IProps extends React.HTMLAttributes<HTMLTableElement> {
+
 	/**
 	 * Defines the columns that are always visible and will be ignored by the
 	 * visible columns functionality.
 	 */
 	alwaysVisibleColumns?: Set<React.Key>;
+
+	/**
+	 * This property vertically align the contents
+	 * inside the table body according a given position.
+	 */
+	bodyVerticalAlignment?: 'bottom' | 'middle' | 'top';
+
+	/**
+	 * Applies a Bordered style on Table's columns.
+	 */
+	borderedColumns?: boolean;
+
+	/**
+	 * Removes the default border and rounded corners from table.
+	 */
+	borderless?: boolean;
 
 	/**
 	 * Flag to enable column visibility control.
@@ -50,9 +67,25 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	expandedKeys?: Set<React.Key>;
 
 	/**
-	 * Defines which columns are visible in the table (controlled).
+	 * This property vertically align the contents
+	 * inside the table header according a given position.
 	 */
-	visibleColumns?: Map<React.Key, number>;
+	headVerticalAlignment?: 'bottom' | 'middle' | 'top';
+
+	/**
+	 * This property keeps all the headings on one line.
+	 */
+	headingNoWrap?: boolean;
+
+	/**
+	 * Applies a Hover style on Table.
+	 */
+	hover?: boolean;
+
+	/**
+	 * Defines which key should be used as the item identifier.
+	 */
+	itemIdKey?: string;
 
 	/**
 	 * Messages for the Table.
@@ -66,6 +99,16 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 		sortDescription: string;
 		sorting: string;
 	};
+
+	/**
+	 * Flag to indicate which key name matches the nested rendering of the tree.
+	 */
+	nestedKey?: string;
+
+	/**
+	 * This property enables keeping everything on one line.
+	 */
+	noWrap?: boolean;
 
 	/**
 	 * A callback that is called when items are expanded or collapsed
@@ -91,63 +134,6 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	onVisibleColumnsChange?: (columns: Map<React.Key, number>) => void;
 
 	/**
-	 * Current state of sort (controlled).
-	 */
-	sort?: Sorting | null;
-
-	/**
-	 * Flag to indicate which key name matches the nested rendering of the tree.
-	 */
-	nestedKey?: string;
-
-	/**
-	 * Defines which key should be used as the item identifier.
-	 */
-	itemIdKey?: string;
-
-	/**
-	 * Defines the size of the table.
-	 */
-	size?: 'sm' | 'lg';
-
-	/**
-	 * This property vertically align the contents
-	 * inside the table body according a given position.
-	 */
-	bodyVerticalAlignment?: 'bottom' | 'middle' | 'top';
-
-	/**
-	 * Applies a Bordered style on Table's columns.
-	 */
-	borderedColumns?: boolean;
-
-	/**
-	 * Removes the default border and rounded corners from table.
-	 */
-	borderless?: boolean;
-
-	/**
-	 * This property keeps all the headings on one line.
-	 */
-	headingNoWrap?: boolean;
-
-	/**
-	 * This property vertically align the contents
-	 * inside the table header according a given position.
-	 */
-	headVerticalAlignment?: 'bottom' | 'middle' | 'top';
-
-	/**
-	 * Applies a Hover style on Table.
-	 */
-	hover?: boolean;
-
-	/**
-	 * This property enables keeping everything on one line.
-	 */
-	noWrap?: boolean;
-
-	/**
 	 * Turns the table responsive.
 	 */
 	responsive?: boolean;
@@ -156,6 +142,16 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	 * Defines the responsive sizing.
 	 */
 	responsiveSize?: 'lg' | 'md' | 'sm' | 'xl';
+
+	/**
+	 * Defines the size of the table.
+	 */
+	size?: 'sm' | 'lg';
+
+	/**
+	 * Current state of sort (controlled).
+	 */
+	sort?: Sorting | null;
 
 	/**
 	 * Applies a Striped style on Table.
@@ -167,6 +163,11 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	 * inside the table according a given position.
 	 */
 	tableVerticalAlignment?: 'bottom' | 'middle' | 'top';
+
+	/**
+	 * Defines which columns are visible in the table (controlled).
+	 */
+	visibleColumns?: Map<React.Key, number>;
 }
 
 const focusableElements = ['[role="row"]', 'td[role="gridcell"]'];
@@ -239,7 +240,7 @@ export const Table = React.forwardRef(
 		});
 
 		const ref = useForwardRef(outRef);
-		const announcerAPI = useRef<AnnouncerAPI>(null);
+		const announcerAPIRef = useRef<AnnouncerAPI>(null);
 
 		const {navigationProps} = useTreeNavigation({
 			disabled: !nestedKey,
@@ -267,7 +268,7 @@ export const Table = React.forwardRef(
 				}}
 				tableVerticalAlignment="middle"
 			>
-				<LiveAnnouncer ref={announcerAPI} />
+				<LiveAnnouncer ref={announcerAPIRef} />
 
 				<FocusWithinProvider
 					containerRef={ref}
@@ -287,7 +288,7 @@ export const Table = React.forwardRef(
 							onLoadMore,
 							onSortChange: useCallback(
 								(sort, textValue) => {
-									announcerAPI.current!.announce(
+									announcerAPIRef.current!.announce(
 										sub(messages!.sorting, [
 											textValue,
 											sort!.direction,
@@ -308,7 +309,8 @@ export const Table = React.forwardRef(
 										column.forEach((value, index) => {
 											if (columns.has(value)) {
 												columns.delete(value);
-											} else {
+											}
+											else {
 												columns.set(value, index);
 											}
 										});
@@ -322,7 +324,8 @@ export const Table = React.forwardRef(
 
 									if (columns.has(column)) {
 										columns.delete(column);
-									} else {
+									}
+									else {
 										columns.set(column, index);
 									}
 

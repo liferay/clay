@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayPanel from '..';
@@ -14,7 +14,9 @@ describe('ClayPanel', () => {
 		const {container} = render(
 			<ClayPanel displayTitle="Display Title" spritemap="/foo/bar">
 				<ClayPanel.Header>Header!</ClayPanel.Header>
+
 				<ClayPanel.Body>Body!</ClayPanel.Body>
+
 				<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 			</ClayPanel>
 		);
@@ -30,7 +32,9 @@ describe('ClayPanel', () => {
 				spritemap="/foo/bar"
 			>
 				<ClayPanel.Header>Header!</ClayPanel.Header>
+
 				<ClayPanel.Body>Body!</ClayPanel.Body>
+
 				<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 			</ClayPanel>
 		);
@@ -46,7 +50,9 @@ describe('ClayPanel', () => {
 				spritemap="/foo/bar"
 			>
 				<ClayPanel.Header>Header!</ClayPanel.Header>
+
 				<ClayPanel.Body>Body!</ClayPanel.Body>
+
 				<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 			</ClayPanel>
 		);
@@ -115,7 +121,9 @@ describe('ClayPanel', () => {
 				spritemap="/foo/bar"
 			>
 				<ClayPanel.Header>Header!</ClayPanel.Header>
+
 				<ClayPanel.Body>Body!</ClayPanel.Body>
+
 				<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 			</ClayPanel>
 		);
@@ -127,7 +135,9 @@ describe('ClayPanel', () => {
 		const {container} = render(
 			<ClayPanel collapsable showCollapseIcon spritemap="/foo/bar">
 				<ClayPanel.Header>Header!</ClayPanel.Header>
+
 				<ClayPanel.Body>Body!</ClayPanel.Body>
+
 				<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 			</ClayPanel>
 		);
@@ -148,7 +158,9 @@ describe('ClayPanel Interactions', () => {
 				spritemap="/foo/bar"
 			>
 				<ClayPanel.Header>Header!</ClayPanel.Header>
+
 				<ClayPanel.Body>Body!</ClayPanel.Body>
+
 				<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 			</ClayPanel>
 		);

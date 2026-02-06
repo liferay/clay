@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayLayout from '..';
@@ -18,38 +18,47 @@ describe('ClayLayout', () => {
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
+
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
 					</ClayLayout.Row>
+
 					<ClayLayout.Row justify="center">
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
+
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
 					</ClayLayout.Row>
+
 					<ClayLayout.Row justify="end">
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
+
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
 					</ClayLayout.Row>
+
 					<ClayLayout.Row justify="around">
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
+
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
 					</ClayLayout.Row>
+
 					<ClayLayout.Row justify="between">
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
+
 						<ClayLayout.Col size={4}>
 							One of two columns
 						</ClayLayout.Col>
@@ -60,6 +69,7 @@ describe('ClayLayout', () => {
 					<ClayLayout.Col md={8} size={12}>
 						.col-12 .col-md-8
 					</ClayLayout.Col>
+
 					<ClayLayout.Col md={4} size={6}>
 						.col-6 .col-md-4
 					</ClayLayout.Col>
@@ -69,9 +79,11 @@ describe('ClayLayout', () => {
 					<ClayLayout.Col md={4} size={6}>
 						.col-6 .col-md-4
 					</ClayLayout.Col>
+
 					<ClayLayout.Col md={4} size={6}>
 						.col-6 .col-md-4
 					</ClayLayout.Col>
+
 					<ClayLayout.Col md={4} size={6}>
 						.col-6 .col-md-4
 					</ClayLayout.Col>
@@ -79,14 +91,17 @@ describe('ClayLayout', () => {
 
 				<ClayLayout.Row>
 					<ClayLayout.Col size={6}>.col-6</ClayLayout.Col>
+
 					<ClayLayout.Col size={6}>.col-6</ClayLayout.Col>
 				</ClayLayout.Row>
 
 				<ClayLayout.Row>
 					<ClayLayout.Col>First, but unordered</ClayLayout.Col>
+
 					<ClayLayout.Col className="order-12">
 						Second, but last
 					</ClayLayout.Col>
+
 					<ClayLayout.Col className="order-1">
 						Third, but first
 					</ClayLayout.Col>

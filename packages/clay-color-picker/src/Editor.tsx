@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayForm, {ClayInput} from '@clayui/form';
@@ -54,15 +54,16 @@ export function useEditor(
 }
 
 type RGBInputProps = {
-	/**
-	 * Callback function for when the input value is changed
-	 */
-	onChange: (val: {r?: number; g?: number; b?: number}) => void;
 
 	/**
 	 * The name of the input. R, G, or B.
 	 */
 	name: string;
+
+	/**
+	 * Callback function for when the input value is changed
+	 */
+	onChange: (val: {b?: number; g?: number; r?: number}) => void;
 
 	/**
 	 * The value of the input.
@@ -73,10 +74,9 @@ type RGBInputProps = {
 /**
  * Renders input that displays RGB values
  */
-const RGBInput = ({name, onChange, value}: RGBInputProps) => {
+function RGBInput({name, onChange, value}: RGBInputProps) {
 	const inputRef = useRef(null);
 	const [inputValue, setInputValue] = useState(value);
-
 	useEffect(() => {
 		if (document.activeElement !== inputRef.current) {
 			setInputValue(value);
@@ -94,27 +94,24 @@ const RGBInput = ({name, onChange, value}: RGBInputProps) => {
 						min={LimitValue.min}
 						onChange={(event: any) => {
 							const value = event.target.value;
-
 							if (value === '') {
 								return;
 							}
-
 							let newVal = Number(value);
-
 							if (newVal < LimitValue.min) {
 								newVal = LimitValue.min;
-							} else if (newVal > LimitValue.maxRGB) {
+							}
+							else if (newVal > LimitValue.maxRGB) {
 								newVal = LimitValue.maxRGB;
 							}
-
 							setInputValue(newVal);
-
 							onChange({[name]: newVal});
 						}}
 						ref={inputRef}
 						type="number"
 						value={inputValue}
 					/>
+
 					<ClayInput.GroupInsetItem before tag="label">
 						{name.toUpperCase()}
 					</ClayInput.GroupInsetItem>
@@ -122,7 +119,7 @@ const RGBInput = ({name, onChange, value}: RGBInputProps) => {
 			</ClayInput.Group>
 		</ClayForm.Group>
 	);
-};
+}
 
 type Props = {
 	color: Instance;
@@ -132,8 +129,8 @@ type Props = {
 	internalToHex: (value: Instance) => string;
 	onChange: (color: Instance, active: boolean) => void;
 	onColorChange: (color: Instance) => void;
-	onHueChange: (value: number) => void;
 	onHexChange: (value: string) => void;
+	onHueChange: (value: number) => void;
 };
 
 export function Editor({
@@ -162,7 +159,8 @@ export function Editor({
 				onChange={(hue) => {
 					if (hue < LimitValue.min) {
 						hue = LimitValue.min;
-					} else if (hue > LimitValue.maxHue) {
+					}
+					else if (hue > LimitValue.maxHue) {
 						hue = LimitValue.maxHue;
 					}
 					onHueChange(hue);
@@ -232,7 +230,8 @@ export function Editor({
 
 									if (newColor.isValid()) {
 										onHexChange(internalToHex(newColor));
-									} else {
+									}
+									else {
 										onHexChange(internalToHex(color));
 									}
 								}}

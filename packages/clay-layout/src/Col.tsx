@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import classNames from 'classnames';
@@ -11,6 +11,7 @@ type TColSize = boolean | number | 'auto';
 /* eslint-disable @liferay/no-abbreviations */
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * Element or component to render for container
 	 */
@@ -42,14 +43,14 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	sm?: TColSize;
 
 	/**
-	 * The number of columns to span on extra-small devices
-	 */
-	xs?: TColSize;
-
-	/**
 	 * The number of columns to span on extra-large devices
 	 */
 	xl?: TColSize;
+
+	/**
+	 * The number of columns to span on extra-small devices
+	 */
+	xs?: TColSize;
 }
 
 const Col = React.forwardRef<HTMLElement, IProps>(
@@ -76,7 +77,7 @@ const Col = React.forwardRef<HTMLElement, IProps>(
 			<ContainerElement
 				{...otherProps}
 				className={classNames(className, {
-					col: noBreakPoints,
+					'col': noBreakPoints,
 					'col-lg': lg === true,
 					[`col-lg-${lg}`]: lg && typeof lg !== 'boolean',
 					'col-md': md === true,

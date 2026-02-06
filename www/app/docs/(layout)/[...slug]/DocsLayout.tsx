@@ -1,9 +1,14 @@
 import {createLXCResource} from '@/lxc';
 import {notFound} from 'next/navigation';
 import Heading from '@/app/_components/Heading';
-import {APIReference} from '@/app/_components/APIReference';
 import {AllCollection} from '@/data';
 import {CodeInline} from 'renoun/components';
+import dynamic from 'next/dynamic';
+
+// Dynamically import APIReference to avoid webpack bundling clay-core files at build time
+const APIReference = dynamic(() => import('@/app/_components/APIReference').then(mod => mod.APIReference), {
+	loading: () => <div>Loading API documentation...</div>,
+});
 
 import styles from './page.module.css';
 
@@ -46,7 +51,7 @@ export async function DocsLayout({slug}: Props) {
 									id: 'api-reference',
 									depth: 2,
 								},
-						  ]
+							]
 						: []),
 				].map((item) => (
 					<li
@@ -107,7 +112,7 @@ export async function DocsLayout({slug}: Props) {
 							<APIReference
 								key={path}
 								source={path}
-								workingDirectory="../packages"
+								workingDirectory="../"
 								filter={(type) => {
 									return (
 										!type.name?.includes('Forward') &&

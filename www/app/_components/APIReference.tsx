@@ -4,7 +4,7 @@ import {resolve} from 'node:path';
 import {JavaScriptFile} from 'renoun/file-system';
 import type {JavaScriptFileExport} from 'renoun/file-system';
 import {CodeInline, MDXRenderer, MDXComponents} from 'renoun/components';
-import {ComponentsCollection} from '@/data';
+import {ComponentsCollection} from '@/components-collection';
 
 import {ErrorBoundary} from './ErrorBoundary';
 
@@ -14,6 +14,7 @@ const mdxComponents = {
 } as MDXComponents;
 
 interface SourceString {
+
 	/** The file path to the source code. */
 	source: string;
 
@@ -22,11 +23,13 @@ interface SourceString {
 }
 
 interface SourceExport {
+
 	/** The export source from a collection export source to get types from. */
 	source: JavaScriptFile<any> | JavaScriptFileExport<any>;
 }
 
 interface Filter {
+
 	/** A filter to apply to the exported types. */
 	filter: (type: Record<string, any>) => boolean;
 }
@@ -61,6 +64,12 @@ async function APIReferenceAsync({
 	filter,
 	...props
 }: APIReferenceProps) {
+	// Skip API reference generation during static build
+	// ComponentsCollection uses file system paths that don't work during prerender
+	if (process.env.NEXT_PHASE === 'phase-production-build') {
+		return null;
+	}
+	
 	if (typeof source === 'string') {
 		let workingDirectory: string | undefined;
 
@@ -68,7 +77,8 @@ async function APIReferenceAsync({
 			if (URL.canParse(props.workingDirectory)) {
 				const {pathname} = new URL(props.workingDirectory);
 				workingDirectory = pathname.slice(0, pathname.lastIndexOf('/'));
-			} else {
+			}
+			else {
 				workingDirectory = props.workingDirectory;
 			}
 		}
@@ -82,9 +92,9 @@ async function APIReferenceAsync({
 
 	if (source instanceof JavaScriptFile) {
 		const exportedTypes = await Promise.all(
-			(
-				await source.getExports()
-			).map((exportSource) => exportSource.getType())
+			(await source.getExports()).map((exportSource) =>
+				exportSource.getType()
+			)
 		);
 
 		return exportedTypes
@@ -324,7 +334,7 @@ function TypeChildren({
 										? signature.parameter.text
 										: signature.parameter.properties[0]
 												.text)
-						  )!
+							)!
 						: null;
 
 					return (
@@ -670,7 +680,7 @@ function TypeValue({type, css: cssProp}: {type: any; css?: CSSObject}) {
 								/>
 							)
 						)
-				  )
+					)
 				: null}
 		</div>
 	);

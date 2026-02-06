@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
@@ -18,6 +18,7 @@ import ClayCard from './Card';
 import type {ButtonWithIconProps} from '@clayui/button';
 
 interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
+
 	/**
 	 * List of actions in the dropdown menu
 	 */
@@ -27,14 +28,6 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Props to add to the checkbox element
 	 */
 	checkboxProps?: React.HTMLAttributes<HTMLInputElement>;
-
-	/**
-	 * Props to add to the radio element
-	 */
-	radioProps?: React.HTMLAttributes<HTMLInputElement> & {
-		name: string;
-		value: string;
-	};
 
 	/**
 	 * Description of the file
@@ -89,6 +82,24 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	>;
 
 	/**
+	 * Callback for when item is selected.
+	 */
+	onSelectChange?: (value: boolean | string) => void;
+
+	/**
+	 * Props to add to the radio element
+	 */
+	radioProps?: React.HTMLAttributes<HTMLInputElement> & {
+		name: string;
+		value: string;
+	};
+
+	/**
+	 * Determines what type of selectable it is.
+	 */
+	selectableType?: 'checkbox' | 'radio';
+
+	/**
 	 * Flag to indicate if card is selected
 	 */
 	selected?: boolean;
@@ -121,19 +132,9 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Flag to indicate if the card text is truncated
 	 */
 	truncate?: boolean;
-
-	/**
-	 * Callback for when item is selected.
-	 */
-	onSelectChange?: (value: boolean | string) => void;
-
-	/**
-	 * Determines what type of selectable it is.
-	 */
-	selectableType?: 'checkbox' | 'radio';
 }
 
-export const ClayCardWithInfo = ({
+export function ClayCardWithInfo({
 	'aria-label': ariaLabel,
 	actions,
 	checkboxProps = {},
@@ -158,22 +159,19 @@ export const ClayCardWithInfo = ({
 	title,
 	truncate = true,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const isCardType = {
 		file: displayType === 'file' && !imgProps,
 		image: displayType === 'image' || imgProps,
 	};
-
 	const contentSymbol = symbol
 		? symbol
 		: isCardType.image
-		? 'camera'
-		: 'documents-and-media';
-
+			? 'camera'
+			: 'documents-and-media';
 	const stickerSymbol = isCardType.image
 		? 'document-image'
 		: 'document-default';
-
 	const headerContent = (
 		<ClayCard.AspectRatio className="card-item-first">
 			{!imgProps && (
@@ -310,4 +308,4 @@ export const ClayCardWithInfo = ({
 			</ClayCard.Body>
 		</ClayCard>
 	);
-};
+}

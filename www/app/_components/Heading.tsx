@@ -45,7 +45,7 @@ export default function Heading({
 						href: `/docs/${slugBase.join('/')}/markup`,
 						label: 'HTML/CSS',
 					},
-			  ]
+				]
 			: []),
 		...(design
 			? [
@@ -54,7 +54,7 @@ export default function Heading({
 						href: `/docs/${slugBase.join('/')}/design`,
 						label: 'Design',
 					},
-			  ]
+				]
 			: []),
 	];
 

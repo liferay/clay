@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {doAlign, useMousePosition} from '@clayui/shared';
@@ -19,12 +19,12 @@ const ALIGNMENTS = [
 ] as const;
 
 const ALIGNMENTS_MAP = {
-	bottom: ['tc', 'bc'],
+	'bottom': ['tc', 'bc'],
 	'bottom-left': ['tl', 'bl'],
 	'bottom-right': ['tr', 'br'],
-	left: ['cr', 'cl'],
-	right: ['cl', 'cr'],
-	top: ['bc', 'tc'],
+	'left': ['cr', 'cl'],
+	'right': ['cl', 'cr'],
+	'top': ['bc', 'tc'],
 	'top-left': ['bl', 'tl'],
 	'top-right': ['br', 'tr'],
 } as const;
@@ -62,7 +62,7 @@ const ALIGNMENTS_FORCE_MAP = {
 	tcbc: 'bottom-left',
 } as const;
 
-export type Align = typeof ALIGNMENTS[number];
+export type Align = (typeof ALIGNMENTS)[number];
 
 type Props = {
 	align: Align;
@@ -136,7 +136,8 @@ export function useAlign({
 
 			if (alignment.overflow.adjustX) {
 				onAlign(ALIGNMENTS_FORCE_MAP[alignmentString]);
-			} else if (pointsString !== alignmentString) {
+			}
+			else if (pointsString !== alignmentString) {
 				onAlign(ALIGNMENTS_INVERSE_MAP[alignmentString]);
 			}
 		}

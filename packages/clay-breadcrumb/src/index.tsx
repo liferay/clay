@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
@@ -14,13 +14,14 @@ type TItem = React.ComponentProps<typeof Item>;
 type TItems = Array<TItem>;
 
 interface IProps extends React.HTMLAttributes<HTMLOListElement> {
+
 	/**
 	 * Defines the aria label of component elements.
 	 */
 	ariaLabels?: {
 		breadcrumb: string;
-		open: string;
 		close: string;
+		open: string;
 	};
 
 	/**
@@ -47,32 +48,33 @@ interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	spritemap?: string;
 }
 
-const findActiveItems = (items: TItems) => {
+function findActiveItems(items: TItems) {
 	return items.filter((item) => {
 		return item.active;
 	});
-};
+}
 
-const Breadcrumb = ({
+function Breadcrumb({
 	ariaLabels = {
 		breadcrumb: 'Breadcrumb',
 		close: 'Partially nest breadcrumbs',
 		open: 'See full nested',
 	},
+
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	ellipsisBuffer = 1,
+
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	ellipsisProps = {},
 	className,
 	items,
 	spritemap,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	warning(
 		findActiveItems(items).length === 1,
 		'ClayBreadcrumb expects at least one `active` item on `items`.'
 	);
-
 	const [collapsed, setCollapsed] = useState(false);
 
 	return (
@@ -92,6 +94,7 @@ const Breadcrumb = ({
 					title={collapsed ? ariaLabels.close : ariaLabels.open}
 				/>
 			)}
+
 			<ol {...otherProps} className={classNames('breadcrumb', className)}>
 				{items.length > 3 && !collapsed ? (
 					<Items
@@ -106,7 +109,7 @@ const Breadcrumb = ({
 			</ol>
 		</nav>
 	);
-};
+}
 
 type ItemsProps = {
 	items: TItems;

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import ClayAlert from '@clayui/alert';
@@ -38,6 +38,7 @@ const ITEMS_DRIVE = [
 						name: 'News',
 					},
 				],
+
 				id: '2',
 				name: 'Blogs',
 			},
@@ -52,6 +53,7 @@ const ITEMS_DRIVE = [
 								type: 'pdf',
 							},
 						],
+
 						id: '15',
 						name: 'PDF',
 					},
@@ -70,15 +72,18 @@ const ITEMS_DRIVE = [
 								type: 'document',
 							},
 						],
+
 						disabled: true,
 						id: '8',
 						name: 'Word',
 					},
 				],
+
 				id: '5',
 				name: 'Documents and Media',
 			},
 		],
+
 		disabled: true,
 		id: '1',
 		name: 'Liferay Drive',
@@ -89,6 +94,7 @@ const ITEMS_DRIVE = [
 			{disabled: true, id: '10', name: 'Blogs'},
 			{id: '11', name: 'Documents and Media'},
 		],
+
 		id: '9',
 		name: 'Repositories',
 		type: 'repository',
@@ -98,6 +104,7 @@ const ITEMS_DRIVE = [
 			{id: '13', name: 'PDF'},
 			{id: '14', name: 'Word'},
 		],
+
 		id: '12',
 		name: 'Documents and Media',
 		status: 'warning',
@@ -109,6 +116,7 @@ const cache = new Map();
 // This method is just a simulation of filtering a tree but don't consider
 // using it in production. This is not performative at runtime because it
 // will traverse the entire tree and create a copy.
+
 function createFilter<T extends Array<any>>(
 	tree: T,
 	nestedKey: string,
@@ -144,7 +152,7 @@ function createFilter<T extends Array<any>>(
 			})
 			.filter(Boolean) as T;
 
-		return filteredTree.length > 0 ? filteredTree : undefined;
+		return filteredTree.length ? filteredTree : undefined;
 	}
 
 	return {
@@ -176,227 +184,246 @@ type Node = {
 	name: string;
 };
 
-const createNode = (
-	lenght: number,
-	depth: number,
-	currentDepth: number = 0
-) => {
+function createNode(lenght: number, depth: number, currentDepth: number = 0) {
 	const node: Node = {
 		children: [],
 		id: String(nodeId),
 		name: `node-${nodeId}`,
 	};
-
 	nodeId += 1;
-
 	if (currentDepth === depth) {
 		return node;
 	}
-
 	for (let i = 0; i < lenght; i++) {
 		node.children.push(createNode(lenght, depth, currentDepth + 1));
 	}
 
 	return node;
-};
+}
 
 export default {
 	title: 'Design System/Components/TreeView',
 };
-
-export const ThemeLight = () => (
-	<TreeView displayType="light">
-		<TreeView.Item>
-			<TreeView.ItemStack>
-				<Icon symbol="folder" />
-				Root
-			</TreeView.ItemStack>
-			<TreeView.Group>
-				<TreeView.Item>Item</TreeView.Item>
-			</TreeView.Group>
-		</TreeView.Item>
-	</TreeView>
-);
-
-export const ThemeDark = () => (
-	<TreeView className="bg-dark" displayType="dark">
-		<TreeView.Item>
-			<TreeView.ItemStack>
-				<Icon symbol="folder" />
-				Root
-			</TreeView.ItemStack>
-			<TreeView.Group>
-				<TreeView.Item>Item</TreeView.Item>
-			</TreeView.Group>
-		</TreeView.Item>
-	</TreeView>
-);
-
-export const Actions = () => (
-	<TreeView>
-		<TreeView.Item
-			actions={
-				<>
-					<Button aria-label="Close" displayType={null} monospaced>
-						<Icon symbol="times" />
-					</Button>
-					<DropDownWithItems
-						items={[
-							{
-								href: '#',
-								label: 'One',
-								onClick: (event) => event.preventDefault(),
-							},
-							{href: '#', label: 'Two'},
-							{label: 'Three'},
-						]}
-						trigger={
-							<Button
-								aria-label="More"
-								displayType={null}
-								monospaced
-							>
-								<Icon symbol="ellipsis-v" />
-							</Button>
-						}
-					/>
-				</>
-			}
-		>
-			<TreeView.ItemStack>
-				<Icon symbol="folder" />
-				Folder 1
-			</TreeView.ItemStack>
-			<TreeView.Group>
-				<TreeView.Item>Item 1</TreeView.Item>
-				<TreeView.Item>Item 2</TreeView.Item>
-				<TreeView.Item>Item 3</TreeView.Item>
-			</TreeView.Group>
-		</TreeView.Item>
-		<TreeView.Item
-			actions={
-				<>
-					<Button aria-label="Close" displayType={null} monospaced>
-						<Icon symbol="times" />
-					</Button>
-					<DropDownWithItems
-						items={[
-							{label: 'Four'},
-							{label: 'Five'},
-							{label: 'Six'},
-						]}
-						trigger={
-							<Button
-								aria-label="More"
-								displayType={null}
-								monospaced
-							>
-								<Icon symbol="ellipsis-v" />
-							</Button>
-						}
-					/>
-				</>
-			}
-		>
-			<TreeView.ItemStack>
-				<Icon symbol="folder" />
-				Folder 2
-			</TreeView.ItemStack>
-			<TreeView.Group>
-				<TreeView.Item>Item 4</TreeView.Item>
-				<TreeView.Item>Item 5</TreeView.Item>
-				<TreeView.Item>Item 6</TreeView.Item>
-			</TreeView.Group>
-		</TreeView.Item>
-	</TreeView>
-);
-
-export const Dynamic = () => (
-	<TreeView
-		defaultItems={[
-			{
-				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
-				name: 'Liferay Drive',
-			},
-			{
-				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
-				name: 'Repositories',
-			},
-			{
-				children: [
-					{name: 'PDF'},
-					{name: 'Word'},
-					{name: 'Google Drive'},
-					{name: 'Figma'},
-				],
-				name: 'Documents and Media',
-			},
-			{
-				children: [],
-				name: 'Empty directory',
-			},
-		]}
-		dragAndDrop
-		nestedKey="children"
-		onRenameItem={(item) => {
-			return new Promise((resolve) => {
-				setTimeout(() => {
-					item.name += `-${Date.now()}`;
-
-					resolve(item);
-				}, 500);
-			});
-		}}
-	>
-		{(item) => (
+export function ThemeLight() {
+	return (
+		<TreeView displayType="light">
 			<TreeView.Item>
 				<TreeView.ItemStack>
 					<Icon symbol="folder" />
-					{item.name}
+					Root
 				</TreeView.ItemStack>
-				<TreeView.Group items={item.children}>
-					{(item) => <TreeView.Item>{item.name}</TreeView.Item>}
+
+				<TreeView.Group>
+					<TreeView.Item>Item</TreeView.Item>
 				</TreeView.Group>
 			</TreeView.Item>
-		)}
-	</TreeView>
-);
-
-export const Styling = () => (
-	<TreeView
-		defaultItems={[
-			{
-				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
-				name: 'Liferay Drive',
-			},
-			{
-				children: [{name: 'PDF'}, {name: 'Word'}],
-				name: 'Documents and Media',
-			},
-		]}
-		expanderClassName="expander-css-class-1"
-		nestedKey="children"
-		showExpanderOnHover={false}
-	>
-		{(item) => (
-			<TreeView.Item className="parent-list-item">
+		</TreeView>
+	);
+}
+export function ThemeDark() {
+	return (
+		<TreeView className="bg-dark" displayType="dark">
+			<TreeView.Item>
 				<TreeView.ItemStack>
 					<Icon symbol="folder" />
-					{item.name}
+					Root
 				</TreeView.ItemStack>
-				<TreeView.Group items={item.children}>
-					{(item) => (
-						<TreeView.Item className="nested-list-item">
-							{item.name}
-						</TreeView.Item>
-					)}
+
+				<TreeView.Group>
+					<TreeView.Item>Item</TreeView.Item>
 				</TreeView.Group>
 			</TreeView.Item>
-		)}
-	</TreeView>
-);
+		</TreeView>
+	);
+}
+export function Actions() {
+	return (
+		<TreeView>
+			<TreeView.Item
+				actions={
+					<>
+						<Button
+							aria-label="Close"
+							displayType={null}
+							monospaced
+						>
+							<Icon symbol="times" />
+						</Button>
+						<DropDownWithItems
+							items={[
+								{
+									href: '#',
+									label: 'One',
+									onClick: (event) => event.preventDefault(),
+								},
+								{href: '#', label: 'Two'},
+								{label: 'Three'},
+							]}
+							trigger={
+								<Button
+									aria-label="More"
+									displayType={null}
+									monospaced
+								>
+									<Icon symbol="ellipsis-v" />
+								</Button>
+							}
+						/>
+					</>
+				}
+			>
+				<TreeView.ItemStack>
+					<Icon symbol="folder" />
+					Folder 1
+				</TreeView.ItemStack>
 
-export const Nested = () => {
+				<TreeView.Group>
+					<TreeView.Item>Item 1</TreeView.Item>
+
+					<TreeView.Item>Item 2</TreeView.Item>
+
+					<TreeView.Item>Item 3</TreeView.Item>
+				</TreeView.Group>
+			</TreeView.Item>
+
+			<TreeView.Item
+				actions={
+					<>
+						<Button
+							aria-label="Close"
+							displayType={null}
+							monospaced
+						>
+							<Icon symbol="times" />
+						</Button>
+						<DropDownWithItems
+							items={[
+								{label: 'Four'},
+								{label: 'Five'},
+								{label: 'Six'},
+							]}
+							trigger={
+								<Button
+									aria-label="More"
+									displayType={null}
+									monospaced
+								>
+									<Icon symbol="ellipsis-v" />
+								</Button>
+							}
+						/>
+					</>
+				}
+			>
+				<TreeView.ItemStack>
+					<Icon symbol="folder" />
+					Folder 2
+				</TreeView.ItemStack>
+
+				<TreeView.Group>
+					<TreeView.Item>Item 4</TreeView.Item>
+
+					<TreeView.Item>Item 5</TreeView.Item>
+
+					<TreeView.Item>Item 6</TreeView.Item>
+				</TreeView.Group>
+			</TreeView.Item>
+		</TreeView>
+	);
+}
+export function Dynamic() {
+	return (
+		<TreeView
+			defaultItems={[
+				{
+					children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+					name: 'Liferay Drive',
+				},
+				{
+					children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+					name: 'Repositories',
+				},
+				{
+					children: [
+						{name: 'PDF'},
+						{name: 'Word'},
+						{name: 'Google Drive'},
+						{name: 'Figma'},
+					],
+
+					name: 'Documents and Media',
+				},
+				{
+					children: [],
+					name: 'Empty directory',
+				},
+			]}
+			dragAndDrop
+			nestedKey="children"
+			onRenameItem={(item) => {
+				return new Promise((resolve) => {
+					setTimeout(() => {
+						item.name += `-${Date.now()}`;
+
+						resolve(item);
+					}, 500);
+				});
+			}}
+		>
+			{(item) => (
+				<TreeView.Item>
+					<TreeView.ItemStack>
+						<Icon symbol="folder" />
+
+						{item.name}
+					</TreeView.ItemStack>
+
+					<TreeView.Group items={item.children}>
+						{(item) => <TreeView.Item>{item.name}</TreeView.Item>}
+					</TreeView.Group>
+				</TreeView.Item>
+			)}
+		</TreeView>
+	);
+}
+export function Styling() {
+	return (
+		<TreeView
+			defaultItems={[
+				{
+					children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+					name: 'Liferay Drive',
+				},
+				{
+					children: [{name: 'PDF'}, {name: 'Word'}],
+					name: 'Documents and Media',
+				},
+			]}
+			expanderClassName="expander-css-class-1"
+			nestedKey="children"
+			showExpanderOnHover={false}
+		>
+			{(item) => (
+				<TreeView.Item className="parent-list-item">
+					<TreeView.ItemStack>
+						<Icon symbol="folder" />
+
+						{item.name}
+					</TreeView.ItemStack>
+
+					<TreeView.Group items={item.children}>
+						{(item) => (
+							<TreeView.Item className="nested-list-item">
+								{item.name}
+							</TreeView.Item>
+						)}
+					</TreeView.Group>
+				</TreeView.Item>
+			)}
+		</TreeView>
+	);
+}
+export function Nested() {
 	const TYPES_TO_SYMBOLS = {
 		document: 'document-text',
 		pdf: 'document-pdf',
@@ -429,7 +456,9 @@ export const Nested = () => {
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<Icon symbol={item.type ?? 'folder'} />
+
 						{item.name}
+
 						{item.status && (
 							<Icon
 								className={TYPES_TO_COLORS[item.status]}
@@ -437,6 +466,7 @@ export const Nested = () => {
 							/>
 						)}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{({name, status, type}: IItem) => (
 							<TreeView.Item>
@@ -446,7 +476,9 @@ export const Nested = () => {
 										symbol={TYPES_TO_SYMBOLS[type]}
 									/>
 								)}
+
 								{name}
+
 								{status && (
 									<Icon
 										className={TYPES_TO_COLORS[status]}
@@ -460,71 +492,79 @@ export const Nested = () => {
 			)}
 		</TreeView>
 	);
-};
+}
+export function WithSticker() {
+	return (
+		<TreeView dragAndDrop showExpanderOnHover={false}>
+			<TreeView.Item>
+				<TreeView.ItemStack>
+					<Sticker displayType="primary" shape="user-icon" size="sm">
+						JH
+					</Sticker>
+					Juan Hidalgo
+				</TreeView.ItemStack>
 
-export const WithSticker = () => (
-	<TreeView dragAndDrop showExpanderOnHover={false}>
-		<TreeView.Item>
-			<TreeView.ItemStack>
-				<Sticker displayType="primary" shape="user-icon" size="sm">
-					JH
-				</Sticker>
-				Juan Hidalgo
-			</TreeView.ItemStack>
-			<TreeView.Group>
-				<TreeView.Item key="Victor Valle">
-					<TreeView.ItemStack>
+				<TreeView.Group>
+					<TreeView.Item key="Victor Valle">
+						<TreeView.ItemStack>
+							<Sticker
+								displayType="primary"
+								shape="user-icon"
+								size="sm"
+							>
+								VV
+							</Sticker>
+							Victor Valle
+						</TreeView.ItemStack>
+
+						<TreeView.Group>
+							<TreeView.Item key="susana-vázquez">
+								<Sticker
+									displayType="primary"
+									shape="user-icon"
+									size="sm"
+								>
+									SV
+								</Sticker>
+								Susana Vázquez
+							</TreeView.Item>
+
+							<TreeView.Item key="myriam-manso">
+								<Sticker
+									displayType="primary"
+									shape="user-icon"
+									size="sm"
+								>
+									MM
+								</Sticker>
+								Myriam Manso
+							</TreeView.Item>
+						</TreeView.Group>
+					</TreeView.Item>
+
+					<TreeView.Item key="emily-young">
 						<Sticker
 							displayType="primary"
 							shape="user-icon"
 							size="sm"
 						>
-							VV
+							EY
 						</Sticker>
-						Victor Valle
-					</TreeView.ItemStack>
-					<TreeView.Group>
-						<TreeView.Item key="susana-vázquez">
-							<Sticker
-								displayType="primary"
-								shape="user-icon"
-								size="sm"
-							>
-								SV
-							</Sticker>
-							Susana Vázquez
-						</TreeView.Item>
-						<TreeView.Item key="myriam-manso">
-							<Sticker
-								displayType="primary"
-								shape="user-icon"
-								size="sm"
-							>
-								MM
-							</Sticker>
-							Myriam Manso
-						</TreeView.Item>
-					</TreeView.Group>
-				</TreeView.Item>
-				<TreeView.Item key="emily-young">
-					<Sticker displayType="primary" shape="user-icon" size="sm">
-						EY
-					</Sticker>
-					Emily Young
-				</TreeView.Item>
-			</TreeView.Group>
-		</TreeView.Item>
-	</TreeView>
-);
-
-export const PageElements = () => {
+						Emily Young
+					</TreeView.Item>
+				</TreeView.Group>
+			</TreeView.Item>
+		</TreeView>
+	);
+}
+export function PageElements() {
 	const TYPES_TO_SYMBOLS = {
-		container: 'container',
-		editable: 'text',
+		'container': 'container',
+		'editable': 'text',
 		'fragment-image': 'picture',
 		'fragment-text': 'h1',
-		paragraph: 'paragraph',
-		row: 'table',
+		'paragraph': 'paragraph',
+		'row': 'table',
 	} as Record<string, string>;
 
 	const items = [
@@ -544,6 +584,7 @@ export const PageElements = () => {
 													type: 'editable',
 												},
 											],
+
 											id: '12',
 											name: 'Heading',
 											type: 'fragment-text',
@@ -556,11 +597,13 @@ export const PageElements = () => {
 													type: 'editable',
 												},
 											],
+
 											id: '13',
 											name: 'Paragraph',
 											type: 'paragraph',
 										},
 									],
+
 									id: '5',
 									name: 'Module',
 								},
@@ -574,25 +617,30 @@ export const PageElements = () => {
 													type: 'editable',
 												},
 											],
+
 											id: '6',
 											name: 'Image',
 											type: 'fragment-image',
 										},
 									],
+
 									id: '4',
 									name: 'Module',
 								},
 							],
+
 							id: '3',
 							name: 'Grid',
 							type: 'row',
 						},
 					],
+
 					id: '2',
 					name: 'Container',
 					type: 'container',
 				},
 			],
+
 			id: '1',
 			name: 'Container',
 			type: 'container',
@@ -623,12 +671,15 @@ export const PageElements = () => {
 						{item.type && (
 							<Icon symbol={TYPES_TO_SYMBOLS[item.type]} />
 						)}
+
 						{item.name}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{({name, type}) => (
 							<TreeView.Item>
 								<Icon symbol={TYPES_TO_SYMBOLS[type]} />
+
 								{name}
 							</TreeView.Item>
 						)}
@@ -637,9 +688,8 @@ export const PageElements = () => {
 			)}
 		</TreeView>
 	);
-};
-
-export const PreSelectedItems = (args: any) => {
+}
+export function PreSelectedItems(args: any) {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set(['3', '15', '17', '18'])
 	);
@@ -657,14 +707,19 @@ export const PreSelectedItems = (args: any) => {
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<ClayCheckbox />
+
 						<Icon symbol="folder" />
+
 						{item.name}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
 								<ClayCheckbox />
+
 								<Icon symbol="folder" />
+
 								{item.name}
 							</TreeView.Item>
 						)}
@@ -673,7 +728,7 @@ export const PreSelectedItems = (args: any) => {
 			)}
 		</TreeView>
 	);
-};
+}
 
 PreSelectedItems.argTypes = {
 	selectionHydrationMode: {
@@ -685,8 +740,7 @@ PreSelectedItems.argTypes = {
 PreSelectedItems.args = {
 	selectionHydrationMode: 'hydrate-first',
 };
-
-export const Disabled = () => {
+export function Disabled() {
 	return (
 		<TreeView
 			defaultItems={ITEMS_DRIVE}
@@ -698,14 +752,19 @@ export const Disabled = () => {
 				<TreeView.Item>
 					<TreeView.ItemStack disabled={item.disabled}>
 						<ClayCheckbox />
+
 						<Icon symbol="folder" />
+
 						{item.name}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item: any) => (
 							<TreeView.Item disabled={item.disabled}>
 								<ClayCheckbox />
+
 								<Icon symbol="folder" />
+
 								{item.name}
 							</TreeView.Item>
 						)}
@@ -714,9 +773,8 @@ export const Disabled = () => {
 			)}
 		</TreeView>
 	);
-};
-
-export const MultipleSelection = (args: any) => {
+}
+export function MultipleSelection(args: any) {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()
 	);
@@ -735,14 +793,19 @@ export const MultipleSelection = (args: any) => {
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<ClayCheckbox />
+
 						<Icon symbol="folder" />
+
 						{item.name}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
 								<ClayCheckbox />
+
 								<Icon symbol="folder" />
+
 								{item.name}
 							</TreeView.Item>
 						)}
@@ -751,7 +814,7 @@ export const MultipleSelection = (args: any) => {
 			)}
 		</TreeView>
 	);
-};
+}
 
 MultipleSelection.argTypes = {
 	selectionMode: {
@@ -763,8 +826,7 @@ MultipleSelection.argTypes = {
 MultipleSelection.args = {
 	selectionMode: 'multiple-recursive',
 };
-
-export const MultipleSelectionWithAsyncLoad = (args: any) => {
+export function MultipleSelectionWithAsyncLoad(args: any) {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()
 	);
@@ -774,7 +836,9 @@ export const MultipleSelectionWithAsyncLoad = (args: any) => {
 			defaultItems={ITEMS_DRIVE}
 			nestedKey="children"
 			onLoadMore={async (item) => {
+
 				// Delay to simulate loading of new data
+
 				await new Promise((resolve) => {
 					setTimeout(() => resolve(''), 1000);
 				});
@@ -803,14 +867,19 @@ export const MultipleSelectionWithAsyncLoad = (args: any) => {
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<ClayCheckbox />
+
 						<Icon symbol="folder" />
+
 						{item.name}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
 								<ClayCheckbox />
+
 								<Icon symbol="folder" />
+
 								{item.name}
 							</TreeView.Item>
 						)}
@@ -819,7 +888,7 @@ export const MultipleSelectionWithAsyncLoad = (args: any) => {
 			)}
 		</TreeView>
 	);
-};
+}
 
 MultipleSelectionWithAsyncLoad.argTypes = {
 	selectionMode: {
@@ -831,8 +900,7 @@ MultipleSelectionWithAsyncLoad.argTypes = {
 MultipleSelectionWithAsyncLoad.args = {
 	selectionMode: 'multiple-recursive',
 };
-
-export const ManuallyTriggerMultipleSelection = (args: any) => {
+export function ManuallyTriggerMultipleSelection(args: any) {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()
 	);
@@ -855,16 +923,21 @@ export const ManuallyTriggerMultipleSelection = (args: any) => {
 							onClick={() => selection.toggle(item.id)}
 						>
 							<Icon symbol="folder" />
+
 							{item.name}
+
 							{item.id}
 						</TreeView.ItemStack>
+
 						<TreeView.Group items={item.children}>
 							{(item) => (
 								<TreeView.Item
 									onClick={() => selection.toggle(item.id)}
 								>
 									<Icon symbol="folder" />
+
 									{item.name}
+
 									{item.id}
 								</TreeView.Item>
 							)}
@@ -874,7 +947,7 @@ export const ManuallyTriggerMultipleSelection = (args: any) => {
 			</TreeView>
 		</>
 	);
-};
+}
 
 ManuallyTriggerMultipleSelection.argTypes = {
 	selectionMode: {
@@ -886,8 +959,7 @@ ManuallyTriggerMultipleSelection.argTypes = {
 ManuallyTriggerMultipleSelection.args = {
 	selectionMode: 'multiple-recursive',
 };
-
-export const ExpandOnCheck = (args: any) => {
+export function ExpandOnCheck(args: any) {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()
 	);
@@ -907,14 +979,19 @@ export const ExpandOnCheck = (args: any) => {
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<ClayCheckbox />
+
 						<Icon symbol="folder" />
+
 						{item.name}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
 								<ClayCheckbox />
+
 								<Icon symbol="folder" />
+
 								{item.name}
 							</TreeView.Item>
 						)}
@@ -923,7 +1000,7 @@ export const ExpandOnCheck = (args: any) => {
 			)}
 		</TreeView>
 	);
-};
+}
 
 ExpandOnCheck.argTypes = {
 	selectionMode: {
@@ -935,8 +1012,7 @@ ExpandOnCheck.argTypes = {
 ExpandOnCheck.args = {
 	selectionMode: 'multiple-recursive',
 };
-
-export const SingleSelection = () => {
+export function SingleSelection() {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()
 	);
@@ -954,12 +1030,15 @@ export const SingleSelection = () => {
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<Icon symbol="folder" />
+
 						{item.name}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
 								<Icon symbol="folder" />
+
 								{item.name}
 							</TreeView.Item>
 						)}
@@ -968,9 +1047,8 @@ export const SingleSelection = () => {
 			)}
 		</TreeView>
 	);
-};
-
-export const ManuallyTriggerSingleSelection = () => {
+}
+export function ManuallyTriggerSingleSelection() {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()
 	);
@@ -991,12 +1069,15 @@ export const ManuallyTriggerSingleSelection = () => {
 					<TreeView.Item>
 						<TreeView.ItemStack>
 							<Icon symbol="folder" />
+
 							{item.name}
 						</TreeView.ItemStack>
+
 						<TreeView.Group items={item.children}>
 							{(item) => (
 								<TreeView.Item>
 									<Icon symbol="folder" />
+
 									{item.name}
 								</TreeView.Item>
 							)}
@@ -1006,9 +1087,8 @@ export const ManuallyTriggerSingleSelection = () => {
 			</TreeView>
 		</>
 	);
-};
-
-export const LargeData = () => {
+}
+export function LargeData() {
 	const rootNode = createNode(10, 5);
 
 	return (
@@ -1020,6 +1100,7 @@ export const LargeData = () => {
 			{(item) => (
 				<TreeView.Item>
 					<TreeView.ItemStack>{item.name}</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item: typeof rootNode) => (
 							<TreeView.Item>{item.name}</TreeView.Item>
@@ -1029,133 +1110,148 @@ export const LargeData = () => {
 			)}
 		</TreeView>
 	);
-};
+}
+export function AsyncLoad() {
+	return (
+		<TreeView
+			defaultItems={ITEMS_DRIVE}
+			nestedKey="children"
+			onLoadMore={async (item) => {
 
-export const AsyncLoad = () => (
-	<TreeView
-		defaultItems={ITEMS_DRIVE}
-		nestedKey="children"
-		onLoadMore={async (item) => {
-			// Delay to simulate loading of new data
-			await new Promise((resolve) => {
-				setTimeout(() => resolve(''), 1000);
-			});
+				// Delay to simulate loading of new data
 
-			return [
+				await new Promise((resolve) => {
+					setTimeout(() => resolve(''), 1000);
+				});
+
+				return [
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+				];
+			}}
+		>
+			{(item) => (
+				<TreeView.Item>
+					<TreeView.ItemStack>
+						<Icon symbol="folder" />
+
+						{item.name}
+					</TreeView.ItemStack>
+
+					<TreeView.Group items={item.children}>
+						{(item) => (
+							<TreeView.Item expandable>
+								<Icon symbol="folder" />
+
+								{item.name}
+							</TreeView.Item>
+						)}
+					</TreeView.Group>
+				</TreeView.Item>
+			)}
+		</TreeView>
+	);
+}
+export function AsyncLoadDataPaginated() {
+	return (
+		<TreeView
+			defaultExpandedKeys={new Set(['root'])}
+			defaultItems={[
 				{
-					id: Math.random(),
-					name: `${item.name} ${Math.random()}`,
+					children: ITEMS_DRIVE,
+					id: 'root',
+					name: 'Root',
 				},
-				{
-					id: Math.random(),
-					name: `${item.name} ${Math.random()}`,
-				},
-				{
-					id: Math.random(),
-					name: `${item.name} ${Math.random()}`,
-				},
-			];
-		}}
-	>
-		{(item) => (
-			<TreeView.Item>
-				<TreeView.ItemStack>
-					<Icon symbol="folder" />
-					{item.name}
-				</TreeView.ItemStack>
-				<TreeView.Group items={item.children}>
-					{(item) => (
-						<TreeView.Item expandable>
-							<Icon symbol="folder" />
-							{item.name}
-						</TreeView.Item>
+			]}
+			nestedKey="children"
+			onLoadMore={async (item, cursor: number = 1) => {
+
+				// Example conditional, I don't want to load data for an item that has
+				// no children.
+
+				if (!item.children) {
+					return;
+				}
+
+				// No more data to fetch.
+
+				if (cursor === null) {
+					return;
+				}
+
+				// Delay to simulate loading of new data
+
+				await new Promise((resolve) => {
+					setTimeout(() => resolve(''), 1000);
+				});
+
+				const newCursor = cursor + 1;
+
+				return {
+
+					// Just for simulation
+
+					cursor: newCursor <= 3 ? newCursor : null,
+					items: [
+						{
+							id: Math.random(),
+							name: `${item.name} ${Math.random()}`,
+						},
+						{
+							id: Math.random(),
+							name: `${item.name} ${Math.random()}`,
+						},
+						{
+							id: Math.random(),
+							name: `${item.name} ${Math.random()}`,
+						},
+					],
+				};
+			}}
+		>
+			{(item, selection, expand, load) => (
+				<TreeView.Item>
+					<TreeView.ItemStack>
+						<Icon symbol="folder" />
+
+						{item.name}
+					</TreeView.ItemStack>
+
+					<TreeView.Group items={item.children}>
+						{(item) => (
+							<TreeView.Item>
+								<Icon symbol="folder" />
+
+								{item.name}
+							</TreeView.Item>
+						)}
+					</TreeView.Group>
+
+					{expand.has(item.id) && load.get(item.id) !== null && (
+						<Button
+							borderless
+							displayType="secondary"
+							onClick={() => load.loadMore(item.id, item)}
+						>
+							Load more results
+						</Button>
 					)}
-				</TreeView.Group>
-			</TreeView.Item>
-		)}
-	</TreeView>
-);
-
-export const AsyncLoadDataPaginated = () => (
-	<TreeView
-		defaultExpandedKeys={new Set(['root'])}
-		defaultItems={[
-			{
-				children: ITEMS_DRIVE,
-				id: 'root',
-				name: 'Root',
-			},
-		]}
-		nestedKey="children"
-		onLoadMore={async (item, cursor: number = 1) => {
-			// Example conditional, I don't want to load data for an item that has
-			// no children.
-			if (!item.children) {
-				return;
-			}
-
-			// No more data to fetch.
-			if (cursor === null) {
-				return;
-			}
-
-			// Delay to simulate loading of new data
-			await new Promise((resolve) => {
-				setTimeout(() => resolve(''), 1000);
-			});
-
-			const newCursor = cursor + 1;
-
-			return {
-				// Just for simulation
-				cursor: newCursor <= 3 ? newCursor : null,
-				items: [
-					{
-						id: Math.random(),
-						name: `${item.name} ${Math.random()}`,
-					},
-					{
-						id: Math.random(),
-						name: `${item.name} ${Math.random()}`,
-					},
-					{
-						id: Math.random(),
-						name: `${item.name} ${Math.random()}`,
-					},
-				],
-			};
-		}}
-	>
-		{(item, selection, expand, load) => (
-			<TreeView.Item>
-				<TreeView.ItemStack>
-					<Icon symbol="folder" />
-					{item.name}
-				</TreeView.ItemStack>
-				<TreeView.Group items={item.children}>
-					{(item) => (
-						<TreeView.Item>
-							<Icon symbol="folder" />
-							{item.name}
-						</TreeView.Item>
-					)}
-				</TreeView.Group>
-
-				{expand.has(item.id) && load.get(item.id) !== null && (
-					<Button
-						borderless
-						displayType="secondary"
-						onClick={() => load.loadMore(item.id, item)}
-					>
-						Load more results
-					</Button>
-				)}
-			</TreeView.Item>
-		)}
-	</TreeView>
-);
-
-export const AsyncLoadWithErrorHandling = () => {
+				</TreeView.Item>
+			)}
+		</TreeView>
+	);
+}
+export function AsyncLoadWithErrorHandling() {
 	const [renderToast, setRenderToast] = useState(false);
 
 	const onLoadMore = () => {
@@ -1179,12 +1275,15 @@ export const AsyncLoadWithErrorHandling = () => {
 					<TreeView.Item>
 						<TreeView.ItemStack>
 							<Icon symbol="folder" />
+
 							{item.name}
 						</TreeView.ItemStack>
+
 						<TreeView.Group items={item.children}>
 							{(item) => (
 								<TreeView.Item>
 									<Icon symbol="folder" />
+
 									{item.name}
 								</TreeView.Item>
 							)}
@@ -1199,15 +1298,14 @@ export const AsyncLoadWithErrorHandling = () => {
 						displayType="danger"
 						title="Error:"
 					>
-						Couldn't load more items
+						Couldnt load more items
 					</ClayAlert>
 				</ClayAlert.ToastContainer>
 			)}
 		</>
 	);
-};
-
-export const SelectionWithFilter = () => {
+}
+export function SelectionWithFilter() {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()
 	);
@@ -1232,6 +1330,7 @@ export const SelectionWithFilter = () => {
 				placeholder="Search..."
 				value={value}
 			/>
+
 			<TreeView
 				items={itemsFiltered}
 				onItemsChange={(data) => setItems(data as any)}
@@ -1244,12 +1343,15 @@ export const SelectionWithFilter = () => {
 					<TreeView.Item>
 						<TreeView.ItemStack>
 							<ClayCheckbox />
+
 							{item.name}
 						</TreeView.ItemStack>
+
 						<TreeView.Group items={item.children}>
 							{(item) => (
 								<TreeView.Item>
 									<ClayCheckbox />
+
 									{item.name}
 								</TreeView.Item>
 							)}
@@ -1259,16 +1361,15 @@ export const SelectionWithFilter = () => {
 			</TreeView>
 		</>
 	);
-};
-
-export const PerformanceTest = () => {
+}
+export function PerformanceTest() {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()
 	);
 
 	type Item = {
-		label: string;
 		itemSubtypes: Array<{label: string}>;
+		label: string;
 	};
 
 	type Data = Array<Item>;
@@ -1294,6 +1395,7 @@ export const PerformanceTest = () => {
 				placeholder="Search..."
 				value={value}
 			/>
+
 			<TreeView<Item>
 				items={itemsFiltered}
 				nestedKey="itemSubtypes"
@@ -1315,6 +1417,7 @@ export const PerformanceTest = () => {
 						<TreeView.ItemStack>
 							<ClayCheckbox /> {item.label}
 						</TreeView.ItemStack>
+
 						<TreeView.Group items={item.itemSubtypes}>
 							{(item) => (
 								<TreeView.Item>
@@ -1327,9 +1430,8 @@ export const PerformanceTest = () => {
 			</TreeView>
 		</>
 	);
-};
-
-export const DemoCategoriesSingle = () => {
+}
+export function DemoCategoriesSingle() {
 	const clickTimerRef = useRef<any>();
 
 	const onCategoryClick = useCallback(
@@ -1397,6 +1499,7 @@ export const DemoCategoriesSingle = () => {
 									name: 'Nonmetals',
 								},
 							],
+
 							id: '4',
 							name: 'Native Elements',
 						},
@@ -1409,6 +1512,7 @@ export const DemoCategoriesSingle = () => {
 							name: 'Silicates',
 						},
 					],
+
 					id: '2',
 					name: 'Minerals',
 					vocabulary: true,
@@ -1430,7 +1534,9 @@ export const DemoCategoriesSingle = () => {
 							event.preventDefault();
 
 							if (item.vocabulary) {
+
 								// @ts-ignore
+
 								switch (event.detail) {
 									case 1:
 										clickTimerRef.current = setTimeout(
@@ -1446,9 +1552,12 @@ export const DemoCategoriesSingle = () => {
 									default:
 										break;
 								}
-							} else {
+							}
+							else {
 								onCategoryClick(
+
 									// @ts-ignore
+
 									event.detail,
 									item,
 									false,
@@ -1463,8 +1572,10 @@ export const DemoCategoriesSingle = () => {
 								item.vocabulary ? 'vocabulary' : 'categories'
 							}
 						/>
+
 						{item.name}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item
@@ -1473,12 +1584,13 @@ export const DemoCategoriesSingle = () => {
 									event.preventDefault();
 
 									const isLeaf = !(
-										item.children &&
-										item.children.length > 0
+										item.children && !!item.children.length
 									);
 
 									onCategoryClick(
+
 										// @ts-ignore
+
 										event.detail,
 										item,
 										isLeaf,
@@ -1488,6 +1600,7 @@ export const DemoCategoriesSingle = () => {
 								}}
 							>
 								<Icon symbol="categories" />
+
 								{item.name}
 							</TreeView.Item>
 						)}
@@ -1496,9 +1609,8 @@ export const DemoCategoriesSingle = () => {
 			)}
 		</TreeView>
 	);
-};
-
-export const DemoCategoriesMultiple = () => {
+}
+export function DemoCategoriesMultiple() {
 	return (
 		<TreeView
 			defaultItems={[
@@ -1513,6 +1625,7 @@ export const DemoCategoriesMultiple = () => {
 							name: 'Cat',
 						},
 					],
+
 					id: '1',
 					name: 'Animals',
 					vocabulary: true,
@@ -1528,6 +1641,7 @@ export const DemoCategoriesMultiple = () => {
 							name: 'Arugula',
 						},
 					],
+
 					id: '2',
 					name: 'Vegetables',
 					vocabulary: true,
@@ -1549,6 +1663,7 @@ export const DemoCategoriesMultiple = () => {
 									name: 'Nonmetals',
 								},
 							],
+
 							id: '5',
 							name: 'Native Elements',
 						},
@@ -1561,6 +1676,7 @@ export const DemoCategoriesMultiple = () => {
 							name: 'Silicates',
 						},
 					],
+
 					id: '3',
 					name: 'Minerals',
 					vocabulary: true,
@@ -1580,6 +1696,7 @@ export const DemoCategoriesMultiple = () => {
 							name: 'Eucalyptus',
 						},
 					],
+
 					id: '4',
 					name: 'Plants',
 					vocabulary: true,
@@ -1596,20 +1713,24 @@ export const DemoCategoriesMultiple = () => {
 
 							if (item.vocabulary) {
 								expand.toggle(item.id);
-							} else {
-								if (item.children && item.children.length > 0) {
+							}
+							else {
+								if (item.children && !!item.children.length) {
 									expand.toggle(item.id);
 								}
 							}
 						}}
 					>
 						{!item.vocabulary && <ClayCheckbox />}
+
 						<Icon
 							symbol={
 								item.vocabulary ? 'vocabulary' : 'categories'
 							}
 						/>
+
 						{item.name}
+
 						{item.vocabulary && (
 							<div className="pl-4">
 								<Button
@@ -1629,11 +1750,14 @@ export const DemoCategoriesMultiple = () => {
 							</div>
 						)}
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
 								<ClayCheckbox />
+
 								<Icon symbol="categories" />
+
 								{item.name}
 							</TreeView.Item>
 						)}
@@ -1642,9 +1766,8 @@ export const DemoCategoriesMultiple = () => {
 			)}
 		</TreeView>
 	);
-};
-
-export const DemoDocumentsMultiple = () => {
+}
+export function DemoDocumentsMultiple() {
 	const MAPPING_ICON = {
 		article: 'web-content',
 		documents: 'documents-and-media',
@@ -1659,6 +1782,7 @@ export const DemoDocumentsMultiple = () => {
 						{id: '3', name: 'New'},
 						{id: '4', name: 'Article'},
 					],
+
 					id: '1',
 					name: 'Web Content Article',
 					type: 'article',
@@ -1668,6 +1792,7 @@ export const DemoDocumentsMultiple = () => {
 						{id: '5', name: 'Basic Documents'},
 						{name: 'External Video Shortcut'},
 					],
+
 					id: '6',
 					name: 'Documents',
 					type: 'documents',
@@ -1682,18 +1807,23 @@ export const DemoDocumentsMultiple = () => {
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<ClayCheckbox />
+
 						{MAPPING_ICON[item.type] && (
 							<Icon symbol={MAPPING_ICON[item.type]} />
 						)}
+
 						{item.name}
+
 						<div className="pl-2">
 							<Badge label={item.children.length} />
 						</div>
 					</TreeView.ItemStack>
+
 					<TreeView.Group items={item.children}>
 						{(item) => (
 							<TreeView.Item>
 								<ClayCheckbox />
+
 								{item.name}
 							</TreeView.Item>
 						)}
@@ -1702,4 +1832,4 @@ export const DemoDocumentsMultiple = () => {
 			)}
 		</TreeView>
 	);
-};
+}

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import Button, {ClayButtonWithIcon} from '@clayui/button';
@@ -31,8 +31,7 @@ export default {
 	component: VerticalBar,
 	title: 'Design System/Components/VerticalBar',
 };
-
-export const Default = (args: any) => {
+export function Default(args: any) {
 	return (
 		<>
 			<VerticalBar
@@ -132,15 +131,14 @@ export const Default = (args: any) => {
 			</VerticalBar>
 		</>
 	);
-};
+}
 
 Default.args = {
 	activation: 'manual',
 	barDisplayType: 'light',
 	contentDisplayType: 'light',
 };
-
-export const DynamicContent = (args: any) => {
+export function DynamicContent(args: any) {
 	const items = [
 		{
 			bodyText:
@@ -189,6 +187,7 @@ export const DynamicContent = (args: any) => {
 											{item.title}
 										</div>
 									</div>
+
 									<div className="autofit-col">
 										<ClayButtonWithIcon
 											displayType={null}
@@ -199,6 +198,7 @@ export const DynamicContent = (args: any) => {
 									</div>
 								</div>
 							</div>
+
 							<div className="sidebar-body">{item.bodyText}</div>
 						</VerticalBar.Panel>
 					)}
@@ -226,7 +226,7 @@ export const DynamicContent = (args: any) => {
 			</VerticalBar>
 		</>
 	);
-};
+}
 
 DynamicContent.args = {
 	barDisplayType: 'light',

@@ -1,6 +1,6 @@
 /**
- * SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {cleanup, render} from '@testing-library/react';
@@ -237,6 +237,7 @@ describe('Picker incremental interactions', () => {
 
 			// Maintains visual focus on the last option when there are no more
 			// options.
+
 			userEvent.keyboard('[ArrowDown]');
 
 			expect(combobox.getAttribute('aria-activedescendant')).toBe(
@@ -280,6 +281,7 @@ describe('Picker incremental interactions', () => {
 
 			// Maintains visual focus on the first option when there are no more
 			// options.
+
 			userEvent.keyboard('[ArrowUp]');
 
 			expect(combobox.getAttribute('aria-activedescendant')).toBe(
@@ -459,7 +461,8 @@ describe('Picker incremental interactions', () => {
 						'Apple'
 					);
 					expect(apple!.classList).toContain('focus');
-				} else {
+				}
+				else {
 					expect(combobox.getAttribute('aria-activedescendant')).toBe(
 						'Blueberry'
 					);

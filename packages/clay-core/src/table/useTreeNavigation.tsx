@@ -1,12 +1,13 @@
 /**
- * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: BSD-3-Clause
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 import {Keys, getFocusableList} from '@clayui/shared';
 import {useCallback} from 'react';
 
 type Props<T> = {
+
 	/**
 	 * Flag to disable navigation in a tree.
 	 */
@@ -16,8 +17,8 @@ type Props<T> = {
 	 * Flag to indicate the ARIA role of a tree element.
 	 */
 	locator: {
-		row: string;
 		cell: string;
+		row: string;
 	};
 
 	/**
@@ -61,7 +62,8 @@ export function useTreeNavigation<T extends HTMLElement>({
 						items = getFocusableList<T>(ref, [
 							`[role="${locator.row}"]`,
 						]);
-					} else {
+					}
+					else {
 						const colIndex =
 							activeElement.getAttribute('aria-colindex');
 						items = getFocusableList<T>(ref, [
@@ -107,7 +109,8 @@ export function useTreeNavigation<T extends HTMLElement>({
 
 							item = items[position];
 						}
-					} else {
+					}
+					else {
 						const row = activeElement.closest(
 							`[role="${locator.row}"]`
 						);
@@ -123,7 +126,8 @@ export function useTreeNavigation<T extends HTMLElement>({
 
 						if (position === 0) {
 							item = row as T;
-						} else {
+						}
+						else {
 							item = items[position - 1];
 						}
 					}
@@ -139,7 +143,8 @@ export function useTreeNavigation<T extends HTMLElement>({
 								`[role="${locator.cell}"]`
 							) as HTMLElement;
 						}
-					} else {
+					}
+					else {
 						const row = activeElement.closest(
 							`[role="${locator.row}"]`
 						);
@@ -165,7 +170,8 @@ export function useTreeNavigation<T extends HTMLElement>({
 						items = getFocusableList<T>(ref, [
 							`[role="${locator.row}"]`,
 						]);
-					} else {
+					}
+					else {
 						const row = activeElement.closest(
 							`[role="${locator.row}"]`
 						);
