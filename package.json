@@ -33,6 +33,7 @@
 		"lint:typescript": "tsc --project ./tsconfig.global.json",
 		"lint": "eslint \".*.js\" \"!(www)/**/*.{js,ts,tsx}\"",
 		"site": "cd www && yarn && yarn build",
+		"sync:portal": "bash ./scripts/sync-portal-to-packages.sh",
 		"sizeLimit": "size-limit",
 		"storybook:build": "NODE_OPTIONS=--max_old_space_size=8192 build-storybook -c .storybook -o .storybook-static",
 		"storybook": "start-storybook -p 8888",
