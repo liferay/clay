@@ -192,9 +192,10 @@ label.custom-control-label {
 				background-color: $custom-control-indicator-border-color;
 				border-radius: $custom-switch-indicator-border-radius;
 				height: $custom-switch-indicator-size;
-				left: add(
-					-($custom-switch-width + $custom-control-gutter),
-					$custom-control-indicator-border-width * 2
+				left: calc(
+					#{$custom-control-indicator-border-width} *
+						2 -
+						(#{$custom-switch-width} + #{$custom-control-gutter})
 				);
 
 				@include transition(
