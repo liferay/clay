@@ -572,8 +572,10 @@ $custom-switch-indicator-border-radius: $custom-control-indicator-size * 0.5 !de
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-switch-indicator-size: $custom-control-indicator-size -
-	($custom-control-indicator-border-width * 4) !default;
+$custom-switch-indicator-size: calc(
+	#{$custom-control-indicator-size} - (#{$custom-control-indicator-border-width} *
+				4)
+) !default;
 
 // Custom Select
 

@@ -461,13 +461,15 @@ $form-control-label-size: map-deep-merge(
 
 // Form Control Tag Group
 
-$form-control-tag-group-padding-y: (
-		$input-height - $input-border-bottom-width - $input-border-top-width - map-get(
-				$form-control-label-size,
-				min-height
-			) - (map-get($form-control-label-size, margin-bottom)) -
-			(map-get($form-control-label-size, margin-top))
-	) * 0.5 !default;
+$form-control-tag-group-padding-y: calc(
+	(
+			#{$input-height} - #{$input-border-bottom-width} - #{$input-border-top-width} -
+				#{map-get($form-control-label-size, min-height)} - #{map-get(
+					$form-control-label-size,
+					margin-bottom
+				)} - #{map-get($form-control-label-size, margin-top)}
+		) * 0.5
+) !default;
 
 $form-control-inset-min-height: 1.5rem !default;
 $form-control-inset-margin-y: 0.125rem !default;
