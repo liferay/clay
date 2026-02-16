@@ -7,12 +7,12 @@ import {ClayButtonWithIcon} from '@clayui/button';
 import {useProvider} from '@clayui/provider';
 import {Keys, setElementFullHeight, useId} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useContext, useMemo, useRef, useState} from 'react';
+import React, {useContext, useLayoutEffect, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import {Collection} from '../collection';
 import {Nav} from '../nav';
-import {useVertical} from './context';
+import {useSetManualFocus, useVerticalNavContext} from './context';
 
 interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 
@@ -65,22 +65,6 @@ interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	textValue?: string;
 }
 
-function findSelectedNested<T extends object>(items: Array<T>): T | undefined {
-	return items.find((item) => {
-		if ('active' in item) {
-			return true;
-		}
-
-		if ('items' in item) {
-			return findSelectedNested(
-				(item as Record<string, any>)['items'] as Array<T>
-			);
-		}
-
-		return false;
-	});
-}
-
 const ParentContext = React.createContext<React.RefObject<
 	HTMLButtonElement | HTMLAnchorElement
 > | null>(null);
@@ -98,6 +82,7 @@ export function Item<T extends Record<string, any>>({
 	textValue: _textValue,
 	...otherProps
 }: IProps<T>) {
+	const setManualFocus = useSetManualFocus();
 	const {
 		activeKey,
 		ariaCurrent = 'page',
@@ -105,10 +90,11 @@ export function Item<T extends Record<string, any>>({
 		close,
 		expandedKeys,
 		firstKey,
+		focusedElement,
 		open,
 		spritemap,
 		toggle,
-	} = useVertical();
+	} = useVerticalNavContext();
 
 	const {prefersReducedMotion} = useProvider();
 
@@ -120,21 +106,23 @@ export function Item<T extends Record<string, any>>({
 	// was kept on each Item instead of centralized with `expandedKeys`.
 
 	const [expanded, setExpanded] = useState(initialExpanded);
+	const [tabIndex, setTabIndex] = useState<0 | -1>(-1);
+
 	const isOldVersion = typeof initialExpanded !== 'undefined';
 
 	const isExpanded = isOldVersion ? expanded : expandedKeys.has(keyValue!);
 
-	const hasItemSelectedNested = useMemo(() => {
-		if (items) {
-			return !!findSelectedNested(items);
-		}
-
-		return false;
-	}, [items]);
-
 	const active = depreactedActive ?? activeKey === keyValue;
 
 	const ariaControlsId = useId();
+
+	useLayoutEffect(() => {
+		const isInitialTabStop = !focusedElement && firstKey === keyValue;
+		const isCurrentTabStop =
+			focusedElement && itemRef.current === focusedElement;
+
+		setTabIndex(isInitialTabStop || isCurrentTabStop ? 0 : -1);
+	}, [firstKey, focusedElement, keyValue]);
 
 	return (
 		<Nav.Item role="none" {...otherProps}>
@@ -179,7 +167,8 @@ export function Item<T extends Record<string, any>>({
 									menusRef.current.querySelector<HTMLElement>(
 										'.nav-link:not([disabled])'
 									);
-								firstItemElement?.focus();
+
+								setManualFocus(firstItemElement);
 							}
 							break;
 						}
@@ -193,7 +182,7 @@ export function Item<T extends Record<string, any>>({
 								}
 							}
 							else if (!items && parentItemRef) {
-								parentItemRef.current?.focus();
+								setManualFocus(parentItemRef.current);
 							}
 							break;
 						}
@@ -205,13 +194,7 @@ export function Item<T extends Record<string, any>>({
 				role="menuitem"
 				showIcon={!!items}
 				spritemap={spritemap}
-				tabIndex={
-					!active &&
-					!(hasItemSelectedNested && items && !isExpanded) &&
-					!(firstKey === keyValue && typeof activeKey === 'undefined')
-						? -1
-						: undefined
-				}
+				tabIndex={tabIndex}
 			>
 				{children}
 			</Nav.Link>

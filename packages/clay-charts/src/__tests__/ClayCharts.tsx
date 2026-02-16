@@ -7,7 +7,7 @@ import ClayChart from '..';
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
-const MAP_DATA = require('../../stories/static/map.json');
+const MAP_DATA = require('../../stories/static/map.js');
 
 const COLUMNS = [
 	['data1', 100, 20, 30],

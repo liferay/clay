@@ -44,6 +44,7 @@
 	],
 	"homepage": "http://clayui.com",
 	"license": "MIT",
+	"main": "index.js",
 	"name": "@clayui/css",
 	"repository": {
 		"type": "git",
@@ -56,5 +57,5 @@
 		"link": "npm link",
 		"prepublish": "yarn compile"
 	},
-	"version": "3.154.0"
+	"version": "3.159.0"
 }

@@ -3,13 +3,13 @@
 		"extends browserslist-config-clay"
 	],
 	"dependencies": {
-		"@clayui/button": "*",
-		"@clayui/core": "*",
-		"@clayui/drop-down": "*",
-		"@clayui/form": "*",
-		"@clayui/icon": "*",
-		"@clayui/shared": "*",
-		"@clayui/time-picker": "*",
+		"@clayui/button": "^3.159.0",
+		"@clayui/core": "^3.159.0",
+		"@clayui/drop-down": "^3.159.0",
+		"@clayui/form": "^3.159.0",
+		"@clayui/icon": "^3.159.0",
+		"@clayui/shared": "^3.159.0",
+		"@clayui/time-picker": "^3.159.0",
 		"classnames": "2.3.1",
 		"date-fns": "^2.14.0"
 	},
@@ -25,17 +25,17 @@
 	"main": "src/index.tsx",
 	"name": "@clayui/date-picker",
 	"peerDependencies": {
-		"@clayui/css": "*",
+		"@clayui/css": "^3.159.0",
 		"react": "^16.0.0 || ^17.0.0 || ^18.0.0",
 		"react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
 	},
 	"repository": "https://github.com/liferay/clay",
 	"scripts": {
 		"build": "yarn build:cjs && yarn build:esm",
-		"build:cjs": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib/cjs --extensions .ts,.tsx",
-		"build:esm": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib/esm --extensions .ts,.tsx --env-name esm",
+		"build:cjs": "cross-env NODE_ENV=production node ../build-package-esbuild.js --format=cjs --outdir=lib/cjs",
+		"build:esm": "cross-env NODE_ENV=production node ../build-package-esbuild.js --format=esm --outdir=lib/esm",
 		"buildTypes": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"test": "jest --config ../../jest.config.js"
 	},
-	"version": "3.156.0"
+	"version": "3.159.0"
 }

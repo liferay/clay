@@ -17,7 +17,7 @@ import {Collection, useCollection} from '../collection';
 import {Nav} from '../nav';
 import {Item} from './Item';
 import {Trigger} from './Trigger';
-import {VerticalNavContext} from './context';
+import {VerticalNavContextProvider} from './context';
 
 import type {ChildrenFunction} from '../collection';
 
@@ -48,6 +48,11 @@ type Props<T extends Record<string, any> | string> = {
 	'children'?: React.ReactNode | ChildrenFunction<T, null>;
 
 	/**
+	 * Flag to determine whether the collapse wrapper should be rendered or not
+	 */
+	'collapse'?: boolean;
+
+	/**
 	 * Flag to activate the Decorator variation.
 	 */
 	'decorated'?: boolean;
@@ -59,8 +64,9 @@ type Props<T extends Record<string, any> | string> = {
 
 	/**
 	 * Determines the Vertical Nav variant to use.
+	 * @default transparent
 	 */
-	'displayType'?: null | 'primary';
+	'displayType'?: 'transparent' | 'primary';
 
 	/**
 	 * The currently expanded keys in the collection (controlled).
@@ -80,6 +86,7 @@ type Props<T extends Record<string, any> | string> = {
 
 	/**
 	 * Flag to indicate if `menubar-vertical-expand-lg` class is applied.
+	 * @deprecated Use "size" to determine the desired breakpoint
 	 */
 	'large'?: boolean;
 
@@ -88,6 +95,11 @@ type Props<T extends Record<string, any> | string> = {
 	 * (controlled).
 	 */
 	'onExpandedChange'?: InternalDispatch<Set<React.Key>>;
+
+	/**
+	 * Defines the size class to use with the menu
+	 */
+	'size'?: 'lg' | 'md';
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
@@ -135,14 +147,16 @@ function VerticalNav<T extends Record<string, any> | string>({
 	activation = 'manual',
 	'aria-label': ariaLabel,
 	children,
+	collapse,
 	decorated,
-	displayType,
+	displayType = 'transparent',
 	defaultExpandedKeys = new Set(),
 	'expandedKeys': externalExpandedKeys,
 	'itemAriaCurrent': ariaCurrent = true,
 	items,
 	large,
 	onExpandedChange,
+	size,
 	spritemap,
 	'trigger': CustomTrigger = Trigger,
 	triggerLabel = 'Menu',
@@ -212,7 +226,7 @@ function VerticalNav<T extends Record<string, any> | string>({
 
 	const childrenRootRef = useRef(children);
 
-	const {navigationProps} = useNavigation({
+	const {navigationFocusedElement, navigationProps} = useNavigation({
 		activation,
 		containerRef,
 		orientation: 'vertical',
@@ -249,30 +263,31 @@ function VerticalNav<T extends Record<string, any> | string>({
 			ref={containerRef}
 			role="menubar"
 		>
-			<VerticalNavContext.Provider
-				value={{
-					activeKey:
-						active && collection.hasItem(active)
-							? active
-							: hasDepthActive
-								? null
-								: undefined,
-					ariaCurrent: ariaCurrent ? 'page' : null,
-					childrenRoot:
-						childrenRootRef as React.MutableRefObject<ChildrenFunction<
-							Object,
-							null
-						> | null>,
-					close,
-					expandedKeys,
-					firstKey: collection.getFirstItem().key,
-					open,
-					spritemap,
-					toggle,
-				}}
+			<VerticalNavContextProvider
+				activeKey={
+					active && collection.hasItem(active)
+						? active
+						: hasDepthActive
+							? null
+							: undefined
+				}
+				ariaCurrent={ariaCurrent ? 'page' : null}
+				childrenRoot={
+					childrenRootRef as React.MutableRefObject<ChildrenFunction<
+						Object,
+						null
+					> | null>
+				}
+				close={close}
+				expandedKeys={expandedKeys}
+				firstKey={collection.getFirstItem().key}
+				focusedElement={navigationFocusedElement}
+				open={open}
+				spritemap={spritemap}
+				toggle={toggle}
 			>
 				<Collection collection={collection} />
-			</VerticalNavContext.Provider>
+			</VerticalNavContextProvider>
 		</Nav>
 	);
 
@@ -286,15 +301,17 @@ function VerticalNav<T extends Record<string, any> | string>({
 	return (
 		<nav
 			aria-label={ariaLabel}
-			className={classNames('menubar menubar-transparent', {
+			className={classNames('menubar', {
 				['menubar-decorated']: decorated,
 				['menubar-primary']: displayType === 'primary',
-				['menubar-vertical-expand-lg']: large,
+				['menubar-transparent']: displayType === 'transparent',
+				['menubar-vertical-expand-lg']: !size && large,
 				['menubar-vertical-expand-md']:
-					!large && displayType !== 'primary',
+					!size && !large && displayType !== 'primary',
+				[`menubar-vertical-expand-${size}`]: size,
 			})}
 		>
-			{displayType !== 'primary' && (
+			{collapse && (
 				<>
 					<CustomTrigger onClick={() => setIsOpen(!isOpen)}>
 						<span className="inline-item inline-item-before">
@@ -319,7 +336,7 @@ function VerticalNav<T extends Record<string, any> | string>({
 				</>
 			)}
 
-			{displayType === 'primary' && content}
+			{!collapse && content}
 		</nav>
 	);
 }

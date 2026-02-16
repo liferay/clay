@@ -4,10 +4,11 @@
 		"declarationDir": "./lib"
 	},
 	"exclude": [
-		"**/__tests__/**"
+		"src/**/__tests__/**",
+		"**/lib/**"
 	],
-	"extends": "../../tsconfig.declarations.json",
+	"extends": "../tsconfig.declarations.json",
 	"include": [
-		"src"
+		"src/**/*"
 	]
 }

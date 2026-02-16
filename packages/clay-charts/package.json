@@ -18,14 +18,14 @@
 	"main": "src/index.tsx",
 	"name": "@clayui/charts",
 	"peerDependencies": {
-		"@clayui/css": "*",
+		"@clayui/css": "^3.159.0",
 		"react": "^16.0.0 || ^17.0.0 || ^18.0.0",
 		"react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
 	},
 	"scripts": {
 		"build": "yarn build:cjs && yarn build:esm",
-		"build:cjs": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib/cjs --extensions .ts,.tsx",
-		"build:esm": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib/esm --extensions .ts,.tsx --env-name esm",
+		"build:cjs": "cross-env NODE_ENV=production node ../build-package-esbuild.js --format=cjs --outdir=lib/cjs",
+		"build:esm": "cross-env NODE_ENV=production node ../build-package-esbuild.js --format=esm --outdir=lib/esm",
 		"buildTypes": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"copySvg": "ncp src/svg lib/svg",
 		"prepublishOnly": "yarn sass && yarn build && yarn buildTypes && yarn copySvg",

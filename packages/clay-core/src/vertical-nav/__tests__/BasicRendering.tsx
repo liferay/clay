@@ -11,18 +11,20 @@ import {VerticalNav} from '../';
 describe('VerticalNav basic rendering', () => {
 	afterEach(() => cleanup());
 
-	it('render static content', () => {
-		const {container} = render(
-			<VerticalNav aria-label="vertical navbar">
-				<VerticalNav.Item active key="home">
-					Home
-				</VerticalNav.Item>
+	function renderStaticWithProps(props: any = {}) {
+		return render(
+			<VerticalNav active="home" aria-label="vertical navbar" {...props}>
+				<VerticalNav.Item key="home">Home</VerticalNav.Item>
 
 				<VerticalNav.Item key="about">About</VerticalNav.Item>
 
 				<VerticalNav.Item key="contact">Contact</VerticalNav.Item>
 			</VerticalNav>
 		);
+	}
+
+	it('render static content', () => {
+		const {container} = renderStaticWithProps();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -65,5 +67,51 @@ describe('VerticalNav basic rendering', () => {
 		);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	describe('VerticalNav displayType', () => {
+		it('render menubar-transparent by default', () => {
+			const {container} = renderStaticWithProps();
+
+			expect(
+				container.querySelector('.menubar-transparent')
+			).toBeInTheDocument();
+		});
+
+		it('render menubar-primary', () => {
+			const {container} = renderStaticWithProps({displayType: 'primary'});
+
+			expect(
+				container.querySelector('.menubar-transparent')
+			).not.toBeInTheDocument();
+
+			expect(
+				container.querySelector('.menubar-primary')
+			).toBeInTheDocument();
+		});
+	});
+
+	describe('VerticalNav collapse', () => {
+		it('render menubar-collapse whenever the collapse prop is provided', () => {
+			const {container} = renderStaticWithProps({collapse: true});
+
+			expect(
+				container.querySelector('.menubar-collapse')
+			).toBeInTheDocument();
+		});
+	});
+
+	describe('VerticalNav size', () => {
+		it('render expand classes according to the size prop', () => {
+			const sizes = ['lg', 'md'];
+
+			for (const size of sizes) {
+				const {container} = renderStaticWithProps({size});
+
+				expect(
+					container.querySelector(`.menubar-vertical-expand-${size}`)
+				).toBeInTheDocument();
+			}
+		});
 	});
 });

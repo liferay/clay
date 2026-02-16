@@ -15,6 +15,7 @@ export type Cursor = Array<React.Key>;
 export type LayoutInfo = {
 	children: Set<Key>;
 	cursor: Cursor;
+	icon: string | undefined;
 
 	/**
 	 * Lazy Child means that the current Node has children but they were not
@@ -22,6 +23,7 @@ export type LayoutInfo = {
 	 */
 	lazyChild: boolean;
 	loc: Array<number>;
+	name: string;
 	parentKey?: Key;
 };
 
@@ -30,6 +32,8 @@ export type Layout = {
 		key: Key,
 		lazy: boolean,
 		loc: Array<number>,
+		name: string,
+		icon: string | undefined,
 		cursor: Cursor,
 		parentKey?: Key
 	) => () => void;
@@ -59,6 +63,8 @@ export function useLayout(): Layout {
 			key: Key,
 			lazyChild: boolean,
 			loc: Array<number>,
+			name: string,
+			icon: string | undefined,
 			cursor: Cursor,
 			parentKey?: Key
 		) => {
@@ -68,14 +74,21 @@ export function useLayout(): Layout {
 				layoutKeysRef.current.set(key, {
 					children: new Set(),
 					cursor,
+					icon,
 					lazyChild,
 					loc,
+					name,
 					parentKey,
 				});
 			}
 			else if (keyMap.parentKey !== parentKey) {
 				layoutKeysRef.current.set(key, {
 					...keyMap,
+					cursor,
+					icon,
+					lazyChild,
+					loc,
+					name,
 					parentKey,
 				});
 			}
@@ -103,8 +116,10 @@ export function useLayout(): Layout {
 					layoutKeysRef.current.set(parentKey, {
 						children: new Set([key]),
 						cursor: cursor.slice(0, -1),
+						icon: undefined,
 						lazyChild: false,
 						loc: loc.slice(0, -1),
+						name: '',
 						parentKey: undefined,
 					});
 				}

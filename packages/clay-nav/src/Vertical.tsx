@@ -7,7 +7,7 @@ import {Nav, VerticalNav} from '@clayui/core';
 import React from 'react';
 import warning from 'warning';
 
-export type DisplayType = null | 'primary';
+export type DisplayType = 'primary' | 'transparent';
 
 interface IItem extends React.ComponentProps<typeof Nav.Item> {
 
@@ -30,6 +30,11 @@ interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	 * Callback for when item is clicked.
 	 */
 	onClick?: () => void;
+
+	/**
+	 * Text value when the label isn't a string.
+	 */
+	textValue?: string;
 }
 
 interface IItemWithItems extends IItem {
@@ -116,10 +121,11 @@ function ClayVerticalNav({
 		'ClayVerticalNav: The `activeLabel` API has been deprecated in favor of `triggerLabel` and will be removed in the next major release.'
 	);
 
-	if (children && !displayType) {
+	if (children) {
 		return (
 			<VerticalNav
 				{...otherProps}
+				displayType={displayType}
 				triggerLabel={activeLabel ?? triggerLabel}
 			>
 				{children}
@@ -128,7 +134,11 @@ function ClayVerticalNav({
 	}
 
 	return (
-		<VerticalNav {...otherProps} triggerLabel={activeLabel ?? triggerLabel}>
+		<VerticalNav
+			{...otherProps}
+			displayType={displayType}
+			triggerLabel={activeLabel ?? triggerLabel}
+		>
 			{(item) => (
 				<VerticalNav.Item
 					active={item.active}
@@ -136,6 +146,7 @@ function ClayVerticalNav({
 					initialExpanded={item.initialExpanded}
 					items={item.items}
 					onClick={item.onClick}
+					textValue={item.textValue}
 				>
 					{item.label}
 				</VerticalNav.Item>

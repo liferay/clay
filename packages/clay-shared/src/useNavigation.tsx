@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {Keys} from './Keys';
 import {FOCUSABLE_ELEMENTS, isFocusable} from './useFocusManagement';
@@ -96,6 +96,10 @@ export function useNavigation<T extends HTMLElement | null>({
 	typeahead = false,
 	visible = false,
 }: Props<T>) {
+	const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(
+		null
+	);
+
 	const timeoutIdRef = useRef<any>();
 	const stringRef = useRef('');
 	const prevIndexRef = useRef<number | null>(-1);
@@ -115,6 +119,12 @@ export function useNavigation<T extends HTMLElement | null>({
 			stringRef.current = '';
 		}
 	}, [visible]);
+
+	const focusElement = (element: HTMLElement) => {
+		element.focus();
+
+		setFocusedElement(element);
+	};
 
 	const accessibilityFocus = useCallback(
 		(
@@ -148,7 +158,7 @@ export function useNavigation<T extends HTMLElement | null>({
 						) as HTMLElement;
 
 						if (nextFocus) {
-							nextFocus.focus();
+							focusElement(nextFocus);
 						}
 					}, 20);
 				}
@@ -375,7 +385,7 @@ export function useNavigation<T extends HTMLElement | null>({
 						accessibilityFocus(item, items);
 					}
 					else {
-						element.focus();
+						focusElement(element);
 					}
 
 					if (activation === 'automatic') {
@@ -429,9 +439,11 @@ export function useNavigation<T extends HTMLElement | null>({
 		}
 	}, [visible]);
 
-	const navigationProps = {onKeyDown};
-
-	return {accessibilityFocus, navigationProps};
+	return {
+		accessibilityFocus,
+		navigationFocusedElement: focusedElement,
+		navigationProps: {onKeyDown},
+	};
 }
 
 export function getFocusableList<T extends HTMLElement | null>(

@@ -4,7 +4,7 @@
  */
 
 import Icon from '@clayui/icon';
-import {cleanup, fireEvent, render} from '@testing-library/react';
+import {cleanup, fireEvent, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {useEffect, useState} from 'react';
 
@@ -416,5 +416,39 @@ describe('FocusScope', () => {
 		const [link1] = getAllByRole('menuitem');
 
 		expect(link1 === document.activeElement).toBeTruthy();
+	});
+
+	describe('stopPropagation', () => {
+		const parentOnKeyDown = jest.fn();
+
+		const renderComponent = (stopPropagation = true) => {
+			return render(
+				<div onKeyDown={parentOnKeyDown}>
+					<FocusScope stopPropagation={stopPropagation}>
+						<button>Button</button>
+					</FocusScope>
+				</div>
+			);
+		};
+
+		it('stops keydown propagation to parent handlers when stopPropagation is true (default)', async () => {
+			renderComponent();
+
+			screen.getByText('Button').focus();
+
+			await userEvent.keyboard('{ArrowDown}');
+
+			expect(parentOnKeyDown).not.toHaveBeenCalled();
+		});
+
+		it('allows keydown propagation to parent handlers when stopPropagation is false', async () => {
+			renderComponent(false);
+
+			screen.getByText('Button').focus();
+
+			await userEvent.keyboard('{ArrowDown}');
+
+			expect(parentOnKeyDown).toHaveBeenCalledTimes(1);
+		});
 	});
 });

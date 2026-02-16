@@ -9,7 +9,14 @@ import {getEmptyImage} from 'react-dnd-html5-backend';
 
 import {useCollectionKeys} from '../collection';
 import {removeItemInternalProps} from './Collection';
-import {Position, TARGET_POSITION, getNewItemPath, useDnD} from './DragAndDrop';
+import {
+	Position,
+	TARGET_POSITION,
+	getNewItemPath,
+	isDescendantOfDraggedItems,
+	removeDescendants,
+	useDnD,
+} from './DragAndDrop';
 import {useTreeViewContext} from './context';
 import {createImmutableTree} from './useTree';
 
@@ -40,14 +47,18 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 export function ItemContextProvider({children, value}: Props) {
 	const {
 		dragAndDrop,
+		dragAndDropMode,
 		expandedKeys,
+		itemNameKey,
 		items,
 		layout,
 		nestedKey,
 		onItemHover,
+		onItemInvalidMove,
 		onItemMove,
 		open,
 		reorder,
+		rootRef,
 	} = useTreeViewContext();
 	const {
 		cursor: parentCursor,
@@ -59,13 +70,14 @@ export function ItemContextProvider({children, value}: Props) {
 	const keys = useCollectionKeys();
 
 	const {
-		currentDrag,
+		currentDragKeys,
 		currentTarget,
-		mode,
+		onClearPosition,
 		onDragStart,
 		onEnd,
 		onPositionChange,
 		position,
+		source,
 	} = useDnD();
 
 	const keyRef = useRef(getKey(value['key']));
@@ -108,6 +120,8 @@ export function ItemContextProvider({children, value}: Props) {
 				keyRef.current,
 				hasLazyChildren,
 				indexes,
+				value[itemNameKey!],
+				value['icon'],
 				cursor,
 				parentKey
 			),
@@ -142,10 +156,10 @@ export function ItemContextProvider({children, value}: Props) {
 
 		// Resets the flag when the drag and drop is finished or cancelled.
 
-		if (mode === null) {
+		if (source === null) {
 			isValidDropRef.current = true;
 		}
-	}, [mode]);
+	}, [source]);
 
 	useEffect(() => {
 		preview(getEmptyImage(), {captureDraggingState: true});
@@ -170,6 +184,10 @@ export function ItemContextProvider({children, value}: Props) {
 				dragItem.item.key === item.key ||
 				!isValidDropRef.current
 			) {
+				if (onItemInvalidMove) {
+					onItemInvalidMove();
+				}
+
 				return;
 			}
 
@@ -184,12 +202,15 @@ export function ItemContextProvider({children, value}: Props) {
 			}
 
 			const indexes = getNewItemPath(item.indexes, currentPosition!);
+			const dragKeys = removeDescendants(currentDragKeys, layout);
 
 			if (onItemMove) {
 				const tree = createImmutableTree(items as any, nestedKey!);
 
 				const isMoved = onItemMove(
-					removeItemInternalProps(dragItem.item),
+					dragAndDropMode === 'multiple'
+						? dragKeys
+						: removeItemInternalProps(dragItem.item),
 					tree.nodeByPath(indexes).parent!,
 					{
 						next: indexes[indexes.length - 1]!,
@@ -202,7 +223,7 @@ export function ItemContextProvider({children, value}: Props) {
 				}
 			}
 
-			reorder(dragItem.item.cursor, item.cursor, currentPosition!);
+			reorder(dragKeys, item.cursor, currentPosition!);
 		},
 		hover(dragItem, monitor) {
 			if (!monitor.canDrop() || isDragging) {
@@ -264,23 +285,39 @@ export function ItemContextProvider({children, value}: Props) {
 				}, 500) as unknown as number;
 			}
 
+			if (
+				isDescendantOfDraggedItems({
+					dragKeys: currentDragKeys,
+					element: childRef.current!,
+					rootRef,
+				})
+			) {
+				return;
+			}
+
 			if (onItemHover) {
 				const tree = createImmutableTree(items as any, nestedKey!);
 				const indexes = getNewItemPath(item.indexes, currentPosition);
+				const dragKeys = removeDescendants(currentDragKeys, layout);
 
 				const isHovered = onItemHover(
-					removeItemInternalProps(
-						(dragItem as unknown as Value)['item']
-					),
+					dragAndDropMode === 'multiple'
+						? dragKeys
+						: removeItemInternalProps(
+								(dragItem as unknown as Value)['item']
+							),
 					tree.nodeByPath(indexes).parent!,
 					{
 						next: indexes[indexes.length - 1]!,
 						previous: (dragItem as unknown as Value)['item'].index,
-					}
+					},
+					currentPosition
 				);
 
 				if (!isHovered) {
 					isValidDropRef.current = false;
+
+					onClearPosition();
 
 					return;
 				}
@@ -300,9 +337,7 @@ export function ItemContextProvider({children, value}: Props) {
 	return (
 		<ItemContext.Provider value={item}>
 			{React.cloneElement(children as JSX.Element, {
-				isDragging:
-					(mode === 'keyboard' && currentDrag === item.key) ||
-					isDragging,
+				isDragging: currentDragKeys.has(item.key),
 				overPosition: position,
 				overTarget: currentTarget === item.key || overTarget,
 				ref: childRef,

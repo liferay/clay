@@ -6,94 +6,72 @@ exports[`ClayVerticalNav renders 1`] = `
     aria-label="vertical navbar"
     class="menubar menubar-transparent menubar-vertical-expand-md"
   >
-    <button
-      class="menubar-toggler btn btn-unstyled"
-      type="button"
+    <ul
+      aria-orientation="vertical"
+      class="nav nav-nested"
+      role="menubar"
     >
-      <span
-        class="inline-item inline-item-before"
+      <li
+        class="nav-item"
+        role="none"
       >
-        Menu
-      </span>
-      <svg
-        class="lexicon-icon lexicon-icon-caret-bottom"
-        focusable="false"
-        role="presentation"
-      >
-        <use
-          href="/path/to#caret-bottom"
-        />
-      </svg>
-    </button>
-    <div
-      class="collapse menubar-collapse"
-    >
-      <ul
-        aria-orientation="vertical"
-        class="nav nav-nested"
-        role="menubar"
-      >
-        <li
-          class="nav-item"
-          role="none"
+        <button
+          aria-controls="clay-id-2"
+          aria-expanded="true"
+          class="nav-link collapse-icon btn btn-unstyled"
+          role="menuitem"
+          tabindex="0"
+          type="button"
         >
-          <button
-            aria-controls="clay-id-2"
-            aria-expanded="true"
-            class="nav-link collapse-icon btn btn-unstyled"
-            role="menuitem"
-            type="button"
+          Home
+          <span
+            class="collapse-icon-closed"
           >
-            Home
-            <span
-              class="collapse-icon-closed"
+            <svg
+              class="lexicon-icon lexicon-icon-angle-right-small"
+              focusable="false"
+              role="presentation"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-angle-right-small"
-                focusable="false"
-                role="presentation"
-              >
-                <use
-                  href="/path/to#angle-right-small"
-                />
-              </svg>
-            </span>
-            <span
-              class="collapse-icon-open"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-angle-down-small"
-                focusable="false"
-                role="presentation"
-              >
-                <use
-                  href="/path/to#angle-down-small"
-                />
-              </svg>
-            </span>
-          </button>
-          <ul
-            class="nav nav-stacked"
-            id="clay-id-2"
-            role="menu"
+              <use
+                href="/path/to#angle-right-small"
+              />
+            </svg>
+          </span>
+          <span
+            class="collapse-icon-open"
           >
-            <li
-              class="nav-item"
-              role="none"
+            <svg
+              class="lexicon-icon lexicon-icon-angle-down-small"
+              focusable="false"
+              role="presentation"
             >
-              <a
-                class="nav-link collapsed"
-                href="#nested1"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Nested1
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+              <use
+                href="/path/to#angle-down-small"
+              />
+            </svg>
+          </span>
+        </button>
+        <ul
+          class="nav nav-stacked"
+          id="clay-id-2"
+          role="menu"
+        >
+          <li
+            class="nav-item"
+            role="none"
+          >
+            <a
+              class="nav-link collapsed"
+              href="#nested1"
+              role="menuitem"
+              tabindex="-1"
+            >
+              Nested1
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 </div>
 `;

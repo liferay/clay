@@ -900,6 +900,72 @@ MultipleSelectionWithAsyncLoad.argTypes = {
 MultipleSelectionWithAsyncLoad.args = {
 	selectionMode: 'multiple-recursive',
 };
+
+export function MultipleSelectionWithMultipleDragAndDrop() {
+	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+		new Set()
+	);
+
+	return (
+		<TreeView
+			defaultItems={[
+				{
+					children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+					id: 1,
+					name: 'Liferay Drive',
+				},
+				{
+					children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+					id: 2,
+					name: 'Repositories',
+				},
+				{
+					children: [
+						{name: 'PDF'},
+						{name: 'Word'},
+						{name: 'Google Drive'},
+						{name: 'Figma'},
+					],
+					id: 3,
+					name: 'Documents and Media',
+				},
+				{
+					children: [],
+					id: 4,
+					name: 'Empty directory',
+				},
+			]}
+			dragAndDrop
+			dragAndDropMode="multiple"
+			nestedKey="children"
+			onSelectionChange={(keys) => setSelectionChange(keys)}
+			selectedKeys={selectedKeys}
+			selectionMode="multiple"
+		>
+			{(item) => (
+				<TreeView.Item>
+					<TreeView.ItemStack>
+						<ClayCheckbox />
+
+						<Icon symbol="folder" />
+
+						{item.name}
+					</TreeView.ItemStack>
+
+					<TreeView.Group items={item.children}>
+						{(item) => (
+							<TreeView.Item>
+								<ClayCheckbox />
+
+								{item.name}
+							</TreeView.Item>
+						)}
+					</TreeView.Group>
+				</TreeView.Item>
+			)}
+		</TreeView>
+	);
+}
 export function ManuallyTriggerMultipleSelection(args: any) {
 	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 		new Set()

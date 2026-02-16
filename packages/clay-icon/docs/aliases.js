@@ -521,6 +521,10 @@ export const iconsData = [
 		name: 'blogs',
 	},
 	{
+		aliases: ['architecture', 'map', 'schema'],
+		name: 'blue-print',
+	},
+	{
 		aliases: ['editor', 'style', 'texts'],
 		name: 'bold',
 	},
@@ -1277,6 +1281,14 @@ export const iconsData = [
 		name: 'marketplace',
 	},
 	{
+		aliases: ['approval', 'ranking', 'reward'],
+		name: 'medal',
+	},
+	{
+		aliases: ['announcement', 'event', 'notification'],
+		name: 'megaphone',
+	},
+	{
 		aliases: [''],
 		name: 'megaphone-full',
 	},
@@ -1509,6 +1521,10 @@ export const iconsData = [
 		name: 'print',
 	},
 	{
+		aliases: ['flow designer', 'logic mapper', 'state machine'],
+		name: 'process-builder',
+	},
+	{
 		aliases: ['list', 'navigation', 'sidebar'],
 		name: 'product-menu-closed',
 	},
@@ -1523,6 +1539,14 @@ export const iconsData = [
 	{
 		aliases: ['arrows', 'circle', 'multiplication', 'publish'],
 		name: 'propagation',
+	},
+	{
+		aliases: ['content', 'digital assets', 'postings'],
+		name: 'publications',
+	},
+	{
+		aliases: ['connection', 'extension', 'piece'],
+		name: 'puzzle',
 	},
 	{
 		aliases: ['help', 'mark'],
@@ -1813,6 +1837,10 @@ export const iconsData = [
 		name: 'strikethrough',
 	},
 	{
+		aliases: ['entry', 'posting', 'request'],
+		name: 'submission',
+	},
+	{
 		aliases: ['editor', 'style', 'text'],
 		name: 'subscript',
 	},
@@ -1827,6 +1855,10 @@ export const iconsData = [
 	{
 		aliases: ['editor', 'style', 'text'],
 		name: 'superscript',
+	},
+	{
+		aliases: ['aliases', 'keywords', 'similar'],
+		name: 'synonyms',
 	},
 	{
 		aliases: ['column', 'grid', 'row'],
