@@ -423,6 +423,16 @@ $sticker-dark: map-deep-merge(
 	$sticker-dark
 );
 
+$sticker-outline: () !default;
+$sticker-outline: map-deep-merge(
+	(
+		background-color: $blue-l5,
+		border: 1px solid $blue-d2,
+		color: $blue-d2,
+	),
+	$sticker-outline
+);
+
 $sticker-outline-0: () !default;
 $sticker-outline-0: map-deep-merge(
 	(
@@ -534,6 +544,7 @@ $sticker-palette: map-deep-merge(
 		danger: $sticker-danger,
 		light: $sticker-light,
 		dark: $sticker-dark,
+		'.sticker-outline': $sticker-outline,
 		'.sticker-outline-0': $sticker-outline-0,
 		'.sticker-outline-1': $sticker-outline-1,
 		'.sticker-outline-2': $sticker-outline-2,

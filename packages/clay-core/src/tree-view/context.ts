@@ -5,6 +5,8 @@
 
 import React, {Key, useCallback, useContext} from 'react';
 
+import {Position} from './DragAndDrop';
+
 import type {ChildrenFunction} from './Collection';
 import type {ITreeState} from './useTree';
 
@@ -32,19 +34,33 @@ export interface ITreeViewContext<T extends Record<string, any>>
 	extends ITreeState<T> {
 	childrenRoot: React.MutableRefObject<ChildrenFunction<Object> | null>;
 	dragAndDrop?: boolean;
+	dragAndDropMode: 'single' | 'multiple';
+	dragHandlerVisibility?: 'visible' | 'keyboard';
 	expandDoubleClick?: boolean;
 	expandOnCheck?: boolean;
 	expanderClassName?: string;
 	expanderIcons?: Icons;
+	itemNameKey?: string;
 	nestedKey?: string;
-	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
-	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
+	onItemHover?: (
+		items: T | Set<Key>,
+		parentItem: T,
+		index: MoveItemIndex,
+		position: Position
+	) => boolean;
+	onItemInvalidMove?: () => void;
+	onItemMove?: (
+		items: T | Set<Key>,
+		parentItem: T,
+		index: MoveItemIndex
+	) => boolean;
 	onLoadMore?: OnLoadMore<T>;
 	onRenameItem?: (item: T) => Promise<any>;
 	onSelect?: (item: T) => void;
 	rootRef: React.RefObject<HTMLUListElement>;
 	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
 	showExpanderOnHover?: boolean;
+	spritemap?: string;
 }
 
 export const TreeViewContext = React.createContext<ITreeViewContext<any>>(

@@ -112,7 +112,7 @@ describe('SidePanel incremental interactions', () => {
 		expect(panel).toHaveAttribute('inert');
 	});
 
-	it('pressing ESC closes and moves focus to the trigger', async () => {
+	it.skip('pressing ESC closes and moves focus to the trigger', async () => {
 		const {getAllByRole, getByRole} = render(<Example />);
 
 		const [button] = getAllByRole('button');

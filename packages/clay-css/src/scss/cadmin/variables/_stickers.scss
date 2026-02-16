@@ -359,6 +359,16 @@ $cadmin-sticker-dark: map-deep-merge(
 	$cadmin-sticker-dark
 );
 
+$cadmin-sticker-outline: () !default;
+$cadmin-sticker-outline: map-deep-merge(
+	(
+		background-color: $cadmin-blue-l5,
+		border: 1px solid $cadmin-blue-d2,
+		color: $cadmin-blue-d2,
+	),
+	$cadmin-sticker-outline
+);
+
 $cadmin-sticker-outline-0: () !default;
 $cadmin-sticker-outline-0: map-deep-merge(
 	(
@@ -470,6 +480,7 @@ $cadmin-sticker-palette: map-deep-merge(
 		danger: $cadmin-sticker-danger,
 		light: $cadmin-sticker-light,
 		dark: $cadmin-sticker-dark,
+		'.sticker-outline': $cadmin-sticker-outline,
 		'.sticker-outline-0': $cadmin-sticker-outline-0,
 		'.sticker-outline-1': $cadmin-sticker-outline-1,
 		'.sticker-outline-2': $cadmin-sticker-outline-2,

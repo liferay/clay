@@ -75,6 +75,9 @@ class GeomapBase {
 			.attr('fill', 'rgba(1, 1, 1, 0)')
 			.attr('width', w)
 			.attr('height', h)
+
+			// @ts-ignore
+
 			.on('click', this._handleClickHandler);
 
 		const bounds = this.svg.node()!.getBoundingClientRect();
@@ -203,9 +206,15 @@ class GeomapBase {
 			.attr('d', this.path as any)
 			.attr('vector-effect', 'non-scaling-stroke')
 			.attr('fill', (value) => this._fillFn.bind(this)(value) || 0)
+
+			// @ts-ignore
+
 			.on('click', this._handleClickHandler!)
 			.on(
 				'mouseout',
+
+				// @ts-ignore
+
 				this._handleMouseOut.bind(this) as d3.ValueFn<
 					SVGPathElement,
 					unknown,
@@ -214,6 +223,9 @@ class GeomapBase {
 			)
 			.on(
 				'mouseover',
+
+				// @ts-ignore
+
 				this._handleMouseOver.bind(this) as d3.ValueFn<
 					SVGPathElement,
 					unknown,

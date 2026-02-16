@@ -429,4 +429,46 @@ describe('TreeView basic rendering', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it('render drag handler visible by default', () => {
+		const {getAllByLabelText} = render(
+			<Provider spritemap={spritemap}>
+				<TreeView dragAndDrop>
+					<TreeView.Item>
+						<TreeView.ItemStack>Root</TreeView.ItemStack>
+					</TreeView.Item>
+				</TreeView>
+			</Provider>
+		);
+
+		const dragButtons = getAllByLabelText('Drag');
+
+		dragButtons.forEach((dragButton) => {
+			expect(dragButton.classList.contains('sr-only')).toBe(false);
+			expect(dragButton.classList.contains('sr-only-focusable')).toBe(
+				false
+			);
+		});
+	});
+
+	it('render drag handler as keyboard-only', () => {
+		const {getAllByLabelText} = render(
+			<Provider spritemap={spritemap}>
+				<TreeView dragAndDrop dragHandlerVisibility="keyboard">
+					<TreeView.Item>
+						<TreeView.ItemStack>Root</TreeView.ItemStack>
+					</TreeView.Item>
+				</TreeView>
+			</Provider>
+		);
+
+		const dragButtons = getAllByLabelText('Drag');
+
+		dragButtons.forEach((dragButton) => {
+			expect(dragButton.classList.contains('sr-only')).toBe(true);
+			expect(dragButton.classList.contains('sr-only-focusable')).toBe(
+				true
+			);
+		});
+	});
 });

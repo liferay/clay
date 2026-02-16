@@ -16,6 +16,7 @@ import {createPortal} from 'react-dom';
 
 import {LiveAnnouncer} from '../live-announcer';
 import {MoveItemIndex, useTreeViewContext} from './context';
+import {Layout} from './useLayout';
 import {createImmutableTree} from './useTree';
 
 import type {AnnouncerAPI} from '../live-announcer';
@@ -23,6 +24,7 @@ import type {AnnouncerAPI} from '../live-announcer';
 export type DragAndDropMessages = {
 	dragDescriptionKeyboard: string;
 	dragItem: string;
+	dragLayerPluralLabel: string;
 	dragStartedKeyboard: string;
 	dropCanceled: string;
 	dropComplete: string;
@@ -46,24 +48,37 @@ export type Value = {
 };
 
 type ContextProps = {
+
+	/**
+	 * Key of the item from which the drag interaction was initiated.
+	 * This is the item the user clicked to start dragging, even when
+	 * multiple items are selected.
+	 */
 	currentDrag: React.Key | null;
+
+	/**
+	 * Set of keys representing all selected items being dragged together.
+	 * Includes the drag origin item and any other selected items.
+	 */
+	currentDragKeys: Set<React.Key>;
 	currentTarget: React.Key | null;
 	dragCancelDescribedBy: string;
 	dragDescribedBy: string;
 	dragDropDescribedBy: string;
 	messages: DragAndDropMessages;
-	mode: 'keyboard' | 'mouse' | null;
 	onCancel: () => void;
-	onDragStart: (mode: 'keyboard' | 'mouse', target: React.Key) => void;
+	onClearPosition: () => void;
+	onDragStart: (source: 'keyboard' | 'mouse', target: React.Key) => void;
 	onDrop: () => void;
 	onEnd: () => void;
 	onPositionChange: (key: React.Key, position: Position) => void;
-	position: 'bottom' | 'middle' | 'top' | null;
+	position: Position | null;
+	source: 'keyboard' | 'mouse' | null;
 };
 
 type State = Pick<
 	ContextProps,
-	'mode' | 'currentTarget' | 'currentDrag' | 'position'
+	'currentDrag' | 'currentDragKeys' | 'currentTarget' | 'position' | 'source'
 > & {
 	lastItem: React.Key | null;
 	status: 'complete' | 'canceled' | null;
@@ -74,13 +89,25 @@ const DnDContext = React.createContext<ContextProps>({} as ContextProps);
 type Props<T> = {
 	children: React.ReactNode;
 	messages?: DragAndDropMessages;
+	mode: 'single' | 'multiple';
 	nestedKey: string;
-	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
-	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
+	onItemHover?: (
+		items: T | Set<React.Key>,
+		parentItem: T,
+		index: MoveItemIndex,
+		position: Position
+	) => boolean;
+	onItemMove?: (
+		items: T | Set<React.Key>,
+		parentItem: T,
+		index: MoveItemIndex
+	) => boolean;
 	rootRef: React.RefObject<HTMLUListElement>;
 };
 
-function getFocusableTree(rootRef: React.RefObject<HTMLUListElement>) {
+const emptySet = () => new Set<React.Key>();
+
+function getFocusableElements(rootRef: React.RefObject<HTMLUListElement>) {
 	if (!rootRef.current) {
 		return [];
 	}
@@ -89,58 +116,256 @@ function getFocusableTree(rootRef: React.RefObject<HTMLUListElement>) {
 		...rootRef.current.querySelectorAll(
 			'[role="treeitem"][data-dnd="true"]'
 		),
-	].filter(
-		(element) =>
-			!(
-				element.getAttribute('disabled') ||
-				element.closest('.treeview-item-dragging')
-			)
+	].filter((element) => !element.getAttribute('disabled'));
+}
+
+function getElementKey(element: Element): React.Key {
+	const [type, key] = element.getAttribute('data-id')!.split(',');
+
+	return type === 'number' ? Number(key) : key!;
+}
+
+export function removeDescendants(
+	currentDragKeys: Set<React.Key>,
+	layout: Layout
+): Set<React.Key> {
+	const layoutKeys = layout.layoutKeys.current;
+
+	const isParentSelected = (key: React.Key): boolean => {
+		let parentKey = layoutKeys.get(key)?.parentKey;
+
+		while (parentKey) {
+			if (currentDragKeys.has(parentKey)) {
+				return true;
+			}
+			parentKey = layoutKeys.get(parentKey)?.parentKey;
+		}
+
+		return false;
+	};
+
+	return new Set(
+		Array.from(currentDragKeys).filter((key) => !isParentSelected(key))
 	);
 }
 
-function getNextTarget(
-	rootRef: React.RefObject<HTMLUListElement>,
-	dragKey: React.Key
-) {
-	const focusableTree = getFocusableTree(rootRef);
+export function isDescendantOfDraggedItems({
+	dragKeys,
+	element,
+	rootRef,
+}: {
+	dragKeys: State['currentDragKeys'];
+	element: Element;
+	rootRef: React.RefObject<HTMLUListElement>;
+}) {
+	const elements = getFocusableElements(rootRef);
 
-	let dragPosition = 0;
+	const dragElements = elements.filter((element) => {
+		const key = getElementKey(element);
 
-	const items = focusableTree.filter((element, index) => {
-		const [type, key] = element.getAttribute('data-id')!.split(',');
-		const reactKey = type === 'number' ? Number(key) : key;
-
-		if (reactKey === dragKey) {
-			dragPosition = index;
-		}
-
-		return !(
-			reactKey === dragKey ||
-			element.closest(
-				`[data-id="${
-					typeof dragKey === 'number'
-						? `number,${dragKey}`
-						: `string,${dragKey}`
-				}"]`
-			)
-		);
+		return dragKeys.has(key);
 	});
 
-	const target =
-		items[dragPosition === items.length ? dragPosition - 1 : dragPosition];
+	if (
+		dragElements.some((dragElement) =>
+			dragElement.closest('.treeview-item')!.contains(element)
+		)
+	) {
+		return true;
+	}
 
-	if (!target) {
+	return false;
+}
+
+function validateTarget<T>({
+	currentDrag,
+	currentDragKeys,
+	items,
+	layout,
+	mode,
+	nestedKey,
+	onItemHover,
+	position,
+	targetKey,
+}: {
+	currentDrag: State['currentDrag'];
+	currentDragKeys: State['currentDragKeys'];
+	items?: Record<string, T>[];
+	layout: Layout;
+	mode: 'single' | 'multiple';
+	nestedKey: string;
+	onItemHover?: (
+		item: T | Set<React.Key>,
+		parentItem: T,
+		index: MoveItemIndex,
+		position: Position
+	) => boolean;
+	position: Position;
+	targetKey: React.Key;
+}) {
+	if (!onItemHover || !currentDrag) {
+		return true;
+	}
+
+	const targetItem = layout.layoutKeys.current.get(targetKey);
+	const dragItem = layout.layoutKeys.current.get(currentDrag);
+
+	if (!targetItem || !dragItem) {
+		return false;
+	}
+
+	const targetIndexes = getNewItemPath(targetItem.loc, position);
+	const dragKeys = removeDescendants(currentDragKeys, layout);
+
+	const tree = createImmutableTree(items as any, nestedKey!);
+	const dragNode = tree.nodeByPath(dragItem.loc);
+	const parentNode = tree.nodeByPath(targetIndexes).parent;
+
+	if (!parentNode) {
+		return false;
+	}
+
+	return onItemHover(
+		mode === 'multiple' ? dragKeys : (dragNode.item as Record<any, any>),
+		parentNode as Record<any, any>,
+		{
+			next: targetIndexes[targetIndexes.length - 1]!,
+			previous: dragNode.index,
+		},
+		position
+	);
+}
+
+type Cursor = {index: number; position: Position};
+type Direction = 'up' | 'down';
+
+const cursorTransactions = {
+	down: {bottom: 'next', middle: 'bottom', top: 'middle'},
+	up: {bottom: 'middle', middle: 'top', top: 'prev'},
+} as const;
+
+function getNextCursor({
+	direction,
+	index,
+	position,
+}: {
+	direction: Direction;
+	index: number;
+	position: Position;
+}): Cursor | null {
+	const next = cursorTransactions[direction]?.[position];
+
+	if (!next) {
 		return null;
 	}
 
-	const [type, key] = target.getAttribute('data-id')!.split(',');
+	if (next === 'next') {
+		return {index: index + 1, position: 'middle'};
+	}
 
-	return type === 'number' ? Number(key) : key!;
+	if (next === 'prev') {
+		return {index: index - 1, position: 'middle'};
+	}
+
+	return {index, position: next};
+}
+
+function getNextTarget<T>({
+	direction,
+	items,
+	layout,
+	mode,
+	nestedKey,
+	onItemHover,
+	rootRef,
+	state,
+}: {
+	direction: Direction;
+	items?: Record<string, T>[];
+	layout: Layout;
+	mode: 'single' | 'multiple';
+	nestedKey: string;
+	onItemHover?: (
+		item: T | Set<React.Key>,
+		parentItem: T,
+		index: MoveItemIndex,
+		position: Position
+	) => boolean;
+	rootRef: React.RefObject<HTMLUListElement>;
+	state: State;
+}): {key: React.Key; position: Position} | null {
+	const elements = getFocusableElements(rootRef);
+
+	if (!elements.length) {
+		return null;
+	}
+
+	const currentIndex = elements.findIndex(
+		(element) => getElementKey(element) === state.currentTarget
+	);
+
+	let cursor: {index: number; position: Position} | null = {
+		index: currentIndex,
+		position: state.position || 'bottom',
+	};
+
+	while (true) {
+		cursor = getNextCursor({...cursor!, direction});
+
+		if (!cursor) {
+			continue;
+		}
+
+		const {index, position} = cursor;
+
+		if (index < 0 || index >= elements.length) {
+			return null;
+		}
+
+		const targetElement = elements[index];
+
+		if (
+			!targetElement ||
+			isDescendantOfDraggedItems({
+				dragKeys: state.currentDragKeys,
+				element: targetElement,
+				rootRef,
+			})
+		) {
+			continue;
+		}
+
+		const targetKey = getElementKey(targetElement);
+
+		const nextTarget = {
+			key: targetKey,
+			position,
+		};
+
+		const isValid = validateTarget({
+			currentDrag: state.currentDrag,
+			currentDragKeys: state.currentDragKeys,
+			items,
+			layout,
+			mode,
+			nestedKey,
+			onItemHover,
+			position,
+			targetKey,
+		});
+
+		if (!isValid) {
+			continue;
+		}
+
+		return nextTarget;
+	}
 }
 
 const defaultMessages: DragAndDropMessages = {
 	dragDescriptionKeyboard: 'Press Enter to start dragging.',
 	dragItem: 'Drag',
+	dragLayerPluralLabel: '{0} Items',
 	dragStartedKeyboard:
 		'Started dragging. Press Tab to navigate to a drop target, then press Enter to drop, or press Escape to cancel.',
 	dropCanceled: 'Drop cancelled.',
@@ -157,62 +382,81 @@ const defaultMessages: DragAndDropMessages = {
 export function DragAndDropProvider<T>({
 	children,
 	messages = defaultMessages,
+	mode,
 	nestedKey,
 	onItemMove,
 	onItemHover,
 	rootRef,
 }: Props<T>) {
-	const {dragAndDrop, items, layout, reorder} = useTreeViewContext();
+	const {
+		dragAndDrop,
+		expandedKeys,
+		items,
+		layout,
+		open,
+		reorder,
+		selection: {selectedKeys},
+	} = useTreeViewContext();
 
 	const announcerRef = useRef<AnnouncerAPI>(null);
 
 	const [state, setState] = useState<State>({
 		currentDrag: null,
+		currentDragKeys: emptySet(),
 		currentTarget: null,
 		lastItem: null,
-		mode: null,
 		position: null,
+		source: null,
 		status: null,
 	});
 
 	const onDragStart = useCallback(
-		(mode: 'keyboard' | 'mouse', dragKey: React.Key) => {
-			if (mode === 'mouse') {
+		(source: 'keyboard' | 'mouse', dragKey: React.Key) => {
+			const dragKeys =
+				mode === 'multiple' && selectedKeys.has(dragKey)
+					? selectedKeys
+					: new Set([dragKey]);
+
+			if (source === 'mouse') {
 				setState((state) => ({
 					...state,
 					currentDrag: dragKey,
-					mode: 'mouse',
+					currentDragKeys: dragKeys,
+					source: 'mouse',
 					status: null,
 				}));
 			}
 			else {
-				const nextTargetKey = getNextTarget(rootRef, dragKey);
+				announcerRef.current?.announce(messages.dragStartedKeyboard);
 
-				if (nextTargetKey === null) {
+				const [first] = [...dragKeys];
+
+				if (!first) {
 					return;
 				}
 
-				announcerRef.current?.announce(messages.dragStartedKeyboard);
 				setState((state) => ({
 					...state,
 					currentDrag: dragKey,
-					currentTarget: nextTargetKey,
-					mode: 'keyboard',
-					position: 'bottom',
+					currentDragKeys: dragKeys,
+					currentTarget: first,
+					position: 'top',
+					source: 'keyboard',
 					status: null,
 				}));
 			}
 		},
-		[]
+		[selectedKeys]
 	);
 
 	const onEnd = useCallback(() => {
 		setState((state) => ({
 			currentDrag: null,
+			currentDragKeys: emptySet(),
 			currentTarget: null,
 			lastItem: state.currentDrag,
-			mode: null,
 			position: null,
+			source: null,
 			status: null,
 		}));
 	}, []);
@@ -228,14 +472,23 @@ export function DragAndDropProvider<T>({
 		[]
 	);
 
+	const onClearPosition = useCallback(() => {
+		setState((state) => ({
+			...state,
+			currentTarget: null,
+			position: null,
+		}));
+	}, []);
+
 	const onCancel = useCallback(() => {
 		announcerRef.current?.announce(messages.dropCanceled);
 		setState((state) => ({
 			currentDrag: null,
+			currentDragKeys: emptySet(),
 			currentTarget: null,
 			lastItem: state.currentDrag,
-			mode: null,
 			position: null,
+			source: null,
 			status: 'canceled',
 		}));
 	}, []);
@@ -244,6 +497,7 @@ export function DragAndDropProvider<T>({
 		const {currentDrag, currentTarget, position} = state;
 		const dropLayoutItem = layout.layoutKeys.current.get(currentTarget!);
 		const dragLayoutItem = layout.layoutKeys.current.get(currentDrag!);
+		const dragKeys = removeDescendants(state.currentDragKeys, layout);
 
 		const indexes = getNewItemPath(dropLayoutItem!.loc, position!);
 
@@ -253,7 +507,9 @@ export function DragAndDropProvider<T>({
 			const dragNode = tree.nodeByPath(dragLayoutItem!.loc);
 
 			const isMoved = onItemMove(
-				dragNode.item as Record<any, any>,
+				mode === 'multiple'
+					? dragKeys
+					: (dragNode.item as Record<any, any>),
 				tree.nodeByPath(indexes).parent as Record<any, any>,
 				{
 					next: indexes[indexes.length - 1]!,
@@ -268,13 +524,14 @@ export function DragAndDropProvider<T>({
 			}
 		}
 
-		reorder(dragLayoutItem!.cursor, dropLayoutItem!.cursor, position!);
+		reorder(dragKeys, dropLayoutItem!.cursor, position!);
 		setState({
 			currentDrag: null,
+			currentDragKeys: emptySet(),
 			currentTarget: null,
 			lastItem: currentDrag,
-			mode: null,
 			position: null,
+			source: null,
 			status: 'complete',
 		});
 		announcerRef.current?.announce(messages.dropComplete);
@@ -297,7 +554,7 @@ export function DragAndDropProvider<T>({
 	}, [state]);
 
 	useEffect(() => {
-		if (rootRef.current && state.mode === 'keyboard') {
+		if (rootRef.current && state.source === 'keyboard') {
 			return suppressOthers([
 				...rootRef.current.querySelectorAll(
 					'[aria-roledescription="drop indicator"], [data-draggable="true"], [class="component-text"]'
@@ -307,16 +564,14 @@ export function DragAndDropProvider<T>({
 				)!,
 			]);
 		}
-	}, [state.mode]);
+	}, [state.source]);
 
 	const dragDescribedBy = useId();
 	const dragDropDescribedBy = useId();
 	const dragCancelDescribedBy = useId();
 
 	useEffect(() => {
-		if (state.mode === 'keyboard') {
-			const denylist = new Set<React.Key>();
-
+		if (state.source === 'keyboard') {
 			const onKeyDown = (event: KeyboardEvent) => {
 				switch (event.key) {
 					case Keys.Esc:
@@ -337,128 +592,42 @@ export function DragAndDropProvider<T>({
 						event.preventDefault();
 						event.stopPropagation();
 
-						const focusableItems = getFocusableTree(rootRef).filter(
-							(item) => {
-								if (item.getAttribute('data-dnd-dropping')) {
-									return true;
-								}
+						const nextTarget = getNextTarget<T>({
+							direction: event.key === Keys.Up ? 'up' : 'down',
+							items,
+							layout,
+							mode,
+							nestedKey,
+							onItemHover,
+							rootRef,
+							state,
+						});
 
-								const [type, key] = item
-									.getAttribute('data-id')!
-									.split(',');
+						if (!nextTarget) {
+							return;
+						}
 
-								return !denylist.has(
-									type === 'number' ? Number(key) : key!
-								);
-							}
-						);
-						const position = focusableItems.findIndex((element) =>
-							element.getAttribute('data-dnd-dropping')
-						);
+						const {key, position} = nextTarget;
 
-						const item =
-							focusableItems[
-								event.key === Keys.Up
-									? position - 1
-									: position + 1
-							];
+						const item = layout.layoutKeys.current.get(key);
 
-						const newState: State = {
+						if (!item) {
+							return;
+						}
+
+						if (
+							!expandedKeys.has(key) &&
+							(item.children.size || item.lazyChild)
+						) {
+							open(key);
+						}
+
+						setState((state) => ({
 							...state,
-						};
+							currentTarget: key,
+							position,
+						}));
 
-						if (item && denylist.has(newState.currentTarget!)) {
-							const [type, key] = item
-								.getAttribute('data-id')!
-								.split(',');
-
-							newState.position =
-								event.key === Keys.Up ? 'top' : 'bottom';
-							newState.currentTarget =
-								type === 'number' ? Number(key) : key!;
-						}
-						else if (
-							(event.key === Keys.Up &&
-								state.position === 'bottom') ||
-							(event.key === Keys.Down &&
-								state.position === 'top')
-						) {
-							newState.position = 'middle';
-						}
-						else if (
-							event.key === Keys.Down &&
-							state.position === 'middle'
-						) {
-							newState.position = 'bottom';
-						}
-						else {
-							if (!item) {
-								newState.position =
-									position === 0 ? 'top' : 'bottom';
-							}
-							else {
-								const [type, key] = item
-									.getAttribute('data-id')!
-									.split(',');
-
-								newState.position =
-									event.key === Keys.Up ? 'bottom' : 'middle';
-								newState.currentTarget =
-									type === 'number' ? Number(key) : key!;
-							}
-						}
-
-						if (onItemHover) {
-							const dropLayoutItem =
-								layout.layoutKeys.current.get(
-									newState.currentTarget!
-								);
-							const dragLayoutItem =
-								layout.layoutKeys.current.get(
-									newState.currentDrag!
-								);
-							const tree = createImmutableTree(
-								items as any,
-								nestedKey!
-							);
-							const indexes = getNewItemPath(
-								dropLayoutItem!.loc,
-								newState.position!
-							);
-
-							const dragNode = tree.nodeByPath(
-								dragLayoutItem!.loc
-							);
-
-							const isHovered = onItemHover(
-								dragNode.item as Record<any, any>,
-								tree.nodeByPath(indexes).parent as Record<
-									any,
-									any
-								>,
-
-								{
-									next: indexes[indexes.length - 1]!,
-									previous: dragNode.index,
-								}
-							);
-
-							if (!isHovered) {
-
-								// Removes the item from the list so that the next function
-								// call looks for the next element.
-
-								denylist.add(newState.currentTarget!);
-
-								// Try moving to the next item.
-
-								onKeyDown(event);
-
-								return;
-							}
-						}
-
-						setState(newState);
 						break;
 					}
 					default:
@@ -483,6 +652,7 @@ export function DragAndDropProvider<T>({
 				dragDropDescribedBy,
 				messages,
 				onCancel,
+				onClearPosition,
 				onDragStart,
 				onDrop,
 				onEnd,
@@ -491,7 +661,7 @@ export function DragAndDropProvider<T>({
 		>
 			{dragAndDrop && <LiveAnnouncer ref={announcerRef} />}
 
-			{state.mode === 'keyboard' ? (
+			{state.source === 'keyboard' ? (
 				<>
 					<span data-focus-scope-start="true" />
 					{children}
@@ -514,7 +684,7 @@ export function DragAndDropProvider<T>({
 						document.body
 					)}
 
-					{state.mode === 'keyboard' && (
+					{state.source === 'keyboard' && (
 						<>
 							{createPortal(
 								<div

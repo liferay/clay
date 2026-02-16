@@ -71,7 +71,11 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 	}, [active]);
 
 	return (
-		<FocusScope>
+		<FocusScope
+			arrowKeysLeftRight={false}
+			arrowKeysUpDown={false}
+			stopPropagation={false}
+		>
 			<div className="c-focus-trap" ref={childrenRef}>
 				{active ? <span data-focus-scope-start="true" /> : null}
 

@@ -6,101 +6,79 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
     aria-label="vertical navbar"
     class="menubar menubar-transparent menubar-vertical-expand-md"
   >
-    <button
-      class="menubar-toggler btn btn-unstyled"
-      type="button"
+    <ul
+      aria-orientation="vertical"
+      class="nav nav-nested"
+      role="menubar"
     >
-      <span
-        class="inline-item inline-item-before"
+      <li
+        class="nav-item"
+        role="none"
       >
-        Menu
-      </span>
-      <svg
-        class="lexicon-icon lexicon-icon-caret-bottom"
-        focusable="false"
-        role="presentation"
-      >
-        <use
-          href="#caret-bottom"
-        />
-      </svg>
-    </button>
-    <div
-      class="collapse menubar-collapse"
-    >
-      <ul
-        aria-orientation="vertical"
-        class="nav nav-nested"
-        role="menubar"
-      >
-        <li
-          class="nav-item"
-          role="none"
+        <button
+          aria-controls="clay-id-6"
+          aria-expanded="false"
+          class="nav-link collapse-icon collapsed btn btn-unstyled"
+          role="menuitem"
+          tabindex="0"
+          type="button"
         >
-          <button
-            aria-controls="clay-id-6"
-            aria-expanded="false"
-            class="nav-link collapse-icon collapsed btn btn-unstyled"
-            role="menuitem"
-            type="button"
+          Home
+          <span
+            class="collapse-icon-closed"
           >
-            Home
-            <span
-              class="collapse-icon-closed"
+            <svg
+              class="lexicon-icon lexicon-icon-angle-right-small"
+              focusable="false"
+              role="presentation"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-angle-right-small"
-                focusable="false"
-                role="presentation"
-              >
-                <use
-                  href="#angle-right-small"
-                />
-              </svg>
-            </span>
-            <span
-              class="collapse-icon-open"
+              <use
+                href="#angle-right-small"
+              />
+            </svg>
+          </span>
+          <span
+            class="collapse-icon-open"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-angle-down-small"
+              focusable="false"
+              role="presentation"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-angle-down-small"
-                focusable="false"
-                role="presentation"
-              >
-                <use
-                  href="#angle-down-small"
-                />
-              </svg>
-            </span>
-          </button>
-        </li>
-        <li
-          class="nav-item"
-          role="none"
+              <use
+                href="#angle-down-small"
+              />
+            </svg>
+          </span>
+        </button>
+      </li>
+      <li
+        class="nav-item"
+        role="none"
+      >
+        <button
+          class="nav-link collapsed btn btn-unstyled"
+          role="menuitem"
+          tabindex="-1"
+          type="button"
         >
-          <button
-            class="nav-link collapsed btn btn-unstyled"
-            role="menuitem"
-            tabindex="-1"
-            type="button"
-          >
-            About
-          </button>
-        </li>
-        <li
-          class="nav-item"
-          role="none"
+          About
+        </button>
+      </li>
+      <li
+        class="nav-item"
+        role="none"
+      >
+        <button
+          class="nav-link collapsed btn btn-unstyled"
+          role="menuitem"
+          tabindex="-1"
+          type="button"
         >
-          <button
-            class="nav-link collapsed btn btn-unstyled"
-            role="menuitem"
-            tabindex="-1"
-            type="button"
-          >
-            Contact
-          </button>
-        </li>
-      </ul>
-    </div>
+          Contact
+        </button>
+      </li>
+    </ul>
   </nav>
 </div>
 `;
@@ -111,74 +89,52 @@ exports[`VerticalNav basic rendering render static content 1`] = `
     aria-label="vertical navbar"
     class="menubar menubar-transparent menubar-vertical-expand-md"
   >
-    <button
-      class="menubar-toggler btn btn-unstyled"
-      type="button"
+    <ul
+      aria-orientation="vertical"
+      class="nav nav-nested"
+      role="menubar"
     >
-      <span
-        class="inline-item inline-item-before"
+      <li
+        class="nav-item"
+        role="none"
       >
-        Menu
-      </span>
-      <svg
-        class="lexicon-icon lexicon-icon-caret-bottom"
-        focusable="false"
-        role="presentation"
+        <button
+          aria-current="page"
+          class="nav-link active collapsed btn btn-unstyled"
+          role="menuitem"
+          tabindex="0"
+          type="button"
+        >
+          Home
+        </button>
+      </li>
+      <li
+        class="nav-item"
+        role="none"
       >
-        <use
-          href="#caret-bottom"
-        />
-      </svg>
-    </button>
-    <div
-      class="collapse menubar-collapse"
-    >
-      <ul
-        aria-orientation="vertical"
-        class="nav nav-nested"
-        role="menubar"
+        <button
+          class="nav-link collapsed btn btn-unstyled"
+          role="menuitem"
+          tabindex="-1"
+          type="button"
+        >
+          About
+        </button>
+      </li>
+      <li
+        class="nav-item"
+        role="none"
       >
-        <li
-          class="nav-item"
-          role="none"
+        <button
+          class="nav-link collapsed btn btn-unstyled"
+          role="menuitem"
+          tabindex="-1"
+          type="button"
         >
-          <button
-            aria-current="page"
-            class="nav-link active collapsed btn btn-unstyled"
-            role="menuitem"
-            type="button"
-          >
-            Home
-          </button>
-        </li>
-        <li
-          class="nav-item"
-          role="none"
-        >
-          <button
-            class="nav-link collapsed btn btn-unstyled"
-            role="menuitem"
-            tabindex="-1"
-            type="button"
-          >
-            About
-          </button>
-        </li>
-        <li
-          class="nav-item"
-          role="none"
-        >
-          <button
-            class="nav-link collapsed btn btn-unstyled"
-            role="menuitem"
-            tabindex="-1"
-            type="button"
-          >
-            Contact
-          </button>
-        </li>
-      </ul>
-    </div>
+          Contact
+        </button>
+      </li>
+    </ul>
   </nav>
 </div>
 `;

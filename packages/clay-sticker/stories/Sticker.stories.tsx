@@ -53,6 +53,8 @@ export function Default() {
 			</ClaySticker>
 
 			<div className="mt-3">
+				<ClaySticker displayType="outline">D</ClaySticker>
+
 				<ClaySticker displayType="outline-0">S</ClaySticker>
 
 				<ClaySticker displayType="outline-1">M</ClaySticker>

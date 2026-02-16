@@ -89,10 +89,42 @@ export interface ITreeState<T extends Record<string, any>>
 	layout: Layout;
 	open: (key: Key) => boolean;
 	remove: (path: Array<number>) => void;
-	reorder: (from: Cursor, path: Cursor, op: Position) => void;
+	reorder: (keys: Set<Key>, path: Cursor, op: Position) => void;
 	replace: (path: Array<number>, item: T) => void;
 	selection: IMultipleSelectionState;
 	toggle: (key: Key) => void;
+}
+
+function compareLoc(a: number[], b: number[]) {
+	for (let i = 0; i < a.length && i < b.length; i++) {
+		const delta = a[i]! - b[i]!;
+
+		if (delta !== 0) {
+			return delta;
+		}
+	}
+
+	return a.length - b.length;
+}
+
+function getSortedCursors(keys: Set<Key>, layout: Layout): Cursor[] {
+	const layoutKeys = layout.layoutKeys.current;
+
+	const entries: Array<{cursor: Cursor; loc: number[]}> = [];
+
+	for (const key of keys) {
+		const item = layoutKeys.get(key);
+
+		if (!item) {
+			continue;
+		}
+
+		entries.push({cursor: item.cursor, loc: item.loc});
+	}
+
+	entries.sort((a, b) => compareLoc(a.loc, b.loc));
+
+	return entries.map((entry) => entry.cursor);
 }
 
 export function useTree<T extends Record<string, any>>(
@@ -251,14 +283,21 @@ export function useTree<T extends Record<string, any>>(
 	);
 
 	const reorder = useCallback(
-		(from: Cursor, path: Cursor, direction: Position) => {
+		(keys: Set<Key>, path: Cursor, direction: Position) => {
 			const tree = createImmutableTree(items, props.nestedKey!);
+			const cursors = getSortedCursors(keys, layout);
 
-			tree.produce({direction, from, op: 'move', path});
+			if (!cursors.length) {
+				return;
+			}
+
+			for (const cursor of cursors) {
+				tree.produce({direction, from: cursor, op: 'move', path});
+			}
 
 			setItems(tree.applyPatches());
 		},
-		[items]
+		[items, layout]
 	);
 
 	const insert = useCallback(

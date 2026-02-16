@@ -20,6 +20,10 @@ describe('bb-patched', () => {
 		// Store the original value of a potential pollution target, if any
 
 		pollutedProperty = (Object.prototype as any).polluted;
+
+		// @ts-ignore
+
+		SVGElement.prototype.getTotalLength = () => 100;
 	});
 
 	afterEach(() => {

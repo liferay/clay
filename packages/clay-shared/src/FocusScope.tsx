@@ -35,6 +35,13 @@ type Props = {
 	children: ChildrenFunction;
 
 	onFocus?: (element: HTMLElement) => void;
+
+	/**
+	 * Flag that indicates whether the FocusScope stops keyboard event propagation
+	 * to parent FocusScope components.
+	 * */
+
+	stopPropagation?: boolean;
 };
 
 /**
@@ -60,6 +67,7 @@ export function FocusScope({
 	arrowKeysUpDown = true,
 	children,
 	onFocus,
+	stopPropagation = true,
 }: Props) {
 	const elRef = React.useRef<null | HTMLElement>(null);
 	const focusManager = useFocusManagement(elRef);
@@ -99,7 +107,9 @@ export function FocusScope({
 		<FocusConflictContext.Provider value>
 			{React.cloneElement(child, {
 				onKeyDown: (event: React.KeyboardEvent) => {
-					event.stopPropagation();
+					if (stopPropagation) {
+						event.stopPropagation();
+					}
 
 					// If the element already exists a `onKeyDown` event should
 					// invoke it as well.
