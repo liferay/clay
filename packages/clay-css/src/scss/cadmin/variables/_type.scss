@@ -12,6 +12,7 @@ $cadmin-reference-mark: map-deep-merge(
 		font-size: $cadmin-reference-mark-font-size,
 		position: relative,
 		vertical-align: $cadmin-reference-mark-vertical-align,
+
 		lexicon-icon: (
 			vertical-align: $cadmin-reference-mark-vertical-align,
 		),
@@ -25,6 +26,7 @@ $cadmin-c-kbd-group: () !default;
 $cadmin-c-kbd-group: map-deep-merge(
 	(
 		font-size: 14px,
+
 		c-kbd: (
 			font-size: inherit,
 		),

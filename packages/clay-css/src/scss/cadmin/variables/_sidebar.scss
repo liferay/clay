@@ -9,6 +9,7 @@ $cadmin-sidebar-header-component-title: () !default;
 $cadmin-sidebar-header-component-title: map-deep-merge(
 	(
 		font-size: 16px,
+
 		href: (
 			color: $cadmin-gray-900,
 		),
@@ -79,35 +80,44 @@ $cadmin-sidebar: map-deep-merge(
 	(
 		height: 100%,
 		overflow: auto,
+
 		-webkit-overflow-scrolling: touch,
+
 		focus: (
 			box-shadow: $cadmin-component-focus-inset-box-shadow,
 		),
+
 		close: (
 			color: $cadmin-secondary,
+
 			hover: (
 				background-color: rgba($cadmin-gray-900, 0.03),
 				color: $cadmin-gray-900,
 			),
+
 			focus: (
 				background-color: rgba($cadmin-gray-900, 0.03),
 				color: $cadmin-gray-900,
 			),
+
 			active: (
 				background-color: rgba($cadmin-gray-900, 0.06),
 				color: $cadmin-gray-900,
 			),
+
 			disabled: (
 				background-color: transparent,
 				box-shadow: none,
 				color: $cadmin-secondary,
 				cursor: $cadmin-disabled-cursor,
 				opacity: $cadmin-component-disabled-opacity,
+
 				active: (
 					pointer-events: none,
 				),
 			),
 		),
+
 		sidebar-header: (
 			padding-bottom: $cadmin-sidebar-padding-bottom,
 			padding-left: $cadmin-sidebar-padding-left,
@@ -115,48 +125,60 @@ $cadmin-sidebar: map-deep-merge(
 			padding-top: $cadmin-sidebar-padding-top,
 			component-title: $cadmin-sidebar-header-component-title,
 			component-subtitle: $cadmin-sidebar-header-component-subtitle,
+
 			autofit-row: (
 				margin-left: -4px,
 				margin-right: -4px,
 				width: auto,
+
 				autofit-col: (
 					padding-left: 4px,
 					padding-right: 4px,
 				),
 			),
 		),
+
 		sidebar-footer: (
 			padding-bottom: $cadmin-sidebar-padding-bottom,
 			padding-left: $cadmin-sidebar-padding-left,
 			padding-right: $cadmin-sidebar-padding-right,
 			padding-top: $cadmin-sidebar-padding-top,
 		),
+
 		sidebar-body: (
 			overflow: auto,
+
 			-webkit-overflow-scrolling: touch,
+
 			padding-bottom: $cadmin-sidebar-padding-bottom,
 			padding-left: $cadmin-sidebar-padding-left,
 			padding-right: $cadmin-sidebar-padding-right,
 			padding-top: $cadmin-sidebar-padding-top,
 		),
+
 		sidebar-list-group: (
 			display: flex,
 			flex-direction: column,
 			font-size: $cadmin-sidebar-list-group-font-size,
 			margin-bottom: 0,
 			padding-left: 0,
+
 			list-group-item: (
 				background-color: $cadmin-sidebar-list-group-bg,
 				border-color: $cadmin-sidebar-list-group-border-color,
 				padding: $cadmin-sidebar-list-group-item-padding,
 			),
+
 			sticker: $cadmin-sidebar-list-group-sticker-size,
 		),
+
 		sidebar-panel: (
 			margin-bottom: $cadmin-sidebar-panel-margin-bottom,
 			position: relative,
 		),
+
 		sidebar-dt: $cadmin-sidebar-dt,
+
 		sidebar-dd: $cadmin-sidebar-dd,
 	),
 	$cadmin-sidebar
@@ -168,30 +190,39 @@ $cadmin-sidebar-sm: () !default;
 $cadmin-sidebar-sm: map-deep-merge(
 	(
 		font-size: 0.875rem,
+
 		panel-group: (
 			extend: '%clay-panel-group-sm',
 		),
+
 		btn: (
 			extend: '%clay-btn-sm',
+
 			'&.btn-xs': (
 				extend: '%clay-btn-xs',
 			),
+
 			'&.btn-monospaced': (
 				extend: '%clay-btn-monospaced-sm',
 			),
+
 			'&.btn-monospaced.btn-xs': (
 				extend: '%clay-btn-monospaced-xs',
 			),
 		),
+
 		form-control: (
 			extend: '%clay-form-control-sm',
 		),
+
 		form-control-select: (
 			extend: '%clay-select-form-control-sm',
 		),
+
 		form-control-tag-group: (
 			extend: '%clay-form-control-tag-group-sm',
 		),
+
 		input-group: (
 			extend: '%clay-input-group-sm',
 		),
@@ -206,20 +237,25 @@ $cadmin-sidebar-light-navigation-bar: map-deep-merge(
 	(
 		background-color: $cadmin-white,
 		border-color: $cadmin-secondary-l2,
+
 		navbar-nav: (
 			nav-link: (
 				color: $cadmin-navbar-light-color,
+
 				hover: (
 					color: $cadmin-navbar-light-hover-color,
 				),
+
 				active: (
 					color: $cadmin-navbar-light-active-color,
 				),
+
 				disabled: (
 					color: $cadmin-navbar-light-disabled-color,
 				),
 			),
 		),
+
 		media-breakpoint-down: (),
 		media-breakpoint-up: (),
 	),
@@ -234,28 +270,35 @@ $cadmin-sidebar-light: map-deep-merge(
 		border-left-width: 0,
 		box-shadow: -4px 0 8px -4px rgba(0, 0, 0, 0.1),
 		color: $cadmin-gray-900,
+
 		sidebar-header: (
 			background-color: $cadmin-white,
 			border: 0px solid $cadmin-gray-300,
 		),
+
 		sidebar-footer: (
 			background-color: $cadmin-white,
 			border: 0px solid $cadmin-gray-300,
 		),
+
 		sidenav-start: (
 			box-shadow: 4px 0 8px -4px rgba(0, 0, 0, 0.1),
 		),
+
 		sidebar-dt: (
 			color: $cadmin-gray-600,
 		),
+
 		sidebar-dd: (
 			href: (
 				color: $cadmin-gray-900,
 			),
 		),
+
 		sidebar-panel: (
 			background-color: $cadmin-gray-200,
 		),
+
 		panel-unstyled: (
 			header: (
 				link: (
@@ -266,14 +309,17 @@ $cadmin-sidebar-light: map-deep-merge(
 				),
 			),
 		),
+
 		sidebar-list-group: (
 			component-title: (
 				font-size: 16px,
+
 				href: (
 					color: $cadmin-gray-900,
 				),
 			),
 		),
+
 		component-navigation-bar: $cadmin-sidebar-light-navigation-bar,
 	),
 	$cadmin-sidebar-light
@@ -286,6 +332,7 @@ $cadmin-sidebar-dark: map-deep-merge(
 	(
 		background-color: $cadmin-dark,
 		color: $cadmin-white,
+
 		sidebar-header: (
 			component-title: (
 				color: inherit,
@@ -293,38 +340,48 @@ $cadmin-sidebar-dark: map-deep-merge(
 					color: inherit,
 				),
 			),
+
 			component-subtitle: (
 				color: inherit,
+
 				href: (
 					color: inherit,
 				),
 			),
 		),
+
 		close: (
 			color: $cadmin-secondary-l1,
+
 			hover: (
 				color: $cadmin-white,
 			),
 		),
+
 		nav-nested: (
 			nav-link: (
 				border-radius: $cadmin-border-radius,
 				color: $cadmin-secondary-l1,
 				transition: box-shadow 0.15s ease-in-out,
+
 				hover: (
 					color: $cadmin-white,
 				),
+
 				focus: (
 					box-shadow: $cadmin-component-focus-box-shadow,
 					outline: 0,
 				),
+
 				active: (
 					color: $cadmin-white,
 				),
+
 				disabled: (
 					box-shadow: none,
 					color: $cadmin-secondary-l1,
 					opacity: 0.65,
+
 					active: (
 						pointer-events: none,
 					),
@@ -351,11 +408,15 @@ $cadmin-sidebar-palette: () !default;
 $cadmin-sidebar-palette: map-deep-merge(
 	(
 		sidebar-sm: $cadmin-sidebar-sm,
+
 		sidebar-light: $cadmin-sidebar-light,
+
 		sidebar-dark: $cadmin-sidebar-dark,
+
 		sidebar-dark-l2: (
 			background-color: $cadmin-dark-l2,
 			color: $cadmin-white,
+
 			sidebar-header: (
 				component-title: (
 					color: inherit,
@@ -363,38 +424,48 @@ $cadmin-sidebar-palette: map-deep-merge(
 						color: inherit,
 					),
 				),
+
 				component-subtitle: (
 					color: inherit,
+
 					href: (
 						color: inherit,
 					),
 				),
 			),
+
 			close: (
 				color: $cadmin-secondary-l1,
+
 				hover: (
 					color: $cadmin-white,
 				),
 			),
+
 			nav-nested: (
 				nav-link: (
 					border-radius: $cadmin-border-radius,
 					color: $cadmin-secondary-l1,
 					transition: box-shadow 0.15s ease-in-out,
+
 					hover: (
 						color: $cadmin-white,
 					),
+
 					focus: (
 						box-shadow: $cadmin-component-focus-box-shadow,
 						outline: 0,
 					),
+
 					active: (
 						color: $cadmin-white,
 					),
+
 					disabled: (
 						box-shadow: none,
 						color: $cadmin-secondary-l1,
 						opacity: 0.65,
+
 						active: (
 							pointer-events: none,
 						),

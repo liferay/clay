@@ -92,6 +92,7 @@ $cadmin-pagination-link-hover: map-deep-merge(
 		letter-spacing: 0,
 		text-decoration: none,
 		z-index: 2,
+
 		before: (
 			background-color: $cadmin-secondary-l0,
 			height: 3px,
@@ -108,6 +109,7 @@ $cadmin-pagination-link-focus: map-deep-merge(
 		color: $cadmin-pagination-hover-color,
 		outline: $cadmin-pagination-focus-outline,
 		z-index: $cadmin-zindex-pagination-link-focus,
+
 		after: (
 			border-radius: $cadmin-pagination-link-border-radius,
 			bottom: 0,
@@ -148,9 +150,11 @@ $cadmin-pagination-link-disabled: map-deep-merge(
 		opacity: $cadmin-pagination-disabled-opacity,
 		pointer-events: $cadmin-pagination-disabled-pointer-events,
 		z-index: $cadmin-zindex-pagination-link-disabled,
+
 		before: (
 			content: none,
 		),
+
 		focus: (
 			after: (
 				content: none,
@@ -183,6 +187,7 @@ $cadmin-pagination-link: map-deep-merge(
 		padding-top: $cadmin-pagination-padding-y,
 		position: relative,
 		transition: $cadmin-pagination-link-transition,
+
 		before: (
 			border-radius: 0 0 $cadmin-border-radius $cadmin-border-radius,
 			bottom: 0,
@@ -192,27 +197,36 @@ $cadmin-pagination-link: map-deep-merge(
 			position: absolute,
 			right: 0,
 		),
+
 		hover: $cadmin-pagination-link-hover,
+
 		focus: $cadmin-pagination-link-focus,
+
 		active: $cadmin-pagination-link-active,
+
 		active-class: (
 			background-color: $cadmin-pagination-active-bg,
 			border-color: $cadmin-pagination-active-border-color,
 			color: $cadmin-pagination-active-color,
 			font-weight: $cadmin-font-weight-semi-bold,
 			letter-spacing: 0,
+
 			before: (
 				background-color: $cadmin-primary-l0,
 				height: 4px,
 			),
 		),
+
 		disabled: $cadmin-pagination-link-disabled,
+
 		show: (
 			font-weight: $cadmin-font-weight-semi-bold,
 			letter-spacing: 0,
+
 			before: (
 				background-color: transparent,
 			),
+
 			hover: (
 				before: (
 					background-color: $cadmin-secondary-l0,
@@ -220,6 +234,7 @@ $cadmin-pagination-link: map-deep-merge(
 				),
 			),
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -273,10 +288,12 @@ $cadmin-pagination-bar: map-deep-merge(
 		align-items: center,
 		display: flex,
 		flex-wrap: wrap,
+
 		media-breakpoint-down: (
 			sm: (
 				flex-direction: column,
 				justify-content: center,
+
 				pagination: (
 					margin-top: $cadmin-pagination-margin-top-mobile,
 				),
@@ -362,6 +379,7 @@ $cadmin-pagination-items-per-page-link-focus: map-deep-merge(
 		box-shadow: $cadmin-pagination-items-per-page-focus-box-shadow,
 		color: map-get($cadmin-pagination-link-focus, color),
 		outline: $cadmin-pagination-items-per-page-focus-outline,
+
 		after: map-get($cadmin-pagination-link-focus, after),
 	),
 	$cadmin-pagination-items-per-page-link-focus
@@ -389,9 +407,11 @@ $cadmin-pagination-items-per-page-link-disabled: map-deep-merge(
 		opacity: $cadmin-pagination-disabled-opacity,
 		pointer-events: $cadmin-pagination-disabled-pointer-events,
 		letter-spacing: 0.033em,
+
 		before: (
 			content: none,
 		),
+
 		focus: (
 			after: (
 				content: none,
@@ -422,6 +442,7 @@ $cadmin-pagination-items-per-page-link: map-deep-merge(
 		padding-top: $cadmin-pagination-padding-y,
 		text-decoration: none,
 		transition: $cadmin-pagination-items-per-page-transition,
+
 		before: (
 			border-radius: 0 0 $cadmin-border-radius $cadmin-border-radius,
 			bottom: 0,
@@ -431,10 +452,15 @@ $cadmin-pagination-items-per-page-link: map-deep-merge(
 			position: absolute,
 			right: 0,
 		),
+
 		hover: $cadmin-pagination-items-per-page-link-hover,
+
 		focus: $cadmin-pagination-items-per-page-link-focus,
+
 		active: $cadmin-pagination-items-per-page-link-active,
+
 		disabled: $cadmin-pagination-items-per-page-link-disabled,
+
 		show: map-get($cadmin-pagination-link, show),
 		lexicon-icon: (
 			margin-left:
@@ -453,7 +479,9 @@ $cadmin-pagination-items-per-page: map-deep-merge(
 	(
 		font-size: $cadmin-pagination-items-per-page-font-size,
 		margin-bottom: $cadmin-pagination-margin-bottom,
+
 		link: $cadmin-pagination-items-per-page-link,
+
 		media-breakpoint-down: (
 			sm: (
 				pagination-results: (
@@ -515,14 +543,17 @@ $cadmin-pagination-sm: map-deep-merge(
 			padding-left: $cadmin-pagination-padding-x-sm,
 			padding-top: $cadmin-pagination-padding-y-sm,
 		),
+
 		page-link-first: (
 			border-bottom-left-radius: $cadmin-pagination-link-border-radius-sm,
 			border-top-left-radius: $cadmin-pagination-link-border-radius-sm,
 		),
+
 		page-link-last: (
 			border-bottom-right-radius: $cadmin-pagination-link-border-radius-sm,
 			border-top-right-radius: $cadmin-pagination-link-border-radius-sm,
 		),
+
 		pagination-items-per-page: (
 			border-radius:
 				clay-enable-rounded($cadmin-pagination-link-border-radius-sm),
@@ -535,12 +566,14 @@ $cadmin-pagination-sm: map-deep-merge(
 				padding-right: $cadmin-pagination-padding-x,
 				padding-top: $cadmin-pagination-padding-y-sm,
 			),
+
 			lexicon-icon: (
 				margin-left:
 					$cadmin-pagination-items-per-page-lexicon-icon-margin-left-sm,
 				margin-right:
 					$cadmin-pagination-items-per-page-lexicon-icon-margin-top-sm,
 			),
+
 			pagination-results: (
 				font-size: $cadmin-pagination-font-size-sm,
 				line-height: $cadmin-pagination-line-height-sm,
@@ -578,14 +611,17 @@ $cadmin-pagination-lg: map-deep-merge(
 			padding-right: $cadmin-pagination-padding-x-lg,
 			padding-top: $cadmin-pagination-padding-y-lg,
 		),
+
 		page-link-first: (
 			border-bottom-left-radius: $cadmin-pagination-link-border-radius-lg,
 			border-top-left-radius: $cadmin-pagination-link-border-radius-lg,
 		),
+
 		page-link-last: (
 			border-bottom-right-radius: $cadmin-pagination-link-border-radius-lg,
 			border-top-right-radius: $cadmin-pagination-link-border-radius-lg,
 		),
+
 		pagination-items-per-page: (
 			border-radius:
 				clay-enable-rounded($cadmin-pagination-link-border-radius-lg),
@@ -598,12 +634,14 @@ $cadmin-pagination-lg: map-deep-merge(
 				padding-right: $cadmin-pagination-padding-x,
 				padding-top: $cadmin-pagination-padding-y-lg,
 			),
+
 			lexicon-icon: (
 				margin-left:
 					$cadmin-pagination-items-per-page-lexicon-icon-margin-left-lg,
 				margin-right:
 					$cadmin-pagination-items-per-page-lexicon-icon-margin-top-lg,
 			),
+
 			pagination-results: (
 				font-size: $cadmin-pagination-font-size-lg,
 				line-height: $cadmin-pagination-line-height-lg,

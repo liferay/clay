@@ -19,16 +19,20 @@ $nav-link: map-deep-merge(
 		padding-top: $nav-link-padding-y,
 		position: relative,
 		user-select: none,
+
 		hover: (
 			text-decoration: none,
 		),
+
 		focus: (
 			text-decoration: none,
 			z-index: 1,
 		),
+
 		disabled: (
 			color: $nav-link-disabled-color,
 			cursor: $nav-link-disabled-cursor,
+
 			active: (
 				pointer-events: none,
 			),
@@ -44,6 +48,7 @@ $nav-link-btn-unstyled: map-deep-merge(
 	(
 		width: 100%,
 		disabled-opacity: 1,
+
 		c-inner: (
 			width: auto,
 		),
@@ -90,12 +95,15 @@ $nav-btn: map-deep-merge(
 		position: relative,
 		text-align: center,
 		width: auto,
+
 		focus: (
 			z-index: 1,
 		),
+
 		disabled: (
 			opacity: 1,
 		),
+
 		c-inner: (
 			margin-bottom: 0,
 			margin-left: math-sign($nav-btn-padding-x),
@@ -109,10 +117,12 @@ $nav-btn: map-deep-merge(
 					)
 				),
 		),
+
 		btn-link: (
 			margin-left: 0,
 			margin-right: 0,
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -126,6 +136,7 @@ $nav-btn-monospaced: () !default;
 $nav-btn-monospaced: map-deep-merge(
 	(
 		padding: 0,
+
 		c-inner: (
 			margin-left:
 				math-sign(
@@ -160,6 +171,7 @@ $nav-link-monospaced: map-deep-merge(
 		margin: $nav-btn-margin-y $nav-btn-margin-x,
 		min-width: $nav-item-monospaced-size,
 		padding: 0,
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -188,6 +200,7 @@ $nav-divider: map-deep-merge(
 		margin-left: 0.5rem,
 		padding-left: 0.5rem,
 		position: relative,
+
 		before: (
 			background-color: $nav-divider-color,
 			content: '',
@@ -210,6 +223,7 @@ $nav-divider-end: map-deep-merge(
 		margin-right: 0.5rem,
 		padding-right: 0.5rem,
 		position: relative,
+
 		after: (
 			background-color: $nav-divider-color,
 			content: '',
@@ -259,6 +273,7 @@ $nav: map-deep-merge(
 		list-style: none,
 		margin-bottom: 0,
 		padding-left: 0,
+
 		nav-form: (
 			padding-bottom: $nav-form-padding-bottom,
 			padding-left: $nav-form-padding-left,
@@ -292,6 +307,7 @@ $nav-justified: map-deep-merge(
 			flex-grow: 1,
 			text-align: center,
 		),
+
 		nav-link: (
 			text-align: center,
 			width: 100%,
@@ -311,6 +327,7 @@ $nav-stacked: () !default;
 $nav-stacked: map-deep-merge(
 	(
 		display: block,
+
 		nav-form: (
 			padding-bottom: $nav-stacked-nav-form-padding-bottom,
 			padding-left: $nav-stacked-nav-form-padding-left,
@@ -327,6 +344,7 @@ $nav-unstyled: () !default;
 $nav-unstyled: map-deep-merge(
 	(
 		flex-wrap: nowrap,
+
 		nav-link: (
 			line-height: $nav-item-monospaced-size,
 			padding-bottom: 0,
@@ -334,9 +352,11 @@ $nav-unstyled: map-deep-merge(
 			padding-right: 4px,
 			padding-top: 0,
 		),
+
 		nav-link-monospaced: (
 			margin: 0 4px,
 		),
+
 		nav-btn: (
 			margin: 0 4px,
 			padding-bottom: 0,
@@ -365,8 +385,8 @@ $nav-tabs-font-size: null !default;
 // Nav Tabs Link
 
 $nav-tabs-border-color: $gray-300 !default;
-$nav-tabs-border-width: $border-width !default;
 $nav-tabs-border-radius: $border-radius $border-radius 0 0 !default;
+$nav-tabs-border-width: $border-width !default;
 
 $nav-tabs-link-color: null !default;
 $nav-tabs-link-padding-x: null !default;
@@ -378,8 +398,8 @@ $nav-tabs-link-active-bg: $white !default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 $nav-tabs-link-active-color: $gray-700 !default;
 
-$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
 $nav-tabs-link-show-bg: $nav-tabs-link-active-bg !default;
+$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
 $nav-tabs-link-show-border-color: $nav-tabs-link-active-border-color !default;
 
 // .nav-tabs .nav-link[aria-expanded="true"]
@@ -407,26 +427,33 @@ $nav-tabs-link: map-deep-merge(
 		padding-right: $nav-tabs-link-padding-x,
 		padding-top: $nav-tabs-link-padding-y,
 		white-space: nowrap,
+
 		hover: (
 			border-color: $nav-tabs-link-hover-border-color,
 		),
+
 		focus: (
 			border-color: $nav-tabs-link-hover-border-color,
 		),
+
 		active: (
 			background-color: $nav-tabs-link-active-bg,
 			border-color: $nav-tabs-link-active-border-color,
 			color: $nav-tabs-link-active-color,
 		),
+
 		show: $nav-tabs-link-show,
+
 		disabled: (
 			background-color: transparent,
 			border-color: transparent,
 			color: $nav-link-disabled-color,
 		),
+
 		inline-item-after: (
 			margin-left: 0.25rem,
 		),
+
 		inline-item-before: (
 			margin-right: 0.25rem,
 		),
@@ -447,15 +474,19 @@ $nav-tabs: map-deep-merge(
 	(
 		border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color,
 		font-size: $nav-tabs-font-size,
+
 		nav-item: (
 			margin-bottom: math-sign($nav-tabs-border-width),
 		),
+
 		nav-link: $nav-tabs-link,
+
 		dropdown-menu: (
 			border-top-left-radius: clay-enable-rounded(0),
 			border-top-right-radius: clay-enable-rounded(0),
 			margin-top: math-sign($nav-tabs-border-width),
 		),
+
 		tab-content: (
 			tab-pane: (
 				background-color: $nav-tabs-tab-pane-bg,
@@ -472,6 +503,7 @@ $nav-tabs-light: () !default;
 $nav-tabs-light: map-deep-merge(
 	(
 		background-color: $gray-100,
+
 		tab-content: (
 			tab-pane: (
 				background-color: transparent,

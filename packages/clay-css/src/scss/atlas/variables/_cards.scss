@@ -71,6 +71,7 @@ $card-link: map-deep-merge(
 	(
 		color: $gray-600,
 		font-size: 0.875rem,
+
 		hover: (
 			color: $gray-600,
 			text-decoration: underline,
@@ -92,10 +93,12 @@ $card-interactive: map-deep-merge(
 		hover: (
 			background-color: #f7f8f9,
 		),
+
 		focus: (
 			border-color: null,
 			box-shadow: $component-focus-box-shadow,
 		),
+
 		active: (
 			background-color: #f1f2f5,
 		),
@@ -112,6 +115,7 @@ $card-interactive-secondary: map-deep-merge(
 			border-color: transparent,
 			box-shadow: 0 0 0 2px $primary-l0,
 		),
+
 		focus: (
 			border-color: transparent,
 			box-shadow: 0 0 0 2px $primary-l0,
@@ -128,6 +132,7 @@ $card-type-asset: map-deep-merge(
 		aspect-ratio: (
 			border-color: $gray-300,
 		),
+
 		card-body: (
 			padding-top: 0.75rem,
 		),

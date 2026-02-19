@@ -22,6 +22,7 @@ $loading-animation: map-deep-merge(
 		text-align: left,
 		vertical-align: middle,
 		width: 1em,
+
 		before: (
 			animation: loading-animation-circle 1s linear infinite,
 			border-radius: 50%,
@@ -35,6 +36,7 @@ $loading-animation: map-deep-merge(
 			top: 50%,
 			width: 0.25em,
 		),
+
 		after: (
 			animation: loading-animation-circle 1s linear infinite,
 			background-color: currentColor,
@@ -42,9 +44,11 @@ $loading-animation: map-deep-merge(
 			content: '',
 			display: block,
 			height: 1em,
+
 			-webkit-mask: #{conic-gradient(transparent 10%, #000),
 			linear-gradient(#000 0 0) content-box},
 			-webkit-mask-composite: source-out,
+
 			mask-composite: subtract,
 			padding: 0.25em,
 			width: 1em,
@@ -66,6 +70,7 @@ $loading-animation-squares: map-deep-merge(
 		text-align: left,
 		vertical-align: middle,
 		width: 1em,
+
 		before: (
 			animation: loading-animation-squares-box-1 2.4s ease-in-out infinite,
 			background-color: currentColor,
@@ -81,6 +86,7 @@ $loading-animation-squares: map-deep-merge(
 			transform: scale(1),
 			width: 1em,
 		),
+
 		after: (
 			animation: loading-animation-squares-box-2 2.4s ease-in-out infinite,
 			background-color: currentColor,
@@ -96,6 +102,7 @@ $loading-animation-squares: map-deep-merge(
 			transform: scale(2),
 			width: 1em,
 		),
+
 		'prefers-reduced-motion': (
 			display: block,
 			height: 1em,
@@ -106,6 +113,7 @@ $loading-animation-squares: map-deep-merge(
 			text-align: left,
 			vertical-align: middle,
 			width: 1em,
+
 			'&::before': (
 				animation: loading-animation-circle 1s linear infinite,
 				background-color: transparent,
@@ -124,6 +132,7 @@ $loading-animation-squares: map-deep-merge(
 				transform: none,
 				width: 0.25em,
 			),
+
 			'&::after': (
 				animation: loading-animation-circle 1s linear infinite,
 				background-color: currentColor,
@@ -133,9 +142,11 @@ $loading-animation-squares: map-deep-merge(
 				font-size: inherit,
 				height: 1em,
 				left: auto,
+
 				-webkit-mask: #{conic-gradient(transparent 10%, #000),
 				linear-gradient(#000 0 0) content-box},
 				-webkit-mask-composite: source-out,
+
 				mask-composite: subtract,
 				padding: 0.25em,
 				position: relative,
@@ -156,12 +167,15 @@ $loading-animation-sizes: map-deep-merge(
 		loading-animation-xs: (
 			font-size: map-get($font-scale, 1),
 		),
+
 		loading-animation-sm: (
 			font-size: $loading-icon-font-size-sm,
 		),
+
 		loading-animation-md: (
 			font-size: 2rem,
 		),
+
 		loading-animation-lg: (
 			font-size: 4rem,
 		),
@@ -185,9 +199,11 @@ $loading-animation-palette: map-deep-merge(
 		loading-animation-primary: (
 			color: $primary,
 		),
+
 		loading-animation-secondary: (
 			color: $secondary,
 		),
+
 		loading-animation-light: $loading-animation-light,
 	),
 	$loading-animation-palette

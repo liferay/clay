@@ -128,6 +128,7 @@ $pagination-link-disabled: map-deep-merge(
 		opacity: $pagination-disabled-opacity,
 		pointer-events: $pagination-disabled-pointer-events,
 		z-index: $zindex-pagination-link-disabled,
+
 		active: (
 			pointer-events: none,
 		),
@@ -157,11 +158,17 @@ $pagination-link: map-deep-merge(
 		padding-top: $pagination-padding-y,
 		position: relative,
 		transition: $pagination-link-transition,
+
 		hover: $pagination-link-hover,
+
 		focus: $pagination-link-focus,
+
 		active: $pagination-link-active,
+
 		active-class: $pagination-link-active,
+
 		disabled: $pagination-link-disabled,
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -213,10 +220,12 @@ $pagination-bar: map-deep-merge(
 		align-items: center,
 		display: flex,
 		flex-wrap: wrap,
+
 		media-breakpoint-down: (
 			sm: (
 				flex-direction: column,
 				justify-content: center,
+
 				pagination: (
 					margin-top: $pagination-margin-top-mobile,
 				),
@@ -348,10 +357,15 @@ $pagination-items-per-page-link: map-deep-merge(
 		padding-top: $pagination-padding-y,
 		text-decoration: none,
 		transition: $pagination-items-per-page-transition,
+
 		hover: $pagination-items-per-page-link-hover,
+
 		focus: $pagination-items-per-page-link-focus,
+
 		active: $pagination-items-per-page-link-active,
+
 		disabled: $pagination-items-per-page-link-disabled,
+
 		lexicon-icon: (
 			margin-left: $pagination-items-per-page-lexicon-icon-margin-left,
 			margin-top: $pagination-items-per-page-lexicon-icon-margin-top,
@@ -368,6 +382,7 @@ $pagination-items-per-page: map-deep-merge(
 		font-size: $pagination-items-per-page-font-size,
 		margin-bottom: $pagination-margin-bottom,
 		link: $pagination-items-per-page-link,
+
 		media-breakpoint-down: (
 			sm: (
 				pagination-results: (
@@ -429,14 +444,17 @@ $pagination-sm: map-deep-merge(
 			padding-left: $pagination-padding-x-sm,
 			padding-top: $pagination-padding-y-sm,
 		),
+
 		page-link-first: (
 			border-bottom-left-radius: $pagination-link-border-radius-sm,
 			border-top-left-radius: $pagination-link-border-radius-sm,
 		),
+
 		page-link-last: (
 			border-bottom-right-radius: $pagination-link-border-radius-sm,
 			border-top-right-radius: $pagination-link-border-radius-sm,
 		),
+
 		pagination-items-per-page: (
 			border-radius:
 				clay-enable-rounded($pagination-link-border-radius-sm),
@@ -449,12 +467,14 @@ $pagination-sm: map-deep-merge(
 				padding-right: $pagination-padding-x,
 				padding-top: $pagination-padding-y-sm,
 			),
+
 			lexicon-icon: (
 				margin-left:
 					$pagination-items-per-page-lexicon-icon-margin-left-sm,
 				margin-right:
 					$pagination-items-per-page-lexicon-icon-margin-top-sm,
 			),
+
 			pagination-results: (
 				font-size: $pagination-font-size-sm,
 				line-height: $pagination-line-height-sm,
@@ -491,14 +511,17 @@ $pagination-lg: map-deep-merge(
 			padding-right: $pagination-padding-x-lg,
 			padding-top: $pagination-padding-y-lg,
 		),
+
 		page-link-first: (
 			border-bottom-left-radius: $pagination-link-border-radius-lg,
 			border-top-left-radius: $pagination-link-border-radius-lg,
 		),
+
 		page-link-last: (
 			border-bottom-right-radius: $pagination-link-border-radius-lg,
 			border-top-right-radius: $pagination-link-border-radius-lg,
 		),
+
 		pagination-items-per-page: (
 			border-radius:
 				clay-enable-rounded($pagination-link-border-radius-lg),
@@ -508,12 +531,14 @@ $pagination-lg: map-deep-merge(
 				line-height: $pagination-line-height-lg,
 				padding: $pagination-padding-y-lg $pagination-padding-x,
 			),
+
 			lexicon-icon: (
 				margin-left:
 					$pagination-items-per-page-lexicon-icon-margin-left-lg,
 				margin-right:
 					$pagination-items-per-page-lexicon-icon-margin-top-lg,
 			),
+
 			pagination-results: (
 				font-size: $pagination-font-size-lg,
 				line-height: $pagination-line-height-lg,

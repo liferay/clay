@@ -38,14 +38,18 @@ $modal-success: map-deep-merge(
 			background-color: $success-l2,
 			border-color: $success-l1,
 			color: $success,
+
 			close: (
 				color: $success,
+
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -64,14 +68,18 @@ $modal-info: map-deep-merge(
 			background-color: $info-l2,
 			border-color: $info-l1,
 			color: $info,
+
 			close: (
 				color: $info,
+
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -90,14 +98,18 @@ $modal-warning: map-deep-merge(
 			background-color: $warning-l2,
 			border-color: $warning-l1,
 			color: $warning,
+
 			close: (
 				color: $warning,
+
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -116,14 +128,18 @@ $modal-danger: map-deep-merge(
 			background-color: $danger-l2,
 			border-color: $danger-l1,
 			color: $danger,
+
 			close: (
 				color: $danger,
+
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),

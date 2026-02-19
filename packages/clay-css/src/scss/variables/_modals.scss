@@ -11,9 +11,11 @@ $modal-backdrop: map-deep-merge(
 		top: 0,
 		width: 100vw,
 		z-index: $zindex-modal-backdrop,
+
 		'&.fade': (
 			opacity: 0,
 		),
+
 		'&.show': (
 			opacity: $modal-backdrop-opacity,
 		),
@@ -36,14 +38,15 @@ $modal-transition: transform 0.3s ease-out !default;
 $modal-content-bg: $white !default;
 $modal-content-color: null !default;
 $modal-content-border-color: rgba($black, 0.2) !default;
+$modal-content-border-radius: $border-radius-lg !default;
 $modal-content-border-width: $border-width !default;
 
-$modal-content-border-radius: $border-radius-lg !default;
 $modal-content-inner-border-radius: calc(
 	#{$modal-content-border-radius} - #{$modal-content-border-width}
 ) !default;
 
 $modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba($black, 0.5) !default;
+
 $modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba($black, 0.5) !default;
 
 $modal-content: () !default;
@@ -85,13 +88,14 @@ $modal-header: () !default;
 $modal-header: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		align-items: center,
 		background-color: $modal-header-bg,
 		border-color: $modal-header-border-color,
 		border-style: solid,
-		border-width: 0 0 $modal-header-border-width 0,
 		border-top-radius:
 			clay-enable-rounded($modal-content-inner-border-radius),
+		border-width: 0 0 $modal-header-border-width 0,
 		color: $modal-header-color,
 		display: flex,
 		flex-shrink: 0,
@@ -101,10 +105,12 @@ $modal-header: map-deep-merge(
 		padding-bottom: 0,
 		padding-top: 0,
 		z-index: 1,
+
 		'.modal-title': (
 			margin-bottom: 0,
 			margin-top: 0,
 		),
+
 		mobile: (
 			height: $modal-header-height-mobile,
 		),
@@ -132,17 +138,20 @@ $modal-body: map-deep-merge(
 		overflow-wrap: break-word,
 		padding: $modal-inner-padding,
 		position: relative,
+
 		'&.inline-scroller': (
 			max-height: none,
 			-webkit-overflow-scrolling: touch,
 			overflow: auto,
 			padding: $modal-inner-padding,
 		),
+
 		'.modal-banner-img': (
 			margin-left: math-sign($modal-inner-padding),
 			margin-right: math-sign($modal-inner-padding),
 			top: math-sign($modal-inner-padding),
 		),
+
 		'> .close': (
 			position: absolute,
 			right: 1rem,
@@ -160,7 +169,6 @@ $modal-footer-margin-between: 0.5rem !default;
 $modal-footer-bg: null !default;
 $modal-footer-border-color: $modal-header-border-color !default;
 $modal-footer-border-width: $modal-header-border-width !default;
-
 $modal-footer-box-shadow: null !default;
 $modal-footer-color: null !default;
 $modal-footer-height: null !default;
@@ -242,6 +250,7 @@ $modal-title-font-size: 1.25rem !default;
 $modal-title-font-weight: $font-weight-semi-bold !default;
 $modal-title-line-height: $headings-line-height !default;
 $modal-title-text-align: null !default;
+
 $modal-title-font-size-mobile: null !default;
 
 $modal-title-indicator-font-size: 0.875rem !default;
@@ -281,15 +290,21 @@ $modal-full-screen-spacer-y: $modal-full-screen-spacer-x !default;
 // Modal Width
 
 $modal-xl: 1140px !default;
+
 $modal-lg: 800px !default;
+
 $modal-md: 500px !default;
+
 $modal-sm: 300px !default;
 
 // Modal Height
 
 $modal-height-sm: 250px !default;
+
 $modal-height-md: 450px !default;
+
 $modal-height-lg: 650px !default;
+
 $modal-height-xl: 800px !default;
 
 $modal-height-full-modal-content: () !default;
@@ -329,16 +344,21 @@ $modal: map-deep-merge(
 		top: 0,
 		width: 100%,
 		z-index: $zindex-modal,
+
 		close: (
 			'&:first-child': (
 				margin-left: math-sign($modal-close-spacer-x),
 			),
+
 			'&:last-child': (
 				margin-right: math-sign($modal-close-spacer-x),
 			),
 		),
+
 		modal-header: $modal-header,
+
 		modal-body: $modal-body,
+
 		modal-footer: (
 			align-items: center,
 			background-color: $modal-footer-bg,
@@ -359,10 +379,12 @@ $modal: map-deep-merge(
 			padding-left: $modal-footer-padding-x,
 			padding-right: $modal-footer-padding-x,
 			padding-top: $modal-footer-padding-y,
+
 			'> *': (
 				margin: 0 calc(#{$modal-footer-margin-between} * 0.5),
 			),
 		),
+
 		modal-title: (
 			flex-grow: 1,
 			font-size: $modal-title-font-size,
@@ -374,10 +396,12 @@ $modal: map-deep-merge(
 			text-align: $modal-title-text-align,
 			text-overflow: ellipsis,
 			white-space: nowrap,
+
 			'[tabindex="-1"]': (
 				outline: 0,
 			),
 		),
+
 		modal-title-indicator: (
 			display: inline-block,
 			font-size: $modal-title-indicator-font-size,
@@ -385,24 +409,30 @@ $modal: map-deep-merge(
 			margin-top: -0.2em,
 			vertical-align: middle,
 		),
+
 		media-breakpoint-down: (
 			sm: (
 				close: (
 					margin-right: -0.5rem,
 				),
+
 				modal-header: (
 					height: 3rem,
 					padding: 0.5rem 1rem,
 				),
+
 				modal-title: (
 					font-size: 1.125rem,
 				),
+
 				modal-body: (
 					padding: 0.5rem 1rem,
 				),
+
 				modal-body-iframe: (
 					padding: 0,
 				),
+
 				modal-footer: (
 					padding: 0.5rem,
 				),
@@ -426,9 +456,11 @@ $modal-success: map-deep-merge(
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -452,9 +484,11 @@ $modal-info: map-deep-merge(
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -478,9 +512,11 @@ $modal-warning: map-deep-merge(
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -504,9 +540,11 @@ $modal-danger: map-deep-merge(
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -520,8 +558,11 @@ $modal-palette: () !default;
 $modal-palette: map-deep-merge(
 	(
 		success: $modal-success,
+
 		info: $modal-info,
+
 		warning: $modal-warning,
+
 		danger: $modal-danger,
 	),
 	$modal-palette

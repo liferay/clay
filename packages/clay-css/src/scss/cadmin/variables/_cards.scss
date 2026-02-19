@@ -166,20 +166,29 @@ $card: map-deep-merge(
 		min-width: 0,
 		position: relative,
 		word-wrap: break-word,
+
 		aspect-ratio: (
 			label: $cadmin-card-aspect-ratio-label,
 		),
+
 		aspect-ratio-item-top-left: $cadmin-card-aspect-ratio-item-top-left,
+
 		aspect-ratio-item-top-center: $cadmin-card-aspect-ratio-item-top-center,
+
 		aspect-ratio-item-top-right: $cadmin-card-aspect-ratio-item-top-right,
+
 		aspect-ratio-item-right-middle:
 			$cadmin-card-aspect-ratio-item-right-middle,
+
 		aspect-ratio-item-bottom-right:
 			$cadmin-card-aspect-ratio-item-bottom-right,
+
 		aspect-ratio-item-bottom-center:
 			$cadmin-card-aspect-ratio-item-bottom-center,
+
 		aspect-ratio-item-bottom-left:
 			$cadmin-card-aspect-ratio-item-bottom-left,
+
 		hr: (
 			margin-left: 0,
 			margin-right: 0,
@@ -259,6 +268,7 @@ $cadmin-card-link: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
 		font-size: 14px,
+
 		hover: (
 			color: $cadmin-gray-600,
 			text-decoration: underline,
@@ -311,6 +321,7 @@ $cadmin-card-header: map-deep-merge(
 		color: $cadmin-card-cap-color,
 		margin-bottom: 0,
 		padding: $cadmin-card-spacer-y $cadmin-card-spacer-x,
+
 		first-child: (
 			border-radius:
 				clay-enable-rounded(
@@ -330,6 +341,7 @@ $cadmin-card-footer: map-deep-merge(
 		background-color: $cadmin-card-cap-bg,
 		border-top: $cadmin-card-border-width solid $cadmin-card-border-color,
 		padding: $cadmin-card-spacer-y $cadmin-card-spacer-x,
+
 		last-child: (
 			border-radius:
 				clay-enable-rounded(
@@ -374,12 +386,15 @@ $cadmin-card-interactive-after-highlight: map-deep-merge(
 		position: absolute,
 		right: math-sign($cadmin-card-border-width),
 		transition: height 0.15s ease-out,
+
 		hover: (
 			height: 4px,
 		),
+
 		focus: (
 			height: 4px,
 		),
+
 		active: (
 			height: 4px,
 		),
@@ -401,18 +416,23 @@ $cadmin-card-interactive: map-deep-merge(
 		cursor: $cadmin-link-cursor,
 		outline: 0,
 		transition: $cadmin-component-transition,
+
 		hover: (
 			background-color: #f7f8f9,
 			text-decoration: none,
 		),
+
 		focus: (
 			box-shadow: #{0 0 0 2px #fff,
 			0 0 0 4px #719aff},
 		),
+
 		active: (
 			background-color: #f1f2f5,
 		),
+
 		after-highlight: $cadmin-card-interactive-after-highlight,
+
 		card-body: $cadmin-card-interactive-card-body,
 	),
 	$cadmin-card-interactive
@@ -426,9 +446,11 @@ $cadmin-card-interactive-primary-after-highlight: map-deep-merge(
 		hover: (
 			background-color: $cadmin-component-active-bg,
 		),
+
 		focus: (
 			background-color: $cadmin-component-active-bg,
 		),
+
 		active: (
 			background-color: $cadmin-component-active-bg,
 		),
@@ -442,9 +464,11 @@ $cadmin-card-interactive-primary: map-deep-merge(
 		focus: (
 			background-color: $cadmin-gray-100,
 		),
+
 		active: (
 			background-color: $cadmin-gray-200,
 		),
+
 		after-highlight: $cadmin-card-interactive-primary-after-highlight,
 	),
 	$cadmin-card-interactive-primary
@@ -456,16 +480,19 @@ $cadmin-card-interactive-secondary: () !default;
 $cadmin-card-interactive-secondary: map-deep-merge(
 	(
 		color: $cadmin-gray-900,
+
 		hover: (
 			background-color: $cadmin-white,
 			border-color: transparent,
 			box-shadow: 0 0 0 2px #719aff,
 			color: $cadmin-gray-900,
 		),
+
 		focus: (
 			border-color: transparent,
 			box-shadow: 0 0 0 2px #719aff,
 		),
+
 		active: (
 			background-color: $cadmin-white,
 		),
@@ -484,6 +511,7 @@ $cadmin-card-type-asset: map-deep-merge(
 			border-width: 0 0 1px 0,
 			horizontal: 16,
 			vertical: 9,
+
 			custom-control: (
 				label: (
 					bottom: 0,
@@ -495,8 +523,10 @@ $cadmin-card-type-asset: map-deep-merge(
 				),
 			),
 		),
+
 		card-type-asset-icon: (
 			width: 22.225%,
+
 			inline-item: (
 				bottom: 0,
 				left: 0,
@@ -504,10 +534,12 @@ $cadmin-card-type-asset: map-deep-merge(
 				right: 0,
 				top: 0,
 			),
+
 			lexicon-icon: (
 				height: 100%,
 				width: 100%,
 			),
+
 			sticker: (
 				border-radius: 50%,
 				display: block,
@@ -516,12 +548,15 @@ $cadmin-card-type-asset: map-deep-merge(
 				width: 100%,
 			),
 		),
+
 		card-body: (
 			padding-top: 12px,
 		),
+
 		card-row: (
 			align-items: flex-start,
 		),
+
 		dropdown-action: (
 			margin-right: -8px,
 			margin-top: -3px,
@@ -563,15 +598,19 @@ $cadmin-product-card: map-deep-merge(
 			background-color: $cadmin-white,
 			background-image: linear-gradient(0deg, #ebebeb, #ebebeb),
 		),
+
 		card-body: (
 			text-align: center,
 		),
+
 		card-title: (
 			font-size: 16px,
 		),
+
 		card-subtitle: (
 			font-size: 12px,
 		),
+
 		card-text: (
 			font-size: 18px,
 			font-weight: $cadmin-font-weight-semi-bold,
@@ -589,6 +628,7 @@ $cadmin-user-card: map-deep-merge(
 			max-width: 80px,
 			min-width: 48px,
 			width: 30%,
+
 			lexicon-icon: (
 				height: auto,
 				width: 50%,
@@ -617,21 +657,25 @@ $cadmin-card-page-item-asset: map-deep-merge(
 		max-width: 100%,
 		padding-left: $cadmin-grid-gutter-width * 0.5,
 		padding-right: $cadmin-grid-gutter-width * 0.5,
+
 		'@container #{map-get($cadmin-card-page, container-name)} (min-width: #{map-get($cadmin-container-max-widths, sm)})':
 		(
 			flex-basis: 50%,
 			max-width: 50%,
 		),
+
 		'@container #{map-get($cadmin-card-page, container-name)} (min-width: #{map-get($cadmin-container-max-widths, md)})':
 		(
 			flex-basis: 33.33333%,
 			max-width: 33.33333%,
 		),
+
 		'@container #{map-get($cadmin-card-page, container-name)} (min-width: #{map-get($cadmin-container-max-widths, lg)})':
 		(
 			flex-basis: 25%,
 			max-width: 25%,
 		),
+
 		'@container #{map-get($cadmin-card-page, container-name)} (min-width: #{map-get($cadmin-container-max-widths, xl)})':
 		(
 			flex-basis: 20%,
@@ -692,6 +736,7 @@ $cadmin-card-type-template-aspect-ratio: map-deep-merge(
 		horizontal: 16,
 		text-align: center,
 		vertical: 9,
+
 		lexicon-icon: (
 			height: auto,
 			width: 28%,
@@ -732,13 +777,19 @@ $cadmin-card-type-template: map-deep-merge(
 		border-width: 1px,
 		box-shadow: none,
 		color: $cadmin-gray-900,
+
 		hover: (
 			color: $cadmin-gray-900,
 		),
+
 		after-highlight: $cadmin-card-type-template-after-highlight,
+
 		aspect-ratio: $cadmin-card-type-template-aspect-ratio,
+
 		aspect-ratio-item: $cadmin-card-type-template-aspect-ratio-item,
+
 		card-title: $cadmin-card-type-template-card-title,
+
 		card-text: $cadmin-card-type-template-card-text,
 	),
 	$cadmin-card-type-template
@@ -779,6 +830,7 @@ $cadmin-template-card-horizontal-card-row: map-deep-merge(
 		margin-left: -4px,
 		margin-right: -4px,
 		width: auto,
+
 		autofit-col: (
 			padding-left: 4px,
 			padding-right: 4px,
@@ -800,11 +852,15 @@ $cadmin-template-card-horizontal: () !default;
 $cadmin-template-card-horizontal: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
+
 		hover: (
 			color: $cadmin-gray-600,
 		),
+
 		sticker: $cadmin-template-card-horizontal-sticker,
+
 		card-row: $cadmin-template-card-horizontal-card-row,
+
 		card-title: $cadmin-template-card-horizontal-card-title,
 	),
 	$cadmin-template-card-horizontal

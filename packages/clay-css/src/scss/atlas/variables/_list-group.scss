@@ -1,13 +1,14 @@
 $list-group-border-color: $gray-300 !default;
 $list-group-color: null !default;
-$list-group-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
-$list-group-active-bg: $list-group-hover-bg !default;
-$list-group-active-border-color: $list-group-border-color !default;
-$list-group-active-color: $gray-900 !default;
-
 $list-group-font-size: 0.875rem !default; // 14px
 $list-group-item-padding-x: 1rem !default; // 16px
 $list-group-item-padding-y: 1rem !default; // 16px
+
+$list-group-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
+
+$list-group-active-bg: $list-group-hover-bg !default;
+$list-group-active-border-color: $list-group-border-color !default;
+$list-group-active-color: $gray-900 !default;
 
 // List Group Header
 
@@ -33,9 +34,11 @@ $list-group-title-link: map-deep-merge(
 		display: inline-block,
 		text-decoration: underline,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -63,9 +66,11 @@ $list-group-subtitle-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -83,9 +88,11 @@ $list-group-text-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -111,9 +118,11 @@ $list-group-subtext-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -136,7 +145,9 @@ $list-group-subtext-active-color: $gray-600 !default;
 // List Group Link
 
 $list-group-link-color: $gray-900 !default;
+
 $list-group-link-hover-color: $list-group-link-color !default;
+
 $list-group-link-active-color: $list-group-link-color !default;
 
 // List Group Notification

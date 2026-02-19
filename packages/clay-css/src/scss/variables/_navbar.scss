@@ -37,6 +37,7 @@ $navbar-brand-font-size: $font-size-lg !default;
 // This is a string so we don't get nested calcs in `$navbar-brand-height` and `$navbar-brand-padding-y`
 
 $nav-link-height: '#{$font-size-base} * #{$line-height-base} + #{$nav-link-padding-y} * 2' !default;
+
 $navbar-brand-height: calc(
 	#{$navbar-brand-font-size} * #{$line-height-base}
 ) !default;
@@ -72,6 +73,7 @@ $navbar-underline: map-deep-merge(
 				width: auto,
 			),
 		),
+
 		media-breakpoint-up: (
 			md: (
 				navbar-expand-md: (
@@ -117,6 +119,7 @@ $navbar-dark-brand-color: $navbar-dark-active-color !default;
 $navbar-dark-brand-hover-color: $navbar-dark-active-color !default;
 
 $navbar-dark-toggler-border-color: rgba($white, 0.1) !default;
+
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 
 // Navbar Light
@@ -134,4 +137,5 @@ $navbar-light-brand-color: $navbar-light-active-color !default;
 $navbar-light-brand-hover-color: $navbar-light-active-color !default;
 
 $navbar-light-toggler-border-color: rgba($black, 0.1) !default;
+
 $navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;

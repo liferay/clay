@@ -62,37 +62,46 @@ $sidebar-light: map-deep-merge(
 		box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
 		close: (
 			color: $secondary,
+
 			hover: (
 				background-color: rgba($gray-900, 0.03),
 				color: $gray-900,
 			),
+
 			focus: (
 				background-color: rgba($gray-900, 0.03),
 				color: $gray-900,
 			),
+
 			active: (
 				background-color: rgba($gray-900, 0.06),
 				color: $gray-900,
 			),
+
 			disabled: (
 				background-color: transparent,
 				box-shadow: none,
 			),
 		),
+
 		sidenav-start: (
 			box-shadow: 0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
 		),
+
 		sidebar-panel: (
 			background-color: $gray-200,
 		),
+
 		sidebar-dt: (
 			color: $gray-600,
 		),
+
 		sidebar-dd: (
 			href: (
 				color: $gray-900,
 			),
 		),
+
 		panel-unstyled: (
 			header: (
 				link: (
@@ -103,6 +112,7 @@ $sidebar-light: map-deep-merge(
 				),
 			),
 		),
+
 		component-navigation-bar: $sidebar-light-navigation-bar,
 	),
 	$sidebar-light

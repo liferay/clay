@@ -7,29 +7,35 @@ $cadmin-treeview: map-merge(
 		list-style: none,
 		margin-bottom: 0,
 		padding: 2px 0,
+
 		btn: (
 			color: inherit,
 			font-size: 12px,
 			line-height: 1,
 			padding: 6px 8px,
+
 			c-inner: (
 				margin: -7px -8px,
 			),
 		),
+
 		btn-monospaced: (
 			font-size: inherit,
 			height: 24px,
 			padding: 0,
 			width: 24px,
+
 			focus: (
 				box-shadow: $cadmin-component-focus-inset-box-shadow,
 			),
 		),
+
 		custom-control: (
 			margin-left: 4px,
 			margin-right: 4px,
 			margin-top: 1.5px,
 		),
+
 		treeview-dragging: (
 			background-color: $cadmin-white,
 			border-color: $cadmin-primary-l0,
@@ -42,6 +48,7 @@ $cadmin-treeview: map-merge(
 			padding: 4px 12px,
 			text-transform: uppercase,
 		),
+
 		treeview-group: (
 			display: flex,
 			flex-direction: column,
@@ -49,18 +56,22 @@ $cadmin-treeview: map-merge(
 			margin-bottom: 0,
 			padding-left: 0,
 		),
+
 		treeview-item: (
 			word-wrap: break-word,
 		),
+
 		treeview-item-dragging: (
 			cursor: $cadmin-disabled-cursor,
 			opacity: 0.4,
+
 			treeview-link: (
 				background-color: transparent,
 				border-color: transparent,
 				box-shadow: none,
 			),
 		),
+
 		treeview-dropping-indicator-top: (
 			background-color: transparent,
 			display: block,
@@ -69,6 +80,7 @@ $cadmin-treeview: map-merge(
 			outline: none,
 			width: 100%,
 		),
+
 		treeview-dropping-indicator-bottom: (
 			background-color: transparent,
 			display: block,
@@ -77,9 +89,11 @@ $cadmin-treeview: map-merge(
 			outline: none,
 			width: 100%,
 		),
+
 		treeview-dropping-indicator-over: (
 			background-color: $cadmin-primary-l0,
 		),
+
 		treeview-link: (
 			background-color: transparent,
 			cursor: pointer,
@@ -94,40 +108,50 @@ $cadmin-treeview: map-merge(
 			position: relative,
 			text-align: left,
 			user-select: none,
+
 			treeview-dropping-middle: (
 				background-color: $cadmin-primary-l3,
 				border-color: $cadmin-primary-l0,
 			),
+
 			hover: (
 				text-decoration: none,
 			),
+
 			focus: (
 				box-shadow: $cadmin-component-focus-inset-box-shadow,
 				outline: 0,
 			),
+
 			disabled: (
 				cursor: $cadmin-disabled-cursor,
 			),
 		),
+
 		component-expander: (
 			font-size: 10px,
 			padding: 6px 8px,
 		),
+
 		component-action: (
 			font-size: 16px,
 			margin-left: 2px,
 			margin-right: 2px,
+
 			hover: (
 				background-color: transparent,
 				color: $cadmin-secondary,
 			),
+
 			focus: (
 				color: $cadmin-secondary,
 			),
+
 			active: (
 				background-color: transparent,
 			),
 		),
+
 		component-icon: (
 			color: $cadmin-secondary,
 			display: inline-block,
@@ -135,20 +159,24 @@ $cadmin-treeview: map-merge(
 			height: auto,
 			margin: 4px,
 			width: auto,
+
 			lexicon-icon: (
 				display: block,
 			),
 		),
+
 		component-text: (
 			line-height: 24px,
 			padding-left: 4px,
 			user-select: auto,
 		),
+
 		quick-action-item: (
 			margin: 0 2px,
 			min-height: 0,
 			min-width: 0,
 		),
+
 		autofit-row: (
 			align-items: center,
 		),
@@ -177,10 +205,12 @@ $cadmin-treeview-show-component-expander-on-hover: map-deep-merge(
 				transition: opacity ease-in-out 600ms,
 			),
 		),
+
 		component-expander: (
 			opacity: 0,
 			transition: opacity ease-in-out 450ms,
 		),
+
 		treeview-link: (
 			focus: (
 				component-expander: (
@@ -200,28 +230,35 @@ $cadmin-treeview-light: map-deep-merge(
 	(
 		component-expander: (
 			color: $cadmin-secondary,
+
 			disabled: (
 				color: $cadmin-secondary,
 				opacity: 0.5,
 			),
+
 			btn-secondary: (
 				background-color: $cadmin-white,
 			),
 		),
+
 		treeview-link: (
 			color: $cadmin-gray-600,
+
 			treeview-no-hover: (
 				hover: (
 					background-color: transparent,
 					color: $cadmin-gray-600,
 				),
 			),
+
 			hover: (
 				box-shadow: inset 0 0 0 1px $cadmin-secondary-l0,
 			),
+
 			focus: (
 				box-shadow: $cadmin-component-focus-inset-box-shadow,
 			),
+
 			active: (
 				background-color: $cadmin-primary-l3,
 				box-shadow: inset 0 0 0 1px $cadmin-primary,
@@ -230,18 +267,22 @@ $cadmin-treeview-light: map-deep-merge(
 					box-shadow: $cadmin-component-focus-inset-box-shadow,
 				),
 			),
+
 			active-class: (
 				background-color: $cadmin-primary-l3,
 				box-shadow: inset 0 0 0 1px $cadmin-primary,
 				color: $cadmin-dark-l2,
+
 				focus: (
 					box-shadow: $cadmin-component-focus-inset-box-shadow,
 				),
 			),
+
 			disabled: (
 				background-color: transparent,
 				color: rgba($cadmin-gray-600, 0.5),
 			),
+
 			show: (
 				background-color: c-unset,
 				box-shadow: c-unset,
@@ -258,48 +299,60 @@ $cadmin-treeview-dark: map-deep-merge(
 		component-expander: (
 			color: $cadmin-secondary-l1,
 		),
+
 		treeview-link: (
 			color: $cadmin-secondary-l1,
+
 			treeview-no-hover: (
 				hover: (
 					background-color: transparent,
 					color: $cadmin-secondary-l1,
 				),
 			),
+
 			hover: (
 				box-shadow: inset 0 0 0 1px $cadmin-secondary-l0,
 			),
+
 			focus: (
 				box-shadow: $cadmin-component-focus-inset-box-shadow,
 			),
+
 			active: (
 				background-color: $cadmin-dark-l2,
 				box-shadow: inset 0 0 0 1px $cadmin-primary,
 				color: $cadmin-primary-l3,
+
 				focus: (
 					box-shadow: $cadmin-component-focus-inset-box-shadow,
 				),
 			),
+
 			active-class: (
 				background-color: $cadmin-dark-l2,
 				box-shadow: inset 0 0 0 1px $cadmin-primary,
 				color: $cadmin-primary-l3,
+
 				focus: (
 					box-shadow: $cadmin-component-focus-inset-box-shadow,
 				),
 			),
+
 			disabled: (
 				background-color: transparent,
 				color: rgba($cadmin-secondary-l1, 0.5),
 			),
+
 			show: (
 				background-color: c-unset,
 				box-shadow: c-unset,
 				color: c-unset,
 			),
 		),
+
 		component-action: (
 			color: $cadmin-secondary-l1,
+
 			disabled: (
 				color: $cadmin-secondary-l1,
 			),

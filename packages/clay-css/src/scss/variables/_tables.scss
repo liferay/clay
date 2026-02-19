@@ -117,9 +117,12 @@ $table-quick-action-menu-bg: if(
 	$body-bg,
 	$table-bg
 ) !default;
+
 $table-quick-action-menu-accent-bg: $table-accent-bg !default;
 $table-quick-action-menu-accent-active-bg: $table-accent-bg !default;
+
 $table-quick-action-menu-active-bg: $table-active-bg !default;
+
 $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
 $table-cell-expand-smaller-max-width: 12.5rem !default; // 200px
@@ -167,6 +170,7 @@ $table-title-link: () !default;
 $table-title-link: map-deep-merge(
 	(
 		color: $gray-900,
+
 		hover: (
 			color: $gray-900,
 		),
@@ -187,6 +191,7 @@ $table-link: () !default;
 $table-link: map-deep-merge(
 	(
 		color: $gray-700,
+
 		hover: (
 			color: clay-darken($gray-700, 15%),
 		),
@@ -211,9 +216,11 @@ $table-action-link: map-deep-merge(
 		justify-content: center,
 		vertical-align: middle,
 		width: 2rem,
+
 		hover: (
 			text-decoration: none,
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -232,26 +239,32 @@ $c-table: map-deep-merge(
 		font-size: $table-font-size,
 		margin-bottom: $table-margin-bottom,
 		width: 100%,
+
 		thead:
 			map-deep-merge(
 				$c-table-thead,
 				(
 					background-color: $table-head-bg,
+
 					table-cell: (
 						border-bottom: $table-head-border-bottom-width solid
 							$table-border-color,
 						border-top-width: $table-head-border-top-width,
 						vertical-align: middle,
 					),
+
 					th: (
 						href: $table-head-link,
 					),
+
 					autofit-col: (
 						padding-left: 0.125rem,
 						padding-right: 0.125rem,
+
 						first-child: (
 							padding-left: 0,
 						),
+
 						last-child: (
 							padding-right: 0,
 						),
@@ -261,6 +274,7 @@ $c-table: map-deep-merge(
 		table-column-start: (
 			padding-left: $table-cell-gutters,
 		),
+
 		th: (
 			background-clip: padding-box,
 			border-top: $table-border-width solid $table-border-color,
@@ -272,6 +286,7 @@ $c-table: map-deep-merge(
 			position: relative,
 			vertical-align: top,
 		),
+
 		td: (
 			background-clip: padding-box,
 			border-bottom-width: $table-data-border-bottom-width,
@@ -285,6 +300,7 @@ $c-table: map-deep-merge(
 			position: relative,
 			vertical-align: $table-data-vertical-align,
 		),
+
 		tbody:
 			map-deep-merge(
 				$c-table-tbody,
@@ -296,7 +312,9 @@ $c-table: map-deep-merge(
 				)
 			),
 		tfoot: $c-table-tfoot,
+
 		caption: $c-table-caption,
+
 		table-divider: (
 			table-cell: (
 				background-color: $table-divider-bg,
@@ -309,29 +327,37 @@ $c-table: map-deep-merge(
 				text-transform: $table-divider-text-transform,
 			),
 		),
+
 		table-active: (
 			background-color: $table-active-bg,
+
 			quick-action-menu: (
 				background-color: $table-quick-action-menu-active-bg,
 			),
 		),
+
 		table-disabled: (
 			background-color: $table-disabled-bg,
 			color: $table-disabled-color,
+
 			table-cell: (
 				cursor: $table-disabled-cursor,
+
 				href: (
 					color: $table-disabled-color,
 					pointer-events: $table-disabled-pointer-events,
 				),
 			),
+
 			table-title: (
 				color: $table-disabled-color,
 			),
+
 			table-list-title: (
 				color: $table-disabled-color,
 			),
 		),
+
 		autofit-col: (
 			justify-content: center,
 			padding-left: nth($table-cell-padding, 2),
@@ -339,21 +365,26 @@ $c-table: map-deep-merge(
 			first-child: (
 				padding-left: 0,
 			),
+
 			last-child: (
 				padding-right: 0,
 			),
 		),
+
 		component-drag: (
 			font-size: 0.875rem,
 			height: 1rem,
 			width: 1rem,
+
 			focus: (
 				box-shadow: $component-focus-inset-box-shadow,
 			),
 		),
+
 		custom-control: (
 			margin-bottom: 0,
 		),
+
 		quick-action-menu: (
 			align-items: $table-quick-action-menu-align-items,
 			background-color: $table-quick-action-menu-bg,
@@ -374,12 +405,14 @@ $c-table-hover: map-deep-merge(
 				hover: (
 					background-color: $table-hover-bg,
 					color: $table-hover-color,
+
 					quick-action-menu: (
 						background-color: $table-quick-action-menu-hover-bg,
 					),
 				),
 			),
 		),
+
 		table-active: (
 			hover: (
 				quick-action-menu: (
@@ -387,6 +420,7 @@ $c-table-hover: map-deep-merge(
 				),
 			),
 		),
+
 		table-disabled: (
 			hover: (
 				background-color: $table-disabled-bg,
@@ -402,8 +436,10 @@ $c-tr-table-focus: () !default;
 $c-tr-table-focus: map-deep-merge(
 	(
 		outline: 0,
+
 		td: (
 			outline: 0,
+
 			before: (
 				box-shadow: (
 					inset 0 0.2rem 0 0 rgba($primary, 0.25),
@@ -419,6 +455,7 @@ $c-tr-table-focus: map-deep-merge(
 				pointer-events: none,
 				z-index: 1,
 			),
+
 			first-child: (
 				after: (
 					box-shadow: inset 0.2rem 0 0 0 rgba($primary, 0.25),
@@ -433,6 +470,7 @@ $c-tr-table-focus: map-deep-merge(
 					width: 0.25rem,
 				),
 			),
+
 			last-child: (
 				after: (
 					box-shadow: inset -0.2rem 0 0 0 rgba($primary, 0.25),
@@ -455,8 +493,8 @@ $c-tr-table-focus: map-deep-merge(
 $c-td-table-focus: () !default;
 $c-td-table-focus: map-deep-merge(
 	(
-		outline: 'none',
 		box-shadow: clay-enable-shadows($component-focus-inset-box-shadow),
+		outline: 'none',
 	),
 	$c-td-table-focus
 );
@@ -469,6 +507,7 @@ $c-table-head-bordered: map-deep-merge(
 		thead: (
 			table-cell: (
 				border-left: $table-border-width solid $table-border-color,
+
 				table-column-start: (
 					border-left-width: 0,
 				),
@@ -486,11 +525,13 @@ $c-table-bordered: () !default;
 $c-table-bordered: map-deep-merge(
 	(
 		border: $table-border-width solid $table-border-color,
+
 		thead: (
 			table-cell: (
 				border-bottom-width: calc(2 * #{$table-border-width}),
 			),
 		),
+
 		table-cell: (
 			border: $table-border-width solid $table-border-color,
 		),
@@ -546,18 +587,22 @@ $c-table-nested-rows: map-deep-merge(
 			padding-right: 0.125rem,
 			min-width: 1.75rem,
 		),
+
 		autofit-col-checkbox: (
 			padding-right: 0.625rem,
 		),
+
 		autofit-col-icon: (
 			padding-right: 0.625rem,
 		),
+
 		component-drag: (
 			left: 2px,
 			position: absolute,
 			top: 50%,
 			transform: translateY(-50%),
 		),
+
 		component-toggle: (
 			font-size: 0.875rem,
 			height: 1.5rem,
@@ -580,6 +625,7 @@ $c-table-sort: map-deep-merge(
 					background-color: $primary-l3,
 					color: $gray-900,
 				),
+
 				component-action: (
 					font-size: 0.75rem,
 					height: 1.5rem,
@@ -733,10 +779,14 @@ $table-list-divider-padding-y: 0.5rem !default;
 
 $table-list-quick-action-menu-align-items: center !default;
 $table-list-quick-action-menu-bg: $table-list-bg !default;
+
 $table-list-quick-action-menu-accent-bg: $table-list-accent-bg !default;
+
 $table-list-quick-action-menu-accent-active-bg: $table-list-active-bg !default;
-$table-list-quick-action-menu-active-bg: $table-list-active-bg !default;
+
 $table-list-quick-action-menu-hover-bg: $table-list-hover-bg !default;
+
+$table-list-quick-action-menu-active-bg: $table-list-active-bg !default;
 
 // Table List Title
 
@@ -755,6 +805,7 @@ $table-list-title-link: () !default;
 $table-list-title-link: map-deep-merge(
 	(
 		color: $gray-900,
+
 		hover: (
 			color: $gray-900,
 		),
@@ -775,6 +826,7 @@ $table-list-link: () !default;
 $table-list-link: map-deep-merge(
 	(
 		color: $gray-700,
+
 		hover: (
 			color: clay-darken($gray-700, 15%),
 		),
@@ -793,9 +845,11 @@ $table-list-action-link: map-deep-merge(
 		justify-content: center,
 		vertical-align: middle,
 		width: 2rem,
+
 		hover: (
 			text-decoration: none,
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -817,6 +871,7 @@ $c-table-list: map-merge(
 		font-size: $table-list-font-size,
 		margin-bottom: $table-list-margin-bottom,
 		margin-top: $table-list-margin-top,
+
 		thead:
 			map-deep-merge(
 				$c-table-list-thead,
@@ -832,6 +887,7 @@ $c-table-list: map-merge(
 				)
 			),
 		table-cell: $c-table-list-cell,
+
 		tbody:
 			map-deep-merge(
 				$c-table-list-tbody,
@@ -851,6 +907,7 @@ $c-table-list: map-merge(
 				)
 			),
 		caption: $c-table-list-caption,
+
 		table-divider: (
 			table-cell: (
 				padding-bottom: $table-list-divider-padding-y,
@@ -859,32 +916,40 @@ $c-table-list: map-merge(
 				padding-top: $table-list-divider-padding-y,
 			),
 		),
+
 		table-active: (
 			background-color: $table-list-active-bg,
+
 			quick-action-menu: (
 				background-color: $table-list-quick-action-menu-active-bg,
 			),
 		),
+
 		table-disabled: (
 			background-color: $table-list-disabled-bg,
 			color: $table-list-disabled-color,
+
 			table-cell: (
 				href: (
 					color: $table-list-disabled-color,
 					pointer-events: $table-list-disabled-pointer-events,
 				),
 			),
+
 			table-title: (
 				color: $table-list-disabled-color,
 			),
+
 			table-list-title: (
 				color: $table-list-disabled-color,
 			),
 		),
+
 		table-row-start: (
 			table-cell: (
 				border-top-width: 0,
 			),
+
 			table-cell-start: (
 				border-top-left-radius:
 					clay-enable-rounded(
@@ -894,6 +959,7 @@ $c-table-list: map-merge(
 						)
 					),
 			),
+
 			table-cell-end: (
 				border-top-right-radius:
 					clay-enable-rounded(
@@ -904,6 +970,7 @@ $c-table-list: map-merge(
 					),
 			),
 		),
+
 		table-row-end: (
 			table-cell-start: (
 				border-bottom-left-radius:
@@ -914,6 +981,7 @@ $c-table-list: map-merge(
 						)
 					),
 			),
+
 			table-cell-end: (
 				border-bottom-right-radius:
 					clay-enable-rounded(
@@ -924,6 +992,7 @@ $c-table-list: map-merge(
 					),
 			),
 		),
+
 		quick-action-menu: (
 			align-items: $table-list-quick-action-menu-align-items,
 			background-color: $table-list-quick-action-menu-bg,
@@ -943,22 +1012,27 @@ $c-table-list-table-hover: map-deep-merge(
 			tr: (
 				hover: (
 					background-color: $table-list-hover-bg,
+
 					quick-action-menu: (
 						background-color: $table-list-quick-action-menu-hover-bg,
 					),
 				),
 			),
 		),
+
 		table-active: (
 			hover: (
 				background-color: $table-list-active-bg,
+
 				quick-action-menu: (
 					background-color: $table-list-quick-action-menu-hover-bg,
 				),
 			),
 		),
+
 		table-disabled: (
 			background-color: $table-list-disabled-bg,
+
 			hover: (
 				background-color: $table-list-disabled-bg,
 			),
@@ -977,7 +1051,9 @@ $c-table-list-table-bordered: map-deep-merge(
 				border-bottom-width: 0,
 			),
 		),
+
 		table-cell: $c-table-list-bordered-cell,
+
 		table-column-start: (
 			border-left-width: 0,
 		),
@@ -1004,6 +1080,7 @@ $table-row-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(primary, $table-bg-level), 5%),
 			),
 		),
+
 		'secondary': (
 			background-color: theme-color-level(secondary, $table-bg-level),
 			border-color: theme-color-level(secondary, $table-border-level),
@@ -1015,6 +1092,7 @@ $table-row-theme-colors: map-deep-merge(
 					),
 			),
 		),
+
 		'success': (
 			background-color: theme-color-level(success, $table-bg-level),
 			border-color: theme-color-level(success, $table-border-level),
@@ -1023,6 +1101,7 @@ $table-row-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(success, $table-bg-level), 5%),
 			),
 		),
+
 		'info': (
 			background-color: theme-color-level(info, $table-bg-level),
 			border-color: theme-color-level(info, $table-border-level),
@@ -1031,6 +1110,7 @@ $table-row-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(info, $table-bg-level), 5%),
 			),
 		),
+
 		'warning': (
 			background-color: theme-color-level(warning, $table-bg-level),
 			border-color: theme-color-level(warning, $table-border-level),
@@ -1039,6 +1119,7 @@ $table-row-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(warning, $table-bg-level), 5%),
 			),
 		),
+
 		'danger': (
 			background-color: theme-color-level(danger, $table-bg-level),
 			border-color: theme-color-level(danger, $table-border-level),
@@ -1047,6 +1128,7 @@ $table-row-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(danger, $table-bg-level), 5%),
 			),
 		),
+
 		'light': (
 			background-color: theme-color-level(light, $table-bg-level),
 			border-color: theme-color-level(light, $table-border-level),
@@ -1055,6 +1137,7 @@ $table-row-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(light, $table-bg-level), 5%),
 			),
 		),
+
 		'dark': (
 			background-color: theme-color-level(dark, $table-bg-level),
 			border-color: theme-color-level(dark, $table-border-level),
@@ -1062,8 +1145,10 @@ $table-row-theme-colors: map-deep-merge(
 				background-color:
 					clay-darken(theme-color-level(dark, $table-bg-level), 5%),
 			),
+
 			table-title: (
 				color: $table-dark-color,
+
 				href: (
 					color: inherit,
 				),

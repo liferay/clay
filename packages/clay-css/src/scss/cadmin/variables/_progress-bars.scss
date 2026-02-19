@@ -40,9 +40,11 @@ $cadmin-progress-group-addon: map-deep-merge(
 		margin-right: $cadmin-progress-group-addon-spacer-x,
 		min-width: 32px,
 		text-align: center,
+
 		first-child: (
 			padding-left: 0,
 		),
+
 		last-child: (
 			padding-right: 0,
 		),
@@ -76,14 +78,17 @@ $cadmin-progress-palette: map-deep-merge(
 			bar-bg: $cadmin-progress-bar-success-bg,
 			group-feedback-color: $cadmin-progress-group-feedback-success-color,
 		),
+
 		info: (
 			bar-bg: $cadmin-progress-bar-info-bg,
 			group-feedback-color: $cadmin-progress-group-feedback-info-color,
 		),
+
 		warning: (
 			bar-bg: $cadmin-progress-bar-warning-bg,
 			group-feedback-color: $cadmin-progress-group-feedback-warning-color,
 		),
+
 		danger: (
 			bar-bg: $cadmin-progress-bar-danger-bg,
 			group-feedback-color: $cadmin-progress-group-feedback-danger-color,

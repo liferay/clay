@@ -12,6 +12,7 @@ $cadmin-clay-time-btn: map-deep-merge(
 		padding-right: 0,
 		padding-top: 0,
 		width: 24px,
+
 		focus: (
 			box-shadow: 0 0 0 1px $cadmin-primary-l0,
 		),
@@ -40,6 +41,7 @@ $cadmin-clay-time-form-control-inset: map-deep-merge(
 		text-align: center,
 		width: 20px,
 		selection-bg: transparent,
+
 		focus: (
 			background-color: #b3d8fd,
 		),

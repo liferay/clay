@@ -15,17 +15,21 @@ $cadmin-nav-link: map-deep-merge(
 		padding-right: $cadmin-nav-link-padding-x,
 		padding-top: $cadmin-nav-link-padding-y,
 		position: relative,
+
 		hover: (
 			text-decoration: none,
 		),
+
 		focus: (
 			text-decoration: none,
 			z-index: 1,
 		),
+
 		disabled: (
 			color: $cadmin-nav-link-disabled-color,
 			box-shadow: none,
 			cursor: $cadmin-nav-link-disabled-cursor,
+
 			active: (
 				pointer-events: none,
 			),
@@ -38,12 +42,15 @@ $cadmin-nav-link-btn-unstyled: () !default;
 $cadmin-nav-link-btn-unstyled: map-deep-merge(
 	(
 		width: 100%,
+
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 		),
+
 		disabled: (
 			opacity: 1,
 		),
+
 		c-inner: (
 			width: auto,
 		),
@@ -86,22 +93,27 @@ $cadmin-nav-btn: map-deep-merge(
 		position: relative,
 		text-align: center,
 		width: auto,
+
 		focus: (
 			z-index: 1,
 		),
+
 		disabled: (
 			opacity: 1,
 		),
+
 		c-inner: (
 			margin-bottom: 0,
 			margin-left: math-sign($cadmin-nav-btn-padding-x),
 			margin-right: math-sign($cadmin-nav-btn-padding-x),
 			margin-top: math-sign($cadmin-btn-border-width),
 		),
+
 		btn-link: (
 			margin-left: 0,
 			margin-right: 0,
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -113,6 +125,7 @@ $cadmin-nav-btn-monospaced: () !default;
 $cadmin-nav-btn-monospaced: map-deep-merge(
 	(
 		padding: 0,
+
 		c-inner: (
 			margin-left: math-sign($cadmin-btn-border-width),
 			margin-right: math-sign($cadmin-btn-border-width),
@@ -131,6 +144,7 @@ $cadmin-nav-link-monospaced: map-deep-merge(
 		margin: $cadmin-nav-btn-margin-y $cadmin-nav-btn-margin-x,
 		min-width: $cadmin-nav-item-monospaced-size,
 		padding: 0,
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -159,6 +173,7 @@ $cadmin-nav-divider: map-deep-merge(
 		margin-left: 8px,
 		padding-left: 8px,
 		position: relative,
+
 		before: (
 			background-color: $cadmin-nav-divider-color,
 			content: '',
@@ -181,6 +196,7 @@ $cadmin-nav-divider-end: map-deep-merge(
 		margin-right: 8px,
 		padding-right: 8px,
 		position: relative,
+
 		after: (
 			background-color: $cadmin-nav-divider-color,
 			content: '',
@@ -256,6 +272,7 @@ $cadmin-nav-stacked: () !default;
 $cadmin-nav-stacked: map-deep-merge(
 	(
 		display: block,
+
 		nav-form: (
 			padding-bottom: $cadmin-nav-stacked-nav-form-padding-bottom,
 			padding-left: $cadmin-nav-stacked-nav-form-padding-left,
@@ -272,6 +289,7 @@ $cadmin-nav-unstyled: () !default;
 $cadmin-nav-unstyled: map-deep-merge(
 	(
 		flex-wrap: nowrap,
+
 		nav-link: (
 			line-height: $cadmin-nav-item-monospaced-size,
 			padding-bottom: 0,
@@ -279,9 +297,11 @@ $cadmin-nav-unstyled: map-deep-merge(
 			padding-right: 4px,
 			padding-top: 0,
 		),
+
 		nav-link-monospaced: (
 			margin: 0 4px,
 		),
+
 		nav-btn: (
 			margin: 0 4px,
 			padding-bottom: 0,
@@ -305,8 +325,8 @@ $cadmin-nav-tabs-font-size: 14px !default; // 14px
 // Nav Tabs Link
 
 $cadmin-nav-tabs-border-color: $cadmin-gray-400 !default;
-$cadmin-nav-tabs-border-width: $cadmin-border-width !default;
 $cadmin-nav-tabs-border-radius: $cadmin-border-radius $cadmin-border-radius 0 0 !default;
+$cadmin-nav-tabs-border-width: $cadmin-border-width !default;
 
 $cadmin-nav-tabs-link-color: $cadmin-gray-600 !default;
 $cadmin-nav-tabs-link-padding-x: null !default;
@@ -319,9 +339,9 @@ $cadmin-nav-tabs-link-active-border-color: $cadmin-gray-400 $cadmin-gray-400
 	$cadmin-nav-tabs-link-active-bg !default;
 $cadmin-nav-tabs-link-active-color: $cadmin-gray-900 !default;
 
-$cadmin-nav-tabs-link-show-color: $cadmin-nav-tabs-link-active-color !default;
 $cadmin-nav-tabs-link-show-bg: $cadmin-white !default;
 $cadmin-nav-tabs-link-show-border-color: $cadmin-nav-tabs-link-active-border-color !default;
+$cadmin-nav-tabs-link-show-color: $cadmin-nav-tabs-link-active-color !default;
 
 // .nav-tabs .nav-link[aria-expanded="true"]
 
@@ -350,29 +370,36 @@ $cadmin-nav-tabs-link: map-deep-merge(
 		padding-top: $cadmin-nav-tabs-link-padding-y,
 		transition: box-shadow 0.15s ease-in-out,
 		white-space: nowrap,
+
 		hover: (
 			border-color: $cadmin-nav-tabs-link-hover-border-color,
 		),
+
 		focus: (
 			border-color: $cadmin-nav-tabs-link-hover-border-color,
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+
 		active: (
 			background-color: $cadmin-nav-tabs-link-active-bg,
 			border-color: $cadmin-nav-tabs-link-active-border-color,
 			color: $cadmin-nav-tabs-link-active-color,
 		),
+
 		show: $cadmin-nav-tabs-link-show,
+
 		disabled: (
 			background-color: transparent,
 			border-color: transparent,
 			box-shadow: none,
 			color: $cadmin-nav-link-disabled-color,
 		),
+
 		inline-item-after: (
 			margin-left: 4px,
 		),
+
 		inline-item-before: (
 			margin-right: 4px,
 		),
@@ -390,9 +417,11 @@ $cadmin-nav-tabs: map-deep-merge(
 		padding-right: 24px,
 		padding-top: 7px,
 		font-size: $cadmin-nav-tabs-font-size,
+
 		nav-item: (
 			margin-bottom: math-sign($cadmin-nav-tabs-border-width),
 		),
+
 		nav-link: $cadmin-nav-tabs-link,
 	),
 	$cadmin-nav-tabs

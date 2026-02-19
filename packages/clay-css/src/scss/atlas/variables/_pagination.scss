@@ -59,6 +59,7 @@ $pagination-link-hover: map-deep-merge(
 		letter-spacing: 0,
 		text-decoration: none,
 		z-index: 2,
+
 		before: (
 			background-color: $secondary-l0,
 			height: 0.1875rem,
@@ -74,6 +75,7 @@ $pagination-link-focus: map-deep-merge(
 		border-color: $pagination-hover-border-color,
 		box-shadow: none,
 		color: $pagination-hover-color,
+
 		after: (
 			border-radius: $pagination-link-border-radius,
 			bottom: 0,
@@ -108,6 +110,7 @@ $pagination-link-disabled: map-deep-merge(
 		before: (
 			content: none,
 		),
+
 		focus: (
 			after: (
 				content: none,
@@ -121,6 +124,7 @@ $pagination-link: () !default;
 $pagination-link: map-deep-merge(
 	(
 		letter-spacing: 0.033em,
+
 		before: (
 			border-radius: 0 0 $border-radius $border-radius,
 			bottom: 0,
@@ -130,24 +134,30 @@ $pagination-link: map-deep-merge(
 			position: absolute,
 			right: 0,
 		),
+
 		active: $pagination-link-active,
+
 		active-class: (
 			background-color: $pagination-active-bg,
 			border-color: $pagination-active-border-color,
 			color: $pagination-active-color,
 			font-weight: $font-weight-semi-bold,
 			letter-spacing: 0,
+
 			before: (
 				background-color: $primary-l0,
 				height: 0.25rem,
 			),
 		),
+
 		show: (
 			font-weight: $font-weight-semi-bold,
 			letter-spacing: 0,
+
 			before: (
 				background-color: transparent,
 			),
+
 			hover: (
 				before: (
 					background-color: $secondary-l0,
@@ -186,9 +196,11 @@ $pagination-items-per-page-link-disabled: map-deep-merge(
 	(
 		font-weight: $font-weight-normal,
 		letter-spacing: 0.033em,
+
 		before: (
 			content: none,
 		),
+
 		focus: (
 			after: (
 				content: none,
@@ -204,6 +216,7 @@ $pagination-items-per-page-link: () !default;
 $pagination-items-per-page-link: map-deep-merge(
 	(
 		letter-spacing: 0.025em,
+
 		before: (
 			border-radius: 0 0 $border-radius $border-radius,
 			bottom: 0,
@@ -213,8 +226,11 @@ $pagination-items-per-page-link: map-deep-merge(
 			position: absolute,
 			right: 0,
 		),
+
 		hover: $pagination-link-hover,
+
 		disabled: $pagination-items-per-page-link-disabled,
+
 		show: map-get($pagination-link, show),
 	),
 	$pagination-items-per-page-link
@@ -228,15 +244,19 @@ $pagination-results-color: $pagination-color !default;
 
 // .pagination-sm
 
-$pagination-link-border-radius-sm: 0.3125rem !default;
 $pagination-font-size-sm: 0.75rem !default; // 12px
-$pagination-item-height-sm: 1.5rem !default; // 24px
 $pagination-padding-y-sm: 0 !default;
+
+$pagination-item-height-sm: 1.5rem !default; // 24px
+
+$pagination-link-border-radius-sm: 0.3125rem !default;
 
 // .pagination-lg
 
-$pagination-link-border-radius-lg: 0.3125rem !default; // 5px
 $pagination-font-size-lg: 1.125rem !default; // 18px
-$pagination-item-height-lg: 2.75rem !default; //44px
 $pagination-padding-x-lg: 1rem !default; // 16px
 $pagination-padding-y-lg: 0 !default;
+
+$pagination-item-height-lg: 2.75rem !default; //44px
+
+$pagination-link-border-radius-lg: 0.3125rem !default; // 5px

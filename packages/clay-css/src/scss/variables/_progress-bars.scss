@@ -33,9 +33,11 @@ $progress-group-addon: map-deep-merge(
 		margin-right: $progress-group-addon-spacer-x,
 		min-width: 2rem,
 		text-align: center,
+
 		first-child: (
 			padding-left: 0,
 		),
+
 		last-child: (
 			padding-right: 0,
 		),
@@ -69,30 +71,37 @@ $progress-palette: map-deep-merge(
 			progress-bar: (
 				background-color: $progress-bar-success-bg,
 			),
+
 			progress-group-feedback: (
 				color: $progress-group-feedback-success-color,
 			),
 		),
+
 		info: (
 			progress-bar: (
 				background-color: $progress-bar-info-bg,
 			),
+
 			progress-group-feedback: (
 				color: $progress-group-feedback-info-color,
 			),
 		),
+
 		warning: (
 			progress-bar: (
 				background-color: $progress-bar-warning-bg,
 			),
+
 			progress-group-feedback: (
 				color: $progress-group-feedback-warning-color,
 			),
 		),
+
 		danger: (
 			progress-bar: (
 				background-color: $progress-bar-danger-bg,
 			),
+
 			progress-group-feedback: (
 				color: $progress-group-feedback-danger-color,
 			),

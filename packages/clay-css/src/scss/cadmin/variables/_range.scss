@@ -58,6 +58,7 @@ $cadmin-clay-range-input: map-deep-merge(
 		position: relative,
 		vertical-align: middle,
 		width: 100%,
+
 		clay-range-thumb: (
 			background-color: $cadmin-white,
 			border-radius: 100px,
@@ -66,6 +67,7 @@ $cadmin-clay-range-input: map-deep-merge(
 			height: 24px,
 			width: 24px,
 		),
+
 		clay-range-track: (
 			background-color: $cadmin-gray-200,
 			border-radius: 100px,
@@ -74,6 +76,7 @@ $cadmin-clay-range-input: map-deep-merge(
 			top: 50%,
 			width: 100%,
 		),
+
 		clay-range-progress: (
 			background-color: $cadmin-primary,
 			border-radius: 100px 0 0 100px,
@@ -81,19 +84,23 @@ $cadmin-clay-range-input: map-deep-merge(
 			top: 50%,
 			width: 50%,
 		),
+
 		tooltip: (
 			margin-left: 13px,
 			transition: opacity 0.15s linear,
 			visibility: hidden,
 			white-space: nowrap,
 		),
+
 		tooltip-inner: (
 			padding: 8px 12px,
 		),
+
 		tooltip-arrow: (
 			height: 6px,
 			width: 6px,
 		),
+
 		clay-tooltip-bottom: (
 			margin-top: 4px,
 			padding-top: 3px,
@@ -103,6 +110,7 @@ $cadmin-clay-range-input: map-deep-merge(
 				margin-left: -4px,
 			),
 		),
+
 		clay-tooltip-top: (
 			bottom: 100%,
 			margin-bottom: 4px,
@@ -118,35 +126,45 @@ $cadmin-clay-range-input: map-deep-merge(
 			height: $cadmin-input-height,
 			position: relative,
 			z-index: $cadmin-zindex-clay-range-input-form-control,
+
 			hover: (
 				cursor: $cadmin-link-cursor,
+
 				clay-range-thumb: (
 					background-color: $cadmin-primary-l3,
 				),
 			),
+
 			focus: (
 				outline: 0,
+
 				clay-range-thumb: (
 					box-shadow: $cadmin-component-focus-inset-box-shadow,
 				),
 			),
+
 			disabled: (
 				color: $cadmin-clay-range-disabled-color,
 				cursor: $cadmin-disabled-cursor,
+
 				clay-range-thumb: (
 					background-color: $cadmin-gray-100,
 				),
+
 				clay-range-progress: (
 					background-color: $cadmin-primary-l2,
 				),
+
 				clay-range-track: (
 					background-color: $cadmin-gray-200,
 				),
 			),
 		),
+
 		data-label-min-max: (
 			margin-bottom: 16px,
 		),
+
 		before-after: (
 			font-size: 14px,
 			font-weight: $cadmin-font-weight-semi-bold,
@@ -157,11 +175,13 @@ $cadmin-clay-range-input: map-deep-merge(
 			top: 0,
 			width: 24px,
 		),
+
 		data-label-min: (
 			before: (
 				content: unquote("'\\FEFF' attr(data-label-min)"),
 			),
 		),
+
 		data-label-max: (
 			after: (
 				content: unquote("'\\FEFF' attr(data-label-max)"),

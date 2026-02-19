@@ -1,8 +1,8 @@
 $popover-bg: $white !default;
 $popover-border-color: rgba($black, 0.2) !default;
+$popover-border-radius: $border-radius-lg !default;
 $popover-border-width: $border-width !default;
 
-$popover-border-radius: $border-radius-lg !default;
 $popover-inner-border-radius: calc(
 	#{$popover-border-radius} - #{$popover-border-width}
 ) !default;
@@ -80,16 +80,19 @@ $popover: map-deep-merge(
 		word-spacing: normal,
 		word-wrap: break-word,
 		z-index: $zindex-popover,
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+
 		arrow: (
 			display: block,
 			height: $popover-arrow-height,
 			margin: 0 $popover-border-radius,
 			position: absolute,
 			width: $popover-arrow-width,
+
 			before: (
 				border-color: transparent,
 				border-style: solid,
@@ -97,6 +100,7 @@ $popover: map-deep-merge(
 				display: block,
 				position: absolute,
 			),
+
 			after: (
 				border-color: transparent,
 				border-style: solid,
@@ -105,6 +109,7 @@ $popover: map-deep-merge(
 				position: absolute,
 			),
 		),
+
 		inline-scroller: (
 			max-height: $popover-inline-scroller-max-height,
 		),
@@ -118,6 +123,7 @@ $popovers: () !default;
 $popovers: map-deep-merge(
 	(
 		popover: $popover,
+
 		// @deprecated as of v3.141.0 popover-secondary
 		popover-secondary:
 			(
@@ -127,6 +133,7 @@ $popovers: map-deep-merge(
 					border-color: transparent,
 					padding-bottom: 0,
 				),
+
 				close: (
 					color: $gray-600,
 				),
@@ -156,6 +163,7 @@ $popover-header: map-deep-merge(
 		margin-right: $popover-header-margin-x,
 		margin-top: $popover-header-margin-y,
 		padding: $popover-header-padding-y $popover-header-padding-x,
+
 		empty: (
 			display: none,
 		),
@@ -216,12 +224,14 @@ $clay-popover-top: () !default;
 $clay-popover-top: map-deep-merge(
 	(
 		margin-bottom: $popover-arrow-height,
+
 		arrow: (
 			left: 50%,
 			margin-left: math-sign($popover-arrow-width * 0.5),
 			bottom:
 				calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1),
 			margin: 0,
+
 			before: (
 				border-top-color: $popover-arrow-outer-color,
 				border-width: $popover-arrow-height
@@ -231,6 +241,7 @@ $clay-popover-top: map-deep-merge(
 					0,
 				bottom: 0,
 			),
+
 			after: (
 				border-top-color: $popover-top-arrow-color,
 				border-width: $popover-arrow-height
@@ -253,6 +264,7 @@ $clay-popover-top-left: map-deep-merge(
 		arrow: (
 			left: $popover-arrow-offset,
 			margin: 0,
+
 			after: (
 				border-top-color: $popover-top-left-arrow-color,
 			),
@@ -270,6 +282,7 @@ $clay-popover-top-right: map-deep-merge(
 			left: auto,
 			right: $popover-arrow-offset,
 			margin: 0,
+
 			after: (
 				border-top-color: $popover-top-right-arrow-color,
 			),
@@ -284,6 +297,7 @@ $clay-popover-right: () !default;
 $clay-popover-right: map-deep-merge(
 	(
 		margin-left: $popover-arrow-height,
+
 		arrow: (
 			height: $popover-arrow-width,
 			left:
@@ -291,6 +305,7 @@ $clay-popover-right: map-deep-merge(
 			margin: math-sign($popover-arrow-height * 0.5) 0 0,
 			top: 50%,
 			width: $popover-arrow-height,
+
 			before: (
 				border-right-color: $popover-arrow-outer-color,
 				border-width: (
@@ -303,6 +318,7 @@ $clay-popover-right: map-deep-merge(
 				0,
 				left: 0,
 			),
+
 			after: (
 				border-right-color: $popover-right-arrow-color,
 				border-width: (
@@ -329,6 +345,7 @@ $clay-popover-right-bottom: map-deep-merge(
 			bottom: $popover-arrow-offset,
 			margin: 0,
 			top: auto,
+
 			after: (
 				border-right-color: $popover-right-bottom-arrow-color,
 			),
@@ -345,6 +362,7 @@ $clay-popover-right-top: map-deep-merge(
 		arrow: (
 			margin: 0,
 			top: $popover-arrow-offset,
+
 			after: (
 				border-right-color: $popover-right-top-arrow-color,
 			),
@@ -359,6 +377,7 @@ $clay-popover-bottom: () !default;
 $clay-popover-bottom: map-deep-merge(
 	(
 		margin-top: $popover-arrow-height,
+
 		arrow: (
 			left: 50%,
 			margin: 0 0 0 math-sign($popover-arrow-width * 0.5),
@@ -376,6 +395,7 @@ $clay-popover-bottom: map-deep-merge(
 					),
 				top: 0,
 			),
+
 			after: (
 				border-bottom-color: $popover-bottom-arrow-color,
 				border-width: 0
@@ -401,6 +421,7 @@ $clay-popover-bottom-left: map-deep-merge(
 		arrow: (
 			left: $popover-arrow-offset,
 			margin: 0,
+
 			after: (
 				border-bottom-color: $popover-bottom-left-arrow-color,
 			),
@@ -417,6 +438,7 @@ $clay-popover-bottom-right: map-deep-merge(
 		arrow: (
 			left: auto,
 			right: $popover-arrow-offset,
+
 			after: (
 				border-bottom-color: $popover-bottom-right-arrow-color,
 			),
@@ -431,6 +453,7 @@ $clay-popover-left: () !default;
 $clay-popover-left: map-deep-merge(
 	(
 		margin-right: $popover-arrow-height,
+
 		arrow: (
 			height: $popover-arrow-width,
 			margin: math-sign($popover-arrow-height * 0.5) 0 0,
@@ -438,6 +461,7 @@ $clay-popover-left: map-deep-merge(
 				calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1),
 			top: 50%,
 			width: $popover-arrow-height,
+
 			before: (
 				border-left-color: $popover-arrow-outer-color,
 				border-width: (
@@ -450,6 +474,7 @@ $clay-popover-left: map-deep-merge(
 				$popover-arrow-height,
 				right: 0,
 			),
+
 			after: (
 				border-left-color: $popover-left-arrow-color,
 				border-width: (
@@ -476,6 +501,7 @@ $clay-popover-left-bottom: map-deep-merge(
 			bottom: $popover-arrow-offset,
 			margin: 0,
 			top: auto,
+
 			after: (
 				border-left-color: $popover-left-bottom-arrow-color,
 			),
@@ -492,6 +518,7 @@ $clay-popover-left-top: map-deep-merge(
 		arrow: (
 			margin: 0,
 			top: $popover-arrow-offset,
+
 			after: (
 				border-left-color: $popover-left-top-arrow-color,
 			),

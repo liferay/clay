@@ -1,5 +1,5 @@
-$cadmin-btn-border-width: $cadmin-input-btn-border-width !default;
 $cadmin-btn-border-radius: $cadmin-border-radius !default;
+$cadmin-btn-border-width: $cadmin-input-btn-border-width !default;
 $cadmin-btn-box-shadow: null !default;
 
 $cadmin-btn-cursor: $cadmin-link-cursor !default;
@@ -17,6 +17,7 @@ $cadmin-btn-padding-x-mobile: null !default;
 $cadmin-btn-padding-y-mobile: null !default;
 
 $cadmin-btn-focus-width: $cadmin-input-btn-focus-width !default;
+
 $cadmin-btn-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
 
 $cadmin-btn-active-box-shadow: null !default;
@@ -207,6 +208,10 @@ $cadmin-btn-sm: map-deep-merge(
 
 		btn-section: (
 			font-size: $cadmin-btn-section-font-size-sm,
+		),
+
+		lexicon-icon: (
+			font-size: 16px,
 		),
 	),
 	$cadmin-btn-sm

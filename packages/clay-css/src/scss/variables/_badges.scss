@@ -1,28 +1,26 @@
 // .badge
 
 $badge-border-color: transparent !default;
+$badge-border-radius: $border-radius !default;
 $badge-border-style: solid !default;
 $badge-border-width: 1px !default;
-
-$badge-border-radius: $border-radius !default;
-
-$badge-line-height: 1 !default;
 $badge-font-size: 75% !default;
 $badge-font-weight: $font-weight-bold !default;
+$badge-line-height: 1 !default;
 $badge-padding-x: 0.4em !default;
 $badge-padding-y: 0.25em !default;
-$badge-transition: $component-transition !default;
-
 $badge-spacer-x: 0.25rem !default; // 4px
 $badge-spacer-y: 0.125rem !default; // 2px
+$badge-transition: $component-transition !default;
 
 $badge-focus-width: $input-btn-focus-width !default;
 
 // .badge a
 
 $badge-link-color: $white !default;
-$badge-link-hover-color: null !default;
 $badge-link-text-decoration: underline !default;
+
+$badge-link-hover-color: null !default;
 $badge-link-hover-text-decoration: none !default;
 
 $badge: () !default;
@@ -48,30 +46,37 @@ $badge: map-deep-merge(
 		transition: clay-enable-transitions($badge-transition),
 		white-space: inherit,
 		word-wrap: break-word,
+
 		empty: (
 			display: none,
 		),
+
 		href: (
 			hover: (
 				text-decoration: none,
 			),
+
 			focus: (
 				box-shadow: $component-focus-box-shadow,
 				outline: 0,
 			),
 		),
+
 		link: (
 			color: $badge-link-color,
 			text-decoration: $badge-link-text-decoration,
+
 			hover: (
 				color: $badge-link-hover-color,
 				text-decoration: $badge-link-hover-text-decoration,
 			),
+
 			focus: (
 				color: $badge-link-hover-color,
 				text-decoration: $badge-link-hover-text-decoration,
 			),
 		),
+
 		c-inner: (
 			margin-bottom: math-sign($badge-padding-y),
 			margin-left: math-sign($badge-padding-x),
@@ -109,10 +114,12 @@ $badge-close: map-deep-merge(
 		height: auto,
 		opacity: 1,
 		width: auto,
+
 		hover: (
 			color: inherit,
 			opacity: 1,
 		),
+
 		focus: (
 			opacity: 1,
 		),
@@ -138,12 +145,15 @@ $badge-pill: map-deep-merge(
 // .badge-primary
 
 $badge-primary-bg: $primary !default;
-$badge-primary-hover-bg: clay-darken($primary, 10%) !default;
 $badge-primary-border-color: null !default;
-$badge-primary-hover-border-color: null !default;
 $badge-primary-color: color-yiq($primary) !default;
+
+$badge-primary-hover-bg: clay-darken($primary, 10%) !default;
+$badge-primary-hover-border-color: null !default;
 $badge-primary-hover-color: $badge-primary-color !default;
+
 $badge-primary-link-color: null !default;
+
 $badge-primary-link-hover-color: null !default;
 
 $badge-primary: () !default;
@@ -152,12 +162,14 @@ $badge-primary: map-deep-merge(
 		background-color: $badge-primary-bg,
 		border-color: $badge-primary-border-color,
 		color: $badge-primary-color,
+
 		href: (
 			hover: (
 				background-color: $badge-primary-hover-bg,
 				border-color: $badge-primary-hover-border-color,
 				color: $badge-primary-hover-color,
 			),
+
 			focus: (
 				background-color: $badge-primary-hover-bg,
 				border-color: $badge-primary-hover-border-color,
@@ -166,11 +178,14 @@ $badge-primary: map-deep-merge(
 				color: $badge-primary-hover-color,
 			),
 		),
+
 		link: (
 			color: $badge-primary-link-color,
+
 			hover: (
 				color: $badge-primary-link-hover-color,
 			),
+
 			focus: (
 				color: $badge-primary-link-hover-color,
 			),
@@ -182,12 +197,15 @@ $badge-primary: map-deep-merge(
 // .badge-secondary
 
 $badge-secondary-bg: $secondary !default;
-$badge-secondary-hover-bg: clay-darken($secondary, 10%) !default;
 $badge-secondary-border-color: null !default;
-$badge-secondary-hover-border-color: null !default;
 $badge-secondary-color: color-yiq($secondary) !default;
+
+$badge-secondary-hover-bg: clay-darken($secondary, 10%) !default;
+$badge-secondary-hover-border-color: null !default;
 $badge-secondary-hover-color: $badge-secondary-color !default;
+
 $badge-secondary-link-color: null !default;
+
 $badge-secondary-link-hover-color: null !default;
 
 $badge-secondary: () !default;
@@ -196,25 +214,30 @@ $badge-secondary: map-deep-merge(
 		background-color: $badge-secondary-bg,
 		border-color: $badge-secondary-border-color,
 		color: $badge-secondary-color,
+
 		href: (
 			hover: (
 				background-color: $badge-secondary-hover-bg,
 				border-color: $badge-secondary-hover-border-color,
 				color: $badge-secondary-hover-color,
 			),
+
 			focus: (
 				background-color: $badge-secondary-hover-bg,
 				border-color: $badge-secondary-hover-border-color,
-				color: $badge-secondary-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width
 					rgba($badge-secondary-bg, 0.5),
+				color: $badge-secondary-hover-color,
 			),
 		),
+
 		link: (
 			color: $badge-secondary-link-color,
+
 			hover: (
 				color: $badge-secondary-link-hover-color,
 			),
+
 			focus: (
 				color: $badge-secondary-link-hover-color,
 			),
@@ -226,12 +249,15 @@ $badge-secondary: map-deep-merge(
 // .badge-success
 
 $badge-success-bg: $success !default;
-$badge-success-hover-bg: clay-darken($success, 10%) !default;
 $badge-success-border-color: null !default;
-$badge-success-hover-border-color: null !default;
 $badge-success-color: color-yiq($success) !default;
+
+$badge-success-hover-bg: clay-darken($success, 10%) !default;
+$badge-success-hover-border-color: null !default;
 $badge-success-hover-color: $badge-success-color !default;
+
 $badge-success-link-color: null !default;
+
 $badge-success-link-hover-color: null !default;
 
 $badge-success: () !default;
@@ -240,25 +266,30 @@ $badge-success: map-deep-merge(
 		background-color: $badge-success-bg,
 		border-color: $badge-success-border-color,
 		color: $badge-success-color,
+
 		href: (
 			hover: (
 				background-color: $badge-success-hover-bg,
 				border-color: $badge-success-hover-border-color,
 				color: $badge-success-hover-color,
 			),
+
 			focus: (
 				background-color: $badge-success-hover-bg,
 				border-color: $badge-success-hover-border-color,
-				color: $badge-success-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width
 					rgba($badge-success-bg, 0.5),
+				color: $badge-success-hover-color,
 			),
 		),
+
 		link: (
 			color: $badge-success-link-color,
+
 			hover: (
 				color: $badge-success-link-hover-color,
 			),
+
 			focus: (
 				color: $badge-success-link-hover-color,
 			),
@@ -270,12 +301,15 @@ $badge-success: map-deep-merge(
 // .badge-info
 
 $badge-info-bg: $info !default;
-$badge-info-hover-bg: clay-darken($info, 10%) !default;
 $badge-info-border-color: null !default;
-$badge-info-hover-border-color: null !default;
 $badge-info-color: color-yiq($info) !default;
+
+$badge-info-hover-bg: clay-darken($info, 10%) !default;
+$badge-info-hover-border-color: null !default;
 $badge-info-hover-color: $badge-info-color !default;
+
 $badge-info-link-color: null !default;
+
 $badge-info-link-hover-color: null !default;
 
 $badge-info: () !default;
@@ -284,24 +318,29 @@ $badge-info: map-deep-merge(
 		background-color: $badge-info-bg,
 		border-color: $badge-info-border-color,
 		color: $badge-info-color,
+
 		href: (
 			hover: (
 				background-color: $badge-info-hover-bg,
 				border-color: $badge-info-hover-border-color,
 				color: $badge-info-hover-color,
 			),
+
 			focus: (
 				background-color: $badge-info-hover-bg,
 				border-color: $badge-info-hover-border-color,
-				color: $badge-info-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width rgba($badge-info-bg, 0.5),
+				color: $badge-info-hover-color,
 			),
 		),
+
 		link: (
 			color: $badge-info-link-color,
+
 			hover: (
 				color: $badge-info-link-hover-color,
 			),
+
 			focus: (
 				color: $badge-info-link-hover-color,
 			),
@@ -313,12 +352,15 @@ $badge-info: map-deep-merge(
 // .badge-warning
 
 $badge-warning-bg: $warning !default;
-$badge-warning-hover-bg: clay-darken($warning, 10%) !default;
 $badge-warning-border-color: null !default;
-$badge-warning-hover-border-color: null !default;
 $badge-warning-color: color-yiq($warning) !default;
+
+$badge-warning-hover-bg: clay-darken($warning, 10%) !default;
+$badge-warning-hover-border-color: null !default;
 $badge-warning-hover-color: $badge-warning-color !default;
+
 $badge-warning-link-color: null !default;
+
 $badge-warning-link-hover-color: null !default;
 
 $badge-warning: () !default;
@@ -327,25 +369,30 @@ $badge-warning: map-deep-merge(
 		background-color: $badge-warning-bg,
 		border-color: $badge-warning-border-color,
 		color: $badge-warning-color,
+
 		href: (
 			hover: (
 				background-color: $badge-warning-hover-bg,
 				border-color: $badge-warning-hover-border-color,
 				color: $badge-warning-hover-color,
 			),
+
 			focus: (
 				background-color: $badge-warning-hover-bg,
 				border-color: $badge-warning-hover-border-color,
-				color: $badge-warning-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width
 					rgba($badge-warning-bg, 0.5),
+				color: $badge-warning-hover-color,
 			),
 		),
+
 		link: (
 			color: $badge-warning-link-color,
+
 			hover: (
 				color: $badge-warning-link-hover-color,
 			),
+
 			focus: (
 				color: $badge-warning-link-hover-color,
 			),
@@ -357,12 +404,15 @@ $badge-warning: map-deep-merge(
 // .badge-danger
 
 $badge-danger-bg: $danger !default;
-$badge-danger-hover-bg: clay-darken($danger, 10%) !default;
 $badge-danger-border-color: null !default;
-$badge-danger-hover-border-color: null !default;
 $badge-danger-color: color-yiq($danger) !default;
+
+$badge-danger-hover-bg: clay-darken($danger, 10%) !default;
+$badge-danger-hover-border-color: null !default;
 $badge-danger-hover-color: $badge-danger-color !default;
+
 $badge-danger-link-color: null !default;
+
 $badge-danger-link-hover-color: null !default;
 
 $badge-danger: () !default;
@@ -371,24 +421,29 @@ $badge-danger: map-deep-merge(
 		background-color: $badge-danger-bg,
 		border-color: $badge-danger-border-color,
 		color: $badge-danger-color,
+
 		href: (
 			hover: (
 				background-color: $badge-danger-hover-bg,
 				border-color: $badge-danger-hover-border-color,
 				color: $badge-danger-hover-color,
 			),
+
 			focus: (
 				background-color: $badge-danger-hover-bg,
 				border-color: $badge-danger-hover-border-color,
-				color: $badge-danger-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width rgba($badge-danger-bg, 0.5),
+				color: $badge-danger-hover-color,
 			),
 		),
+
 		link: (
 			color: $badge-danger-link-color,
+
 			hover: (
 				color: $badge-danger-link-hover-color,
 			),
+
 			focus: (
 				color: $badge-danger-link-hover-color,
 			),
@@ -400,12 +455,15 @@ $badge-danger: map-deep-merge(
 // .badge-light
 
 $badge-light-bg: $light !default;
-$badge-light-hover-bg: clay-darken($light, 10%) !default;
 $badge-light-border-color: null !default;
-$badge-light-hover-border-color: null !default;
 $badge-light-color: color-yiq($light) !default;
+
+$badge-light-hover-bg: clay-darken($light, 10%) !default;
+$badge-light-hover-border-color: null !default;
 $badge-light-hover-color: $badge-light-color !default;
+
 $badge-light-link-color: null !default;
+
 $badge-light-link-hover-color: null !default;
 
 $badge-light: () !default;
@@ -414,24 +472,29 @@ $badge-light: map-deep-merge(
 		background-color: $badge-light-bg,
 		border-color: $badge-light-border-color,
 		color: $badge-light-color,
+
 		href: (
 			hover: (
 				background-color: $badge-light-hover-bg,
 				border-color: $badge-light-hover-border-color,
 				color: $badge-light-hover-color,
 			),
+
 			focus: (
 				background-color: $badge-light-hover-bg,
 				border-color: $badge-light-hover-border-color,
-				color: $badge-light-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width rgba($badge-light-bg, 0.5),
+				color: $badge-light-hover-color,
 			),
 		),
+
 		link: (
 			color: $badge-light-link-color,
+
 			hover: (
 				color: $badge-light-link-hover-color,
 			),
+
 			focus: (
 				color: $badge-light-link-hover-color,
 			),
@@ -443,12 +506,15 @@ $badge-light: map-deep-merge(
 // .badge-dark
 
 $badge-dark-bg: $dark !default;
-$badge-dark-hover-bg: clay-darken($dark, 10%) !default;
 $badge-dark-border-color: null !default;
-$badge-dark-hover-border-color: null !default;
 $badge-dark-color: color-yiq($dark) !default;
+
+$badge-dark-hover-bg: clay-darken($dark, 10%) !default;
+$badge-dark-hover-border-color: null !default;
 $badge-dark-hover-color: $badge-dark-color !default;
+
 $badge-dark-link-color: null !default;
+
 $badge-dark-link-hover-color: null !default;
 
 $badge-dark: () !default;
@@ -457,24 +523,29 @@ $badge-dark: map-deep-merge(
 		background-color: $badge-dark-bg,
 		border-color: $badge-dark-border-color,
 		color: $badge-dark-color,
+
 		href: (
 			hover: (
 				background-color: $badge-dark-hover-bg,
 				border-color: $badge-dark-hover-border-color,
 				color: $badge-dark-hover-color,
 			),
+
 			focus: (
 				background-color: $badge-dark-hover-bg,
 				border-color: $badge-dark-hover-border-color,
-				color: $badge-dark-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width rgba($badge-dark-bg, 0.5),
+				color: $badge-dark-hover-color,
 			),
 		),
+
 		link: (
 			color: $badge-dark-link-color,
+
 			hover: (
 				color: $badge-dark-link-hover-color,
 			),
+
 			focus: (
 				color: $badge-dark-link-hover-color,
 			),
@@ -487,90 +558,117 @@ $badge-palette: () !default;
 $badge-palette: map-deep-merge(
 	(
 		primary: $badge-primary,
+
 		secondary: $badge-secondary,
+
 		success: $badge-success,
+
 		info: $badge-info,
+
 		warning: $badge-warning,
+
 		danger: $badge-danger,
+
 		light: $badge-light,
+
 		dark: $badge-dark,
+
 		'.badge-translucent.badge-primary': (
 			background-color: rgba($primary-d1, 0.04),
 			border-color: transparent,
 			color: $primary-d1,
 		),
+
 		'.badge-translucent.badge-info, .badge-beta': (
 			background-color: rgba($info-d1, 0.04),
 			border-color: transparent,
 			color: $info-d1,
 		),
+
 		'.badge-translucent.badge-success': (
 			background-color: rgba($success-d1, 0.04),
 			border-color: transparent,
 			color: $success-d1,
 		),
+
 		'.badge-translucent.badge-warning': (
 			background-color: rgba($warning-d1, 0.04),
 			border-color: transparent,
 			color: $warning-d1,
 		),
+
 		'.badge-translucent.badge-danger': (
 			background-color: rgba($danger-d1, 0.04),
 			border-color: transparent,
 			color: $danger-d1,
 		),
+
 		'%clay-dark-badge-translucent-primary': (
 			background-color: rgba($primary-l2, 0.04),
 			border-color: transparent,
 			color: $primary-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-primary': (
 			extend: '%clay-dark-badge-translucent-primary',
 		),
+
 		'.clay-dark.badge-translucent.badge-primary': (
 			extend: '%clay-dark-badge-translucent-primary',
 		),
+
 		'%clay-dark-badge-translucent-info': (
 			background-color: rgba($info-l2, 0.04),
 			border-color: transparent,
 			color: $info-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-info, .badge-beta-dark': (
 			extend: '%clay-dark-badge-translucent-info',
 		),
+
 		'.clay-dark.badge-translucent.badge-info': (
 			extend: '%clay-dark-badge-translucent-info',
 		),
+
 		'%clay-dark-badge-translucent-success': (
 			background-color: rgba($success-l2, 0.04),
 			border-color: transparent,
 			color: $success-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-success': (
 			extend: '%clay-dark-badge-translucent-success',
 		),
+
 		'.clay-dark.badge-translucent.badge-success': (
 			extend: '%clay-dark-badge-translucent-success',
 		),
+
 		'%clay-dark-badge-translucent-warning': (
 			background-color: rgba($warning-l2, 0.04),
 			border-color: transparent,
 			color: $warning-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-warning': (
 			extend: '%clay-dark-badge-translucent-warning',
 		),
+
 		'.clay-dark.badge-translucent.badge-warning': (
 			extend: '%clay-dark-badge-translucent-warning',
 		),
+
 		'%clay-dark-badge-translucent-danger': (
 			background-color: rgba($danger-l2, 0.04),
 			border-color: transparent,
 			color: $danger-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-danger': (
 			extend: '%clay-dark-badge-translucent-danger',
 		),
+
 		'.clay-dark.badge-translucent.badge-danger': (
 			extend: '%clay-dark-badge-translucent-danger',
 		),

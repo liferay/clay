@@ -10,6 +10,7 @@ $sidebar-header-component-title: map-deep-merge(
 	(
 		font-size: 1.5rem,
 		overflow-wrap: break-word,
+
 		href: (
 			color: $gray-900,
 		),
@@ -81,56 +82,72 @@ $sidebar: map-deep-merge(
 	(
 		height: 100%,
 		overflow: auto,
+
 		-webkit-overflow-scrolling: touch,
+
 		sidebar-header: (
 			padding-bottom: $sidebar-padding-bottom,
 			padding-left: $sidebar-padding-left,
 			padding-right: 1rem,
 			padding-top: $sidebar-padding-top,
+
 			component-title: $sidebar-header-component-title,
+
 			component-subtitle: $sidebar-header-component-subtitle,
+
 			autofit-row: (
 				margin-left: -0.25rem,
 				margin-right: -0.25rem,
 				width: auto,
+
 				autofit-col: (
 					padding-left: 0.25rem,
 					padding-right: 0.25rem,
 				),
 			),
 		),
+
 		sidebar-footer: (
 			padding-bottom: $sidebar-padding-bottom,
 			padding-left: $sidebar-padding-left,
 			padding-right: $sidebar-padding-right,
 			padding-top: $sidebar-padding-top,
 		),
+
 		sidebar-body: (
 			overflow: auto,
+
 			-webkit-overflow-scrolling: touch,
+
 			padding-bottom: $sidebar-padding-bottom,
 			padding-left: $sidebar-padding-left,
 			padding-right: $sidebar-padding-right,
 			padding-top: $sidebar-padding-top,
 		),
+
 		sidebar-list-group: (
 			display: flex,
 			flex-direction: column,
 			font-size: $sidebar-list-group-font-size,
 			margin-bottom: 0,
 			padding-left: 0,
+
 			list-group-item: (
 				background-color: $sidebar-list-group-bg,
 				border-color: $sidebar-list-group-border-color,
 				padding: $sidebar-list-group-item-padding,
 			),
+
 			sticker: $sidebar-list-group-sticker-size,
 		),
+
 		sidebar-panel: (
 			margin-bottom: $sidebar-panel-margin-bottom,
 			position: relative,
 		),
+
 		sidebar-dt: $sidebar-dt,
+
 		sidebar-dd: $sidebar-dd,
 	),
 	$sidebar
@@ -143,6 +160,7 @@ $sidebar-light-navigation-bar: map-deep-merge(
 	(
 		background-color: $light,
 		border-color: $gray-300,
+
 		navbar-nav: (
 			nav-link: (
 				color:
@@ -159,6 +177,7 @@ $sidebar-light-navigation-bar: map-deep-merge(
 							rgba($black, 0.7)
 						),
 				),
+
 				active: (
 					color:
 						if(
@@ -167,6 +186,7 @@ $sidebar-light-navigation-bar: map-deep-merge(
 							rgba($black, 0.9)
 						),
 				),
+
 				disabled: (
 					color:
 						if(
@@ -177,6 +197,7 @@ $sidebar-light-navigation-bar: map-deep-merge(
 				),
 			),
 		),
+
 		media-breakpoint-down: (),
 		media-breakpoint-up: (),
 	),
@@ -187,30 +208,39 @@ $sidebar-sm: () !default;
 $sidebar-sm: map-deep-merge(
 	(
 		font-size: 0.875rem,
+
 		panel-group: (
 			extend: '%clay-panel-group-sm',
 		),
+
 		btn: (
 			extend: '%clay-btn-sm',
+
 			'&.btn-xs': (
 				extend: '%clay-btn-xs',
 			),
+
 			'&.btn-monospaced': (
 				extend: '%clay-btn-monospaced-sm',
 			),
+
 			'&.btn-monospaced.btn-xs': (
 				extend: '%clay-btn-monospaced-xs',
 			),
 		),
+
 		form-control: (
 			extend: '%clay-form-control-sm',
 		),
+
 		form-control-select: (
 			extend: '%clay-select-form-control-sm',
 		),
+
 		form-control-tag-group: (
 			extend: '%clay-form-control-tag-group-sm',
 		),
+
 		input-group: (
 			extend: '%clay-input-group-sm',
 		),
@@ -225,50 +255,61 @@ $sidebar-light: map-deep-merge(
 		border-color: $gray-300,
 		border-left-width: 1px,
 		color: $gray-900,
+
 		close: (
 			hover: (
 				background-color: $secondary,
 				color: $white,
 			),
+
 			active: (
 				background-color: $secondary,
 				color: $white,
 			),
+
 			disabled: (
 				background-color: transparent,
 				box-shadow: none,
 				color: $secondary,
 				cursor: $disabled-cursor,
 				opacity: $component-disabled-opacity,
+
 				active: (
 					pointer-events: none,
 				),
 			),
 		),
+
 		sidebar-header: (
 			background-color: inherit,
 			border: 0px solid $gray-300,
 		),
+
 		sidebar-footer: (
 			background-color: inherit,
 			border: 0px solid $gray-300,
 		),
+
 		sidebar-dd: (
 			href: (
 				color: $gray-900,
 			),
 		),
+
 		sidebar-panel: (
 			background-color: $gray-200,
 		),
+
 		sidebar-list-group: (
 			list-group-title: (
 				font-size: 1rem,
+
 				href: (
 					color: $gray-900,
 				),
 			),
 		),
+
 		component-navigation-bar: $sidebar-light-navigation-bar,
 	),
 	$sidebar-light
@@ -281,45 +322,57 @@ $sidebar-dark: map-deep-merge(
 	(
 		background-color: $dark,
 		color: $white,
+
 		sidebar-header: (
 			component-title: (
 				color: inherit,
+
 				href: (
 					color: inherit,
 				),
 			),
+
 			component-subtitle: (
 				color: inherit,
+
 				href: (
 					color: inherit,
 				),
 			),
 		),
+
 		close: (
 			color: $secondary-l1,
+
 			hover: (
 				color: $white,
 			),
 		),
+
 		nav-nested: (
 			nav-link: (
 				border-radius: $border-radius,
 				color: $secondary-l1,
 				transition: box-shadow 0.15s ease-in-out,
+
 				hover: (
 					color: $white,
 				),
+
 				focus: (
 					box-shadow: $component-focus-box-shadow,
 					outline: 0,
 				),
+
 				active: (
 					color: $white,
 				),
+
 				disabled: (
 					box-shadow: none,
 					color: $secondary-l1,
 					opacity: 0.65,
+
 					active: (
 						pointer-events: none,
 					),
@@ -338,50 +391,65 @@ $sidebar-palette: () !default;
 $sidebar-palette: map-deep-merge(
 	(
 		sidebar-sm: $sidebar-sm,
+
 		sidebar-light: $sidebar-light,
+
 		sidebar-dark: $sidebar-dark,
+
 		sidebar-dark-l2: (
 			background-color: $dark-l2,
 			color: $white,
+
 			sidebar-header: (
 				component-title: (
 					color: inherit,
+
 					href: (
 						color: inherit,
 					),
 				),
+
 				component-subtitle: (
 					color: inherit,
+
 					href: (
 						color: inherit,
 					),
 				),
 			),
+
 			close: (
 				color: $secondary-l1,
+
 				hover: (
 					color: $white,
 				),
 			),
+
 			nav-nested: (
 				nav-link: (
 					border-radius: $border-radius,
 					color: $secondary-l1,
 					transition: box-shadow 0.15s ease-in-out,
+
 					hover: (
 						color: $white,
 					),
+
 					focus: (
 						box-shadow: $component-focus-box-shadow,
 						outline: 0,
 					),
+
 					active: (
 						color: $white,
 					),
+
 					disabled: (
 						box-shadow: none,
 						color: $secondary-l1,
 						opacity: 0.65,
+
 						active: (
 							pointer-events: none,
 						),

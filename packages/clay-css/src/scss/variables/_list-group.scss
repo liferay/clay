@@ -1,20 +1,18 @@
 $list-group-bg: $white !default;
 $list-group-border-color: rgba($black, 0.125) !default;
-$list-group-border-width: $border-width !default;
-
 $list-group-border-radius: $border-radius !default;
-
+$list-group-border-width: $border-width !default;
 $list-group-box-shadow: null !default;
 $list-group-color: null !default;
 $list-group-font-size: null !default;
 $list-group-margin-bottom: 1.5rem !default;
 $list-group-margin-top: null !default;
 
+$list-group-hover-bg: $gray-100 !default;
+
 // List Group Item Action
 
 $list-group-action-color: $gray-700 !default;
-
-$list-group-hover-bg: $gray-100 !default;
 
 $list-group-action-hover-color: $list-group-action-color !default;
 
@@ -29,9 +27,10 @@ $list-group-item-padding-y: 0.75rem !default;
 // Use values flex-start, flex-end, or center
 
 $list-group-item-flex-align-items: flex-start !default;
+$list-group-item-flex-offset-top: 0.0625rem !default;
 
 $list-group-item-flex-checkbox-offset-top: 0.1875rem !default;
-$list-group-item-flex-offset-top: 0.0625rem !default;
+
 $list-group-item-flex-list-group-title-offset-top: -0.25rem !default;
 
 $list-group-item-flex: () !default;
@@ -83,6 +82,7 @@ $list-group-title-link: map-deep-merge(
 	(
 		color: $gray-900,
 		max-width: 100%,
+
 		hover: (
 			color: clay-darken($gray-900, 15%),
 		),
@@ -99,6 +99,7 @@ $list-group-title: map-deep-merge(
 		line-height: $line-height-base,
 		margin-bottom: 0,
 		margin-top: $list-group-item-flex-list-group-title-offset-top,
+
 		href: $list-group-title-link
 	),
 	$list-group-title
@@ -112,6 +113,7 @@ $list-group-subtitle-link: () !default;
 $list-group-subtitle-link: map-deep-merge(
 	(
 		color: $gray-600,
+
 		hover: (
 			color: clay-darken($gray-600, 15%),
 		),
@@ -124,6 +126,7 @@ $list-group-subtitle: map-deep-merge(
 	(
 		color: $gray-600,
 		margin-bottom: 0,
+
 		href: $list-group-subtitle-link,
 	),
 	$list-group-subtitle
@@ -135,6 +138,7 @@ $list-group-text-link: () !default;
 $list-group-text-link: map-deep-merge(
 	(
 		color: $gray-900,
+
 		hover: (
 			color: clay-darken($gray-900, 15%),
 		),
@@ -147,6 +151,7 @@ $list-group-text: map-deep-merge(
 	(
 		color: $gray-900,
 		margin-bottom: 0,
+
 		href: $list-group-text-link,
 	),
 	$list-group-text
@@ -160,6 +165,7 @@ $list-group-subtext-link: () !default;
 $list-group-subtext-link: map-deep-merge(
 	(
 		color: $gray-600,
+
 		hover: (
 			color: clay-darken($gray-600, 15%),
 		),
@@ -172,6 +178,7 @@ $list-group-subtext: map-deep-merge(
 	(
 		color: $gray-600,
 		margin-bottom: 0,
+
 		href: $list-group-subtext-link,
 	),
 	$list-group-subtext
@@ -185,7 +192,9 @@ $list-group-detail-margin-bottom: null !default;
 $list-group-detail-margin-top: null !default;
 
 $list-group-link-color: null !default;
+
 $list-group-link-hover-color: null !default;
+
 $list-group-link-active-color: $white !default;
 
 $list-group: () !default;
@@ -200,6 +209,7 @@ $list-group: map-deep-merge(
 		margin-bottom: $list-group-margin-bottom,
 		margin-top: $list-group-margin-top,
 		padding-left: 0,
+
 		list-group: (
 			box-shadow: if($list-group-box-shadow != null, none, null),
 		),
@@ -222,12 +232,14 @@ $list-group-item-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(primary, -9), 5%),
 				color: theme-color-level(primary, 6),
 			),
+
 			active: (
 				background-color: theme-color-level(primary, 6),
 				border-color: theme-color-level(primary, 6),
 				color: $white,
 			),
 		),
+
 		'secondary': (
 			background-color: theme-color-level(secondary, -9),
 			color: theme-color-level(secondary, 6),
@@ -236,12 +248,14 @@ $list-group-item-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(secondary, -9), 5%),
 				color: theme-color-level(secondary, 6),
 			),
+
 			active: (
 				background-color: theme-color-level(secondary, 6),
 				border-color: theme-color-level(secondary, 6),
 				color: $white,
 			),
 		),
+
 		'success': (
 			background-color: theme-color-level(success, -9),
 			color: theme-color-level(success, 6),
@@ -250,12 +264,14 @@ $list-group-item-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(success, -9), 5%),
 				color: theme-color-level(success, 6),
 			),
+
 			active: (
 				background-color: theme-color-level(success, 6),
 				border-color: theme-color-level(success, 6),
 				color: $white,
 			),
 		),
+
 		'info': (
 			background-color: theme-color-level(info, -9),
 			color: theme-color-level(info, 6),
@@ -263,12 +279,14 @@ $list-group-item-theme-colors: map-deep-merge(
 				background-color: clay-darken(theme-color-level(info, -9), 5%),
 				color: theme-color-level(info, 6),
 			),
+
 			active: (
 				background-color: theme-color-level(info, 6),
 				border-color: theme-color-level(info, 6),
 				color: $white,
 			),
 		),
+
 		'warning': (
 			background-color: theme-color-level(warning, -9),
 			color: theme-color-level(warning, 6),
@@ -277,12 +295,14 @@ $list-group-item-theme-colors: map-deep-merge(
 					clay-darken(theme-color-level(warning, -9), 5%),
 				color: theme-color-level(warning, 6),
 			),
+
 			active: (
 				background-color: theme-color-level(warning, 6),
 				border-color: theme-color-level(warning, 6),
 				color: $white,
 			),
 		),
+
 		'danger': (
 			background-color: theme-color-level(danger, -9),
 			color: theme-color-level(danger, 6),
@@ -290,12 +310,14 @@ $list-group-item-theme-colors: map-deep-merge(
 				background-color: clay-darken(theme-color-level(danger, -9), 5%),
 				color: theme-color-level(danger, 6),
 			),
+
 			active: (
 				background-color: theme-color-level(danger, 6),
 				border-color: theme-color-level(danger, 6),
 				color: $white,
 			),
 		),
+
 		'light': (
 			background-color: theme-color-level(light, -9),
 			color: theme-color-level(light, 6),
@@ -303,12 +325,14 @@ $list-group-item-theme-colors: map-deep-merge(
 				background-color: clay-darken(theme-color-level(light, -9), 5%),
 				color: theme-color-level(light, 6),
 			),
+
 			active: (
 				background-color: theme-color-level(light, 6),
 				border-color: theme-color-level(light, 6),
 				color: $white,
 			),
 		),
+
 		'dark': (
 			background-color: theme-color-level(dark, -9),
 			color: theme-color-level(dark, 6),
@@ -316,6 +340,7 @@ $list-group-item-theme-colors: map-deep-merge(
 				background-color: clay-darken(theme-color-level(dark, -9), 5%),
 				color: theme-color-level(dark, 6),
 			),
+
 			active: (
 				background-color: theme-color-level(dark, 6),
 				border-color: theme-color-level(dark, 6),
@@ -352,6 +377,7 @@ $list-group-notification-item-primary: map-deep-merge(
 		border-left-width: 0.5rem,
 		border-bottom-left-radius: 0px,
 		border-top-left-radius: 0px,
+
 		active-border-left-color: theme-color-level(primary, -9),
 	),
 	$list-group-notification-item-primary

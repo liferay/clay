@@ -6,9 +6,11 @@ $management-bar-base: map-deep-merge(
 				border-radius: $border-radius,
 				outline: 0,
 				transition: box-shadow 0.15s ease-in-out,
+
 				focus: (
 					box-shadow: $component-focus-box-shadow,
 				),
+
 				disabled: (
 					box-shadow: none,
 				),
@@ -22,20 +24,25 @@ $management-bar-light: () !default;
 $management-bar-light: map-deep-merge(
 	(
 		background-color: $white,
+
 		navbar-nav: (
 			nav-link: (
 				font-weight: $font-weight-semi-bold,
+
 				hover: (
 					background-color: rgba($gray-900, 0.03),
 					color: $gray-900,
 				),
+
 				focus: (
 					background-color: rgba($gray-900, 0.03),
 					color: $gray-900,
 				),
+
 				active: (
 					background-color: rgba($gray-900, 0.06),
 				),
+
 				disabled: (
 					background-color: transparent,
 				),
@@ -52,17 +59,21 @@ $management-bar-primary: map-deep-merge(
 			nav-link: (
 				border-radius: $border-radius,
 				font-weight: $font-weight-semi-bold,
+
 				hover: (
 					background-color: rgba($gray-900, 0.03),
 					color: $gray-900,
 				),
+
 				focus: (
 					background-color: rgba($gray-900, 0.03),
 					color: $gray-900,
 				),
+
 				active: (
 					background-color: rgba($gray-900, 0.06),
 				),
+
 				disabled: (
 					background-color: transparent,
 				),

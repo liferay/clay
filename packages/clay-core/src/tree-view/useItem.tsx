@@ -224,6 +224,8 @@ export function ItemContextProvider({children, value}: Props) {
 			}
 
 			reorder(dragKeys, item.cursor, currentPosition!);
+
+			onEnd('complete');
 		},
 		hover(dragItem, monitor) {
 			if (!monitor.canDrop() || isDragging) {

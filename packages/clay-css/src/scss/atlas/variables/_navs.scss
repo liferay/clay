@@ -49,21 +49,24 @@ $nav-tabs-link-active-bg: $white !default;
 $nav-tabs-link-active-border-color: $gray-400 $gray-400 $nav-tabs-link-active-bg !default;
 $nav-tabs-link-active-color: $gray-900 !default;
 
-$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
 $nav-tabs-link-show-bg: $white !default;
 $nav-tabs-link-show-border-color: $gray-400 !default;
+$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
 
 $nav-tabs-link: () !default;
 $nav-tabs-link: map-deep-merge(
 	(
 		font-weight: $font-weight-semi-bold,
 		transition: box-shadow 0.15s ease-in-out,
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+
 		disabled: (
 			box-shadow: none,
+
 			active: (
 				box-shadow: none,
 			),

@@ -46,14 +46,17 @@ $tooltip: map-deep-merge(
 		word-spacing: normal,
 		word-wrap: break-word,
 		z-index: $zindex-tooltip,
+
 		show: (
 			opacity: $tooltip-opacity,
 		),
+
 		arrow: (
 			display: block,
 			height: $tooltip-arrow-height,
 			position: absolute,
 			width: $tooltip-arrow-width,
+
 			before: (
 				border-color: transparent,
 				border-style: solid,
@@ -88,10 +91,12 @@ $clay-tooltip-bottom: () !default;
 $clay-tooltip-bottom: map-deep-merge(
 	(
 		padding-top: $tooltip-arrow-height,
+
 		arrow: (
 			left: 50%,
 			margin-left: math-sign($tooltip-arrow-width * 0.5),
 			top: 0,
+
 			before: (
 				border-bottom-color: $tooltip-arrow-color,
 				border-width: 0
@@ -102,6 +107,7 @@ $clay-tooltip-bottom: map-deep-merge(
 				bottom: 0,
 			),
 		),
+
 		tooltip-arrow: (
 			border-bottom-color: transparent,
 			border-right-color: transparent,
@@ -145,12 +151,14 @@ $clay-tooltip-left: () !default;
 $clay-tooltip-left: map-deep-merge(
 	(
 		padding-right: $tooltip-arrow-height,
+
 		arrow: (
 			height: $tooltip-arrow-width,
 			margin-top: math-sign($tooltip-arrow-width * 0.5),
 			right: 0,
 			top: 50%,
 			width: $tooltip-arrow-height,
+
 			before: (
 				border-left-color: $tooltip-arrow-color,
 				border-width: (
@@ -164,6 +172,7 @@ $clay-tooltip-left: map-deep-merge(
 				left: 0,
 			),
 		),
+
 		tooltip-arrow: (
 			border-bottom-color: transparent,
 			border-left-color: transparent,
@@ -207,12 +216,14 @@ $clay-tooltip-right: () !default;
 $clay-tooltip-right: map-deep-merge(
 	(
 		padding-left: $tooltip-arrow-height,
+
 		arrow: (
 			height: $tooltip-arrow-width,
 			left: 0,
 			margin-top: math-sign($tooltip-arrow-width * 0.5),
 			width: $tooltip-arrow-height,
 			top: 50%,
+
 			before: (
 				border-right-color: $tooltip-arrow-color,
 				border-width: (
@@ -226,6 +237,7 @@ $clay-tooltip-right: map-deep-merge(
 				right: 0,
 			),
 		),
+
 		tooltip-arrow: (
 			border-right-color: transparent,
 			border-top-color: transparent,
@@ -269,6 +281,7 @@ $clay-tooltip-top: () !default;
 $clay-tooltip-top: map-deep-merge(
 	(
 		padding-bottom: $tooltip-arrow-height,
+
 		arrow: (
 			bottom: 0,
 			left: 50%,
@@ -283,6 +296,7 @@ $clay-tooltip-top: map-deep-merge(
 				top: 0,
 			),
 		),
+
 		tooltip-arrow: (
 			border-left-color: transparent,
 			border-top-color: transparent,

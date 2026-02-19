@@ -30,13 +30,16 @@ $cadmin-sticker: map-deep-merge(
 		text-align: center,
 		vertical-align: middle,
 		width: $cadmin-sticker-size,
+
 		inline-item: (
 			font-size: $cadmin-sticker-inline-item-font-size,
 			justify-content: center,
+
 			lexicon-icon: (
 				margin-top: 0,
 			),
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -99,6 +102,7 @@ $cadmin-sticker-xxl: map-deep-merge(
 		height: 5rem,
 		line-height: 5rem,
 		width: 5rem,
+
 		lexicon-icon: (
 			font-size: 1.5rem,
 		),
@@ -115,9 +119,13 @@ $cadmin-sticker-sizes: map-deep-merge(
 			line-height: 1rem,
 			width: 1rem,
 		),
+
 		sticker-sm: $cadmin-sticker-sm,
+
 		sticker-lg: $cadmin-sticker-lg,
+
 		sticker-xl: $cadmin-sticker-xl,
+
 		sticker-xxl: $cadmin-sticker-xxl,
 	),
 	$cadmin-sticker-sizes
@@ -189,16 +197,19 @@ $cadmin-sticker-outside: map-deep-merge(
 	(
 		left: $cadmin-sticker-outside-offset,
 		top: $cadmin-sticker-outside-offset,
+
 		sticker-bottom-left: (
 			bottom: $cadmin-sticker-outside-offset,
 			top: auto,
 		),
+
 		sticker-bottom-right: (
 			bottom: $cadmin-sticker-outside-offset,
 			left: auto,
 			right: $cadmin-sticker-outside-offset,
 			top: auto,
 		),
+
 		sticker-top-right: (
 			left: auto,
 			right: $cadmin-sticker-outside-offset,
@@ -473,23 +484,40 @@ $cadmin-sticker-palette: () !default;
 $cadmin-sticker-palette: map-deep-merge(
 	(
 		primary: $cadmin-sticker-primary,
+
 		secondary: $cadmin-sticker-secondary,
+
 		success: $cadmin-sticker-success,
+
 		info: $cadmin-sticker-info,
+
 		warning: $cadmin-sticker-warning,
+
 		danger: $cadmin-sticker-danger,
+
 		light: $cadmin-sticker-light,
+
 		dark: $cadmin-sticker-dark,
 		'.sticker-outline': $cadmin-sticker-outline,
+
 		'.sticker-outline-0': $cadmin-sticker-outline-0,
+
 		'.sticker-outline-1': $cadmin-sticker-outline-1,
+
 		'.sticker-outline-2': $cadmin-sticker-outline-2,
+
 		'.sticker-outline-3': $cadmin-sticker-outline-3,
+
 		'.sticker-outline-4': $cadmin-sticker-outline-4,
+
 		'.sticker-outline-5': $cadmin-sticker-outline-5,
+
 		'.sticker-outline-6': $cadmin-sticker-outline-6,
+
 		'.sticker-outline-7': $cadmin-sticker-outline-7,
+
 		'.sticker-outline-8': $cadmin-sticker-outline-8,
+
 		'.sticker-outline-9': $cadmin-sticker-outline-9,
 	),
 	$cadmin-sticker-palette

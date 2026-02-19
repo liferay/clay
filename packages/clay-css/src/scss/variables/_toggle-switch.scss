@@ -16,12 +16,14 @@ $toggle-switch-transition:
 // must all be same units--start
 $toggle-switch-bar-padding: 0 !default; // space between button and bar, can be negative value
 $toggle-switch-button-width: 25px !default;
+
 $toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) +
 	$toggle-switch-button-width !default;
 $toggle-switch-bar-width: 50px !default; // width of switch bar
 
 $toggle-switch-bar-padding-mobile: $toggle-switch-bar-padding !default;
 $toggle-switch-button-width-mobile: $toggle-switch-button-width !default;
+
 $toggle-switch-bar-height-mobile: $toggle-switch-bar-height !default;
 $toggle-switch-bar-width-mobile: $toggle-switch-bar-width !default;
 // must all be same units--end
@@ -30,9 +32,12 @@ $toggle-switch-bar-bg: $gray-200 !default;
 $toggle-switch-bar-border-color: $gray-400 !default;
 $toggle-switch-bar-border-radius: 3px !default;
 $toggle-switch-bar-border-width: 1px !default;
-$toggle-switch-bar-focus-box-shadow: $component-focus-box-shadow !default;
 $toggle-switch-bar-font-size: 0.75rem !default; // 12px
+
+$toggle-switch-bar-focus-box-shadow: $component-focus-box-shadow !default;
+
 $toggle-switch-bar-font-size-mobile: $toggle-switch-bar-font-size !default;
+
 $toggle-switch-bar-icon-color: $gray-700 !default;
 
 $toggle-switch-button-bg: $white !default;
@@ -40,7 +45,9 @@ $toggle-switch-button-border-color: $gray-400 !default;
 $toggle-switch-button-border-radius: 3px 0 0 3px !default;
 $toggle-switch-button-border-width: 1px !default;
 $toggle-switch-button-font-size: $toggle-switch-bar-font-size !default;
+
 $toggle-switch-button-font-size-mobile: $toggle-switch-button-font-size !default; // null
+
 $toggle-switch-button-icon-color: $gray-700 !default;
 
 // See https://issues.liferay.com/browse/LPS-147457.
@@ -53,11 +60,13 @@ $toggle-switch-handle-after-content: unquote(
 
 $toggle-switch-bar-on-bg: $component-active-bg !default;
 $toggle-switch-bar-on-border-color: $toggle-switch-bar-on-bg !default;
+
 $toggle-switch-bar-on-icon-color: $component-active-color !default;
 
 $toggle-switch-button-on-bg: $white !default;
 $toggle-switch-button-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-button-on-border-radius: 0 3px 3px 0 !default;
+
 $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;
 
 // See https://issues.liferay.com/browse/LPS-147457.
@@ -100,12 +109,15 @@ $toggle-switch: map-deep-merge(
 		font-weight: $toggle-switch-font-weight,
 		max-width: 100%,
 		position: relative,
+
 		disabled: (
 			cursor: $toggle-switch-disabled-cursor,
+
 			toggle-switch-label: (
 				color: $toggle-switch-label-disabled-color,
 				cursor: $toggle-switch-disabled-cursor,
 			),
+
 			toggle-switch-text: (
 				color: $toggle-switch-text-disabled-color,
 			),
@@ -135,12 +147,15 @@ $toggle-switch-bar: map-deep-merge(
 			min-width: $toggle-switch-bar-width,
 			text-transform: uppercase,
 		),
+
 		toggle-switch-icon: (
 			font-size: $toggle-switch-bar-font-size,
+
 			lexicon-icon: (
 				margin-top: -0.2em,
 			),
 		),
+
 		button-icon: (
 			font-size: $toggle-switch-button-font-size,
 		),
@@ -161,6 +176,7 @@ $toggle-switch-check: map-deep-merge(
 		position: absolute,
 		width: $toggle-switch-bar-width,
 		z-index: 2,
+
 		toggle-switch-bar: (
 			display: inline-flex,
 			font-size: $toggle-switch-bar-font-size,
@@ -169,6 +185,7 @@ $toggle-switch-check: map-deep-merge(
 			position: relative,
 			text-indent: 0,
 			user-select: none,
+
 			before: (
 				background-color: $toggle-switch-bar-bg,
 				border-color: $toggle-switch-bar-border-color,
@@ -185,6 +202,7 @@ $toggle-switch-check: map-deep-merge(
 				transition: $toggle-switch-transition,
 				width: $toggle-switch-bar-width,
 			),
+
 			after: (
 				background-color: $toggle-switch-button-bg,
 				border-color: $toggle-switch-button-border-color,
@@ -202,11 +220,13 @@ $toggle-switch-check: map-deep-merge(
 				transition: $toggle-switch-transition,
 				width: $toggle-switch-button-width,
 			),
+
 			toggle-switch-handle: (
 				before: (
 					transition:
 						clay-enable-transitions($toggle-switch-transition),
 				),
+
 				after: (
 					content: $toggle-switch-handle-after-content,
 					margin-left:
@@ -218,6 +238,7 @@ $toggle-switch-check: map-deep-merge(
 					white-space: nowrap,
 				),
 			),
+
 			toggle-switch-icon: (
 				color: $toggle-switch-bar-icon-color,
 				left: $toggle-switch-bar-padding,
@@ -230,21 +251,26 @@ $toggle-switch-check: map-deep-merge(
 				width: $toggle-switch-button-width,
 				z-index: 1,
 			),
+
 			toggle-switch-icon-on: (
 				left: $toggle-switch-bar-padding,
 				opacity: 0,
 			),
+
 			toggle-switch-icon-off: (
 				left: $toggle-switch-bar-width - $toggle-switch-bar-padding -
 					$toggle-switch-button-width,
 			),
+
 			button-icon: (
 				color: $toggle-switch-button-icon-color,
 			),
+
 			button-icon-on: (
 				opacity: 0,
 			),
 		),
+
 		focus: (
 			toggle-switch-bar: (
 				before: (
@@ -252,12 +278,14 @@ $toggle-switch-check: map-deep-merge(
 				),
 			),
 		),
+
 		disabled: (
 			toggle-switch-bar: (
 				cursor: $toggle-switch-disabled-cursor,
 				opacity: $toggle-switch-disabled-opacity,
 			),
 		),
+
 		checked: (
 			toggle-switch-bar: (
 				before: (
@@ -268,6 +296,7 @@ $toggle-switch-check: map-deep-merge(
 					border-style: solid,
 					border-width: $toggle-switch-bar-border-width,
 				),
+
 				after: (
 					background-color: $toggle-switch-button-on-bg,
 					border-color: $toggle-switch-button-on-border-color,
@@ -280,43 +309,54 @@ $toggle-switch-check: map-deep-merge(
 					left: $toggle-switch-bar-width - $toggle-switch-bar-padding -
 						$toggle-switch-button-width,
 				),
+
 				toggle-switch-handle: (
 					after: (
 						content: $toggle-switch-handle-on-after-content,
 					),
 				),
+
 				toggle-switch-icon: (
 					color: $toggle-switch-bar-on-icon-color,
 				),
+
 				toggle-switch-icon-on: (
 					opacity: 1,
 				),
+
 				toggle-switch-icon-off: (
 					opacity: 0,
 				),
+
 				button-icon: (
 					color: $toggle-switch-button-on-icon-color,
 					left: $toggle-switch-bar-width - $toggle-switch-bar-padding -
 						$toggle-switch-button-width,
 				),
+
 				button-icon-on: (
 					opacity: 1,
 				),
+
 				button-icon-off: (
 					opacity: 0,
 				),
 			),
 		),
+
 		mobile: (
 			height: $toggle-switch-bar-height-mobile,
 			width: $toggle-switch-bar-width-mobile,
+
 			toggle-switch-bar: (
 				height: $toggle-switch-bar-height-mobile,
 				line-height: $toggle-switch-bar-height-mobile,
 				text-indent: 0,
+
 				before: (
 					width: $toggle-switch-bar-width-mobile,
 				),
+
 				after: (
 					bottom: $toggle-switch-bar-padding-mobile,
 					height: $toggle-switch-button-width-mobile,
@@ -324,8 +364,10 @@ $toggle-switch-check: map-deep-merge(
 					top: $toggle-switch-bar-padding-mobile,
 					width: $toggle-switch-button-width-mobile,
 				),
+
 				toggle-switch-handle: (
 					min-width: $toggle-switch-bar-width-mobile,
+
 					after: (
 						margin-left:
 							clay-data-label-text-position(
@@ -334,6 +376,7 @@ $toggle-switch-check: map-deep-merge(
 							),
 					),
 				),
+
 				toggle-switch-icon: (
 					font-size: $toggle-switch-bar-font-size-mobile,
 					left: $toggle-switch-bar-padding-mobile,
@@ -341,18 +384,22 @@ $toggle-switch-check: map-deep-merge(
 					top: $toggle-switch-bar-padding-mobile,
 					width: $toggle-switch-button-width-mobile,
 				),
+
 				toggle-switch-icon-on: (
 					left: $toggle-switch-bar-padding-mobile,
 				),
+
 				toggle-switch-icon-off: (
 					left: $toggle-switch-bar-width-mobile -
 						$toggle-switch-bar-padding-mobile -
 						$toggle-switch-button-width-mobile,
 				),
+
 				button-icon: (
 					font-size: $toggle-switch-button-font-size-mobile,
 				),
 			),
+
 			checked: (
 				toggle-switch-bar: (
 					after: (
@@ -360,6 +407,7 @@ $toggle-switch-check: map-deep-merge(
 							$toggle-switch-bar-padding-mobile -
 							$toggle-switch-button-width-mobile,
 					),
+
 					toggle-switch-handle: (
 						after: (
 							margin-left:
@@ -369,6 +417,7 @@ $toggle-switch-check: map-deep-merge(
 								),
 						),
 					),
+
 					button-icon: (
 						left: $toggle-switch-bar-width-mobile -
 							$toggle-switch-bar-padding-mobile -
@@ -412,6 +461,7 @@ $toggle-switch-text-left: map-merge(
 		display: inline-flex,
 		line-height: $toggle-switch-bar-height,
 		margin-right: 8px,
+
 		mobile: (
 			line-height: $toggle-switch-bar-height-mobile,
 		),
@@ -428,6 +478,7 @@ $toggle-switch-text-right: map-deep-merge(
 		display: inline-flex,
 		line-height: $toggle-switch-bar-height,
 		margin-left: 8px,
+
 		mobile: (
 			line-height: $toggle-switch-bar-height-mobile,
 		),
@@ -444,8 +495,10 @@ $simple-toggle-switch: () !default;
 $simple-toggle-switch: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		align-items: center,
 		display: inline-flex,
+
 		toggle-switch-label: (
 			line-height: $simple-toggle-switch-label-line-height,
 			margin-bottom: 0,
@@ -457,6 +510,7 @@ $simple-toggle-switch: map-deep-merge(
 						)}
 				),
 		),
+
 		mobile: (
 			toggle-switch-label: (
 				max-width:
@@ -478,14 +532,17 @@ $simple-toggle-switch-reverse: () !default;
 $simple-toggle-switch-reverse: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		toggle-switch-check-bar: (
 			order: 5,
 		),
+
 		toggle-switch-check: (
 			toggle-switch-bar: (
 				order: 5,
 			),
 		),
+
 		toggle-switch-label: (
 			margin-right: $simple-toggle-switch-label-spacer-x,
 		),
@@ -504,25 +561,32 @@ $toggle-switch-sizes: map-deep-merge(
 					max-width: calc(100% - 34px),
 				),
 			),
+
 			toggle-switch-check: (
 				height: 16px,
 				width: 30px,
+
 				toggle-switch-bar: (
 					height: 16px,
 					line-height: 16px,
+
 					before: (
 						width: 30px,
 					),
+
 					after: (
 						height: 16px,
 						width: 16px,
 					),
+
 					toggle-switch-handle: (
 						min-width: 30px,
+
 						after: (
 							margin-left: 34px,
 						),
 					),
+
 					toggle-switch-icon: (
 						font-size: 0.6875rem,
 						height: 16px,
@@ -530,21 +594,25 @@ $toggle-switch-sizes: map-deep-merge(
 						line-height: 16px,
 						width: 16px,
 					),
+
 					toggle-switch-icon-off: (
 						left: 14px,
 					),
 				),
+
 				checked: (
 					toggle-switch-bar: (
 						after: (
 							left: 14px,
 						),
+
 						button-icon: (
 							left: 14px,
 						),
 					),
 				),
 			),
+
 			toggle-switch-label: (
 				font-size: 0.75rem,
 				max-width: calc(100% - 38px),

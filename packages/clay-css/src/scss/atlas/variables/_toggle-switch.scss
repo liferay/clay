@@ -1,16 +1,20 @@
 // must all be same units--start
 $toggle-switch-bar-padding: 4px !default; // space between button and bar, can be negative value
+
 $toggle-switch-bar-padding-mobile: 4px !default;
 
 $toggle-switch-button-width: 16px !default; // 24px
+
 $toggle-switch-button-width-mobile: 16px !default; // 16px
 
 $toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) +
 	$toggle-switch-button-width !default;
+
 $toggle-switch-bar-height-mobile: ($toggle-switch-bar-padding-mobile * 2) +
 	$toggle-switch-button-width-mobile !default;
 
 $toggle-switch-bar-width: 48px !default; // width of switch bar
+
 $toggle-switch-bar-width-mobile: 40px !default; // width of switch bar
 // must all be same units--end
 
@@ -19,17 +23,19 @@ $toggle-switch-bar-border-color: $toggle-switch-bar-bg !default;
 $toggle-switch-bar-border-radius: 20px !default;
 $toggle-switch-bar-border-width: 1px !default;
 $toggle-switch-bar-font-size: 0.625rem !default;
-$toggle-switch-bar-font-size-mobile: 0.625rem !default;
 $toggle-switch-bar-icon-color: $white !default;
 $toggle-switch-bar-focus-box-shadow: $component-focus-box-shadow !default;
+$toggle-switch-bar-font-size-mobile: 0.625rem !default;
 
 $toggle-switch-button-bg: $white !default;
 $toggle-switch-button-border-color: $toggle-switch-button-bg !default;
 $toggle-switch-button-border-radius: 50% !default;
 $toggle-switch-button-border-width: 1px !default;
 $toggle-switch-button-font-size: $toggle-switch-bar-font-size !default; // 12px
-$toggle-switch-button-font-size-mobile: $toggle-switch-bar-font-size-mobile !default; // 10px
+
 $toggle-switch-button-icon-color: $gray-900 !default;
+
+$toggle-switch-button-font-size-mobile: $toggle-switch-bar-font-size-mobile !default; // 10px
 
 // Toggle Switch On
 $toggle-switch-bar-on-bg: $component-active-bg !default;
@@ -56,19 +62,23 @@ $toggle-switch-sizes: map-deep-merge(
 						top: 2px,
 						width: 12px,
 					),
+
 					toggle-switch-icon: (
 						font-size: 0.5rem,
 						top: 0px,
 					),
+
 					toggle-switch-icon-off: (
 						left: 13px,
 					),
 				),
+
 				checked: (
 					toggle-switch-bar: (
 						after: (
 							left: 16px,
 						),
+
 						button-icon: (
 							left: 14px,
 						),

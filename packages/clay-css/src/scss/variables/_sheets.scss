@@ -4,11 +4,9 @@
 
 $sheet-bg: $body-bg !default;
 $sheet-border-color: $gray-300 !default;
+$sheet-border-radius: $border-radius !default;
 $sheet-border-style: solid !default;
 $sheet-border-width: 0.0625rem !default; // 1px
-
-$sheet-border-radius: $border-radius !default;
-
 $sheet-padding-bottom: 0.0625rem !default; // 1px
 $sheet-padding-left: 1.5rem !default; // 24px
 $sheet-padding-right: 1.5rem !default; // 24px
@@ -47,14 +45,17 @@ $sheet-row: map-merge(
 // Sheet Header
 
 $sheet-header-margin-bottom: 3rem !default; // 48px
+
 $sheet-header-margin-bottom-mobile: null !default;
 
 // Sheet Section
 
 $sheet-section-margin-bottom: 3rem !default; // 48px
+
 $sheet-section-margin-bottom-mobile: null !default;
 
 $sheet-panel-group-margin-bottom: 1.5rem !default; // 24px
+
 $sheet-panel-group-margin-bottom-mobile: null !default;
 
 // Sheet Footer
@@ -73,16 +74,20 @@ $sheet-footer-btn-block-sm-down: () !default;
 $sheet-footer-btn-block-sm-down: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		mobile: (
 			display: block,
+
 			btn: (
 				display: block,
 				margin-bottom: 1rem,
 				width: 100%,
 			),
+
 			btn-group: (
 				display: block,
 			),
+
 			btn-group-item: (
 				display: block,
 				margin-right: 0,
@@ -135,6 +140,7 @@ $sheet-subtitle-heading-text-margin-top: auto !default;
 
 $sheet-subtitle-link-color: $sheet-subtitle-color !default;
 $sheet-subtitle-link-text-decoration: null !default;
+
 $sheet-subtitle-link-hover-color: null !default;
 $sheet-subtitle-link-hover-text-decoration: none !default;
 
@@ -143,6 +149,7 @@ $sheet-subtitle-link: map-deep-merge(
 	(
 		color: $sheet-subtitle-link-color,
 		text-decoration: $sheet-subtitle-link-text-decoration,
+
 		hover: (
 			color: $sheet-subtitle-link-hover-color,
 			text-decoration: $sheet-subtitle-link-hover-text-decoration,
@@ -152,6 +159,7 @@ $sheet-subtitle-link: map-deep-merge(
 );
 
 $sheet-subtitle-collapse-icon-font-size: null !default;
+
 $sheet-subtitle-collapse-icon-bottom: null !default;
 $sheet-subtitle-collapse-icon-left: null !default;
 $sheet-subtitle-collapse-icon-right: null !default;

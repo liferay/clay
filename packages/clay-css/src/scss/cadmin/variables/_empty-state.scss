@@ -84,13 +84,16 @@ $cadmin-c-empty-state-sm: map-deep-merge(
 			margin: 2.5rem auto 2rem,
 			max-width: 268px,
 		),
+
 		c-empty-state-image: (
 			max-width: 120px,
 		),
+
 		c-empty-state-title: (
 			font-size: 1rem,
 			line-height: 1.5,
 		),
+
 		c-empty-state-text: (
 			font-size: 0.875rem,
 		),

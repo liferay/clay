@@ -11,9 +11,11 @@ $cadmin-modal-backdrop: map-deep-merge(
 		top: 0,
 		width: 100vw,
 		z-index: $cadmin-zindex-modal-backdrop,
+
 		'&.fade': (
 			opacity: 0,
 		),
+
 		'&.show': (
 			opacity: $cadmin-modal-backdrop-opacity,
 		),
@@ -44,6 +46,7 @@ $cadmin-modal-content-inner-border-radius: calc(
 ) !default;
 
 $cadmin-modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
+
 $cadmin-modal-content-box-shadow-sm-up: 0 8px 16px rgba($cadmin-black, 0.5) !default;
 
 $cadmin-modal-content: () !default;
@@ -86,6 +89,7 @@ $cadmin-modal-header: () !default;
 $cadmin-modal-header: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		align-items: center,
 		background-color: $cadmin-modal-header-bg,
 		border-color: $cadmin-modal-header-border-color,
@@ -101,10 +105,12 @@ $cadmin-modal-header: map-deep-merge(
 		padding: $cadmin-modal-header-padding,
 		padding-bottom: 0,
 		padding-top: 0,
+
 		'.modal-title': (
 			margin-bottom: 0,
 			margin-top: 0,
 		),
+
 		mobile: (
 			height: $cadmin-modal-header-height-mobile,
 		),
@@ -133,17 +139,20 @@ $cadmin-modal-body: map-deep-merge(
 		overflow-wrap: break-word,
 		padding: $cadmin-modal-inner-padding,
 		position: relative,
+
 		'.aspect-ratio': (
 			margin-left: math-sign($cadmin-modal-inner-padding),
 			margin-right: math-sign($cadmin-modal-inner-padding),
 			top: math-sign($cadmin-modal-inner-padding),
 		),
+
 		'> .close': (
 			position: absolute,
 			right: 1rem,
 			top: 1rem,
 			z-index: 1,
 		),
+
 		'&.inline-scroller': (
 			max-height: none,
 			-webkit-overflow-scrolling: touch,
@@ -243,6 +252,7 @@ $cadmin-modal-title-font-size: 20px !default; // 20px
 $cadmin-modal-title-font-weight: $cadmin-font-weight-bold !default;
 $cadmin-modal-title-line-height: $cadmin-headings-line-height !default;
 $cadmin-modal-title-text-align: null !default;
+
 $cadmin-modal-title-font-size-mobile: null !default;
 
 $cadmin-modal-title-indicator-font-size: 14px !default;
@@ -281,24 +291,30 @@ $cadmin-modal-full-screen-spacer-y: $cadmin-modal-full-screen-spacer-x !default;
 
 // Modal Width
 
-$cadmin-modal-xl: 1140px !default;
-$cadmin-modal-lg: 896px !default;
-$cadmin-modal-md: 600px !default;
 $cadmin-modal-sm: 320px !default;
+
+$cadmin-modal-md: 600px !default;
+
+$cadmin-modal-lg: 896px !default;
+
+$cadmin-modal-xl: 1140px !default;
 
 // Modal Height
 
 $cadmin-modal-height-sm: 250px !default;
+
 $cadmin-modal-height-md: 450px !default;
+
 $cadmin-modal-height-lg: 650px !default;
+
 $cadmin-modal-height-xl: 800px !default;
 
 $cadmin-modal-height-full-modal-content: () !default;
 $cadmin-modal-height-full-modal-content: map-merge(
 	(
-		position: absolute,
 		bottom: $cadmin-modal-dialog-margin,
 		left: $cadmin-modal-dialog-margin,
+		position: absolute,
 		right: $cadmin-modal-dialog-margin,
 		top: $cadmin-modal-dialog-margin,
 	),
@@ -330,16 +346,21 @@ $cadmin-modal: map-deep-merge(
 		top: 0,
 		width: 100%,
 		z-index: $cadmin-zindex-modal,
+
 		close: (
 			'&:first-child': (
 				margin-left: math-sign($cadmin-modal-close-spacer-x),
 			),
+
 			'&:last-child': (
 				margin-right: math-sign($cadmin-modal-close-spacer-x),
 			),
 		),
+
 		modal-header: $cadmin-modal-header,
+
 		modal-body: $cadmin-modal-body,
+
 		modal-footer: (
 			align-items: center,
 			background-color: $cadmin-modal-footer-bg,
@@ -360,10 +381,12 @@ $cadmin-modal: map-deep-merge(
 			padding-left: $cadmin-modal-footer-padding-x,
 			padding-right: $cadmin-modal-footer-padding-x,
 			padding-top: $cadmin-modal-footer-padding-y,
+
 			'> *': (
 				margin: 0 calc(#{$cadmin-modal-footer-margin-between} * 0.5),
 			),
 		),
+
 		modal-title: (
 			flex-grow: 1,
 			font-size: $cadmin-modal-title-font-size,
@@ -375,10 +398,12 @@ $cadmin-modal: map-deep-merge(
 			text-align: $cadmin-modal-title-text-align,
 			text-overflow: ellipsis,
 			white-space: nowrap,
+
 			'[tabindex="-1"]': (
 				outline: 0,
 			),
 		),
+
 		modal-title-indicator: (
 			display: inline-block,
 			font-size: $cadmin-modal-title-indicator-font-size,
@@ -386,24 +411,30 @@ $cadmin-modal: map-deep-merge(
 			margin-top: -0.2em,
 			vertical-align: middle,
 		),
+
 		media-breakpoint-down: (
 			sm: (
 				close: (
 					margin-right: -8px,
 				),
+
 				modal-header: (
 					height: 48px,
 					padding: 8px 16px,
 				),
+
 				modal-title: (
 					font-size: 18px,
 				),
+
 				modal-body: (
 					padding: 8px 16px,
 				),
+
 				modal-body-iframe: (
 					padding: 0px,
 				),
+
 				modal-footer: (
 					padding: 8px,
 				),
@@ -424,12 +455,15 @@ $cadmin-modal-success: map-deep-merge(
 			color: $cadmin-success,
 			close: (
 				color: $cadmin-success,
+
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -448,14 +482,18 @@ $cadmin-modal-info: map-deep-merge(
 			background-color: $cadmin-info-l2,
 			border-color: $cadmin-info-l1,
 			color: $cadmin-info,
+
 			close: (
 				color: $cadmin-info,
+
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -474,14 +512,18 @@ $cadmin-modal-warning: map-deep-merge(
 			background-color: $cadmin-warning-l2,
 			border-color: $cadmin-warning-l1,
 			color: $cadmin-warning,
+
 			close: (
 				color: $cadmin-warning,
+
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -500,14 +542,18 @@ $cadmin-modal-danger: map-deep-merge(
 			background-color: $cadmin-danger-l2,
 			border-color: $cadmin-danger-l1,
 			color: $cadmin-danger,
+
 			close: (
 				color: $cadmin-danger,
+
 				hover: (
 					color: inherit,
 				),
+
 				focus: (
 					color: inherit,
 				),
+
 				disabled: (
 					color: inherit,
 				),
@@ -521,8 +567,11 @@ $cadmin-modal-palette: () !default;
 $cadmin-modal-palette: map-deep-merge(
 	(
 		success: $cadmin-modal-success,
+
 		info: $cadmin-modal-info,
+
 		warning: $cadmin-modal-warning,
+
 		danger: $cadmin-modal-danger,
 	),
 	$cadmin-modal-palette

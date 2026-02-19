@@ -87,9 +87,11 @@ $cadmin-table-head-link: map-deep-merge(
 		border-radius: 1px,
 		color: $cadmin-gray-600,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $cadmin-gray-900,
 		),
+
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
@@ -135,8 +137,10 @@ $cadmin-table-quick-action-menu-bg: if(
 ) !default;
 $cadmin-table-quick-action-menu-accent-bg: $cadmin-table-accent-bg !default;
 $cadmin-table-quick-action-menu-accent-active-bg: $cadmin-table-hover-bg !default;
-$cadmin-table-quick-action-menu-active-bg: $cadmin-gray-200 !default;
+
 $cadmin-table-quick-action-menu-hover-bg: $cadmin-table-hover-bg !default;
+
+$cadmin-table-quick-action-menu-active-bg: $cadmin-gray-200 !default;
 
 $cadmin-table-cell-expand-smaller-max-width: 200px !default; // 200px
 $cadmin-table-cell-expand-smaller-width: 15% !default;
@@ -188,9 +192,11 @@ $cadmin-table-title-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $cadmin-gray-900,
 		),
+
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
@@ -209,9 +215,11 @@ $cadmin-table-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $cadmin-gray-900,
 		),
+
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
@@ -235,20 +243,24 @@ $cadmin-table-action-link: map-deep-merge(
 		transition: $cadmin-component-transition,
 		vertical-align: middle,
 		width: 32px,
+
 		hover: (
 			background-color: rgba(0, 0, 0, 0.02),
 			color: $cadmin-gray-900,
 			text-decoration: none,
 		),
+
 		focus: (
 			background-color: rgba(0, 0, 0, 0.02),
 			color: $cadmin-gray-900,
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+
 		active: (
 			background-color: rgba(0, 0, 0, 0.04),
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -267,26 +279,32 @@ $cadmin-c-table: map-deep-merge(
 		font-size: $cadmin-table-font-size,
 		margin-bottom: $cadmin-table-margin-bottom,
 		width: 100%,
+
 		thead:
 			map-deep-merge(
 				$cadmin-c-table-thead,
 				(
 					background-color: $cadmin-table-head-bg,
+
 					table-cell: (
 						border-bottom: $cadmin-table-head-border-bottom-width
 							solid $cadmin-table-border-color,
 						border-top-width: $cadmin-table-head-border-top-width,
 						vertical-align: middle,
 					),
+
 					th: (
 						href: $cadmin-table-head-link,
 					),
+
 					autofit-col: (
 						padding-left: 0.125rem,
 						padding-right: 0.125rem,
+
 						first-child: (
 							padding-left: 0,
 						),
+
 						last-child: (
 							padding-right: 0,
 						),
@@ -296,6 +314,7 @@ $cadmin-c-table: map-deep-merge(
 		table-column-start: (
 			padding-left: $cadmin-table-cell-gutters,
 		),
+
 		th: (
 			background-clip: padding-box,
 			border-top: $cadmin-table-border-width solid
@@ -308,6 +327,7 @@ $cadmin-c-table: map-deep-merge(
 			position: relative,
 			vertical-align: top,
 		),
+
 		td: (
 			background-clip: padding-box,
 			border-bottom-width: $cadmin-table-data-border-bottom-width,
@@ -321,6 +341,7 @@ $cadmin-c-table: map-deep-merge(
 			position: relative,
 			vertical-align: $cadmin-table-data-vertical-align,
 		),
+
 		tbody:
 			map-deep-merge(
 				$cadmin-c-table-tbody,
@@ -334,7 +355,9 @@ $cadmin-c-table: map-deep-merge(
 				)
 			),
 		tfoot: $cadmin-c-table-tfoot,
+
 		caption: $cadmin-c-table-caption,
+
 		table-divider: (
 			table-cell: (
 				background-color: $cadmin-table-divider-bg,
@@ -347,32 +370,40 @@ $cadmin-c-table: map-deep-merge(
 				text-transform: $cadmin-table-divider-text-transform,
 			),
 		),
+
 		table-active: (
 			background-color: $cadmin-table-active-bg,
 			quick-action-menu: (
 				background-color: $cadmin-table-quick-action-menu-active-bg,
 			),
 		),
+
 		table-disabled: (
 			background-color: $cadmin-table-disabled-bg,
 			color: $cadmin-table-disabled-color,
+
 			table-cell: (
 				cursor: $cadmin-table-disabled-cursor,
+
 				href: (
 					color: $cadmin-table-disabled-color,
 					pointer-events: $cadmin-table-disabled-pointer-events,
 				),
 			),
+
 			table-title: (
 				color: $cadmin-table-disabled-color,
 			),
+
 			table-list-title: (
 				color: $cadmin-table-disabled-color,
 			),
 		),
+
 		table-sort: (
 			color: $cadmin-gray-900,
 		),
+
 		autofit-col: (
 			justify-content: center,
 			padding-left: nth($cadmin-table-cell-padding, 2),
@@ -380,21 +411,26 @@ $cadmin-c-table: map-deep-merge(
 			first-child: (
 				padding-left: 0,
 			),
+
 			last-child: (
 				padding-right: 0,
 			),
 		),
+
 		component-drag: (
 			font-size: 14px,
 			height: 16px,
 			width: 16px,
+
 			focus: (
 				box-shadow: $cadmin-component-focus-inset-box-shadow,
 			),
 		),
+
 		custom-control: (
 			margin-bottom: 0,
 		),
+
 		quick-action-menu: (
 			align-items: $cadmin-table-quick-action-menu-align-items,
 			background-color: $cadmin-table-quick-action-menu-bg,
@@ -415,6 +451,7 @@ $cadmin-c-table-hover: map-deep-merge(
 				hover: (
 					background-color: $cadmin-table-hover-bg,
 					color: $cadmin-table-hover-color,
+
 					quick-action-menu: (
 						background-color:
 							$cadmin-table-quick-action-menu-hover-bg,
@@ -422,6 +459,7 @@ $cadmin-c-table-hover: map-deep-merge(
 				),
 			),
 		),
+
 		table-active: (
 			hover: (
 				quick-action-menu: (
@@ -429,6 +467,7 @@ $cadmin-c-table-hover: map-deep-merge(
 				),
 			),
 		),
+
 		table-disabled: (
 			hover: (
 				background-color: $cadmin-table-disabled-bg,
@@ -463,6 +502,7 @@ $cadmin-c-tr-table-focus: map-deep-merge(
 				pointer-events: none,
 				z-index: 1,
 			),
+
 			first-child: (
 				after: (
 					box-shadow: (
@@ -480,6 +520,7 @@ $cadmin-c-tr-table-focus: map-deep-merge(
 					width: 4px,
 				),
 			),
+
 			last-child: (
 				after: (
 					box-shadow: (
@@ -559,18 +600,22 @@ $cadmin-c-table-nested-rows: map-deep-merge(
 			padding-right: 2px,
 			min-width: 28px,
 		),
+
 		autofit-col-checkbox: (
 			padding-right: 10px,
 		),
+
 		autofit-col-icon: (
 			padding-right: 10px,
 		),
+
 		component-drag: (
 			left: 2px,
 			position: absolute,
 			top: 50%,
 			transform: translateY(-50%),
 		),
+
 		component-toggle: (
 			font-size: 14px,
 			height: 24px,
@@ -603,6 +648,7 @@ $cadmin-c-table-head-bordered: map-deep-merge(
 			table-cell: (
 				border-left: $cadmin-table-border-width solid
 					$cadmin-table-border-color,
+
 				table-column-start: (
 					border-left-width: 0,
 				),
@@ -620,11 +666,13 @@ $cadmin-c-table-bordered: () !default;
 $cadmin-c-table-bordered: map-deep-merge(
 	(
 		border: $cadmin-table-border-width solid $cadmin-table-border-color,
+
 		thead: (
 			table-cell: (
 				border-bottom-width: calc(2 * #{$cadmin-table-border-width}),
 			),
 		),
+
 		table-cell: (
 			border: $cadmin-table-border-width solid $cadmin-table-border-color,
 		),
@@ -747,10 +795,13 @@ $cadmin-table-list-divider-padding-y: 8px !default;
 
 $cadmin-table-list-quick-action-menu-align-items: center !default;
 $cadmin-table-list-quick-action-menu-bg: $cadmin-table-list-bg !default;
+
 $cadmin-table-list-quick-action-menu-accent-bg: $cadmin-table-list-accent-bg !default;
 $cadmin-table-list-quick-action-menu-accent-active-bg: $cadmin-table-list-active-bg !default;
-$cadmin-table-list-quick-action-menu-active-bg: $cadmin-table-list-active-bg !default;
+
 $cadmin-table-list-quick-action-menu-hover-bg: $cadmin-table-list-hover-bg !default;
+
+$cadmin-table-list-quick-action-menu-active-bg: $cadmin-table-list-active-bg !default;
 
 // Table List Title
 
@@ -774,9 +825,11 @@ $cadmin-table-list-title-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $cadmin-gray-900,
 		),
+
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
@@ -795,9 +848,11 @@ $cadmin-table-list-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $cadmin-gray-900,
 		),
+
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
@@ -820,20 +875,24 @@ $cadmin-table-list-action-link: map-deep-merge(
 		transition: $cadmin-component-transition,
 		vertical-align: middle,
 		width: 32px,
+
 		hover: (
 			background-color: rgba(0, 0, 0, 0.02),
 			color: $cadmin-gray-900,
 			text-decoration: none,
 		),
+
 		focus: (
 			background-color: rgba(0, 0, 0, 0.02),
 			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-gray-900,
 			outline: 0,
 		),
+
 		active: (
 			background-color: rgba(0, 0, 0, 0.04),
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -856,6 +915,7 @@ $cadmin-c-table-list: map-merge(
 		font-size: $cadmin-table-list-font-size,
 		margin-bottom: $cadmin-table-list-margin-bottom,
 		margin-top: $cadmin-table-list-margin-top,
+
 		thead:
 			map-deep-merge(
 				$cadmin-c-table-list-thead,
@@ -873,6 +933,7 @@ $cadmin-c-table-list: map-merge(
 				)
 			),
 		table-cell: $cadmin-c-table-list-cell,
+
 		tbody:
 			map-deep-merge(
 				$cadmin-c-table-list-tbody,
@@ -892,6 +953,7 @@ $cadmin-c-table-list: map-merge(
 				)
 			),
 		caption: $cadmin-c-table-list-caption,
+
 		table-divider: (
 			table-cell: (
 				padding-bottom: $cadmin-table-list-divider-padding-y,
@@ -900,32 +962,39 @@ $cadmin-c-table-list: map-merge(
 				padding-top: $cadmin-table-list-divider-padding-y,
 			),
 		),
+
 		table-active: (
 			background-color: $cadmin-table-list-active-bg,
 			quick-action-menu: (
 				background-color: $cadmin-table-list-quick-action-menu-active-bg,
 			),
 		),
+
 		table-disabled: (
 			background-color: $cadmin-table-list-disabled-bg,
 			color: $cadmin-table-list-disabled-color,
+
 			table-cell: (
 				href: (
 					color: $cadmin-table-list-disabled-color,
 					pointer-events: $cadmin-table-list-disabled-pointer-events,
 				),
 			),
+
 			table-title: (
 				color: $cadmin-table-list-disabled-color,
 			),
+
 			table-list-title: (
 				color: $cadmin-table-list-disabled-color,
 			),
 		),
+
 		table-row-start: (
 			table-cell: (
 				border-top-width: 0,
 			),
+
 			table-cell-start: (
 				border-top-left-radius:
 					clay-enable-rounded(
@@ -935,6 +1004,7 @@ $cadmin-c-table-list: map-merge(
 						)
 					),
 			),
+
 			table-cell-end: (
 				border-top-right-radius:
 					clay-enable-rounded(
@@ -945,6 +1015,7 @@ $cadmin-c-table-list: map-merge(
 					),
 			),
 		),
+
 		table-row-end: (
 			table-cell-start: (
 				border-bottom-left-radius:
@@ -955,6 +1026,7 @@ $cadmin-c-table-list: map-merge(
 						)
 					),
 			),
+
 			table-cell-end: (
 				border-bottom-right-radius:
 					clay-enable-rounded(
@@ -965,6 +1037,7 @@ $cadmin-c-table-list: map-merge(
 					),
 			),
 		),
+
 		quick-action-menu: (
 			align-items: $cadmin-table-list-quick-action-menu-align-items,
 			background-color: $cadmin-table-list-quick-action-menu-bg,
@@ -984,6 +1057,7 @@ $cadmin-c-table-list-table-hover: map-deep-merge(
 			tr: (
 				hover: (
 					background-color: $cadmin-table-list-hover-bg,
+
 					quick-action-menu: (
 						background-color:
 							$cadmin-table-list-quick-action-menu-hover-bg,
@@ -991,17 +1065,21 @@ $cadmin-c-table-list-table-hover: map-deep-merge(
 				),
 			),
 		),
+
 		table-active: (
 			hover: (
 				background-color: $cadmin-table-list-active-bg,
+
 				quick-action-menu: (
 					background-color:
 						$cadmin-table-list-quick-action-menu-hover-bg,
 				),
 			),
 		),
+
 		table-disabled: (
 			background-color: $cadmin-table-list-disabled-bg,
+
 			hover: (
 				background-color: $cadmin-table-list-disabled-bg,
 			),
@@ -1020,7 +1098,9 @@ $cadmin-c-table-list-table-bordered: map-deep-merge(
 				border-bottom-width: 0,
 			),
 		),
+
 		table-cell: $cadmin-c-table-list-bordered-cell,
+
 		table-column-start: (
 			border-left-width: 0,
 		),
@@ -1042,9 +1122,11 @@ $cadmin-table-drag: map-deep-merge(
 		cell: (
 			position: relative,
 		),
+
 		c-drag: (
 			cursor: move,
 		),
+
 		c-dragging-after: (
 			background-color: $cadmin-gray-400,
 			bottom: 0,
@@ -1055,6 +1137,7 @@ $cadmin-table-drag: map-deep-merge(
 			right: 0,
 			top: 0,
 		),
+
 		c-droppable-before: (
 			background-image:
 				linear-gradient($cadmin-orange 50%, rgba(255, 255, 255, 0) 0%),
@@ -1091,6 +1174,7 @@ $cadmin-table-clone: map-deep-merge(
 		position: absolute,
 		top: 0,
 		z-index: 1050,
+
 		after: (
 			background-color: $cadmin-primary,
 			bottom: 0,
@@ -1102,6 +1186,7 @@ $cadmin-table-clone: map-deep-merge(
 			width: 2px,
 			z-index: 1,
 		),
+
 		before: (
 			background-color: $cadmin-primary,
 			bottom: 0,
@@ -1113,6 +1198,7 @@ $cadmin-table-clone: map-deep-merge(
 			width: 2px,
 			z-index: 1,
 		),
+
 		cell: (
 			background-color: transparent,
 		),

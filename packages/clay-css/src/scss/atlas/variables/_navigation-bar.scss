@@ -4,7 +4,9 @@ $navigation-bar-size: map-deep-merge(
 		border-bottom-width: 0.0625rem,
 		collapse-dropdown-item-padding-y-mobile: 0.8125rem,
 		link-height-mobile: 2rem,
+
 		active-border-offset-bottom: -0.53125rem,
+
 		toggler-link-height: 2rem,
 		toggler-link-margin-y: 0.46875rem,
 		toggler-link-padding-y: 0,
@@ -19,14 +21,17 @@ $navigation-bar-base: map-deep-merge(
 			nav-link: (
 				border-radius: clay-enable-rounded($border-radius),
 				outline: 0,
+
 				focus: (
 					box-shadow: $component-focus-box-shadow,
 				),
+
 				disabled: (
 					box-shadow: none,
 				),
 			),
 		),
+
 		media-breakpoint-down: (),
 		media-breakpoint-up: (),
 	),
@@ -38,21 +43,26 @@ $navigation-bar-light: map-deep-merge(
 	(
 		background-color: $white,
 		border-color: $gray-200,
+
 		navbar-nav: (
 			nav-link: (
 				font-weight: $font-weight-semi-bold,
+
 				hover: (
 					color: $gray-900,
 				),
+
 				focus: (
 					color: $gray-900,
 				),
+
 				disabled: (
 					color: $gray-600,
 					opacity: $component-disabled-opacity,
 				),
 			),
 		),
+
 		media-breakpoint-down: (
 			sm: (
 				navbar-expand-md: (
@@ -60,15 +70,19 @@ $navigation-bar-light: map-deep-merge(
 						navbar-nav: (
 							dropdown-item: (
 								font-weight: $font-weight-semi-bold,
+
 								hover: (
 									color: $gray-900,
 								),
+
 								focus: (
 									color: $gray-900,
 								),
+
 								active: (
 									color: $gray-900,
 								),
+
 								disabled: (
 									color: $gray-600,
 									opacity: $component-disabled-opacity,
@@ -87,25 +101,31 @@ $navigation-bar-secondary: () !default;
 $navigation-bar-secondary: map-deep-merge(
 	(
 		background-color: $secondary-d1,
+
 		navbar-nav: (
 			nav-link: (
 				color: $secondary-l2,
 				font-weight: $font-weight-semi-bold,
+
 				hover: (
 					color: $white,
 				),
+
 				focus: (
 					color: $white,
 				),
+
 				active: (
 					color: $white,
 				),
+
 				disabled: (
 					color: $gray-400,
 					opacity: $component-disabled-opacity,
 				),
 			),
 		),
+
 		media-breakpoint-down: (
 			sm: (
 				navbar-expand-md: (
@@ -114,15 +134,19 @@ $navigation-bar-secondary: map-deep-merge(
 							dropdown-item: (
 								color: $secondary-l2,
 								font-weight: $font-weight-semi-bold,
+
 								hover: (
 									color: $white,
 								),
+
 								focus: (
 									color: $white,
 								),
+
 								active: (
 									color: $white,
 								),
+
 								disabled: (
 									color: $gray-400,
 									opacity: $component-disabled-opacity,

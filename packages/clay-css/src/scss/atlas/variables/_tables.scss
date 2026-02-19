@@ -1,8 +1,10 @@
 $table-bg: $white !default;
-$table-accent-bg: $light-l1 !default;
-$table-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
 $table-border-color: $gray-300 !default;
 $table-font-size: 0.875rem !default;
+
+$table-accent-bg: $light-l1 !default;
+
+$table-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
 
 $table-disabled-color: $gray-500 !default;
 
@@ -17,9 +19,11 @@ $table-head-link: map-deep-merge(
 		border-radius: 1px,
 		color: $gray-600,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -45,8 +49,11 @@ $table-divider-font-weight: $font-weight-semi-bold !default;
 $table-divider-text-transform: uppercase !default;
 
 $table-quick-action-menu-accent-bg: $table-accent-bg !default;
+
 $table-quick-action-menu-accent-active-bg: $table-hover-bg !default;
+
 $table-quick-action-menu-active-bg: $gray-200 !default;
+
 $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
 // Table Title
@@ -58,6 +65,7 @@ $table-title-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -83,16 +91,19 @@ $table-action-link: map-deep-merge(
 		color: $gray-600,
 		font-size: 1rem,
 		transition: $component-transition,
+
 		hover: (
 			background-color: rgba(0, 0, 0, 0.02),
 			color: $gray-900,
 		),
+
 		focus: (
 			background-color: rgba(0, 0, 0, 0.02),
 			color: $gray-900,
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+
 		active: (
 			background-color: rgba(0, 0, 0, 0.04),
 		),
@@ -110,9 +121,11 @@ $table-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -135,6 +148,7 @@ $c-tr-table-focus: map-deep-merge(
 					inset 0 -0.25rem 0 0 $white,
 				),
 			),
+
 			first-child: (
 				after: (
 					box-shadow: (
@@ -143,6 +157,7 @@ $c-tr-table-focus: map-deep-merge(
 					),
 				),
 			),
+
 			last-child: (
 				after: (
 					box-shadow: (
@@ -162,7 +177,9 @@ $table-list-border-color: $gray-300 !default;
 $table-list-color: $body-color !default;
 
 $table-list-accent-bg: $gray-100 !default;
+
 $table-list-hover-bg: $table-hover-bg !default;
+
 $table-list-active-bg: $table-list-hover-bg !default;
 
 $table-list-disabled-color: $gray-500 !default;
@@ -189,9 +206,11 @@ $table-list-title-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -210,9 +229,11 @@ $table-list-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -229,16 +250,19 @@ $table-list-action-link: map-deep-merge(
 		color: $gray-600,
 		font-size: 1rem,
 		transition: $component-transition,
+
 		hover: (
 			background-color: rgba(0, 0, 0, 0.02),
 			color: $gray-900,
 		),
+
 		focus: (
 			background-color: rgba(0, 0, 0, 0.02),
 			color: $gray-900,
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+
 		active: (
 			background-color: rgba(0, 0, 0, 0.04),
 		),

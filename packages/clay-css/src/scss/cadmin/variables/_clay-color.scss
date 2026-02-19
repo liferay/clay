@@ -94,15 +94,19 @@ $cadmin-clay-color-dropdown-menu-close: map-deep-merge(
 		color: $cadmin-gray-600,
 		font-size: 16px,
 		opacity: 1,
+
 		hover: (
 			background-color: rgba($cadmin-gray-900, 0.03),
 		),
+
 		focus: (
 			background-color: rgba($cadmin-gray-900, 0.03),
 		),
+
 		active: (
 			background-color: rgba($cadmin-gray-900, 0.06),
 		),
+
 		disabled: (
 			background-color: transparent,
 		),
@@ -152,6 +156,7 @@ $cadmin-clay-color-btn: map-deep-merge(
 		padding-right: 0,
 		padding-top: 0,
 		width: 24px,
+
 		active: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 		),
@@ -185,6 +190,7 @@ $cadmin-clay-color-pointer: map-deep-merge(
 		position: absolute,
 		transition: box-shadow 0.15s ease-in-out,
 		width: 14px,
+
 		focus: (
 			box-shadow: 0 0 0 2px $cadmin-primary-l0,
 			outline: 0,
@@ -342,17 +348,20 @@ $cadmin-clay-color-form-group: map-deep-merge(
 		align-items: center,
 		margin-top: 4px,
 		margin-bottom: 16px,
+
 		clay-range: (
 			flex-grow: 1,
 			flex-shrink: 0,
 			margin-right: 16px,
 			width: 144px,
 		),
+
 		form-control: (
 			padding-left: 0,
 			padding-right: 10%,
 			text-align: right,
 		),
+
 		input-group: (
 			input-group-inset-item-before: (
 				font-weight: $cadmin-font-weight-semi-bold,
@@ -372,11 +381,13 @@ $cadmin-clay-color-slider: map-deep-merge(
 	(
 		clay-range-input: (
 			border-radius: 100px,
+
 			clay-range-track: (
 				border-radius: inherit,
 				height: 8px,
 				margin-top: -4px,
 			),
+
 			clay-range-progress: (
 				background-color: transparent,
 				border-radius: inherit,
@@ -384,15 +395,19 @@ $cadmin-clay-color-slider: map-deep-merge(
 				margin-top: -4px,
 				width: 100%,
 			),
+
 			ms-thumb: (
 				visibility: visible,
 			),
+
 			moz-range-thumb: (
 				visibility: visible,
 			),
+
 			webkit-slider-thumb: (
 				visibility: visible,
 			),
+
 			clay-range-thumb: (
 				background-color: currentColor,
 				border-width: 0,
@@ -404,16 +419,19 @@ $cadmin-clay-color-slider: map-deep-merge(
 				visibility: hidden,
 				width: 10px,
 			),
+
 			form-control-range: (
 				background-color: inherit,
 				border-radius: inherit,
 				color: inherit,
 				height: 8px,
+
 				webkit-slider-runnable-track: (
 					-webkit-appearance: none,
 					appearance: none,
 				),
 			),
+
 			focus: (
 				clay-range-thumb: (
 					box-shadow: #{0 0 0 2px $cadmin-white,
@@ -430,6 +448,7 @@ $cadmin-clay-color-slider-hue: map-deep-merge(
 	(
 		clay-range-input: (
 			color: #26affd,
+
 			clay-range-track: (
 				background-image:
 					linear-gradient(
@@ -453,6 +472,7 @@ $cadmin-clay-color-slider-alpha: map-deep-merge(
 	(
 		clay-range-input: (
 			color: $cadmin-black,
+
 			clay-range-track: (
 				background-color: $cadmin-white,
 				background-image: #{linear-gradient(
@@ -477,11 +497,13 @@ $cadmin-clay-color-slider-alpha: map-deep-merge(
 				-4px 0px},
 				background-size: 8px 8px,
 			),
+
 			form-control-range: (
 				background-image:
 					linear-gradient(90deg, transparent 0%, currentcolor 100%),
 				color: inherit,
 			),
+
 			clay-range-progress: (
 				background-image:
 					linear-gradient(90deg, transparent 0%, currentcolor 100%),

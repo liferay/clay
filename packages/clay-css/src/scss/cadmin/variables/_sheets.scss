@@ -1,9 +1,8 @@
 $cadmin-sheet-bg: $cadmin-white !default;
 $cadmin-sheet-border-color: $cadmin-gray-300 !default;
+$cadmin-sheet-border-radius: $cadmin-border-radius !default;
 $cadmin-sheet-border-style: solid !default;
 $cadmin-sheet-border-width: 1px !default; // 1px
-
-$cadmin-sheet-border-radius: $cadmin-border-radius !default;
 
 $cadmin-sheet-padding-bottom: 1px !default; // 1px
 $cadmin-sheet-padding-left: 24px !default; // 24px
@@ -26,14 +25,17 @@ $cadmin-sheet-plus-sheet: map-merge(
 // Sheet Header
 
 $cadmin-sheet-header-margin-bottom: 48px !default; // 48px
+
 $cadmin-sheet-header-margin-bottom-mobile: 32px !default; // 32px
 
 // Sheet Section
 
 $cadmin-sheet-section-margin-bottom: 48px !default; // 48px
+
 $cadmin-sheet-section-margin-bottom-mobile: 32px !default; // 32px
 
 $cadmin-sheet-panel-group-margin-bottom: 24px !default; // 24px
+
 $cadmin-sheet-panel-group-margin-bottom-mobile: 16px !default; // 16px
 
 // Sheet Footer
@@ -51,16 +53,20 @@ $cadmin-sheet-footer-btn-block-sm-down: () !default;
 $cadmin-sheet-footer-btn-block-sm-down: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		mobile: (
 			display: block,
+
 			btn: (
 				display: block,
 				margin-bottom: 16px,
 				width: 100%,
 			),
+
 			btn-group: (
 				display: block,
 			),
+
 			btn-group-item: (
 				display: block,
 				margin-right: 0,
@@ -115,6 +121,7 @@ $cadmin-sheet-subtitle-heading-text-margin-top: auto !default;
 
 $cadmin-sheet-subtitle-link-color: $cadmin-sheet-subtitle-color !default;
 $cadmin-sheet-subtitle-link-text-decoration: null !default;
+
 $cadmin-sheet-subtitle-link-hover-color: null !default;
 $cadmin-sheet-subtitle-link-hover-text-decoration: none !default;
 
@@ -125,10 +132,12 @@ $cadmin-sheet-subtitle-link: map-deep-merge(
 		color: $cadmin-sheet-subtitle-link-color,
 		text-decoration: $cadmin-sheet-subtitle-link-text-decoration,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $cadmin-sheet-subtitle-link-hover-color,
 			text-decoration: $cadmin-sheet-subtitle-link-hover-text-decoration,
 		),
+
 		focus: (
 			box-shadow: #{0 0 0 4px $cadmin-white,
 			0 0 0 6px $cadmin-primary-l0},
@@ -138,8 +147,8 @@ $cadmin-sheet-subtitle-link: map-deep-merge(
 	$cadmin-sheet-subtitle-link
 );
 
-$cadmin-sheet-subtitle-collapse-icon-font-size: 12px !default;
 $cadmin-sheet-subtitle-collapse-icon-bottom: null !default;
+$cadmin-sheet-subtitle-collapse-icon-font-size: 12px !default;
 $cadmin-sheet-subtitle-collapse-icon-left: null !default;
 $cadmin-sheet-subtitle-collapse-icon-right: null !default;
 $cadmin-sheet-subtitle-collapse-icon-top: clay-collapse-icon-align(

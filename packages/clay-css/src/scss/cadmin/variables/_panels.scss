@@ -20,13 +20,14 @@ $cadmin-panel-header-border-bottom-width: 0 !default;
 $cadmin-panel-header-offset-border-radius: calc(
 	#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-top-width}
 ) !default;
+
 $cadmin-panel-header-font-size: 14px !default; // 14px
 $cadmin-panel-header-line-height: $cadmin-headings-line-height !default;
 $cadmin-panel-header-padding-x: 20px !default;
 $cadmin-panel-header-padding-y: 12px !default;
 
-$cadmin-panel-header-collapse-icon-font-size: 12px !default; // 12px
 $cadmin-panel-header-collapse-icon-bottom: null !default;
+$cadmin-panel-header-collapse-icon-font-size: 12px !default; // 12px
 $cadmin-panel-header-collapse-icon-left: null !default;
 $cadmin-panel-header-collapse-icon-right: null !default;
 $cadmin-panel-header-collapse-icon-top: clay-collapse-icon-align(
@@ -40,6 +41,7 @@ $cadmin-panel-header-collapse-icon-padding-left: null !default;
 $cadmin-panel-header-collapse-icon-padding-right: null !default;
 
 $cadmin-panel-header-link-text-decoration: null !default;
+
 $cadmin-panel-header-link-hover-text-decoration: none !default;
 
 $cadmin-panel-header-link: () !default;
@@ -49,10 +51,12 @@ $cadmin-panel-header-link: map-deep-merge(
 		display: block,
 		text-decoration: $cadmin-panel-header-link-text-decoration,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: inherit,
 			text-decoration: $cadmin-panel-header-link-hover-text-decoration,
 		),
+
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
@@ -75,6 +79,7 @@ $cadmin-panel-footer-border-top-width: 0 !default;
 $cadmin-panel-footer-offset-border-radius: calc(
 	#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-bottom-width}
 ) !default;
+
 $cadmin-panel-footer-padding-x: $cadmin-panel-header-padding-x !default;
 $cadmin-panel-footer-padding-y: $cadmin-panel-header-padding-y !default;
 
@@ -109,13 +114,16 @@ $cadmin-panel-group-sm: () !default;
 $cadmin-panel-group-sm: map-deep-merge(
 	(
 		font-size: 14px,
+
 		header: (
 			padding-bottom: 8px,
 			padding-top: 8px,
 		),
+
 		title: (
 			font-size: 12px,
 		),
+
 		collapse-icon: (
 			top: 11px,
 		),
@@ -145,6 +153,7 @@ $cadmin-panel-group-flush-panel-unstyled: () !default;
 $cadmin-panel-group-flush-panel-unstyled: map-deep-merge(
 	(
 		margin-bottom: 24px,
+
 		body: (
 			margin-bottom: 0,
 		),
@@ -161,10 +170,12 @@ $cadmin-panel-secondary: map-deep-merge(
 	(
 		border-color: $cadmin-gray-300,
 		color: $cadmin-gray-600,
+
 		header: (
 			border-color: $cadmin-gray-300,
 			link: $cadmin-panel-secondary-header-link,
 		),
+
 		footer: (
 			border-color: $cadmin-gray-300,
 		),
@@ -178,6 +189,7 @@ $cadmin-panel-unstyled-header-link: () !default;
 $cadmin-panel-unstyled-header-link: map-deep-merge(
 	(
 		border-radius: 1px,
+
 		focus: (
 			box-shadow: #{0 0 0 4px $cadmin-body-bg,
 			0 0 0 6px $cadmin-primary-l0},
@@ -193,23 +205,29 @@ $cadmin-panel-unstyled: map-deep-merge(
 		border-radius: 0,
 		border-width: 0,
 		margin-bottom: 24px,
+
 		header: (
 			border-color: $cadmin-gray-500,
 			border-radius: 0,
 			border-style: solid,
 			border-width: 0 0 1px 0,
 			padding-left: 0,
+
 			collapsed: (
 				border-color: $cadmin-gray-500,
 			),
+
 			link: $cadmin-panel-unstyled-header-link,
 		),
+
 		collapse-icon: (
 			right: 0,
 		),
+
 		body: (
 			padding: 16px 0 0.1px 0,
 		),
+
 		footer: (
 			padding: 16px 0 0.1px 0,
 		),

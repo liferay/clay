@@ -16,13 +16,16 @@ $date-picker-nav-btn: map-deep-merge(
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			background-color: $gray-200,
 			color: $gray-900,
 		),
+
 		active: (
 			background-color: $gray-200,
 		),
+
 		disabled: (
 			color: $gray-500,
 			opacity: null,
@@ -43,14 +46,17 @@ $date-picker-nav-select: map-deep-merge(
 		padding-bottom: 0,
 		padding-left: 0.5rem,
 		padding-top: 0,
+
 		hover: (
 			background-color: $gray-200,
 			color: $gray-900,
 		),
+
 		focus: (
 			background-color: $gray-200,
 			color: $gray-900,
 		),
+
 		disabled: (
 			background-color: transparent,
 			color:
@@ -72,10 +78,12 @@ $date-picker-date: map-deep-merge(
 		hover: (
 			color: $gray-900,
 		),
+
 		focus: (
 			background-color: $gray-200,
 			color: $gray-900,
 		),
+
 		disabled: (
 			color: $gray-500,
 			opacity: null,
@@ -89,9 +97,11 @@ $date-picker-previous-month-date: map-deep-merge(
 	(
 		color: $gray-500,
 		opacity: null,
+
 		focus: (
 			opacity: null,
 		),
+
 		active: (
 			background-color: $primary-l2,
 			color: $secondary,
@@ -105,9 +115,11 @@ $date-picker-next-month-date: map-deep-merge(
 	(
 		color: $gray-500,
 		opacity: null,
+
 		focus: (
 			opacity: null,
 		),
+
 		active: (
 			background-color: $primary-l2,
 		),

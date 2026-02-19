@@ -70,7 +70,7 @@ type ContextProps = {
 	onClearPosition: () => void;
 	onDragStart: (source: 'keyboard' | 'mouse', target: React.Key) => void;
 	onDrop: () => void;
-	onEnd: () => void;
+	onEnd: (status?: 'complete' | 'canceled' | null) => void;
 	onPositionChange: (key: React.Key, position: Position) => void;
 	position: Position | null;
 	source: 'keyboard' | 'mouse' | null;
@@ -449,17 +449,20 @@ export function DragAndDropProvider<T>({
 		[selectedKeys]
 	);
 
-	const onEnd = useCallback(() => {
-		setState((state) => ({
-			currentDrag: null,
-			currentDragKeys: emptySet(),
-			currentTarget: null,
-			lastItem: state.currentDrag,
-			position: null,
-			source: null,
-			status: null,
-		}));
-	}, []);
+	const onEnd = useCallback(
+		(status: 'complete' | 'canceled' | null = null) => {
+			setState((state) => ({
+				currentDrag: null,
+				currentDragKeys: emptySet(),
+				currentTarget: null,
+				lastItem: state.currentDrag,
+				position: null,
+				source: null,
+				status,
+			}));
+		},
+		[]
+	);
 
 	const onPositionChange = useCallback(
 		(key: React.Key, position: Position) => {
@@ -525,15 +528,9 @@ export function DragAndDropProvider<T>({
 		}
 
 		reorder(dragKeys, dropLayoutItem!.cursor, position!);
-		setState({
-			currentDrag: null,
-			currentDragKeys: emptySet(),
-			currentTarget: null,
-			lastItem: currentDrag,
-			position: null,
-			source: null,
-			status: 'complete',
-		});
+
+		onEnd('complete');
+
 		announcerRef.current?.announce(messages.dropComplete);
 	}, [state, onCancel]);
 

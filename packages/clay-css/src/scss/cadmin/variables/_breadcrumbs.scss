@@ -53,12 +53,15 @@ $cadmin-breadcrumb-item: map-deep-merge(
 		font-weight: $cadmin-breadcrumb-font-weight,
 		margin-right: 0.5em,
 		position: relative,
+
 		active: (
 			color: $cadmin-breadcrumb-active-color,
 			font-weight: $cadmin-breadcrumb-active-font-weight,
 		),
+
 		breadcrumb-item: (
 			padding-left: 1em,
+
 			before: (
 				color: $cadmin-breadcrumb-divider-color,
 				display: block,
@@ -80,11 +83,14 @@ $cadmin-breadcrumb-item: map-deep-merge(
 				width: $cadmin-breadcrumb-divider-svg-icon-width,
 			),
 		),
+
 		dropdown-toggle: (
 			text-decoration: none,
+
 			hover: (
 				text-decoration: none,
 			),
+
 			focus: (
 				text-decoration: none,
 			),
@@ -132,10 +138,12 @@ $cadmin-breadcrumb-link: map-deep-merge(
 		text-decoration: $cadmin-breadcrumb-link-text-decoration,
 		text-transform: $cadmin-breadcrumb-text-transform,
 		transition: box-shadow 0.15s ease-in-out,
+
 		hover: (
 			color: $cadmin-breadcrumb-link-hover-color,
 			text-decoration: $cadmin-breadcrumb-link-hover-text-decoration,
 		),
+
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-breadcrumb-link-hover-color,

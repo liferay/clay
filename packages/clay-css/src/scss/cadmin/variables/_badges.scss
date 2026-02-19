@@ -21,8 +21,9 @@ $cadmin-badge-focus-width: $cadmin-input-btn-focus-width !default;
 // .badge a
 
 $cadmin-badge-link-color: $cadmin-white !default;
-$cadmin-badge-link-hover-color: null !default;
 $cadmin-badge-link-text-decoration: underline !default;
+
+$cadmin-badge-link-hover-color: null !default;
 $cadmin-badge-link-hover-text-decoration: none !default;
 
 $cadmin-badge: () !default;
@@ -48,30 +49,37 @@ $cadmin-badge: map-deep-merge(
 		transition: clay-enable-transitions($cadmin-badge-transition),
 		white-space: inherit,
 		word-wrap: break-word,
+
 		empty: (
 			display: none,
 		),
+
 		href: (
 			hover: (
 				text-decoration: none,
 			),
+
 			focus: (
 				box-shadow: $cadmin-component-focus-box-shadow,
 				outline: 0,
 			),
 		),
+
 		link: (
 			color: $cadmin-badge-link-color,
 			text-decoration: $cadmin-badge-link-text-decoration,
+
 			hover: (
 				color: $cadmin-badge-link-hover-color,
 				text-decoration: $cadmin-badge-link-hover-text-decoration,
 			),
+
 			focus: (
 				color: $cadmin-badge-link-hover-color,
 				text-decoration: $cadmin-badge-link-hover-text-decoration,
 			),
 		),
+
 		c-inner: (
 			margin: #{math-sign($cadmin-badge-padding-y)} #{math-sign(
 					$cadmin-badge-padding-x
@@ -108,10 +116,12 @@ $cadmin-badge-close: map-deep-merge(
 		font-size: inherit,
 		height: auto,
 		width: auto,
+
 		hover: (
 			color: inherit,
 			opacity: 1,
 		),
+
 		focus: (
 			opacity: 1,
 		),
@@ -122,12 +132,15 @@ $cadmin-badge-close: map-deep-merge(
 // .badge-primary
 
 $cadmin-badge-primary-bg: $cadmin-primary !default;
-$cadmin-badge-primary-hover-bg: $cadmin-badge-primary-bg !default;
 $cadmin-badge-primary-border-color: null !default;
-$cadmin-badge-primary-hover-border-color: null !default;
 $cadmin-badge-primary-color: $cadmin-white !default;
+
+$cadmin-badge-primary-hover-bg: $cadmin-badge-primary-bg !default;
+$cadmin-badge-primary-hover-border-color: null !default;
 $cadmin-badge-primary-hover-color: $cadmin-badge-primary-color !default;
+
 $cadmin-badge-primary-link-color: null !default;
+
 $cadmin-badge-primary-link-hover-color: null !default;
 
 $cadmin-badge-primary: () !default;
@@ -136,23 +149,28 @@ $cadmin-badge-primary: map-deep-merge(
 		background-color: $cadmin-badge-primary-bg,
 		border-color: $cadmin-badge-primary-border-color,
 		color: $cadmin-badge-primary-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-badge-primary-hover-bg,
 				border-color: $cadmin-badge-primary-hover-border-color,
 				color: $cadmin-badge-primary-hover-color,
 			),
+
 			focus: (
 				background-color: $cadmin-badge-primary-hover-bg,
 				border-color: $cadmin-badge-primary-hover-border-color,
 				color: $cadmin-badge-primary-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-badge-primary-link-color,
+
 			hover: (
 				color: $cadmin-badge-primary-link-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-badge-primary-link-hover-color,
 			),
@@ -164,12 +182,15 @@ $cadmin-badge-primary: map-deep-merge(
 // .badge-secondary
 
 $cadmin-badge-secondary-bg: $cadmin-secondary-l3 !default;
-$cadmin-badge-secondary-hover-bg: $cadmin-badge-secondary-bg !default;
 $cadmin-badge-secondary-border-color: null !default;
-$cadmin-badge-secondary-hover-border-color: null !default;
 $cadmin-badge-secondary-color: $cadmin-gray-900 !default;
+
+$cadmin-badge-secondary-hover-bg: $cadmin-badge-secondary-bg !default;
+$cadmin-badge-secondary-hover-border-color: null !default;
 $cadmin-badge-secondary-hover-color: $cadmin-badge-secondary-color !default;
+
 $cadmin-badge-secondary-link-color: $cadmin-badge-secondary-color !default;
+
 $cadmin-badge-secondary-link-hover-color: null !default;
 
 $cadmin-badge-secondary: () !default;
@@ -178,23 +199,28 @@ $cadmin-badge-secondary: map-deep-merge(
 		background-color: $cadmin-badge-secondary-bg,
 		border-color: $cadmin-badge-secondary-border-color,
 		color: $cadmin-badge-secondary-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-badge-secondary-hover-bg,
 				border-color: $cadmin-badge-secondary-hover-border-color,
 				color: $cadmin-badge-secondary-hover-color,
 			),
+
 			focus: (
 				background-color: $cadmin-badge-secondary-hover-bg,
 				border-color: $cadmin-badge-secondary-hover-border-color,
 				color: $cadmin-badge-secondary-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-badge-secondary-link-color,
+
 			hover: (
 				color: $cadmin-badge-secondary-link-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-badge-secondary-link-hover-color,
 			),
@@ -206,12 +232,15 @@ $cadmin-badge-secondary: map-deep-merge(
 // .badge-success
 
 $cadmin-badge-success-bg: $cadmin-success !default;
-$cadmin-badge-success-hover-bg: $cadmin-badge-success-bg !default;
 $cadmin-badge-success-border-color: null !default;
-$cadmin-badge-success-hover-border-color: null !default;
 $cadmin-badge-success-color: $cadmin-white !default;
+
+$cadmin-badge-success-hover-bg: $cadmin-badge-success-bg !default;
+$cadmin-badge-success-hover-border-color: null !default;
 $cadmin-badge-success-hover-color: $cadmin-badge-success-color !default;
+
 $cadmin-badge-success-link-color: null !default;
+
 $cadmin-badge-success-link-hover-color: null !default;
 
 $cadmin-badge-success: () !default;
@@ -220,23 +249,28 @@ $cadmin-badge-success: map-deep-merge(
 		background-color: $cadmin-badge-success-bg,
 		border-color: $cadmin-badge-success-border-color,
 		color: $cadmin-badge-success-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-badge-success-hover-bg,
 				border-color: $cadmin-badge-success-hover-border-color,
 				color: $cadmin-badge-success-hover-color,
 			),
+
 			focus: (
 				background-color: $cadmin-badge-success-hover-bg,
 				border-color: $cadmin-badge-success-hover-border-color,
 				color: $cadmin-badge-success-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-badge-success-link-color,
+
 			hover: (
 				color: $cadmin-badge-success-link-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-badge-success-link-hover-color,
 			),
@@ -248,12 +282,15 @@ $cadmin-badge-success: map-deep-merge(
 // .badge-info
 
 $cadmin-badge-info-bg: $cadmin-info !default;
-$cadmin-badge-info-hover-bg: $cadmin-badge-info-bg !default;
 $cadmin-badge-info-border-color: null !default;
-$cadmin-badge-info-hover-border-color: null !default;
 $cadmin-badge-info-color: $cadmin-white !default;
+
+$cadmin-badge-info-hover-bg: $cadmin-badge-info-bg !default;
+$cadmin-badge-info-hover-border-color: null !default;
 $cadmin-badge-info-hover-color: $cadmin-badge-info-color !default;
+
 $cadmin-badge-info-link-color: null !default;
+
 $cadmin-badge-info-link-hover-color: null !default;
 
 $cadmin-badge-info: () !default;
@@ -262,23 +299,28 @@ $cadmin-badge-info: map-deep-merge(
 		background-color: $cadmin-badge-info-bg,
 		border-color: $cadmin-badge-info-border-color,
 		color: $cadmin-badge-info-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-badge-info-hover-bg,
 				border-color: $cadmin-badge-info-hover-border-color,
 				color: $cadmin-badge-info-hover-color,
 			),
+
 			focus: (
 				background-color: $cadmin-badge-info-hover-bg,
 				border-color: $cadmin-badge-info-hover-border-color,
 				color: $cadmin-badge-info-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-badge-info-link-color,
+
 			hover: (
 				color: $cadmin-badge-info-link-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-badge-info-link-hover-color,
 			),
@@ -290,12 +332,15 @@ $cadmin-badge-info: map-deep-merge(
 // .badge-warning
 
 $cadmin-badge-warning-bg: $cadmin-warning !default;
-$cadmin-badge-warning-hover-bg: $cadmin-badge-warning-bg !default;
 $cadmin-badge-warning-border-color: null !default;
-$cadmin-badge-warning-hover-border-color: null !default;
 $cadmin-badge-warning-color: $cadmin-white !default;
+
+$cadmin-badge-warning-hover-bg: $cadmin-badge-warning-bg !default;
+$cadmin-badge-warning-hover-border-color: null !default;
 $cadmin-badge-warning-hover-color: $cadmin-badge-warning-color !default;
+
 $cadmin-badge-warning-link-color: null !default;
+
 $cadmin-badge-warning-link-hover-color: null !default;
 
 $cadmin-badge-warning: () !default;
@@ -304,23 +349,28 @@ $cadmin-badge-warning: map-deep-merge(
 		background-color: $cadmin-badge-warning-bg,
 		border-color: $cadmin-badge-warning-border-color,
 		color: $cadmin-badge-warning-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-badge-warning-hover-bg,
 				border-color: $cadmin-badge-warning-hover-border-color,
 				color: $cadmin-badge-warning-hover-color,
 			),
+
 			focus: (
 				background-color: $cadmin-badge-warning-hover-bg,
 				border-color: $cadmin-badge-warning-hover-border-color,
 				color: $cadmin-badge-warning-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-badge-warning-link-color,
+
 			hover: (
 				color: $cadmin-badge-warning-link-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-badge-warning-link-hover-color,
 			),
@@ -332,12 +382,15 @@ $cadmin-badge-warning: map-deep-merge(
 // .badge-danger
 
 $cadmin-badge-danger-bg: $cadmin-danger !default;
-$cadmin-badge-danger-hover-bg: $cadmin-badge-danger-bg !default;
 $cadmin-badge-danger-border-color: null !default;
-$cadmin-badge-danger-hover-border-color: null !default;
 $cadmin-badge-danger-color: $cadmin-white !default;
+
+$cadmin-badge-danger-hover-bg: $cadmin-badge-danger-bg !default;
+$cadmin-badge-danger-hover-border-color: null !default;
 $cadmin-badge-danger-hover-color: $cadmin-badge-danger-color !default;
+
 $cadmin-badge-danger-link-color: null !default;
+
 $cadmin-badge-danger-link-hover-color: null !default;
 
 $cadmin-badge-danger: () !default;
@@ -346,23 +399,28 @@ $cadmin-badge-danger: map-deep-merge(
 		background-color: $cadmin-badge-danger-bg,
 		border-color: $cadmin-badge-danger-border-color,
 		color: $cadmin-badge-danger-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-badge-danger-hover-bg,
 				border-color: $cadmin-badge-danger-hover-border-color,
 				color: $cadmin-badge-danger-hover-color,
 			),
+
 			focus: (
 				background-color: $cadmin-badge-danger-hover-bg,
 				border-color: $cadmin-badge-danger-hover-border-color,
 				color: $cadmin-badge-danger-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-badge-danger-link-color,
+
 			hover: (
 				color: $cadmin-badge-danger-link-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-badge-danger-link-hover-color,
 			),
@@ -374,12 +432,15 @@ $cadmin-badge-danger: map-deep-merge(
 // .badge-light
 
 $cadmin-badge-light-bg: $cadmin-light !default;
-$cadmin-badge-light-hover-bg: $cadmin-badge-light-bg !default;
 $cadmin-badge-light-border-color: null !default;
-$cadmin-badge-light-hover-border-color: null !default;
 $cadmin-badge-light-color: $cadmin-gray-900 !default;
+
+$cadmin-badge-light-hover-bg: $cadmin-badge-light-bg !default;
+$cadmin-badge-light-hover-border-color: null !default;
 $cadmin-badge-light-hover-color: $cadmin-badge-light-color !default;
+
 $cadmin-badge-light-link-color: $cadmin-badge-light-color !default;
+
 $cadmin-badge-light-link-hover-color: null !default;
 
 $cadmin-badge-light: () !default;
@@ -388,23 +449,28 @@ $cadmin-badge-light: map-deep-merge(
 		background-color: $cadmin-badge-light-bg,
 		border-color: $cadmin-badge-light-border-color,
 		color: $cadmin-badge-light-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-badge-light-hover-bg,
 				border-color: $cadmin-badge-light-hover-border-color,
 				color: $cadmin-badge-light-hover-color,
 			),
+
 			focus: (
 				background-color: $cadmin-badge-light-hover-bg,
 				border-color: $cadmin-badge-light-hover-border-color,
 				color: $cadmin-badge-light-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-badge-light-link-color,
+
 			hover: (
 				color: $cadmin-badge-light-link-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-badge-light-link-hover-color,
 			),
@@ -416,12 +482,15 @@ $cadmin-badge-light: map-deep-merge(
 // .badge-dark
 
 $cadmin-badge-dark-bg: $cadmin-dark !default;
-$cadmin-badge-dark-hover-bg: $cadmin-badge-dark-bg !default;
 $cadmin-badge-dark-border-color: null !default;
-$cadmin-badge-dark-hover-border-color: null !default;
 $cadmin-badge-dark-color: $cadmin-white !default;
+
+$cadmin-badge-dark-hover-bg: $cadmin-badge-dark-bg !default;
+$cadmin-badge-dark-hover-border-color: null !default;
 $cadmin-badge-dark-hover-color: $cadmin-badge-dark-color !default;
+
 $cadmin-badge-dark-link-color: null !default;
+
 $cadmin-badge-dark-link-hover-color: null !default;
 
 $cadmin-badge-dark: () !default;
@@ -430,23 +499,28 @@ $cadmin-badge-dark: map-deep-merge(
 		background-color: $cadmin-badge-dark-bg,
 		border-color: $cadmin-badge-dark-border-color,
 		color: $cadmin-badge-dark-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-badge-dark-hover-bg,
 				border-color: $cadmin-badge-dark-hover-border-color,
 				color: $cadmin-badge-dark-hover-color,
 			),
+
 			focus: (
 				background-color: $cadmin-badge-dark-hover-bg,
 				border-color: $cadmin-badge-dark-hover-border-color,
 				color: $cadmin-badge-dark-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-badge-dark-link-color,
+
 			hover: (
 				color: $cadmin-badge-dark-link-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-badge-dark-link-hover-color,
 			),
@@ -459,90 +533,117 @@ $cadmin-badge-palette: () !default;
 $cadmin-badge-palette: map-deep-merge(
 	(
 		primary: $cadmin-badge-primary,
+
 		secondary: $cadmin-badge-secondary,
+
 		success: $cadmin-badge-success,
+
 		info: $cadmin-badge-info,
+
 		warning: $cadmin-badge-warning,
+
 		danger: $cadmin-badge-danger,
+
 		light: $cadmin-badge-light,
+
 		dark: $cadmin-badge-dark,
+
 		'.badge-translucent.badge-primary': (
 			background-color: rgba($cadmin-primary-d1, 0.04),
 			border-color: transparent,
 			color: $cadmin-primary-d1,
 		),
+
 		'.badge-translucent.badge-info, .badge-beta': (
 			background-color: rgba($cadmin-info-d1, 0.04),
 			border-color: transparent,
 			color: $cadmin-info-d1,
 		),
+
 		'.badge-translucent.badge-success': (
 			background-color: rgba($cadmin-success-d1, 0.04),
 			border-color: transparent,
 			color: $cadmin-success-d1,
 		),
+
 		'.badge-translucent.badge-warning': (
 			background-color: rgba($cadmin-warning-d1, 0.04),
 			border-color: transparent,
 			color: $cadmin-warning-d1,
 		),
+
 		'.badge-translucent.badge-danger': (
 			background-color: rgba($cadmin-danger-d1, 0.04),
 			border-color: transparent,
 			color: $cadmin-danger-d1,
 		),
+
 		'%clay-dark-badge-translucent-primary': (
 			background-color: rgba($cadmin-primary-l2, 0.04),
 			border-color: transparent,
 			color: $cadmin-primary-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-primary': (
 			extend: '%clay-dark-badge-translucent-primary',
 		),
+
 		'.clay-dark.badge-translucent.badge-primary': (
 			extend: '%clay-dark-badge-translucent-primary',
 		),
+
 		'%clay-dark-badge-translucent-info': (
 			background-color: rgba($cadmin-info-l2, 0.04),
 			border-color: transparent,
 			color: $cadmin-info-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-info, .badge-beta-dark': (
 			extend: '%clay-dark-badge-translucent-info',
 		),
+
 		'.clay-dark.badge-translucent.badge-info': (
 			extend: '%clay-dark-badge-translucent-info',
 		),
+
 		'%clay-dark-badge-translucent-success': (
 			background-color: rgba($cadmin-success-l2, 0.04),
 			border-color: transparent,
 			color: $cadmin-success-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-success': (
 			extend: '%clay-dark-badge-translucent-success',
 		),
+
 		'.clay-dark.badge-translucent.badge-success': (
 			extend: '%clay-dark-badge-translucent-success',
 		),
+
 		'%clay-dark-badge-translucent-warning': (
 			background-color: rgba($cadmin-warning-l2, 0.04),
 			border-color: transparent,
 			color: $cadmin-warning-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-warning': (
 			extend: '%clay-dark-badge-translucent-warning',
 		),
+
 		'.clay-dark.badge-translucent.badge-warning': (
 			extend: '%clay-dark-badge-translucent-warning',
 		),
+
 		'%clay-dark-badge-translucent-danger': (
 			background-color: rgba($cadmin-danger-l2, 0.04),
 			border-color: transparent,
 			color: $cadmin-danger-l1,
 		),
+
 		'.clay-dark .badge-translucent.badge-danger': (
 			extend: '%clay-dark-badge-translucent-danger',
 		),
+
 		'.clay-dark.badge-translucent.badge-danger': (
 			extend: '%clay-dark-badge-translucent-danger',
 		),

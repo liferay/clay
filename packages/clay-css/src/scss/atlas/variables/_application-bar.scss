@@ -14,9 +14,11 @@ $application-bar-base: map-deep-merge(
 				border-radius: $border-radius,
 				outline: 0,
 				transition: box-shadow 0.15s ease-in-out,
+
 				focus: (
 					box-shadow: $component-focus-box-shadow,
 				),
+
 				disabled: (
 					box-shadow: none,
 				),
@@ -30,18 +32,23 @@ $application-bar-dark: () !default;
 $application-bar-dark: map-deep-merge(
 	(
 		background-color: $dark-l1,
+
 		navbar-nav: (
 			nav-link: (
 				font-weight: $font-weight-semi-bold,
+
 				hover: (
 					background-color: rgba(255, 255, 255, 0.03),
 				),
+
 				focus: (
 					background-color: rgba(255, 255, 255, 0.03),
 				),
+
 				active: (
 					background-color: rgba(255, 255, 255, 0.06),
 				),
+
 				disabled: (
 					background-color: transparent,
 					opacity: 0.5,

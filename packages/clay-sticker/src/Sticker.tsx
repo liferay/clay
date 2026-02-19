@@ -31,6 +31,11 @@ export type DisplayType =
 interface IClayStickerProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 	/**
+	 * Flag to indicate if the sticker should disable a border.
+	 */
+	borderless?: boolean;
+
+	/**
 	 * Determines the color of the sticker.
 	 */
 	displayType?: DisplayType;
@@ -98,6 +103,7 @@ export function Image({
 }
 
 function Sticker({
+	borderless,
 	children,
 	className,
 	displayType,
@@ -112,6 +118,7 @@ function Sticker({
 		<span
 			{...otherProps}
 			className={classNames('sticker', className, {
+				[`border-0`]: borderless,
 				[`sticker-${shape}`]: shape,
 				[`sticker-${displayType}`]: displayType,
 				[`sticker-${position}`]: position,

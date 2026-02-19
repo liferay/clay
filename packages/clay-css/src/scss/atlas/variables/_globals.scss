@@ -57,6 +57,7 @@ $enable-hover-media-query: false !default;
 // Theme Base Colors
 
 $white: #fff !default;
+
 $gray-100: #f7f8f9 !default;
 $gray-200: #f1f2f5 !default;
 $gray-300: #e7e7ed !default;
@@ -66,6 +67,7 @@ $gray-600: #6b6c7e !default;
 $gray-700: #495057 !default;
 $gray-800: #393a4a !default;
 $gray-900: #272833 !default;
+
 $black: #000 !default;
 
 $grays: () !default;
@@ -84,110 +86,120 @@ $grays: map-merge(
 	$grays
 );
 
-$blue-d4: #004799 !default;
-$blue-d3: #0053b3 !default;
-$blue-d2: #005fcc !default;
-$blue-d1: #006be6 !default;
 $blue: if($enable-lexicon-flat-colors, #006eff, #0b5fff) !default;
+
+$blue-d1: #006be6 !default;
+$blue-d2: #005fcc !default;
+$blue-d3: #0053b3 !default;
+$blue-d4: #004799 !default;
 $blue-l1: #338fff !default;
 $blue-l2: #66abff !default;
 $blue-l3: #97c5ff !default;
 $blue-l4: #cce3ff !default;
 $blue-l5: #e5f1ff !default;
 
-$indigo-d4: #0017e5 !default;
-$indigo-d3: #001aff !default;
-$indigo-d2: #1a30ff !default;
-$indigo-d1: #3347ff !default;
 $indigo: if($enable-lexicon-flat-colors, #4d5fff, #6610f2) !default;
+
+$indigo-d1: #3347ff !default;
+$indigo-d2: #1a30ff !default;
+$indigo-d3: #001aff !default;
+$indigo-d4: #0017e5 !default;
 $indigo-l1: #808cff !default;
 $indigo-l2: #99a3ff !default;
 $indigo-l3: #b2baff !default;
 $indigo-l4: #ccd1ff !default;
 $indigo-l5: #e5e8ff !default;
 
-$purple-d4: #7700cc !default;
-$purple-d3: #8600e6 !default;
-$purple-d2: #9500ff !default;
-$purple-d1: #9f1aff !default;
 $purple: if($enable-lexicon-flat-colors, #aa33ff, #6f42c1) !default;
+
+$purple-d1: #9f1aff !default;
+$purple-d2: #9500ff !default;
+$purple-d3: #8600e6 !default;
+$purple-d4: #7700cc !default;
 $purple-l1: #bf66ff !default;
 $purple-l2: #ca80ff !default;
 $purple-l3: #d499ff !default;
 $purple-l4: #dfb3ff !default;
 $purple-l5: #f2e5ff !default;
 
-$pink-d4: #800048 !default;
-$pink-d3: #990057 !default;
-$pink-d2: #b30065 !default;
-$pink-d1: #cc0074 !default;
 $pink: if($enable-lexicon-flat-colors, #e50082, #e83e8c) !default;
+
+$pink-d1: #cc0074 !default;
+$pink-d2: #b30065 !default;
+$pink-d3: #990057 !default;
+$pink-d4: #800048 !default;
 $pink-l1: #ff4db2 !default;
 $pink-l2: #ff80c8 !default;
 $pink-l3: #ff99d3 !default;
 $pink-l4: #ffb3de !default;
 $pink-l5: #ffe5f4 !default;
 
-$red-d4: #800000 !default;
-$red-d3: #990000 !default;
-$red-d2: #b30000 !default;
-$red-d1: #cc0000 !default;
 $red: if($enable-lexicon-flat-colors, #e60000, #da1414) !default;
+
+$red-d1: #cc0000 !default;
+$red-d2: #b30000 !default;
+$red-d3: #990000 !default;
+$red-d4: #800000 !default;
 $red-l1: #ff4d4d !default;
 $red-l2: #ff6666 !default;
 $red-l3: #ff8080 !default;
 $red-l4: #ff9999 !default;
 $red-l5: #ffe5e5 !default;
 
-$orange-d4: #662700 !default;
-$orange-d3: #803100 !default;
-$orange-d2: #993b00 !default;
-$orange-d1: #b34400 !default;
 $orange: if($enable-lexicon-flat-colors, #cc4e00, #b95000) !default;
+
+$orange-d1: #b34400 !default;
+$orange-d2: #993b00 !default;
+$orange-d3: #803100 !default;
+$orange-d4: #662700 !default;
 $orange-l1: #ff6200 !default;
 $orange-l2: #ff8133 !default;
 $orange-l3: #ffa166 !default;
 $orange-l4: #ffc099 !default;
 $orange-l5: #fff0e5 !default;
 
-$yellow-d4: #997000 !default;
-$yellow-d3: #b38900 !default;
-$yellow-d2: #cc9600 !default;
-$yellow-d1: #e6a800 !default;
 $yellow: if($enable-lexicon-flat-colors, #ffbb00, #ffc107) !default;
+
+$yellow-d1: #e6a800 !default;
+$yellow-d2: #cc9600 !default;
+$yellow-d3: #b38900 !default;
+$yellow-d4: #997000 !default;
 $yellow-l1: #ffc933 !default;
 $yellow-l2: #ffd666 !default;
 $yellow-l3: #ffe499 !default;
 $yellow-l4: #fff1cc !default;
 $yellow-l5: #fff8e5 !default;
 
-$green-d4: #162d06 !default;
-$green-d3: #22430a !default;
-$green-d2: #2e590d !default;
-$green-d1: #397010 !default;
 $green: if($enable-lexicon-flat-colors, #458613, #287d3d) !default;
+
+$green-d1: #397010 !default;
+$green-d2: #2e590d !default;
+$green-d3: #22430a !default;
+$green-d4: #162d06 !default;
 $green-l1: #53a117 !default;
 $green-l2: #67c91d !default;
 $green-l3: #81e236 !default;
 $green-l4: #9de963 !default;
 $green-l5: #f1fce9 !default;
 
-$teal-d4: #092a25 !default;
-$teal-d3: #0d3f37 !default;
-$teal-d2: #125449 !default;
-$teal-d1: #16695b !default;
 $teal: if($enable-lexicon-flat-colors, #1b7e6e, #20c997) !default;
+
+$teal-d1: #16695b !default;
+$teal-d2: #125449 !default;
+$teal-d3: #0d3f37 !default;
+$teal-d4: #092a25 !default;
 $teal-l1: #24a892 !default;
 $teal-l2: #42d7be !default;
 $teal-l3: #6ce0cc !default;
 $teal-l4: #96e9db !default;
 $teal-l5: #eafbf8 !default;
 
-$cyan-d4: #00334d !default;
-$cyan-d3: #004466 !default;
-$cyan-d2: #005580 !default;
-$cyan-d1: #006699 !default;
 $cyan: if($enable-lexicon-flat-colors, #0077b3, #17a2b8) !default;
+
+$cyan-d1: #006699 !default;
+$cyan-d2: #005580 !default;
+$cyan-d3: #004466 !default;
+$cyan-d4: #00334d !default;
 $cyan-l1: #0099e6 !default;
 $cyan-l2: #33bbff !default;
 $cyan-l3: #66ccff !default;
@@ -198,23 +210,24 @@ $colors: () !default;
 $colors: map-merge(
 	(
 		'blue': $blue,
-		'indigo': $indigo,
-		'purple': $purple,
-		'pink': $pink,
-		'red': $red,
-		'orange': $orange,
-		'yellow': $yellow,
-		'green': $green,
-		'teal': $teal,
 		'cyan': $cyan,
-		'white': $white,
 		'gray': $gray-600,
 		'gray-dark': $gray-800,
+		'green': $green,
+		'indigo': $indigo,
+		'orange': $orange,
+		'pink': $pink,
+		'purple': $purple,
+		'red': $red,
+		'teal': $teal,
+		'white': $white,
+		'yellow': $yellow,
 	),
 	$colors
 );
 
 $primary: #0b5fff !default;
+
 $primary-d1: clay-darken($primary, 5.1) !default;
 $primary-d2: clay-darken($primary, 10) !default;
 $primary-l0: clay-lighten($primary, 14.9) !default;
@@ -223,6 +236,7 @@ $primary-l2: clay-lighten($primary, 32.94) !default;
 $primary-l3: clay-lighten($primary, 44.9) !default;
 
 $secondary: #6b6c7e !default;
+
 $secondary-d1: clay-darken(clay-saturate($secondary, 4.82), 20) !default;
 $secondary-d2: clay-darken(clay-saturate($secondary, 5.36), 23.92) !default;
 $secondary-l0: clay-lighten(
@@ -243,30 +257,35 @@ $secondary-l3: clay-lighten(
 ) !default;
 
 $info: #2e5aac !default;
+
 $info-d1: clay-darken($info, 5) !default;
 $info-d2: clay-darken($info, 10) !default;
 $info-l1: clay-lighten(clay-saturate($info, 0.59), 28.04) !default;
 $info-l2: clay-lighten(clay-desaturate($info, 3.25), 52.94) !default;
 
 $success: #287d3c !default;
+
 $success-d1: clay-darken($success, 5) !default;
 $success-d2: clay-darken($success, 10) !default;
 $success-l1: clay-lighten(clay-desaturate($success, 0.14), 24.95) !default;
 $success-l2: clay-lighten(clay-desaturate($success, 1.52), 62.94) !default;
 
 $warning: #b95000 !default;
+
 $warning-d1: clay-darken($warning, 5.1) !default;
 $warning-d2: clay-darken($warning, 10) !default;
 $warning-l1: clay-lighten($warning, 24.9) !default;
 $warning-l2: clay-lighten($warning, 60) !default;
 
 $danger: #da1414 !default;
+
 $danger-d1: clay-darken($danger, 5) !default;
 $danger-d2: clay-darken($danger, 10) !default;
 $danger-l1: clay-lighten(clay-desaturate($danger, 0.25), 28.04) !default;
 $danger-l2: clay-lighten(clay-saturate($danger, 5.04), 50) !default;
 
 $light: #f1f2f5 !default;
+
 $light-d1: clay-darken($light, 5.1) !default;
 $light-d2: clay-darken($light, 10) !default;
 $light-l1: clay-lighten(
@@ -279,6 +298,7 @@ $light-l2: clay-lighten(
 ) !default;
 
 $dark: #272833 !default;
+
 $dark-d1: clay-darken($dark, 5.1) !default;
 $dark-d2: clay-darken($dark, 10) !default;
 $dark-l1: clay-lighten(clay-saturate($dark, 0.18), 4.12) !default;
@@ -288,13 +308,20 @@ $theme-colors: () !default;
 $theme-colors: map-merge(
 	(
 		'primary': $primary,
+
 		'secondary': $secondary,
+
 		'success': $success,
+
 		'info': $info,
+
 		'warning': $warning,
+
 		'danger': $danger,
-		'light': $light,
+
 		'dark': $dark,
+
+		'light': $light,
 	),
 	$theme-colors
 );
@@ -360,22 +387,23 @@ $border-radius: 0.25rem !default; // 4px
 $border-radius-lg: 0.375rem !default; // 6px
 $border-radius-sm: 0.1875rem !default; // 3px
 
+$rounded-0-border-radius: 0px !default;
 $rounded-border-radius: $border-radius !default;
 $rounded-circle-border-radius: 5000px !default;
-$rounded-0-border-radius: 0px !default;
 $rounded-pill: 50rem !default;
 
-$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
 $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 $box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
 
 $caret-width: 0.3em !default;
-$caret-vertical-align: $caret-width * 0.85 !default;
+
 $caret-spacing: $caret-width * 0.85 !default;
+$caret-vertical-align: $caret-width * 0.85 !default;
 
 $transition-base: all 0.2s ease-in-out !default;
-$transition-fade: opacity 0.15s linear !default;
 $transition-collapse: height 0.35s ease !default;
+$transition-fade: opacity 0.15s linear !default;
 
 $embed-responsive-aspect-ratios: () !default;
 $embed-responsive-aspect-ratios: join(
@@ -396,23 +424,28 @@ $component-focus-inset-box-shadow:
 	#{inset 0 0 0 0.125rem $primary-l0,
 	inset 0 0 0 0.25rem $white} !default;
 
-$component-active-color: #fff !default;
 $component-active-bg: #0b5fff !default;
+$component-active-color: #fff !default;
 
 $component-disabled-opacity: 0.4 !default;
 
 // Cursors
 
 $link-cursor: pointer !default;
+
 $disabled-cursor: not-allowed !default;
 
 // Grid
 
 $grid-breakpoints: (
 	xs: 0,
+
 	sm: 576px,
+
 	md: 768px,
+
 	lg: 992px,
+
 	xl: 1280px,
 ) !default;
 
@@ -426,10 +459,15 @@ $grid-row-columns: 6 !default;
 
 $container-max-widths: (
 	sm: 540px,
+
 	md: 720px,
+
 	lg: 960px,
+
 	xl: 1248px,
+
 	xxl: 1392px,
+
 	xxxl: 1872px,
 ) !default;
 
@@ -508,10 +546,15 @@ $font-size-base-mobile: $font-size-base !default;
 $font-size-lg-mobile: $font-size-lg !default;
 
 $font-weight-lighter: lighter !default;
+
 $font-weight-light: 300 !default;
+
 $font-weight-normal: 400 !default;
+
 $font-weight-semi-bold: 600 !default;
+
 $font-weight-bold: 700 !default;
+
 $font-weight-bolder: 900 !default;
 
 $font-weight-base: $font-weight-normal !default;
@@ -550,19 +593,19 @@ $h6-font-size-mobile: null !default;
 
 // Headings h1-h6
 
-$headings-margin-bottom: 0.5rem !default;
+$headings-color: null !default;
 $headings-font-family: null !default;
 $headings-font-weight: $font-weight-bold !default;
 $headings-line-height: 1.2 !default;
-$headings-color: null !default;
+$headings-margin-bottom: 0.5rem !default;
 
 // Body
 
 $body-bg: $white !default;
 $body-color: $dark-d1 !default;
 $body-moz-osx-font-smoothing: $moz-osx-font-smoothing !default;
-$body-webkit-font-smoothing: $webkit-font-smoothing !default;
 $body-text-align: inherit !default;
+$body-webkit-font-smoothing: $webkit-font-smoothing !default;
 
 $c-body: () !default;
 $c-body: map-merge(
@@ -571,12 +614,16 @@ $c-body: map-merge(
 		color: $body-color,
 		font-family: $font-family-base,
 		font-size: $font-size-base,
+
 		-moz-osx-font-smoothing: $body-moz-osx-font-smoothing,
 		-webkit-font-smoothing: $body-webkit-font-smoothing,
+
 		font-weight: $font-weight-base,
 		line-height: $line-height-base,
 		margin: 0,
+
 		-ms-overflow-style: scrollbar,
+
 		text-align: $body-text-align,
 	),
 	$c-body
@@ -586,10 +633,7 @@ $c-body: map-merge(
 
 $c-button-base: () !default;
 $c-button-base: map-merge(
-	(
-		cursor: $link-cursor,
-		-webkit-appearance: button,
-	),
+	(-webkit-appearance: button, cursor: $link-cursor),
 	$c-button-base
 );
 
@@ -597,6 +641,7 @@ $c-button-base: map-merge(
 
 $link-color: $primary !default;
 $link-decoration: none !default;
+
 $link-hover-color: $primary-d2 !default;
 $link-hover-decoration: underline !default;
 
@@ -605,6 +650,7 @@ $link: map-deep-merge(
 	(
 		color: $link-color,
 		text-decoration: $link-decoration,
+
 		hover: (
 			color: $link-hover-color,
 			text-decoration: $link-hover-decoration,
@@ -668,11 +714,11 @@ $code-color: $red !default;
 $code-font-size: 87.5% !default;
 
 $kbd-bg: $gray-900 !default;
+$kbd-box-shadow: inset 0 -0.1rem 0 rgba($black, 0.25) !default;
 $kbd-color: $white !default;
 $kbd-font-size: $code-font-size !default;
 $kbd-padding-x: 0.4rem !default;
 $kbd-padding-y: 0.2rem !default;
-$kbd-box-shadow: inset 0 -0.1rem 0 rgba($black, 0.25) !default;
 
 $nested-kbd-font-weight: $font-weight-bold !default;
 
@@ -694,6 +740,7 @@ $input-btn-padding-y: 0.375rem !default;
 $input-btn-focus-width: 0.2rem !default;
 
 $input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
+
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
 $input-btn-font-size-sm: $font-size-sm !default;

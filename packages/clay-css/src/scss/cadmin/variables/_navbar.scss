@@ -36,6 +36,7 @@ $cadmin-navbar-brand-font-size: $cadmin-font-size-lg !default;
 
 $cadmin-nav-link-height: $cadmin-font-size-base * $cadmin-line-height-base +
 	$cadmin-nav-link-padding-y * 2 !default;
+
 $cadmin-navbar-brand-height: $cadmin-navbar-brand-font-size *
 	$cadmin-line-height-base !default;
 $cadmin-navbar-brand-padding-y: (
@@ -73,6 +74,7 @@ $cadmin-navbar-underline: map-deep-merge(
 				width: auto,
 			),
 		),
+
 		media-breakpoint-up: (
 			md: (
 				navbar-expand-md: (

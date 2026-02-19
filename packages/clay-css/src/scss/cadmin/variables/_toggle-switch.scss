@@ -11,16 +11,20 @@ $cadmin-toggle-switch-transition:
 
 // must all be same units--start
 $cadmin-toggle-switch-bar-padding: 4px !default; // space between button and bar, can be negative value
-$cadmin-toggle-switch-bar-padding-mobile: 4px !default;
 $cadmin-toggle-switch-button-width: 16px !default;
+
+$cadmin-toggle-switch-bar-padding-mobile: 4px !default;
 $cadmin-toggle-switch-button-width-mobile: 16px !default; // 16px
 
 $cadmin-toggle-switch-bar-height: ($cadmin-toggle-switch-bar-padding * 2) +
 	$cadmin-toggle-switch-button-width !default;
+
 $cadmin-toggle-switch-bar-height-mobile: (
 		$cadmin-toggle-switch-bar-padding-mobile * 2
 	) + $cadmin-toggle-switch-button-width-mobile !default;
+
 $cadmin-toggle-switch-bar-width: 48px !default; // width of switch bar
+
 $cadmin-toggle-switch-bar-width-mobile: 40px !default; // width of switch bar
 // must all be same units--end
 
@@ -28,18 +32,21 @@ $cadmin-toggle-switch-bar-bg: $cadmin-gray-500 !default;
 $cadmin-toggle-switch-bar-border-color: $cadmin-toggle-switch-bar-bg !default;
 $cadmin-toggle-switch-bar-border-radius: 20px !default;
 $cadmin-toggle-switch-bar-border-width: 1px !default;
-$cadmin-toggle-switch-bar-focus-box-shadow: $cadmin-custom-control-indicator-focus-box-shadow !default;
 $cadmin-toggle-switch-bar-font-size: 10px !default;
-$cadmin-toggle-switch-bar-font-size-mobile: 10px !default;
 $cadmin-toggle-switch-bar-icon-color: $cadmin-white !default;
+
+$cadmin-toggle-switch-bar-focus-box-shadow: $cadmin-custom-control-indicator-focus-box-shadow !default;
 
 $cadmin-toggle-switch-button-bg: $cadmin-white !default;
 $cadmin-toggle-switch-button-border-color: $cadmin-toggle-switch-button-bg !default;
 $cadmin-toggle-switch-button-border-radius: 50% !default;
 $cadmin-toggle-switch-button-border-width: 1px !default;
 $cadmin-toggle-switch-button-font-size: $cadmin-toggle-switch-bar-font-size !default; // 12px
-$cadmin-toggle-switch-button-font-size-mobile: $cadmin-toggle-switch-bar-font-size-mobile !default; // 10px
 $cadmin-toggle-switch-button-icon-color: $cadmin-gray-900 !default;
+
+$cadmin-toggle-switch-bar-font-size-mobile: 10px !default;
+
+$cadmin-toggle-switch-button-font-size-mobile: $cadmin-toggle-switch-bar-font-size-mobile !default; // 10px
 
 // Toggle Switch On
 
@@ -78,12 +85,15 @@ $cadmin-toggle-switch: map-deep-merge(
 		font-weight: $cadmin-toggle-switch-font-weight,
 		max-width: 100%,
 		position: relative,
+
 		disabled: (
 			cursor: $cadmin-toggle-switch-disabled-cursor,
+
 			toggle-switch-label: (
 				color: $cadmin-toggle-switch-label-disabled-color,
 				cursor: $cadmin-toggle-switch-disabled-cursor,
 			),
+
 			toggle-switch-text: (
 				color: $cadmin-toggle-switch-text-disabled-color,
 			),
@@ -113,12 +123,15 @@ $cadmin-toggle-switch-bar: map-deep-merge(
 			min-width: $cadmin-toggle-switch-bar-width,
 			text-transform: uppercase,
 		),
+
 		toggle-switch-icon: (
 			font-size: $cadmin-toggle-switch-bar-font-size,
+
 			lexicon-icon: (
 				margin-top: -0.2em,
 			),
 		),
+
 		button-icon: (
 			font-size: $cadmin-toggle-switch-button-font-size,
 		),
@@ -132,6 +145,7 @@ $cadmin-toggle-switch-check: () !default;
 $cadmin-toggle-switch-check: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		bottom: 0,
 		font-size: 62.5%,
 		height: $cadmin-toggle-switch-bar-height,
@@ -139,6 +153,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 		position: absolute,
 		width: $cadmin-toggle-switch-bar-width,
 		z-index: 2,
+
 		toggle-switch-bar: (
 			display: inline-flex,
 			font-size: $cadmin-toggle-switch-bar-font-size,
@@ -147,6 +162,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 			position: relative,
 			text-indent: 0,
 			user-select: none,
+
 			before: (
 				background-color: $cadmin-toggle-switch-bar-bg,
 				border-color: $cadmin-toggle-switch-bar-border-color,
@@ -163,6 +179,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 				transition: $cadmin-toggle-switch-transition,
 				width: $cadmin-toggle-switch-bar-width,
 			),
+
 			after: (
 				background-color: $cadmin-toggle-switch-button-bg,
 				border-color: $cadmin-toggle-switch-button-border-color,
@@ -182,10 +199,12 @@ $cadmin-toggle-switch-check: map-deep-merge(
 				transition: $cadmin-toggle-switch-transition,
 				width: $cadmin-toggle-switch-button-width,
 			),
+
 			toggle-switch-handle: (
 				before: (
 					transition: $cadmin-toggle-switch-transition,
 				),
+
 				after: (
 					content: attr(data-label-off),
 					margin-left:
@@ -197,6 +216,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 					white-space: nowrap,
 				),
 			),
+
 			toggle-switch-icon: (
 				color: $cadmin-toggle-switch-bar-icon-color,
 				left: $cadmin-toggle-switch-bar-padding,
@@ -209,22 +229,27 @@ $cadmin-toggle-switch-check: map-deep-merge(
 				width: $cadmin-toggle-switch-button-width,
 				z-index: 1,
 			),
+
 			toggle-switch-icon-on: (
 				left: $cadmin-toggle-switch-bar-padding,
 				opacity: 0,
 			),
+
 			toggle-switch-icon-off: (
 				left: $cadmin-toggle-switch-bar-width -
 					$cadmin-toggle-switch-bar-padding -
 					$cadmin-toggle-switch-button-width,
 			),
+
 			button-icon: (
 				color: $cadmin-toggle-switch-button-icon-color,
 			),
+
 			button-icon-on: (
 				opacity: 0,
 			),
 		),
+
 		focus: (
 			toggle-switch-bar: (
 				before: (
@@ -232,12 +257,14 @@ $cadmin-toggle-switch-check: map-deep-merge(
 				),
 			),
 		),
+
 		disabled: (
 			toggle-switch-bar: (
 				cursor: $cadmin-toggle-switch-disabled-cursor,
 				opacity: $cadmin-toggle-switch-disabled-opacity,
 			),
 		),
+
 		checked: (
 			toggle-switch-bar: (
 				before: (
@@ -250,6 +277,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 					border-style: solid,
 					border-width: $cadmin-toggle-switch-bar-border-width,
 				),
+
 				after: (
 					background-color: $cadmin-toggle-switch-button-on-bg,
 					border-color: $cadmin-toggle-switch-button-on-border-color,
@@ -263,44 +291,55 @@ $cadmin-toggle-switch-check: map-deep-merge(
 						$cadmin-toggle-switch-bar-padding -
 						$cadmin-toggle-switch-button-width,
 				),
+
 				toggle-switch-handle: (
 					after: (
 						content: attr(data-label-on),
 					),
 				),
+
 				toggle-switch-icon: (
 					color: $cadmin-toggle-switch-bar-on-icon-color,
 				),
+
 				toggle-switch-icon-on: (
 					opacity: 1,
 				),
+
 				toggle-switch-icon-off: (
 					opacity: 0,
 				),
+
 				button-icon: (
 					color: $cadmin-toggle-switch-button-on-icon-color,
 					left: $cadmin-toggle-switch-bar-width -
 						$cadmin-toggle-switch-bar-padding -
 						$cadmin-toggle-switch-button-width,
 				),
+
 				button-icon-on: (
 					opacity: 1,
 				),
+
 				button-icon-off: (
 					opacity: 0,
 				),
 			),
 		),
+
 		mobile: (
 			height: $cadmin-toggle-switch-bar-height-mobile,
 			width: $cadmin-toggle-switch-bar-width-mobile,
+
 			toggle-switch-bar: (
 				height: $cadmin-toggle-switch-bar-height-mobile,
 				line-height: $cadmin-toggle-switch-bar-height-mobile,
 				text-indent: 0,
+
 				before: (
 					width: $cadmin-toggle-switch-bar-width-mobile,
 				),
+
 				after: (
 					bottom: $cadmin-toggle-switch-bar-padding-mobile,
 					height: $cadmin-toggle-switch-button-width-mobile,
@@ -308,8 +347,10 @@ $cadmin-toggle-switch-check: map-deep-merge(
 					top: $cadmin-toggle-switch-bar-padding-mobile,
 					width: $cadmin-toggle-switch-button-width-mobile,
 				),
+
 				toggle-switch-handle: (
 					min-width: $cadmin-toggle-switch-bar-width-mobile,
+
 					after: (
 						margin-left:
 							clay-data-label-text-position(
@@ -318,6 +359,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 							),
 					),
 				),
+
 				toggle-switch-icon: (
 					font-size: $cadmin-toggle-switch-bar-font-size-mobile,
 					left: $cadmin-toggle-switch-bar-padding-mobile,
@@ -325,18 +367,22 @@ $cadmin-toggle-switch-check: map-deep-merge(
 					top: $cadmin-toggle-switch-bar-padding-mobile,
 					width: $cadmin-toggle-switch-button-width-mobile,
 				),
+
 				toggle-switch-icon-on: (
 					left: $cadmin-toggle-switch-bar-padding-mobile,
 				),
+
 				toggle-switch-icon-off: (
 					left: $cadmin-toggle-switch-bar-width-mobile -
 						$cadmin-toggle-switch-bar-padding-mobile -
 						$cadmin-toggle-switch-button-width-mobile,
 				),
+
 				button-icon: (
 					font-size: $cadmin-toggle-switch-button-font-size-mobile,
 				),
 			),
+
 			checked: (
 				toggle-switch-bar: (
 					after: (
@@ -344,6 +390,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 							$cadmin-toggle-switch-bar-padding-mobile -
 							$cadmin-toggle-switch-button-width-mobile,
 					),
+
 					toggle-switch-handle: (
 						after: (
 							margin-left:
@@ -353,6 +400,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 								),
 						),
 					),
+
 					button-icon: (
 						left: $cadmin-toggle-switch-bar-width-mobile -
 							$cadmin-toggle-switch-bar-padding-mobile -
@@ -360,9 +408,11 @@ $cadmin-toggle-switch-check: map-deep-merge(
 					),
 				),
 			),
+
 			toggle-switch-text-left: (
 				line-height: $cadmin-toggle-switch-bar-height-mobile,
 			),
+
 			toggle-switch-text-right: (
 				line-height: $cadmin-toggle-switch-bar-height-mobile,
 			),
@@ -426,8 +476,10 @@ $cadmin-simple-toggle-switch: () !default;
 $cadmin-simple-toggle-switch: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		align-items: center,
 		display: inline-flex,
+
 		toggle-switch-label: (
 			line-height: $cadmin-simple-toggle-switch-label-line-height,
 			margin-bottom: 0,
@@ -439,6 +491,7 @@ $cadmin-simple-toggle-switch: map-deep-merge(
 						)}
 				),
 		),
+
 		mobile: (
 			toggle-switch-label: (
 				max-width:
@@ -460,12 +513,15 @@ $cadmin-simple-toggle-switch-reverse: () !default;
 $cadmin-simple-toggle-switch-reverse: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		toggle-switch-label: (
 			margin-right: $cadmin-simple-toggle-switch-label-spacer-x,
 		),
+
 		toggle-switch-check-bar: (
 			order: 5,
 		),
+
 		toggle-switch-check: (
 			toggle-switch-bar: (
 				order: 5,
@@ -486,15 +542,19 @@ $cadmin-toggle-switch-sizes: map-deep-merge(
 					max-width: calc(100% - 34px),
 				),
 			),
+
 			toggle-switch-check: (
 				height: 16px,
 				width: 30px,
+
 				toggle-switch-bar: (
 					height: 16px,
 					line-height: 16px,
+
 					before: (
 						width: 30px,
 					),
+
 					after: (
 						bottom: 0,
 						height: 12px,
@@ -502,12 +562,15 @@ $cadmin-toggle-switch-sizes: map-deep-merge(
 						top: 2px,
 						width: 12px,
 					),
+
 					toggle-switch-handle: (
 						min-width: 30px,
+
 						after: (
 							margin-left: 34px,
 						),
 					),
+
 					toggle-switch-icon: (
 						font-size: 8px,
 						height: 16px,
@@ -516,21 +579,25 @@ $cadmin-toggle-switch-sizes: map-deep-merge(
 						top: 0px,
 						width: 16px,
 					),
+
 					toggle-switch-icon-off: (
 						left: 13px,
 					),
 				),
+
 				checked: (
 					toggle-switch-bar: (
 						after: (
 							left: 16px,
 						),
+
 						button-icon: (
 							left: 14px,
 						),
 					),
 				),
 			),
+
 			toggle-switch-label: (
 				font-size: 12px,
 				max-width: calc(100% - 38px),

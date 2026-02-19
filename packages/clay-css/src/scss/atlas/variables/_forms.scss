@@ -27,9 +27,9 @@ $input-focus-box-shadow: $component-focus-box-shadow !default;
 
 // Input Disabled (.form-control:disabled)
 
-$input-disabled-color: $gray-500 !default;
 $input-disabled-bg: $input-bg !default;
 $input-disabled-border-color: $input-bg !default;
+$input-disabled-color: $gray-500 !default;
 
 // .form-control:disabled::placeholder
 
@@ -52,21 +52,26 @@ $input: map-deep-merge(
 		padding-left: $input-padding-x,
 		padding-right: $input-padding-x,
 		padding-top: $input-padding-y,
+
 		mobile: (
 			font-size: $input-font-size-mobile,
 		),
+
 		placeholder: (
 			color: $input-placeholder-color,
 		),
+
 		focus: (
 			background-color: $input-focus-bg,
 			border-color: $input-focus-border-color,
 			box-shadow: $input-focus-box-shadow,
 		),
+
 		disabled: (
 			background-color: $input-disabled-bg,
 			border-color: $input-disabled-border-color,
 			color: $input-disabled-color,
+
 			placeholder: (
 				color: $input-placeholder-disabled-color,
 			),
@@ -126,6 +131,7 @@ $input-label: map-deep-merge(
 		font-size: $input-label-font-size,
 		font-weight: $input-label-font-weight,
 		margin-bottom: $input-label-margin-bottom,
+
 		disabled: (
 			color: $input-label-disabled-color,
 		),
@@ -146,6 +152,7 @@ $input-readonly: map-deep-merge(
 	(
 		background-color: $input-readonly-bg,
 		border-color: $input-border-color,
+
 		focus: (
 			border-color: $input-focus-border-color,
 			box-shadow: none,
@@ -213,6 +220,7 @@ $input-danger: map-deep-merge(
 		border-color: $input-danger-border-color,
 		box-shadow: $input-danger-box-shadow,
 		color: $input-danger-color,
+
 		focus: (
 			box-shadow: $input-danger-focus-box-shadow,
 		),
@@ -272,6 +280,7 @@ $input-warning: map-deep-merge(
 		border-color: $input-warning-border-color,
 		box-shadow: $input-warning-box-shadow,
 		color: $input-warning-color,
+
 		focus: (
 			box-shadow: $input-warning-focus-box-shadow,
 		),
@@ -331,6 +340,7 @@ $input-success: map-deep-merge(
 		border-color: $input-success-border-color,
 		box-shadow: $input-success-box-shadow,
 		color: $input-success-color,
+
 		focus: (
 			box-shadow: $input-success-focus-box-shadow,
 		),
@@ -361,6 +371,7 @@ $input-success-checkbox-label-color: $success !default;
 // .has-success select.form-control
 
 $input-success-select-icon-color: $input-success-border-color !default;
+
 $input-success-select-icon: clay-icon(
 	caret-double-l,
 	$input-success-select-icon-color
@@ -381,18 +392,21 @@ $input-select-bg-size: 1.5em 1.5em !default;
 $input-select-padding-right: 2em !default;
 
 $input-select-icon-color: $gray-600 !default;
+
 $input-select-icon: clay-icon(
 	caret-double-l,
 	$input-select-icon-color
 ) !default;
 
 $input-select-icon-focus-color: $input-select-icon-color !default;
+
 $input-select-icon-focus: clay-icon(
 	caret-double-l,
 	$input-select-icon-focus-color
 ) !default;
 
 $input-select-icon-disabled-color: $gray-500 !default;
+
 $input-select-icon-disabled: clay-icon(
 	caret-double-l,
 	$input-select-icon-disabled-color
@@ -407,18 +421,22 @@ $form-control-select-palette: map-deep-merge(
 			background-color: $white,
 			border-color: $secondary-l0,
 			color: $gray-600,
+
 			hover: (
 				color: $gray-600,
 			),
+
 			focus: (
 				background-image: clay-icon(caret-double-l, $gray-900),
 				color: $gray-900,
 			),
+
 			disabled: (
 				background-color: $white,
 				color: $gray-600,
 				opacity: $component-disabled-opacity,
 			),
+
 			show: (
 				background-color: $gray-200,
 				background-image: clay-icon(caret-double-l, $gray-900),
@@ -446,6 +464,7 @@ $input-select-size: map-deep-merge(
 				),
 			),
 		),
+
 		disabled: (
 			option: (
 				hover: (
@@ -453,15 +472,18 @@ $input-select-size: map-deep-merge(
 				),
 			),
 		),
+
 		option: (
 			padding: 0.4375rem 0.5rem,
 			hover: (
 				background-image: linear-gradient(#{$gray-300}, #{$gray-300}),
 			),
+
 			checked: (
 				background-image: linear-gradient(#{$light-d2}, #{$light-d2}),
 			),
 		),
+
 		firefox-only: (
 			focus: (
 				option: (
@@ -500,6 +522,7 @@ $form-control-label-size: map-deep-merge(
 		padding-right: 0.5rem,
 		padding-top: 0.3125rem,
 		text-transform: none,
+
 		label-item: (
 			margin-bottom: -0.0625rem,
 			margin-top: -0.0625rem,
@@ -535,25 +558,31 @@ $input-group-item: map-deep-merge(
 				border-top-right-radius: clay-enable-rounded(0),
 				z-index: 1,
 			),
+
 			input-group-append: (
 				border-bottom-left-radius: clay-enable-rounded(0),
 				border-top-left-radius: clay-enable-rounded(0),
 			),
+
 			form-control: (
 				background-color: $input-focus-bg,
 				border-color: $input-focus-border-color,
 			),
+
 			input-group-inset-item: (
 				background-color: $input-focus-bg,
 				border-color: $input-focus-border-color,
 			),
 		),
+
 		first-child: (
 			margin-left: 0,
 		),
+
 		btn: (
 			align-self: flex-start,
 		),
+
 		dropdown: (
 			display: flex,
 			flex-wrap: wrap,

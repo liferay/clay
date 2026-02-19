@@ -2,17 +2,21 @@ $application-bar-size: () !default;
 $application-bar-size: map-deep-merge(
 	(
 		scaling-navbar: true,
+
 		font-size:
 			if(variable-exists(navbar-font-size), $navbar-font-size, null),
 		height: 3.5rem,
-		height-mobile: 3rem,
-		btn-monospaced-font-size: 1rem,
-		link-height: 2rem,
-		link-height-mobile: 2rem,
-		link-margin-x: 0.5rem,
-		link-padding-x: 0.25rem,
 		padding-x: 0,
 		padding-y: 0,
+
+		btn-monospaced-font-size: 1rem,
+
+		link-height: 2rem,
+		link-margin-x: 0.5rem,
+		link-padding-x: 0.25rem,
+
+		height-mobile: 3rem,
+		link-height-mobile: 2rem,
 	),
 	$application-bar-size
 );
@@ -45,6 +49,7 @@ $application-bar-dark: map-deep-merge(
 							rgba($white, 0.75)
 						),
 				),
+
 				active: (
 					color:
 						if(
@@ -53,6 +58,7 @@ $application-bar-dark: map-deep-merge(
 							$white
 						),
 				),
+
 				disabled: (
 					color:
 						if(
@@ -64,6 +70,7 @@ $application-bar-dark: map-deep-merge(
 				),
 			),
 		),
+
 		media-breakpoint-down: (),
 		media-breakpoint-up: (),
 	),

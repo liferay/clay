@@ -6,15 +6,19 @@ $clay-color-dropdown-menu-close: map-deep-merge(
 		color: $gray-600,
 		font-size: 1rem,
 		opacity: 1,
+
 		hover: (
 			background-color: rgba($gray-900, 0.03),
 		),
+
 		focus: (
 			background-color: rgba($gray-900, 0.03),
 		),
+
 		active: (
 			background-color: rgba($gray-900, 0.06),
 		),
+
 		disabled: (
 			background-color: transparent,
 		),
@@ -31,6 +35,7 @@ $clay-color-dropdown-menu-component-action: map-deep-merge(
 			background-color: null,
 			color: null,
 		),
+
 		focus: (
 			box-shadow: null,
 			color: null,

@@ -30,13 +30,16 @@ $sticker: map-deep-merge(
 		text-align: center,
 		vertical-align: middle,
 		width: $sticker-size,
+
 		inline-item: (
 			font-size: $sticker-inline-item-font-size,
 			justify-content: center,
+
 			lexicon-icon: (
 				margin-top: 0,
 			),
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -72,19 +75,23 @@ $sticker-sm: map-deep-merge(
 		height: 1.5rem,
 		line-height: 1.5rem,
 		width: 1.5rem,
+
 		sticker-outside: (
 			left: -0.75rem,
 			top: -0.75rem,
+
 			sticker-bottom-left: (
 				bottom: -0.75rem,
 				top: auto,
 			),
+
 			sticker-bottom-right: (
 				bottom: -0.75rem,
 				left: auto,
 				right: -0.75rem,
 				top: auto,
 			),
+
 			sticker-top-right: (
 				left: auto,
 				right: -0.75rem,
@@ -103,19 +110,23 @@ $sticker-lg: map-deep-merge(
 		height: 2.5rem,
 		line-height: 2.5rem,
 		width: 2.5rem,
+
 		sticker-outside: (
 			left: -1.25rem,
 			top: -1.25rem,
+
 			sticker-bottom-left: (
 				bottom: -1.25rem,
 				top: auto,
 			),
+
 			sticker-bottom-right: (
 				bottom: -1.25rem,
 				left: auto,
 				right: -1.25rem,
 				top: auto,
 			),
+
 			sticker-top-right: (
 				left: auto,
 				right: -1.25rem,
@@ -134,19 +145,23 @@ $sticker-xl: map-deep-merge(
 		height: 3rem,
 		line-height: 3rem,
 		width: 3rem,
+
 		sticker-outside: (
 			left: -1.5rem,
 			top: -1.5rem,
+
 			sticker-bottom-left: (
 				bottom: -1.5rem,
 				top: auto,
 			),
+
 			sticker-bottom-right: (
 				bottom: -1.5rem,
 				left: auto,
 				right: -1.5rem,
 				top: auto,
 			),
+
 			sticker-top-right: (
 				left: auto,
 				right: -1.5rem,
@@ -163,6 +178,7 @@ $sticker-xxl: map-deep-merge(
 		height: 5rem,
 		line-height: 5rem,
 		width: 5rem,
+
 		lexicon-icon: (
 			font-size: 1.5rem,
 		),
@@ -179,9 +195,13 @@ $sticker-sizes: map-deep-merge(
 			line-height: 1rem,
 			width: 1rem,
 		),
+
 		sticker-sm: $sticker-sm,
+
 		sticker-lg: $sticker-lg,
+
 		sticker-xl: $sticker-xl,
+
 		sticker-xxl: $sticker-xxl,
 	),
 	$sticker-sizes
@@ -253,16 +273,19 @@ $sticker-outside: map-deep-merge(
 	(
 		left: $sticker-outside-offset,
 		top: $sticker-outside-offset,
+
 		sticker-bottom-left: (
 			bottom: $sticker-outside-offset,
 			top: auto,
 		),
+
 		sticker-bottom-right: (
 			bottom: $sticker-outside-offset,
 			left: auto,
 			right: $sticker-outside-offset,
 			top: auto,
 		),
+
 		sticker-top-right: (
 			left: auto,
 			right: $sticker-outside-offset,
@@ -537,23 +560,41 @@ $sticker-palette: () !default;
 $sticker-palette: map-deep-merge(
 	(
 		primary: $sticker-primary,
+
 		secondary: $sticker-secondary,
+
 		success: $sticker-success,
+
 		info: $sticker-info,
+
 		warning: $sticker-warning,
+
 		danger: $sticker-danger,
+
 		light: $sticker-light,
+
 		dark: $sticker-dark,
+
 		'.sticker-outline': $sticker-outline,
+
 		'.sticker-outline-0': $sticker-outline-0,
+
 		'.sticker-outline-1': $sticker-outline-1,
+
 		'.sticker-outline-2': $sticker-outline-2,
+
 		'.sticker-outline-3': $sticker-outline-3,
+
 		'.sticker-outline-4': $sticker-outline-4,
+
 		'.sticker-outline-5': $sticker-outline-5,
+
 		'.sticker-outline-6': $sticker-outline-6,
+
 		'.sticker-outline-7': $sticker-outline-7,
+
 		'.sticker-outline-8': $sticker-outline-8,
+
 		'.sticker-outline-9': $sticker-outline-9,
 	),
 	$sticker-palette

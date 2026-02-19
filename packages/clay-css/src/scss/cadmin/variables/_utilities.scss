@@ -22,11 +22,15 @@ $cadmin-inline-scroller: map-deep-merge(
 		margin: 0,
 		max-height: $cadmin-inline-scroller-max-height,
 		overflow: auto,
+
 		-webkit-overflow-scrolling: touch,
+
 		padding: 0,
+
 		focus: (
 			outline: 0,
 		),
+
 		focus-visible: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 		),
@@ -46,6 +50,7 @@ $cadmin-autofit-padded-no-gutters-sm: map-merge(
 	(
 		margin: -4px,
 		width: auto,
+
 		autofit-col: (
 			padding: 4px,
 		),
@@ -81,24 +86,29 @@ $cadmin-close: map-deep-merge(
 		text-shadow: $cadmin-close-text-shadow,
 		transition: $cadmin-component-transition,
 		width: 32px,
+
 		hover: (
 			color: $cadmin-close-color,
 			text-decoration: none,
 		),
+
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+
 		disabled: (
 			box-shadow: none,
 			color: $cadmin-gray-600,
 			cursor: $cadmin-disabled-cursor,
 			opacity: $cadmin-component-disabled-opacity,
 			outline: 0,
+
 			active: (
 				pointer-events: none,
 			),
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -163,12 +173,15 @@ $cadmin-inline-item: map-deep-merge(
 		align-items: center,
 		display: inline-flex,
 		vertical-align: middle,
+
 		inline-item: (
 			display: inline,
 		),
+
 		lexicon-icon: (
 			margin-top: $cadmin-inline-item-lexicon-icon-margin-top,
 		),
+
 		loading-animation: (
 			font-size: $cadmin-inline-item-loading-animation-font-size,
 		),
@@ -202,122 +215,161 @@ $cadmin-bg-theme-colors: map-deep-merge(
 	(
 		'blue': (
 			background-color: $cadmin-blue !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-blue, 10%) !important,
 			),
 		),
+
 		'indigo': (
 			background-color: $cadmin-indigo !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-indigo, 10%) !important,
 			),
 		),
+
 		'purple': (
 			background-color: $cadmin-purple !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-purple, 10%) !important,
 			),
 		),
+
 		'pink': (
 			background-color: $cadmin-pink !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-pink, 10%) !important,
 			),
 		),
+
 		'red': (
 			background-color: $cadmin-red !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-red, 10%) !important,
 			),
 		),
+
 		'orange': (
 			background-color: $cadmin-orange !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-orange, 10%) !important,
 			),
 		),
+
 		'yellow': (
 			background-color: $cadmin-yellow !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-yellow, 10%) !important,
 			),
 		),
+
 		'green': (
 			background-color: $cadmin-green !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-green, 10%) !important,
 			),
 		),
+
 		'teal': (
 			background-color: $cadmin-teal !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-teal, 10%) !important,
 			),
 		),
+
 		'cyan': (
 			background-color: $cadmin-cyan !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-cyan, 10%) !important,
 			),
 		),
+
 		'primary': (
 			background-color: $cadmin-primary !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-primary, 10%) !important,
 			),
 		),
+
 		'primary-l3': (
 			background-color: $cadmin-primary-l3 !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-primary-l3, 10%)
 					!important,
 			),
 		),
+
 		'secondary': (
 			background-color: $cadmin-secondary !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-secondary, 10%) !important,
 			),
 		),
+
 		'success': (
 			background-color: $cadmin-success !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-success, 10%) !important,
 			),
 		),
+
 		'info': (
 			background-color: $cadmin-info !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-info, 10%) !important,
 			),
 		),
+
 		'warning': (
 			background-color: $cadmin-warning !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-warning, 10%) !important,
 			),
 		),
+
 		'danger': (
 			background-color: $cadmin-danger !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-danger, 10%) !important,
 			),
 		),
+
 		'light': (
 			background-color: $cadmin-light !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-light, 10%) !important,
 			),
 		),
+
 		'dark': (
 			background-color: $cadmin-dark !important,
+
 			hover: (
 				background-color: clay-darken($cadmin-dark, 10%) !important,
 			),
 		),
+
 		'white': (
 			background-color: $cadmin-white !important,
 		),
+
 		'transparent': (
 			background-color: transparent !important,
 		),
@@ -337,6 +389,7 @@ $cadmin-bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
+
 		'secondary': (
 			background: $cadmin-secondary
 				linear-gradient(
@@ -346,6 +399,7 @@ $cadmin-bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
+
 		'success': (
 			background: $cadmin-success
 				linear-gradient(
@@ -355,6 +409,7 @@ $cadmin-bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
+
 		'info': (
 			background: $cadmin-info
 				linear-gradient(
@@ -364,6 +419,7 @@ $cadmin-bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
+
 		'warning': (
 			background: $cadmin-warning
 				linear-gradient(
@@ -373,6 +429,7 @@ $cadmin-bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
+
 		'danger': (
 			background: $cadmin-danger
 				linear-gradient(
@@ -382,6 +439,7 @@ $cadmin-bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
+
 		'light': (
 			background: $cadmin-light
 				linear-gradient(
@@ -391,6 +449,7 @@ $cadmin-bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
+
 		'dark': (
 			background: $cadmin-dark
 				linear-gradient(
@@ -412,27 +471,35 @@ $cadmin-border-theme-colors: map-deep-merge(
 		'primary': (
 			border-color: $cadmin-primary !important,
 		),
+
 		'secondary': (
 			border-color: $cadmin-secondary !important,
 		),
+
 		'success': (
 			border-color: $cadmin-success !important,
 		),
+
 		'info': (
 			border-color: $cadmin-info !important,
 		),
+
 		'warning': (
 			border-color: $cadmin-warning !important,
 		),
+
 		'danger': (
 			border-color: $cadmin-danger !important,
 		),
+
 		'light': (
 			border-color: $cadmin-light !important,
 		),
+
 		'dark': (
 			border-color: $cadmin-dark !important,
 		),
+
 		'white': (
 			border-color: $cadmin-white !important,
 		),
@@ -502,6 +569,7 @@ $cadmin-text-theme-colors: map-deep-merge(
 	(
 		'blue': (
 			color: $cadmin-blue !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -511,8 +579,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'indigo': (
 			color: $cadmin-indigo !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -522,8 +592,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'purple': (
 			color: $cadmin-purple !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -533,8 +605,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'pink': (
 			color: $cadmin-pink !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -544,8 +618,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'red': (
 			color: $cadmin-red !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -555,8 +631,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'orange': (
 			color: $cadmin-orange !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -566,8 +644,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'yellow': (
 			color: $cadmin-yellow !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -577,8 +657,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'green': (
 			color: $cadmin-green !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -588,8 +670,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'teal': (
 			color: $cadmin-teal !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -599,8 +683,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'cyan': (
 			color: $cadmin-cyan !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -610,8 +696,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'primary': (
 			color: $cadmin-primary !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -621,8 +709,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'secondary': (
 			color: $cadmin-secondary !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -632,8 +722,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'success': (
 			color: $cadmin-success !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -643,8 +735,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'info': (
 			color: $cadmin-info !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -654,8 +748,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'warning': (
 			color: $cadmin-warning !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -665,8 +761,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'danger': (
 			color: $cadmin-danger !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -676,8 +774,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'light': (
 			color: $cadmin-light !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -687,8 +787,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'dark': (
 			color: $cadmin-dark !important,
+
 			hover: (
 				color:
 					clay-darken(
@@ -698,15 +800,19 @@ $cadmin-text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
+
 		'body': (
 			color: $cadmin-body-color !important,
 		),
+
 		'muted': (
 			color: $cadmin-text-muted !important,
 		),
+
 		'black-50': (
 			color: rgba($cadmin-black, 0.5) !important,
 		),
+
 		'white-50': (
 			color: rgba($cadmin-white, 0.5) !important,
 		),
@@ -720,6 +826,7 @@ $cadmin-text-decorations: map-deep-merge(
 		'.text-none, .text-decoration-none': (
 			text-decoration: none !important,
 		),
+
 		'.text-underline, .text-decoration-underline': (
 			text-decoration: underline !important,
 		),
@@ -747,6 +854,7 @@ $cadmin-text-truncate-inline: map-deep-merge(
 	(
 		display: inline-flex,
 		max-width: 100%,
+
 		text-truncate: (
 			display: inline-block,
 			max-width: 100%,
@@ -769,6 +877,7 @@ $cadmin-c-prefers-link-underline: map-deep-merge(
 			'[href]:not(.disabled):not([role="button"])': (
 				text-decoration: underline !important,
 			),
+
 			'.btn-monospaced, .nav-btn-monospaced, .nav-link-monospaced': (
 				'&[href]:not(.disabled):not([role="button"]):not([role="tab"])::after':
 				(
@@ -777,6 +886,7 @@ $cadmin-c-prefers-link-underline: map-deep-merge(
 					text-decoration: underline !important,
 				),
 			),
+
 			'.multi-step-item.active, .multi-step-item.complete, .multi-step-item.error, .dropdown':
 			(
 				'.multi-step-icon[href]:not([role="button"])::after': (
@@ -785,6 +895,7 @@ $cadmin-c-prefers-link-underline: map-deep-merge(
 					text-decoration: underline !important,
 				),
 			),
+
 			'.multi-step-item.disabled .multi-step-icon[href]:not([role="button"])::after':
 			(
 				text-decoration: none !important,
@@ -814,24 +925,30 @@ $cadmin-displays-c-prefers-reduced-motion: map-deep-merge(
 		'.cadmin .d-inline-block-c-prefers-reduced-motion': (
 			display: none !important,
 		),
+
 		'@media (prefers-reduced-motion: reduce)': (
 			'.cadmin .d-none-c-prefers-reduced-motion': (
 				display: none !important,
 			),
+
 			'.cadmin .d-block-c-prefers-reduced-motion': (
 				display: block !important,
 			),
+
 			'.cadmin .d-inline-block-c-prefers-reduced-motion': (
 				display: inline-block !important,
 			),
 		),
+
 		'.c-prefers-reduced-motion .cadmin': (
 			'.d-none-c-prefers-reduced-motion': (
 				display: none !important,
 			),
+
 			'.d-block-c-prefers-reduced-motion': (
 				display: block !important,
 			),
+
 			'.d-inline-block-c-prefers-reduced-motion': (
 				display: inline-block !important,
 			),

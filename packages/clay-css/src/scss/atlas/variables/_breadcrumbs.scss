@@ -12,6 +12,7 @@ $breadcrumb-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		transition: box-shadow 0.15s ease-in-out,
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,

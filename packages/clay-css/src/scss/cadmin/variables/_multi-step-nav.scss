@@ -4,11 +4,11 @@ $cadmin-multi-step-nav-padding-y: 0 !default;
 
 $cadmin-multi-step-icon-bg: $cadmin-gray-200 !default;
 $cadmin-multi-step-icon-border-color: null !default;
+$cadmin-multi-step-icon-border-radius: 100px !default;
 $cadmin-multi-step-icon-border-style: null !default;
 $cadmin-multi-step-icon-border-width: 0 !default;
 $cadmin-multi-step-icon-color: $cadmin-gray-600 !default;
 $cadmin-multi-step-icon-cursor: $cadmin-link-cursor !default;
-$cadmin-multi-step-icon-border-radius: 100px !default;
 $cadmin-multi-step-icon-font-size: 14px !default;
 $cadmin-multi-step-icon-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-multi-step-icon-padding-bottom: 0 !default;
@@ -81,6 +81,7 @@ $cadmin-multi-step-title-center: map-deep-merge(
 
 $cadmin-multi-step-item-margin-bottom: 10px !default;
 $cadmin-multi-step-item-width: 75px !default;
+
 $cadmin-multi-step-item-fixed-width: 150px !default;
 
 $cadmin-multi-step-nav-center: () !default;
@@ -88,19 +89,23 @@ $cadmin-multi-step-nav-center: map-deep-merge(
 	(
 		padding: 0,
 		text-align: center,
+
 		multi-step-item: (
 			flex-grow: 1,
 			width: $cadmin-multi-step-item-width,
 		),
+
 		multi-step-divider: (
 			left: 50%,
 			margin-left: 1rem,
 			width: calc(100% - #{$cadmin-multi-step-icon-size}),
 		),
+
 		multi-step-indicator: (
 			left: 50%,
 			transform: translateX(-50%),
 		),
+
 		multi-step-title: (
 			margin-left: 12.5%,
 			max-width: 75%,
@@ -119,11 +124,13 @@ $cadmin-multi-step-item-error: map-deep-merge(
 			background-image: clay-icon(times, $cadmin-white),
 			color: $cadmin-white,
 			text-indent: -100px,
+
 			data-multi-step-icon: (
 				before: (
 					content: none,
 				),
 			),
+
 			lexicon-icon: (
 				display: none,
 			),
@@ -133,6 +140,7 @@ $cadmin-multi-step-item-error: map-deep-merge(
 );
 
 $cadmin-multi-step-icon-complete-color: $cadmin-white !default;
+
 $cadmin-multi-step-icon-complete-bg: $cadmin-gray-600 !default;
 $cadmin-multi-step-icon-complete-bg-image: clay-icon(
 	check,
@@ -140,7 +148,9 @@ $cadmin-multi-step-icon-complete-bg-image: clay-icon(
 ) !default;
 $cadmin-multi-step-icon-complete-bg-position: center !default;
 $cadmin-multi-step-icon-complete-bg-size: $cadmin-multi-step-icon-font-size !default;
+
 $cadmin-multi-step-divider-complete-bg: $cadmin-multi-step-icon-complete-bg !default;
+
 $cadmin-multi-step-dropdown-indicator-complete-icon: clay-icon(
 	check,
 	$cadmin-dropdown-link-active-color
@@ -148,22 +158,29 @@ $cadmin-multi-step-dropdown-indicator-complete-icon: clay-icon(
 $cadmin-multi-step-dropdown-indicator-complete-width: 14px !default;
 
 $cadmin-multi-step-icon-active-color: $cadmin-component-active-color !default;
+
 $cadmin-multi-step-icon-active-bg: $cadmin-component-active-bg !default;
 $cadmin-multi-step-icon-active-bg-image: null !default;
 $cadmin-multi-step-icon-active-bg-position: center !default;
 $cadmin-multi-step-icon-active-bg-size: $cadmin-multi-step-icon-font-size !default;
+
 $cadmin-multi-step-divider-active-bg: $cadmin-multi-step-divider-bg !default;
+
+$cadmin-multi-step-icon-disabled-color: $cadmin-gray-500 !default;
 
 $cadmin-multi-step-icon-disabled-bg: $cadmin-multi-step-icon-bg !default;
 $cadmin-multi-step-icon-disabled-bg-image: null !default;
 $cadmin-multi-step-icon-disabled-bg-position: null !default;
 $cadmin-multi-step-icon-disabled-bg-size: null !default;
-$cadmin-multi-step-icon-disabled-color: $cadmin-gray-500 !default;
 $cadmin-multi-step-icon-disabled-cursor: $cadmin-disabled-cursor !default;
 $cadmin-multi-step-icon-disabled-opacity: 1 !default;
+
 $cadmin-multi-step-icon-disabled-focus-box-shadow: none !default;
+
 $cadmin-multi-step-divider-disabled-bg: $cadmin-multi-step-icon-disabled-bg !default;
+
 $cadmin-multi-step-title-disabled-color: $cadmin-multi-step-icon-disabled-color !default;
+
 $cadmin-multi-step-indicator-label-disabled-color: $cadmin-multi-step-title-disabled-color !default;
 
 $cadmin-multi-step-title-disabled: () !default;

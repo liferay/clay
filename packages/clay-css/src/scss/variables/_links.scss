@@ -10,23 +10,29 @@ $c-link: map-deep-merge(
 		hover: (
 			text-decoration: none,
 		),
+
 		focus: (
 			border-radius: 1px,
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+
 		c-link-variants: (
 			text-secondary: (
 				color: $gray-900 !important,
+
 				hover: (
 					color: $black !important,
 				),
+
 				focus: (
 					color: $black !important,
 				),
 			),
+
 			text-tertiary: (
 				color: $gray-900 !important,
+
 				hover: (
 					color: $black !important,
 					text-decoration: underline,
@@ -41,6 +47,7 @@ $component-link: () !default;
 $component-link: map-deep-merge(
 	(
 		color: $gray-600,
+
 		hover: (
 			color: clay-darken($gray-600, 15%),
 		),
@@ -52,6 +59,7 @@ $link-primary: () !default;
 $link-primary: map-deep-merge(
 	(
 		color: $primary,
+
 		hover: (
 			color: clay-darken($primary, 15%),
 		),
@@ -63,6 +71,7 @@ $link-secondary: () !default;
 $link-secondary: map-deep-merge(
 	(
 		color: $secondary,
+
 		hover: (
 			color: clay-darken($secondary, 15%),
 		),
@@ -150,19 +159,24 @@ $link-outline: map-deep-merge(
 		padding-top: $link-outline-padding-y,
 		transition: $link-outline-transition,
 		vertical-align: middle,
+
 		hover: (
 			text-decoration: none,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+
 		disabled: (
 			box-shadow: none,
+
 			active: (
 				pointer-events: none,
 			),
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -175,14 +189,17 @@ $link-outline-primary: map-deep-merge(
 	(
 		border-color: $primary,
 		color: $primary,
+
 		hover: (
 			background-color: $primary,
 			color: $white,
 		),
+
 		active: (
 			background-color: $primary,
 			color: $white,
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $primary,
@@ -198,14 +215,17 @@ $link-outline-secondary: map-deep-merge(
 	(
 		border-color: $secondary,
 		color: $secondary,
+
 		hover: (
 			background-color: $secondary,
 			color: $white,
 		),
+
 		active: (
 			background-color: $secondary,
 			color: $white,
 		),
+
 		disabled: (
 			background-color: transparent,
 			color: $secondary,
@@ -240,6 +260,7 @@ $link-monospaced: map-deep-merge(
 		padding-top: 0,
 		vertical-align: middle,
 		width: $link-monospaced-size,
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -284,6 +305,7 @@ $component-title-link: () !default;
 $component-title-link: map-deep-merge(
 	(
 		color: $gray-900,
+
 		hover: (
 			color: clay-darken($gray-900, 15%),
 		),
@@ -313,6 +335,7 @@ $component-subtitle-link: () !default;
 $component-subtitle-link: map-deep-merge(
 	(
 		color: $gray-600,
+
 		hover: (
 			color: clay-darken($gray-600, 15%),
 		),
@@ -350,24 +373,29 @@ $component-action: map-deep-merge(
 			background-color: $secondary,
 			color: $white,
 		),
+
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+
 		active: (
 			background-color: $secondary,
 			color: $white,
 		),
+
 		disabled: (
 			background-color: transparent,
 			box-shadow: none,
 			color: $secondary,
 			cursor: $disabled-cursor,
 			opacity: $component-disabled-opacity,
+
 			active: (
 				pointer-events: none,
 			),
 		),
+
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -389,6 +417,7 @@ $component-icon: map-deep-merge(
 		height: 32px,
 		justify-content: center,
 		width: 32px,
+
 		lexicon-icon: (
 			margin-top: 0,
 		),

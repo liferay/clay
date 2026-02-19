@@ -55,6 +55,7 @@ $multi-step-indicator: map-deep-merge(
 	(
 		position: relative,
 		width: $multi-step-indicator-width,
+
 		multi-step-indicator-label: (
 			color: $multi-step-indicator-label-color,
 			font-size: $multi-step-indicator-label-font-size,
@@ -101,19 +102,23 @@ $multi-step-nav-center: map-deep-merge(
 	(
 		padding: 0,
 		text-align: center,
+
 		multi-step-item: (
 			flex-grow: 1,
 			width: $multi-step-item-width,
 		),
+
 		multi-step-divider: (
 			left: 50%,
 			margin-left: 1rem,
 			width: calc(100% - #{$multi-step-icon-size}),
 		),
+
 		multi-step-indicator: (
 			left: 50%,
 			transform: translateX(-50%),
 		),
+
 		multi-step-title: (
 			margin-left: 12.5%,
 			max-width: 75%,
@@ -149,11 +154,13 @@ $multi-step-item-error: map-deep-merge(
 			background-color: $danger,
 			background-image: clay-icon(times, $white),
 			color: $white,
+
 			data-multi-step-icon: (
 				before: (
 					content: none,
 				),
 			),
+
 			lexicon-icon: (
 				display: none,
 			),
@@ -163,6 +170,7 @@ $multi-step-item-error: map-deep-merge(
 );
 
 $multi-step-icon-complete-color: $white !default;
+
 $multi-step-icon-complete-bg: $gray-600 !default;
 $multi-step-icon-complete-bg-image: clay-icon(
 	check,
@@ -170,7 +178,9 @@ $multi-step-icon-complete-bg-image: clay-icon(
 ) !default;
 $multi-step-icon-complete-bg-position: center !default;
 $multi-step-icon-complete-bg-size: $multi-step-icon-font-size !default;
+
 $multi-step-divider-complete-bg: $multi-step-icon-complete-bg !default;
+
 $multi-step-dropdown-indicator-complete-icon: clay-icon(
 	check,
 	if(
@@ -182,10 +192,12 @@ $multi-step-dropdown-indicator-complete-icon: clay-icon(
 $multi-step-dropdown-indicator-complete-width: 0.875rem !default;
 
 $multi-step-icon-active-color: $component-active-color !default;
+
 $multi-step-icon-active-bg: $component-active-bg !default;
 $multi-step-icon-active-bg-image: null !default;
 $multi-step-icon-active-bg-position: center !default;
 $multi-step-icon-active-bg-size: $multi-step-icon-font-size !default;
+
 $multi-step-divider-active-bg: $multi-step-divider-bg !default;
 
 $multi-step-icon-disabled-bg: $gray-100 !default;
@@ -195,9 +207,13 @@ $multi-step-icon-disabled-bg-size: null !default;
 $multi-step-icon-disabled-color: $gray-400 !default;
 $multi-step-icon-disabled-cursor: $disabled-cursor !default;
 $multi-step-icon-disabled-opacity: 1 !default;
+
 $multi-step-icon-disabled-focus-box-shadow: none !default;
+
 $multi-step-divider-disabled-bg: $multi-step-icon-disabled-bg !default;
+
 $multi-step-title-disabled-color: $multi-step-icon-disabled-color !default;
+
 $multi-step-indicator-label-disabled-color: $multi-step-title-disabled-color !default;
 
 $multi-step-title-disabled: () !default;

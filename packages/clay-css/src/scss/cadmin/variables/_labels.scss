@@ -62,42 +62,52 @@ $cadmin-label: map-deep-merge(
 		transition: box-shadow 0.15s ease-in-out,
 		white-space: inherit,
 		word-wrap: break-word,
+
 		disabled: (
 			box-shadow: none,
 		),
+
 		href: (
 			cursor: $cadmin-link-cursor,
 			text-decoration: $cadmin-label-anchor-text-decoration,
+
 			hover: (
 				text-decoration: $cadmin-label-anchor-hover-text-decoration,
 			),
+
 			focus: (
 				box-shadow: $cadmin-component-focus-box-shadow,
 				text-decoration: $cadmin-label-anchor-hover-text-decoration,
 			),
 		),
+
 		link: (
 			color: $cadmin-label-link-color,
 			display: inline-block,
 			text-decoration: $cadmin-label-link-text-decoration,
+
 			hover: (
 				color: $cadmin-label-link-hover-color,
 				text-decoration: $cadmin-label-link-hover-text-decoration,
 			),
+
 			focus: (
 				color: $cadmin-label-link-hover-color,
 				text-decoration: $cadmin-label-link-hover-text-decoration,
 			),
 		),
+
 		sticker: (
 			border-radius: $cadmin-label-sticker-border-radius,
 			height: $cadmin-label-sticker-size,
 			line-height: $cadmin-label-sticker-size,
 			width: $cadmin-label-sticker-size,
 		),
+
 		sticker-overlay: (
 			border-radius: $cadmin-label-sticker-border-radius,
 		),
+
 		c-inner: (
 			margin-bottom: math-sign($cadmin-label-padding-y),
 			margin-left: math-sign($cadmin-label-padding-x),
@@ -135,13 +145,16 @@ $cadmin-label-close: map-deep-merge(
 		margin: -5px -4px,
 		opacity: 1,
 		width: 24px,
+
 		hover: (
 			color: inherit,
 			opacity: 1,
 		),
+
 		focus: (
 			opacity: 1,
 		),
+
 		disabled: (
 			color: inherit,
 			opacity: $cadmin-component-disabled-opacity,
@@ -170,19 +183,24 @@ $cadmin-label-item: map-deep-merge(
 		margin-top: $cadmin-label-item-spacer-y,
 		min-height: 0,
 		position: relative,
+
 		link: (
 			display: inline-flex,
 		),
+
 		btn-unstyled: (
 			color: inherit,
 			display: inline-flex,
 		),
+
 		close: $cadmin-label-close,
+
 		lexicon-icon: (
 			height: $cadmin-label-lexicon-icon-height,
 			margin-top: $cadmin-label-lexicon-icon-margin-top,
 			width: $cadmin-label-lexicon-icon-width,
 		),
+
 		text-truncate-inline: (
 			display: inline-flex,
 		),
@@ -199,6 +217,7 @@ $cadmin-label-item-expand: map-deep-merge(
 		flex-shrink: 1,
 		min-width: 16px,
 		word-wrap: break-word,
+
 		link: (
 			flex-direction: column,
 		),
@@ -239,14 +258,17 @@ $cadmin-label-lg: map-deep-merge(
 		padding-right: 8px,
 		padding-top: 5px,
 		text-transform: none,
+
 		label-item: (
 			margin-bottom: -1px,
 			margin-top: -1px,
 		),
+
 		lexicon-icon: (
 			height: 1em,
 			width: 1em,
 		),
+
 		sticker: (
 			height: 14px,
 			line-height: 14px,
@@ -304,6 +326,7 @@ $cadmin-label-primary-close: map-deep-merge(
 		hover: (
 			color: $cadmin-label-primary-hover-color,
 		),
+
 		focus: (
 			color: $cadmin-label-primary-hover-color,
 		),
@@ -317,22 +340,27 @@ $cadmin-label-primary: map-deep-merge(
 		background-color: $cadmin-label-primary-bg,
 		border-color: $cadmin-label-primary-border-color,
 		color: $cadmin-label-primary-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-label-primary-hover-bg,
 				border-color: $cadmin-label-primary-hover-border-color,
 				color: $cadmin-label-primary-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-label-primary-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-label-primary-link-color,
+
 			hover: (
 				color: $cadmin-label-primary-link-hover-color,
 			),
 		),
+
 		close: $cadmin-label-primary-close,
 	),
 	$cadmin-label-primary
@@ -376,6 +404,7 @@ $cadmin-label-secondary-close: map-deep-merge(
 		hover: (
 			color: $cadmin-label-secondary-hover-color,
 		),
+
 		focus: (
 			color: $cadmin-label-secondary-hover-color,
 		),
@@ -389,22 +418,27 @@ $cadmin-label-secondary: map-deep-merge(
 		background-color: $cadmin-label-secondary-bg,
 		border-color: $cadmin-label-secondary-border-color,
 		color: $cadmin-label-secondary-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-label-secondary-hover-bg,
 				border-color: $cadmin-label-secondary-hover-border-color,
 				color: $cadmin-label-secondary-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-label-secondary-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-label-secondary-link-color,
+
 			hover: (
 				color: $cadmin-label-secondary-link-hover-color,
 			),
 		),
+
 		close: $cadmin-label-secondary-close,
 	),
 	$cadmin-label-secondary
@@ -448,6 +482,7 @@ $cadmin-label-success-close: map-deep-merge(
 		hover: (
 			color: $cadmin-label-success-hover-color,
 		),
+
 		focus: (
 			color: $cadmin-label-success-hover-color,
 		),
@@ -461,22 +496,27 @@ $cadmin-label-success: map-deep-merge(
 		background-color: $cadmin-label-success-bg,
 		border-color: $cadmin-label-success-border-color,
 		color: $cadmin-label-success-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-label-success-hover-bg,
 				border-color: $cadmin-label-success-hover-border-color,
 				color: $cadmin-label-success-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-label-success-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-label-success-link-color,
+
 			hover: (
 				color: $cadmin-label-success-link-hover-color,
 			),
 		),
+
 		close: $cadmin-label-success-close,
 	),
 	$cadmin-label-success
@@ -520,6 +560,7 @@ $cadmin-label-info-close: map-deep-merge(
 		hover: (
 			color: $cadmin-label-info-hover-color,
 		),
+
 		focus: (
 			color: $cadmin-label-info-hover-color,
 		),
@@ -533,22 +574,27 @@ $cadmin-label-info: map-deep-merge(
 		background-color: $cadmin-label-info-bg,
 		border-color: $cadmin-label-info-border-color,
 		color: $cadmin-label-info-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-label-info-hover-bg,
 				border-color: $cadmin-label-info-hover-border-color,
 				color: $cadmin-label-info-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-label-info-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-label-info-link-color,
+
 			hover: (
 				color: $cadmin-label-info-link-hover-color,
 			),
 		),
+
 		close: $cadmin-label-info-close,
 	),
 	$cadmin-label-info
@@ -592,6 +638,7 @@ $cadmin-label-warning-close: map-deep-merge(
 		hover: (
 			color: $cadmin-label-warning-hover-color,
 		),
+
 		focus: (
 			color: $cadmin-label-warning-hover-color,
 		),
@@ -605,22 +652,27 @@ $cadmin-label-warning: map-deep-merge(
 		background-color: $cadmin-label-warning-bg,
 		border-color: $cadmin-label-warning-border-color,
 		color: $cadmin-label-warning-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-label-warning-hover-bg,
 				border-color: $cadmin-label-warning-hover-border-color,
 				color: $cadmin-label-warning-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-label-warning-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-label-warning-link-color,
+
 			hover: (
 				color: $cadmin-label-warning-link-hover-color,
 			),
 		),
+
 		close: $cadmin-label-warning-close,
 	),
 	$cadmin-label-warning
@@ -664,6 +716,7 @@ $cadmin-label-danger-close: map-deep-merge(
 		hover: (
 			color: $cadmin-label-danger-hover-color,
 		),
+
 		focus: (
 			color: $cadmin-label-danger-hover-color,
 		),
@@ -677,22 +730,27 @@ $cadmin-label-danger: map-deep-merge(
 		background-color: $cadmin-label-danger-bg,
 		border-color: $cadmin-label-danger-border-color,
 		color: $cadmin-label-danger-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-label-danger-hover-bg,
 				border-color: $cadmin-label-danger-hover-border-color,
 				color: $cadmin-label-danger-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-label-danger-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-label-danger-link-color,
+
 			hover: (
 				color: $cadmin-label-danger-link-hover-color,
 			),
 		),
+
 		close: $cadmin-label-danger-close,
 	),
 	$cadmin-label-danger
@@ -736,6 +794,7 @@ $cadmin-label-light-close: map-deep-merge(
 		hover: (
 			color: $cadmin-label-light-hover-color,
 		),
+
 		focus: (
 			color: $cadmin-label-light-hover-color,
 		),
@@ -749,22 +808,27 @@ $cadmin-label-light: map-deep-merge(
 		background-color: $cadmin-label-light-bg,
 		border-color: $cadmin-label-light-border-color,
 		color: $cadmin-label-light-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-label-light-hover-bg,
 				border-color: $cadmin-label-light-hover-border-color,
 				color: $cadmin-label-light-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-label-light-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-label-light-link-color,
+
 			hover: (
 				color: $cadmin-label-light-link-hover-color,
 			),
 		),
+
 		close: $cadmin-label-light-close,
 	),
 	$cadmin-label-light
@@ -808,6 +872,7 @@ $cadmin-label-dark-close: map-deep-merge(
 		hover: (
 			color: $cadmin-label-dark-hover-color,
 		),
+
 		focus: (
 			color: $cadmin-label-dark-hover-color,
 		),
@@ -821,22 +886,27 @@ $cadmin-label-dark: map-deep-merge(
 		background-color: $cadmin-label-dark-bg,
 		border-color: $cadmin-label-dark-border-color,
 		color: $cadmin-label-dark-color,
+
 		href: (
 			hover: (
 				background-color: $cadmin-label-dark-hover-bg,
 				border-color: $cadmin-label-dark-hover-border-color,
 				color: $cadmin-label-dark-hover-color,
 			),
+
 			focus: (
 				color: $cadmin-label-dark-hover-color,
 			),
 		),
+
 		link: (
 			color: $cadmin-label-dark-link-color,
+
 			hover: (
 				color: $cadmin-label-dark-link-hover-color,
 			),
 		),
+
 		close: $cadmin-label-dark-close,
 	),
 	$cadmin-label-dark
@@ -850,6 +920,7 @@ $cadmin-label-inverse-primary: map-deep-merge(
 		background-color: $cadmin-primary,
 		border-color: $cadmin-primary,
 		color: $cadmin-white,
+
 		href: (
 			hover: (
 				color: $cadmin-white,
@@ -865,6 +936,7 @@ $cadmin-label-inverse-secondary: map-deep-merge(
 		background-color: $cadmin-secondary,
 		border-color: $cadmin-secondary,
 		color: $cadmin-white,
+
 		href: (
 			hover: (
 				color: $cadmin-white,
@@ -880,6 +952,7 @@ $cadmin-label-inverse-success: map-deep-merge(
 		background-color: $cadmin-success,
 		border-color: $cadmin-success,
 		color: $cadmin-white,
+
 		href: (
 			hover: (
 				color: $cadmin-white,
@@ -895,6 +968,7 @@ $cadmin-label-inverse-info: map-deep-merge(
 		background-color: $cadmin-info,
 		border-color: $cadmin-info,
 		color: $cadmin-white,
+
 		href: (
 			hover: (
 				color: $cadmin-white,
@@ -910,6 +984,7 @@ $cadmin-label-inverse-warning: map-deep-merge(
 		background-color: $cadmin-warning,
 		border-color: $cadmin-warning,
 		color: $cadmin-white,
+
 		href: (
 			hover: (
 				color: $cadmin-white,
@@ -925,6 +1000,7 @@ $cadmin-label-inverse-danger: map-deep-merge(
 		background-color: $cadmin-danger,
 		border-color: $cadmin-danger,
 		color: $cadmin-white,
+
 		href: (
 			hover: (
 				color: $cadmin-white,
@@ -940,6 +1016,7 @@ $cadmin-label-inverse-light: map-deep-merge(
 		background-color: $cadmin-light,
 		border-color: $cadmin-light,
 		color: $cadmin-dark,
+
 		href: (
 			hover: (
 				color: $cadmin-dark,
@@ -955,6 +1032,7 @@ $cadmin-label-inverse-dark: map-deep-merge(
 		background-color: $cadmin-dark,
 		border-color: $cadmin-dark,
 		color: $cadmin-white,
+
 		href: (
 			hover: (
 				color: $cadmin-white,
@@ -968,20 +1046,35 @@ $cadmin-label-palette: () !default;
 $cadmin-label-palette: map-deep-merge(
 	(
 		primary: $cadmin-label-primary,
+
 		secondary: $cadmin-label-secondary,
+
 		success: $cadmin-label-success,
+
 		info: $cadmin-label-info,
+
 		warning: $cadmin-label-warning,
+
 		danger: $cadmin-label-danger,
+
 		dark: $cadmin-label-dark,
+
 		light: $cadmin-label-light,
+
 		inverse-primary: $cadmin-label-inverse-primary,
+
 		inverse-secondary: $cadmin-label-inverse-secondary,
+
 		inverse-success: $cadmin-label-inverse-success,
+
 		inverse-info: $cadmin-label-inverse-info,
+
 		inverse-warning: $cadmin-label-inverse-warning,
+
 		inverse-danger: $cadmin-label-inverse-danger,
+
 		inverse-light: $cadmin-label-inverse-light,
+
 		inverse-dark: $cadmin-label-inverse-dark,
 	),
 	$cadmin-label-palette

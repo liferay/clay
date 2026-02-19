@@ -12,6 +12,7 @@ $reference-mark: map-deep-merge(
 		font-size: $reference-mark-font-size,
 		position: relative,
 		vertical-align: $reference-mark-vertical-align,
+
 		lexicon-icon: (
 			vertical-align: $reference-mark-vertical-align,
 		),
@@ -25,6 +26,7 @@ $c-kbd-group: () !default;
 $c-kbd-group: map-deep-merge(
 	(
 		font-size: 0.875rem,
+
 		c-kbd: (
 			font-size: inherit,
 		),

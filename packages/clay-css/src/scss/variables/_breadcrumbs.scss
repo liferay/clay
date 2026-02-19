@@ -53,12 +53,15 @@ $breadcrumb-item: map-merge(
 		font-weight: $breadcrumb-font-weight,
 		margin-right: 0.5em,
 		position: relative,
+
 		active: (
 			color: $breadcrumb-active-color,
 			font-weight: $breadcrumb-active-font-weight,
 		),
+
 		breadcrumb-item: (
 			padding-left: 1em,
+
 			before: (
 				color: $breadcrumb-divider-color,
 				display: block,
@@ -77,11 +80,14 @@ $breadcrumb-item: map-merge(
 				width: $breadcrumb-divider-svg-icon-width,
 			),
 		),
+
 		dropdown-toggle: (
 			text-decoration: none,
+
 			hover: (
 				text-decoration: none,
 			),
+
 			focus: (
 				text-decoration: none,
 			),
@@ -93,8 +99,10 @@ $breadcrumb-item: map-merge(
 // Breadcrumb Text Truncate
 
 $breadcrumb-text-truncate-icon-spacer-x: 0.875rem !default;
+
 $breadcrumb-text-truncate-max-width: 18.75rem -
 	$breadcrumb-text-truncate-icon-spacer-x !default;
+
 $breadcrumb-text-truncate-max-width-mobile: 9.375rem -
 	$breadcrumb-text-truncate-icon-spacer-x !default;
 
@@ -127,10 +135,12 @@ $breadcrumb-link: map-deep-merge(
 		display: block,
 		text-decoration: $breadcrumb-link-text-decoration,
 		text-transform: $breadcrumb-text-transform,
+
 		hover: (
 			color: $breadcrumb-link-hover-color,
 			text-decoration: $breadcrumb-link-hover-text-decoration,
 		),
+
 		focus: (
 			color: $breadcrumb-link-hover-color,
 			text-decoration: $breadcrumb-link-hover-text-decoration,

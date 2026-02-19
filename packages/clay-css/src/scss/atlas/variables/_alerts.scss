@@ -21,6 +21,7 @@ $alert-close: () !default;
 $alert-close: map-deep-merge(
 	(
 		opacity: $alert-close-opacity,
+
 		disabled: (
 			color: inherit,
 		),
@@ -56,12 +57,16 @@ $alert: map-deep-merge(
 		border-width: $alert-border-width,
 		font-size: $alert-font-size,
 		padding: $alert-padding-y $alert-padding-x,
+
 		close: $alert-close,
+
 		lead: (
 			font-size: $alert-lead-font-size,
 			font-weight: $alert-lead-font-weight,
 		),
+
 		component-title: $alert-title,
+
 		component-subtitle: $alert-subtitle,
 	),
 	$alert
@@ -70,17 +75,19 @@ $alert: map-deep-merge(
 // .alert-link
 
 $alert-link-decoration: underline !default;
-$alert-link-hover-decoration: none !default;
 $alert-link-font-weight: $font-weight-semi-bold !default;
+$alert-link-hover-decoration: none !default;
 
 $alert-link: () !default;
 $alert-link: map-deep-merge(
 	(
 		font-weight: $alert-link-font-weight,
 		text-decoration: $alert-link-decoration,
+
 		hover: (
 			text-decoration: $alert-link-hover-decoration,
 		),
+
 		focus: (
 			text-decoration: $alert-link-hover-decoration,
 		),
@@ -154,6 +161,7 @@ $alert-autofit-row: map-deep-merge(
 		margin-left: -0.25rem,
 		margin-right: -0.25rem,
 		width: auto,
+
 		autofit-col: (
 			padding-left: 0.25rem,
 			padding-right: 0.25rem,
@@ -206,9 +214,11 @@ $alert-indicator-start: map-deep-merge(
 					),
 			),
 		),
+
 		alert-feedback: (
 			padding-left: calc(#{$alert-indicator-font-size} + 0.5rem),
 		),
+
 		alert-indicator: (
 			margin-left: calc(-1em - 0.5rem),
 			margin-top: 2px,
@@ -219,17 +229,22 @@ $alert-indicator-start: map-deep-merge(
 
 // .alert-primary
 
-$alert-primary-color: $primary !default;
 $alert-primary-bg: $primary-l3 !default;
 $alert-primary-border-color: $primary-l1 !default;
+$alert-primary-color: $primary !default;
+
 $alert-primary-close-color: $alert-primary-color !default;
 $alert-primary-close-hover-color: $alert-primary-color !default;
+
 $alert-primary-lead-color: $alert-primary-color !default;
+
 $alert-primary-link-color: $link-color !default;
+
 $alert-primary-btn: () !default;
 $alert-primary-btn: map-deep-merge(
 	(
 		border-color: $primary-l1,
+
 		hover: (
 			border-color: $primary,
 		),
@@ -243,18 +258,23 @@ $alert-primary: map-deep-merge(
 		background-color: $alert-primary-bg,
 		border-color: $alert-primary-border-color,
 		color: $alert-primary-color,
+
 		close: (
 			color: $alert-primary-close-color,
+
 			hover: (
 				color: $alert-primary-close-hover-color,
 			),
 		),
+
 		lead: (
 			color: $alert-primary-lead-color,
 		),
+
 		alert-link: (
 			color: $alert-primary-link-color,
 		),
+
 		alert-btn: $alert-primary-btn,
 	),
 	$alert-primary
@@ -262,17 +282,22 @@ $alert-primary: map-deep-merge(
 
 // .alert-secondary
 
-$alert-secondary-color: $secondary !default;
 $alert-secondary-bg: $light-l1 !default;
 $alert-secondary-border-color: $light-d2 !default;
+$alert-secondary-color: $secondary !default;
+
 $alert-secondary-close-color: $alert-secondary-color !default;
 $alert-secondary-close-hover-color: $alert-secondary-color !default;
+
 $alert-secondary-lead-color: $alert-secondary-color !default;
+
 $alert-secondary-link-color: $link-color !default;
+
 $alert-secondary-btn: () !default;
 $alert-secondary-btn: map-deep-merge(
 	(
 		border-color: $secondary-l1,
+
 		hover: (
 			border-color: $secondary,
 		),
@@ -286,18 +311,23 @@ $alert-secondary: map-deep-merge(
 		background-color: $alert-secondary-bg,
 		border-color: $alert-secondary-border-color,
 		color: $alert-secondary-color,
+
 		close: (
 			color: $alert-secondary-close-color,
+
 			hover: (
 				color: $alert-secondary-close-hover-color,
 			),
 		),
+
 		lead: (
 			color: $alert-secondary-lead-color,
 		),
+
 		alert-link: (
 			color: $alert-secondary-link-color,
 		),
+
 		alert-btn: $alert-secondary-btn,
 	),
 	$alert-secondary
@@ -305,17 +335,22 @@ $alert-secondary: map-deep-merge(
 
 // .alert-success
 
-$alert-success-color: $success !default;
 $alert-success-bg: $success-l2 !default;
 $alert-success-border-color: $success-l1 !default;
+$alert-success-color: $success !default;
+
 $alert-success-close-color: $alert-success-color !default;
 $alert-success-close-hover-color: $alert-success-color !default;
+
 $alert-success-lead-color: $alert-success-color !default;
+
 $alert-success-link-color: $link-color !default;
+
 $alert-success-btn: () !default;
 $alert-success-btn: map-deep-merge(
 	(
 		border-color: $success-l1,
+
 		hover: (
 			border-color: $success,
 		),
@@ -329,18 +364,23 @@ $alert-success: map-deep-merge(
 		background-color: $alert-success-bg,
 		border-color: $alert-success-border-color,
 		color: $alert-success-color,
+
 		close: (
 			color: $alert-success-close-color,
+
 			hover: (
 				color: $alert-success-close-hover-color,
 			),
 		),
+
 		lead: (
 			color: $alert-success-lead-color,
 		),
+
 		alert-link: (
 			color: $alert-success-link-color,
 		),
+
 		alert-btn: $alert-success-btn,
 	),
 	$alert-success
@@ -348,17 +388,22 @@ $alert-success: map-deep-merge(
 
 // .alert-info
 
-$alert-info-color: $info !default;
 $alert-info-bg: $info-l2 !default;
 $alert-info-border-color: $info-l1 !default;
+$alert-info-color: $info !default;
+
 $alert-info-close-color: $alert-info-color !default;
 $alert-info-close-hover-color: $alert-info-color !default;
+
 $alert-info-lead-color: $alert-info-color !default;
+
 $alert-info-link-color: $link-color !default;
+
 $alert-info-btn: () !default;
 $alert-info-btn: map-deep-merge(
 	(
 		border-color: $info-l1,
+
 		hover: (
 			border-color: $info,
 		),
@@ -372,18 +417,23 @@ $alert-info: map-deep-merge(
 		background-color: $alert-info-bg,
 		border-color: $alert-info-border-color,
 		color: $alert-info-color,
+
 		close: (
 			color: $alert-info-close-color,
+
 			hover: (
 				color: $alert-info-close-hover-color,
 			),
 		),
+
 		lead: (
 			color: $alert-info-lead-color,
 		),
+
 		alert-link: (
 			color: $alert-info-link-color,
 		),
+
 		alert-btn: $alert-info-btn,
 	),
 	$alert-info
@@ -391,17 +441,22 @@ $alert-info: map-deep-merge(
 
 // .alert-warning
 
-$alert-warning-color: $warning !default;
 $alert-warning-bg: $warning-l2 !default;
 $alert-warning-border-color: $warning-l1 !default;
+$alert-warning-color: $warning !default;
+
 $alert-warning-close-color: $alert-warning-color !default;
 $alert-warning-close-hover-color: $alert-warning-color !default;
+
 $alert-warning-lead-color: $alert-warning-color !default;
+
 $alert-warning-link-color: $link-color !default;
+
 $alert-warning-btn: () !default;
 $alert-warning-btn: map-deep-merge(
 	(
 		border-color: $warning-l1,
+
 		hover: (
 			border-color: $warning,
 		),
@@ -415,18 +470,23 @@ $alert-warning: map-deep-merge(
 		background-color: $alert-warning-bg,
 		border-color: $alert-warning-border-color,
 		color: $alert-warning-color,
+
 		close: (
 			color: $alert-warning-close-color,
+
 			hover: (
 				color: $alert-warning-close-hover-color,
 			),
 		),
+
 		lead: (
 			color: $alert-warning-lead-color,
 		),
+
 		alert-link: (
 			color: $alert-warning-link-color,
 		),
+
 		alert-btn: $alert-warning-btn,
 	),
 	$alert-warning
@@ -434,17 +494,22 @@ $alert-warning: map-deep-merge(
 
 // .alert-danger
 
-$alert-danger-color: $danger !default;
 $alert-danger-bg: $danger-l2 !default;
 $alert-danger-border-color: $danger-l1 !default;
+$alert-danger-color: $danger !default;
+
 $alert-danger-close-color: $alert-danger-color !default;
 $alert-danger-close-hover-color: $alert-danger-color !default;
+
 $alert-danger-lead-color: $alert-danger-color !default;
+
 $alert-danger-link-color: $link-color !default;
+
 $alert-danger-btn: () !default;
 $alert-danger-btn: map-deep-merge(
 	(
 		border-color: $danger-l1,
+
 		hover: (
 			border-color: $danger,
 		),
@@ -458,18 +523,23 @@ $alert-danger: map-deep-merge(
 		background-color: $alert-danger-bg,
 		border-color: $alert-danger-border-color,
 		color: $alert-danger-color,
+
 		close: (
 			color: $alert-danger-close-color,
+
 			hover: (
 				color: $alert-danger-close-hover-color,
 			),
 		),
+
 		lead: (
 			color: $alert-danger-lead-color,
 		),
+
 		alert-link: (
 			color: $alert-danger-link-color,
 		),
+
 		alert-btn: $alert-danger-btn,
 	),
 	$alert-danger
@@ -477,23 +547,29 @@ $alert-danger: map-deep-merge(
 
 // .alert-light
 
-$alert-light-color: $dark !default;
 $alert-light-bg: $light-l2 !default;
 $alert-light-border-color: $light-l1 !default;
+$alert-light-color: $dark !default;
+
 $alert-light-close-color: $alert-light-color !default;
 $alert-light-close-hover-color: $alert-light-color !default;
+
 $alert-light-lead-color: $alert-light-color !default;
+
 $alert-light-link-color: $link-color !default;
+
 $alert-light-btn: () !default;
 $alert-light-btn: map-deep-merge(
 	(
 		border-color: $dark-l1,
 		color: $dark,
+
 		hover: (
 			background-color: $dark,
 			border-color: $dark,
 			color: $white,
 		),
+
 		active: (
 			background-color: clay-darken($dark, 5%),
 			border-color: clay-darken($dark, 5%),
@@ -508,18 +584,23 @@ $alert-light: map-deep-merge(
 		background-color: $alert-light-bg,
 		border-color: $alert-light-border-color,
 		color: $alert-light-color,
+
 		close: (
 			color: $alert-light-close-color,
+
 			hover: (
 				color: $alert-light-close-hover-color,
 			),
 		),
+
 		lead: (
 			color: $alert-light-lead-color,
 		),
+
 		link: (
 			color: $alert-light-link-color,
 		),
+
 		alert-btn: $alert-light-btn,
 	),
 	$alert-light
@@ -527,17 +608,22 @@ $alert-light: map-deep-merge(
 
 // .alert-dark
 
-$alert-dark-color: $light !default;
 $alert-dark-bg: $dark-l2 !default;
 $alert-dark-border-color: $dark-l1 !default;
+$alert-dark-color: $light !default;
+
 $alert-dark-close-color: $alert-dark-color !default;
 $alert-dark-close-hover-color: $alert-dark-color !default;
+
 $alert-dark-lead-color: $alert-dark-color !default;
+
 $alert-dark-link-color: $alert-dark-color !default;
+
 $alert-dark-btn: () !default;
 $alert-dark-btn: map-deep-merge(
 	(
 		border-color: $dark-l1,
+
 		hover: (
 			border-color: $dark,
 		),
@@ -551,18 +637,23 @@ $alert-dark: map-deep-merge(
 		background-color: $alert-dark-bg,
 		border-color: $alert-dark-border-color,
 		color: $alert-dark-color,
+
 		close: (
 			color: $alert-dark-close-color,
+
 			hover: (
 				color: $alert-dark-close-hover-color,
 			),
 		),
+
 		lead: (
 			color: $alert-dark-lead-color,
 		),
+
 		link: (
 			color: $alert-dark-link-color,
 		),
+
 		alert-btn: $alert-dark-btn,
 	),
 	$alert-dark
