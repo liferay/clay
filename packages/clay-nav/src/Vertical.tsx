@@ -94,9 +94,21 @@ interface IProps extends React.ComponentProps<typeof VerticalNav> {
 	large?: boolean;
 
 	/**
+	 * Flag to indicate if `nav-nested-margins` class should be applied.
+	 * It uses margin instead of padding to indent each nested navigation.
+	 */
+	nestMargins?: boolean;
+
+	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
 	 */
 	spritemap?: string;
+
+	/**
+	 * Flag to indicate if `nav-stacked` class should be applied. It doesn't
+	 * indent nested navigation.
+	 */
+	stacked?: boolean;
 
 	/**
 	 * Custom component that will be displayed on mobile resolutions that toggles the visibility of the navigation.
@@ -113,6 +125,8 @@ function ClayVerticalNav({
 	activeLabel,
 	children,
 	displayType,
+	nestMargins,
+	stacked,
 	triggerLabel = 'Menu',
 	...otherProps
 }: IProps) {
@@ -126,6 +140,8 @@ function ClayVerticalNav({
 			<VerticalNav
 				{...otherProps}
 				displayType={displayType}
+				nestMargins={nestMargins}
+				stacked={stacked}
 				triggerLabel={activeLabel ?? triggerLabel}
 			>
 				{children}

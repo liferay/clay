@@ -91,6 +91,12 @@ type Props<T extends Record<string, any> | string> = {
 	'large'?: boolean;
 
 	/**
+	 * Flag to indicate if `nav-nested-margins` class should be applied.
+	 * It uses margin instead of padding to indent each nested navigation.
+	 */
+	'nestMargins'?: boolean;
+
+	/**
 	 * A callback that is called when items are expanded or collapsed
 	 * (controlled).
 	 */
@@ -105,6 +111,12 @@ type Props<T extends Record<string, any> | string> = {
 	 * Path to the spritemap that Icon should use when referencing symbols.
 	 */
 	'spritemap'?: string;
+
+	/**
+	 * Flag to indicate if `nav-stacked` class should be applied. It doesn't
+	 * indent nested navigation.
+	 */
+	'stacked'?: boolean;
 
 	/**
 	 * Custom component that will be displayed on mobile resolutions that
@@ -155,9 +167,11 @@ function VerticalNav<T extends Record<string, any> | string>({
 	'itemAriaCurrent': ariaCurrent = true,
 	items,
 	large,
+	nestMargins,
 	onExpandedChange,
 	size,
 	spritemap,
+	stacked,
 	'trigger': CustomTrigger = Trigger,
 	triggerLabel = 'Menu',
 }: Props<T>) {
@@ -259,9 +273,11 @@ function VerticalNav<T extends Record<string, any> | string>({
 		<Nav
 			{...navigationProps}
 			aria-orientation="vertical"
-			nested
+			nestMargins={nestMargins}
+			nested={!stacked && !nestMargins}
 			ref={containerRef}
 			role="menubar"
+			stacked={stacked}
 		>
 			<VerticalNavContextProvider
 				activeKey={

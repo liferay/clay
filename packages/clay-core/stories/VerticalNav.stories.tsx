@@ -653,6 +653,7 @@ export function Primary() {
 			aria-label="vertical navbar"
 			displayType="primary"
 			items={items_cms_product_menu}
+			stacked
 		>
 			{(item) => (
 				<VerticalNav.Item
