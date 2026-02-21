@@ -75,6 +75,15 @@ export type Props = {
 	'className'?: string;
 
 	/**
+	 * Flag to determine whether the SidePanel should close when pressing
+	 * the Escape key.
+	 * NOTE: The default behavior is to close on Escape but it will be forced
+	 * to `true` on mobile devices and can be set to `false` for desktop if
+	 * needed.
+	 */
+	'closeOnEscape'?: boolean;
+
+	/**
 	 * Element reference to the container of the SidePanel and primary content.
 	 * NOTE: The containerRef is needed to properly handle layout and
 	 * transitions of the SidePanel.
@@ -136,6 +145,7 @@ export function SidePanel({
 	'as': As = 'div',
 	children,
 	className,
+	'closeOnEscape': externalCloseOnEscape = true,
 	containerRef,
 	defaultOpen,
 	direction = 'right',
@@ -159,6 +169,7 @@ export function SidePanel({
 	const panelWidthMax = usePanelWidthMax(sidePanelRef);
 	const {prefersReducedMotion} = useProvider();
 
+	const closeOnEscape = isMobile || externalCloseOnEscape;
 	const isResizable = fluid && !isMobile;
 
 	const [open, setOpen] = useControlledState({
@@ -209,7 +220,7 @@ export function SidePanel({
 	useEffect(() => {
 		if (open) {
 			const onKeyDown = (event: KeyboardEvent) => {
-				if (event.key === Keys.Esc) {
+				if (event.key === Keys.Esc && closeOnEscape) {
 					event.stopImmediatePropagation();
 					event.preventDefault();
 
@@ -233,7 +244,7 @@ export function SidePanel({
 
 			sidePanelRef.current?.setAttribute('inert', '');
 		}
-	}, [open]);
+	}, [closeOnEscape, open]);
 
 	const titleId = useId();
 
