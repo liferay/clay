@@ -26,6 +26,12 @@ export function Default(args: any) {
 				55 of 100
 				<span className="sr-only">items loaded</span>
 			</ClayProgressBar>
+
+			<ClayProgressBar
+				feedback={args.feedback}
+				fillBarClassName="progress-bar-animated progress-bar-striped"
+				value={99.99}
+			/>
 		</div>
 	);
 }

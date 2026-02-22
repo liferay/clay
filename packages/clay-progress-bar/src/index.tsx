@@ -17,6 +17,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	feedback?: boolean;
 
 	/**
+	 * Classname to be applied to the fill bar of the progress bar.
+	 */
+	fillBarClassName?: string;
+
+	/**
 	 * Aria Messages for the Progress Bar.
 	 */
 	messages?: {
@@ -51,6 +56,7 @@ const ProgressBar = ({
 	children,
 	className,
 	feedback = false,
+	fillBarClassName,
 	messages: externalMessages,
 	spritemap,
 	value = 0,
@@ -115,7 +121,7 @@ const ProgressBar = ({
 					aria-valuemax={100}
 					aria-valuemin={0}
 					aria-valuenow={value}
-					className="progress-bar"
+					className={classNames('progress-bar', fillBarClassName)}
 					role="progressbar"
 					style={{width: `${value}%`}}
 				/>

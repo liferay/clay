@@ -223,4 +223,30 @@ describe('ClayModal', () => {
 
 		expect(document.body).toMatchSnapshot();
 	});
+
+	it('renders footer item wrappers only when props are provided', () => {
+		const {rerender} = render(<ClayModal.Footer />);
+
+		expect(document.querySelector('.modal-item-first')).toBeNull();
+		expect(document.querySelector('.modal-item')).toBeNull();
+		expect(document.querySelector('.modal-item-last')).toBeNull();
+
+		rerender(<ClayModal.Footer first={<Button>First</Button>} />);
+
+		expect(document.querySelector('.modal-item-first')).not.toBeNull();
+		expect(document.querySelector('.modal-item')).toBeNull();
+		expect(document.querySelector('.modal-item-last')).toBeNull();
+
+		rerender(<ClayModal.Footer middle={<Button>Middle</Button>} />);
+
+		expect(document.querySelector('.modal-item-first')).toBeNull();
+		expect(document.querySelector('.modal-item')).not.toBeNull();
+		expect(document.querySelector('.modal-item-last')).toBeNull();
+
+		rerender(<ClayModal.Footer last={<Button>Last</Button>} />);
+
+		expect(document.querySelector('.modal-item-first')).toBeNull();
+		expect(document.querySelector('.modal-item')).toBeNull();
+		expect(document.querySelector('.modal-item-last')).not.toBeNull();
+	});
 });

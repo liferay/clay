@@ -30,11 +30,11 @@ export interface IFooterProps extends React.HTMLAttributes<HTMLDivElement> {
 function Footer({className, first, last, middle, ...otherProps}: IFooterProps) {
 	return (
 		<div className={classNames('modal-footer', className)} {...otherProps}>
-			<div className="modal-item-first">{first}</div>
+			{first ? <div className="modal-item-first">{first}</div> : null}
 
-			<div className="modal-item">{middle}</div>
+			{middle ? <div className="modal-item">{middle}</div> : null}
 
-			<div className="modal-item-last">{last}</div>
+			{last ? <div className="modal-item-last">{last}</div> : null}
 		</div>
 	);
 }
