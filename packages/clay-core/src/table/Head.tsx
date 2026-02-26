@@ -92,7 +92,7 @@ export function Head<T extends Record<string, any>>(
 					<Collection<T> collection={collection} />
 
 					{columnsVisibility && (
-						<Cell keyValue="visibility" width="72px">
+						<Cell keyValue="visibility" width="64px">
 							<span className="sr-only">
 								{messages['columnsVisibilityCell'] ||
 									messages['columnsVisibility']}
@@ -132,6 +132,7 @@ export function Head<T extends Record<string, any>>(
 										borderless
 										displayType="secondary"
 										monospaced
+										size="sm"
 										title={messages['columnsVisibility']}
 									>
 										<Icon symbol="caret-bottom" />

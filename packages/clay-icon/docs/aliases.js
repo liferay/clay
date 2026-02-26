@@ -1621,6 +1621,10 @@ export const iconsData = [
 		name: 'restore',
 	},
 	{
+		aliases: ['boost', 'launch', 'promote'],
+		name: 'rocket',
+	},
+	{
 		aliases: ['pivot', 'spin', 'move', 'turn'],
 		name: 'rotate',
 	},

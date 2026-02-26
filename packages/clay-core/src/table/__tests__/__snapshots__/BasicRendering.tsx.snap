@@ -30,7 +30,7 @@ exports[`Table basic rendering render dynamic content 1`] = `
           <th
             class="table-head-title"
             data-id="string,visibility"
-            style="width: 72px;"
+            style="width: 64px;"
             tabindex="-1"
           >
             <span
@@ -44,7 +44,7 @@ exports[`Table basic rendering render dynamic content 1`] = `
               <button
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
-                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-sm btn-outline-secondary"
                 title="Manage Columns Visibility"
                 type="button"
               >
@@ -191,7 +191,7 @@ exports[`Table basic rendering render static content 1`] = `
           <th
             class="table-head-title"
             data-id="string,visibility"
-            style="width: 72px;"
+            style="width: 64px;"
             tabindex="-1"
           >
             <span
@@ -205,7 +205,7 @@ exports[`Table basic rendering render static content 1`] = `
               <button
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
-                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-sm btn-outline-secondary"
                 title="Manage Columns Visibility"
                 type="button"
               >
@@ -426,7 +426,7 @@ exports[`Table basic rendering render with sort column 1`] = `
           <th
             class="table-head-title"
             data-id="string,visibility"
-            style="width: 72px;"
+            style="width: 64px;"
             tabindex="-1"
           >
             <span
@@ -440,7 +440,7 @@ exports[`Table basic rendering render with sort column 1`] = `
               <button
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
-                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-sm btn-outline-secondary"
                 title="Manage Columns Visibility"
                 type="button"
               >
@@ -592,7 +592,7 @@ exports[`Table basic rendering render with treegrid 1`] = `
             class="table-head-title"
             data-id="string,visibility"
             role="gridcell"
-            style="width: 72px;"
+            style="width: 64px;"
             tabindex="-1"
           >
             <span
@@ -606,7 +606,7 @@ exports[`Table basic rendering render with treegrid 1`] = `
               <button
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
-                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-sm btn-outline-secondary"
                 title="Manage Columns Visibility"
                 type="button"
               >

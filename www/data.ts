@@ -88,9 +88,7 @@ export const CSSDocumentsCollection = new Collection<ComponentDocumentsSchema>(
 	(slug) => import(`./docs/css/${slug}.mdx`)
 );
 
-const IGNORE_LIST = [
-	'clay-charts'
-]
+const IGNORE_LIST = []
 
 export const ComponentDocumentsCollection =
 	new Collection<ComponentDocumentsSchema>(
