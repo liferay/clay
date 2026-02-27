@@ -5,8 +5,15 @@
 		@include clay-button-variant(map-get($cadmin-treeview, btn));
 	}
 
+	$_btn-monospaced: map-get($cadmin-treeview, btn-monospaced);
+
 	.btn-monospaced {
-		@include clay-button-variant(map-get($cadmin-treeview, btn-monospaced));
+		@include clay-button-variant($_btn-monospaced);
+
+		&.sr-only-focusable {
+			height: map-get($_btn-monospaced, height);
+			width: map-get($_btn-monospaced, width);
+		}
 	}
 
 	.custom-control {

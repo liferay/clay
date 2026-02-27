@@ -1127,7 +1127,7 @@ function Drag({labelId, tabIndex}: DragProps) {
 				aria-label={messages.dragItem}
 				aria-labelledby={`${dragButtonId} ${labelId}`}
 				className={classNames({
-					'p-1 sr-only sr-only-focusable':
+					'sr-only sr-only-focusable':
 						dragHandlerVisibility === 'keyboard',
 				})}
 				data-draggable={currentDrag === item.key}
