@@ -581,6 +581,10 @@ export const iconsData = [
 		name: 'button',
 	},
 	{
+		aliases: ['adjust', 'estimator', 'tax'],
+		name: 'calculator',
+	},
+	{
 		aliases: ['agenda', 'date', 'days', 'picker', 'time'],
 		name: 'calendar',
 	},
@@ -1513,6 +1517,10 @@ export const iconsData = [
 		name: 'polls',
 	},
 	{
+		aliases: ['pricing', 'tariff', 'tier'],
+		name: 'price-list',
+	},
+	{
 		aliases: ['cash', 'discount', 'dollar', 'money', 'offer'],
 		name: 'price-tag',
 	},
@@ -1525,6 +1533,10 @@ export const iconsData = [
 		name: 'process-builder',
 	},
 	{
+		aliases: ['customizer', 'model selection', 'variants'],
+		name: 'product-configuration',
+	},
+	{
 		aliases: ['list', 'navigation', 'sidebar'],
 		name: 'product-menu-closed',
 	},
@@ -1535,6 +1547,10 @@ export const iconsData = [
 	{
 		aliases: ['list', 'navigation', 'sidebar'],
 		name: 'product-menu',
+	},
+	{
+		aliases: ['catalog', 'inventory', 'packages'],
+		name: 'products',
 	},
 	{
 		aliases: ['arrows', 'circle', 'multiplication', 'publish'],
