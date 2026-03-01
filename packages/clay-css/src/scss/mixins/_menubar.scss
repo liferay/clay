@@ -282,22 +282,22 @@
 					),
 				margin-bottom:
 					setter(
-						math-sign(map-get($toggler-mobile, padding-bottom)),
+						calc(#{map-get($toggler-mobile, padding-bottom)} * -1),
 						map-get($_toggler-mobile-c-inner, margin-bottom)
 					),
 				margin-left:
 					setter(
-						math-sign(map-get($toggler-mobile, padding-left)),
+						calc(#{map-get($toggler-mobile, padding-left)} * -1),
 						map-get($_toggler-mobile-c-inner, margin-left)
 					),
 				margin-right:
 					setter(
-						math-sign(map-get($toggler-mobile, padding-right)),
+						calc(#{map-get($toggler-mobile, padding-right)} * -1),
 						map-get($_toggler-mobile-c-inner, margin-right)
 					),
 				margin-top:
 					setter(
-						math-sign(map-get($toggler-mobile, padding-top)),
+						calc(#{map-get($toggler-mobile, padding-top)} * -1),
 						map-get($_toggler-mobile-c-inner, margin-top)
 					),
 			)

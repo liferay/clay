@@ -33,7 +33,7 @@ $dropdown-border-radius: $border-radius !default;
 /// @deprecated as of v3.x with no replacement
 
 $dropdown-inner-border-radius: $dropdown-border-radius
-	math-sign($dropdown-border-width) !default;
+	calc(#{$dropdown-border-width} * -1) !default;
 
 /// @deprecated as of v3.x use map $dropdown-menu instead
 
@@ -483,7 +483,7 @@ $dropdown-section: map-deep-merge(
 
 		form-group: (
 			form-group: (
-				margin-top: $dropdown-item-padding-y * 2,
+				margin-top: calc(#{$dropdown-item-padding-y} * 2),
 			),
 		),
 
@@ -554,8 +554,10 @@ $dropdown-item-indicator-text-start: map-deep-merge(
 	(
 		color: inherit,
 		display: block,
-		padding-left: $dropdown-item-indicator-size +
-			$dropdown-item-indicator-spacer-x,
+		padding-left:
+			calc(
+				#{$dropdown-item-indicator-size} + #{$dropdown-item-indicator-spacer-x}
+			),
 		text-decoration: inherit,
 		width: 100%,
 
@@ -604,8 +606,10 @@ $dropdown-item-indicator-text-end: map-deep-merge(
 	(
 		color: inherit,
 		display: block,
-		padding-right: $dropdown-item-indicator-size +
-			$dropdown-item-indicator-spacer-x,
+		padding-right:
+			calc(
+				#{$dropdown-item-indicator-size} + #{$dropdown-item-indicator-spacer-x}
+			),
 		text-decoration: inherit,
 		width: 100%,
 
@@ -968,11 +972,11 @@ $dropdown-menu-alert-fluid: map-deep-merge(
 		margin-right: 0,
 
 		first-child: (
-			margin-top: math-sign($dropdown-padding-y),
+			margin-top: calc(#{$dropdown-padding-y} * -1),
 		),
 
 		last-child: (
-			margin-bottom: math-sign($dropdown-padding-y),
+			margin-bottom: calc(#{$dropdown-padding-y} * -1),
 		),
 	),
 	$dropdown-menu-alert-fluid

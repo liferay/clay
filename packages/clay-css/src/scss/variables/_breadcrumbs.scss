@@ -72,8 +72,7 @@ $breadcrumb-item: map-merge(
 				content: '',
 				height: $breadcrumb-divider-svg-icon-height,
 				left: 0,
-				margin-top:
-					calc(#{math-sign($breadcrumb-divider-svg-icon-height)} / 2),
+				margin-top: calc(#{$breadcrumb-divider-svg-icon-height} / -2),
 				padding: 0,
 				position: absolute,
 				top: 50%,

@@ -21,7 +21,11 @@
 
 .timeline-increment {
 	background-color: $cadmin-timeline-increment-bg;
-	left: -($cadmin-timeline-inner-spacing - $cadmin-timeline-border-modifier);
+	left: calc(
+		(
+				#{$cadmin-timeline-inner-spacing} - #{$cadmin-timeline-border-modifier}
+			) * -1
+	);
 	position: absolute;
 	text-align: center;
 	top: 50%;
@@ -32,7 +36,9 @@
 
 .timeline-increment-text {
 	display: block;
-	max-width: $cadmin-timeline-inner-spacing + $cadmin-timeline-outer-spacing;
+	max-width: calc(
+		#{$cadmin-timeline-inner-spacing} + #{$cadmin-timeline-outer-spacing}
+	);
 }
 
 .timeline-item-label {
@@ -70,7 +76,7 @@
 
 	.panel {
 		.timeline-increment {
-			margin-left: math-sign($cadmin-panel-border-left-width);
+			margin-left: calc(#{$cadmin-panel-border-left-width} * -1);
 		}
 	}
 }
@@ -109,7 +115,7 @@
 
 			.timeline-item-label {
 				left: -100%;
-				margin-left: -($cadmin-timeline-inner-spacing * 2);
+				margin-left: calc($cadmin-timeline-inner-spacing * -2);
 				position: absolute;
 				text-align: right;
 				top: 50%;
@@ -126,7 +132,7 @@
 
 			.timeline-item-label {
 				margin-left: auto;
-				margin-right: -($cadmin-timeline-inner-spacing * 2);
+				margin-right: calc($cadmin-timeline-inner-spacing * -2);
 				right: -100%;
 				text-align: left;
 			}
@@ -143,7 +149,7 @@
 
 		.timeline-item-label {
 			margin-left: auto;
-			margin-right: -($cadmin-timeline-inner-spacing * 2);
+			margin-right: calc($cadmin-timeline-inner-spacing * -2);
 			right: -100%;
 			text-align: left;
 		}
@@ -158,7 +164,8 @@
 	);
 
 	.timeline-increment-text {
-		max-width: $cadmin-timeline-inner-spacing-xl +
-			$cadmin-timeline-outer-spacing-xl;
+		max-width: calc(
+			#{$cadmin-timeline-inner-spacing-xl} + #{$cadmin-timeline-outer-spacing-xl}
+		);
 	}
 }

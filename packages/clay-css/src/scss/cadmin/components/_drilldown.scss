@@ -64,11 +64,11 @@
 		}
 
 		.dropdown-item-indicator-text-end {
-			margin-left: math-sign(
-				map-get(
-					$cadmin-drilldown-dropdown-menu-indicator-start,
-					padding-left
-				)
+			margin-left: calc(
+				#{map-get(
+						$cadmin-drilldown-dropdown-menu-indicator-start,
+						padding-left
+					)} * -1
 			);
 		}
 	}
@@ -82,11 +82,11 @@
 		@include clay-css($cadmin-drilldown-dropdown-menu-indicator-end);
 
 		.dropdown-item-indicator-text-start {
-			margin-right: math-sign(
-				map-get(
-					$cadmin-drilldown-dropdown-menu-indicator-end,
-					padding-right
-				)
+			margin-right: calc(
+				#{map-get(
+						$cadmin-drilldown-dropdown-menu-indicator-end,
+						padding-right
+					)} * -1
 			);
 		}
 

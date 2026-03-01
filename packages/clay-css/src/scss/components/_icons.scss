@@ -36,8 +36,8 @@ button.collapse-icon,
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			margin-left: math-sign($collapse-icon-padding-left);
-			margin-right: math-sign($collapse-icon-padding-right);
+			margin-left: calc(#{$collapse-icon-padding-left} * -1);
+			margin-right: calc(#{$collapse-icon-padding-right} * -1);
 		}
 	}
 }

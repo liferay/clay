@@ -116,7 +116,7 @@
 
 	.alert-list {
 		.alert-fluid:last-child {
-			margin-bottom: math-sign($alert-fluid-border-bottom-width);
+			margin-bottom: calc(#{$alert-fluid-border-bottom-width} * -1);
 		}
 	}
 }

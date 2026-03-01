@@ -379,11 +379,11 @@ $cadmin-alert-notifications-fixed-right: null !default;
 $cadmin-alert-notifications-fixed-top: null !default;
 
 $cadmin-alert-notifications-fixed-bottom-mobile: 16px !default;
-$cadmin-alert-notifications-fixed-left-mobile: (
-	$cadmin-grid-gutter-width * 0.5
+$cadmin-alert-notifications-fixed-left-mobile: calc(
+	#{$cadmin-grid-gutter-width} * 0.5
 ) !default;
-$cadmin-alert-notifications-fixed-right-mobile: (
-	$cadmin-grid-gutter-width * 0.5
+$cadmin-alert-notifications-fixed-right-mobile: calc(
+	#{$cadmin-grid-gutter-width} * 0.5
 ) !default;
 $cadmin-alert-notifications-fixed-top-mobile: null !default;
 
@@ -510,8 +510,8 @@ $cadmin-alert-inline: map-deep-merge(
 
 		alert-autofit-row: (
 			align-items: center,
-			margin-bottom: calc(#{math-sign($cadmin-alert-padding-y)} - 1px),
-			margin-top: calc(#{math-sign($cadmin-alert-padding-y)} - 1px),
+			margin-bottom: calc(#{$cadmin-alert-padding-y} * -1 - 1px),
+			margin-top: calc(#{$cadmin-alert-padding-y} * -1 - 1px),
 			padding-bottom: 9px,
 			padding-top: 9px,
 			min-height: 56px,
@@ -523,7 +523,7 @@ $cadmin-alert-inline: map-deep-merge(
 		),
 
 		close: (
-			margin-top: math-sign(16px),
+			margin-top: -16px,
 			top: 50%,
 		),
 	),

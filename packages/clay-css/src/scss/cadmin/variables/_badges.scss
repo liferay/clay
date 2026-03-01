@@ -81,9 +81,8 @@ $cadmin-badge: map-deep-merge(
 		),
 
 		c-inner: (
-			margin: #{math-sign($cadmin-badge-padding-y)} #{math-sign(
-					$cadmin-badge-padding-x
-				)},
+			margin: calc(#{$cadmin-badge-padding-y} * -1)
+				calc(#{$cadmin-badge-padding-x} * -1),
 			max-width: none,
 		),
 	),

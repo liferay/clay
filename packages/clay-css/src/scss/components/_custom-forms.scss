@@ -178,12 +178,14 @@ label.custom-control-label {
 	// Bootstrap 4 Custom Switch
 
 	.custom-switch {
-		padding-left: $custom-switch-width + $custom-control-gutter;
+		padding-left: calc(#{$custom-switch-width} + #{$custom-control-gutter});
 
 		.custom-control-label {
 			&::before {
 				border-radius: $custom-switch-indicator-border-radius;
-				left: -($custom-switch-width + $custom-control-gutter);
+				left: calc(
+					(#{$custom-switch-width} + #{$custom-control-gutter}) * -1
+				);
 				pointer-events: all;
 				width: $custom-switch-width;
 			}
@@ -222,7 +224,10 @@ label.custom-control-label {
 			&::after {
 				background-color: $custom-control-indicator-bg;
 				transform: translateX(
-					$custom-switch-width - $custom-control-indicator-size
+					calc(
+						#{$custom-switch-width} -
+							#{$custom-control-indicator-size}
+					)
 				);
 			}
 		}
@@ -255,7 +260,10 @@ label.custom-control-label {
 		height: $custom-select-height;
 		line-height: $custom-select-line-height;
 		padding: $custom-select-padding-y
-			($custom-select-padding-x + $custom-select-indicator-padding)
+			calc(
+				#{$custom-select-padding-x} +
+					#{$custom-select-indicator-padding}
+			)
 			$custom-select-padding-y
 			$custom-select-padding-x;
 		vertical-align: middle;
@@ -425,9 +433,9 @@ label.custom-control-label {
 	.custom-range {
 		appearance: none;
 		background-color: transparent;
-		height: add(
-			$custom-range-thumb-height,
-			$custom-range-thumb-focus-box-shadow-width * 2
+		height: calc(
+			#{$custom-range-thumb-height} +
+				(#{$custom-range-thumb-focus-box-shadow-width} * 2)
 		);
 		padding: 0;
 		width: 100%;
@@ -467,10 +475,13 @@ label.custom-control-label {
 			@include box-shadow($custom-range-thumb-box-shadow);
 
 			height: $custom-range-thumb-height;
-			margin-top: (
-					$custom-range-track-height - $custom-range-thumb-height
-				) *
-				0.5; // Webkit specific
+			margin-top: calc(
+				(
+						#{$custom-range-track-height} -
+							#{$custom-range-thumb-height}
+					) *
+					0.5
+			); // Webkit specific
 
 			@include transition($custom-forms-transition);
 
@@ -560,7 +571,7 @@ label.custom-control-label {
 		&::-ms-track {
 			background-color: transparent;
 			border-color: transparent;
-			border-width: $custom-range-thumb-height * 0.5;
+			border-width: calc(#{$custom-range-thumb-height} * 0.5);
 
 			@include box-shadow($custom-range-track-box-shadow);
 

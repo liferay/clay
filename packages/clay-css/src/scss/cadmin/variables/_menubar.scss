@@ -427,11 +427,14 @@ $cadmin-menubar-vertical-decorated-md-nav-link-after-active: map-deep-merge(
 		content: '',
 		display: block,
 		left:
-			math-sign(
-				map-get($cadmin-menubar-vertical-decorated-md-nav, padding-left)
-			) - map-get(
-				$cadmin-menubar-vertical-decorated-md-nav,
-				border-left-width
+			calc(
+				#{map-get(
+						$cadmin-menubar-vertical-decorated-md-nav,
+						padding-left
+					)} * -1 - #{map-get(
+						$cadmin-menubar-vertical-decorated-md-nav,
+						border-left-width
+					)}
 			),
 		position: absolute,
 		top: 0,

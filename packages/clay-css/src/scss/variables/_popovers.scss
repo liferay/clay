@@ -227,7 +227,7 @@ $clay-popover-top: map-deep-merge(
 
 		arrow: (
 			left: 50%,
-			margin-left: math-sign($popover-arrow-width * 0.5),
+			margin-left: calc(#{$popover-arrow-width} * -0.5),
 			bottom:
 				calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1),
 			margin: 0,
@@ -235,20 +235,14 @@ $clay-popover-top: map-deep-merge(
 			before: (
 				border-top-color: $popover-arrow-outer-color,
 				border-width: $popover-arrow-height
-					(
-						$popover-arrow-width * 0.5,
-					)
-					0,
+					calc(#{$popover-arrow-width} * 0.5) 0,
 				bottom: 0,
 			),
 
 			after: (
 				border-top-color: $popover-top-arrow-color,
 				border-width: $popover-arrow-height
-					(
-						$popover-arrow-width * 0.5,
-					)
-					0,
+					calc(#{$popover-arrow-width} * 0.5) 0,
 				bottom: $popover-border-width,
 			),
 		),
@@ -302,33 +296,21 @@ $clay-popover-right: map-deep-merge(
 			height: $popover-arrow-width,
 			left:
 				calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1),
-			margin: math-sign($popover-arrow-height * 0.5) 0 0,
+			margin: calc(#{$popover-arrow-height} * -0.5) 0 0,
 			top: 50%,
 			width: $popover-arrow-height,
 
 			before: (
 				border-right-color: $popover-arrow-outer-color,
-				border-width: (
-					$popover-arrow-width * 0.5,
-				)
-				$popover-arrow-height
-				(
-					$popover-arrow-width * 0.5,
-				)
-				0,
+				border-width: calc(#{$popover-arrow-width} * 0.5)
+					$popover-arrow-height calc(#{$popover-arrow-width} * 0.5) 0,
 				left: 0,
 			),
 
 			after: (
 				border-right-color: $popover-right-arrow-color,
-				border-width: (
-					$popover-arrow-width * 0.5,
-				)
-				$popover-arrow-height
-				(
-					$popover-arrow-width * 0.5,
-				)
-				0,
+				border-width: calc(#{$popover-arrow-width} * 0.5)
+					$popover-arrow-height calc(#{$popover-arrow-width} * 0.5) 0,
 				left: $popover-border-width,
 			),
 		),
@@ -380,32 +362,20 @@ $clay-popover-bottom: map-deep-merge(
 
 		arrow: (
 			left: 50%,
-			margin: 0 0 0 math-sign($popover-arrow-width * 0.5),
+			margin: 0 0 0 calc(#{$popover-arrow-width} * -0.5),
 			top:
 				calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1),
 			before: (
 				border-bottom-color: $popover-arrow-outer-color,
-				border-width: 0
-					(
-						$popover-arrow-width * 0.5,
-					)
-					$popover-arrow-height
-					(
-						$popover-arrow-width * 0.5,
-					),
+				border-width: 0 calc(#{$popover-arrow-width} * 0.5)
+					$popover-arrow-height calc(#{$popover-arrow-width} * 0.5),
 				top: 0,
 			),
 
 			after: (
 				border-bottom-color: $popover-bottom-arrow-color,
-				border-width: 0
-					(
-						$popover-arrow-width * 0.5,
-					)
-					$popover-arrow-height
-					(
-						$popover-arrow-width * 0.5,
-					),
+				border-width: 0 calc(#{$popover-arrow-width} * 0.5)
+					$popover-arrow-height calc(#{$popover-arrow-width} * 0.5),
 				top: $popover-border-width,
 			),
 		),
@@ -456,7 +426,7 @@ $clay-popover-left: map-deep-merge(
 
 		arrow: (
 			height: $popover-arrow-width,
-			margin: math-sign($popover-arrow-height * 0.5) 0 0,
+			margin: calc(#{$popover-arrow-height} * -0.5) 0 0,
 			right:
 				calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1),
 			top: 50%,
@@ -464,27 +434,15 @@ $clay-popover-left: map-deep-merge(
 
 			before: (
 				border-left-color: $popover-arrow-outer-color,
-				border-width: (
-					$popover-arrow-width * 0.5,
-				)
-				0
-				(
-					$popover-arrow-width * 0.5,
-				)
-				$popover-arrow-height,
+				border-width: calc(#{$popover-arrow-width} * 0.5) 0
+					calc(#{$popover-arrow-width} * 0.5) $popover-arrow-height,
 				right: 0,
 			),
 
 			after: (
 				border-left-color: $popover-left-arrow-color,
-				border-width: (
-					$popover-arrow-width * 0.5,
-				)
-				0
-				(
-					$popover-arrow-width * 0.5,
-				)
-				$popover-arrow-height,
+				border-width: calc(#{$popover-arrow-width} * 0.5) 0
+					calc(#{$popover-arrow-width} * 0.5) $popover-arrow-height,
 				right: $popover-border-width,
 			),
 		),

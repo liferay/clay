@@ -52,19 +52,21 @@ $timeline-border-modifier: if(
 
 	&:before {
 		left: auto;
-		right: -$timeline-border-width;
+		right: calc(#{$timeline-border-width} * -1);
 	}
 
 	.panel {
 		.timeline-increment {
 			margin-left: auto;
-			margin-right: -$card-border-width;
+			margin-right: calc(#{$card-border-width} * -1);
 		}
 	}
 
 	.timeline-increment {
 		left: auto;
-		right: -($timeline-inner-spacing + $timeline-border-modifier);
+		right: calc(
+			(#{$timeline-inner-spacing} + #{$timeline-border-modifier}) * -1
+		);
 		-ms-transform: translate(50%, -50%);
 		transform: translate(50%, -50%);
 	}
@@ -92,7 +94,7 @@ $timeline-border-modifier: if(
 
 			.timeline-item {
 				.timeline-item-label {
-					margin-left: -($inner-spacing * 2);
+					margin-left: calc(#{$inner-spacing} * -2);
 				}
 			}
 
@@ -100,12 +102,14 @@ $timeline-border-modifier: if(
 				padding-right: $inner-spacing;
 
 				.timeline-increment {
-					right: -($inner-spacing + $timeline-border-modifier);
+					right: calc(
+						(#{$inner-spacing} + #{$timeline-border-modifier}) * -1
+					);
 				}
 
 				.timeline-item-label {
 					margin-left: auto;
-					margin-right: -($inner-spacing * 2);
+					margin-right: calc(#{$inner-spacing} * -2);
 				}
 			}
 		}
@@ -117,12 +121,14 @@ $timeline-border-modifier: if(
 			padding-right: $inner-spacing;
 
 			.timeline-increment {
-				right: -($inner-spacing + $timeline-border-modifier);
+				right: calc(
+					(#{$inner-spacing} + #{$timeline-border-modifier}) * -1
+				);
 			}
 
 			.timeline-item-label {
 				margin-left: auto;
-				margin-right: -($inner-spacing * 2);
+				margin-right: calc(#{$inner-spacing} * -2);
 			}
 		}
 	}
@@ -134,7 +140,9 @@ $timeline-border-modifier: if(
 			padding-right: $inner-spacing;
 
 			.timeline-increment {
-				right: -($inner-spacing + $timeline-border-modifier);
+				right: calc(
+					(#{$inner-spacing} + #{$timeline-border-modifier}) * -1
+				);
 			}
 		}
 	}
@@ -150,7 +158,9 @@ $timeline-border-modifier: if(
 
 				.timeline-increment {
 					left: auto;
-					right: -($inner-spacing + $timeline-border-modifier);
+					right: calc(
+						(#{$inner-spacing} + #{$timeline-border-modifier}) * -1
+					);
 				}
 			}
 		}
@@ -162,7 +172,7 @@ $timeline-border-modifier: if(
 		padding-top: $item-padding-y;
 
 		.timeline-increment {
-			left: -($inner-spacing - $timeline-border-modifier);
+			left: calc((#{$inner-spacing} - #{$timeline-border-modifier}) * -1);
 		}
 	}
 }

@@ -452,8 +452,8 @@ $cadmin-box-shadow-lg: 0 16px 48px rgba($cadmin-black, 0.175) !default;
 
 $cadmin-caret-width: 0.3em !default;
 
-$cadmin-caret-spacing: $cadmin-caret-width * 0.85 !default;
-$cadmin-caret-vertical-align: $cadmin-caret-width * 0.85 !default;
+$cadmin-caret-spacing: calc(#{$cadmin-caret-width} * 0.85) !default;
+$cadmin-caret-vertical-align: calc(#{$cadmin-caret-width} * 0.85) !default;
 
 $cadmin-transition-base: all 0.2s ease-in-out !default;
 $cadmin-transition-collapse: height 0.35s ease !default;
@@ -525,8 +525,8 @@ $cadmin-clay-container: map-merge(
 	(
 		margin-left: auto,
 		margin-right: auto,
-		padding-left: $cadmin-grid-gutter-width * 0.5,
-		padding-right: $cadmin-grid-gutter-width * 0.5,
+		padding-left: calc(#{$cadmin-grid-gutter-width} * 0.5),
+		padding-right: calc(#{$cadmin-grid-gutter-width} * 0.5),
 		width: 100%,
 	),
 	$cadmin-clay-container
@@ -537,8 +537,8 @@ $cadmin-clay-container-fluid: map-merge(
 	(
 		margin-left: auto,
 		margin-right: auto,
-		padding-left: $cadmin-grid-gutter-width * 0.5,
-		padding-right: $cadmin-grid-gutter-width * 0.5,
+		padding-left: calc(#{$cadmin-grid-gutter-width} * 0.5),
+		padding-right: calc(#{$cadmin-grid-gutter-width} * 0.5),
 		width: 100%,
 	),
 	$cadmin-clay-container-fluid
@@ -762,7 +762,7 @@ $cadmin-headings-color: null !default;
 $cadmin-headings-font-family: null !default;
 $cadmin-headings-font-weight: $cadmin-font-weight-bold !default;
 $cadmin-headings-line-height: 1.2 !default;
-$cadmin-headings-margin-bottom: $cadmin-spacer * 0.5 !default;
+$cadmin-headings-margin-bottom: calc(#{$cadmin-spacer} * 0.5) !default;
 
 $cadmin-headings: () !default;
 $cadmin-headings: map-deep-merge(
@@ -982,7 +982,7 @@ $cadmin-display-4: map-deep-merge(
 	$cadmin-display-4
 );
 
-$cadmin-lead-font-size: $cadmin-font-size-base * 1.25 !default;
+$cadmin-lead-font-size: calc(#{$cadmin-font-size-base} * 1.25) !default;
 $cadmin-lead-font-weight: 300 !default;
 
 $cadmin-small-font-size: 80% !default;
@@ -992,7 +992,7 @@ $cadmin-text-muted: $cadmin-gray-500 !default;
 $cadmin-blockquote-small-color: $cadmin-gray-600 !default;
 $cadmin-blockquote-small-font-size: $cadmin-small-font-size !default;
 
-$cadmin-blockquote-font-size: $cadmin-font-size-base * 1.25 !default;
+$cadmin-blockquote-font-size: calc(#{$cadmin-font-size-base} * 1.25) !default;
 
 $cadmin-hr-border-color: rgba($cadmin-black, 0.1) !default;
 $cadmin-hr-border-width: $cadmin-border-width !default;

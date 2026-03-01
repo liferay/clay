@@ -17,8 +17,9 @@ $toggle-switch-transition:
 $toggle-switch-bar-padding: 0 !default; // space between button and bar, can be negative value
 $toggle-switch-button-width: 25px !default;
 
-$toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) +
-	$toggle-switch-button-width !default;
+$toggle-switch-bar-height: calc(
+	(#{$toggle-switch-bar-padding} * 2) + #{$toggle-switch-button-width}
+) !default;
 $toggle-switch-bar-width: 50px !default; // width of switch bar
 
 $toggle-switch-bar-padding-mobile: $toggle-switch-bar-padding !default;
@@ -258,8 +259,11 @@ $toggle-switch-check: map-deep-merge(
 			),
 
 			toggle-switch-icon-off: (
-				left: $toggle-switch-bar-width - $toggle-switch-bar-padding -
-					$toggle-switch-button-width,
+				left:
+					calc(
+						#{$toggle-switch-bar-width} - #{$toggle-switch-bar-padding} -
+							#{$toggle-switch-button-width}
+					),
 			),
 
 			button-icon: (
@@ -306,8 +310,11 @@ $toggle-switch-check: map-deep-merge(
 						),
 					border-style: solid,
 					border-width: $toggle-switch-button-border-width,
-					left: $toggle-switch-bar-width - $toggle-switch-bar-padding -
-						$toggle-switch-button-width,
+					left:
+						calc(
+							#{$toggle-switch-bar-width} - #{$toggle-switch-bar-padding} -
+								#{$toggle-switch-button-width}
+						),
 				),
 
 				toggle-switch-handle: (
@@ -330,8 +337,11 @@ $toggle-switch-check: map-deep-merge(
 
 				button-icon: (
 					color: $toggle-switch-button-on-icon-color,
-					left: $toggle-switch-bar-width - $toggle-switch-bar-padding -
-						$toggle-switch-button-width,
+					left:
+						calc(
+							#{$toggle-switch-bar-width} - #{$toggle-switch-bar-padding} -
+								#{$toggle-switch-button-width}
+						),
 				),
 
 				button-icon-on: (
@@ -390,9 +400,11 @@ $toggle-switch-check: map-deep-merge(
 				),
 
 				toggle-switch-icon-off: (
-					left: $toggle-switch-bar-width-mobile -
-						$toggle-switch-bar-padding-mobile -
-						$toggle-switch-button-width-mobile,
+					left:
+						calc(
+							#{$toggle-switch-bar-width-mobile} - #{$toggle-switch-bar-padding-mobile} -
+								#{$toggle-switch-button-width-mobile}
+						),
 				),
 
 				button-icon: (
@@ -403,9 +415,11 @@ $toggle-switch-check: map-deep-merge(
 			checked: (
 				toggle-switch-bar: (
 					after: (
-						left: $toggle-switch-bar-width-mobile -
-							$toggle-switch-bar-padding-mobile -
-							$toggle-switch-button-width-mobile,
+						left:
+							calc(
+								#{$toggle-switch-bar-width-mobile} - #{$toggle-switch-bar-padding-mobile} -
+									#{$toggle-switch-button-width-mobile}
+							),
 					),
 
 					toggle-switch-handle: (
@@ -419,9 +433,11 @@ $toggle-switch-check: map-deep-merge(
 					),
 
 					button-icon: (
-						left: $toggle-switch-bar-width-mobile -
-							$toggle-switch-bar-padding-mobile -
-							$toggle-switch-button-width-mobile,
+						left:
+							calc(
+								#{$toggle-switch-bar-width-mobile} - #{$toggle-switch-bar-padding-mobile} -
+									#{$toggle-switch-button-width-mobile}
+							),
 					),
 				),
 			),

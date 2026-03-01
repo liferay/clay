@@ -121,11 +121,11 @@ $cadmin-management-bar-base: map-deep-merge(
 									)
 								),
 							left:
-								math-sign(
-									map-get(
-										$cadmin-management-bar-size,
-										border-left-width
-									)
+								calc(
+									#{map-get(
+											$cadmin-management-bar-size,
+											border-left-width
+										)} * -1
 								),
 							margin-top:
 								map-get(
@@ -141,11 +141,11 @@ $cadmin-management-bar-base: map-deep-merge(
 							padding-top:
 								map-get($cadmin-management-bar-size, padding-y),
 							right:
-								math-sign(
-									map-get(
-										$cadmin-management-bar-size,
-										border-right-width
-									)
+								calc(
+									#{map-get(
+											$cadmin-management-bar-size,
+											border-right-width
+										)} * -1
 								),
 						),
 					),

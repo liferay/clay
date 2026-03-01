@@ -109,10 +109,10 @@ $cadmin-label: map-deep-merge(
 		),
 
 		c-inner: (
-			margin-bottom: math-sign($cadmin-label-padding-y),
-			margin-left: math-sign($cadmin-label-padding-x),
-			margin-right: math-sign($cadmin-label-padding-x),
-			margin-top: math-sign($cadmin-label-padding-y),
+			margin-bottom: calc(#{$cadmin-label-padding-y} * -1),
+			margin-left: calc(#{$cadmin-label-padding-x} * -1),
+			margin-right: calc(#{$cadmin-label-padding-x} * -1),
+			margin-top: calc(#{$cadmin-label-padding-y} * -1),
 			max-width: none,
 		),
 	),

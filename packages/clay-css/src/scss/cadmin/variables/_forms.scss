@@ -426,24 +426,26 @@ $cadmin-form-control-label-size: map-deep-merge(
 
 // Form Control Tag Group
 
-$cadmin-form-control-tag-group-padding-y: (
-		$cadmin-input-height - $cadmin-input-border-bottom-width -
-			$cadmin-input-border-top-width - map-get(
-				$cadmin-form-control-label-size,
-				min-height
-			) - (map-get($cadmin-form-control-label-size, margin-bottom)) -
-			(map-get($cadmin-form-control-label-size, margin-top))
-	) * 0.5 !default;
+$cadmin-form-control-tag-group-padding-y: calc(
+	(
+			#{$cadmin-input-height} - #{$cadmin-input-border-bottom-width} - #{$cadmin-input-border-top-width} -
+				#{map-get($cadmin-form-control-label-size, min-height)} - #{map-get(
+					$cadmin-form-control-label-size,
+					margin-bottom
+				)} - #{map-get($cadmin-form-control-label-size, margin-top)}
+		) * 0.5
+) !default;
 
-$cadmin-form-control-inset-min-height: $cadmin-input-font-size *
-	$cadmin-input-line-height !default;
+$cadmin-form-control-inset-min-height: calc(
+	#{$cadmin-input-font-size} * #{$cadmin-input-line-height}
+) !default;
 
-$cadmin-form-control-inset-margin-y: (
-		$cadmin-input-height - $cadmin-input-border-bottom-width -
-			$cadmin-input-border-top-width -
-			($cadmin-form-control-tag-group-padding-y * 2) -
-			$cadmin-form-control-inset-min-height
-	) * 0.5 !default;
+$cadmin-form-control-inset-margin-y: calc(
+	(
+			#{$cadmin-input-height} - #{$cadmin-input-border-bottom-width} - #{$cadmin-input-border-top-width} -
+				(#{$cadmin-form-control-tag-group-padding-y} * 2) - #{$cadmin-form-control-inset-min-height}
+		) * 0.5
+) !default;
 
 $cadmin-form-control-inset: () !default;
 $cadmin-form-control-inset: map-deep-merge(
@@ -1533,9 +1535,9 @@ $cadmin-input-select-multiple: map-deep-merge(
 // Form Group Autofit
 
 $cadmin-form-group-item-label-max-width: 200px !default; // 200px
-$cadmin-form-group-item-label-spacer: (
-		$cadmin-input-label-font-size * $cadmin-line-height-base
-	) + $cadmin-input-label-margin-bottom !default;
+$cadmin-form-group-item-label-spacer: calc(
+	#{$cadmin-input-label-font-size} * #{$cadmin-line-height-base} + #{$cadmin-input-label-margin-bottom}
+) !default;
 
 // .input-group
 
@@ -1771,8 +1773,8 @@ $cadmin-input-group-inset-item-btn-monospaced: map-deep-merge(
 	(
 		font-size: 16px,
 		height: 32px,
-		margin-bottom: math-sign($cadmin-input-border-bottom-width),
-		margin-top: math-sign($cadmin-input-border-bottom-width),
+		margin-bottom: calc(#{$cadmin-input-border-bottom-width} * -1),
+		margin-top: calc(#{$cadmin-input-border-bottom-width} * -1),
 		padding: 0,
 		width: 32px,
 	),

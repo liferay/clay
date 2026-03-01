@@ -175,8 +175,8 @@ $panel: map-deep-merge(
 
 // Panel Group
 
-$panel-group-panel-margin-bottom: math-sign(
-	$panel-border-bottom-width
+$panel-group-panel-margin-bottom: calc(
+	#{$panel-border-bottom-width} * -1
 ) !default;
 
 $panel-group-panel-unstyled: () !default;

@@ -51,7 +51,7 @@ $card-section-header-font-size: 0.75rem !default;
 $card-section-header-font-weight: $font-weight-semi-bold !default;
 $card-section-header-line-height: 2.5 !default;
 $card-section-header-margin-bottom: 1.5rem !default;
-$card-section-header-padding: 0 ($grid-gutter-width * 0.5) !default;
+$card-section-header-padding: 0 calc(#{$grid-gutter-width} * 0.5) !default;
 $card-section-header-text-transform: uppercase !default;
 
 $card-section-header: () !default;
@@ -74,7 +74,7 @@ $card-img-overlay-padding: 1.25rem !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$card-group-margin: $grid-gutter-width * 0.5 !default;
+$card-group-margin: calc(#{$grid-gutter-width} * 0.5) !default;
 
 /// @deprecated as of v3.x with no replacement
 
@@ -675,12 +675,12 @@ $card-interactive-after-highlight: () !default;
 $card-interactive-after-highlight: map-deep-merge(
 	(
 		border-radius: 0 0 $card-border-radius $card-border-radius,
-		bottom: math-sign($card-border-width),
+		bottom: calc(#{$card-border-width} * -1),
 		content: '',
 		height: 0,
-		left: math-sign($card-border-width),
+		left: calc(#{$card-border-width} * -1),
 		position: absolute,
-		right: math-sign($card-border-width),
+		right: calc(#{$card-border-width} * -1),
 		transition: height 0.15s ease-out,
 
 		hover: (
@@ -937,9 +937,8 @@ $card-page-item-asset: map-deep-merge(
 	(
 		flex-basis: 100%,
 		max-width: 100%,
-		padding-left: $grid-gutter-width * 0.5,
-		padding-right: $grid-gutter-width * 0.5,
-
+		padding-left: calc(#{$grid-gutter-width} * 0.5),
+		padding-right: calc(#{$grid-gutter-width} * 0.5),
 		'@container #{map-get($card-page, container-name)} (min-width: #{map-get($container-max-widths, sm)})':
 		(
 			flex-basis: 50%,

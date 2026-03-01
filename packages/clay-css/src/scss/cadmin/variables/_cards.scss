@@ -52,7 +52,7 @@ $cadmin-card-section-header-font-size: 12px !default;
 $cadmin-card-section-header-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-card-section-header-line-height: 2.5 !default;
 $cadmin-card-section-header-margin-bottom: 24px !default;
-$cadmin-card-section-header-padding: 0 ($cadmin-grid-gutter-width * 0.5) !default;
+$cadmin-card-section-header-padding: 0 calc(#{$cadmin-grid-gutter-width} * 0.5) !default;
 $cadmin-card-section-header-text-transform: uppercase !default;
 
 $cadmin-card-section-header: () !default;
@@ -379,12 +379,12 @@ $cadmin-card-interactive-after-highlight: () !default;
 $cadmin-card-interactive-after-highlight: map-deep-merge(
 	(
 		border-radius: 0 0 $cadmin-card-border-radius $cadmin-card-border-radius,
-		bottom: math-sign($cadmin-card-border-width),
+		bottom: calc(#{$cadmin-card-border-width} * -1),
 		content: '',
 		height: 0,
-		left: math-sign($cadmin-card-border-width),
+		left: calc(#{$cadmin-card-border-width} * -1),
 		position: absolute,
-		right: math-sign($cadmin-card-border-width),
+		right: calc(#{$cadmin-card-border-width} * -1),
 		transition: height 0.15s ease-out,
 
 		hover: (
@@ -655,9 +655,8 @@ $cadmin-card-page-item-asset: map-deep-merge(
 	(
 		flex-basis: 100%,
 		max-width: 100%,
-		padding-left: $cadmin-grid-gutter-width * 0.5,
-		padding-right: $cadmin-grid-gutter-width * 0.5,
-
+		padding-left: calc(#{$cadmin-grid-gutter-width} * 0.5),
+		padding-right: calc(#{$cadmin-grid-gutter-width} * 0.5),
 		'@container #{map-get($cadmin-card-page, container-name)} (min-width: #{map-get($cadmin-container-max-widths, sm)})':
 		(
 			flex-basis: 50%,

@@ -66,10 +66,12 @@ $cadmin-nav-btn-margin-x: 4px !default; // 4px
 
 // @deprecated after v3.4.0 use the Sass map `$cadmin-nav-btn` instead
 
-$cadmin-nav-btn-margin-y: (
-		($cadmin-line-height-base * $cadmin-font-size-base) +
-			($cadmin-nav-link-padding-y * 2) - $cadmin-nav-item-monospaced-size
-	) * 0.5 !default;
+$cadmin-nav-btn-margin-y: calc(
+	(
+			#{$cadmin-line-height-base} * #{$cadmin-font-size-base} + #{$cadmin-nav-link-padding-y} *
+				2 - #{$cadmin-nav-item-monospaced-size}
+		) * 0.5
+) !default;
 
 // @deprecated after v3.4.0 use the Sass map `$cadmin-nav-btn` instead
 
@@ -104,9 +106,9 @@ $cadmin-nav-btn: map-deep-merge(
 
 		c-inner: (
 			margin-bottom: 0,
-			margin-left: math-sign($cadmin-nav-btn-padding-x),
-			margin-right: math-sign($cadmin-nav-btn-padding-x),
-			margin-top: math-sign($cadmin-btn-border-width),
+			margin-left: calc(#{$cadmin-nav-btn-padding-x} * -1),
+			margin-right: calc(#{$cadmin-nav-btn-padding-x} * -1),
+			margin-top: calc(#{$cadmin-btn-border-width} * -1),
 		),
 
 		btn-link: (
@@ -127,8 +129,8 @@ $cadmin-nav-btn-monospaced: map-deep-merge(
 		padding: 0,
 
 		c-inner: (
-			margin-left: math-sign($cadmin-btn-border-width),
-			margin-right: math-sign($cadmin-btn-border-width),
+			margin-left: calc(#{$cadmin-btn-border-width} * -1),
+			margin-right: calc(#{$cadmin-btn-border-width} * -1),
 		),
 	),
 	$cadmin-nav-btn-monospaced
@@ -165,7 +167,7 @@ $cadmin-nav-item: map-deep-merge(
 // .nav-divider
 
 $cadmin-nav-divider-color: $cadmin-gray-600 !default;
-$cadmin-nav-divider-margin-y: $cadmin-spacer * 0.5 !default;
+$cadmin-nav-divider-margin-y: calc(#{$cadmin-spacer} * 0.5) !default;
 
 $cadmin-nav-divider: () !default;
 $cadmin-nav-divider: map-deep-merge(
@@ -419,7 +421,7 @@ $cadmin-nav-tabs: map-deep-merge(
 		font-size: $cadmin-nav-tabs-font-size,
 
 		nav-item: (
-			margin-bottom: math-sign($cadmin-nav-tabs-border-width),
+			margin-bottom: calc(#{$cadmin-nav-tabs-border-width} * -1),
 		),
 
 		nav-link: $cadmin-nav-tabs-link,

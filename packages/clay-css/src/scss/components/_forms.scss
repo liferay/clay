@@ -370,7 +370,7 @@ textarea.form-control-plaintext,
 }
 
 .form-check-input {
-	margin-left: math-sign($form-check-input-gutter);
+	margin-left: calc(#{$form-check-input-gutter} * -1);
 	margin-top: $form-check-input-margin-y;
 	position: static;
 
@@ -614,13 +614,13 @@ textarea.form-control-sm,
 	.form-row {
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: math-sign($form-grid-gutter-width * 0.5);
-		margin-right: math-sign($form-grid-gutter-width * 0.5);
+		margin-left: calc(#{$form-grid-gutter-width} * -0.5);
+		margin-right: calc(#{$form-grid-gutter-width} * -0.5);
 
 		> .col,
 		> [class*='col-'] {
-			padding-left: $form-grid-gutter-width * 0.5;
-			padding-right: $form-grid-gutter-width * 0.5;
+			padding-left: calc(#{$form-grid-gutter-width} * 0.5);
+			padding-right: calc(#{$form-grid-gutter-width} * 0.5);
 		}
 	}
 
@@ -755,7 +755,7 @@ textarea.form-control-sm,
 	> .form-group-item:not(:last-child) {
 		@include media-breakpoint-up(sm) {
 			margin-bottom: 0;
-			margin-right: $grid-gutter-width * 0.5;
+			margin-right: calc(#{$grid-gutter-width} * 0.5);
 		}
 	}
 

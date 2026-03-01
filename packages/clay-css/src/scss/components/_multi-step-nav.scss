@@ -219,7 +219,7 @@
 	background-color: $multi-step-divider-bg;
 	height: $multi-step-divider-height;
 	margin-left: $multi-step-icon-size;
-	margin-top: math-sign($multi-step-divider-height);
+	margin-top: calc(#{$multi-step-divider-height} * -1);
 	position: relative;
 	top: $multi-step-divider-top;
 }
@@ -303,10 +303,10 @@
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			margin-bottom: #{math-sign($multi-step-icon-padding-bottom)};
-			margin-left: #{math-sign($multi-step-icon-padding-left)};
-			margin-right: #{math-sign($multi-step-icon-padding-right)};
-			margin-top: #{math-sign($multi-step-icon-padding-top)};
+			margin-bottom: calc(#{$multi-step-icon-padding-bottom} * -1);
+			margin-left: calc(#{$multi-step-icon-padding-left} * -1);
+			margin-right: calc(#{$multi-step-icon-padding-right} * -1);
+			margin-top: calc(#{$multi-step-icon-padding-top} * -1);
 			position: absolute;
 		}
 	}

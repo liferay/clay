@@ -597,11 +597,13 @@ $custom-control-outside: map-deep-merge(
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-switch-width: $custom-control-indicator-size * 1.75 !default;
+$custom-switch-width: calc(#{$custom-control-indicator-size} * 1.75) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-switch-indicator-border-radius: $custom-control-indicator-size * 0.5 !default;
+$custom-switch-indicator-border-radius: calc(
+	#{$custom-control-indicator-size} * 0.5
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
@@ -772,7 +774,7 @@ $custom-select-feedback-icon-padding-right: calc(
 /// @deprecated as of v3.x with no replacement
 
 $custom-select-feedback-icon-position: center right
-	($custom-select-padding-x + $custom-select-indicator-padding) !default;
+	calc(#{$custom-select-padding-x} + #{$custom-select-indicator-padding}) !default;
 
 /// @deprecated as of v3.x with no replacement
 

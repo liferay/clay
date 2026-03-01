@@ -78,10 +78,10 @@ $badge: map-deep-merge(
 		),
 
 		c-inner: (
-			margin-bottom: math-sign($badge-padding-y),
-			margin-left: math-sign($badge-padding-x),
-			margin-right: math-sign($badge-padding-x),
-			margin-top: math-sign($badge-padding-y),
+			margin-bottom: calc(#{$badge-padding-y} * -1),
+			margin-left: calc(#{$badge-padding-x} * -1),
+			margin-right: calc(#{$badge-padding-x} * -1),
+			margin-top: calc(#{$badge-padding-y} * -1),
 			max-width: none,
 		),
 	),

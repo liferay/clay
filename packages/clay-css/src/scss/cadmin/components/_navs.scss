@@ -152,7 +152,7 @@
 	.dropdown-menu {
 		@include border-top-radius(0);
 
-		margin-top: math-sign($cadmin-nav-tabs-border-width);
+		margin-top: calc(#{$cadmin-nav-tabs-border-width} * -1);
 	}
 
 	+ .tab-content {

@@ -81,8 +81,8 @@
 }
 
 %autofit-padded-no-gutters-x {
-	margin-left: math-sign($cadmin-autofit-padded-col-padding-x);
-	margin-right: math-sign($cadmin-autofit-padded-col-padding-x);
+	margin-left: calc(#{$cadmin-autofit-padded-col-padding-x} * -1);
+	margin-right: calc(#{$cadmin-autofit-padded-col-padding-x} * -1);
 	width: auto;
 
 	> .autofit-col {
@@ -98,8 +98,8 @@
 }
 
 %autofit-padded-no-gutters-y {
-	margin-bottom: math-sign($cadmin-autofit-padded-col-padding-y);
-	margin-top: math-sign($cadmin-autofit-padded-col-padding-y);
+	margin-bottom: calc(#{$cadmin-autofit-padded-col-padding-y} * -1);
+	margin-top: calc(#{$cadmin-autofit-padded-col-padding-y} * -1);
 	width: auto;
 
 	> .autofit-col {
@@ -115,10 +115,10 @@
 }
 
 %autofit-padded-no-gutters {
-	margin-bottom: math-sign($cadmin-autofit-padded-col-padding-y);
-	margin-left: math-sign($cadmin-autofit-padded-col-padding-x);
-	margin-right: math-sign($cadmin-autofit-padded-col-padding-x);
-	margin-top: math-sign($cadmin-autofit-padded-col-padding-y);
+	margin-bottom: calc(#{$cadmin-autofit-padded-col-padding-y} * -1);
+	margin-left: calc(#{$cadmin-autofit-padded-col-padding-x} * -1);
+	margin-right: calc(#{$cadmin-autofit-padded-col-padding-x} * -1);
+	margin-top: calc(#{$cadmin-autofit-padded-col-padding-y} * -1);
 	width: auto;
 
 	> .autofit-col {
@@ -392,27 +392,27 @@
 		@each $cadmin-size, $cadmin-length in $cadmin-spacers {
 			@if $cadmin-size != 0 {
 				.c-m#{$cadmin-infix}-n#{$cadmin-size} {
-					margin: math-sign($cadmin-length);
+					margin: calc(#{$cadmin-length} * -1);
 				}
 
 				.c-mt#{$cadmin-infix}-n#{$cadmin-size},
 				.c-my#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-top: math-sign($cadmin-length);
+					margin-top: calc(#{$cadmin-length} * -1);
 				}
 
 				.c-mr#{$cadmin-infix}-n#{$cadmin-size},
 				.c-mx#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-right: math-sign($cadmin-length);
+					margin-right: calc(#{$cadmin-length} * -1);
 				}
 
 				.c-mb#{$cadmin-infix}-n#{$cadmin-size},
 				.c-my#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-bottom: math-sign($cadmin-length);
+					margin-bottom: calc(#{$cadmin-length} * -1);
 				}
 
 				.c-ml#{$cadmin-infix}-n#{$cadmin-size},
 				.c-mx#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-left: math-sign($cadmin-length);
+					margin-left: calc(#{$cadmin-length} * -1);
 				}
 			}
 		}

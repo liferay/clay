@@ -15,7 +15,7 @@ $cadmin-progress-bar-transition: width 0.6s ease !default;
 
 $cadmin-progress-border-radius-lg: 100px !default;
 $cadmin-progress-font-size-lg: $cadmin-font-size-lg !default;
-$cadmin-progress-height-lg: $cadmin-progress-height * 2 !default;
+$cadmin-progress-height-lg: calc(#{$cadmin-progress-height} * 2) !default;
 
 // Progress Group
 

@@ -37,13 +37,15 @@ $data-multi-step-icon-before-content: unquote(
 $multi-step-divider-bg: $gray-200 !default;
 $multi-step-divider-height: 0.25rem !default;
 $multi-step-divider-spacer-x: 0 !default;
-$multi-step-divider-top: ($multi-step-divider-height * 0.5) +
-	($multi-step-icon-size * 0.5) !default;
+$multi-step-divider-top: calc(
+	#{$multi-step-divider-height} * 0.5 + #{$multi-step-icon-size} * 0.5
+) !default;
 
 // Multi Step Indicator
 
-$multi-step-indicator-width: $multi-step-icon-size +
-	($multi-step-divider-spacer-x * 2) !default;
+$multi-step-indicator-width: calc(
+	#{$multi-step-icon-size} + #{$multi-step-divider-spacer-x} * 2
+) !default;
 
 $multi-step-indicator-label-color: null !default;
 $multi-step-indicator-label-font-size: $font-size-base !default;

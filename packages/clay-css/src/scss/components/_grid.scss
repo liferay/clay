@@ -61,8 +61,8 @@
 	.row {
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: math-sign($grid-gutter-width * 0.5);
-		margin-right: math-sign($grid-gutter-width * 0.5);
+		margin-left: calc(#{$grid-gutter-width} * -0.5);
+		margin-right: calc(#{$grid-gutter-width} * -0.5);
 	}
 
 	// Remove the negative margin from default .row, then the horizontal padding
@@ -84,8 +84,8 @@
 
 @if $enable-grid-classes {
 	%grid-column {
-		padding-left: $grid-gutter-width * 0.5;
-		padding-right: $grid-gutter-width * 0.5;
+		padding-left: calc(#{$grid-gutter-width} * 0.5);
+		padding-right: calc(#{$grid-gutter-width} * 0.5);
 		position: relative;
 		width: 100%;
 	}
@@ -147,7 +147,7 @@
 			}
 
 			.order#{$infix}-last {
-				order: $grid-columns + 1;
+				order: calc(#{$grid-columns} + 1);
 			}
 
 			@for $i from 0 through $grid-columns {
@@ -210,8 +210,8 @@
 
 		.container &,
 		.container-fluid & {
-			margin-left: math-sign($grid-gutter-width * 0.5);
-			margin-right: math-sign($grid-gutter-width * 0.5);
+			margin-left: calc(#{$grid-gutter-width} * -0.5);
+			margin-right: calc(#{$grid-gutter-width} * -0.5);
 		}
 	}
 

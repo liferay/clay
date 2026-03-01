@@ -399,11 +399,11 @@ $caret-width: 0.3em !default;
 
 /// @deprecated as of v3.x with no replacement, Clay CSS inlines SVG icons for dropdown-toggle carets
 
-$caret-vertical-align: $caret-width * 0.85 !default;
+$caret-vertical-align: calc(#{$caret-width} * 0.85) !default;
 
 /// @deprecated as of v3.x with no replacement, Clay CSS inlines SVG icons for dropdown-toggle carets
 
-$caret-spacing: $caret-width * 0.85 !default;
+$caret-spacing: calc(#{$caret-width} * 0.85) !default;
 
 $transition-base: all 0.2s ease-in-out !default;
 $transition-collapse: height 0.35s ease !default;

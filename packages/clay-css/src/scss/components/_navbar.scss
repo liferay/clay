@@ -275,8 +275,10 @@
 
 							.container,
 							.container-fluid {
-								padding-left: $grid-gutter-width * 0.5;
-								padding-right: $grid-gutter-width * 0.5;
+								padding-left: calc(#{$grid-gutter-width} * 0.5);
+								padding-right: calc(
+									#{$grid-gutter-width} * 0.5
+								);
 							}
 
 							.navbar-nav,
@@ -308,8 +310,8 @@
 							}
 
 							.dropdown-divider {
-								margin-left: math-sign($navbar-padding-x);
-								margin-right: math-sign($navbar-padding-x);
+								margin-left: calc(#{$navbar-padding-x} * -1);
+								margin-right: calc(#{$navbar-padding-x} * -1);
 							}
 
 							.dropdown-item {
@@ -384,8 +386,10 @@
 						width: auto;
 
 						.dropdown-toggle .navbar-text-truncate {
-							max-width: $navbar-text-truncate-max-width -
-								$navbar-text-truncate-spacer-right;
+							max-width: calc(
+								#{$navbar-text-truncate-max-width} -
+									#{$navbar-text-truncate-spacer-right}
+							);
 						}
 					}
 

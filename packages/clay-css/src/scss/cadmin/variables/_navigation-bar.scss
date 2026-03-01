@@ -117,14 +117,14 @@ $cadmin-navigation-bar-base: map-deep-merge(
 									)
 								),
 							left:
-								math-sign(
-									setter(
-										map-get(
-											$cadmin-navigation-bar-size,
-											border-left-width
-										),
-										0
-									)
+								setter(
+									calc(
+										#{map-get(
+												$cadmin-navigation-bar-size,
+												border-left-width
+											)} * -1
+									),
+									0
 								),
 							margin-top:
 								setter(
@@ -167,14 +167,14 @@ $cadmin-navigation-bar-base: map-deep-merge(
 									0
 								),
 							right:
-								math-sign(
-									setter(
-										map-get(
-											$cadmin-navigation-bar-size,
-											border-right-width
-										),
-										0
-									)
+								setter(
+									calc(
+										#{map-get(
+												$cadmin-navigation-bar-size,
+												border-right-width
+											)} * -1
+									),
+									0
 								),
 						),
 					),
@@ -183,24 +183,24 @@ $cadmin-navigation-bar-base: map-deep-merge(
 						navbar-nav: (
 							dropdown-divider: (
 								margin-left:
-									math-sign(
-										setter(
-											map-get(
-												$cadmin-navigation-bar-size,
-												padding-x
-											),
-											null
-										)
+									setter(
+										calc(
+											#{map-get(
+													$cadmin-navigation-bar-size,
+													padding-x
+												)} * -1
+										),
+										null
 									),
 								margin-right:
-									math-sign(
-										setter(
-											map-get(
-												$cadmin-navigation-bar-size,
-												padding-x
-											),
-											null
-										)
+									setter(
+										calc(
+											#{map-get(
+													$cadmin-navigation-bar-size,
+													padding-x
+												)} * -1
+										),
+										null
 									),
 							),
 							dropdown-item: (

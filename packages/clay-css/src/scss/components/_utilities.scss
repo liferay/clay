@@ -81,8 +81,8 @@
 }
 
 %autofit-padded-no-gutters-x {
-	margin-left: math-sign($autofit-padded-col-padding-x);
-	margin-right: math-sign($autofit-padded-col-padding-x);
+	margin-left: calc(#{$autofit-padded-col-padding-x} * -1);
+	margin-right: calc(#{$autofit-padded-col-padding-x} * -1);
 	width: auto;
 
 	> .autofit-col {
@@ -98,8 +98,8 @@
 }
 
 %autofit-padded-no-gutters-y {
-	margin-bottom: math-sign($autofit-padded-col-padding-y);
-	margin-top: math-sign($autofit-padded-col-padding-y);
+	margin-bottom: calc(#{$autofit-padded-col-padding-y} * -1);
+	margin-top: calc(#{$autofit-padded-col-padding-y} * -1);
 	width: auto;
 
 	> .autofit-col {
@@ -115,10 +115,10 @@
 }
 
 %autofit-padded-no-gutters {
-	margin-bottom: math-sign($autofit-padded-col-padding-y);
-	margin-left: math-sign($autofit-padded-col-padding-x);
-	margin-right: math-sign($autofit-padded-col-padding-x);
-	margin-top: math-sign($autofit-padded-col-padding-y);
+	margin-bottom: calc(#{$autofit-padded-col-padding-y} * -1);
+	margin-left: calc(#{$autofit-padded-col-padding-x} * -1);
+	margin-right: calc(#{$autofit-padded-col-padding-x} * -1);
+	margin-top: calc(#{$autofit-padded-col-padding-y} * -1);
 	width: auto;
 
 	> .autofit-col {
@@ -389,27 +389,27 @@
 		@each $size, $length in $spacers {
 			@if $size != 0 {
 				.c-m#{$infix}-n#{$size} {
-					margin: math-sign($length);
+					margin: calc(#{$length} * -1);
 				}
 
 				.c-mt#{$infix}-n#{$size},
 				.c-my#{$infix}-n#{$size} {
-					margin-top: math-sign($length);
+					margin-top: calc(#{$length} * -1);
 				}
 
 				.c-mr#{$infix}-n#{$size},
 				.c-mx#{$infix}-n#{$size} {
-					margin-right: math-sign($length);
+					margin-right: calc(#{$length} * -1);
 				}
 
 				.c-mb#{$infix}-n#{$size},
 				.c-my#{$infix}-n#{$size} {
-					margin-bottom: math-sign($length);
+					margin-bottom: calc(#{$length} * -1);
 				}
 
 				.c-ml#{$infix}-n#{$size},
 				.c-mx#{$infix}-n#{$size} {
-					margin-left: math-sign($length);
+					margin-left: calc(#{$length} * -1);
 				}
 			}
 		}

@@ -34,7 +34,7 @@
 	font-size: $font-size;
 
 	@if ($height) {
-		line-height: $height - ($border-width * 2);
+		line-height: calc(#{$height} - (#{$border-width} * 2));
 	}
 
 	padding-bottom: $padding-y;

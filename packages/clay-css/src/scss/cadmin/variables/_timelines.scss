@@ -1,8 +1,9 @@
 $cadmin-timeline-border-color: $cadmin-gray-900 !default;
 $cadmin-timeline-border-width: 2px !default;
 
-$cadmin-timeline-border-modifier: ceil($cadmin-timeline-border-width * 0.5) -
-	$cadmin-panel-border-left-width !default;
+$cadmin-timeline-border-modifier: calc(
+	#{$cadmin-timeline-border-width} * 0.5 - #{$cadmin-panel-border-left-width}
+) !default;
 
 $cadmin-timeline-icon-active-bg: $cadmin-component-active-bg !default;
 $cadmin-timeline-icon-active-border-color: $cadmin-timeline-icon-active-bg !default;

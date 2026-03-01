@@ -402,7 +402,7 @@
 			height: 100%;
 			left: 50%;
 			margin-bottom: 0;
-			margin-left: calc(#{math-sign($modal-md)} / 2);
+			margin-left: calc(#{$modal-md} / -2);
 			margin-right: 0;
 			margin-top: 0;
 			top: 0;
@@ -410,23 +410,23 @@
 
 		&.modal-sm {
 			@include media-breakpoint-up(sm) {
-				margin-left: calc(#{math-sign($modal-sm)} / 2);
+				margin-left: calc(#{$modal-sm} / -2);
 			}
 		}
 
 		&.modal-lg {
 			@include media-breakpoint-up(lg) {
-				margin-left: calc(#{math-sign($modal-lg)} / 2);
+				margin-left: calc(#{$modal-lg} / -2);
 			}
 		}
 
 		&.modal-xl {
 			@include media-breakpoint-up(lg) {
-				margin-left: calc(#{math-sign($modal-lg)} / 2);
+				margin-left: calc(#{$modal-lg} / -2);
 			}
 
 			@include media-breakpoint-up(xl) {
-				margin-left: calc(#{math-sign($modal-xl)} / 2);
+				margin-left: calc(#{$modal-xl} / -2);
 			}
 		}
 	}

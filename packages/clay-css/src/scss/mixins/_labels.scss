@@ -191,22 +191,22 @@
 				margin-bottom:
 					setter(
 						map-get($c-inner, margin-bottom),
-						math-sign(map-get($base, padding-bottom))
+						calc(#{map-get($base, padding-bottom)} * -1)
 					),
 				margin-left:
 					setter(
 						map-get($c-inner, margin-left),
-						math-sign(map-get($base, padding-left))
+						calc(#{map-get($base, padding-left)} * -1)
 					),
 				margin-right:
 					setter(
 						map-get($c-inner, margin-right),
-						math-sign(map-get($base, padding-right))
+						calc(#{map-get($base, padding-right)} * -1)
 					),
 				margin-top:
 					setter(
 						map-get($c-inner, margin-top),
-						math-sign(map-get($base, padding-top))
+						calc(#{map-get($base, padding-top)} * -1)
 					),
 			)
 		);
@@ -671,22 +671,22 @@
 				margin-bottom:
 					setter(
 						map-get($c-inner, margin-bottom),
-						math-sign(map-get($map, padding-bottom))
+						calc(#{map-get($map, padding-bottom)} * -1)
 					),
 				margin-left:
 					setter(
 						map-get($c-inner, margin-left),
-						math-sign(map-get($map, padding-left))
+						calc(#{map-get($map, padding-left)} * -1)
 					),
 				margin-right:
 					setter(
 						map-get($c-inner, margin-right),
-						math-sign(map-get($map, padding-right))
+						calc(#{map-get($map, padding-right)} * -1)
 					),
 				margin-top:
 					setter(
 						map-get($c-inner, margin-top),
-						math-sign(map-get($map, padding-top))
+						calc(#{map-get($map, padding-top)} * -1)
 					),
 			)
 		);

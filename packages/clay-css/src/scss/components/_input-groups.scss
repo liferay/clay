@@ -22,7 +22,7 @@
 		+ .form-control,
 		+ .custom-select,
 		+ .custom-file {
-			margin-left: math-sign($input-border-width);
+			margin-left: calc(#{$input-border-width} * -1);
 		}
 	}
 
@@ -88,7 +88,9 @@
 
 .input-group-lg > .custom-select,
 .input-group-sm > .custom-select {
-	padding-right: $custom-select-padding-x + $custom-select-indicator-padding;
+	padding-right: calc(
+		#{$custom-select-padding-x} + #{$custom-select-indicator-padding}
+	);
 }
 
 .input-group-prepend,
@@ -97,7 +99,7 @@
 	> .btn + .input-group-text,
 	> .input-group-text + .input-group-text,
 	> .input-group-text + .btn {
-		margin-left: math-sign($input-border-width);
+		margin-left: calc(#{$input-border-width} * -1);
 	}
 
 	.btn {
@@ -325,7 +327,7 @@
 		&.input-group-prepend {
 			align-items: stretch;
 			display: flex;
-			margin-right: math-sign($input-border-left-width);
+			margin-right: calc(#{$input-border-left-width} * -1);
 		}
 
 		&.input-group-prepend:not(:last-child) {
@@ -362,7 +364,7 @@
 		&.input-group-append {
 			align-items: stretch;
 			display: flex;
-			margin-right: math-sign($input-border-left-width);
+			margin-right: calc(#{$input-border-left-width} * -1);
 		}
 
 		&.input-group-append:first-child {

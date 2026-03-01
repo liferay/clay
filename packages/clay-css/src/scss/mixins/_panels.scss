@@ -172,10 +172,10 @@
 							null
 						)
 					),
-				margin-bottom: math-sign(map-get($header, padding-bottom)),
-				margin-left: math-sign(map-get($header, padding-left)),
-				margin-right: math-sign(map-get($header, padding-right)),
-				margin-top: math-sign(map-get($header, padding-top)),
+				margin-bottom: calc(#{map-get($header, padding-bottom)} * -1),
+				margin-left: calc(#{map-get($header, padding-left)} * -1),
+				margin-right: calc(#{map-get($header, padding-right)} * -1),
+				margin-top: calc(#{map-get($header, padding-top)} * -1),
 			),
 			$header-c-inner
 		);

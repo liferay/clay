@@ -381,8 +381,12 @@ $alert-notifications-fixed-right: null !default;
 $alert-notifications-fixed-top: null !default;
 
 $alert-notifications-fixed-bottom-mobile: 1rem !default;
-$alert-notifications-fixed-left-mobile: $grid-gutter-width * 0.5 !default;
-$alert-notifications-fixed-right-mobile: $grid-gutter-width * 0.5 !default;
+$alert-notifications-fixed-left-mobile: calc(
+	#{$grid-gutter-width} * 0.5
+) !default;
+$alert-notifications-fixed-right-mobile: calc(
+	#{$grid-gutter-width} * 0.5
+) !default;
 $alert-notifications-fixed-top-mobile: null !default;
 
 $alert-notifications-fixed: () !default;
@@ -516,8 +520,8 @@ $alert-inline: map-deep-merge(
 
 		alert-autofit-row: (
 			align-items: center,
-			margin-bottom: calc(#{math-sign($alert-padding-y)} - 1px),
-			margin-top: calc(#{math-sign($alert-padding-y)} - 1px),
+			margin-bottom: calc(#{$alert-padding-y} * -1 - 1px),
+			margin-top: calc(#{$alert-padding-y} * -1 - 1px),
 			padding-bottom: 0.5625rem,
 			padding-top: 0.5625rem,
 			min-height: 3.5rem,
@@ -528,7 +532,7 @@ $alert-inline: map-deep-merge(
 		),
 
 		close: (
-			margin-top: math-sign(1rem),
+			margin-top: -1rem,
 			top: 50%,
 		),
 	),

@@ -100,14 +100,14 @@
 @if ($enable-bs4-deprecated) {
 	.card-header-tabs {
 		border-bottom: 0;
-		margin-bottom: math-sign($card-spacer-y);
-		margin-left: calc(#{math-sign($card-spacer-x)} / 2);
-		margin-right: calc(#{math-sign($card-spacer-x)} / 2);
+		margin-bottom: calc(#{$card-spacer-y} * -1);
+		margin-left: calc(#{$card-spacer-x} / -2);
+		margin-right: calc(#{$card-spacer-x} / -2);
 	}
 
 	.card-header-pills {
-		margin-left: calc(#{math-sign($card-spacer-x)} / 2);
-		margin-right: calc(#{math-sign($card-spacer-x)} / 2);
+		margin-left: calc(#{$card-spacer-x} / -2);
+		margin-right: calc(#{$card-spacer-x} / -2);
 	}
 }
 
@@ -346,8 +346,8 @@
 		@include media-breakpoint-up(sm) {
 			display: flex;
 			flex-flow: row wrap;
-			margin-left: math-sign($card-deck-margin);
-			margin-right: math-sign($card-deck-margin);
+			margin-left: calc(#{$card-deck-margin} * -1);
+			margin-right: calc(#{$card-deck-margin} * -1);
 
 			.card {
 				// Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
@@ -464,7 +464,7 @@
 			> .card-header {
 				@include border-radius(0);
 
-				margin-bottom: math-sign($card-border-width);
+				margin-bottom: calc(#{$card-border-width} * -1);
 			}
 		}
 	}
@@ -558,8 +558,8 @@
 }
 
 .card-page-item-header {
-	padding-left: $grid-gutter-width * 0.5;
-	padding-right: $grid-gutter-width * 0.5;
+	padding-left: calc(#{$grid-gutter-width} * 0.5);
+	padding-right: calc(#{$grid-gutter-width} * 0.5);
 	width: 100%;
 }
 

@@ -288,8 +288,8 @@
 	$breakpoints: $grid-breakpoints
 ) {
 	%grid-column {
-		padding-left: $gutter * 0.5;
-		padding-right: $gutter * 0.5;
+		padding-left: calc(#{$gutter} * 0.5);
+		padding-right: calc(#{$gutter} * 0.5);
 		position: relative;
 		width: 100%;
 	}
@@ -362,8 +362,8 @@
 @mixin make-container($gutter: $grid-gutter-width) {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: $gutter * 0.5;
-	padding-right: $gutter * 0.5;
+	padding-left: calc(#{$gutter} * 0.5);
+	padding-right: calc(#{$gutter} * 0.5);
 	width: 100%;
 }
 
@@ -390,8 +390,8 @@
 @mixin make-row($gutter: $grid-gutter-width) {
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: math-sign($gutter * 0.5);
-	margin-right: math-sign($gutter * 0.5);
+	margin-left: calc(#{$gutter} * -0.5);
+	margin-right: calc(#{$gutter} * -0.5);
 }
 
 /// A Bootstrap 4 mixin. This mixin is deprecated, not used in Bootstrap 4.
@@ -399,8 +399,8 @@
 /// @param {Number} $gutter[$grid-gutter-width]
 
 @mixin make-col-ready($gutter: $grid-gutter-width) {
-	padding-left: $gutter * 0.5;
-	padding-right: $gutter * 0.5;
+	padding-left: calc(#{$gutter} * 0.5);
+	padding-right: calc(#{$gutter} * 0.5);
 	position: relative;
 	width: 100%;
 }

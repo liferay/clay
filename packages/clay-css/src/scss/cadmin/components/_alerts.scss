@@ -123,7 +123,9 @@
 
 	.alert-list {
 		.alert-fluid:last-child {
-			margin-bottom: math-sign($cadmin-alert-fluid-border-bottom-width);
+			margin-bottom: calc(
+				#{$cadmin-alert-fluid-border-bottom-width} * -1
+			);
 		}
 	}
 }

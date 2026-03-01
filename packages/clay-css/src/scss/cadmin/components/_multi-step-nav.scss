@@ -10,8 +10,9 @@
 
 .multi-step-indicator-label-bottom {
 	.multi-step-item {
-		padding-bottom: $cadmin-multi-step-indicator-label-font-size *
-			$cadmin-line-height-base;
+		padding-bottom: calc(
+			#{$cadmin-multi-step-indicator-label-font-size} * #{$cadmin-line-height-base}
+		);
 	}
 
 	.multi-step-indicator-label {
@@ -21,12 +22,15 @@
 
 .multi-step-indicator-label-top {
 	.multi-step-item {
-		padding-top: $cadmin-multi-step-indicator-label-font-size *
-			$cadmin-line-height-base;
+		padding-top: calc(
+			#{$cadmin-multi-step-indicator-label-font-size} * #{$cadmin-line-height-base}
+		);
 	}
 
 	.multi-step-indicator-label {
-		bottom: $cadmin-multi-step-icon-size + $cadmin-multi-step-divider-height;
+		bottom: calc(
+			#{$cadmin-multi-step-icon-size} + #{$cadmin-multi-step-divider-height}
+		);
 	}
 }
 
@@ -205,7 +209,7 @@
 	background-color: $cadmin-multi-step-divider-bg;
 	height: $cadmin-multi-step-divider-height;
 	margin-left: $cadmin-multi-step-icon-size;
-	margin-top: math-sign($cadmin-multi-step-divider-height);
+	margin-top: calc(#{$cadmin-multi-step-divider-height} * -1);
 	position: relative;
 	top: $cadmin-multi-step-divider-top;
 }
@@ -293,10 +297,10 @@
 
 	@if ($cadmin-enable-c-inner) {
 		.c-inner {
-			margin-bottom: #{math-sign($cadmin-multi-step-icon-padding-bottom)};
-			margin-left: #{math-sign($cadmin-multi-step-icon-padding-left)};
-			margin-right: #{math-sign($cadmin-multi-step-icon-padding-right)};
-			margin-top: #{math-sign($cadmin-multi-step-icon-padding-top)};
+			margin-bottom: calc(#{$cadmin-multi-step-icon-padding-bottom} * -1);
+			margin-left: calc(#{$cadmin-multi-step-icon-padding-left} * -1);
+			margin-right: calc(#{$cadmin-multi-step-icon-padding-right} * -1);
+			margin-top: calc(#{$cadmin-multi-step-icon-padding-top} * -1);
 			position: absolute;
 		}
 	}
@@ -433,9 +437,10 @@
 		.multi-step-item {
 			margin-bottom: 0;
 			min-width: $cadmin-multi-step-icon-size;
-			padding-top: $cadmin-multi-step-title-font-size +
-				$cadmin-multi-step-title-margin-bottom +
-				($cadmin-multi-step-divider-height * 0.5);
+			padding-top: calc(
+				#{$cadmin-multi-step-title-font-size} + #{$cadmin-multi-step-title-margin-bottom} +
+					#{$cadmin-multi-step-divider-height} * 0.5
+			);
 		}
 
 		.multi-step-title {

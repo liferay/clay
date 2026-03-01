@@ -61,7 +61,7 @@ $cadmin-autofit-padded-no-gutters-sm: map-merge(
 // Close
 
 $cadmin-close-color: $cadmin-gray-900 !default;
-$cadmin-close-font-size: $cadmin-font-size-base * 1.5 !default;
+$cadmin-close-font-size: calc(#{$cadmin-font-size-base} * 1.5) !default;
 $cadmin-close-font-weight: $cadmin-font-weight-bold !default;
 $cadmin-close-text-shadow: null !default;
 

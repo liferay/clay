@@ -231,17 +231,21 @@ $c-slideout-start-sm-down: () !default;
 $c-slideout-start-sm-down: map-deep-merge(
 	(
 		c-slideout-tbar-shown-sidebar: (
-			left: math-sign($c-slideout-sidebar-width-mobile),
+			left: calc(#{$c-slideout-sidebar-width-mobile} * -1),
 		),
 
 		sidebar: (
-			left: #{math-sign($c-slideout-sidebar-width-mobile) +
-				math-sign($c-slideout-tbar-stacked-min-width-mobile)},
+			left:
+				calc(
+					(
+							#{$c-slideout-sidebar-width-mobile} + #{$c-slideout-tbar-stacked-min-width-mobile}
+						) * -1
+				),
 			width: $c-slideout-sidebar-width-mobile,
 		),
 
 		tbar-stacked: (
-			left: math-sign($c-slideout-tbar-stacked-min-width-mobile),
+			left: calc(#{$c-slideout-tbar-stacked-min-width-mobile} * -1),
 		),
 	),
 	$c-slideout-start-sm-down
@@ -255,12 +259,16 @@ $c-slideout-start: map-deep-merge(
 		top: 0,
 
 		c-slideout-tbar-shown-sidebar: (
-			left: math-sign($c-slideout-sidebar-width),
+			left: calc(#{$c-slideout-sidebar-width} * -1),
 		),
 
 		sidebar: (
-			left: #{math-sign($c-slideout-sidebar-width) +
-				math-sign($c-slideout-tbar-stacked-min-width)},
+			left:
+				calc(
+					(
+							#{$c-slideout-sidebar-width} + #{$c-slideout-tbar-stacked-min-width}
+						) * -1
+				),
 			width: $c-slideout-sidebar-width,
 		),
 
@@ -269,7 +277,7 @@ $c-slideout-start: map-deep-merge(
 		),
 
 		tbar-stacked: (
-			left: math-sign($c-slideout-tbar-stacked-min-width),
+			left: calc(#{$c-slideout-tbar-stacked-min-width} * -1),
 		),
 
 		tbar-stacked-c-slideout-show: (
@@ -289,16 +297,20 @@ $c-slideout-end-sm-down: () !default;
 $c-slideout-end-sm-down: map-deep-merge(
 	(
 		c-slideout-tbar-shown-sidebar: (
-			right: math-sign($c-slideout-sidebar-width-mobile),
+			right: calc(#{$c-slideout-sidebar-width-mobile} * -1),
 		),
 
 		sidebar: (
-			right: #{math-sign($c-slideout-sidebar-width-mobile) +
-				math-sign($c-slideout-tbar-stacked-min-width-mobile)},
+			right:
+				calc(
+					(
+							#{$c-slideout-sidebar-width-mobile} + #{$c-slideout-tbar-stacked-min-width-mobile}
+						) * -1
+				),
 		),
 
 		tbar-stacked: (
-			right: math-sign($c-slideout-tbar-stacked-min-width-mobile),
+			right: calc(#{$c-slideout-tbar-stacked-min-width-mobile} * -1),
 		),
 	),
 	$c-slideout-end-sm-down
@@ -312,12 +324,16 @@ $c-slideout-end: map-deep-merge(
 		top: 0,
 
 		c-slideout-tbar-shown-sidebar: (
-			right: math-sign($c-slideout-sidebar-width),
+			right: calc(#{$c-slideout-sidebar-width} * -1),
 		),
 
 		sidebar: (
-			right: #{math-sign($c-slideout-sidebar-width) +
-				math-sign($c-slideout-tbar-stacked-min-width)},
+			right:
+				calc(
+					(
+							#{$c-slideout-sidebar-width} + #{$c-slideout-tbar-stacked-min-width}
+						) * -1
+				),
 		),
 
 		sidebar-c-slideout-show: (
@@ -325,7 +341,7 @@ $c-slideout-end: map-deep-merge(
 		),
 
 		tbar-stacked: (
-			right: math-sign($c-slideout-tbar-stacked-min-width),
+			right: calc(#{$c-slideout-tbar-stacked-min-width} * -1),
 		),
 
 		tbar-stacked-c-slideout-show: (

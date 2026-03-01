@@ -24,8 +24,8 @@
 
 	@if ($cadmin-enable-c-inner) {
 		.c-inner {
-			margin: #{math-sign($cadmin-panel-header-padding-y)}
-				#{math-sign($cadmin-panel-header-padding-x)};
+			margin: calc(#{$cadmin-panel-header-padding-y} * -1)
+				calc(#{$cadmin-panel-header-padding-x} * -1);
 			width: auto;
 		}
 	}
@@ -42,12 +42,12 @@
 
 		@if ($cadmin-enable-c-inner) {
 			.c-inner {
-				margin-left: #{math-sign(
-						$cadmin-panel-header-collapse-icon-padding-left
-					)};
-				margin-right: #{math-sign(
-						$cadmin-panel-header-collapse-icon-padding-right
-					)};
+				margin-left: calc(
+					#{$cadmin-panel-header-collapse-icon-padding-left} * -1
+				);
+				margin-right: calc(
+					#{$cadmin-panel-header-collapse-icon-padding-right} * -1
+				);
 			}
 		}
 	}
@@ -114,7 +114,7 @@
 		&:not(:first-child) {
 			@include border-radius(0);
 
-			margin-top: math-sign($cadmin-panel-border-bottom-width);
+			margin-top: calc(#{$cadmin-panel-border-bottom-width} * -1);
 
 			.panel-header {
 				@include border-radius(0);
@@ -208,27 +208,27 @@
 	> .panel-group-fluid,
 	> .panel-group-fluid-first,
 	> .panel-group-fluid-last {
-		margin-left: math-sign($cadmin-card-spacer-x);
-		margin-right: math-sign($cadmin-card-spacer-x);
+		margin-left: calc(#{$cadmin-card-spacer-x} * -1);
+		margin-right: calc(#{$cadmin-card-spacer-x} * -1);
 	}
 }
 
 .sheet {
 	> .panel-group-fluid {
-		margin-left: math-sign($cadmin-sheet-padding-left);
-		margin-right: math-sign($cadmin-sheet-padding-right);
+		margin-left: calc(#{$cadmin-sheet-padding-left} * -1);
+		margin-right: calc(#{$cadmin-sheet-padding-right} * -1);
 	}
 
 	> .panel-group-fluid-first {
-		margin-left: math-sign($cadmin-sheet-padding-left);
-		margin-right: math-sign($cadmin-sheet-padding-right);
-		margin-top: math-sign($cadmin-sheet-padding-top);
+		margin-left: calc(#{$cadmin-sheet-padding-left} * -1);
+		margin-right: calc(#{$cadmin-sheet-padding-right} * -1);
+		margin-top: calc(#{$cadmin-sheet-padding-top} * -1);
 	}
 
 	> .panel-group-fluid-last {
-		margin-bottom: math-sign($cadmin-sheet-padding-bottom);
-		margin-left: math-sign($cadmin-sheet-padding-left);
-		margin-right: math-sign($cadmin-sheet-padding-right);
+		margin-bottom: calc(#{$cadmin-sheet-padding-bottom} * -1);
+		margin-left: calc(#{$cadmin-sheet-padding-left} * -1);
+		margin-right: calc(#{$cadmin-sheet-padding-right} * -1);
 	}
 }
 
@@ -259,12 +259,13 @@
 
 		@if ($cadmin-enable-c-inner) {
 			.c-inner {
-				margin-left: #{math-sign(
-						$cadmin-panel-group-flush-collapse-icon-padding-left
-					)};
-				margin-right: #{math-sign(
-						$cadmin-panel-group-flush-collapse-icon-padding-right
-					)};
+				margin-left: calc(
+					#{$cadmin-panel-group-flush-collapse-icon-padding-left} * -1
+				);
+				margin-right: calc(
+					#{$cadmin-panel-group-flush-collapse-icon-padding-right} *
+						-1
+				);
 			}
 		}
 	}

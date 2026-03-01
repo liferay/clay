@@ -541,10 +541,10 @@
 							true
 						)
 					),
-				margin-bottom: math-sign(map-get($map, padding-bottom)),
-				margin-left: math-sign(map-get($map, padding-left)),
-				margin-right: math-sign(map-get($map, padding-right)),
-				margin-top: math-sign(map-get($map, padding-top)),
+				margin-bottom: calc(#{map-get($map, padding-bottom)} * -1),
+				margin-left: calc(#{map-get($map, padding-left)} * -1),
+				margin-right: calc(#{map-get($map, padding-right)} * -1),
+				margin-top: calc(#{map-get($map, padding-top)} * -1),
 			),
 			$c-inner
 		);

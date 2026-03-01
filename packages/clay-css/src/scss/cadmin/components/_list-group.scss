@@ -34,7 +34,7 @@
 		$cadmin-list-group-border-color;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: math-sign($cadmin-list-group-border-width);
+	margin-bottom: calc(#{$cadmin-list-group-border-width} * -1);
 	padding: $cadmin-list-group-header-padding-y
 		$cadmin-list-group-header-padding-x;
 
@@ -166,7 +166,7 @@
 
 		&.active {
 			border-top-width: $cadmin-list-group-border-width;
-			margin-top: math-sign($cadmin-list-group-border-width);
+			margin-top: calc(#{$cadmin-list-group-border-width} * -1);
 		}
 	}
 }
@@ -238,8 +238,8 @@
 .list-group-item-action {
 	@if ($cadmin-enable-c-inner) {
 		.c-inner {
-			margin: #{math-sign($cadmin-list-group-item-padding-y)}
-				#{math-sign($cadmin-list-group-item-padding-x)};
+			margin: calc(#{$cadmin-list-group-item-padding-y} * -1)
+				calc(#{$cadmin-list-group-item-padding-x} * -1);
 			width: auto;
 		}
 	}
@@ -350,8 +350,8 @@
 	.quick-action-menu {
 		align-items: $cadmin-list-group-item-flex-align-items;
 		background-color: $cadmin-list-group-bg;
-		margin-bottom: math-sign($cadmin-list-group-item-padding-y);
-		margin-top: math-sign($cadmin-list-group-item-padding-y);
+		margin-bottom: calc(#{$cadmin-list-group-item-padding-y} * -1);
+		margin-top: calc(#{$cadmin-list-group-item-padding-y} * -1);
 		padding-bottom: $cadmin-list-group-item-padding-y;
 		padding-top: $cadmin-list-group-item-padding-y;
 	}
@@ -392,16 +392,17 @@
 
 	.quick-action-menu {
 		margin-bottom: calc(
-			#{math-sign($cadmin-list-group-item-padding-y)} + #{$cadmin-list-group-notification-item-border-bottom-width}
+			#{$cadmin-list-group-item-padding-y} * -1 + #{$cadmin-list-group-notification-item-border-bottom-width}
 		);
 		margin-top: calc(
-			#{math-sign($cadmin-list-group-item-padding-y)} + #{$cadmin-list-group-notification-item-border-top-width}
+			#{$cadmin-list-group-item-padding-y} * -1 + #{$cadmin-list-group-notification-item-border-top-width}
 		);
 	}
 
 	.autofit-col .quick-action-item {
-		margin-top: $cadmin-list-group-notification-item-border-top-width -
-			$cadmin-list-group-item-flex-offset-top;
+		margin-top: calc(
+			#{$cadmin-list-group-notification-item-border-top-width} - #{$cadmin-list-group-item-flex-offset-top}
+		);
 	}
 }
 

@@ -34,7 +34,7 @@
 
 .figure-img {
 	line-height: 1;
-	margin-bottom: $spacer * 0.5;
+	margin-bottom: calc(#{$spacer} * 0.5);
 }
 
 .figure-caption {

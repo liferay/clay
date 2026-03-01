@@ -202,11 +202,11 @@
 	.carousel-caption {
 		bottom: 20px;
 		color: $carousel-caption-color;
-		left: (100% - $carousel-caption-width) * 0.5;
+		left: calc((100% - #{$carousel-caption-width}) * 0.5);
 		padding-bottom: 20px;
 		padding-top: 20px;
 		position: absolute;
-		right: (100% - $carousel-caption-width) * 0.5;
+		right: calc((100% - #{$carousel-caption-width}) * 0.5);
 		text-align: center;
 		z-index: 10;
 	}

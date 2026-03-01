@@ -9,8 +9,8 @@
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			margin: math-sign($panel-header-padding-y)
-				math-sign($panel-header-padding-x);
+			margin: calc(#{$panel-header-padding-y} * -1)
+				calc(#{$panel-header-padding-x} * -1);
 			width: auto;
 		}
 	}
@@ -24,12 +24,12 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin-left: #{math-sign(
-						$panel-header-collapse-icon-padding-left
-					)};
-				margin-right: #{math-sign(
-						$panel-header-collapse-icon-padding-right
-					)};
+				margin-left: calc(
+					#{$panel-header-collapse-icon-padding-left} * -1
+				);
+				margin-right: calc(
+					#{$panel-header-collapse-icon-padding-right} * -1
+				);
 			}
 		}
 	}
@@ -118,7 +118,7 @@
 		&:not(:first-child) {
 			@include border-radius(0);
 
-			margin-top: math-sign($panel-border-bottom-width);
+			margin-top: calc(#{$panel-border-bottom-width} * -1);
 
 			.panel-header {
 				@include border-radius(0);
@@ -207,62 +207,75 @@
 	> .panel-group-fluid,
 	> .panel-group-fluid-first,
 	> .panel-group-fluid-last {
-		margin-left: math-sign(
-			if(variable-exists(card-spacer-x), $card-spacer-x, 1.25rem)
+		margin-left: calc(
+			#{if(variable-exists(card-spacer-x), $card-spacer-x, 1.25rem)} * -1
 		);
-		margin-right: math-sign(
-			if(variable-exists(card-spacer-x), $card-spacer-x, 1.25rem)
+		margin-right: calc(
+			#{if(variable-exists(card-spacer-x), $card-spacer-x, 1.25rem)} * -1
 		);
 	}
 }
 
 .sheet {
 	> .panel-group-fluid {
-		margin-left: math-sign(
-			if(variable-exists(sheet-padding-left), $sheet-padding-left, 1.5rem)
+		margin-left: calc(
+			#{if(
+					variable-exists(sheet-padding-left),
+					$sheet-padding-left,
+					1.5rem
+				)} * -1
 		);
-		margin-right: math-sign(
-			if(
-				variable-exists(sheet-padding-right),
-				$sheet-padding-right,
-				1.5rem
-			)
+		margin-right: calc(
+			#{if(
+					variable-exists(sheet-padding-right),
+					$sheet-padding-right,
+					1.5rem
+				)} * -1
 		);
 	}
 
 	> .panel-group-fluid-first {
-		margin-left: math-sign(
-			if(variable-exists(sheet-padding-left), $sheet-padding-left, 1.5rem)
+		margin-left: calc(
+			#{if(
+					variable-exists(sheet-padding-left),
+					$sheet-padding-left,
+					1.5rem
+				)} * -1
 		);
-		margin-right: math-sign(
-			if(
-				variable-exists(sheet-padding-right),
-				$sheet-padding-right,
-				1.5rem
-			)
+		margin-right: calc(
+			#{if(
+					variable-exists(sheet-padding-right),
+					$sheet-padding-right,
+					1.5rem
+				)} * -1
 		);
-		margin-top: math-sign(
-			if(variable-exists(sheet-padding-top), $sheet-padding-top, 1.5rem)
+		margin-top: calc(
+			#{if(variable-exists(sheet-padding-top), $sheet-padding-top, 1.5rem)} *
+				-1
 		);
 	}
 
 	> .panel-group-fluid-last {
-		margin-bottom: math-sign(
-			if(
-				variable-exists(sheet-padding-bottom),
-				$sheet-padding-bottom,
-				0.0625rem
-			)
+		margin-bottom: calc(
+			#{if(
+					variable-exists(sheet-padding-bottom),
+					$sheet-padding-bottom,
+					0.0625rem
+				)} * -1
 		);
-		margin-left: math-sign(
-			if(variable-exists(sheet-padding-left), $sheet-padding-left, 1.5rem)
+		margin-left: calc(
+			#{if(
+					variable-exists(sheet-padding-left),
+					$sheet-padding-left,
+					1.5rem
+				)} * -1
 		);
-		margin-right: math-sign(
-			if(
-				variable-exists(sheet-padding-right),
-				$sheet-padding-right,
-				1.5rem
-			)
+		margin-right: calc(
+			#{if(
+					variable-exists(sheet-padding-right),
+					$sheet-padding-right,
+					1.5rem
+				)} * -1
 		);
 	}
 }
@@ -294,12 +307,12 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin-left: #{math-sign(
-						$panel-group-flush-collapse-icon-padding-left
-					)};
-				margin-right: #{math-sign(
-						$panel-group-flush-collapse-icon-padding-right
-					)};
+				margin-left: calc(
+					#{$panel-group-flush-collapse-icon-padding-left} * -1
+				);
+				margin-right: calc(
+					#{$panel-group-flush-collapse-icon-padding-right} * -1
+				);
 			}
 		}
 	}

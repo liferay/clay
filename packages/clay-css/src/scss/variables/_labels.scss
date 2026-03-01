@@ -95,10 +95,10 @@ $label: map-deep-merge(
 		),
 
 		c-inner: (
-			margin-bottom: math-sign($label-padding-y),
-			margin-left: math-sign($label-padding-x),
-			margin-right: math-sign($label-padding-x),
-			margin-top: math-sign($label-padding-y),
+			margin-bottom: calc(#{$label-padding-y} * -1),
+			margin-left: calc(#{$label-padding-x} * -1),
+			margin-right: calc(#{$label-padding-x} * -1),
+			margin-top: calc(#{$label-padding-y} * -1),
 			max-width: none,
 		),
 

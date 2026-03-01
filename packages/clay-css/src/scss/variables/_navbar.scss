@@ -36,7 +36,9 @@ $navbar-brand-font-size: $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 // This is a string so we don't get nested calcs in `$navbar-brand-height` and `$navbar-brand-padding-y`
 
-$nav-link-height: '#{$font-size-base} * #{$line-height-base} + #{$nav-link-padding-y} * 2' !default;
+$nav-link-height: calc(
+	#{$font-size-base} * #{$line-height-base} + #{$nav-link-padding-y} * 2
+) !default;
 
 $navbar-brand-height: calc(
 	#{$navbar-brand-font-size} * #{$line-height-base}
@@ -63,7 +65,7 @@ $navbar-underline: map-deep-merge(
 		navbar-toggler-link: (
 			after: (
 				background-color: $navbar-underline-active-bg,
-				bottom: math-sign($navbar-padding-y),
+				bottom: calc(#{$navbar-padding-y} * -1),
 				content: '',
 				display: block,
 				height: 0.1875rem,
@@ -84,7 +86,7 @@ $navbar-underline: map-deep-merge(
 									after: (
 										background-color:
 											$navbar-underline-active-bg,
-										bottom: math-sign($navbar-padding-y),
+										bottom: calc(#{$navbar-padding-y} * -1),
 										content: '',
 										display: block,
 										height: 0.1875rem,

@@ -537,8 +537,9 @@ $form-control-inset-margin-y: 0.3125rem !default;
 
 // Form Group
 
-$form-group-item-label-spacer: ($input-label-font-size * $line-height-base) +
-	$input-label-margin-bottom !default;
+$form-group-item-label-spacer: calc(
+	(#{$input-label-font-size} * #{$line-height-base}) + #{$input-label-margin-bottom}
+) !default;
 
 // Input Groups
 

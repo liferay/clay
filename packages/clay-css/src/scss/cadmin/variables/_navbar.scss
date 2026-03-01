@@ -3,7 +3,7 @@ $cadmin-enable-scaling-navbar: $cadmin-enable-scaling-components !default;
 $cadmin-navbar-border-radius: null !default;
 $cadmin-navbar-font-size: 14px !default; // 14px
 $cadmin-navbar-padding-x: $cadmin-spacer !default;
-$cadmin-navbar-padding-y: $cadmin-spacer * 0.5 !default;
+$cadmin-navbar-padding-y: calc(#{$cadmin-spacer} * 0.5) !default;
 
 $cadmin-navbar-nav-link-padding-x: 8px !default;
 
@@ -34,14 +34,17 @@ $cadmin-navbar-brand-font-size: $cadmin-font-size-lg !default;
 
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 
-$cadmin-nav-link-height: $cadmin-font-size-base * $cadmin-line-height-base +
-	$cadmin-nav-link-padding-y * 2 !default;
+$cadmin-nav-link-height: calc(
+	#{$cadmin-font-size-base} * #{$cadmin-line-height-base} + #{$cadmin-nav-link-padding-y} *
+		2
+) !default;
 
-$cadmin-navbar-brand-height: $cadmin-navbar-brand-font-size *
-	$cadmin-line-height-base !default;
-$cadmin-navbar-brand-padding-y: (
-		$cadmin-nav-link-height - $cadmin-navbar-brand-height
-	) * 0.5 !default;
+$cadmin-navbar-brand-height: calc(
+	#{$cadmin-navbar-brand-font-size} * #{$cadmin-line-height-base}
+) !default;
+$cadmin-navbar-brand-padding-y: calc(
+	(#{$cadmin-nav-link-height} - #{$cadmin-navbar-brand-height}) * 0.5
+) !default;
 
 // Navbar Toggler
 
@@ -64,7 +67,7 @@ $cadmin-navbar-underline: map-deep-merge(
 		navbar-toggler-link: (
 			after: (
 				background-color: $cadmin-navbar-underline-active-bg,
-				bottom: math-sign($cadmin-navbar-padding-y),
+				bottom: calc(#{$cadmin-navbar-padding-y} * -1),
 				content: '',
 				display: block,
 				height: 0.25rem,
@@ -86,7 +89,9 @@ $cadmin-navbar-underline: map-deep-merge(
 										background-color:
 											$cadmin-navbar-underline-active-bg,
 										bottom:
-											math-sign($cadmin-navbar-padding-y),
+											calc(
+												#{$cadmin-navbar-padding-y} * -1
+											),
 										content: '',
 										display: block,
 										height: 0.25rem,

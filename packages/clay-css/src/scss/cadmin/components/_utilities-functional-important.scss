@@ -602,27 +602,27 @@
 		@each $cadmin-size, $cadmin-length in $cadmin-spacers {
 			@if $cadmin-size != 0 {
 				.m#{$cadmin-infix}-n#{$cadmin-size} {
-					margin: math-sign($cadmin-length) !important;
+					margin: calc(#{$cadmin-length} * -1) !important;
 				}
 
 				.mt#{$cadmin-infix}-n#{$cadmin-size},
 				.my#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-top: math-sign($cadmin-length) !important;
+					margin-top: calc(#{$cadmin-length} * -1) !important;
 				}
 
 				.mr#{$cadmin-infix}-n#{$cadmin-size},
 				.mx#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-right: math-sign($cadmin-length) !important;
+					margin-right: calc(#{$cadmin-length} * -1) !important;
 				}
 
 				.mb#{$cadmin-infix}-n#{$cadmin-size},
 				.my#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-bottom: math-sign($cadmin-length) !important;
+					margin-bottom: calc(#{$cadmin-length} * -1) !important;
 				}
 
 				.ml#{$cadmin-infix}-n#{$cadmin-size},
 				.mx#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-left: math-sign($cadmin-length) !important;
+					margin-left: calc(#{$cadmin-length} * -1) !important;
 				}
 			}
 		}

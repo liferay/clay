@@ -228,10 +228,10 @@
 		$btn-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
-				margin-bottom: math-sign(map-get($btn, padding-bottom)),
-				margin-left: math-sign(map-get($btn, padding-left)),
-				margin-right: math-sign(map-get($btn, padding-right)),
-				margin-top: math-sign(map-get($btn, padding-top)),
+				margin-bottom: calc(#{map-get($btn, padding-bottom)} * -1),
+				margin-left: calc(#{map-get($btn, padding-left)} * -1),
+				margin-right: calc(#{map-get($btn, padding-right)} * -1),
+				margin-top: calc(#{map-get($btn, padding-top)} * -1),
 			),
 			$btn-c-inner
 		);
@@ -307,7 +307,7 @@
 		$btn-monospaced-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
-				margin: math-sign(map-get($btn-monospaced, padding)),
+				margin: calc(#{map-get($btn-monospaced, padding)} * -1),
 			),
 			$btn-monospaced-c-inner
 		);
@@ -368,10 +368,10 @@
 		$link-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
-				margin-bottom: math-sign(map-get($link, padding-bottom)),
-				margin-left: math-sign(map-get($link, padding-left)),
-				margin-right: math-sign(map-get($link, padding-right)),
-				margin-top: math-sign(map-get($link, padding-top)),
+				margin-bottom: calc(#{map-get($link, padding-bottom)} * -1),
+				margin-left: calc(#{map-get($link, padding-left)} * -1),
+				margin-right: calc(#{map-get($link, padding-right)} * -1),
+				margin-top: calc(#{map-get($link, padding-top)} * -1),
 			),
 			$link-c-inner
 		);
@@ -448,7 +448,7 @@
 		$link-monospaced-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
-				margin: math-sign(map-get($link-monospaced, padding)),
+				margin: calc(#{map-get($link-monospaced, padding)} * -1),
 			),
 			$link-monospaced-c-inner
 		);

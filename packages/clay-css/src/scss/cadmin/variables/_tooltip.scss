@@ -94,15 +94,12 @@ $cadmin-clay-tooltip-bottom: map-deep-merge(
 
 		arrow: (
 			left: 50%,
-			margin-left: math-sign($cadmin-tooltip-arrow-width * 0.5),
+			margin-left: calc(#{$cadmin-tooltip-arrow-width} * -0.5),
 			top: 0,
 
 			before: (
 				border-bottom-color: $cadmin-tooltip-arrow-color,
-				border-width: 0
-					(
-						$cadmin-tooltip-arrow-width * 0.5,
-					)
+				border-width: 0 calc(#{$cadmin-tooltip-arrow-width} * 0.5)
 					$cadmin-tooltip-arrow-height,
 				bottom: 0,
 			),
@@ -154,21 +151,16 @@ $cadmin-clay-tooltip-left: map-deep-merge(
 
 		arrow: (
 			height: $cadmin-tooltip-arrow-width,
-			margin-top: math-sign($cadmin-tooltip-arrow-width * 0.5),
+			margin-top: calc(#{$cadmin-tooltip-arrow-width} * -0.5),
 			right: 0,
 			top: 50%,
 			width: $cadmin-tooltip-arrow-height,
 
 			before: (
 				border-left-color: $cadmin-tooltip-arrow-color,
-				border-width: (
-					$cadmin-tooltip-arrow-width * 0.5,
-				)
-				0
-				(
-					$cadmin-tooltip-arrow-width * 0.5,
-				)
-				$cadmin-tooltip-arrow-height,
+				border-width: calc(#{$cadmin-tooltip-arrow-width} * 0.5) 0
+					calc(#{$cadmin-tooltip-arrow-width} * 0.5)
+					$cadmin-tooltip-arrow-height,
 				left: 0,
 			),
 		),
@@ -220,20 +212,15 @@ $cadmin-clay-tooltip-right: map-deep-merge(
 		arrow: (
 			height: $cadmin-tooltip-arrow-width,
 			left: 0,
-			margin-top: math-sign($cadmin-tooltip-arrow-width * 0.5),
+			margin-top: calc(#{$cadmin-tooltip-arrow-width} * -0.5),
 			top: 50%,
 			width: $cadmin-tooltip-arrow-height,
 
 			before: (
 				border-right-color: $cadmin-tooltip-arrow-color,
-				border-width: (
-					$cadmin-tooltip-arrow-width * 0.5,
-				)
-				$cadmin-tooltip-arrow-height
-				(
-					$cadmin-tooltip-arrow-width * 0.5,
-				)
-				0,
+				border-width: calc(#{$cadmin-tooltip-arrow-width} * 0.5)
+					$cadmin-tooltip-arrow-height
+					calc(#{$cadmin-tooltip-arrow-width} * 0.5) 0,
 				right: 0,
 			),
 		),
@@ -285,14 +272,11 @@ $cadmin-tooltip-top: map-deep-merge(
 		arrow: (
 			bottom: 0,
 			left: 50%,
-			margin-left: math-sign($cadmin-tooltip-arrow-width * 0.5),
+			margin-left: calc(#{$cadmin-tooltip-arrow-width} * -0.5),
 			before: (
 				border-top-color: $cadmin-tooltip-arrow-color,
 				border-width: $cadmin-tooltip-arrow-height
-					(
-						$cadmin-tooltip-arrow-width * 0.5,
-					)
-					0,
+					calc(#{$cadmin-tooltip-arrow-width} * 0.5) 0,
 				top: 0,
 			),
 		),

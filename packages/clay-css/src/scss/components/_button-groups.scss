@@ -25,7 +25,7 @@
 .btn-group {
 	> .btn:not(:first-child),
 	> .btn-group:not(:first-child) {
-		margin-left: math-sign($btn-border-width);
+		margin-left: calc(#{$btn-border-width} * -1);
 	}
 
 	> .btn::after {
@@ -158,7 +158,7 @@
 
 	> .btn:not(:first-child),
 	> .btn-group:not(:first-child) {
-		margin-top: math-sign($btn-border-width);
+		margin-top: calc(#{$btn-border-width} * -1);
 	}
 
 	> .btn:not(:last-child):not(.dropdown-toggle),

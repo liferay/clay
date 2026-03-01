@@ -18,7 +18,7 @@
 		position: relative;
 
 		+ .form-control {
-			margin-left: math-sign($cadmin-input-border-width);
+			margin-left: calc(#{$cadmin-input-border-width} * -1);
 		}
 	}
 
@@ -45,7 +45,7 @@
 	> .btn + .input-group-text,
 	> .input-group-text + .input-group-text,
 	> .input-group-text + .btn {
-		margin-left: math-sign($cadmin-input-border-width);
+		margin-left: calc(#{$cadmin-input-border-width} * -1);
 	}
 
 	.btn {
@@ -275,7 +275,7 @@
 		&.input-group-prepend {
 			align-items: stretch;
 			display: flex;
-			margin-right: math-sign($cadmin-input-border-left-width);
+			margin-right: calc(#{$cadmin-input-border-left-width} * -1);
 		}
 
 		&.input-group-prepend:not(:last-child) {
@@ -312,7 +312,7 @@
 		&.input-group-append {
 			align-items: stretch;
 			display: flex;
-			margin-right: math-sign($cadmin-input-border-left-width);
+			margin-right: calc(#{$cadmin-input-border-left-width} * -1);
 		}
 
 		&.input-group-append:first-child {

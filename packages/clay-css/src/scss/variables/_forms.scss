@@ -1372,7 +1372,7 @@ $input-select-bg-size: 8px 10px !default;
 $input-select-cursor: $link-cursor !default;
 $input-select-padding-bottom: null !default;
 $input-select-padding-left: null !default;
-$input-select-padding-right: 1rem + $input-btn-padding-x !default;
+$input-select-padding-right: calc(1rem + #{$input-btn-padding-x}) !default;
 $input-select-padding-top: null !default;
 
 $input-select-icon-color: $input-color !default;
@@ -1767,8 +1767,8 @@ $input-group-inset-item-btn-monospaced: map-deep-merge(
 	(
 		font-size: 1rem,
 		height: 2rem,
-		margin-bottom: math-sign($input-border-bottom-width),
-		margin-top: math-sign($input-border-top-width),
+		margin-bottom: calc(#{$input-border-bottom-width} * -1),
+		margin-top: calc(#{$input-border-top-width} * -1),
 		padding: 0,
 		width: 2rem,
 	),

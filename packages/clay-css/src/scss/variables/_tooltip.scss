@@ -94,15 +94,12 @@ $clay-tooltip-bottom: map-deep-merge(
 
 		arrow: (
 			left: 50%,
-			margin-left: math-sign($tooltip-arrow-width * 0.5),
+			margin-left: calc(#{$tooltip-arrow-width} * -0.5),
 			top: 0,
 
 			before: (
 				border-bottom-color: $tooltip-arrow-color,
-				border-width: 0
-					(
-						$tooltip-arrow-width * 0.5,
-					)
+				border-width: 0 calc(#{$tooltip-arrow-width} * 0.5)
 					$tooltip-arrow-height,
 				bottom: 0,
 			),
@@ -154,21 +151,15 @@ $clay-tooltip-left: map-deep-merge(
 
 		arrow: (
 			height: $tooltip-arrow-width,
-			margin-top: math-sign($tooltip-arrow-width * 0.5),
+			margin-top: calc(#{$tooltip-arrow-width} * -0.5),
 			right: 0,
 			top: 50%,
 			width: $tooltip-arrow-height,
 
 			before: (
 				border-left-color: $tooltip-arrow-color,
-				border-width: (
-					$tooltip-arrow-width * 0.5,
-				)
-				0
-				(
-					$tooltip-arrow-width * 0.5,
-				)
-				$tooltip-arrow-height,
+				border-width: calc(#{$tooltip-arrow-width} * 0.5) 0
+					calc(#{$tooltip-arrow-width} * 0.5) $tooltip-arrow-height,
 				left: 0,
 			),
 		),
@@ -220,20 +211,14 @@ $clay-tooltip-right: map-deep-merge(
 		arrow: (
 			height: $tooltip-arrow-width,
 			left: 0,
-			margin-top: math-sign($tooltip-arrow-width * 0.5),
+			margin-top: calc(#{$tooltip-arrow-width} * -0.5),
 			width: $tooltip-arrow-height,
 			top: 50%,
 
 			before: (
 				border-right-color: $tooltip-arrow-color,
-				border-width: (
-					$tooltip-arrow-width * 0.5,
-				)
-				$tooltip-arrow-height
-				(
-					$tooltip-arrow-width * 0.5,
-				)
-				0,
+				border-width: calc(#{$tooltip-arrow-width} * 0.5)
+					$tooltip-arrow-height calc(#{$tooltip-arrow-width} * 0.5) 0,
 				right: 0,
 			),
 		),
@@ -285,14 +270,11 @@ $clay-tooltip-top: map-deep-merge(
 		arrow: (
 			bottom: 0,
 			left: 50%,
-			margin-left: math-sign($tooltip-arrow-width * 0.5),
+			margin-left: calc(#{$tooltip-arrow-width} * -0.5),
 			before: (
 				border-top-color: $tooltip-arrow-color,
 				border-width: $tooltip-arrow-height
-					(
-						$tooltip-arrow-width * 0.5,
-					)
-					0,
+					calc(#{$tooltip-arrow-width} * 0.5) 0,
 				top: 0,
 			),
 		),

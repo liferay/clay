@@ -134,16 +134,16 @@ $cadmin-modal-body: map-deep-merge(
 		color: $cadmin-modal-body-color,
 		flex-grow: 1,
 		flex-shrink: 1,
-		margin-top: math-sign($cadmin-modal-content-border-width),
+		margin-top: calc(#{$cadmin-modal-content-border-width} * -1),
 		overflow: auto,
 		overflow-wrap: break-word,
 		padding: $cadmin-modal-inner-padding,
 		position: relative,
 
 		'.aspect-ratio': (
-			margin-left: math-sign($cadmin-modal-inner-padding),
-			margin-right: math-sign($cadmin-modal-inner-padding),
-			top: math-sign($cadmin-modal-inner-padding),
+			margin-left: calc(#{$cadmin-modal-inner-padding} * -1),
+			margin-right: calc(#{$cadmin-modal-inner-padding} * -1),
+			top: calc(#{$cadmin-modal-inner-padding} * -1),
 		),
 
 		'> .close': (
@@ -349,11 +349,11 @@ $cadmin-modal: map-deep-merge(
 
 		close: (
 			'&:first-child': (
-				margin-left: math-sign($cadmin-modal-close-spacer-x),
+				margin-left: calc(#{$cadmin-modal-close-spacer-x} * -1),
 			),
 
 			'&:last-child': (
-				margin-right: math-sign($cadmin-modal-close-spacer-x),
+				margin-right: calc(#{$cadmin-modal-close-spacer-x} * -1),
 			),
 		),
 

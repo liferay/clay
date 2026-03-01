@@ -25,7 +25,7 @@
 .btn-group {
 	> .btn:not(:first-child),
 	> .btn-group:not(:first-child) {
-		margin-left: math-sign($cadmin-btn-border-width);
+		margin-left: calc(#{$cadmin-btn-border-width} * -1);
 	}
 
 	> .btn:not(:last-child):not(.dropdown-toggle),
@@ -123,7 +123,7 @@
 
 	> .btn:not(:first-child),
 	> .btn-group:not(:first-child) {
-		margin-top: math-sign($cadmin-btn-border-width);
+		margin-top: calc(#{$cadmin-btn-border-width} * -1);
 	}
 
 	> .btn:not(:last-child):not(.dropdown-toggle),

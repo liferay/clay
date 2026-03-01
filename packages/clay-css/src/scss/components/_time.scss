@@ -33,11 +33,11 @@
 	@include clay-css($clay-time-edit);
 
 	&:first-child {
-		margin-left: math-sign(map-get($clay-time-edit, padding-left));
+		margin-left: calc(#{map-get($clay-time-edit, padding-left)} * -1);
 	}
 
 	&:last-child {
-		margin-right: math-sign(map-get($clay-time-edit, padding-left));
+		margin-right: calc(#{map-get($clay-time-edit, padding-left)} * -1);
 	}
 }
 

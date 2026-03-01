@@ -347,10 +347,8 @@ $cadmin-c-table: map-deep-merge(
 				$cadmin-c-table-tbody,
 				(
 					tbody: (
-						border-top: (
-							2 * $cadmin-table-border-width,
-						)
-						solid $cadmin-table-border-color,
+						border-top: calc(2 * #{$cadmin-table-border-width})
+							solid $cadmin-table-border-color,
 					),
 				)
 			),
@@ -495,10 +493,10 @@ $cadmin-c-tr-table-focus: map-deep-merge(
 				content: '',
 				display: block,
 				position: absolute,
-				left: math-sign($cadmin-table-border-width),
-				right: math-sign($cadmin-table-border-width),
-				top: math-sign($cadmin-table-border-width),
-				bottom: math-sign($cadmin-table-border-width),
+				left: calc(#{$cadmin-table-border-width} * -1),
+				right: calc(#{$cadmin-table-border-width} * -1),
+				top: calc(#{$cadmin-table-border-width} * -1),
+				bottom: calc(#{$cadmin-table-border-width} * -1),
 				pointer-events: none,
 				z-index: 1,
 			),
@@ -515,7 +513,7 @@ $cadmin-c-tr-table-focus: map-deep-merge(
 					pointer-events: none,
 					top: $cadmin-table-border-width,
 					bottom: $cadmin-table-border-width,
-					left: math-sign($cadmin-table-border-width),
+					left: calc(#{$cadmin-table-border-width} * -1),
 					z-index: 1,
 					width: 4px,
 				),
@@ -533,7 +531,7 @@ $cadmin-c-tr-table-focus: map-deep-merge(
 					pointer-events: none,
 					top: $cadmin-table-border-width,
 					bottom: $cadmin-table-border-width,
-					right: math-sign($cadmin-table-border-width),
+					right: calc(#{$cadmin-table-border-width} * -1),
 					z-index: 1,
 					width: 4px,
 				),

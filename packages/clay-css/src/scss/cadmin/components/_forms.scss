@@ -402,7 +402,7 @@ textarea.form-control-plaintext,
 }
 
 .form-check-input {
-	margin-left: math-sign($cadmin-form-check-input-gutter);
+	margin-left: calc(#{$cadmin-form-check-input-gutter} * -1);
 	margin-top: $cadmin-form-check-input-margin-y;
 	position: static;
 
@@ -643,7 +643,7 @@ textarea.form-control-sm,
 	> .form-group-item:not(:last-child) {
 		@include media-breakpoint-up(sm, $cadmin-grid-breakpoints) {
 			margin-bottom: 0;
-			margin-right: $cadmin-grid-gutter-width * 0.5;
+			margin-right: calc(#{$cadmin-grid-gutter-width} * 0.5);
 		}
 	}
 

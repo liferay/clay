@@ -20,21 +20,19 @@
 	margin-top: $popover-arrow-height;
 
 	> .arrow {
-		top: calc(
-			#{math-sign($popover-arrow-height)} - #{$popover-border-width}
-		);
+		top: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
 
 		&::before {
 			border-bottom-color: $popover-arrow-outer-color;
-			border-width: 0 ($popover-arrow-width * 0.5) $popover-arrow-height
-				($popover-arrow-width * 0.5);
+			border-width: 0 calc(#{$popover-arrow-width} * 0.5)
+				$popover-arrow-height calc(#{$popover-arrow-width} * 0.5);
 			top: 0;
 		}
 
 		&::after {
 			border-bottom-color: $popover-bottom-arrow-color;
-			border-width: 0 ($popover-arrow-width * 0.5) $popover-arrow-height
-				($popover-arrow-width * 0.5);
+			border-width: 0 calc(#{$popover-arrow-width} * 0.5)
+				$popover-arrow-height calc(#{$popover-arrow-width} * 0.5);
 			top: $popover-border-width;
 		}
 	}
@@ -46,7 +44,7 @@
 		content: '';
 		display: block;
 		left: 50%;
-		margin-left: calc(#{math-sign($popover-arrow-width)} / 2);
+		margin-left: calc(#{$popover-arrow-width} / -2);
 		position: absolute;
 		top: 0;
 		width: $popover-arrow-width;
@@ -59,22 +57,20 @@
 	> .arrow {
 		height: $popover-arrow-width;
 		margin: $popover-border-radius 0;
-		right: calc(
-			#{math-sign($popover-arrow-height)} - #{$popover-border-width}
-		);
+		right: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
 		width: $popover-arrow-height;
 
 		&::before {
 			border-left-color: $popover-arrow-outer-color;
-			border-width: ($popover-arrow-width * 0.5) 0
-				($popover-arrow-width * 0.5) $popover-arrow-height;
+			border-width: calc(#{$popover-arrow-width} * 0.5) 0
+				calc(#{$popover-arrow-width} * 0.5) $popover-arrow-height;
 			right: 0;
 		}
 
 		&::after {
 			border-left-color: $popover-left-arrow-color;
-			border-width: ($popover-arrow-width * 0.5) 0
-				($popover-arrow-width * 0.5) $popover-arrow-height;
+			border-width: calc(#{$popover-arrow-width} * 0.5) 0
+				calc(#{$popover-arrow-width} * 0.5) $popover-arrow-height;
 			right: $popover-border-width;
 		}
 	}
@@ -85,23 +81,21 @@
 
 	> .arrow {
 		height: $popover-arrow-width;
-		left: calc(
-			#{math-sign($popover-arrow-height)} - #{$popover-border-width}
-		);
+		left: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
 		margin: $popover-border-radius 0;
 		width: $popover-arrow-height;
 
 		&::before {
 			border-right-color: $popover-arrow-outer-color;
-			border-width: ($popover-arrow-width * 0.5) $popover-arrow-height
-				($popover-arrow-width * 0.5) 0;
+			border-width: calc(#{$popover-arrow-width} * 0.5)
+				$popover-arrow-height calc(#{$popover-arrow-width} * 0.5) 0;
 			left: 0;
 		}
 
 		&::after {
 			border-right-color: $popover-right-arrow-color;
-			border-width: ($popover-arrow-width * 0.5) $popover-arrow-height
-				($popover-arrow-width * 0.5) 0;
+			border-width: calc(#{$popover-arrow-width} * 0.5)
+				$popover-arrow-height calc(#{$popover-arrow-width} * 0.5) 0;
 			left: $popover-border-width;
 		}
 	}
@@ -112,18 +106,20 @@
 
 	> .arrow {
 		bottom: calc(
-			#{math-sign($popover-arrow-height)} - #{$popover-border-width}
+			(#{$popover-arrow-height} + #{$popover-border-width}) * -1
 		);
 
 		&::before {
 			border-top-color: $popover-arrow-outer-color;
-			border-width: $popover-arrow-height ($popover-arrow-width * 0.5) 0;
+			border-width: $popover-arrow-height
+				calc(#{$popover-arrow-width} * 0.5) 0;
 			bottom: 0;
 		}
 
 		&::after {
 			border-top-color: $popover-top-arrow-color;
-			border-width: $popover-arrow-height ($popover-arrow-width * 0.5) 0;
+			border-width: $popover-arrow-height
+				calc(#{$popover-arrow-width} * 0.5) 0;
 			bottom: $popover-border-width;
 		}
 	}

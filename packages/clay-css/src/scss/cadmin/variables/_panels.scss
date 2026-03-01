@@ -96,8 +96,8 @@ $cadmin-panel-title-small-margin-left: 6px !default; // 6px
 
 // Panel Group
 
-$cadmin-panel-group-panel-margin-bottom: math-sign(
-	$cadmin-panel-border-bottom-width
+$cadmin-panel-group-panel-margin-bottom: calc(
+	#{$cadmin-panel-border-bottom-width} * -1
 ) !default;
 
 $cadmin-panel-group-panel-unstyled: () !default;

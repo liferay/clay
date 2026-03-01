@@ -21,20 +21,22 @@
 
 	> .arrow {
 		top: calc(
-			#{math-sign($cadmin-popover-arrow-height)} - #{$cadmin-popover-border-width}
+			#{$cadmin-popover-arrow-height} * -1 - #{$cadmin-popover-border-width}
 		);
 
 		&::before {
 			border-bottom-color: $cadmin-popover-arrow-outer-color;
-			border-width: 0 ($cadmin-popover-arrow-width * 0.5)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5);
+			border-width: 0 calc(#{$cadmin-popover-arrow-width} * 0.5)
+				$cadmin-popover-arrow-height
+				calc(#{$cadmin-popover-arrow-width} * 0.5);
 			top: 0;
 		}
 
 		&::after {
 			border-bottom-color: $cadmin-popover-bottom-arrow-color;
-			border-width: 0 ($cadmin-popover-arrow-width * 0.5)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5);
+			border-width: 0 calc(#{$cadmin-popover-arrow-width} * 0.5)
+				$cadmin-popover-arrow-height
+				calc(#{$cadmin-popover-arrow-width} * 0.5);
 			top: $cadmin-popover-border-width;
 		}
 	}
@@ -47,7 +49,7 @@
 		content: '';
 		display: block;
 		left: 50%;
-		margin-left: calc(#{math-sign($cadmin-popover-arrow-width)} / 2);
+		margin-left: calc(#{$cadmin-popover-arrow-width} / -2);
 		position: absolute;
 		top: 0;
 		width: $cadmin-popover-arrow-width;
@@ -61,21 +63,23 @@
 		height: $cadmin-popover-arrow-width;
 		margin: $cadmin-popover-border-radius 0;
 		right: calc(
-			#{math-sign($cadmin-popover-arrow-height)} - #{$cadmin-popover-border-width}
+			#{$cadmin-popover-arrow-height} * -1 - #{$cadmin-popover-border-width}
 		);
 		width: $cadmin-popover-arrow-height;
 
 		&::before {
 			border-left-color: $cadmin-popover-arrow-outer-color;
-			border-width: ($cadmin-popover-arrow-width * 0.5) 0
-				($cadmin-popover-arrow-width * 0.5) $cadmin-popover-arrow-height;
+			border-width: calc(#{$cadmin-popover-arrow-width} * 0.5) 0
+				calc(#{$cadmin-popover-arrow-width} * 0.5)
+				$cadmin-popover-arrow-height;
 			right: 0;
 		}
 
 		&::after {
 			border-left-color: $cadmin-popover-left-arrow-color;
-			border-width: ($cadmin-popover-arrow-width * 0.5) 0
-				($cadmin-popover-arrow-width * 0.5) $cadmin-popover-arrow-height;
+			border-width: calc(#{$cadmin-popover-arrow-width} * 0.5) 0
+				calc(#{$cadmin-popover-arrow-width} * 0.5)
+				$cadmin-popover-arrow-height;
 			right: $cadmin-popover-border-width;
 		}
 	}
@@ -87,24 +91,24 @@
 	> .arrow {
 		height: $cadmin-popover-arrow-width;
 		left: calc(
-			#{math-sign($cadmin-popover-arrow-height)} - #{$cadmin-popover-border-width}
+			#{$cadmin-popover-arrow-height} * -1 - #{$cadmin-popover-border-width}
 		);
 		margin: $cadmin-popover-border-radius 0;
 		width: $cadmin-popover-arrow-height;
 
 		&::before {
 			border-right-color: $cadmin-popover-arrow-outer-color;
-			border-width: ($cadmin-popover-arrow-width * 0.5)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5)
-				0;
+			border-width: calc(#{$cadmin-popover-arrow-width} * 0.5)
+				$cadmin-popover-arrow-height
+				calc(#{$cadmin-popover-arrow-width} * 0.5) 0;
 			left: 0;
 		}
 
 		&::after {
 			border-right-color: $cadmin-popover-right-arrow-color;
-			border-width: ($cadmin-popover-arrow-width * 0.5)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5)
-				0;
+			border-width: calc(#{$cadmin-popover-arrow-width} * 0.5)
+				$cadmin-popover-arrow-height
+				calc(#{$cadmin-popover-arrow-width} * 0.5) 0;
 			left: $cadmin-popover-border-width;
 		}
 	}
@@ -115,20 +119,20 @@
 
 	> .arrow {
 		bottom: calc(
-			#{math-sign($cadmin-popover-arrow-height)} - #{$cadmin-popover-border-width}
+			#{$cadmin-popover-arrow-height} * -1 - #{$cadmin-popover-border-width}
 		);
 
 		&::before {
 			border-top-color: $cadmin-popover-arrow-outer-color;
 			border-width: $cadmin-popover-arrow-height
-				($cadmin-popover-arrow-width * 0.5) 0;
+				calc(#{$cadmin-popover-arrow-width} * 0.5) 0;
 			bottom: 0;
 		}
 
 		&::after {
 			border-top-color: $cadmin-popover-top-arrow-color;
 			border-width: $cadmin-popover-arrow-height
-				($cadmin-popover-arrow-width * 0.5) 0;
+				calc(#{$cadmin-popover-arrow-width} * 0.5) 0;
 			bottom: $cadmin-popover-border-width;
 		}
 	}

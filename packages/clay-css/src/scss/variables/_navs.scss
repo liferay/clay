@@ -106,15 +106,15 @@ $nav-btn: map-deep-merge(
 
 		c-inner: (
 			margin-bottom: 0,
-			margin-left: math-sign($nav-btn-padding-x),
-			margin-right: math-sign($nav-btn-padding-x),
+			margin-left: calc(#{$nav-btn-padding-x} * -1),
+			margin-right: calc(#{$nav-btn-padding-x} * -1),
 			margin-top:
-				math-sign(
-					if(
-						variable-exists(btn-border-width),
-						$btn-border-width,
-						$border-width
-					)
+				calc(
+					#{if(
+							variable-exists(btn-border-width),
+							$btn-border-width,
+							$border-width
+						)} * -1
 				),
 		),
 
@@ -139,20 +139,20 @@ $nav-btn-monospaced: map-deep-merge(
 
 		c-inner: (
 			margin-left:
-				math-sign(
-					if(
-						variable-exists(btn-border-width),
-						$btn-border-width,
-						$border-width
-					)
+				calc(
+					#{if(
+							variable-exists(btn-border-width),
+							$btn-border-width,
+							$border-width
+						)} * -1
 				),
 			margin-right:
-				math-sign(
-					if(
-						variable-exists(btn-border-width),
-						$btn-border-width,
-						$border-width
-					)
+				calc(
+					#{if(
+							variable-exists(btn-border-width),
+							$btn-border-width,
+							$border-width
+						)} * -1
 				),
 		),
 	),
@@ -476,7 +476,7 @@ $nav-tabs: map-deep-merge(
 		font-size: $nav-tabs-font-size,
 
 		nav-item: (
-			margin-bottom: math-sign($nav-tabs-border-width),
+			margin-bottom: calc(#{$nav-tabs-border-width} * -1),
 		),
 
 		nav-link: $nav-tabs-link,
@@ -484,7 +484,7 @@ $nav-tabs: map-deep-merge(
 		dropdown-menu: (
 			border-top-left-radius: clay-enable-rounded(0),
 			border-top-right-radius: clay-enable-rounded(0),
-			margin-top: math-sign($nav-tabs-border-width),
+			margin-top: calc(#{$nav-tabs-border-width} * -1),
 		),
 
 		tab-content: (

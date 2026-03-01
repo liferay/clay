@@ -7,11 +7,13 @@ $toggle-switch-button-width: 16px !default; // 24px
 
 $toggle-switch-button-width-mobile: 16px !default; // 16px
 
-$toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) +
-	$toggle-switch-button-width !default;
+$toggle-switch-bar-height: calc(
+	(#{$toggle-switch-bar-padding} * 2) + #{$toggle-switch-button-width}
+) !default;
 
-$toggle-switch-bar-height-mobile: ($toggle-switch-bar-padding-mobile * 2) +
-	$toggle-switch-button-width-mobile !default;
+$toggle-switch-bar-height-mobile: calc(
+	(#{$toggle-switch-bar-padding-mobile} * 2) + #{$toggle-switch-button-width-mobile}
+) !default;
 
 $toggle-switch-bar-width: 48px !default; // width of switch bar
 

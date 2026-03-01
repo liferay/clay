@@ -17,7 +17,9 @@ $cadmin-zindex-clay-range-input-form-control: 1 !default;
 
 $cadmin-zindex-input-group-hover: 3 !default;
 
-$cadmin-zindex-input-group-focus: $cadmin-zindex-input-group-hover + 1 !default; // 4
+$cadmin-zindex-input-group-focus: calc(
+	#{$cadmin-zindex-input-group-hover} + 1
+) !default; // 4
 
 $cadmin-zindex-navbar-collapse-absolute: 500 !default;
 
@@ -25,11 +27,13 @@ $cadmin-zindex-navbar-overlay: 450 !default;
 
 $cadmin-zindex-navbar-toggler-focus: 525 !default;
 
-$cadmin-zindex-menubar-vertical-expand-md-collapse-mobile: $cadmin-zindex-navbar-collapse-absolute -
-	1 !default; // 499
+$cadmin-zindex-menubar-vertical-expand-md-collapse-mobile: calc(
+	#{$cadmin-zindex-navbar-collapse-absolute} - 1
+) !default; // 499
 
-$cadmin-zindex-menubar-vertical-expand-lg-collapse-mobile: $cadmin-zindex-navbar-collapse-absolute -
-	1 !default; // 499
+$cadmin-zindex-menubar-vertical-expand-lg-collapse-mobile: calc(
+	#{$cadmin-zindex-navbar-collapse-absolute} - 1
+) !default; // 499
 
 $cadmin-zindex-pagination-link-focus: 4 !default;
 

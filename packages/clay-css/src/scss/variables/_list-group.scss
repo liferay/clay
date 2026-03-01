@@ -37,7 +37,7 @@ $list-group-item-flex: () !default;
 $list-group-item-flex: map-deep-merge(
 	(
 		display: flex,
-		margin-bottom: math-sign($list-group-border-width),
+		margin-bottom: calc(#{$list-group-border-width} * -1),
 		padding-left: calc(#{$list-group-item-padding-x} * 0.5),
 		padding-right: calc(#{$list-group-item-padding-x} * 0.5),
 		autofit-col: (

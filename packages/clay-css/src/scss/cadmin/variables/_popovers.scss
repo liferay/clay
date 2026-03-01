@@ -32,7 +32,7 @@ $cadmin-popover-offset-border-width: $cadmin-popover-inner-border-radius !defaul
 $cadmin-popover-arrow-color: $cadmin-popover-bg !default;
 $cadmin-popover-arrow-height: 4.8px !default;
 $cadmin-popover-arrow-offset: 10px !default; // 10px
-$cadmin-popover-arrow-width: $cadmin-popover-arrow-height * 2 !default;
+$cadmin-popover-arrow-width: calc(#{$cadmin-popover-arrow-height} * 2) !default;
 
 $cadmin-popover-arrow-outer-color: transparent !default;
 
@@ -213,7 +213,7 @@ $cadmin-clay-popover-top: map-deep-merge(
 
 		arrow: (
 			left: 50%,
-			margin-left: math-sign($cadmin-popover-arrow-width * 0.5),
+			margin-left: calc(#{$cadmin-popover-arrow-width} * -0.5),
 			bottom:
 				calc(
 					(
@@ -225,20 +225,14 @@ $cadmin-clay-popover-top: map-deep-merge(
 			before: (
 				border-top-color: $cadmin-popover-arrow-outer-color,
 				border-width: $cadmin-popover-arrow-height
-					(
-						$cadmin-popover-arrow-width * 0.5,
-					)
-					0,
+					calc(#{$cadmin-popover-arrow-width} * 0.5) 0,
 				bottom: 0,
 			),
 
 			after: (
 				border-top-color: $cadmin-popover-top-arrow-color,
 				border-width: $cadmin-popover-arrow-height
-					(
-						$cadmin-popover-arrow-width * 0.5,
-					)
-					0,
+					calc(#{$cadmin-popover-arrow-width} * 0.5) 0,
 				bottom: $cadmin-popover-border-width,
 			),
 		),
@@ -296,33 +290,23 @@ $cadmin-clay-popover-right: map-deep-merge(
 							#{$cadmin-popover-arrow-height} + #{$cadmin-popover-border-width}
 						) * -1
 				),
-			margin: math-sign($cadmin-popover-arrow-height * 0.5) 0 0,
+			margin: calc(#{$cadmin-popover-arrow-height} * -0.5) 0 0,
 			top: 50%,
 			width: $cadmin-popover-arrow-height,
 
 			before: (
 				border-right-color: $cadmin-popover-arrow-outer-color,
-				border-width: (
-					$cadmin-popover-arrow-width * 0.5,
-				)
-				$cadmin-popover-arrow-height
-				(
-					$cadmin-popover-arrow-width * 0.5,
-				)
-				0,
+				border-width: calc(#{$cadmin-popover-arrow-width} * 0.5)
+					$cadmin-popover-arrow-height
+					calc(#{$cadmin-popover-arrow-width} * 0.5) 0,
 				left: 0,
 			),
 
 			after: (
 				border-right-color: $cadmin-popover-right-arrow-color,
-				border-width: (
-					$cadmin-popover-arrow-width * 0.5,
-				)
-				$cadmin-popover-arrow-height
-				(
-					$cadmin-popover-arrow-width * 0.5,
-				)
-				0,
+				border-width: calc(#{$cadmin-popover-arrow-width} * 0.5)
+					$cadmin-popover-arrow-height
+					calc(#{$cadmin-popover-arrow-width} * 0.5) 0,
 				left: $cadmin-popover-border-width,
 			),
 		),
@@ -374,7 +358,7 @@ $cadmin-clay-popover-bottom: map-deep-merge(
 
 		arrow: (
 			left: 50%,
-			margin: 0 0 0 math-sign($cadmin-popover-arrow-width * 0.5),
+			margin: 0 0 0 calc(#{$cadmin-popover-arrow-width} * -0.5),
 			top:
 				calc(
 					(
@@ -383,27 +367,17 @@ $cadmin-clay-popover-bottom: map-deep-merge(
 				),
 			before: (
 				border-bottom-color: $cadmin-popover-arrow-outer-color,
-				border-width: 0
-					(
-						$cadmin-popover-arrow-width * 0.5,
-					)
+				border-width: 0 calc(#{$cadmin-popover-arrow-width} * 0.5)
 					$cadmin-popover-arrow-height
-					(
-						$cadmin-popover-arrow-width * 0.5,
-					),
+					calc(#{$cadmin-popover-arrow-width} * 0.5),
 				top: 0,
 			),
 
 			after: (
 				border-bottom-color: $cadmin-popover-bottom-arrow-color,
-				border-width: 0
-					(
-						$cadmin-popover-arrow-width * 0.5,
-					)
+				border-width: 0 calc(#{$cadmin-popover-arrow-width} * 0.5)
 					$cadmin-popover-arrow-height
-					(
-						$cadmin-popover-arrow-width * 0.5,
-					),
+					calc(#{$cadmin-popover-arrow-width} * 0.5),
 				top: $cadmin-popover-border-width,
 			),
 		),
@@ -455,7 +429,7 @@ $cadmin-clay-popover-left: map-deep-merge(
 
 		arrow: (
 			height: $cadmin-popover-arrow-width,
-			margin: math-sign($cadmin-popover-arrow-height * 0.5) 0 0,
+			margin: calc(#{$cadmin-popover-arrow-height} * -0.5) 0 0,
 			right:
 				calc(
 					(
@@ -467,27 +441,17 @@ $cadmin-clay-popover-left: map-deep-merge(
 
 			before: (
 				border-left-color: $cadmin-popover-arrow-outer-color,
-				border-width: (
-					$cadmin-popover-arrow-width * 0.5,
-				)
-				0
-				(
-					$cadmin-popover-arrow-width * 0.5,
-				)
-				$cadmin-popover-arrow-height,
+				border-width: calc(#{$cadmin-popover-arrow-width} * 0.5) 0
+					calc(#{$cadmin-popover-arrow-width} * 0.5)
+					$cadmin-popover-arrow-height,
 				right: 0,
 			),
 
 			after: (
 				border-left-color: $cadmin-popover-left-arrow-color,
-				border-width: (
-					$cadmin-popover-arrow-width * 0.5,
-				)
-				0
-				(
-					$cadmin-popover-arrow-width * 0.5,
-				)
-				$cadmin-popover-arrow-height,
+				border-width: calc(#{$cadmin-popover-arrow-width} * 0.5) 0
+					calc(#{$cadmin-popover-arrow-width} * 0.5)
+					$cadmin-popover-arrow-height,
 				right: $cadmin-popover-border-width,
 			),
 		),

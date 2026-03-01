@@ -41,7 +41,7 @@
 	.autofit-col {
 		border-left: $list-group-border-width solid $list-group-border-color;
 		border-right: $list-group-border-width solid $list-group-border-color;
-		margin-left: math-sign($list-group-border-width);
+		margin-left: calc(#{$list-group-border-width} * -1);
 		padding: $list-group-item-padding-y $list-group-item-padding-x;
 
 		&:first-child,
@@ -85,7 +85,7 @@
 
 					&.active {
 						border-left-width: $list-group-border-width;
-						margin-left: math-sign($list-group-border-width);
+						margin-left: calc(#{$list-group-border-width} * -1);
 					}
 				}
 			}
@@ -101,7 +101,7 @@
 	border: $list-group-border-width solid $list-group-border-color;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: math-sign($list-group-border-width);
+	margin-bottom: calc(#{$list-group-border-width} * -1);
 	padding: $list-group-header-padding-y $list-group-header-padding-x;
 
 	&:first-child {
@@ -231,7 +231,7 @@
 
 		&.active {
 			border-top-width: $list-group-border-width;
-			margin-top: math-sign($list-group-border-width);
+			margin-top: calc(#{$list-group-border-width} * -1);
 		}
 	}
 }
@@ -303,8 +303,8 @@
 .list-group-item-action {
 	@if ($enable-c-inner) {
 		.c-inner {
-			margin: #{math-sign($list-group-item-padding-y)}
-				#{math-sign($list-group-item-padding-x)};
+			margin: calc(#{$list-group-item-padding-y} * -1)
+				calc(#{$list-group-item-padding-x} * -1);
 			width: auto;
 		}
 	}
@@ -441,8 +441,8 @@
 	.quick-action-menu {
 		align-items: $list-group-item-flex-align-items;
 		background-color: $list-group-bg;
-		margin-bottom: -$list-group-item-padding-y;
-		margin-top: -$list-group-item-padding-y;
+		margin-bottom: calc(#{$list-group-item-padding-y} * -1);
+		margin-top: calc(#{$list-group-item-padding-y} * -1);
 		padding-bottom: $list-group-item-padding-y;
 		padding-top: $list-group-item-padding-y;
 	}
@@ -498,15 +498,22 @@
 	}
 
 	.quick-action-menu {
-		margin-bottom: -$list-group-item-padding-y +
-			$list-group-notification-item-border-bottom-width;
-		margin-top: -$list-group-item-padding-y +
-			$list-group-notification-item-border-top-width;
+		margin-bottom: calc(
+			(
+					#{$list-group-item-padding-y} + #{$list-group-notification-item-border-bottom-width}
+				) * -1
+		);
+		margin-top: calc(
+			(
+					#{$list-group-item-padding-y} + #{$list-group-notification-item-border-top-width}
+				) * -1
+		);
 	}
 
 	.autofit-col .quick-action-item {
-		margin-top: $list-group-notification-item-border-top-width -
-			$list-group-item-flex-offset-top;
+		margin-top: calc(
+			#{$list-group-notification-item-border-top-width} - #{$list-group-item-flex-offset-top}
+		);
 	}
 }
 

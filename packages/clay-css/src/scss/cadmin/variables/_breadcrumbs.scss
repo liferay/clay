@@ -73,10 +73,7 @@ $cadmin-breadcrumb-item: map-deep-merge(
 				height: $cadmin-breadcrumb-divider-svg-icon-height,
 				left: 0,
 				margin-top:
-					calc(
-						#{math-sign($cadmin-breadcrumb-divider-svg-icon-height)} /
-							2
-					),
+					calc(#{$cadmin-breadcrumb-divider-svg-icon-height} / -2),
 				padding: 0,
 				position: absolute,
 				top: 50%,
@@ -102,10 +99,12 @@ $cadmin-breadcrumb-item: map-deep-merge(
 // Breadcrumb Text Truncate
 
 $cadmin-breadcrumb-text-truncate-icon-spacer-x: 14px !default;
-$cadmin-breadcrumb-text-truncate-max-width: 300px -
-	$cadmin-breadcrumb-text-truncate-icon-spacer-x !default;
-$cadmin-breadcrumb-text-truncate-max-width-mobile: 150px -
-	$cadmin-breadcrumb-text-truncate-icon-spacer-x !default;
+$cadmin-breadcrumb-text-truncate-max-width: calc(
+	300px - #{$cadmin-breadcrumb-text-truncate-icon-spacer-x}
+) !default;
+$cadmin-breadcrumb-text-truncate-max-width-mobile: calc(
+	150px - #{$cadmin-breadcrumb-text-truncate-icon-spacer-x}
+) !default;
 
 $cadmin-breadcrumb-text-truncate: () !default;
 $cadmin-breadcrumb-text-truncate: map-merge(

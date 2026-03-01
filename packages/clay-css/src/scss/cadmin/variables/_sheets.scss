@@ -80,8 +80,8 @@ $cadmin-sheet-footer-btn-block-sm-down: map-deep-merge(
 
 // @deprecated as of 3.x.
 
-$cadmin-sheet-lg-max-width: ceil(
-	map-get($cadmin-container-max-widths, lg) * 0.83333
+$cadmin-sheet-lg-max-width: calc(
+	#{map-get($cadmin-container-max-widths, lg)} * 0.83333
 ) !default; // 800px
 
 // Sheet Title
