@@ -1217,6 +1217,10 @@ export const iconsData = [
 		name: 'key',
 	},
 	{
+		aliases: ['edit', 'multitask', 'preview'],
+		name: 'layout-new-window',
+	},
+	{
 		aliases: [''],
 		name: 'liferay-ac',
 	},

@@ -88,25 +88,13 @@ export const CSSDocumentsCollection = new Collection<ComponentDocumentsSchema>(
 	(slug) => import(`./docs/css/${slug}.mdx`)
 );
 
-const IGNORE_LIST = []
-
 export const ComponentDocumentsCollection =
 	new Collection<ComponentDocumentsSchema>(
 		{
 			filePattern: 'clay-*/docs/**/*.mdx',
 			baseDirectory: '../',
 			basePath: 'components',
-			filter: (source) => {
-				const path = source.getEditPath();
-				
-				const ignored = IGNORE_LIST.find(ignore => path.includes(ignore))
-
-				if (ignored) {
-					return false;
-				}
-
-				return isFileSystemSource(source) && source.isFile();
-			},
+			filter: (source) => isFileSystemSource(source) && source.isFile(),
 			schema: {
 				frontmatter: frontmatterSchema.parse,
 			},
