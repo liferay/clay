@@ -33,6 +33,11 @@ export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	complete?: boolean;
 
 	/**
+	 * Flag to indicate if step should be disabled
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Flag to indicate if progress line should expand out from step
 	 */
 	expand?: boolean;
@@ -48,6 +53,7 @@ function Item({
 	children,
 	className,
 	complete,
+	disabled,
 	expand,
 	state,
 	...otherProps
@@ -58,6 +64,7 @@ function Item({
 				active,
 				className,
 				complete: complete ?? state === 'complete',
+				disabled,
 				error: state === 'error',
 				['multi-step-item-expand']: expand,
 			})}

@@ -259,7 +259,6 @@
 	border-style: $multi-step-icon-border-style;
 	border-width: $multi-step-icon-border-width;
 	color: $multi-step-icon-color;
-	cursor: $multi-step-icon-cursor;
 	display: flex;
 	font-size: $multi-step-icon-font-size;
 	font-weight: $multi-step-icon-font-weight;
@@ -275,12 +274,6 @@
 
 	width: $multi-step-icon-size;
 
-	&:hover {
-		background-color: $multi-step-icon-hover-bg;
-		color: $multi-step-icon-hover-color;
-		text-decoration: $multi-step-icon-hover-text-decoration;
-	}
-
 	@at-root {
 		&.focus,
 		#{$focus-visible-selector},
@@ -290,6 +283,17 @@
 			color: $multi-step-icon-focus-color;
 			outline: $multi-step-icon-focus-outline;
 			text-decoration: $multi-step-icon-focus-text-decoration;
+		}
+
+		&[role='button'],
+		button#{&} {
+			cursor: $multi-step-icon-cursor;
+
+			&:hover {
+				background-color: $multi-step-icon-hover-bg;
+				color: $multi-step-icon-hover-color;
+				text-decoration: $multi-step-icon-hover-text-decoration;
+			}
 		}
 	}
 

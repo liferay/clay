@@ -4,6 +4,7 @@
  */
 
 import ClayIcon from '@clayui/icon';
+import classNames from 'classnames';
 import React, {useContext} from 'react';
 
 import {ItemContext} from './Item';
@@ -11,12 +12,27 @@ import {ItemContext} from './Item';
 type Props = {
 
 	/**
+	 * Component to render.
+	 */
+	as?: React.ElementType;
+
+	/**
 	 * Flag to indicate if step should show its been completed
 	 * @deprecated since v3.91.0 - this is no longer necessary.
 	 */
 	complete?: boolean;
 
-	innerRef?: React.Ref<HTMLButtonElement>;
+	/**
+	 * Flag to indicate if step should be disabled
+	 */
+	disabled?: boolean;
+
+	/**
+	 * HTML properties that are applied to the step element.
+	 */
+	elementProps?: React.HTMLAttributes<HTMLElement>;
+
+	innerRef?: React.Ref<HTMLElement>;
 
 	/**
 	 * Value to display above step icon
@@ -40,29 +56,55 @@ type Props = {
 };
 
 const MultiStepNavIndicator = React.forwardRef<HTMLDivElement, Props>(
-	({complete, innerRef, label, onClick, spritemap, subTitle}: Props, ref) => {
+	(
+		{
+			as,
+			complete,
+			disabled,
+			elementProps,
+			innerRef,
+			label,
+			onClick,
+			spritemap,
+			subTitle,
+		}: Props,
+		ref
+	) => {
 		const {state} = useContext(ItemContext);
 
 		const isComplete = complete ?? state === 'complete';
+		const Tag = as || (onClick ? 'button' : 'div');
 
 		return (
-			<div className="multi-step-indicator" ref={ref}>
+			<div
+				className={classNames('multi-step-indicator', {
+					disabled,
+				})}
+				ref={ref}
+			>
 				{subTitle && (
 					<div className="multi-step-indicator-label">{subTitle}</div>
 				)}
 
-				<button
-					className="multi-step-icon"
-					onClick={onClick}
+				<Tag
+					{...elementProps}
+					className={classNames(
+						'multi-step-icon',
+						elementProps?.className
+					)}
+					onClick={onClick || elementProps?.onClick}
 					ref={innerRef}
-					type="button"
+					{...(Tag === 'button' && {
+						disabled,
+						type: 'button',
+					})}
 				>
 					{isComplete && (
 						<ClayIcon spritemap={spritemap} symbol="check" />
 					)}
 
 					{!isComplete && state !== 'error' && label}
-				</button>
+				</Tag>
 			</div>
 		);
 	}

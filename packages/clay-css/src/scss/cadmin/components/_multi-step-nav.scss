@@ -253,7 +253,6 @@
 	border-style: $cadmin-multi-step-icon-border-style;
 	border-width: $cadmin-multi-step-icon-border-width;
 	color: $cadmin-multi-step-icon-color;
-	cursor: $cadmin-multi-step-icon-cursor;
 	display: flex;
 	font-size: $cadmin-multi-step-icon-font-size;
 	font-weight: $cadmin-multi-step-icon-font-weight;
@@ -269,12 +268,6 @@
 
 	width: $cadmin-multi-step-icon-size;
 
-	&:hover {
-		background-color: $cadmin-multi-step-icon-hover-bg;
-		color: $cadmin-multi-step-icon-hover-color;
-		text-decoration: $cadmin-multi-step-icon-hover-text-decoration;
-	}
-
 	@at-root {
 		&.focus,
 		#{$focus-visible-selector},
@@ -284,6 +277,17 @@
 			color: $cadmin-multi-step-icon-focus-color;
 			outline: $cadmin-multi-step-icon-focus-outline;
 			text-decoration: $cadmin-multi-step-icon-focus-text-decoration;
+		}
+
+		&[role='button'],
+		button#{&} {
+			cursor: $cadmin-multi-step-icon-cursor;
+
+			&:hover {
+				background-color: $cadmin-multi-step-icon-hover-bg;
+				color: $cadmin-multi-step-icon-hover-color;
+				text-decoration: $cadmin-multi-step-icon-hover-text-decoration;
+			}
 		}
 	}
 
