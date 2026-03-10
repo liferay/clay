@@ -184,7 +184,7 @@ type Node = {
 	name: string;
 };
 
-function createNode(lenght: number, depth: number, currentDepth: number = 0) {
+function createNode(length: number, depth: number, currentDepth: number = 0) {
 	const node: Node = {
 		children: [],
 		id: String(nodeId),
@@ -194,8 +194,8 @@ function createNode(lenght: number, depth: number, currentDepth: number = 0) {
 	if (currentDepth === depth) {
 		return node;
 	}
-	for (let i = 0; i < lenght; i++) {
-		node.children.push(createNode(lenght, depth, currentDepth + 1));
+	for (let i = 0; i < length; i++) {
+		node.children.push(createNode(length, depth, currentDepth + 1));
 	}
 
 	return node;
