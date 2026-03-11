@@ -220,6 +220,11 @@
 			)
 		);
 
+		$_bpb: map-get($btn, padding-bottom);
+		$_bpl: map-get($btn, padding-left);
+		$_bpr: map-get($btn, padding-right);
+		$_bpt: map-get($btn, padding-top);
+
 		$btn-c-inner: setter(map-get($btn, c-inner), ());
 		$btn-c-inner: map-merge(
 			$btn-c-inner,
@@ -228,10 +233,10 @@
 		$btn-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
-				margin-bottom: calc(#{map-get($btn, padding-bottom)} * -1),
-				margin-left: calc(#{map-get($btn, padding-left)} * -1),
-				margin-right: calc(#{map-get($btn, padding-right)} * -1),
-				margin-top: calc(#{map-get($btn, padding-top)} * -1),
+				margin-bottom: if($_bpb, calc(#{$_bpb} * -1), null),
+				margin-left: if($_bpl, calc(#{$_bpl} * -1), null),
+				margin-right: if($_bpr, calc(#{$_bpr} * -1), null),
+				margin-top: if($_bpt, calc(#{$_bpt} * -1), null),
 			),
 			$btn-c-inner
 		);
@@ -299,6 +304,8 @@
 			)
 		);
 
+		$_bmp: map-get($btn-monospaced, padding);
+
 		$btn-monospaced-c-inner: setter(map-get($btn-monospaced, c-inner), ());
 		$btn-monospaced-c-inner: map-merge(
 			$btn-monospaced-c-inner,
@@ -307,7 +314,7 @@
 		$btn-monospaced-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
-				margin: calc(#{map-get($btn-monospaced, padding)} * -1),
+				margin: if($_bmp, calc(#{$_bmp} * -1), null),
 			),
 			$btn-monospaced-c-inner
 		);
@@ -360,6 +367,11 @@
 			)
 		);
 
+		$_lpb: map-get($link, padding-bottom);
+		$_lpl: map-get($link, padding-left);
+		$_lpr: map-get($link, padding-right);
+		$_lpt: map-get($link, padding-top);
+
 		$link-c-inner: setter(map-get($link, c-inner), ());
 		$link-c-inner: map-merge(
 			$link-c-inner,
@@ -368,10 +380,10 @@
 		$link-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
-				margin-bottom: calc(#{map-get($link, padding-bottom)} * -1),
-				margin-left: calc(#{map-get($link, padding-left)} * -1),
-				margin-right: calc(#{map-get($link, padding-right)} * -1),
-				margin-top: calc(#{map-get($link, padding-top)} * -1),
+				margin-bottom: if($_lpb, calc(#{$_lpb} * -1), null),
+				margin-left: if($_lpl, calc(#{$_lpl} * -1), null),
+				margin-right: if($_lpr, calc(#{$_lpr} * -1), null),
+				margin-top: if($_lpt, calc(#{$_lpt} * -1), null),
 			),
 			$link-c-inner
 		);
@@ -437,6 +449,8 @@
 			$link-monospaced
 		);
 
+		$_lmp: map-get($link-monospaced, padding);
+
 		$link-monospaced-c-inner: setter(
 			map-get($link-monospaced, c-inner),
 			()
@@ -448,7 +462,7 @@
 		$link-monospaced-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
-				margin: calc(#{map-get($link-monospaced, padding)} * -1),
+				margin: if($_lmp, calc(#{$_lmp} * -1), null),
 			),
 			$link-monospaced-c-inner
 		);
@@ -464,6 +478,45 @@
 						map-get($section, text-align)
 					),
 			)
+		);
+
+		$base: map-remove(
+			$base,
+			'bg',
+			'bg-color',
+			'btn-font-size',
+			'btn-font-weight',
+			'btn-height',
+			'btn-line-height',
+			'btn-margin-x',
+			'btn-margin-y',
+			'btn-monospaced-border-radius',
+			'btn-monospaced-border-width',
+			'btn-monospaced-font-size',
+			'btn-monospaced-margin-x',
+			'btn-monospaced-margin-y',
+			'btn-monospaced-padding',
+			'btn-monospaced-size',
+			'btn-padding-x',
+			'btn-padding-y',
+			'item-justify-content',
+			'item-padding-x',
+			'item-padding-y',
+			'link-margin-x',
+			'link-margin-y',
+			'link-monospaced-border-radius',
+			'link-monospaced-border-width',
+			'link-monospaced-font-size',
+			'link-monospaced-margin-x',
+			'link-monospaced-margin-y',
+			'link-monospaced-padding',
+			'link-monospaced-size',
+			'link-padding-x',
+			'link-padding-y',
+			'padding-x',
+			'padding-y',
+			'section-text-align',
+			'strong-font-weight'
 		);
 
 		@if (length($base) != 0) {
@@ -726,6 +779,8 @@
 					),
 			)
 		);
+
+		$map: map-remove($map, 'item-padding-left', 'item-padding-right');
 
 		@if ($breakpoint-down) {
 			@include media-breakpoint-down($breakpoint-down) {

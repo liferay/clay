@@ -64,7 +64,7 @@ $cadmin-c-slideout-push-start: map-deep-merge(
 
 		media-breakpoint-down: (
 			md: (
-				padding-left: 0,
+				padding-left: 0px,
 			),
 		),
 	),
@@ -78,7 +78,7 @@ $cadmin-c-slideout-push-end: map-deep-merge(
 
 		media-breakpoint-down: (
 			md: (
-				padding-right: 0,
+				padding-right: 0px,
 			),
 		),
 	),
@@ -208,11 +208,11 @@ $cadmin-c-slideout-fluid: map-deep-merge(
 
 			sm: (
 				'&.c-slideout-push-start': (
-					padding-left: 0,
+					padding-left: 0px,
 				),
 
 				'&.c-slideout-push-end': (
-					padding-right: 0,
+					padding-right: 0px,
 				),
 
 				sidebar: (
@@ -254,9 +254,9 @@ $cadmin-c-slideout-start-sm-down: map-deep-merge(
 $cadmin-c-slideout-start: () !default;
 $cadmin-c-slideout-start: map-deep-merge(
 	(
-		bottom: 0,
-		left: 0,
-		top: 0,
+		bottom: 0px,
+		left: 0px,
+		top: 0px,
 
 		c-slideout-tbar-shown-sidebar: (
 			left: calc(#{$cadmin-c-slideout-sidebar-width} * -1),
@@ -273,7 +273,7 @@ $cadmin-c-slideout-start: map-deep-merge(
 		),
 
 		sidebar-c-slideout-show: (
-			left: 0,
+			left: 0px,
 		),
 
 		tbar-stacked: (
@@ -281,7 +281,7 @@ $cadmin-c-slideout-start: map-deep-merge(
 		),
 
 		tbar-stacked-c-slideout-show: (
-			left: 0,
+			left: 0px,
 		),
 
 		media-breakpoint-down: (
@@ -320,9 +320,9 @@ $cadmin-c-slideout-end-sm-down: map-deep-merge(
 $cadmin-c-slideout-end: () !default;
 $cadmin-c-slideout-end: map-deep-merge(
 	(
-		bottom: 0,
-		right: 0,
-		top: 0,
+		bottom: 0px,
+		right: 0px,
+		top: 0px,
 
 		c-slideout-tbar-shown-sidebar: (
 			right: calc(#{$cadmin-c-slideout-sidebar-width} * -1),
@@ -338,7 +338,7 @@ $cadmin-c-slideout-end: map-deep-merge(
 		),
 
 		sidebar-c-slideout-show: (
-			right: 0,
+			right: 0px,
 		),
 
 		tbar-stacked: (
@@ -346,11 +346,11 @@ $cadmin-c-slideout-end: map-deep-merge(
 		),
 
 		tbar-stacked-c-slideout-show: (
-			right: 0,
+			right: 0px,
 		),
 
 		c-horizontal-resizer: (
-			left: 0,
+			left: 0px,
 			right: auto,
 		),
 

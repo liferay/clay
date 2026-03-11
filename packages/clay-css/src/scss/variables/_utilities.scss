@@ -19,13 +19,13 @@ $inline-scroller: () !default;
 $inline-scroller: map-deep-merge(
 	(
 		list-style: none,
-		margin: 0,
+		margin: 0rem,
 		max-height: $inline-scroller-max-height,
 		overflow: auto,
 
 		-webkit-overflow-scrolling: touch,
 
-		padding: 0,
+		padding: 0rem,
 
 		focus: (
 			outline: 0,
@@ -82,7 +82,7 @@ $close: map-deep-merge(
 		justify-content: center,
 		line-height: 1,
 		opacity: 0.5,
-		padding: 0,
+		padding: 0rem,
 		text-align: center,
 		text-shadow: $close-text-shadow,
 		transition: #{color 0.15s ease-in-out,
@@ -115,7 +115,7 @@ $close: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$close

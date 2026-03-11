@@ -425,7 +425,10 @@
 			map-get($map, toggler-link-line-height),
 			$_line-height-base
 		);
-		$toggler-link-margin-x: setter(map-get($map, toggler-link-margin-x), 0);
+		$toggler-link-margin-x: setter(
+			map-get($map, toggler-link-margin-x),
+			0px
+		);
 		$toggler-link-margin-y: map-get($map, toggler-link-margin-y);
 		$toggler-link-padding-x: setter(
 			map-get($map, toggler-link-padding-x),
@@ -517,10 +520,26 @@
 
 				@if ($enable-c-inner) {
 					.c-inner {
-						margin-bottom: calc(#{$toggler-padding-y} * -1);
-						margin-left: calc(#{$toggler-padding-x} * -1);
-						margin-right: calc(#{$toggler-padding-x} * -1);
-						margin-top: calc(#{$toggler-padding-y} * -1);
+						margin-bottom: if(
+							$toggler-padding-y,
+							calc(#{$toggler-padding-y} * -1),
+							null
+						);
+						margin-left: if(
+							$toggler-padding-x,
+							calc(#{$toggler-padding-x} * -1),
+							null
+						);
+						margin-right: if(
+							$toggler-padding-x,
+							calc(#{$toggler-padding-x} * -1),
+							null
+						);
+						margin-top: if(
+							$toggler-padding-y,
+							calc(#{$toggler-padding-y} * -1),
+							null
+						);
 					}
 				}
 			}
@@ -540,10 +559,26 @@
 
 				@if ($enable-c-inner) {
 					.c-inner {
-						margin-bottom: calc(#{$toggler-link-padding-y} * -1);
-						margin-left: calc(#{$toggler-link-padding-x} * -1);
-						margin-right: calc(#{$toggler-link-padding-x} * -1);
-						margin-top: calc(#{$toggler-link-padding-y} * -1);
+						margin-bottom: if(
+							$toggler-link-padding-y,
+							calc(#{$toggler-link-padding-y} * -1),
+							null
+						);
+						margin-left: if(
+							$toggler-link-padding-x,
+							calc(#{$toggler-link-padding-x} * -1),
+							null
+						);
+						margin-right: if(
+							$toggler-link-padding-x,
+							calc(#{$toggler-link-padding-x} * -1),
+							null
+						);
+						margin-top: if(
+							$toggler-link-padding-y,
+							calc(#{$toggler-link-padding-y} * -1),
+							null
+						);
 					}
 				}
 			}
@@ -559,10 +594,26 @@
 
 				@if ($enable-c-inner) {
 					.c-inner {
-						margin-bottom: calc(#{$brand-padding-y-mobile} * -1);
-						margin-left: calc(#{$brand-padding-x-mobile} * -1);
-						margin-right: calc(#{$brand-padding-x-mobile} * -1);
-						margin-top: calc(#{$brand-padding-y-mobile} * -1);
+						margin-bottom: if(
+							$brand-padding-y-mobile,
+							calc(#{$brand-padding-y-mobile} * -1),
+							null
+						);
+						margin-left: if(
+							$brand-padding-x-mobile,
+							calc(#{$brand-padding-x-mobile} * -1),
+							null
+						);
+						margin-right: if(
+							$brand-padding-x-mobile,
+							calc(#{$brand-padding-x-mobile} * -1),
+							null
+						);
+						margin-top: if(
+							$brand-padding-y-mobile,
+							calc(#{$brand-padding-y-mobile} * -1),
+							null
+						);
 					}
 				}
 			}
@@ -590,10 +641,26 @@
 
 					@if ($enable-c-inner) {
 						.c-inner {
-							margin-bottom: calc(#{$btn-padding-y-mobile} * -1);
-							margin-left: calc(#{$btn-padding-x-mobile} * -1);
-							margin-right: calc(#{$btn-padding-x-mobile} * -1);
-							margin-top: calc(#{$btn-padding-y-mobile} * -1);
+							margin-bottom: if(
+								$btn-padding-y-mobile,
+								calc(#{$btn-padding-y-mobile} * -1),
+								null
+							);
+							margin-left: if(
+								$btn-padding-x-mobile,
+								calc(#{$btn-padding-x-mobile} * -1),
+								null
+							);
+							margin-right: if(
+								$btn-padding-x-mobile,
+								calc(#{$btn-padding-x-mobile} * -1),
+								null
+							);
+							margin-top: if(
+								$btn-padding-y-mobile,
+								calc(#{$btn-padding-y-mobile} * -1),
+								null
+							);
 						}
 					}
 				}
@@ -630,10 +697,26 @@
 
 					@if ($enable-c-inner) {
 						.c-inner {
-							margin-bottom: calc(#{$link-padding-y-mobile} * -1);
-							margin-left: calc(#{$link-padding-x-mobile} * -1);
-							margin-right: calc(#{$link-padding-x-mobile} * -1);
-							margin-top: calc(#{$link-padding-y-mobile} * -1);
+							margin-bottom: if(
+								$link-padding-y-mobile,
+								calc(#{$link-padding-y-mobile} * -1),
+								null
+							);
+							margin-left: if(
+								$link-padding-x-mobile,
+								calc(#{$link-padding-x-mobile} * -1),
+								null
+							);
+							margin-right: if(
+								$link-padding-x-mobile,
+								calc(#{$link-padding-x-mobile} * -1),
+								null
+							);
+							margin-top: if(
+								$link-padding-y-mobile,
+								calc(#{$link-padding-y-mobile} * -1),
+								null
+							);
 						}
 					}
 				}
@@ -749,17 +832,37 @@
 
 											@if ($enable-c-inner) {
 												.c-inner {
-													margin-bottom: calc(
-														#{$brand-padding-y} * -1
+													margin-bottom: if(
+														$brand-padding-y,
+														calc(
+															#{$brand-padding-y} *
+																-1
+														),
+														null
 													);
-													margin-left: calc(
-														#{$brand-padding-x} * -1
+													margin-left: if(
+														$brand-padding-x,
+														calc(
+															#{$brand-padding-x} *
+																-1
+														),
+														null
 													);
-													margin-right: calc(
-														#{$brand-padding-x} * -1
+													margin-right: if(
+														$brand-padding-x,
+														calc(
+															#{$brand-padding-x} *
+																-1
+														),
+														null
 													);
-													margin-top: calc(
-														#{$brand-padding-y} * -1
+													margin-top: if(
+														$brand-padding-y,
+														calc(
+															#{$brand-padding-y} *
+																-1
+														),
+														null
 													);
 												}
 											}
@@ -804,17 +907,37 @@
 
 											@if ($enable-c-inner) {
 												.c-inner {
-													margin-bottom: calc(
-														#{$btn-padding-y} * -1
+													margin-bottom: if(
+														$btn-padding-y,
+														calc(
+															#{$btn-padding-y} *
+																-1
+														),
+														null
 													);
-													margin-left: calc(
-														#{$btn-padding-x} * -1
+													margin-left: if(
+														$btn-padding-x,
+														calc(
+															#{$btn-padding-x} *
+																-1
+														),
+														null
 													);
-													margin-right: calc(
-														#{$btn-padding-x} * -1
+													margin-right: if(
+														$btn-padding-x,
+														calc(
+															#{$btn-padding-x} *
+																-1
+														),
+														null
 													);
-													margin-top: calc(
-														#{$btn-padding-y} * -1
+													margin-top: if(
+														$btn-padding-y,
+														calc(
+															#{$btn-padding-y} *
+																-1
+														),
+														null
 													);
 												}
 											}
@@ -858,17 +981,37 @@
 
 											@if ($enable-c-inner) {
 												.c-inner {
-													margin-bottom: calc(
-														#{$link-padding-y} * -1
+													margin-bottom: if(
+														$link-padding-y,
+														calc(
+															#{$link-padding-y} *
+																-1
+														),
+														null
 													);
-													margin-left: calc(
-														#{$link-padding-x} * -1
+													margin-left: if(
+														$link-padding-x,
+														calc(
+															#{$link-padding-x} *
+																-1
+														),
+														null
 													);
-													margin-right: calc(
-														#{$link-padding-x} * -1
+													margin-right: if(
+														$link-padding-x,
+														calc(
+															#{$link-padding-x} *
+																-1
+														),
+														null
 													);
-													margin-top: calc(
-														#{$link-padding-y} * -1
+													margin-top: if(
+														$link-padding-y,
+														calc(
+															#{$link-padding-y} *
+																-1
+														),
+														null
 													);
 												}
 											}
@@ -1565,6 +1708,37 @@
 		);
 
 		$underline-active-bg: map-get($map, underline-active-bg);
+
+		$base: map-remove(
+			$base,
+			'bg',
+			'brand-bg',
+			'brand-color',
+			'brand-hover-bg',
+			'brand-hover-color',
+			'btn-font-weight',
+			'link-active-bg',
+			'link-active-color',
+			'link-bg',
+			'link-border-radius',
+			'link-color',
+			'link-disabled-bg',
+			'link-disabled-box-shadow',
+			'link-disabled-color',
+			'link-disabled-opacity',
+			'link-disabled-pointer-events',
+			'link-focus-bg',
+			'link-focus-box-shadow',
+			'link-focus-color',
+			'link-font-weight',
+			'link-hover-bg',
+			'link-hover-color',
+			'link-outline',
+			'link-transition',
+			'toggler-color',
+			'toggler-font-weight',
+			'underline-active-bg'
+		);
 
 		@if ($enabled) {
 			@if (length($base) != 0) {

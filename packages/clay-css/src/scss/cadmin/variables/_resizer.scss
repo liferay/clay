@@ -2,12 +2,12 @@ $cadmin-c-horizontal-resizer: () !default;
 $cadmin-c-horizontal-resizer: map-merge(
 	(
 		background-color: transparent,
-		bottom: 0,
+		bottom: 0px,
 		cursor: ew-resize,
 		margin-right: -0.25rem,
 		position: absolute,
-		right: 0,
-		top: 0,
+		right: 0px,
+		top: 0px,
 		width: 0.5rem,
 		z-index: 10,
 

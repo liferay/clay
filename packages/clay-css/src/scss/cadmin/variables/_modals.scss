@@ -6,9 +6,9 @@ $cadmin-modal-backdrop: map-deep-merge(
 	(
 		background-color: $cadmin-modal-backdrop-bg,
 		height: 100vh,
-		left: 0,
+		left: 0px,
 		position: fixed,
-		top: 0,
+		top: 0px,
 		width: 100vw,
 		z-index: $cadmin-zindex-modal-backdrop,
 
@@ -94,7 +94,7 @@ $cadmin-modal-header: map-deep-merge(
 		background-color: $cadmin-modal-header-bg,
 		border-color: $cadmin-modal-header-border-color,
 		border-style: solid,
-		border-width: 0 0 $cadmin-modal-header-border-width 0,
+		border-width: 0px 0px $cadmin-modal-header-border-width 0px,
 		border-top-radius:
 			clay-enable-rounded($cadmin-modal-content-inner-border-radius),
 		color: $cadmin-modal-header-color,
@@ -103,12 +103,12 @@ $cadmin-modal-header: map-deep-merge(
 		height: $cadmin-modal-header-height,
 		justify-content: space-between,
 		padding: $cadmin-modal-header-padding,
-		padding-bottom: 0,
-		padding-top: 0,
+		padding-bottom: 0px,
+		padding-top: 0px,
 
 		'.modal-title': (
-			margin-bottom: 0,
-			margin-top: 0,
+			margin-bottom: 0px,
+			margin-top: 0px,
 		),
 
 		mobile: (
@@ -199,7 +199,7 @@ $cadmin-modal-item-group: map-deep-merge(
 $cadmin-modal-item-group-first-child: () !default;
 $cadmin-modal-item-group-first-child: map-deep-merge(
 	(
-		padding-left: 0,
+		padding-left: 0px,
 	),
 	$cadmin-modal-item-group-first-child
 );
@@ -207,7 +207,7 @@ $cadmin-modal-item-group-first-child: map-deep-merge(
 $cadmin-modal-item-group-last-child: () !default;
 $cadmin-modal-item-group-last-child: map-deep-merge(
 	(
-		padding-right: 0,
+		padding-right: 0px,
 	),
 	$cadmin-modal-item-group-last-child
 );
@@ -215,8 +215,8 @@ $cadmin-modal-item-group-last-child: map-deep-merge(
 $cadmin-modal-item-group-only-child: () !default;
 $cadmin-modal-item-group-only-child: map-deep-merge(
 	(
-		padding-left: 0,
-		padding-right: 0,
+		padding-left: 0px,
+		padding-right: 0px,
 	),
 	$cadmin-modal-item-group-only-child
 );
@@ -229,9 +229,9 @@ $cadmin-modal-item: map-deep-merge(
 		flex-grow: 1,
 		flex-shrink: 1,
 		max-width: 100%,
-		min-height: 0,
+		min-height: 0px,
 		min-width: 50px,
-		padding: 0,
+		padding: 0px,
 		position: relative,
 		word-wrap: break-word,
 	),
@@ -339,11 +339,11 @@ $cadmin-modal: map-deep-merge(
 	(
 		display: none,
 		height: 100%,
-		left: 0,
+		left: 0px,
 		outline: 0,
 		overflow: hidden,
 		position: fixed,
-		top: 0,
+		top: 0px,
 		width: 100%,
 		z-index: $cadmin-zindex-modal,
 
@@ -383,7 +383,7 @@ $cadmin-modal: map-deep-merge(
 			padding-top: $cadmin-modal-footer-padding-y,
 
 			'> *': (
-				margin: 0 calc(#{$cadmin-modal-footer-margin-between} * 0.5),
+				margin: 0px calc(#{$cadmin-modal-footer-margin-between} * 0.5),
 			),
 		),
 

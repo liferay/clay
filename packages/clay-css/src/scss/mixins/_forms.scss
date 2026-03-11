@@ -526,6 +526,47 @@
 			)
 		);
 
+		$base: map-remove(
+			$base,
+			'bg',
+			'bg-clip',
+			'bg-image',
+			'bg-position',
+			'bg-repeat',
+			'bg-size',
+			'disabled-bg',
+			'disabled-bg-image',
+			'disabled-border-color',
+			'disabled-box-shadow',
+			'disabled-color',
+			'disabled-cursor',
+			'disabled-opacity',
+			'disabled-placeholder-color',
+			'focus-bg',
+			'focus-bg-image',
+			'focus-border-color',
+			'focus-box-shadow',
+			'focus-color',
+			'focus-placeholder-color',
+			'hover-bg',
+			'hover-border-color',
+			'hover-box-shadow',
+			'hover-color',
+			'hover-placeholder-color',
+			'placeholder-color',
+			'placeholder-opacity',
+			'readonly-bg',
+			'readonly-bg-image',
+			'readonly-border-color',
+			'readonly-box-shadow',
+			'readonly-color',
+			'readonly-cursor',
+			'readonly-opacity',
+			'readonly-placeholder-color',
+			'selection-bg',
+			'selection-color'
+		);
+
 		@if ($enabled) {
 			@if (length($base) != 0) {
 				@include clay-css($base);
@@ -924,6 +965,32 @@
 		$_media-breakpoint-up: map-get($map, media-breakpoint-up);
 
 		$mobile: setter(map-get($map, mobile), ());
+
+		$base: map-remove(
+			$base,
+			'bg',
+			'bg-clip',
+			'bg-image',
+			'bg-position',
+			'bg-repeat',
+			'bg-size',
+			'disabled-bg',
+			'disabled-bg-image',
+			'disabled-border-color',
+			'disabled-box-shadow',
+			'disabled-color',
+			'disabled-cursor',
+			'disabled-opacity',
+			'focus-bg',
+			'focus-bg-image',
+			'focus-border-color',
+			'focus-box-shadow',
+			'focus-color',
+			'hover-bg',
+			'hover-border-color',
+			'hover-box-shadow',
+			'hover-color'
+		);
 
 		@if ($enabled) {
 			@if (length($base) != 0) {
@@ -2528,6 +2595,87 @@
 			)
 		);
 
+		$map: map-remove(
+			$map,
+			'data-label-after-content',
+			'data-label-after-right',
+			'data-label-before-content',
+			'data-label-before-left',
+			'data-label-font-size',
+			'data-label-font-weight',
+			'data-label-line-height',
+			'data-label-margin-top',
+			'data-label-position',
+			'data-label-spacer',
+			'data-label-text-align',
+			'data-label-top',
+			'data-label-width',
+			'disabled-color',
+			'disabled-cursor',
+			'disabled-progress-bg',
+			'disabled-thumb-bg',
+			'disabled-thumb-box-shadow',
+			'disabled-track-bg',
+			'focus-outline',
+			'focus-thumb-box-shadow',
+			'form-control-appearance',
+			'form-control-bg',
+			'form-control-height',
+			'form-control-position',
+			'form-control-z-index',
+			'hover-cursor',
+			'hover-thumb-bg',
+			'progress-bg',
+			'progress-bg-image',
+			'progress-border-color',
+			'progress-border-radius',
+			'progress-border-style',
+			'progress-border-width',
+			'progress-height',
+			'progress-margin-top',
+			'progress-position',
+			'progress-top',
+			'progress-width',
+			'thumb-bg',
+			'thumb-bg-image',
+			'thumb-border-color',
+			'thumb-border-radius',
+			'thumb-border-style',
+			'thumb-border-width',
+			'thumb-box-shadow',
+			'thumb-height',
+			'thumb-width',
+			'tooltip-arrow-border-color',
+			'tooltip-arrow-border-style',
+			'tooltip-arrow-border-width',
+			'tooltip-arrow-offset',
+			'tooltip-arrow-size',
+			'tooltip-bg',
+			'tooltip-color',
+			'tooltip-line-height',
+			'tooltip-padding',
+			'tooltip-padding-bottom',
+			'tooltip-padding-left',
+			'tooltip-padding-right',
+			'tooltip-padding-top',
+			'tooltip-spacer-x',
+			'tooltip-spacer-y',
+			'tooltip-transition',
+			'tooltip-visibility',
+			'tooltip-white-space',
+			'track-bg',
+			'track-bg-image',
+			'track-border-color',
+			'track-border-radius',
+			'track-border-style',
+			'track-border-width',
+			'track-height',
+			'track-margin-top',
+			'track-position',
+			'track-top',
+			'track-width'
+		);
+
 		@if ($enabled) {
 			@if (length($map) != 0) {
 				@include clay-css($map);
@@ -3007,6 +3155,8 @@
 				clay-tooltip-top: $clay-tooltip-top,
 			)
 		);
+
+		$map: map-remove($map, 'tooltip-arrow-offset');
 
 		@if ($enabled) {
 			@if (length($map) != 0) {

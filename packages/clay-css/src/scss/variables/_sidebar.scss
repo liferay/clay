@@ -25,7 +25,7 @@ $sidebar-header-component-subtitle: map-deep-merge(
 	(
 		font-size: 1.125rem,
 		font-weight: $font-weight-semi-bold,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 		overflow-wrap: break-word,
 	),
 	$sidebar-header-component-subtitle
@@ -66,7 +66,7 @@ $sidebar-list-group-border-color: $gray-300 !default;
 $sidebar-list-group-font-size: 0.875rem !default; // 14px
 $sidebar-list-group-type: list-group-flush !default;
 
-$sidebar-list-group-item-padding: 0 !default;
+$sidebar-list-group-item-padding: 0rem !default;
 
 $sidebar-list-group-autofit-col-padding-x: 0.5rem !default; // 8px
 $sidebar-list-group-autofit-col-padding-y: 1rem !default; // 16px
@@ -129,8 +129,8 @@ $sidebar: map-deep-merge(
 			display: flex,
 			flex-direction: column,
 			font-size: $sidebar-list-group-font-size,
-			margin-bottom: 0,
-			padding-left: 0,
+			margin-bottom: 0rem,
+			padding-left: 0rem,
 
 			list-group-item: (
 				background-color: $sidebar-list-group-bg,

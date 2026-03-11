@@ -301,10 +301,26 @@
 
 	@if ($cadmin-enable-c-inner) {
 		.c-inner {
-			margin-bottom: calc(#{$cadmin-multi-step-icon-padding-bottom} * -1);
-			margin-left: calc(#{$cadmin-multi-step-icon-padding-left} * -1);
-			margin-right: calc(#{$cadmin-multi-step-icon-padding-right} * -1);
-			margin-top: calc(#{$cadmin-multi-step-icon-padding-top} * -1);
+			margin-bottom: if(
+				$cadmin-multi-step-icon-padding-bottom,
+				calc(#{$cadmin-multi-step-icon-padding-bottom} * -1),
+				null
+			);
+			margin-left: if(
+				$cadmin-multi-step-icon-padding-left,
+				calc(#{$cadmin-multi-step-icon-padding-left} * -1),
+				null
+			);
+			margin-right: if(
+				$cadmin-multi-step-icon-padding-right,
+				calc(#{$cadmin-multi-step-icon-padding-right} * -1),
+				null
+			);
+			margin-top: if(
+				$cadmin-multi-step-icon-padding-top,
+				calc(#{$cadmin-multi-step-icon-padding-top} * -1),
+				null
+			);
 			position: absolute;
 		}
 	}

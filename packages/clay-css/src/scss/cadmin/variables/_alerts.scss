@@ -61,19 +61,19 @@ $cadmin-alert-close-margin-left: null !default;
 
 // @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
-$cadmin-alert-close-padding-bottom: 0 !default;
+$cadmin-alert-close-padding-bottom: 0px !default;
 
 // @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
-$cadmin-alert-close-padding-left: 0 !default;
+$cadmin-alert-close-padding-left: 0px !default;
 
 // @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
-$cadmin-alert-close-padding-right: 0 !default;
+$cadmin-alert-close-padding-right: 0px !default;
 
 // @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
-$cadmin-alert-close-padding-top: 0 !default;
+$cadmin-alert-close-padding-top: 0px !default;
 
 // @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
@@ -125,7 +125,7 @@ $cadmin-alert-title: map-deep-merge(
 	(
 		font-size: 14px,
 		margin-bottom: 4px,
-		margin-top: 0,
+		margin-top: 0px,
 	),
 	$cadmin-alert-title
 );
@@ -252,15 +252,15 @@ $cadmin-alert-fluid-border-bottom-width: 1px !default;
 
 // @deprecated use the Sass map `$alert-fluid` instead
 
-$cadmin-alert-fluid-border-left-width: 0 !default;
+$cadmin-alert-fluid-border-left-width: 0px !default;
 
 // @deprecated use the Sass map `$alert-fluid` instead
 
-$cadmin-alert-fluid-border-right-width: 0 !default;
+$cadmin-alert-fluid-border-right-width: 0px !default;
 
 // @deprecated use the Sass map `$alert-fluid` instead
 
-$cadmin-alert-fluid-border-top-width: 0 !default;
+$cadmin-alert-fluid-border-top-width: 0px !default;
 
 // @deprecated use the Sass map `$alert-fluid` instead
 
@@ -268,7 +268,7 @@ $cadmin-alert-fluid-border-width: $cadmin-alert-fluid-border-top-width
 	$cadmin-alert-fluid-border-right-width
 	$cadmin-alert-fluid-border-bottom-width
 	$cadmin-alert-fluid-border-left-width !default;
-$cadmin-alert-fluid-margin-bottom: 0 !default;
+$cadmin-alert-fluid-margin-bottom: 0px !default;
 
 // .alert-fluid .container-fluid
 
@@ -320,10 +320,10 @@ $cadmin-alert-fluid-close: map-deep-merge(
 $cadmin-alert-fluid: () !default;
 $cadmin-alert-fluid: map-merge(
 	(
-		border-radius: 0,
+		border-radius: 0px,
 		border-width: $cadmin-alert-fluid-border-width,
 		margin-bottom: $cadmin-alert-fluid-margin-bottom,
-		padding: 0,
+		padding: 0px,
 
 		alert-dismissible: (
 			container-fluid: $cadmin-alert-fluid-dismissible-container,
@@ -354,7 +354,7 @@ $cadmin-alert-notifications-absolute: map-deep-merge(
 		breakpoint-down: sm,
 
 		bottom: $cadmin-alert-notifications-absolute-bottom,
-		height: 0,
+		height: 0px,
 		left: $cadmin-alert-notifications-absolute-left,
 		position: absolute,
 		right: $cadmin-alert-notifications-absolute-right,
@@ -478,9 +478,9 @@ $cadmin-alert-feedback: () !default;
 $cadmin-alert-feedback: map-deep-merge(
 	(
 		background-color: transparent,
-		border-width: 0,
+		border-width: 0px,
 		margin-bottom: 4px,
-		padding: 0,
+		padding: 0px,
 
 		close: (),
 	),
@@ -501,7 +501,7 @@ $cadmin-alert-inline: map-deep-merge(
 		),
 
 		alert-dismissible-alert-fluid: (
-			padding-right: 0,
+			padding-right: 0px,
 
 			container-fluid: (
 				padding-right: 56px,
@@ -538,25 +538,25 @@ $cadmin-alert-autofit-stacked: map-deep-merge(
 		alert-autofit-row: (
 			align-items: flex-start,
 			flex-direction: column,
-			margin-bottom: 0,
-			margin-top: 0,
-			min-height: 0,
-			padding-bottom: 0,
-			padding-top: 0,
+			margin-bottom: 0px,
+			margin-top: 0px,
+			min-height: 0px,
+			padding-bottom: 0px,
+			padding-top: 0px,
 
 			autofit-col: (
 				width: 100%,
 			),
 
 			btn-group: (
-				margin-left: 0,
-				margin-right: 0,
+				margin-left: 0px,
+				margin-right: 0px,
 				margin-top: 14px,
 			),
 		),
 
 		close: (
-			margin-top: 0,
+			margin-top: 0px,
 			top: map-get($cadmin-alert-close, top),
 		),
 	),
@@ -594,7 +594,7 @@ $cadmin-alert-indicator-start: map-deep-merge(
 					)}
 			),
 		alert-fluid: (
-			padding-left: 0,
+			padding-left: 0px,
 
 			container-fluid: (
 				padding-left:
@@ -620,13 +620,13 @@ $cadmin-alert-indicator-start: map-deep-merge(
 			position: absolute,
 
 			lead: (
-				margin-left: 0,
+				margin-left: 0px,
 			),
 		),
 
 		alert-autofit-row: (
 			alert-indicator-only-child: (
-				margin-right: 0,
+				margin-right: 0px,
 			),
 		),
 	),

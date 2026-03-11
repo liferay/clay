@@ -151,6 +151,16 @@
 			)
 		);
 
+		$base: map-remove(
+			$base,
+			'bg',
+			'close-color',
+			'close-hover-color',
+			'lead-color',
+			'link-color',
+			'link-hover-color'
+		);
+
 		@if ($enabled) {
 			@if (length($base) != 0) {
 				@include clay-css($base);

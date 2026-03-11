@@ -5,8 +5,8 @@ $treeview: map-merge(
 		flex-direction: column,
 		font-size: 14px,
 		list-style: none,
-		margin-bottom: 0,
-		padding: 2px 0,
+		margin-bottom: 0rem,
+		padding: 2px 0rem,
 
 		btn: (
 			color: inherit,
@@ -22,7 +22,7 @@ $treeview: map-merge(
 		btn-monospaced: (
 			font-size: inherit,
 			height: 24px,
-			padding: 0,
+			padding: 0rem,
 			width: 24px,
 
 			focus: (
@@ -53,8 +53,8 @@ $treeview: map-merge(
 			display: flex,
 			flex-direction: column,
 			list-style: none,
-			margin-bottom: 0,
-			padding-left: 0,
+			margin-bottom: 0rem,
+			padding-left: 0rem,
 		),
 
 		treeview-item: (
@@ -104,7 +104,7 @@ $treeview: map-merge(
 			margin-bottom: 2px,
 			margin-top: 2px,
 			min-width: 100%,
-			padding: 0,
+			padding: 0rem,
 			position: relative,
 			text-align: left,
 			user-select: none,
@@ -172,9 +172,9 @@ $treeview: map-merge(
 		),
 
 		quick-action-item: (
-			margin: 0 2px,
-			min-height: 0,
-			min-width: 0,
+			margin: 0px 2px,
+			min-height: 0rem,
+			min-width: 0rem,
 		),
 
 		autofit-row: (

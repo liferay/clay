@@ -36,12 +36,12 @@ $sticker: map-deep-merge(
 			justify-content: center,
 
 			lexicon-icon: (
-				margin-top: 0,
+				margin-top: 0rem,
 			),
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$sticker
@@ -54,14 +54,14 @@ $sticker-overlay: map-merge(
 	(
 		align-items: center,
 		border-radius: inherit,
-		bottom: 0,
+		bottom: 0rem,
 		display: flex,
 		justify-content: center,
-		left: 0,
+		left: 0rem,
 		overflow: hidden,
 		position: absolute,
-		right: 0,
-		top: 0,
+		right: 0rem,
+		top: 0rem,
 	),
 	$sticker-overlay
 );

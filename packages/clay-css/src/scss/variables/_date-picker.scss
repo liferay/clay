@@ -5,16 +5,16 @@ $date-picker-dropdown-menu: map-deep-merge(
 	(
 		max-height: none,
 		max-width: 370px,
-		padding-bottom: 0,
-		padding-left: 0,
-		padding-right: 0,
-		padding-top: 0,
+		padding-bottom: 0rem,
+		padding-left: 0rem,
+		padding-right: 0rem,
+		padding-top: 0rem,
 		width: 100%,
 
 		media-breakpoint-down: (
 			xs: (
 				font-size: 0.75rem,
-				margin: 0,
+				margin: 0rem,
 				max-height: 255px,
 				max-width: 264px,
 			),
@@ -62,10 +62,10 @@ $date-picker-nav-btn: map-deep-merge(
 $date-picker-nav-btn-monospaced: () !default;
 $date-picker-nav-btn-monospaced: map-deep-merge(
 	(
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 		margin-left: 0.125rem,
 		margin-right: 0.125rem,
-		margin-top: 0,
+		margin-top: 0rem,
 
 		media-breakpoint-down: (
 			xs: (
@@ -103,7 +103,7 @@ $date-picker-row: map-deep-merge(
 		list-style: none,
 		margin-bottom: 0.5rem,
 		margin-top: 0.5rem,
-		padding: 0,
+		padding: 0rem,
 
 		media-breakpoint-down: (
 			xs: (
@@ -154,7 +154,7 @@ $date-picker-days-row: () !default;
 $date-picker-days-row: map-deep-merge(
 	(
 		margin-bottom: 1rem,
-		margin-top: 0,
+		margin-top: 0rem,
 
 		media-breakpoint-down: (
 			xs: (
@@ -231,7 +231,7 @@ $date-picker-calendar-footer-container: map-merge(
 	(
 		border-color: $gray-400,
 		border-style: solid,
-		border-width: 1px 0 0 0,
+		border-width: 1px 0px 0px 0px,
 		padding-bottom: 0.5rem,
 		padding-left: 0.875rem,
 		padding-right: 0.875rem,
@@ -264,12 +264,12 @@ $date-picker-calendar-item: map-deep-merge(
 		height: 2rem,
 		justify-content: center,
 		line-height: 1,
-		margin-left: 0,
-		margin-right: 0,
-		padding-bottom: 0,
-		padding-left: 0,
-		padding-right: 0,
-		padding-top: 0,
+		margin-left: 0rem,
+		margin-right: 0rem,
+		padding-bottom: 0rem,
+		padding-left: 0rem,
+		padding-right: 0rem,
+		padding-top: 0rem,
 		transition: $component-transition,
 		user-select: none,
 		vertical-align: middle,

@@ -78,6 +78,16 @@
 			)
 		);
 
+		$base: map-remove(
+			$base,
+			'bg',
+			'bg-clip',
+			'breakpoint-down',
+			'font-size-mobile',
+			'max-height-mobile',
+			'max-width-mobile'
+		);
+
 		@if ($enabled) {
 			@if (length($base) != 0) {
 				@include clay-css($base);
@@ -192,9 +202,9 @@
 				}
 			}
 
-			$_dropdown-ooter: map-get($map, dropdown-ooter);
+			$_dropdown-footer: map-get($map, dropdown-footer);
 
-			@if ($_dropdown-ooter) {
+			@if ($_dropdown-footer) {
 				.dropdown-footer {
 					@include clay-css($_dropdown-footer);
 				}
@@ -642,6 +652,11 @@
 			)
 		);
 
+		$_pb: map-get($map, padding-bottom);
+		$_pl: map-get($map, padding-left);
+		$_pr: map-get($map, padding-right);
+		$_pt: map-get($map, padding-top);
+
 		$c-inner: setter(map-get($map, c-inner), ());
 		$c-inner: map-merge(
 			(
@@ -656,13 +671,47 @@
 						)
 					),
 				flex-grow: 1,
-				margin-bottom: calc(#{map-get($map, padding-bottom)} * -1),
-				margin-left: calc(#{map-get($map, padding-left)} * -1),
-				margin-right: calc(#{map-get($map, padding-right)} * -1),
-				margin-top: calc(#{map-get($map, padding-top)} * -1),
+				margin-bottom: if($_pb, calc(#{$_pb} * -1), null),
+				margin-left: if($_pl, calc(#{$_pl} * -1), null),
+				margin-right: if($_pr, calc(#{$_pr} * -1), null),
+				margin-top: if($_pt, calc(#{$_pt} * -1), null),
 				width: auto,
 			),
 			$c-inner
+		);
+
+		$base: map-remove(
+			$base,
+			'active-bg',
+			'active-border-color',
+			'active-class-bg',
+			'active-class-border-color',
+			'active-class-color',
+			'active-class-font-weight',
+			'active-class-text-decoration',
+			'active-color',
+			'active-font-weight',
+			'active-text-decoration',
+			'bg',
+			'disabled-active-pointer-events',
+			'disabled-bg',
+			'disabled-border-color',
+			'disabled-box-shadow',
+			'disabled-color',
+			'disabled-cursor',
+			'disabled-opacity',
+			'disabled-outline',
+			'disabled-pointer-events',
+			'disabled-text-decoration',
+			'focus-bg',
+			'focus-border-radius',
+			'focus-box-shadow',
+			'focus-opacity',
+			'focus-outline',
+			'focus-text-decoration',
+			'hover-bg',
+			'hover-opacity',
+			'hover-text-decoration'
 		);
 
 		@if ($enabled) {

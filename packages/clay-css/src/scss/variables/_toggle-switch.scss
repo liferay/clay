@@ -14,7 +14,7 @@ $toggle-switch-transition:
 	right 100ms ease-in !default;
 
 // must all be same units--start
-$toggle-switch-bar-padding: 0 !default; // space between button and bar, can be negative value
+$toggle-switch-bar-padding: 0px !default; // space between button and bar, can be negative value
 $toggle-switch-button-width: 25px !default;
 
 $toggle-switch-bar-height: calc(
@@ -43,7 +43,7 @@ $toggle-switch-bar-icon-color: $gray-700 !default;
 
 $toggle-switch-button-bg: $white !default;
 $toggle-switch-button-border-color: $gray-400 !default;
-$toggle-switch-button-border-radius: 3px 0 0 3px !default;
+$toggle-switch-button-border-radius: 3px 0px 0px 3px !default;
 $toggle-switch-button-border-width: 1px !default;
 $toggle-switch-button-font-size: $toggle-switch-bar-font-size !default;
 
@@ -66,7 +66,7 @@ $toggle-switch-bar-on-icon-color: $component-active-color !default;
 
 $toggle-switch-button-on-bg: $white !default;
 $toggle-switch-button-on-border-color: $toggle-switch-bar-on-bg !default;
-$toggle-switch-button-on-border-radius: 0 3px 3px 0 !default;
+$toggle-switch-button-on-border-radius: 0px 3px 3px 0px !default;
 
 $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;
 
@@ -170,7 +170,7 @@ $toggle-switch-check: () !default;
 $toggle-switch-check: map-deep-merge(
 	(
 		breakpoint-down: sm,
-		bottom: 0,
+		bottom: 0rem,
 		font-size: 62.5%,
 		height: $toggle-switch-bar-height,
 		opacity: 0,
@@ -184,7 +184,7 @@ $toggle-switch-check: map-deep-merge(
 			height: $toggle-switch-bar-height,
 			line-height: $toggle-switch-bar-height,
 			position: relative,
-			text-indent: 0,
+			text-indent: 0rem,
 			user-select: none,
 
 			before: (
@@ -194,12 +194,12 @@ $toggle-switch-check: map-deep-merge(
 					clay-enable-rounded($toggle-switch-bar-border-radius),
 				border-style: solid,
 				border-width: $toggle-switch-bar-border-width,
-				bottom: 0,
+				bottom: 0rem,
 				content: ' ',
 				display: block,
-				left: 0,
+				left: 0rem,
 				position: absolute,
-				top: 0,
+				top: 0rem,
 				transition: $toggle-switch-transition,
 				width: $toggle-switch-bar-width,
 			),
@@ -246,7 +246,7 @@ $toggle-switch-check: map-deep-merge(
 				line-height: $toggle-switch-button-width,
 				position: absolute,
 				text-align: center,
-				text-indent: 0,
+				text-indent: 0rem,
 				top: $toggle-switch-bar-padding,
 				transition: $toggle-switch-transition,
 				width: $toggle-switch-button-width,
@@ -361,7 +361,7 @@ $toggle-switch-check: map-deep-merge(
 			toggle-switch-bar: (
 				height: $toggle-switch-bar-height-mobile,
 				line-height: $toggle-switch-bar-height-mobile,
-				text-indent: 0,
+				text-indent: 0rem,
 
 				before: (
 					width: $toggle-switch-bar-width-mobile,
@@ -517,7 +517,7 @@ $simple-toggle-switch: map-deep-merge(
 
 		toggle-switch-label: (
 			line-height: $simple-toggle-switch-label-line-height,
-			margin-bottom: 0,
+			margin-bottom: 0rem,
 			max-width:
 				calc(
 					100% - #{clay-data-label-text-position(
@@ -606,7 +606,7 @@ $toggle-switch-sizes: map-deep-merge(
 					toggle-switch-icon: (
 						font-size: 0.6875rem,
 						height: 16px,
-						left: 0,
+						left: 0rem,
 						line-height: 16px,
 						width: 16px,
 					),

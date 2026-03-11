@@ -165,7 +165,7 @@ $label-item-spacer-x: 0.5em !default;
 $label-item-spacer-y: null !default;
 
 $label-lexicon-icon-height: null !default;
-$label-lexicon-icon-margin-top: 0 !default;
+$label-lexicon-icon-margin-top: 0rem !default;
 $label-lexicon-icon-width: null !default;
 
 $label-item: () !default;
@@ -177,7 +177,7 @@ $label-item: map-deep-merge(
 		justify-content: center,
 		margin-bottom: $label-item-spacer-y,
 		margin-top: $label-item-spacer-y,
-		min-height: 0,
+		min-height: 0rem,
 		position: relative,
 
 		link: (

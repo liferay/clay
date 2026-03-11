@@ -9,8 +9,16 @@
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			margin: calc(#{$panel-header-padding-y} * -1)
-				calc(#{$panel-header-padding-x} * -1);
+			margin: if(
+					$panel-header-padding-y,
+					calc(#{$panel-header-padding-y} * -1),
+					null
+				)
+				if(
+					$panel-header-padding-x,
+					calc(#{$panel-header-padding-x} * -1),
+					null
+				);
 			width: auto;
 		}
 	}
@@ -24,11 +32,15 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin-left: calc(
-					#{$panel-header-collapse-icon-padding-left} * -1
+				margin-left: if(
+					$panel-header-collapse-icon-padding-left,
+					calc(#{$panel-header-collapse-icon-padding-left} * -1),
+					null
 				);
-				margin-right: calc(
-					#{$panel-header-collapse-icon-padding-right} * -1
+				margin-right: if(
+					$panel-header-collapse-icon-padding-right,
+					calc(#{$panel-header-collapse-icon-padding-right} * -1),
+					null
 				);
 			}
 		}
@@ -307,11 +319,17 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin-left: calc(
-					#{$panel-group-flush-collapse-icon-padding-left} * -1
+				margin-left: if(
+					$panel-group-flush-collapse-icon-padding-left,
+					calc(#{$panel-group-flush-collapse-icon-padding-left} * -1),
+					null
 				);
-				margin-right: calc(
-					#{$panel-group-flush-collapse-icon-padding-right} * -1
+				margin-right: if(
+					$panel-group-flush-collapse-icon-padding-right,
+					calc(
+						#{$panel-group-flush-collapse-icon-padding-right} * -1
+					),
+					null
 				);
 			}
 		}

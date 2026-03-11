@@ -545,6 +545,11 @@
 			)
 		);
 
+		$_mpb: map-get($mobile, padding-bottom);
+		$_mpl: map-get($mobile, padding-left);
+		$_mpr: map-get($mobile, padding-right);
+		$_mpt: map-get($mobile, padding-top);
+
 		$mobile-c-inner: setter(map-get($mobile, c-inner), ());
 		$mobile-c-inner: map-merge(
 			(
@@ -559,10 +564,10 @@
 								true
 							)
 					),
-				margin-bottom: calc(#{map-get($mobile, padding-bottom)} * -1),
-				margin-left: calc(#{map-get($mobile, padding-left)} * -1),
-				margin-right: calc(#{map-get($mobile, padding-right)} * -1),
-				margin-top: calc(#{map-get($mobile, padding-top)} * -1),
+				margin-bottom: if($_mpb, calc(#{$_mpb} * -1), null),
+				margin-left: if($_mpl, calc(#{$_mpl} * -1), null),
+				margin-right: if($_mpr, calc(#{$_mpr} * -1), null),
+				margin-top: if($_mpt, calc(#{$_mpt} * -1), null),
 			),
 			$mobile-c-inner
 		);
@@ -571,6 +576,11 @@
 			map-get($map, loading-animation),
 			clay-unset-placeholder
 		);
+
+		$_pb: map-get($map, padding-bottom);
+		$_pl: map-get($map, padding-left);
+		$_pr: map-get($map, padding-right);
+		$_pt: map-get($map, padding-top);
 
 		$c-inner: setter(map-get($map, c-inner), ());
 		$c-inner: map-merge(
@@ -585,12 +595,62 @@
 							true
 						)
 					),
-				margin-bottom: calc(#{map-get($map, padding-bottom)} * -1),
-				margin-left: calc(#{map-get($map, padding-left)} * -1),
-				margin-right: calc(#{map-get($map, padding-right)} * -1),
-				margin-top: calc(#{map-get($map, padding-top)} * -1),
+				margin-bottom: if($_pb, calc(#{$_pb} * -1), null),
+				margin-left: if($_pl, calc(#{$_pl} * -1), null),
+				margin-right: if($_pr, calc(#{$_pr} * -1), null),
+				margin-top: if($_pt, calc(#{$_pt} * -1), null),
 			),
 			$c-inner
+		);
+
+		$base: map-remove(
+			$base,
+			'active-bg',
+			'active-border-color',
+			'active-box-shadow',
+			'active-color',
+			'active-focus',
+			'active-focus-box-shadow',
+			'active-opacity',
+			'active-z-index',
+			'bg',
+			'breakpoint-down',
+			'disabled-bg',
+			'disabled-border-color',
+			'disabled-box-shadow',
+			'disabled-color',
+			'disabled-cursor',
+			'disabled-opacity',
+			'disabled-z-index',
+			'focus-bg',
+			'focus-border-color',
+			'focus-box-shadow',
+			'focus-color',
+			'focus-opacity',
+			'focus-outline',
+			'focus-z-index',
+			'font-size-mobile',
+			'height-mobile',
+			'hover-bg',
+			'hover-border-color',
+			'hover-color',
+			'hover-opacity',
+			'hover-text-decoration',
+			'hover-z-index',
+			'inline-item-font-size',
+			'lexicon-icon-font-size',
+			'lexicon-icon-margin-bottom',
+			'lexicon-icon-margin-left',
+			'lexicon-icon-margin-right',
+			'lexicon-icon-margin-top',
+			'padding-bottom-mobile',
+			'padding-left-mobile',
+			'padding-right-mobile',
+			'padding-top-mobile',
+			'section-font-size',
+			'section-font-weight',
+			'section-line-height',
+			'width-mobile'
 		);
 
 		@if ($enabled) {

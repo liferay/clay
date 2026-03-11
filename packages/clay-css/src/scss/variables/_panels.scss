@@ -221,10 +221,10 @@ $panel-group-sm-panel-unstyled: map-deep-merge(
 // Panel Group Flush
 
 $panel-group-flush-body-margin-bottom: 1.5rem !default;
-$panel-group-flush-body-padding: 0 !default;
+$panel-group-flush-body-padding: 0rem !default;
 
 $panel-group-flush-collapse-icon-left: null !default;
-$panel-group-flush-collapse-icon-right: 0 !default;
+$panel-group-flush-collapse-icon-right: 0rem !default;
 
 $panel-group-flush-collapse-icon-padding-left: null !default;
 $panel-group-flush-collapse-icon-padding-right: 1.5rem !default;
@@ -235,7 +235,7 @@ $panel-group-flush-panel-unstyled: map-deep-merge(
 		margin-bottom: 1.5rem,
 
 		panel-body: (
-			margin-bottom: 0,
+			margin-bottom: 0rem,
 		),
 	),
 	$panel-group-flush-panel-unstyled
@@ -279,8 +279,8 @@ $panel-unstyled: map-deep-merge(
 			border-color: $gray-500,
 			border-radius: 0px,
 			border-style: solid,
-			border-width: 0 0 1px 0,
-			padding-left: 0,
+			border-width: 0px 0px 1px 0px,
+			padding-left: 0rem,
 
 			collapsed: (
 				border-color: $gray-500,
@@ -290,15 +290,15 @@ $panel-unstyled: map-deep-merge(
 		),
 
 		collapse-icon: (
-			right: 0,
+			right: 0rem,
 		),
 
 		panel-body: (
-			padding: 1rem 0 0.1px 0,
+			padding: 1rem 0rem 0.1px 0rem,
 		),
 
 		panel-footer: (
-			padding: 1rem 0 0.1px 0,
+			padding: 1rem 0rem 0.1px 0rem,
 		),
 	),
 	$panel-unstyled
@@ -331,11 +331,11 @@ $panel-palette: map-deep-merge(
 			),
 
 			panel-body: (
-				padding: 0 1.25rem 1.25rem,
+				padding: 0rem 1.25rem 1.25rem,
 			),
 
 			panel-footer: (
-				padding: 0 1.25rem 1.25rem,
+				padding: 0rem 1.25rem 1.25rem,
 			),
 		),
 
@@ -348,8 +348,8 @@ $panel-palette: map-deep-merge(
 				font-size: 0.875rem,
 				line-height: 1.125rem,
 				padding-bottom: 0.40625rem,
-				padding-left: 0,
-				padding-right: 0,
+				padding-left: 0rem,
+				padding-right: 0rem,
 				padding-top: 0.40625rem,
 				text-transform: uppercase,
 
@@ -364,18 +364,18 @@ $panel-palette: map-deep-merge(
 
 			collapse-icon: (
 				font-size: inherit,
-				right: 0,
+				right: 0rem,
 				top: 0.5rem,
 			),
 
 			collapse-icon-middle: (
 				collapse-icon: (
-					right: 0,
+					right: 0rem,
 				),
 			),
 
 			panel-body: (
-				padding: 1.25rem 0,
+				padding: 1.25rem 0rem,
 			),
 
 			panel-title: (
@@ -383,7 +383,7 @@ $panel-palette: map-deep-merge(
 			),
 
 			panel-footer: (
-				padding: 1.25rem 0,
+				padding: 1.25rem 0rem,
 			),
 		),
 	),
@@ -410,11 +410,11 @@ $panel-sizes: map-deep-merge(
 			),
 
 			panel-body: (
-				padding: 0 1.5rem 1.5rem,
+				padding: 0rem 1.5rem 1.5rem,
 			),
 
 			panel-footer: (
-				padding: 0 1.5rem 1.5rem,
+				padding: 0rem 1.5rem 1.5rem,
 			),
 		),
 
@@ -433,11 +433,11 @@ $panel-sizes: map-deep-merge(
 			),
 
 			panel-body: (
-				padding: 0 1rem 1rem,
+				padding: 0rem 1rem 1rem,
 			),
 
 			panel-footer: (
-				padding: 0 1rem 1rem,
+				padding: 0rem 1rem 1rem,
 			),
 		),
 

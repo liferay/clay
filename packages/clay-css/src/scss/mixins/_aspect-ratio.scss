@@ -100,6 +100,17 @@
 			)
 		);
 
+		$base: map-remove(
+			$base,
+			'bg',
+			'bg-image',
+			'horizontal',
+			'lexicon-icon-height',
+			'lexicon-icon-margin-top',
+			'lexicon-icon-width',
+			'vertical'
+		);
+
 		@if ($enabled) {
 			@include clay-css($base);
 

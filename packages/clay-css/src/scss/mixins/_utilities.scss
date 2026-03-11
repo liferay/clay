@@ -158,6 +158,15 @@
 			)
 		);
 
+		$map: map-remove(
+			$map,
+			'autofit-col-padding',
+			'autofit-col-padding-bottom',
+			'autofit-col-padding-left',
+			'autofit-col-padding-right',
+			'autofit-col-padding-top'
+		);
+
 		@if ($enabled) {
 			@include clay-css($map);
 

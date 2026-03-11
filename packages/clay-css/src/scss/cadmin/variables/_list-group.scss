@@ -73,7 +73,7 @@ $cadmin-list-group-header-title: map-deep-merge(
 		font-size: 12px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: $cadmin-headings-line-height,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 		text-transform: uppercase,
 	),
 	$cadmin-list-group-header-title
@@ -110,7 +110,7 @@ $cadmin-list-group-title: map-deep-merge(
 		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: 1.45,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 		margin-top: $cadmin-list-group-item-flex-list-group-title-offset-top,
 
 		href: $cadmin-list-group-title-link,
@@ -147,7 +147,7 @@ $cadmin-list-group-subtitle: () !default;
 $cadmin-list-group-subtitle: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 
 		href: $cadmin-list-group-subtitle-link,
 	),
@@ -181,7 +181,7 @@ $cadmin-list-group-text: () !default;
 $cadmin-list-group-text: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 
 		href: $cadmin-list-group-text-link,
 	),
@@ -217,7 +217,7 @@ $cadmin-list-group-subtext: () !default;
 $cadmin-list-group-subtext: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 		margin-top: 8px,
 
 		href: $cadmin-list-group-subtext-link,
@@ -249,7 +249,7 @@ $cadmin-list-group: map-deep-merge(
 		font-size: $cadmin-list-group-font-size,
 		margin-bottom: $cadmin-list-group-margin-bottom,
 		margin-top: $cadmin-list-group-margin-top,
-		padding-left: 0,
+		padding-left: 0px,
 
 		list-group: (
 			box-shadow: if($cadmin-list-group-box-shadow != null, none, null),
@@ -282,8 +282,8 @@ $cadmin-list-group-notification-item-primary: map-deep-merge(
 	(
 		border-left-color: clay-lighten($cadmin-component-active-bg, 22.94),
 		border-left-width: 8px,
-		border-bottom-left-radius: 0,
-		border-top-left-radius: 0,
+		border-bottom-left-radius: 0px,
+		border-top-left-radius: 0px,
 
 		active-border-left-color:
 			clay-lighten($cadmin-component-active-bg, 22.94),

@@ -11,8 +11,8 @@ $clay-reorder: map-deep-merge(
 $clay-reorder-input-inset: () !default;
 $clay-reorder-input-inset: map-deep-merge(
 	(
-		margin-bottom: 0,
-		margin-top: 0,
+		margin-bottom: 0rem,
+		margin-top: 0rem,
 		overflow: auto,
 		padding-bottom:
 			if(variable-exists(input-padding-y), $input-padding-y, 0.375rem),
@@ -31,11 +31,11 @@ $clay-reorder-input-inset: map-deep-merge(
 $clay-reorder-underlay: () !default;
 $clay-reorder-underlay: map-deep-merge(
 	(
-		bottom: 0,
-		left: 0,
+		bottom: 0rem,
+		left: 0rem,
 		position: absolute,
-		right: 0,
-		top: 0,
+		right: 0rem,
+		top: 0rem,
 		z-index: -1,
 	),
 	$clay-reorder-underlay

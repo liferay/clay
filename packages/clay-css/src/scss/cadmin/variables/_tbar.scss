@@ -13,19 +13,19 @@ $cadmin-tbar-stacked: map-deep-merge(
 
 		tbar-nav: (
 			flex-direction: column,
-			min-width: 0,
+			min-width: 0px,
 		),
 
 		tbar-item: (
 			align-items: center,
 			justify-content: flex-start,
-			padding-left: 0,
-			padding-right: 0,
+			padding-left: 0px,
+			padding-right: 0px,
 		),
 
 		tbar-item-expand: (
 			flex-shrink: 0,
-			min-width: 0,
+			min-width: 0px,
 		),
 
 		tbar-divider-before: (
@@ -54,17 +54,17 @@ $cadmin-tbar-stacked: map-deep-merge(
 
 		tbar-btn-monospaced: (
 			border-color: transparent,
-			border-radius: 0,
-			border-width: 0,
+			border-radius: 0px,
+			border-width: 0px,
 			color: inherit,
 			height: 40px,
-			margin-bottom: 0,
-			margin-top: 0,
+			margin-bottom: 0px,
+			margin-top: 0px,
 			overflow: visible,
-			padding-bottom: 0,
-			padding-left: 0,
-			padding-right: 0,
-			padding-top: 0,
+			padding-bottom: 0px,
+			padding-left: 0px,
+			padding-right: 0px,
+			padding-top: 0px,
 			position: relative,
 			width: 40px,
 
@@ -89,7 +89,7 @@ $cadmin-tbar-inline-xs-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 1),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0px,
 		),
 	),
 	$cadmin-tbar-inline-xs-down
@@ -100,7 +100,7 @@ $cadmin-tbar-inline-sm-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 2),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0px,
 		),
 	),
 	$cadmin-tbar-inline-sm-down
@@ -111,7 +111,7 @@ $cadmin-tbar-inline-md-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 3),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0px,
 		),
 	),
 	$cadmin-tbar-inline-md-down
@@ -122,7 +122,7 @@ $cadmin-tbar-inline-lg-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 4),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0px,
 		),
 	),
 	$cadmin-tbar-inline-lg-down
@@ -133,7 +133,7 @@ $cadmin-tbar-inline-xl-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 5),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0px,
 		),
 	),
 	$cadmin-tbar-inline-xl-down
@@ -146,7 +146,7 @@ $cadmin-component-tbar: map-deep-merge(
 	(
 		border-color: $cadmin-gray-300,
 		border-style: solid,
-		border-width: 0 0 1px 0,
+		border-width: 0px 0px 1px 0px,
 		color: $cadmin-gray-600,
 		height: 56px,
 	),
@@ -238,12 +238,12 @@ $cadmin-tbar-dark-d1: map-deep-merge(
 			active-class: (
 				after: (
 					background-color: $cadmin-primary-l1,
-					bottom: 0,
+					bottom: 0px,
 					content: '',
 					display: block,
-					left: 0,
+					left: 0px,
 					position: absolute,
-					top: 0,
+					top: 0px,
 					width: 4px,
 				),
 			),
@@ -359,8 +359,8 @@ $cadmin-subnav-tbar: map-deep-merge(
 			line-height: 1,
 			margin-bottom: 2px,
 			margin-top: 2px,
-			padding-bottom: 0,
-			padding-top: 0,
+			padding-bottom: 0px,
+			padding-top: 0px,
 		),
 
 		tbar-btn-monospaced: (
@@ -462,7 +462,7 @@ $cadmin-subnav-tbar-primary-tbar-label-size: () !default;
 $cadmin-subnav-tbar-primary-tbar-label-size: map-deep-merge(
 	(
 		font-size: 12px,
-		margin-right: 0,
+		margin-right: 0px,
 		padding-bottom: 5px,
 		padding-left: 10px,
 		padding-right: 10px,
@@ -492,8 +492,8 @@ $cadmin-subnav-tbar-primary: map-deep-merge(
 		),
 
 		tbar-link-monospaced: (
-			border-radius: 0,
-			border-width: 0,
+			border-radius: 0px,
+			border-width: 0px,
 			height: 48px,
 			margin-bottom: -10px,
 			margin-top: -10px,

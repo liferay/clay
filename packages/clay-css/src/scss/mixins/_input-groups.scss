@@ -87,6 +87,19 @@
 		)
 	);
 
+	$map: map-remove(
+		$map,
+		'breakpoint',
+		'item-margin-bottom',
+		'item-margin-left',
+		'item-margin-right',
+		'item-margin-top',
+		'shrink-margin-bottom',
+		'shrink-margin-left',
+		'shrink-margin-right',
+		'shrink-margin-top'
+	);
+
 	@if ($enabled) {
 		@include media-breakpoint-down($breakpoint-down) {
 			@if (length($map) != 0) {
@@ -168,6 +181,8 @@
 					setter(map-get($map, bg), map-get($map, background-color)),
 			)
 		);
+
+		$base: map-remove($base, 'bg');
 
 		@if ($enabled) {
 			@if (length($base) != 0) {

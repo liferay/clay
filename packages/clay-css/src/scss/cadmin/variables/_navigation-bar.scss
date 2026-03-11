@@ -6,11 +6,11 @@ $cadmin-navigation-bar-size: map-deep-merge(
 		border-bottom-width: 1px,
 		font-size: $cadmin-navbar-font-size,
 		height: 48px,
-		padding-x: 0,
-		padding-y: 0,
+		padding-x: 0px,
+		padding-y: 0px,
 		link-padding-x: 16px,
 
-		nav-item-dropdown-margin-top: 0,
+		nav-item-dropdown-margin-top: 0px,
 
 		active-border-bottom-width: 4px,
 		active-border-offset-bottom: -8.5px,
@@ -22,7 +22,7 @@ $cadmin-navigation-bar-size: map-deep-merge(
 
 		toggler-link-height: 32px,
 		toggler-link-margin-y: 7.5px,
-		toggler-link-padding-y: 0,
+		toggler-link-padding-y: 0px,
 
 		media-breakpoint-down: (),
 		media-breakpoint-up: (),
@@ -39,7 +39,7 @@ $cadmin-navigation-bar-base: map-deep-merge(
 		navbar-nav: (
 			nav-link: (
 				border-radius: clay-enable-rounded($cadmin-border-radius),
-				border-width: 0,
+				border-width: 0px,
 				outline: 0,
 				font-size: inherit,
 

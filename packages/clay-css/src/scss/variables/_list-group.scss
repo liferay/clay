@@ -70,7 +70,7 @@ $list-group-header-title: map-deep-merge(
 		font-size: 1rem,
 		font-weight: $font-weight-semi-bold,
 		line-height: $headings-line-height,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 	),
 	$list-group-header-title
 );
@@ -97,7 +97,7 @@ $list-group-title: map-deep-merge(
 		font-size: 1.125rem,
 		font-weight: $font-weight-semi-bold,
 		line-height: $line-height-base,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 		margin-top: $list-group-item-flex-list-group-title-offset-top,
 
 		href: $list-group-title-link
@@ -125,7 +125,7 @@ $list-group-subtitle: () !default;
 $list-group-subtitle: map-deep-merge(
 	(
 		color: $gray-600,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 
 		href: $list-group-subtitle-link,
 	),
@@ -150,7 +150,7 @@ $list-group-text: () !default;
 $list-group-text: map-deep-merge(
 	(
 		color: $gray-900,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 
 		href: $list-group-text-link,
 	),
@@ -177,7 +177,7 @@ $list-group-subtext: () !default;
 $list-group-subtext: map-deep-merge(
 	(
 		color: $gray-600,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 
 		href: $list-group-subtext-link,
 	),
@@ -208,7 +208,7 @@ $list-group: map-deep-merge(
 		font-size: $list-group-font-size,
 		margin-bottom: $list-group-margin-bottom,
 		margin-top: $list-group-margin-top,
-		padding-left: 0,
+		padding-left: 0rem,
 
 		list-group: (
 			box-shadow: if($list-group-box-shadow != null, none, null),

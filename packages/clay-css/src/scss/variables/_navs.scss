@@ -79,7 +79,7 @@ $nav-btn-padding-x: 0.5rem !default;
 
 /// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
 
-$nav-btn-padding-y: 0 !default;
+$nav-btn-padding-y: 0rem !default;
 
 $nav-btn: () !default;
 $nav-btn: map-deep-merge(
@@ -105,7 +105,7 @@ $nav-btn: map-deep-merge(
 		),
 
 		c-inner: (
-			margin-bottom: 0,
+			margin-bottom: 0rem,
 			margin-left: calc(#{$nav-btn-padding-x} * -1),
 			margin-right: calc(#{$nav-btn-padding-x} * -1),
 			margin-top:
@@ -119,12 +119,12 @@ $nav-btn: map-deep-merge(
 		),
 
 		btn-link: (
-			margin-left: 0,
-			margin-right: 0,
+			margin-left: 0rem,
+			margin-right: 0rem,
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$nav-btn
@@ -135,7 +135,7 @@ $nav-btn: map-deep-merge(
 $nav-btn-monospaced: () !default;
 $nav-btn-monospaced: map-deep-merge(
 	(
-		padding: 0,
+		padding: 0rem,
 
 		c-inner: (
 			margin-left:
@@ -170,10 +170,10 @@ $nav-link-monospaced: map-deep-merge(
 		justify-content: center,
 		margin: $nav-btn-margin-y $nav-btn-margin-x,
 		min-width: $nav-item-monospaced-size,
-		padding: 0,
+		padding: 0rem,
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$nav-link-monospaced
@@ -206,7 +206,7 @@ $nav-divider: map-deep-merge(
 			content: '',
 			display: block,
 			height: 1rem,
-			left: 0,
+			left: 0rem,
 			margin-top: -0.5rem,
 			position: absolute,
 			top: 50%,
@@ -231,7 +231,7 @@ $nav-divider-end: map-deep-merge(
 			height: 1rem,
 			margin-top: -0.5rem,
 			position: absolute,
-			right: 0,
+			right: 0rem,
 			top: 50%,
 			width: 1px,
 			z-index: 2,
@@ -257,10 +257,10 @@ $nav-text-truncate: map-merge(
 
 // .nav .nav-form
 
-$nav-form-padding-bottom: 0 !default;
+$nav-form-padding-bottom: 0rem !default;
 $nav-form-padding-left: $nav-link-padding-x !default;
 $nav-form-padding-right: $nav-link-padding-x !default;
-$nav-form-padding-top: 0 !default;
+$nav-form-padding-top: 0rem !default;
 
 // .nav
 
@@ -271,8 +271,8 @@ $nav: map-deep-merge(
 		flex-wrap: wrap,
 		font-size: $nav-font-size,
 		list-style: none,
-		margin-bottom: 0,
-		padding-left: 0,
+		margin-bottom: 0rem,
+		padding-left: 0rem,
 
 		nav-form: (
 			padding-bottom: $nav-form-padding-bottom,
@@ -347,22 +347,22 @@ $nav-unstyled: map-deep-merge(
 
 		nav-link: (
 			line-height: $nav-item-monospaced-size,
-			padding-bottom: 0,
+			padding-bottom: 0rem,
 			padding-left: 4px,
 			padding-right: 4px,
-			padding-top: 0,
+			padding-top: 0rem,
 		),
 
 		nav-link-monospaced: (
-			margin: 0 4px,
+			margin: 0px 4px,
 		),
 
 		nav-btn: (
-			margin: 0 4px,
-			padding-bottom: 0,
+			margin: 0px 4px,
+			padding-bottom: 0rem,
 			padding-left: 4px,
 			padding-right: 4px,
-			padding-top: 0,
+			padding-top: 0rem,
 		),
 	),
 	$nav-unstyled
@@ -385,7 +385,7 @@ $nav-tabs-font-size: null !default;
 // Nav Tabs Link
 
 $nav-tabs-border-color: $gray-300 !default;
-$nav-tabs-border-radius: $border-radius $border-radius 0 0 !default;
+$nav-tabs-border-radius: $border-radius $border-radius 0rem 0rem !default;
 $nav-tabs-border-width: $border-width !default;
 
 $nav-tabs-link-color: null !default;

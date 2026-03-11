@@ -24,7 +24,7 @@ $drilldown-item: map-merge(
 	(
 		display: none,
 		flex-shrink: 0,
-		height: 0,
+		height: 0rem,
 		width: 100%,
 	),
 	$drilldown-item
@@ -47,7 +47,7 @@ $drilldown-dropdown-menu: map-merge(
 		flex-direction: column,
 		max-height: none,
 		max-width: none,
-		min-width: 0,
+		min-width: 0rem,
 		overflow: hidden,
 		width: $drilldown-width,
 	),
@@ -186,7 +186,7 @@ $drilldown-dropdown-footer: map-merge(
 $drilldown-dropdown-divider: () !default;
 $drilldown-dropdown-divider: map-merge(
 	(
-		margin: 0,
+		margin: 0rem,
 	),
 	$drilldown-dropdown-divider
 );

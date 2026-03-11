@@ -7,8 +7,8 @@ $navigation-bar-size: map-deep-merge(
 		font-size:
 			if(variable-exists(navbar-font-size), $navbar-font-size, null),
 		height: 3rem,
-		padding-x: 0,
-		padding-y: 0,
+		padding-x: 0rem,
+		padding-y: 0rem,
 
 		link-padding-x: 1rem,
 
@@ -16,7 +16,7 @@ $navigation-bar-size: map-deep-merge(
 
 		collapse-dropdown-item-padding-y-mobile: 0.71875rem,
 
-		nav-item-dropdown-margin-top: 0,
+		nav-item-dropdown-margin-top: 0rem,
 
 		active-border-bottom-width: 0.25rem,
 	),
@@ -31,7 +31,7 @@ $navigation-bar-base: map-deep-merge(
 
 		navbar-nav: (
 			nav-link: (
-				border-width: 0,
+				border-width: 0rem,
 				font-size: inherit,
 			),
 		),

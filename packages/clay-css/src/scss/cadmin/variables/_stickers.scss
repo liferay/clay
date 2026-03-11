@@ -36,12 +36,12 @@ $cadmin-sticker: map-deep-merge(
 			justify-content: center,
 
 			lexicon-icon: (
-				margin-top: 0,
+				margin-top: 0px,
 			),
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-sticker
@@ -54,14 +54,14 @@ $cadmin-sticker-overlay: map-merge(
 	(
 		align-items: center,
 		border-radius: inherit,
-		bottom: 0,
+		bottom: 0px,
 		display: flex,
 		justify-content: center,
-		left: 0,
+		left: 0px,
 		overflow: hidden,
 		position: absolute,
-		right: 0,
-		top: 0,
+		right: 0px,
+		top: 0px,
 	),
 	$cadmin-sticker-overlay
 );

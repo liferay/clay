@@ -4,7 +4,7 @@ $cadmin-breadcrumb-bg: transparent !default;
 $cadmin-breadcrumb-border-radius: $cadmin-border-radius !default;
 $cadmin-breadcrumb-font-size: 14px !default;
 $cadmin-breadcrumb-font-weight: null !default;
-$cadmin-breadcrumb-margin-bottom: 0 !default;
+$cadmin-breadcrumb-margin-bottom: 0px !default;
 $cadmin-breadcrumb-padding-x: 2px !default; // 2px
 $cadmin-breadcrumb-padding-y: 9.5px !default;
 $cadmin-breadcrumb-text-transform: null !default;
@@ -71,10 +71,10 @@ $cadmin-breadcrumb-item: map-deep-merge(
 				background-size: 100%,
 				content: '',
 				height: $cadmin-breadcrumb-divider-svg-icon-height,
-				left: 0,
+				left: 0px,
 				margin-top:
 					calc(#{$cadmin-breadcrumb-divider-svg-icon-height} / -2),
-				padding: 0,
+				padding: 0px,
 				position: absolute,
 				top: 50%,
 				width: $cadmin-breadcrumb-divider-svg-icon-width,

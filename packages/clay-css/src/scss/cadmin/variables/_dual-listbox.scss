@@ -46,7 +46,7 @@ $cadmin-clay-dual-listbox-item-sm-up: map-deep-merge(
 $cadmin-clay-dual-listbox-item-last-child: () !default;
 $cadmin-clay-dual-listbox-item-last-child: map-deep-merge(
 	(
-		margin-right: 0,
+		margin-right: 0px,
 	),
 	$cadmin-clay-dual-listbox-item-last-child
 );

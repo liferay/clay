@@ -69,7 +69,7 @@ $cadmin-sheet-footer-btn-block-sm-down: map-deep-merge(
 
 			btn-group-item: (
 				display: block,
-				margin-right: 0,
+				margin-right: 0px,
 			),
 		),
 	),
@@ -101,7 +101,7 @@ $cadmin-sheet-title-margin-bottom-mobile: 16px !default; // 16px
 
 $cadmin-sheet-subtitle-border-color: $cadmin-gray-500 !default;
 $cadmin-sheet-subtitle-border-style: solid !default;
-$cadmin-sheet-subtitle-border-width: 0 0 1px 0 !default;
+$cadmin-sheet-subtitle-border-width: 0px 0px 1px 0px !default;
 $cadmin-sheet-subtitle-color: $cadmin-body-color !default;
 $cadmin-sheet-subtitle-font-size: 14px !default; // 14px
 $cadmin-sheet-subtitle-font-weight: $cadmin-font-weight-semi-bold !default;
@@ -114,7 +114,7 @@ $cadmin-sheet-subtitle-text-transform: uppercase !default;
 $cadmin-sheet-subtitle-font-size-mobile: null !default;
 $cadmin-sheet-subtitle-margin-bottom-mobile: 16px !default; // 16px
 
-$cadmin-sheet-subtitle-heading-text-margin-bottom: 0 !default;
+$cadmin-sheet-subtitle-heading-text-margin-bottom: 0px !default;
 $cadmin-sheet-subtitle-heading-text-margin-top: auto !default;
 
 // Sheet Subtitle as Panel Header
@@ -194,7 +194,7 @@ $cadmin-sheet-multiple-form-sheet-header: map-merge(
 	(
 		border-color: $cadmin-gray-300,
 		border-style: solid,
-		border-width: 0 0 1px,
+		border-width: 0px 0px 1px,
 		margin: -24px -24px 24px,
 		padding: 16px 24px,
 	),
@@ -213,7 +213,7 @@ $cadmin-sheet-multiple-form-sheet-header-mobile: map-merge(
 $cadmin-sheet-multiple-form-sheet-title: () !default;
 $cadmin-sheet-multiple-form-sheet-title: map-merge(
 	(
-		margin-bottom: 0,
+		margin-bottom: 0px,
 	),
 	$cadmin-sheet-multiple-form-sheet-title
 );
@@ -225,7 +225,7 @@ $cadmin-sheet-dataset-content: () !default;
 $cadmin-sheet-dataset-content-sheet-header: () !default;
 $cadmin-sheet-dataset-content-sheet-header: map-merge(
 	(
-		border-width: 0,
+		border-width: 0px,
 		margin: -24px -24px 24px,
 		padding: 16px 24px,
 	),
@@ -244,7 +244,7 @@ $cadmin-sheet-dataset-content-sheet-header-mobile: map-merge(
 $cadmin-sheet-dataset-content-sheet-title: () !default;
 $cadmin-sheet-dataset-content-sheet-title: map-merge(
 	(
-		margin-bottom: 0,
+		margin-bottom: 0px,
 	),
 	$cadmin-sheet-dataset-content-sheet-title
 );

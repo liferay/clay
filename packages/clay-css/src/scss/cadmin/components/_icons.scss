@@ -23,8 +23,16 @@ button.collapse-icon {
 
 	@if ($cadmin-enable-c-inner) {
 		.c-inner {
-			margin-left: calc(#{$cadmin-collapse-icon-padding-left} * -1);
-			margin-right: calc(#{$cadmin-collapse-icon-padding-right} * -1);
+			margin-left: if(
+				$cadmin-collapse-icon-padding-left,
+				calc(#{$cadmin-collapse-icon-padding-left} * -1),
+				null
+			);
+			margin-right: if(
+				$cadmin-collapse-icon-padding-right,
+				calc(#{$cadmin-collapse-icon-padding-right} * -1),
+				null
+			);
 		}
 	}
 }

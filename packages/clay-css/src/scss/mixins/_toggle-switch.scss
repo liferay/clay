@@ -706,6 +706,8 @@
 		$breakpoint-down: setter(map-get($map, breakpoint-down), sm);
 		$enabled: setter(map-get($map, enabled), true);
 
+		$map: map-remove($map, 'breakpoint-down');
+
 		@if ($enabled) {
 			@if (length($map) != 0) {
 				@include clay-css($map);
@@ -1264,6 +1266,8 @@
 	@if (type-of($map) == 'map') {
 		$breakpoint-down: setter(map-get($map, breakpoint-down), sm);
 		$enabled: setter(map-get($map, enabled), true);
+
+		$map: map-remove($map, 'breakpoint-down');
 
 		@if (length($map) != 0) {
 			@include clay-css($map);

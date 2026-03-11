@@ -97,6 +97,19 @@
 			)
 		);
 
+		$base: map-remove(
+			$base,
+			'bg',
+			'bg-image',
+			'bg-position',
+			'bg-size',
+			'breakpoint-up',
+			'padding-bottom-mobile',
+			'padding-left-mobile',
+			'padding-right-mobile',
+			'padding-top-mobile'
+		);
+
 		@if ($enabled) {
 			@include clay-css($base);
 

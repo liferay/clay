@@ -45,7 +45,7 @@ $cadmin-c-empty-state-title: map-deep-merge(
 		font-size: 20px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: $cadmin-headings-line-height,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 		margin-top: 40px,
 		max-width: 100%,
 		word-wrap: break-word,
@@ -57,7 +57,7 @@ $cadmin-c-empty-state-text: () !default;
 $cadmin-c-empty-state-text: map-deep-merge(
 	(
 		color: $cadmin-secondary,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 		margin-top: 8px,
 		max-width: 100%,
 		word-wrap: break-word,

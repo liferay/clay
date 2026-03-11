@@ -43,11 +43,11 @@ $dropdown-menu: map-deep-merge(
 		border-width: $dropdown-border-width,
 		box-shadow: clay-enable-shadows($dropdown-box-shadow),
 		font-size: $dropdown-font-size,
-		margin: $dropdown-spacer 0 0,
+		margin: $dropdown-spacer 0rem 0rem,
 		max-width: $dropdown-max-width,
 		min-height: $dropdown-min-height,
 		min-width: $dropdown-min-width,
-		padding: $dropdown-padding-y 0,
+		padding: $dropdown-padding-y 0rem,
 	),
 	$dropdown-menu
 );

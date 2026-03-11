@@ -59,6 +59,13 @@
 			)
 		);
 
+		$base: map-remove(
+			$base,
+			'autofit-col-padding-left',
+			'autofit-col-padding-right',
+			'bg'
+		);
+
 		@if ($enabled) {
 			@if (length($base) != 0) {
 				@include clay-css($base);
@@ -698,6 +705,52 @@
 						map-get($dropdown-action, margin-top)
 					),
 			)
+		);
+
+		$base: map-remove(
+			$base,
+			'active-bg',
+			'active-border-color',
+			'active-color',
+			'aspect-ratio-bg',
+			'aspect-ratio-border-bottom-width',
+			'aspect-ratio-border-color',
+			'aspect-ratio-border-style',
+			'aspect-ratio-border-width',
+			'aspect-ratio-checkered-bg',
+			'aspect-ratio-checkered-fg',
+			'aspect-ratio-horizontal',
+			'aspect-ratio-vertical',
+			'asset-icon-color',
+			'asset-icon-lexicon-icon-height',
+			'asset-icon-lexicon-icon-width',
+			'asset-icon-max-width',
+			'asset-icon-min-width',
+			'asset-icon-sticker-border-radius',
+			'asset-icon-sticker-font-size',
+			'asset-icon-width',
+			'bg',
+			'card-body-padding-bottom',
+			'card-body-padding-left',
+			'card-body-padding-right',
+			'card-body-padding-top',
+			'card-row-align-items',
+			'checkbox-cursor',
+			'checkered-foreground-color',
+			'dropdown-action-offset-bottom',
+			'dropdown-action-offset-left',
+			'dropdown-action-offset-right',
+			'dropdown-action-offset-top',
+			'focus-bg',
+			'focus-border-color',
+			'focus-box-shadow',
+			'focus-color',
+			'focus-text-decoration',
+			'hover-bg',
+			'hover-border-color',
+			'hover-box-shadow',
+			'hover-color',
+			'hover-text-decoration'
 		);
 
 		@if ($enabled) {
@@ -1653,6 +1706,19 @@
 		)
 	);
 
+	$map: map-remove(
+		$map,
+		'aspect-ratio-bg',
+		'aspect-ratio-checkered-bg',
+		'asset-icon-color',
+		'asset-icon-lexicon-icon-height',
+		'asset-icon-lexicon-icon-width',
+		'asset-icon-max-width',
+		'asset-icon-min-width',
+		'asset-icon-width',
+		'checkered-foreground-color'
+	);
+
 	@if ($enabled) {
 		@if (length($map) != 0) {
 			@include clay-css($map);
@@ -1783,6 +1849,21 @@
 					map-get($dropdown-action, margin-top)
 				),
 		)
+	);
+
+	$base: map-remove(
+		$base,
+		'card-body-padding-bottom',
+		'card-body-padding-left',
+		'card-body-padding-right',
+		'card-body-padding-top',
+		'dropdown-action-offset-bottom',
+		'dropdown-action-offset-left',
+		'dropdown-action-offset-right',
+		'dropdown-action-offset-top',
+		'sticker-font-size',
+		'sticker-line-height',
+		'sticker-size'
 	);
 
 	@if ($enabled) {

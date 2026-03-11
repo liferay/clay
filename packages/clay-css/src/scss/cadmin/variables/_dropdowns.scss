@@ -13,7 +13,7 @@ $cadmin-dropdown-toggle: map-deep-merge(
 $cadmin-dropdown-bg: $cadmin-white !default;
 $cadmin-dropdown-border-color: $cadmin-gray-300 !default;
 $cadmin-dropdown-border-style: solid !default;
-$cadmin-dropdown-border-width: 0 !default;
+$cadmin-dropdown-border-width: 0px !default;
 
 $cadmin-dropdown-border-radius: $cadmin-border-radius !default;
 $cadmin-dropdown-inner-border-radius: $cadmin-dropdown-border-radius
@@ -49,15 +49,15 @@ $cadmin-dropdown-menu: map-deep-merge(
 		display: none,
 		float: left,
 		font-size: $cadmin-dropdown-font-size,
-		left: 0,
+		left: 0px,
 		list-style: none,
-		margin: $cadmin-dropdown-spacer 0 0,
+		margin: $cadmin-dropdown-spacer 0px 0px,
 		max-height: $cadmin-dropdown-max-height,
 		max-width: $cadmin-dropdown-max-width,
 		min-height: $cadmin-dropdown-min-height,
 		min-width: $cadmin-dropdown-min-width,
 		overflow: auto,
-		padding: $cadmin-dropdown-padding-y 0,
+		padding: $cadmin-dropdown-padding-y 0px,
 		position: absolute,
 		text-align: left,
 		top: 100%,
@@ -103,8 +103,8 @@ $cadmin-dropdown-item-base: () !default;
 $cadmin-dropdown-item-base: map-deep-merge(
 	(
 		background-color: transparent,
-		border-radius: 0,
-		border-width: 0,
+		border-radius: 0px,
+		border-width: 0px,
 		clear: both,
 		color: $cadmin-dropdown-link-color,
 		cursor: $cadmin-link-cursor,
@@ -202,12 +202,12 @@ $cadmin-dropdown-item-base: map-deep-merge(
 
 			lexicon-icon: (
 				font-size: 16px,
-				margin-top: 0,
+				margin-top: 0px,
 			),
 		),
 
 		label: (
-			margin-bottom: 0,
+			margin-bottom: 0px,
 			margin-top: 5px,
 		),
 	),
@@ -265,7 +265,7 @@ $cadmin-dropdown-header: map-deep-merge(
 		),
 
 		first-child: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-dropdown-header
@@ -299,7 +299,7 @@ $cadmin-dropdown-subheader: map-deep-merge(
 		word-wrap: break-word,
 
 		first-child: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-dropdown-subheader
@@ -333,8 +333,8 @@ $cadmin-dropdown-divider: () !default;
 $cadmin-dropdown-divider: map-merge(
 	(
 		border-top: 1px solid $cadmin-dropdown-divider-bg,
-		height: 0,
-		margin: $cadmin-dropdown-divider-margin-y 0,
+		height: 0px,
+		margin: $cadmin-dropdown-divider-margin-y 0px,
 		overflow: hidden,
 	),
 	$cadmin-dropdown-divider
@@ -345,7 +345,7 @@ $cadmin-dropdown-divider: map-merge(
 $cadmin-dropdown-section-custom-control: () !default;
 $cadmin-dropdown-section-custom-control: map-deep-merge(
 	(
-		margin-bottom: 0,
+		margin-bottom: 0px,
 	),
 	$cadmin-dropdown-section-custom-control
 );
@@ -412,7 +412,7 @@ $cadmin-dropdown-footer: () !default;
 $cadmin-dropdown-footer: map-merge(
 	(
 		box-shadow: -1px -2px 3px -3px rgba(0, 0, 0, 0.5),
-		padding: 8px $cadmin-dropdown-item-padding-x 0,
+		padding: 8px $cadmin-dropdown-item-padding-x 0px,
 		position: relative,
 	),
 	$cadmin-dropdown-footer
@@ -450,7 +450,7 @@ $cadmin-dropdown-item-indicator-start: map-deep-merge(
 
 		lexicon-icon: (
 			font-size: 16px,
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-dropdown-item-indicator-start
@@ -503,7 +503,7 @@ $cadmin-dropdown-item-indicator-end: map-deep-merge(
 
 		lexicon-icon: (
 			font-size: 16px,
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-dropdown-item-indicator-end
@@ -540,8 +540,8 @@ $cadmin-dropdown-menu-top: () !default;
 $cadmin-dropdown-menu-top: map-deep-merge(
 	(
 		bottom: 100% !important,
-		left: 0 !important,
-		margin-top: 0,
+		left: 0px !important,
+		margin-top: 0px,
 		margin-bottom: $cadmin-dropdown-spacer,
 		right: auto !important,
 		top: auto !important,
@@ -558,9 +558,9 @@ $cadmin-dropdown-menu-top-right: map-deep-merge(
 	(
 		bottom: 100% !important,
 		left: auto !important,
-		margin-top: 0,
+		margin-top: 0px,
 		margin-bottom: $cadmin-dropdown-spacer,
-		right: 0 !important,
+		right: 0px !important,
 		top: auto !important,
 		transform: none !important,
 		will-change: auto !important,
@@ -575,7 +575,7 @@ $cadmin-dropdown-menu-top-center: map-deep-merge(
 	(
 		bottom: 100% !important,
 		left: 50% !important,
-		margin-top: 0,
+		margin-top: 0px,
 		margin-bottom: $cadmin-dropdown-spacer,
 		right: auto !important,
 		top: auto !important,
@@ -608,9 +608,9 @@ $cadmin-dropdown-menu-left-side: map-deep-merge(
 		bottom: auto !important,
 		left: auto !important,
 		margin-right: $cadmin-dropdown-spacer,
-		margin-top: 0,
+		margin-top: 0px,
 		right: 100% !important,
-		top: 0 !important,
+		top: 0px !important,
 		transform: none !important,
 		will-change: auto !important,
 	),
@@ -622,10 +622,10 @@ $cadmin-dropdown-menu-left-side: map-deep-merge(
 $cadmin-dropdown-menu-left-side-bottom: () !default;
 $cadmin-dropdown-menu-left-side-bottom: map-deep-merge(
 	(
-		bottom: 0 !important,
+		bottom: 0px !important,
 		left: auto !important,
 		margin-right: $cadmin-dropdown-spacer,
-		margin-top: 0,
+		margin-top: 0px,
 		right: 100% !important,
 		top: auto !important,
 		transform: none !important,
@@ -642,7 +642,7 @@ $cadmin-dropdown-menu-left-side-middle: map-deep-merge(
 		bottom: auto !important,
 		left: auto !important,
 		margin-right: $cadmin-dropdown-spacer,
-		margin-top: 0,
+		margin-top: 0px,
 		right: 100% !important,
 		top: 50% !important,
 		transform: translate(0, -50%) !important,
@@ -659,9 +659,9 @@ $cadmin-dropdown-menu-right-side: map-deep-merge(
 		bottom: auto !important,
 		left: 100% !important,
 		margin-left: $cadmin-dropdown-spacer,
-		margin-top: 0,
+		margin-top: 0px,
 		right: auto !important,
-		top: 0 !important,
+		top: 0px !important,
 		transform: none !important,
 		will-change: auto !important,
 	),
@@ -673,10 +673,10 @@ $cadmin-dropdown-menu-right-side: map-deep-merge(
 $cadmin-dropdown-menu-right-side-bottom: () !default;
 $cadmin-dropdown-menu-right-side-bottom: map-deep-merge(
 	(
-		bottom: 0 !important,
+		bottom: 0px !important,
 		left: 100% !important,
 		margin-left: $cadmin-dropdown-spacer,
-		margin-top: 0,
+		margin-top: 0px,
 		right: auto !important,
 		top: auto !important,
 		transform: none !important,
@@ -693,7 +693,7 @@ $cadmin-dropdown-menu-right-side-middle: map-deep-merge(
 		bottom: auto !important,
 		left: 100% !important,
 		margin-left: $cadmin-dropdown-spacer,
-		margin-top: 0,
+		margin-top: 0px,
 		right: auto !important,
 		top: 50% !important,
 		transform: translate(0, -50%) !important,
@@ -715,7 +715,7 @@ $cadmin-dropdown-wide-width: 500px !default;
 $cadmin-dropdown-menu-width-shrink: () !default;
 $cadmin-dropdown-menu-width-shrink: map-deep-merge(
 	(
-		min-width: 0,
+		min-width: 0px,
 	),
 	$cadmin-dropdown-menu-width-shrink
 );
@@ -728,7 +728,7 @@ $cadmin-dropdown-menu-width-full: map-merge(
 		left: 12px !important,
 		right: 12px !important,
 		max-width: none,
-		min-width: 0,
+		min-width: 0px,
 		width: calc(100% - 24px),
 	),
 	$cadmin-dropdown-menu-width-full
@@ -740,7 +740,7 @@ $cadmin-dropdown-menu-width-sm: () !default;
 $cadmin-dropdown-menu-width-sm: map-merge(
 	(
 		max-width: none,
-		min-width: 0,
+		min-width: 0px,
 		width: 500px,
 	),
 	$cadmin-dropdown-menu-width-sm
@@ -763,7 +763,7 @@ $cadmin-dropdown-menu-height-auto: map-merge(
 	(
 		height: auto,
 		max-height: none,
-		min-height: 0,
+		min-height: 0px,
 	),
 	$cadmin-dropdown-menu-height-auto
 );
@@ -809,7 +809,7 @@ $cadmin-dropdown-action: map-deep-merge(
 			height: $cadmin-dropdown-action-toggle-size,
 			justify-content: center,
 			line-height: inherit,
-			padding: 0,
+			padding: 0px,
 			text-transform: inherit,
 			vertical-align: baseline,
 			width: $cadmin-dropdown-action-toggle-size,
@@ -820,12 +820,12 @@ $cadmin-dropdown-action: map-deep-merge(
 			),
 
 			lexicon-icon: (
-				margin-top: 0,
+				margin-top: 0px,
 			),
 
 			inline-item: (
 				lexicon-icon: (
-					margin-top: 0,
+					margin-top: 0px,
 				),
 			),
 		),
@@ -876,7 +876,7 @@ $cadmin-dropdown-menu-palette: map-deep-merge(
 			dropdown-item-scroll: (
 				font-size: 16px,
 				height: 32px,
-				padding: 0,
+				padding: 0px,
 				position: absolute,
 				text-align: center,
 				z-index: 1,
@@ -930,7 +930,7 @@ $cadmin-dropdown-menu-palette: map-deep-merge(
 			),
 
 			dropdown-divider: (
-				margin: 5px 0,
+				margin: 5px 0px,
 			),
 
 			dropdown-menu-indicator-start: (

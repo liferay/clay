@@ -6,10 +6,10 @@ $clay-time-btn: map-deep-merge(
 		font-size: 0.75rem,
 		height: 1.5rem,
 		justify-content: center,
-		padding-bottom: 0,
-		padding-left: 0,
-		padding-right: 0,
-		padding-top: 0,
+		padding-bottom: 0rem,
+		padding-left: 0rem,
+		padding-right: 0rem,
+		padding-top: 0rem,
 		width: 1.5rem,
 	),
 	$clay-time-btn
@@ -30,9 +30,9 @@ $clay-time-form-control: map-deep-merge(
 $clay-time-form-control-inset: () !default;
 $clay-time-form-control-inset: map-deep-merge(
 	(
-		margin-bottom: 0,
-		margin-left: 0,
-		margin-top: 0,
+		margin-bottom: 0rem,
+		margin-left: 0rem,
+		margin-top: 0rem,
 		text-align: center,
 		width: 1.25rem,
 
@@ -64,10 +64,10 @@ $clay-time-input-group-text: map-merge(
 		background-color:
 			setter(map-get($clay-time-input-group-text, bg), transparent),
 		border-color: transparent,
-		padding-bottom: 0,
-		padding-left: 0,
-		padding-right: 0,
-		padding-top: 0,
+		padding-bottom: 0rem,
+		padding-left: 0rem,
+		padding-right: 0rem,
+		padding-top: 0rem,
 	),
 	$clay-time-input-group-text
 );

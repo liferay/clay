@@ -9,7 +9,7 @@ $cadmin-navbar-nav-link-padding-x: 8px !default;
 
 $cadmin-navbar-title-font-size: 20px !default; // 20px
 $cadmin-navbar-title-font-weight: $cadmin-font-weight-semi-bold !default;
-$cadmin-navbar-title-margin-bottom: 0 !default;
+$cadmin-navbar-title-margin-bottom: 0px !default;
 $cadmin-navbar-title-text-transform: null !default;
 
 $cadmin-navbar-text-truncate-spacer-right: 25px !default; // 25px
@@ -71,9 +71,9 @@ $cadmin-navbar-underline: map-deep-merge(
 				content: '',
 				display: block,
 				height: 0.25rem,
-				left: 0,
+				left: 0px,
 				position: absolute,
-				right: 0,
+				right: 0px,
 				width: auto,
 			),
 		),
@@ -95,9 +95,9 @@ $cadmin-navbar-underline: map-deep-merge(
 										content: '',
 										display: block,
 										height: 0.25rem,
-										left: 0,
+										left: 0px,
 										position: absolute,
-										right: 0,
+										right: 0px,
 										width: auto,
 									),
 								),

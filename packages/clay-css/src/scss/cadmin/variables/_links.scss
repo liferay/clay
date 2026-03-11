@@ -173,7 +173,7 @@ $cadmin-link-outline: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-link-outline
@@ -256,15 +256,15 @@ $cadmin-link-monospaced: map-deep-merge(
 		height: $cadmin-link-monospaced-size,
 		justify-content: center,
 		overflow: hidden,
-		padding-bottom: 0,
-		padding-left: 0,
-		padding-right: 0,
-		padding-top: 0,
+		padding-bottom: 0px,
+		padding-left: 0px,
+		padding-right: 0px,
+		padding-top: 0px,
 		vertical-align: middle,
 		width: $cadmin-link-monospaced-size,
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-link-monospaced
@@ -322,7 +322,7 @@ $cadmin-component-subtitle: map-deep-merge(
 		color: $cadmin-gray-600,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: 1.45,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 	),
 	$cadmin-component-subtitle
 );
@@ -363,14 +363,14 @@ $cadmin-component-action: map-deep-merge(
 		background-color: transparent,
 		border-color: transparent,
 		border-radius: $cadmin-border-radius,
-		border-width: 0,
+		border-width: 0px,
 		color: $cadmin-secondary,
 		display: inline-flex,
 		font-size: 16px,
 		height: map-get($cadmin-link-monospaced, height),
 		justify-content: center,
 		overflow: hidden,
-		padding: 0,
+		padding: 0px,
 		transition: $cadmin-component-transition,
 		vertical-align: middle,
 		width: map-get($cadmin-link-monospaced, width),
@@ -404,7 +404,7 @@ $cadmin-component-action: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-component-action
@@ -422,7 +422,7 @@ $cadmin-component-icon: map-deep-merge(
 		width: 32px,
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-component-icon

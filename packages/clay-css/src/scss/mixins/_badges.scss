@@ -21,7 +21,7 @@
 	$font-size: map-get($map, font-size);
 	$height: map-get($map, height);
 	$padding-x: map-get($map, padding-x);
-	$padding-y: setter(map-get($map, padding-y), 0);
+	$padding-y: setter(map-get($map, padding-y), 0rem);
 
 	$lexicon-icon-height: setter(
 		map-get($map, lexicon-icon-height),
@@ -176,6 +176,18 @@
 		$badge-item: setter(map-get($map, badge-item), ());
 
 		$badge-item-expand: setter(map-get($map, badge-item-expand), ());
+
+		$base: map-remove(
+			$base,
+			'bg',
+			'hover-bg',
+			'hover-border-color',
+			'hover-color',
+			'link-color',
+			'link-hover-color',
+			'padding-x',
+			'padding-y'
+		);
 
 		@if ($enabled) {
 			@if (length($base) != 0) {

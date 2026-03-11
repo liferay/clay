@@ -212,6 +212,25 @@
 			)
 		);
 
+		$base: map-remove(
+			$base,
+			'bg',
+			'link-active-bg',
+			'link-active-color',
+			'link-active-font-weight',
+			'link-bg',
+			'link-border-radius',
+			'link-color',
+			'link-disabled-bg',
+			'link-disabled-color',
+			'link-disabled-opacity',
+			'link-focus-bg',
+			'link-focus-color',
+			'link-font-weight',
+			'link-hover-bg',
+			'link-hover-color'
+		);
+
 		@if ($enabled) {
 			@if (length($base) != 0) {
 				@include clay-css($base);

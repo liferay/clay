@@ -24,15 +24,15 @@ $cadmin-clay-range-input-group-text: map-merge(
 				map-get($cadmin-clay-range-input-group-text, bg),
 				transparent
 			),
-		border-width: 0,
+		border-width: 0px,
 		color: $cadmin-gray-500,
 		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		min-width: 24px,
-		padding-bottom: 0,
-		padding-left: 0,
-		padding-right: 0,
-		padding-top: 0,
+		padding-bottom: 0px,
+		padding-left: 0px,
+		padding-right: 0px,
+		padding-top: 0px,
 	),
 	$cadmin-clay-range-input-group-text
 );
@@ -62,7 +62,7 @@ $cadmin-clay-range-input: map-deep-merge(
 		clay-range-thumb: (
 			background-color: $cadmin-white,
 			border-radius: 100px,
-			border-width: 0,
+			border-width: 0px,
 			box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3),
 			height: 24px,
 			width: 24px,
@@ -79,7 +79,7 @@ $cadmin-clay-range-input: map-deep-merge(
 
 		clay-range-progress: (
 			background-color: $cadmin-primary,
-			border-radius: 100px 0 0 100px,
+			border-radius: 100px 0px 0px 100px,
 			position: absolute,
 			top: 50%,
 			width: 50%,
@@ -172,7 +172,7 @@ $cadmin-clay-range-input: map-deep-merge(
 			margin-top: 40px,
 			position: absolute,
 			text-align: center,
-			top: 0,
+			top: 0px,
 			width: 24px,
 		),
 
@@ -185,7 +185,7 @@ $cadmin-clay-range-input: map-deep-merge(
 		data-label-max: (
 			after: (
 				content: unquote("'\\FEFF' attr(data-label-max)"),
-				right: 0,
+				right: 0px,
 			),
 		),
 	),

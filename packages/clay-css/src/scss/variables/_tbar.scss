@@ -13,19 +13,19 @@ $tbar-stacked: map-deep-merge(
 
 		tbar-nav: (
 			flex-direction: column,
-			min-width: 0,
+			min-width: 0rem,
 		),
 
 		tbar-item: (
 			align-items: center,
 			justify-content: flex-start,
-			padding-left: 0,
-			padding-right: 0,
+			padding-left: 0rem,
+			padding-right: 0rem,
 		),
 
 		tbar-item-expand: (
 			flex-shrink: 0,
-			min-width: 0,
+			min-width: 0rem,
 		),
 
 		tbar-divider-before: (
@@ -58,13 +58,13 @@ $tbar-stacked: map-deep-merge(
 			border-width: 0px,
 			color: inherit,
 			height: 2.5rem,
-			margin-bottom: 0,
-			margin-top: 0,
+			margin-bottom: 0rem,
+			margin-top: 0rem,
 			overflow: visible,
-			padding-bottom: 0,
-			padding-left: 0,
-			padding-right: 0,
-			padding-top: 0,
+			padding-bottom: 0rem,
+			padding-left: 0rem,
+			padding-right: 0rem,
+			padding-top: 0rem,
 			position: relative,
 			width: 2.5rem,
 
@@ -89,7 +89,7 @@ $tbar-inline-xs-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($grid-breakpoints), 1),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0rem,
 		),
 	),
 	$tbar-inline-xs-down
@@ -100,7 +100,7 @@ $tbar-inline-sm-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($grid-breakpoints), 2),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0rem,
 		),
 	),
 	$tbar-inline-sm-down
@@ -111,7 +111,7 @@ $tbar-inline-md-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($grid-breakpoints), 3),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0rem,
 		),
 	),
 	$tbar-inline-md-down
@@ -122,7 +122,7 @@ $tbar-inline-lg-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($grid-breakpoints), 4),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0rem,
 		),
 	),
 	$tbar-inline-lg-down
@@ -133,7 +133,7 @@ $tbar-inline-xl-down: map-deep-merge(
 	(
 		breakpoint-down: nth(map-keys($grid-breakpoints), 5),
 		tbar-item: (
-			padding-left: 0,
+			padding-left: 0rem,
 		),
 	),
 	$tbar-inline-xl-down
@@ -146,7 +146,7 @@ $component-tbar: map-deep-merge(
 	(
 		border-color: $gray-300,
 		border-style: solid,
-		border-width: 0 0 0.0625rem 0,
+		border-width: 0rem 0rem 0.0625rem 0rem,
 		height: 3.5rem,
 	),
 	$component-tbar
@@ -237,12 +237,12 @@ $tbar-dark-d1: map-deep-merge(
 			active-class: (
 				after: (
 					background-color: $primary-l1,
-					bottom: 0,
+					bottom: 0rem,
 					content: '',
 					display: block,
-					left: 0,
+					left: 0rem,
 					position: absolute,
-					top: 0,
+					top: 0rem,
 					width: 0.25rem,
 				),
 			),
@@ -362,8 +362,8 @@ $subnav-tbar: map-deep-merge(
 			line-height: 1,
 			margin-bottom: 0.125rem,
 			margin-top: 0.125rem,
-			padding-left: 0,
-			padding-right: 0,
+			padding-left: 0rem,
+			padding-right: 0rem,
 		),
 
 		tbar-btn-monospaced: (
@@ -467,7 +467,7 @@ $subnav-tbar-primary-tbar-label-size: () !default;
 $subnav-tbar-primary-tbar-label-size: map-deep-merge(
 	(
 		font-size: 0.75rem,
-		margin-right: 0,
+		margin-right: 0rem,
 		padding-bottom: 0.3125rem,
 		padding-left: 0.625rem,
 		padding-right: 0.625rem,

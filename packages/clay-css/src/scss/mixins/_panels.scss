@@ -158,6 +158,11 @@
 			)
 		);
 
+		$_hpb: map-get($header, padding-bottom);
+		$_hpl: map-get($header, padding-left);
+		$_hpr: map-get($header, padding-right);
+		$_hpt: map-get($header, padding-top);
+
 		$old-header-c-inner: setter(map-get($map, header-c-inner), ());
 		$header-c-inner: setter(map-get($header, c-inner), ());
 		$header-c-inner: map-merge(
@@ -172,10 +177,10 @@
 							null
 						)
 					),
-				margin-bottom: calc(#{map-get($header, padding-bottom)} * -1),
-				margin-left: calc(#{map-get($header, padding-left)} * -1),
-				margin-right: calc(#{map-get($header, padding-right)} * -1),
-				margin-top: calc(#{map-get($header, padding-top)} * -1),
+				margin-bottom: if($_hpb, calc(#{$_hpb} * -1), null),
+				margin-left: if($_hpl, calc(#{$_hpl} * -1), null),
+				margin-right: if($_hpr, calc(#{$_hpr} * -1), null),
+				margin-top: if($_hpt, calc(#{$_hpt} * -1), null),
 			),
 			$header-c-inner
 		);
@@ -305,6 +310,45 @@
 						map-get($footer, color)
 					),
 			)
+		);
+
+		$base: map-remove(
+			$base,
+			'bg',
+			'body-margin-bottom',
+			'body-margin-left',
+			'body-margin-right',
+			'body-margin-top',
+			'body-padding-bottom',
+			'body-padding-left',
+			'body-padding-right',
+			'body-padding-top',
+			'collapse-icon-bottom',
+			'collapse-icon-font-size',
+			'collapse-icon-left',
+			'collapse-icon-right',
+			'collapse-icon-top',
+			'footer-bg',
+			'footer-border-color',
+			'footer-color',
+			'header-bg',
+			'header-border-color',
+			'header-border-style',
+			'header-border-width',
+			'header-collapsed-border-color',
+			'header-color',
+			'header-margin-bottom',
+			'header-margin-left',
+			'header-margin-right',
+			'header-margin-top',
+			'header-padding-bottom',
+			'header-padding-left',
+			'header-padding-right',
+			'header-padding-top',
+			'header-transition',
+			'title-font-size',
+			'title-font-weight',
+			'title-text-transform'
 		);
 
 		@if ($enabled) {

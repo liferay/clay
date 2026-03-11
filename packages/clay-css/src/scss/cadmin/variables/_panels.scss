@@ -16,7 +16,7 @@ $cadmin-panel-margin-bottom: $cadmin-spacer !default;
 
 // Panel Header
 
-$cadmin-panel-header-border-bottom-width: 0 !default;
+$cadmin-panel-header-border-bottom-width: 0px !default;
 $cadmin-panel-header-offset-border-radius: calc(
 	#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-top-width}
 ) !default;
@@ -75,7 +75,7 @@ $cadmin-panel-body-padding-y: 12px !default;
 
 // Panel Footer
 
-$cadmin-panel-footer-border-top-width: 0 !default;
+$cadmin-panel-footer-border-top-width: 0px !default;
 $cadmin-panel-footer-offset-border-radius: calc(
 	#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-bottom-width}
 ) !default;
@@ -142,10 +142,10 @@ $cadmin-panel-group-sm-panel-unstyled: map-deep-merge(
 // Panel Group Flush
 
 $cadmin-panel-group-flush-body-margin-bottom: 24px !default;
-$cadmin-panel-group-flush-body-padding: 0 !default;
+$cadmin-panel-group-flush-body-padding: 0px !default;
 
 $cadmin-panel-group-flush-collapse-icon-left: null !default;
-$cadmin-panel-group-flush-collapse-icon-right: 0 !default;
+$cadmin-panel-group-flush-collapse-icon-right: 0px !default;
 $cadmin-panel-group-flush-collapse-icon-padding-left: null !default;
 $cadmin-panel-group-flush-collapse-icon-padding-right: 24px !default;
 
@@ -155,7 +155,7 @@ $cadmin-panel-group-flush-panel-unstyled: map-deep-merge(
 		margin-bottom: 24px,
 
 		body: (
-			margin-bottom: 0,
+			margin-bottom: 0px,
 		),
 	),
 	$cadmin-panel-group-flush-panel-unstyled
@@ -202,16 +202,16 @@ $cadmin-panel-unstyled: () !default;
 $cadmin-panel-unstyled: map-deep-merge(
 	(
 		background-color: transparent,
-		border-radius: 0,
-		border-width: 0,
+		border-radius: 0px,
+		border-width: 0px,
 		margin-bottom: 24px,
 
 		header: (
 			border-color: $cadmin-gray-500,
-			border-radius: 0,
+			border-radius: 0px,
 			border-style: solid,
-			border-width: 0 0 1px 0,
-			padding-left: 0,
+			border-width: 0px 0px 1px 0px,
+			padding-left: 0px,
 
 			collapsed: (
 				border-color: $cadmin-gray-500,
@@ -221,15 +221,15 @@ $cadmin-panel-unstyled: map-deep-merge(
 		),
 
 		collapse-icon: (
-			right: 0,
+			right: 0px,
 		),
 
 		body: (
-			padding: 16px 0 0.1px 0,
+			padding: 16px 0px 0.1px 0px,
 		),
 
 		footer: (
-			padding: 16px 0 0.1px 0,
+			padding: 16px 0px 0.1px 0px,
 		),
 	),
 	$cadmin-panel-unstyled

@@ -169,7 +169,7 @@ $cadmin-label-item-spacer-x: 0.85714em !default;
 $cadmin-label-item-spacer-y: null !default;
 
 $cadmin-label-lexicon-icon-height: null !default;
-$cadmin-label-lexicon-icon-margin-top: 0 !default;
+$cadmin-label-lexicon-icon-margin-top: 0px !default;
 $cadmin-label-lexicon-icon-width: null !default;
 
 $cadmin-label-item: () !default;
@@ -181,7 +181,7 @@ $cadmin-label-item: map-deep-merge(
 		justify-content: center,
 		margin-bottom: $cadmin-label-item-spacer-y,
 		margin-top: $cadmin-label-item-spacer-y,
-		min-height: 0,
+		min-height: 0px,
 		position: relative,
 
 		link: (

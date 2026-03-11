@@ -30,7 +30,7 @@ $cadmin-table-border-color: $cadmin-gray-300 !default;
 $cadmin-table-border-width: $cadmin-border-width !default;
 $cadmin-table-color: $cadmin-body-color !default;
 $cadmin-table-font-size: 14px !default;
-$cadmin-table-margin-bottom: 0 !default;
+$cadmin-table-margin-bottom: 0px !default;
 
 $cadmin-table-hover-bg: clay-lighten(
 	$cadmin-component-active-bg,
@@ -73,7 +73,7 @@ $cadmin-table-cell-expand-smallest-width: 10% !default;
 
 $cadmin-table-head-bg: $cadmin-white !default;
 $cadmin-table-head-border-bottom-width: 0px !default;
-$cadmin-table-head-border-top-width: 0 !default;
+$cadmin-table-head-border-top-width: 0px !default;
 $cadmin-table-head-color: $cadmin-gray-600 !default;
 $cadmin-table-head-font-size: null !default;
 $cadmin-table-head-font-weight: $cadmin-font-weight-semi-bold !default;
@@ -112,8 +112,8 @@ $cadmin-c-table-tbody: () !default;
 // TD
 
 $cadmin-table-data-border-bottom-width: $cadmin-table-border-width !default;
-$cadmin-table-data-border-left-width: 0 !default;
-$cadmin-table-data-border-right-width: 0 !default;
+$cadmin-table-data-border-left-width: 0px !default;
+$cadmin-table-data-border-right-width: 0px !default;
 $cadmin-table-data-border-top-width: $cadmin-table-border-width !default;
 
 $cadmin-table-data-border-color: $cadmin-table-border-color !default;
@@ -179,7 +179,7 @@ $cadmin-table-title: map-deep-merge(
 		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: $cadmin-line-height-base,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 	),
 	$cadmin-table-title
 );
@@ -262,7 +262,7 @@ $cadmin-table-action-link: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-table-action-link
@@ -274,7 +274,7 @@ $cadmin-c-table: () !default;
 $cadmin-c-table: map-deep-merge(
 	(
 		background-color: $cadmin-table-bg,
-		border-spacing: 0,
+		border-spacing: 0px,
 		color: $cadmin-table-color,
 		font-size: $cadmin-table-font-size,
 		margin-bottom: $cadmin-table-margin-bottom,
@@ -302,11 +302,11 @@ $cadmin-c-table: map-deep-merge(
 						padding-right: 0.125rem,
 
 						first-child: (
-							padding-left: 0,
+							padding-left: 0px,
 						),
 
 						last-child: (
-							padding-right: 0,
+							padding-right: 0px,
 						),
 					),
 				)
@@ -407,11 +407,11 @@ $cadmin-c-table: map-deep-merge(
 			padding-left: nth($cadmin-table-cell-padding, 2),
 			padding-right: nth($cadmin-table-cell-padding, 2),
 			first-child: (
-				padding-left: 0,
+				padding-left: 0px,
 			),
 
 			last-child: (
-				padding-right: 0,
+				padding-right: 0px,
 			),
 		),
 
@@ -426,7 +426,7 @@ $cadmin-c-table: map-deep-merge(
 		),
 
 		custom-control: (
-			margin-bottom: 0,
+			margin-bottom: 0px,
 		),
 
 		quick-action-menu: (
@@ -648,7 +648,7 @@ $cadmin-c-table-head-bordered: map-deep-merge(
 					$cadmin-table-border-color,
 
 				table-column-start: (
-					border-left-width: 0,
+					border-left-width: 0px,
 				),
 			),
 		),
@@ -723,7 +723,7 @@ $cadmin-c-table-list-cell: map-merge(
 	(
 		border-color: $cadmin-table-list-border-color,
 		border-style: solid,
-		border-width: $cadmin-table-list-border-y-width 0 0 0,
+		border-width: $cadmin-table-list-border-y-width 0px 0px 0px,
 	),
 	$cadmin-c-table-list-cell
 );
@@ -810,7 +810,7 @@ $cadmin-table-list-title: map-deep-merge(
 		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: 1.45,
-		margin-bottom: 0,
+		margin-bottom: 0px,
 	),
 	$cadmin-table-list-title
 );
@@ -892,7 +892,7 @@ $cadmin-table-list-action-link: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-table-list-action-link
@@ -920,7 +920,7 @@ $cadmin-c-table-list: map-merge(
 				(
 					background-color: $cadmin-table-list-head-bg,
 					table-cell: (
-						border-bottom-width: 0,
+						border-bottom-width: 0px,
 						font-size: $cadmin-table-list-head-font-size,
 						font-weight: $cadmin-table-list-head-font-weight,
 						height: $cadmin-table-list-head-height,
@@ -990,7 +990,7 @@ $cadmin-c-table-list: map-merge(
 
 		table-row-start: (
 			table-cell: (
-				border-top-width: 0,
+				border-top-width: 0px,
 			),
 
 			table-cell-start: (
@@ -1039,8 +1039,8 @@ $cadmin-c-table-list: map-merge(
 		quick-action-menu: (
 			align-items: $cadmin-table-list-quick-action-menu-align-items,
 			background-color: $cadmin-table-list-quick-action-menu-bg,
-			bottom: 0,
-			top: 0,
+			bottom: 0px,
+			top: 0px,
 		),
 	),
 	$cadmin-c-table-list
@@ -1093,14 +1093,14 @@ $cadmin-c-table-list-table-bordered: map-deep-merge(
 	(
 		thead: (
 			table-cell: (
-				border-bottom-width: 0,
+				border-bottom-width: 0px,
 			),
 		),
 
 		table-cell: $cadmin-c-table-list-bordered-cell,
 
 		table-column-start: (
-			border-left-width: 0,
+			border-left-width: 0px,
 		),
 	),
 	$cadmin-c-table-list-table-bordered
@@ -1127,13 +1127,13 @@ $cadmin-table-drag: map-deep-merge(
 
 		c-dragging-after: (
 			background-color: $cadmin-gray-400,
-			bottom: 0,
+			bottom: 0px,
 			content: '',
 			display: block,
 			left: 1px,
 			position: absolute,
-			right: 0,
-			top: 0,
+			right: 0px,
+			top: 0px,
 		),
 
 		c-droppable-before: (
@@ -1142,12 +1142,12 @@ $cadmin-table-drag: map-deep-merge(
 			background-position: right,
 			background-repeat: repeat-y,
 			background-size: 5px 6px,
-			bottom: 0,
+			bottom: 0px,
 			content: '',
 			display: block,
-			left: 0,
+			left: 0px,
 			position: absolute,
-			top: 0,
+			top: 0px,
 			width: 1px,
 			z-index: 1,
 		),
@@ -1170,16 +1170,16 @@ $cadmin-table-clone: map-deep-merge(
 		background-color: rgba($cadmin-primary-l3, 0.9),
 		cursor: move,
 		position: absolute,
-		top: 0,
+		top: 0px,
 		z-index: 1050,
 
 		after: (
 			background-color: $cadmin-primary,
-			bottom: 0,
+			bottom: 0px,
 			content: '',
 			display: block,
 			position: absolute,
-			right: 0,
+			right: 0px,
 			top: 1px,
 			width: 2px,
 			z-index: 1,
@@ -1187,10 +1187,10 @@ $cadmin-table-clone: map-deep-merge(
 
 		before: (
 			background-color: $cadmin-primary,
-			bottom: 0,
+			bottom: 0px,
 			content: '',
 			display: block,
-			left: 0,
+			left: 0px,
 			position: absolute,
 			top: 1px,
 			width: 2px,

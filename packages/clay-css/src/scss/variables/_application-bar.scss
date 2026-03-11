@@ -6,8 +6,8 @@ $application-bar-size: map-deep-merge(
 		font-size:
 			if(variable-exists(navbar-font-size), $navbar-font-size, null),
 		height: 3.5rem,
-		padding-x: 0,
-		padding-y: 0,
+		padding-x: 0rem,
+		padding-y: 0rem,
 
 		btn-monospaced-font-size: 1rem,
 

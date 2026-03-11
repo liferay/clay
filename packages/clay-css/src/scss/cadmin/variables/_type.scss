@@ -51,10 +51,10 @@ $cadmin-c-kbd: map-deep-merge(
 		height: 24px,
 		line-height: 22px,
 		min-width: 24px,
-		padding-bottom: 0,
+		padding-bottom: 0px,
 		padding-left: 5px,
 		padding-right: 5px,
-		padding-top: 0,
+		padding-top: 0px,
 		text-align: center,
 		text-transform: capitalize,
 	),
@@ -66,13 +66,13 @@ $cadmin-c-kbd: map-deep-merge(
 $cadmin-c-kbd-c-kbd: () !default;
 $cadmin-c-kbd-c-kbd: map-merge(
 	(
-		border-width: 0,
+		border-width: 0px,
 		font-size: inherit,
 		font-weight: inherit,
 		height: auto,
 		line-height: inherit,
-		min-width: 0,
-		padding: 0,
+		min-width: 0px,
+		padding: 0px,
 	),
 	$cadmin-c-kbd-c-kbd
 );
@@ -80,7 +80,7 @@ $cadmin-c-kbd-c-kbd: map-merge(
 $cadmin-c-kbd-monospaced: () !default;
 $cadmin-c-kbd-monospaced: map-deep-merge(
 	(
-		padding: 0,
+		padding: 0px,
 	),
 	$cadmin-c-kbd-monospaced
 );
@@ -88,12 +88,12 @@ $cadmin-c-kbd-monospaced: map-deep-merge(
 $cadmin-c-kbd-inline: () !default;
 $cadmin-c-kbd-inline: map-deep-merge(
 	(
-		border-width: 0,
+		border-width: 0px,
 		font-weight: $cadmin-font-weight-light,
 		height: auto,
 		line-height: inherit,
-		min-width: 0,
-		padding: 0,
+		min-width: 0px,
+		padding: 0px,
 	),
 	$cadmin-c-kbd-inline
 );

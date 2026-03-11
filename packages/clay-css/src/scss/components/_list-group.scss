@@ -303,8 +303,16 @@
 .list-group-item-action {
 	@if ($enable-c-inner) {
 		.c-inner {
-			margin: calc(#{$list-group-item-padding-y} * -1)
-				calc(#{$list-group-item-padding-x} * -1);
+			@if ($list-group-item-padding-y) {
+				margin-bottom: calc(#{$list-group-item-padding-y} * -1);
+				margin-top: calc(#{$list-group-item-padding-y} * -1);
+			}
+
+			@if ($list-group-item-padding-x) {
+				margin-left: calc(#{$list-group-item-padding-x} * -1);
+				margin-right: calc(#{$list-group-item-padding-x} * -1);
+			}
+
 			width: auto;
 		}
 	}

@@ -2,12 +2,12 @@ $c-horizontal-resizer: () !default;
 $c-horizontal-resizer: map-merge(
 	(
 		background-color: transparent,
-		bottom: 0,
+		bottom: 0rem,
 		cursor: ew-resize,
 		margin-right: -0.25rem,
 		position: absolute,
-		right: 0,
-		top: 0,
+		right: 0rem,
+		top: 0rem,
 		user-select: none,
 		width: 0.5rem,
 		z-index: 10,

@@ -216,6 +216,14 @@
 			);
 		}
 
+		$base: map-remove(
+			$base,
+			'bg',
+			'size',
+			'inline-item-font-size',
+			'outside-offset'
+		);
+
 		@if ($enabled) {
 			@if (length($base) != 0) {
 				@include clay-css($base);

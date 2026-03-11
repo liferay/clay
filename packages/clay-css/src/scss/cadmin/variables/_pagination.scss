@@ -5,7 +5,7 @@ $cadmin-pagination-color: $cadmin-gray-600 !default;
 $cadmin-pagination-font-size: 14px !default; // 14px
 $cadmin-pagination-line-height: 1 !default;
 $cadmin-pagination-padding-x: 10px !default; // 10px
-$cadmin-pagination-padding-y: 0 !default;
+$cadmin-pagination-padding-y: 0px !default;
 
 $cadmin-pagination-hover-bg: rgba($cadmin-gray-900, 0.04) !default;
 $cadmin-pagination-hover-border-color: transparent !default;
@@ -89,7 +89,7 @@ $cadmin-pagination-link-hover: map-deep-merge(
 		border-color: $cadmin-pagination-hover-border-color,
 		color: $cadmin-pagination-hover-color,
 		font-weight: $cadmin-font-weight-semi-bold,
-		letter-spacing: 0,
+		letter-spacing: 0px,
 		text-decoration: none,
 		z-index: 2,
 
@@ -112,15 +112,15 @@ $cadmin-pagination-link-focus: map-deep-merge(
 
 		after: (
 			border-radius: $cadmin-pagination-link-border-radius,
-			bottom: 0,
+			bottom: 0px,
 			box-shadow: $cadmin-pagination-focus-box-shadow,
 			content: '',
 			display: block,
-			left: 0,
+			left: 0px,
 			pointer-events: none,
 			position: absolute,
-			right: 0,
-			top: 0,
+			right: 0px,
+			top: 0px,
 		),
 	),
 	$cadmin-pagination-link-focus
@@ -133,7 +133,7 @@ $cadmin-pagination-link-active: map-deep-merge(
 		border-color: $cadmin-pagination-active-border-color,
 		color: $cadmin-pagination-active-color,
 		font-weight: $cadmin-font-weight-semi-bold,
-		letter-spacing: 0,
+		letter-spacing: 0px,
 		z-index: $cadmin-zindex-pagination-link-active,
 	),
 	$cadmin-pagination-link-active
@@ -180,7 +180,7 @@ $cadmin-pagination-link: map-deep-merge(
 		justify-content: center,
 		letter-spacing: 0.033em,
 		line-height: $cadmin-pagination-line-height,
-		margin-left: 0,
+		margin-left: 0px,
 		padding-bottom: $cadmin-pagination-padding-y,
 		padding-left: $cadmin-pagination-padding-x,
 		padding-right: $cadmin-pagination-padding-x,
@@ -189,13 +189,13 @@ $cadmin-pagination-link: map-deep-merge(
 		transition: $cadmin-pagination-link-transition,
 
 		before: (
-			border-radius: 0 0 $cadmin-border-radius $cadmin-border-radius,
-			bottom: 0,
+			border-radius: 0px 0px $cadmin-border-radius $cadmin-border-radius,
+			bottom: 0px,
 			content: '',
 			display: block,
-			left: 0,
+			left: 0px,
 			position: absolute,
-			right: 0,
+			right: 0px,
 		),
 
 		hover: $cadmin-pagination-link-hover,
@@ -209,7 +209,7 @@ $cadmin-pagination-link: map-deep-merge(
 			border-color: $cadmin-pagination-active-border-color,
 			color: $cadmin-pagination-active-color,
 			font-weight: $cadmin-font-weight-semi-bold,
-			letter-spacing: 0,
+			letter-spacing: 0px,
 
 			before: (
 				background-color: $cadmin-primary-l0,
@@ -221,7 +221,7 @@ $cadmin-pagination-link: map-deep-merge(
 
 		show: (
 			font-weight: $cadmin-font-weight-semi-bold,
-			letter-spacing: 0,
+			letter-spacing: 0px,
 
 			before: (
 				background-color: transparent,
@@ -236,7 +236,7 @@ $cadmin-pagination-link: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0px,
 		),
 	),
 	$cadmin-pagination-link
@@ -275,7 +275,7 @@ $cadmin-pagination: map-deep-merge(
 		font-size: $cadmin-pagination-font-size,
 		list-style: none,
 		margin-bottom: $cadmin-pagination-margin-bottom,
-		padding-left: 0,
+		padding-left: 0px,
 	),
 	$cadmin-pagination
 );
@@ -444,13 +444,13 @@ $cadmin-pagination-items-per-page-link: map-deep-merge(
 		transition: $cadmin-pagination-items-per-page-transition,
 
 		before: (
-			border-radius: 0 0 $cadmin-border-radius $cadmin-border-radius,
-			bottom: 0,
+			border-radius: 0px 0px $cadmin-border-radius $cadmin-border-radius,
+			bottom: 0px,
 			content: '',
 			display: block,
-			left: 0,
+			left: 0px,
 			position: absolute,
-			right: 0,
+			right: 0px,
 		),
 
 		hover: $cadmin-pagination-items-per-page-link-hover,
@@ -522,7 +522,7 @@ $cadmin-pagination-results: map-deep-merge(
 $cadmin-pagination-font-size-sm: 12px !default; // 12px
 $cadmin-pagination-line-height-sm: 1 !default;
 $cadmin-pagination-padding-x-sm: 8px !default;
-$cadmin-pagination-padding-y-sm: 0 !default;
+$cadmin-pagination-padding-y-sm: 0px !default;
 
 $cadmin-pagination-item-height-sm: 24px !default; // 24px
 
@@ -590,7 +590,7 @@ $cadmin-pagination-sm: map-deep-merge(
 $cadmin-pagination-font-size-lg: 18px !default; // 18px
 $cadmin-pagination-line-height-lg: 1 !default;
 $cadmin-pagination-padding-x-lg: 16px !default; // 16px
-$cadmin-pagination-padding-y-lg: 0 !default;
+$cadmin-pagination-padding-y-lg: 0px !default;
 
 $cadmin-pagination-item-height-lg: 44px !default; //44px
 

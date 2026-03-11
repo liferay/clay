@@ -266,6 +266,11 @@
 			)
 		);
 
+		$_pb: map-get($toggler-mobile, padding-bottom);
+		$_pl: map-get($toggler-mobile, padding-left);
+		$_pr: map-get($toggler-mobile, padding-right);
+		$_pt: map-get($toggler-mobile, padding-top);
+
 		$_toggler-mobile-c-inner: setter(map-get($toggler-mobile, c-inner), ());
 		$_toggler-mobile-c-inner: map-merge(
 			$_toggler-mobile-c-inner,
@@ -282,22 +287,22 @@
 					),
 				margin-bottom:
 					setter(
-						calc(#{map-get($toggler-mobile, padding-bottom)} * -1),
+						if($_pb, calc(#{$_pb} * -1), null),
 						map-get($_toggler-mobile-c-inner, margin-bottom)
 					),
 				margin-left:
 					setter(
-						calc(#{map-get($toggler-mobile, padding-left)} * -1),
+						if($_pl, calc(#{$_pl} * -1), null),
 						map-get($_toggler-mobile-c-inner, margin-left)
 					),
 				margin-right:
 					setter(
-						calc(#{map-get($toggler-mobile, padding-right)} * -1),
+						if($_pr, calc(#{$_pr} * -1), null),
 						map-get($_toggler-mobile-c-inner, margin-right)
 					),
 				margin-top:
 					setter(
-						calc(#{map-get($toggler-mobile, padding-top)} * -1),
+						if($_pt, calc(#{$_pt} * -1), null),
 						map-get($_toggler-mobile-c-inner, margin-top)
 					),
 			)
@@ -307,6 +312,38 @@
 		$_toggler-mobile-c-inner: map-merge(
 			$_toggler-mobile-c-inner,
 			$_old-toggler-c-inner
+		);
+
+		$map: map-remove(
+			$map,
+			'border-color-mobile',
+			'border-style-mobile',
+			'border-width-mobile',
+			'breakpoint-down',
+			'breakpoint-up',
+			'collapse-border-color-mobile',
+			'collapse-border-style-mobile',
+			'collapse-border-width-mobile',
+			'collapse-inner-spacer-y-mobile',
+			'collapse-left-mobile',
+			'collapse-margin-top-mobile',
+			'collapse-max-width-mobile',
+			'collapse-right-mobile',
+			'collapse-z-index-mobile',
+			'margin-bottom-mobile',
+			'margin-left-mobile',
+			'margin-right-mobile',
+			'margin-top-mobile',
+			'max-width-mobile',
+			'min-height-mobile',
+			'padding-x-mobile',
+			'padding-y-mobile',
+			'toggler-border-color-mobile',
+			'toggler-border-style-mobile',
+			'toggler-border-width-mobile',
+			'toggler-height-mobile',
+			'toggler-padding-x-mobile',
+			'toggler-padding-y-mobile'
 		);
 
 		@if ($enabled) {
@@ -898,6 +935,45 @@
 					map-get($toggler-mobile, font-weight)
 				),
 		)
+	);
+
+	$map: map-remove(
+		$map,
+		'bg',
+		'bg-mobile',
+		'border-color-mobile',
+		'border-style-mobile',
+		'breakpoint-down',
+		'breakpoint-up',
+		'collapse-bg-mobile',
+		'collapse-border-color-mobile',
+		'collapse-border-radius-mobile',
+		'collapse-border-style-mobile',
+		'collapse-box-shadow-mobile',
+		'link-active-bg',
+		'link-active-bg-mobile',
+		'link-active-class-font-weight',
+		'link-active-color',
+		'link-active-color-mobile',
+		'link-active-font-weight-mobile',
+		'link-bg',
+		'link-border-radius',
+		'link-border-radius-mobile',
+		'link-color',
+		'link-color-mobile',
+		'link-disabled-bg',
+		'link-disabled-bg-mobile',
+		'link-disabled-color',
+		'link-disabled-color-mobile',
+		'link-hover-bg',
+		'link-hover-bg-mobile',
+		'link-hover-color',
+		'link-hover-color-mobile',
+		'toggler-border-color-mobile',
+		'toggler-border-style-mobile',
+		'toggler-color-mobile',
+		'toggler-font-size-mobile',
+		'toggler-font-weight-mobile'
 	);
 
 	@if ($enable) {

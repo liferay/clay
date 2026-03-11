@@ -30,7 +30,7 @@ $table-border-color: $border-color !default;
 $table-border-width: $border-width !default;
 $table-color: $body-color !default;
 $table-font-size: null !default;
-$table-margin-bottom: 0 !default;
+$table-margin-bottom: 0rem !default;
 
 // .table-hover
 
@@ -161,7 +161,7 @@ $table-title: map-deep-merge(
 		font-size: $font-size-base,
 		font-weight: $font-weight-semi-bold,
 		line-height: $line-height-base,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 	),
 	$table-title
 );
@@ -222,7 +222,7 @@ $table-action-link: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$table-action-link
@@ -234,7 +234,7 @@ $c-table: () !default;
 $c-table: map-deep-merge(
 	(
 		background-color: $table-bg,
-		border-spacing: 0,
+		border-spacing: 0rem,
 		color: $table-color,
 		font-size: $table-font-size,
 		margin-bottom: $table-margin-bottom,
@@ -262,11 +262,11 @@ $c-table: map-deep-merge(
 						padding-right: 0.125rem,
 
 						first-child: (
-							padding-left: 0,
+							padding-left: 0rem,
 						),
 
 						last-child: (
-							padding-right: 0,
+							padding-right: 0rem,
 						),
 					),
 				)
@@ -363,11 +363,11 @@ $c-table: map-deep-merge(
 			padding-left: nth($table-cell-padding, 2),
 			padding-right: nth($table-cell-padding, 2),
 			first-child: (
-				padding-left: 0,
+				padding-left: 0rem,
 			),
 
 			last-child: (
-				padding-right: 0,
+				padding-right: 0rem,
 			),
 		),
 
@@ -382,7 +382,7 @@ $c-table: map-deep-merge(
 		),
 
 		custom-control: (
-			margin-bottom: 0,
+			margin-bottom: 0rem,
 		),
 
 		quick-action-menu: (
@@ -509,7 +509,7 @@ $c-table-head-bordered: map-deep-merge(
 				border-left: $table-border-width solid $table-border-color,
 
 				table-column-start: (
-					border-left-width: 0,
+					border-left-width: 0rem,
 				),
 			),
 		),
@@ -697,7 +697,7 @@ $c-table-list-cell: map-merge(
 	(
 		border-color: $table-list-border-color,
 		border-style: solid,
-		border-width: $table-list-border-y-width 0 0 0,
+		border-width: $table-list-border-y-width 0px 0px 0px,
 	),
 	$c-table-list-cell
 );
@@ -796,7 +796,7 @@ $table-list-title: map-deep-merge(
 		font-size: $font-size-base,
 		font-weight: $font-weight-semi-bold,
 		line-height: $headings-line-height,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 	),
 	$table-list-title
 );
@@ -851,7 +851,7 @@ $table-list-action-link: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$table-list-action-link
@@ -877,7 +877,7 @@ $c-table-list: map-merge(
 				$c-table-list-thead,
 				(
 					table-cell: (
-						border-bottom-width: 0,
+						border-bottom-width: 0rem,
 						font-size: $table-list-head-font-size,
 						font-weight: $table-list-head-font-weight,
 						height: $table-list-head-height,
@@ -947,7 +947,7 @@ $c-table-list: map-merge(
 
 		table-row-start: (
 			table-cell: (
-				border-top-width: 0,
+				border-top-width: 0rem,
 			),
 
 			table-cell-start: (
@@ -996,8 +996,8 @@ $c-table-list: map-merge(
 		quick-action-menu: (
 			align-items: $table-list-quick-action-menu-align-items,
 			background-color: $table-list-quick-action-menu-bg,
-			bottom: 0,
-			top: 0,
+			bottom: 0rem,
+			top: 0rem,
 		),
 	),
 	$c-table-list
@@ -1048,14 +1048,14 @@ $c-table-list-table-bordered: map-deep-merge(
 	(
 		thead: (
 			table-cell: (
-				border-bottom-width: 0,
+				border-bottom-width: 0rem,
 			),
 		),
 
 		table-cell: $c-table-list-bordered-cell,
 
 		table-column-start: (
-			border-left-width: 0,
+			border-left-width: 0rem,
 		),
 	),
 	$c-table-list-table-bordered

@@ -7,10 +7,10 @@ $cadmin-clay-time-btn: map-deep-merge(
 		font-size: 12px,
 		height: 24px,
 		justify-content: center,
-		padding-bottom: 0,
-		padding-left: 0,
-		padding-right: 0,
-		padding-top: 0,
+		padding-bottom: 0px,
+		padding-left: 0px,
+		padding-right: 0px,
+		padding-top: 0px,
 		width: 24px,
 
 		focus: (
@@ -35,9 +35,9 @@ $cadmin-clay-time-form-control: map-deep-merge(
 $cadmin-clay-time-form-control-inset: () !default;
 $cadmin-clay-time-form-control-inset: map-deep-merge(
 	(
-		margin-bottom: 0,
-		margin-left: 0,
-		margin-top: 0,
+		margin-bottom: 0px,
+		margin-left: 0px,
+		margin-top: 0px,
 		text-align: center,
 		width: 20px,
 		selection-bg: transparent,
@@ -66,10 +66,10 @@ $cadmin-clay-time-input-group-text: map-merge(
 		background-color:
 			setter(map-get($cadmin-clay-time-input-group-text, bg), transparent),
 		border-color: transparent,
-		padding-bottom: 0,
-		padding-left: 0,
-		padding-right: 0,
-		padding-top: 0,
+		padding-bottom: 0px,
+		padding-left: 0px,
+		padding-right: 0px,
+		padding-top: 0px,
 	),
 	$cadmin-clay-time-input-group-text
 );
@@ -105,7 +105,7 @@ $cadmin-clay-time-inner-spin-btn: map-deep-merge(
 	(
 		align-items: center,
 		border-radius: map-get($cadmin-clay-time-inner-spin, border-radius),
-		border-width: 0,
+		border-width: 0px,
 		display: inline-flex,
 		font-size: 8px,
 		height: auto,

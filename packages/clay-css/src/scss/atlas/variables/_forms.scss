@@ -202,7 +202,7 @@ $form-text-font-weight: $font-weight-semi-bold !default;
 $form-feedback-font-size: 0.875rem !default; // 14px
 $form-feedback-font-weight: $font-weight-semi-bold !default;
 
-$form-feedback-indicator-margin-x: 0 !default;
+$form-feedback-indicator-margin-x: 0rem !default;
 
 // .has-error .form-control
 
@@ -577,7 +577,7 @@ $input-group-item: map-deep-merge(
 		),
 
 		first-child: (
-			margin-left: 0,
+			margin-left: 0rem,
 		),
 
 		btn: (

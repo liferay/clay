@@ -24,8 +24,16 @@
 
 	@if ($cadmin-enable-c-inner) {
 		.c-inner {
-			margin: calc(#{$cadmin-panel-header-padding-y} * -1)
-				calc(#{$cadmin-panel-header-padding-x} * -1);
+			@if ($cadmin-panel-header-padding-y) {
+				margin-bottom: calc(#{$cadmin-panel-header-padding-y} * -1);
+				margin-top: calc(#{$cadmin-panel-header-padding-y} * -1);
+			}
+
+			@if ($cadmin-panel-header-padding-x) {
+				margin-left: calc(#{$cadmin-panel-header-padding-x} * -1);
+				margin-right: calc(#{$cadmin-panel-header-padding-x} * -1);
+			}
+
 			width: auto;
 		}
 	}
@@ -42,11 +50,19 @@
 
 		@if ($cadmin-enable-c-inner) {
 			.c-inner {
-				margin-left: calc(
-					#{$cadmin-panel-header-collapse-icon-padding-left} * -1
+				margin-left: if(
+					$cadmin-panel-header-collapse-icon-padding-left,
+					calc(
+						#{$cadmin-panel-header-collapse-icon-padding-left} * -1
+					),
+					null
 				);
-				margin-right: calc(
-					#{$cadmin-panel-header-collapse-icon-padding-right} * -1
+				margin-right: if(
+					$cadmin-panel-header-collapse-icon-padding-right,
+					calc(
+						#{$cadmin-panel-header-collapse-icon-padding-right} * -1
+					),
+					null
 				);
 			}
 		}
@@ -259,12 +275,21 @@
 
 		@if ($cadmin-enable-c-inner) {
 			.c-inner {
-				margin-left: calc(
-					#{$cadmin-panel-group-flush-collapse-icon-padding-left} * -1
+				margin-left: if(
+					$cadmin-panel-group-flush-collapse-icon-padding-left,
+					calc(
+						#{$cadmin-panel-group-flush-collapse-icon-padding-left} *
+							-1
+					),
+					null
 				);
-				margin-right: calc(
-					#{$cadmin-panel-group-flush-collapse-icon-padding-right} *
-						-1
+				margin-right: if(
+					$cadmin-panel-group-flush-collapse-icon-padding-right,
+					calc(
+						#{$cadmin-panel-group-flush-collapse-icon-padding-right} *
+							-1
+					),
+					null
 				);
 			}
 		}

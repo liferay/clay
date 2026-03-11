@@ -42,11 +42,11 @@ $cadmin-progress-group-addon: map-deep-merge(
 		text-align: center,
 
 		first-child: (
-			padding-left: 0,
+			padding-left: 0px,
 		),
 
 		last-child: (
-			padding-right: 0,
+			padding-right: 0px,
 		),
 	),
 	$cadmin-progress-group-addon

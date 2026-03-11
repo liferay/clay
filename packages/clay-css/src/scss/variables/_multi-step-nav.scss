@@ -1,6 +1,6 @@
 $multi-step-nav-margin-bottom: 15px !default;
 $multi-step-nav-padding-x: 15px !default;
-$multi-step-nav-padding-y: 0 !default;
+$multi-step-nav-padding-y: 0px !default;
 
 $multi-step-icon-bg: $gray-200 !default;
 $multi-step-icon-border-color: null !default;
@@ -11,10 +11,10 @@ $multi-step-icon-cursor: $link-cursor !default;
 $multi-step-icon-border-radius: $border-radius !default;
 $multi-step-icon-font-size: $font-size-base !default;
 $multi-step-icon-font-weight: null !default;
-$multi-step-icon-padding-bottom: 0 !default;
-$multi-step-icon-padding-left: 0 !default;
-$multi-step-icon-padding-right: 0 !default;
-$multi-step-icon-padding-top: 0 !default;
+$multi-step-icon-padding-bottom: 0px !default;
+$multi-step-icon-padding-left: 0px !default;
+$multi-step-icon-padding-right: 0px !default;
+$multi-step-icon-padding-top: 0px !default;
 $multi-step-icon-size: 2rem !default;
 $multi-step-icon-transition: box-shadow 0.15s ease-in-out !default;
 
@@ -36,7 +36,7 @@ $data-multi-step-icon-before-content: unquote(
 
 $multi-step-divider-bg: $gray-200 !default;
 $multi-step-divider-height: 0.25rem !default;
-$multi-step-divider-spacer-x: 0 !default;
+$multi-step-divider-spacer-x: 0rem !default;
 $multi-step-divider-top: calc(
 	#{$multi-step-divider-height} * 0.5 + #{$multi-step-icon-size} * 0.5
 ) !default;
@@ -102,7 +102,7 @@ $multi-step-item-fixed-width: 150px !default;
 $multi-step-nav-center: () !default;
 $multi-step-nav-center: map-deep-merge(
 	(
-		padding: 0,
+		padding: 0rem,
 		text-align: center,
 
 		multi-step-item: (

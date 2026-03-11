@@ -20,8 +20,8 @@ $management-bar-size: map-deep-merge(
 			if(variable-exists(navbar-font-size), $navbar-font-size, null),
 		height: 4rem,
 		min-height: 4rem,
-		padding-x: 0,
-		padding-y: 0,
+		padding-x: 0rem,
+		padding-y: 0rem,
 
 		active-border-bottom-width: 0.25rem,
 
@@ -35,7 +35,7 @@ $management-bar-size: map-deep-merge(
 
 		toggler-margin-x: 0.875rem,
 
-		nav-item-dropdown-margin-top: 0,
+		nav-item-dropdown-margin-top: 0rem,
 
 		link-height-mobile: 2rem,
 		link-margin-x-mobile: 0.25rem,

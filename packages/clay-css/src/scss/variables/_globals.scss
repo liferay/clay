@@ -344,7 +344,7 @@ $spacer: 1rem !default;
 $spacers: () !default;
 $spacers: map-deep-merge(
 	(
-		0: 0,
+		0: 0rem,
 		1: $spacer * 0.25,
 		2: $spacer * 0.5,
 		3: $spacer,
@@ -744,7 +744,7 @@ $c-body: map-merge(
 
 		font-weight: $font-weight-base,
 		line-height: $line-height-base,
-		margin: 0,
+		margin: 0rem,
 
 		-ms-overflow-style: scrollbar,
 
@@ -933,10 +933,10 @@ $list-inline-padding: 0.5rem !default;
 $fieldset: () !default;
 $fieldset: map-merge(
 	(
-		border: 0,
-		margin: 0,
-		min-width: 0,
-		padding: 0,
+		border: 0rem,
+		margin: 0rem,
+		min-width: 0rem,
+		padding: 0rem,
 	),
 	$fieldset
 );
@@ -957,7 +957,7 @@ $legend: map-merge(
 		line-height: inherit,
 		margin-bottom: 0.5rem,
 		max-width: 100%,
-		padding: 0,
+		padding: 0rem,
 		white-space: normal,
 		width: 100%,
 	),

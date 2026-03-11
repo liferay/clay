@@ -51,10 +51,10 @@ $c-kbd: map-deep-merge(
 		height: 1.5rem,
 		line-height: 1.375rem,
 		min-width: 1.5rem,
-		padding-bottom: 0,
+		padding-bottom: 0rem,
 		padding-left: 0.3125rem,
 		padding-right: 0.3125rem,
-		padding-top: 0,
+		padding-top: 0rem,
 		text-align: center,
 		text-transform: capitalize,
 	),
@@ -71,8 +71,8 @@ $c-kbd-c-kbd: map-merge(
 		font-weight: inherit,
 		height: auto,
 		line-height: inherit,
-		min-width: 0,
-		padding: 0,
+		min-width: 0rem,
+		padding: 0rem,
 	),
 	$c-kbd-c-kbd
 );
@@ -80,7 +80,7 @@ $c-kbd-c-kbd: map-merge(
 $c-kbd-monospaced: () !default;
 $c-kbd-monospaced: map-deep-merge(
 	(
-		padding: 0,
+		padding: 0rem,
 	),
 	$c-kbd-monospaced
 );
@@ -92,8 +92,8 @@ $c-kbd-inline: map-deep-merge(
 		font-weight: $font-weight-light,
 		height: auto,
 		line-height: inherit,
-		min-width: 0,
-		padding: 0,
+		min-width: 0rem,
+		padding: 0rem,
 	),
 	$c-kbd-inline
 );

@@ -6,7 +6,9 @@ import fs from 'node:fs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export function buildIcons() {
-	const path = join(clay.srcDir, 'images', 'icons');
+	const path = process.env.NODE_ENV === 'development' ?
+		join(__dirname, '..', '..', '..', 'clay-css', 'src', 'images', 'icons') :
+		join(clay.srcDir, 'images', 'icons');
 	const staticPath = join(__dirname, '../..', 'public');
 
 	const REGEX_FILE_EXT_SVG = /(?:flags-|\.svg$)/g;

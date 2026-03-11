@@ -178,7 +178,7 @@ $link-outline: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$link-outline
@@ -254,15 +254,15 @@ $link-monospaced: map-deep-merge(
 		height: $link-monospaced-size,
 		justify-content: center,
 		overflow: hidden,
-		padding-bottom: 0,
-		padding-left: 0,
-		padding-right: 0,
-		padding-top: 0,
+		padding-bottom: 0rem,
+		padding-left: 0rem,
+		padding-right: 0rem,
+		padding-top: 0rem,
 		vertical-align: middle,
 		width: $link-monospaced-size,
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$link-monospaced
@@ -326,7 +326,7 @@ $component-subtitle: () !default;
 $component-subtitle: map-deep-merge(
 	(
 		color: $gray-600,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 	),
 	$component-subtitle
 );
@@ -365,7 +365,7 @@ $component-action: map-deep-merge(
 		height: map-get($link-monospaced, height),
 		justify-content: center,
 		overflow: hidden,
-		padding: 0,
+		padding: 0rem,
 		transition: $component-transition,
 		vertical-align: middle,
 		width: map-get($link-monospaced, width),
@@ -397,7 +397,7 @@ $component-action: map-deep-merge(
 		),
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$component-action
@@ -419,7 +419,7 @@ $component-icon: map-deep-merge(
 		width: 32px,
 
 		lexicon-icon: (
-			margin-top: 0,
+			margin-top: 0rem,
 		),
 	),
 	$component-icon

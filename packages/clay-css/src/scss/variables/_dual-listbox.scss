@@ -46,7 +46,7 @@ $clay-dual-listbox-item-sm-up: map-deep-merge(
 $clay-dual-listbox-item-last-child: () !default;
 $clay-dual-listbox-item-last-child: map-deep-merge(
 	(
-		margin-right: 0,
+		margin-right: 0rem,
 	),
 	$clay-dual-listbox-item-last-child
 );

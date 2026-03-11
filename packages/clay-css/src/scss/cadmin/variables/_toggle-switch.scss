@@ -147,7 +147,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 	(
 		breakpoint-down: sm,
 
-		bottom: 0,
+		bottom: 0px,
 		font-size: 62.5%,
 		height: $cadmin-toggle-switch-bar-height,
 		opacity: 0,
@@ -161,7 +161,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 			height: $cadmin-toggle-switch-bar-height,
 			line-height: $cadmin-toggle-switch-bar-height,
 			position: relative,
-			text-indent: 0,
+			text-indent: 0px,
 			user-select: none,
 
 			before: (
@@ -171,12 +171,12 @@ $cadmin-toggle-switch-check: map-deep-merge(
 					clay-enable-rounded($cadmin-toggle-switch-bar-border-radius),
 				border-style: solid,
 				border-width: $cadmin-toggle-switch-bar-border-width,
-				bottom: 0,
+				bottom: 0px,
 				content: ' ',
 				display: block,
-				left: 0,
+				left: 0px,
 				position: absolute,
-				top: 0,
+				top: 0px,
 				transition: $cadmin-toggle-switch-transition,
 				width: $cadmin-toggle-switch-bar-width,
 			),
@@ -224,7 +224,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 				line-height: $cadmin-toggle-switch-button-width,
 				position: absolute,
 				text-align: center,
-				text-indent: 0,
+				text-indent: 0px,
 				top: $cadmin-toggle-switch-bar-padding,
 				transition: $cadmin-toggle-switch-transition,
 				width: $cadmin-toggle-switch-button-width,
@@ -341,7 +341,7 @@ $cadmin-toggle-switch-check: map-deep-merge(
 			toggle-switch-bar: (
 				height: $cadmin-toggle-switch-bar-height-mobile,
 				line-height: $cadmin-toggle-switch-bar-height-mobile,
-				text-indent: 0,
+				text-indent: 0px,
 
 				before: (
 					width: $cadmin-toggle-switch-bar-width-mobile,
@@ -495,7 +495,7 @@ $cadmin-simple-toggle-switch: map-deep-merge(
 
 		toggle-switch-label: (
 			line-height: $cadmin-simple-toggle-switch-label-line-height,
-			margin-bottom: 0,
+			margin-bottom: 0px,
 			max-width:
 				calc(
 					100% - #{clay-data-label-text-position(
@@ -569,7 +569,7 @@ $cadmin-toggle-switch-sizes: map-deep-merge(
 					),
 
 					after: (
-						bottom: 0,
+						bottom: 0px,
 						height: 12px,
 						left: 2px,
 						top: 2px,
@@ -587,7 +587,7 @@ $cadmin-toggle-switch-sizes: map-deep-merge(
 					toggle-switch-icon: (
 						font-size: 8px,
 						height: 16px,
-						left: 0,
+						left: 0px,
 						line-height: 16px,
 						top: 0px,
 						width: 16px,

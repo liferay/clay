@@ -5,8 +5,8 @@ $cadmin-treeview: map-merge(
 		flex-direction: column,
 		font-size: 14px,
 		list-style: none,
-		margin-bottom: 0,
-		padding: 2px 0,
+		margin-bottom: 0px,
+		padding: 2px 0px,
 
 		btn: (
 			color: inherit,
@@ -22,7 +22,7 @@ $cadmin-treeview: map-merge(
 		btn-monospaced: (
 			font-size: inherit,
 			height: 24px,
-			padding: 0,
+			padding: 0px,
 			width: 24px,
 
 			focus: (
@@ -53,8 +53,8 @@ $cadmin-treeview: map-merge(
 			display: flex,
 			flex-direction: column,
 			list-style: none,
-			margin-bottom: 0,
-			padding-left: 0,
+			margin-bottom: 0px,
+			padding-left: 0px,
 		),
 
 		treeview-item: (
@@ -104,7 +104,7 @@ $cadmin-treeview: map-merge(
 			margin-bottom: 2px,
 			margin-top: 2px,
 			min-width: 100%,
-			padding: 0,
+			padding: 0px,
 			position: relative,
 			text-align: left,
 			user-select: none,
@@ -171,9 +171,9 @@ $cadmin-treeview: map-merge(
 		),
 
 		quick-action-item: (
-			margin: 0 2px,
-			min-height: 0,
-			min-width: 0,
+			margin: 0px 2px,
+			min-height: 0px,
+			min-width: 0px,
 		),
 
 		autofit-row: (

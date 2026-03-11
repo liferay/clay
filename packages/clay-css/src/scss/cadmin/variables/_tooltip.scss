@@ -3,7 +3,7 @@ $cadmin-tooltip-border-radius: $cadmin-border-radius !default;
 $cadmin-tooltip-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.4) !default;
 $cadmin-tooltip-color: $cadmin-white !default;
 $cadmin-tooltip-font-size: 14px !default; // 14px
-$cadmin-tooltip-margin: 0 !default;
+$cadmin-tooltip-margin: 0px !default;
 $cadmin-tooltip-max-width: 230px !default;
 $cadmin-tooltip-opacity: 1 !default;
 $cadmin-tooltip-padding-x: 12px !default; // 12px
@@ -95,13 +95,13 @@ $cadmin-clay-tooltip-bottom: map-deep-merge(
 		arrow: (
 			left: 50%,
 			margin-left: calc(#{$cadmin-tooltip-arrow-width} * -0.5),
-			top: 0,
+			top: 0px,
 
 			before: (
 				border-bottom-color: $cadmin-tooltip-arrow-color,
-				border-width: 0 calc(#{$cadmin-tooltip-arrow-width} * 0.5)
+				border-width: 0px calc(#{$cadmin-tooltip-arrow-width} * 0.5)
 					$cadmin-tooltip-arrow-height,
-				bottom: 0,
+				bottom: 0px,
 			),
 		),
 
@@ -109,7 +109,7 @@ $cadmin-clay-tooltip-bottom: map-deep-merge(
 			border-bottom-color: transparent,
 			border-right-color: transparent,
 			left: 50%,
-			top: 0,
+			top: 0px,
 		),
 	),
 	$cadmin-clay-tooltip-bottom
@@ -122,7 +122,7 @@ $cadmin-clay-tooltip-bottom-left: map-deep-merge(
 	(
 		arrow: (
 			left: $cadmin-tooltip-arrow-offset,
-			margin-left: 0,
+			margin-left: 0px,
 		),
 	),
 	$cadmin-clay-tooltip-bottom-left
@@ -135,7 +135,7 @@ $cadmin-clay-tooltip-bottom-right: map-deep-merge(
 	(
 		arrow: (
 			left: auto,
-			margin-left: 0,
+			margin-left: 0px,
 			right: $cadmin-tooltip-arrow-offset,
 		),
 	),
@@ -152,7 +152,7 @@ $cadmin-clay-tooltip-left: map-deep-merge(
 		arrow: (
 			height: $cadmin-tooltip-arrow-width,
 			margin-top: calc(#{$cadmin-tooltip-arrow-width} * -0.5),
-			right: 0,
+			right: 0px,
 			top: 50%,
 			width: $cadmin-tooltip-arrow-height,
 
@@ -161,14 +161,14 @@ $cadmin-clay-tooltip-left: map-deep-merge(
 				border-width: calc(#{$cadmin-tooltip-arrow-width} * 0.5) 0
 					calc(#{$cadmin-tooltip-arrow-width} * 0.5)
 					$cadmin-tooltip-arrow-height,
-				left: 0,
+				left: 0px,
 			),
 		),
 
 		tooltip-arrow: (
 			border-bottom-color: transparent,
 			border-left-color: transparent,
-			right: 0,
+			right: 0px,
 			top: 50%,
 		),
 	),
@@ -182,7 +182,7 @@ $cadmin-clay-tooltip-left-bottom: map-deep-merge(
 	(
 		arrow: (
 			bottom: $cadmin-tooltip-arrow-offset,
-			margin-top: 0,
+			margin-top: 0px,
 			top: auto,
 		),
 	),
@@ -195,7 +195,7 @@ $cadmin-clay-tooltip-left-top: () !default;
 $cadmin-clay-tooltip-left-top: map-deep-merge(
 	(
 		arrow: (
-			margin-top: 0,
+			margin-top: 0px,
 			top: $cadmin-tooltip-arrow-offset,
 		),
 	),
@@ -211,7 +211,7 @@ $cadmin-clay-tooltip-right: map-deep-merge(
 
 		arrow: (
 			height: $cadmin-tooltip-arrow-width,
-			left: 0,
+			left: 0px,
 			margin-top: calc(#{$cadmin-tooltip-arrow-width} * -0.5),
 			top: 50%,
 			width: $cadmin-tooltip-arrow-height,
@@ -220,15 +220,15 @@ $cadmin-clay-tooltip-right: map-deep-merge(
 				border-right-color: $cadmin-tooltip-arrow-color,
 				border-width: calc(#{$cadmin-tooltip-arrow-width} * 0.5)
 					$cadmin-tooltip-arrow-height
-					calc(#{$cadmin-tooltip-arrow-width} * 0.5) 0,
-				right: 0,
+					calc(#{$cadmin-tooltip-arrow-width} * 0.5) 0px,
+				right: 0px,
 			),
 		),
 
 		tooltip-arrow: (
 			border-right-color: transparent,
 			border-top-color: transparent,
-			left: 0,
+			left: 0px,
 			top: 50%,
 		),
 	),
@@ -242,7 +242,7 @@ $cadmin-clay-tooltip-right-bottom: map-deep-merge(
 	(
 		arrow: (
 			bottom: $cadmin-tooltip-arrow-offset,
-			margin-top: 0,
+			margin-top: 0px,
 			top: auto,
 		),
 	),
@@ -255,7 +255,7 @@ $cadmin-clay-tooltip-right-top: () !default;
 $cadmin-clay-tooltip-right-top: map-deep-merge(
 	(
 		arrow: (
-			margin-top: 0,
+			margin-top: 0px,
 			top: $cadmin-tooltip-arrow-offset,
 		),
 	),
@@ -270,21 +270,21 @@ $cadmin-tooltip-top: map-deep-merge(
 		padding-bottom: $cadmin-tooltip-arrow-height,
 
 		arrow: (
-			bottom: 0,
+			bottom: 0px,
 			left: 50%,
 			margin-left: calc(#{$cadmin-tooltip-arrow-width} * -0.5),
 			before: (
 				border-top-color: $cadmin-tooltip-arrow-color,
 				border-width: $cadmin-tooltip-arrow-height
-					calc(#{$cadmin-tooltip-arrow-width} * 0.5) 0,
-				top: 0,
+					calc(#{$cadmin-tooltip-arrow-width} * 0.5) 0px,
+				top: 0px,
 			),
 		),
 
 		tooltip-arrow: (
 			border-left-color: transparent,
 			border-top-color: transparent,
-			bottom: 0,
+			bottom: 0px,
 			left: 50%,
 		),
 	),
@@ -298,7 +298,7 @@ $cadmin-tooltip-top-left: map-deep-merge(
 	(
 		arrow: (
 			left: $cadmin-tooltip-arrow-offset,
-			margin-left: 0,
+			margin-left: 0px,
 		),
 	),
 	$cadmin-tooltip-top-left
@@ -311,7 +311,7 @@ $cadmin-tooltip-top-right: map-deep-merge(
 	(
 		arrow: (
 			left: auto,
-			margin-left: 0,
+			margin-left: 0px,
 			right: $cadmin-tooltip-arrow-offset,
 		),
 	),

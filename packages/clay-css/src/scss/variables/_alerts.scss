@@ -88,19 +88,19 @@ $alert-close-margin-left: null !default;
 
 /// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
 
-$alert-close-padding-bottom: 0 !default;
+$alert-close-padding-bottom: 0rem !default;
 
 /// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
 
-$alert-close-padding-left: 0 !default;
+$alert-close-padding-left: 0rem !default;
 
 /// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
 
-$alert-close-padding-right: 0 !default;
+$alert-close-padding-right: 0rem !default;
 
 /// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
 
-$alert-close-padding-top: 0 !default;
+$alert-close-padding-top: 0rem !default;
 
 /// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
 
@@ -261,22 +261,22 @@ $alert-fluid-border-bottom-width: 1px !default;
 
 /// @deprecated use the Sass map `$alert-fluid` instead
 
-$alert-fluid-border-left-width: 0 !default;
+$alert-fluid-border-left-width: 0px !default;
 
 /// @deprecated use the Sass map `$alert-fluid` instead
 
-$alert-fluid-border-right-width: 0 !default;
+$alert-fluid-border-right-width: 0px !default;
 
 /// @deprecated use the Sass map `$alert-fluid` instead
 
-$alert-fluid-border-top-width: 0 !default;
+$alert-fluid-border-top-width: 0px !default;
 
 /// @deprecated use the Sass map `$alert-fluid` instead
 
 $alert-fluid-border-width: $alert-fluid-border-top-width
 	$alert-fluid-border-right-width $alert-fluid-border-bottom-width
 	$alert-fluid-border-left-width !default;
-$alert-fluid-margin-bottom: 0 !default;
+$alert-fluid-margin-bottom: 0rem !default;
 
 /// @deprecated use the Sass map `$alert-fluid` instead
 
@@ -323,10 +323,10 @@ $alert-fluid-close: map-deep-merge(
 $alert-fluid: () !default;
 $alert-fluid: map-deep-merge(
 	(
-		border-radius: 0,
+		border-radius: 0px,
 		border-width: $alert-fluid-border-width,
 		margin-bottom: $alert-fluid-margin-bottom,
-		padding: 0,
+		padding: 0rem,
 
 		alert-dismissible: (
 			container-fluid: $alert-fluid-dismissible-container,
@@ -356,7 +356,7 @@ $alert-notifications-absolute: map-deep-merge(
 	(
 		breakpoint-down: sm,
 		bottom: $alert-notifications-absolute-bottom,
-		height: 0,
+		height: 0rem,
 		left: $alert-notifications-absolute-left,
 		position: absolute,
 		right: $alert-notifications-absolute-right,
@@ -488,9 +488,9 @@ $alert-feedback: () !default;
 $alert-feedback: map-deep-merge(
 	(
 		background-color: transparent,
-		border-width: 0,
+		border-width: 0rem,
 		margin-bottom: 0.25rem,
-		padding: 0,
+		padding: 0rem,
 
 		close: (),
 	),
@@ -511,7 +511,7 @@ $alert-inline: map-deep-merge(
 		),
 
 		alert-dismissible-alert-fluid: (
-			padding-right: 0,
+			padding-right: 0rem,
 
 			container-fluid: (
 				padding-right: 3.5rem,
@@ -547,24 +547,24 @@ $alert-autofit-stacked: map-deep-merge(
 		alert-autofit-row: (
 			align-items: flex-start,
 			flex-direction: column,
-			margin-bottom: 0,
-			margin-top: 0,
-			min-height: 0,
-			padding-bottom: 0,
-			padding-top: 0,
+			margin-bottom: 0rem,
+			margin-top: 0rem,
+			min-height: 0rem,
+			padding-bottom: 0rem,
+			padding-top: 0rem,
 
 			autofit-col: (
 				width: 100%,
 			),
 
 			btn-group: (
-				margin-right: 0,
+				margin-right: 0rem,
 				margin-top: 0.875rem,
 			),
 		),
 
 		close: (
-			margin-top: 0,
+			margin-top: 0rem,
 			top: map-get($alert-close, top),
 		),
 	),
@@ -601,7 +601,7 @@ $alert-indicator-start: map-deep-merge(
 					)}
 			),
 		alert-fluid: (
-			padding-left: 0,
+			padding-left: 0rem,
 
 			container-fluid: (
 				padding-left:
@@ -640,13 +640,13 @@ $alert-indicator-start: map-deep-merge(
 			position: absolute,
 
 			lead: (
-				margin-left: 0,
+				margin-left: 0rem,
 			),
 		),
 
 		alert-autofit-row: (
 			alert-indicator-only-child: (
-				margin-right: 0,
+				margin-right: 0rem,
 			),
 		),
 	),

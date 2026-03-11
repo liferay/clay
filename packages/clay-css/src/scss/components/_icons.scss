@@ -36,8 +36,16 @@ button.collapse-icon,
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			margin-left: calc(#{$collapse-icon-padding-left} * -1);
-			margin-right: calc(#{$collapse-icon-padding-right} * -1);
+			margin-left: if(
+				$collapse-icon-padding-left,
+				calc(#{$collapse-icon-padding-left} * -1),
+				null
+			);
+			margin-right: if(
+				$collapse-icon-padding-right,
+				calc(#{$collapse-icon-padding-right} * -1),
+				null
+			);
 		}
 	}
 }

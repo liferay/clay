@@ -192,10 +192,26 @@ fieldset {
 
 	@if ($cadmin-enable-c-inner) {
 		.c-inner {
-			margin-bottom: calc(#{$cadmin-sheet-subtitle-padding-y} * -1);
-			margin-left: calc(#{$cadmin-sheet-subtitle-padding-x} * -1);
-			margin-right: calc(#{$cadmin-sheet-subtitle-padding-x} * -1);
-			margin-top: calc(#{$cadmin-sheet-subtitle-padding-y} * -1);
+			margin-bottom: if(
+				$cadmin-sheet-subtitle-padding-y,
+				calc(#{$cadmin-sheet-subtitle-padding-y} * -1),
+				null
+			);
+			margin-left: if(
+				$cadmin-sheet-subtitle-padding-x,
+				calc(#{$cadmin-sheet-subtitle-padding-x} * -1),
+				null
+			);
+			margin-right: if(
+				$cadmin-sheet-subtitle-padding-x,
+				calc(#{$cadmin-sheet-subtitle-padding-x} * -1),
+				null
+			);
+			margin-top: if(
+				$cadmin-sheet-subtitle-padding-y,
+				calc(#{$cadmin-sheet-subtitle-padding-y} * -1),
+				null
+			);
 		}
 	}
 
@@ -213,11 +229,21 @@ fieldset {
 
 		@if ($cadmin-enable-c-inner) {
 			.c-inner {
-				margin-left: calc(
-					#{$cadmin-sheet-subtitle-collapse-icon-padding-left} * -1
+				margin-left: if(
+					$cadmin-sheet-subtitle-collapse-icon-padding-left,
+					calc(
+						#{$cadmin-sheet-subtitle-collapse-icon-padding-left} *
+							-1
+					),
+					null
 				);
-				margin-right: calc(
-					#{$cadmin-sheet-subtitle-collapse-icon-padding-right} * -1
+				margin-right: if(
+					$cadmin-sheet-subtitle-collapse-icon-padding-right,
+					calc(
+						#{$cadmin-sheet-subtitle-collapse-icon-padding-right} *
+							-1
+					),
+					null
 				);
 			}
 		}

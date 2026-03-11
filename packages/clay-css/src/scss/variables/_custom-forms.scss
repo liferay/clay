@@ -44,7 +44,7 @@ $custom-control-indicator-box-shadow: if(
 	$input-box-shadow,
 	inset 0 1px 1px rgba($black, 0.075)
 ) !default;
-$custom-control-indicator-position-top: 0 !default;
+$custom-control-indicator-position-top: 0px !default;
 
 $custom-control-indicator-focus-border-color: if(
 	variable-exists(input-focus-border-color),
@@ -166,7 +166,7 @@ $custom-control-label: map-deep-merge(
 		font-size: $custom-control-description-font-size,
 		font-weight: $custom-control-description-font-weight,
 		line-height: $custom-control-description-line-height,
-		margin-bottom: 0,
+		margin-bottom: 0rem,
 		position: static,
 		vertical-align: top,
 
@@ -182,7 +182,7 @@ $custom-control-label: map-deep-merge(
 			float: left,
 			font-size: $custom-control-indicator-size,
 			height: $custom-control-indicator-size,
-			left: 0,
+			left: 0rem,
 			position: relative,
 			top: 0.25rem,
 			transition: clay-enable-transitions($custom-forms-transition),
@@ -263,14 +263,14 @@ $custom-control: map-deep-merge(
 		text-align: left,
 
 		only-child: (
-			margin-bottom: 0,
+			margin-bottom: 0rem,
 		),
 
 		label: (
 			cursor: map-get($custom-control-label, cursor),
 			display: inline,
 			font-size: $font-size-base,
-			margin-bottom: 0,
+			margin-bottom: 0rem,
 		),
 	),
 	$custom-control
@@ -587,7 +587,7 @@ $custom-control-outside: map-deep-merge(
 		),
 
 		custom-control-label-text: (
-			padding-left: 0,
+			padding-left: 0rem,
 		),
 	),
 	$custom-control-outside
@@ -880,7 +880,7 @@ $custom-range-thumb-bg: $component-active-bg !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-range-thumb-border: 0 !default;
+$custom-range-thumb-border: 0px !default;
 
 /// @deprecated as of v3.x with no replacement
 
