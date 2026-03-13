@@ -37,7 +37,7 @@ $cadmin-custom-control-indicator-position-top: 0px !default;
 $cadmin-custom-control-indicator-focus-border-color: $cadmin-custom-control-indicator-border-color !default;
 $cadmin-custom-control-indicator-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
 
-$cadmin-custom-control-indicator-active-bg: $cadmin-white !default;
+$cadmin-custom-control-indicator-active-bg: $cadmin-custom-control-indicator-bg !default;
 $cadmin-custom-control-indicator-active-box-shadow: c-unset !default;
 $cadmin-custom-control-indicator-active-border-color: $cadmin-custom-control-indicator-border-color !default;
 $cadmin-custom-control-indicator-active-color: $cadmin-component-active-color !default;
@@ -371,7 +371,7 @@ $cadmin-custom-checkbox-indicator-border-radius: 2px !default; // 2px
 
 $cadmin-custom-checkbox-indicator-icon-checked: clay-icon(
 	check-small,
-	$cadmin-white
+	$cadmin-custom-control-indicator-checked-color
 ) !default;
 $cadmin-custom-checkbox-indicator-icon-checked-bg-size: 16px !default;
 
@@ -424,7 +424,8 @@ $cadmin-custom-checkbox: map-deep-merge(
 				readonly: (
 					custom-control-label: (
 						before: (
-							background-color: $cadmin-white,
+							background-color:
+								$cadmin-custom-control-indicator-bg,
 							border-color: $cadmin-secondary-l2,
 						),
 
@@ -483,7 +484,8 @@ $cadmin-custom-checkbox: map-deep-merge(
 				readonly: (
 					custom-control-label: (
 						before: (
-							background-color: $cadmin-white,
+							background-color:
+								$cadmin-custom-control-indicator-bg,
 							border-color: $cadmin-secondary-l2,
 						),
 

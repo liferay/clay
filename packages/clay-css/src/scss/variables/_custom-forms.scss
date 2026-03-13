@@ -437,7 +437,7 @@ $custom-checkbox: map-deep-merge(
 				readonly: (
 					custom-control-label: (
 						before: (
-							background-color: $white,
+							background-color: $custom-control-indicator-bg,
 						),
 
 						after: (

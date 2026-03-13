@@ -143,8 +143,10 @@ $c-table-caption: () !default;
 $c-table-caption: map-merge(
 	(
 		caption-side: top,
-		padding-left: nth($table-cell-padding, 2),
-		padding-right: nth($table-cell-padding, 2),
+		padding: $table-cell-padding,
+
+		padding-bottom: 0rem,
+		padding-top: 0rem,
 	),
 	$c-table-caption
 );
@@ -360,8 +362,11 @@ $c-table: map-deep-merge(
 
 		autofit-col: (
 			justify-content: center,
-			padding-left: nth($table-cell-padding, 2),
-			padding-right: nth($table-cell-padding, 2),
+			padding: $table-cell-padding,
+
+			padding-bottom: 0rem,
+			padding-top: 0rem,
+
 			first-child: (
 				padding-left: 0rem,
 			),
@@ -388,8 +393,10 @@ $c-table: map-deep-merge(
 		quick-action-menu: (
 			align-items: $table-quick-action-menu-align-items,
 			background-color: $table-quick-action-menu-bg,
-			padding-bottom: nth($table-cell-padding, 1),
-			padding-top: nth($table-cell-padding, 1),
+			padding: $table-cell-padding,
+
+			padding-left: 0rem,
+			padding-right: 0rem,
 		),
 	),
 	$c-table

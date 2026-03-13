@@ -160,8 +160,10 @@ $cadmin-c-table-caption: () !default;
 $cadmin-c-table-caption: map-merge(
 	(
 		caption-side: top,
-		padding-left: nth($cadmin-table-cell-padding, 2),
-		padding-right: nth($cadmin-table-cell-padding, 2),
+		padding: $cadmin-table-cell-padding,
+
+		padding-bottom: 0px,
+		padding-top: 0px,
 	),
 	$cadmin-c-table-caption
 );
@@ -404,8 +406,11 @@ $cadmin-c-table: map-deep-merge(
 
 		autofit-col: (
 			justify-content: center,
-			padding-left: nth($cadmin-table-cell-padding, 2),
-			padding-right: nth($cadmin-table-cell-padding, 2),
+			padding: $cadmin-table-cell-padding,
+
+			padding-bottom: 0px,
+			padding-top: 0px,
+
 			first-child: (
 				padding-left: 0px,
 			),
@@ -432,8 +437,10 @@ $cadmin-c-table: map-deep-merge(
 		quick-action-menu: (
 			align-items: $cadmin-table-quick-action-menu-align-items,
 			background-color: $cadmin-table-quick-action-menu-bg,
-			padding-bottom: nth($cadmin-table-cell-padding, 1),
-			padding-top: nth($cadmin-table-cell-padding, 1),
+			padding: $cadmin-table-cell-padding,
+
+			padding-left: 0px,
+			padding-right: 0px,
 		),
 	),
 	$cadmin-c-table

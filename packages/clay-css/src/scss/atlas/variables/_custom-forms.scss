@@ -8,7 +8,7 @@ $custom-control-indicator-position-top: 0rem !default;
 $custom-control-indicator-focus-border-color: $custom-control-indicator-border-color !default;
 $custom-control-indicator-focus-box-shadow: $component-focus-box-shadow !default;
 
-$custom-control-indicator-active-bg: $white !default;
+$custom-control-indicator-active-bg: $custom-control-indicator-bg !default;
 $custom-control-indicator-active-border-color: $custom-control-indicator-border-color !default;
 $custom-control-indicator-active-box-shadow: c-unset !default;
 
@@ -220,7 +220,7 @@ $custom-control-input: map-deep-merge(
 
 $custom-checkbox-indicator-icon-checked: clay-icon(
 	check-small,
-	$white
+	$custom-control-indicator-checked-color
 ) !default;
 $custom-checkbox-indicator-icon-checked-bg-size: 1rem !default;
 $custom-checkbox-indicator-icon-indeterminate-bg-size: 1rem !default;
@@ -274,7 +274,7 @@ $custom-checkbox: map-deep-merge(
 				readonly: (
 					custom-control-label: (
 						before: (
-							background-color: $white,
+							background-color: $custom-control-indicator-bg,
 							border-color: $secondary-l2,
 						),
 
@@ -330,7 +330,7 @@ $custom-checkbox: map-deep-merge(
 				readonly: (
 					custom-control-label: (
 						before: (
-							background-color: $white,
+							background-color: $custom-control-indicator-bg,
 							border-color: $secondary-l2,
 						),
 
