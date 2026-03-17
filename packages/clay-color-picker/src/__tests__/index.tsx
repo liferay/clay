@@ -357,9 +357,7 @@ describe('Interactions', () => {
 			expect(handleColorsChange).toBeCalledTimes(1);
 		});
 
-		// LPS-193699 Skiping this test because it's not updating value and needs deeper investigation'
-
-		it.skip('changes the transparancy by changing the alpha', () => {
+		it('changes the transparancy by changing the alpha', () => {
 			const [alphaSlider] = getAllByRole(
 				document.body,
 				'slider'
