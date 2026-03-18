@@ -77,6 +77,11 @@ export interface IClayAlertProps
 	closeButtonAriaLabel?: string;
 
 	/**
+	 * Additional class name for the conditional container.
+	 */
+	containerClassName?: string;
+
+	/**
 	 * Determines the style of the alert.
 	 */
 	displayType?: 'danger' | 'info' | 'secondary' | 'success' | 'warning';
@@ -134,6 +139,7 @@ function ClayAlert({
 	children,
 	className,
 	closeButtonAriaLabel = 'Close',
+	containerClassName,
 	displayType = 'info',
 	hideCloseIcon = false,
 	onClose,
@@ -150,7 +156,9 @@ function ClayAlert({
 	);
 	const ConditionalContainer = ({children}: any) =>
 		variant === 'stripe' ? (
-			<div className="container">{children}</div>
+			<div className={classNames('container', containerClassName)}>
+				{children}
+			</div>
 		) : (
 			<>{children}</>
 		);

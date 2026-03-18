@@ -19,7 +19,7 @@ export type Item = {
 	id: string;
 	label: string;
 	name?: string;
-	symbol: string;
+	symbol?: string;
 };
 
 type Messages = {
@@ -195,12 +195,14 @@ const Trigger = React.forwardRef<HTMLButtonElement>(
 					ref={ref}
 					title={hideTriggerText ? selectedItem.label : null}
 				>
-					<span className="inline-item-before">
-						<ClayIcon
-							spritemap={spritemap}
-							symbol={selectedItem.symbol}
-						/>
-					</span>
+					{selectedItem.symbol ? (
+						<span className="inline-item-before">
+							<ClayIcon
+								spritemap={spritemap}
+								symbol={selectedItem.symbol}
+							/>
+						</span>
+					) : null}
 
 					{!hideTriggerText ? (
 						<span className="inline-item-before">
@@ -287,11 +289,13 @@ export function LanguagePicker({
 								expand
 							>
 								<ClayLayout.ContentSection>
-									<ClayIcon
-										className="inline-item inline-item-before"
-										spritemap={spritemap}
-										symbol={locale.symbol}
-									/>
+									{locale.symbol ? (
+										<ClayIcon
+											className="inline-item inline-item-before"
+											spritemap={spritemap}
+											symbol={locale.symbol}
+										/>
+									) : null}
 
 									<span aria-hidden="true">
 										{locale.label}

@@ -21,7 +21,7 @@ global.ResizeObserver = require('resize-observer-polyfill');
 /**
  * Incremental iteration tests for the new autocomplete behavior.
  */
-describe.skip('Autocomplete incremental interactions', () => {
+describe('Autocomplete incremental interactions', () => {
 	afterEach(cleanup);
 
 	it('render default component', () => {
@@ -443,7 +443,7 @@ describe.skip('Autocomplete incremental interactions', () => {
 			expect(input.value).toBe('twooo');
 			expect(getByRole('option').textContent).toBe(messages.notFound);
 
-			userEvent.keyboard('[Escape]');
+			userEvent.keyboard('{Escape}');
 
 			expect(input.value).toBe('two');
 			expect(queryByRole('listbox')).toBeFalsy();
@@ -598,7 +598,7 @@ describe.skip('Autocomplete incremental interactions', () => {
 
 			expect(getByRole('listbox')).toBeDefined();
 
-			userEvent.keyboard('[Escape]');
+			userEvent.keyboard('{Escape}');
 
 			expect(input.value).toBe('');
 			expect(queryByRole('listbox')).toBeFalsy();
