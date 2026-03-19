@@ -4,7 +4,7 @@ import {resolve} from 'node:path';
 import {JavaScriptFile} from 'renoun/file-system';
 import type {JavaScriptFileExport} from 'renoun/file-system';
 import {CodeInline, MDXRenderer, MDXComponents} from 'renoun/components';
-import {ComponentsCollection} from '@/components-collection';
+import {getComponentsCollection} from '@/components-collection';
 
 import {ErrorBoundary} from './ErrorBoundary';
 
@@ -64,12 +64,6 @@ async function APIReferenceAsync({
 	filter,
 	...props
 }: APIReferenceProps) {
-	// Skip API reference generation during static build
-	// ComponentsCollection uses file system paths that don't work during prerender
-	if (process.env.NEXT_PHASE === 'phase-production-build') {
-		return null;
-	}
-	
 	if (typeof source === 'string') {
 		let workingDirectory: string | undefined;
 
@@ -86,7 +80,7 @@ async function APIReferenceAsync({
 		// @ts-ignore
 		source = new JavaScriptFile({
 			path: workingDirectory ? resolve(workingDirectory, source) : source,
-			directory: ComponentsCollection,
+			directory: getComponentsCollection(),
 		});
 	}
 

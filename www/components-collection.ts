@@ -37,22 +37,24 @@ let componentsCollectionInstance: ReturnType<typeof createComponentsCollection> 
 
 function createComponentsCollection() {
 	return new Directory({
-		path: '../clay-core/src/table',
-		tsConfigPath: '../tsconfig.json',
+		path: '..',
+		tsConfigPath: '../tsconfig.renoun.json',
 		loaders: {
 			ts: withSchema<ComponentSchema>((filePath) => {
 				// Use eval to bypass webpack's static analysis
 				// @ts-ignore
-				return eval('require')(`../clay-core/src/table/${filePath}.ts`);
+				return eval('require')(`../${filePath}.ts`);
 			}),
 			tsx: withSchema<ComponentSchema>((filePath) => {
 				// Use eval to bypass webpack's static analysis
 				// @ts-ignore
-				return eval('require')(`../clay-core/src/table/${filePath}.tsx`);
+				return eval('require')(`../${filePath}.tsx`);
 			}),
 		},
 		include: (entry) => {
 			const entryPath = entry.getPath();
+			const isRootEntry = entryPath === '' || entryPath === '.';
+			const isClayPackageEntry = entryPath.startsWith('clay-');
 
 			// Exclude test directories and files
 			if (entryPath.includes('__tests__') || entryPath.includes('.stories.') || entryPath.includes('.spec.')) {
@@ -61,27 +63,18 @@ function createComponentsCollection() {
 
 			// Only include specific component source files
 			if (isFile(entry, ['ts', 'tsx'])) {
-				// Only include main component files in the table directory root
-				return !entryPath.includes('/');
+				return isClayPackageEntry && entryPath.includes('/src/');
 			}
 
-			return isDirectory(entry);
+			return isDirectory(entry) && (isRootEntry || isClayPackageEntry);
 		},
 	});
 }
 
-// Proxy that lazily creates the ComponentsCollection only when accessed
-export const ComponentsCollection = new Proxy({} as ReturnType<typeof createComponentsCollection>, {
-	get(target, prop) {
-		// Skip creation during build phase
-		if (process.env.NEXT_PHASE === 'phase-production-build' || process.env.NEXT_PHASE === 'phase-development-server') {
-			return undefined;
-		}
-		
-		if (!componentsCollectionInstance) {
-			componentsCollectionInstance = createComponentsCollection();
-		}
-		// @ts-ignore
-		return componentsCollectionInstance[prop];
-	},
-});
+export function getComponentsCollection() {
+	if (!componentsCollectionInstance) {
+		componentsCollectionInstance = createComponentsCollection();
+	}
+
+	return componentsCollectionInstance;
+}

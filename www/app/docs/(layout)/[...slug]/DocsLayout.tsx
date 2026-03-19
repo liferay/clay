@@ -101,7 +101,6 @@ export async function DocsLayout({slug}: Props) {
 						style={{
 							display: 'flex',
 							flexDirection: 'column',
-							overflow: 'hidden',
 						}}
 					>
 						<h2 className="text-7 mb-4 mt-5" id="api-reference">

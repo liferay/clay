@@ -74,7 +74,7 @@ describe('PanelResizer', () => {
 		expect(onChange).toHaveBeenLastCalledWith(499);
 	});
 
-	test.skip('applies acceleration (delta 10) after > 7 presses', () => {
+	test('applies acceleration (delta 10) after > 7 presses', () => {
 		const onChange = jest.fn();
 
 		renderComponent({onChange});
@@ -83,12 +83,16 @@ describe('PanelResizer', () => {
 
 		resizer.focus();
 
-		userEvent.keyboard('{ArrowRight>4}');
+		for (let i = 0; i < 4; i++) {
+			fireEvent.keyDown(resizer, {code: 'ArrowRight', key: 'ArrowRight'});
+		}
 
 		expect(onChange).toHaveBeenCalledTimes(4);
 		expect(onChange).toHaveBeenLastCalledWith(501);
 
-		userEvent.keyboard('{ArrowRight>10}');
+		for (let i = 0; i < 10; i++) {
+			fireEvent.keyDown(resizer, {code: 'ArrowRight', key: 'ArrowRight'});
+		}
 
 		expect(onChange).toHaveBeenCalledTimes(14);
 		expect(onChange).toHaveBeenLastCalledWith(510);

@@ -9,7 +9,7 @@ import React from 'react';
 
 import {Option, Picker} from '../../';
 
-describe.skip('Picker incremental interactions', () => {
+describe('Picker incremental interactions', () => {
 	afterEach(cleanup);
 
 	it('click trigger expand menu', () => {
@@ -152,7 +152,7 @@ describe.skip('Picker incremental interactions', () => {
 
 		expect(document.activeElement).toEqual(combobox);
 
-		userEvent.keyboard('[Escape]');
+		userEvent.keyboard('{Escape}');
 
 		expect(document.activeElement === combobox).toBe(true);
 		expect(combobox.getAttribute('aria-expanded')).toBe('false');
@@ -340,9 +340,9 @@ describe.skip('Picker incremental interactions', () => {
 			const combobox = getByRole('combobox');
 
 			userEvent.click(combobox);
-			userEvent.keyboard('[PageDown]');
-			userEvent.keyboard('[PageDown]');
-			userEvent.keyboard('[PageUp]');
+			userEvent.keyboard('{PageDown}');
+			userEvent.keyboard('{PageDown}');
+			userEvent.keyboard('{PageUp}');
 
 			expect(combobox.getAttribute('aria-expanded')).toBe('true');
 			expect(combobox.getAttribute('aria-activedescendant')).toBe(
@@ -350,7 +350,7 @@ describe.skip('Picker incremental interactions', () => {
 			);
 			expect(combobox.textContent).not.toBe('Banana');
 
-			userEvent.keyboard('[PageUp]');
+			userEvent.keyboard('{PageUp}');
 
 			expect(combobox.getAttribute('aria-activedescendant')).toBe(
 				'Apple'
@@ -383,7 +383,7 @@ describe.skip('Picker incremental interactions', () => {
 			const combobox = getByRole('combobox');
 
 			userEvent.click(combobox);
-			userEvent.keyboard('[PageDown]');
+			userEvent.keyboard('{PageDown}');
 
 			expect(combobox.getAttribute('aria-expanded')).toBe('true');
 			expect(combobox.getAttribute('aria-activedescendant')).toBe(
@@ -391,7 +391,7 @@ describe.skip('Picker incremental interactions', () => {
 			);
 			expect(combobox.textContent).not.toBe('Guava');
 
-			userEvent.keyboard('[PageDown]');
+			userEvent.keyboard('{PageDown}');
 
 			expect(combobox.getAttribute('aria-activedescendant')).toBe(
 				'Huckleberry'
@@ -483,7 +483,7 @@ describe.skip('Picker incremental interactions', () => {
 
 		userEvent.click(combobox);
 		userEvent.keyboard('[ArrowDown]');
-		userEvent.keyboard('[Escape]');
+		userEvent.keyboard('{Escape}');
 
 		userEvent.click(combobox);
 
