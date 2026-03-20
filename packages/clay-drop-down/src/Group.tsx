@@ -56,7 +56,7 @@ function Group<T>({children, header, items, role = 'group'}: IProps<T>) {
 
 			<li role="presentation">
 				<ul
-					aria-labelledby={ariaLabel}
+					aria-labelledby={header ? ariaLabel : undefined}
 					className="list-unstyled"
 					role={role}
 				>

@@ -241,7 +241,7 @@ function DropDown<T>({
 			className={classNames('dropdown', className)}
 		>
 			{React.cloneElement(trigger, {
-				'aria-controls': ariaControls,
+				'aria-controls': internalActive ? ariaControls : undefined,
 				'aria-expanded': internalActive,
 				'aria-haspopup': 'true',
 				'children':
