@@ -112,7 +112,7 @@ describe('SidePanel incremental interactions', () => {
 		expect(panel).toHaveAttribute('inert');
 	});
 
-	it.skip('pressing ESC closes and moves focus to the trigger', async () => {
+	it('pressing ESC closes and moves focus to the trigger', async () => {
 		const {getAllByRole, getByRole} = render(<Example />);
 
 		const [button] = getAllByRole('button');
@@ -130,7 +130,7 @@ describe('SidePanel incremental interactions', () => {
 			expect(panel).not.toHaveAttribute('inert');
 		});
 
-		userEvent.keyboard('[Escape]');
+		userEvent.keyboard('{Escape}');
 
 		expect(button).toHaveFocus();
 		expect(panel).toHaveAttribute('inert');
