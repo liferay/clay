@@ -78,3 +78,13 @@ export function getCSSVariableColor(value: string) {
 
 	return color;
 }
+
+export function formatHexColor({
+	isHex,
+	value = '',
+}: {
+	isHex: boolean;
+	value?: string;
+}) {
+	return `${isHex ? '#' : ''}${value}`;
+}

@@ -40,7 +40,7 @@ export function useEditor(
 ) {
 	const [state, dispatch] = useReducer(reducer, {}, () => {
 		const index = colors.findIndex(
-			(color) => color.toUpperCase() === value.toUpperCase()
+			(color) => color?.toUpperCase() === value?.toUpperCase()
 		);
 
 		return {
@@ -129,6 +129,7 @@ type Props = {
 	internalToHex: (value: Instance) => string;
 	onChange: (color: Instance, active: boolean) => void;
 	onColorChange: (color: Instance) => void;
+	onHexBlur?: (value: string) => void;
 	onHexChange: (value: string) => void;
 	onHueChange: (value: number) => void;
 };
@@ -141,6 +142,7 @@ export function Editor({
 	internalToHex,
 	onChange,
 	onColorChange,
+	onHexBlur,
 	onHexChange,
 	onHueChange,
 }: Props) {
@@ -229,7 +231,11 @@ export function Editor({
 									);
 
 									if (newColor.isValid()) {
-										onHexChange(internalToHex(newColor));
+										const validColor =
+											internalToHex(newColor);
+
+										onHexChange(validColor);
+										onHexBlur?.(validColor);
 									}
 									else {
 										onHexChange(internalToHex(color));

@@ -30,10 +30,10 @@ type Props = {
 	/**
 	 * Messages for the Color Picker.
 	 */
-	messages?: {
+	messages?: Partial<{
 		close: string;
 		customColor: string;
-	};
+	}>;
 
 	/**
 	 * Callback for when a color is changed
