@@ -549,6 +549,10 @@ export const iconsData = [
 		name: 'books',
 	},
 	{
+		aliases: ['assets', 'design library', 'palette'],
+		name: 'books-brush',
+	},
+	{
 		aliases: ['line', 'stroke', 'dashed', 'solid'],
 		name: 'border-style',
 	},
