@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
-import {formatHexColor} from './util';
+import {parseColor, toHexColorString} from './util';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
@@ -33,7 +33,7 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
  */
 const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 	({active, className, size, title, value, ...otherProps}, ref) => {
-		const color = tinycolor(value);
+		const color = parseColor(value);
 
 		const isHex = !!(color.getFormat() || '').match('hex');
 
@@ -52,11 +52,11 @@ const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 				style={{
 					background:
 						otherProps?.style?.background ||
-						formatHexColor({isHex, value}),
+						toHexColorString({isHex, value}),
 					height: otherProps?.style?.height || size,
 					width: otherProps?.style?.width || size,
 				}}
-				title={title || formatHexColor({isHex, value})}
+				title={title || toHexColorString({isHex, value})}
 			/>
 		);
 	}

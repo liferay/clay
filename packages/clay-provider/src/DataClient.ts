@@ -28,6 +28,14 @@ export class DataClient {
 		return this.cache.get(key);
 	}
 
+	public remove(key: string | null) {
+		if (!key) {
+			return;
+		}
+
+		delete this.currentPromises[key];
+	}
+
 	public update(key: string | null, value: any) {
 		if (!key) {
 			return null;

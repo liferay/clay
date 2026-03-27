@@ -9,7 +9,7 @@ import React, {useRef} from 'react';
 import tinycolor from 'tinycolor2';
 
 import Splotch from './Splotch';
-import {formatHexColor} from './util';
+import {toHexColorString} from './util';
 
 interface IProps
 	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
@@ -152,7 +152,9 @@ export default function Field({
 							}}
 							tabIndex={-1}
 							type={useNative ? 'color' : 'text'}
-							value={value ? formatHexColor({isHex, value}) : ''}
+							value={
+								value ? toHexColorString({isHex, value}) : ''
+							}
 						/>
 					)}
 
@@ -189,7 +191,7 @@ export default function Field({
 						/>
 
 						<ClayInput.GroupInsetItem before tag="label">
-							{formatHexColor({isHex})}
+							{toHexColorString({isHex})}
 						</ClayInput.GroupInsetItem>
 					</ClayInput.GroupItem>
 				)}

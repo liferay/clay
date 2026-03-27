@@ -116,15 +116,16 @@ describe('ClayDataProvider', () => {
 		);
 	});
 
-	it.skip('calls clay.data and return data from cache', async () => {
+	it('calls clay.data and return data from cache', async () => {
 		const data = {title: 'Foo'};
 
 		fetchMock.mockResponse(JSON.stringify(data));
 
-		const {container} = render(
+		const {container, rerender} = render(
 			<Provider spritemap="">
 				<DataProvider
 					fetchPolicy={FetchPolicy.CacheFirst}
+					key="render-1"
 					link="https://clay.data"
 				>
 					{({data}) => <h1>{data && data.title}</h1>}
@@ -132,19 +133,35 @@ describe('ClayDataProvider', () => {
 			</Provider>
 		);
 
-		await waitFor(() => expect(fetchMock.mock.calls.length).not.toEqual(1));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		await waitFor(() => expect(container.innerHTML).toContain(data.title));
 
-		expect(fetchMock.mock.calls.length).toBe(0);
+		rerender(
+			<Provider spritemap="">
+				<DataProvider
+					fetchPolicy={FetchPolicy.CacheFirst}
+					key="render-2"
+					link="https://clay.data"
+				>
+					{({data}) => <h1>{data && data.title}</h1>}
+				</DataProvider>
+			</Provider>
+		);
+
+		await waitFor(() => expect(container.innerHTML).toContain(data.title));
+
+		expect(fetchMock.mock.calls.length).toBe(1);
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
-	xit('calls clay.data and returns data from the cache and fetches data on the network', async () => {
-		fetchMock.mockResponse(JSON.stringify({title: 'Bar'}));
+	it('calls clay.data and returns data from the cache and fetches data on the network', async () => {
+		fetchMock.mockResponseOnce(JSON.stringify({title: 'Foo'}));
 
-		const {container} = render(
+		const {container, rerender} = render(
 			<Provider spritemap="">
 				<DataProvider
 					fetchPolicy={FetchPolicy.CacheAndNetwork}
+					key="render-1"
 					link="https://clay.data"
 				>
 					{({data}) => <h1>{data && data.title}</h1>}
@@ -152,23 +169,37 @@ describe('ClayDataProvider', () => {
 			</Provider>
 		);
 
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		await waitFor(() => expect(container.innerHTML).toContain('Foo'));
+
 		expect(container.innerHTML).toMatchSnapshot();
 
-		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		fetchMock.mockResponseOnce(JSON.stringify({title: 'Bar'}));
 
-		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
+		rerender(
+			<Provider spritemap="">
+				<DataProvider
+					fetchPolicy={FetchPolicy.CacheAndNetwork}
+					key="render-2"
+					link="https://clay.data"
+				>
+					{({data}) => <h1>{data && data.title}</h1>}
+				</DataProvider>
+			</Provider>
+		);
+
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
+		await waitFor(() => expect(container.innerHTML).toContain('Bar'));
+
+		expect(fetchMock.mock.calls[1]![0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
-	xit('calls clay.data and returns the timeout error', async () => {
+	it('calls clay.data and returns the timeout error', async () => {
 		fetchMock.mockResponseOnce(
 			() =>
 				new Promise((resolve) => {
-					const timer = setTimeout(() => resolve({body: 'ok'}), 200);
-
-					timer.unref();
-
-					return timer;
+					setTimeout(() => resolve({body: 'ok'}), 200);
 				})
 		);
 
@@ -186,7 +217,9 @@ describe('ClayDataProvider', () => {
 			</Provider>
 		);
 
-		await fetchMock.mock.results[0]!.value;
+		await waitFor(() =>
+			expect(container.innerHTML).toContain('Timeout Error')
+		);
 
 		expect(fetchMock.mock.calls.length).toEqual(1);
 

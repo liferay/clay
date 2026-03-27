@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
-import tinycolor from 'tinycolor2';
+import tinycolor, {Instance as ColorInstance} from 'tinycolor2';
 
 /**
  * Utility function for getting x & y coordinates for gradient
@@ -65,6 +65,20 @@ export function findColorIndex(
 	);
 }
 
+export function internalToHex(color: ColorInstance) {
+	if (color.getAlpha() < 1) {
+		return color.toHex8().toUpperCase();
+	}
+
+	return color.toHex().toUpperCase();
+}
+
+export function isHexFormat(color: ColorInstance) {
+	const format = color.getFormat();
+
+	return format === 'hex' || format === 'hex8';
+}
+
 export function getCSSVariableColor(value: string) {
 	const element = document.createElement('div');
 
@@ -79,7 +93,11 @@ export function getCSSVariableColor(value: string) {
 	return color;
 }
 
-export function formatHexColor({
+export function parseColor(value: string) {
+	return tinycolor(value);
+}
+
+export function toHexColorString({
 	isHex,
 	value = '',
 }: {

@@ -365,6 +365,9 @@ function useResource({
 		}
 		setResource(data);
 		dispatchNetworkStatus(NetworkStatus.Unused);
+
+		clientRef.current.remove(identifier);
+
 		if (shouldUseCache) {
 			clientRef.current.update(identifier, data);
 		}
@@ -551,10 +554,16 @@ function useResource({
 
 	// Makes first request if not started at render time
 
-	if (!fetchingOrError && firstRenderRef.current) {
+	if (
+		!fetchingOrError &&
+		firstRenderRef.current &&
+		firstRequestRef.current === false
+	) {
+		firstRequestRef.current = true;
+
 		const result = maybeFetch(NetworkStatus.Loading);
+
 		if (result) {
-			firstRequestRef.current = true;
 			fetchingOrError = result;
 			clientRef.current.update(identifier, result);
 		}
