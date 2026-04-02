@@ -10,6 +10,8 @@ import React from 'react';
 
 const spritemap = 'path/to/spritemap';
 
+global.ResizeObserver = require('resize-observer-polyfill');
+
 describe('ClayPagination', () => {
 	afterEach(cleanup);
 
@@ -142,7 +144,7 @@ describe('ClayPagination', () => {
 		expect(currentActivePage.getAttribute('aria-current')).toBe('page');
 	});
 
-	xit('shows dropdown when ellipsis is clicked', () => {
+	it('shows dropdown when ellipsis is clicked', () => {
 		const {getAllByText} = render(
 			<ClayPaginationWithBasicItems
 				defaultActive={12}
@@ -158,7 +160,7 @@ describe('ClayPagination', () => {
 		).toContain('show');
 	});
 
-	xit('calls onPageChange when an item is clicked in dropdown-menu', () => {
+	it('calls onPageChange when an item is clicked in dropdown-menu', () => {
 		const changeMock = jest.fn();
 
 		const {getAllByText} = render(

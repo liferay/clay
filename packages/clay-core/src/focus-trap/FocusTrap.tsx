@@ -23,6 +23,13 @@ type Props = {
 	 * Ref of the element that receives the focus when the focus trap is activated.
 	 */
 	focusElementRef?: React.RefObject<HTMLElement>;
+
+	/**
+	 * Flag that indicates whether the FocusScope stops keyboard event propagation
+	 * to parent FocusScope components.
+	 * */
+
+	stopPropagation?: boolean;
 };
 
 function getFocusableElements(childrenRef: React.RefObject<HTMLDivElement>) {
@@ -35,7 +42,12 @@ function getFocusableElements(childrenRef: React.RefObject<HTMLDivElement>) {
 	].filter((element) => !element.getAttribute('aria-hidden'));
 }
 
-export function FocusTrap({active = false, children, focusElementRef}: Props) {
+export function FocusTrap({
+	active = false,
+	children,
+	focusElementRef,
+	stopPropagation = false,
+}: Props) {
 	const childrenRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -74,7 +86,7 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 		<FocusScope
 			arrowKeysLeftRight={false}
 			arrowKeysUpDown={false}
-			stopPropagation={false}
+			stopPropagation={stopPropagation}
 		>
 			<div className="c-focus-trap" ref={childrenRef}>
 				{active ? <span data-focus-scope-start="true" /> : null}
