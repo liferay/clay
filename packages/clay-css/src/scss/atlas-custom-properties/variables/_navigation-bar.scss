@@ -1,0 +1,473 @@
+@if ($enable-atlas-custom-properties) {
+	$navigation-bar-size: ();
+	$navigation-bar-size: map-deep-merge(
+		(
+			scaling-navbar: false,
+
+			border-bottom-width: 1px,
+			font-size: var(--navigation-bar-font-size, $navbar-font-size),
+			height: var(--navigation-bar-height, 48px),
+			padding-x: var(--navigation-bar-padding-x, 0px),
+			padding-y: var(--navigation-bar-padding-y, 0px),
+			link-padding-x: var(--navigation-bar-nav-link-link-padding-x, 16px),
+			nav-item-dropdown-margin-top: 0,
+
+			active-border-bottom-width: 4px,
+			active-border-offset-bottom: -8.5px,
+
+			link-height-mobile: 32px,
+
+			collapse-dropdown-item-padding-x-mobile: 16px,
+			collapse-dropdown-item-padding-y-mobile: 13px,
+
+			toggler-link-height: 32px,
+			toggler-link-margin-y: 7.5px,
+			toggler-link-padding-y: 0,
+
+			media-breakpoint-down: (),
+			media-breakpoint-up: (),
+		),
+		$navigation-bar-size
+	);
+
+	$navigation-bar-base: ();
+	$navigation-bar-base: map-deep-merge(
+		(
+			border-color: transparent,
+			border-style: solid,
+
+			navbar-nav: (
+				nav-link: (
+					border-radius: clay-enable-rounded($border-radius),
+					border-width: 0,
+					outline: 0,
+					font-size: inherit,
+
+					focus: (
+						box-shadow: $component-focus-box-shadow,
+					),
+
+					disabled: (
+						box-shadow: none,
+					),
+				),
+			),
+
+			media-breakpoint-down: (
+				sm: (
+					navbar-expand-md: (
+						navbar-collapse-absolute: (
+							navbar-collapse: (
+								border-color:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											border-color
+										),
+										transparent
+									),
+								border-style:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											border-style
+										),
+										solid
+									),
+								border-bottom-width:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											border-bottom-width
+										),
+										1px
+									),
+								border-left-width:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											border-left-width
+										),
+										0
+									),
+								border-right-width:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											border-right-width
+										),
+										0
+									),
+								border-top-width:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											border-top-width
+										),
+										0
+									),
+								box-shadow:
+									clay-enable-shadows(
+										setter(
+											map-get(
+												$navigation-bar-size,
+												box-shadow
+											),
+											null
+										)
+									),
+								left:
+									setter(
+										calc(
+											#{map-get(
+													$navigation-bar-size,
+													border-left-width
+												)} *
+												-1
+										),
+										0
+									),
+								margin-top:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											border-bottom-width
+										),
+										1px
+									),
+								padding-bottom:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											padding-y
+										),
+										0
+									),
+								padding-left:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											padding-x
+										),
+										0
+									),
+								padding-right:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											padding-x
+										),
+										0
+									),
+								padding-top:
+									setter(
+										map-get(
+											$navigation-bar-size,
+											padding-y
+										),
+										0
+									),
+								right:
+									setter(
+										calc(
+											#{map-get(
+													$navigation-bar-size,
+													border-right-width
+												)} *
+												-1
+										),
+										0
+									),
+							),
+						),
+
+						navbar-collapse: (
+							navbar-nav: (
+								dropdown-divider: (
+									margin-left:
+										setter(
+											calc(
+												#{map-get(
+														$navigation-bar-size,
+														padding-x
+													)} *
+													-1
+											),
+											null
+										),
+									margin-right:
+										setter(
+											calc(
+												#{map-get(
+														$navigation-bar-size,
+														padding-x
+													)} *
+													-1
+											),
+											null
+										),
+								),
+								dropdown-item: (
+									padding-bottom:
+										setter(
+											map-get(
+												$navigation-bar-size,
+												collapse-dropdown-item-padding-y-mobile
+											),
+											11.5px
+										),
+									padding-left:
+										setter(
+											map-get(
+												$navigation-bar-size,
+												collapse-dropdown-item-padding-x-mobile
+											),
+											16px
+										),
+									padding-right:
+										setter(
+											map-get(
+												$navigation-bar-size,
+												collapse-dropdown-item-padding-x-mobile
+											),
+											16px
+										),
+									padding-top:
+										setter(
+											map-get(
+												$navigation-bar-size,
+												collapse-dropdown-item-padding-y-mobile
+											),
+											11.5px
+										),
+								),
+							),
+						),
+					),
+				),
+			),
+
+			media-breakpoint-up: (
+				md: (
+					navbar-expand-md: (
+						navbar-underline: (
+							navbar-nav: (
+								nav-link: (
+									active-class: (
+										after: (
+											bottom:
+												setter(
+													map-get(
+														$navigation-bar-size,
+														active-border-offset-bottom
+													),
+													-1px
+												),
+											height:
+												setter(
+													map-get(
+														$navigation-bar-size,
+														active-border-bottom-width
+													),
+													4px
+												),
+											left:
+												setter(
+													map-get(
+														$navigation-bar-size,
+														active-border-offset-x
+													),
+													null
+												),
+											right:
+												setter(
+													map-get(
+														$navigation-bar-size,
+														active-border-offset-x
+													),
+													null
+												),
+											top:
+												setter(
+													map-get(
+														$navigation-bar-size,
+														active-border-offset-top
+													),
+													null
+												),
+										),
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+		$navigation-bar-base
+	);
+
+	$navigation-bar-light: ();
+	$navigation-bar-light: map-deep-merge(
+		(
+			background-color: $white,
+			border-color: $gray-200,
+
+			navbar-nav: (
+				nav-link: (
+					color:
+						var(
+							--navigation-bar-light-nav-link-color,
+							$navbar-light-color
+						),
+					font-weight:
+						var(
+							--navigation-bar-light-nav-link-font-weight,
+							$font-weight-semi-bold
+						),
+					hover: (
+						color: $gray-900,
+					),
+
+					focus: (
+						color: $gray-900,
+					),
+
+					active: (
+						color: $navbar-light-active-color,
+					),
+
+					disabled: (
+						color: $gray-600,
+						opacity: $component-disabled-opacity,
+					),
+				),
+			),
+
+			media-breakpoint-down: (
+				sm: (
+					navbar-expand-md: (
+						navbar-collapse: (
+							navbar-nav: (
+								dropdown-item: (
+									color: $navbar-light-color,
+									font-weight: $font-weight-semi-bold,
+
+									hover: (
+										color: $gray-900,
+									),
+
+									focus: (
+										color: $gray-900,
+									),
+
+									active: (
+										color: $navbar-light-active-color,
+									),
+
+									disabled: (
+										color: $gray-600,
+										opacity: $component-disabled-opacity,
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+
+			media-breakpoint-up: (
+				md: (
+					navbar-expand-md: (
+						navbar-underline: (
+							navbar-nav: (
+								nav-link: (
+									active-class: (
+										after: (
+											background-color: $primary-l0,
+										),
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+		$navigation-bar-light
+	);
+
+	$navigation-bar-secondary: ();
+	$navigation-bar-secondary: map-deep-merge(
+		(
+			background-color: $secondary-d1,
+			color: $white,
+
+			navbar-nav: (
+				nav-link: (
+					color: $secondary-l2,
+					font-weight: $font-weight-semi-bold,
+
+					hover: (
+						color: $white,
+					),
+
+					focus: (
+						color: $white,
+					),
+
+					active: (
+						color: $white,
+					),
+
+					disabled: (
+						color: $gray-400,
+						opacity: $component-disabled-opacity,
+					),
+				),
+			),
+
+			navbar-brand: (
+				color: rgba(255, 255, 255, 0.9),
+				hover: (
+					color: rgba(255, 255, 255, 0.9),
+				),
+			),
+
+			media-breakpoint-down: (
+				sm: (
+					navbar-expand-md: (
+						navbar-collapse: (
+							navbar-nav: (
+								dropdown-item: (
+									color: $secondary-l2,
+									font-weight: $font-weight-semi-bold,
+
+									hover: (
+										color: $white,
+									),
+
+									focus: (
+										color: $white,
+									),
+
+									active: (
+										color: $white,
+									),
+
+									disabled: (
+										color: $gray-400,
+										opacity: $component-disabled-opacity,
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+
+			media-breakpoint-up: (),
+		),
+		$navigation-bar-secondary
+	);
+}

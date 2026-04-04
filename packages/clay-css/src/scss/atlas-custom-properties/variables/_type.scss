@@ -1,0 +1,194 @@
+@if ($enable-atlas-custom-properties) {
+	$b-font-weight: var(--b-font-weight, $font-weight-semi-bold);
+
+	$strong-font-weight: var(--strong-font-weight, $font-weight-semi-bold);
+
+	$reference-mark-font-size: var(--reference-mark-font-size, 12px);
+	$reference-mark-vertical-align: var(--reference-mark-vertical-align, super);
+
+	$reference-mark: ();
+	$reference-mark: map-deep-merge(
+		(
+			display: inline-block,
+			font-size: $reference-mark-font-size,
+			position: relative,
+			vertical-align: $reference-mark-vertical-align,
+
+			lexicon-icon: (
+				vertical-align: $reference-mark-vertical-align,
+			),
+		),
+		$reference-mark
+	);
+
+	// C Kbd
+
+	$c-kbd-group: ();
+	$c-kbd-group: map-deep-merge(
+		(
+			font-size: var(--c-kbd-group-font-size, 14px),
+			c-kbd: (
+				font-size: inherit,
+			),
+		),
+		$c-kbd-group
+	);
+
+	$c-kbd: ();
+	$c-kbd: map-deep-merge(
+		(
+			background-color: var(--c-kbd-background-color, transparent),
+			border-radius: var(--c-kbd-border-radius, 2px),
+			border-color: var(--c-kbd-border-color, transparent),
+			border-style: var(--c-kbd-border-style, solid),
+			border-width: var(--c-kbd-border-width, 1px),
+			box-shadow: var(--c-kbd-box-shadow, none),
+			color: var(--c-kbd-color, inherit),
+			display: var(--c-kbd-display, inline-block),
+			font-family: var(--c-kbd-font-family, $font-family-sans-serif),
+			font-size: var(--c-kbd-font-size, 14px),
+			font-weight: var(--c-kbd-font-weight, $font-weight-semi-bold),
+			height: var(--c-kbd-height, 24px),
+			line-height: var(--c-kbd-line-height, 22px),
+			min-width: var(--c-kbd-min-width, 24px),
+			padding-bottom: var(--c-kbd-padding-bottom, 0),
+			padding-left: var(--c-kbd-padding-left, 5px),
+			padding-right: var(--c-kbd-padding-right, 5px),
+			padding-top: var(--c-kbd-padding-top, 0),
+			text-align: center,
+			text-transform: capitalize,
+		),
+		$c-kbd
+	);
+
+	// .c-kbd > .c-kbd
+
+	$c-kbd-c-kbd: ();
+	$c-kbd-c-kbd: map-merge(
+		(
+			border-width: 0,
+			font-size: inherit,
+			font-weight: inherit,
+			height: auto,
+			line-height: inherit,
+			min-width: 0,
+			padding: 0,
+		),
+		$c-kbd-c-kbd
+	);
+
+	$c-kbd-monospaced: ();
+	$c-kbd-monospaced: map-deep-merge(
+		(
+			padding: 0,
+		),
+		$c-kbd-monospaced
+	);
+
+	$c-kbd-inline: ();
+	$c-kbd-inline: map-deep-merge(
+		(
+			border-width: 0,
+			font-weight: $font-weight-light,
+			height: auto,
+			line-height: inherit,
+			min-width: 0,
+			padding: 0,
+		),
+		$c-kbd-inline
+	);
+
+	// Kbd Separator
+
+	// .c-kbd > .c-kbd-separator
+
+	$c-kbd-c-kbd-separator: ();
+	$c-kbd-c-kbd-separator: map-merge(
+		(
+			font-weight: $font-weight-normal,
+		),
+		$c-kbd-c-kbd-separator
+	);
+
+	// .c-kbd-inline > .c-kbd-separator
+
+	$c-kbd-inline-c-kbd-separator: ();
+	$c-kbd-inline-c-kbd-separator: map-merge(
+		(
+			font-weight: inherit,
+		),
+		$c-kbd-inline-c-kbd-separator
+	);
+
+	// Kbd Sizes
+
+	$c-kbd-group-sm: ();
+	$c-kbd-group-sm: map-deep-merge(
+		(
+			font-size: var(--c-kbd-group-sm-font-size, 12px),
+		),
+		$c-kbd-group-sm
+	);
+
+	$c-kbd-sm: ();
+	$c-kbd-sm: map-deep-merge(
+		(
+			font-size: var(--c-kbd-sm-font-size, 12px),
+		),
+		$c-kbd-sm
+	);
+
+	$c-kbd-group-lg: ();
+	$c-kbd-group-lg: map-deep-merge(
+		(
+			font-size: var(--c-kbd-group-lg-font-size, 16px),
+		),
+		$c-kbd-group-lg
+	);
+
+	$c-kbd-lg: ();
+	$c-kbd-lg: map-deep-merge(
+		(
+			font-size: var(--c-kbd-lg-font-size, 16px),
+		),
+		$c-kbd-lg
+	);
+
+	// Kbd Variants
+
+	$c-kbd-group-light: ();
+	$c-kbd-group-light: map-deep-merge(
+		(
+			color: var(--c-kbd-group-light-color, $secondary),
+		),
+		$c-kbd-group-light
+	);
+
+	$c-kbd-light: ();
+	$c-kbd-light: map-deep-merge(
+		(
+			background-color: var(--c-kbd-light-background-color, $white),
+			border-color: var(--c-kbd-light-border-color, $gray-400),
+			color: var(--c-kbd-light-color, $secondary),
+		),
+		$c-kbd-light
+	);
+
+	$c-kbd-group-dark: ();
+	$c-kbd-group-dark: map-deep-merge(
+		(
+			color: var(--c-kbd-group-dark-color, $white),
+		),
+		$c-kbd-group-dark
+	);
+
+	$c-kbd-dark: ();
+	$c-kbd-dark: map-deep-merge(
+		(
+			background-color: var(--c-kbd-dark-background-color, $dark-l2),
+			border-color: var(--c-kbd-dark-border-color, $dark-l2),
+			color: var(--c-kbd-dark-color, $white),
+		),
+		$c-kbd-dark
+	);
+}

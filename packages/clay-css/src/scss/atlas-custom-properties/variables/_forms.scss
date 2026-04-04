@@ -1,0 +1,2342 @@
+@if ($enable-atlas-custom-properties) {
+	$input-bg: var(--input-background-color, $gray-200);
+
+	$input-border-color: var(--input-border-color, $gray-300);
+	$input-border-style: var(--input-border-style, solid);
+	$input-border-width: 1px;
+
+	$input-border-bottom-width: var(
+		--input-border-bottom-width,
+		$input-border-width
+	);
+	$input-border-left-width: var(
+		--input-border-left-width,
+		$input-border-width
+	);
+	$input-border-right-width: var(
+		--input-border-right-width,
+		$input-border-width
+	);
+	$input-border-top-width: var(--input-border-top-width, $input-border-width);
+
+	$input-border-radius: var(--input-border-radius, $border-radius);
+	$input-box-shadow: var(--input-box-shadow, none);
+	$input-color: var(--input-color, $gray-900);
+	$input-font-family: var(--input-font-family, $input-btn-font-family);
+	$input-font-size: var(--input-font-size, $input-btn-font-size);
+	$input-font-weight: var(--input-font-weight, $font-weight-base);
+	$input-height: var(--input-height, 40px);
+	$input-line-height: var(--input-line-height, $input-btn-line-height);
+	$input-padding-x: var(--input-padding-x, 16px);
+	$input-padding-y: var(--input-padding-y, 7px);
+	$input-transition:
+		border-color 0.15s ease-in-out,
+		box-shadow 0.15s ease-in-out;
+
+	$input-font-size-mobile: 16px;
+	$input-height-mobile: null;
+
+	// Input Focus
+
+	$input-focus-bg: var(--input-focus-bg, $primary-l3);
+	$input-focus-border-color: var(
+		--input-focus-border-color,
+		unquote('hsl(from #{$component-active-bg} h s calc(l + 22.9))')
+	);
+	$input-focus-box-shadow: var(
+		--input-focus-box-shadow,
+		$component-focus-box-shadow
+	);
+	$input-focus-color: var(--input-focus-color, $input-color);
+	$input-focus-width: $input-btn-focus-width;
+
+	// Input Disabled
+
+	$input-disabled-bg: var(--input-disabled-bg, $input-bg);
+	$input-disabled-border-color: var(--input-disabled-border-color, $input-bg);
+	$input-disabled-color: var(--input-disabled-color, $gray-500);
+	$input-disabled-cursor: $disabled-cursor;
+	$input-disabled-opacity: var(--input-disabled-opacity, 1);
+
+	// Input Placeholder
+
+	$input-placeholder-color: var(--input-placeholder-color, $gray-600);
+
+	$input-placeholder-focus-color: var(
+		--input-focus-placeholder-color,
+		$gray-600
+	);
+
+	$input-placeholder-disabled-color: var(
+		--input-disabled-placeholder-color,
+		$input-disabled-color
+	);
+
+	$input: ();
+	$input: map-deep-merge(
+		(
+			background-color: $input-bg,
+			border-color: $input-border-color,
+			border-style: $input-border-style,
+			border-width: $input-border-width,
+			border-bottom-width: $input-border-bottom-width,
+			border-left-width: $input-border-left-width,
+			border-right-width: $input-border-right-width,
+			border-top-width: $input-border-top-width,
+			border-radius: $input-border-radius,
+			box-shadow: $input-box-shadow,
+			color: $input-color,
+			display: block,
+			font-family: $input-font-family,
+			font-size: $input-font-size,
+			font-weight: $input-font-weight,
+			height: $input-height,
+			letter-spacing: inherit,
+			line-height: $input-line-height,
+			min-width: 0px,
+			padding-bottom: $input-padding-y,
+			padding-left: $input-padding-x,
+			padding-right: $input-padding-x,
+			padding-top: $input-padding-y,
+			transition: $input-transition,
+			width: 100%,
+
+			mobile: (
+				font-size: $input-font-size-mobile,
+				height: $input-height-mobile,
+			),
+
+			placeholder: (
+				color: $input-placeholder-color,
+				opacity: 1,
+			),
+
+			focus: (
+				background-color: $input-focus-bg,
+				border-color: $input-focus-border-color,
+				box-shadow: $input-focus-box-shadow,
+				color: $input-focus-color,
+				outline: 0,
+
+				placeholder: (
+					color: $input-placeholder-focus-color,
+				),
+			),
+
+			focus-within: (
+				background-color: $input-focus-bg,
+				border-color: $input-focus-border-color,
+				box-shadow: $input-focus-box-shadow,
+				color: $input-focus-color,
+			),
+
+			disabled: (
+				background-color: $input-disabled-bg,
+				border-color: $input-disabled-border-color,
+				color: $input-disabled-color,
+				cursor: $input-disabled-cursor,
+				opacity: $input-disabled-opacity,
+
+				placeholder: (
+					color: $input-placeholder-disabled-color,
+				),
+			),
+		),
+		$input
+	);
+
+	// Form Control Variants
+
+	$input-palette: ();
+	$input-palette: map-deep-merge(
+		(
+			'.form-control-shrink': (
+				max-width: 100%,
+				white-space: nowrap,
+				width: min-content,
+			),
+		),
+		$input-palette
+	);
+
+	// Form Control Plaintext
+
+	$input-plaintext-color: $body-color;
+
+	$input-plaintext: ();
+	$input-plaintext: map-deep-merge(
+		(
+			background-clip: border-box,
+			background-color: transparent,
+			border-bottom-width: $input-border-bottom-width,
+			border-color: transparent,
+			border-left-width: $input-border-left-width,
+			border-right-width: $input-border-right-width,
+			border-style: solid,
+			border-top-width: $input-border-top-width,
+			color: $input-plaintext-color,
+			display: block,
+			font-size: $input-font-size,
+			height: $input-height,
+			letter-spacing: inherit,
+			line-height: $input-line-height,
+			// match inputs if this class comes on inputs with default margins
+			margin-bottom:
+				0px,
+			min-width: 0px,
+			padding-bottom: $input-padding-y,
+			padding-left: 0px,
+			padding-right: 0px,
+			padding-top: $input-padding-y,
+			text-overflow: ellipsis,
+			width: 100%,
+		),
+		$input-plaintext
+	);
+
+	// Input Lg
+
+	$input-border-radius-lg: var(--input-lg-border-radius, $border-radius-lg);
+	$input-font-size-lg: var(--input-lg-font-size, $input-btn-font-size-lg);
+	$input-height-lg: var(--input-lg-height, 48px);
+	$input-line-height-lg: var(
+		--input-lg-line-height,
+		$input-btn-line-height-lg
+	);
+	$input-padding-x-lg: var(--input-lg-padding-x, $input-padding-x);
+	$input-padding-y-lg: var(--input-lg-padding-y, $input-padding-y);
+
+	$input-font-size-lg-mobile: null;
+	$input-height-lg-mobile: null;
+
+	$input-lg: ();
+	$input-lg: map-deep-merge(
+		(
+			border-radius: $input-border-radius-lg,
+			font-size: $input-font-size-lg,
+			height: $input-height-lg,
+			line-height: $input-line-height-lg,
+			padding-bottom: $input-padding-y-lg,
+			padding-left: $input-padding-x-lg,
+			padding-right: $input-padding-x-lg,
+			padding-top: $input-padding-y-lg,
+
+			media-breakpoint-down: (
+				sm: (
+					font-size: $input-font-size-lg-mobile,
+					height: $input-height-lg-mobile,
+				),
+			),
+		),
+		$input-lg
+	);
+
+	// Input Sm
+
+	$input-border-radius-sm: var(--input-sm-border-radius, $border-radius);
+	$input-font-size-sm: var(--input-sm-font-size, $input-btn-font-size-sm);
+	$input-height-sm: var(--input-sm-height, 32px);
+	$input-line-height-sm: var(
+		--input-sm-line-height,
+		$input-btn-line-height-sm
+	);
+	$input-padding-x-sm: var(--input-sm-padding-x, 12px);
+	$input-padding-y-sm: var(--input-sm-padding-y, 4px);
+
+	$input-font-size-sm-mobile: null;
+	$input-height-sm-mobile: null;
+
+	$input-sm: ();
+	$input-sm: map-deep-merge(
+		(
+			border-radius: $input-border-radius-sm,
+			font-size: $input-font-size-sm,
+			height: $input-height-sm,
+			line-height: $input-line-height-sm,
+			padding-bottom: $input-padding-y-sm,
+			padding-left: $input-padding-x-sm,
+			padding-right: $input-padding-x-sm,
+			padding-top: $input-padding-y-sm,
+
+			media-breakpoint-down: (
+				sm: (
+					height: $input-height-sm-mobile,
+				),
+			),
+		),
+		$input-sm
+	);
+
+	// Input Label (<label>)
+
+	$input-label-color: var(--input-label-color, $gray-900);
+	$input-label-font-size: var(--input-label-font-size, 14px);
+	$input-label-font-weight: var(
+		--input-label-font-weight,
+		$font-weight-semi-bold
+	);
+	$input-label-margin-bottom: var(--input-label-margin-bottom, 4px);
+
+	$input-label-font-size-mobile: null;
+
+	$input-label-for-cursor: $link-cursor;
+
+	$input-label-focus-color: var(--input-label-focus-color, $gray-900);
+
+	$input-label-disabled-color: var(--input-label-disabled-color, $gray-500);
+	$input-label-disabled-cursor: $disabled-cursor;
+
+	// Label Reference Mark
+
+	$input-label-reference-mark-color: var(
+		--input-label-reference-mark-color,
+		$warning
+	);
+	$input-label-reference-mark-font-size: var(
+		--input-label-reference-mark-font-size,
+		6px
+	);
+	$input-label-reference-mark-spacer: var(
+		--input-label-reference-mark-spacer,
+		0px
+	);
+	$input-label-reference-mark-vertical-align: var(
+		--input-label-reference-mark-vertical-align,
+		super
+	);
+
+	$input-label: ();
+	$input-label: map-deep-merge(
+		(
+			color: $input-label-color,
+			font-size: $input-label-font-size,
+			font-weight: $input-label-font-weight,
+			margin-bottom: $input-label-margin-bottom,
+			max-width: 100%,
+			position: static,
+			word-wrap: break-word,
+
+			mobile: (
+				font-size: $input-label-font-size-mobile,
+			),
+
+			focus: (
+				color: $input-label-focus-color,
+			),
+
+			disabled: (
+				color: $input-label-disabled-color,
+				cursor: $input-label-disabled-cursor,
+				opacity: $input-disabled-opacity,
+			),
+
+			for: (
+				cursor: $input-label-for-cursor,
+			),
+
+			'+ .form-feedback-group': (
+				margin-bottom: 12px,
+			),
+
+			form-text: (
+				margin-bottom: $input-label-margin-bottom,
+				margin-top: 0px,
+			),
+
+			form-help-text: (
+				color: $secondary-l0,
+				display: inline,
+				font-size: 14px,
+				font-weight: $font-weight-normal,
+				margin-left: 8px,
+				margin-top: 0px,
+			),
+
+			reference-mark: (
+				color: $input-label-reference-mark-color,
+				font-size: $input-label-reference-mark-font-size,
+				margin-left: $input-label-reference-mark-spacer,
+				margin-right: $input-label-reference-mark-spacer,
+				vertical-align: $input-label-reference-mark-vertical-align,
+			),
+		),
+		$input-label
+	);
+
+	// .form-control-label
+
+	$form-control-label: ();
+	$form-control-label: map-merge(
+		(
+			display: inline,
+			margin-bottom: 0px,
+		),
+		$form-control-label
+	);
+
+	// .form-control-label-text
+
+	$form-control-label-text: ();
+	$form-control-label-text: map-merge(
+		(
+			cursor: map-deep-get($input-label, for, cursor),
+			display: inline-block,
+			margin-bottom: map-get($input-label, margin-bottom),
+			max-width: 100%,
+			word-wrap: break-word,
+		),
+		$form-control-label-text
+	);
+
+	// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+	$input-readonly-bg: $white;
+
+	// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+	$input-readonly-border-color: $input-border-color;
+
+	// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+	$input-readonly-color: null;
+
+	// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+	$input-readonly-cursor: null;
+
+	// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+	$input-readonly-focus-bg: null;
+
+	// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+	$input-readonly-focus-border-color: $input-focus-border-color;
+
+	// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+	$input-readonly-focus-color: null;
+
+	$input-readonly: ();
+	$input-readonly: map-deep-merge(
+		(
+			background-color:
+				var(--input-readonly-background-color, $input-readonly-bg),
+			border-color:
+				var(
+					--input-readonly-border-color,
+					$input-readonly-border-color
+				),
+			color: var(--input-readonly-color, $input-readonly-color),
+			cursor: $input-readonly-cursor,
+			opacity: var(--input-readonly-opacity, 1),
+			focus: (
+				background-color:
+					var(
+						--input-readonly-focus-background-color,
+						$input-readonly-focus-bg
+					),
+				border-color:
+					var(
+						--input-readonly-focus-border-color,
+						$input-readonly-focus-border-color
+					),
+				box-shadow: none,
+				color:
+					var(
+						--input-readonly-focus-color,
+						$input-readonly-focus-color
+					),
+			),
+		),
+		$input-readonly
+	);
+
+	$input-plaintext-readonly: ();
+	$input-plaintext-readonly: map-deep-merge(
+		(
+			border-radius: $input-border-radius,
+			outline: 0,
+			transition: $input-transition,
+
+			focus: (
+				border-color: $input-focus-border-color,
+				box-shadow: none,
+			),
+		),
+		$input-plaintext-readonly
+	);
+
+	// textarea.form-control, textarea.form-control-plaintext, .form-control.form-control-textarea
+
+	$input-textarea-height: 100px;
+
+	$input-textarea: ();
+	$input-textarea: map-merge(
+		(
+			height: $input-textarea-height,
+			resize: vertical,
+		),
+		$input-textarea
+	);
+
+	// textarea.form-control-lg, .form-control-lg.form-control-textarea
+
+	$input-textarea-height-lg: 120px;
+
+	$input-textarea-lg: ();
+	$input-textarea-lg: map-deep-merge(
+		(
+			height: $input-textarea-height-lg,
+		),
+		$input-textarea-lg
+	);
+
+	// textarea.form-control-sm, .form-control-sm.form-control-textarea
+
+	$input-textarea-height-sm: 80px;
+
+	$input-textarea-sm: ();
+	$input-textarea-sm: map-deep-merge(
+		(
+			height: $input-textarea-height-sm,
+		),
+		$input-textarea-sm
+	);
+
+	// Form Control Label (Labels inside Form Control Tag Group)
+
+	$form-control-label-size: ();
+	$form-control-label-size: map-deep-merge(
+		(
+			border-width: 1px,
+			font-size: 12px,
+			height: auto,
+			margin-bottom: 5px,
+			margin-right: 10px,
+			margin-top: 5px,
+			min-height: 24px,
+			padding-bottom: 5px,
+			padding-left: 8px,
+			padding-right: 8px,
+			padding-top: 5px,
+			text-transform: none,
+
+			label-item: (
+				margin-bottom: -1px,
+				margin-top: -1px,
+			),
+		),
+		$form-control-label-size
+	);
+
+	// Form Control Tag Group
+
+	$form-control-tag-group-padding-y: calc(
+		(
+				#{$input-height} -
+					#{$input-border-bottom-width} -
+					#{$input-border-top-width} -
+					#{map-get($form-control-label-size, min-height)} -
+					#{map-get($form-control-label-size, margin-bottom)} -
+					#{map-get($form-control-label-size, margin-top)}
+			) *
+			0.5
+	);
+
+	$form-control-inset-min-height: calc(
+		#{$input-font-size} * #{$input-line-height}
+	);
+
+	$form-control-inset-margin-y: calc(
+		(
+				#{$input-height} -
+					#{$input-border-bottom-width} -
+					#{$input-border-top-width} -
+					(#{$form-control-tag-group-padding-y} * 2) -
+					#{$form-control-inset-min-height}
+			) *
+			0.5
+	);
+
+	$form-control-inset: ();
+	$form-control-inset: map-deep-merge(
+		(
+			background-color: transparent,
+			border-width: 0px,
+			color: $input-color,
+			flex-grow: 1,
+			margin-bottom: $form-control-inset-margin-y,
+			margin-left: 8px,
+			margin-top: $form-control-inset-margin-y,
+			min-height: $form-control-inset-min-height,
+			padding: 0px,
+			width: 50px,
+
+			focus: (
+				outline: 0,
+			),
+
+			disabled: (
+				background-color: $input-disabled-bg,
+				border-color: $input-disabled-border-color,
+				color: $input-disabled-color,
+				cursor: $input-disabled-cursor,
+				opacity: $input-disabled-opacity,
+			),
+		),
+		$form-control-inset
+	);
+
+	$form-control-tag-group: ();
+	$form-control-tag-group: map-merge(
+		(
+			align-items: center,
+			color: $secondary,
+			display: flex,
+			flex-wrap: wrap,
+			height: auto,
+			padding-bottom: $form-control-tag-group-padding-y,
+			padding-left: 8px,
+			padding-right: 8px,
+			padding-top: $form-control-tag-group-padding-y,
+		),
+		$form-control-tag-group
+	);
+
+	$form-control-tag-group-autofit-row: ();
+	$form-control-tag-group-autofit-row: map-merge(
+		(
+			align-items: center,
+			flex-grow: 1,
+			margin-left: -8px,
+			margin-right: -8px,
+			width: auto,
+		),
+		$form-control-tag-group-autofit-row
+	);
+
+	$form-control-tag-group-autofit-col: ();
+	$form-control-tag-group-autofit-col: map-merge(
+		(
+			padding-left: 8px,
+			padding-right: 8px,
+		),
+		$form-control-tag-group-autofit-col
+	);
+
+	$form-control-tag-group-input-group-item: ();
+	$form-control-tag-group-input-group-item: map-merge(
+		(
+			align-items: center,
+		),
+		$form-control-tag-group-input-group-item
+	);
+
+	$form-control-tag-group-inline-item: ();
+	$form-control-tag-group-inline-item: map-merge(
+		(
+			height: $form-control-inset-min-height,
+			margin-bottom: $form-control-inset-margin-y,
+			margin-top: $form-control-inset-margin-y,
+		),
+		$form-control-tag-group-inline-item
+	);
+
+	$form-control-tag-group-btn: ();
+	$form-control-tag-group-btn: map-deep-merge(
+		(
+			height: $form-control-inset-min-height,
+			line-height: 1,
+			margin-bottom: $form-control-inset-margin-y,
+			margin-top: $form-control-inset-margin-y,
+			padding-bottom: 0px,
+			padding-left: $btn-padding-x-sm,
+			padding-right: $btn-padding-x-sm,
+			padding-top: 0px,
+		),
+		$form-control-tag-group-btn
+	);
+
+	$form-control-tag-group-btn-monospaced: ();
+	$form-control-tag-group-btn-monospaced: map-deep-merge(
+		(
+			height: $form-control-inset-min-height,
+			line-height: 1,
+			margin-bottom: $form-control-inset-margin-y,
+			margin-top: $form-control-inset-margin-y,
+			padding-left: 0px,
+			padding-right: 0px,
+			width: $form-control-inset-min-height,
+		),
+		$form-control-tag-group-btn-monospaced
+	);
+
+	$form-control-tag-group-component-action: ();
+	$form-control-tag-group-component-action: map-deep-merge(
+		(
+			height: 100%,
+			margin-bottom: 0px,
+			margin-top: 0px,
+			width: 32px,
+		),
+		$form-control-tag-group-component-action
+	);
+
+	// .form-control-tag-group-sm.form-control
+
+	$form-control-tag-group-sm: ();
+	$form-control-tag-group-sm: map-deep-merge(
+		(
+			border-radius: clay-enable-rounded($input-border-radius-sm),
+			font-size: $input-font-size-sm,
+			height: auto,
+			line-height: $input-line-height-sm,
+			min-height: $input-height-sm,
+			padding-bottom: 0px,
+			padding-left: 4px,
+			padding-right: 4px,
+			padding-top: 0px,
+
+			inline-item: (
+				margin-bottom: 0px,
+				margin-top: 0px,
+			),
+
+			label: (
+				margin-bottom: 3px,
+				margin-right: 4px,
+				margin-top: 3px,
+			),
+
+			form-control-inset: (
+				margin-bottom: 2px,
+				margin-left: 8px,
+				margin-top: 3px,
+			),
+		),
+		$form-control-tag-group-sm
+	);
+
+	// Form Grid
+
+	// @deprecated as of v3.x with no replacement
+
+	$form-grid-gutter-width: 10px;
+
+	// .form-fieldset
+
+	$form-fieldset: ();
+
+	// .form-legend
+
+	$form-legend: ();
+
+	// Form Group
+
+	$form-group-margin-bottom: 24px;
+
+	$form-group-margin-bottom-mobile: 16px;
+
+	$form-group-sm-margin-bottom: 16px;
+
+	$form-group-sm-margin-bottom-mobile: null;
+
+	$form-group-sm-input-label-margin-bottom: 3px;
+
+	$form-group-sm-item-label-spacer: 25px;
+
+	// Form Group Autofit
+
+	$form-group-autofit-margin-bottom: $form-group-margin-bottom;
+
+	// Form Control File
+
+	$input-file-cursor: $link-cursor;
+
+	// Form Check
+
+	$form-check-input-cursor: $link-cursor;
+	$form-check-input-gutter: 0px;
+	$form-check-input-margin-y: 0px;
+
+	$form-check-label-cursor: $input-label-for-cursor;
+
+	$form-check-label-text-margin-left: -3px;
+	$form-check-label-text-padding-left: 8px;
+
+	$form-check-input-disabled-cursor: $disabled-cursor;
+
+	$form-check-label-text-disabled-cursor: $disabled-cursor;
+
+	// Form Check Inline
+
+	$form-check-inline-margin-x: 12px;
+
+	$form-check-inline-input-margin-x: auto;
+
+	// .form-feedback-group
+
+	$form-feedback-group: ();
+	$form-feedback-group: map-merge(
+		(
+			width: 100%,
+			word-wrap: break-word,
+		),
+		$form-feedback-group
+	);
+
+	// .form-text
+
+	$form-text-color: $gray-600;
+	$form-text-font-size: 14px;
+	$form-text-font-weight: $font-weight-semi-bold;
+	$form-text-margin-top: 4px;
+
+	$form-text: ();
+	$form-text: map-merge(
+		(
+			color: $form-text-color,
+			display: block,
+			font-size: $form-text-font-size,
+			font-weight: $form-text-font-weight,
+			margin-top: $form-text-margin-top,
+			word-wrap: break-word,
+
+			blockquote: (
+				font-style: italic,
+				font-weight: $font-weight-normal,
+				margin-bottom: 0px,
+				margin-top: 12px,
+				padding-left: 12px,
+				position: relative,
+
+				before: (
+					background-color: $secondary-l1,
+					bottom: 0px,
+					content: '',
+					display: block,
+					left: 0px,
+					position: absolute,
+					top: 0px,
+					width: 2px,
+				),
+			),
+		),
+		$form-text
+	);
+
+	$form-help-text: ();
+	$form-help-text: map-deep-merge(
+		(
+			color: $secondary,
+			display: block,
+			font-size: 14px,
+			margin-top: 4px,
+		),
+		$form-help-text
+	);
+
+	// .form-feedback-item
+
+	$form-feedback-font-size: 14px;
+	$form-feedback-font-weight: $font-weight-semi-bold;
+	$form-feedback-margin-top: 4px;
+
+	$form-feedback-item: ();
+	$form-feedback-item: map-merge(
+		(
+			font-size: $form-feedback-font-size,
+			font-weight: $form-feedback-font-weight,
+			margin-top: $form-feedback-margin-top,
+			word-wrap: break-word,
+		),
+		$form-feedback-item
+	);
+
+	// .form-feedback-indicator
+
+	$form-feedback-indicator-margin-x: 0px;
+
+	$form-feedback-indicator: ();
+	$form-feedback-indicator: map-deep-merge(
+		(
+			margin-left: $form-feedback-indicator-margin-x,
+			margin-right: $form-feedback-indicator-margin-x,
+
+			first-child: (
+				margin-left: 0px,
+			),
+		),
+		$form-feedback-indicator
+	);
+
+	$form-feedback-valid-color: $success;
+
+	$form-feedback-warning-color: $warning;
+
+	$form-feedback-invalid-color: $danger;
+
+	// .has-error .form-control
+
+	$input-danger-bg: $danger-l2;
+	$input-danger-border-color: $danger-l1;
+	$input-danger-box-shadow: null;
+	$input-danger-color: $input-color;
+
+	$input-danger-focus-bg: $input-danger-bg;
+	$input-danger-focus-border-color: $input-danger-border-color;
+	$input-danger-focus-box-shadow: $input-focus-box-shadow;
+	$input-danger-focus-color: $input-danger-color;
+
+	$input-danger: ();
+	$input-danger: map-deep-merge(
+		(
+			background-color:
+				var(--input-danger-background-color, $input-danger-bg),
+			border-color:
+				var(--input-danger-border-color, $input-danger-border-color),
+			box-shadow:
+				var(--input-danger-box-shadow, $input-danger-box-shadow),
+			color: var(--input-danger-color, $input-danger-color),
+			focus: (
+				background-color:
+					var(
+						--input-danger-focus-background-color,
+						$input-danger-focus-bg
+					),
+				border-color:
+					var(
+						--input-danger-focus-border-color,
+						$input-danger-focus-border-color
+					),
+				box-shadow:
+					var(
+						--input-danger-focus-box-shadow,
+						$input-danger-focus-box-shadow
+					),
+				color:
+					var(--input-danger-focus-color, $input-danger-focus-color),
+			),
+
+			focus-within: (
+				background-color: $input-danger-bg,
+				border-color: $input-danger-border-color,
+				box-shadow: $input-danger-box-shadow,
+				color: $input-danger-color,
+			),
+		),
+		$input-danger
+	);
+
+	// .has-error .form-control[readonly]
+
+	$input-danger-readonly: ();
+	$input-danger-readonly: map-deep-merge(
+		(
+			background-color: map-get($input-readonly, background-color),
+			border-color: map-get($input-readonly, border-color),
+			focus: (
+				border-color: $input-focus-border-color,
+			),
+		),
+		$input-danger-readonly
+	);
+
+	$input-danger-checkbox-label-color: $danger;
+
+	$input-danger-label-color: null;
+
+	// .has-error select.form-control
+
+	$input-danger-select-icon-color: $input-danger-border-color;
+
+	$input-danger-select-icon: clay-icon(caret-double-l, #f48989);
+
+	$input-danger-select: ();
+	$input-danger-select: map-deep-merge(
+		(
+			background-image: $input-danger-select-icon,
+		),
+		$input-danger-select
+	);
+
+	// .has-error select.form-control[size]
+
+	$input-danger-select-size: ();
+	$input-danger-select-size: map-deep-merge(
+		(
+			background-image: none,
+		),
+		$input-danger-select-size
+	);
+
+	// .has-error select.form-control[multiple]
+
+	$input-danger-select-multiple: ();
+	$input-danger-select-multiple: map-deep-merge(
+		$input-danger-select-size,
+		$input-danger-select-multiple
+	);
+
+	// .has-error
+
+	$has-error: ();
+	$has-error: map-deep-merge(
+		(
+			label: (
+				color: $input-danger-label-color,
+			),
+
+			custom-control-label: (
+				color: $input-danger-checkbox-label-color,
+			),
+
+			form-control:
+				map-deep-merge(
+					(
+						readonly: $input-danger-readonly,
+					),
+					$input-danger
+				),
+			form-feedback-item: (
+				color: $form-feedback-invalid-color,
+			),
+
+			select: (
+				form-control:
+					map-deep-merge(
+						(
+							multiple: $input-danger-select-multiple,
+							size: $input-danger-select-size,
+						),
+						$input-danger-select
+					),
+			),
+
+			input-group-item: (
+				focus: (
+					box-shadow:
+						setter(
+							$input-danger-focus-box-shadow,
+							$input-danger-box-shadow
+						),
+					input-group-inset: (
+						background-color:
+							setter($input-danger-focus-bg, $input-danger-bg),
+						border-color:
+							setter(
+								$input-danger-focus-border-color,
+								$input-danger-border-color
+							),
+						input-group-inset-item: (
+							background-color:
+								setter(
+									$input-danger-focus-bg,
+									$input-danger-bg
+								),
+							border-color:
+								setter(
+									$input-danger-focus-border-color,
+									$input-danger-border-color
+								),
+						),
+					),
+				),
+
+				input-group-inset: (
+					input-group-inset-item: (
+						background-color: $input-danger-bg,
+						border-color: $input-danger-border-color,
+						box-shadow: $input-danger-box-shadow,
+					),
+
+					focus: (
+						box-shadow: none,
+
+						input-group-inset-item: (
+							background-color:
+								setter(
+									$input-danger-focus-bg,
+									$input-danger-bg
+								),
+							border-color:
+								setter(
+									$input-danger-focus-border-color,
+									$input-danger-border-color
+								),
+						),
+					),
+				),
+			),
+		),
+		$has-error
+	);
+
+	// .has-warning .form-control
+
+	$input-warning-bg: $warning-l2;
+	$input-warning-border-color: $warning-l1;
+	$input-warning-box-shadow: null;
+	$input-warning-color: $input-color;
+
+	$input-warning-focus-bg: $input-warning-bg;
+	$input-warning-focus-border-color: $input-warning-border-color;
+	$input-warning-focus-box-shadow: $input-focus-box-shadow;
+	$input-warning-focus-color: $input-warning-color;
+
+	$input-warning: ();
+	$input-warning: map-deep-merge(
+		(
+			background-color:
+				var(--input-warning-background-color, $input-warning-bg),
+			border-color:
+				var(--input-warning-border-color, $input-warning-border-color),
+			box-shadow:
+				var(--input-warning-box-shadow, $input-warning-box-shadow),
+			color: var(--input-warning-color, $input-warning-color),
+			focus: (
+				background-color:
+					var(
+						--input-warning-focus-background-color,
+						$input-warning-focus-bg
+					),
+				border-color:
+					var(
+						--input-warning-focus-border-color,
+						$input-warning-focus-border-color
+					),
+				box-shadow:
+					var(
+						--input-warning-focus-box-shadow,
+						$input-warning-focus-box-shadow
+					),
+				color:
+					var(
+						--input-warning-focus-color,
+						$input-warning-focus-color
+					),
+			),
+
+			focus-within: (
+				background-color: $input-warning-bg,
+				border-color: $input-warning-border-color,
+				box-shadow: $input-warning-box-shadow,
+				color: $input-warning-color,
+			),
+		),
+		$input-warning
+	);
+
+	// .has-warning .form-control[readonly]
+
+	$input-warning-readonly: ();
+	$input-warning-readonly: map-deep-merge(
+		(
+			background-color: map-get($input-readonly, background-color),
+			border-color: map-get($input-readonly, border-color),
+			focus: (
+				border-color: $input-focus-border-color,
+			),
+		),
+		$input-warning-readonly
+	);
+
+	$input-warning-checkbox-label-color: $warning;
+
+	$input-warning-label-color: null;
+
+	// .has-warning select.form-control
+
+	$input-warning-select-icon-color: $input-warning-border-color;
+
+	$input-warning-select-icon: clay-icon(caret-double-l, #ff8f39);
+
+	$input-warning-select: ();
+	$input-warning-select: map-deep-merge(
+		(
+			background-image: $input-warning-select-icon,
+		),
+		$input-warning-select
+	);
+
+	// .has-warning select.form-control[size]
+
+	$input-warning-select-size: ();
+	$input-warning-select-size: map-deep-merge(
+		(
+			background-image: none,
+		),
+		$input-warning-select-size
+	);
+
+	// .has-warning select.form-control[multiple]
+
+	$input-warning-select-multiple: ();
+	$input-warning-select-multiple: map-deep-merge(
+		$input-warning-select-size,
+		$input-warning-select-multiple
+	);
+
+	// .has-warning
+
+	$has-warning: ();
+	$has-warning: map-deep-merge(
+		(
+			label: (
+				color: $input-warning-label-color,
+			),
+
+			custom-control-label: (
+				color: $input-warning-checkbox-label-color,
+			),
+
+			form-control:
+				map-deep-merge(
+					(
+						readonly: $input-warning-readonly,
+					),
+					$input-warning
+				),
+			form-feedback-item: (
+				color: $form-feedback-warning-color,
+			),
+
+			select: (
+				form-control:
+					map-deep-merge(
+						(
+							multiple: $input-warning-select-multiple,
+							size: $input-warning-select-size,
+						),
+						$input-warning-select
+					),
+			),
+
+			input-group-item: (
+				focus: (
+					box-shadow:
+						setter(
+							$input-warning-focus-box-shadow,
+							$input-warning-box-shadow
+						),
+					input-group-inset: (
+						background-color:
+							setter($input-warning-focus-bg, $input-warning-bg),
+						border-color:
+							setter(
+								$input-warning-focus-border-color,
+								$input-warning-border-color
+							),
+						input-group-inset-item: (
+							background-color:
+								setter(
+									$input-warning-focus-bg,
+									$input-warning-bg
+								),
+							border-color:
+								setter(
+									$input-warning-focus-border-color,
+									$input-warning-border-color
+								),
+						),
+					),
+				),
+
+				input-group-inset: (
+					input-group-inset-item: (
+						background-color: $input-warning-bg,
+						border-color: $input-warning-border-color,
+						box-shadow: $input-warning-box-shadow,
+					),
+
+					focus: (
+						box-shadow: none,
+
+						input-group-inset-item: (
+							background-color:
+								setter(
+									$input-warning-focus-bg,
+									$input-warning-bg
+								),
+							border-color:
+								setter(
+									$input-warning-focus-border-color,
+									$input-warning-border-color
+								),
+						),
+					),
+				),
+			),
+		),
+		$has-warning
+	);
+
+	// .has-success .form-control
+
+	$input-success-bg: $success-l2;
+	$input-success-border-color: $success-l1;
+	$input-success-box-shadow: null;
+	$input-success-color: $input-color;
+
+	$input-success-focus-bg: $input-success-bg;
+	$input-success-focus-border-color: $input-success-border-color;
+	$input-success-focus-box-shadow: $input-focus-box-shadow;
+	$input-success-focus-color: $input-success-color;
+
+	$input-success: ();
+	$input-success: map-deep-merge(
+		(
+			background-color:
+				var(--input-success-background-color, $input-success-bg),
+			border-color:
+				var(--input-success-border-color, $input-success-border-color),
+			box-shadow:
+				var(--input-success-box-shadow, $input-success-box-shadow),
+			color: var(--input-success-color, $input-success-color),
+			focus: (
+				background-color:
+					var(
+						--input-success-focus-background-color,
+						$input-success-focus-bg
+					),
+				border-color:
+					var(
+						--input-success-focus-border-color,
+						$input-success-focus-border-color
+					),
+				box-shadow:
+					var(
+						--input-success-focus-box-shadow,
+						$input-success-focus-box-shadow
+					),
+				color:
+					var(
+						--input-success-focus-color,
+						$input-success-focus-color
+					),
+			),
+
+			focus-within: (
+				background-color: $input-success-bg,
+				border-color: $input-success-border-color,
+				box-shadow: $input-success-box-shadow,
+				color: $input-success-color,
+			),
+		),
+		$input-success
+	);
+
+	// .has-success .form-control[readonly]
+
+	$input-success-readonly: ();
+	$input-success-readonly: map-deep-merge(
+		(
+			background-color: map-get($input-readonly, background-color),
+			border-color: map-get($input-readonly, border-color),
+			focus: (
+				border-color: $input-focus-border-color,
+			),
+		),
+		$input-success-readonly
+	);
+
+	$input-success-checkbox-label-color: $success;
+
+	$input-success-label-color: null;
+
+	// .has-success select.form-control
+
+	$input-success-select-icon-color: $input-success-border-color;
+
+	$input-success-select-icon: clay-icon(caret-double-l, #5aca75);
+
+	$input-success-select: ();
+	$input-success-select: map-deep-merge(
+		(
+			background-image: $input-success-select-icon,
+		),
+		$input-success-select
+	);
+
+	// .has-success select.form-control[size]
+
+	$input-success-select-size: ();
+	$input-success-select-size: map-deep-merge(
+		(
+			background-image: none,
+		),
+		$input-success-select-size
+	);
+
+	// .has-success select.form-control[multiple]
+
+	$input-success-select-multiple: ();
+	$input-success-select-multiple: map-deep-merge(
+		$input-success-select-size,
+		$input-success-select-multiple
+	);
+
+	// .has-select
+
+	$has-success: ();
+	$has-success: map-deep-merge(
+		(
+			label: (
+				color: $input-success-label-color,
+			),
+
+			custom-control-label: (
+				color: $input-success-checkbox-label-color,
+			),
+
+			form-control:
+				map-deep-merge(
+					(
+						readonly: $input-success-readonly,
+					),
+					$input-success
+				),
+			form-feedback-item: (
+				color: $form-feedback-valid-color,
+			),
+
+			select: (
+				form-control:
+					map-deep-merge(
+						(
+							multiple: $input-success-select-multiple,
+							size: $input-success-select-size,
+						),
+						$input-success-select
+					),
+			),
+
+			input-group-item: (
+				focus: (
+					box-shadow:
+						setter(
+							$input-success-focus-box-shadow,
+							$input-success-box-shadow
+						),
+					input-group-inset: (
+						background-color:
+							setter($input-success-focus-bg, $input-success-bg),
+						border-color:
+							setter(
+								$input-success-focus-border-color,
+								$input-success-border-color
+							),
+						input-group-inset-item: (
+							background-color:
+								setter(
+									$input-success-focus-bg,
+									$input-success-bg
+								),
+							border-color:
+								setter(
+									$input-success-focus-border-color,
+									$input-success-border-color
+								),
+						),
+					),
+				),
+
+				input-group-inset: (
+					input-group-inset-item: (
+						background-color: $input-success-bg,
+						border-color: $input-success-border-color,
+						box-shadow: $input-success-box-shadow,
+					),
+					focus: (
+						box-shadow: none,
+
+						input-group-inset-item: (
+							background-color:
+								setter(
+									$input-success-focus-bg,
+									$input-success-bg
+								),
+							border-color:
+								setter(
+									$input-success-focus-border-color,
+									$input-success-border-color
+								),
+						),
+					),
+				),
+			),
+		),
+		$has-success
+	);
+
+	// Select Element
+
+	$input-select-bg: $input-bg;
+	$input-select-bg-position: right 0.5em center;
+	$input-select-bg-size: 1.5em 1.5em;
+	$input-select-cursor: $link-cursor;
+	$input-select-padding-bottom: $input-padding-y;
+	$input-select-padding-left: $input-padding-x;
+	$input-select-padding-right: 2em;
+	$input-select-padding-top: $input-padding-y;
+
+	$input-select-focus-bg: $input-focus-bg;
+
+	$input-select-icon-color: $gray-600;
+
+	$input-select-icon: clay-icon(caret-double-l, #6b6c7e);
+
+	$input-select-icon-focus-color: $input-select-icon-color;
+
+	$input-select-icon-focus: clay-icon(caret-double-l, #6b6c7e);
+
+	$input-select-icon-disabled-color: $gray-500;
+
+	$input-select-icon-disabled: clay-icon(caret-double-l, #a7a9bc);
+
+	$input-select: ();
+	$input-select: map-deep-merge(
+		(
+			background-color:
+				var(--input-select-background-color, $input-select-bg),
+			background-image:
+				var(--input-select-background-image, $input-select-icon),
+			background-position:
+				var(
+					--input-select-background-position,
+					$input-select-bg-position
+				),
+			background-repeat: no-repeat,
+			background-size:
+				var(--input-select-background-size, $input-select-bg-size),
+			cursor: $input-select-cursor,
+			padding-bottom:
+				var(
+					--input-select-padding-bottom,
+					$input-select-padding-bottom
+				),
+			padding-left:
+				var(--input-select-padding-left, $input-select-padding-left),
+			padding-right:
+				var(--input-select-padding-right, $input-select-padding-right),
+			padding-top:
+				var(--input-select-padding-top, $input-select-padding-top),
+			focus: (
+				background-color:
+					var(
+						--input-select-focus-background-color,
+						$input-select-focus-bg
+					),
+				background-image:
+					var(
+						--input-select-focus-background-image,
+						$input-select-icon-focus
+					),
+			),
+
+			disabled: (
+				background-image:
+					var(
+						--input-select-disabled-background-image,
+						$input-select-icon-disabled
+					),
+				option: (
+					cursor: $disabled-cursor,
+				),
+			),
+
+			option: (
+				cursor: $input-select-cursor,
+			),
+		),
+		$input-select
+	);
+
+	// Form Control Select for Divs Styled Like Select
+
+	$form-control-select: ();
+	$form-control-select: map-deep-merge(
+		(
+			map-deep-merge(
+				$input-select,
+				(
+					appearance: null,
+					cursor: null,
+					overflow: hidden,
+					text-align: left,
+					text-overflow: ellipsis,
+					white-space: nowrap,
+
+					hover: (
+						color: inherit,
+						text-decoration: none,
+					),
+				)
+			)
+		),
+		$form-control-select
+	);
+
+	// Form Control Select Variants
+
+	$form-control-select-palette: ();
+	$form-control-select-palette: map-deep-merge(
+		(
+			form-control-select-secondary: (
+				background-color: $white,
+				border-color: $secondary-l0,
+				color: $gray-600,
+
+				hover: (
+					color: $gray-600,
+				),
+
+				focus: (
+					background-image: clay-icon(caret-double-l, #272833),
+					color: $gray-900,
+				),
+
+				disabled: (
+					background-color: $white,
+					color: $gray-600,
+					opacity: $component-disabled-opacity,
+				),
+
+				show: (
+					background-color: $gray-200,
+					background-image: clay-icon(caret-double-l, #272833),
+					color: $gray-900,
+				),
+			),
+
+			'.form-control-select-shrink': (
+				max-width: 100%,
+				width: min-content,
+			),
+		),
+		$form-control-select-palette
+	);
+
+	$form-control-select-sm: ();
+	$form-control-select-sm: map-deep-merge(
+		(
+			height: $input-height-sm,
+			padding-right: 2em,
+
+			mobile: (
+				height: $input-height-sm-mobile,
+			),
+		),
+		$form-control-select-sm
+	);
+
+	// Select Size
+
+	// scrollbar-width: Future proof https://github.com/w3c/csswg-drafts/issues/1958
+	// if/when it gets added
+	// focus.option.checked: Chrome can't style text, we invert colors to make text white
+	// option.checked: hack for changing the background-color
+	// firefox-only: undo some styles for Chrome to make it match Lexicon
+
+	$input-select-size: ();
+	$input-select-size: map-deep-merge(
+		(
+			background-image: none,
+			height: auto,
+			padding-left: 8px,
+			padding-right: 8px,
+			scrollbar-width: thin,
+
+			focus: (
+				background-image: none,
+
+				option: (
+					checked: (
+						background-image: linear-gradient(#ffa700, #ffa700),
+						filter: invert(100%),
+					),
+				),
+			),
+
+			disabled: (
+				option: (
+					hover: (
+						background-image: none,
+					),
+				),
+			),
+
+			option: (
+				padding: 7px 8px,
+
+				checked: (
+					background-image:
+						linear-gradient(#{$gray-300}, #{$gray-300}),
+				),
+			),
+
+			firefox-only: (
+				focus: (
+					option: (
+						checked: (
+							background-image:
+								linear-gradient(#{$primary-d2}, #{$primary-d2}),
+							filter: invert(0),
+						),
+					),
+				),
+
+				option: (
+					padding: 6.5px 8px,
+				),
+			),
+		),
+		$input-select-size
+	);
+
+	// Select Multiple
+
+	$input-select-multiple: ();
+	$input-select-multiple: map-deep-merge(
+		$input-select-size,
+		$input-select-multiple
+	);
+
+	// Form Group Autofit
+
+	$form-group-item-label-max-width: 200px;
+	$form-group-item-label-spacer: calc(
+		#{$input-label-font-size} *
+			#{$line-height-base} +
+			#{$input-label-margin-bottom}
+	);
+
+	// .input-group
+
+	$input-group: ();
+	$input-group: map-deep-merge(
+		(
+			align-items: stretch,
+			display: flex,
+			flex-wrap: wrap,
+			position: relative,
+			width: 100%,
+
+			btn-unstyled: (
+				color: inherit,
+			),
+		),
+		$input-group
+	);
+
+	// .input-group-text
+
+	$input-group-addon-bg: $gray-300;
+	$input-group-addon-border-color: $input-group-addon-bg;
+	$input-group-addon-color: $gray-600;
+	$input-group-addon-font-weight: $font-weight-semi-bold;
+	$input-group-addon-min-width: 40px;
+	$input-group-addon-padding-x: 12px;
+	$input-group-addon-padding-y: $input-padding-y;
+
+	$input-group-text: ();
+	$input-group-text: map-deep-merge(
+		(
+			align-items: center,
+			background-color: $input-group-addon-bg,
+			border-bottom-width: $input-border-bottom-width,
+			border-color: $input-group-addon-border-color,
+			border-left-width: $input-border-left-width,
+			border-radius: clay-enable-rounded($input-border-radius),
+			border-right-width: $input-border-right-width,
+			border-style: solid,
+			border-top-width: $input-border-top-width,
+			color: $input-group-addon-color,
+			display: flex,
+			font-size: $input-font-size,
+			font-weight: $input-group-addon-font-weight,
+			height: $input-height,
+			justify-content: center,
+			line-height: $input-line-height,
+			margin-bottom: 0px,
+			min-width: $input-group-addon-min-width,
+			padding-bottom: $input-group-addon-padding-y,
+			padding-left: $input-group-addon-padding-x,
+			padding-right: $input-group-addon-padding-x,
+			padding-top: $input-group-addon-padding-y,
+			text-align: center,
+			white-space: nowrap,
+
+			label: (
+				color: $input-group-addon-color,
+			),
+
+			custom-control: (
+				margin-bottom: 0px,
+			),
+
+			form-check: (
+				margin-bottom: 0px,
+
+				input: (
+					margin-top: 0px,
+				),
+			),
+
+			lexicon-icon: (
+				margin-top: 0px,
+			),
+
+			media-breakpoint-down: (
+				sm: (
+					height: $input-height-mobile,
+				),
+			),
+		),
+		$input-group-text
+	);
+
+	// .input-group-text-secondary
+
+	$input-group-secondary-addon-bg: $white;
+	$input-group-secondary-addon-border-color: $secondary-l2;
+	$input-group-secondary-addon-border-width: 1px;
+	$input-group-secondary-addon-color: $secondary;
+
+	$input-group-text-secondary: ();
+	$input-group-text-secondary: map-deep-merge(
+		(
+			background-color: $input-group-secondary-addon-bg,
+			border-color: $input-group-secondary-addon-border-color,
+			border-width: $input-group-secondary-addon-border-width,
+			color: $input-group-secondary-addon-color,
+			z-index: 2,
+
+			label: (
+				color: $input-group-secondary-addon-color,
+			),
+		),
+		$input-group-text-secondary
+	);
+
+	// .input-group-item
+
+	$input-group-item-margin-left: 8px;
+
+	$input-group-item: ();
+	$input-group-item: map-deep-merge(
+		(
+			display: flex,
+			flex-grow: 1,
+			flex-wrap: wrap,
+			margin-left: $input-group-item-margin-left,
+			width: 1%,
+			word-wrap: break-word,
+
+			focus: (
+				border-radius: clay-enable-rounded($input-border-radius),
+				box-shadow: $input-focus-box-shadow,
+
+				input-group-prepend: (
+					border-bottom-right-radius: clay-enable-rounded(0),
+					border-top-right-radius: clay-enable-rounded(0),
+					z-index: 1,
+				),
+
+				input-group-append: (
+					border-bottom-left-radius: clay-enable-rounded(0),
+					border-top-left-radius: clay-enable-rounded(0),
+				),
+
+				form-control: (
+					background-color: $input-focus-bg,
+					border-color: $input-focus-border-color,
+				),
+
+				input-group-inset-item: (
+					background-color: $input-focus-bg,
+					border-color: $input-focus-border-color,
+				),
+			),
+
+			first-child: (
+				margin-left: 0px,
+			),
+
+			btn: (
+				align-self: flex-start,
+			),
+
+			dropdown: (
+				display: flex,
+				flex-wrap: wrap,
+				word-wrap: break-word,
+				width: 100%,
+			),
+		),
+		$input-group-item
+	);
+
+	// .input-group-item-shrink
+
+	$input-group-item-shrink: ();
+	$input-group-item-shrink: map-deep-merge(
+		(
+			flex-grow: 0,
+			width: auto,
+		),
+		$input-group-item-shrink
+	);
+
+	// .input-group-item-focusable
+
+	$input-group-item-focusable: ();
+	$input-group-item-focusable: map-deep-merge(
+		(
+			border-radius: clay-enable-rounded($input-border-radius),
+			transition: clay-enable-transitions($input-transition),
+			focus-within: (
+				background-color: $input-focus-bg,
+				box-shadow: $input-focus-box-shadow,
+				outline: 0,
+				z-index: 1,
+			),
+		),
+		$input-group-item-focusable
+	);
+
+	// Input Group Inset
+
+	$input-group-inset-item-color: $input-group-addon-color;
+	$input-group-inset-item-padding-left: 4px;
+	$input-group-inset-item-padding-right: 4px;
+
+	$input-group-inset-item-btn: ();
+	$input-group-inset-item-btn: map-deep-merge(
+		(
+			align-items: center,
+			display: flex,
+			height: 75%,
+			justify-content: center,
+			line-height: 1,
+			margin-left: 4px,
+			margin-right: 4px,
+			padding-bottom: 0px,
+			padding-left: 8px,
+			padding-right: 8px,
+			padding-top: 0px,
+
+			c-inner: (
+				align-items: center,
+				display: flex,
+				height: 100%,
+				justify-content: center,
+			),
+
+			lexicon-icon: (
+				margin-top: 0px,
+			),
+		),
+		$input-group-inset-item-btn
+	);
+
+	$input-group-inset-item-btn-monospaced: ();
+	$input-group-inset-item-btn-monospaced: map-deep-merge(
+		(
+			font-size: 16px,
+			height: 32px,
+			margin-bottom: calc(#{$input-border-bottom-width} * -1),
+			margin-top: calc(#{$input-border-bottom-width} * -1),
+			padding: 0px,
+			width: 32px,
+		),
+		$input-group-inset-item-btn-monospaced
+	);
+
+	$input-group-inset-form-file-btn: ();
+	$input-group-inset-form-file-btn: map-deep-merge(
+		(
+			height: 100%,
+		),
+		$input-group-inset-form-file-btn
+	);
+
+	// .input-group-lg
+
+	$input-group-addon-min-width-lg: 48px;
+	$input-group-addon-padding-x-lg: $input-padding-x-lg;
+	$input-group-addon-padding-y-lg: null;
+
+	$input-group-lg-item-btn: ();
+	$input-group-lg-item-btn: map-deep-merge(
+		(
+			breakpoint-down: null,
+			font-size: $btn-font-size-lg,
+
+			inline-item-font-size: $btn-inline-item-font-size-lg,
+
+			section-font-size: $btn-section-font-size-lg,
+
+			// font-size-mobile: $btn-font-size-lg-mobile,
+			// padding-bottom-mobile: $btn-padding-y-lg-mobile,
+			// padding-left-mobile: $btn-padding-x-lg-mobile,
+			// padding-right-mobile: $btn-padding-x-lg-mobile,
+			// padding-top-mobile: $btn-padding-y-lg-mobile,
+		),
+		$input-group-lg-item-btn
+	);
+
+	$input-group-lg-item-btn-monospaced: ();
+	$input-group-lg-item-btn-monospaced: map-deep-merge(
+		(
+			breakpoint-down: null,
+			height: $btn-monospaced-size-lg,
+			line-height: 1,
+			// padding-bottom: $btn-monospaced-padding-y-lg,
+			// padding-left: $btn-monospaced-padding-x-lg,
+			// padding-right: $btn-monospaced-padding-x-lg,
+			// padding-top: $btn-monospaced-padding-y-lg,
+			// width: $btn-monospaced-size-lg,
+			// height-mobile: $btn-monospaced-size-lg-mobile,
+			// width-mobile: $btn-monospaced-size-lg-mobile,
+		),
+		$input-group-lg-item-btn-monospaced
+	);
+
+	$input-group-lg-inset-item-btn: ();
+
+	$input-group-lg-inset-item-btn-monospaced: ();
+
+	$input-group-lg-inset-item-form-file-btn: ();
+	$input-group-lg-inset-item-form-file-btn: map-deep-merge(
+		(
+			breakpoint-down: null,
+			height: 100%,
+			line-height: 1,
+			padding-bottom: 0px,
+			padding-left: 12px,
+			padding-right: 12px,
+			padding-top: 0px,
+		),
+		$input-group-lg-inset-item-form-file-btn
+	);
+
+	$input-group-lg: ();
+	$input-group-lg: map-deep-merge(
+		(
+			input-group-item: (
+				btn: $input-group-lg-item-btn,
+
+				btn-monospaced: $input-group-lg-item-btn-monospaced,
+
+				form-control: (
+					border-radius: clay-enable-rounded($input-border-radius-lg),
+					font-size: $input-font-size-lg,
+					height: $input-height-lg,
+					line-height: $input-line-height-lg,
+					padding-bottom: $input-padding-y-lg,
+					padding-left: $input-padding-x-lg,
+					padding-right: $input-padding-x-lg,
+					padding-top: $input-padding-y-lg,
+				),
+
+				form-control-inset: (
+					margin-bottom: 0px,
+					margin-top: 0px,
+				),
+
+				form-file: (
+					btn: (
+						border-radius:
+							clay-enable-rounded($input-border-radius-lg),
+						font-size: $input-font-size-lg,
+						height: $input-height-lg,
+						line-height: $input-line-height-lg,
+						padding-bottom: $input-padding-y-lg,
+						padding-left: $input-padding-x-lg,
+						padding-right: $input-padding-x-lg,
+						padding-top: $input-padding-y-lg,
+					),
+				),
+
+				textarea: (
+					height: $input-textarea-height-lg,
+				),
+
+				form-control-plaintext: (
+					font-size: $input-font-size-lg,
+					height: $input-height-lg,
+					line-height: $input-line-height-lg,
+					padding-bottom: $input-padding-y-lg,
+					padding-top: $input-padding-y-lg,
+				),
+
+				input-group-text: (
+					border-radius: clay-enable-rounded($input-border-radius-lg),
+					font-size: $input-font-size-lg,
+					height: $input-height-lg,
+					min-width: $input-group-addon-min-width-lg,
+					padding-bottom: $input-group-addon-padding-y-lg,
+					padding-left: $input-group-addon-padding-x-lg,
+					padding-right: $input-group-addon-padding-x-lg,
+					padding-top: $input-group-addon-padding-y-lg,
+				),
+
+				input-group-inset-item: (
+					btn: $input-group-lg-inset-item-btn,
+
+					btn-monospaced: $input-group-lg-inset-item-btn-monospaced,
+
+					form-file: (
+						height: 75%,
+
+						btn: $input-group-lg-inset-item-form-file-btn,
+					),
+				),
+			),
+
+			media-breakpoint-down: (
+				sm: (
+					input-group-item: (
+						form-control: (
+							height: $input-height-lg-mobile,
+						),
+
+						form-file: (
+							btn: (
+								height: $input-height-lg-mobile,
+							),
+						),
+
+						form-control-plaintext: (
+							height: $input-height-lg-mobile,
+						),
+					),
+				),
+			),
+		),
+		$input-group-lg
+	);
+
+	// .input-group-sm
+
+	$input-group-addon-min-width-sm: 32px;
+	$input-group-addon-padding-x-sm: $input-padding-x-sm;
+	$input-group-addon-padding-y-sm: null;
+
+	$input-group-sm-item-btn: ();
+	$input-group-sm-item-btn: map-deep-merge(
+		(
+			font-size: $btn-font-size-sm,
+
+			inline-item-font-size: $btn-inline-item-font-size-sm,
+
+			section-font-size: $btn-section-font-size-sm,
+
+			// font-size-mobile: $btn-font-size-sm-mobile,
+			// padding-bottom-mobile: $btn-padding-y-sm-mobile,
+			// padding-left-mobile: $btn-padding-x-sm-mobile,
+			// padding-right-mobile: $btn-padding-x-sm-mobile,
+			// padding-top-mobile: $btn-padding-y-sm-mobile,
+		),
+		$input-group-sm-item-btn
+	);
+
+	$input-group-sm-item-btn-monospaced: ();
+	$input-group-sm-item-btn-monospaced: map-deep-merge(
+		(
+			height: $btn-monospaced-size-sm,
+			line-height: 1,
+			padding-bottom: $btn-monospaced-padding-y-sm,
+			padding-left: $btn-monospaced-padding-x-sm,
+			padding-right: $btn-monospaced-padding-x-sm,
+			padding-top: $btn-monospaced-padding-y-sm,
+			width: $btn-monospaced-size-sm,
+
+			height-mobile: $btn-monospaced-size-sm-mobile,
+			width-mobile: $btn-monospaced-size-sm-mobile,
+		),
+		$input-group-sm-item-btn-monospaced
+	);
+
+	$input-group-sm-inset-item-btn: ();
+	$input-group-sm-inset-item-btn: map-deep-merge(
+		(
+			line-height: 1,
+			padding-bottom: 0px,
+			padding-left: 8px,
+			padding-right: 8px,
+			padding-top: 0px,
+		),
+		$input-group-sm-inset-item-btn
+	);
+
+	$input-group-sm-inset-item-btn-monospaced: ();
+	$input-group-sm-inset-item-btn-monospaced: map-deep-merge(
+		(
+			height: 24px,
+			margin-left: 4px,
+			margin-right: 4px,
+			width: 24px,
+		),
+		$input-group-sm-inset-item-btn-monospaced
+	);
+
+	$input-group-sm-inset-item-form-file-btn: ();
+	$input-group-sm-inset-item-form-file-btn: map-deep-merge(
+		(
+			height: 100%,
+			line-height: 1,
+			padding-bottom: 0px,
+			padding-left: 8px,
+			padding-right: 8px,
+			padding-top: 0px,
+		),
+		$input-group-sm-inset-item-form-file-btn
+	);
+
+	$input-group-sm: ();
+	$input-group-sm: map-deep-merge(
+		(
+			input-group-item: (
+				btn: $input-group-sm-item-btn,
+
+				btn-monospaced: $input-group-sm-item-btn-monospaced,
+
+				form-file: (
+					btn: (
+						border-radius:
+							clay-enable-rounded($input-border-radius-sm),
+						font-size: $input-font-size-sm,
+						height: $input-height-sm,
+						line-height: $input-line-height-sm,
+						padding-bottom: $input-padding-y-sm,
+						padding-left: $input-padding-x-sm,
+						padding-right: $input-padding-x-sm,
+						padding-top: $input-padding-y-sm,
+					),
+				),
+
+				form-control-plaintext: (
+					font-size: $input-font-size-sm,
+					height: $input-height-sm,
+					line-height: $input-line-height-sm,
+					padding-bottom: $input-padding-y-sm,
+					padding-top: $input-padding-y-sm,
+				),
+
+				textarea: (
+					height: $input-textarea-height-sm,
+				),
+
+				input-group-text: (
+					border-radius: clay-enable-rounded($input-border-radius-sm),
+					font-size: $input-font-size-sm,
+					height: $input-height-sm,
+					min-width: $input-group-addon-min-width-sm,
+					padding-bottom: $input-group-addon-padding-y-sm,
+					padding-left: $input-group-addon-padding-x-sm,
+					padding-right: $input-group-addon-padding-x-sm,
+					padding-top: $input-group-addon-padding-y-sm,
+				),
+
+				input-group-inset-item: (
+					btn: $input-group-sm-inset-item-btn,
+
+					btn-monospaced: $input-group-sm-inset-item-btn-monospaced,
+
+					form-file: (
+						height: 75%,
+
+						btn: $input-group-sm-inset-item-form-file-btn,
+					),
+				),
+			),
+
+			media-breakpoint-down: (
+				sm: (
+					input-group-item: (
+						form-control: (
+							height: $input-height-sm-mobile,
+						),
+
+						form-file: (
+							btn: (
+								height: $input-height-sm-mobile,
+							),
+						),
+
+						form-control-plaintext: (
+							height: $input-height-sm-mobile,
+						),
+					),
+				),
+			),
+		),
+		$input-group-sm
+	);
+
+	// .input-group-inset
+
+	$input-group-inset: ();
+	$input-group-inset: map-deep-merge(
+		(
+			flex-grow: 1,
+			order: 5,
+			width: 1%,
+
+			focus: (
+				box-shadow: none,
+
+				input-group-inset-item: (
+					background-color: $input-focus-bg,
+					border-color: $input-focus-border-color,
+				),
+			),
+
+			disabled: (
+				input-group-inset-item: (
+					background-color: $input-disabled-bg,
+					border-color: $input-disabled-border-color,
+				),
+			),
+		),
+		$input-group-inset
+	);
+
+	// .input-group-inset[readonly]
+
+	$input-group-inset-readonly: ();
+	$input-group-inset-readonly: map-deep-merge(
+		(
+			input-group-inset-item: (
+				background-color: $input-readonly-bg,
+				border-color: $input-readonly-border-color,
+				color: $input-readonly-color,
+				cursor: $input-readonly-cursor,
+			),
+
+			focus: (
+				input-group-inset-item: (
+					background-color: $input-readonly-focus-bg,
+					border-color: $input-readonly-focus-border-color,
+					color: $input-readonly-focus-color,
+				),
+			),
+		),
+		$input-group-inset-readonly
+	);
+
+	// Input Group Stacked
+
+	$input-group-stacked-sm-down: ();
+	$input-group-stacked-sm-down: map-deep-merge(
+		(
+			breakpoint: sm,
+			item-margin-bottom: 8px,
+			item-margin-left: 0px,
+			shrink-margin-right: 8px,
+		),
+		$input-group-stacked-sm-down
+	);
+}

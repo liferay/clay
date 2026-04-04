@@ -1,0 +1,701 @@
+@if ($enable-atlas-custom-properties) {
+	// Date Picker Dropdown Menu
+
+	$date-picker-dropdown-menu: ();
+	$date-picker-dropdown-menu: map-deep-merge(
+		(
+			max-height: var(--date-picker-dropdown-menu-max-height, none),
+			max-width: var(--date-picker-dropdown-menu-max-width, 352px),
+			padding-bottom: var(--date-picker-dropdown-menu-padding-bottom, 0),
+			padding-left: var(--date-picker-dropdown-menu-padding-left, 0),
+			padding-right: var(--date-picker-dropdown-menu-padding-right, 0),
+			padding-top: var(--date-picker-dropdown-menu-padding-top, 0),
+			width: var(--date-picker-dropdown-menu-width, 100%),
+			media-breakpoint-down: (
+				xs: (
+					font-size:
+						var(
+							--date-picker-dropdown-menu-xs-down-font-size,
+							12px
+						),
+					margin: var(--date-picker-dropdown-menu-xs-down-margin, 0),
+					max-height:
+						var(
+							--date-picker-dropdown-menu-xs-down-max-height,
+							255px
+						),
+					max-width:
+						var(
+							--date-picker-dropdown-menu-xs-down-max-width,
+							264px
+						),
+				),
+			),
+		),
+		$date-picker-dropdown-menu
+	);
+
+	// Date Picker Nav
+
+	$date-picker-nav-row: ();
+	$date-picker-nav-row: map-deep-merge(
+		(
+			display: flex,
+			margin-left: var(--date-picker-nav-row-margin-left, -2px),
+			margin-right: var(--date-picker-nav-row-margin-right, -2px),
+		),
+		$date-picker-nav-row
+	);
+
+	$date-picker-nav-btn: ();
+	$date-picker-nav-btn: map-deep-merge(
+		(
+			color: var(--date-picker-nav-btn-color, $gray-600),
+			transition:
+				var(--date-picker-nav-btn-transition, $component-transition),
+			hover: (
+				background-color:
+					var(
+						--date-picker-nav-btn-hover-background-color,
+						$gray-200
+					),
+				color: var(--date-picker-nav-btn-hover-color, $gray-900),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--date-picker-nav-btn-focus-background-color,
+						$gray-200
+					),
+				box-shadow:
+					var(
+						--date-picker-nav-btn-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+				color: var(--date-picker-nav-btn-focus-color, $gray-900),
+			),
+
+			active: (
+				background-color:
+					var(--date-picker-nav-btn-active-active, $gray-200),
+			),
+
+			disabled: (
+				background-color:
+					var(
+						--date-picker-nav-btn-disabled-background-color,
+						transparent
+					),
+				box-shadow:
+					var(--date-picker-nav-btn-disabled-box-shadow, none),
+				color: var(--date-picker-nav-btn-disabled-color, $gray-500),
+			),
+		),
+		$date-picker-nav-btn
+	);
+
+	$date-picker-nav-btn-monospaced: ();
+	$date-picker-nav-btn-monospaced: map-deep-merge(
+		(
+			margin-bottom:
+				var(--date-picker-nav-btn-monospaced-margin-bottom, 0),
+			margin-left: var(--date-picker-nav-btn-monospaced-margin-left, 2px),
+			margin-right:
+				var(--date-picker-nav-btn-monospaced-margin-right, 2px),
+			margin-top: var(--date-picker-nav-btn-monospaced-margin-top, 0),
+			media-breakpoint-down: (
+				xs: (
+					font-size:
+						var(
+							--date-picker-nav-btn-monospaced-xs-down-font-size,
+							12px
+						),
+					height:
+						var(
+							--date-picker-nav-btn-monospaced-xs-down-height,
+							24px
+						),
+					max-height:
+						var(
+							--date-picker-nav-btn-monospaced-xs-down-max-height,
+							24px
+						),
+					max-width:
+						var(
+							--date-picker-nav-btn-monospaced-xs-down-max-width,
+							24px
+						),
+					min-width:
+						var(
+							--date-picker-nav-btn-monospaced-xs-down-min-width,
+							24px
+						),
+				),
+			),
+		),
+		$date-picker-nav-btn-monospaced
+	);
+
+	$date-picker-nav-select: ();
+	$date-picker-nav-select: map-deep-merge(
+		(
+			background-color:
+				var(--date-picker-nav-select-background-color, transparent),
+			border-color:
+				var(--date-picker-nav-select-border-color, transparent),
+			color: var(--date-picker-nav-select-color, $secondary),
+			font-size: var(--date-picker-nav-select-font-size, $font-size-sm),
+			font-weight:
+				var(
+					--date-picker-nav-select-font-weight,
+					$font-weight-semi-bold
+				),
+			height: var(--date-picker-nav-select-height, $input-height-sm),
+			padding-bottom: var(--date-picker-nav-select-padding-bottom, 0),
+			padding-left: var(--date-picker-nav-select-padding-left, 8px),
+			padding-top: var(--date-picker-nav-select-padding-top, 0),
+			hover: (
+				background-color:
+					var(
+						--date-picker-nav-select-hover-background-color,
+						$gray-200
+					),
+				color: var(--date-picker-nav-select-hover-color, $gray-900),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--date-picker-nav-select-focus-background-color,
+						$gray-200
+					),
+				color: var(--date-picker-nav-select-focus-color, $gray-900),
+			),
+
+			disabled: (
+				background-color:
+					var(
+						--date-picker-nav-select-disabled-background-color,
+						transparent
+					),
+				color:
+					var(
+						--date-picker-nav-select-disabled-color,
+						$input-disabled-color
+					),
+			),
+
+			media-breakpoint-down: (
+				xs: (
+					font-size:
+						var(--date-picker-nav-select-xs-down-font-size, 12px),
+					height: var(--date-picker-nav-select-xs-down-height, 24px),
+				),
+			),
+		),
+		$date-picker-nav-select
+	);
+
+	// Date Picker Row
+
+	$date-picker-row: ();
+	$date-picker-row: map-deep-merge(
+		(
+			display: flex,
+			justify-content: space-between,
+			list-style: none,
+			margin-bottom: var(--date-picker-row-margin-bottom, 8px),
+			margin-top: var(--date-picker-row-margin-top, 8px),
+			padding: var(--date-picker-row-padding, 0),
+			media-breakpoint-down: (
+				xs: (
+					margin-bottom:
+						var(--date-picker-row-xs-down-margin-bottom, 4px),
+					margin-top: var(--date-picker-row-xs-down-margin-top, 4px),
+				),
+			),
+		),
+		$date-picker-row
+	);
+
+	$date-picker-col: ();
+	$date-picker-col: map-deep-merge(
+		(
+			display: flex,
+			flex-grow: 1,
+			justify-content: center,
+
+			c-selected: (
+				background-image:
+					var(
+						--date-picker-col-c-selected-background-image,
+						linear-gradient($primary-l3, $primary-l3)
+					),
+				background-repeat:
+					var(
+						--date-picker-col-c-selected-background-repeat,
+						no-repeat
+					),
+			),
+
+			c-selected-first-child: (
+				border-bottom-left-radius:
+					var(
+						--date-picker-col-c-selected-first-child-border-bottom-left-radius,
+						100px
+					),
+				border-top-left-radius:
+					var(
+						--date-picker-col-c-selected-first-child-border-top-left-radius,
+						100px
+					),
+			),
+
+			c-selected-last-child: (
+				border-bottom-right-radius:
+					var(
+						--date-picker-col-c-selected-last-child-border-bottom-right-radius,
+						100px
+					),
+				border-top-right-radius:
+					var(
+						--date-picker-col-c-selected-last-child-border-top-right-radius,
+						100px
+					),
+			),
+
+			c-selected-start: (
+				background-position:
+					var(
+						--date-picker-col-c-selected-start-background-position,
+						right top
+					),
+				background-size:
+					var(
+						--date-picker-col-c-selected-start-background-size,
+						50% 100%
+					),
+			),
+
+			c-selected-end: (
+				background-position:
+					var(
+						--date-picker-col-c-selected-end-background-position,
+						left top
+					),
+				background-size:
+					var(
+						--date-picker-col-c-selected-end-background-size,
+						50% 100%
+					),
+			),
+		),
+		$date-picker-col
+	);
+
+	$date-picker-days-row: ();
+	$date-picker-days-row: map-deep-merge(
+		(
+			margin-bottom: var(--date-picker-days-row-margin-bottom, 16px),
+			margin-top: var(--date-picker-days-row-margin-top, 0),
+			media-breakpoint-down: (
+				xs: (
+					margin-bottom:
+						var(--date-picker-days-row-xs-down-margin-bottom, 4px),
+				),
+			),
+		),
+		$date-picker-days-row
+	);
+
+	$date-picker-date-row: ();
+
+	// Date Picker Day
+
+	$date-picker-day: ();
+	$date-picker-day: map-deep-merge(
+		(
+			height: var(--date-picker-day-height, 21px),
+		),
+		$date-picker-day
+	);
+
+	// Date Picker Calendar
+
+	$date-picker-calendar-container: ();
+	$date-picker-calendar-container: map-merge(
+		(
+			float: left,
+			min-width: 100%,
+		),
+		$date-picker-calendar-container
+	);
+
+	$date-picker-calendar-header-container: ();
+	$date-picker-calendar-header-container: map-merge(
+		(
+			padding-bottom:
+				var(
+					--date-picker-calendar-header-container-padding-bottom,
+					16px
+				),
+			padding-left:
+				var(--date-picker-calendar-header-container-padding-left, 16px),
+			padding-right:
+				var(
+					--date-picker-calendar-header-container-padding-right,
+					16px
+				),
+			padding-top:
+				var(--date-picker-calendar-header-container-padding-top, 16px),
+			media-breakpoint-down: (
+				xs: (
+					padding-bottom:
+						var(
+							--date-picker-calendar-header-container-xs-down-padding-bottom,
+							4px
+						),
+					padding-left:
+						var(
+							--date-picker-calendar-header-container-xs-down-padding-left,
+							6px
+						),
+					padding-right:
+						var(
+							--date-picker-calendar-header-container-xs-down-padding-right,
+							6px
+						),
+					padding-top:
+						var(
+							--date-picker-calendar-header-container-xs-down-padding-top,
+							8px
+						),
+				),
+			),
+		),
+		$date-picker-calendar-header-container
+	);
+
+	$date-picker-calendar-body-container: ();
+	$date-picker-calendar-body-container: map-merge(
+		(
+			padding-bottom:
+				var(--date-picker-calendar-body-container-padding-bottom, 8px),
+			padding-left:
+				var(--date-picker-calendar-body-container-padding-left, 8px),
+			padding-right:
+				var(--date-picker-calendar-body-container-padding-right, 8px),
+			media-breakpoint-down: (
+				xs: (
+					padding-bottom:
+						var(
+							--date-picker-calendar-body-container-xs-down-padding-bottom,
+							4px
+						),
+					padding-left:
+						var(
+							--date-picker-calendar-body-container-xs-down-padding-left,
+							6px
+						),
+					padding-right:
+						var(
+							--date-picker-calendar-body-container-xs-down-padding-right,
+							6px
+						),
+				),
+			),
+		),
+		$date-picker-calendar-body-container
+	);
+
+	$date-picker-calendar-footer-container: ();
+	$date-picker-calendar-footer-container: map-merge(
+		(
+			border-color:
+				var(
+					--date-picker-calendar-footer-container-border-color,
+					$gray-400
+				),
+			border-style:
+				var(
+					--date-picker-calendar-footer-container-border-style,
+					solid
+				),
+			border-width:
+				var(
+					--date-picker-calendar-footer-container-border-width,
+					1px 0 0 0
+				),
+			padding-bottom:
+				var(
+					--date-picker-calendar-footer-container-padding-bottom,
+					8px
+				),
+			padding-left:
+				var(--date-picker-calendar-footer-container-padding-left, 14px),
+			padding-right:
+				var(
+					--date-picker-calendar-footer-container-padding-right,
+					14px
+				),
+			padding-top:
+				var(--date-picker-calendar-footer-container-padding-top, 8px),
+			media-breakpoint-down: (
+				xs: (
+					padding-left:
+						var(
+							--date-picker-calendar-footer-container-xs-down-padding-left,
+							6px
+						),
+					padding-right:
+						var(
+							--date-picker-calendar-footer-container-xs-down-padding-right,
+							6px
+						),
+					padding-top:
+						var(
+							--date-picker-calendar-footer-container-xs-down-padding-top,
+							7px
+						),
+				),
+			),
+		),
+		$date-picker-calendar-footer-container
+	);
+
+	// Date Picker Calendar Item
+
+	$date-picker-calendar-item: ();
+	$date-picker-calendar-item: map-deep-merge(
+		(
+			align-items: center,
+			background-color:
+				var(
+					--date-picker-calendar-item-background-color,
+					setter(map-get($date-picker-calendar-item, bg), transparent)
+				),
+			border-width: var(--date-picker-calendar-item-border-width, 0),
+			disabled-cursor: $disabled-cursor,
+			display: inline-flex,
+			flex-shrink: 0,
+			font-weight: $font-weight-semi-bold,
+			height: var(--date-picker-calendar-item-height, 32px),
+			justify-content: center,
+			line-height: var(--date-picker-calendar-item-line-height, 1),
+			margin-left: var(--date-picker-calendar-item-margin-left, 0),
+			margin-right: var(--date-picker-calendar-item-margin-right, 0),
+			padding-bottom: var(--date-picker-calendar-item-padding-bottom, 0),
+			padding-left: var(--date-picker-calendar-item-padding-left, 0),
+			padding-right: var(--date-picker-calendar-item-padding-right, 0),
+			padding-top: var(--date-picker-calendar-item-padding-top, 0),
+			transition: $component-transition,
+			user-select: none,
+			vertical-align: middle,
+			white-space: nowrap,
+			width: var(--date-picker-calendar-item-width, 32px),
+			media-breakpoint-down: (
+				xs: (
+					height:
+						var(--date-picker-calendar-item-xs-down-height, 24px),
+					width: var(--date-picker-calendar-item-xs-down-width, 24px),
+				),
+			),
+		),
+		$date-picker-calendar-item
+	);
+
+	$date-picker-date: ();
+	$date-picker-date: map-deep-merge(
+		(
+			border-radius: var(--date-picker-date-border-radius, 100px),
+			color: var(--date-picker-date-color, $gray-600),
+			cursor: $link-cursor,
+			position: relative,
+
+			hover: (
+				background-color:
+					var(--date-picker-date-hover-background-color, $gray-200),
+				color: var(--date-picker-date-hover-color, $gray-900),
+			),
+
+			focus: (
+				background-color:
+					var(--date-picker-date-focus-background-color, $gray-200),
+				box-shadow:
+					var(
+						--date-picker-date-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+				color: var(--date-picker-date-focus-color, $gray-900),
+				outline: 0,
+			),
+
+			active: (
+				background-color:
+					var(
+						--date-picker-date-active-background-color,
+						$component-active-bg
+					),
+				color:
+					var(
+						--date-picker-date-active-color,
+						$component-active-color
+					),
+			),
+
+			disabled: (
+				background-color:
+					var(
+						--date-picker-date-disabled-background-color,
+						transparent
+					),
+				box-shadow: var(--date-picker-date-disabled-box-shadow, none),
+				color: var(--date-picker-date-disabled-color, $gray-500),
+			),
+		),
+		$date-picker-date
+	);
+
+	$date-picker-previous-month-date: ();
+	$date-picker-previous-month-date: map-deep-merge(
+		(
+			color: var(--date-picker-previous-month-date-color, $gray-500),
+			active: (
+				background-color:
+					var(
+						--date-picker-previous-month-date-background-color,
+						$primary-l2
+					),
+				color: var(--date-picker-previous-month-date-color, $secondary),
+			),
+		),
+		$date-picker-previous-month-date
+	);
+
+	$date-picker-next-month-date: ();
+	$date-picker-next-month-date: map-deep-merge(
+		(
+			color: var(--date-picker-next-month-date-color, $gray-500),
+			active: (
+				background-color:
+					var(
+						--date-picker-next-month-date-active-background-color,
+						$primary-l2
+					),
+				color:
+					var(
+						--date-picker-next-month-date-active-color,
+						$primary-l3
+					),
+			),
+		),
+		$date-picker-next-month-date
+	);
+
+	// Date Picker Input Group
+
+	$date-picker-input-group-item: ();
+	$date-picker-input-group-item: map-deep-merge(
+		(
+			margin-left: var(--date-picker-input-group-item-margin-left, 2px),
+		),
+		$date-picker-input-group-item
+	);
+
+	$date-picker-input-group-text: ();
+	$date-picker-input-group-text: map-deep-merge(
+		(
+			background-color:
+				var(
+					--date-picker-input-group-text-background-color,
+					setter(
+						map-get($date-picker-input-group-text, bg),
+						transparent
+					)
+				),
+			border-color:
+				var(--date-picker-input-group-text-border-color, transparent),
+			min-width: var(--date-picker-input-group-text-min-width, 32px),
+			padding-left: var(--date-picker-input-group-text-padding-left, 4px),
+			padding-right:
+				var(--date-picker-input-group-text-padding-right, 4px),
+			media-breakpoint-down: (
+				xs: (
+					font-size:
+						var(
+							--date-picker-input-group-text-xs-down-font-size,
+							inherit
+						),
+					height:
+						var(
+							--date-picker-input-group-text-xs-down-height,
+							$input-height-sm
+						),
+					min-width:
+						var(
+							--date-picker-input-group-text-xs-down-min-width,
+							24px
+						),
+				),
+			),
+		),
+		$date-picker-input-group-text
+	);
+
+	$date-picker-input-form-control: ();
+	$date-picker-input-form-control: map-deep-merge(
+		(
+			media-breakpoint-down: (
+				xs: (
+					border-radius:
+						var(
+							--date-picker-input-form-control-border-radius,
+							clay-enable-rounded($input-border-radius-sm)
+						),
+					font-size:
+						var(
+							--date-picker-input-form-control-font-size,
+							$input-font-size-sm
+						),
+					height:
+						var(
+							--date-picker-input-form-control-height,
+							$input-height-sm
+						),
+					line-height:
+						var(
+							--date-picker-input-form-control-line-height,
+							$input-line-height-sm
+						),
+					min-height:
+						var(
+							--date-picker-input-form-control-min-height,
+							$input-height-sm
+						),
+					padding-bottom:
+						var(
+							--date-picker-input-form-control-padding-bottom,
+							$input-padding-y-sm
+						),
+					padding-left:
+						var(
+							--date-picker-input-form-control-padding-left,
+							$input-padding-x-sm
+						),
+					padding-right:
+						var(
+							--date-picker-input-form-control-padding-right,
+							$input-padding-x-sm
+						),
+					padding-top:
+						var(
+							--date-picker-input-form-control-padding-top,
+							$input-padding-y-sm
+						),
+				),
+			),
+		),
+		$date-picker-input-form-control
+	);
+}

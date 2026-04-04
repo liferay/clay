@@ -1,0 +1,706 @@
+@if ($enable-atlas-custom-properties) {
+	$toggle-switch-cursor: $link-cursor;
+	$toggle-switch-font-weight: var(
+		--toggle-switch-font-weight,
+		$input-label-font-weight
+	);
+	$toggle-switch-transition:
+		background-color 100ms ease-in,
+		border-color 100ms ease-in,
+		box-shadow 150ms ease-in-out,
+		color 100ms ease-in,
+		left 100ms ease-in,
+		opacity 100ms ease-in,
+		right 100ms ease-in;
+
+	// must all be same units--start
+	$toggle-switch-bar-padding: var(--toggle-switch-bar-padding, 4px);
+	$toggle-switch-button-width: var(--toggle-switch-button-width, 16px);
+
+	$toggle-switch-bar-padding-mobile: var(
+		--toggle-switch-bar-padding-mobile,
+		4px
+	);
+	$toggle-switch-button-width-mobile: var(
+		--toggle-switch-button-width-mobile,
+		16px
+	);
+
+	$toggle-switch-bar-height: calc(
+		#{$toggle-switch-bar-padding} * 2 + #{$toggle-switch-button-width}
+	);
+
+	$toggle-switch-bar-height-mobile: calc(
+		#{$toggle-switch-bar-padding-mobile} *
+			2 +
+			#{$toggle-switch-button-width-mobile}
+	);
+
+	$toggle-switch-bar-width: var(--toggle-switch-bar-width, 48px);
+
+	$toggle-switch-bar-width-mobile: var(
+		--toggle-switch-bar-width-mobile,
+		40px
+	);
+	// must all be same units--end
+
+	$toggle-switch-bar-bg: var(--toggle-switch-bar-background-color, $gray-500);
+	$toggle-switch-bar-border-color: var(
+		--toggle-switch-bar-border-color,
+		$toggle-switch-bar-bg
+	);
+	$toggle-switch-bar-border-radius: var(
+		--toggle-switch-bar-border-radius,
+		20px
+	);
+	$toggle-switch-bar-border-width: var(--toggle-switch-bar-border-width, 1px);
+	$toggle-switch-bar-font-size: var(--toggle-switch-bar-font-size, 10px);
+	$toggle-switch-bar-icon-color: var(--toggle-switch-bar-icon-color, $white);
+
+	$toggle-switch-bar-focus-box-shadow: $custom-control-indicator-focus-box-shadow;
+
+	$toggle-switch-button-bg: var(
+		--toggle-switch-button-background-color,
+		$white
+	);
+	$toggle-switch-button-border-color: var(
+		--toggle-switch-button-border-color,
+		$toggle-switch-button-bg
+	);
+	$toggle-switch-button-border-radius: var(
+		--toggle-switch-button-border-radius,
+		50%
+	);
+	$toggle-switch-button-border-width: var(
+		--toggle-switch-button-border-width,
+		1px
+	);
+	$toggle-switch-button-font-size: var(
+		--toggle-switch-button-font-size,
+		$toggle-switch-bar-font-size
+	);
+	$toggle-switch-button-icon-color: var(
+		--toggle-switch-button-icon-color,
+		$gray-900
+	);
+
+	$toggle-switch-bar-font-size-mobile: var(
+		--toggle-switch-bar-font-size-mobile,
+		10px
+	);
+
+	$toggle-switch-button-font-size-mobile: var(
+		--toggle-switch-button-font-size-mobile,
+		$toggle-switch-bar-font-size-mobile
+	);
+
+	// Toggle Switch On
+
+	$toggle-switch-bar-on-bg: var(
+		--toggle-switch-bar-on-background-color,
+		$component-active-bg
+	);
+	$toggle-switch-bar-on-border-color: var(
+		--toggle-switch-bar-on-border-color,
+		$toggle-switch-bar-on-bg
+	);
+	$toggle-switch-bar-on-icon-color: var(
+		--toggle-switch-bar-on-icon-color,
+		$white
+	);
+
+	$toggle-switch-button-on-bg: var(
+		--toggle-switch-button-on-background-color,
+		$white
+	);
+	$toggle-switch-button-on-border-color: var(
+		--toggle-switch-button-on-border-color,
+		$white
+	);
+	$toggle-switch-button-on-border-radius: var(
+		--toggle-switch-button-on-border-radius,
+		$toggle-switch-button-border-radius
+	);
+	$toggle-switch-button-on-icon-color: var(
+		--toggle-switch-button-on-icon-color,
+		$primary
+	);
+
+	// Toggle Switch Disabled
+
+	$toggle-switch-disabled-cursor: $disabled-cursor;
+	$toggle-switch-disabled-opacity: var(--toggle-switch-disabled-opacity, 0.4);
+
+	// Toggle Switch Label
+
+	$toggle-switch-label-disabled-color: var(
+		--toggle-switch-label-disabled-color,
+		$input-label-disabled-color
+	);
+
+	// Toggle Switch Text
+
+	$toggle-switch-text-font-size: var(--toggle-switch-text-font-size, 12px);
+
+	$toggle-switch-text-disabled-color: var(
+		--toggle-switch-text-disabled-color,
+		$input-label-disabled-color
+	);
+
+	// .toggle-switch
+
+	$toggle-switch: ();
+	$toggle-switch: map-deep-merge(
+		(
+			breakpoint-down: sm,
+			cursor: $toggle-switch-cursor,
+			display: inline-block,
+			font-weight: $toggle-switch-font-weight,
+			max-width: 100%,
+			position: relative,
+
+			disabled: (
+				cursor: $toggle-switch-disabled-cursor,
+
+				toggle-switch-label: (
+					color: $toggle-switch-label-disabled-color,
+					cursor: $toggle-switch-disabled-cursor,
+				),
+
+				toggle-switch-text: (
+					color: $toggle-switch-text-disabled-color,
+				),
+			),
+		),
+		$toggle-switch
+	);
+
+	// .toggle-switch-check-bar
+
+	$toggle-switch-check-bar: ();
+	$toggle-switch-check-bar: map-merge(
+		(
+			display: inline-flex,
+			position: relative,
+		),
+		$toggle-switch-check-bar
+	);
+
+	// .toggle-switch-bar
+
+	$toggle-switch-bar: ();
+	$toggle-switch-bar: map-deep-merge(
+		(
+			toggle-switch-handle: (
+				display: block,
+				min-width: $toggle-switch-bar-width,
+				text-transform: uppercase,
+			),
+
+			toggle-switch-icon: (
+				font-size: $toggle-switch-bar-font-size,
+
+				lexicon-icon: (
+					margin-top: -0.2em,
+				),
+			),
+
+			button-icon: (
+				font-size: $toggle-switch-button-font-size,
+			),
+		),
+		$toggle-switch-bar
+	);
+
+	// .toggle-switch-check
+
+	$toggle-switch-check: ();
+	$toggle-switch-check: map-deep-merge(
+		(
+			breakpoint-down: sm,
+
+			bottom: 0,
+			font-size: var(--togle-switch-check-font-size, 62.5%),
+			height: var(--togle-switch-check-height, $toggle-switch-bar-height),
+			opacity: 0,
+			position: absolute,
+			width: var(--togle-switch-check-width, $toggle-switch-bar-width),
+			z-index: 2,
+
+			toggle-switch-bar: (
+				display: inline-flex,
+				font-size: $toggle-switch-bar-font-size,
+				height: $toggle-switch-bar-height,
+				line-height: $toggle-switch-bar-height,
+				position: relative,
+				text-indent: 0,
+				user-select: none,
+
+				before: (
+					background-color: $toggle-switch-bar-bg,
+					border-color: $toggle-switch-bar-border-color,
+					border-radius:
+						clay-enable-rounded($toggle-switch-bar-border-radius),
+					border-style: solid,
+					border-width: $toggle-switch-bar-border-width,
+					bottom: 0,
+					content: ' ',
+					display: block,
+					left: 0,
+					position: absolute,
+					top: 0,
+					transition: $toggle-switch-transition,
+					width: $toggle-switch-bar-width,
+				),
+
+				after: (
+					background-color: $toggle-switch-button-bg,
+					border-color: $toggle-switch-button-border-color,
+					border-radius:
+						clay-enable-rounded(
+							$toggle-switch-button-border-radius
+						),
+					border-style: solid,
+					border-width: $toggle-switch-button-border-width,
+					bottom: $toggle-switch-bar-padding,
+					content: '',
+					display: block,
+					height: $toggle-switch-button-width,
+					left: $toggle-switch-bar-padding,
+					position: absolute,
+					top: $toggle-switch-bar-padding,
+					transition: $toggle-switch-transition,
+					width: $toggle-switch-button-width,
+				),
+
+				toggle-switch-handle: (
+					before: (
+						transition: $toggle-switch-transition,
+					),
+
+					after: (
+						content: attr(data-label-off),
+						margin-left:
+							clay-data-label-text-position(
+								$toggle-switch-bar-width,
+								$toggle-switch-bar-padding
+							),
+						transition: $toggle-switch-transition,
+						white-space: nowrap,
+					),
+				),
+
+				toggle-switch-icon: (
+					color: $toggle-switch-bar-icon-color,
+					left: $toggle-switch-bar-padding,
+					line-height: $toggle-switch-button-width,
+					position: absolute,
+					text-align: center,
+					text-indent: 0,
+					top: $toggle-switch-bar-padding,
+					transition: $toggle-switch-transition,
+					width: $toggle-switch-button-width,
+					z-index: 1,
+				),
+
+				toggle-switch-icon-on: (
+					left: $toggle-switch-bar-padding,
+					opacity: 0,
+				),
+
+				toggle-switch-icon-off: (
+					left:
+						calc(
+							#{$toggle-switch-bar-width} -
+								#{$toggle-switch-bar-padding} -
+								#{$toggle-switch-button-width}
+						),
+				),
+
+				button-icon: (
+					color: $toggle-switch-button-icon-color,
+				),
+
+				button-icon-on: (
+					opacity: 0,
+				),
+			),
+
+			focus: (
+				toggle-switch-bar: (
+					before: (
+						box-shadow: $toggle-switch-bar-focus-box-shadow,
+					),
+				),
+			),
+
+			disabled: (
+				toggle-switch-bar: (
+					cursor: $toggle-switch-disabled-cursor,
+					opacity: $toggle-switch-disabled-opacity,
+				),
+			),
+
+			checked: (
+				toggle-switch-bar: (
+					before: (
+						background-color: $toggle-switch-bar-on-bg,
+						border-color: $toggle-switch-bar-on-border-color,
+						border-radius:
+							clay-enable-rounded(
+								$toggle-switch-bar-border-radius
+							),
+						border-style: solid,
+						border-width: $toggle-switch-bar-border-width,
+					),
+
+					after: (
+						background-color: $toggle-switch-button-on-bg,
+						border-color: $toggle-switch-button-on-border-color,
+						border-radius:
+							clay-enable-rounded(
+								$toggle-switch-button-on-border-radius
+							),
+						border-style: solid,
+						border-width: $toggle-switch-button-border-width,
+						left:
+							calc(
+								#{$toggle-switch-bar-width} -
+									#{$toggle-switch-bar-padding} -
+									#{$toggle-switch-button-width}
+							),
+					),
+
+					toggle-switch-handle: (
+						after: (
+							content: attr(data-label-on),
+						),
+					),
+
+					toggle-switch-icon: (
+						color: $toggle-switch-bar-on-icon-color,
+					),
+
+					toggle-switch-icon-on: (
+						opacity: 1,
+					),
+
+					toggle-switch-icon-off: (
+						opacity: 0,
+					),
+
+					button-icon: (
+						color: $toggle-switch-button-on-icon-color,
+						left:
+							calc(
+								#{$toggle-switch-bar-width} -
+									#{$toggle-switch-bar-padding} -
+									#{$toggle-switch-button-width}
+							),
+					),
+
+					button-icon-on: (
+						opacity: 1,
+					),
+
+					button-icon-off: (
+						opacity: 0,
+					),
+				),
+			),
+
+			mobile: (
+				height: $toggle-switch-bar-height-mobile,
+				width: $toggle-switch-bar-width-mobile,
+
+				toggle-switch-bar: (
+					height: $toggle-switch-bar-height-mobile,
+					line-height: $toggle-switch-bar-height-mobile,
+					text-indent: 0,
+
+					before: (
+						width: $toggle-switch-bar-width-mobile,
+					),
+
+					after: (
+						bottom: $toggle-switch-bar-padding-mobile,
+						height: $toggle-switch-button-width-mobile,
+						left: $toggle-switch-bar-padding-mobile,
+						top: $toggle-switch-bar-padding-mobile,
+						width: $toggle-switch-button-width-mobile,
+					),
+
+					toggle-switch-handle: (
+						min-width: $toggle-switch-bar-width-mobile,
+
+						after: (
+							margin-left:
+								clay-data-label-text-position(
+									$toggle-switch-bar-width-mobile,
+									$toggle-switch-bar-padding-mobile
+								),
+						),
+					),
+
+					toggle-switch-icon: (
+						font-size: $toggle-switch-bar-font-size-mobile,
+						left: $toggle-switch-bar-padding-mobile,
+						line-height: $toggle-switch-button-width-mobile,
+						top: $toggle-switch-bar-padding-mobile,
+						width: $toggle-switch-button-width-mobile,
+					),
+
+					toggle-switch-icon-on: (
+						left: $toggle-switch-bar-padding-mobile,
+					),
+
+					toggle-switch-icon-off: (
+						left:
+							calc(
+								#{$toggle-switch-bar-width-mobile} -
+									#{$toggle-switch-bar-padding-mobile} -
+									#{$toggle-switch-button-width-mobile}
+							),
+					),
+
+					button-icon: (
+						font-size: $toggle-switch-button-font-size-mobile,
+					),
+				),
+
+				checked: (
+					toggle-switch-bar: (
+						after: (
+							left:
+								calc(
+									#{$toggle-switch-bar-width-mobile} -
+										#{$toggle-switch-bar-padding-mobile} -
+										#{$toggle-switch-button-width-mobile}
+								),
+						),
+
+						toggle-switch-handle: (
+							after: (
+								margin-left:
+									clay-data-label-text-position(
+										$toggle-switch-bar-width-mobile,
+										$toggle-switch-bar-padding-mobile
+									),
+							),
+						),
+
+						button-icon: (
+							left:
+								calc(
+									#{$toggle-switch-bar-width-mobile} -
+										#{$toggle-switch-bar-padding-mobile} -
+										#{$toggle-switch-button-width-mobile}
+								),
+						),
+					),
+				),
+
+				toggle-switch-text-left: (
+					line-height: $toggle-switch-bar-height-mobile,
+				),
+
+				toggle-switch-text-right: (
+					line-height: $toggle-switch-bar-height-mobile,
+				),
+			),
+		),
+		$toggle-switch-check
+	);
+
+	// .toggle-switch-label
+
+	$toggle-switch-label: ();
+	$toggle-switch-label: map-merge(
+		(
+			display: block,
+			margin-bottom: var(--toggle-switch-label-margin-bottom, 2px),
+		),
+		$toggle-switch-label
+	);
+
+	// .toggle-switch-text
+
+	$toggle-switch-text: ();
+	$toggle-switch-text: map-merge(
+		(
+			display: block,
+			font-size:
+				var(
+					--toggle-switch-text-font-size,
+					$toggle-switch-text-font-size
+				),
+		),
+		$toggle-switch-text
+	);
+
+	// .toggle-switch-text-left
+
+	$toggle-switch-text-left: ();
+	$toggle-switch-text-left: map-deep-merge(
+		(
+			display: inline-flex,
+			line-height: $toggle-switch-bar-height,
+			margin-right: 8px,
+		),
+		$toggle-switch-text-left
+	);
+
+	// .toggle-switch-text-right
+
+	$toggle-switch-text-right: ();
+	$toggle-switch-text-right: map-merge(
+		(
+			display: inline-flex,
+			line-height: $toggle-switch-bar-height,
+			margin-left: 8px,
+		),
+		$toggle-switch-text-right
+	);
+
+	// .simple-toggle-switch
+
+	$simple-toggle-switch-label-line-height: 1;
+	$simple-toggle-switch-label-spacer-x: 8px;
+
+	$simple-toggle-switch: ();
+	$simple-toggle-switch: map-deep-merge(
+		(
+			breakpoint-down: sm,
+
+			align-items: center,
+			display: inline-flex,
+
+			toggle-switch-label: (
+				line-height: $simple-toggle-switch-label-line-height,
+				margin-bottom: 0,
+				max-width:
+					calc(
+						100% -
+							#{clay-data-label-text-position(
+								$toggle-switch-bar-width,
+								$toggle-switch-bar-padding
+							)}
+					),
+			),
+
+			mobile: (
+				toggle-switch-label: (
+					max-width:
+						calc(
+							100% -
+								#{clay-data-label-text-position(
+									$toggle-switch-bar-width-mobile,
+									$toggle-switch-bar-padding-mobile
+								)}
+						),
+				),
+			),
+		),
+		$simple-toggle-switch
+	);
+
+	// .simple-toggle-switch-reverse
+
+	$simple-toggle-switch-reverse: ();
+	$simple-toggle-switch-reverse: map-deep-merge(
+		(
+			breakpoint-down: sm,
+
+			toggle-switch-label: (
+				margin-right: $simple-toggle-switch-label-spacer-x,
+			),
+
+			toggle-switch-check-bar: (
+				order: 5,
+			),
+
+			toggle-switch-check: (
+				toggle-switch-bar: (
+					order: 5,
+				),
+			),
+		),
+		$simple-toggle-switch-reverse
+	);
+
+	// .toggle-switch-sm
+
+	$toggle-switch-sizes: ();
+	$toggle-switch-sizes: map-deep-merge(
+		(
+			toggle-switch-sm: (
+				simple-toggle-switch: (
+					toggle-switch-label: (
+						max-width: calc(100% - 34px),
+					),
+				),
+
+				toggle-switch-check: (
+					height: 16px,
+					width: 30px,
+
+					toggle-switch-bar: (
+						height: 16px,
+						line-height: 16px,
+
+						before: (
+							width: 30px,
+						),
+
+						after: (
+							bottom: 0,
+							height: 12px,
+							left: 2px,
+							top: 2px,
+							width: 12px,
+						),
+
+						toggle-switch-handle: (
+							min-width: 30px,
+
+							after: (
+								margin-left: 34px,
+							),
+						),
+
+						toggle-switch-icon: (
+							font-size: 8px,
+							height: 16px,
+							left: 0,
+							line-height: 16px,
+							top: 0px,
+							width: 16px,
+						),
+
+						toggle-switch-icon-off: (
+							left: 13px,
+						),
+					),
+
+					checked: (
+						toggle-switch-bar: (
+							after: (
+								left: 16px,
+							),
+
+							button-icon: (
+								left: 14px,
+							),
+						),
+					),
+				),
+
+				toggle-switch-label: (
+					font-size: 12px,
+					max-width: calc(100% - 38px),
+				),
+			),
+		),
+		$toggle-switch-sizes
+	);
+}

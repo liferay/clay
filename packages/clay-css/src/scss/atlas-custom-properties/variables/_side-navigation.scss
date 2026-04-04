@@ -1,0 +1,4 @@
+@if ($enable-atlas-custom-properties) {
+	$sidenav-transition: all 0.5s ease;
+	$sidenav-width: 320px;
+}

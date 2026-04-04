@@ -1,0 +1,836 @@
+@if ($enable-atlas-custom-properties) {
+	$menubar-primary: ();
+	$menubar-primary: map-deep-merge(
+		(
+			nav-item: (
+				position: relative,
+			),
+
+			nav-link: (
+				border-radius: var(--menubar-primary-nav-link-border-radius, 0),
+				color: var(--menubar-primary-nav-link-color, $gray-900),
+				line-height: var(--menubar-primary-nav-link-line-height, 24px),
+				overflow: var(--menubar-primary-nav-link-overflow, visible),
+				padding: var(--menubar-primary-nav-link-padding, 10px 16px),
+				transition:
+					var(
+						--menubar-primary-nav-link-transition,
+						#{color 0.15s ease-in-out,
+						background-color 0.15s ease-in-out,
+						border-color 0.15s ease-in-out,
+						box-shadow 0.15s ease-in-out}
+					),
+				before: (
+					bottom: var(--menubar-primary-nav-link-highlight-bottom, 0),
+					content:
+						var(--menubar-primary-nav-link-highlight-content, ''),
+					display:
+						var(
+							--menubar-primary-nav-link-highlight-display,
+							block
+						),
+					left: var(--menubar-primary-nav-link-highlight-left, 0),
+					position:
+						var(
+							--menubar-primary-nav-link-highlight-position,
+							absolute
+						),
+					right:
+						var(--menubar-primary-nav-link-highlight-right, auto),
+					top: var(--menubar-primary-nav-link-highlight-top, 0),
+					transition:
+						var(
+							--menubar-primary-nav-link-highlight-transition,
+							$transition-base
+						),
+				),
+
+				hover: (
+					background-color:
+						var(
+							--menubar-primary-nav-link-hover-background-color,
+							$primary-l3
+						),
+					color:
+						var(--menubar-primary-nav-link-hover-color, $gray-900),
+					letter-spacing:
+						var(--menubar-primary-nav-link-hover-letter-spacing, 0),
+					before: (
+						background-color:
+							var(
+								--menubar-primary-nav-link-hover-highlight-background-color,
+								$secondary-l0
+							),
+						height:
+							var(
+								--menubar-primary-nav-link-hover-highlight-height,
+								auto
+							),
+						width:
+							var(
+								--menubar-primary-nav-link-hover-highlight-width,
+								0.125rem
+							),
+					),
+				),
+
+				focus: (
+					background-color:
+						var(
+							--menubar-primary-nav-link-focus-background-color,
+							transparent
+						),
+					box-shadow: none,
+					color:
+						var(--menubar-primary-nav-link-focus-color, $gray-900),
+					outline: 0,
+
+					after: (
+						bottom: 0,
+						box-shadow:
+							var(
+								--menubar-primary-nav-link-focus-box-shadow,
+								$component-focus-inset-box-shadow
+							),
+						content: '',
+						display: block,
+						left: 0,
+						pointer-events: none,
+						position: absolute,
+						right: 0,
+						top: 0,
+					),
+				),
+
+				active-class: (
+					background-color:
+						var(
+							--menubar-primary-nav-link-active-class-background-color,
+							$primary-l3
+						),
+					color:
+						var(
+							--menubar-primary-nav-link-active-class-color,
+							$gray-900
+						),
+					font-weight:
+						var(
+							--menubar-primary-nav-link-active-class-font-weight,
+							$font-weight-semi-bold
+						),
+					before: (
+						background-color:
+							var(
+								--menubar-primary-nav-link-active-class-highlight-background-color,
+								$primary
+							),
+						height:
+							var(
+								--menubar-primary-nav-link-active-class-highlight-height,
+								auto
+							),
+						width:
+							var(
+								--menubar-primary-nav-link-active-class-highlight-width,
+								0.375rem
+							),
+					),
+
+					focus: (
+						before: (
+							display: none,
+						),
+					),
+				),
+
+				disabled: (
+					background-color:
+						var(
+							--menubar-primary-nav-link-disabled-background-color,
+							transparent
+						),
+					box-shadow:
+						var(
+							--menubar-primary-nav-link-disabled-box-shadow,
+							none
+						),
+					font-weight:
+						var(
+							--menubar-primary-nav-link-disabled-font-weight,
+							$font-weight-normal
+						),
+					before: (
+						content: none,
+					),
+
+					after: (
+						content: none,
+					),
+				),
+
+				show: (
+					background-color: c-unset,
+					box-shadow: c-unset,
+					color: $gray-900,
+
+					before: (
+						background-color: transparent,
+						width: 0,
+					),
+
+					hover: (
+						before: (
+							background-color: $secondary-l0,
+							width: 0.125rem,
+						),
+					),
+				),
+
+				autofit-row: (
+					align-items: center,
+					margin-left:
+						var(
+							--menubar-primary-autofit-row-margin-left,
+							-0.25rem
+						),
+					margin-right:
+						var(
+							--menubar-primary-autofit-row-margin-right,
+							-0.25rem
+						),
+					autofit-col: (
+						padding-left:
+							var(
+								--menubar-primary-autofit-col-padding-left,
+								0.25rem
+							),
+						padding-right:
+							var(
+								--menubar-primary-autofit-col-padding-right,
+								0.25rem
+							),
+					),
+				),
+
+				collapse-icon: (
+					font-size:
+						var(--menubar-primary-collapse-icon-font-size, 0.75rem),
+					font-weight:
+						var(
+							--menubar-primary-collapse-icon-font-weight,
+							$font-weight-semi-bold
+						),
+					text-transform:
+						var(
+							--menubar-primary-collapse-icon-text-transform,
+							uppercase
+						),
+					collapse-icon-closed: (
+						bottom:
+							var(
+								--menubar-primary-collapse-icon-close-bottom,
+								auto
+							),
+						font-size:
+							var(
+								--menubar-primary-collapse-icon-close-font-size,
+								0.875rem
+							),
+						left:
+							var(
+								--menubar-primary-collapse-icon-close-left,
+								auto
+							),
+						right:
+							var(
+								--menubar-primary-collapse-icon-close-right,
+								15px
+							),
+						top:
+							var(
+								--menubar-primary-collapse-icon-close-top,
+								calc(22px - (1em / 2))
+							),
+					),
+
+					collapse-icon-open: (
+						bottom:
+							var(
+								--menubar-primary-collapse-icon-open-bottom,
+								auto
+							),
+						font-size:
+							var(
+								--menubar-primary-collapse-icon-open-font-size,
+								0.875rem
+							),
+						left:
+							var(
+								--menubar-primary-collapse-icon-open-left,
+								auto
+							),
+						right:
+							var(
+								--menubar-primary-collapse-icon-open-right,
+								15px
+							),
+						top:
+							var(
+								--menubar-primary-collapse-icon-open-top,
+								calc(22px - (1em / 2))
+							),
+					),
+				),
+			),
+
+			menubar-actions-1: (
+				padding-right: var(--menubar-primary-menubar-actions-1, 4rem),
+			),
+
+			menubar-action: (
+				position: absolute,
+				top: var(--menubar-primary-menubar-action-top, 0.625rem),
+				right: var(--menubar-primary-menubar-action-right, 2rem),
+			),
+		),
+		$menubar-primary
+	);
+
+	// Menubar Vertical MD
+
+	$menubar-vertical-expand-md: ();
+	$menubar-vertical-expand-md: map-deep-merge(
+		(
+			max-width: 15.625rem,
+
+			menubar-collapse: (
+				display: block,
+			),
+
+			media-breakpoint-down: (
+				sm: (
+					margin-bottom: 1rem,
+					max-width: none,
+
+					menubar-collapse: (
+						border-color: transparent,
+						border-style: solid,
+						border-width: 0.0625rem,
+						display: none,
+						position: relative,
+						top: 100%,
+						z-index:
+							$zindex-menubar-vertical-expand-md-collapse-mobile,
+					),
+
+					nav-nested: (
+						margin-bottom: 0.5rem,
+						margin-top: 0.5rem,
+					),
+
+					nav-nested-margins: (
+						margin-bottom: 0.5rem,
+						margin-top: 0.5rem,
+					),
+
+					nav-nested-margins-item: (
+						margin-left: 0rem,
+					),
+
+					menubar-toggler: (
+						align-items: center,
+						border-color: transparent,
+						border-style: solid,
+						border-width: 0.0625rem,
+						display: inline-flex,
+						height: 2rem,
+						padding-left: 0.5rem,
+						padding-right: 0.5rem,
+
+						c-inner: (
+							margin-left: -0.5rem,
+							margin-right: -0.5rem,
+							max-width: none,
+						),
+
+						lexicon-icon: (
+							margin-top: 0rem,
+						),
+					),
+				),
+			),
+		),
+		$menubar-vertical-expand-md
+	);
+
+	$menubar-vertical-transparent-md: ();
+	$menubar-vertical-transparent-md: map-deep-merge(
+		(
+			nav-link: (
+				border-radius: $border-radius,
+				letter-spacing: 0.02rem,
+				line-height: 1.25rem,
+				margin-bottom: 0.25rem,
+				transition: #{color 0.15s ease-in-out,
+				background-color 0.15s ease-in-out,
+				border-color 0.15s ease-in-out,
+				box-shadow 0.15s ease-in-out},
+
+				before: (
+					border-radius: $border-radius 0 0 $border-radius,
+					bottom: 0,
+					content: '',
+					display: block,
+					left: 0,
+					position: absolute,
+					top: 0,
+				),
+
+				hover: (
+					background-color:
+						unquote('hsl(from #{$gray-900} h s l / 0.04)'),
+					color: $gray-900,
+					font-weight: $font-weight-semi-bold,
+					letter-spacing: 0,
+
+					before: (
+						background: $secondary-l0,
+						width: 0.1875rem,
+					),
+				),
+
+				focus: (
+					background-color: c-unset,
+					color: $gray-900,
+					outline: 0,
+
+					after: (
+						border-radius: $border-radius,
+						bottom: 0,
+						box-shadow: $component-focus-box-shadow,
+						content: '',
+						display: block,
+						left: 0,
+						pointer-events: none,
+						position: absolute,
+						right: 0,
+						top: 0,
+					),
+				),
+
+				active-class: (
+					background-color:
+						unquote('hsl(from #{$primary} h s l / 0.06)'),
+					color: $gray-900,
+					font-weight: $font-weight-semi-bold,
+					letter-spacing: 0,
+
+					before: (
+						background-color: $primary-l0,
+						width: 0.25rem,
+					),
+				),
+
+				disabled: (
+					background-color: transparent,
+					box-shadow: none,
+					font-weight: $font-weight-normal,
+					letter-spacing: 0.02rem,
+
+					before: (
+						content: none,
+					),
+
+					after: (
+						content: none,
+					),
+				),
+
+				show: (
+					background-color: c-unset,
+					box-shadow: c-unset,
+					color: $gray-900,
+					font-weight: $font-weight-semi-bold,
+
+					before: (
+						background-color: transparent,
+					),
+
+					hover: (
+						before: (
+							background-color: $secondary-l0,
+							width: 0.1875rem,
+						),
+					),
+				),
+			),
+
+			media-breakpoint-down: (
+				sm: (
+					background-color: $white,
+
+					nav-link: (
+						margin-bottom: 0,
+
+						before: (
+							content: none,
+						),
+
+						hover: (
+							background-color:
+								unquote('hsl(from #{$gray-900} h s l / 0.04)'),
+							box-shadow: none,
+						),
+
+						focus: (
+							background-color: transparent,
+
+							after: (
+								box-shadow: $component-focus-inset-box-shadow,
+							),
+						),
+
+						active: (
+							background-color: c-unset,
+							color: c-unset,
+						),
+
+						active-class: (
+							background-color:
+								unquote('hsl(from #{$primary} h s l / 0.06)'),
+							box-shadow: none,
+							color: c-unset,
+						),
+					),
+
+					menubar-toggler: (
+						color: $gray-600,
+						font-size: 0.875rem,
+						font-weight: $font-weight-semi-bold,
+						transition: box-shadow 0.15s ease-in-out,
+
+						focus: (
+							box-shadow: $component-focus-box-shadow,
+							outline: 0,
+						),
+
+						disabled: (
+							box-shadow: clay-enable-shadows(none),
+						),
+					),
+				),
+			),
+		),
+		$menubar-vertical-transparent-md
+	);
+
+	$menubar-vertical-decorated-md-nav: ();
+	$menubar-vertical-decorated-md-nav: map-deep-merge(
+		(
+			border-left-color: $gray-300,
+			border-left-style: solid,
+			border-left-width: 0.125rem,
+			display: block,
+			padding-left: 0.5rem,
+		),
+		$menubar-vertical-decorated-md-nav
+	);
+
+	$menubar-vertical-decorated-md-nav-item-nav: ();
+	$menubar-vertical-decorated-md-nav-item-nav: map-deep-merge(
+		(
+			margin-bottom: 0.25rem,
+			margin-left: 1rem,
+			margin-top: 0.25rem,
+		),
+		$menubar-vertical-decorated-md-nav-item-nav
+	);
+
+	$menubar-vertical-decorated-md-nav-link: ();
+	$menubar-vertical-decorated-md-nav-link: map-deep-merge(
+		(
+			padding-left: 1rem !important,
+		),
+		$menubar-vertical-decorated-md-nav-link
+	);
+
+	$menubar-vertical-decorated-md-nav-link-after-active: ();
+	$menubar-vertical-decorated-md-nav-link-after-active: map-deep-merge(
+		(
+			background-color: $primary-l2,
+			bottom: 0rem,
+			content: '',
+			display: block,
+			left:
+				calc(
+					#{map-get(
+							$menubar-vertical-decorated-md-nav,
+							padding-left
+						)} *
+						-1 -
+						#{map-get(
+							$menubar-vertical-decorated-md-nav,
+							border-left-width
+						)}
+				),
+			position: absolute,
+			top: 0rem,
+			width:
+				map-get($menubar-vertical-decorated-md-nav, border-left-width),
+		),
+		$menubar-vertical-decorated-md-nav-link-after-active
+	);
+
+	// Menubar Vertical LG
+
+	$menubar-vertical-expand-lg: ();
+	$menubar-vertical-expand-lg: map-deep-merge(
+		(
+			max-width: 15.625rem,
+
+			menubar-collapse: (
+				display: block,
+			),
+
+			media-breakpoint-down: (
+				md: (
+					margin-bottom: 1rem,
+					max-width: none,
+
+					menubar-collapse: (
+						border-color: transparent,
+						border-style: solid,
+						border-width: 0.0625rem,
+						display: none,
+						position: relative,
+						top: 100%,
+						z-index:
+							$zindex-menubar-vertical-expand-md-collapse-mobile,
+					),
+
+					nav-nested: (
+						margin-bottom: 0.5rem,
+						margin-top: 0.5rem,
+					),
+
+					nav-nested-margins: (
+						margin-bottom: 0.5rem,
+						margin-top: 0.5rem,
+					),
+
+					nav-nested-margins-item: (
+						margin-left: 0rem,
+					),
+
+					menubar-toggler: (
+						align-items: center,
+						border-color: transparent,
+						border-style: solid,
+						border-width: 0.0625rem,
+						display: inline-flex,
+						height: 2rem,
+						padding-left: 0.5rem,
+						padding-right: 0.5rem,
+
+						c-inner: (
+							margin-left: -0.5rem,
+							margin-right: -0.5rem,
+							max-width: none,
+						),
+
+						lexicon-icon: (
+							margin-top: 0rem,
+						),
+					),
+				),
+			),
+		),
+		$menubar-vertical-expand-lg
+	);
+
+	$menubar-vertical-transparent-lg: ();
+	$menubar-vertical-transparent-lg: map-deep-merge(
+		(
+			nav-link: (
+				border-radius: $border-radius,
+				letter-spacing: 0.02rem,
+				margin-bottom: 0.25rem,
+				transition: #{color 0.15s ease-in-out,
+				background-color 0.15s ease-in-out,
+				border-color 0.15s ease-in-out,
+				box-shadow 0.15s ease-in-out},
+
+				before: (
+					border-radius: $border-radius 0 0 $border-radius,
+					bottom: 0,
+					content: '',
+					display: block,
+					left: 0,
+					position: absolute,
+					top: 0,
+				),
+
+				hover: (
+					background-color:
+						unquote('hsl(from #{$gray-900} h s l / 0.04)'),
+					color: $gray-900,
+					font-weight: $font-weight-semi-bold,
+					letter-spacing: 0,
+
+					before: (
+						background: $secondary-l0,
+						width: 0.1875rem,
+					),
+				),
+
+				focus: (
+					background-color: c-unset,
+					color: $gray-900,
+					outline: 0,
+
+					after: (
+						border-radius: $border-radius,
+						bottom: 0,
+						box-shadow: $component-focus-box-shadow,
+						content: '',
+						display: block,
+						left: 0,
+						position: absolute,
+						right: 0,
+						top: 0,
+					),
+				),
+
+				active-class: (
+					background-color:
+						unquote('hsl(from #{$primary} h s l / 0.06)'),
+					color: $gray-900,
+					font-weight: $font-weight-semi-bold,
+					letter-spacing: 0,
+
+					before: (
+						background-color: $primary-l0,
+						width: 0.25rem,
+					),
+				),
+
+				disabled: (
+					background-color: transparent,
+					box-shadow: none,
+					font-weight: $font-weight-normal,
+					letter-spacing: 0.02rem,
+
+					before: (
+						content: none,
+					),
+
+					after: (
+						content: none,
+					),
+				),
+
+				show: (
+					background-color: c-unset,
+					box-shadow: c-unset,
+					color: $gray-900,
+					font-weight: $font-weight-semi-bold,
+
+					before: (
+						background-color: transparent,
+					),
+
+					hover: (
+						before: (
+							background-color: $secondary-l0,
+							width: 0.1875rem,
+						),
+					),
+				),
+			),
+
+			media-breakpoint-down: (
+				md: (
+					background-color: $white,
+
+					nav-link: (
+						margin-bottom: 0,
+
+						before: (
+							content: none,
+						),
+
+						hover: (
+							background-color:
+								unquote('hsl(from #{$gray-900} h s l / 0.04)'),
+							box-shadow: none,
+						),
+
+						focus: (
+							background-color: transparent,
+
+							after: (
+								box-shadow: $component-focus-inset-box-shadow,
+							),
+						),
+
+						active: (
+							background-color: c-unset,
+							color: c-unset,
+						),
+
+						active-class: (
+							background-color:
+								unquote('hsl(from #{$primary} h s l / 0.06)'),
+							box-shadow: none,
+							color: $gray-900,
+						),
+					),
+
+					menubar-toggler: (
+						color: $gray-600,
+						font-size: 0.875rem,
+						font-weight: $font-weight-semi-bold,
+						transition: box-shadow 0.15s ease-in-out,
+
+						focus: (
+							box-shadow:
+								clay-enable-shadows(
+									$component-focus-box-shadow
+								),
+							outline: 0,
+						),
+
+						disabled: (
+							box-shadow: clay-enable-shadows(none),
+						),
+					),
+				),
+			),
+		),
+		$menubar-vertical-transparent-lg
+	);
+
+	$menubar-vertical-decorated-lg-nav: ();
+	$menubar-vertical-decorated-lg-nav: map-deep-merge(
+		$menubar-vertical-decorated-md-nav,
+		$menubar-vertical-decorated-lg-nav
+	);
+
+	$menubar-vertical-decorated-lg-nav-item-nav: ();
+	$menubar-vertical-decorated-lg-nav-item-nav: map-deep-merge(
+		$menubar-vertical-decorated-md-nav-item-nav,
+		$menubar-vertical-decorated-lg-nav-item-nav
+	);
+
+	$menubar-vertical-decorated-lg-nav-link: ();
+	$menubar-vertical-decorated-lg-nav-link: map-deep-merge(
+		$menubar-vertical-decorated-md-nav-link,
+		$menubar-vertical-decorated-lg-nav-link
+	);
+
+	$menubar-vertical-decorated-lg-nav-link-after-active: ();
+	$menubar-vertical-decorated-lg-nav-link-after-active: map-deep-merge(
+		$menubar-vertical-decorated-md-nav-link-after-active,
+		$menubar-vertical-decorated-lg-nav-link-after-active
+	);
+}

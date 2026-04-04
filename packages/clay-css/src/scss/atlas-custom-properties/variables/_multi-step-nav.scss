@@ -1,0 +1,324 @@
+@if ($enable-atlas-custom-properties) {
+	$multi-step-nav-margin-bottom: var(--multi-step-nav-margin-bottom, 15px);
+	$multi-step-nav-padding-x: var(--multi-step-nav-padding-x, 15px);
+	$multi-step-nav-padding-y: var(--multi-step-nav-padding-y, 0);
+
+	$multi-step-icon-bg: var(--multi-step-icon-bg, $gray-200);
+	$multi-step-icon-border-color: var(
+		--multi-step-icon-border-color,
+		transparent
+	);
+	$multi-step-icon-border-radius: var(--multi-step-icon-border-radius, 100px);
+	$multi-step-icon-border-style: var(--multi-step-icon-border-style, solid);
+	$multi-step-icon-border-width: var(--multi-step-icon-border-width, 0);
+	$multi-step-icon-color: var(--multi-step-icon-color, $gray-600);
+	$multi-step-icon-cursor: var(--multi-step-icon-cursor, $link-cursor);
+	$multi-step-icon-font-size: var(--multi-step-icon-font-size, 14px);
+	$multi-step-icon-font-weight: var(
+		--multi-step-icon-font-weight,
+		$font-weight-semi-bold
+	);
+	$multi-step-icon-padding-bottom: var(--multi-step-icon-padding-bottom, 0);
+	$multi-step-icon-padding-left: var(--multi-step-icon-padding-left, 0);
+	$multi-step-icon-padding-right: var(--multi-step-icon-padding-right, 0);
+	$multi-step-icon-padding-top: var(--multi-step-icon-padding-top, 0);
+	$multi-step-icon-size: var(--multi-step-icon-size, 32px);
+	$multi-step-icon-transition: var(
+		--multi-step-icon-transition,
+		box-shadow 0.15s ease-in-out
+	);
+
+	$multi-step-icon-hover-bg: var(
+		--multi-step-icon-hover-bg,
+		$multi-step-icon-bg
+	);
+	$multi-step-icon-hover-color: var(
+		--multi-step-icon-hover-color,
+		$multi-step-icon-color
+	);
+	$multi-step-icon-hover-text-decoration: var(
+		--multi-step-icon-hover-text-decoration,
+		none
+	);
+
+	$multi-step-icon-focus-bg: var(--multi-step-icon-focus-bg, transparent);
+	$multi-step-icon-focus-box-shadow: var(
+		--multi-step-icon-focus-box-shadow,
+		$component-focus-box-shadow
+	);
+	$multi-step-icon-focus-color: var(--multi-step-icon-focus-color, inherit);
+	$multi-step-icon-focus-outline: var(--multi-step-icon-focus-outline, 0);
+	$multi-step-icon-focus-text-decoration: var(
+		--multi-step-icon-focus-text-decoration,
+		$multi-step-icon-hover-text-decoration
+	);
+
+	// See https://issues.liferay.com/browse/LPS-147457.
+
+	$data-multi-step-icon-before-content: unquote(
+		"'\\FEFF' attr(data-multi-step-icon)"
+	);
+
+	$multi-step-divider-bg: var(--multi-step-divider-bg, $gray-200);
+	$multi-step-divider-height: var(--multi-step-divider-height, 4px);
+	$multi-step-divider-spacer-x: var(--multi-step-divider-spacer-x, 0);
+	$multi-step-divider-top: var(
+		--multi-step-divider-top,
+		calc(
+			#{$multi-step-divider-height} * 0.5 + #{$multi-step-icon-size} * 0.5
+		)
+	);
+
+	$multi-step-indicator-width: var(
+		--multi-step-indicator-width,
+		calc(#{$multi-step-icon-size} + #{$multi-step-divider-spacer-x} * 2)
+	);
+
+	$multi-step-indicator-label-color: var(
+		--multi-step-indicator-label-color,
+		$gray-600
+	);
+	$multi-step-indicator-label-font-size: var(
+		--multi-step-indicator-label-font-size,
+		14px
+	);
+	$multi-step-indicator-label-font-weight: var(
+		--multi-step-indicator-label-font-weight,
+		$font-weight-semi-bold
+	);
+	$multi-step-indicator-label-max-width: var(
+		--multi-step-indicator-label-max-width,
+		100px
+	);
+
+	$multi-step-indicator: ();
+	$multi-step-indicator: map-deep-merge(
+		(
+			position: relative,
+			width: $multi-step-indicator-width,
+
+			multi-step-indicator-label: (
+				color: $multi-step-indicator-label-color,
+				font-size: $multi-step-indicator-label-font-size,
+				font-weight: $multi-step-indicator-label-font-weight,
+				left: 50%,
+				max-width: $multi-step-indicator-label-max-width,
+				overflow: hidden,
+				position: absolute,
+				text-overflow: ellipsis,
+				transform: translateX(-50%),
+				white-space: nowrap,
+			),
+		),
+		$multi-step-indicator
+	);
+
+	$multi-step-title-color: var(--multi-step-title-color, $gray-600);
+	$multi-step-title-font-size: var(--multi-step-title-font-size, 14px);
+	$multi-step-title-font-weight: var(
+		--multi-step-title-font-weight,
+		$font-weight-semi-bold
+	);
+	$multi-step-title-margin-bottom: var(
+		--multi-step-title-margin-bottom,
+		10px
+	);
+	$multi-step-title-max-width: var(--multi-step-title-max-width, 100px);
+
+	$multi-step-title: ();
+	$multi-step-title: map-deep-merge(
+		(
+			color: $multi-step-title-color,
+			font-size: $multi-step-title-font-size,
+			font-weight: $multi-step-title-font-weight,
+			line-height: normal,
+			margin-bottom: $multi-step-title-margin-bottom,
+			word-wrap: break-word,
+		),
+		$multi-step-title
+	);
+
+	$multi-step-title-center: ();
+	$multi-step-title-center: map-deep-merge(
+		(
+			multi-step-title: (
+				margin-left: calc(#{$multi-step-icon-size} * 0.5),
+				max-width: $multi-step-title-max-width,
+				overflow: hidden,
+				position: relative,
+				text-align: center,
+				text-overflow: ellipsis,
+				transform: translateX(-50%),
+				white-space: nowrap,
+				width: auto,
+			),
+		),
+		$multi-step-title-center
+	);
+
+	$multi-step-item-margin-bottom: var(--multi-step-item-margin-bottom, 10px);
+	$multi-step-item-width: var(--multi-step-item-width, 75px);
+
+	$multi-step-item-fixed-width: var(--multi-step-item-fixed-width, 150px);
+
+	$multi-step-nav-center: ();
+	$multi-step-nav-center: map-deep-merge(
+		(
+			padding: 0,
+			text-align: center,
+
+			multi-step-item: (
+				flex-grow: 1,
+				width: $multi-step-item-width,
+			),
+
+			multi-step-divider: (
+				left: 50%,
+				margin-left: 1rem,
+				width: calc(100% - #{$multi-step-icon-size}),
+			),
+
+			multi-step-indicator: (
+				left: 50%,
+				transform: translateX(-50%),
+			),
+
+			multi-step-title: (
+				margin-left: 12.5%,
+				max-width: 75%,
+			),
+		),
+		$multi-step-nav-center
+	);
+
+	// data-multi-step-icon::before See https://issues.liferay.com/browse/LPS-147457.
+
+	$multi-step-item-error: ();
+	$multi-step-item-error: map-deep-merge(
+		(
+			multi-step-icon: (
+				background-color:
+					var(
+						--multi-step-item-error-multi-step-icon-background-color,
+						$danger
+					),
+				background-image:
+					var(
+						--multi-step-item-error-multi-step-icon-background-image,
+						clay-icon(times, #fff)
+					),
+				color:
+					var(--multi-step-item-error-multi-step-icon-color, $white),
+				text-indent: -100px,
+
+				data-multi-step-icon: (
+					before: (
+						content: none,
+					),
+				),
+
+				lexicon-icon: (
+					display: none,
+				),
+			),
+		),
+		$multi-step-item-error
+	);
+
+	$multi-step-icon-complete-color: var(
+		--multi-step-icon-complete-color,
+		$white
+	);
+
+	$multi-step-icon-complete-bg: var(--multi-step-icon-complete-bg, $gray-600);
+	$multi-step-icon-complete-bg-image: var(
+		--multi-step-icon-complete-bg-image,
+		clay-icon(check, #fff)
+	);
+	$multi-step-icon-complete-bg-position: var(
+		--multi-step-icon-complete-bg-position,
+		center
+	);
+	$multi-step-icon-complete-bg-size: var(
+		--multi-step-icon-complete-bg-size,
+		$multi-step-icon-font-size
+	);
+
+	$multi-step-divider-complete-bg: var(
+		--multi-step-divider-complete-bg,
+		$multi-step-icon-complete-bg
+	);
+
+	$multi-step-dropdown-indicator-complete-icon: var(
+		--multi-step-dropdown-indicator-complete-icon,
+		clay-icon(check, #272833)
+	);
+	$multi-step-dropdown-indicator-complete-width: var(
+		--multi-step-dropdown-indicator-complete-width,
+		14px
+	);
+
+	$multi-step-icon-active-color: var(
+		--multi-step-icon-active-color,
+		$component-active-color
+	);
+
+	$multi-step-icon-active-bg: var(
+		--multi-step-icon-active-bg,
+		$component-active-bg
+	);
+	$multi-step-icon-active-bg-image: null;
+	$multi-step-icon-active-bg-position: null;
+	$multi-step-icon-active-bg-size: var(
+		--multi-step-icon-active-bg-size,
+		$multi-step-icon-font-size
+	);
+
+	$multi-step-divider-active-bg: $multi-step-divider-bg;
+
+	$multi-step-icon-disabled-color: $gray-500;
+
+	$multi-step-icon-disabled-bg: var(
+		--multi-step-icon-disabled-bg,
+		$multi-step-icon-bg
+	);
+	$multi-step-icon-disabled-bg-image: null;
+	$multi-step-icon-disabled-bg-position: null;
+	$multi-step-icon-disabled-bg-size: var(--multi-step-icon-disabled-bg-size);
+	$multi-step-icon-disabled-cursor: var(
+		--multi-step-icon-disabled-cursor,
+		$disabled-cursor
+	);
+	$multi-step-icon-disabled-opacity: var(
+		--multi-step-icon-disabled-opacity,
+		1
+	);
+
+	$multi-step-icon-disabled-focus-box-shadow: var(
+		--multi-step-icon-disabled-focus-box-shadow,
+		none
+	);
+
+	$multi-step-divider-disabled-bg: var(
+		--multi-step-divider-disabled-bg,
+		$multi-step-icon-disabled-bg
+	);
+
+	$multi-step-title-disabled-color: var(
+		--multi-step-title-disabled-color,
+		$multi-step-icon-disabled-color
+	);
+
+	$multi-step-indicator-label-disabled-color: var(
+		--multi-step-indicator-label-disabled-color,
+		$multi-step-title-disabled-color
+	);
+
+	$multi-step-title-disabled: ();
+	$multi-step-title-disabled: map-deep-merge(
+		(
+			color: $multi-step-title-disabled-color,
+		),
+		$multi-step-title-disabled
+	);
+}

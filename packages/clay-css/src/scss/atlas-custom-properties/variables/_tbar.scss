@@ -1,0 +1,636 @@
+@if ($enable-atlas-custom-properties) {
+	$tbar-item-padding-x: var(--tbar-item-padding-x, 8px);
+	$tbar-item-padding-y: var(--tbar-item-padding-y, 0px);
+
+	// Tbar Stacked
+
+	$tbar-stacked: ();
+	$tbar-stacked: map-deep-merge(
+		(
+			display: inline-flex,
+			height: 100%,
+			padding-bottom: var(--tbar-stacked-padding-bottom, 8px),
+			padding-top: var(--tbar-stacked-padding-top, 8px),
+			tbar-nav: (
+				flex-direction: column,
+				min-width: 0,
+			),
+
+			tbar-item: (
+				align-items: center,
+				justify-content: flex-start,
+				padding-left: var(--tbar-stacked-tbar-item-padding-left, 0),
+				padding-right: var(--tbar-stacked-tbar-item-padding-right, 0),
+			),
+
+			tbar-item-expand: (
+				flex-shrink: 0,
+				min-width: 0,
+			),
+
+			tbar-divider-before: (
+				before: (
+					background-color: $body-color,
+					content: '',
+					display: block,
+					height: 1px,
+					margin-bottom: 4px,
+					margin-top: 4px,
+					width: 40px,
+				),
+			),
+
+			tbar-divider-after: (
+				after: (
+					background-color: $body-color,
+					content: '',
+					display: block,
+					height: 1px,
+					margin-bottom: 4px,
+					margin-top: 4px,
+					width: 40px,
+				),
+			),
+
+			tbar-btn-monospaced: (
+				border-color:
+					var(
+						--tbar-stacked-tbar-btn-monospaced-border-color,
+						transparent
+					),
+				border-radius:
+					var(--tbar-stacked-tbar-btn-monospaced-border-radius, 0),
+				border-width:
+					var(--tbar-stacked-tbar-btn-monospaced-border-width, 0),
+				color: var(--tbar-stacked-tbar-btn-monospaced-color, inherit),
+				height: var(--tbar-stacked-tbar-btn-monospaced-height, 40px),
+				margin-bottom:
+					var(--tbar-stacked-tbar-btn-monospaced-margin-bottom, 0),
+				margin-top:
+					var(--tbar-stacked-tbar-btn-monospaced-margin-top, 0),
+				overflow:
+					var(--tbar-stacked-tbar-btn-monospaced-overflow, visible),
+				padding-bottom:
+					var(--tbar-stacked-tbar-btn-monospaced-padding-bottom, 0),
+				padding-left:
+					var(--tbar-stacked-tbar-btn-monospaced-padding-left, 0),
+				padding-right:
+					var(--tbar-stacked-tbar-btn-monospaced-padding-right, 0),
+				padding-top:
+					var(--tbar-stacked-tbar-btn-monospaced-padding-top, 0),
+				position:
+					var(--tbar-stacked-tbar-btn-monospaced-position, relative),
+				width: var(--tbar-stacked-tbar-btn-monospaced-width, 40px),
+				focus: (
+					box-shadow: $component-focus-inset-box-shadow,
+				),
+
+				active: (
+					focus: (
+						box-shadow: $component-focus-inset-box-shadow,
+					),
+				),
+			),
+		),
+		$tbar-stacked
+	);
+
+	// Tbar Inline {xs|sm|md|lg|xl} Down
+
+	$tbar-inline-xs-down: ();
+	$tbar-inline-xs-down: map-deep-merge(
+		(
+			breakpoint-down: nth(map-keys($grid-breakpoints), 1),
+			tbar-item: (
+				padding-left: 0,
+			),
+		),
+		$tbar-inline-xs-down
+	);
+
+	$tbar-inline-sm-down: ();
+	$tbar-inline-sm-down: map-deep-merge(
+		(
+			breakpoint-down: nth(map-keys($grid-breakpoints), 2),
+			tbar-item: (
+				padding-left: 0,
+			),
+		),
+		$tbar-inline-sm-down
+	);
+
+	$tbar-inline-md-down: ();
+	$tbar-inline-md-down: map-deep-merge(
+		(
+			breakpoint-down: nth(map-keys($grid-breakpoints), 3),
+			tbar-item: (
+				padding-left: 0,
+			),
+		),
+		$tbar-inline-md-down
+	);
+
+	$tbar-inline-lg-down: ();
+	$tbar-inline-lg-down: map-deep-merge(
+		(
+			breakpoint-down: nth(map-keys($grid-breakpoints), 4),
+			tbar-item: (
+				padding-left: 0,
+			),
+		),
+		$tbar-inline-lg-down
+	);
+
+	$tbar-inline-xl-down: ();
+	$tbar-inline-xl-down: map-deep-merge(
+		(
+			breakpoint-down: nth(map-keys($grid-breakpoints), 5),
+			tbar-item: (
+				padding-left: 0,
+			),
+		),
+		$tbar-inline-xl-down
+	);
+
+	// Component Tbar
+
+	$component-tbar: ();
+	$component-tbar: map-deep-merge(
+		(
+			border-color: var(--component-tbar-border-color, $gray-300),
+			border-style: var(--component-tbar-border-style, solid),
+			border-width: var(--component-tbar-border-width, 0 0 1px 0),
+			color: var(--component-tbar-color, $gray-600),
+			height: var(--component-tbar-height, 56px),
+		),
+		$component-tbar
+	);
+
+	// Tbar Variants
+
+	$tbar-light: ();
+	$tbar-light: map-deep-merge(
+		(
+			background-color: $white,
+			box-shadow:
+				inset
+				1px
+				0
+				0
+				0
+				$gray-200#{','}
+				inset -1px
+				0
+				0
+				0
+				$gray-200,
+			color: $secondary,
+
+			tbar-divider-before: (
+				before: (
+					background-color: $gray-200,
+				),
+			),
+
+			tbar-divider-after: (
+				after: (
+					background-color: $gray-200,
+				),
+			),
+
+			tbar-btn-monospaced: (
+				hover: (
+					color: $dark,
+				),
+
+				focus: (
+					color: $dark,
+				),
+
+				disabled: (
+					color: inherit,
+				),
+
+				active: (
+					background-color: $gray-200,
+					color: $dark,
+				),
+			),
+		),
+		$tbar-light
+	);
+
+	$tbar-dark-d1: ();
+	$tbar-dark-d1: map-deep-merge(
+		(
+			background-color: $dark-d1,
+			box-shadow:
+				inset
+				1px
+				0
+				0
+				0
+				unquote('hsl(from #{$white} h s l / 0.06)')
+				#{','}
+				inset -1px
+				0
+				0
+				0
+				unquote('hsl(from #{$white} h s l / 0.06)'),
+			color: $gray-500,
+
+			tbar-divider-before: (
+				before: (
+					background-color:
+						unquote('hsl(from #{$white} h s l / 0.06)'),
+				),
+			),
+
+			tbar-divider-after: (
+				after: (
+					background-color:
+						unquote('hsl(from #{$white} h s l / 0.06)'),
+				),
+			),
+
+			tbar-btn-monospaced: (
+				hover: (
+					color: $white,
+				),
+
+				focus: (
+					color: $white,
+				),
+
+				disabled: (
+					color: inherit,
+				),
+
+				active: (
+					background-color:
+						unquote('hsl(from #{$white} h s l / 0.06)'),
+					color: $white,
+				),
+
+				active-class: (
+					after: (
+						background-color: $primary-l1,
+						bottom: 0,
+						content: '',
+						display: block,
+						left: 0,
+						position: absolute,
+						top: 0,
+						width: 4px,
+					),
+				),
+			),
+		),
+		$tbar-dark-d1
+	);
+
+	$tbar-dark-l2: ();
+	$tbar-dark-l2: map-deep-merge(
+		(
+			background-color: $dark-l2,
+			box-shadow:
+				inset
+				1px
+				0
+				0
+				0
+				unquote('hsl(from #{$white} h s l / 0.06)')
+				#{','}
+				inset -1px
+				0
+				0
+				0
+				unquote('hsl(from #{$white} h s l / 0.06)'),
+			border-color: unquote('hsl(from #{$white} h s l / 0.06)'),
+			color: $gray-500,
+
+			tbar-divider-before: (
+				before: (
+					background-color:
+						unquote('hsl(from #{$white} h s l / 0.06)'),
+				),
+			),
+
+			tbar-divider-after: (
+				after: (
+					background-color:
+						unquote('hsl(from #{$white} h s l / 0.06)'),
+				),
+			),
+
+			tbar-btn-monospaced: (
+				hover: (
+					color: $white,
+				),
+
+				focus: (
+					color: $white,
+				),
+
+				disabled: (
+					color: inherit,
+				),
+
+				active: (
+					background-color:
+						unquote('hsl(from #{$white} h s l / 0.06)'),
+					color: $white,
+				),
+			),
+		),
+		$tbar-dark-l2
+	);
+
+	// Subnav Tbar
+
+	$subnav-tbar-component-title: ();
+	$subnav-tbar-component-title: map-deep-merge(
+		(
+			display: inline-block,
+			font-size: var(--subnav-tbar-component-title-font-size, 14px),
+			font-weight:
+				var(
+					--subnav-tbar-component-title-font-weight,
+					$font-weight-semi-bold
+				),
+			line-height: var(--subnav-tbar-component-title-line-height, 1.45),
+			margin-bottom:
+				var(--subnav-tbar-component-title-margin-bottom, 4px),
+			margin-top: var(--subnav-tbar-component-title-margin-top, 4px),
+			max-width: 100%,
+		),
+		$subnav-tbar-component-title
+	);
+
+	$subnav-tbar-component-link: ();
+	$subnav-tbar-component-link: map-deep-merge(
+		(
+			color: var(--subnav-tbar-component-link-color, $link-color),
+			font-weight:
+				var(
+					--subnav-tbar-component-link-font-weight,
+					$font-weight-semi-bold
+				),
+			hover: (
+				color:
+					var(
+						--subnav-tbar-component-link-hover-color,
+						$link-hover-color
+					),
+			),
+		),
+		$subnav-tbar-component-link
+	);
+
+	$subnav-tbar-component-text: ();
+	$subnav-tbar-component-text: map-deep-merge(
+		(
+			display: inline-block,
+			line-height: var(--subnav-tbar-component-text-line-height, 1.45),
+			margin-bottom: var(--subnav-tbar-component-text-margin-bottom, 4px),
+			margin-top: var(--subnav-tbar-component-text-margin-top, 4px),
+			max-width: 100%,
+		),
+		$subnav-tbar-component-text
+	);
+
+	$subnav-tbar: ();
+	$subnav-tbar: map-deep-merge(
+		(
+			font-size: var(--subnav-tbar-font-size, 14px),
+			tbar-section: (
+				text-align: left,
+			),
+
+			strong: (
+				font-weight: $font-weight-semi-bold,
+			),
+
+			tbar-item-padding: (
+				padding-left: var(--subnav-tbar-item-padding-left, 8px),
+				padding-right: var(--subnav-tbar-item-padding-right, 8px),
+			),
+
+			tbar-btn: (
+				height: var(--subnav-tbar-btn-height, 24px),
+				line-height: var(--subnav-tbar-btn-line-height, 1),
+				margin-bottom: var(--subnav-tbar-btn-margin-bottom, 2px),
+				margin-top: var(--subnav-tbar-btn-margin-top, 2px),
+				padding-bottom: var(--subnav-tbar-btn-padding-bottom, 0),
+				padding-top: var(--subnav-tbar-btn-padding-top, 0),
+			),
+
+			tbar-btn-monospaced: (
+				margin-bottom:
+					var(--subnav-tbar-btn-monospaced-margin-bottom, 2px),
+				margin-top: var(--subnav-tbar-btn-monospaced-margin-top, 2px),
+				padding: var(--subnav-tbar-btn-monospaced-padding, 4px),
+			),
+
+			component-link: $subnav-tbar-component-link,
+
+			component-title: $subnav-tbar-component-title,
+
+			component-text: $subnav-tbar-component-text,
+
+			component-label: (
+				font-weight:
+					var(
+						--subnav-tbar-component-label-font-weight,
+						$font-weight-normal
+					),
+			),
+
+			tbar-link: (
+				margin-bottom: var(--subnav-tbar-link-margin-bottom, 2px),
+				margin-top: var(--subnav-tbar-link-margin-top, 2px),
+				padding-bottom: var(--subnav-tbar-link-padding-bottom, 1.5px),
+				padding-left: var(--subnav-tbar-link-padding-left, 4px),
+				padding-right: var(--subnav-tbar-link-padding-right, 4px),
+				padding-top: var(--subnav-tbar-link-padding-top, 1.5px),
+			),
+
+			tbar-link-monospaced: (
+				height: var(--subnav-tbar-link-monospaced-height, 24px),
+				margin-bottom:
+					var(--subnav-tbar-link-monospaced-margin-bottom, 2px),
+				margin-top: var(--subnav-tbar-link-monospaced-margin-top, 2px),
+				width: var(--subnav-tbar-link-monospaced-width, 24px),
+			),
+		),
+		$subnav-tbar
+	);
+
+	// Subnav Tbar Variants
+
+	$subnav-tbar-light: ();
+	$subnav-tbar-light: map-deep-merge(
+		(
+			background-color:
+				var(
+					--subnav-tbar-light-background-color,
+					setter(map-get($subnav-tbar-light, bg-color), $light-l2)
+				),
+			color: var(--subnav-tbar-light-color, $gray-600),
+			padding-y: var(--subnav-tbar-light-padding-y, 2px),
+		),
+		$subnav-tbar-light
+	);
+
+	// Subnav Tbar Primary
+
+	$subnav-tbar-primary-component-link: ();
+	$subnav-tbar-primary-component-link: map-deep-merge(
+		(
+			color: var(--subnav-tbar-primary-component-link-color, $gray-900),
+			hover: (
+				color:
+					var(
+						--subnav-tbar-primary-component-link-hover-color,
+						$gray-900
+					),
+			),
+
+			disabled: (
+				color:
+					var(
+						--subnav-tbar-primary-component-link-disabled-color,
+						$gray-600
+					),
+				cursor: $disabled-cursor,
+				opacity:
+					var(
+						--subnav-tbar-primary-component-link-disabled-opacity,
+						0.65
+					),
+				text-decoration: none,
+			),
+		),
+		$subnav-tbar-primary-component-link
+	);
+
+	$subnav-tbar-primary-component-label-close: ();
+	$subnav-tbar-primary-component-label-close: map-deep-merge(
+		(
+			focus: (
+				color: inherit,
+			),
+
+			disabled: (
+				color: $gray-600,
+				opacity: 0.65,
+			),
+		),
+		$subnav-tbar-primary-component-label-close
+	);
+
+	$subnav-tbar-primary-component-label: ();
+	$subnav-tbar-primary-component-label: map-deep-merge(
+		(
+			close: $subnav-tbar-primary-component-label-close,
+		),
+		$subnav-tbar-primary-component-label
+	);
+
+	$subnav-tbar-primary-tbar-label-size: ();
+	$subnav-tbar-primary-tbar-label-size: map-deep-merge(
+		(
+			font-size: var(--subnav-tbar-primary-label-size-font-size, 12px),
+			margin-right: var(--subnav-tbar-primary-label-size-margin-right, 0),
+			padding-bottom:
+				var(--subnav-tbar-primary-label-size-padding-bottom, 5px),
+			padding-left:
+				var(--subnav-tbar-primary-label-size-padding-left, 10px),
+			padding-right:
+				var(--subnav-tbar-primary-label-size-padding-right, 10px),
+			padding-top: var(--subnav-tbar-primary-label-size-padding-top, 5px),
+			text-transform: none,
+		),
+		$subnav-tbar-primary-tbar-label-size
+	);
+
+	$subnav-tbar-primary: ();
+	$subnav-tbar-primary: map-deep-merge(
+		(
+			background-color:
+				var(
+					--subnav-tbar-primary-background-color,
+					setter(map-get($subnav-tbar-primary, bg-color), $primary-l2)
+				),
+			padding-bottom: var(--subnav-tbar-primary-padding-bottom, 10px),
+			padding-left: var(--subnav-tbar-primary-padding-left, 4px),
+			padding-right: var(--subnav-tbar-primary-padding-right, 4px),
+			padding-top: var(--subnav-tbar-primary-padding-top, 10px),
+			tbar-item: (
+				justify-content: flex-start,
+				padding-left: var(--subnav-tbar-primary-item-padding-left, 4px),
+				padding-right:
+					var(--subnav-tbar-primary-item-padding-right, 4px),
+			),
+
+			tbar-link-monospaced: (
+				border-radius:
+					var(--subnav-tbar-primary-link-monospaced-border-radius, 0),
+				border-width:
+					var(--subnav-tbar-primary-link-monospaced-border-width, 0),
+				height: var(--subnav-tbar-primary-link-monospaced-height, 48px),
+				margin-bottom:
+					var(
+						--subnav-tbar-primary-link-monospaced-margin-bottom,
+						-10px
+					),
+				margin-top:
+					var(
+						--subnav-tbar-primary-link-monospaced-margin-top,
+						-10px
+					),
+				width: var(--subnav-tbar-primary-link-monospaced-width, 48px),
+			),
+
+			component-link: $subnav-tbar-primary-component-link,
+
+			component-label: $subnav-tbar-primary-component-label,
+
+			tbar-label: $subnav-tbar-primary-tbar-label-size,
+		),
+		$subnav-tbar-primary
+	);
+
+	// Subnav Tbar Primary Disabled
+
+	$subnav-tbar-primary-disabled-component-label: ();
+	$subnav-tbar-primary-disabled-component-label: map-deep-merge(
+		(
+			border-color:
+				var(
+					--subnav-tbar-primary-disabled-component-label-border-color,
+					#8e94aa
+				),
+		),
+		$subnav-tbar-primary-disabled-component-label
+	);
+
+	$subnav-tbar-primary-disabled: ();
+	$subnav-tbar-primary-disabled: map-deep-merge(
+		(
+			background-color:
+				var(
+					--subnav-tbar-primary-disabled-background-color,
+					setter(
+						map-get($subnav-tbar-primary-disabled, bg-color),
+						unquote(
+							'hsl(from #{$primary} h calc(s - 27.03) calc(l + 37.06))'
+						)
+					)
+				),
+			color: var(--subnav-tbar-primary-disabled-color, #8e94aa),
+			component-label: $subnav-tbar-primary-disabled-component-label,
+		),
+		$subnav-tbar-primary-disabled
+	);
+}

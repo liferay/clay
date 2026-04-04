@@ -1,0 +1,1127 @@
+@if ($enable-atlas-custom-properties) {
+	$custom-forms-transition:
+		background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out,
+		box-shadow 0.15s ease-in-out;
+
+	// Form File
+
+	$form-file: ();
+	$form-file: map-deep-merge(
+		(
+			border-radius: clay-enable-rounded($input-border-radius),
+			display: flex,
+			position: relative,
+			transition: clay-enable-transitions($input-transition),
+			focus-within: (
+				background-color: $input-focus-bg,
+				box-shadow: $input-focus-box-shadow,
+				outline: 0,
+				z-index: 1,
+			),
+		),
+		$form-file
+	);
+
+	// Custom Control Indicator
+
+	$custom-control-indicator-size: 1rem;
+
+	$custom-control-indicator-bg: $white;
+	$custom-control-indicator-bg-size: 8px 8px;
+	$custom-control-indicator-border-color: $gray-600;
+	$custom-control-indicator-border-style: solid;
+	$custom-control-indicator-border-width: $border-width;
+	$custom-control-indicator-box-shadow: none;
+	$custom-control-indicator-position-top: 0px;
+
+	$custom-control-indicator-focus-border-color: $custom-control-indicator-border-color;
+	$custom-control-indicator-focus-box-shadow: $component-focus-box-shadow;
+
+	$custom-control-indicator-active-bg: $custom-control-indicator-bg;
+	$custom-control-indicator-active-border-color: $custom-control-indicator-border-color;
+	$custom-control-indicator-active-box-shadow: none;
+	$custom-control-indicator-active-color: $component-active-color;
+
+	$custom-control-indicator-disabled-bg: if(
+		variable-exists(input-disabled-bg),
+		$input-disabled-bg,
+		$gray-200
+	);
+	$custom-control-indicator-disabled-border-color: $secondary-l3;
+	$custom-control-indicator-disabled-cursor: $disabled-cursor;
+
+	// Custom Control Indicator Checked
+
+	$custom-control-indicator-checked-bg: $component-active-bg;
+	$custom-control-indicator-checked-color: $component-active-color;
+	$custom-control-indicator-checked-border-color: $component-active-bg;
+	$custom-control-indicator-checked-box-shadow: none;
+
+	// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-active-bg` instead
+
+	$custom-control-indicator-active-checked-bg: $component-active-bg;
+
+	$custom-control-indicator-checked-active-bg: $custom-control-indicator-active-checked-bg;
+
+	// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-active-border-color` instead
+
+	$custom-control-indicator-active-checked-border-color: $custom-control-indicator-checked-active-bg;
+
+	$custom-control-indicator-checked-active-border-color: $custom-control-indicator-active-checked-border-color;
+
+	// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
+
+	$custom-control-indicator-disabled-checked-bg: unquote(
+		'hsl(from #{$component-active-bg} h s calc(l + 32.94))'
+	);
+
+	$custom-control-indicator-checked-disabled-bg: $custom-control-indicator-disabled-checked-bg;
+
+	// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-border-color` instead
+
+	$custom-control-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-bg;
+
+	$custom-control-indicator-checked-disabled-border-color: $custom-control-indicator-disabled-checked-border-color;
+
+	// .custom-control
+
+	$custom-control-cursor: null;
+	$custom-control-gutter: 0.5rem;
+	$custom-control-spacer-x: 1rem;
+
+	// @deprecated after of v3.5.0 use the Sass map `$custom-control` instead
+
+	$custom-control-margin-bottom: 0.5rem;
+
+	// @deprecated after of v3.5.0 use the Sass map `$custom-control` instead
+
+	$custom-control-margin-top: null;
+
+	// @deprecated after of v3.5.0 use the Sass map `$custom-control` instead
+
+	$custom-control-min-height: 1.5rem;
+
+	// .custom-control-label
+
+	// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
+	$custom-control-description-cursor: if(
+		variable-exists(form-check-label-cursor),
+		$form-check-label-cursor,
+		$link-cursor
+	);
+
+	// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
+	$custom-control-description-font-size: if(
+		variable-exists(input-label-font-size),
+		$input-label-font-size,
+		0.875rem
+	);
+
+	// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
+	$custom-control-description-font-weight: $font-weight-normal;
+
+	// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
+	$custom-control-description-line-height: $custom-control-min-height;
+
+	// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-text` instead
+
+	$custom-control-description-padding-left: 0.5rem;
+
+	// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-disabled` instead
+
+	$custom-control-description-disabled-cursor: $disabled-cursor;
+
+	// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-text-small` instead
+
+	$custom-control-description-small-font-size: 100%;
+
+	$custom-control-label-color: null;
+
+	$custom-control-label: ();
+	$custom-control-label: map-deep-merge(
+		(
+			color: $custom-control-label-color,
+			cursor: $custom-control-description-cursor,
+			font-size: $custom-control-description-font-size,
+			font-weight: $custom-control-description-font-weight,
+			line-height: $custom-control-description-line-height,
+			margin-bottom: 0rem,
+			position: static,
+			vertical-align: top,
+
+			before: (
+				background-color: $custom-control-indicator-bg,
+				border-color: $custom-control-indicator-border-color,
+				border-style: $custom-control-indicator-border-style,
+				border-width: $custom-control-indicator-border-width,
+				box-shadow:
+					clay-enable-shadows($custom-control-indicator-box-shadow),
+				content: '',
+				display: block,
+				float: left,
+				font-size: $custom-control-indicator-size,
+				height: $custom-control-indicator-size,
+				left: 0rem,
+				position: relative,
+				top: 0.25rem,
+				transition: clay-enable-transitions($custom-forms-transition),
+				width: $custom-control-indicator-size,
+			),
+
+			after: (
+				background:
+					no-repeat
+					50% /
+					#{$custom-control-indicator-bg-size},
+				border-radius: $rounded-circle-border-radius,
+				content: '',
+				display: block,
+				height: 1.5rem,
+				left: -0.25rem,
+				position: absolute,
+				top: $custom-control-indicator-position-top,
+				width: 1.5rem,
+			),
+		),
+		$custom-control-label
+	);
+
+	$custom-control-label-disabled-color: if(
+		variable-exists(input-label-disabled-color),
+		$input-label-disabled-color,
+		$gray-500
+	);
+
+	$custom-control-label-disabled: ();
+	$custom-control-label-disabled: map-deep-merge(
+		(
+			color: $custom-control-label-disabled-color,
+			cursor: $custom-control-description-disabled-cursor,
+
+			before: (
+				background-color: $custom-control-indicator-disabled-bg,
+				border-color: $custom-control-indicator-disabled-border-color,
+				box-shadow: none,
+			),
+		),
+		$custom-control-label-disabled
+	);
+
+	// label.custom-control-label
+
+	$label-custom-control-label: ();
+	$label-custom-control-label: map-deep-merge(
+		(
+			font-size: map-get($custom-control-label, font-size),
+		),
+		$label-custom-control-label
+	);
+
+	// .custom-control-label-text
+
+	$custom-control-label-text: ();
+	$custom-control-label-text: map-deep-merge(
+		(
+			padding-left: $custom-control-description-padding-left,
+		),
+		$custom-control-label-text
+	);
+
+	// .custom-control-label-text small, .custom-control-label-text .small
+
+	$custom-control-label-text-small: ();
+	$custom-control-label-text-small: map-merge(
+		(
+			font-size: $custom-control-description-small-font-size,
+		),
+		$custom-control-label-text-small
+	);
+
+	$custom-control: ();
+	$custom-control: map-deep-merge(
+		(
+			cursor: $custom-control-cursor,
+			display: block,
+			line-height: 1,
+			margin-bottom: $custom-control-margin-bottom,
+			margin-top: $custom-control-margin-top,
+			min-height: $custom-control-min-height,
+			position: relative,
+			text-align: left,
+
+			only-child: (
+				margin-bottom: 0rem,
+			),
+
+			label: (
+				cursor: map-get($custom-control-label, cursor),
+				display: inline,
+				font-size: $font-size-base,
+				margin-bottom: 0rem,
+			),
+		),
+		$custom-control
+	);
+
+	// .custom-control-input
+
+	$custom-control-input: ();
+	$custom-control-input: map-deep-merge(
+		(
+			cursor: $link-cursor,
+			height: 1.5rem,
+			left: -0.25rem,
+			opacity: 0,
+			position: absolute,
+			top: $custom-control-indicator-position-top,
+			width: 1.5rem,
+			z-index: 1,
+
+			focus: (
+				custom-control-label: (
+					before: (
+						border-color:
+							$custom-control-indicator-focus-border-color,
+					),
+
+					after: (
+						box-shadow: $custom-control-indicator-focus-box-shadow,
+					),
+				),
+			),
+
+			active: (
+				custom-control-label: (
+					before: (
+						background-color: $custom-control-indicator-active-bg,
+						border-color:
+							$custom-control-indicator-active-border-color,
+						box-shadow: $custom-control-indicator-active-box-shadow,
+						color: $custom-control-indicator-active-color,
+					),
+				),
+			),
+
+			disabled: (
+				custom-control-label: $custom-control-label-disabled,
+			),
+
+			readonly: (
+				custom-control-label: (
+					color: $gray-900,
+
+					before: (
+						background-color: $gray-200,
+						border-color: $secondary-l3,
+					),
+				),
+
+				disabled: (
+					custom-control-label: (
+						color: $custom-control-label-disabled-color,
+					),
+				),
+			),
+
+			checked: (
+				custom-control-label: (
+					before: (
+						background-color: $custom-control-indicator-checked-bg,
+						border-color:
+							$custom-control-indicator-checked-border-color,
+						box-shadow:
+							clay-enable-shadows(
+								$custom-control-indicator-checked-box-shadow
+							),
+						color: $custom-control-indicator-checked-color,
+					),
+				),
+
+				active: (
+					custom-control-label: (
+						before: (
+							background-color:
+								$custom-control-indicator-checked-active-bg,
+							border-color:
+								$custom-control-indicator-checked-active-border-color,
+						),
+					),
+				),
+
+				disabled: (
+					cursor: $custom-control-indicator-disabled-cursor,
+
+					custom-control-label: (
+						before: (
+							background-color:
+								$custom-control-indicator-disabled-bg,
+							box-shadow: none,
+						),
+					),
+				),
+
+				readonly: (
+					custom-control-label: (
+						before: (
+							background-color: $custom-control-indicator-bg,
+							border-color:
+								$custom-control-indicator-border-color,
+						),
+					),
+				),
+			),
+		),
+		$custom-control-input
+	);
+
+	// Custom Control Primary
+
+	$custom-control-primary-label-text: ();
+	$custom-control-primary-label-text: map-deep-merge(
+		(
+			font-weight: $font-weight-semi-bold,
+		),
+		$custom-control-primary-label-text
+	);
+
+	// Custom Checkbox
+
+	$custom-checkbox-indicator-border-radius: 0.125rem;
+
+	$custom-checkbox-indicator-icon-checked: clay-icon(check-small, #fff);
+	$custom-checkbox-indicator-icon-checked-bg-size: 1rem;
+
+	$custom-checkbox-indicator-indeterminate-bg: $component-active-bg;
+	$custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg;
+
+	$custom-control-indicator-indeterminate-border-color: $custom-control-indicator-checked-active-bg;
+
+	$custom-checkbox-indicator-indeterminate-box-shadow: none;
+	$custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color;
+
+	$custom-checkbox-indicator-icon-indeterminate: clay-icon(hr, #fff);
+	$custom-checkbox-indicator-icon-indeterminate-bg-size: 1rem;
+
+	$custom-checkbox: ();
+	$custom-checkbox: map-deep-merge(
+		(
+			custom-control-input: (
+				custom-control-label: (
+					before: (
+						border-radius:
+							clay-enable-rounded(
+								$custom-checkbox-indicator-border-radius
+							),
+					),
+				),
+
+				checked: (
+					custom-control-label: (
+						before: (),
+						after: (
+							background-image:
+								$custom-checkbox-indicator-icon-checked,
+							background-size:
+								$custom-checkbox-indicator-icon-checked-bg-size,
+						),
+					),
+
+					disabled: (
+						custom-control-label: (
+							before: (
+								background-color:
+									$custom-control-indicator-checked-disabled-bg,
+								border-color:
+									$custom-control-indicator-checked-disabled-border-color,
+							),
+						),
+					),
+
+					readonly: (
+						custom-control-label: (
+							before: (
+								background-color: $custom-control-indicator-bg,
+								border-color: $secondary-l2,
+							),
+
+							after: (
+								background-image:
+									clay-icon(check-small, #6b6c7e),
+							),
+						),
+
+						disabled: (
+							custom-control-label: (
+								before: (
+									opacity: 0.4,
+								),
+
+								after: (
+									opacity: 0.4,
+								),
+							),
+						),
+					),
+				),
+
+				indeterminate: (
+					custom-control-label: (
+						before: (
+							background-color:
+								$custom-checkbox-indicator-indeterminate-bg,
+							border-color:
+								$custom-control-indicator-indeterminate-border-color,
+							box-shadow:
+								$custom-checkbox-indicator-indeterminate-box-shadow,
+						),
+
+						after: (
+							background-image:
+								$custom-checkbox-indicator-icon-indeterminate,
+							background-size:
+								$custom-checkbox-indicator-icon-indeterminate-bg-size,
+						),
+					),
+
+					disabled: (
+						custom-control-label: (
+							before: (
+								background-color:
+									$custom-control-indicator-checked-disabled-bg,
+								border-color:
+									$custom-control-indicator-checked-disabled-border-color,
+							),
+						),
+					),
+
+					readonly: (
+						custom-control-label: (
+							before: (
+								background-color: $custom-control-indicator-bg,
+								border-color: $secondary-l2,
+							),
+
+							after: (
+								background-image: clay-icon(hr, #6b6c7e),
+							),
+						),
+
+						disabled: (
+							custom-control-label: (
+								before: (
+									opacity: 0.4,
+								),
+
+								after: (
+									opacity: 0.4,
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+		$custom-checkbox
+	);
+
+	// Custom Radio
+
+	$custom-radio-indicator-border-radius: 50%;
+
+	$custom-radio-indicator-icon-checked: clay-icon(circle, #fff);
+	$custom-radio-indicator-icon-checked-bg-size: 0.5rem;
+
+	$custom-radio-indicator-disabled-border-color: $custom-control-indicator-disabled-bg;
+
+	// @deprecated as of v2.2.1 use `$custom-radio-indicator-checked-disabled-border-color` instead
+
+	$custom-radio-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-border-color;
+
+	$custom-radio-indicator-checked-disabled-border-color: $custom-radio-indicator-disabled-checked-border-color;
+
+	$custom-radio: ();
+	$custom-radio: map-deep-merge(
+		(
+			custom-control-input: (
+				custom-control-label: (
+					before: (
+						border-radius: $custom-radio-indicator-border-radius,
+					),
+				),
+
+				disabled: (
+					custom-control-label: (
+						before: (
+							border-color:
+								$custom-radio-indicator-disabled-border-color,
+						),
+					),
+				),
+
+				checked: (
+					custom-control-label: (
+						after: (
+							background-image:
+								$custom-radio-indicator-icon-checked,
+							background-size:
+								$custom-radio-indicator-icon-checked-bg-size,
+						),
+					),
+
+					disabled: (
+						custom-control-label: (
+							before: (
+								background-color:
+									$custom-control-indicator-checked-disabled-bg,
+								border-color:
+									$custom-radio-indicator-checked-disabled-border-color,
+							),
+						),
+					),
+				),
+			),
+		),
+		$custom-radio
+	);
+
+	$custom-control-outside: ();
+	$custom-control-outside: map-deep-merge(
+		(
+			label: (
+				display: inline-block,
+				padding-left:
+					calc(
+						#{$custom-control-indicator-size} +
+							#{$custom-control-description-padding-left}
+					),
+			),
+
+			custom-control-input: (
+				custom-control-label: (
+					before: (
+						position: absolute,
+					),
+				),
+			),
+
+			custom-control-label-text: (
+				padding-left: 0rem,
+			),
+		),
+		$custom-control-outside
+	);
+
+	// Custom Switch
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-switch-width: calc(#{$custom-control-indicator-size} * 1.75);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-switch-indicator-border-radius: calc(
+		#{$custom-control-indicator-size} * 0.5
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-switch-indicator-size: calc(
+		#{$custom-control-indicator-size} -
+			(#{$custom-control-indicator-border-width} * 4)
+	);
+
+	// Custom Select
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-bg: if(variable-exists(input-bg), $input-bg, $white);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-bg-size: 8px 10px;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-border-color: if(
+		variable-exists(input-border-color),
+		$input-border-color,
+		$gray-400
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-border-radius: $border-radius;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-border-width: if(
+		variable-exists(input-border-width),
+		$input-border-width,
+		0.0625rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-box-shadow: inset
+		0
+		1px
+		2px
+		unquote('hsl(from #{$black} h s l / 0.075)');
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-color: if(
+		variable-exists(input-color),
+		$input-color,
+		$gray-700
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-font-family: if(
+		variable-exists(input-font-family),
+		$input-font-family,
+		null
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-font-size: if(
+		variable-exists(input-font-size),
+		$input-font-size,
+		$font-size-base
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-font-weight: if(
+		variable-exists(input-font-weight),
+		$input-font-weight,
+		$font-weight-base
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-height: if(
+		variable-exists(input-height),
+		$input-height,
+		2.375rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-indicator-padding: 1rem;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-line-height: if(
+		variable-exists(input-line-height),
+		$input-line-height,
+		$line-height-base
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-padding-x: if(
+		variable-exists(input-padding-x),
+		$input-padding-x,
+		0.75rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-padding-y: if(
+		variable-exists(input-padding-y),
+		$input-padding-y,
+		0.375rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-indicator-color: $gray-800;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-indicator: clay-svg-url(
+		"<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>"
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-background: $custom-select-indicator
+		no-repeat
+		right
+		$custom-select-padding-x
+		center /
+		$custom-select-bg-size;
+
+	// Custom Select Focus
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-focus-border-color: if(
+		variable-exists(input-focus-border-color),
+		$input-focus-border-color,
+		unquote('hsl(from #{$component-active-bg} h s calc(l + 25))')
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-focus-width: if(
+		variable-exists(input-focus-width),
+		$input-focus-width,
+		0.2rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-focus-box-shadow: 0
+		0
+		0
+		$custom-select-focus-width
+		$custom-select-focus-border-color;
+
+	// Custom Select Disabled
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-disabled-bg: $gray-200;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-disabled-color: $gray-600;
+
+	// Custom Select Feedback
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-feedback-icon-padding-right: calc(
+		(1em * 0.75) +
+			(2 * #{$custom-select-padding-y} * 0.75) +
+			#{$custom-select-padding-x} +
+			#{$custom-select-indicator-padding}
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-feedback-icon-position: center
+		right
+		calc(#{$custom-select-padding-x} + #{$custom-select-indicator-padding});
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-feedback-icon-size: 18px 18px;
+
+	// Custom Select Lg
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-font-size-lg: if(
+		variable-exists(input-font-size-lg),
+		$input-font-size-lg,
+		$font-size-lg
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-height-lg: if(
+		variable-exists(input-height-lg),
+		$input-height-lg,
+		3rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-padding-x-lg: if(
+		variable-exists(input-padding-x-lg),
+		$input-padding-x-lg,
+		1rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-padding-y-lg: if(
+		variable-exists(input-padding-y-lg),
+		$input-padding-y-lg,
+		0.5rem
+	);
+
+	// Custom Select Sm
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-font-size-sm: if(
+		variable-exists(input-font-size-sm),
+		$input-font-size-sm,
+		$font-size-sm
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-height-sm: if(
+		variable-exists(input-height-sm),
+		$input-height-sm,
+		1.9375rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-padding-x-sm: if(
+		variable-exists(input-padding-x-sm),
+		$input-padding-x-sm,
+		0.5rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-select-padding-y-sm: if(
+		variable-exists(input-padding-y-sm),
+		$input-padding-y-sm,
+		0.25rem
+	);
+
+	// Custom Range
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-track-bg: $gray-300;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-track-border-radius: 1rem;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-track-box-shadow: inset
+		0
+		0.25rem
+		0.25rem
+		unquote('hsl(from #{$black} h s l / 0.1)');
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-track-cursor: pointer;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-track-height: 0.5rem;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-track-width: 100%;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-bg: $component-active-bg;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-border: 0px;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-border-radius: 1rem;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-box-shadow: 0
+		0.1rem
+		0.25rem
+		unquote('hsl(from #{$black} h s l / 0.1)');
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-width: 1rem;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-height: $custom-range-thumb-width;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-focus-box-shadow:
+		0 0 0 1px $body-bg,
+		if(
+			variable-exists(input-focus-box-shadow),
+			$input-focus-box-shadow,
+			$component-focus-box-shadow
+		);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-focus-box-shadow-width: if(
+		variable-exists(input-focus-width),
+		$input-focus-width,
+		0.2rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-active-bg: unquote(
+		'hsl(from #{$component-active-bg} h s calc(l + 35))'
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-range-thumb-disabled-bg: $gray-500;
+
+	// Custom File
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-bg: if(variable-exists(input-bg), $input-bg, $white);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-border-color: if(
+		variable-exists(input-border-color),
+		$input-border-color,
+		$gray-400
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-border-width: if(
+		variable-exists(input-border-width),
+		$input-border-width,
+		0.0625rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-border-radius: if(
+		variable-exists(input-border-radius),
+		$input-border-radius,
+		$border-radius
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-box-shadow: if(
+		variable-exists(input-box-shadow),
+		$input-box-shadow,
+		inset 0 1px 1px unquote('hsl(from #{$black} h s l / 0.075)')
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-color: if(
+		variable-exists(input-color),
+		$input-color,
+		$gray-700
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-font-family: if(
+		variable-exists(input-font-family),
+		$input-font-family,
+		null
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-font-weight: if(
+		variable-exists(input-font-weight),
+		$input-font-weight,
+		$font-weight-base
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-height-inner: 36px;
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-height: if(
+		variable-exists(input-height),
+		$input-height,
+		2.375rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-line-height: if(
+		variable-exists(input-line-height),
+		$input-line-height,
+		$line-height-base
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-padding-x: if(
+		variable-exists(input-padding-x),
+		$input-padding-x,
+		0.75rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-padding-y: if(
+		variable-exists(input-padding-y),
+		$input-padding-y,
+		0.375rem
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-focus-border-color: if(
+		variable-exists(input-focus-border-color),
+		$input-focus-border-color,
+		unquote('hsl(from #{$component-active-bg} h s calc(l + 25))')
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-focus-box-shadow: if(
+		variable-exists(input-focus-box-shadow),
+		$input-focus-box-shadow,
+		$component-focus-box-shadow
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-disabled-bg: if(
+		variable-exists(input-disabled-bg),
+		$input-disabled-bg,
+		$gray-200
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-button-bg: if(
+		variable-exists(input-group-addon-bg),
+		$input-group-addon-bg,
+		$gray-200
+	);
+
+	// @deprecated as of v3.x with no replacement
+
+	$custom-file-button-color: $custom-file-color;
+
+	// .custom-file-label::after
+
+	// @deprecated as of v3.x with no replacement. See https://issues.liferay.com/browse/LPS-147457 and https://github.com/sass/sass/issues/1395
+
+	$custom-file-label-after-content: unquote("'\\FEFF Browse'");
+
+	$custom-file-text: ();
+
+	// @deprecated as of v3.x with no replacement. See https://issues.liferay.com/browse/LPS-147457 and https://github.com/sass/sass/issues/1395
+
+	$custom-file-text: map-deep-merge(
+		(
+			en: unquote("'\\FEFF Browse'"),
+		),
+		$custom-file-text
+	);
+
+	// @deprecated as of v3.x with no replacement. See https://issues.liferay.com/browse/LPS-147457.
+
+	$custom-file-text-data-browse: unquote("'\\FEFF' attr(data-browse)");
+}

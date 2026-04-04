@@ -1,0 +1,1101 @@
+@if ($enable-atlas-custom-properties) {
+	$pagination-bg: var(--pagination-background-color, transparent);
+	$pagination-border-color: var(--pagination-border-color, $pagination-bg);
+	$pagination-border-width: var(--pagination-border-width, 1px);
+	$pagination-color: var(--pagination-color, $gray-600);
+	$pagination-font-size: var(--pagination-font-size, 14px);
+	$pagination-line-height: var(--pagination-line-height, 1);
+	$pagination-padding-x: var(--pagination-padding-x, 10px);
+	$pagination-padding-y: var(--pagination-padding-y, 0);
+
+	$pagination-hover-bg: var(
+		--pagination-hover-bg,
+		unquote('hsl(from #{$gray-900} h s l / 0.04)')
+	);
+	$pagination-hover-border-color: var(
+		--pagination-hover-border-color,
+		transparent
+	);
+	$pagination-hover-color: var(--pagination-hover-color, $gray-900);
+
+	$pagination-focus-box-shadow: var(
+		--pagination-focus-box-shadow,
+		$component-focus-box-shadow
+	);
+	$pagination-focus-outline: 0;
+
+	$pagination-active-bg: var(
+		--pagination-active-bg,
+		unquote('hsl(from #{$primary} h s l / 0.06)')
+	);
+	$pagination-active-border-color: var(
+		--pagination-active-border-color,
+		transparent
+	);
+	$pagination-active-color: var(--pagination-active-color, $gray-900);
+
+	$pagination-disabled-bg: var(--pagination-disabled-bg, transparent);
+	$pagination-disabled-border-color: var(
+		--pagination-disabled-border-color,
+		$pagination-disabled-bg
+	);
+	$pagination-disabled-color: var(--pagination-disabled-color, $gray-600);
+
+	// Pagination Item
+
+	$pagination-item-height: 32px;
+
+	// @deprecated as of v2 use the Sass map `$pagination-item` instead
+
+	$pagination-item-margin-x: 4px;
+
+	// @deprecated as of v2 use the Sass map `$pagination-item` instead
+
+	$pagination-item-margin-y: 0px;
+
+	$pagination-item: ();
+	$pagination-item: map-deep-merge(
+		(
+			margin-bottom:
+				var(--pagination-item-margin-bottom, $pagination-item-margin-y),
+			margin-left:
+				var(--pagination-item-margin-left, $pagination-item-margin-x),
+			margin-right:
+				var(--pagination-item-margin-right, $pagination-item-margin-x),
+			margin-top:
+				var(--pagination-item-margin-top, $pagination-item-margin-y),
+		),
+		$pagination-item
+	);
+
+	// Pagination Link
+
+	// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
+	$pagination-link-border-radius: 4px;
+
+	// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
+	$pagination-link-cursor: null;
+
+	// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
+	$pagination-link-transition:
+		background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out;
+
+	$pagination-link-first-border-radius: $pagination-link-border-radius;
+	$pagination-link-last-border-radius: $pagination-link-border-radius;
+
+	$pagination-margin-bottom: 8px;
+
+	$pagination-margin-top-mobile: 8px;
+
+	// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
+	$pagination-disabled-cursor: $disabled-cursor;
+
+	// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
+	$pagination-disabled-opacity: 0.5;
+
+	// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
+	$pagination-disabled-pointer-events: auto;
+
+	// .page-link
+
+	$pagination-link-hover: ();
+	$pagination-link-hover: map-deep-merge(
+		(
+			background-color:
+				var(
+					--pagination-link-hover-background-color,
+					$pagination-hover-bg
+				),
+			border-color:
+				var(
+					--pagination-link-hover-border-color,
+					$pagination-hover-border-color
+				),
+			color: var(--pagination-link-hover-color, $pagination-hover-color),
+			font-weight:
+				var(
+					--pagination-link-hover-font-weight,
+					$font-weight-semi-bold
+				),
+			letter-spacing: var(--pagination-link-hover-letter-spacing, 0),
+			text-decoration: none,
+			z-index: 2,
+
+			before: (
+				background-color:
+					var(
+						--pagination-link-hover-highlight-background-color,
+						$secondary-l0
+					),
+				height: var(--pagination-link-hover-highlight-height, 3px),
+			),
+		),
+		$pagination-link-hover
+	);
+
+	$pagination-link-focus: ();
+	$pagination-link-focus: map-deep-merge(
+		(
+			border-color:
+				var(
+					--pagination-link-focus-border-color,
+					$pagination-hover-border-color
+				),
+			box-shadow: none,
+			color: var(--pagination-link-focus-color, $pagination-hover-color),
+			outline: $pagination-focus-outline,
+
+			after: (
+				border-radius: $pagination-link-border-radius,
+				bottom: 0,
+				box-shadow:
+					var(
+						--pagination-link-focus-box-shadow,
+						$pagination-focus-box-shadow
+					),
+				content: '',
+				display: block,
+				left: 0,
+				pointer-events: none,
+				position: absolute,
+				right: 0,
+				top: 0,
+			),
+		),
+		$pagination-link-focus
+	);
+
+	$pagination-link-active: ();
+	$pagination-link-active: map-deep-merge(
+		(
+			background-color:
+				var(
+					--pagination-link-active-background-color,
+					$pagination-active-bg
+				),
+			border-color:
+				var(
+					--pagination-link-active-border-color,
+					$pagination-active-border-color
+				),
+			color:
+				var(--pagination-link-active-color, $pagination-active-color),
+			font-weight:
+				var(
+					--pagination-link-active-font-weight,
+					$font-weight-semi-bold
+				),
+			letter-spacing: 0,
+		),
+		$pagination-link-active
+	);
+
+	$pagination-link-disabled: ();
+	$pagination-link-disabled: map-deep-merge(
+		(
+			background-color:
+				var(
+					--pagination-link-disabled-background-color,
+					$pagination-disabled-bg
+				),
+			border-color:
+				var(
+					--pagination-link-disabled-border-color,
+					$pagination-disabled-border-color
+				),
+			box-shadow: none,
+			color:
+				var(
+					--pagination-link-disabled-color,
+					$pagination-disabled-color
+				),
+			cursor: $pagination-disabled-cursor,
+			opacity:
+				var(
+					--pagination-link-disabled-opacity,
+					$pagination-disabled-opacity
+				),
+			pointer-events: $pagination-disabled-pointer-events,
+
+			before: (
+				content: none,
+			),
+
+			focus: (
+				after: (
+					content: none,
+				),
+			),
+		),
+		$pagination-link-disabled
+	);
+
+	$pagination-link: ();
+	$pagination-link: map-deep-merge(
+		(
+			align-items: center,
+			background-color:
+				var(--pagination-link-background-color, $pagination-bg),
+			border-radius:
+				var(
+					--pagination-link-border-radius,
+					$pagination-link-border-radius
+				),
+			border-color:
+				var(--pagination-link-border-color, $pagination-border-color),
+			border-style: var(--pagination-link-border-style, solid),
+			border-width:
+				var(--pagination-link-border-width, $pagination-border-width),
+			color: var(--pagination-link-color, $pagination-color),
+			cursor: $pagination-link-cursor,
+			display: inline-flex,
+			height: var(--pagination-link-height, $pagination-item-height),
+			justify-content: center,
+			letter-spacing: var(--pagination-link-letter-spacing, 0.033em),
+			line-height:
+				var(--pagination-link-line-height, $pagination-line-height),
+			margin-left: var(--pagination-link-margin-left, 0),
+			min-width:
+				var(--pagination-link-min-width, var(--pagination-link-height)),
+			padding-bottom:
+				var(--pagination-link-padding-bottom, $pagination-padding-y),
+			padding-left:
+				var(--pagination-link-padding-left, $pagination-padding-x),
+			padding-right:
+				var(--pagination-link-padding-right, $pagination-padding-x),
+			padding-top:
+				var(--pagination-link-padding-top, $pagination-padding-y),
+			position: relative,
+			text-decoration: var(--pagination-link-text-decoration, none),
+			transition: $pagination-link-transition,
+
+			before: (
+				border-radius:
+					var(
+						--pagination-link-highlight-border-radius,
+						0 0 $border-radius $border-radius
+					),
+				bottom: var(--pagination-link-highlight-bottom, 0),
+				content: '',
+				display: block,
+				left: var(--pagination-link-highlight-left, 0),
+				position: absolute,
+				right: var(--pagination-link-highlight-right, 0),
+				top: var(--pagination-link-highlight-top, auto),
+			),
+
+			hover: $pagination-link-hover,
+
+			focus: $pagination-link-focus,
+
+			active: $pagination-link-active,
+
+			active-class: (
+				background-color:
+					var(
+						--pagination-link-active-class-background-color,
+						$pagination-active-bg
+					),
+				border-color:
+					var(
+						--pagination-link-active-class-border-color,
+						$pagination-active-border-color
+					),
+				color:
+					var(
+						--pagination-link-active-class-color,
+						$pagination-active-color
+					),
+				font-weight:
+					var(
+						--pagination-link-active-class-font-weight,
+						$font-weight-semi-bold
+					),
+				letter-spacing:
+					var(--pagination-link-active-class-letter-spacing, 0),
+				before: (
+					background-color:
+						var(
+							--pagination-link-active-class-highlight-background-color,
+							$primary-l0
+						),
+					height:
+						var(
+							--pagination-link-active-class-highlight-height,
+							4px
+						),
+				),
+			),
+
+			disabled: $pagination-link-disabled,
+
+			show: (
+				font-weight:
+					var(
+						--pagination-link-show-font-weight,
+						$font-weight-semi-bold
+					),
+				letter-spacing: var(--pagination-link-show-letter-spacing, 0),
+				before: (
+					background-color:
+						var(
+							--pagination-link-show-highlight-background-color,
+							transparent
+						),
+				),
+
+				hover: (
+					before: (
+						background-color:
+							var(
+								--pagination-link-show-highlight-background-color,
+								$secondary-l0
+							),
+						height:
+							var(--pagination-link-show-highlight-height, 3px),
+					),
+				),
+			),
+
+			lexicon-icon: (
+				margin-top: 0,
+			),
+		),
+		$pagination-link
+	);
+
+	// .page-item:first-child .page-link, .page-link-first
+
+	$pagination-link-first: ();
+	$pagination-link-first: map-merge(
+		(
+			border-radius:
+				var(
+					--pagination-link-first-border-radius,
+					clay-enable-rounded($pagination-link-first-border-radius)
+				),
+		),
+		$pagination-link-first
+	);
+
+	// .page-item:last-child .page-link, .page-link-last
+
+	$pagination-link-last: ();
+	$pagination-link-last: map-deep-merge(
+		(
+			border-radius:
+				var(
+					--pagination-link-last-border-radius,
+					clay-enable-rounded($pagination-link-last-border-radius)
+				),
+		),
+		$pagination-link-last
+	);
+
+	// .pagination
+
+	$pagination: ();
+	$pagination: map-deep-merge(
+		(
+			border-radius:
+				var(
+					--pagination-border-radius,
+					clay-enable-rounded($border-radius)
+				),
+			display: flex,
+			flex-wrap: wrap,
+			font-size: var(--pagination-font-size, $pagination-font-size),
+			list-style: none,
+			margin-bottom:
+				var(--pagination-margin-bottom, $pagination-margin-bottom),
+			padding-left: var(--pagination-padding-left, 0),
+		),
+		$pagination
+	);
+
+	// .pagination-bar
+
+	$pagination-bar: ();
+	$pagination-bar: map-deep-merge(
+		(
+			align-items: center,
+			display: flex,
+			flex-wrap: wrap,
+
+			media-breakpoint-down: (
+				sm: (
+					flex-direction: column,
+					justify-content: center,
+
+					pagination: (
+						margin-top: $pagination-margin-top-mobile,
+					),
+				),
+			),
+		),
+		$pagination-bar
+	);
+
+	// Pagination Dropdown Menu
+
+	$pagination-dropdown-menu-spacer-y: 10px; // 10px
+
+	// Pagination Items Per Page
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
+	$pagination-items-per-page-bg: transparent;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
+	$pagination-items-per-page-border-color: $pagination-border-color;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
+	$pagination-items-per-page-border-radius: $border-radius;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
+	$pagination-items-per-page-color: $pagination-color;
+	$pagination-items-per-page-font-size: $pagination-font-size;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
+	$pagination-items-per-page-transition: $pagination-link-transition;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-hover` instead
+
+	$pagination-items-per-page-hover-bg: $pagination-hover-bg;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-hover` instead
+
+	$pagination-items-per-page-hover-border-color: $pagination-hover-border-color;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-hover` instead
+
+	$pagination-items-per-page-hover-color: $pagination-hover-color;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-focus` instead
+
+	$pagination-items-per-page-focus-box-shadow: $pagination-focus-box-shadow;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-focus` instead
+
+	$pagination-items-per-page-focus-outline: 0;
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
+	$pagination-items-per-page-lexicon-icon-margin-left: 2px; // 2px
+
+	// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
+	$pagination-items-per-page-lexicon-icon-margin-top: 2px; // 2px
+
+	// Pagination Items Per Page Link
+
+	$pagination-items-per-page-link-hover: ();
+	$pagination-items-per-page-link-hover: map-deep-merge(
+		(
+			background-color:
+				var(
+					--pagination-items-per-page-link-hover-background-color,
+					$pagination-items-per-page-hover-bg
+				),
+			border-color:
+				var(
+					--pagination-items-per-page-link-hover-border-color,
+					$pagination-items-per-page-hover-border-color
+				),
+			color:
+				var(
+					--pagination-items-per-page-link-hover-color,
+					$pagination-items-per-page-hover-color
+				),
+		),
+		$pagination-items-per-page-link-hover
+	);
+
+	$pagination-items-per-page-link-focus: ();
+	$pagination-items-per-page-link-focus: map-deep-merge(
+		(
+			background-color:
+				var(
+					--pagination-items-per-page-link-focus-background-color,
+					map-get($pagination-link-focus, background-color)
+				),
+			border-color:
+				var(
+					--pagination-items-per-page-link-focus-border-color,
+					map-get($pagination-link-focus, border-color)
+				),
+			box-shadow: $pagination-items-per-page-focus-box-shadow,
+			color:
+				var(
+					--pagination-items-per-page-link-focus-color,
+					map-get($pagination-link-focus, color)
+				),
+			outline: $pagination-items-per-page-focus-outline,
+
+			after: map-get($pagination-link-focus, after),
+		),
+		$pagination-items-per-page-link-focus
+	);
+
+	$pagination-items-per-page-link-active: ();
+	$pagination-items-per-page-link-active: map-deep-merge(
+		(
+			background-color:
+				var(
+					--pagination-items-per-page-link-active-background-color,
+					$pagination-active-bg
+				),
+			border-color:
+				var(
+					--pagination-items-per-page-link-active-border-color,
+					$pagination-active-border-color
+				),
+			color:
+				var(
+					--pagination-items-per-page-link-active-color,
+					$pagination-active-color
+				),
+		),
+		$pagination-items-per-page-link-active
+	);
+
+	$pagination-items-per-page-link-disabled: ();
+	$pagination-items-per-page-link-disabled: map-deep-merge(
+		(
+			background-color:
+				var(
+					--pagination-items-per-page-link-disabled-background-color,
+					$pagination-disabled-bg
+				),
+			border-color:
+				var(
+					--pagination-items-per-page-link-disabled-border-color,
+					$pagination-disabled-border-color
+				),
+			box-shadow: none,
+			color:
+				var(
+					--pagination-items-per-page-link-disabled-color,
+					$pagination-disabled-color
+				),
+			cursor: $pagination-disabled-cursor,
+			font-weight:
+				var(
+					--pagination-items-per-page-link-disabled-font-weight,
+					$font-weight-normal
+				),
+			opacity:
+				var(
+					--pagination-items-per-page-link-disabled-opacity,
+					$pagination-disabled-opacity
+				),
+			pointer-events: $pagination-disabled-pointer-events,
+			letter-spacing:
+				var(
+					--pagination-items-per-page-link-disabled-letter-spacing,
+					0.033em
+				),
+			before: (
+				content: none,
+			),
+
+			focus: (
+				after: (
+					content: none,
+				),
+			),
+		),
+		$pagination-items-per-page-link-disabled
+	);
+
+	$pagination-items-per-page-link: ();
+	$pagination-items-per-page-link: map-deep-merge(
+		(
+			align-items: center,
+			background-color:
+				var(
+					--pagination-items-per-page-link-background-color,
+					$pagination-items-per-page-bg
+				),
+			border-color:
+				var(
+					--pagination-items-per-page-link-border-color,
+					$pagination-items-per-page-border-color
+				),
+			border-radius:
+				var(
+					--pagination-items-per-page-link-border-radius,
+					$pagination-items-per-page-border-radius
+				),
+			border-style:
+				var(--pagination-items-per-page-link-border-style, solid),
+			border-width:
+				var(
+					--pagination-items-per-page-link-border-width,
+					$pagination-border-width
+				),
+			color:
+				var(
+					--pagination-items-per-page-link-color,
+					$pagination-items-per-page-color
+				),
+			display: inline-flex,
+			height:
+				var(
+					--pagination-items-per-page-link-height,
+					$pagination-item-height
+				),
+			justify-content: center,
+			letter-spacing:
+				var(--pagination-items-per-page-link-letter-spacing, 0.025em),
+			line-height:
+				var(
+					--pagination-items-per-page-link-line-height,
+					$pagination-line-height
+				),
+			padding-bottom:
+				var(
+					--pagination-items-per-page-link-padding-bottom,
+					$pagination-padding-y
+				),
+			padding-left:
+				var(
+					--pagination-items-per-page-link-padding-left,
+					$pagination-padding-x
+				),
+			padding-right:
+				var(
+					--pagination-items-per-page-link-padding-right,
+					$pagination-padding-x
+				),
+			padding-top:
+				var(
+					--pagination-items-per-page-link-padding-top,
+					$pagination-padding-y
+				),
+			text-decoration: none,
+			transition: $pagination-items-per-page-transition,
+
+			before: (
+				border-radius:
+					var(
+						--pagination-items-per-page-link-highlight-border-radius,
+						0 0 $border-radius $border-radius
+					),
+				bottom:
+					var(--pagination-items-per-page-link-highlight-bottom, 0),
+				content: '',
+				display: block,
+				left: var(--pagination-items-per-page-link-highlight-left, 0),
+				position:
+					var(
+						--pagination-items-per-page-link-highlight-position,
+						absolute
+					),
+				right: 0,
+				top: var(--pagination-items-per-page-link-highlight-top, auto),
+			),
+
+			hover: $pagination-items-per-page-link-hover,
+
+			focus: $pagination-items-per-page-link-focus,
+
+			active: $pagination-items-per-page-link-active,
+
+			disabled: $pagination-items-per-page-link-disabled,
+
+			show: map-get($pagination-link, show),
+			lexicon-icon: (
+				margin-left:
+					$pagination-items-per-page-lexicon-icon-margin-left,
+				margin-top: $pagination-items-per-page-lexicon-icon-margin-top,
+			),
+		),
+		$pagination-items-per-page-link
+	);
+
+	// .pagination-items-per-page
+
+	$pagination-items-per-page: ();
+	$pagination-items-per-page: map-deep-merge(
+		(
+			font-size:
+				var(
+					--pagination-items-per-page-font-size,
+					$pagination-items-per-page-font-size
+				),
+			margin-bottom:
+				var(
+					--pagination-items-per-page-margin-bottom,
+					$pagination-margin-bottom
+				),
+			link: $pagination-items-per-page-link,
+
+			media-breakpoint-down: (
+				sm: (
+					pagination-results: (
+						margin-left: auto,
+					),
+				),
+			),
+		),
+		$pagination-items-per-page
+	);
+
+	// .pagination-results
+
+	$pagination-results-color: $pagination-color;
+
+	$pagination-results: ();
+	$pagination-results: map-deep-merge(
+		(
+			border-color: var(--pagination-results-border-color, transparent),
+			border-style: var(--pagination-results-border-style, solid),
+			border-width:
+				var(
+					--pagination-results-border-width,
+					$pagination-border-width
+				),
+			color: var(--pagination-results-color, $pagination-results-color),
+			font-size:
+				var(--pagination-results-font-size, $pagination-font-size),
+			line-height:
+				var(--pagination-results-line-height, $pagination-line-height),
+			margin-bottom:
+				var(
+					--pagination-results-margin-bottom,
+					$pagination-margin-bottom
+				),
+			margin-right: var(--pagination-results-margin-right, auto),
+			max-width: var(--pagination-results-max-width, 100%),
+			padding:
+				var(
+					--pagination-results-padding,
+					$pagination-padding-y $pagination-padding-x
+				),
+			word-wrap: break-word,
+		),
+		$pagination-results
+	);
+
+	// @deprecated Pagination Sizes as of v3.146.0
+
+	// .pagination-sm
+
+	$pagination-font-size-sm: 12px; // 12px
+	$pagination-line-height-sm: 1;
+	$pagination-padding-x-sm: 8px;
+	$pagination-padding-y-sm: 0;
+
+	$pagination-item-height-sm: 24px; // 24px
+
+	$pagination-link-border-radius-sm: 5px;
+
+	$pagination-items-per-page-lexicon-icon-margin-left-sm: null;
+	$pagination-items-per-page-lexicon-icon-margin-top-sm: null;
+
+	$pagination-sm: ();
+	$pagination-sm: map-deep-merge(
+		(
+			page-link: (
+				font-size:
+					var(
+						--pagination-sm-page-link-font-size,
+						$pagination-font-size-sm
+					),
+				height:
+					var(
+						--pagination-sm-page-link-height,
+						$pagination-item-height-sm
+					),
+				line-height:
+					var(
+						--pagination-sm-page-link-line-height,
+						$pagination-line-height-sm
+					),
+				padding-bottom:
+					var(
+						--pagination-sm-page-link-padding-bottom,
+						$pagination-padding-y-sm
+					),
+				padding-right:
+					var(
+						--pagination-sm-page-link-padding-right,
+						$pagination-padding-x-sm
+					),
+				padding-left:
+					var(
+						--pagination-sm-page-link-padding-left,
+						$pagination-padding-x-sm
+					),
+				padding-top:
+					var(
+						--pagination-sm-page-link-padding-top,
+						$pagination-padding-y-sm
+					),
+			),
+
+			page-link-first: (
+				border-bottom-left-radius:
+					var(
+						--pagination-sm-page-link-first-border-bottom-left-radius,
+						$pagination-link-border-radius-sm
+					),
+				border-top-left-radius:
+					var(
+						--pagination-sm-page-link-first-border-top-left-radius,
+						$pagination-link-border-radius-sm
+					),
+			),
+
+			page-link-last: (
+				border-bottom-right-radius:
+					var(
+						--pagination-sm-page-link-last-border-bottom-right-radius,
+						$pagination-link-border-radius-sm
+					),
+				border-top-right-radius:
+					var(
+						--pagination-sm-page-link-last-border-top-right-radius,
+						$pagination-link-border-radius-sm
+					),
+			),
+
+			pagination-items-per-page: (
+				border-radius:
+					var(
+						--pagination-sm-pagination-items-per-page-page-link-border-radius,
+						clay-enable-rounded($pagination-link-border-radius-sm)
+					),
+				link: (
+					font-size:
+						var(
+							--pagination-sm-pagination-items-per-page-page-link-font-size,
+							$pagination-font-size-sm
+						),
+					height:
+						var(
+							--pagination-sm-pagination-items-per-page-page-link-height,
+							$pagination-item-height-sm
+						),
+					line-height:
+						var(
+							--pagination-sm-pagination-items-per-page-page-link-line-height,
+							$pagination-line-height-sm
+						),
+					padding-bottom:
+						var(
+							--pagination-sm-pagination-items-per-page-page-link-padding-bottom,
+							$pagination-padding-y-sm
+						),
+					padding-left:
+						var(
+							--pagination-sm-pagination-items-per-page-page-link-padding-left,
+							$pagination-padding-x
+						),
+					padding-right:
+						var(
+							--pagination-sm-pagination-items-per-page-page-link-padding-right,
+							$pagination-padding-x
+						),
+					padding-top:
+						var(
+							--pagination-sm-pagination-items-per-page-page-link-padding-top,
+							$pagination-padding-y-sm
+						),
+				),
+
+				lexicon-icon: (
+					margin-left:
+						$pagination-items-per-page-lexicon-icon-margin-left-sm,
+					margin-right:
+						$pagination-items-per-page-lexicon-icon-margin-top-sm,
+				),
+
+				pagination-results: (
+					font-size:
+						var(
+							--pagination-sm-pagination-results-font-size,
+							$pagination-font-size-sm
+						),
+					line-height:
+						var(
+							--pagination-sm-pagination-results-line-height,
+							$pagination-line-height-sm
+						),
+					padding:
+						var(
+							--pagination-sm-pagination-results-padding,
+							$pagination-padding-y-sm $pagination-padding-x
+						),
+				),
+			),
+		),
+		$pagination-sm
+	);
+
+	// .pagination-lg
+
+	$pagination-font-size-lg: 18px; // 18px
+	$pagination-line-height-lg: 1;
+	$pagination-padding-x-lg: 16px; // 16px
+	$pagination-padding-y-lg: 0;
+
+	$pagination-item-height-lg: 44px; //44px
+
+	$pagination-link-border-radius-lg: 5px; // 5px
+
+	$pagination-items-per-page-lexicon-icon-margin-left-lg: null;
+	$pagination-items-per-page-lexicon-icon-margin-top-lg: null;
+
+	$pagination-lg: ();
+	$pagination-lg: map-deep-merge(
+		(
+			page-link: (
+				font-size:
+					var(
+						--pagination-lg-page-link-font-size,
+						$pagination-font-size-lg
+					),
+				height:
+					var(
+						--pagination-lg-page-link-height,
+						$pagination-item-height-lg
+					),
+				line-height:
+					var(
+						--pagination-lg-page-link-line-height,
+						$pagination-line-height-lg
+					),
+				padding-bottom:
+					var(
+						--pagination-lg-page-link-padding-bottom,
+						$pagination-padding-y-lg
+					),
+				padding-left:
+					var(
+						--pagination-lg-page-link-padding-left,
+						$pagination-padding-x-lg
+					),
+				padding-right:
+					var(
+						--pagination-lg-page-link-padding-right,
+						$pagination-padding-x-lg
+					),
+				padding-top:
+					var(
+						--pagination-lg-page-link-padding-top,
+						$pagination-padding-y-lg
+					),
+			),
+
+			page-link-first: (
+				border-bottom-left-radius:
+					var(
+						--pagination-lg-page-link-first-border-bottom-left-radius,
+						$pagination-link-border-radius-lg
+					),
+				border-top-left-radius:
+					var(
+						--pagination-lg-page-link-first-border-top-left-radius,
+						$pagination-link-border-radius-lg
+					),
+			),
+
+			page-link-last: (
+				border-bottom-right-radius:
+					var(
+						--pagination-lg-page-link-last-border-bottom-right-radius,
+						$pagination-link-border-radius-lg
+					),
+				border-top-right-radius:
+					var(
+						--pagination-lg-page-link-last-border-top-right-radius,
+						$pagination-link-border-radius-lg
+					),
+			),
+
+			pagination-items-per-page: (
+				border-radius:
+					var(
+						--pagination-lg-pagination-items-per-page-page-link-border-radius,
+						clay-enable-rounded($pagination-link-border-radius-lg)
+					),
+				link: (
+					font-size:
+						var(
+							--pagination-lg-pagination-items-per-page-page-link-font-size,
+							$pagination-font-size-lg
+						),
+					height:
+						var(
+							--pagination-lg-pagination-items-per-page-page-link-height,
+							$pagination-item-height-lg
+						),
+					line-height:
+						var(
+							--pagination-lg-pagination-items-per-page-page-link-line-height,
+							$pagination-line-height-lg
+						),
+					padding-bottom:
+						var(
+							--pagination-lg-pagination-items-per-page-page-link-padding-bottom,
+							$pagination-padding-y-lg
+						),
+					padding-left:
+						var(
+							--pagination-lg-pagination-items-per-page-page-link-padding-left,
+							$pagination-padding-x
+						),
+					padding-right:
+						var(
+							--pagination-lg-pagination-items-per-page-page-link-padding-right,
+							$pagination-padding-x
+						),
+					padding-top:
+						var(
+							--pagination-lg-pagination-items-per-page-page-link-padding-top,
+							$pagination-padding-y-lg
+						),
+				),
+
+				lexicon-icon: (
+					margin-left:
+						$pagination-items-per-page-lexicon-icon-margin-left-lg,
+					margin-right:
+						$pagination-items-per-page-lexicon-icon-margin-top-lg,
+				),
+
+				pagination-results: (
+					font-size:
+						var(
+							--pagination-lg-pagination-results-font-size,
+							$pagination-font-size-lg
+						),
+					line-height:
+						var(
+							--pagination-lg-pagination-results-line-height,
+							$pagination-line-height-lg
+						),
+					padding:
+						var(
+							--pagination-lg-pagination-results-padding,
+							$pagination-padding-y-lg $pagination-padding-x
+						),
+				),
+			),
+		),
+		$pagination-lg
+	);
+}

@@ -1,0 +1,252 @@
+@if ($enable-atlas-custom-properties) {
+	$drilldown-inner-transition: height 0.25s ease;
+
+	$drilldown-transition: all 0.25s ease;
+	$drilldown-width: var(
+		--drilldown-width,
+		if(variable-exists(dropdown-max-width), $dropdown-max-width, 260px)
+	);
+
+	$drilldown-inline-scroller-max-height: var(
+		--drilldown-inline-scroller-max-height,
+		none
+	);
+
+	$drilldown-inner: ();
+	$drilldown-inner: map-merge(
+		(
+			display: flex,
+			flex-grow: 1,
+			transition: $drilldown-inner-transition,
+		),
+		$drilldown-inner
+	);
+
+	$drilldown-item: ();
+	$drilldown-item: map-merge(
+		(
+			display: none,
+			flex-shrink: 0,
+			height: 0,
+			width: 100%,
+		),
+		$drilldown-item
+	);
+
+	$drilldown-item-inner: ();
+	$drilldown-item-inner: map-merge(
+		(
+			display: flex,
+			flex-direction: column,
+		),
+		$drilldown-item-inner
+	);
+
+	// Drilldown Dropdown Menu
+
+	$drilldown-dropdown-menu: ();
+	$drilldown-dropdown-menu: map-merge(
+		(
+			flex-direction: column,
+			max-height: none,
+			max-width: none,
+			min-width: 0,
+			overflow: hidden,
+			width: $drilldown-width,
+		),
+		$drilldown-dropdown-menu
+	);
+
+	$drilldown-dropdown-menu-drilldown-inner: ();
+	$drilldown-dropdown-menu-drilldown-inner: map-merge(
+		(
+			min-height: 266px,
+			overflow: hidden,
+		),
+		$drilldown-dropdown-menu-drilldown-inner
+	);
+
+	// Drilldown Dropdown Menu Indicator
+
+	$drilldown-dropdown-menu-indicator-start: ();
+	$drilldown-dropdown-menu-indicator-start: map-merge(
+		(
+			padding-left:
+				var(
+					--drilldown-dropdown-menu-indicator-start-padding-left,
+					3rem
+				),
+			top: var(--drilldown-dropdown-menu-indicator-start-top, 0.5rem),
+		),
+		$drilldown-dropdown-menu-indicator-start
+	);
+
+	$drilldown-dropdown-menu-indicator-end: ();
+	$drilldown-dropdown-menu-indicator-end: map-merge(
+		(
+			padding-right:
+				var(--drilldown-dropdown-menu-indicator-end-padding-left, 3rem),
+			top: var(--drilldown-dropdown-menu-indicator-end-top, 0.5rem),
+		),
+		$drilldown-dropdown-menu-indicator-end
+	);
+
+	// Drilldown Dropdown Item
+
+	$drilldown-dropdown-item: ();
+	$drilldown-dropdown-item: map-deep-merge(
+		(
+			padding-bottom:
+				var(--drilldown-dropdown-item-padding-bottom, 0.59375rem),
+			padding-left: var(--drilldown-dropdown-item-padding-left, 1rem),
+			padding-right: var(--drilldown-dropdown-item-padding-right, 1rem),
+			padding-top: var(--drilldown-dropdown-item-padding-top, 0.59375rem),
+		),
+		$drilldown-dropdown-item
+	);
+
+	$_drilldown-dropdown-item-pt: map-get(
+		$drilldown-dropdown-item,
+		padding-top
+	);
+
+	// Drilldown Dropdown Item Indicators
+
+	$drilldown-dropdown-item-indicator-start: ();
+	$drilldown-dropdown-item-indicator-start: map-merge(
+		(
+			height:
+				var(--drilldown-dropdown-item-indicator-start-height, 1.5rem),
+			left: var(--drilldown-dropdown-item-indicator-start-left, 0.5rem),
+			top:
+				var(
+					--drilldown-dropdown-item-indicator-start-top,
+					calc(
+						#{$_drilldown-dropdown-item-pt} -
+							((1.5rem - (1em * #{$line-height-base})) / 2)
+					)
+				),
+			transition: none,
+			width: var(--drilldown-dropdown-item-indicator-start-width, 1.5rem),
+		),
+		$drilldown-dropdown-item-indicator-start
+	);
+
+	$drilldown-dropdown-item-indicator-text-start: ();
+	$drilldown-dropdown-item-indicator-text-start: map-merge(
+		(
+			padding-left: 2rem,
+		),
+		$drilldown-dropdown-item-indicator-text-start
+	);
+
+	$drilldown-dropdown-item-indicator-end: ();
+	$drilldown-dropdown-item-indicator-end: map-merge(
+		(
+			height: var(--drilldown-dropdown-item-indicator-end-height, 1.5rem),
+			right: var(--drilldown-dropdown-item-indicator-end-right, 0.5rem),
+			top:
+				var(
+					--drilldown-dropdown-item-indicator-end-top,
+					calc(
+						#{$_drilldown-dropdown-item-pt} -
+							((1.5rem - (1em * #{$line-height-base})) / 2)
+					)
+				),
+			transition: none,
+			width: var(--drilldown-dropdown-item-indicator-end-width, 1.5rem),
+		),
+		$drilldown-dropdown-item-indicator-end
+	);
+
+	$drilldown-dropdown-item-indicator-text-end: ();
+	$drilldown-dropdown-item-indicator-text-end: map-merge(
+		(
+			margin-bottom: -0.59375rem,
+			margin-left: -1rem,
+			margin-top: -0.59375rem,
+			padding-bottom: inherit,
+			padding-left: inherit,
+			padding-right: 2rem,
+			padding-top: inherit,
+			width: auto,
+		),
+		$drilldown-dropdown-item-indicator-text-end
+	);
+
+	// Drilldown Dropdown Header
+
+	$drilldown-dropdown-header: ();
+	$drilldown-dropdown-header: map-merge(
+		(
+			color: var(--drilldown-dropdown-header-color, $secondary),
+			font-weight:
+				var(
+					--drilldown-dropdown-header-font-weight,
+					$font-weight-semi-bold
+				),
+			padding-bottom:
+				var(
+					--drilldown-dropdown-header-padding-bottom,
+					map-get($drilldown-dropdown-item, padding-bottom)
+				),
+			padding-left:
+				var(
+					--drilldown-dropdown-header-padding-left,
+					map-get($drilldown-dropdown-item, padding-left)
+				),
+			padding-right:
+				var(
+					--drilldown-dropdown-header-padding-right,
+					map-get($drilldown-dropdown-item, padding-right)
+				),
+			padding-top:
+				var(
+					--drilldown-dropdown-header-padding-top,
+					map-get($drilldown-dropdown-item, padding-top)
+				),
+			text-transform:
+				var(--drilldown-dropdown-header-text-transform, uppercase),
+		),
+		$drilldown-dropdown-header
+	);
+
+	// Drilldown Dropdown Footer
+
+	$drilldown-dropdown-footer: ();
+	$drilldown-dropdown-footer: map-merge(
+		(
+			padding:
+				var(--drilldown-dropdown-footer-padding, 1rem 1rem 0.625rem),
+		),
+		$drilldown-dropdown-footer
+	);
+
+	// Drilldown Dropdown Divider
+
+	$drilldown-dropdown-divider: ();
+	$drilldown-dropdown-divider: map-merge(
+		(
+			margin: var(--drilldown-dropdown-divider-margin, 0),
+		),
+		$drilldown-dropdown-divider
+	);
+
+	// Drilldown Height Dropdown Menu
+
+	$drilldown-height-sm-dropdown-menu: ();
+	$drilldown-height-sm-dropdown-menu: map-merge(
+		(
+			height: var(--drilldown-height-sm-dropdown-menu-height, 272px),
+		),
+		$drilldown-height-sm-dropdown-menu
+	);
+
+	$drilldown-height-md-dropdown-menu: ();
+	$drilldown-height-md-dropdown-menu: map-merge(
+		(
+			height: var(--drilldown-height-md-dropdown-menu-height, 344px),
+		),
+		$drilldown-height-md-dropdown-menu
+	);
+}

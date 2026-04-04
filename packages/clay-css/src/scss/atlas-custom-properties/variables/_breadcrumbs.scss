@@ -1,0 +1,205 @@
+@if ($enable-atlas-custom-properties) {
+	// .breadcrumb
+
+	$breadcrumb-bg: transparent;
+	$breadcrumb-border-radius: clay-enable-rounded($border-radius);
+	$breadcrumb-font-size: 0.875rem;
+	$breadcrumb-font-weight: $font-weight-normal;
+	$breadcrumb-margin-bottom: 0;
+	$breadcrumb-padding-x: 0.125rem;
+	$breadcrumb-padding-y: 0.59375rem;
+	$breadcrumb-text-transform: none;
+
+	$breadcrumb-link-color: $gray-600;
+	$breadcrumb-link-text-decoration: $link-decoration;
+
+	$breadcrumb-link-hover-color: $breadcrumb-link-color;
+	$breadcrumb-link-hover-text-decoration: $link-hover-decoration;
+
+	$breadcrumb: ();
+	$breadcrumb: map-merge(
+		(
+			background-color:
+				var(--breadcrumb-background-color, $breadcrumb-bg),
+			border-radius:
+				var(--breadcrumb-border-radius, $breadcrumb-border-radius),
+			display: flex,
+			flex-wrap: wrap,
+			font-size: var(--breadcrumb-font-size, $breadcrumb-font-size),
+			font-weight: var(--breadcrumb-font-weight, $breadcrumb-font-weight),
+			list-style: none,
+			margin-bottom:
+				var(--breadcrumb-margin-bottom, $breadcrumb-margin-bottom),
+			padding:
+				var(--breadcrumb-padding-y, $breadcrumb-padding-y)
+				var(--breadcrumb-padding-x, $breadcrumb-padding-x),
+		),
+		$breadcrumb
+	);
+
+	// .breadcrumb-item + .breadcrumb-item::before
+
+	$breadcrumb-divider: quote('/');
+
+	$breadcrumb-divider-color: $breadcrumb-link-color;
+	$breadcrumb-divider-font-family: null;
+	$breadcrumb-divider-font-weight: null;
+
+	$breadcrumb-divider-svg-icon: clay-icon(angle-right, #6b6c7e);
+	$breadcrumb-divider-svg-icon-height: 0.6em;
+	$breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height;
+
+	// Breadcrumb Item
+
+	$breadcrumb-active-color: $gray-900;
+	$breadcrumb-active-font-weight: $font-weight-semi-bold;
+
+	$breadcrumb-item: ();
+	$breadcrumb-item: map-merge(
+		(
+			font-size: var(--breadcrumb-font-size, $breadcrumb-font-size),
+			font-weight: var(--breadcrumb-font-weight, $breadcrumb-font-weight),
+			margin-right: 0.5em,
+			position: relative,
+
+			active: (
+				color: var(--breadcrumb-active-color, $breadcrumb-active-color),
+				font-weight:
+					var(
+						--breadcrumb-active-font-weight,
+						$breadcrumb-active-font-weight
+					),
+			),
+
+			breadcrumb-item: (
+				padding-left: 1em,
+
+				before: (
+					color:
+						var(
+							--breadcrumb-divider-color,
+							$breadcrumb-divider-color
+						),
+					display: block,
+					float: left,
+					background-image:
+						var(
+							--breadcrumb-divider-svg-icon,
+							$breadcrumb-divider-svg-icon
+						),
+					background-repeat: no-repeat,
+					background-size: 100%,
+					content: '',
+					height:
+						var(
+							--breadcrumb-divider-svg-icon-height,
+							$breadcrumb-divider-svg-icon-height
+						),
+					left: 0,
+					margin-top:
+						calc(#{$breadcrumb-divider-svg-icon-height} / -2),
+					padding: 0,
+					position: absolute,
+					top: 50%,
+					width:
+						var(
+							--breadcrumb-divider-svg-icon-width,
+							$breadcrumb-divider-svg-icon-width
+						),
+				),
+			),
+
+			dropdown-toggle: (
+				text-decoration: none,
+
+				hover: (
+					text-decoration: none,
+				),
+
+				focus: (
+					text-decoration: none,
+				),
+			),
+		),
+		$breadcrumb-item
+	);
+
+	// Breadcrumb Text Truncate
+
+	$breadcrumb-text-truncate-icon-spacer-x: 0.875rem;
+	$breadcrumb-text-truncate-max-width: 18.75rem -
+		$breadcrumb-text-truncate-icon-spacer-x;
+	$breadcrumb-text-truncate-max-width-mobile: 9.375rem -
+		$breadcrumb-text-truncate-icon-spacer-x;
+
+	$breadcrumb-text-truncate: ();
+	$breadcrumb-text-truncate: map-merge(
+		(
+			display: inline-block,
+			max-width: $breadcrumb-text-truncate-max-width,
+			overflow: hidden,
+			text-decoration: inherit,
+			text-overflow: ellipsis,
+			vertical-align: bottom,
+			white-space: nowrap,
+		),
+		$breadcrumb-text-truncate
+	);
+
+	// Breadcrumb Link
+
+	$breadcrumb-link: ();
+	$breadcrumb-link: map-deep-merge(
+		(
+			border-radius: 1px,
+			color: var(--breadcrumb-link-color, $breadcrumb-link-color),
+			display: block,
+			text-decoration:
+				var(
+					--breadcrumb-link-text-decoration,
+					$breadcrumb-link-text-decoration
+				),
+			text-transform:
+				var(
+					--breadcrumb-link-text-transform,
+					$breadcrumb-text-transform
+				),
+			transition: box-shadow 0.15s ease-in-out,
+
+			hover: (
+				color:
+					var(
+						--breadcrumb-link-hover-color,
+						$breadcrumb-link-hover-color
+					),
+				text-decoration:
+					var(
+						--breadcrumb-link-hover-text-decoration,
+						$breadcrumb-link-hover-text-decoration
+					),
+			),
+
+			focus: (),
+		),
+		$breadcrumb-link
+	);
+
+	// Breadcrumb Item Expand
+
+	$breadcrumb-toggle: ();
+	$breadcrumb-toggle: map-merge(
+		(
+			color: $breadcrumb-link-color,
+		),
+		$breadcrumb-toggle
+	);
+
+	$breadcrumb-bar: ();
+	$breadcrumb-bar: map-deep-merge(
+		(
+			align-items: center,
+			display: flex,
+		),
+		$breadcrumb-bar
+	);
+}

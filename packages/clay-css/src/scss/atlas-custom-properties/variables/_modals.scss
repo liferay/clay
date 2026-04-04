@@ -1,0 +1,650 @@
+@if ($enable-atlas-custom-properties) {
+	$modal-backdrop-bg: var(--modal-backdrop-bg, $gray-800);
+	$modal-backdrop-opacity: var(--modal-backdrop-opacity, 0.8);
+
+	$modal-backdrop: ();
+	$modal-backdrop: map-deep-merge(
+		(
+			background-color: $modal-backdrop-bg,
+			height: 100vh,
+			left: 0rem,
+			position: fixed,
+			top: 0rem,
+			width: 100vw,
+			z-index: $zindex-modal-backdrop,
+
+			'&.fade': (
+				opacity: 0,
+			),
+
+			'&.show': (
+				opacity: $modal-backdrop-opacity,
+			),
+		),
+		$modal-backdrop
+	);
+
+	// Modal Dialog
+
+	$modal-dialog-margin: 0.5rem;
+	$modal-dialog-margin-y-sm-up: 1.75rem;
+
+	$modal-fade-transform: translate(0, -50px);
+	$modal-scale-transform: scale(1.02);
+	$modal-show-transform: none;
+	$modal-transition: transform 0.3s ease-out;
+
+	// Modal Content
+
+	$modal-content-bg: var(--modal-content-bg, $white);
+	$modal-content-color: var(--modal-content-color, inherit);
+	$modal-content-border-color: var(--modal-content-border-color, transparent);
+	$modal-content-border-radius: var(
+		--modal-content-border-radius,
+		$border-radius-lg
+	);
+	$modal-content-border-width: var(
+		--modal-content-border-width,
+		$border-width
+	);
+
+	$modal-content-inner-border-radius: calc(
+		#{$modal-content-border-radius} - #{$modal-content-border-width}
+	);
+
+	$modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+
+	$modal-content-box-shadow-sm-up: var(
+		--modal-content-box-shadow-sm-up,
+		0 8px 16px unquote('hsl(from #{$black} h s l / 0.5)')
+	);
+
+	$modal-content: ();
+	$modal-content: map-deep-merge(
+		(
+			background-clip: padding-box,
+			background-color: $modal-content-bg,
+			border-radius: clay-enable-rounded($modal-content-border-radius),
+			border:
+				$modal-content-border-width
+				solid
+				$modal-content-border-color,
+			box-shadow: clay-enable-shadows($modal-content-box-shadow-xs),
+			color: $modal-content-color,
+			display: flex,
+			flex-direction: column,
+			max-height: calc(100vh - #{$modal-dialog-margin} * 2),
+			outline: 0,
+			overflow: hidden,
+			pointer-events: auto,
+			position: relative,
+			width: 100%,
+		),
+		$modal-content
+	);
+
+	// Modal Header
+
+	$modal-header-bg: var(--modal-header-bg, transparent);
+	$modal-header-border-color: var(--modal-header-border-color, $gray-300);
+	$modal-header-border-width: var(
+		--modal-header-border-width,
+		$modal-content-border-width
+	);
+	$modal-header-color: var(--modal-header-color, inherit);
+	$modal-header-height: var(--modal-header-height, 64px);
+	$modal-header-padding-x: var(--modal-header-padding-x, 24px);
+	$modal-header-padding-y: var(--modal-header-padding-y, 24px);
+
+	$modal-header-padding: var(--modal-header-padding, 24px);
+
+	$modal-header-height-mobile: null;
+
+	$modal-header: ();
+	$modal-header: map-deep-merge(
+		(
+			breakpoint-down: sm,
+
+			align-items: center,
+			background-color: $modal-header-bg,
+			border-color: $modal-header-border-color,
+			border-style: solid,
+			border-top-radius:
+				clay-enable-rounded($modal-content-inner-border-radius),
+			border-width: 0px 0px $modal-header-border-width 0px,
+			color: $modal-header-color,
+			display: flex,
+			flex-shrink: 0,
+			height: $modal-header-height,
+			justify-content: space-between,
+			padding: $modal-header-padding,
+			padding-bottom: 0rem,
+			padding-top: 0rem,
+			z-index: 1,
+
+			'.modal-title': (
+				margin-bottom: 0rem,
+				margin-top: 0rem,
+			),
+
+			mobile: (
+				height: $modal-header-height-mobile,
+			),
+		),
+		$modal-header
+	);
+
+	// Modal Body
+
+	$modal-inner-padding: var(--modal-inner-padding, 24px);
+
+	$modal-body-bg: var(--modal-body-bg, transparent);
+	$modal-body-color: var(--modal-body-color, inherit);
+
+	$modal-body: ();
+	$modal-body: map-deep-merge(
+		(
+			background-color: $modal-body-bg,
+			border-top:
+				var(
+					--modal-body-border-top,
+					$modal-content-border-width solid $border-color
+				),
+			color: $modal-body-color,
+			flex-grow: 1,
+			flex-shrink: 1,
+			margin-top:
+				var(
+					--modal-body-margin-top,
+					calc(#{$modal-content-border-width} * -1)
+				),
+			overflow: auto,
+			overflow-wrap: break-word,
+			padding: $modal-inner-padding,
+			position: relative,
+
+			'.aspect-ratio': (
+				margin-left: calc(#{$modal-inner-padding} * -1),
+				margin-right: calc(#{$modal-inner-padding} * -1),
+				top: calc(#{$modal-inner-padding} * -1),
+			),
+
+			'&.inline-scroller': (
+				max-height: none,
+				-webkit-overflow-scrolling: touch,
+				overflow: auto,
+				padding: $modal-inner-padding,
+			),
+
+			'.modal-banner-img': (
+				margin-left: calc(#{$modal-inner-padding} * -1),
+				margin-right: calc(#{$modal-inner-padding} * -1),
+				top: calc(#{$modal-inner-padding} * -1),
+			),
+
+			'> .close': (
+				position: absolute,
+				right: 1rem,
+				top: 1rem,
+				z-index: 1,
+			),
+		),
+		$modal-body
+	);
+
+	// Modal Footer
+
+	$modal-footer-margin-between: var(--modal-footer-margin-between, 0.5rem);
+
+	$modal-footer-bg: var(--modal-footer-bg, transparent);
+	$modal-footer-border-color: var(
+		--modal-footer-border-color,
+		$modal-header-border-color
+	);
+	$modal-footer-border-width: var(
+		--modal-footer-border-width,
+		$modal-header-border-width
+	);
+	$modal-footer-box-shadow: var(--modal-footer-box-shadow, none);
+	$modal-footer-color: var(--modal-footer-color, inherit);
+	$modal-footer-height: var(--modal-footer-height, auto);
+	$modal-footer-padding-x: var(--modal-footer-padding-x, 1.5rem);
+	$modal-footer-padding-y: var(--modal-footer-padding-y, 1rem);
+
+	$modal-footer-height-mobile: null;
+
+	$modal-item-padding-x: var(--modal-item-padding-x, 0rem);
+	$modal-item-padding-y: var(--modal-item-padding-y, 0rem);
+
+	$modal-item-group: ();
+	$modal-item-group: map-deep-merge(
+		(
+			align-items: center,
+			display: flex,
+			flex-wrap: wrap,
+			min-width: 3rem,
+			padding-left: 0.5rem,
+			padding-right: 0.5rem,
+			width: 100%,
+		),
+		$modal-item-group
+	);
+
+	$modal-item-group-first-child: ();
+	$modal-item-group-first-child: map-deep-merge(
+		(
+			padding-left: 0rem,
+		),
+		$modal-item-group-first-child
+	);
+
+	$modal-item-group-last-child: ();
+	$modal-item-group-last-child: map-deep-merge(
+		(
+			padding-right: 0rem,
+		),
+		$modal-item-group-last-child
+	);
+
+	$modal-item-group-only-child: ();
+	$modal-item-group-only-child: map-deep-merge(
+		(
+			padding-left: 0rem,
+			padding-right: 0rem,
+		),
+		$modal-item-group-only-child
+	);
+
+	$modal-item: ();
+	$modal-item: map-deep-merge(
+		(
+			display: flex,
+			flex-direction: column,
+			flex-grow: 1,
+			flex-shrink: 1,
+			max-width: 100%,
+			min-height: 0rem,
+			min-width: 3.125rem,
+			padding: 0rem,
+			position: relative,
+			word-wrap: break-word,
+		),
+		$modal-item
+	);
+
+	$modal-item-shrink: ();
+	$modal-item-shrink: map-deep-merge(
+		(
+			flex-grow: 0,
+		),
+		$modal-item-shrink
+	);
+
+	// Modal Title
+
+	$modal-title-font-size: var(--modal-title-font-size, 20px);
+	$modal-title-font-weight: var(--modal-title-font-weight, $font-weight-bold);
+	$modal-title-line-height: var(
+		--modal-title-line-height,
+		$headings-line-height
+	);
+	$modal-title-text-align: var(--modal-title-text-align, left);
+
+	$modal-title-font-size-mobile: null;
+
+	$modal-title-indicator-font-size: var(
+		--modal-title-indicator-font-size,
+		14px
+	);
+	$modal-title-indicator-spacer-x: var(--modal-title-indicator-spacer-x, 8px);
+
+	// Modal Subtitle
+
+	$modal-subtitle: ();
+	$modal-subtitle: map-deep-merge(
+		(
+			display: inline-block,
+		),
+		$modal-subtitle
+	);
+
+	$modal-subtitle-divider: ();
+	$modal-subtitle-divider: map-deep-merge(
+		(
+			display: inline-block,
+			margin-left: 0.25rem,
+			margin-right: 0.25rem,
+		),
+		$modal-subtitle-divider
+	);
+
+	$modal-subtitle-strong: ();
+
+	// Modal Close
+
+	$modal-close-spacer-x: 0.3125rem;
+
+	// Modal Full Screen
+
+	$modal-full-screen-spacer-x: 45px;
+	$modal-full-screen-spacer-y: $modal-full-screen-spacer-x;
+
+	// Modal Width
+
+	$modal-sm: var(--modal-sm, 320px);
+
+	$modal-md: var(--modal-md, 600px);
+
+	$modal-lg: var(--modal-lg, 896px);
+
+	$modal-xl: var(--modal-xl, 1140px);
+
+	// Modal Height
+
+	$modal-height-sm: var(--modal-height-sm, 250px);
+
+	$modal-height-md: var(--modal-height-md, 450px);
+
+	$modal-height-lg: var(--modal-height-lg, 650px);
+
+	$modal-height-xl: var(--modal-height-xl, 800px);
+
+	$modal-height-full-modal-content: ();
+	$modal-height-full-modal-content: map-merge(
+		(
+			bottom: $modal-dialog-margin-y-sm-up,
+			left: auto,
+			position: absolute,
+			right: auto,
+			top: $modal-dialog-margin-y-sm-up,
+		),
+		$modal-height-full-modal-content
+	);
+
+	$modal-height-full-modal-content-sm-up: ();
+	$modal-height-full-modal-content-sm-up: map-merge(
+		(
+			bottom: $modal-dialog-margin-y-sm-up,
+			left: auto,
+			right: auto,
+			top: $modal-dialog-margin-y-sm-up,
+		),
+		$modal-height-full-modal-content-sm-up
+	);
+
+	// Modal
+
+	$modal: ();
+	$modal: map-deep-merge(
+		(
+			display: none,
+			height: 100%,
+			left: 0rem,
+			outline: 0,
+			overflow: hidden,
+			position: fixed,
+			top: 0rem,
+			width: 100%,
+			z-index: $zindex-modal,
+
+			close: (
+				'&:first-child': (
+					margin-left: calc(#{$modal-close-spacer-x} * -1),
+				),
+
+				'&:last-child': (
+					margin-right: calc(#{$modal-close-spacer-x} * -1),
+				),
+			),
+
+			modal-header: $modal-header,
+
+			modal-body: $modal-body,
+
+			modal-footer: (
+				align-items: center,
+				background-color: $modal-footer-bg,
+				border-bottom-left-radius:
+					clay-enable-rounded($modal-content-inner-border-radius),
+				border-bottom-right-radius:
+					clay-enable-rounded($modal-content-inner-border-radius),
+				border-top:
+					$modal-footer-border-width
+					solid
+					$modal-footer-border-color,
+				box-shadow: clay-enable-shadows($modal-footer-box-shadow),
+				color: $modal-footer-color,
+				display: flex,
+				flex-shrink: 0,
+				flex-wrap: wrap,
+				height: $modal-footer-height,
+				justify-content: flex-start,
+				padding-bottom: $modal-footer-padding-y,
+				padding-left: $modal-footer-padding-x,
+				padding-right: $modal-footer-padding-x,
+				padding-top: $modal-footer-padding-y,
+
+				'> *': (
+					margin: 0rem calc(#{$modal-footer-margin-between} * 0.5),
+				),
+			),
+
+			modal-title: (
+				flex-grow: 1,
+				font-family: var(--modal-title-font-family, inherit),
+				font-size: $modal-title-font-size,
+				font-weight: $modal-title-font-weight,
+				line-height: $modal-title-line-height,
+				margin: var(--modal-title-margin, 16px 0 24px 0),
+				overflow: hidden,
+				text-align: $modal-title-text-align,
+				text-overflow: ellipsis,
+				white-space: nowrap,
+
+				'[tabindex="-1"]': (
+					outline: 0,
+				),
+			),
+
+			modal-title-indicator: (
+				display: inline-block,
+				font-size: $modal-title-indicator-font-size,
+				margin-right: $modal-title-indicator-spacer-x,
+				margin-top: -0.2em,
+				vertical-align: middle,
+			),
+
+			media-breakpoint-down: (
+				sm: (
+					close: (
+						margin-right: -0.5rem,
+					),
+
+					modal-header: (
+						height: 3rem,
+						padding: 0.5rem 1rem,
+					),
+
+					modal-title: (
+						font-size: 1.125rem,
+					),
+
+					modal-body: (
+						padding: 0.5rem 1rem,
+					),
+
+					modal-body-iframe: (
+						padding: 0rem,
+					),
+
+					modal-footer: (
+						padding: 0.5rem,
+					),
+				),
+			),
+		),
+		$modal
+	);
+
+	// Modal Success
+
+	$modal-success: ();
+	$modal-success: map-deep-merge(
+		(
+			modal-header: (
+				background-color:
+					var(
+						--modal-success-modal-header-background-color,
+						$success-l2
+					),
+				border-color:
+					var(--modal-success-modal-header-border-color, $success-l1),
+				color: var(--modal-success-modal-header-color, $success),
+				close: (
+					color:
+						var(--modal-success-modal-header-close-color, $success),
+					hover: (
+						color:
+							var(
+								--modal-success-modal-header-close-hover-color,
+								inherit
+							),
+					),
+
+					disabled: (
+						color:
+							var(
+								--modal-success-modal-header-close-disabled-color,
+								inherit
+							),
+					),
+				),
+			),
+		),
+		$modal-success
+	);
+
+	// Modal Info
+
+	$modal-info: ();
+	$modal-info: map-deep-merge(
+		(
+			modal-header: (
+				background-color:
+					var(--modal-info-modal-header-background-color, $info-l2),
+				border-color:
+					var(--modal-info-modal-header-border-color, $info-l1),
+				color: var(--modal-info-modal-header-color, $info),
+				close: (
+					color: var(--modal-info-modal-header-close-color, $info),
+					hover: (
+						color:
+							var(
+								--modal-info-modal-header-close-hover-color,
+								inherit
+							),
+					),
+
+					disabled: (
+						color:
+							var(
+								--modal-info-modal-header-close-disabled-color,
+								inherit
+							),
+					),
+				),
+			),
+		),
+		$modal-info
+	);
+
+	// Modal Warning
+
+	$modal-warning: ();
+	$modal-warning: map-deep-merge(
+		(
+			modal-header: (
+				background-color:
+					var(
+						--modal-warning-modal-header-background-color,
+						$warning-l2
+					),
+				border-color:
+					var(--modal-warning-modal-header-border-color, $warning-l1),
+				color: var(--modal-warning-modal-header-color, $warning),
+				close: (
+					color:
+						var(--modal-warning-modal-header-close-color, $warning),
+					hover: (
+						color:
+							var(
+								--modal-warning-modal-header-close-hover-color,
+								inherit
+							),
+					),
+
+					disabled: (
+						color:
+							var(
+								--modal-warning-modal-header-close-disabled-color,
+								inherit
+							),
+					),
+				),
+			),
+		),
+		$modal-warning
+	);
+
+	// Modal Danger
+
+	$modal-danger: ();
+	$modal-danger: map-deep-merge(
+		(
+			modal-header: (
+				background-color:
+					var(
+						--modal-danger-modal-header-background-color,
+						$danger-l2
+					),
+				border-color:
+					var(--modal-danger-modal-header-border-color, $danger-l1),
+				color: var(--modal-danger-modal-header-color, $danger),
+				close: (
+					color:
+						var(--modal-danger-modal-header-close-color, $danger),
+					hover: (
+						color:
+							var(
+								--modal-danger-modal-header-close-hover-color,
+								inherit
+							),
+					),
+
+					disabled: (
+						color:
+							var(
+								--modal-danger-modal-header-close-disabled-color,
+								inherit
+							),
+					),
+				),
+			),
+		),
+		$modal-danger
+	);
+
+	$modal-palette: ();
+	$modal-palette: map-deep-merge(
+		(
+			success: $modal-success,
+
+			info: $modal-info,
+
+			warning: $modal-warning,
+
+			danger: $modal-danger,
+		),
+		$modal-palette
+	);
+}

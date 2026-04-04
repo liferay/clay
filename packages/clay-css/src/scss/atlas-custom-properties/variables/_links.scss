@@ -1,0 +1,482 @@
+@if ($enable-atlas-custom-properties) {
+	$c-link: ();
+	$c-link: map-deep-merge(
+		(
+			text-decoration: none,
+			transition: clay-enable-transitions(box-shadow 0.15s ease-in-out),
+			hover: (
+				text-decoration: none,
+			),
+
+			focus: (
+				border-radius: 1px,
+				box-shadow: $component-focus-box-shadow,
+				outline: 0,
+			),
+
+			c-link-variants: (
+				text-secondary: (
+					color: $gray-900 !important,
+
+					hover: (
+						color: $black !important,
+					),
+
+					focus: (
+						color: $black !important,
+					),
+				),
+
+				text-tertiary: (
+					color: $gray-900 !important,
+
+					hover: (
+						color: $black !important,
+					),
+				),
+			),
+		),
+		$c-link
+	);
+
+	$component-link: ();
+	$component-link: map-deep-merge(
+		(
+			border-radius: 1px,
+			color: var(--component-link-color, $gray-600),
+			transition:
+				var(--component-link-transition, box-shadow 0.15s ease-in-out),
+			hover: (
+				color: var(--component-link-hover-color, $gray-900),
+			),
+
+			focus: (
+				color: var(--component-link-focus-color, $gray-900),
+				box-shadow:
+					var(
+						--component-link-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+				outline: 0,
+			),
+		),
+		$component-link
+	);
+
+	$link-primary: ();
+	$link-primary: map-deep-merge(
+		(
+			border-radius: 1px,
+			color: var(--link-primary-color, $primary),
+			transition:
+				var(--link-primary-transition, box-shadow 0.15s ease-in-out),
+			hover: (
+				color: var(--link-primary-hover-color, $primary-d1),
+			),
+
+			focus: (
+				color: var(--link-primary-focus-color, $primary-d1),
+				box-shadow:
+					var(
+						--link-primary-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+				outline: 0,
+			),
+		),
+		$link-primary
+	);
+
+	$link-secondary: ();
+	$link-secondary: map-deep-merge(
+		(
+			border-radius: 1px,
+			color: var(--link-secondary-color, $secondary),
+			transition: box-shadow 0.15s ease-in-out,
+
+			hover: (
+				color: var(--link-secondary-hover-color, $gray-900),
+			),
+
+			focus: (
+				color: var(--link-secondary-focus-color, $gray-900),
+				box-shadow: $component-focus-box-shadow,
+				outline: 0,
+			),
+		),
+		$link-secondary
+	);
+
+	$single-link-font-weight: $font-weight-semi-bold;
+
+	// Link Outline
+
+	// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
+	$link-outline-border-radius: $btn-border-radius;
+
+	// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
+	$link-outline-border-width: $btn-border-width;
+
+	// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
+	$link-outline-font-size: $btn-font-size-sm;
+
+	// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
+	$link-outline-font-weight: $font-weight-semi-bold;
+
+	// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
+	$link-outline-line-height: $btn-line-height-sm;
+
+	// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
+	$link-outline-padding-x: $btn-padding-x-sm;
+
+	// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
+	$link-outline-padding-y: $btn-padding-y-sm;
+
+	// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
+	$link-outline-transition: $component-transition;
+
+	$link-outline: ();
+	$link-outline: map-deep-merge(
+		(
+			align-items: center,
+			background-color: transparent,
+			border-color: transparent,
+			border-radius: $link-outline-border-radius,
+			border-style: solid,
+			border-width: $link-outline-border-width,
+			display: inline-flex,
+			font-size: $link-outline-font-size,
+			font-weight: $link-outline-font-weight,
+			justify-content: center,
+			line-height: $link-outline-line-height,
+			padding-bottom: $link-outline-padding-y,
+			padding-left: $link-outline-padding-x,
+			padding-right: $link-outline-padding-x,
+			padding-top: $link-outline-padding-y,
+			transition: $link-outline-transition,
+			vertical-align: middle,
+
+			hover: (
+				text-decoration: none,
+			),
+
+			focus: (
+				box-shadow: $component-focus-box-shadow,
+				outline: 0,
+			),
+
+			disabled: (
+				box-shadow: none,
+
+				active: (
+					pointer-events: none,
+				),
+			),
+
+			lexicon-icon: (
+				margin-top: 0,
+			),
+		),
+		$link-outline
+	);
+
+	$link-outline-primary: ();
+	$link-outline-primary: map-deep-merge(
+		(
+			border-color: $primary,
+			color: $primary,
+
+			hover: (
+				background-color: $primary-l3,
+				color: $primary,
+			),
+
+			focus: (
+				background-color: $primary-l3,
+				color: $primary,
+			),
+
+			active: (
+				background-color: unquote('hsl(from #{$primary} h s l / 0.12)'),
+				color: $primary,
+			),
+
+			disabled: (
+				background-color: transparent,
+				color: $primary,
+				cursor: $disabled-cursor,
+				opacity: $component-disabled-opacity,
+			),
+		),
+		$link-outline-primary
+	);
+
+	$link-outline-secondary: ();
+	$link-outline-secondary: map-deep-merge(
+		(
+			border-color: $secondary-l2,
+			color: $secondary,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$gray-900} h s l / 0.03)'),
+				color: $gray-900,
+			),
+
+			focus: (
+				background-color:
+					unquote('hsl(from #{$gray-900} h s l / 0.03)'),
+				color: $gray-900,
+			),
+
+			active: (
+				background-color:
+					unquote('hsl(from #{$gray-900} h s l / 0.06)'),
+				color: $gray-900,
+			),
+
+			disabled: (
+				background-color: transparent,
+				color: $secondary,
+				cursor: $disabled-cursor,
+				opacity: $component-disabled-opacity,
+			),
+		),
+		$link-outline-secondary
+	);
+
+	// Link Monospaced
+
+	// @deprecated as of v3.4.0 use the Sass map `$link-monospaced` instead
+
+	$link-monospaced-size: $btn-monospaced-size-sm;
+
+	$link-monospaced: ();
+	$link-monospaced: map-deep-merge(
+		(
+			align-items: center,
+			display: inline-flex,
+			height: $link-monospaced-size,
+			justify-content: center,
+			overflow: hidden,
+			padding-bottom: 0,
+			padding-left: 0,
+			padding-right: 0,
+			padding-top: 0,
+			vertical-align: middle,
+			width: $link-monospaced-size,
+
+			lexicon-icon: (
+				margin-top: 0,
+			),
+		),
+		$link-monospaced
+	);
+
+	// Component Title
+
+	$component-title: ();
+	$component-title: map-deep-merge(
+		(
+			color: var(--component-title-color, $gray-900),
+			font-size: var(--component-title-font-size, 16px),
+			font-weight:
+				var(--component-title-font-weight, $headings-font-weight),
+			line-height: var(--component-title-line-height, 1.25),
+			margin-bottom:
+				var(
+					--component-title-margin-bottom,
+					calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2)
+				),
+			margin-top:
+				var(
+					--component-title-margin-top,
+					calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2)
+				),
+		),
+		$component-title
+	);
+
+	$component-title-link: ();
+	$component-title-link: map-deep-merge(
+		(
+			border-radius: 1px,
+			color: var(--component-title-link-color, $gray-900),
+			transition: box-shadow 0.15s ease-in-out,
+
+			hover: (
+				color:
+					var(
+						--component-title-link-hover-color,
+						unquote('hsl(from #{$gray-900} h s calc(l - 15))')
+					),
+			),
+
+			focus: (
+				color:
+					var(
+						--component-title-link-focus-color,
+						unquote('hsl(from #{$gray-900} h s calc(l - 15))')
+					),
+				box-shadow: $component-focus-box-shadow,
+				outline: 0,
+			),
+		),
+		$component-title-link
+	);
+
+	$component-title: map-deep-merge(
+		$component-title,
+		(
+			href: $component-title-link,
+		)
+	);
+
+	// Component Subtitle
+
+	$component-subtitle: ();
+	$component-subtitle: map-deep-merge(
+		(
+			color: var(--component-subtitle-color, $gray-600),
+			font-weight:
+				var(--component-subtitle-font-weight, $font-weight-semi-bold),
+			line-height: var(--component-subtitle-line-height, 1.45),
+			margin-bottom: var(--component-subtitle-margin-bottom, 0),
+		),
+		$component-subtitle
+	);
+
+	$component-subtitle-link: ();
+	$component-subtitle-link: map-deep-merge(
+		(
+			border-radius: 1px,
+			color: var(--component-subtitle-link-color, $gray-600),
+			transition: box-shadow 0.15s ease-in-out,
+
+			hover: (
+				color: var(--component-subtitle-link-hover-color, $gray-900),
+			),
+
+			focus: (
+				color: var(--component-subtitle-link-focus-color, $gray-900),
+				box-shadow: $component-focus-box-shadow,
+				outline: 0,
+			),
+		),
+		$component-subtitle-link
+	);
+
+	$component-subtitle: map-deep-merge(
+		$component-subtitle,
+		(
+			href: $component-subtitle-link,
+		)
+	);
+
+	// Component Action
+
+	$component-action: ();
+	$component-action: map-deep-merge(
+		(
+			align-items: center,
+			background-color:
+				var(--component-action-background-color, transparent),
+			border-color: var(--component-action-border-color, transparent),
+			border-radius:
+				var(--component-action-border-radius, $border-radius),
+			border-width: var(--component-action-border-width, 0),
+			color: var(--component-action-color, $secondary),
+			display: inline-flex,
+			font-size: var(--component-action-font-size, 16px),
+			height:
+				var(
+					--component-action-height,
+					map-get($link-monospaced, height)
+				),
+			justify-content: center,
+			overflow: hidden,
+			padding: var(--component-action-padding, 0),
+			transition: $component-transition,
+			vertical-align: middle,
+			width:
+				var(--component-action-width, map-get($link-monospaced, width)),
+			hover: (
+				background-color:
+					var(
+						--component-action-hover-background-color,
+						unquote('hsl(from #{$gray-900} h s l / 0.03)')
+					),
+				color: var(--component-action-hover-color, $gray-900),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--component-action-focus-background-color,
+						unquote('hsl(from #{$gray-900} h s l / 0.03)')
+					),
+				box-shadow: $component-focus-box-shadow,
+				color: var(--component-action-focus-color, $gray-900),
+				outline: 0,
+			),
+
+			active: (
+				background-color:
+					var(
+						--component-action-active-background-color,
+						unquote('hsl(from #{$gray-900} h s l / 0.06)')
+					),
+				color: var(--component-action-active-color, $gray-900),
+			),
+
+			disabled: (
+				background-color:
+					var(
+						--component-action-disabled-background-color,
+						transparent
+					),
+				box-shadow: none,
+				color: var(--component-action-disabled-color, $secondary),
+				cursor: $disabled-cursor,
+				opacity:
+					var(
+						--component-action-disabled-opacity,
+						$component-disabled-opacity
+					),
+				active: (
+					pointer-events: none,
+				),
+			),
+
+			lexicon-icon: (
+				margin-top: 0,
+			),
+		),
+		$component-action
+	);
+
+	$component-text: ();
+
+	$component-icon: ();
+	$component-icon: map-deep-merge(
+		(
+			align-items: center,
+			display: inline-flex,
+			height: var(--component-icon-height, 32px),
+			justify-content: center,
+			width: var(--component-icon-width, 32px),
+			lexicon-icon: (
+				margin-top: 0,
+			),
+		),
+		$component-icon
+	);
+}

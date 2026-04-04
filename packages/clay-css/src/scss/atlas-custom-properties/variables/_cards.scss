@@ -1,0 +1,1217 @@
+@if ($enable-atlas-custom-properties) {
+	$card-bg: var(--card-bg, $white);
+	$card-border-color: var(
+		--card-border-color,
+		unquote('hsl(from #{$black} h s l / 0.125)')
+	);
+	$card-border-style: var(--card-border-style, solid);
+	$card-border-width: var(--card-border-width, 0px);
+
+	$card-border-radius: var(--card-border-radius, $border-radius);
+	$card-inner-border-radius: calc(
+		#{$card-border-radius} - #{$card-border-width}
+	);
+
+	$card-box-shadow: var(--card-box-shadow, 0 1px 3px -1px rgba(0, 0, 0, 0.6));
+	$card-color: var(--card-color, inherit);
+	$card-height: null;
+	$card-margin-bottom: var(--card-margin-bottom, 24px);
+
+	$card-spacer-x: var(--card-spacer-x, 20px);
+	$card-spacer-y: var(--card-spacer-y, 12px);
+
+	$card-cap-bg: unquote('hsl(from #{$black} h s l / 0.03)');
+	$card-cap-color: null;
+
+	// .card-body
+
+	$card-body-padding-bottom: var(--card-body-padding-bottom, 16px);
+	$card-body-padding-left: var(--card-body-padding-left, 16px);
+	$card-body-padding-right: var(--card-body-padding-right, 16px);
+	$card-body-padding-top: var(--card-body-padding-top, 16px);
+
+	// `flex` enable `flex-grow: 1` for decks and groups so that card blocks take up
+	// as much space as possible, ensuring footers are aligned to the bottom.
+	// `min-height` workaround for the image size bug in IE
+	// See: https://github.com/twbs/bootstrap/pull/28855
+
+	$card-body: ();
+	$card-body: map-deep-merge(
+		(
+			color: $card-color,
+			flex: 1 1 auto,
+			min-height: 1px,
+			padding-bottom: $card-body-padding-bottom,
+			padding-left: $card-body-padding-left,
+			padding-right: $card-body-padding-right,
+			padding-top: $card-body-padding-top,
+		),
+		$card-body
+	);
+
+	// .card-section-header
+
+	$card-section-header-color: var(--card-section-header-color, $gray-600);
+	$card-section-header-font-size: var(--card-section-header-font-size, 12px);
+	$card-section-header-font-weight: var(
+		--card-section-header-font-weight,
+		$font-weight-semi-bold
+	);
+	$card-section-header-line-height: var(
+		--card-section-header-line-height,
+		2.5
+	);
+	$card-section-header-margin-bottom: var(
+		--card-section-header-margin-bottom,
+		24px
+	);
+	$card-section-header-padding: var(
+		--card-section-header-padding,
+		0 calc(#{$grid-gutter-width} * 0.5)
+	);
+	$card-section-header-text-transform: var(
+		--card-section-header-text-transform,
+		uppercase
+	);
+
+	$card-section-header: ();
+	$card-section-header: map-deep-merge(
+		(
+			color: $card-section-header-color,
+			font-size: $card-section-header-font-size,
+			font-weight: $card-section-header-font-weight,
+			line-height: $card-section-header-line-height,
+			margin-bottom: $card-section-header-margin-bottom,
+			padding: $card-section-header-padding,
+			text-transform: $card-section-header-text-transform,
+		),
+		$card-section-header
+	);
+
+	// .card-img-overlay
+
+	$card-img-overlay-padding: var(--card-img-overlay-padding, 20px);
+
+	// Card Aspect Ratio
+
+	$card-aspect-ratio-label: ();
+	$card-aspect-ratio-label: map-deep-merge(
+		(
+			display: block,
+			margin-bottom: 8px,
+			margin-left: 0,
+			margin-right: 0,
+			margin-top: 8px,
+		),
+		$card-aspect-ratio-label
+	);
+
+	$card-aspect-ratio-item-top-left: ();
+	$card-aspect-ratio-item-top-left: map-deep-merge(
+		(
+			left: 16px,
+			top: 16px,
+		),
+		$card-aspect-ratio-item-top-left
+	);
+
+	$card-aspect-ratio-item-top-center: ();
+	$card-aspect-ratio-item-top-center: map-deep-merge(
+		(
+			top: 16px,
+		),
+		$card-aspect-ratio-item-top-center
+	);
+
+	$card-aspect-ratio-item-top-right: ();
+	$card-aspect-ratio-item-top-right: map-deep-merge(
+		(
+			right: 16px,
+			top: 16px,
+		),
+		$card-aspect-ratio-item-top-right
+	);
+
+	$card-aspect-ratio-item-right-middle: ();
+	$card-aspect-ratio-item-right-middle: map-deep-merge(
+		(
+			right: 16px,
+		),
+		$card-aspect-ratio-item-right-middle
+	);
+
+	$card-aspect-ratio-item-bottom-right: ();
+	$card-aspect-ratio-item-bottom-right: map-deep-merge(
+		(
+			bottom: 16px,
+			right: 16px,
+		),
+		$card-aspect-ratio-item-bottom-right
+	);
+
+	$card-aspect-ratio-item-bottom-center: ();
+	$card-aspect-ratio-item-bottom-center: map-deep-merge(
+		(
+			bottom: 16px,
+		),
+		$card-aspect-ratio-item-bottom-center
+	);
+
+	$card-aspect-ratio-item-bottom-left: ();
+	$card-aspect-ratio-item-bottom-left: map-deep-merge(
+		(
+			bottom: 16px,
+			left: 16px,
+		),
+		$card-aspect-ratio-item-bottom-left
+	);
+
+	// .card
+
+	// `min-width`, see https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+
+	$card: ();
+	$card: map-deep-merge(
+		(
+			background-color: $card-bg,
+			border-color: $card-border-color,
+			border-radius: clay-enable-rounded($card-border-radius),
+			border-style: $card-border-style,
+			border-width: $card-border-width,
+			box-shadow: clay-enable-shadows($card-box-shadow),
+			display: block,
+			height: $card-height,
+			margin-bottom: $card-margin-bottom,
+			min-width: 0,
+			position: relative,
+			word-wrap: break-word,
+
+			aspect-ratio: (
+				label: $card-aspect-ratio-label,
+			),
+
+			aspect-ratio-item-top-left: $card-aspect-ratio-item-top-left,
+
+			aspect-ratio-item-top-center: $card-aspect-ratio-item-top-center,
+
+			aspect-ratio-item-top-right: $card-aspect-ratio-item-top-right,
+
+			aspect-ratio-item-right-middle:
+				$card-aspect-ratio-item-right-middle,
+
+			aspect-ratio-item-bottom-right:
+				$card-aspect-ratio-item-bottom-right,
+
+			aspect-ratio-item-bottom-center:
+				$card-aspect-ratio-item-bottom-center,
+
+			aspect-ratio-item-bottom-left: $card-aspect-ratio-item-bottom-left,
+
+			hr: (
+				margin-left: 0,
+				margin-right: 0,
+			),
+		),
+		$card
+	);
+
+	// Card Title
+
+	$card-title: ();
+	$card-title: map-deep-merge(
+		(
+			color: var(--card-title-color, $gray-900),
+			font-size: var(--card-title-font-size, 14px),
+			font-weight: var(--card-title-font-weight, $font-weight-semi-bold),
+			line-height: var(--card-title-line-height, $line-height-base),
+			margin-bottom: var(--card-title-margin-bottom, 0),
+		),
+		$card-title
+	);
+
+	$card-title-link: ();
+	$card-title-link: map-deep-merge(
+		(
+			color: map-get($card-title, color),
+			hover: (
+				color: map-get($card-title, color),
+			),
+		),
+		$card-title-link
+	);
+
+	$card-title: map-deep-merge(
+		$card-title,
+		(
+			href: $card-title-link,
+		)
+	);
+
+	// Card Subtitle
+
+	$card-subtitle: ();
+	$card-subtitle: map-deep-merge(
+		(
+			color: var(--card-subtitle-color, $gray-600),
+			font-size: var(--card-subtitle-font-size, 14px),
+			font-weight: var(--card-subtitle-font-weight, $font-weight-normal),
+			margin-bottom: var(--card-subtitle-margin-bottom, 0),
+			margin-top: var(--card-subtitle-margin-top, 0),
+		),
+		$card-subtitle
+	);
+
+	$card-subtitle-link: ();
+	$card-subtitle-link: map-deep-merge(
+		(
+			color: map-get($card-subtitle, color),
+			hover: (
+				color: $gray-600,
+			),
+		),
+		$card-subtitle-link
+	);
+
+	$card-subtitle: map-deep-merge(
+		$card-subtitle,
+		(
+			href: $card-subtitle-link,
+		)
+	);
+
+	// Card Link
+
+	$card-link: ();
+	$card-link: map-deep-merge(
+		(
+			color: var(--card-link-color, $gray-600),
+			font-size: var(--card-link-font-size, 14px),
+			hover: (
+				color: var(--card-link-hover-color, $gray-600),
+				text-decoration:
+					var(--card-link-hover-text-decoration, underline),
+			),
+		),
+		$card-link
+	);
+
+	// .card-text
+
+	$card-text: ();
+	$card-text: map-deep-merge(
+		(
+			last-child: (
+				margin-bottom: 0,
+			),
+		),
+		$card-text
+	);
+
+	// .card-divider
+
+	$card-divider-bg: var(--card-divider-bg, $card-border-color);
+	$card-divider-height: var(--card-divider-height, 1px);
+	$card-divider-spacer-x: var(--card-divider-spacer-x, null);
+	$card-divider-spacer-y: var(--card-divider-spacer-y, 10px);
+
+	$card-divider: ();
+	$card-divider: map-deep-merge(
+		(
+			background-color: $card-divider-bg,
+			height: $card-divider-height,
+			margin-bottom: $card-divider-spacer-y,
+			margin-left: $card-divider-spacer-x,
+			margin-right: $card-divider-spacer-x,
+			margin-top: $card-divider-spacer-y,
+		),
+		$card-divider
+	);
+
+	// .card-header
+
+	// `margin-bottom` removes the default margin-bottom of <hN> (h1 - h6)
+
+	$card-header: ();
+	$card-header: map-deep-merge(
+		(
+			background-color: var(--card-header-background-color, $card-cap-bg),
+			border-bottom:
+				var(
+					--card-header-border-bottom,
+					$card-border-width solid $card-border-color
+				),
+			color: var(--card-header-color, $card-cap-color),
+			margin-bottom: var(--card-header-margin-bottom, 0),
+			padding: var(--card-header-padding, $card-spacer-y $card-spacer-x),
+			first-child: (
+				border-radius:
+					clay-enable-rounded(
+						$card-inner-border-radius $card-inner-border-radius 0 0
+					),
+			),
+		),
+		$card-header
+	);
+
+	// .card-footer
+
+	$card-footer: ();
+	$card-footer: map-deep-merge(
+		(
+			background-color: var(--card-footer-background-color, $card-cap-bg),
+			border-top:
+				var(
+					--card-footer-border-top,
+					$card-border-width solid $card-border-color
+				),
+			padding: var(--card-footer-padding, $card-spacer-y $card-spacer-x),
+			last-child: (
+				border-radius:
+					clay-enable-rounded(
+						0 0 $card-inner-border-radius $card-inner-border-radius
+					),
+			),
+		),
+		$card-footer
+	);
+
+	// .rounded-*
+
+	$card-rounded-inner-border-radius: calc(
+		#{$rounded-border-radius} - #{$card-border-width}
+	);
+	$card-rounded-0-inner-border-radius: calc(
+		#{$rounded-0-border-radius} - #{$card-border-width}
+	);
+	$card-rounded-circle-inner-border-radius: calc(
+		#{$rounded-circle-border-radius} - #{$card-border-width}
+	);
+
+	$checkbox-left-card-padding: var(--checkbox-left-card-padding, 50px);
+	$checkbox-right-card-padding: var(
+		--checkbox-right-card-padding,
+		$checkbox-left-card-padding
+	);
+
+	$checkbox-position: var(--checkbox-position, 16px);
+
+	$form-check-card-checked-box-shadow: var(
+		--form-check-card-checked-box-shadow,
+		0
+			0
+			0
+			2px
+			unquote('hsl(from #{$component-active-bg} h s calc(l + 22.94))')
+	);
+
+	// .form-check-card
+
+	$form-check-card-checked-box-shadow: $input-btn-focus-box-shadow;
+
+	$form-check-card: ();
+	$form-check-card: map-deep-merge(
+		(
+			margin-bottom: $card-margin-bottom,
+			margin-top: 0rem,
+			padding-left: 0rem,
+
+			hover: (
+				card: (
+					box-shadow: $form-check-card-checked-box-shadow,
+				),
+			),
+
+			active: (
+				card: (
+					box-shadow: $form-check-card-checked-box-shadow,
+				),
+			),
+
+			checked: (
+				card: (
+					box-shadow: $form-check-card-checked-box-shadow,
+				),
+			),
+
+			card: (
+				margin-bottom: 0rem,
+			),
+
+			form-check-input: (
+				margin-left: 0rem,
+				margin-top: 0rem,
+				opacity: 0,
+				position: absolute,
+				z-index: 1,
+			),
+
+			form-check-label: (
+				color: $body-color,
+				display: inline,
+				font-weight: $font-weight-normal,
+				padding-left: 0rem,
+				position: static,
+			),
+
+			custom-control: (
+				display: inline,
+				margin-right: 0rem,
+				position: static,
+
+				label: (
+					font-weight: $font-weight-normal,
+					padding-left: 0rem,
+				),
+
+				custom-control-label: (
+					opacity: 0,
+					position: absolute,
+					z-index: 1,
+				),
+
+				custom-control-input: (
+					z-index: 2,
+
+					checked: (
+						card: (
+							box-shadow: $form-check-card-checked-box-shadow,
+						),
+					),
+				),
+			),
+		),
+		$form-check-card
+	);
+
+	// .form-check-bottom-left .card-horizontal > .card-body,
+	// .form-check-middle-left .card-horizontal > .card-body,
+	// .form-check-top-left .card-horizontal > .card-body
+
+	$checkbox-left-card-padding: 40px;
+
+	// .form-check-bottom-right .card-horizontal > .card-body,
+	// .form-check-middle-right .card-horizontal > .card-body,
+	// .form-check-top-right .card-horizontal > .card-body
+
+	$checkbox-right-card-padding: $checkbox-left-card-padding;
+
+	// Form Check Positions
+
+	$checkbox-position: 1rem;
+
+	// .form-check-bottom-left
+
+	$form-check-bottom-left: ();
+	$form-check-bottom-left: map-deep-merge(
+		(
+			form-check-input: (
+				bottom: $checkbox-position,
+				left: $checkbox-position,
+				opacity: 1,
+				top: auto,
+				transform: none,
+			),
+
+			custom-control: (
+				custom-control-input: (
+					bottom: $checkbox-position,
+					left: $checkbox-position,
+					top: auto,
+					transform: none,
+				),
+
+				custom-control-label: (
+					bottom: $checkbox-position,
+					left: $checkbox-position,
+					opacity: 1,
+					top: auto,
+					transform: none,
+				),
+			),
+		),
+		$form-check-bottom-left
+	);
+
+	// .form-check-bottom-right
+
+	$form-check-bottom-right: ();
+	$form-check-bottom-right: map-deep-merge(
+		(
+			form-check-input: (
+				bottom: $checkbox-position,
+				left: auto,
+				opacity: 1,
+				right: $checkbox-position,
+				top: auto,
+				transform: none,
+			),
+
+			custom-control: (
+				custom-control-input: (
+					bottom: $checkbox-position,
+					left: auto,
+					right: $checkbox-position,
+					top: auto,
+					transform: none,
+				),
+
+				custom-control-label: (
+					bottom: $checkbox-position,
+					left: auto,
+					opacity: 1,
+					right: $checkbox-position,
+					top: auto,
+					transform: none,
+				),
+			),
+		),
+		$form-check-bottom-right
+	);
+
+	// .form-check-middle-left
+
+	$form-check-middle-left: ();
+	$form-check-middle-left: map-deep-merge(
+		(
+			form-check-input: (
+				left: $checkbox-position,
+				margin-top: 0rem,
+				opacity: 1,
+				top: 50%,
+				transform: translateY(-50%),
+			),
+
+			custom-control: (
+				custom-control-input: (
+					left: $checkbox-position,
+					margin-top: 0rem,
+					top: 50%,
+					transform: translateY(-50%),
+				),
+
+				custom-control-label: (
+					left: $checkbox-position,
+					margin-top: 0rem,
+					opacity: 1,
+					top: 50%,
+					transform: translateY(-50%),
+				),
+			),
+		),
+		$form-check-middle-left
+	);
+
+	// .form-check-middle-right
+
+	$form-check-middle-right: ();
+	$form-check-middle-right: map-deep-merge(
+		(
+			form-check-input: (
+				left: auto,
+				margin-top: 0rem,
+				opacity: 1,
+				right: $checkbox-position,
+				top: 50%,
+				transform: translateY(-50%),
+			),
+
+			custom-control: (
+				custom-control-input: (
+					left: auto,
+					margin-top: 0rem,
+					right: $checkbox-position,
+					top: 50%,
+					transform: translateY(-50%),
+				),
+
+				custom-control-label: (
+					left: auto,
+					margin-top: 0rem,
+					opacity: 1,
+					right: $checkbox-position,
+					top: 50%,
+					transform: translateY(-50%),
+				),
+			),
+		),
+		$form-check-middle-right
+	);
+
+	// .form-check-top-right
+
+	$form-check-top-right: ();
+	$form-check-top-right: map-deep-merge(
+		(
+			form-check-input: (
+				left: auto,
+				opacity: 1,
+				right: $checkbox-position,
+				top: $checkbox-position,
+				transform: none,
+			),
+
+			custom-control: (
+				custom-control-input: (
+					left: auto,
+					right: $checkbox-position,
+					top: $checkbox-position,
+					transform: none,
+				),
+
+				custom-control-label: (
+					left: auto,
+					opacity: 1,
+					right: $checkbox-position,
+					top: $checkbox-position,
+					transform: none,
+				),
+			),
+		),
+		$form-check-top-right
+	);
+
+	// .form-check-top-left
+
+	$form-check-top-left: ();
+	$form-check-top-left: map-deep-merge(
+		(
+			form-check-input: (
+				left: $checkbox-position,
+				opacity: 1,
+				top: $checkbox-position,
+				transform: none,
+			),
+
+			custom-control: (
+				custom-control-input: (
+					left: $checkbox-position,
+					top: $checkbox-position,
+					transform: none,
+				),
+
+				custom-control-label: (
+					left: $checkbox-position,
+					opacity: 1,
+					top: $checkbox-position,
+					transform: none,
+				),
+			),
+		),
+		$form-check-top-left
+	);
+
+	// Card Interactive
+
+	$card-interactive-after-highlight: ();
+	$card-interactive-after-highlight: map-deep-merge(
+		(
+			border-radius:
+				var(
+					--card-interactive-after-highlight-border-radius,
+					0 0 $card-border-radius $card-border-radius
+				),
+			bottom:
+				var(
+					--card-interactive-after-highlight-bottom,
+					calc(#{$card-border-width} * -1)
+				),
+			content: '',
+			height: var(--card-interactive-after-highlight-height, 0),
+			left:
+				var(
+					--card-interactive-after-highlight-left,
+					calc(#{$card-border-width} * -1)
+				),
+			position:
+				var(--card-interactive-after-highlight-position, absolute),
+			right:
+				var(
+					--card-interactive-after-highlight-right,
+					calc(#{$card-border-width} * -1)
+				),
+			transition:
+				var(
+					--card-interactive-after-highlight-transition,
+					height 0.15s ease-out
+				),
+			hover: (
+				height:
+					var(--card-interactive-after-highlight-hover-height, 4px),
+			),
+
+			focus: (
+				height:
+					var(--card-interactive-after-highlight-focus-height, 4px),
+			),
+
+			active: (
+				height:
+					var(--card-interactive-after-highlight-active-height, 4px),
+			),
+		),
+		$card-interactive-after-highlight
+	);
+
+	$card-interactive-card-body: ();
+	$card-interactive-card-body: map-deep-merge(
+		(
+			display: block,
+		),
+		$card-interactive-card-body
+	);
+
+	$card-interactive: ();
+	$card-interactive: map-deep-merge(
+		(
+			cursor: $link-cursor,
+			outline: 0,
+			transition: $component-transition,
+
+			hover: (
+				background-color: #f7f8f9,
+				text-decoration: none,
+			),
+
+			focus: (
+				box-shadow: #{0 0 0 2px #fff,
+				0 0 0 4px #719aff},
+			),
+
+			active: (
+				background-color: #f1f2f5,
+			),
+
+			after-highlight: $card-interactive-after-highlight,
+
+			card-body: $card-interactive-card-body,
+		),
+		$card-interactive
+	);
+
+	// Card Interactive Primary
+
+	$card-interactive-primary-after-highlight: ();
+	$card-interactive-primary-after-highlight: map-deep-merge(
+		(
+			hover: (
+				background-color: $component-active-bg,
+			),
+
+			focus: (
+				background-color: $component-active-bg,
+			),
+
+			active: (
+				background-color: $component-active-bg,
+			),
+		),
+		$card-interactive-primary-after-highlight
+	);
+
+	$card-interactive-primary: ();
+	$card-interactive-primary: map-deep-merge(
+		(
+			focus: (
+				background-color: $gray-100,
+			),
+
+			active: (
+				background-color: $gray-200,
+			),
+
+			after-highlight: $card-interactive-primary-after-highlight,
+		),
+		$card-interactive-primary
+	);
+
+	// Card Interactive Secondary
+
+	$card-interactive-secondary: ();
+	$card-interactive-secondary: map-deep-merge(
+		(
+			color: $gray-900,
+
+			hover: (
+				background-color: $white,
+				border-color: transparent,
+				box-shadow: 0 0 0 2px #719aff,
+				color: $gray-900,
+			),
+
+			focus: (
+				border-color: transparent,
+				box-shadow: 0 0 0 2px #719aff,
+			),
+
+			active: (
+				background-color: $white,
+			),
+		),
+		$card-interactive-secondary
+	);
+
+	// Card Type Asset
+
+	$card-type-asset: ();
+	$card-type-asset: map-deep-merge(
+		(
+			aspect-ratio: (
+				border-color: $gray-300,
+				border-style: solid,
+				border-width: 0 0 1px 0,
+				horizontal: 16,
+				vertical: 9,
+
+				custom-control: (
+					label: (
+						bottom: 0,
+						cursor: $link-cursor,
+						left: 0,
+						position: absolute,
+						right: 0,
+						top: 0,
+					),
+				),
+			),
+
+			card-type-asset-icon: (
+				width: 22.225%,
+
+				inline-item: (
+					bottom: 0,
+					left: 0,
+					position: absolute,
+					right: 0,
+					top: 0,
+				),
+
+				lexicon-icon: (
+					height: 100%,
+					width: 100%,
+				),
+
+				sticker: (
+					border-radius: 50%,
+					display: block,
+					font-size: 2vw,
+					padding-bottom: 100%,
+					width: 100%,
+				),
+			),
+
+			card-body: (
+				padding-top: 12px,
+			),
+
+			card-row: (
+				align-items: flex-start,
+			),
+
+			dropdown-action: (
+				margin-right: -8px,
+				margin-top: -3px,
+			),
+		),
+		$card-type-asset
+	);
+
+	// Image Card
+
+	$image-card: ();
+	$image-card: map-deep-merge(
+		(
+			aspect-ratio: (
+				checkered-foreground-color: $gray-300,
+			),
+		),
+		$image-card
+	);
+
+	// File Card
+
+	$file-card: ();
+	$file-card: map-deep-merge(
+		(
+			card-type-asset-icon: (
+				color: $gray-400,
+			),
+		),
+		$file-card
+	);
+
+	// Product Card
+
+	$product-card: ();
+	$product-card: map-deep-merge(
+		(
+			aspect-ratio: (
+				background-color: $white,
+				background-image: linear-gradient(0deg, #ebebeb, #ebebeb),
+			),
+
+			card-body: (
+				text-align: center,
+			),
+
+			card-title: (
+				font-size: 16px,
+			),
+
+			card-subtitle: (
+				font-size: 12px,
+			),
+
+			card-text: (
+				font-size: 18px,
+				font-weight: $font-weight-semi-bold,
+			),
+		),
+		$product-card
+	);
+
+	// User Card
+
+	$user-card: ();
+	$user-card: map-deep-merge(
+		(
+			card-type-asset-icon: (
+				max-width: 80px,
+				min-width: 48px,
+				width: 30%,
+
+				lexicon-icon: (
+					height: auto,
+					width: 50%,
+				),
+			),
+		),
+		$user-card
+	);
+
+	$card-page: ();
+	$card-page: map-deep-merge(
+		(
+			container-name: c-card-page,
+			container-type: inline-size,
+			extend: '%clay-custom-grid-wrapper',
+		),
+		$card-page
+	);
+
+	// Card Page Item Asset
+
+	$card-page-item-asset: ();
+	$card-page-item-asset: map-deep-merge(
+		(
+			flex-basis: 100%,
+			max-width: 100%,
+			padding-left: calc(#{$grid-gutter-width} * 0.5),
+			padding-right: calc(#{$grid-gutter-width} * 0.5),
+			'@container #{map-get($card-page, container-name)} (min-width: #{map-get($container-max-widths, sm)})':
+			(
+				flex-basis: 50%,
+				max-width: 50%,
+			),
+
+			'@container #{map-get($card-page, container-name)} (min-width: #{map-get($container-max-widths, md)})':
+			(
+				flex-basis: 33.33333%,
+				max-width: 33.33333%,
+			),
+
+			'@container #{map-get($card-page, container-name)} (min-width: #{map-get($container-max-widths, lg)})':
+			(
+				flex-basis: 25%,
+				max-width: 25%,
+			),
+
+			'@container #{map-get($card-page, container-name)} (min-width: #{map-get($container-max-widths, xl)})':
+			(
+				flex-basis: 20%,
+				max-width: 20%,
+			),
+		),
+		$card-page-item-asset
+	);
+
+	// Card Page Item User
+
+	// base: min-width 0, sm min-width: 576px, lg: min-width: 992px
+
+	$card-page-item-user: ();
+	$card-page-item-user: map-deep-merge(
+		$card-page-item-asset,
+		$card-page-item-user
+	);
+
+	// Card Type Directory
+
+	$card-type-directory: ();
+	$card-type-directory: map-deep-merge(
+		(
+			sticker: (
+				font-size: 18px,
+			),
+		),
+		$card-type-directory
+	);
+
+	// Card Page Item Directory
+
+	$card-page-item-directory: ();
+	$card-page-item-directory: map-deep-merge(
+		$card-page-item-asset,
+		$card-page-item-directory
+	);
+
+	// Card Type Template
+
+	$card-type-template-after-highlight: ();
+	$card-type-template-after-highlight: map-deep-merge(
+		(
+			bottom: -1px,
+			left: -1px,
+			right: -1px,
+		),
+		$card-type-template-after-highlight
+	);
+
+	$card-type-template-aspect-ratio: ();
+	$card-type-template-aspect-ratio: map-deep-merge(
+		(
+			background-image: none,
+			border-width: 0,
+			color: $gray-600,
+			horizontal: 16,
+			text-align: center,
+			vertical: 9,
+
+			lexicon-icon: (
+				height: auto,
+				width: 28%,
+			),
+		),
+		$card-type-template-aspect-ratio
+	);
+
+	$card-type-template-aspect-ratio-item: ();
+	$card-type-template-aspect-ratio-item: map-deep-merge(
+		(
+			color: $gray-600,
+			width: 100.6%,
+		),
+		$card-type-template-aspect-ratio-item
+	);
+
+	$card-type-template-card-title: ();
+	$card-type-template-card-title: map-deep-merge(
+		(
+			display: block,
+			margin-bottom: 8px,
+		),
+		$card-type-template-card-title
+	);
+
+	$card-type-template-card-text: ();
+	$card-type-template-card-text: map-deep-merge(
+		(
+			display: block,
+		),
+		$card-type-template-card-text
+	);
+
+	$card-type-template: ();
+	$card-type-template: map-deep-merge(
+		(
+			border-width: 1px,
+			box-shadow: none,
+			color: $gray-900,
+
+			hover: (
+				color: $gray-900,
+			),
+
+			after-highlight: $card-type-template-after-highlight,
+
+			aspect-ratio: $card-type-template-aspect-ratio,
+
+			aspect-ratio-item: $card-type-template-aspect-ratio-item,
+
+			card-title: $card-type-template-card-title,
+
+			card-text: $card-type-template-card-text,
+		),
+		$card-type-template
+	);
+
+	// Template Card
+
+	$template-card-body: ();
+	$template-card-body: map-deep-merge(
+		(
+			padding-top: 0,
+			text-align: center,
+		),
+		$template-card-body
+	);
+
+	$template-card: ();
+	$template-card: map-deep-merge(
+		(
+			card-body: $template-card-body,
+		),
+		$template-card
+	);
+
+	// Template Card Horizontal
+
+	$template-card-horizontal-sticker: ();
+	$template-card-horizontal-sticker: map-deep-merge(
+		(
+			font-size: 20px,
+		),
+		$template-card-horizontal-sticker
+	);
+
+	$template-card-horizontal-card-row: ();
+	$template-card-horizontal-card-row: map-deep-merge(
+		(
+			margin-left: -4px,
+			margin-right: -4px,
+			width: auto,
+
+			autofit-col: (
+				padding-left: 4px,
+				padding-right: 4px,
+			),
+		),
+		$template-card-horizontal-card-row
+	);
+
+	$template-card-horizontal-card-title: ();
+	$template-card-horizontal-card-title: map-deep-merge(
+		(
+			color: inherit,
+			margin-bottom: 0,
+		),
+		$template-card-horizontal-card-title
+	);
+
+	$template-card-horizontal: ();
+	$template-card-horizontal: map-deep-merge(
+		(
+			color: $gray-600,
+
+			hover: (
+				color: $gray-600,
+			),
+
+			sticker: $template-card-horizontal-sticker,
+
+			card-row: $template-card-horizontal-card-row,
+
+			card-title: $template-card-horizontal-card-title,
+		),
+		$template-card-horizontal
+	);
+}

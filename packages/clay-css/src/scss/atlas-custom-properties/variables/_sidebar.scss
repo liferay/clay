@@ -1,0 +1,579 @@
+@if ($enable-atlas-custom-properties) {
+	$sidebar-padding-bottom: var(--sidebar-padding-bottom, 16px);
+	$sidebar-padding-left: var(--sidebar-padding-left, 24px);
+	$sidebar-padding-right: var(--sidebar-padding-right, 24px);
+	$sidebar-padding-top: var(--sidebar-padding-top, 16px);
+
+	// Sidebar Header Title
+
+	$sidebar-header-component-title: ();
+	$sidebar-header-component-title: map-deep-merge(
+		(
+			font-size: var(--sidebar-header-component-title, 16px),
+			href: (
+				color:
+					var(--sidebar-header-component-title-link-color, $gray-900),
+			),
+		),
+		$sidebar-header-component-title
+	);
+
+	// Sidebar Header Subtitle
+
+	$sidebar-header-component-subtitle: ();
+	$sidebar-header-component-subtitle: map-deep-merge(
+		(
+			font-size: var(--sidebar-header-component-subtitle-font-size, 14px),
+			font-weight:
+				var(
+					--sidebar-header-component-subtitle-font-weight,
+					$font-weight-normal
+				),
+			margin-bottom:
+				var(--sidebar-header-component-subtitle-margin-bottom, 0),
+		),
+		$sidebar-header-component-subtitle
+	);
+
+	// Sidebar DT
+
+	$sidebar-dt: ();
+	$sidebar-dt: map-deep-merge(
+		(
+			font-size: var(--sidebar-dt-font-size, 12px),
+			font-weight: var(--sidebar-dt-font-weight, $font-weight-semi-bold),
+			margin-bottom: var(--sidebar-dt-margin-bottom, 4px),
+			text-transform: var(--sidebar-dt-text-transform, uppercase),
+		),
+		$sidebar-dt
+	);
+
+	// Sidebar DD
+
+	$sidebar-dd: ();
+	$sidebar-dd: map-deep-merge(
+		(
+			font-size: var(--sidebar-dd-font-size, 14px),
+			margin-bottom: var(--sidebar-dd-margin-bottom, 12px),
+		),
+		$sidebar-dd
+	);
+
+	// Sidebar Panel
+
+	$sidebar-panel-margin-bottom: var(--sidebar-panel-margin-bottom, 16px);
+
+	// Sidebar List Group
+
+	$sidebar-list-group-bg: var(
+		--sidebar-list-group-sidebar-list-group-background-color,
+		transparent
+	);
+	$sidebar-list-group-border-color: var(
+		--sidebar-list-group-sidebar-list-group-border-color,
+		$gray-300
+	);
+	$sidebar-list-group-font-size: var(
+		--sidebar-list-group-sidebar-list-group-font-size,
+		14px
+	);
+	$sidebar-list-group-type: list-group-flush;
+
+	$sidebar-list-group-item-padding: var(--sidebar-list-group-item-padding, 0);
+
+	$sidebar-list-group-autofit-col-padding-x: var(
+		--sidebar-list-group-autofit-col-padding-x,
+		8px
+	);
+	$sidebar-list-group-autofit-col-padding-y: var(
+		--sidebar-list-group-autofit-col-padding-y,
+		16px
+	);
+
+	$sidebar-list-group-sticker-size: ();
+	$sidebar-list-group-sticker-size: map-deep-merge(
+		$sticker-sm,
+		$sidebar-list-group-sticker-size
+	);
+
+	$sidebar: ();
+	$sidebar: map-deep-merge(
+		(
+			height: 100%,
+			overflow: auto,
+
+			-webkit-overflow-scrolling: touch,
+
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
+			),
+
+			close: (
+				color: var(--sidebar-close-color, $secondary),
+				hover: (
+					background-color:
+						var(
+							--sidebar-close-hover-background-color,
+							unquote('hsl(from #{$gray-900} h s l / 0.03)')
+						),
+					color: var(--sidebar-close-hover-color, $gray-900),
+				),
+
+				focus: (
+					background-color:
+						var(
+							--sidebar-close-focus-background-color,
+							unquote('hsl(from #{$gray-900} h s l / 0.03)')
+						),
+					color: var(--sidebar-close-focus-color, $gray-900),
+				),
+
+				active: (
+					background-color:
+						var(
+							--sidebar-close-active-background-color,
+							unquote('hsl(from #{$gray-900} h s l / 0.06)')
+						),
+					color: var(--sidebar-close-active-color, $gray-900),
+				),
+
+				disabled: (
+					background-color:
+						var(
+							--sidebar-close-disabled-background-color,
+							transparent
+						),
+					box-shadow: var(--sidebar-close-disabled-box-shadow, none),
+					color: var(--sidebar-close-disabled-color, $secondary),
+					cursor:
+						var(--sidebar-close-disabled-cursor, $disabled-cursor),
+					opacity:
+						var(
+							--sidebar-close-disabled-opacity,
+							$component-disabled-opacity
+						),
+					active: (
+						pointer-events: none,
+					),
+				),
+			),
+
+			sidebar-header: (
+				padding-bottom:
+					var(
+						--sidebar-header-padding-bottom,
+						$sidebar-padding-bottom
+					),
+				padding-left:
+					var(--sidebar-header-padding-left, $sidebar-padding-left),
+				padding-right: var(--sidebar-header-padding-right, 16px),
+				padding-top:
+					var(--sidebar-header-padding-top, $sidebar-padding-top),
+				component-title: $sidebar-header-component-title,
+				component-subtitle: $sidebar-header-component-subtitle,
+
+				autofit-row: (
+					margin-left:
+						var(--sidebar-header-autofit-row-margin-left, -4px),
+					margin-right:
+						var(--sidebar-header-autofit-row-margin-right, -4px),
+					width: auto,
+
+					autofit-col: (
+						padding-left:
+							var(--sidebar-header-autofit-col-padding-left, 4px),
+						padding-right:
+							var(
+								--sidebar-header-autofit-col-padding-right,
+								4px
+							),
+					),
+				),
+			),
+
+			sidebar-footer: (
+				padding-bottom:
+					var(
+						--sidebar-footer-padding-bottom,
+						$sidebar-padding-bottom
+					),
+				padding-left:
+					var(--sidebar-footer-padding-left, $sidebar-padding-left),
+				padding-right:
+					var(--sidebar-footer-padding-right, $sidebar-padding-right),
+				padding-top:
+					var(--sidebar-footer-padding-top, $sidebar-padding-top),
+			),
+
+			sidebar-body: (
+				overflow: auto,
+
+				-webkit-overflow-scrolling: touch,
+
+				padding-bottom:
+					var(--sidebar-body-padding-bottom, $sidebar-padding-bottom),
+				padding-left:
+					var(--sidebar-body-padding-left, $sidebar-padding-left),
+				padding-right:
+					var(--sidebar-body-padding-right, $sidebar-padding-right),
+				padding-top:
+					var(--sidebar-body-padding-top, $sidebar-padding-top),
+			),
+
+			sidebar-list-group: (
+				display: flex,
+				flex-direction: column,
+				font-size: $sidebar-list-group-font-size,
+				margin-bottom: 0,
+				padding-left: 0,
+
+				list-group-item: (
+					background-color: $sidebar-list-group-bg,
+					border-color: $sidebar-list-group-border-color,
+					padding: $sidebar-list-group-item-padding,
+				),
+
+				sticker: $sidebar-list-group-sticker-size,
+			),
+
+			sidebar-panel: (
+				margin-bottom: $sidebar-panel-margin-bottom,
+				position: relative,
+			),
+
+			sidebar-dt: $sidebar-dt,
+
+			sidebar-dd: $sidebar-dd,
+		),
+		$sidebar
+	);
+
+	// Sidebar Sm
+
+	$sidebar-sm: ();
+	$sidebar-sm: map-deep-merge(
+		(
+			font-size: var(--sidebar-sm-font-size, 0.875rem),
+			panel-group: (
+				extend: '%clay-panel-group-sm',
+			),
+
+			btn: (
+				extend: '%clay-btn-sm',
+
+				'&.btn-xs': (
+					extend: '%clay-btn-xs',
+				),
+
+				'&.btn-monospaced': (
+					extend: '%clay-btn-monospaced-sm',
+				),
+
+				'&.btn-monospaced.btn-xs': (
+					extend: '%clay-btn-monospaced-xs',
+				),
+			),
+
+			form-control: (
+				extend: '%clay-form-control-sm',
+			),
+
+			form-control-select: (
+				extend: '%clay-select-form-control-sm',
+			),
+
+			form-control-tag-group: (
+				extend: '%clay-form-control-tag-group-sm',
+			),
+
+			input-group: (
+				extend: '%clay-input-group-sm',
+			),
+		),
+		$sidebar-sm
+	);
+
+	// Sidebar Light
+
+	$sidebar-light-navigation-bar: ();
+	$sidebar-light-navigation-bar: map-deep-merge(
+		(
+			background-color:
+				var(--sidebar-light-navigation-bar-background-color, $white),
+			border-color:
+				var(--sidebar-light-navigation-bar-border-color, $secondary-l2),
+			navbar-nav: (
+				nav-link: (
+					color:
+						var(
+							--sidebar-light-navigation-bar-link-color,
+							$navbar-light-color
+						),
+					hover: (
+						color:
+							var(
+								--sidebar-light-navigation-bar-link-hover-color,
+								$navbar-light-hover-color
+							),
+					),
+
+					active: (
+						color:
+							var(
+								--sidebar-light-navigation-bar-link-active-color,
+								$navbar-light-active-color
+							),
+					),
+
+					disabled: (
+						color:
+							var(
+								--sidebar-light-navigation-bar-link-disabled-color,
+								$navbar-light-disabled-color
+							),
+					),
+				),
+			),
+
+			media-breakpoint-down: (),
+			media-breakpoint-up: (),
+		),
+		$sidebar-light-navigation-bar
+	);
+
+	$sidebar-light: ();
+	$sidebar-light: map-deep-merge(
+		(
+			background-color: var(--sidebar-light-background-color, $white),
+			border-color: var(--sidebar-light-border-color, $gray-300),
+			border-left-width: var(--sidebar-light-border-left-width, 0),
+			box-shadow:
+				var(
+					--sidebar-light-box-shadow,
+					-4px 0 8px -4px rgba(0, 0, 0, 0.1)
+				),
+			color: var(--sidebar-light-color, $gray-900),
+			sidebar-header: (
+				background-color:
+					var(
+						--sidebar-light-sidebar-header-background-color,
+						$white
+					),
+				border:
+					var(
+						--sidebar-light-sidebar-header-border,
+						0px solid $gray-300
+					),
+			),
+
+			sidebar-footer: (
+				background-color: var(--sidebar-light-sidebar-footer, $white),
+				border:
+					var(--sidebar-light-sidebar-footer, 0px solid $gray-300),
+			),
+
+			sidenav-start: (
+				box-shadow:
+					var(
+						--sidebar-light-sidenav-start-box-shadow,
+						4px 0 8px -4px rgba(0, 0, 0, 0.1)
+					),
+			),
+
+			sidebar-dt: (
+				color: var(--sidebar-light-sidebar-dt-color, $gray-600),
+			),
+
+			sidebar-dd: (
+				href: (
+					color:
+						var(--sidebar-light-sidebar-dd-link-color, $gray-900),
+				),
+			),
+
+			sidebar-panel: (
+				background-color:
+					var(
+						--sidebar-light-sidebar-panel-background-color,
+						$gray-200
+					),
+			),
+
+			panel-unstyled: (
+				header: (
+					link: (
+						focus: (
+							box-shadow: #{0 0 0 4px $white,
+							0 0 0 6px $primary-l0},
+						),
+					),
+				),
+			),
+
+			sidebar-list-group: (
+				component-title: (
+					font-size: 16px,
+
+					href: (
+						color: $gray-900,
+					),
+				),
+			),
+
+			component-navigation-bar: $sidebar-light-navigation-bar,
+		),
+		$sidebar-light
+	);
+
+	// Sidebar Dark
+
+	$sidebar-dark: ();
+	$sidebar-dark: map-deep-merge(
+		(
+			background-color: $dark,
+			color: $white,
+
+			sidebar-header: (
+				component-title: (
+					color: inherit,
+					href: (
+						color: inherit,
+					),
+				),
+
+				component-subtitle: (
+					color: inherit,
+
+					href: (
+						color: inherit,
+					),
+				),
+			),
+
+			close: (
+				color: $secondary-l1,
+
+				hover: (
+					color: $white,
+				),
+			),
+
+			nav-nested: (
+				nav-link: (
+					border-radius: $border-radius,
+					color: $secondary-l1,
+					transition: box-shadow 0.15s ease-in-out,
+
+					hover: (
+						color: $white,
+					),
+
+					focus: (
+						box-shadow: $component-focus-box-shadow,
+						outline: 0,
+					),
+
+					active: (
+						color: $white,
+					),
+
+					disabled: (
+						box-shadow: none,
+						color: $secondary-l1,
+						opacity: 0.65,
+
+						active: (
+							pointer-events: none,
+						),
+					),
+				),
+			),
+		),
+		$sidebar-dark
+	);
+
+	$sidebar-c-slideout-start: ();
+	$sidebar-c-slideout-start: map-deep-merge(
+		(
+			'.sidebar-light': (
+				box-shadow: 0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+			),
+		),
+		$sidebar-c-slideout-start
+	);
+
+	$sidebar-c-slideout-end: ();
+
+	$sidebar-palette: ();
+	$sidebar-palette: map-deep-merge(
+		(
+			sidebar-sm: $sidebar-sm,
+
+			sidebar-light: $sidebar-light,
+
+			sidebar-dark: $sidebar-dark,
+
+			sidebar-dark-l2: (
+				background-color: $dark-l2,
+				color: $white,
+
+				sidebar-header: (
+					component-title: (
+						color: inherit,
+						href: (
+							color: inherit,
+						),
+					),
+
+					component-subtitle: (
+						color: inherit,
+
+						href: (
+							color: inherit,
+						),
+					),
+				),
+
+				close: (
+					color: $secondary-l1,
+
+					hover: (
+						color: $white,
+					),
+				),
+
+				nav-nested: (
+					nav-link: (
+						border-radius: $border-radius,
+						color: $secondary-l1,
+						transition: box-shadow 0.15s ease-in-out,
+
+						hover: (
+							color: $white,
+						),
+
+						focus: (
+							box-shadow: $component-focus-box-shadow,
+							outline: 0,
+						),
+
+						active: (
+							color: $white,
+						),
+
+						disabled: (
+							box-shadow: none,
+							color: $secondary-l1,
+							opacity: 0.65,
+
+							active: (
+								pointer-events: none,
+							),
+						),
+					),
+				),
+			),
+		),
+		$sidebar-palette
+	);
+}

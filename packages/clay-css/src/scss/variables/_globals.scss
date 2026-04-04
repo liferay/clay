@@ -345,14 +345,14 @@ $spacers: () !default;
 $spacers: map-deep-merge(
 	(
 		0: 0rem,
-		1: $spacer * 0.25,
-		2: $spacer * 0.5,
-		3: $spacer,
-		4: $spacer * 1.5,
-		5: $spacer * 3,
-		6: $spacer * 4.5,
-		7: $spacer * 6,
-		8: $spacer * 7.5,
+		1: calc(#{$spacer} * 0.25),
+		2: calc(#{$spacer} * 0.5),
+		3: calc(#{$spacer}),
+		4: calc(#{$spacer} * 1.5),
+		5: calc(#{$spacer} * 3),
+		6: calc(#{$spacer} * 4.5),
+		7: calc(#{$spacer} * 6),
+		8: calc(#{$spacer} * 7.5),
 	),
 	$spacers
 );

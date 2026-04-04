@@ -1,0 +1,50 @@
+@if ($enable-atlas-custom-properties) {
+	$zindex-dropdown: 1000;
+
+	$zindex-sticky: 989;
+
+	$zindex-fixed: 1030;
+
+	$zindex-modal-backdrop: 1040;
+	$zindex-modal: 1050;
+
+	$zindex-popover: 1060;
+
+	$zindex-tooltip: 1070;
+
+	$zindex-alert-notifications: 5000;
+
+	$zindex-clay-range-input-form-control: 1;
+
+	$zindex-input-group-hover: 3;
+
+	$zindex-input-group-focus: calc(#{$zindex-input-group-hover} + 1); // 4
+
+	$zindex-navbar-collapse-absolute: 500;
+
+	$zindex-navbar-overlay: 450;
+
+	$zindex-navbar-toggler-focus: 525;
+
+	$zindex-menubar-vertical-expand-md-collapse-mobile: calc(
+		#{$zindex-navbar-collapse-absolute} - 1
+	); // 499
+
+	$zindex-menubar-vertical-expand-lg-collapse-mobile: calc(
+		#{$zindex-navbar-collapse-absolute} - 1
+	); // 499
+
+	$zindex-pagination-link-focus: 4;
+
+	$zindex-pagination-link-active: 3;
+
+	$zindex-pagination-link-disabled: 0;
+
+	$zindex-panel-header-link-focus: 1;
+
+	$zindex-sidenav: calc(#{$zindex-dropdown} - 25); // 975
+
+	$zindex-c-slideout: $zindex-sidenav; // 975
+
+	$zindex-c-slideout-height-full: calc(#{$zindex-fixed} + 5); // 1035
+}

@@ -1,0 +1,200 @@
+@if ($enable-atlas-custom-properties) {
+	$enable-scaling-navbar: $enable-scaling-components;
+
+	$navbar-border-radius: var(--navbar-border-radius, 0px);
+	$navbar-font-size: var(--navbar-font-size, 14px);
+	$navbar-padding-x: var(--navbar-padding-x, $spacer);
+	$navbar-padding-y: var(--navbar-padding-y, calc(#{$spacer} * 0.5));
+
+	$navbar-nav-link-padding-x: var(--navbar-nav-link-padding-x, 8px);
+
+	$navbar-title-font-size: var(--navbar-title-font-size, 20px);
+	$navbar-title-font-weight: var(
+		--navbar-title-font-weight,
+		$font-weight-semi-bold
+	);
+	$navbar-title-margin-bottom: var(--navbar-title-margin-bottom, 0);
+	$navbar-title-text-transform: var(--navbar-title-text-transform, none);
+
+	$navbar-text-truncate-spacer-right: var(
+		--navbar-text-truncate-spacer-right,
+		25px
+	);
+	$navbar-text-truncate-max-width: var(
+		--navbar-text-truncate-max-width,
+		200px
+	);
+
+	$navbar-text-truncate: ();
+	$navbar-text-truncate: map-deep-merge(
+		(
+			display: inline-block,
+			max-width: 100%,
+			overflow: hidden,
+			text-overflow: ellipsis,
+			vertical-align: bottom,
+			white-space: nowrap,
+		),
+		$navbar-text-truncate
+	);
+
+	// Navbar Brand
+
+	$navbar-brand-font-size: var(--navbar-brand-font-size, $font-size-lg);
+
+	// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+
+	$nav-link-height: var(
+		--nav-link-height,
+		calc(
+			#{$font-size-base} *
+				#{$line-height-base} +
+				#{$nav-link-padding-y} *
+				2
+		)
+	);
+
+	$navbar-brand-height: var(
+		--navbar-brand-height,
+		calc(#{$navbar-brand-font-size} * #{$line-height-base})
+	);
+
+	$navbar-brand-padding-y: var(
+		--navbar-brand-padding-y,
+		calc((#{$nav-link-height} - #{$navbar-brand-height}) * 0.5)
+	);
+
+	// Navbar Toggler
+
+	$navbar-toggler-border-radius: var(
+		--navbar-toggler-border-radius,
+		$border-radius
+	);
+	$navbar-toggler-cursor: null;
+	$navbar-toggler-font-size: var(--navbar-toggler-font-size, $font-size-lg);
+	$navbar-toggler-padding-x: var(--navbar-toggler-padding-x, 12px);
+	$navbar-toggler-padding-y: var(--navbar-toggler-padding-y, 4px);
+
+	// Navbar Underline
+
+	$navbar-underline-active-bg: unquote(
+		'hsl(from #{$component-active-bg} h s calc(l + 22.94))'
+	);
+
+	$navbar-underline: ();
+	$navbar-underline: map-deep-merge(
+		(
+			navbar-toggler-link: (
+				after: (
+					background-color: $navbar-underline-active-bg,
+					bottom: calc(#{$navbar-padding-y} * -1),
+					content: '',
+					display: block,
+					height: 0.25rem,
+					left: 0,
+					position: absolute,
+					right: 0,
+					width: auto,
+				),
+			),
+
+			media-breakpoint-up: (
+				md: (
+					navbar-expand-md: (
+						navbar-underline: (
+							navbar-nav: (
+								nav-link: (
+									active-class: (
+										after: (
+											background-color:
+												$navbar-underline-active-bg,
+											bottom:
+												calc(#{$navbar-padding-y} * -1),
+											content: '',
+											display: block,
+											height: 0.25rem,
+											left: 0,
+											position: absolute,
+											right: 0,
+											width: auto,
+										),
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+		$navbar-underline
+	);
+
+	// Navbar Dark
+
+	$navbar-dark-color: var(--navbar-dark-color, $white);
+
+	$navbar-dark-hover-color: var(
+		--navbar-dark-hover-color,
+		$navbar-dark-color
+	);
+
+	$navbar-dark-active-color: var(
+		--navbar-dark-active-color,
+		$navbar-dark-color
+	);
+
+	$navbar-dark-disabled-color: var(
+		--navbar-dark-disabled-color,
+		$nav-link-disabled-color
+	);
+
+	$navbar-dark-brand-color: var(
+		--navbar-dark-brand-color,
+		$navbar-dark-active-color
+	);
+
+	$navbar-dark-brand-hover-color: var(
+		--navbar-dark-brand-hover-color,
+		$navbar-dark-active-color
+	);
+
+	$navbar-dark-toggler-border-color: var(
+		--navbar-dark-toggler-border-color,
+		unquote('hsl(from #{$white} h s l / 0.1)')
+	);
+
+	$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+
+	// Navbar Light
+
+	$navbar-light-color: var(--navbar-light-color, $gray-600);
+
+	$navbar-light-hover-color: var(
+		--navbar-light-hover-color,
+		$navbar-light-color
+	);
+
+	$navbar-light-active-color: var(--navbar-light-active-color, $gray-900);
+
+	$navbar-light-disabled-color: var(
+		--navbar-light-disabled-color,
+		$nav-link-disabled-color
+	);
+
+	$navbar-light-brand-color: var(
+		--navbar-light-brand-color,
+		$navbar-light-active-color
+	);
+
+	$navbar-light-brand-hover-color: var(
+		--navbar-light-brand-hover-color,
+		$navbar-light-active-color
+	);
+
+	$navbar-light-toggler-border-color: var(
+		--navbar-light-toggler-border-color,
+		unquote('hsl(from #{$black} h s l / 0.1)')
+	);
+
+	$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#272833' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
