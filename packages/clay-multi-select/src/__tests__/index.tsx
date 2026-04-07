@@ -186,7 +186,7 @@ describe('Interactions', () => {
 		).toMatchSnapshot();
 	});
 
-	xit('allows for async sourceItems', () => {
+	it('allows for async sourceItems', () => {
 		jest.useFakeTimers();
 		const callbackFn = jest.fn();
 
@@ -198,13 +198,11 @@ describe('Interactions', () => {
 			function asyncData(query: string) {
 				setIsLoading(true);
 
-				const timer = setTimeout(() => {
+				setTimeout(() => {
 					callbackFn(query);
 
 					setIsLoading(false);
 				}, 2000);
-
-				timer.unref();
 			}
 
 			return (
@@ -234,7 +232,7 @@ describe('Interactions', () => {
 
 		expect(callbackFn).not.toHaveBeenCalled();
 
-		jest.runAllTimers();
+		jest.runOnlyPendingTimers();
 
 		expect(callbackFn).toHaveBeenCalledWith('b');
 

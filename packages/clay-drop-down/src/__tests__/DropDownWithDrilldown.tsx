@@ -83,10 +83,10 @@ describe('ClayDropDownWithDrilldown', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
-	xit('navigates forwards when clicking through menus', () => {
-		const {getAllByRole, getByTestId} = render(
+	it('navigates forwards when clicking through menus', () => {
+		const {getByRole, getByTestId} = render(
 			<ClayDropDownWithDrilldown
-				initialActiveMenu="x0a3"
+				defaultActiveMenu="x0a3"
 				menus={{
 					x0a3: [
 						{href: '#', title: 'Hash Link'},
@@ -102,21 +102,21 @@ describe('ClayDropDownWithDrilldown', () => {
 
 		fireEvent.click(getByTestId('trigger'));
 
-		const [, item] = getAllByRole('menuitem');
+		const item = getByRole('menuitem', {name: /subnav/i});
 
-		fireEvent.click(item!);
+		fireEvent.click(item);
 
-		jest.runAllTimers();
+		jest.runOnlyPendingTimers();
 
 		expect(
 			document.querySelectorAll('.drilldown-item')[1]!.classList
 		).toContain('drilldown-current');
 	});
 
-	xit('navigates backwards when clicking header', () => {
-		const {getByTestId} = render(
+	it('navigates backwards when clicking header', () => {
+		const {getByRole, getByTestId} = render(
 			<ClayDropDownWithDrilldown
-				initialActiveMenu="x0a3"
+				defaultActiveMenu="x0a3"
 				menus={{
 					x0a3: [
 						{href: '#', title: 'Hash Link'},
@@ -132,11 +132,15 @@ describe('ClayDropDownWithDrilldown', () => {
 
 		fireEvent.click(getByTestId('trigger'));
 
-		fireEvent.click(getByTestId('menu-item-Subnav'));
+		const item = getByRole('menuitem', {name: /subnav/i});
+
+		fireEvent.click(item);
+
+		jest.runOnlyPendingTimers();
 
 		fireEvent.click(getByTestId('back-button-Subnav'));
 
-		jest.runAllTimers();
+		jest.runOnlyPendingTimers();
 
 		expect(
 			document.querySelectorAll('.drilldown-item')[0]!.classList
