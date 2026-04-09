@@ -102,25 +102,29 @@ describe('Interactions', () => {
 		]);
 	});
 
-	xit('selects multiple options', () => {
+	it('selects multiple options', () => {
+		const handleChange = jest.fn();
+
 		const {container} = render(
 			<ClaySelectBox
 				aria-label="Select Box Label"
 				items={options}
 				multiple
-				onSelectChange={() => {}}
+				onSelectChange={handleChange}
 				showArrows
 				spritemap="/path/to/some/resource.svg"
 				value={[]}
 			/>
 		);
 
-		const optionElement = container.querySelector('option');
+		const select = container.querySelector('select')!;
+		const optionsElements = select.querySelectorAll('option');
 
-		fireEvent.change(optionElement as HTMLOptionElement, {
-			target: {value: ['1', '2']},
-		});
+		optionsElements[0]!.selected = true;
+		optionsElements[1]!.selected = true;
 
-		expect(container.querySelector('select')!.value).toEqual('1,2');
+		fireEvent.change(select);
+
+		expect(handleChange).toHaveBeenCalledWith(['1', '2']);
 	});
 });
