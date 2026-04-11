@@ -60,6 +60,30 @@ exports[`ClayBadge renders displayType="beta-dark" as dark, info and translucent
 </span>
 `;
 
+exports[`ClayBadge renders icon when symbol is provided 1`] = `
+<span
+  className="badge badge-primary"
+>
+  <span
+    className="badge-item badge-item-expand"
+  >
+    4
+  </span>
+  <span
+    className="badge-item badge-item-after"
+  >
+    <svg
+      className="lexicon-icon lexicon-icon-check"
+      role="presentation"
+    >
+      <use
+        href="/some/path#check"
+      />
+    </svg>
+  </span>
+</span>
+`;
+
 exports[`ClayBadge renders translucent 1`] = `
 <span
   className="badge badge-info badge-translucent"

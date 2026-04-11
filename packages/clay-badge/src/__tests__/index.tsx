@@ -55,4 +55,12 @@ describe('ClayBadge', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('renders icon when symbol is provided', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayBadge label="4" spritemap="/some/path" symbol="check" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });

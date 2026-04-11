@@ -3,8 +3,54 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
+import ClayIcon from '@clayui/icon';
 import classNames from 'classnames';
 import React from 'react';
+
+export const ItemAfter = React.forwardRef<
+	HTMLSpanElement,
+	React.HTMLAttributes<HTMLSpanElement>
+>(({children, className, ...otherProps}, ref) => (
+	<span
+		{...otherProps}
+		className={classNames(className, 'badge-item badge-item-after')}
+		ref={ref}
+	>
+		{children}
+	</span>
+));
+
+ItemAfter.displayName = 'ClayBadgeItemAfter';
+
+export const ItemBefore = React.forwardRef<
+	HTMLSpanElement,
+	React.HTMLAttributes<HTMLSpanElement>
+>(({children, className, ...otherProps}, ref) => (
+	<span
+		{...otherProps}
+		className={classNames(className, 'badge-item badge-item-before')}
+		ref={ref}
+	>
+		{children}
+	</span>
+));
+
+ItemBefore.displayName = 'ClayBadgeItemBefore';
+
+export const ItemExpand = React.forwardRef<
+	HTMLSpanElement,
+	React.HTMLAttributes<HTMLSpanElement>
+>(({children, className, ...otherProps}, ref) => (
+	<span
+		{...otherProps}
+		className={classNames(className, 'badge-item badge-item-expand')}
+		ref={ref}
+	>
+		{children}
+	</span>
+));
+
+ItemExpand.displayName = 'ClayBadgeItemExpand';
 
 type DisplayType =
 	| 'primary'
@@ -36,18 +82,30 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	label?: string | number;
 
 	/**
+	 * Path to the location of the spritemap resource.
+	 */
+	spritemap?: string;
+
+	/**
+	 * The id of the icon in the spritemap.
+	 */
+	symbol?: string;
+
+	/**
 	 * Flag to indicate if the badge should use the translucent variant.
 	 */
 	translucent?: boolean;
 }
 
-const Badge = React.forwardRef<HTMLSpanElement, IProps>(
+const BadgeComponent = React.forwardRef<HTMLSpanElement, IProps>(
 	(
 		{
 			className,
 			dark,
 			displayType = 'primary',
 			label,
+			spritemap,
+			symbol,
 			translucent,
 			...otherProps
 		}: IProps,
@@ -77,12 +135,24 @@ const Badge = React.forwardRef<HTMLSpanElement, IProps>(
 				)}
 				ref={ref}
 			>
-				<span className="badge-item badge-item-expand">{label}</span>
+				<ItemExpand>{label}</ItemExpand>
+
+				{symbol && (
+					<ItemAfter>
+						<ClayIcon spritemap={spritemap} symbol={symbol} />
+					</ItemAfter>
+				)}
 			</span>
 		);
 	}
 );
 
-Badge.displayName = 'ClayBadge';
+BadgeComponent.displayName = 'ClayBadge';
+
+const Badge = Object.assign(BadgeComponent, {
+	ItemAfter,
+	ItemBefore,
+	ItemExpand,
+});
 
 export default Badge;
