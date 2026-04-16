@@ -402,3 +402,85 @@ Native select for mobile devices offers a better experience compared to Picker i
 	</Picker>
 </Form.Group>
 ```
+
+## Search
+
+The Picker component supports searching within the panel to filter options. This feature is fully opt-in and can be enabled explicitly using the `searchable` prop or automatically based on a threshold of items using the `searchableThreshold` prop.
+
+If neither `searchable` nor `searchableThreshold` are provided, the search input will not be rendered.
+
+```jsx preview
+import {Provider, Option, Picker} from '@clayui/core';
+import {useId} from '@clayui/shared';
+import Form from '@clayui/form';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	const pickerId1 = useId();
+	const labelId1 = useId();
+	const pickerId2 = useId();
+	const labelId2 = useId();
+
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<div style={{display: 'flex', gap: '20px'}}>
+					<div style={{width: '200px'}}>
+						<Form.Group>
+							<label htmlFor={pickerId1} id={labelId1}>
+								Searchable
+							</label>
+							<Picker
+								aria-labelledby={labelId1}
+								id={pickerId1}
+								searchable
+								items={[
+									'Apple',
+									'Banana',
+									'Blueberry',
+									'Cherry',
+									'Grape',
+									'Lemon',
+									'Lime',
+									'Mango',
+									'Orange',
+									'Peach',
+									'Pear',
+									'Plum',
+								]}
+							>
+								{(item) => <Option key={item}>{item}</Option>}
+							</Picker>
+						</Form.Group>
+					</div>
+
+					<div style={{width: '200px'}}>
+						<Form.Group>
+							<label htmlFor={pickerId2} id={labelId2}>
+								Threshold (5 items)
+							</label>
+							<Picker
+								aria-labelledby={labelId2}
+								id={pickerId2}
+								searchableThreshold={5}
+								items={[
+									'Apple',
+									'Banana',
+									'Blueberry',
+									'Cherry',
+									'Grape',
+									'Lemon',
+								]}
+							>
+								{(item) => <Option key={item}>{item}</Option>}
+							</Picker>
+						</Form.Group>
+					</div>
+				</div>
+			</div>
+		</Provider>
+	);
+}
+```

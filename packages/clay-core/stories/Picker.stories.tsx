@@ -60,38 +60,61 @@ export function Default() {
 		</div>
 	);
 }
-export function Dynamic() {
-	const pickerId = useId();
-	const labelId = useId();
+export function Search() {
+	const pickerId1 = useId();
+	const labelId1 = useId();
+	const pickerId2 = useId();
+	const labelId2 = useId();
 
 	return (
-		<div style={{width: '150px'}}>
-			<Form.Group>
-				<label htmlFor={pickerId} id={labelId}>
-					Choose a fruit
-				</label>
+		<div style={{display: 'flex', gap: '20px'}}>
+			<div style={{width: '200px'}}>
+				<Form.Group>
+					<label htmlFor={pickerId1} id={labelId1}>
+						Searchable (Explicit)
+					</label>
 
-				<Picker
-					aria-labelledby={labelId}
-					id={pickerId}
-					items={[
-						'Apple',
-						'Banana',
-						'Mangos',
-						'Blueberry',
-						'Boysenberry',
-						'Cherry',
-						'Cranberry',
-						'Eggplant',
-						'Fig',
-						'Grape',
-						'Guava',
-						'Huckleberry',
-					]}
-				>
-					{(item) => <Option key={item}>{item}</Option>}
-				</Picker>
-			</Form.Group>
+					<Picker
+						aria-labelledby={labelId1}
+						id={pickerId1}
+						searchable
+					>
+						<Option key="apple">Apple</Option>
+
+						<Option key="banana">Banana</Option>
+
+						<Option key="mangos">Mangos</Option>
+
+						<Option key="blueberry">Blueberry</Option>
+					</Picker>
+				</Form.Group>
+			</div>
+
+			<div style={{width: '200px'}}>
+				<Form.Group>
+					<label htmlFor={pickerId2} id={labelId2}>
+						Automatic (Threshold 5)
+					</label>
+
+					<Picker
+						aria-labelledby={labelId2}
+						id={pickerId2}
+						items={[
+							'Apple',
+							'Banana',
+							'Blueberry',
+							'Cherry',
+							'Grape',
+							'Lemon',
+							'Lime',
+							'Mango',
+						]}
+						searchableThreshold={5}
+					>
+						{(item) => <Option key={item}>{item}</Option>}
+					</Picker>
+				</Form.Group>
+			</div>
 		</div>
 	);
 }
