@@ -1,301 +1,301 @@
-@if ($enable-atlas-custom-properties) {
-	$sheet-bg: var(--sheet-background-color, $white);
-	$sheet-border-color: var(--sheet-border-color, $gray-300);
-	$sheet-border-radius: var(--sheet-border-radius, $border-radius);
-	$sheet-border-style: var(--sheet-border-style, solid);
-	$sheet-border-width: var(--sheet-border-width, 1px);
-	$sheet-padding-bottom: var(--sheet-padding-bottom, 1px);
-	$sheet-padding-left: var(--sheet-padding-left, 24px);
-	$sheet-padding-right: var(--sheet-padding-right, 24px);
-	$sheet-padding-top: var(--sheet-padding-top, 24px);
+$sheet-bg: var(--sheet-background-color, $white) !default;
+$sheet-border-color: var(--sheet-border-color, $gray-300) !default;
+$sheet-border-radius: var(--sheet-border-radius, $border-radius) !default;
+$sheet-border-style: var(--sheet-border-style, solid) !default;
+$sheet-border-width: var(--sheet-border-width, 1px) !default;
+$sheet-padding-bottom: var(--sheet-padding-bottom, 1px) !default;
+$sheet-padding-left: var(--sheet-padding-left, 24px) !default;
+$sheet-padding-right: var(--sheet-padding-right, 24px) !default;
+$sheet-padding-top: var(--sheet-padding-top, 24px) !default;
 
-	$sheet-padding-bottom-mobile: var(--sheet-padding-bottom-mobile, 1px);
-	$sheet-padding-left-mobile: var(--sheet-padding-left-mobile, 16px);
-	$sheet-padding-right-mobile: var(--sheet-padding-right-mobile, 16px);
-	$sheet-padding-top-mobile: var(--sheet-padding-top-mobile, 16px);
+$sheet-padding-bottom-mobile: var(--sheet-padding-bottom-mobile, 1px) !default;
+$sheet-padding-left-mobile: var(--sheet-padding-left-mobile, 16px) !default;
+$sheet-padding-right-mobile: var(--sheet-padding-right-mobile, 16px) !default;
+$sheet-padding-top-mobile: var(--sheet-padding-top-mobile, 16px) !default;
 
-	$sheet-plus-sheet: ();
-	$sheet-plus-sheet: map-merge(
-		(
-			margin-top: var(--sheet-plus-sheet, 48px),
-		),
-		$sheet-plus-sheet
-	);
-	// Sheet Row
+$sheet-plus-sheet: () !default;
+$sheet-plus-sheet: map-merge(
+	(
+		margin-top: var(--sheet-plus-sheet, 48px),
+	),
+	$sheet-plus-sheet
+);
+// Sheet Row
 
-	$sheet-row: ();
-	$sheet-row: map-merge(
-		(
-			margin-left: calc(#{$sheet-padding-left} * -1),
-			margin-right: calc(#{$sheet-padding-right} * -1),
-			media-breakpoint-down: (
-				sm: (
-					margin-left: calc(#{$sheet-padding-left-mobile} * -1),
-					margin-right: calc(#{$sheet-padding-right-mobile} * -1),
-				),
+$sheet-row: () !default;
+$sheet-row: map-merge(
+	(
+		margin-left: calc(#{$sheet-padding-left} * -1),
+		margin-right: calc(#{$sheet-padding-right} * -1),
+		media-breakpoint-down: (
+			sm: (
+				margin-left: calc(#{$sheet-padding-left-mobile} * -1),
+				margin-right: calc(#{$sheet-padding-right-mobile} * -1),
 			),
 		),
-		$sheet-row
-	);
+	),
+	$sheet-row
+);
 
-	// Sheet Header
+// Sheet Header
 
-	$sheet-header-margin-bottom: var(--sheet-header-margin-bottom, 48px);
+$sheet-header-margin-bottom: var(--sheet-header-margin-bottom, 48px) !default;
 
-	$sheet-header-margin-bottom-mobile: var(
-		--sheet-header-margin-bottom-mobile,
-		32px
-	);
+$sheet-header-margin-bottom-mobile: var(
+	--sheet-header-margin-bottom-mobile,
+	32px
+) !default;
 
-	// Sheet Section
+// Sheet Section
 
-	$sheet-section-margin-bottom: var(--sheet-section-margin-bottom, 48px);
+$sheet-section-margin-bottom: var(--sheet-section-margin-bottom, 48px) !default;
 
-	$sheet-section-margin-bottom-mobile: var(
-		--sheet-section-margin-bottom-mobile,
-		32px
-	);
+$sheet-section-margin-bottom-mobile: var(
+	--sheet-section-margin-bottom-mobile,
+	32px
+) !default;
 
-	$sheet-panel-group-margin-bottom: var(
-		--sheet-panel-group-margin-bottom,
-		24px
-	);
+$sheet-panel-group-margin-bottom: var(
+	--sheet-panel-group-margin-bottom,
+	24px
+) !default;
 
-	$sheet-panel-group-margin-bottom-mobile: var(
-		--sheet-panel-group-margin-bottom-mobile,
-		16px
-	);
+$sheet-panel-group-margin-bottom-mobile: var(
+	--sheet-panel-group-margin-bottom-mobile,
+	16px
+) !default;
 
-	// Sheet Footer
+// Sheet Footer
 
-	$sheet-footer-margin-bottom: var(--sheet-footer-margin-bottom, 24px);
-	$sheet-footer-margin-left: var(--sheet-footer-margin-left, 0px);
-	$sheet-footer-margin-right: var(--sheet-footer-margin-right, 0px);
-	$sheet-footer-margin-top: var(--sheet-footer-margin-top, 24px);
+$sheet-footer-margin-bottom: var(--sheet-footer-margin-bottom, 24px) !default;
+$sheet-footer-margin-left: var(--sheet-footer-margin-left, 0px) !default;
+$sheet-footer-margin-right: var(--sheet-footer-margin-right, 0px) !default;
+$sheet-footer-margin-top: var(--sheet-footer-margin-top, 24px) !default;
 
-	$sheet-footer-margin-bottom-mobile: var(
-		--sheet-footer-margin-bottom-mobile,
-		16px
-	);
-	$sheet-footer-margin-left-mobile: var(
-		--sheet-footer-margin-left-mobile,
-		0px
-	);
-	$sheet-footer-margin-right-mobile: var(
-		--sheet-footer-margin-right-mobile,
-		0px
-	);
-	$sheet-footer-margin-top-mobile: var(
-		--sheet-footer-margin-top-mobile,
-		16px
-	);
+$sheet-footer-margin-bottom-mobile: var(
+	--sheet-footer-margin-bottom-mobile,
+	16px
+) !default;
+$sheet-footer-margin-left-mobile: var(
+	--sheet-footer-margin-left-mobile,
+	0px
+) !default;
+$sheet-footer-margin-right-mobile: var(
+	--sheet-footer-margin-right-mobile,
+	0px
+) !default;
+$sheet-footer-margin-top-mobile: var(
+	--sheet-footer-margin-top-mobile,
+	16px
+) !default;
 
-	$sheet-footer-btn-block-sm-down: ();
-	$sheet-footer-btn-block-sm-down: map-deep-merge(
-		(
-			breakpoint-down: sm,
+$sheet-footer-btn-block-sm-down: () !default;
+$sheet-footer-btn-block-sm-down: map-deep-merge(
+	(
+		breakpoint-down: sm,
 
-			mobile: (
+		mobile: (
+			display: block,
+
+			btn: (
 				display: block,
-
-				btn: (
-					display: block,
-					margin-bottom: 1rem,
-					width: 100%,
-				),
-
-				btn-group: (
-					display: block,
-				),
-
-				btn-group-item: (
-					display: block,
-					margin-right: 0rem,
-				),
-			),
-		),
-		$sheet-footer-btn-block-sm-down
-	);
-
-	// Sheet Sizes
-
-	// @deprecated as of 3.x.
-
-	$sheet-lg-max-width: calc(#{map-get($container-max-widths, lg)} * 0.83333);
-
-	// Sheet Title
-
-	$sheet-title-color: null;
-	$sheet-title-font-size: 1.25rem;
-	$sheet-title-font-weight: $font-weight-bold;
-	$sheet-title-line-height: $headings-line-height; // 1.2
-	$sheet-title-margin-bottom: 1.5rem; // 24px
-
-	$sheet-title-autofit-padded-no-gutters-ext: 'autofit-padded-no-gutters-sm';
-
-	$sheet-title-font-size-mobile: 1.25rem; // 20px
-	$sheet-title-margin-bottom-mobile: 1rem;
-
-	// Sheet Subtitle
-
-	$sheet-subtitle-border-color: $gray-500;
-	$sheet-subtitle-border-style: solid;
-	$sheet-subtitle-border-width: 0 0 1px 0;
-	$sheet-subtitle-color: $body-color;
-	$sheet-subtitle-font-size: 14px;
-	$sheet-subtitle-font-weight: $font-weight-semi-bold;
-	$sheet-subtitle-line-height: $headings-line-height; // 1.2
-	$sheet-subtitle-margin-bottom: 1.5rem; // 24px
-	$sheet-subtitle-padding-x: 0px;
-	$sheet-subtitle-padding-y: 8px;
-	$sheet-subtitle-text-transform: uppercase;
-
-	$sheet-subtitle-font-size-mobile: null;
-	$sheet-subtitle-margin-bottom-mobile: 1rem;
-
-	$sheet-subtitle-heading-text-margin-bottom: 0rem;
-	$sheet-subtitle-heading-text-margin-top: auto;
-
-	// Sheet Subtitle as Panel Header
-
-	$sheet-subtitle-link-color: $sheet-subtitle-color;
-	$sheet-subtitle-link-text-decoration: null;
-
-	$sheet-subtitle-link-hover-color: null;
-	$sheet-subtitle-link-hover-text-decoration: none;
-
-	$sheet-subtitle-link: ();
-	$sheet-subtitle-link: map-deep-merge(
-		(
-			border-radius: 1px,
-			color: $sheet-subtitle-link-color,
-			text-decoration: $sheet-subtitle-link-text-decoration,
-			transition: box-shadow 0.15s ease-in-out,
-
-			hover: (
-				color: $sheet-subtitle-link-hover-color,
-				text-decoration: $sheet-subtitle-link-hover-text-decoration,
+				margin-bottom: 1rem,
+				width: 100%,
 			),
 
-			focus: (
-				box-shadow: #{0 0 0 4px $white,
-				0 0 0 6px $primary-l0},
-				outline: 0,
+			btn-group: (
+				display: block,
+			),
+
+			btn-group-item: (
+				display: block,
+				margin-right: 0rem,
 			),
 		),
-		$sheet-subtitle-link
-	);
+	),
+	$sheet-footer-btn-block-sm-down
+);
 
-	$sheet-subtitle-collapse-icon-font-size: 12px;
+// Sheet Sizes
 
-	$sheet-subtitle-collapse-icon-bottom: null;
-	$sheet-subtitle-collapse-icon-left: null;
-	$sheet-subtitle-collapse-icon-right: null;
-	$sheet-subtitle-collapse-icon-top: clay-collapse-icon-align(
-		$sheet-subtitle-padding-y,
-		0,
-		1em,
-		$sheet-subtitle-line-height
-	);
+// @deprecated as of 3.x.
 
-	$sheet-subtitle-collapse-icon-padding-left: null;
-	$sheet-subtitle-collapse-icon-padding-right: null;
+$sheet-lg-max-width: calc(
+	#{map-get($container-max-widths, lg)} * 0.83333
+) !default;
 
-	// Sheet Tertiary Title
+// Sheet Title
 
-	$sheet-tertiary-title-color: $sheet-subtitle-color;
-	$sheet-tertiary-title-font-size: $sheet-subtitle-font-size;
-	$sheet-tertiary-title-font-weight: $sheet-subtitle-font-weight;
-	$sheet-tertiary-title-line-height: $sheet-subtitle-line-height;
-	$sheet-tertiary-title-margin-bottom: $sheet-subtitle-margin-bottom;
-	$sheet-tertiary-title-padding-x: $sheet-subtitle-padding-x;
-	$sheet-tertiary-title-padding-y: $sheet-subtitle-padding-y;
-	$sheet-tertiary-title-text-transform: $sheet-subtitle-text-transform;
+$sheet-title-color: null !default;
+$sheet-title-font-size: 1.25rem !default;
+$sheet-title-font-weight: $font-weight-bold !default;
+$sheet-title-line-height: $headings-line-height !default; // 1.2
+$sheet-title-margin-bottom: 1.5rem !default; // 24px
 
-	$sheet-tertiary-title-font-size-mobile: null;
-	$sheet-tertiary-title-margin-bottom-mobile: 8px;
+$sheet-title-autofit-padded-no-gutters-ext: 'autofit-padded-no-gutters-sm' !default;
 
-	// Sheet Text
+$sheet-title-font-size-mobile: 1.25rem !default; // 20px
+$sheet-title-margin-bottom-mobile: 1rem !default;
 
-	$sheet-text-color: $gray-600;
-	$sheet-text-font-size: null;
-	$sheet-text-font-weight: null;
-	$sheet-text-margin-bottom: 1.5rem; // 24px
+// Sheet Subtitle
 
-	$sheet-text-font-size-mobile: null;
-	$sheet-text-margin-bottom-mobile: 1rem;
+$sheet-subtitle-border-color: $gray-500 !default;
+$sheet-subtitle-border-style: solid !default;
+$sheet-subtitle-border-width: 0 0 1px 0 !default;
+$sheet-subtitle-color: $body-color !default;
+$sheet-subtitle-font-size: 14px !default;
+$sheet-subtitle-font-weight: $font-weight-semi-bold !default;
+$sheet-subtitle-line-height: $headings-line-height !default; // 1.2
+$sheet-subtitle-margin-bottom: 1.5rem !default; // 24px
+$sheet-subtitle-padding-x: 0px !default;
+$sheet-subtitle-padding-y: 8px !default;
+$sheet-subtitle-text-transform: uppercase !default;
 
-	// Sheet Multiple Form Variant
+$sheet-subtitle-font-size-mobile: null !default;
+$sheet-subtitle-margin-bottom-mobile: 1rem !default;
 
-	$sheet-multiple-form: ();
+$sheet-subtitle-heading-text-margin-bottom: 0rem !default;
+$sheet-subtitle-heading-text-margin-top: auto !default;
 
-	$sheet-multiple-form-sheet-header: ();
-	$sheet-multiple-form-sheet-header: map-merge(
-		(
-			border-color: $gray-300,
-			border-style: solid,
-			border-width: 0px 0px 1px,
-			margin: -1.5rem -1.5rem 1.5rem,
-			padding: 1rem 1.5rem,
+// Sheet Subtitle as Panel Header
+
+$sheet-subtitle-link-color: $sheet-subtitle-color !default;
+$sheet-subtitle-link-text-decoration: null !default;
+
+$sheet-subtitle-link-hover-color: null !default;
+$sheet-subtitle-link-hover-text-decoration: none !default;
+
+$sheet-subtitle-link: () !default;
+$sheet-subtitle-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $sheet-subtitle-link-color,
+		text-decoration: $sheet-subtitle-link-text-decoration,
+		transition: box-shadow 0.15s ease-in-out,
+
+		hover: (
+			color: $sheet-subtitle-link-hover-color,
+			text-decoration: $sheet-subtitle-link-hover-text-decoration,
 		),
-		$sheet-multiple-form-sheet-header
-	);
 
-	$sheet-multiple-form-sheet-header-mobile: ();
-	$sheet-multiple-form-sheet-header-mobile: map-merge(
-		(
-			margin: -1rem -1rem 1rem,
-			padding: 1rem,
+		focus: (
+			box-shadow: #{0 0 0 4px $white,
+			0 0 0 6px $primary-l0},
+			outline: 0,
 		),
-		$sheet-multiple-form-sheet-header-mobile
-	);
+	),
+	$sheet-subtitle-link
+);
 
-	$sheet-multiple-form-sheet-title: ();
-	$sheet-multiple-form-sheet-title: map-merge(
-		(
-			margin-bottom: 0rem,
-		),
-		$sheet-multiple-form-sheet-title
-	);
+$sheet-subtitle-collapse-icon-font-size: 12px !default;
 
-	// Sheet Dataset Content Variant
+$sheet-subtitle-collapse-icon-bottom: null !default;
+$sheet-subtitle-collapse-icon-left: null !default;
+$sheet-subtitle-collapse-icon-right: null !default;
+$sheet-subtitle-collapse-icon-top: clay-collapse-icon-align(
+	$sheet-subtitle-padding-y,
+	0,
+	1em,
+	$sheet-subtitle-line-height
+) !default;
 
-	$sheet-dataset-content: ();
+$sheet-subtitle-collapse-icon-padding-left: null !default;
+$sheet-subtitle-collapse-icon-padding-right: null !default;
 
-	$sheet-dataset-content-sheet-header: ();
-	$sheet-dataset-content-sheet-header: map-merge(
-		(
-			border-width: 0px,
-			margin: -1.5rem -1.5rem 1.5rem,
-			padding: 1rem 1.5rem,
-		),
-		$sheet-dataset-content-sheet-header
-	);
+// Sheet Tertiary Title
 
-	$sheet-dataset-content-sheet-header-mobile: ();
-	$sheet-dataset-content-sheet-header-mobile: map-merge(
-		(
-			margin: -1rem -1rem 1rem,
-			padding: 1rem,
-		),
-		$sheet-dataset-content-sheet-header-mobile
-	);
+$sheet-tertiary-title-color: $sheet-subtitle-color !default;
+$sheet-tertiary-title-font-size: $sheet-subtitle-font-size !default;
+$sheet-tertiary-title-font-weight: $sheet-subtitle-font-weight !default;
+$sheet-tertiary-title-line-height: $sheet-subtitle-line-height !default;
+$sheet-tertiary-title-margin-bottom: $sheet-subtitle-margin-bottom !default;
+$sheet-tertiary-title-padding-x: $sheet-subtitle-padding-x !default;
+$sheet-tertiary-title-padding-y: $sheet-subtitle-padding-y !default;
+$sheet-tertiary-title-text-transform: $sheet-subtitle-text-transform !default;
 
-	$sheet-dataset-content-sheet-title: ();
-	$sheet-dataset-content-sheet-title: map-merge(
-		(
-			margin-bottom: 0rem,
-		),
-		$sheet-dataset-content-sheet-title
-	);
+$sheet-tertiary-title-font-size-mobile: null !default;
+$sheet-tertiary-title-margin-bottom-mobile: 8px !default;
 
-	// Sheet in Card Page
+// Sheet Text
 
-	$card-page-item-sheet: ();
-	$card-page-item-sheet: map-merge(
-		(
-			margin-bottom: $grid-gutter-width,
-		),
-		$card-page-item-sheet
-	);
-}
+$sheet-text-color: $gray-600 !default;
+$sheet-text-font-size: null !default;
+$sheet-text-font-weight: null !default;
+$sheet-text-margin-bottom: 1.5rem !default; // 24px
+
+$sheet-text-font-size-mobile: null !default;
+$sheet-text-margin-bottom-mobile: 1rem !default;
+
+// Sheet Multiple Form Variant
+
+$sheet-multiple-form: () !default;
+
+$sheet-multiple-form-sheet-header: () !default;
+$sheet-multiple-form-sheet-header: map-merge(
+	(
+		border-color: $gray-300,
+		border-style: solid,
+		border-width: 0px 0px 1px,
+		margin: -1.5rem -1.5rem 1.5rem,
+		padding: 1rem 1.5rem,
+	),
+	$sheet-multiple-form-sheet-header
+);
+
+$sheet-multiple-form-sheet-header-mobile: () !default;
+$sheet-multiple-form-sheet-header-mobile: map-merge(
+	(
+		margin: -1rem -1rem 1rem,
+		padding: 1rem,
+	),
+	$sheet-multiple-form-sheet-header-mobile
+);
+
+$sheet-multiple-form-sheet-title: () !default;
+$sheet-multiple-form-sheet-title: map-merge(
+	(
+		margin-bottom: 0rem,
+	),
+	$sheet-multiple-form-sheet-title
+);
+
+// Sheet Dataset Content Variant
+
+$sheet-dataset-content: () !default;
+
+$sheet-dataset-content-sheet-header: () !default;
+$sheet-dataset-content-sheet-header: map-merge(
+	(
+		border-width: 0px,
+		margin: -1.5rem -1.5rem 1.5rem,
+		padding: 1rem 1.5rem,
+	),
+	$sheet-dataset-content-sheet-header
+);
+
+$sheet-dataset-content-sheet-header-mobile: () !default;
+$sheet-dataset-content-sheet-header-mobile: map-merge(
+	(
+		margin: -1rem -1rem 1rem,
+		padding: 1rem,
+	),
+	$sheet-dataset-content-sheet-header-mobile
+);
+
+$sheet-dataset-content-sheet-title: () !default;
+$sheet-dataset-content-sheet-title: map-merge(
+	(
+		margin-bottom: 0rem,
+	),
+	$sheet-dataset-content-sheet-title
+);
+
+// Sheet in Card Page
+
+$card-page-item-sheet: () !default;
+$card-page-item-sheet: map-merge(
+	(
+		margin-bottom: $grid-gutter-width,
+	),
+	$card-page-item-sheet
+);

@@ -1,547 +1,553 @@
-@if ($enable-atlas-custom-properties) {
-	$nav-font-size: var(--nav-font-size, 14px);
+$nav-font-size: var(--nav-font-size, 14px) !default;
 
-	$nav-link-padding-x: var(--nav-link-padding-x, 16px); // 16px
-	$nav-link-padding-y: var(--nav-link-padding-y, 10px); // 10px
+$nav-link-padding-x: var(--nav-link-padding-x, 16px) !default; // 16px
+$nav-link-padding-y: var(--nav-link-padding-y, 10px) !default; // 10px
 
-	$nav-link-disabled-color: var(--nav-link-disabled-color, $gray-500);
-	$nav-link-disabled-cursor: var(
-		--nav-link-disabled-cursor,
-		$disabled-cursor
-	);
+$nav-link-disabled-color: var(--nav-link-disabled-color, $gray-500) !default;
+$nav-link-disabled-cursor: var(
+	--nav-link-disabled-cursor,
+	$disabled-cursor
+) !default;
 
-	$nav-link: ();
-	$nav-link: map-deep-merge(
-		(
-			display: block,
-			padding-bottom: $nav-link-padding-y,
-			padding-left: $nav-link-padding-x,
-			padding-right: $nav-link-padding-x,
-			padding-top: $nav-link-padding-y,
-			position: relative,
+$nav-link: () !default;
+$nav-link: map-deep-merge(
+	(
+		display: block,
+		padding-bottom: $nav-link-padding-y,
+		padding-left: $nav-link-padding-x,
+		padding-right: $nav-link-padding-x,
+		padding-top: $nav-link-padding-y,
+		position: relative,
 
-			hover: (
-				text-decoration: none,
-			),
+		hover: (
+			text-decoration: none,
+		),
 
-			focus: (
-				text-decoration: none,
-				z-index: 1,
-			),
+		focus: (
+			text-decoration: none,
+			z-index: 1,
+		),
 
-			disabled: (
-				color: $nav-link-disabled-color,
-				box-shadow: none,
-				cursor: $nav-link-disabled-cursor,
+		disabled: (
+			color: $nav-link-disabled-color,
+			box-shadow: none,
+			cursor: $nav-link-disabled-cursor,
 
-				active: (
-					pointer-events: none,
-				),
+			active: (
+				pointer-events: none,
 			),
 		),
-		$nav-link
-	);
+	),
+	$nav-link
+);
 
-	$nav-link-btn-unstyled: ();
-	$nav-link-btn-unstyled: map-deep-merge(
-		(
-			width: 100%,
+$nav-link-btn-unstyled: () !default;
+$nav-link-btn-unstyled: map-deep-merge(
+	(
+		width: 100%,
 
-			focus: (
-				box-shadow: $component-focus-box-shadow,
-			),
-
-			disabled: (
-				opacity: 1,
-			),
-
-			c-inner: (
-				width: auto,
-			),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
 		),
-		$nav-link-btn-unstyled
-	);
 
-	$nav-item-monospaced-size: var(--nav-item-monospaced-size, 32px); // 32px
+		disabled: (
+			opacity: 1,
+		),
 
-	// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
-
-	$nav-btn-margin-x: var(--nav-btn-margin-x, 4px); // 4px
-
-	// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
-
-	$nav-btn-margin-y: var(
-		--nav-btn-margin-y,
-		calc(
-			(
-					#{$line-height-base} *
-						#{$font-size-base} +
-						#{$nav-link-padding-y} *
-						2 -
-						#{$nav-item-monospaced-size}
-				) *
-				0.5
-		)
-	);
-
-	// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
-
-	$nav-btn-padding-x: var(--nav-btn-padding-x, $btn-padding-x-sm);
-
-	// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
-
-	$nav-btn-padding-y: var(--nav-btn-padding-y, 0);
-
-	$nav-btn: ();
-	$nav-btn: map-deep-merge(
-		(
-			align-items: center,
-			display: flex,
-			height: $nav-item-monospaced-size,
-			justify-content: center,
-			line-height: var(--nav-btn-line-height, $line-height-base),
-			margin: $nav-btn-margin-y $nav-btn-margin-x,
-			min-width: $nav-item-monospaced-size,
-			padding: $nav-btn-padding-y $nav-btn-padding-x,
-			position: relative,
-			text-align: center,
+		c-inner: (
 			width: auto,
-
-			focus: (
-				z-index: 1,
-			),
-
-			disabled: (
-				opacity: 1,
-			),
-
-			btn-link: (
-				margin-left: 0,
-				margin-right: 0,
-			),
-
-			lexicon-icon: (
-				margin-top: 0,
-			),
 		),
-		$nav-btn
-	);
+	),
+	$nav-link-btn-unstyled
+);
 
-	// .nav-btn-monospaced
+$nav-item-monospaced-size: var(
+	--nav-item-monospaced-size,
+	32px
+) !default; // 32px
 
-	$nav-btn-monospaced: ();
-	$nav-btn-monospaced: map-deep-merge(
+// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-margin-x: var(--nav-btn-margin-x, 4px) !default; // 4px
+
+// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-margin-y: var(
+	--nav-btn-margin-y,
+	calc(
 		(
-			padding: 0rem,
+				#{$line-height-base} * #{$font-size-base} + #{$nav-link-padding-y} *
+					2 - #{$nav-item-monospaced-size}
+			) * 0.5
+	)
+) !default;
 
-			c-inner: (
-				margin-left:
-					calc(
-						#{if(
-								variable-exists(btn-border-width),
-								$btn-border-width,
-								$border-width
-							)} *
-							-1
-					),
-				margin-right:
-					calc(
-						#{if(
-								variable-exists(btn-border-width),
-								$btn-border-width,
-								$border-width
-							)} *
-							-1
-					),
-			),
+// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-padding-x: var(--nav-btn-padding-x, $btn-padding-x-sm) !default;
+
+// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-padding-y: var(--nav-btn-padding-y, 0) !default;
+
+$nav-btn: () !default;
+$nav-btn: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		height: $nav-item-monospaced-size,
+		justify-content: center,
+		line-height: var(--nav-btn-line-height, $line-height-base),
+		margin: $nav-btn-margin-y $nav-btn-margin-x,
+		min-width: $nav-item-monospaced-size,
+		padding: $nav-btn-padding-y $nav-btn-padding-x,
+		position: relative,
+		text-align: center,
+		width: auto,
+
+		focus: (
+			z-index: 1,
 		),
-		$nav-btn-monospaced
-	);
 
-	$nav-link-monospaced: ();
-	$nav-link-monospaced: map-deep-merge(
-		(
-			align-items: center,
-			display: flex,
-			height: $nav-item-monospaced-size,
-			justify-content: center,
-			margin: $nav-btn-margin-y $nav-btn-margin-x,
-			min-width: $nav-item-monospaced-size,
-			padding: 0,
-
-			lexicon-icon: (
-				margin-top: 0,
-			),
+		disabled: (
+			opacity: 1,
 		),
-		$nav-link-monospaced
-	);
 
-	// .nav-item
-
-	$nav-item: ();
-	$nav-item: map-deep-merge(
-		(
-			word-wrap: break-word,
+		btn-link: (
+			margin-left: 0,
+			margin-right: 0,
 		),
-		$nav-item
-	);
 
-	// .nav-divider
-
-	$nav-divider-color: var(--nav-divider-color, $secondary-l1);
-	$nav-divider-margin-y: var(--nav-divider-margin-y, calc(#{$spacer} * 0.5));
-
-	$nav-divider: ();
-	$nav-divider: map-deep-merge(
-		(
-			margin-left: var(--nav-divider-margin-left, 8px),
-			padding-left: var(--nav-divider-padding-left, 8px),
-			position: relative,
-
-			before: (
-				background-color: $nav-divider-color,
-				content: '',
-				display: block,
-				height: 16px,
-				left: 0,
-				margin-top: -8px,
-				position: absolute,
-				top: 50%,
-				width: 1px,
-				z-index: 2,
-			),
+		lexicon-icon: (
+			margin-top: 0,
 		),
-		$nav-divider
-	);
+	),
+	$nav-btn
+);
 
-	$nav-divider-end: ();
-	$nav-divider-end: map-deep-merge(
-		(
-			margin-right: 8px,
-			padding-right: 8px,
-			position: relative,
+// .nav-btn-monospaced
 
-			after: (
-				background-color: $nav-divider-color,
-				content: '',
-				display: block,
-				height: 16px,
-				margin-top: -8px,
-				position: absolute,
-				right: 0,
-				top: 50%,
-				width: 1px,
-				z-index: 2,
-			),
+$nav-btn-monospaced: () !default;
+$nav-btn-monospaced: map-deep-merge(
+	(
+		padding: 0rem,
+
+		c-inner: (
+			margin-left:
+				calc(
+					#{if(
+							variable-exists(btn-border-width),
+							$btn-border-width,
+							$border-width
+						)} * -1
+				),
+			margin-right:
+				calc(
+					#{if(
+							variable-exists(btn-border-width),
+							$btn-border-width,
+							$border-width
+						)} * -1
+				),
 		),
-		$nav-divider-end
-	);
+	),
+	$nav-btn-monospaced
+);
 
-	// .nav-text-truncate
+$nav-link-monospaced: () !default;
+$nav-link-monospaced: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		height: $nav-item-monospaced-size,
+		justify-content: center,
+		margin: $nav-btn-margin-y $nav-btn-margin-x,
+		min-width: $nav-item-monospaced-size,
+		padding: 0,
 
-	$nav-text-truncate: ();
-	$nav-text-truncate: map-deep-merge(
-		(
-			display: inline-block,
-			margin-bottom: -6px,
-			max-width: 100%,
-			overflow: hidden,
-			text-overflow: ellipsis,
-			white-space: nowrap,
+		lexicon-icon: (
+			margin-top: 0,
 		),
-		$nav-text-truncate
-	);
+	),
+	$nav-link-monospaced
+);
 
-	// .nav .nav-form
+// .nav-item
 
-	$nav-form-padding-bottom: var(--nav-form-padding-bottom, 0);
-	$nav-form-padding-left: var(--nav-form-padding-left, $nav-link-padding-x);
-	$nav-form-padding-right: var(--nav-form-padding-right, $nav-link-padding-x);
-	$nav-form-padding-top: var(--nav-form-padding-top, 0);
+$nav-item: () !default;
+$nav-item: map-deep-merge(
+	(
+		word-wrap: break-word,
+	),
+	$nav-item
+);
 
-	$nav-form: ();
-	$nav-form: map-merge(
-		(
+// .nav-divider
+
+$nav-divider-color: var(--nav-divider-color, $secondary-l1) !default;
+$nav-divider-margin-y: var(
+	--nav-divider-margin-y,
+	calc(#{$spacer} * 0.5)
+) !default;
+
+$nav-divider: () !default;
+$nav-divider: map-deep-merge(
+	(
+		margin-left: var(--nav-divider-margin-left, 8px),
+		padding-left: var(--nav-divider-padding-left, 8px),
+		position: relative,
+
+		before: (
+			background-color: $nav-divider-color,
+			content: '',
+			display: block,
+			height: 16px,
+			left: 0,
+			margin-top: -8px,
+			position: absolute,
+			top: 50%,
+			width: 1px,
+			z-index: 2,
+		),
+	),
+	$nav-divider
+);
+
+$nav-divider-end: () !default;
+$nav-divider-end: map-deep-merge(
+	(
+		margin-right: 8px,
+		padding-right: 8px,
+		position: relative,
+
+		after: (
+			background-color: $nav-divider-color,
+			content: '',
+			display: block,
+			height: 16px,
+			margin-top: -8px,
+			position: absolute,
+			right: 0,
+			top: 50%,
+			width: 1px,
+			z-index: 2,
+		),
+	),
+	$nav-divider-end
+);
+
+// .nav-text-truncate
+
+$nav-text-truncate: () !default;
+$nav-text-truncate: map-deep-merge(
+	(
+		display: inline-block,
+		margin-bottom: -6px,
+		max-width: 100%,
+		overflow: hidden,
+		text-overflow: ellipsis,
+		white-space: nowrap,
+	),
+	$nav-text-truncate
+);
+
+// .nav .nav-form
+
+$nav-form-padding-bottom: var(--nav-form-padding-bottom, 0) !default;
+$nav-form-padding-left: var(
+	--nav-form-padding-left,
+	$nav-link-padding-x
+) !default;
+$nav-form-padding-right: var(
+	--nav-form-padding-right,
+	$nav-link-padding-x
+) !default;
+$nav-form-padding-top: var(--nav-form-padding-top, 0) !default;
+
+$nav-form: () !default;
+$nav-form: map-merge(
+	(
+		padding-bottom: $nav-form-padding-bottom,
+		padding-left: $nav-form-padding-left,
+		padding-right: $nav-form-padding-right,
+		padding-top: $nav-form-padding-top,
+
+		nav-form: (
 			padding-bottom: $nav-form-padding-bottom,
 			padding-left: $nav-form-padding-left,
 			padding-right: $nav-form-padding-right,
 			padding-top: $nav-form-padding-top,
-
-			nav-form: (
-				padding-bottom: $nav-form-padding-bottom,
-				padding-left: $nav-form-padding-left,
-				padding-right: $nav-form-padding-right,
-				padding-top: $nav-form-padding-top,
-			),
 		),
-		$nav-form
-	);
+	),
+	$nav-form
+);
 
-	// .nav
+// .nav
 
-	$nav: ();
-	$nav: map-deep-merge(
-		(
-			display: flex,
-			flex-wrap: wrap,
-			font-size: $nav-font-size,
-			list-style: none,
-			margin-bottom: 0,
-			padding-left: 0,
+$nav: () !default;
+$nav: map-deep-merge(
+	(
+		display: flex,
+		flex-wrap: wrap,
+		font-size: $nav-font-size,
+		list-style: none,
+		margin-bottom: 0,
+		padding-left: 0,
+	),
+	$nav
+);
+
+// .nav-fill
+
+$nav-fill: () !default;
+$nav-fill: map-deep-merge(
+	(
+		nav-item: (
+			flex: 1 1 auto,
+			text-align: center,
 		),
-		$nav
-	);
+	),
+	$nav-fill
+);
 
-	// .nav-fill
+// .nav-justified
 
-	$nav-fill: ();
-	$nav-fill: map-deep-merge(
-		(
-			nav-item: (
-				flex: 1 1 auto,
-				text-align: center,
-			),
+$nav-justified: () !default;
+$nav-justified: map-deep-merge(
+	(
+		nav-item: (
+			flex-basis: 0,
+			flex-grow: 1,
+			text-align: center,
 		),
-		$nav-fill
-	);
 
-	// .nav-justified
-
-	$nav-justified: ();
-	$nav-justified: map-deep-merge(
-		(
-			nav-item: (
-				flex-basis: 0,
-				flex-grow: 1,
-				text-align: center,
-			),
-
-			nav-link: (
-				text-align: center,
-				width: 100%,
-			),
+		nav-link: (
+			text-align: center,
+			width: 100%,
 		),
-		$nav-justified
-	);
+	),
+	$nav-justified
+);
 
-	// .nav-stacked
+// .nav-stacked
 
-	$nav-stacked-nav-form-padding-bottom: var(
-		--nav-stacked-nav-form-padding-bottom,
-		$nav-link-padding-y
-	);
-	$nav-stacked-nav-form-padding-left: var(
-		--nav-stacked-nav-form-padding-left,
-		8px
-	);
-	$nav-stacked-nav-form-padding-right: var(
-		--nav-stacked-nav-form-padding-right,
-		8px
-	);
-	$nav-stacked-nav-form-padding-top: var(
-		--nav-stacked-nav-form-padding-top,
-		$nav-link-padding-y
-	);
+$nav-stacked-nav-form-padding-bottom: var(
+	--nav-stacked-nav-form-padding-bottom,
+	$nav-link-padding-y
+) !default;
+$nav-stacked-nav-form-padding-left: var(
+	--nav-stacked-nav-form-padding-left,
+	8px
+) !default;
+$nav-stacked-nav-form-padding-right: var(
+	--nav-stacked-nav-form-padding-right,
+	8px
+) !default;
+$nav-stacked-nav-form-padding-top: var(
+	--nav-stacked-nav-form-padding-top,
+	$nav-link-padding-y
+) !default;
 
-	$nav-stacked: ();
-	$nav-stacked: map-deep-merge(
-		(
-			display: block,
+$nav-stacked: () !default;
+$nav-stacked: map-deep-merge(
+	(
+		display: block,
 
-			nav-form: (
-				padding-bottom: $nav-stacked-nav-form-padding-bottom,
-				padding-left: $nav-stacked-nav-form-padding-left,
-				padding-right: $nav-stacked-nav-form-padding-right,
-				padding-top: $nav-stacked-nav-form-padding-top,
-			),
+		nav-form: (
+			padding-bottom: $nav-stacked-nav-form-padding-bottom,
+			padding-left: $nav-stacked-nav-form-padding-left,
+			padding-right: $nav-stacked-nav-form-padding-right,
+			padding-top: $nav-stacked-nav-form-padding-top,
 		),
-		$nav-stacked
-	);
+	),
+	$nav-stacked
+);
 
-	// .nav-unstyled
+// .nav-unstyled
 
-	$nav-unstyled: ();
-	$nav-unstyled: map-deep-merge(
-		(
-			flex-wrap: nowrap,
+$nav-unstyled: () !default;
+$nav-unstyled: map-deep-merge(
+	(
+		flex-wrap: nowrap,
 
-			nav-link: (
-				line-height: $nav-item-monospaced-size,
-				padding-bottom: 0,
-				padding-left: 4px,
-				padding-right: 4px,
-				padding-top: 0,
-			),
-
-			nav-link-monospaced: (
-				margin: 0 4px,
-			),
-
-			nav-btn: (
-				margin: 0 4px,
-				padding-bottom: 0,
-				padding-left: 4px,
-				padding-right: 4px,
-				padding-top: 0,
-			),
+		nav-link: (
+			line-height: $nav-item-monospaced-size,
+			padding-bottom: 0,
+			padding-left: 4px,
+			padding-right: 4px,
+			padding-top: 0,
 		),
-		$nav-unstyled
-	);
 
-	// Nav Nested
-
-	$nav-nested-margins-spacer-x: var(
-		--nav-nested-margins-spacer-x,
-		$nav-link-padding-x
-	);
-
-	// Nav Nested
-
-	$nav-nested-nav-class: '.nav';
-	$nav-nested-nest-level: 7;
-	$nav-nested-spacer-x: var(--nav-nested-spacer-x, 16px);
-
-	// Nav Tabs
-
-	$nav-tabs-font-size: var(--nav-tabs-font-size, 14px); // 14px
-
-	// Nav Tabs Link
-
-	$nav-tabs-border-color: var(--nav-tabs-border-color, $gray-400);
-	$nav-tabs-border-radius: var(
-		--nav-tabs-border-radius,
-		$border-radius $border-radius 0 0
-	);
-	$nav-tabs-border-width: var(--nav-tabs-border-width, $border-width);
-
-	$nav-tabs-link-color: var(--nav-tabs-link-color, $gray-600);
-	$nav-tabs-link-padding-x: var(
-		--nav-tabs-link-padding-x,
-		$nav-link-padding-x
-	);
-	$nav-tabs-link-padding-y: var(--nav-tabs-link-padding-y, 4.5px); // 4.5px
-
-	$nav-tabs-link-hover-border-color: var(
-		--nav-tabs-link-hover-border-color,
-		transparent
-	);
-
-	$nav-tabs-link-active-bg: var(--nav-tabs-link-active-bg, $white);
-	$nav-tabs-link-active-border-color: var(
-		--nav-tabs-link-active-border-color,
-		$gray-400 $gray-400 $nav-tabs-link-active-bg
-	);
-	$nav-tabs-link-active-color: var(--nav-tabs-link-active-color, $gray-900);
-
-	$nav-tabs-link-show-bg: var(--nav-tabs-link-show-bg, $white);
-	$nav-tabs-link-show-border-color: var(
-		--nav-tabs-link-show-border-color,
-		$nav-tabs-link-active-border-color
-	);
-	$nav-tabs-link-show-color: var(
-		--nav-tabs-link-show-color,
-		$nav-tabs-link-active-color
-	);
-
-	// .nav-tabs .nav-link[aria-expanded="true"]
-
-	$nav-tabs-link-show: ();
-	$nav-tabs-link-show: map-deep-merge(
-		(
-			background-color: $nav-tabs-link-show-bg,
-			border-color: $nav-tabs-link-show-border-color,
-			color: $nav-tabs-link-show-color,
+		nav-link-monospaced: (
+			margin: 0 4px,
 		),
-		$nav-tabs-link-show
-	);
 
-	$nav-tabs-link: ();
-	$nav-tabs-link: map-deep-merge(
-		(
-			border-color: transparent,
-			border-style: solid,
-			border-width: $nav-tabs-border-width,
-			border-radius: $nav-tabs-border-radius,
-			color: $nav-tabs-link-color,
-			font-weight: $font-weight-semi-bold,
-			padding-bottom: $nav-tabs-link-padding-y,
-			padding-left: $nav-tabs-link-padding-x,
-			padding-right: $nav-tabs-link-padding-x,
-			padding-top: $nav-tabs-link-padding-y,
-			transition: box-shadow 0.15s ease-in-out,
-			white-space: nowrap,
-
-			hover: (
-				border-color: $nav-tabs-link-hover-border-color,
-			),
-
-			focus: (
-				border-color: $nav-tabs-link-hover-border-color,
-				box-shadow: $component-focus-box-shadow,
-				outline: 0,
-			),
-
-			active: (
-				background-color: $nav-tabs-link-active-bg,
-				border-color: $nav-tabs-link-active-border-color,
-				color: $nav-tabs-link-active-color,
-			),
-
-			show: $nav-tabs-link-show,
-
-			disabled: (
-				background-color:
-					var(--nav-tabs-link-disabled-background-color, transparent),
-				border-color:
-					var(--nav-tabs-link-disabled-border-color, transparent),
-				box-shadow: var(--nav-tabs-link-disabled-box-shadow, none),
-				color:
-					var(
-						--nav-tabs-link-disabled-color,
-						$nav-link-disabled-color
-					),
-			),
-
-			inline-item-after: (
-				margin-left: 4px,
-			),
-
-			inline-item-before: (
-				margin-right: 4px,
-			),
+		nav-btn: (
+			margin: 0 4px,
+			padding-bottom: 0,
+			padding-left: 4px,
+			padding-right: 4px,
+			padding-top: 0,
 		),
-		$nav-tabs-link
-	);
+	),
+	$nav-unstyled
+);
 
-	// .nav-tabs
+// Nav Nested
 
-	$nav-tabs: ();
-	$nav-tabs: map-deep-merge(
-		(
-			border-bottom: var(--nav-tabs-border-bottom, 1px solid $gray-400),
-			padding-left: var(--nav-tabs-padding-left, 24px),
-			padding-right: var(--nav-tabs-padding-right, 24px),
-			padding-top: var(--nav-tabs-padding-top, 7px),
-			font-size: var(--nav-tabs-font-size, $nav-tabs-font-size),
-			nav-item: (
-				margin-bottom: calc(#{$nav-tabs-border-width} * -1),
-			),
+$nav-nested-margins-spacer-x: var(
+	--nav-nested-margins-spacer-x,
+	$nav-link-padding-x
+) !default;
 
-			nav-link: $nav-tabs-link,
+// Nav Nested
+
+$nav-nested-nav-class: '.nav' !default;
+$nav-nested-nest-level: 7 !default;
+$nav-nested-spacer-x: var(--nav-nested-spacer-x, 16px) !default;
+
+// Nav Tabs
+
+$nav-tabs-font-size: var(--nav-tabs-font-size, 14px) !default; // 14px
+
+// Nav Tabs Link
+
+$nav-tabs-border-color: var(--nav-tabs-border-color, $gray-400) !default;
+$nav-tabs-border-radius: var(
+	--nav-tabs-border-radius,
+	$border-radius $border-radius 0 0
+) !default;
+$nav-tabs-border-width: var(--nav-tabs-border-width, $border-width) !default;
+
+$nav-tabs-link-color: var(--nav-tabs-link-color, $gray-600) !default;
+$nav-tabs-link-padding-x: var(
+	--nav-tabs-link-padding-x,
+	$nav-link-padding-x
+) !default;
+$nav-tabs-link-padding-y: var(
+	--nav-tabs-link-padding-y,
+	4.5px
+) !default; // 4.5px
+
+$nav-tabs-link-hover-border-color: var(
+	--nav-tabs-link-hover-border-color,
+	transparent
+) !default;
+
+$nav-tabs-link-active-bg: var(--nav-tabs-link-active-bg, $white) !default;
+$nav-tabs-link-active-border-color: var(
+	--nav-tabs-link-active-border-color,
+	$gray-400 $gray-400 $nav-tabs-link-active-bg
+) !default;
+$nav-tabs-link-active-color: var(
+	--nav-tabs-link-active-color,
+	$gray-900
+) !default;
+
+$nav-tabs-link-show-bg: var(--nav-tabs-link-show-bg, $white) !default;
+$nav-tabs-link-show-border-color: var(
+	--nav-tabs-link-show-border-color,
+	$nav-tabs-link-active-border-color
+) !default;
+$nav-tabs-link-show-color: var(
+	--nav-tabs-link-show-color,
+	$nav-tabs-link-active-color
+) !default;
+
+// .nav-tabs .nav-link[aria-expanded="true"]
+
+$nav-tabs-link-show: () !default;
+$nav-tabs-link-show: map-deep-merge(
+	(
+		background-color: $nav-tabs-link-show-bg,
+		border-color: $nav-tabs-link-show-border-color,
+		color: $nav-tabs-link-show-color,
+	),
+	$nav-tabs-link-show
+);
+
+$nav-tabs-link: () !default;
+$nav-tabs-link: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
+		border-width: $nav-tabs-border-width,
+		border-radius: $nav-tabs-border-radius,
+		color: $nav-tabs-link-color,
+		font-weight: $font-weight-semi-bold,
+		padding-bottom: $nav-tabs-link-padding-y,
+		padding-left: $nav-tabs-link-padding-x,
+		padding-right: $nav-tabs-link-padding-x,
+		padding-top: $nav-tabs-link-padding-y,
+		transition: box-shadow 0.15s ease-in-out,
+		white-space: nowrap,
+
+		hover: (
+			border-color: $nav-tabs-link-hover-border-color,
 		),
-		$nav-tabs
-	);
 
-	// Nav Tabs Tab Pane
+		focus: (
+			border-color: $nav-tabs-link-hover-border-color,
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 
-	$nav-tabs-tab-pane-bg: var(--nav-tabs-tab-pane-bg, $white);
-	$nav-tabs-tab-pane-border-radius: var(
-		--nav-tabs-tab-pane-border-radius,
-		4px
-	);
-	$nav-tabs-tab-pane-padding: var(--nav-tabs-tab-pane-padding, 32px);
+		active: (
+			background-color: $nav-tabs-link-active-bg,
+			border-color: $nav-tabs-link-active-border-color,
+			color: $nav-tabs-link-active-color,
+		),
 
-	// Nav Variants
+		show: $nav-tabs-link-show,
 
-	$nav-palette: ();
-}
+		disabled: (
+			background-color:
+				var(--nav-tabs-link-disabled-background-color, transparent),
+			border-color:
+				var(--nav-tabs-link-disabled-border-color, transparent),
+			box-shadow: var(--nav-tabs-link-disabled-box-shadow, none),
+			color: var(--nav-tabs-link-disabled-color, $nav-link-disabled-color),
+		),
+
+		inline-item-after: (
+			margin-left: 4px,
+		),
+
+		inline-item-before: (
+			margin-right: 4px,
+		),
+	),
+	$nav-tabs-link
+);
+
+// .nav-tabs
+
+$nav-tabs: () !default;
+$nav-tabs: map-deep-merge(
+	(
+		border-bottom: var(--nav-tabs-border-bottom, 1px solid $gray-400),
+		padding-left: var(--nav-tabs-padding-left, 24px),
+		padding-right: var(--nav-tabs-padding-right, 24px),
+		padding-top: var(--nav-tabs-padding-top, 7px),
+		font-size: var(--nav-tabs-font-size, $nav-tabs-font-size),
+		nav-item: (
+			margin-bottom: calc(#{$nav-tabs-border-width} * -1),
+		),
+
+		nav-link: $nav-tabs-link,
+	),
+	$nav-tabs
+);
+
+// Nav Tabs Tab Pane
+
+$nav-tabs-tab-pane-bg: var(--nav-tabs-tab-pane-bg, $white) !default;
+$nav-tabs-tab-pane-border-radius: var(
+	--nav-tabs-tab-pane-border-radius,
+	4px
+) !default;
+$nav-tabs-tab-pane-padding: var(--nav-tabs-tab-pane-padding, 32px) !default;
+
+// Nav Variants
+
+$nav-palette: () !default;

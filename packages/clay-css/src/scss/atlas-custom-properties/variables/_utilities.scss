@@ -1,1016 +1,933 @@
-@if ($enable-atlas-custom-properties) {
-	$bg-checkered-fg: var(--bg-checkered-foreground-color, $gray-300);
+$bg-checkered-fg: var(--bg-checkered-foreground-color, $gray-300) !default;
 
-	$c-focus-trap: ();
-	$c-focus-trap: map-merge(
-		(
-			background: inherit,
-			color: inherit,
-			display: contents,
-			font: inherit,
+$c-focus-trap: () !default;
+$c-focus-trap: map-merge(
+	(
+		background: inherit,
+		color: inherit,
+		display: contents,
+		font: inherit,
+	),
+	$c-focus-trap
+);
+
+// .inline-scroller
+
+$inline-scroller-max-height: var(--inline-scroller-max-height, 125px) !default;
+
+$inline-scroller: () !default;
+$inline-scroller: map-deep-merge(
+	(
+		list-style: none,
+		margin: 0,
+		max-height: $inline-scroller-max-height,
+		overflow: auto,
+
+		-webkit-overflow-scrolling: touch,
+
+		padding: 0,
+
+		focus: (
+			outline: 0,
 		),
-		$c-focus-trap
-	);
 
-	// .inline-scroller
+		focus-visible: (
+			box-shadow: $component-focus-box-shadow,
+		),
+	),
+	$inline-scroller
+);
 
-	$inline-scroller-max-height: var(--inline-scroller-max-height, 125px);
+// Autofit Row
 
-	$inline-scroller: ();
-	$inline-scroller: map-deep-merge(
-		(
-			list-style: none,
-			margin: 0,
-			max-height: $inline-scroller-max-height,
-			overflow: auto,
+$autofit-col-expand-min-width: 50px !default;
 
-			-webkit-overflow-scrolling: touch,
+$autofit-padded-col-padding-x: 8px !default;
+$autofit-padded-col-padding-y: 4px !default;
 
-			padding: 0,
+$autofit-padded-no-gutters-sm: () !default;
+$autofit-padded-no-gutters-sm: map-merge(
+	(
+		margin: -4px,
+		width: auto,
 
-			focus: (
-				outline: 0,
-			),
+		autofit-col: (
+			padding: 4px,
+		),
+	),
+	$autofit-padded-no-gutters-sm
+);
 
-			focus-visible: (
-				box-shadow: $component-focus-box-shadow,
+// Close
+
+$close-color: var(--close-color, $gray-900) !default;
+$close-font-size: var(
+	--close-font-size,
+	calc(#{$font-size-base} * 1.5)
+) !default;
+$close-font-weight: var(--close-font-weight, $font-weight-bold) !default;
+$close-text-shadow: var(--close-text-shadow, none) !default;
+
+$close: () !default;
+$close: map-deep-merge(
+	(
+		align-items: center,
+		appearance: none,
+		background-color: var(--close-background-color, transparent),
+		border-radius: var(--close-border-radius, $btn-border-radius-sm),
+		border-width: var(--close-border-width, 0),
+		color: $close-color,
+		cursor: $link-cursor,
+		display: inline-flex,
+		font-size: var(--close-font-size, 16px),
+		font-weight: $close-font-weight,
+		height: var(--close-height, 32px),
+		justify-content: center,
+		line-height: 1,
+		padding: var(--close-padding, 0),
+		text-align: center,
+		text-shadow: $close-text-shadow,
+		transition: $component-transition,
+		width: var(--close-width, 32px),
+		hover: (
+			color: var(--close-hover-color, $close-color),
+			text-decoration: none,
+		),
+
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+
+		disabled: (
+			box-shadow: var(--close-disabled-box-shadow, none),
+			color: var(--close-disabled-color, $gray-600),
+			cursor: $disabled-cursor,
+			opacity: var(--close-disabled-opacity, $component-disabled-opacity),
+			outline: 0,
+
+			active: (
+				pointer-events: none,
 			),
 		),
-		$inline-scroller
-	);
 
-	// Autofit Row
-
-	$autofit-col-expand-min-width: 50px;
-
-	$autofit-padded-col-padding-x: 8px;
-	$autofit-padded-col-padding-y: 4px;
-
-	$autofit-padded-no-gutters-sm: ();
-	$autofit-padded-no-gutters-sm: map-merge(
-		(
-			margin: -4px,
-			width: auto,
-
-			autofit-col: (
-				padding: 4px,
-			),
+		lexicon-icon: (
+			margin-top: 0,
 		),
-		$autofit-padded-no-gutters-sm
-	);
+	),
+	$close
+);
 
-	// Close
+// C Focus Inset
 
-	$close-color: var(--close-color, $gray-900);
-	$close-font-size: var(--close-font-size, calc(#{$font-size-base} * 1.5));
-	$close-font-weight: var(--close-font-weight, $font-weight-bold);
-	$close-text-shadow: var(--close-text-shadow, none);
+$c-focus-inset-focus: () !default;
+$c-focus-inset-focus: map-deep-merge(
+	(
+		box-shadow: $component-focus-inset-box-shadow,
+		border-color: $primary-l0,
+		outline: 0,
+	),
+	$c-focus-inset-focus
+);
 
-	$close: ();
-	$close: map-deep-merge(
-		(
-			align-items: center,
-			appearance: none,
-			background-color: var(--close-background-color, transparent),
-			border-radius: var(--close-border-radius, $btn-border-radius-sm),
-			border-width: var(--close-border-width, 0),
-			color: $close-color,
-			cursor: $link-cursor,
-			display: inline-flex,
-			font-size: var(--close-font-size, 16px),
-			font-weight: $close-font-weight,
-			height: var(--close-height, 32px),
-			justify-content: center,
-			line-height: 1,
-			padding: var(--close-padding, 0),
-			text-align: center,
-			text-shadow: $close-text-shadow,
-			transition: $component-transition,
-			width: var(--close-width, 32px),
+// C Inner
+
+$c-inner: () !default;
+$c-inner: map-deep-merge(
+	(
+		align-items: inherit,
+		display: inherit,
+		flex-direction: inherit,
+		height: inherit,
+		justify-content: inherit,
+		line-height: inherit,
+		max-width: inherit,
+		min-width: inherit,
+		outline: 0,
+		overflow: inherit,
+		padding-bottom: inherit,
+		padding-left: inherit,
+		padding-right: inherit,
+		padding-top: inherit,
+		text-overflow: inherit,
+		width: inherit,
+	),
+	$c-inner
+);
+
+// Heading
+
+$heading-spacer-x: var(--heading-spacer-x, 16px) !default;
+
+$heading-text-margin-bottom: var(--heading-text-margin-bottom, auto) !default;
+$heading-text-margin-top: var(--heading-text-margin-top, auto) !default;
+
+// Inline Item
+
+$inline-item-lexicon-icon-margin-top: -0.1em !default;
+$inline-item-spacer-x: 8px !default;
+
+$inline-item-loading-animation-font-size: null !default;
+
+$inline-item: () !default;
+$inline-item: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		vertical-align: middle,
+
+		inline-item: (
+			display: inline,
+		),
+
+		lexicon-icon: (
+			margin-top: $inline-item-lexicon-icon-margin-top,
+		),
+
+		loading-animation: (
+			font-size: $inline-item-loading-animation-font-size,
+		),
+	),
+	$inline-item
+);
+
+// Page Header
+
+$page-header-bg: var(--page-header-background-color, $white) !default;
+
+// Clay Gap
+
+$c-gap: () !default;
+$c-gap: map-merge(
+	(
+		0: map-get($spacers, 0),
+		1: map-get($spacers, 1),
+		2: map-get($spacers, 2),
+		3: map-get($spacers, 3),
+		4: map-get($spacers, 4),
+		5: map-get($spacers, 5),
+	),
+	$c-gap
+);
+
+// Background
+
+$bg-theme-colors: () !default;
+$bg-theme-colors: map-deep-merge(
+	(
+		'blue': (
+			background-color: $blue !important,
+
 			hover: (
-				color: var(--close-hover-color, $close-color),
-				text-decoration: none,
-			),
-
-			focus: (
-				box-shadow: $component-focus-box-shadow,
-				outline: 0,
-			),
-
-			disabled: (
-				box-shadow: var(--close-disabled-box-shadow, none),
-				color: var(--close-disabled-color, $gray-600),
-				cursor: $disabled-cursor,
-				opacity:
-					var(--close-disabled-opacity, $component-disabled-opacity),
-				outline: 0,
-
-				active: (
-					pointer-events: none,
-				),
-			),
-
-			lexicon-icon: (
-				margin-top: 0,
+				background-color: unquote('hsl(from #{$blue} h s calc(l - 10))')
+					!important,
 			),
 		),
-		$close
-	);
 
-	// C Focus Inset
+		'indigo': (
+			background-color: $indigo !important,
 
-	$c-focus-inset-focus: ();
-	$c-focus-inset-focus: map-deep-merge(
-		(
-			box-shadow: $component-focus-inset-box-shadow,
-			border-color: $primary-l0,
-			outline: 0,
-		),
-		$c-focus-inset-focus
-	);
-
-	// C Inner
-
-	$c-inner: ();
-	$c-inner: map-deep-merge(
-		(
-			align-items: inherit,
-			display: inherit,
-			flex-direction: inherit,
-			height: inherit,
-			justify-content: inherit,
-			line-height: inherit,
-			max-width: inherit,
-			min-width: inherit,
-			outline: 0,
-			overflow: inherit,
-			padding-bottom: inherit,
-			padding-left: inherit,
-			padding-right: inherit,
-			padding-top: inherit,
-			text-overflow: inherit,
-			width: inherit,
-		),
-		$c-inner
-	);
-
-	// Heading
-
-	$heading-spacer-x: var(--heading-spacer-x, 16px);
-
-	$heading-text-margin-bottom: var(--heading-text-margin-bottom, auto);
-	$heading-text-margin-top: var(--heading-text-margin-top, auto);
-
-	// Inline Item
-
-	$inline-item-lexicon-icon-margin-top: -0.1em;
-	$inline-item-spacer-x: 8px;
-
-	$inline-item-loading-animation-font-size: null;
-
-	$inline-item: ();
-	$inline-item: map-deep-merge(
-		(
-			align-items: center,
-			display: inline-flex,
-			vertical-align: middle,
-
-			inline-item: (
-				display: inline,
-			),
-
-			lexicon-icon: (
-				margin-top: $inline-item-lexicon-icon-margin-top,
-			),
-
-			loading-animation: (
-				font-size: $inline-item-loading-animation-font-size,
+			hover: (
+				background-color:
+					unquote('hsl(from #{$indigo} h s calc(l - 10))') !important,
 			),
 		),
-		$inline-item
-	);
 
-	// Page Header
+		'purple': (
+			background-color: $purple !important,
 
-	$page-header-bg: var(--page-header-background-color, $white);
-
-	// Clay Gap
-
-	$c-gap: ();
-	$c-gap: map-merge(
-		(
-			0: map-get($spacers, 0),
-			1: map-get($spacers, 1),
-			2: map-get($spacers, 2),
-			3: map-get($spacers, 3),
-			4: map-get($spacers, 4),
-			5: map-get($spacers, 5),
-		),
-		$c-gap
-	);
-
-	// Background
-
-	$bg-theme-colors: ();
-	$bg-theme-colors: map-deep-merge(
-		(
-			'blue': (
-				background-color: $blue !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$blue} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'indigo': (
-				background-color: $indigo !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$indigo} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'purple': (
-				background-color: $purple !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$purple} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'pink': (
-				background-color: $pink !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$pink} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'red': (
-				background-color: $red !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$red} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'orange': (
-				background-color: $orange !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$orange} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'yellow': (
-				background-color: $yellow !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$yellow} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'green': (
-				background-color: $green !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$green} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'teal': (
-				background-color: $teal !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$teal} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'cyan': (
-				background-color: $cyan !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$cyan} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'primary': (
-				background-color: $primary !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$primary} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'primary-l3': (
-				background-color: $primary-l3 !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$primary-l3} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'secondary': (
-				background-color: $secondary !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$secondary} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'success': (
-				background-color: $success !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$success} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'info': (
-				background-color: $info !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$info} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'warning': (
-				background-color: $warning !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$warning} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'danger': (
-				background-color: $danger !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$danger} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'light': (
-				background-color: $light !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$light} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'lighter': (
-				background-color: $gray-100 !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$gray-100} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'dark': (
-				background-color: $dark !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$dark} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'gray-dark': (
-				background-color: $gray-800 !important,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$gray-800} h s calc(l - 10))')
-						!important,
-				),
-			),
-
-			'white': (
-				background-color: $white !important,
-			),
-
-			'transparent': (
-				background-color: transparent !important,
+			hover: (
+				background-color:
+					unquote('hsl(from #{$purple} h s calc(l - 10))') !important,
 			),
 		),
-		$bg-theme-colors
-	);
 
-	$bg-gradient-theme-colors: ();
-	$bg-gradient-theme-colors: map-deep-merge(
-		(
-			'primary': (
-				background:
+		'pink': (
+			background-color: $pink !important,
+
+			hover: (
+				background-color: unquote('hsl(from #{$pink} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'red': (
+			background-color: $red !important,
+
+			hover: (
+				background-color: unquote('hsl(from #{$red} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'orange': (
+			background-color: $orange !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$orange} h s calc(l - 10))') !important,
+			),
+		),
+
+		'yellow': (
+			background-color: $yellow !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$yellow} h s calc(l - 10))') !important,
+			),
+		),
+
+		'green': (
+			background-color: $green !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$green} h s calc(l - 10))') !important,
+			),
+		),
+
+		'teal': (
+			background-color: $teal !important,
+
+			hover: (
+				background-color: unquote('hsl(from #{$teal} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'cyan': (
+			background-color: $cyan !important,
+
+			hover: (
+				background-color: unquote('hsl(from #{$cyan} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'primary': (
+			background-color: $primary !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$primary} h s calc(l - 10))') !important,
+			),
+		),
+
+		'primary-l3': (
+			background-color: $primary-l3 !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$primary-l3} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'secondary': (
+			background-color: $secondary !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$secondary} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'success': (
+			background-color: $success !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$success} h s calc(l - 10))') !important,
+			),
+		),
+
+		'info': (
+			background-color: $info !important,
+
+			hover: (
+				background-color: unquote('hsl(from #{$info} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'warning': (
+			background-color: $warning !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$warning} h s calc(l - 10))') !important,
+			),
+		),
+
+		'danger': (
+			background-color: $danger !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$danger} h s calc(l - 10))') !important,
+			),
+		),
+
+		'light': (
+			background-color: $light !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$light} h s calc(l - 10))') !important,
+			),
+		),
+
+		'lighter': (
+			background-color: $gray-100 !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$gray-100} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'dark': (
+			background-color: $dark !important,
+
+			hover: (
+				background-color: unquote('hsl(from #{$dark} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'gray-dark': (
+			background-color: $gray-800 !important,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$gray-800} h s calc(l - 10))')
+					!important,
+			),
+		),
+
+		'white': (
+			background-color: $white !important,
+		),
+
+		'transparent': (
+			background-color: transparent !important,
+		),
+	),
+	$bg-theme-colors
+);
+
+$bg-gradient-theme-colors: () !default;
+$bg-gradient-theme-colors: map-deep-merge(
+	(
+		'primary': (
+			background: $primary
+				linear-gradient(
+					180deg,
+					clay-mix($body-bg, $primary, 15%),
 					$primary
-					linear-gradient(
-						180deg,
-						clay-mix($body-bg, $primary, 15%),
-						$primary
-					)
-					repeat-x
-					!important,
-			),
+				)
+				repeat-x !important,
+		),
 
-			'secondary': (
-				background:
+		'secondary': (
+			background: $secondary
+				linear-gradient(
+					180deg,
+					clay-mix($body-bg, $secondary, 15%),
 					$secondary
-					linear-gradient(
-						180deg,
-						clay-mix($body-bg, $secondary, 15%),
-						$secondary
-					)
-					repeat-x
-					!important,
-			),
+				)
+				repeat-x !important,
+		),
 
-			'success': (
-				background:
+		'success': (
+			background: $success
+				linear-gradient(
+					180deg,
+					clay-clay-mix($body-bg, $success, 15%),
 					$success
-					linear-gradient(
-						180deg,
-						clay-clay-mix($body-bg, $success, 15%),
-						$success
-					)
-					repeat-x
-					!important,
-			),
+				)
+				repeat-x !important,
+		),
 
-			'info': (
-				background:
-					$info
-					linear-gradient(
-						180deg,
-						clay-mix($body-bg, $info, 15%),
-						$info
-					)
-					repeat-x
-					!important,
-			),
+		'info': (
+			background: $info
+				linear-gradient(180deg, clay-mix($body-bg, $info, 15%), $info)
+				repeat-x !important,
+		),
 
-			'warning': (
-				background:
+		'warning': (
+			background: $warning
+				linear-gradient(
+					180deg,
+					clay-mix($body-bg, $warning, 15%),
 					$warning
-					linear-gradient(
-						180deg,
-						clay-mix($body-bg, $warning, 15%),
-						$warning
-					)
-					repeat-x
-					!important,
-			),
+				)
+				repeat-x !important,
+		),
 
-			'danger': (
-				background:
+		'danger': (
+			background: $danger
+				linear-gradient(
+					180deg,
+					clay-mix($body-bg, $danger, 15%),
 					$danger
-					linear-gradient(
-						180deg,
-						clay-mix($body-bg, $danger, 15%),
-						$danger
-					)
-					repeat-x
+				)
+				repeat-x !important,
+		),
+
+		'light': (
+			background: $light
+				linear-gradient(180deg, clay-mix($body-bg, $light, 15%), $light)
+				repeat-x !important,
+		),
+
+		'dark': (
+			background: $dark
+				linear-gradient(180deg, clay-mix($body-bg, $dark, 15%), $dark)
+				repeat-x !important,
+		),
+	),
+	$bg-gradient-theme-colors
+);
+
+// Border
+
+$border-theme-colors: () !default;
+$border-theme-colors: map-deep-merge(
+	(
+		'primary': (
+			border-color: $primary !important,
+		),
+
+		'secondary': (
+			border-color: $secondary !important,
+		),
+
+		'success': (
+			border-color: $success !important,
+		),
+
+		'info': (
+			border-color: $info !important,
+		),
+
+		'warning': (
+			border-color: $warning !important,
+		),
+
+		'danger': (
+			border-color: $danger !important,
+		),
+
+		'light': (
+			border-color: $light !important,
+		),
+
+		'lighter': (
+			border-color: $gray-100 !important,
+		),
+
+		'dark': (
+			border-color: $dark !important,
+		),
+
+		'gray-dark': (
+			border-color: $gray-800 !important,
+		),
+
+		'white': (
+			border-color: $white !important,
+		),
+	),
+	$border-theme-colors
+);
+
+// Display
+
+$displays: none, inline, inline-block, grid, block, contents, table, table-row,
+	table-cell, flex, inline-flex !default;
+
+// Overflow
+
+$overflows: auto, hidden !default;
+
+// Position
+
+$positions: static, relative, absolute, fixed, sticky !default;
+
+// Font Sizes
+
+$font-sizes: () !default;
+$font-sizes: map-deep-merge(
+	(
+		text-1: (
+			font-size: var(--text-1-font-size, 10px),
+		),
+		text-2: (
+			font-size: var(--text-2-font-size, 12px),
+		),
+		text-3: (
+			font-size: var(--text-3-font-size, 14px),
+		),
+		text-4: (
+			font-size: var(--text-4-font-size, 16px),
+		),
+		text-5: (
+			font-size: var(--text-5-font-size, 18px),
+		),
+		text-6: (
+			font-size: var(--text-6-font-size, 20px),
+		),
+		text-7: (
+			font-size: var(--text-7-font-size, 24px),
+		),
+		text-8: (
+			font-size: var(--text-8-font-size, 28px),
+		),
+		text-9: (
+			font-size: var(--text-9-font-size, 32px),
+		),
+		text-10: (
+			font-size: var(--text-10-font-size, 36px),
+		),
+		text-11: (
+			font-size: var(--text-11-font-size, 40px),
+		),
+	),
+	$font-sizes
+);
+
+// Text
+
+$text-theme-colors: () !default;
+$text-theme-colors: map-deep-merge(
+	(
+		'blue': (
+			color: $blue !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'indigo': (
+			color: $indigo !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'purple': (
+			color: $purple !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'pink': (
+			color: $pink !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'red': (
+			color: $red !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'orange': (
+			color: $orange !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'yellow': (
+			color: $yellow !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'green': (
+			color: $green !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'teal': (
+			color: $teal !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'cyan': (
+			color: $cyan !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'primary': (
+			color: $primary !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'secondary': (
+			color: $secondary !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'success': (
+			color: $success !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'info': (
+			color: $info !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'warning': (
+			color: $warning !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'danger': (
+			color: $danger !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'light': (
+			color: $light !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
+			),
+		),
+
+		'lighter': (
+			color: $gray-100 !important,
+
+			hover: (
+				color: unquote('hsl(from #{$gray-100} h s calc(l - 15))')
 					!important,
 			),
+		),
 
-			'light': (
-				background:
-					$light
-					linear-gradient(
-						180deg,
-						clay-mix($body-bg, $light, 15%),
-						$light
-					)
-					repeat-x
-					!important,
+		'dark': (
+			color: $dark !important,
+
+			hover: (
+				color: unquote('hsl(from #{$blue} h s calc(l - 15))') !important,
 			),
+		),
 
-			'dark': (
-				background:
-					$dark
-					linear-gradient(
-						180deg,
-						clay-mix($body-bg, $dark, 15%),
-						$dark
-					)
-					repeat-x
+		'gray-dark': (
+			color: $gray-800 !important,
+
+			hover: (
+				color: unquote('hsl(from #{$gray-800} h s calc(l - 15))')
 					!important,
 			),
 		),
-		$bg-gradient-theme-colors
-	);
 
-	// Border
-
-	$border-theme-colors: ();
-	$border-theme-colors: map-deep-merge(
-		(
-			'primary': (
-				border-color: $primary !important,
-			),
-
-			'secondary': (
-				border-color: $secondary !important,
-			),
-
-			'success': (
-				border-color: $success !important,
-			),
-
-			'info': (
-				border-color: $info !important,
-			),
-
-			'warning': (
-				border-color: $warning !important,
-			),
-
-			'danger': (
-				border-color: $danger !important,
-			),
-
-			'light': (
-				border-color: $light !important,
-			),
-
-			'lighter': (
-				border-color: $gray-100 !important,
-			),
-
-			'dark': (
-				border-color: $dark !important,
-			),
-
-			'gray-dark': (
-				border-color: $gray-800 !important,
-			),
-
-			'white': (
-				border-color: $white !important,
-			),
+		'body': (
+			color: $body-color !important,
 		),
-		$border-theme-colors
-	);
 
-	// Display
-
-	$displays: none, inline, inline-block, grid, block, contents, table,
-		table-row, table-cell, flex, inline-flex;
-
-	// Overflow
-
-	$overflows: auto, hidden;
-
-	// Position
-
-	$positions: static, relative, absolute, fixed, sticky;
-
-	// Font Sizes
-
-	$font-sizes: ();
-	$font-sizes: map-deep-merge(
-		(
-			text-1: (
-				font-size: var(--text-1-font-size, 10px),
-			),
-			text-2: (
-				font-size: var(--text-2-font-size, 12px),
-			),
-			text-3: (
-				font-size: var(--text-3-font-size, 14px),
-			),
-			text-4: (
-				font-size: var(--text-4-font-size, 16px),
-			),
-			text-5: (
-				font-size: var(--text-5-font-size, 18px),
-			),
-			text-6: (
-				font-size: var(--text-6-font-size, 20px),
-			),
-			text-7: (
-				font-size: var(--text-7-font-size, 24px),
-			),
-			text-8: (
-				font-size: var(--text-8-font-size, 28px),
-			),
-			text-9: (
-				font-size: var(--text-9-font-size, 32px),
-			),
-			text-10: (
-				font-size: var(--text-10-font-size, 36px),
-			),
-			text-11: (
-				font-size: var(--text-11-font-size, 40px),
-			),
+		'muted': (
+			color: $text-muted !important,
 		),
-		$font-sizes
-	);
 
-	// Text
-
-	$text-theme-colors: ();
-	$text-theme-colors: map-deep-merge(
-		(
-			'blue': (
-				color: $blue !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'indigo': (
-				color: $indigo !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'purple': (
-				color: $purple !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'pink': (
-				color: $pink !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'red': (
-				color: $red !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'orange': (
-				color: $orange !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'yellow': (
-				color: $yellow !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'green': (
-				color: $green !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'teal': (
-				color: $teal !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'cyan': (
-				color: $cyan !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'primary': (
-				color: $primary !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'secondary': (
-				color: $secondary !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'success': (
-				color: $success !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'info': (
-				color: $info !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'warning': (
-				color: $warning !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'danger': (
-				color: $danger !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'light': (
-				color: $light !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'lighter': (
-				color: $gray-100 !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$gray-100} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'dark': (
-				color: $dark !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$blue} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'gray-dark': (
-				color: $gray-800 !important,
-
-				hover: (
-					color:
-						unquote('hsl(from #{$gray-800} h s calc(l - 15))')
-						!important,
-				),
-			),
-
-			'body': (
-				color: $body-color !important,
-			),
-
-			'muted': (
-				color: $text-muted !important,
-			),
-
-			'black-50': (
-				color: unquote('hsl(from #{$black} h s l / 0.5)') !important,
-			),
-
-			'white-50': (
-				color: unquote('hsl(from #{$white} h s l / 0.5)') !important,
-			),
+		'black-50': (
+			color: unquote('hsl(from #{$black} h s l / 0.5)') !important,
 		),
-		$text-theme-colors
-	);
 
-	$text-decorations: ();
-	$text-decorations: map-deep-merge(
-		(
-			'.text-none, .text-decoration-none': (
-				text-decoration: none !important,
-			),
-
-			'.text-underline, .text-decoration-underline': (
-				text-decoration: underline !important,
-			),
+		'white-50': (
+			color: unquote('hsl(from #{$white} h s l / 0.5)') !important,
 		),
-		$text-decorations
-	);
+	),
+	$text-theme-colors
+);
 
-	// Text Truncate
+$text-decorations: () !default;
+$text-decorations: map-deep-merge(
+	(
+		'.text-none, .text-decoration-none': (
+			text-decoration: none !important,
+		),
 
-	$text-truncate: ();
-	$text-truncate: map-merge(
-		(
-			display: block,
+		'.text-underline, .text-decoration-underline': (
+			text-decoration: underline !important,
+		),
+	),
+	$text-decorations
+);
+
+// Text Truncate
+
+$text-truncate: () !default;
+$text-truncate: map-merge(
+	(
+		display: block,
+		overflow: hidden,
+		text-overflow: ellipsis,
+		white-space: nowrap,
+	),
+	$text-truncate
+);
+
+// Text Truncate Inline
+
+$text-truncate-inline: () !default;
+$text-truncate-inline: map-deep-merge(
+	(
+		display: inline-flex,
+		max-width: 100%,
+
+		text-truncate: (
+			display: inline-block,
+			max-width: 100%,
 			overflow: hidden,
 			text-overflow: ellipsis,
+			vertical-align: bottom,
 			white-space: nowrap,
+			word-wrap: normal,
 		),
-		$text-truncate
-	);
+	),
+	$text-truncate-inline
+);
 
-	// Text Truncate Inline
+// C Prefers
 
-	$text-truncate-inline: ();
-	$text-truncate-inline: map-deep-merge(
-		(
-			display: inline-flex,
-			max-width: 100%,
-
-			text-truncate: (
-				display: inline-block,
-				max-width: 100%,
-				overflow: hidden,
-				text-overflow: ellipsis,
-				vertical-align: bottom,
-				white-space: nowrap,
-				word-wrap: normal,
+$c-prefers-link-underline: () !default;
+$c-prefers-link-underline: map-deep-merge(
+	(
+		'.c-prefers-link-underline .cadmin': (
+			'[href]:not(.disabled):not([role="button"])': (
+				text-decoration: underline !important,
 			),
-		),
-		$text-truncate-inline
-	);
 
-	// C Prefers
-
-	$c-prefers-link-underline: ();
-	$c-prefers-link-underline: map-deep-merge(
-		(
-			'.c-prefers-link-underline .cadmin': (
-				'[href]:not(.disabled):not([role="button"])': (
+			'.btn-monospaced, .nav-btn-monospaced, .nav-link-monospaced': (
+				'&[href]:not(.disabled):not([role="button"]):not([role="tab"])::after':
+				(
+					content: '\00a0\00a0\00a0',
+					position: absolute,
 					text-decoration: underline !important,
 				),
-
-				'.btn-monospaced, .nav-btn-monospaced, .nav-link-monospaced': (
-					'&[href]:not(.disabled):not([role="button"]):not([role="tab"])::after':
-					(
-						content: '\00a0\00a0\00a0',
-						position: absolute,
-						text-decoration: underline !important,
-					),
-				),
-
-				'.multi-step-item.active, .multi-step-item.complete, .multi-step-item.error, .dropdown':
-				(
-					'.multi-step-icon[href]:not([role="button"])::after': (
-						content: '\00a0\00a0\00a0',
-						position: absolute,
-						text-decoration: underline !important,
-					),
-				),
-
-				'.multi-step-item.disabled .multi-step-icon[href]:not([role="button"])::after':
-				(
-					text-decoration: none !important,
-				),
 			),
-		),
-		$c-prefers-link-underline
-	);
 
-	$c-prefers-letter-spacing: ();
-	$c-prefers-letter-spacing: map-deep-merge(
-		(
-			'.c-prefers-letter-spacing-1 .cadmin, .c-prefers-letter-spacing-1 .cadmin *':
+			'.multi-step-item.active, .multi-step-item.complete, .multi-step-item.error, .dropdown':
 			(
-				letter-spacing: 1px !important,
+				'.multi-step-icon[href]:not([role="button"])::after': (
+					content: '\00a0\00a0\00a0',
+					position: absolute,
+					text-decoration: underline !important,
+				),
+			),
+
+			'.multi-step-item.disabled .multi-step-icon[href]:not([role="button"])::after':
+			(
+				text-decoration: none !important,
 			),
 		),
-		$c-prefers-letter-spacing
-	);
+	),
+	$c-prefers-link-underline
+);
 
-	$displays-c-prefers-reduced-motion: ();
-	$displays-c-prefers-reduced-motion: map-deep-merge(
+$c-prefers-letter-spacing: () !default;
+$c-prefers-letter-spacing: map-deep-merge(
+	(
+		'.c-prefers-letter-spacing-1 .cadmin, .c-prefers-letter-spacing-1 .cadmin *':
 		(
+			letter-spacing: 1px !important,
+		),
+	),
+	$c-prefers-letter-spacing
+);
+
+$displays-c-prefers-reduced-motion: () !default;
+$displays-c-prefers-reduced-motion: map-deep-merge(
+	(
+		'.cadmin .d-block-c-prefers-reduced-motion': (
+			display: none !important,
+		),
+		'.cadmin .d-inline-block-c-prefers-reduced-motion': (
+			display: none !important,
+		),
+
+		'@media (prefers-reduced-motion: reduce)': (
+			'.cadmin .d-none-c-prefers-reduced-motion': (
+				display: none !important,
+			),
+
 			'.cadmin .d-block-c-prefers-reduced-motion': (
-				display: none !important,
+				display: block !important,
 			),
+
 			'.cadmin .d-inline-block-c-prefers-reduced-motion': (
+				display: inline-block !important,
+			),
+		),
+
+		'.c-prefers-reduced-motion .cadmin': (
+			'.d-none-c-prefers-reduced-motion': (
 				display: none !important,
 			),
 
-			'@media (prefers-reduced-motion: reduce)': (
-				'.cadmin .d-none-c-prefers-reduced-motion': (
-					display: none !important,
-				),
-
-				'.cadmin .d-block-c-prefers-reduced-motion': (
-					display: block !important,
-				),
-
-				'.cadmin .d-inline-block-c-prefers-reduced-motion': (
-					display: inline-block !important,
-				),
+			'.d-block-c-prefers-reduced-motion': (
+				display: block !important,
 			),
 
-			'.c-prefers-reduced-motion .cadmin': (
-				'.d-none-c-prefers-reduced-motion': (
-					display: none !important,
-				),
-
-				'.d-block-c-prefers-reduced-motion': (
-					display: block !important,
-				),
-
-				'.d-inline-block-c-prefers-reduced-motion': (
-					display: inline-block !important,
-				),
+			'.d-inline-block-c-prefers-reduced-motion': (
+				display: inline-block !important,
 			),
 		),
-		$displays-c-prefers-reduced-motion
-	);
+	),
+	$displays-c-prefers-reduced-motion
+);
 
-	$c-prefers-reduced-motion: ();
-	$c-prefers-reduced-motion: map-merge(
-		(
-			scroll-behavior: auto,
-			transition: clay-enable-transitions(none),
-		),
-		$c-prefers-reduced-motion
-	);
-}
+$c-prefers-reduced-motion: () !default;
+$c-prefers-reduced-motion: map-merge(
+	(
+		scroll-behavior: auto,
+		transition: clay-enable-transitions(none),
+	),
+	$c-prefers-reduced-motion
+);

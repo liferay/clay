@@ -1,153 +1,151 @@
-@if ($enable-atlas-custom-properties) {
-	$management-bar-base: ();
-	$management-bar-base: map-deep-merge(
-		(
-			border-color: transparent,
-			border-style: solid,
+$management-bar-base: () !default;
+$management-bar-base: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
 
-			media-breakpoint-down: (),
-			media-breakpoint-up: (),
-		),
-		$management-bar-base
-	);
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$management-bar-base
+);
 
-	$management-bar-size: ();
-	$management-bar-size: map-deep-merge(
-		(
-			scaling-navbar: true,
+$management-bar-size: () !default;
+$management-bar-size: map-deep-merge(
+	(
+		scaling-navbar: true,
 
-			border-bottom-width: 0.0625rem,
-			font-size:
-				if(variable-exists(navbar-font-size), $navbar-font-size, null),
-			height: 4rem,
-			min-height: 4rem,
-			padding-x: 0rem,
-			padding-y: 0rem,
+		border-bottom-width: 0.0625rem,
+		font-size:
+			if(variable-exists(navbar-font-size), $navbar-font-size, null),
+		height: 4rem,
+		min-height: 4rem,
+		padding-x: 0rem,
+		padding-y: 0rem,
 
-			active-border-bottom-width: 0.25rem,
+		active-border-bottom-width: 0.25rem,
 
-			height-mobile: 3rem,
-			min-height-mobile: 3rem,
+		height-mobile: 3rem,
+		min-height-mobile: 3rem,
 
-			btn-monospaced-font-size: 1rem,
+		btn-monospaced-font-size: 1rem,
 
-			link-height: 2rem,
-			link-margin-x: 0.5rem,
+		link-height: 2rem,
+		link-margin-x: 0.5rem,
 
-			toggler-margin-x: 0.875rem,
+		toggler-margin-x: 0.875rem,
 
-			nav-item-dropdown-margin-top: 0rem,
+		nav-item-dropdown-margin-top: 0rem,
 
-			link-height-mobile: 2rem,
-			link-margin-x-mobile: 0.25rem,
-			link-padding-x-mobile: 0.25rem,
+		link-height-mobile: 2rem,
+		link-margin-x-mobile: 0.25rem,
+		link-padding-x-mobile: 0.25rem,
 
-			form-control-height-mobile: 2rem,
-		),
-		$management-bar-size
-	);
+		form-control-height-mobile: 2rem,
+	),
+	$management-bar-size
+);
 
-	$management-bar-light: ();
-	$management-bar-light: map-deep-merge(
-		(
-			background-color: $light,
+$management-bar-light: () !default;
+$management-bar-light: map-deep-merge(
+	(
+		background-color: $light,
 
-			navbar-nav: (
-				nav-link: (
+		navbar-nav: (
+			nav-link: (
+				color:
+					if(
+						variable-exists(navbar-light-color),
+						$navbar-light-color,
+						unquote('hsl(from #{$black} h s l / 0.5)')
+					),
+				hover: (
 					color:
 						if(
-							variable-exists(navbar-light-color),
-							$navbar-light-color,
-							unquote('hsl(from #{$black} h s l / 0.5)')
+							variable-exists(navbar-light-hover-color),
+							$navbar-light-hover-color,
+							unquote('hsl(from #{$black} h s l / 0.7)')
 						),
-					hover: (
-						color:
-							if(
-								variable-exists(navbar-light-hover-color),
-								$navbar-light-hover-color,
-								unquote('hsl(from #{$black} h s l / 0.7)')
-							),
-					),
-
-					active: (
-						color:
-							if(
-								variable-exists(navbar-light-active-color),
-								$navbar-light-active-color,
-								unquote('hsl(from #{$black} h s l / 0.9)')
-							),
-					),
-
-					disabled: (
-						color:
-							if(
-								variable-exists(navbar-light-disabled-color),
-								$navbar-light-disabled-color,
-								unquote('hsl(from #{$black} h s l / 0.3)')
-							),
-						opacity: 1,
-					),
 				),
-			),
 
-			media-breakpoint-down: (),
-			media-breakpoint-up: (),
-		),
-		$management-bar-light
-	);
-
-	$management-bar-primary: ();
-	$management-bar-primary: map-deep-merge(
-		(
-			background-color: $primary-l3,
-			border-color: $primary,
-			color:
-				if(
-					variable-exists(navbar-light-color),
-					$navbar-light-color,
-					unquote('hsl(from #{$black} h s l / 0.5)')
-				),
-			navbar-nav: (
-				nav-link: (
+				active: (
 					color:
 						if(
-							variable-exists(navbar-light-color),
-							$navbar-light-color,
-							unquote('hsl(from #{$black} h s l / 0.5)')
+							variable-exists(navbar-light-active-color),
+							$navbar-light-active-color,
+							unquote('hsl(from #{$black} h s l / 0.9)')
 						),
-					hover: (
-						color:
-							if(
-								variable-exists(navbar-light-hover-color),
-								$navbar-light-hover-color,
-								unquote('hsl(from #{$black} h s l / 0.7)')
-							),
-					),
+				),
 
-					active: (
-						color:
-							if(
-								variable-exists(navbar-light-active-color),
-								$navbar-light-active-color,
-								unquote('hsl(from #{$black} h s l / 0.9)')
-							),
-					),
-
-					disabled: (
-						color:
-							if(
-								variable-exists(navbar-light-disabled-color),
-								$navbar-light-disabled-color,
-								unquote('hsl(from #{$black} h s l / 0.3)')
-							),
-						opacity: 1,
-					),
+				disabled: (
+					color:
+						if(
+							variable-exists(navbar-light-disabled-color),
+							$navbar-light-disabled-color,
+							unquote('hsl(from #{$black} h s l / 0.3)')
+						),
+					opacity: 1,
 				),
 			),
-
-			media-breakpoint-down: (),
-			media-breakpoint-up: (),
 		),
-		$management-bar-primary
-	);
-}
+
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$management-bar-light
+);
+
+$management-bar-primary: () !default;
+$management-bar-primary: map-deep-merge(
+	(
+		background-color: $primary-l3,
+		border-color: $primary,
+		color:
+			if(
+				variable-exists(navbar-light-color),
+				$navbar-light-color,
+				unquote('hsl(from #{$black} h s l / 0.5)')
+			),
+		navbar-nav: (
+			nav-link: (
+				color:
+					if(
+						variable-exists(navbar-light-color),
+						$navbar-light-color,
+						unquote('hsl(from #{$black} h s l / 0.5)')
+					),
+				hover: (
+					color:
+						if(
+							variable-exists(navbar-light-hover-color),
+							$navbar-light-hover-color,
+							unquote('hsl(from #{$black} h s l / 0.7)')
+						),
+				),
+
+				active: (
+					color:
+						if(
+							variable-exists(navbar-light-active-color),
+							$navbar-light-active-color,
+							unquote('hsl(from #{$black} h s l / 0.9)')
+						),
+				),
+
+				disabled: (
+					color:
+						if(
+							variable-exists(navbar-light-disabled-color),
+							$navbar-light-disabled-color,
+							unquote('hsl(from #{$black} h s l / 0.3)')
+						),
+					opacity: 1,
+				),
+			),
+		),
+
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$management-bar-primary
+);

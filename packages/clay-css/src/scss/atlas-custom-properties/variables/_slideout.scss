@@ -1,379 +1,369 @@
-@if ($enable-atlas-custom-properties) {
-	$c-slideout-sidebar-width: 320px;
+$c-slideout-sidebar-width: 320px !default;
 
-	$c-slideout-sidebar-width-mobile: 280px;
+$c-slideout-sidebar-width-mobile: 280px !default;
 
-	$c-slideout-tbar-stacked-min-width: 40px;
+$c-slideout-tbar-stacked-min-width: 40px !default;
 
-	$c-slideout-tbar-stacked-min-width-mobile: 40px;
+$c-slideout-tbar-stacked-min-width-mobile: 40px !default;
 
-	$c-slideout-fluid-sidebar-width-md: '50vw';
+$c-slideout-fluid-sidebar-width-md: '50vw' !default;
 
-	$c-slideout-fluid-sidebar-width: '33vw';
+$c-slideout-fluid-sidebar-width: '33vw' !default;
 
-	// C Slideout Transitions
+// C Slideout Transitions
 
-	$c-slideout-transition-in: ();
-	$c-slideout-transition-in: map-merge(
-		(
-			overflow: hidden,
-			transition: all 0.3s ease-in-out,
+$c-slideout-transition-in: () !default;
+$c-slideout-transition-in: map-merge(
+	(
+		overflow: hidden,
+		transition: all 0.3s ease-in-out,
+	),
+	$c-slideout-transition-in
+);
+
+$c-slideout-transition-out: () !default;
+$c-slideout-transition-out: map-merge(
+	(
+		overflow: hidden,
+		transition: all 0.2s ease-in,
+	),
+	$c-slideout-transition-out
+);
+
+// C Slideout Positions
+
+$c-slideout-absolute: () !default;
+$c-slideout-absolute: map-merge(
+	(
+		position: absolute,
+	),
+	$c-slideout-absolute
+);
+
+$c-slideout-fixed: () !default;
+$c-slideout-fixed: map-merge(
+	(
+		position: fixed,
+	),
+	$c-slideout-fixed
+);
+
+$c-slideout-container: () !default;
+$c-slideout-container: map-deep-merge(
+	(
+		min-height: 480px,
+		position: relative,
+	),
+	$c-slideout-container
+);
+
+$c-slideout-push-start: () !default;
+$c-slideout-push-start: map-deep-merge(
+	(
+		padding-left: $c-slideout-sidebar-width,
+
+		media-breakpoint-down: (
+			md: (
+				padding-left: 0rem,
+			),
 		),
-		$c-slideout-transition-in
-	);
+	),
+	$c-slideout-push-start
+);
 
-	$c-slideout-transition-out: ();
-	$c-slideout-transition-out: map-merge(
-		(
-			overflow: hidden,
-			transition: all 0.2s ease-in,
+$c-slideout-push-end: () !default;
+$c-slideout-push-end: map-deep-merge(
+	(
+		padding-right: $c-slideout-sidebar-width,
+
+		media-breakpoint-down: (
+			md: (
+				padding-right: 0rem,
+			),
 		),
-		$c-slideout-transition-out
-	);
+	),
+	$c-slideout-push-end
+);
 
-	// C Slideout Positions
-
-	$c-slideout-absolute: ();
-	$c-slideout-absolute: map-merge(
-		(
-			position: absolute,
+$c-slideout-sm-down: () !default;
+$c-slideout-sm-down: map-deep-merge(
+	(
+		sidebar: (
+			width: $c-slideout-sidebar-width-mobile,
 		),
-		$c-slideout-absolute
-	);
+	),
+	$c-slideout-sm-down
+);
 
-	$c-slideout-fixed: ();
-	$c-slideout-fixed: map-merge(
-		(
-			position: fixed,
+// C Slideout Base
+
+$c-slideout: () !default;
+$c-slideout: map-deep-merge(
+	(
+		display: flex,
+		overflow: hidden,
+		z-index: $zindex-c-slideout,
+
+		c-slideout-shown: (
+			overflow: visible,
 		),
-		$c-slideout-fixed
-	);
 
-	$c-slideout-container: ();
-	$c-slideout-container: map-deep-merge(
-		(
-			min-height: 480px,
+		sidebar: (
+			display: none,
+			flex-shrink: 0,
 			position: relative,
-		),
-		$c-slideout-container
-	);
+			width: $c-slideout-sidebar-width,
 
-	$c-slideout-push-start: ();
-	$c-slideout-push-start: map-deep-merge(
-		(
-			padding-left: $c-slideout-sidebar-width,
-
-			media-breakpoint-down: (
-				md: (
-					padding-left: 0rem,
-				),
-			),
-		),
-		$c-slideout-push-start
-	);
-
-	$c-slideout-push-end: ();
-	$c-slideout-push-end: map-deep-merge(
-		(
-			padding-right: $c-slideout-sidebar-width,
-
-			media-breakpoint-down: (
-				md: (
-					padding-right: 0rem,
-				),
-			),
-		),
-		$c-slideout-push-end
-	);
-
-	$c-slideout-sm-down: ();
-	$c-slideout-sm-down: map-deep-merge(
-		(
-			sidebar: (
-				width: $c-slideout-sidebar-width-mobile,
-			),
-		),
-		$c-slideout-sm-down
-	);
-
-	// C Slideout Base
-
-	$c-slideout: ();
-	$c-slideout: map-deep-merge(
-		(
-			display: flex,
-			overflow: hidden,
-			z-index: $zindex-c-slideout,
-
-			c-slideout-shown: (
+			sidebar-body: (
+				flex-grow: 1,
 				overflow: visible,
 			),
 
-			sidebar: (
-				display: none,
-				flex-shrink: 0,
-				position: relative,
-				width: $c-slideout-sidebar-width,
-
-				sidebar-body: (
-					flex-grow: 1,
-					overflow: visible,
-				),
-
-				sidebar-footer: (
-					border-top-width: 1px,
-				),
-
-				'@supports (position: sticky)': (
-					'@media (max-height: 700px)': (
-						'.sidebar-header.sticky-top': (
-							position: static,
-						),
-
-						'.sidebar-footer.sticky-bottom': (
-							position: static,
-						),
-					),
-				),
+			sidebar-footer: (
+				border-top-width: 1px,
 			),
 
-			sidebar-c-slideout-show: (
-				display: flex,
-				flex-direction: column,
-			),
-
-			sidebar-c-slideout-transition: (
-				display: flex,
-				flex-direction: column,
-
-				c-horizontal-resizer: (
-					display: none,
-				),
-			),
-
-			tbar-stacked: (
-				display: none,
-				flex-shrink: 0,
-				min-width: $c-slideout-tbar-stacked-min-width,
-				overflow: auto,
-				position: relative,
-				z-index: 1,
-			),
-
-			tbar-stacked-c-slideout-show: (
-				display: flex,
-			),
-
-			tbar-stacked-c-slideout-transition: (
-				display: flex,
-			),
-
-			media-breakpoint-down: (
-				sm: $c-slideout-sm-down,
-			),
-		),
-		$c-slideout
-	);
-
-	$c-slideout-fluid: ();
-	$c-slideout-fluid: map-deep-merge(
-		(
-			'&.c-slideout-push-start': (
-				padding-left: $c-slideout-fluid-sidebar-width,
-			),
-
-			'&.c-slideout-push-end': (
-				padding-right: $c-slideout-fluid-sidebar-width,
-			),
-
-			sidebar: (
-				max-width: $c-slideout-fluid-sidebar-width,
-				width: $c-slideout-fluid-sidebar-width,
-			),
-
-			media-breakpoint-down: (
-				md: (
-					'&.c-slideout-push-start': (
-						padding-left: $c-slideout-fluid-sidebar-width-md,
+			'@supports (position: sticky)': (
+				'@media (max-height: 700px)': (
+					'.sidebar-header.sticky-top': (
+						position: static,
 					),
 
-					'&.c-slideout-push-end': (
-						padding-right: $c-slideout-fluid-sidebar-width-md,
-					),
-
-					sidebar: (
-						max-width: $c-slideout-fluid-sidebar-width-md,
-						width: $c-slideout-fluid-sidebar-width-md,
-					),
-				),
-
-				sm: (
-					'&.c-slideout-push-start': (
-						padding-left: 0rem,
-					),
-
-					'&.c-slideout-push-end': (
-						padding-right: 0rem,
-					),
-
-					sidebar: (
-						max-width: none,
-						width: 100vw,
+					'.sidebar-footer.sticky-bottom': (
+						position: static,
 					),
 				),
 			),
 		),
-		$c-slideout-fluid
-	);
 
-	// C Slideout Start
-
-	$c-slideout-start-sm-down: ();
-	$c-slideout-start-sm-down: map-deep-merge(
-		(
-			c-slideout-tbar-shown-sidebar: (
-				left: calc(#{$c-slideout-sidebar-width-mobile} * -1),
-			),
-
-			sidebar: (
-				left:
-					calc(
-						(
-								#{$c-slideout-sidebar-width-mobile} +
-									#{$c-slideout-tbar-stacked-min-width-mobile}
-							) *
-							-1
-					),
-				width: $c-slideout-sidebar-width-mobile,
-			),
-
-			tbar-stacked: (
-				left: calc(#{$c-slideout-tbar-stacked-min-width-mobile} * -1),
-			),
+		sidebar-c-slideout-show: (
+			display: flex,
+			flex-direction: column,
 		),
-		$c-slideout-start-sm-down
-	);
 
-	$c-slideout-start: ();
-	$c-slideout-start: map-deep-merge(
-		(
-			bottom: 0rem,
-			left: 0rem,
-			top: 0rem,
-
-			c-slideout-tbar-shown-sidebar: (
-				left: calc(#{$c-slideout-sidebar-width} * -1),
-			),
-
-			sidebar: (
-				left:
-					calc(
-						(
-								#{$c-slideout-sidebar-width} +
-									#{$c-slideout-tbar-stacked-min-width}
-							) *
-							-1
-					),
-				width: $c-slideout-sidebar-width,
-			),
-
-			sidebar-c-slideout-show: (
-				left: 0rem,
-			),
-
-			tbar-stacked: (
-				left: calc(#{$c-slideout-tbar-stacked-min-width} * -1),
-			),
-
-			tbar-stacked-c-slideout-show: (
-				left: 0rem,
-			),
-
-			media-breakpoint-down: (
-				sm: $c-slideout-start-sm-down,
-			),
-		),
-		$c-slideout-start
-	);
-
-	// C Slideout End
-
-	$c-slideout-end-sm-down: ();
-	$c-slideout-end-sm-down: map-deep-merge(
-		(
-			c-slideout-tbar-shown-sidebar: (
-				right: calc(#{$c-slideout-sidebar-width-mobile} * -1),
-			),
-
-			sidebar: (
-				right:
-					calc(
-						(
-								#{$c-slideout-sidebar-width-mobile} +
-									#{$c-slideout-tbar-stacked-min-width-mobile}
-							) *
-							-1
-					),
-			),
-
-			tbar-stacked: (
-				right: calc(#{$c-slideout-tbar-stacked-min-width-mobile} * -1),
-			),
-		),
-		$c-slideout-end-sm-down
-	);
-
-	$c-slideout-end: ();
-	$c-slideout-end: map-deep-merge(
-		(
-			bottom: 0rem,
-			right: 0rem,
-			top: 0rem,
-
-			c-slideout-tbar-shown-sidebar: (
-				right: calc(#{$c-slideout-sidebar-width} * -1),
-			),
-
-			sidebar: (
-				right:
-					calc(
-						(
-								#{$c-slideout-sidebar-width} +
-									#{$c-slideout-tbar-stacked-min-width}
-							) *
-							-1
-					),
-			),
-
-			sidebar-c-slideout-show: (
-				right: 0rem,
-			),
-
-			tbar-stacked: (
-				right: calc(#{$c-slideout-tbar-stacked-min-width} * -1),
-			),
-
-			tbar-stacked-c-slideout-show: (
-				right: 0rem,
-			),
+		sidebar-c-slideout-transition: (
+			display: flex,
+			flex-direction: column,
 
 			c-horizontal-resizer: (
-				left: 0rem,
-				right: auto,
-			),
-
-			media-breakpoint-down: (
-				sm: $c-slideout-end-sm-down,
+				display: none,
 			),
 		),
-		$c-slideout-end
-	);
 
-	$c-slideout-height-full: ();
-	$c-slideout-height-full: map-deep-merge(
-		(
-			z-index: $zindex-c-slideout-height-full,
+		tbar-stacked: (
+			display: none,
+			flex-shrink: 0,
+			min-width: $c-slideout-tbar-stacked-min-width,
+			overflow: auto,
+			position: relative,
+			z-index: 1,
 		),
-		$c-slideout-height-full
-	);
-}
+
+		tbar-stacked-c-slideout-show: (
+			display: flex,
+		),
+
+		tbar-stacked-c-slideout-transition: (
+			display: flex,
+		),
+
+		media-breakpoint-down: (
+			sm: $c-slideout-sm-down,
+		),
+	),
+	$c-slideout
+);
+
+$c-slideout-fluid: () !default;
+$c-slideout-fluid: map-deep-merge(
+	(
+		'&.c-slideout-push-start': (
+			padding-left: $c-slideout-fluid-sidebar-width,
+		),
+
+		'&.c-slideout-push-end': (
+			padding-right: $c-slideout-fluid-sidebar-width,
+		),
+
+		sidebar: (
+			max-width: $c-slideout-fluid-sidebar-width,
+			width: $c-slideout-fluid-sidebar-width,
+		),
+
+		media-breakpoint-down: (
+			md: (
+				'&.c-slideout-push-start': (
+					padding-left: $c-slideout-fluid-sidebar-width-md,
+				),
+
+				'&.c-slideout-push-end': (
+					padding-right: $c-slideout-fluid-sidebar-width-md,
+				),
+
+				sidebar: (
+					max-width: $c-slideout-fluid-sidebar-width-md,
+					width: $c-slideout-fluid-sidebar-width-md,
+				),
+			),
+
+			sm: (
+				'&.c-slideout-push-start': (
+					padding-left: 0rem,
+				),
+
+				'&.c-slideout-push-end': (
+					padding-right: 0rem,
+				),
+
+				sidebar: (
+					max-width: none,
+					width: 100vw,
+				),
+			),
+		),
+	),
+	$c-slideout-fluid
+);
+
+// C Slideout Start
+
+$c-slideout-start-sm-down: () !default;
+$c-slideout-start-sm-down: map-deep-merge(
+	(
+		c-slideout-tbar-shown-sidebar: (
+			left: calc(#{$c-slideout-sidebar-width-mobile} * -1),
+		),
+
+		sidebar: (
+			left:
+				calc(
+					(
+							#{$c-slideout-sidebar-width-mobile} + #{$c-slideout-tbar-stacked-min-width-mobile}
+						) * -1
+				),
+			width: $c-slideout-sidebar-width-mobile,
+		),
+
+		tbar-stacked: (
+			left: calc(#{$c-slideout-tbar-stacked-min-width-mobile} * -1),
+		),
+	),
+	$c-slideout-start-sm-down
+);
+
+$c-slideout-start: () !default;
+$c-slideout-start: map-deep-merge(
+	(
+		bottom: 0rem,
+		left: 0rem,
+		top: 0rem,
+
+		c-slideout-tbar-shown-sidebar: (
+			left: calc(#{$c-slideout-sidebar-width} * -1),
+		),
+
+		sidebar: (
+			left:
+				calc(
+					(
+							#{$c-slideout-sidebar-width} + #{$c-slideout-tbar-stacked-min-width}
+						) * -1
+				),
+			width: $c-slideout-sidebar-width,
+		),
+
+		sidebar-c-slideout-show: (
+			left: 0rem,
+		),
+
+		tbar-stacked: (
+			left: calc(#{$c-slideout-tbar-stacked-min-width} * -1),
+		),
+
+		tbar-stacked-c-slideout-show: (
+			left: 0rem,
+		),
+
+		media-breakpoint-down: (
+			sm: $c-slideout-start-sm-down,
+		),
+	),
+	$c-slideout-start
+);
+
+// C Slideout End
+
+$c-slideout-end-sm-down: () !default;
+$c-slideout-end-sm-down: map-deep-merge(
+	(
+		c-slideout-tbar-shown-sidebar: (
+			right: calc(#{$c-slideout-sidebar-width-mobile} * -1),
+		),
+
+		sidebar: (
+			right:
+				calc(
+					(
+							#{$c-slideout-sidebar-width-mobile} + #{$c-slideout-tbar-stacked-min-width-mobile}
+						) * -1
+				),
+		),
+
+		tbar-stacked: (
+			right: calc(#{$c-slideout-tbar-stacked-min-width-mobile} * -1),
+		),
+	),
+	$c-slideout-end-sm-down
+);
+
+$c-slideout-end: () !default;
+$c-slideout-end: map-deep-merge(
+	(
+		bottom: 0rem,
+		right: 0rem,
+		top: 0rem,
+
+		c-slideout-tbar-shown-sidebar: (
+			right: calc(#{$c-slideout-sidebar-width} * -1),
+		),
+
+		sidebar: (
+			right:
+				calc(
+					(
+							#{$c-slideout-sidebar-width} + #{$c-slideout-tbar-stacked-min-width}
+						) * -1
+				),
+		),
+
+		sidebar-c-slideout-show: (
+			right: 0rem,
+		),
+
+		tbar-stacked: (
+			right: calc(#{$c-slideout-tbar-stacked-min-width} * -1),
+		),
+
+		tbar-stacked-c-slideout-show: (
+			right: 0rem,
+		),
+
+		c-horizontal-resizer: (
+			left: 0rem,
+			right: auto,
+		),
+
+		media-breakpoint-down: (
+			sm: $c-slideout-end-sm-down,
+		),
+	),
+	$c-slideout-end
+);
+
+$c-slideout-height-full: () !default;
+$c-slideout-height-full: map-deep-merge(
+	(
+		z-index: $zindex-c-slideout-height-full,
+	),
+	$c-slideout-height-full
+);

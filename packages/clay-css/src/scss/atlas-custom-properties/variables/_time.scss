@@ -1,142 +1,133 @@
-@if ($enable-atlas-custom-properties) {
-	$clay-time-btn: ();
-	$clay-time-btn: map-deep-merge(
-		(
-			align-items: center,
-			color: $secondary,
-			display: inline-flex,
-			font-size: var(--clay-time-btn-font-size, 12px),
-			height: var(--clay-time-btn-height, 24px),
-			justify-content: center,
-			padding-bottom: 0,
-			padding-left: 0,
-			padding-right: 0,
-			padding-top: 0,
-			width: var(--clay-time-btn-width, 24px),
-			focus: (
-				box-shadow:
-					var(
-						--clay-time-btn-focus-box-shadow,
-						0 0 0 1px $primary-l0
-					),
-			),
+$clay-time-btn: () !default;
+$clay-time-btn: map-deep-merge(
+	(
+		align-items: center,
+		color: $secondary,
+		display: inline-flex,
+		font-size: var(--clay-time-btn-font-size, 12px),
+		height: var(--clay-time-btn-height, 24px),
+		justify-content: center,
+		padding-bottom: 0,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: 0,
+		width: var(--clay-time-btn-width, 24px),
+		focus: (
+			box-shadow:
+				var(--clay-time-btn-focus-box-shadow, 0 0 0 1px $primary-l0),
 		),
-		$clay-time-btn
-	);
+	),
+	$clay-time-btn
+);
 
-	$clay-time-form-control: ();
-	$clay-time-form-control: map-deep-merge(
-		(
-			align-items: center,
-			display: inline-flex,
-			flex-wrap: wrap,
-			padding-bottom: 2px,
-			padding-top: 2px,
-		),
-		$clay-time-form-control
-	);
+$clay-time-form-control: () !default;
+$clay-time-form-control: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		flex-wrap: wrap,
+		padding-bottom: 2px,
+		padding-top: 2px,
+	),
+	$clay-time-form-control
+);
 
-	$clay-time-form-control-inset: ();
-	$clay-time-form-control-inset: map-deep-merge(
-		(
-			margin-bottom: 0,
-			margin-left: 0,
-			margin-top: 0,
-			text-align: center,
-			width: 20px,
-			selection-bg: transparent,
+$clay-time-form-control-inset: () !default;
+$clay-time-form-control-inset: map-deep-merge(
+	(
+		margin-bottom: 0,
+		margin-left: 0,
+		margin-top: 0,
+		text-align: center,
+		width: 20px,
+		selection-bg: transparent,
 
-			focus: (
-				background-color:
-					var(
-						--clay-time-form-control-inset-focus-background-color,
-						#b3d8fd
-					),
-			),
-		),
-		$clay-time-form-control-inset
-	);
-
-	$clay-time-ampm: ();
-	$clay-time-ampm: map-deep-merge(
-		(
-			font-weight: var(--clay-time-ampm-font-weight, 500),
-			margin-left: var(--clay-time-ampm-margin-left, 4px),
-			text-transform: var(--clay-time-ampm-text-transform, uppercase),
-			width: var(--clay-time-ampm-width, 24px),
-		),
-		$clay-time-ampm
-	);
-
-	$clay-time-input-group-text: ();
-	$clay-time-input-group-text: map-merge(
-		(
+		focus: (
 			background-color:
 				var(
-					--clay-time-input-group-text-background-color,
-					setter(
-						map-get($clay-time-input-group-text, bg),
-						transparent
-					)
+					--clay-time-form-control-inset-focus-background-color,
+					#b3d8fd
 				),
-			border-color:
-				var(--clay-time-input-group-text-border-color, transparent),
-			padding-bottom: var(--clay-time-input-group-text-padding-bottom, 0),
-			padding-left: var(--clay-time-input-group-text-padding-left, 0),
-			padding-right: var(--clay-time-input-group-text-padding-right, 0),
-			padding-top: var(--clay-time-input-group-text-padding-top, 0),
 		),
-		$clay-time-input-group-text
-	);
+	),
+	$clay-time-form-control-inset
+);
 
-	$clay-time-divider-margin-left: null;
-	$clay-time-divider-margin-right: null;
+$clay-time-ampm: () !default;
+$clay-time-ampm: map-deep-merge(
+	(
+		font-weight: var(--clay-time-ampm-font-weight, 500),
+		margin-left: var(--clay-time-ampm-margin-left, 4px),
+		text-transform: var(--clay-time-ampm-text-transform, uppercase),
+		width: var(--clay-time-ampm-width, 24px),
+	),
+	$clay-time-ampm
+);
 
-	$clay-time-edit: ();
-	$clay-time-edit: map-merge(
-		(
-			display: flex,
-			flex-wrap: wrap,
-			margin-right: auto,
-			padding-left: var(--clay-time-edit-padding-left, 8px),
-			padding-right: var(--clay-time-edit-padding-right, 8px),
-		),
-		$clay-time-edit
-	);
+$clay-time-input-group-text: () !default;
+$clay-time-input-group-text: map-merge(
+	(
+		background-color:
+			var(
+				--clay-time-input-group-text-background-color,
+				setter(map-get($clay-time-input-group-text, bg), transparent)
+			),
+		border-color:
+			var(--clay-time-input-group-text-border-color, transparent),
+		padding-bottom: var(--clay-time-input-group-text-padding-bottom, 0),
+		padding-left: var(--clay-time-input-group-text-padding-left, 0),
+		padding-right: var(--clay-time-input-group-text-padding-right, 0),
+		padding-top: var(--clay-time-input-group-text-padding-top, 0),
+	),
+	$clay-time-input-group-text
+);
 
-	$clay-time-inner-spin: ();
-	$clay-time-inner-spin: map-merge(
-		(
-			border-color:
-				var(--clay-time-inner-spin-border-color, $secondary-l2),
-			border-radius: var(--clay-time-inner-spin-border-radius, 8px),
-			border-style: var(--clay-time-inner-spin-border-style, solid),
-			border-width:
-				var(--clay-time-inner-spin-border-width, $btn-border-width),
-		),
-		$clay-time-inner-spin
-	);
+$clay-time-divider-margin-left: null !default;
+$clay-time-divider-margin-right: null !default;
 
-	$clay-time-inner-spin-btn: ();
-	$clay-time-inner-spin-btn: map-deep-merge(
-		(
-			align-items: center,
-			border-radius:
-				var(
-					--clay-time-inner-spin-btn-border-radius,
-					map-get($clay-time-inner-spin, border-radius)
-				),
-			border-width: var(--clay-time-inner-spin-btn-border-width, 0),
-			display: inline-flex,
-			font-size: var(--clay-time-inner-spin-btn-font-size, 8px),
-			height: var(--clay-time-inner-spin-btn-height, auto),
-			justify-content: center,
-			padding-bottom: var(--clay-time-inner-spin-btn-padding-bottom, 2px),
-			padding-left: var(--clay-time-inner-spin-btn-padding-left, 2px),
-			padding-right: var(--clay-time-inner-spin-btn-padding-right, 2px),
-			padding-top: var(--clay-time-inner-spin-btn-padding-top, 2px),
-			width: var(--clay-time-inner-spin-btn-width, auto),
-		),
-		$clay-time-inner-spin-btn
-	);
-}
+$clay-time-edit: () !default;
+$clay-time-edit: map-merge(
+	(
+		display: flex,
+		flex-wrap: wrap,
+		margin-right: auto,
+		padding-left: var(--clay-time-edit-padding-left, 8px),
+		padding-right: var(--clay-time-edit-padding-right, 8px),
+	),
+	$clay-time-edit
+);
+
+$clay-time-inner-spin: () !default;
+$clay-time-inner-spin: map-merge(
+	(
+		border-color: var(--clay-time-inner-spin-border-color, $secondary-l2),
+		border-radius: var(--clay-time-inner-spin-border-radius, 8px),
+		border-style: var(--clay-time-inner-spin-border-style, solid),
+		border-width:
+			var(--clay-time-inner-spin-border-width, $btn-border-width),
+	),
+	$clay-time-inner-spin
+);
+
+$clay-time-inner-spin-btn: () !default;
+$clay-time-inner-spin-btn: map-deep-merge(
+	(
+		align-items: center,
+		border-radius:
+			var(
+				--clay-time-inner-spin-btn-border-radius,
+				map-get($clay-time-inner-spin, border-radius)
+			),
+		border-width: var(--clay-time-inner-spin-btn-border-width, 0),
+		display: inline-flex,
+		font-size: var(--clay-time-inner-spin-btn-font-size, 8px),
+		height: var(--clay-time-inner-spin-btn-height, auto),
+		justify-content: center,
+		padding-bottom: var(--clay-time-inner-spin-btn-padding-bottom, 2px),
+		padding-left: var(--clay-time-inner-spin-btn-padding-left, 2px),
+		padding-right: var(--clay-time-inner-spin-btn-padding-right, 2px),
+		padding-top: var(--clay-time-inner-spin-btn-padding-top, 2px),
+		width: var(--clay-time-inner-spin-btn-width, auto),
+	),
+	$clay-time-inner-spin-btn
+);

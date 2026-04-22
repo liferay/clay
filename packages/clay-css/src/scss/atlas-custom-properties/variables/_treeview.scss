@@ -1,369 +1,367 @@
-@if ($enable-atlas-custom-properties) {
-	$treeview: ();
-	$treeview: map-merge(
-		(
+$treeview: () !default;
+$treeview: map-merge(
+	(
+		display: flex,
+		flex-direction: column,
+		font-size: 14px,
+		list-style: none,
+		margin-bottom: 0rem,
+		padding: 2px 0rem,
+
+		btn: (
+			color: inherit,
+			font-size: 12px,
+			line-height: 1,
+			padding: 6px 8px,
+
+			c-inner: (
+				margin: -7px -8px,
+			),
+		),
+
+		btn-monospaced: (
+			font-size: inherit,
+			height: 24px,
+			padding: 0rem,
+			width: 24px,
+
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
+			),
+		),
+
+		custom-control: (
+			margin-left: 4px,
+			margin-right: 4px,
+			margin-top: 1.5px,
+		),
+
+		treeview-dragging: (
+			background-color: $white,
+			border-color: $primary-l0,
+			border-radius: $border-radius-sm,
+			border-style: solid,
+			border-width: 1px,
+			display: inline-block,
+			font-size: 10px,
+			font-weight: $font-weight-semi-bold,
+			padding: 4px 12px,
+			text-transform: uppercase,
+		),
+
+		treeview-group: (
 			display: flex,
 			flex-direction: column,
-			font-size: 14px,
 			list-style: none,
 			margin-bottom: 0rem,
-			padding: 2px 0rem,
+			padding-left: 0rem,
+		),
 
-			btn: (
-				color: inherit,
-				font-size: 12px,
-				line-height: 1,
-				padding: 6px 8px,
+		treeview-item: (
+			word-wrap: break-word,
+		),
 
-				c-inner: (
-					margin: -7px -8px,
-				),
-			),
-
-			btn-monospaced: (
-				font-size: inherit,
-				height: 24px,
-				padding: 0rem,
-				width: 24px,
-
-				focus: (
-					box-shadow: $component-focus-inset-box-shadow,
-				),
-			),
-
-			custom-control: (
-				margin-left: 4px,
-				margin-right: 4px,
-				margin-top: 1.5px,
-			),
-
-			treeview-dragging: (
-				background-color: $white,
-				border-color: $primary-l0,
-				border-radius: $border-radius-sm,
-				border-style: solid,
-				border-width: 1px,
-				display: inline-block,
-				font-size: 10px,
-				font-weight: $font-weight-semi-bold,
-				padding: 4px 12px,
-				text-transform: uppercase,
-			),
-
-			treeview-group: (
-				display: flex,
-				flex-direction: column,
-				list-style: none,
-				margin-bottom: 0rem,
-				padding-left: 0rem,
-			),
-
-			treeview-item: (
-				word-wrap: break-word,
-			),
-
-			treeview-item-dragging: (
-				cursor: $disabled-cursor,
-				opacity: 0.4,
-
-				treeview-link: (
-					background-color: transparent,
-					border-color: transparent,
-					box-shadow: none,
-				),
-			),
-
-			treeview-dropping-indicator-top: (
-				background-color: transparent,
-				display: block,
-				height: 2px,
-				margin-top: -2px,
-				outline: none,
-				width: 100%,
-			),
-
-			treeview-dropping-indicator-bottom: (
-				background-color: transparent,
-				display: block,
-				height: 2px,
-				margin-bottom: -2px,
-				outline: none,
-				width: 100%,
-			),
-
-			treeview-dropping-indicator-over: (
-				background-color: $primary-l0,
-			),
+		treeview-item-dragging: (
+			cursor: $disabled-cursor,
+			opacity: 0.4,
 
 			treeview-link: (
 				background-color: transparent,
-				cursor: pointer,
-				display: block,
 				border-color: transparent,
-				border-style: solid,
-				border-width: 1px,
-				margin-bottom: 2px,
-				margin-top: 2px,
-				min-width: 100%,
-				padding: 0rem,
-				position: relative,
-				text-align: left,
-				user-select: none,
-
-				treeview-dropping-middle: (
-					background-color: $primary-l3,
-					border-color: $primary-l0,
-				),
-
-				hover: (
-					text-decoration: none,
-				),
-
-				focus: (
-					box-shadow: $component-focus-inset-box-shadow,
-					outline: 0,
-				),
-
-				disabled: (
-					cursor: $disabled-cursor,
-				),
-			),
-
-			component-expander: (
-				font-size: 10px,
-			),
-
-			component-action: (
-				font-size: 16px,
-				margin-left: 2px,
-				margin-right: 2px,
-
-				hover: (
-					background-color: transparent,
-					color: $secondary,
-				),
-
-				focus: (
-					color: $secondary,
-				),
-
-				active: (
-					background-color: transparent,
-				),
-			),
-
-			component-icon: (
-				color: $secondary,
-				display: inline-block,
-				font-size: 16px,
-				height: auto,
-				margin: 4px,
-				vertical-align: middle,
-				width: auto,
-
-				lexicon-icon: (
-					display: block,
-				),
-			),
-
-			component-text: (
-				line-height: 24px,
-				padding-left: 4px,
-				user-select: auto,
-			),
-
-			quick-action-item: (
-				margin: 0px 2px,
-				min-height: 0rem,
-				min-width: 0rem,
-			),
-
-			autofit-row: (
-				align-items: center,
+				box-shadow: none,
 			),
 		),
-		$treeview
-	);
 
-	$treeview-nested-margins: ();
-	$treeview-nested-margins: map-deep-merge(
-		(
-			treeview-group: (
-				treeview-item: (
-					margin-left: 24px,
-				),
-			),
+		treeview-dropping-indicator-top: (
+			background-color: transparent,
+			display: block,
+			height: 2px,
+			margin-top: -2px,
+			outline: none,
+			width: 100%,
 		),
-		$treeview-nested-margins
-	);
 
-	$treeview-show-component-expander-on-hover: ();
-	$treeview-show-component-expander-on-hover: map-deep-merge(
-		(
+		treeview-dropping-indicator-bottom: (
+			background-color: transparent,
+			display: block,
+			height: 2px,
+			margin-bottom: -2px,
+			outline: none,
+			width: 100%,
+		),
+
+		treeview-dropping-indicator-over: (
+			background-color: $primary-l0,
+		),
+
+		treeview-link: (
+			background-color: transparent,
+			cursor: pointer,
+			display: block,
+			border-color: transparent,
+			border-style: solid,
+			border-width: 1px,
+			margin-bottom: 2px,
+			margin-top: 2px,
+			min-width: 100%,
+			padding: 0rem,
+			position: relative,
+			text-align: left,
+			user-select: none,
+
+			treeview-dropping-middle: (
+				background-color: $primary-l3,
+				border-color: $primary-l0,
+			),
+
 			hover: (
+				text-decoration: none,
+			),
+
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
+				outline: 0,
+			),
+
+			disabled: (
+				cursor: $disabled-cursor,
+			),
+		),
+
+		component-expander: (
+			font-size: 10px,
+		),
+
+		component-action: (
+			font-size: 16px,
+			margin-left: 2px,
+			margin-right: 2px,
+
+			hover: (
+				background-color: transparent,
+				color: $secondary,
+			),
+
+			focus: (
+				color: $secondary,
+			),
+
+			active: (
+				background-color: transparent,
+			),
+		),
+
+		component-icon: (
+			color: $secondary,
+			display: inline-block,
+			font-size: 16px,
+			height: auto,
+			margin: 4px,
+			vertical-align: middle,
+			width: auto,
+
+			lexicon-icon: (
+				display: block,
+			),
+		),
+
+		component-text: (
+			line-height: 24px,
+			padding-left: 4px,
+			user-select: auto,
+		),
+
+		quick-action-item: (
+			margin: 0px 2px,
+			min-height: 0rem,
+			min-width: 0rem,
+		),
+
+		autofit-row: (
+			align-items: center,
+		),
+	),
+	$treeview
+);
+
+$treeview-nested-margins: () !default;
+$treeview-nested-margins: map-deep-merge(
+	(
+		treeview-group: (
+			treeview-item: (
+				margin-left: 24px,
+			),
+		),
+	),
+	$treeview-nested-margins
+);
+
+$treeview-show-component-expander-on-hover: () !default;
+$treeview-show-component-expander-on-hover: map-deep-merge(
+	(
+		hover: (
+			component-expander: (
+				opacity: 1,
+				transition: opacity ease-in-out 600ms,
+			),
+		),
+
+		component-expander: (
+			opacity: 0,
+			transition: opacity ease-in-out 450ms,
+		),
+
+		treeview-link: (
+			focus: (
 				component-expander: (
 					opacity: 1,
-					transition: opacity ease-in-out 600ms,
-				),
-			),
-
-			component-expander: (
-				opacity: 0,
-				transition: opacity ease-in-out 450ms,
-			),
-
-			treeview-link: (
-				focus: (
-					component-expander: (
-						opacity: 1,
-						transition: none,
-					),
+					transition: none,
 				),
 			),
 		),
-		$treeview-show-component-expander-on-hover
-	);
+	),
+	$treeview-show-component-expander-on-hover
+);
 
-	// Variants
+// Variants
 
-	$treeview-light: ();
-	$treeview-light: map-deep-merge(
-		(
-			component-expander: (
+$treeview-light: () !default;
+$treeview-light: map-deep-merge(
+	(
+		component-expander: (
+			color: $secondary,
+
+			disabled: (
 				color: $secondary,
+				opacity: 0.5,
+			),
 
-				disabled: (
+			btn-secondary: (
+				background-color: $white,
+			),
+		),
+
+		treeview-link: (
+			color: $gray-600,
+
+			treeview-no-hover: (
+				hover: (
+					background-color: transparent,
 					color: $secondary,
-					opacity: 0.5,
-				),
-
-				btn-secondary: (
-					background-color: $white,
 				),
 			),
 
-			treeview-link: (
-				color: $gray-600,
+			hover: (
+				box-shadow: inset 0 0 0 1px $secondary-l0,
+			),
 
-				treeview-no-hover: (
-					hover: (
-						background-color: transparent,
-						color: $secondary,
-					),
-				),
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
+			),
 
-				hover: (
-					box-shadow: inset 0 0 0 1px $secondary-l0,
+			active: (
+				background-color: $primary-l3,
+				box-shadow: inset 0 0 0 1px $primary,
+				color: $dark-l2,
+				focus: (
+					box-shadow: $component-focus-inset-box-shadow,
 				),
+			),
+
+			active-class: (
+				background-color: $primary-l3,
+				box-shadow: inset 0 0 0 1px $primary,
+				color: $dark-l2,
 
 				focus: (
 					box-shadow: $component-focus-inset-box-shadow,
 				),
+			),
 
-				active: (
-					background-color: $primary-l3,
-					box-shadow: inset 0 0 0 1px $primary,
-					color: $dark-l2,
-					focus: (
-						box-shadow: $component-focus-inset-box-shadow,
-					),
-				),
+			disabled: (
+				background-color: transparent,
+				color: unquote('hsl(from #{$gray-600} h s l / 0.5)'),
+			),
 
-				active-class: (
-					background-color: $primary-l3,
-					box-shadow: inset 0 0 0 1px $primary,
-					color: $dark-l2,
-
-					focus: (
-						box-shadow: $component-focus-inset-box-shadow,
-					),
-				),
-
-				disabled: (
-					background-color: transparent,
-					color: unquote('hsl(from #{$gray-600} h s l / 0.5)'),
-				),
-
-				show: (
-					background-color: c-unset,
-					box-shadow: c-unset,
-					color: c-unset,
-				),
+			show: (
+				background-color: c-unset,
+				box-shadow: c-unset,
+				color: c-unset,
 			),
 		),
-		$treeview-light
-	);
+	),
+	$treeview-light
+);
 
-	$treeview-dark: ();
-	$treeview-dark: map-deep-merge(
-		(
-			component-expander: (
+$treeview-dark: () !default;
+$treeview-dark: map-deep-merge(
+	(
+		component-expander: (
+			color: $secondary-l1,
+
+			disabled: (
 				color: $secondary-l1,
+				opacity: 0.5,
+			),
+		),
 
-				disabled: (
+		treeview-link: (
+			color: $secondary-l1,
+
+			treeview-no-hover: (
+				hover: (
+					background-color: transparent,
 					color: $secondary-l1,
-					opacity: 0.5,
 				),
 			),
 
-			treeview-link: (
-				color: $secondary-l1,
+			hover: (
+				box-shadow: inset 0 0 0 1px $secondary-l0,
+			),
 
-				treeview-no-hover: (
-					hover: (
-						background-color: transparent,
-						color: $secondary-l1,
-					),
-				),
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
+			),
 
-				hover: (
-					box-shadow: inset 0 0 0 1px $secondary-l0,
-				),
+			active: (
+				background-color: $dark-l2,
+				box-shadow: inset 0 0 0 1px $primary,
+				color: $primary-l3,
 
 				focus: (
 					box-shadow: $component-focus-inset-box-shadow,
 				),
+			),
 
-				active: (
-					background-color: $dark-l2,
-					box-shadow: inset 0 0 0 1px $primary,
-					color: $primary-l3,
+			active-class: (
+				background-color: $dark-l2,
+				box-shadow: inset 0 0 0 1px $primary,
+				color: $primary-l3,
 
-					focus: (
-						box-shadow: $component-focus-inset-box-shadow,
-					),
-				),
-
-				active-class: (
-					background-color: $dark-l2,
-					box-shadow: inset 0 0 0 1px $primary,
-					color: $primary-l3,
-
-					focus: (
-						box-shadow: $component-focus-inset-box-shadow,
-					),
-				),
-
-				disabled: (
-					background-color: transparent,
-					color: unquote('hsl(from #{$secondary-l1} h s l / 0.5)'),
-				),
-
-				show: (
-					background-color: c-unset,
-					box-shadow: c-unset,
-					color: c-unset,
+				focus: (
+					box-shadow: $component-focus-inset-box-shadow,
 				),
 			),
 
-			component-action: (
-				color: $secondary-l1,
+			disabled: (
+				background-color: transparent,
+				color: unquote('hsl(from #{$secondary-l1} h s l / 0.5)'),
+			),
 
-				disabled: (
-					color: $secondary-l1,
-				),
+			show: (
+				background-color: c-unset,
+				box-shadow: c-unset,
+				color: c-unset,
 			),
 		),
-		$treeview-dark
-	);
-}
+
+		component-action: (
+			color: $secondary-l1,
+
+			disabled: (
+				color: $secondary-l1,
+			),
+		),
+	),
+	$treeview-dark
+);

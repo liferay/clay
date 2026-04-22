@@ -1,493 +1,488 @@
-@if ($enable-atlas-custom-properties) {
-	$list-group-bg: var(--list-group-bg, $white);
-	$list-group-border-color: var(--list-group-border-color, $gray-300);
-	$list-group-border-width: var(--list-group-border-width, $border-width);
+$list-group-bg: var(--list-group-bg, $white) !default;
+$list-group-border-color: var(--list-group-border-color, $gray-300) !default;
+$list-group-border-width: var(
+	--list-group-border-width,
+	$border-width
+) !default;
 
-	$list-group-border-radius: var(--list-group-border-radius, $border-radius);
+$list-group-border-radius: var(
+	--list-group-border-radius,
+	$border-radius
+) !default;
 
-	$list-group-box-shadow: var(--list-group-box-shadow, none);
-	$list-group-color: var(--list-group-color, inherit);
-	$list-group-font-size: var(--list-group-font-size, 14px);
-	$list-group-margin-bottom: var(--list-group-margin-bottom, 24px);
-	$list-group-margin-top: var(--list-group-margin-top, 0px);
+$list-group-box-shadow: var(--list-group-box-shadow, none) !default;
+$list-group-color: var(--list-group-color, inherit) !default;
+$list-group-font-size: var(--list-group-font-size, 14px) !default;
+$list-group-margin-bottom: var(--list-group-margin-bottom, 24px) !default;
+$list-group-margin-top: var(--list-group-margin-top, 0px) !default;
 
-	// List Group Item Action
+// List Group Item Action
 
-	$list-group-action-color: var(--list-group-action-color, $gray-700);
+$list-group-action-color: var(--list-group-action-color, $gray-700) !default;
 
-	$list-group-hover-bg: var(--list-group-hover-bg, $primary-l3);
+$list-group-hover-bg: var(--list-group-hover-bg, $primary-l3) !default;
 
-	$list-group-action-hover-color: var(
-		--list-group-action-hover-color,
-		$list-group-action-color
-	);
+$list-group-action-hover-color: var(
+	--list-group-action-hover-color,
+	$list-group-action-color
+) !default;
 
-	$list-group-action-active-bg: var(--list-group-action-active-bg, $gray-200);
-	$list-group-action-active-color: var(
-		--list-group-action-active-color,
-		$body-color
-	);
+$list-group-action-active-bg: var(
+	--list-group-action-active-bg,
+	$gray-200
+) !default;
+$list-group-action-active-color: var(
+	--list-group-action-active-color,
+	$body-color
+) !default;
 
-	// List Group Item
+// List Group Item
 
-	$list-group-item-padding-x: var(--list-group-item-padding-x, 16px);
-	$list-group-item-padding-y: var(--list-group-item-padding-y, 16px);
+$list-group-item-padding-x: var(--list-group-item-padding-x, 16px) !default;
+$list-group-item-padding-y: var(--list-group-item-padding-y, 16px) !default;
 
-	// Use values flex-start, flex-end, or center
+// Use values flex-start, flex-end, or center
 
-	$list-group-item-flex-align-items: flex-start;
+$list-group-item-flex-align-items: flex-start !default;
 
-	$list-group-item-flex-checkbox-offset-top: var(
-		--list-group-item-flex-checkbox-offset-top,
-		3px
-	);
-	$list-group-item-flex-offset-top: var(
-		--list-group-item-flex-offset-top,
-		1px
-	);
-	$list-group-item-flex-list-group-title-offset-top: var(
-		--list-group-item-flex-list-group-title-offset-top,
-		-4px
-	);
+$list-group-item-flex-checkbox-offset-top: var(
+	--list-group-item-flex-checkbox-offset-top,
+	3px
+) !default;
+$list-group-item-flex-offset-top: var(
+	--list-group-item-flex-offset-top,
+	1px
+) !default;
+$list-group-item-flex-list-group-title-offset-top: var(
+	--list-group-item-flex-list-group-title-offset-top,
+	-4px
+) !default;
 
-	$list-group-item-flex: ();
-	$list-group-item-flex: map-deep-merge(
-		(
-			display: flex,
-			margin-bottom:
+$list-group-item-flex: () !default;
+$list-group-item-flex: map-deep-merge(
+	(
+		display: flex,
+		margin-bottom:
+			var(
+				--list-group-item-flex-margin-bottom,
+				calc(#{$list-group-border-width} * -1)
+			),
+		padding-left:
+			var(
+				--list-group-item-flex-padding-left,
+				calc(#{$list-group-item-padding-x} * 0.5)
+			),
+		padding-right:
+			var(
+				--list-group-item-flex-padding-right,
+				calc(#{$list-group-item-padding-x} * 0.5)
+			),
+		autofit-col: (
+			justify-content:
 				var(
-					--list-group-item-flex-margin-bottom,
-					calc(#{$list-group-border-width} * -1)
+					--list-group-item-flex-autofit-col-justify-content,
+					$list-group-item-flex-align-items
 				),
 			padding-left:
 				var(
-					--list-group-item-flex-padding-left,
+					--list-group-item-flex-autofit-col-padding-left,
 					calc(#{$list-group-item-padding-x} * 0.5)
 				),
 			padding-right:
 				var(
-					--list-group-item-flex-padding-right,
+					--list-group-item-flex-autofit-col-padding-right,
 					calc(#{$list-group-item-padding-x} * 0.5)
 				),
-			autofit-col: (
-				justify-content:
-					var(
-						--list-group-item-flex-autofit-col-justify-content,
-						$list-group-item-flex-align-items
-					),
-				padding-left:
-					var(
-						--list-group-item-flex-autofit-col-padding-left,
-						calc(#{$list-group-item-padding-x} * 0.5)
-					),
-				padding-right:
-					var(
-						--list-group-item-flex-autofit-col-padding-right,
-						calc(#{$list-group-item-padding-x} * 0.5)
-					),
+		),
+	),
+	$list-group-item-flex
+);
+
+$list-group-active-bg: var(
+	--list-group-active-bg,
+	$list-group-hover-bg
+) !default;
+$list-group-active-border-color: var(
+	--list-group-active-border-color,
+	$list-group-border-color
+) !default;
+$list-group-active-color: var(--list-group-active-color, $gray-900) !default;
+
+$list-group-disabled-bg: var(--list-group-disabled-bg, $list-group-bg) !default;
+$list-group-disabled-color: var(
+	--list-group-disabled-color,
+	$gray-600
+) !default;
+
+// List Group Header
+
+$list-group-header-bg: var(--list-group-header-bg, $gray-100) !default;
+$list-group-header-padding-x: var(
+	--list-group-header-padding-x,
+	$list-group-item-padding-x
+) !default;
+$list-group-header-padding-y: var(--list-group-header-padding-y, 8px) !default;
+
+$list-group-header-title: () !default;
+$list-group-header-title: map-deep-merge(
+	(
+		color: var(--list-group-header-title-color, $gray-600),
+		font-size: var(--list-group-header-title-font-size, 12px),
+		font-weight:
+			var(--list-group-header-title-font-weight, $font-weight-semi-bold),
+		line-height:
+			var(--list-group-header-title-line-height, $headings-line-height),
+		margin-bottom: var(--list-group-header-title-margin-bottom, 0),
+		text-transform: var(--list-group-header-title-text-transform, uppercase),
+	),
+	$list-group-header-title
+);
+
+// List Group Title
+
+$list-group-title-link: () !default;
+$list-group-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-900,
+		display: var(--list-group-title-link-display, inline-block),
+		text-decoration: var(--list-group-title-link-text-decoration, underline),
+		transition:
+			var(
+				--list-group-title-link-transition,
+				box-shadow 0.15s ease-in-out
 			),
+		max-width: var(--list-group-title-link-max-width, 100%),
+		hover: (
+			color: var(--list-group-title-link-hover-color, $gray-900),
 		),
-		$list-group-item-flex
-	);
 
-	$list-group-active-bg: var(--list-group-active-bg, $list-group-hover-bg);
-	$list-group-active-border-color: var(
-		--list-group-active-border-color,
-		$list-group-border-color
-	);
-	$list-group-active-color: var(--list-group-active-color, $gray-900);
-
-	$list-group-disabled-bg: var(--list-group-disabled-bg, $list-group-bg);
-	$list-group-disabled-color: var(--list-group-disabled-color, $gray-600);
-
-	// List Group Header
-
-	$list-group-header-bg: var(--list-group-header-bg, $gray-100);
-	$list-group-header-padding-x: var(
-		--list-group-header-padding-x,
-		$list-group-item-padding-x
-	);
-	$list-group-header-padding-y: var(--list-group-header-padding-y, 8px);
-
-	$list-group-header-title: ();
-	$list-group-header-title: map-deep-merge(
-		(
-			color: var(--list-group-header-title-color, $gray-600),
-			font-size: var(--list-group-header-title-font-size, 12px),
-			font-weight:
+		focus: (
+			box-shadow:
 				var(
-					--list-group-header-title-font-weight,
-					$font-weight-semi-bold
+					--list-group-title-link-focus-box-shadow,
+					$component-focus-box-shadow
 				),
-			line-height:
-				var(
-					--list-group-header-title-line-height,
-					$headings-line-height
-				),
-			margin-bottom: var(--list-group-header-title-margin-bottom, 0),
-			text-transform:
-				var(--list-group-header-title-text-transform, uppercase),
+			outline: 0,
 		),
-		$list-group-header-title
-	);
+	),
+	$list-group-title-link
+);
 
-	// List Group Title
-
-	$list-group-title-link: ();
-	$list-group-title-link: map-deep-merge(
-		(
-			border-radius: 1px,
-			color: $gray-900,
-			display: var(--list-group-title-link-display, inline-block),
-			text-decoration:
-				var(--list-group-title-link-text-decoration, underline),
-			transition:
-				var(
-					--list-group-title-link-transition,
-					box-shadow 0.15s ease-in-out
-				),
-			max-width: var(--list-group-title-link-max-width, 100%),
-			hover: (
-				color: var(--list-group-title-link-hover-color, $gray-900),
+$list-group-title: () !default;
+$list-group-title: map-deep-merge(
+	(
+		color: var(--list-group-title-color, $gray-900),
+		font-size: var(--list-group-title-font-size, 14px),
+		font-weight: var(--list-group-title-font-weight, $font-weight-semi-bold),
+		line-height: var(--list-group-title-line-height, 1.45),
+		margin-bottom: var(--list-group-title-margin-bottom, 0),
+		margin-top:
+			var(
+				--list-group-title-margin-top,
+				$list-group-item-flex-list-group-title-offset-top
 			),
+		href: $list-group-title-link,
+	),
+	$list-group-title
+);
 
-			focus: (
-				box-shadow:
-					var(
-						--list-group-title-link-focus-box-shadow,
-						$component-focus-box-shadow
-					),
-				outline: 0,
+$list-group-title-active-color: var(
+	--list-group-title-active-color,
+	$list-group-active-color
+) !default;
+
+// List Group Subtitle
+
+$list-group-subtitle-link: () !default;
+$list-group-subtitle-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: var(--list-group-subtitle-link-color, $gray-600),
+		display: inline-block,
+		max-width: 100%,
+		transition:
+			var(
+				--list-group-subtitle-link-transition,
+				box-shadow 0.15s ease-in-out
 			),
+		hover: (
+			color: var(--list-group-subtitle-link-hover-color, $gray-900),
 		),
-		$list-group-title-link
-	);
 
-	$list-group-title: ();
-	$list-group-title: map-deep-merge(
-		(
-			color: var(--list-group-title-color, $gray-900),
-			font-size: var(--list-group-title-font-size, 14px),
-			font-weight:
-				var(--list-group-title-font-weight, $font-weight-semi-bold),
-			line-height: var(--list-group-title-line-height, 1.45),
-			margin-bottom: var(--list-group-title-margin-bottom, 0),
-			margin-top:
+		focus: (
+			box-shadow:
 				var(
-					--list-group-title-margin-top,
-					$list-group-item-flex-list-group-title-offset-top
+					--list-group-subtitle-link-focus-box-shadow,
+					$component-focus-box-shadow
 				),
-			href: $list-group-title-link,
+			outline: 0,
 		),
-		$list-group-title
-	);
+	),
+	$list-group-subtitle-link
+);
 
-	$list-group-title-active-color: var(
-		--list-group-title-active-color,
-		$list-group-active-color
-	);
+$list-group-subtitle: () !default;
+$list-group-subtitle: map-deep-merge(
+	(
+		color: var(--list-group-subtitle-color, $gray-600),
+		margin-bottom: var(--list-group-subtitle-margin-bottom, 0),
+		href: $list-group-subtitle-link,
+	),
+	$list-group-subtitle
+);
 
-	// List Group Subtitle
+// List Group Text
 
-	$list-group-subtitle-link: ();
-	$list-group-subtitle-link: map-deep-merge(
-		(
-			border-radius: 1px,
-			color: var(--list-group-subtitle-link-color, $gray-600),
-			display: inline-block,
-			max-width: 100%,
-			transition:
+$list-group-text-link: () !default;
+$list-group-text-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: var(--list-group-text-link-color, $gray-600),
+		display: inline-block,
+		max-width: 100%,
+		transition:
+			var(--list-group-text-link-transition, box-shadow 0.15s ease-in-out),
+		hover: (
+			color: var(--list-group-text-link-hover-color, $gray-900),
+		),
+
+		focus: (
+			box-shadow:
 				var(
-					--list-group-subtitle-link-transition,
-					box-shadow 0.15s ease-in-out
+					--list-group-text-link-focus-box-shadow,
+					$component-focus-box-shadow
 				),
-			hover: (
-				color: var(--list-group-subtitle-link-hover-color, $gray-900),
+			outline: 0,
+		),
+	),
+	$list-group-text-link
+);
+
+$list-group-text: () !default;
+$list-group-text: map-deep-merge(
+	(
+		color: var(--list-group-text-color, $gray-600),
+		margin-bottom: var(--list-group-text-margin-bottom, 0),
+		href: $list-group-text-link,
+	),
+	$list-group-text
+);
+
+$list-group-text-active-color: $list-group-active-color !default;
+
+// List Group Subtext
+
+$list-group-subtext-link: () !default;
+$list-group-subtext-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: var(--list-group-subtext-link-color, $gray-600),
+		display: inline-block,
+		max-width: 100%,
+		transition:
+			var(
+				--list-group-subtext-link-transition,
+				box-shadow 0.15s ease-in-out
 			),
+		hover: (
+			color: var(--list-group-subtext-link-hover-color, $gray-900),
+		),
 
-			focus: (
-				box-shadow:
-					var(
-						--list-group-subtitle-link-focus-box-shadow,
-						$component-focus-box-shadow
-					),
-				outline: 0,
+		focus: (
+			box-shadow:
+				var(
+					--list-group-subtext-link-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			outline: 0,
+		),
+	),
+	$list-group-subtext-link
+);
+
+$list-group-subtext: () !default;
+$list-group-subtext: map-deep-merge(
+	(
+		color: var(--list-group-subtext-color, $gray-600),
+		margin-bottom: var(--list-group-subtext-margin-bottom, 0),
+		margin-top: var(--list-group-subtext-margin-top, 8px),
+		href: $list-group-subtext-link,
+	),
+	$list-group-subtext
+);
+
+$list-group-subtext-active-color: var(
+	--list-group-subtext-active-color,
+	$gray-600
+) !default;
+
+// List Group Detail
+
+$list-group-detail-margin-bottom: var(
+	--list-group-detail-margin-bottom,
+	0rem
+) !default;
+$list-group-detail-margin-top: var(
+	--list-group-detail-margin-top,
+	0rem
+) !default;
+
+$list-group-link-color: var(--list-group-link-color, $gray-900) !default;
+
+$list-group-link-hover-color: var(
+	--list-group-link-hover-color,
+	$list-group-link-color
+) !default;
+
+$list-group-link-active-color: var(
+	--list-group-link-active-color,
+	$list-group-link-color
+) !default;
+
+$list-group: () !default;
+$list-group: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($list-group-border-radius),
+		box-shadow: clay-enable-shadows($list-group-box-shadow),
+		color: $list-group-color,
+		display: flex,
+		flex-direction: column,
+		font-size: $list-group-font-size,
+		margin-bottom: $list-group-margin-bottom,
+		margin-top: $list-group-margin-top,
+		padding-left: 0,
+
+		list-group: (
+			box-shadow: if($list-group-box-shadow != null, none, null),
+		),
+	),
+	$list-group
+);
+
+// List Group Item Variants
+
+// @deprecated as of v3.142.2 with no replacement
+
+$list-group-item-theme-colors: () !default;
+$list-group-item-theme-colors: map-deep-merge(
+	(
+		'primary': (),
+		'secondary': (),
+		'success': (),
+		'info': (),
+		'warning': (),
+		'danger': (),
+		'light': (),
+		'dark': (),
+	),
+	$list-group-item-theme-colors
+);
+
+// List Group Notification
+
+$list-group-notification-item-border-bottom-color: var(
+	--list-group-notification-item-border-bottom-color,
+	$list-group-border-color
+) !default;
+$list-group-notification-item-border-left-color: var(
+	--list-group-notification-item-border-left-color,
+	$list-group-border-color
+) !default;
+$list-group-notification-item-border-right-color: var(
+	--list-group-notification-item-border-right-color,
+	$list-group-border-color
+) !default;
+$list-group-notification-item-border-top-color: var(
+	--list-group-notification-item-border-top-color,
+	$list-group-border-color
+) !default;
+
+$list-group-notification-item-active-border-bottom-color: var(
+	--list-group-notification-item-active-border-bottom-color,
+	$list-group-active-border-color
+) !default;
+$list-group-notification-item-active-border-left-color: var(
+	--list-group-notification-item-active-border-left-color,
+	$list-group-active-border-color
+) !default;
+$list-group-notification-item-active-border-right-color: var(
+	--list-group-notification-item-active-border-right-color,
+	$list-group-active-border-color
+) !default;
+$list-group-notification-item-active-border-top-color: var(
+	--list-group-notification-item-active-border-top-color,
+	$list-group-active-border-color
+) !default;
+
+$list-group-notification-item-border-bottom-width: var(
+	--list-group-notification-item-border-bottom-width,
+	1px
+) !default;
+$list-group-notification-item-border-left-width: var(
+	--list-group-notification-item-border-left-width,
+	1px
+) !default;
+$list-group-notification-item-border-right-width: var(
+	--list-group-notification-item-border-right-width,
+	1px
+) !default;
+$list-group-notification-item-border-top-width: var(
+	--list-group-notification-item-border-top-width,
+	1px
+) !default;
+
+$list-group-notification-item: () !default;
+
+$list-group-notification-item-primary: () !default;
+$list-group-notification-item-primary: map-deep-merge(
+	(
+		border-left-color:
+			var(
+				--list-group-notification-item-primary-border-left-color,
+				unquote('hsl(from #{$component-active-bg} h s calc(l + 22.94))')
 			),
-		),
-		$list-group-subtitle-link
-	);
-
-	$list-group-subtitle: ();
-	$list-group-subtitle: map-deep-merge(
-		(
-			color: var(--list-group-subtitle-color, $gray-600),
-			margin-bottom: var(--list-group-subtitle-margin-bottom, 0),
-			href: $list-group-subtitle-link,
-		),
-		$list-group-subtitle
-	);
-
-	// List Group Text
-
-	$list-group-text-link: ();
-	$list-group-text-link: map-deep-merge(
-		(
-			border-radius: 1px,
-			color: var(--list-group-text-link-color, $gray-600),
-			display: inline-block,
-			max-width: 100%,
-			transition:
-				var(
-					--list-group-text-link-transition,
-					box-shadow 0.15s ease-in-out
-				),
-			hover: (
-				color: var(--list-group-text-link-hover-color, $gray-900),
+		border-left-width:
+			var(--list-group-notification-item-primary-border-left-width, 8px),
+		border-bottom-left-radius:
+			var(
+				--list-group-notification-item-primary-border-bottom-left-radius,
+				0
 			),
-
-			focus: (
-				box-shadow:
-					var(
-						--list-group-text-link-focus-box-shadow,
-						$component-focus-box-shadow
-					),
-				outline: 0,
+		border-top-left-radius:
+			var(
+				--list-group-notification-item-primary-border-top-left-radius,
+				0
 			),
-		),
-		$list-group-text-link
-	);
-
-	$list-group-text: ();
-	$list-group-text: map-deep-merge(
-		(
-			color: var(--list-group-text-color, $gray-600),
-			margin-bottom: var(--list-group-text-margin-bottom, 0),
-			href: $list-group-text-link,
-		),
-		$list-group-text
-	);
-
-	$list-group-text-active-color: $list-group-active-color;
-
-	// List Group Subtext
-
-	$list-group-subtext-link: ();
-	$list-group-subtext-link: map-deep-merge(
-		(
-			border-radius: 1px,
-			color: var(--list-group-subtext-link-color, $gray-600),
-			display: inline-block,
-			max-width: 100%,
-			transition:
-				var(
-					--list-group-subtext-link-transition,
-					box-shadow 0.15s ease-in-out
-				),
-			hover: (
-				color: var(--list-group-subtext-link-hover-color, $gray-900),
+		active-border-left-color:
+			var(
+				--list-group-notification-item-primary-active-border-left-color,
+				unquote('hsl(from #{$component-active-bg} h s calc(l + 22.94))')
 			),
+	),
+	$list-group-notification-item-primary
+);
 
-			focus: (
-				box-shadow:
-					var(
-						--list-group-subtext-link-focus-box-shadow,
-						$component-focus-box-shadow
-					),
-				outline: 0,
-			),
-		),
-		$list-group-subtext-link
-	);
+// List Group Sm
 
-	$list-group-subtext: ();
-	$list-group-subtext: map-deep-merge(
-		(
-			color: var(--list-group-subtext-color, $gray-600),
-			margin-bottom: var(--list-group-subtext-margin-bottom, 0),
-			margin-top: var(--list-group-subtext-margin-top, 8px),
-			href: $list-group-subtext-link,
-		),
-		$list-group-subtext
-	);
+$list-group-sm-item: () !default;
+$list-group-sm-item: map-merge(
+	(
+		padding-bottom: var(--list-group-sm-item-padding-bottom, 6.5px),
+		padding-top: var(--list-group-sm-item-padding-top, 6.5px),
+	),
+	$list-group-sm-item
+);
 
-	$list-group-subtext-active-color: var(
-		--list-group-subtext-active-color,
-		$gray-600
-	);
-
-	// List Group Detail
-
-	$list-group-detail-margin-bottom: var(
-		--list-group-detail-margin-bottom,
-		0rem
-	);
-	$list-group-detail-margin-top: var(--list-group-detail-margin-top, 0rem);
-
-	$list-group-link-color: var(--list-group-link-color, $gray-900);
-
-	$list-group-link-hover-color: var(
-		--list-group-link-hover-color,
-		$list-group-link-color
-	);
-
-	$list-group-link-active-color: var(
-		--list-group-link-active-color,
-		$list-group-link-color
-	);
-
-	$list-group: ();
-	$list-group: map-deep-merge(
-		(
-			border-radius: clay-enable-rounded($list-group-border-radius),
-			box-shadow: clay-enable-shadows($list-group-box-shadow),
-			color: $list-group-color,
-			display: flex,
-			flex-direction: column,
-			font-size: $list-group-font-size,
-			margin-bottom: $list-group-margin-bottom,
-			margin-top: $list-group-margin-top,
-			padding-left: 0,
-
-			list-group: (
-				box-shadow: if($list-group-box-shadow != null, none, null),
-			),
-		),
-		$list-group
-	);
-
-	// List Group Item Variants
-
-	// @deprecated as of v3.142.2 with no replacement
-
-	$list-group-item-theme-colors: ();
-	$list-group-item-theme-colors: map-deep-merge(
-		(
-			'primary': (),
-			'secondary': (),
-			'success': (),
-			'info': (),
-			'warning': (),
-			'danger': (),
-			'light': (),
-			'dark': (),
-		),
-		$list-group-item-theme-colors
-	);
-
-	// List Group Notification
-
-	$list-group-notification-item-border-bottom-color: var(
-		--list-group-notification-item-border-bottom-color,
-		$list-group-border-color
-	);
-	$list-group-notification-item-border-left-color: var(
-		--list-group-notification-item-border-left-color,
-		$list-group-border-color
-	);
-	$list-group-notification-item-border-right-color: var(
-		--list-group-notification-item-border-right-color,
-		$list-group-border-color
-	);
-	$list-group-notification-item-border-top-color: var(
-		--list-group-notification-item-border-top-color,
-		$list-group-border-color
-	);
-
-	$list-group-notification-item-active-border-bottom-color: var(
-		--list-group-notification-item-active-border-bottom-color,
-		$list-group-active-border-color
-	);
-	$list-group-notification-item-active-border-left-color: var(
-		--list-group-notification-item-active-border-left-color,
-		$list-group-active-border-color
-	);
-	$list-group-notification-item-active-border-right-color: var(
-		--list-group-notification-item-active-border-right-color,
-		$list-group-active-border-color
-	);
-	$list-group-notification-item-active-border-top-color: var(
-		--list-group-notification-item-active-border-top-color,
-		$list-group-active-border-color
-	);
-
-	$list-group-notification-item-border-bottom-width: var(
-		--list-group-notification-item-border-bottom-width,
-		1px
-	);
-	$list-group-notification-item-border-left-width: var(
-		--list-group-notification-item-border-left-width,
-		1px
-	);
-	$list-group-notification-item-border-right-width: var(
-		--list-group-notification-item-border-right-width,
-		1px
-	);
-	$list-group-notification-item-border-top-width: var(
-		--list-group-notification-item-border-top-width,
-		1px
-	);
-
-	$list-group-notification-item: ();
-
-	$list-group-notification-item-primary: ();
-	$list-group-notification-item-primary: map-deep-merge(
-		(
-			border-left-color:
-				var(
-					--list-group-notification-item-primary-border-left-color,
-					unquote(
-						'hsl(from #{$component-active-bg} h s calc(l + 22.94))'
-					)
-				),
-			border-left-width:
-				var(
-					--list-group-notification-item-primary-border-left-width,
-					8px
-				),
-			border-bottom-left-radius:
-				var(
-					--list-group-notification-item-primary-border-bottom-left-radius,
-					0
-				),
-			border-top-left-radius:
-				var(
-					--list-group-notification-item-primary-border-top-left-radius,
-					0
-				),
-			active-border-left-color:
-				var(
-					--list-group-notification-item-primary-active-border-left-color,
-					unquote(
-						'hsl(from #{$component-active-bg} h s calc(l + 22.94))'
-					)
-				),
-		),
-		$list-group-notification-item-primary
-	);
-
-	// List Group Sm
-
-	$list-group-sm-item: ();
-	$list-group-sm-item: map-merge(
-		(
-			padding-bottom: var(--list-group-sm-item-padding-bottom, 6.5px),
-			padding-top: var(--list-group-sm-item-padding-top, 6.5px),
-		),
-		$list-group-sm-item
-	);
-
-	$list-group-sm-quick-action-menu: ();
-	$list-group-sm-quick-action-menu: map-merge(
-		(
-			margin-bottom:
-				var(--list-group-sm-quick-action-menu-margin-bottom, -6.5px),
-			margin-top:
-				var(--list-group-sm-quick-action-menu-margin-top, -6.5px),
-			padding-bottom:
-				var(--list-group-sm-quick-action-menu-padding-bottom, 6.5px),
-			padding-top:
-				var(--list-group-sm-quick-action-menu-padding-top, 6.5px),
-		),
-		$list-group-sm-quick-action-menu
-	);
-}
+$list-group-sm-quick-action-menu: () !default;
+$list-group-sm-quick-action-menu: map-merge(
+	(
+		margin-bottom:
+			var(--list-group-sm-quick-action-menu-margin-bottom, -6.5px),
+		margin-top: var(--list-group-sm-quick-action-menu-margin-top, -6.5px),
+		padding-bottom:
+			var(--list-group-sm-quick-action-menu-padding-bottom, 6.5px),
+		padding-top: var(--list-group-sm-quick-action-menu-padding-top, 6.5px),
+	),
+	$list-group-sm-quick-action-menu
+);

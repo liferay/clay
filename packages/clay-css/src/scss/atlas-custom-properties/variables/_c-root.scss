@@ -1,353 +1,338 @@
-@if ($enable-atlas-custom-properties) {
-	// This map outputs custom properties in the `:root` selector: use the Sass `map-merge` function to add additional custom properties to `:root`.
-
-	$c-root: ();
-	$c-root: map-merge(
-		(
-			--black: #000,
-			--white: #fff,
-
-			--gray-100: #f7f8f9,
-			--gray-200: #f1f2f5,
-			--gray-300: #e7e7ed,
-			--gray-400: #cdced9,
-			--gray-500: #a7a9bc,
-			--gray-600: #6b6c7e,
-			--gray-700: #495057,
-			--gray-800: #393a4a,
-			--gray-900: #272833,
-
-			--blue: #006eff,
-
-			--blue-d1: #006be6,
-			--blue-d2: #005fcc,
-			--blue-d3: #0053b3,
-			--blue-d4: #004799,
-			--blue-l1: #338fff,
-			--blue-l2: #66abff,
-			--blue-l3: #97c5ff,
-			--blue-l4: #cce3ff,
-			--blue-l5: #e5f1ff,
-
-			--indigo: #4d5fff,
-
-			--indigo-d1: #3347ff,
-			--indigo-d2: #1a30ff,
-			--indigo-d3: #001aff,
-			--indigo-d4: #0017e5,
-			--indigo-l1: #808cff,
-			--indigo-l2: #99a3ff,
-			--indigo-l3: #b2baff,
-			--indigo-l4: #ccd1ff,
-			--indigo-l5: #e5e8ff,
-
-			--purple: #a3f,
-
-			--purple-d1: #9f1aff,
-			--purple-d2: #9500ff,
-			--purple-d3: #8600e6,
-			--purple-d4: #70c,
-			--purple-l1: #bf66ff,
-			--purple-l2: #ca80ff,
-			--purple-l3: #d499ff,
-			--purple-l4: #dfb3ff,
-			--purple-l5: #f2e5ff,
-
-			--pink: #e50082,
-
-			--pink-d1: #cc0074,
-			--pink-d2: #b30065,
-			--pink-d3: #990057,
-			--pink-d4: #800048,
-			--pink-l1: #ff4db2,
-			--pink-l2: #ff80c8,
-			--pink-l3: #ff99d3,
-			--pink-l4: #ffb3de,
-			--pink-l5: #ffe5f4,
-
-			--red: #e60000,
-
-			--red-d1: #c00,
-			--red-d2: #b30000,
-			--red-d3: #900,
-			--red-d4: #800000,
-			--red-l1: #ff4d4d,
-			--red-l2: #f66,
-			--red-l3: #ff8080,
-			--red-l4: #f99,
-			--red-l5: #ffe5e5,
-
-			--orange: #cc4e00,
-
-			--orange-d1: #b34400,
-			--orange-d2: #993b00,
-			--orange-d3: #803100,
-			--orange-d4: #662700,
-			--orange-l1: #ff6200,
-			--orange-l2: #ff8133,
-			--orange-l3: #ffa166,
-			--orange-l4: #ffc099,
-			--orange-l5: #fff0e5,
-
-			--yellow: #fb0,
-
-			--yellow-d1: #e6a800,
-			--yellow-d2: #cc9600,
-			--yellow-d3: #b38900,
-			--yellow-d4: #997000,
-			--yellow-l1: #ffc933,
-			--yellow-l2: #ffd666,
-			--yellow-l3: #ffe499,
-			--yellow-l4: #fff1cc,
-			--yellow-l5: #fff8e5,
-
-			--green: #458613,
-
-			--green-d1: #397010,
-			--green-d2: #2e590d,
-			--green-d3: #22430a,
-			--green-d4: #162d06,
-			--green-l1: #53a117,
-			--green-l2: #67c91d,
-			--green-l3: #81e236,
-			--green-l4: #9de963,
-			--green-l5: #f1fce9,
-
-			--teal: #1b7e6e,
-
-			--teal-d1: #16695b,
-			--teal-d2: #125449,
-			--teal-d3: #0d3f37,
-			--teal-d4: #092a25,
-			--teal-l1: #24a892,
-			--teal-l2: #42d7be,
-			--teal-l3: #6ce0cc,
-			--teal-l4: #96e9db,
-			--teal-l5: #eafbf8,
-
-			--cyan: #0077b3,
-
-			--cyan-d1: #069,
-			--cyan-d2: #005580,
-			--cyan-d3: #046,
-			--cyan-d4: #00334d,
-			--cyan-l1: #0099e6,
-			--cyan-l2: #3bf,
-			--cyan-l3: #6cf,
-			--cyan-l4: #9df,
-			--cyan-l5: #e5f6ff,
-
-			--primary: #0b5fff,
-
-			--primary-d1: #0053f0,
-			--primary-d2: #004ad7,
-			--primary-l0: #5791ff,
-			--primary-l1: #80acff,
-			--primary-l2: #b3cdff,
-			--primary-l3: #f0f5ff,
-
-			--secondary: #6b6c7e,
-
-			--secondary-d1: #393a4a,
-			--secondary-d2: #30313f,
-			--secondary-l0: #9b92a5,
-			--secondary-l1: #a7a9bc,
-			--secondary-l2: #cdced9,
-			--secondary-l3: #e7e7ed,
-
-			--info: #2e5aac,
-
-			--info-d1: #294f98,
-			--info-d2: #234584,
-			--info-l1: #89a7e0,
-			--info-l2: #eef2fa,
-
-			--success: #287d3c,
-
-			--success-d1: #226a33,
-			--success-d2: #1c5629,
-			--success-l1: #5aca75,
-			--success-l2: #edf9f0,
-
-			--warning: #b95000,
-
-			--warning-d1: #9f4500,
-			--warning-d2: #863a00,
-			--warning-l1: #ff8f39,
-			--warning-l2: #fff4ec,
-
-			--danger: #da1414,
-
-			--danger-d1: #c31212,
-			--danger-d2: #ab1010,
-			--danger-l1: #f48989,
-			--danger-l2: #feefef,
-
-			--light: #f1f2f5,
-
-			--light-d1: #e2e4ea,
-			--light-d2: #d3d6e0,
-			--light-l1: #f7f8f9,
-			--light-l2: #fff,
-
-			--dark: #272833,
-			--dark-d1: #1c1c24,
-			--dark-d2: #111116,
-			--dark-l1: #30313f,
-			--dark-l2: #393a4a,
-
-			--spacer: 1rem,
-
-			--spacer-0: map-get($spacers, 0),
-			--spacer-1: map-get($spacers, 1),
-			--spacer-2: map-get($spacers, 2),
-			--spacer-3: map-get($spacers, 3),
-			--spacer-4: map-get($spacers, 4),
-			--spacer-5: map-get($spacers, 5),
-			--spacer-6: map-get($spacers, 6),
-			--spacer-7: map-get($spacers, 7),
-			--spacer-8: map-get($spacers, 8),
-			--spacer-9: map-get($spacers, 9),
-			--spacer-10: map-get($spacers, 10),
-			--line-height-lg: 1.5,
-			--line-height-sm: 1.5,
-
-			--line-height-base: 1.5,
-
-			--border-color: $gray-200,
-			--border-width: 0.0625rem,
-
-			--border-radius: 0.25rem,
-
-			--border-radius-lg: 0.375rem,
-			--border-radius-sm: 0.1875rem,
-
-			--rounded-0-border-radius: 0,
-			--rounded-border-radius: $border-radius,
-			--rounded-circle-border-radius: 50%,
-			--rounded-pill: 50rem,
-
-			--box-shadow:
-				0
-				0.5rem
-				1rem
-				unquote('hsl(from #{$black} h s l / 0.15)'),
-			--box-shadow-lg:
-				0
-				1rem
-				3rem
-				unquote('hsl(from #{$black} h s l / 0.175)'),
-			--box-shadow-sm:
-				0
-				0.125rem
-				0.25rem
-				unquote('hsl(from #{$black} h s l / 0.075)'),
-			--transition-base: all 0.2s ease-in-out,
-			--transition-collapse: height 0.35s ease,
-			--transition-fade: opacity 0.15s linear,
-
-			--component-transition:
-				unquote(
-					'color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out'
-				),
-			--component-active-background-color: $primary,
-			--component-active-color: $white,
-
-			--component-focus-box-shadow:
-				unquote(
-					'0 0 0 0.125rem #{$white}, 0 0 0 0.25rem #{$primary-l1}'
-				),
-			--component-focus-inset-box-shadow:
-				unquote(
-					'inset 0 0 0 0.125rem #{$primary-l1}, inset 0 0 0 0.25rem #{$white}'
-				),
-			--component-disabled-opacity: 0.4,
-
-			--container-max-sm: map-get($container-max-widths, 'sm'),
-			--container-max-md: map-get($container-max-widths, 'md'),
-			--container-max-lg: map-get($container-max-widths, 'lg'),
-			--container-max-xl: map-get($container-max-widths, 'xl'),
-			--font-family-monospace:
-				unquote(
-					"sfmono-regular, menlo, monaco, consolas, 'Liberation Mono', 'Courier New', monospace"
-				),
-			--font-family-sans-serif:
-				unquote(
-					"system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen-sans, ubuntu, cantarell, 'Helvetica Neue', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-				),
-			--font-family-serif:
-				unquote("georgia, 'Times New Roman', times, serif"),
-			--font-family-base: $font-family-sans-serif,
-
-			--font-size-base: 1rem,
-
-			--font-size-lg: 1.125rem,
-			--font-size-sm: 0.875rem,
-
-			--font-weight-bold: 700,
-			--font-weight-bolder: 900,
-			--font-weight-light: 300,
-			--font-weight-lighter: lighter,
-			--font-weight-normal: 400,
-			--font-weight-semi-bold: 600,
-
-			--h1-font-size: 1.625rem,
-			--h2-font-size: 1.375rem,
-			--h3-font-size: 1.1875rem,
-			--h4-font-size: 1rem,
-			--h5-font-size: 0.875rem,
-			--h6-font-size: 0.8125rem,
-
-			--headings-color: inherit,
-			--headings-font-family: inherit,
-			--headings-font-weight: $font-weight-bold,
-			--headings-line-height: 1.2,
-			--headings-margin-bottom: 0.5rem,
-
-			--body-background-color: $white,
-			--body-color: $dark-d1,
-			--body-font-family: $font-family-base,
-			--body-font-size: $font-size-base,
-			--body-font-weight: $font-weight-base,
-			--body-line-height: $line-height-base,
-			--body-margin: 0,
-
-			--link-color: $primary,
-			--link-decoration: none,
-			--link-hover-color: $primary-d2,
-			--link-hover-decoration: underline,
-
-			--paragraph-margin-bottom: 1rem,
-
-			--display1-size: 6rem,
-			--display2-size: 5.5rem,
-			--display3-size: 4.5rem,
-			--display4-size: 3.5rem,
-
-			--display1-weight: 300,
-			--display2-weight: 300,
-			--display3-weight: 300,
-			--display4-weight: 300,
-
-			--display-line-height: $headings-line-height,
-
-			--lead-font-size: 1.25rem,
-			--lead-font-weight: 400,
-
-			--text-muted: $gray-500,
-
-			--blockquote-font-size: 1.25rem,
-
-			--blockquote-small-color: $gray-600,
-			--blockquote-small-font-size: $small-font-size,
-
-			--hr-border-color: unquote('hsl(from #{$black} h s l / 0.1)'),
-			--hr-border-width: $border-width,
-			--hr-margin-y: $spacer,
-
-			--code-color: $pink,
-			--code-font-size: 87.5%,
-		),
-		$c-root
-	);
-}
+// This map outputs custom properties in the `:root` selector: use the Sass `map-merge` function to add additional custom properties to `:root`.
+
+$c-root: () !default;
+$c-root: map-merge(
+	(
+		--black: #000,
+		--white: #fff,
+
+		--gray-100: #f7f8f9,
+		--gray-200: #f1f2f5,
+		--gray-300: #e7e7ed,
+		--gray-400: #cdced9,
+		--gray-500: #a7a9bc,
+		--gray-600: #6b6c7e,
+		--gray-700: #495057,
+		--gray-800: #393a4a,
+		--gray-900: #272833,
+
+		--blue: #006eff,
+
+		--blue-d1: #006be6,
+		--blue-d2: #005fcc,
+		--blue-d3: #0053b3,
+		--blue-d4: #004799,
+		--blue-l1: #338fff,
+		--blue-l2: #66abff,
+		--blue-l3: #97c5ff,
+		--blue-l4: #cce3ff,
+		--blue-l5: #e5f1ff,
+
+		--indigo: #4d5fff,
+
+		--indigo-d1: #3347ff,
+		--indigo-d2: #1a30ff,
+		--indigo-d3: #001aff,
+		--indigo-d4: #0017e5,
+		--indigo-l1: #808cff,
+		--indigo-l2: #99a3ff,
+		--indigo-l3: #b2baff,
+		--indigo-l4: #ccd1ff,
+		--indigo-l5: #e5e8ff,
+
+		--purple: #a3f,
+
+		--purple-d1: #9f1aff,
+		--purple-d2: #9500ff,
+		--purple-d3: #8600e6,
+		--purple-d4: #70c,
+		--purple-l1: #bf66ff,
+		--purple-l2: #ca80ff,
+		--purple-l3: #d499ff,
+		--purple-l4: #dfb3ff,
+		--purple-l5: #f2e5ff,
+
+		--pink: #e50082,
+
+		--pink-d1: #cc0074,
+		--pink-d2: #b30065,
+		--pink-d3: #990057,
+		--pink-d4: #800048,
+		--pink-l1: #ff4db2,
+		--pink-l2: #ff80c8,
+		--pink-l3: #ff99d3,
+		--pink-l4: #ffb3de,
+		--pink-l5: #ffe5f4,
+
+		--red: #e60000,
+
+		--red-d1: #c00,
+		--red-d2: #b30000,
+		--red-d3: #900,
+		--red-d4: #800000,
+		--red-l1: #ff4d4d,
+		--red-l2: #f66,
+		--red-l3: #ff8080,
+		--red-l4: #f99,
+		--red-l5: #ffe5e5,
+
+		--orange: #cc4e00,
+
+		--orange-d1: #b34400,
+		--orange-d2: #993b00,
+		--orange-d3: #803100,
+		--orange-d4: #662700,
+		--orange-l1: #ff6200,
+		--orange-l2: #ff8133,
+		--orange-l3: #ffa166,
+		--orange-l4: #ffc099,
+		--orange-l5: #fff0e5,
+
+		--yellow: #fb0,
+
+		--yellow-d1: #e6a800,
+		--yellow-d2: #cc9600,
+		--yellow-d3: #b38900,
+		--yellow-d4: #997000,
+		--yellow-l1: #ffc933,
+		--yellow-l2: #ffd666,
+		--yellow-l3: #ffe499,
+		--yellow-l4: #fff1cc,
+		--yellow-l5: #fff8e5,
+
+		--green: #458613,
+
+		--green-d1: #397010,
+		--green-d2: #2e590d,
+		--green-d3: #22430a,
+		--green-d4: #162d06,
+		--green-l1: #53a117,
+		--green-l2: #67c91d,
+		--green-l3: #81e236,
+		--green-l4: #9de963,
+		--green-l5: #f1fce9,
+
+		--teal: #1b7e6e,
+
+		--teal-d1: #16695b,
+		--teal-d2: #125449,
+		--teal-d3: #0d3f37,
+		--teal-d4: #092a25,
+		--teal-l1: #24a892,
+		--teal-l2: #42d7be,
+		--teal-l3: #6ce0cc,
+		--teal-l4: #96e9db,
+		--teal-l5: #eafbf8,
+
+		--cyan: #0077b3,
+
+		--cyan-d1: #069,
+		--cyan-d2: #005580,
+		--cyan-d3: #046,
+		--cyan-d4: #00334d,
+		--cyan-l1: #0099e6,
+		--cyan-l2: #3bf,
+		--cyan-l3: #6cf,
+		--cyan-l4: #9df,
+		--cyan-l5: #e5f6ff,
+
+		--primary: #0b5fff,
+
+		--primary-d1: #0053f0,
+		--primary-d2: #004ad7,
+		--primary-l0: #5791ff,
+		--primary-l1: #80acff,
+		--primary-l2: #b3cdff,
+		--primary-l3: #f0f5ff,
+
+		--secondary: #6b6c7e,
+
+		--secondary-d1: #393a4a,
+		--secondary-d2: #30313f,
+		--secondary-l0: #9b92a5,
+		--secondary-l1: #a7a9bc,
+		--secondary-l2: #cdced9,
+		--secondary-l3: #e7e7ed,
+
+		--info: #2e5aac,
+
+		--info-d1: #294f98,
+		--info-d2: #234584,
+		--info-l1: #89a7e0,
+		--info-l2: #eef2fa,
+
+		--success: #287d3c,
+
+		--success-d1: #226a33,
+		--success-d2: #1c5629,
+		--success-l1: #5aca75,
+		--success-l2: #edf9f0,
+
+		--warning: #b95000,
+
+		--warning-d1: #9f4500,
+		--warning-d2: #863a00,
+		--warning-l1: #ff8f39,
+		--warning-l2: #fff4ec,
+
+		--danger: #da1414,
+
+		--danger-d1: #c31212,
+		--danger-d2: #ab1010,
+		--danger-l1: #f48989,
+		--danger-l2: #feefef,
+
+		--light: #f1f2f5,
+
+		--light-d1: #e2e4ea,
+		--light-d2: #d3d6e0,
+		--light-l1: #f7f8f9,
+		--light-l2: #fff,
+
+		--dark: #272833,
+		--dark-d1: #1c1c24,
+		--dark-d2: #111116,
+		--dark-l1: #30313f,
+		--dark-l2: #393a4a,
+
+		--spacer: 1rem,
+
+		--spacer-0: map-get($spacers, 0),
+		--spacer-1: map-get($spacers, 1),
+		--spacer-2: map-get($spacers, 2),
+		--spacer-3: map-get($spacers, 3),
+		--spacer-4: map-get($spacers, 4),
+		--spacer-5: map-get($spacers, 5),
+		--spacer-6: map-get($spacers, 6),
+		--spacer-7: map-get($spacers, 7),
+		--spacer-8: map-get($spacers, 8),
+		--spacer-9: map-get($spacers, 9),
+		--spacer-10: map-get($spacers, 10),
+		--line-height-lg: 1.5,
+		--line-height-sm: 1.5,
+
+		--line-height-base: 1.5,
+
+		--border-color: $gray-200,
+		--border-width: 0.0625rem,
+
+		--border-radius: 0.25rem,
+
+		--border-radius-lg: 0.375rem,
+		--border-radius-sm: 0.1875rem,
+
+		--rounded-0-border-radius: 0,
+		--rounded-border-radius: $border-radius,
+		--rounded-circle-border-radius: 50%,
+		--rounded-pill: 50rem,
+
+		--box-shadow: 0 0.5rem 1rem unquote('hsl(from #{$black} h s l / 0.15)'),
+		--box-shadow-lg: 0 1rem 3rem
+			unquote('hsl(from #{$black} h s l / 0.175)'),
+		--box-shadow-sm: 0 0.125rem 0.25rem
+			unquote('hsl(from #{$black} h s l / 0.075)'),
+		--transition-base: all 0.2s ease-in-out,
+		--transition-collapse: height 0.35s ease,
+		--transition-fade: opacity 0.15s linear,
+
+		--component-transition:
+			unquote(
+				'color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out'
+			),
+		--component-active-background-color: $primary,
+		--component-active-color: $white,
+
+		--component-focus-box-shadow:
+			unquote('0 0 0 0.125rem #{$white}, 0 0 0 0.25rem #{$primary-l1}'),
+		--component-focus-inset-box-shadow:
+			unquote(
+				'inset 0 0 0 0.125rem #{$primary-l1}, inset 0 0 0 0.25rem #{$white}'
+			),
+		--component-disabled-opacity: 0.4,
+
+		--container-max-sm: map-get($container-max-widths, 'sm'),
+		--container-max-md: map-get($container-max-widths, 'md'),
+		--container-max-lg: map-get($container-max-widths, 'lg'),
+		--container-max-xl: map-get($container-max-widths, 'xl'),
+		--font-family-monospace:
+			unquote(
+				"sfmono-regular, menlo, monaco, consolas, 'Liberation Mono', 'Courier New', monospace"
+			),
+		--font-family-sans-serif:
+			unquote(
+				"system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen-sans, ubuntu, cantarell, 'Helvetica Neue', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+			),
+		--font-family-serif: unquote("georgia, 'Times New Roman', times, serif"),
+		--font-family-base: $font-family-sans-serif,
+
+		--font-size-base: 1rem,
+
+		--font-size-lg: 1.125rem,
+		--font-size-sm: 0.875rem,
+
+		--font-weight-bold: 700,
+		--font-weight-bolder: 900,
+		--font-weight-light: 300,
+		--font-weight-lighter: lighter,
+		--font-weight-normal: 400,
+		--font-weight-semi-bold: 600,
+
+		--h1-font-size: 1.625rem,
+		--h2-font-size: 1.375rem,
+		--h3-font-size: 1.1875rem,
+		--h4-font-size: 1rem,
+		--h5-font-size: 0.875rem,
+		--h6-font-size: 0.8125rem,
+
+		--headings-color: inherit,
+		--headings-font-family: inherit,
+		--headings-font-weight: $font-weight-bold,
+		--headings-line-height: 1.2,
+		--headings-margin-bottom: 0.5rem,
+
+		--body-background-color: $white,
+		--body-color: $dark-d1,
+		--body-font-family: $font-family-base,
+		--body-font-size: $font-size-base,
+		--body-font-weight: $font-weight-base,
+		--body-line-height: $line-height-base,
+		--body-margin: 0,
+
+		--link-color: $primary,
+		--link-decoration: none,
+		--link-hover-color: $primary-d2,
+		--link-hover-decoration: underline,
+
+		--paragraph-margin-bottom: 1rem,
+
+		--display1-size: 6rem,
+		--display2-size: 5.5rem,
+		--display3-size: 4.5rem,
+		--display4-size: 3.5rem,
+
+		--display1-weight: 300,
+		--display2-weight: 300,
+		--display3-weight: 300,
+		--display4-weight: 300,
+
+		--display-line-height: $headings-line-height,
+
+		--lead-font-size: 1.25rem,
+		--lead-font-weight: 400,
+
+		--text-muted: $gray-500,
+
+		--blockquote-font-size: 1.25rem,
+
+		--blockquote-small-color: $gray-600,
+		--blockquote-small-font-size: $small-font-size,
+
+		--hr-border-color: unquote('hsl(from #{$black} h s l / 0.1)'),
+		--hr-border-width: $border-width,
+		--hr-margin-y: $spacer,
+
+		--code-color: $pink,
+		--code-font-size: 87.5%,
+	),
+	$c-root
+);

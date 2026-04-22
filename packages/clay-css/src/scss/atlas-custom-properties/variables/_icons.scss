@@ -1,73 +1,71 @@
-@if ($enable-atlas-custom-properties) {
-	// .lexicon-icon
+// .lexicon-icon
 
-	$lexicon-icon-size: 1em; // 16px
+$lexicon-icon-size: 1em !default; // 16px
 
-	$lexicon-icon: ();
-	$lexicon-icon: map-merge(
-		(
-			display: inline-block,
-			fill: currentColor,
-			height: $lexicon-icon-size,
-			margin-top: -3px,
-			vertical-align: middle,
-			width: $lexicon-icon-size,
-		),
-		$lexicon-icon
-	);
+$lexicon-icon: () !default;
+$lexicon-icon: map-merge(
+	(
+		display: inline-block,
+		fill: currentColor,
+		height: $lexicon-icon-size,
+		margin-top: -3px,
+		vertical-align: middle,
+		width: $lexicon-icon-size,
+	),
+	$lexicon-icon
+);
 
-	// .lexicon-icon-sm
+// .lexicon-icon-sm
 
-	$lexicon-icon-sm-font-size: 0.5rem; // 8px
+$lexicon-icon-sm-font-size: 0.5rem !default; // 8px
 
-	$lexicon-icon-sm: ();
-	$lexicon-icon-sm: map-merge(
-		(
-			font-size: $lexicon-icon-sm-font-size,
-		),
-		$lexicon-icon-sm
-	);
+$lexicon-icon-sm: () !default;
+$lexicon-icon-sm: map-merge(
+	(
+		font-size: $lexicon-icon-sm-font-size,
+	),
+	$lexicon-icon-sm
+);
 
-	// .lexicon-icon-lg
+// .lexicon-icon-lg
 
-	$lexicon-icon-lg-font-size: 2rem; // 32px
+$lexicon-icon-lg-font-size: 2rem !default; // 32px
 
-	$lexicon-icon-lg: ();
-	$lexicon-icon-lg: map-merge(
-		(
-			font-size: $lexicon-icon-lg-font-size,
-		),
-		$lexicon-icon-lg
-	);
+$lexicon-icon-lg: () !default;
+$lexicon-icon-lg: map-merge(
+	(
+		font-size: $lexicon-icon-lg-font-size,
+	),
+	$lexicon-icon-lg
+);
 
-	// .lexicon-icon-xl
+// .lexicon-icon-xl
 
-	$lexicon-icon-xl-font-size: 8rem; // 128px
+$lexicon-icon-xl-font-size: 8rem !default; // 128px
 
-	$lexicon-icon-xl: ();
-	$lexicon-icon-xl: map-merge(
-		(
-			font-size: $lexicon-icon-xl-font-size,
-		),
-		$lexicon-icon-xl
-	);
+$lexicon-icon-xl: () !default;
+$lexicon-icon-xl: map-merge(
+	(
+		font-size: $lexicon-icon-xl-font-size,
+	),
+	$lexicon-icon-xl
+);
 
-	// .order-arrow
+// .order-arrow
 
-	$order-arrow-down-active-color: $gray-500;
-	$order-arrow-up-active-color: $order-arrow-down-active-color;
+$order-arrow-down-active-color: $gray-500 !default;
+$order-arrow-up-active-color: $order-arrow-down-active-color !default;
 
-	// .collapse-icon[href], .collapse-icon[type]
+// .collapse-icon[href], .collapse-icon[type]
 
-	$collapse-icon-padding-left: null;
-	$collapse-icon-padding-right: 2.28125rem; // 45px
+$collapse-icon-padding-left: null !default;
+$collapse-icon-padding-right: 2.28125rem !default; // 45px
 
-	$collapse-icon-position-bottom: null;
-	$collapse-icon-position-left: null;
-	$collapse-icon-position-right: 0.9375rem; // 15px
-	$collapse-icon-position-top: clay-collapse-icon-align(
-		if(variable-exists(nav-link-padding-y), $nav-link-padding-y, 0.5rem),
-		0.0625rem,
-		0.9375em
-	);
-}
+$collapse-icon-position-bottom: null !default;
+$collapse-icon-position-left: null !default;
+$collapse-icon-position-right: 0.9375rem !default; // 15px
+$collapse-icon-position-top: clay-collapse-icon-align(
+	if(variable-exists(nav-link-padding-y), $nav-link-padding-y, 0.5rem),
+	0.0625rem,
+	0.9375em
+) !default;

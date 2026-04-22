@@ -1,267 +1,262 @@
-@if ($enable-atlas-custom-properties) {
-	$clay-range-disabled-color: var(--clay-range-disabled-color, $gray-500);
+$clay-range-disabled-color: var(
+	--clay-range-disabled-color,
+	$gray-500
+) !default;
 
-	$clay-range-input-group: ();
-	$clay-range-input-group: map-merge(
-		(
-			align-items: center,
+$clay-range-input-group: () !default;
+$clay-range-input-group: map-merge(
+	(
+		align-items: center,
+	),
+	$clay-range-input-group
+);
+
+$clay-range-input-group-item: () !default;
+$clay-range-input-group-item: map-merge(
+	(
+		flex-direction: column,
+	),
+	$clay-range-input-group-item
+);
+
+$clay-range-input-group-text: () !default;
+$clay-range-input-group-text: map-merge(
+	(
+		background-color:
+			var(
+				--clay-range-input-group-text-background-color,
+				setter(map-get($clay-range-input-group-text, bg), transparent)
+			),
+		border-width: 0,
+		color: var(--clay-range-input-group-text-color, $gray-500),
+		font-size: var(--clay-range-input-group-text-font-size, 14px),
+		font-weight:
+			var(
+				--clay-range-input-group-text-font-weight,
+				$font-weight-semi-bold
+			),
+		min-width: var(--clay-range-input-group-text-min-width, 24px),
+		padding-bottom: 0,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: 0,
+	),
+	$clay-range-input-group-text
+);
+
+$clay-range-title: () !default;
+$clay-range-title: map-deep-merge(
+	(
+		color: var(--clay-range-title-color),
+		display: block,
+		font-size: var(--clay-range-title-font-size),
+		font-weight: var(--clay-range-title-font-weight, $font-weight-semi-bold),
+		line-height: var(--clay-range-title-line-height, 1),
+		margin-bottom: var(--clay-range-title-margin-bottom, 8px),
+		text-align: center,
+	),
+	$clay-range-title
+);
+
+$clay-range-input: () !default;
+$clay-range-input: map-deep-merge(
+	(
+		color: var(--clay-range-input-color, $gray-500),
+		display: block,
+		padding-bottom: 0.1px,
+		position: relative,
+		vertical-align: middle,
+		width: 100%,
+
+		clay-range-thumb: (
+			background-color: var(--clay-range-thumb-background-color, $white),
+			border: var(--clay-range-thumb-border),
+			border-radius: var(--clay-range-thumb-border-radius, 100px),
+			border-width: var(--clay-range-thumb-border-width, 0),
+			box-shadow:
+				var(
+					--clay-range-thumb-box-shadow,
+					0 1px 5px -1px rgba(0, 0, 0, 0.3)
+				),
+			height: var(--clay-range-thumb-height, 24px),
+			margin-top: var(--clay-range-thumb-margin-top, -0.75rem),
+			width: var(--clay-range-thumb-width, 24px),
 		),
-		$clay-range-input-group
-	);
 
-	$clay-range-input-group-item: ();
-	$clay-range-input-group-item: map-merge(
-		(
-			flex-direction: column,
-		),
-		$clay-range-input-group-item
-	);
-
-	$clay-range-input-group-text: ();
-	$clay-range-input-group-text: map-merge(
-		(
+		clay-range-track: (
 			background-color:
-				var(
-					--clay-range-input-group-text-background-color,
-					setter(
-						map-get($clay-range-input-group-text, bg),
-						transparent
-					)
-				),
-			border-width: 0,
-			color: var(--clay-range-input-group-text-color, $gray-500),
-			font-size: var(--clay-range-input-group-text-font-size, 14px),
-			font-weight:
-				var(
-					--clay-range-input-group-text-font-weight,
-					$font-weight-semi-bold
-				),
-			min-width: var(--clay-range-input-group-text-min-width, 24px),
-			padding-bottom: 0,
-			padding-left: 0,
-			padding-right: 0,
-			padding-top: 0,
-		),
-		$clay-range-input-group-text
-	);
-
-	$clay-range-title: ();
-	$clay-range-title: map-deep-merge(
-		(
-			color: var(--clay-range-title-color),
-			display: block,
-			font-size: var(--clay-range-title-font-size),
-			font-weight:
-				var(--clay-range-title-font-weight, $font-weight-semi-bold),
-			line-height: var(--clay-range-title-line-height, 1),
-			margin-bottom: var(--clay-range-title-margin-bottom, 8px),
-			text-align: center,
-		),
-		$clay-range-title
-	);
-
-	$clay-range-input: ();
-	$clay-range-input: map-deep-merge(
-		(
-			color: var(--clay-range-input-color, $gray-500),
-			display: block,
-			padding-bottom: 0.1px,
-			position: relative,
-			vertical-align: middle,
+				var(--clay-range-track-background-color, $gray-200),
+			border-radius: var(--clay-range-track-border-radius, 100px),
+			height: var(--clay-range-track-height, 4px),
+			position: absolute,
+			top: 50%,
 			width: 100%,
+		),
 
-			clay-range-thumb: (
-				background-color:
-					var(--clay-range-thumb-background-color, $white),
-				border: var(--clay-range-thumb-border),
-				border-radius: var(--clay-range-thumb-border-radius, 100px),
-				border-width: var(--clay-range-thumb-border-width, 0),
-				box-shadow:
-					var(
-						--clay-range-thumb-box-shadow,
-						0 1px 5px -1px rgba(0, 0, 0, 0.3)
-					),
-				height: var(--clay-range-thumb-height, 24px),
-				margin-top: var(--clay-range-thumb-margin-top, -0.75rem),
-				width: var(--clay-range-thumb-width, 24px),
-			),
+		clay-range-progress: (
+			background-color:
+				var(--clay-range-progress-background-color, $primary),
+			border-radius:
+				var(--clay-range-progress-border-radius, 100px 0 0 100px),
+			position: absolute,
+			top: 50%,
+			width: 50%,
+		),
 
-			clay-range-track: (
-				background-color:
-					var(--clay-range-track-background-color, $gray-200),
-				border-radius: var(--clay-range-track-border-radius, 100px),
-				height: var(--clay-range-track-height, 4px),
-				position: absolute,
-				top: 50%,
-				width: 100%,
-			),
+		tooltip: (
+			margin-left: 13px,
+			transition: opacity 0.15s linear,
+			visibility: hidden,
+			white-space: nowrap,
+		),
 
-			clay-range-progress: (
-				background-color:
-					var(--clay-range-progress-background-color, $primary),
-				border-radius:
-					var(--clay-range-progress-border-radius, 100px 0 0 100px),
-				position: absolute,
-				top: 50%,
-				width: 50%,
-			),
+		tooltip-inner: (
+			padding: 8px 12px,
+		),
 
-			tooltip: (
-				margin-left: 13px,
-				transition: opacity 0.15s linear,
-				visibility: hidden,
-				white-space: nowrap,
-			),
+		tooltip-arrow: (
+			height: 6px,
+			width: 6px,
+		),
 
-			tooltip-inner: (
-				padding: 8px 12px,
-			),
-
+		clay-tooltip-bottom: (
+			margin-top: 4px,
+			padding-top: 3px,
+			top: 100%,
+			transform: translateX(-50%),
 			tooltip-arrow: (
-				height: 6px,
-				width: 6px,
-			),
-
-			clay-tooltip-bottom: (
-				margin-top: 4px,
-				padding-top: 3px,
-				top: 100%,
-				transform: translateX(-50%),
-				tooltip-arrow: (
-					margin-left: -4px,
-				),
-			),
-
-			clay-tooltip-top: (
-				bottom: 100%,
-				margin-bottom: 4px,
-				padding-bottom: 3px,
-				transform: translateX(-50%),
-				tooltip-arrow: (
-					margin-left: -4px,
-				),
-			),
-			form-control-range: (
-				appearance: none,
-				background-color: transparent,
-				height: var(--form-control-range-height, $input-height),
-				position: relative,
-
-				hover: (
-					cursor: $link-cursor,
-
-					clay-range-thumb: (
-						background-color:
-							var(
-								--clay-range-thumb-hover-background-color,
-								$primary-l3
-							),
-					),
-				),
-
-				focus: (
-					outline: 0,
-
-					clay-range-thumb: (
-						box-shadow:
-							var(
-								--clay-range-thumb-focus-box-shadow,
-								$component-focus-inset-box-shadow
-							),
-					),
-				),
-
-				disabled: (
-					color:
-						var(
-							--clay-range-input-disabled-color,
-							$clay-range-disabled-color
-						),
-					cursor: $disabled-cursor,
-
-					clay-range-thumb: (
-						background-color:
-							var(
-								--clay-range-thumb-disabled-background-color,
-								$gray-100
-							),
-					),
-
-					clay-range-progress: (
-						background-color:
-							var(
-								--clay-range-progress-disabled-clay-range-progress,
-								$primary-l2
-							),
-					),
-
-					clay-range-track: (
-						background-color:
-							var(
-								--clay-range-track-disabled-clay-range-track,
-								$gray-200
-							),
-					),
-				),
-			),
-
-			data-label-min-max: (
-				margin-bottom: var(--data-label-spacer, 16px),
-			),
-
-			before-after: (
-				font-size: var(--data-label-font-size, 14px),
-				font-weight:
-					var(--data-label-font-weight, $font-weight-semi-bold),
-				line-height: var(--data-label-line-height, 1),
-				margin-top: var(--data-label-margin-top, 40px),
-				position: absolute,
-				text-align: center,
-				top: var(--data-label-top, 0),
-				width: var(--data-label-width, 24px),
-			),
-
-			data-label-min: (
-				before: (
-					content: unquote("'\\FEFF' attr(data-label-min)"),
-				),
-			),
-
-			data-label-max: (
-				after: (
-					content: unquote("'\\FEFF' attr(data-label-max)"),
-					right: 0,
-				),
+				margin-left: -4px,
 			),
 		),
-		$clay-range-input
-	);
 
-	$clay-range-progress-none: ();
-	$clay-range-progress-none: map-deep-merge(
-		(
-			clay-range-input: (
-				ms-thumb: (
-					visibility: visible,
-				),
+		clay-tooltip-top: (
+			bottom: 100%,
+			margin-bottom: 4px,
+			padding-bottom: 3px,
+			transform: translateX(-50%),
+			tooltip-arrow: (
+				margin-left: -4px,
+			),
+		),
+		form-control-range: (
+			appearance: none,
+			background-color: transparent,
+			height: var(--form-control-range-height, $input-height),
+			position: relative,
 
-				moz-range-thumb: (
-					visibility: visible,
-				),
-
-				webkit-slider-thumb: (
-					visibility: visible,
-				),
+			hover: (
+				cursor: $link-cursor,
 
 				clay-range-thumb: (
-					visibility: hidden,
+					background-color:
+						var(
+							--clay-range-thumb-hover-background-color,
+							$primary-l3
+						),
+				),
+			),
+
+			focus: (
+				outline: 0,
+
+				clay-range-thumb: (
+					box-shadow:
+						var(
+							--clay-range-thumb-focus-box-shadow,
+							$component-focus-inset-box-shadow
+						),
+				),
+			),
+
+			disabled: (
+				color:
+					var(
+						--clay-range-input-disabled-color,
+						$clay-range-disabled-color
+					),
+				cursor: $disabled-cursor,
+
+				clay-range-thumb: (
+					background-color:
+						var(
+							--clay-range-thumb-disabled-background-color,
+							$gray-100
+						),
 				),
 
 				clay-range-progress: (
-					visibility: hidden,
+					background-color:
+						var(
+							--clay-range-progress-disabled-clay-range-progress,
+							$primary-l2
+						),
+				),
+
+				clay-range-track: (
+					background-color:
+						var(
+							--clay-range-track-disabled-clay-range-track,
+							$gray-200
+						),
 				),
 			),
 		),
-		$clay-range-progress-none
-	);
-}
+
+		data-label-min-max: (
+			margin-bottom: var(--data-label-spacer, 16px),
+		),
+
+		before-after: (
+			font-size: var(--data-label-font-size, 14px),
+			font-weight: var(--data-label-font-weight, $font-weight-semi-bold),
+			line-height: var(--data-label-line-height, 1),
+			margin-top: var(--data-label-margin-top, 40px),
+			position: absolute,
+			text-align: center,
+			top: var(--data-label-top, 0),
+			width: var(--data-label-width, 24px),
+		),
+
+		data-label-min: (
+			before: (
+				content: unquote("'\\FEFF' attr(data-label-min)"),
+			),
+		),
+
+		data-label-max: (
+			after: (
+				content: unquote("'\\FEFF' attr(data-label-max)"),
+				right: 0,
+			),
+		),
+	),
+	$clay-range-input
+);
+
+$clay-range-progress-none: () !default;
+$clay-range-progress-none: map-deep-merge(
+	(
+		clay-range-input: (
+			ms-thumb: (
+				visibility: visible,
+			),
+
+			moz-range-thumb: (
+				visibility: visible,
+			),
+
+			webkit-slider-thumb: (
+				visibility: visible,
+			),
+
+			clay-range-thumb: (
+				visibility: hidden,
+			),
+
+			clay-range-progress: (
+				visibility: hidden,
+			),
+		),
+	),
+	$clay-range-progress-none
+);

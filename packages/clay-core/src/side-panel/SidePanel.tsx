@@ -10,6 +10,7 @@ import {
 	useControlledState,
 	useId,
 	useIsMobileDevice,
+	useObservedMaxWidth,
 } from '@clayui/shared';
 import classnames from 'classnames';
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
@@ -166,7 +167,7 @@ export function SidePanel({
 	const sidePanelRef = externalSidePanelRef || internalSidePanelRef;
 
 	const isMobile = useIsMobileDevice();
-	const panelWidthMax = usePanelWidthMax(sidePanelRef);
+	const sidePanelObservedMaxWidth = useObservedMaxWidth(sidePanelRef);
 	const {prefersReducedMotion} = useProvider();
 
 	const closeOnEscape = isMobile || externalCloseOnEscape;
@@ -251,7 +252,7 @@ export function SidePanel({
 	const offsetTop = useOffsetTop(containerRef);
 
 	const panelWidth = isResizable
-		? Math.min(panelWidthMax, resizeWidth)
+		? Math.min(sidePanelObservedMaxWidth, resizeWidth)
 		: externalPanelWidth && Math.max(externalPanelWidth, PANEL_WIDTH_MIN);
 
 	return (
@@ -350,7 +351,7 @@ export function SidePanel({
 							<PanelResizer
 								onPanelWidthChange={setResizeWidth}
 								panelWidth={panelWidth}
-								panelWidthMax={panelWidthMax}
+								panelWidthMax={sidePanelObservedMaxWidth}
 								panelWidthMin={PANEL_WIDTH_MIN}
 								position={direction}
 							/>
@@ -397,30 +398,6 @@ function useOffsetTop(ref: React.RefObject<HTMLElement>) {
 	}, []);
 
 	return offsetTop;
-}
-
-function usePanelWidthMax(ref: React.RefObject<HTMLElement>) {
-	const [maxWidth, setMaxWidth] = useState<number>(window.innerWidth / 2);
-
-	const handleResize = () => {
-		if (ref.current) {
-			setMaxWidth(
-				parseFloat(window.getComputedStyle(ref.current).maxWidth)
-			);
-		}
-	};
-
-	useEffect(() => {
-		handleResize();
-
-		window.addEventListener('resize', handleResize);
-
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, []);
-
-	return maxWidth;
 }
 
 SidePanel.Header = Header;

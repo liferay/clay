@@ -1,1498 +1,1442 @@
-@if ($enable-atlas-custom-properties) {
-	$btn-border-radius: var(--btn-border-radius, $border-radius);
-	$btn-border-width: var(--btn-border-width, $border-width);
-	$btn-box-shadow: var(--btn-box-shadow, none);
-	$btn-cursor: $link-cursor;
-	$btn-font-family: var(--btn-font-family, $font-family-base);
-	$btn-font-size: var(--btn-font-size, $font-size-base);
-	$btn-font-weight: var(--btn-font-weight, $font-weight-semi-bold);
-	$btn-line-height: var(--btn-line-height, $line-height-base);
-	$btn-padding-x: var(--btn-padding-x, 0.9375rem);
-	$btn-padding-y: var(--btn-padding-y, 0.4375rem);
-	$btn-transition: $component-transition;
-	$btn-white-space: null;
+$btn-border-radius: var(--btn-border-radius, $border-radius) !default;
+$btn-border-width: var(--btn-border-width, $border-width) !default;
+$btn-box-shadow: var(--btn-box-shadow, none) !default;
+$btn-cursor: $link-cursor !default;
+$btn-font-family: var(--btn-font-family, $font-family-base) !default;
+$btn-font-size: var(--btn-font-size, $font-size-base) !default;
+$btn-font-weight: var(--btn-font-weight, $font-weight-semi-bold) !default;
+$btn-line-height: var(--btn-line-height, $line-height-base) !default;
+$btn-padding-x: var(--btn-padding-x, 0.9375rem) !default;
+$btn-padding-y: var(--btn-padding-y, 0.4375rem) !default;
+$btn-transition: $component-transition !default;
+$btn-white-space: null !default;
 
-	$btn-font-size-mobile: null;
-	$btn-padding-x-mobile: null;
-	$btn-padding-y-mobile: null;
+$btn-font-size-mobile: null !default;
+$btn-padding-x-mobile: null !default;
+$btn-padding-y-mobile: null !default;
 
-	$btn-focus-width: $input-btn-focus-width;
+$btn-focus-width: $input-btn-focus-width !default;
 
-	$btn-focus-box-shadow: var(
-		--btn-focus-box-shadow,
-		$component-focus-box-shadow
-	);
+$btn-focus-box-shadow: var(
+	--btn-focus-box-shadow,
+	$component-focus-box-shadow
+) !default;
 
-	$btn-active-box-shadow: none;
+$btn-active-box-shadow: none !default;
 
-	$btn-disabled-cursor: $disabled-cursor;
-	$btn-disabled-opacity: $component-disabled-opacity;
+$btn-disabled-cursor: $disabled-cursor !default;
+$btn-disabled-opacity: $component-disabled-opacity !default;
 
-	$btn-inline-item-font-size: null;
+$btn-inline-item-font-size: null !default;
 
-	$btn-section-font-size: 0.6875rem; // 11px
-	$btn-section-font-weight: $font-weight-semi-bold;
-	$btn-section-line-height: 1;
+$btn-section-font-size: 0.6875rem !default; // 11px
+$btn-section-font-weight: $font-weight-semi-bold !default;
+$btn-section-line-height: 1 !default;
 
-	$btn: ();
-	$btn: map-deep-merge(
-		(
-			background-color: transparent,
-			border-color: transparent,
-			border-style: solid,
-			border-width: $btn-border-width,
-			border-radius: clay-enable-rounded($btn-border-radius),
-			box-shadow: clay-enable-shadows($btn-box-shadow),
+$btn: () !default;
+$btn: map-deep-merge(
+	(
+		background-color: transparent,
+		border-color: transparent,
+		border-style: solid,
+		border-width: $btn-border-width,
+		border-radius: clay-enable-rounded($btn-border-radius),
+		box-shadow: clay-enable-shadows($btn-box-shadow),
+		color: $body-color,
+		cursor: $btn-cursor,
+		display: inline-block,
+		font-family: $btn-font-family,
+		font-size: $btn-font-size,
+		font-weight: $btn-font-weight,
+		letter-spacing: inherit,
+		line-height: $btn-line-height,
+		padding-bottom: $btn-padding-y,
+		padding-left: $btn-padding-x,
+		padding-right: $btn-padding-x,
+		padding-top: $btn-padding-y,
+		text-align: center,
+		text-transform: none,
+		transition: clay-enable-transitions($btn-transition),
+		user-select: none,
+		vertical-align: middle,
+		white-space: $btn-white-space,
+
+		mobile: (
+			font-size: $btn-font-size-mobile,
+			padding-bottom: $btn-padding-y-mobile,
+			padding-left: $btn-padding-x-mobile,
+			padding-right: $btn-padding-x-mobile,
+			padding-top: $btn-padding-y-mobile,
+		),
+
+		hover: (
 			color: $body-color,
-			cursor: $btn-cursor,
-			display: inline-block,
-			font-family: $btn-font-family,
-			font-size: $btn-font-size,
-			font-weight: $btn-font-weight,
-			letter-spacing: inherit,
-			line-height: $btn-line-height,
-			padding-bottom: $btn-padding-y,
-			padding-left: $btn-padding-x,
-			padding-right: $btn-padding-x,
-			padding-top: $btn-padding-y,
-			text-align: center,
-			text-transform: none,
-			transition: clay-enable-transitions($btn-transition),
-			user-select: none,
-			vertical-align: middle,
-			white-space: $btn-white-space,
+			text-decoration: none,
+		),
 
-			mobile: (
-				font-size: $btn-font-size-mobile,
-				padding-bottom: $btn-padding-y-mobile,
-				padding-left: $btn-padding-x-mobile,
-				padding-right: $btn-padding-x-mobile,
-				padding-top: $btn-padding-y-mobile,
-			),
+		focus: (
+			box-shadow: $btn-focus-box-shadow,
+			outline: 0,
+		),
 
-			hover: (
-				color: $body-color,
-				text-decoration: none,
+		active: (
+			box-shadow: clay-enable-shadows($btn-active-box-shadow),
+			focus: (
+				box-shadow: clay-enable-shadows($btn-focus-box-shadow),
 			),
+		),
+
+		active-class: (
+			box-shadow: clay-enable-shadows($btn-active-box-shadow),
+		),
+
+		disabled: (
+			cursor: $btn-disabled-cursor,
+			opacity: $btn-disabled-opacity,
 
 			focus: (
-				box-shadow: $btn-focus-box-shadow,
-				outline: 0,
+				box-shadow: none,
 			),
 
 			active: (
-				box-shadow: clay-enable-shadows($btn-active-box-shadow),
-				focus: (
-					box-shadow: clay-enable-shadows($btn-focus-box-shadow),
-				),
-			),
-
-			active-class: (
-				box-shadow: clay-enable-shadows($btn-active-box-shadow),
-			),
-
-			disabled: (
-				cursor: $btn-disabled-cursor,
-				opacity: $btn-disabled-opacity,
-
-				focus: (
-					box-shadow: none,
-				),
-
-				active: (
-					pointer-events: none,
-				),
-			),
-
-			inline-item: (
-				font-size: $btn-inline-item-font-size,
-				line-height: 1,
-				margin-top: -3px,
-
-				lexicon-icon: (
-					margin-top: 0rem,
-				),
-			),
-
-			btn-section: (
-				display: block,
-				font-size: $btn-section-font-size,
-				font-weight: $btn-section-font-weight,
-				line-height: $btn-section-line-height,
+				pointer-events: none,
 			),
 		),
-		$btn
-	);
 
-	// Button Lg
-
-	$btn-border-radius-lg: $border-radius;
-	$btn-font-size-lg: $font-size-lg;
-	$btn-line-height-lg: $input-btn-line-height-lg;
-	$btn-padding-x-lg: 1.5rem; // 24px
-	$btn-padding-y-lg: 0.59375rem; // 9.5px
-	$btn-inline-item-font-size-lg: $font-size-lg; // 18px
-	$btn-section-font-size-lg: 0.8125rem; // 13px
-
-	$btn-font-size-lg-mobile: null;
-	$btn-padding-x-lg-mobile: null;
-	$btn-padding-y-lg-mobile: null;
-
-	$btn-lg: ();
-	$btn-lg: map-deep-merge(
-		(
-			border-radius: clay-enable-rounded($btn-border-radius-lg),
-			font-size: $btn-font-size-lg,
-			line-height: $btn-line-height-lg,
-			padding-bottom: $btn-padding-y-lg,
-			padding-left: $btn-padding-x-lg,
-			padding-right: $btn-padding-x-lg,
-			padding-top: $btn-padding-y-lg,
-
-			mobile: (
-				font-size: $btn-font-size-lg-mobile,
-				padding-bottom: $btn-padding-y-lg-mobile,
-				padding-left: $btn-padding-x-lg-mobile,
-				padding-right: $btn-padding-x-lg-mobile,
-				padding-top: $btn-padding-y-lg-mobile,
-			),
-
-			inline-item: (
-				font-size: $btn-inline-item-font-size-lg,
-			),
-
-			btn-section: (
-				font-size: $btn-section-font-size-lg,
-			),
-		),
-		$btn-lg
-	);
-
-	// Button Sm
-
-	$btn-border-radius-sm: $border-radius-sm;
-	$btn-font-size-sm: $font-size-sm; // 14px
-	$btn-line-height-sm: 1;
-	$btn-padding-x-sm: 0.75rem; // 12px
-	$btn-padding-y-sm: 0.4375rem; // 7px
-	$btn-inline-item-font-size-sm: null;
-	$btn-section-font-size-sm: 0.5625rem; // 9px
-
-	$btn-font-size-sm-mobile: null;
-	$btn-padding-x-sm-mobile: null;
-	$btn-padding-y-sm-mobile: null;
-
-	$btn-sm: ();
-	$btn-sm: map-deep-merge(
-		(
-			border-radius: clay-enable-rounded($btn-border-radius-sm),
-			font-size: $btn-font-size-sm,
-			line-height: $btn-line-height-sm,
-			padding-bottom: $btn-padding-y-sm,
-			padding-left: $btn-padding-x-sm,
-			padding-right: $btn-padding-x-sm,
-			padding-top: $btn-padding-y-sm,
-
-			mobile: (
-				font-size: $btn-font-size-sm-mobile,
-				padding-bottom: $btn-padding-y-sm-mobile,
-				padding-left: $btn-padding-x-sm-mobile,
-				padding-right: $btn-padding-x-sm-mobile,
-				padding-top: $btn-padding-y-sm-mobile,
-			),
-
-			inline-item: (
-				font-size: $btn-inline-item-font-size-sm,
-			),
-
-			btn-section: (
-				font-size: $btn-section-font-size-sm,
-			),
-
-			lexicon-icon: (
-				font-size: 1rem,
-			),
-		),
-		$btn-sm
-	);
-
-	// Button Sizes
-
-	$btn-sizes: ();
-	$btn-sizes: map-deep-merge(
-		(
-			btn-xs: (
-				border-radius: var(--btn-xs-border-radius, $border-radius),
-				font-size: 0.75rem,
-				line-height: 1.5,
-				padding-bottom: 0.125rem,
-				padding-left: 0.5rem,
-				padding-right: 0.5rem,
-				padding-top: 0.125rem,
-
-				inline-item: (
-					font-size: inherit,
-					margin-top: -0.16em,
-				),
-
-				inline-item-before: (
-					margin-right: 0.25rem,
-				),
-
-				inline-item-after: (
-					margin-left: 0.25rem,
-				),
-
-				btn-section: (
-					font-size: 0.375rem,
-				),
-
-				lexicon-icon: (
-					font-size: inherit,
-				),
-			),
-
-			btn-lg: $btn-lg,
-
-			btn-sm: $btn-sm,
-		),
-		$btn-sizes
-	);
-
-	// .btn-monospaced
-
-	$btn-monospaced-padding-x: 0;
-	$btn-monospaced-padding-y: 0;
-	$btn-monospaced-size: 2.5rem; // 40px
-
-	$btn-monospaced-size-mobile: null;
-
-	$btn-monospaced: ();
-	$btn-monospaced: map-deep-merge(
-		(
-			align-items: center,
-			display: inline-flex,
-			flex-direction: column,
-			height: $btn-monospaced-size,
-			justify-content: center,
+		inline-item: (
+			font-size: $btn-inline-item-font-size,
 			line-height: 1,
-			overflow: hidden,
-			padding-bottom: $btn-monospaced-padding-y,
-			padding-left: $btn-monospaced-padding-x,
-			padding-right: $btn-monospaced-padding-x,
-			padding-top: $btn-monospaced-padding-y,
-			text-align: center,
-			white-space: normal,
-			width: $btn-monospaced-size,
-			word-wrap: break-word,
-
-			mobile: (
-				height: $btn-monospaced-size-mobile,
-				width: $btn-monospaced-size-mobile,
-			),
-
-			inline-item: (
-				margin-top: 0rem,
-			),
+			margin-top: -3px,
 
 			lexicon-icon: (
 				margin-top: 0rem,
 			),
+		),
 
-			c-inner: (
-				align-items: center,
-				display: flex,
-				flex-direction: column,
-				height: 100%,
-				justify-content: center,
-				padding: 0rem,
-				width: 100%,
+		btn-section: (
+			display: block,
+			font-size: $btn-section-font-size,
+			font-weight: $btn-section-font-weight,
+			line-height: $btn-section-line-height,
+		),
+	),
+	$btn
+);
+
+// Button Lg
+
+$btn-border-radius-lg: $border-radius !default;
+$btn-font-size-lg: $font-size-lg !default;
+$btn-line-height-lg: $input-btn-line-height-lg !default;
+$btn-padding-x-lg: 1.5rem !default; // 24px
+$btn-padding-y-lg: 0.59375rem !default; // 9.5px
+$btn-inline-item-font-size-lg: $font-size-lg !default; // 18px
+$btn-section-font-size-lg: 0.8125rem !default; // 13px
+
+$btn-font-size-lg-mobile: null !default;
+$btn-padding-x-lg-mobile: null !default;
+$btn-padding-y-lg-mobile: null !default;
+
+$btn-lg: () !default;
+$btn-lg: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($btn-border-radius-lg),
+		font-size: $btn-font-size-lg,
+		line-height: $btn-line-height-lg,
+		padding-bottom: $btn-padding-y-lg,
+		padding-left: $btn-padding-x-lg,
+		padding-right: $btn-padding-x-lg,
+		padding-top: $btn-padding-y-lg,
+
+		mobile: (
+			font-size: $btn-font-size-lg-mobile,
+			padding-bottom: $btn-padding-y-lg-mobile,
+			padding-left: $btn-padding-x-lg-mobile,
+			padding-right: $btn-padding-x-lg-mobile,
+			padding-top: $btn-padding-y-lg-mobile,
+		),
+
+		inline-item: (
+			font-size: $btn-inline-item-font-size-lg,
+		),
+
+		btn-section: (
+			font-size: $btn-section-font-size-lg,
+		),
+	),
+	$btn-lg
+);
+
+// Button Sm
+
+$btn-border-radius-sm: $border-radius-sm !default;
+$btn-font-size-sm: $font-size-sm !default; // 14px
+$btn-line-height-sm: 1 !default;
+$btn-padding-x-sm: 0.75rem !default; // 12px
+$btn-padding-y-sm: 0.4375rem !default; // 7px
+$btn-inline-item-font-size-sm: null !default;
+$btn-section-font-size-sm: 0.5625rem !default; // 9px
+
+$btn-font-size-sm-mobile: null !default;
+$btn-padding-x-sm-mobile: null !default;
+$btn-padding-y-sm-mobile: null !default;
+
+$btn-sm: () !default;
+$btn-sm: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($btn-border-radius-sm),
+		font-size: $btn-font-size-sm,
+		line-height: $btn-line-height-sm,
+		padding-bottom: $btn-padding-y-sm,
+		padding-left: $btn-padding-x-sm,
+		padding-right: $btn-padding-x-sm,
+		padding-top: $btn-padding-y-sm,
+
+		mobile: (
+			font-size: $btn-font-size-sm-mobile,
+			padding-bottom: $btn-padding-y-sm-mobile,
+			padding-left: $btn-padding-x-sm-mobile,
+			padding-right: $btn-padding-x-sm-mobile,
+			padding-top: $btn-padding-y-sm-mobile,
+		),
+
+		inline-item: (
+			font-size: $btn-inline-item-font-size-sm,
+		),
+
+		btn-section: (
+			font-size: $btn-section-font-size-sm,
+		),
+
+		lexicon-icon: (
+			font-size: 1rem,
+		),
+	),
+	$btn-sm
+);
+
+// Button Sizes
+
+$btn-sizes: () !default;
+$btn-sizes: map-deep-merge(
+	(
+		btn-xs: (
+			border-radius: var(--btn-xs-border-radius, $border-radius),
+			font-size: 0.75rem,
+			line-height: 1.5,
+			padding-bottom: 0.125rem,
+			padding-left: 0.5rem,
+			padding-right: 0.5rem,
+			padding-top: 0.125rem,
+
+			inline-item: (
+				font-size: inherit,
+				margin-top: -0.16em,
+			),
+
+			inline-item-before: (
+				margin-right: 0.25rem,
+			),
+
+			inline-item-after: (
+				margin-left: 0.25rem,
+			),
+
+			btn-section: (
+				font-size: 0.375rem,
+			),
+
+			lexicon-icon: (
+				font-size: inherit,
 			),
 		),
-		$btn-monospaced
-	);
 
-	// .btn-monospaced.btn-lg
+		btn-lg: $btn-lg,
 
-	$btn-monospaced-padding-x-lg: null;
-	$btn-monospaced-padding-y-lg: null;
-	$btn-monospaced-size-lg: 3rem; // 48px
+		btn-sm: $btn-sm,
+	),
+	$btn-sizes
+);
 
-	$btn-monospaced-size-lg-mobile: null;
+// .btn-monospaced
 
-	$btn-monospaced-lg: ();
-	$btn-monospaced-lg: map-deep-merge(
-		(
-			height: $btn-monospaced-size-lg,
-			padding-bottom: $btn-monospaced-padding-y-lg,
-			padding-left: $btn-monospaced-padding-x-lg,
-			padding-right: $btn-monospaced-padding-x-lg,
-			padding-top: $btn-monospaced-padding-y-lg,
-			width: $btn-monospaced-size-lg,
+$btn-monospaced-padding-x: 0 !default;
+$btn-monospaced-padding-y: 0 !default;
+$btn-monospaced-size: 2.5rem !default; // 40px
 
-			mobile: (
-				height: $btn-monospaced-size-lg-mobile,
-				width: $btn-monospaced-size-lg-mobile,
-			),
+$btn-monospaced-size-mobile: null !default;
+
+$btn-monospaced: () !default;
+$btn-monospaced: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		flex-direction: column,
+		height: $btn-monospaced-size,
+		justify-content: center,
+		line-height: 1,
+		overflow: hidden,
+		padding-bottom: $btn-monospaced-padding-y,
+		padding-left: $btn-monospaced-padding-x,
+		padding-right: $btn-monospaced-padding-x,
+		padding-top: $btn-monospaced-padding-y,
+		text-align: center,
+		white-space: normal,
+		width: $btn-monospaced-size,
+		word-wrap: break-word,
+
+		mobile: (
+			height: $btn-monospaced-size-mobile,
+			width: $btn-monospaced-size-mobile,
 		),
-		$btn-monospaced-lg
-	);
 
-	// .btn-monospaced.btn-sm
-
-	$btn-monospaced-padding-x-sm: null;
-	$btn-monospaced-padding-y-sm: null;
-	$btn-monospaced-size-sm: 2rem; // 32px
-
-	$btn-monospaced-size-sm-mobile: null;
-
-	$btn-monospaced-sm: ();
-	$btn-monospaced-sm: map-deep-merge(
-		(
-			height: $btn-monospaced-size-sm,
-			padding-bottom: $btn-monospaced-padding-y-sm,
-			padding-left: $btn-monospaced-padding-x-sm,
-			padding-right: $btn-monospaced-padding-x-sm,
-			padding-top: $btn-monospaced-padding-y-sm,
-			width: $btn-monospaced-size-sm,
-
-			mobile: (
-				height: $btn-monospaced-size-sm-mobile,
-				width: $btn-monospaced-size-sm-mobile,
-			),
+		inline-item: (
+			margin-top: 0rem,
 		),
-		$btn-monospaced-sm
-	);
 
-	// Button Monospaced Sizes
-
-	$btn-monospaced-sizes: ();
-	$btn-monospaced-sizes: map-deep-merge(
-		(
-			btn-monospaced-xs: (
-				height: 1.5rem,
-				width: 1.5rem,
-			),
-
-			btn-monospaced: $btn-monospaced,
-
-			btn-monospaced-lg: $btn-monospaced-lg,
-
-			btn-monospaced-sm: $btn-monospaced-sm,
+		lexicon-icon: (
+			margin-top: 0rem,
 		),
-		$btn-monospaced-sizes
-	);
 
-	// Button Block
-
-	$btn-block-spacing-y: 0.5rem;
-
-	// Button Unstyled
-
-	$btn-unstyled: ();
-	$btn-unstyled: map-deep-merge(
-		(
-			background-color: unquote('hsl(from #{$black} h s l / 0.001)'),
-			border-width: 0px,
-			cursor: $btn-cursor,
-			font-size: inherit,
-			font-weight: inherit,
-			letter-spacing: inherit,
-			line-height: inherit,
-			max-width: 100%,
-			padding: 0rem,
-			text-align: left,
-			text-transform: inherit,
-			vertical-align: baseline,
-
-			c-inner: (
-				margin: 0rem,
-				max-width: none,
-			),
-		),
-		$btn-unstyled
-	);
-
-	// Button Group
-
-	$btn-group-item-margin-right: 1rem;
-
-	$btn-group-spaced: ();
-	$btn-group-spaced: map-merge(
-		(
+		c-inner: (
 			align-items: center,
-			column-gap: $btn-group-item-margin-right,
-			display: inline-flex,
-			flex-wrap: wrap,
-			position: relative,
+			display: flex,
+			flex-direction: column,
+			height: 100%,
+			justify-content: center,
+			padding: 0rem,
+			width: 100%,
 		),
-		$btn-group-spaced
-	);
+	),
+	$btn-monospaced
+);
 
-	$clay-btn-group-divider: ();
-	$clay-btn-group-divider: map-deep-merge(
-		(
-			'&:not(:first-of-type)': (
-				border-left-color: $white,
-			),
+// .btn-monospaced.btn-lg
 
-			'&:not(:last-of-type)': (
-				border-right-color: $white,
-			),
+$btn-monospaced-padding-x-lg: null !default;
+$btn-monospaced-padding-y-lg: null !default;
+$btn-monospaced-size-lg: 3rem !default; // 48px
+
+$btn-monospaced-size-lg-mobile: null !default;
+
+$btn-monospaced-lg: () !default;
+$btn-monospaced-lg: map-deep-merge(
+	(
+		height: $btn-monospaced-size-lg,
+		padding-bottom: $btn-monospaced-padding-y-lg,
+		padding-left: $btn-monospaced-padding-x-lg,
+		padding-right: $btn-monospaced-padding-x-lg,
+		padding-top: $btn-monospaced-padding-y-lg,
+		width: $btn-monospaced-size-lg,
+
+		mobile: (
+			height: $btn-monospaced-size-lg-mobile,
+			width: $btn-monospaced-size-lg-mobile,
 		),
-		$clay-btn-group-divider
-	);
+	),
+	$btn-monospaced-lg
+);
 
-	$btn-group-palette: ();
-	$btn-group-palette: map-deep-merge(
-		(
-			'> .btn-primary': (
-				extend: '%clay-btn-group-divider',
-			),
+// .btn-monospaced.btn-sm
 
-			'> .btn-info': (
-				extend: '%clay-btn-group-divider',
-			),
+$btn-monospaced-padding-x-sm: null !default;
+$btn-monospaced-padding-y-sm: null !default;
+$btn-monospaced-size-sm: 2rem !default; // 32px
 
-			'> .btn-success': (
-				extend: '%clay-btn-group-divider',
-			),
+$btn-monospaced-size-sm-mobile: null !default;
 
-			'> .btn-warning': (
-				extend: '%clay-btn-group-divider',
-			),
+$btn-monospaced-sm: () !default;
+$btn-monospaced-sm: map-deep-merge(
+	(
+		height: $btn-monospaced-size-sm,
+		padding-bottom: $btn-monospaced-padding-y-sm,
+		padding-left: $btn-monospaced-padding-x-sm,
+		padding-right: $btn-monospaced-padding-x-sm,
+		padding-top: $btn-monospaced-padding-y-sm,
+		width: $btn-monospaced-size-sm,
 
-			'> .btn-danger': (
-				extend: '%clay-btn-group-divider',
-			),
-
-			'> .btn-dark': (
-				extend: '%clay-btn-group-divider',
-			),
+		mobile: (
+			height: $btn-monospaced-size-sm-mobile,
+			width: $btn-monospaced-size-sm-mobile,
 		),
-		$btn-group-palette
-	);
+	),
+	$btn-monospaced-sm
+);
 
-	// Button Toolbar
+// Button Monospaced Sizes
 
-	$btn-toolbar-spacer-x: 0.5rem; // 8px
-	$btn-toolbar-spacer-y: 0.125rem; // 2px
-
-	// Button Variants
-
-	$btn-primary: ();
-	$btn-primary: map-deep-merge(
-		(
-			background-color: var(--btn-primary-background-color, $primary),
-			border-color: var(--btn-primary-border-color, transparent),
-			color: var(--btn-primary-color, $white),
-			hover: (
-				background-color:
-					var(--btn-primary-hover-background-color, $primary-d1),
-				border-color:
-					var(--btn-primary-hover-border-color, transparent),
-				color: var(--btn-primary-hover-color, $white),
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					var(--btn-primary-active-background-color, $primary-d2),
-				border-color:
-					var(--btn-primary-active-border-color, transparent),
-				color: var(--btn-primary-active-color, $white),
-			),
-
-			disabled: (
-				background-color:
-					var(--btn-primary-disabled-background-color, $primary),
-				border-color:
-					var(--btn-primary-disabled-border-color, transparent),
-				color: var(--btn-primary-disabled-color, $white),
-			),
+$btn-monospaced-sizes: () !default;
+$btn-monospaced-sizes: map-deep-merge(
+	(
+		btn-monospaced-xs: (
+			height: 1.5rem,
+			width: 1.5rem,
 		),
-		$btn-primary
-	);
 
-	$btn-secondary: ();
-	$btn-secondary: map-deep-merge(
-		(
-			background-color: var(--btn-secondary-background-color, $white),
-			border-color: var(--btn-secondary-border-color, $secondary-l0),
-			color: var(--btn-secondary-color, $secondary),
-			hover: (
-				background-color:
-					var(--btn-secondary-hover-background-color, $gray-100),
-				border-color:
-					var(--btn-secondary-hover-border-color, $secondary-l0),
-				color: var(--btn-secondary-hover-color, $gray-900),
-			),
+		btn-monospaced: $btn-monospaced,
 
-			focus: (),
-			active: (
-				background-color:
-					var(--btn-secondary-active-background-color, $gray-200),
-				border-color:
-					var(--btn-secondary-active-border-color, $secondary-l0),
-				color: var(--btn-secondary-active-color, $gray-900),
-			),
+		btn-monospaced-lg: $btn-monospaced-lg,
 
-			disabled: (
-				background-color:
-					var(--btn-secondary-disabled-background-color, $white),
-				border-color:
-					var(--btn-secondary-disabled-border-color, $secondary-l0),
-				color: var(--btn-secondary-disabled-color, $secondary),
-			),
+		btn-monospaced-sm: $btn-monospaced-sm,
+	),
+	$btn-monospaced-sizes
+);
+
+// Button Block
+
+$btn-block-spacing-y: 0.5rem !default;
+
+// Button Unstyled
+
+$btn-unstyled: () !default;
+$btn-unstyled: map-deep-merge(
+	(
+		background-color: unquote('hsl(from #{$black} h s l / 0.001)'),
+		border-width: 0px,
+		cursor: $btn-cursor,
+		font-size: inherit,
+		font-weight: inherit,
+		letter-spacing: inherit,
+		line-height: inherit,
+		max-width: 100%,
+		padding: 0rem,
+		text-align: left,
+		text-transform: inherit,
+		vertical-align: baseline,
+
+		c-inner: (
+			margin: 0rem,
+			max-width: none,
 		),
-		$btn-secondary
-	);
+	),
+	$btn-unstyled
+);
 
-	$btn-success: ();
-	$btn-success: map-deep-merge(
-		(
-			background-color: var(--btn-success-background-color, $success),
-			border-color: var(--btn-success-border-color, transparent),
-			color: var(--btn-success-color, $white),
-			hover: (
-				background-color:
-					var(--btn-success-hover-background-color, $success-d1),
-				border-color:
-					var(--btn-success-hover-border-color, transparent),
-				color: var(--btn-success-hover-color, $white),
-			),
+// Button Group
 
-			focus: (),
-			active: (
-				background-color:
-					var(--btn-success-active-background-color, $success-d2),
-				border-color:
-					var(--btn-success-active-border-color, transparent),
-				color: var(--btn-success-active-color, $white),
-			),
+$btn-group-item-margin-right: 1rem !default;
 
-			disabled: (
-				background-color:
-					var(--btn-success-disabled-background-color, $success),
-				border-color:
-					var(--btn-success-disabled-border-color, transparent),
-				color: var(--btn-success-disabled-color, $white),
-			),
+$btn-group-spaced: () !default;
+$btn-group-spaced: map-merge(
+	(
+		align-items: center,
+		column-gap: $btn-group-item-margin-right,
+		display: inline-flex,
+		flex-wrap: wrap,
+		position: relative,
+	),
+	$btn-group-spaced
+);
+
+$clay-btn-group-divider: () !default;
+$clay-btn-group-divider: map-deep-merge(
+	(
+		'&:not(:first-of-type)': (
+			border-left-color: $white,
 		),
-		$btn-success
-	);
 
-	$btn-info: ();
-	$btn-info: map-deep-merge(
-		(
-			background-color: var(--btn-info-background-color, $info),
-			border-color: var(--btn-info-border-color, transparent),
-			color: var(--btn-info-color, $white),
-			hover: (
-				background-color:
-					var(--btn-info-hover-background-color, $info-d1),
-				border-color: var(--btn-info-hover-border-color, transparent),
-				color: var(--btn-info-hover-color, $white),
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					var(--btn-info-active-background-color, $info-d2),
-				border-color: var(--btn-info-active-border-color, transparent),
-				color: var(--btn-info-active-color, $white),
-			),
-
-			disabled: (
-				background-color:
-					var(--btn-info-disabled-background-color, $info),
-				border-color:
-					var(--btn-info-disabled-border-color, transparent),
-				color: var(--btn-info-disabled-color, $white),
-			),
+		'&:not(:last-of-type)': (
+			border-right-color: $white,
 		),
-		$btn-info
-	);
+	),
+	$clay-btn-group-divider
+);
 
-	$btn-warning: ();
-	$btn-warning: map-deep-merge(
-		(
-			background-color: var(--btn-warning-background-color, $warning),
-			border-color: var(--btn-warning-border-color, transparent),
-			color: var(--btn-warning-color, $white),
-			hover: (
-				background-color:
-					var(--btn-warning-hover-background-color, $warning-d1),
-				border-color:
-					var(--btn-warning-hover-border-color, transparent),
-				color: var(--btn-warning-hover-color, $white),
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					var(--btn-warning-active-background-color, $warning-d2),
-				border-color:
-					var(--btn-warning-active-border-color, transparent),
-				color: var(--btn-warning-active-color, $white),
-			),
-
-			disabled: (
-				background-color:
-					var(--btn-warning-disabled-background-color, $warning),
-				border-color:
-					var(--btn-warning-disabled-border-color, transparent),
-				color: var(--btn-warning-disabled-color, $white),
-			),
+$btn-group-palette: () !default;
+$btn-group-palette: map-deep-merge(
+	(
+		'> .btn-primary': (
+			extend: '%clay-btn-group-divider',
 		),
-		$btn-warning
-	);
 
-	$btn-danger: ();
-	$btn-danger: map-deep-merge(
-		(
-			background-color: var(--btn-danger-background-color, $danger),
-			border-color: var(--btn-danger-border-color, transparent),
-			color: var(--btn-danger-color, $white),
-			hover: (
-				background-color:
-					var(--btn-danger-hover-background-color, $danger-d1),
-				border-color: var(--btn-danger-hover-border-color, transparent),
-				color: var(--btn-danger-hover-color, $white),
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					var(--btn-danger-active-background-color, $danger-d2),
-				border-color:
-					var(--btn-danger-active-border-color, transparent),
-				color: var(--btn-danger-active-color, $white),
-			),
-
-			disabled: (
-				background-color:
-					var(--btn-danger-disabled-background-color, $danger),
-				border-color:
-					var(--btn-danger-disabled-border-color, transparent),
-				color: var(--btn-danger-disabled-color, $white),
-			),
+		'> .btn-info': (
+			extend: '%clay-btn-group-divider',
 		),
-		$btn-danger
-	);
 
-	$btn-light: ();
-	$btn-light: map-deep-merge(
-		(
+		'> .btn-success': (
+			extend: '%clay-btn-group-divider',
+		),
+
+		'> .btn-warning': (
+			extend: '%clay-btn-group-divider',
+		),
+
+		'> .btn-danger': (
+			extend: '%clay-btn-group-divider',
+		),
+
+		'> .btn-dark': (
+			extend: '%clay-btn-group-divider',
+		),
+	),
+	$btn-group-palette
+);
+
+// Button Toolbar
+
+$btn-toolbar-spacer-x: 0.5rem !default; // 8px
+$btn-toolbar-spacer-y: 0.125rem !default; // 2px
+
+// Button Variants
+
+$btn-primary: () !default;
+$btn-primary: map-deep-merge(
+	(
+		background-color: var(--btn-primary-background-color, $primary),
+		border-color: var(--btn-primary-border-color, transparent),
+		color: var(--btn-primary-color, $white),
+		hover: (
+			background-color:
+				var(--btn-primary-hover-background-color, $primary-d1),
+			border-color: var(--btn-primary-hover-border-color, transparent),
+			color: var(--btn-primary-hover-color, $white),
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				var(--btn-primary-active-background-color, $primary-d2),
+			border-color: var(--btn-primary-active-border-color, transparent),
+			color: var(--btn-primary-active-color, $white),
+		),
+
+		disabled: (
+			background-color:
+				var(--btn-primary-disabled-background-color, $primary),
+			border-color: var(--btn-primary-disabled-border-color, transparent),
+			color: var(--btn-primary-disabled-color, $white),
+		),
+	),
+	$btn-primary
+);
+
+$btn-secondary: () !default;
+$btn-secondary: map-deep-merge(
+	(
+		background-color: var(--btn-secondary-background-color, $white),
+		border-color: var(--btn-secondary-border-color, $secondary-l0),
+		color: var(--btn-secondary-color, $secondary),
+		hover: (
+			background-color:
+				var(--btn-secondary-hover-background-color, $gray-100),
+			border-color: var(--btn-secondary-hover-border-color, $secondary-l0),
+			color: var(--btn-secondary-hover-color, $gray-900),
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				var(--btn-secondary-active-background-color, $gray-200),
+			border-color:
+				var(--btn-secondary-active-border-color, $secondary-l0),
+			color: var(--btn-secondary-active-color, $gray-900),
+		),
+
+		disabled: (
+			background-color:
+				var(--btn-secondary-disabled-background-color, $white),
+			border-color:
+				var(--btn-secondary-disabled-border-color, $secondary-l0),
+			color: var(--btn-secondary-disabled-color, $secondary),
+		),
+	),
+	$btn-secondary
+);
+
+$btn-success: () !default;
+$btn-success: map-deep-merge(
+	(
+		background-color: var(--btn-success-background-color, $success),
+		border-color: var(--btn-success-border-color, transparent),
+		color: var(--btn-success-color, $white),
+		hover: (
+			background-color:
+				var(--btn-success-hover-background-color, $success-d1),
+			border-color: var(--btn-success-hover-border-color, transparent),
+			color: var(--btn-success-hover-color, $white),
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				var(--btn-success-active-background-color, $success-d2),
+			border-color: var(--btn-success-active-border-color, transparent),
+			color: var(--btn-success-active-color, $white),
+		),
+
+		disabled: (
+			background-color:
+				var(--btn-success-disabled-background-color, $success),
+			border-color: var(--btn-success-disabled-border-color, transparent),
+			color: var(--btn-success-disabled-color, $white),
+		),
+	),
+	$btn-success
+);
+
+$btn-info: () !default;
+$btn-info: map-deep-merge(
+	(
+		background-color: var(--btn-info-background-color, $info),
+		border-color: var(--btn-info-border-color, transparent),
+		color: var(--btn-info-color, $white),
+		hover: (
+			background-color: var(--btn-info-hover-background-color, $info-d1),
+			border-color: var(--btn-info-hover-border-color, transparent),
+			color: var(--btn-info-hover-color, $white),
+		),
+
+		focus: (),
+		active: (
+			background-color: var(--btn-info-active-background-color, $info-d2),
+			border-color: var(--btn-info-active-border-color, transparent),
+			color: var(--btn-info-active-color, $white),
+		),
+
+		disabled: (
+			background-color: var(--btn-info-disabled-background-color, $info),
+			border-color: var(--btn-info-disabled-border-color, transparent),
+			color: var(--btn-info-disabled-color, $white),
+		),
+	),
+	$btn-info
+);
+
+$btn-warning: () !default;
+$btn-warning: map-deep-merge(
+	(
+		background-color: var(--btn-warning-background-color, $warning),
+		border-color: var(--btn-warning-border-color, transparent),
+		color: var(--btn-warning-color, $white),
+		hover: (
+			background-color:
+				var(--btn-warning-hover-background-color, $warning-d1),
+			border-color: var(--btn-warning-hover-border-color, transparent),
+			color: var(--btn-warning-hover-color, $white),
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				var(--btn-warning-active-background-color, $warning-d2),
+			border-color: var(--btn-warning-active-border-color, transparent),
+			color: var(--btn-warning-active-color, $white),
+		),
+
+		disabled: (
+			background-color:
+				var(--btn-warning-disabled-background-color, $warning),
+			border-color: var(--btn-warning-disabled-border-color, transparent),
+			color: var(--btn-warning-disabled-color, $white),
+		),
+	),
+	$btn-warning
+);
+
+$btn-danger: () !default;
+$btn-danger: map-deep-merge(
+	(
+		background-color: var(--btn-danger-background-color, $danger),
+		border-color: var(--btn-danger-border-color, transparent),
+		color: var(--btn-danger-color, $white),
+		hover: (
+			background-color:
+				var(--btn-danger-hover-background-color, $danger-d1),
+			border-color: var(--btn-danger-hover-border-color, transparent),
+			color: var(--btn-danger-hover-color, $white),
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				var(--btn-danger-active-background-color, $danger-d2),
+			border-color: var(--btn-danger-active-border-color, transparent),
+			color: var(--btn-danger-active-color, $white),
+		),
+
+		disabled: (
+			background-color:
+				var(--btn-danger-disabled-background-color, $danger),
+			border-color: var(--btn-danger-disabled-border-color, transparent),
+			color: var(--btn-danger-disabled-color, $white),
+		),
+	),
+	$btn-danger
+);
+
+$btn-light: () !default;
+$btn-light: map-deep-merge(
+	(
+		background-color: $light,
+		border-color: $light,
+		color: $gray-900,
+
+		hover: (
+			background-color: $light-d1,
+			border-color: transparent,
+			color: $gray-900,
+		),
+
+		focus: (),
+		active: (
+			background-color: $light-d1,
+			border-color: transparent,
+			color: $gray-900,
+		),
+
+		disabled: (
 			background-color: $light,
 			border-color: $light,
 			color: $gray-900,
-
-			hover: (
-				background-color: $light-d1,
-				border-color: transparent,
-				color: $gray-900,
-			),
-
-			focus: (),
-			active: (
-				background-color: $light-d1,
-				border-color: transparent,
-				color: $gray-900,
-			),
-
-			disabled: (
-				background-color: $light,
-				border-color: $light,
-				color: $gray-900,
-			),
 		),
-		$btn-light
-	);
+	),
+	$btn-light
+);
 
-	$btn-dark: ();
-	$btn-dark: map-deep-merge(
-		(
+$btn-dark: () !default;
+$btn-dark: map-deep-merge(
+	(
+		background-color: $dark,
+		border-color: $dark,
+		color: $white,
+
+		hover: (
+			background-color: $dark-d1,
+			border-color: transparent,
+			color: $white,
+		),
+
+		focus: (),
+		active: (
+			background-color: $dark-d2,
+			border-color: transparent,
+			color: $white,
+		),
+
+		disabled: (
 			background-color: $dark,
 			border-color: $dark,
 			color: $white,
-
-			hover: (
-				background-color: $dark-d1,
-				border-color: transparent,
-				color: $white,
-			),
-
-			focus: (),
-			active: (
-				background-color: $dark-d2,
-				border-color: transparent,
-				color: $white,
-			),
-
-			disabled: (
-				background-color: $dark,
-				border-color: $dark,
-				color: $white,
-			),
 		),
-		$btn-dark
-	);
+	),
+	$btn-dark
+);
 
-	$btn-link-disabled-color: $link-color;
+$btn-link-disabled-color: $link-color !default;
 
-	$btn-link: ();
-	$btn-link: map-deep-merge(
-		(
-			border-radius: 1px,
-			box-shadow: clay-enable-shadows(none),
-			color: $link-color,
-			font-weight: $font-weight-normal,
+$btn-link: () !default;
+$btn-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		box-shadow: clay-enable-shadows(none),
+		color: $link-color,
+		font-weight: $font-weight-normal,
+		text-decoration: $link-decoration,
+
+		hover: (
+			color: $link-hover-color,
+			text-decoration: $link-hover-decoration,
+		),
+
+		focus: (
+			box-shadow: $btn-focus-box-shadow,
 			text-decoration: $link-decoration,
-
-			hover: (
-				color: $link-hover-color,
-				text-decoration: $link-hover-decoration,
-			),
-
-			focus: (
-				box-shadow: $btn-focus-box-shadow,
-				text-decoration: $link-decoration,
-			),
-
-			disabled: (
-				box-shadow: none,
-				color: $btn-link-disabled-color,
-				text-decoration: none,
-			),
 		),
-		$btn-link
-	);
 
-	$btn-palette: ();
-	$btn-palette: map-deep-merge(
-		(
-			primary: $btn-primary,
-
-			secondary: $btn-secondary,
-
-			success: $btn-success,
-
-			info: $btn-info,
-
-			warning: $btn-warning,
-
-			danger: $btn-danger,
-
-			light: $btn-light,
-
-			dark: $btn-dark,
-
-			link: $btn-link,
-
-			'.btn-translucent': (
-				extend: '%clay-btn-xs',
-
-				border-radius: $rounded-pill,
-			),
-
-			'.btn-translucent.btn-primary': (
-				background-color:
-					unquote('hsl(from #{$primary-d1} h s l / 0.04)'),
-				border-color: transparent,
-				color: $primary-d1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$primary-d1} h s l / 0.06)'),
-					color: $primary-d1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$primary-d1} h s l / 0.06)'),
-					color: $primary-d1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$primary-d1} h s l / 0.08)'),
-					color: $primary-d1,
-				),
-			),
-
-			'.btn-translucent.btn-secondary': (
-				background-color: unquote('hsl(from #{$dark-l2} h s l / 0.04)'),
-				border-color: transparent,
-				color: $secondary,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$dark-l2} h s l / 0.06)'),
-					color: $secondary,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$dark-l2} h s l / 0.06)'),
-					color: $secondary,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$dark-l2} h s l / 0.08)'),
-					color: $secondary,
-				),
-			),
-
-			'.btn-translucent.btn-info, .btn-beta': (
-				background-color: unquote('hsl(from #{$info-d1} h s l / 0.04)'),
-				border-color: transparent,
-				color: $info-d1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$info-d1} h s l / 0.06)'),
-					color: $info-d1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$info-d1} h s l / 0.06)'),
-					color: $info-d1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$info-d1} h s l / 0.08)'),
-					color: $info-d1,
-				),
-			),
-
-			'.btn-translucent.btn-success': (
-				background-color:
-					unquote('hsl(from #{$success-d1} h s l / 0.04)'),
-				border-color: transparent,
-				color: $success-d1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$success-d1} h s l / 0.06)'),
-					color: $success-d1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$success-d1} h s l / 0.06)'),
-					color: $success-d1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$success-d1} h s l / 0.08)'),
-					color: $success-d1,
-				),
-			),
-
-			'.btn-translucent.btn-warning': (
-				background-color:
-					unquote('hsl(from #{$warning-d1} h s l / 0.04)'),
-				border-color: transparent,
-				color: $warning-d1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$warning-d1} h s l / 0.06)'),
-					color: $warning-d1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$warning-d1} h s l / 0.06)'),
-					color: $warning-d1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$warning-d1} h s l / 0.08)'),
-					color: $warning-d1,
-				),
-			),
-
-			'.btn-translucent.btn-danger': (
-				background-color:
-					unquote('hsl(from #{$danger-d1} h s l / 0.04)'),
-				border-color: transparent,
-				color: $danger-d1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$danger-d1} h s l / 0.06)'),
-					color: $danger-d1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$danger-d1} h s l / 0.06)'),
-					color: $danger-d1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$danger-d1} h s l / 0.08)'),
-					color: $danger-d1,
-				),
-			),
-
-			'%clay-dark-btn-translucent-primary': (
-				background-color:
-					unquote('hsl(from #{$primary-l2} h s l / 0.04)'),
-				border-color: transparent,
-				color: $primary-l1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$primary-l2} h s l / 0.06)'),
-					color: $primary-l1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$primary-l2} h s l / 0.06)'),
-					color: $primary-l1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$primary-l2} h s l / 0.08)'),
-					color: $primary-l1,
-				),
-			),
-
-			'.clay-dark .btn-translucent.btn-primary': (
-				extend: '%clay-dark-btn-translucent-primary',
-			),
-
-			'.clay-dark.btn-translucent.btn-primary': (
-				extend: '%clay-dark-btn-translucent-primary',
-			),
-
-			'%clay-dark-btn-translucent-info': (
-				background-color: unquote('hsl(from #{$info-l2} h s l / 0.04)'),
-				border-color: transparent,
-				color: $info-l1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$info-l2} h s l / 0.06)'),
-					color: $info-l1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$info-l2} h s l / 0.06)'),
-					color: $info-l1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$info-l2} h s l / 0.08)'),
-					color: $info-l1,
-				),
-			),
-
-			'.clay-dark .btn-translucent.btn-info, .btn-beta-dark': (
-				extend: '%clay-dark-btn-translucent-info',
-			),
-
-			'.clay-dark.btn-translucent.btn-info': (
-				extend: '%clay-dark-btn-translucent-info',
-			),
-
-			'%clay-dark-btn-translucent-success': (
-				background-color:
-					unquote('hsl(from #{$success-l2} h s l / 0.04)'),
-				border-color: transparent,
-				color: $success-l1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$success-l2} h s l / 0.06)'),
-					color: $success-l1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$success-l2} h s l / 0.06)'),
-					color: $success-l1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$success-l2} h s l / 0.08)'),
-					color: $success-l1,
-				),
-			),
-
-			'.clay-dark .btn-translucent.btn-success': (
-				extend: '%clay-dark-btn-translucent-success',
-			),
-
-			'.clay-dark.btn-translucent.btn-success': (
-				extend: '%clay-dark-btn-translucent-success',
-			),
-
-			'%clay-dark-btn-translucent-warning': (
-				background-color:
-					unquote('hsl(from #{$warning-l2} h s l / 0.04)'),
-				border-color: transparent,
-				color: $warning-l1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$warning-l2} h s l / 0.06)'),
-					color: $warning-l1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$warning-l2} h s l / 0.06)'),
-					color: $warning-l1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$warning-l2} h s l / 0.08)'),
-					color: $warning-l1,
-				),
-			),
-
-			'.clay-dark .btn-translucent.btn-warning': (
-				extend: '%clay-dark-btn-translucent-warning',
-			),
-
-			'.clay-dark.btn-translucent.btn-warning': (
-				extend: '%clay-dark-btn-translucent-warning',
-			),
-
-			'%clay-dark-btn-translucent-danger': (
-				background-color:
-					unquote('hsl(from #{$danger-l2} h s l / 0.04)'),
-				border-color: transparent,
-				color: $danger-l1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$danger-l2} h s l / 0.06)'),
-					color: $danger-l1,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$danger-l2} h s l / 0.06)'),
-					color: $danger-l1,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$danger-l2} h s l / 0.08)'),
-					color: $danger-l1,
-				),
-			),
-
-			'.clay-dark .btn-translucent.btn-danger': (
-				extend: '%clay-dark-btn-translucent-danger',
-			),
-
-			'.clay-dark.btn-translucent.btn-danger': (
-				extend: '%clay-dark-btn-translucent-danger',
-			),
+		disabled: (
+			box-shadow: none,
+			color: $btn-link-disabled-color,
+			text-decoration: none,
 		),
-		$btn-palette
-	);
+	),
+	$btn-link
+);
 
-	// Button Outline Variants
+$btn-palette: () !default;
+$btn-palette: map-deep-merge(
+	(
+		primary: $btn-primary,
 
-	$btn-outline-primary: ();
-	$btn-outline-primary: map-deep-merge(
-		(
-			background-color:
-				var(--btn-outline-primary-background-color, transparent),
-			border-color: var(--btn-outline-primary-border-color, $primary),
-			color: var(--btn-outline-primary-color, $primary),
-			hover: (
-				background-color:
-					var(
-						--btn-outline-primary-hover-background-color,
-						$primary-l3
-					),
-				border-color:
-					var(--btn-outline-primary-hover-border-color, $primary),
-				color: var(--btn-outline-primary-hover-color, $primary),
-			),
+		secondary: $btn-secondary,
 
-			focus: (),
-			active: (
-				background-color:
-					var(
-						--btn-outline-primary-active-background-color,
-						unquote('hsl(from #{$primary} h s l / 0.12)')
-					),
-				border-color:
-					var(--btn-outline-primary-active-border-color, $primary),
-				color: var(--btn-outline-primary-active-color, $primary),
-			),
+		success: $btn-success,
 
-			disabled: (
-				background-color:
-					var(
-						--btn-outline-primary-disabled-background-color,
-						transparent
-					),
-				border-color:
-					var(--btn-outline-primary-disabled-border-color, $primary),
-				color: var(--btn-outline-primary-disabled-color, $primary),
-			),
+		info: $btn-info,
+
+		warning: $btn-warning,
+
+		danger: $btn-danger,
+
+		light: $btn-light,
+
+		dark: $btn-dark,
+
+		link: $btn-link,
+
+		'.btn-translucent': (
+			extend: '%clay-btn-xs',
+
+			border-radius: $rounded-pill,
 		),
-		$btn-outline-primary
-	);
 
-	$btn-outline-secondary: ();
-	$btn-outline-secondary: map-deep-merge(
-		(
-			background-color:
-				var(--btn-outline-secondary-background-color, transparent),
-			border-color:
-				var(--btn-outline-secondary-border-color, $secondary-l2),
-			color: var(--btn-outline-secondary-color, $secondary),
-			hover: (
-				background-color:
-					var(
-						--btn-outline-secondary-hover-background-color,
-						unquote('hsl(from #{$gray-900} h s l / 0.03)')
-					),
-				border-color:
-					var(
-						--btn-outline-secondary-hover-border-color,
-						transparent
-					),
-				color: var(--btn-outline-secondary-hover-color, $gray-900),
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					var(
-						--btn-outline-secondary-active-background-color,
-						unquote('hsl(from #{$gray-900} h s l / 0.06)')
-					),
-				border-color:
-					var(
-						--btn-outline-secondary-active-border-color,
-						transparent
-					),
-				color: var(--btn-outline-secondary-active-color, $gray-900),
-			),
-
-			disabled: (
-				background-color:
-					var(
-						--btn-outline-secondary-disabled-background-color,
-						transparent
-					),
-				border-color:
-					var(
-						--btn-outline-secondary-disabled-border-color,
-						$secondary-l2
-					),
-				color: var(--btn-outline-secondary-disabled-color, $secondary),
-			),
-		),
-		$btn-outline-secondary
-	);
-
-	$btn-outline-success: ();
-	$btn-outline-success: map-deep-merge(
-		(
-			border-color: $success,
-			color: $success,
-
-			hover: (
-				background-color:
-					map-deep-get($btn-success, hover, background-color),
-				border-color: $success,
-				color: $white,
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					map-deep-get($btn-success, active, background-color),
-				box-shadow: map-deep-get($btn-success, active, box-shadow),
-			),
-
-			disabled: (
-				background-color: transparent,
-				color: $success,
-			),
-		),
-		$btn-outline-success
-	);
-
-	$btn-outline-info: ();
-	$btn-outline-info: map-deep-merge(
-		(
-			border-color: $info,
-			color: $info,
-
-			hover: (
-				background-color:
-					map-deep-get($btn-info, hover, background-color),
-				border-color: $info,
-				color: $white,
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					map-deep-get($btn-info, active, background-color),
-				box-shadow: map-deep-get($btn-info, active, box-shadow),
-				border-color: $info,
-				color: $white,
-			),
-
-			disabled: (
-				background-color: transparent,
-				color: $info,
-			),
-		),
-		$btn-outline-info
-	);
-
-	$btn-outline-warning: ();
-	$btn-outline-warning: map-deep-merge(
-		(
-			border-color: $warning,
-			color: $warning,
-
-			hover: (
-				background-color:
-					map-deep-get($btn-warning, hover, background-color),
-				border-color: $warning,
-				color: $white,
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					map-deep-get($btn-warning, active, background-color),
-				border-color: $warning,
-				color: $white,
-			),
-
-			disabled: (
-				background-color: transparent,
-				color: $warning,
-			),
-		),
-		$btn-outline-warning
-	);
-
-	$btn-outline-danger: ();
-	$btn-outline-danger: map-deep-merge(
-		(
-			border-color: $danger,
-			color: $danger,
-
-			hover: (
-				background-color:
-					map-deep-get($btn-danger, hover, background-color),
-				border-color: $danger,
-				color: $white,
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					map-deep-get($btn-danger, active, background-color),
-				border-color: $danger,
-				color: $white,
-			),
-
-			disabled: (
-				background-color: transparent,
-				color: $danger,
-			),
-		),
-		$btn-outline-danger
-	);
-
-	$btn-outline-light: ();
-	$btn-outline-light: map-deep-merge(
-		(
-			border-color: $light,
-			color: $light,
-
-			hover: (
-				background-color:
-					map-deep-get($btn-light, hover, background-color),
-				border-color: $light,
-				color: $dark,
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					map-deep-get($btn-light, active, background-color),
-				border-color: $light,
-				color: $dark,
-			),
-
-			disabled: (
-				background-color: transparent,
-				color: $light,
-			),
-		),
-		$btn-outline-light
-	);
-
-	$btn-outline-dark: ();
-	$btn-outline-dark: map-deep-merge(
-		(
-			border-color: $dark,
-			color: $dark,
-
-			hover: (
-				background-color:
-					map-deep-get($btn-dark, hover, background-color),
-				border-color: $dark,
-				color: $white,
-			),
-
-			focus: (),
-			active: (
-				background-color:
-					map-deep-get($btn-dark, active, background-color),
-				border-color: $dark,
-				color: $white,
-			),
-
-			disabled: (
-				background-color: transparent,
-				color: $dark,
-			),
-		),
-		$btn-outline-dark
-	);
-
-	$btn-outline-borderless: ();
-	$btn-outline-borderless: map-deep-merge(
-		(
+		'.btn-translucent.btn-primary': (
+			background-color: unquote('hsl(from #{$primary-d1} h s l / 0.04)'),
 			border-color: transparent,
+			color: $primary-d1,
 
 			hover: (
-				border-color: transparent,
+				background-color:
+					unquote('hsl(from #{$primary-d1} h s l / 0.06)'),
+				color: $primary-d1,
 			),
 
 			focus: (
-				border-color: transparent,
+				background-color:
+					unquote('hsl(from #{$primary-d1} h s l / 0.06)'),
+				color: $primary-d1,
 			),
 
 			active: (
-				border-color: transparent,
+				background-color:
+					unquote('hsl(from #{$primary-d1} h s l / 0.08)'),
+				color: $primary-d1,
+			),
+		),
+
+		'.btn-translucent.btn-secondary': (
+			background-color: unquote('hsl(from #{$dark-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $secondary,
+
+			hover: (
+				background-color: unquote('hsl(from #{$dark-l2} h s l / 0.06)'),
+				color: $secondary,
+			),
+
+			focus: (
+				background-color: unquote('hsl(from #{$dark-l2} h s l / 0.06)'),
+				color: $secondary,
+			),
+
+			active: (
+				background-color: unquote('hsl(from #{$dark-l2} h s l / 0.08)'),
+				color: $secondary,
+			),
+		),
+
+		'.btn-translucent.btn-info, .btn-beta': (
+			background-color: unquote('hsl(from #{$info-d1} h s l / 0.04)'),
+			border-color: transparent,
+			color: $info-d1,
+
+			hover: (
+				background-color: unquote('hsl(from #{$info-d1} h s l / 0.06)'),
+				color: $info-d1,
+			),
+
+			focus: (
+				background-color: unquote('hsl(from #{$info-d1} h s l / 0.06)'),
+				color: $info-d1,
+			),
+
+			active: (
+				background-color: unquote('hsl(from #{$info-d1} h s l / 0.08)'),
+				color: $info-d1,
+			),
+		),
+
+		'.btn-translucent.btn-success': (
+			background-color: unquote('hsl(from #{$success-d1} h s l / 0.04)'),
+			border-color: transparent,
+			color: $success-d1,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$success-d1} h s l / 0.06)'),
+				color: $success-d1,
+			),
+
+			focus: (
+				background-color:
+					unquote('hsl(from #{$success-d1} h s l / 0.06)'),
+				color: $success-d1,
+			),
+
+			active: (
+				background-color:
+					unquote('hsl(from #{$success-d1} h s l / 0.08)'),
+				color: $success-d1,
+			),
+		),
+
+		'.btn-translucent.btn-warning': (
+			background-color: unquote('hsl(from #{$warning-d1} h s l / 0.04)'),
+			border-color: transparent,
+			color: $warning-d1,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$warning-d1} h s l / 0.06)'),
+				color: $warning-d1,
+			),
+
+			focus: (
+				background-color:
+					unquote('hsl(from #{$warning-d1} h s l / 0.06)'),
+				color: $warning-d1,
+			),
+
+			active: (
+				background-color:
+					unquote('hsl(from #{$warning-d1} h s l / 0.08)'),
+				color: $warning-d1,
+			),
+		),
+
+		'.btn-translucent.btn-danger': (
+			background-color: unquote('hsl(from #{$danger-d1} h s l / 0.04)'),
+			border-color: transparent,
+			color: $danger-d1,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$danger-d1} h s l / 0.06)'),
+				color: $danger-d1,
+			),
+
+			focus: (
+				background-color:
+					unquote('hsl(from #{$danger-d1} h s l / 0.06)'),
+				color: $danger-d1,
+			),
+
+			active: (
+				background-color:
+					unquote('hsl(from #{$danger-d1} h s l / 0.08)'),
+				color: $danger-d1,
+			),
+		),
+
+		'%clay-dark-btn-translucent-primary': (
+			background-color: unquote('hsl(from #{$primary-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $primary-l1,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$primary-l2} h s l / 0.06)'),
+				color: $primary-l1,
+			),
+
+			focus: (
+				background-color:
+					unquote('hsl(from #{$primary-l2} h s l / 0.06)'),
+				color: $primary-l1,
+			),
+
+			active: (
+				background-color:
+					unquote('hsl(from #{$primary-l2} h s l / 0.08)'),
+				color: $primary-l1,
+			),
+		),
+
+		'.clay-dark .btn-translucent.btn-primary': (
+			extend: '%clay-dark-btn-translucent-primary',
+		),
+
+		'.clay-dark.btn-translucent.btn-primary': (
+			extend: '%clay-dark-btn-translucent-primary',
+		),
+
+		'%clay-dark-btn-translucent-info': (
+			background-color: unquote('hsl(from #{$info-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $info-l1,
+
+			hover: (
+				background-color: unquote('hsl(from #{$info-l2} h s l / 0.06)'),
+				color: $info-l1,
+			),
+
+			focus: (
+				background-color: unquote('hsl(from #{$info-l2} h s l / 0.06)'),
+				color: $info-l1,
+			),
+
+			active: (
+				background-color: unquote('hsl(from #{$info-l2} h s l / 0.08)'),
+				color: $info-l1,
+			),
+		),
+
+		'.clay-dark .btn-translucent.btn-info, .btn-beta-dark': (
+			extend: '%clay-dark-btn-translucent-info',
+		),
+
+		'.clay-dark.btn-translucent.btn-info': (
+			extend: '%clay-dark-btn-translucent-info',
+		),
+
+		'%clay-dark-btn-translucent-success': (
+			background-color: unquote('hsl(from #{$success-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $success-l1,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$success-l2} h s l / 0.06)'),
+				color: $success-l1,
+			),
+
+			focus: (
+				background-color:
+					unquote('hsl(from #{$success-l2} h s l / 0.06)'),
+				color: $success-l1,
+			),
+
+			active: (
+				background-color:
+					unquote('hsl(from #{$success-l2} h s l / 0.08)'),
+				color: $success-l1,
+			),
+		),
+
+		'.clay-dark .btn-translucent.btn-success': (
+			extend: '%clay-dark-btn-translucent-success',
+		),
+
+		'.clay-dark.btn-translucent.btn-success': (
+			extend: '%clay-dark-btn-translucent-success',
+		),
+
+		'%clay-dark-btn-translucent-warning': (
+			background-color: unquote('hsl(from #{$warning-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $warning-l1,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$warning-l2} h s l / 0.06)'),
+				color: $warning-l1,
+			),
+
+			focus: (
+				background-color:
+					unquote('hsl(from #{$warning-l2} h s l / 0.06)'),
+				color: $warning-l1,
+			),
+
+			active: (
+				background-color:
+					unquote('hsl(from #{$warning-l2} h s l / 0.08)'),
+				color: $warning-l1,
+			),
+		),
+
+		'.clay-dark .btn-translucent.btn-warning': (
+			extend: '%clay-dark-btn-translucent-warning',
+		),
+
+		'.clay-dark.btn-translucent.btn-warning': (
+			extend: '%clay-dark-btn-translucent-warning',
+		),
+
+		'%clay-dark-btn-translucent-danger': (
+			background-color: unquote('hsl(from #{$danger-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $danger-l1,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$danger-l2} h s l / 0.06)'),
+				color: $danger-l1,
+			),
+
+			focus: (
+				background-color:
+					unquote('hsl(from #{$danger-l2} h s l / 0.06)'),
+				color: $danger-l1,
+			),
+
+			active: (
+				background-color:
+					unquote('hsl(from #{$danger-l2} h s l / 0.08)'),
+				color: $danger-l1,
+			),
+		),
+
+		'.clay-dark .btn-translucent.btn-danger': (
+			extend: '%clay-dark-btn-translucent-danger',
+		),
+
+		'.clay-dark.btn-translucent.btn-danger': (
+			extend: '%clay-dark-btn-translucent-danger',
+		),
+	),
+	$btn-palette
+);
+
+// Button Outline Variants
+
+$btn-outline-primary: () !default;
+$btn-outline-primary: map-deep-merge(
+	(
+		background-color:
+			var(--btn-outline-primary-background-color, transparent),
+		border-color: var(--btn-outline-primary-border-color, $primary),
+		color: var(--btn-outline-primary-color, $primary),
+		hover: (
+			background-color:
+				var(--btn-outline-primary-hover-background-color, $primary-l3),
+			border-color:
+				var(--btn-outline-primary-hover-border-color, $primary),
+			color: var(--btn-outline-primary-hover-color, $primary),
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				var(
+					--btn-outline-primary-active-background-color,
+					unquote('hsl(from #{$primary} h s l / 0.12)')
+				),
+			border-color:
+				var(--btn-outline-primary-active-border-color, $primary),
+			color: var(--btn-outline-primary-active-color, $primary),
+		),
+
+		disabled: (
+			background-color:
+				var(
+					--btn-outline-primary-disabled-background-color,
+					transparent
+				),
+			border-color:
+				var(--btn-outline-primary-disabled-border-color, $primary),
+			color: var(--btn-outline-primary-disabled-color, $primary),
+		),
+	),
+	$btn-outline-primary
+);
+
+$btn-outline-secondary: () !default;
+$btn-outline-secondary: map-deep-merge(
+	(
+		background-color:
+			var(--btn-outline-secondary-background-color, transparent),
+		border-color: var(--btn-outline-secondary-border-color, $secondary-l2),
+		color: var(--btn-outline-secondary-color, $secondary),
+		hover: (
+			background-color:
+				var(
+					--btn-outline-secondary-hover-background-color,
+					unquote('hsl(from #{$gray-900} h s l / 0.03)')
+				),
+			border-color:
+				var(--btn-outline-secondary-hover-border-color, transparent),
+			color: var(--btn-outline-secondary-hover-color, $gray-900),
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				var(
+					--btn-outline-secondary-active-background-color,
+					unquote('hsl(from #{$gray-900} h s l / 0.06)')
+				),
+			border-color:
+				var(--btn-outline-secondary-active-border-color, transparent),
+			color: var(--btn-outline-secondary-active-color, $gray-900),
+		),
+
+		disabled: (
+			background-color:
+				var(
+					--btn-outline-secondary-disabled-background-color,
+					transparent
+				),
+			border-color:
+				var(
+					--btn-outline-secondary-disabled-border-color,
+					$secondary-l2
+				),
+			color: var(--btn-outline-secondary-disabled-color, $secondary),
+		),
+	),
+	$btn-outline-secondary
+);
+
+$btn-outline-success: () !default;
+$btn-outline-success: map-deep-merge(
+	(
+		border-color: $success,
+		color: $success,
+
+		hover: (
+			background-color:
+				map-deep-get($btn-success, hover, background-color),
+			border-color: $success,
+			color: $white,
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				map-deep-get($btn-success, active, background-color),
+			box-shadow: map-deep-get($btn-success, active, box-shadow),
+		),
+
+		disabled: (
+			background-color: transparent,
+			color: $success,
+		),
+	),
+	$btn-outline-success
+);
+
+$btn-outline-info: () !default;
+$btn-outline-info: map-deep-merge(
+	(
+		border-color: $info,
+		color: $info,
+
+		hover: (
+			background-color: map-deep-get($btn-info, hover, background-color),
+			border-color: $info,
+			color: $white,
+		),
+
+		focus: (),
+		active: (
+			background-color: map-deep-get($btn-info, active, background-color),
+			box-shadow: map-deep-get($btn-info, active, box-shadow),
+			border-color: $info,
+			color: $white,
+		),
+
+		disabled: (
+			background-color: transparent,
+			color: $info,
+		),
+	),
+	$btn-outline-info
+);
+
+$btn-outline-warning: () !default;
+$btn-outline-warning: map-deep-merge(
+	(
+		border-color: $warning,
+		color: $warning,
+
+		hover: (
+			background-color:
+				map-deep-get($btn-warning, hover, background-color),
+			border-color: $warning,
+			color: $white,
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				map-deep-get($btn-warning, active, background-color),
+			border-color: $warning,
+			color: $white,
+		),
+
+		disabled: (
+			background-color: transparent,
+			color: $warning,
+		),
+	),
+	$btn-outline-warning
+);
+
+$btn-outline-danger: () !default;
+$btn-outline-danger: map-deep-merge(
+	(
+		border-color: $danger,
+		color: $danger,
+
+		hover: (
+			background-color: map-deep-get($btn-danger, hover, background-color),
+			border-color: $danger,
+			color: $white,
+		),
+
+		focus: (),
+		active: (
+			background-color:
+				map-deep-get($btn-danger, active, background-color),
+			border-color: $danger,
+			color: $white,
+		),
+
+		disabled: (
+			background-color: transparent,
+			color: $danger,
+		),
+	),
+	$btn-outline-danger
+);
+
+$btn-outline-light: () !default;
+$btn-outline-light: map-deep-merge(
+	(
+		border-color: $light,
+		color: $light,
+
+		hover: (
+			background-color: map-deep-get($btn-light, hover, background-color),
+			border-color: $light,
+			color: $dark,
+		),
+
+		focus: (),
+		active: (
+			background-color: map-deep-get($btn-light, active, background-color),
+			border-color: $light,
+			color: $dark,
+		),
+
+		disabled: (
+			background-color: transparent,
+			color: $light,
+		),
+	),
+	$btn-outline-light
+);
+
+$btn-outline-dark: () !default;
+$btn-outline-dark: map-deep-merge(
+	(
+		border-color: $dark,
+		color: $dark,
+
+		hover: (
+			background-color: map-deep-get($btn-dark, hover, background-color),
+			border-color: $dark,
+			color: $white,
+		),
+
+		focus: (),
+		active: (
+			background-color: map-deep-get($btn-dark, active, background-color),
+			border-color: $dark,
+			color: $white,
+		),
+
+		disabled: (
+			background-color: transparent,
+			color: $dark,
+		),
+	),
+	$btn-outline-dark
+);
+
+$btn-outline-borderless: () !default;
+$btn-outline-borderless: map-deep-merge(
+	(
+		border-color: transparent,
+
+		hover: (
+			border-color: transparent,
+		),
+
+		focus: (
+			border-color: transparent,
+		),
+
+		active: (
+			border-color: transparent,
+		),
+
+		disabled: (
+			border-color: transparent,
+		),
+	),
+	$btn-outline-borderless
+);
+
+$btn-outline-palette: () !default;
+$btn-outline-palette: map-deep-merge(
+	(
+		primary: $btn-outline-primary,
+
+		secondary: $btn-outline-secondary,
+
+		success: $btn-outline-success,
+
+		info: $btn-outline-info,
+
+		warning: $btn-outline-warning,
+
+		danger: $btn-outline-danger,
+
+		light: $btn-outline-light,
+
+		dark: $btn-outline-dark,
+
+		'%clay-dark-btn-outline-primary': (
+			background-color: transparent,
+			color: $primary-l1,
+
+			hover: (
+				background-color:
+					unquote('hsl(from #{$primary-l1} h s l / 0.06)'),
+				color: $primary-l2,
+			),
+
+			focus: (
+				background-color:
+					unquote('hsl(from #{$primary-l1} h s l / 0.06)'),
+				color: $primary-l2,
+			),
+
+			active: (
+				background-color:
+					unquote('hsl(from #{$primary-l1} h s l / 0.12)'),
+				color: $primary-l2,
 			),
 
 			disabled: (
-				border-color: transparent,
-			),
-		),
-		$btn-outline-borderless
-	);
-
-	$btn-outline-palette: ();
-	$btn-outline-palette: map-deep-merge(
-		(
-			primary: $btn-outline-primary,
-
-			secondary: $btn-outline-secondary,
-
-			success: $btn-outline-success,
-
-			info: $btn-outline-info,
-
-			warning: $btn-outline-warning,
-
-			danger: $btn-outline-danger,
-
-			light: $btn-outline-light,
-
-			dark: $btn-outline-dark,
-
-			'%clay-dark-btn-outline-primary': (
 				background-color: transparent,
 				color: $primary-l1,
+			),
+		),
 
-				hover: (
-					background-color:
-						unquote('hsl(from #{$primary-l1} h s l / 0.06)'),
-					color: $primary-l2,
-				),
+		'.clay-dark .btn-outline-primary, .clay-dark.btn-outline-primary': (
+			extend: '%clay-dark-btn-outline-primary',
+		),
 
-				focus: (
-					background-color:
-						unquote('hsl(from #{$primary-l1} h s l / 0.06)'),
-					color: $primary-l2,
-				),
+		'%clay-dark-btn-outline-secondary': (
+			background-color: transparent,
+			color: $secondary-l1,
 
-				active: (
-					background-color:
-						unquote('hsl(from #{$primary-l1} h s l / 0.12)'),
-					color: $primary-l2,
-				),
-
-				disabled: (
-					background-color: transparent,
-					color: $primary-l1,
-				),
+			hover: (
+				background-color: unquote('hsl(from #{$white} h s l / 0.06)'),
+				color: $white,
 			),
 
-			'.clay-dark .btn-outline-primary, .clay-dark.btn-outline-primary': (
-				extend: '%clay-dark-btn-outline-primary',
+			focus: (
+				background-color: unquote('hsl(from #{$white} h s l / 0.06)'),
+				color: $white,
 			),
 
-			'%clay-dark-btn-outline-secondary': (
+			active: (
+				background-color: unquote('hsl(from #{$white} h s l / 0.12)'),
+				color: $white,
+			),
+
+			disabled: (
 				background-color: transparent,
 				color: $secondary-l1,
-
-				hover: (
-					background-color:
-						unquote('hsl(from #{$white} h s l / 0.06)'),
-					color: $white,
-				),
-
-				focus: (
-					background-color:
-						unquote('hsl(from #{$white} h s l / 0.06)'),
-					color: $white,
-				),
-
-				active: (
-					background-color:
-						unquote('hsl(from #{$white} h s l / 0.12)'),
-					color: $white,
-				),
-
-				disabled: (
-					background-color: transparent,
-					color: $secondary-l1,
-				),
-			),
-
-			'.clay-dark .btn-outline-secondary, .clay-dark.btn-outline-secondary':
-			(
-				extend: '%clay-dark-btn-outline-secondary',
 			),
 		),
-		$btn-outline-palette
-	);
-}
+
+		'.clay-dark .btn-outline-secondary, .clay-dark.btn-outline-secondary': (
+			extend: '%clay-dark-btn-outline-secondary',
+		),
+	),
+	$btn-outline-palette
+);

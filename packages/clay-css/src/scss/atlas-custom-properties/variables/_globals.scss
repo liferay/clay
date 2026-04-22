@@ -1,846 +1,839 @@
-@if ($enable-atlas-custom-properties) {
-	// Global Variables
-
-	$clay-unset: clay-unset;
-
-	// An alias for `$clay-unset`
-
-	$c-unset: $clay-unset;
-
-	$clay-unset-placeholder: clay-unset-placeholder;
-
-	$enable-bs4-deprecated: false;
-	$enable-c-inner: true;
-	$enable-focus-visible: true;
-
-	$focus-visible-selector: if(
-		$enable-focus-visible,
-		'&:focus-visible',
-		'&:focus'
-	);
-
-	$c-prefers-focus-selector: if(
-		$enable-focus-visible,
-		'.c-prefers-focus &:focus',
-		null
-	);
-
-	$enable-lexicon-flat-colors: true;
-	$enable-scaling-components: true;
-
-	$scaling-breakpoint-down: sm;
-
-	$enable-clay-color-functions-process-fallback: false;
-
-	$enable-caret: false;
-	$enable-deprecation-messages: true;
-	$enable-gradients: false;
-	$enable-grid-classes: true;
-	$enable-pagination-sizes: false;
-	$enable-pointer-cursor-for-buttons: true;
-	$enable-prefers-reduced-motion-media-query: true;
-	$enable-print-styles: true;
-	$enable-responsive-font-sizes: false;
-	$enable-rounded: true;
-	$enable-shadows: true;
-	$enable-transitions: true;
-	$enable-validation-icons: true;
-
-	// Deprecated, no longer affects any compiled CSS
-
-	$enable-hover-media-query: false;
-
-	// Theme Base Colors
-
-	$black: var(--black);
-	$white: var(--white);
-
-	$gray-100: var(--gray-100);
-	$gray-200: var(--gray-200);
-	$gray-300: var(--gray-300);
-	$gray-400: var(--gray-400);
-	$gray-500: var(--gray-500);
-	$gray-600: var(--gray-600);
-	$gray-700: var(--gray-700);
-	$gray-800: var(--gray-800);
-	$gray-900: var(--gray-900);
-
-	$blue: var(--blue);
-
-	$blue-d1: var(--blue-d1);
-	$blue-d2: var(--blue-d2);
-	$blue-d3: var(--blue-d3);
-	$blue-d4: var(--blue-d4);
-	$blue-l1: var(--blue-l1);
-	$blue-l2: var(--blue-l2);
-	$blue-l3: var(--blue-l3);
-	$blue-l4: var(--blue-l4);
-	$blue-l5: var(--blue-l5);
-
-	$indigo: var(--indigo);
-
-	$indigo-d1: var(--indigo-d1);
-	$indigo-d2: var(--indigo-d2);
-	$indigo-d3: var(--indigo-d3);
-	$indigo-d4: var(--indigo-d4);
-	$indigo-l1: var(--indigo-l1);
-	$indigo-l2: var(--indigo-l2);
-	$indigo-l3: var(--indigo-l3);
-	$indigo-l4: var(--indigo-l4);
-	$indigo-l5: var(--indigo-l5);
-
-	$purple: var(--purple);
-
-	$purple-d1: var(--purple-d1);
-	$purple-d2: var(--purple-d2);
-	$purple-d3: var(--purple-d3);
-	$purple-d4: var(--purple-d4);
-	$purple-l1: var(--purple-l1);
-	$purple-l2: var(--purple-l2);
-	$purple-l3: var(--purple-l3);
-	$purple-l4: var(--purple-l4);
-	$purple-l5: var(--purple-l5);
-
-	$pink: var(--pink);
-
-	$pink-d1: var(--pink-d1);
-	$pink-d2: var(--pink-d2);
-	$pink-d3: var(--pink-d3);
-	$pink-d4: var(--pink-d4);
-	$pink-l1: var(--pink-l1);
-	$pink-l2: var(--pink-l2);
-	$pink-l3: var(--pink-l3);
-	$pink-l4: var(--pink-l4);
-	$pink-l5: var(--pink-l5);
-
-	$red: var(--red);
-
-	$red-d1: var(--red-d1);
-	$red-d2: var(--red-d2);
-	$red-d3: var(--red-d3);
-	$red-d4: var(--red-d4);
-	$red-l1: var(--red-l1);
-	$red-l2: var(--red-l2);
-	$red-l3: var(--red-l3);
-	$red-l4: var(--red-l4);
-	$red-l5: var(--red-l5);
-
-	$orange: var(--orange);
-
-	$orange-d1: var(--orange-d1);
-	$orange-d2: var(--orange-d2);
-	$orange-d3: var(--orange-d3);
-	$orange-d4: var(--orange-d4);
-	$orange-l1: var(--orange-l1);
-	$orange-l2: var(--orange-l2);
-	$orange-l3: var(--orange-l3);
-	$orange-l4: var(--orange-l4);
-	$orange-l5: var(--orange-l5);
-
-	$yellow: var(--yellow);
-
-	$yellow-d1: var(--yellow-d1);
-	$yellow-d2: var(--yellow-d2);
-	$yellow-d3: var(--yellow-d3);
-	$yellow-d4: var(--yellow-d4);
-	$yellow-l1: var(--yellow-l1);
-	$yellow-l2: var(--yellow-l2);
-	$yellow-l3: var(--yellow-l3);
-	$yellow-l4: var(--yellow-l4);
-	$yellow-l5: var(--yellow-l5);
-
-	$green: var(--green);
-
-	$green-d1: var(--green-d1);
-	$green-d2: var(--green-d2);
-	$green-d3: var(--green-d3);
-	$green-d4: var(--green-d4);
-	$green-l1: var(--green-l1);
-	$green-l2: var(--green-l2);
-	$green-l3: var(--green-l3);
-	$green-l4: var(--green-l4);
-	$green-l5: var(--green-l5);
-
-	$teal: var(--teal);
-
-	$teal-d1: var(--teal-d1);
-	$teal-d2: var(--teal-d2);
-	$teal-d3: var(--teal-d3);
-	$teal-d4: var(--teal-d4);
-	$teal-l1: var(--teal-l1);
-	$teal-l2: var(--teal-l2);
-	$teal-l3: var(--teal-l3);
-	$teal-l4: var(--teal-l4);
-	$teal-l5: var(--teal-l5);
-
-	$cyan: var(--cyan);
-
-	$cyan-d1: var(--cyan-d1);
-	$cyan-d2: var(--cyan-d2);
-	$cyan-d3: var(--cyan-d3);
-	$cyan-d4: var(--cyan-d4);
-	$cyan-l1: var(--cyan-l1);
-	$cyan-l2: var(--cyan-l2);
-	$cyan-l3: var(--cyan-l3);
-	$cyan-l4: var(--cyan-l4);
-	$cyan-l5: var(--cyan-l5);
-
-	$primary: var(--primary);
-
-	$primary-d1: var(--primary-d1);
-	$primary-d2: var(--primary-d2);
-	$primary-l0: var(--primary-l0);
-	$primary-l1: var(--primary-l1);
-	$primary-l2: var(--primary-l2);
-	$primary-l3: var(--primary-l3);
-
-	$secondary: var(--secondary);
-
-	$secondary-d1: var(--secondary-d1);
-	$secondary-d2: var(--secondary-d2);
-	$secondary-l0: var(--secondary-l0);
-	$secondary-l1: var(--secondary-l1);
-	$secondary-l2: var(--secondary-l2);
-	$secondary-l3: var(--secondary-l3);
-
-	$info: var(--info);
-
-	$info-d1: var(--info-d1);
-	$info-d2: var(--info-d2);
-	$info-l1: var(--info-l1);
-	$info-l2: var(--info-l2);
-
-	$success: var(--success);
-
-	$success-d1: var(--success-d1);
-	$success-d2: var(--success-d2);
-	$success-l1: var(--success-l1);
-	$success-l2: var(--success-l2);
-
-	$warning: var(--warning);
-
-	$warning-d1: var(--warning-d1);
-	$warning-d2: var(--warning-d2);
-	$warning-l1: var(--warning-l1);
-	$warning-l2: var(--warning-l2);
-
-	$danger: var(--danger);
-
-	$danger-d1: var(--danger-d1);
-	$danger-d2: var(--danger-d2);
-	$danger-l1: var(--danger-l1);
-	$danger-l2: var(--danger-l2);
-
-	$light: var(--light);
-
-	$light-d1: var(--light-d1);
-	$light-d2: var(--light-d2);
-	$light-l1: var(--light-l1);
-	$light-l2: var(--light-l2);
-
-	$dark: var(--dark);
-
-	$dark-d1: var(--dark-d1);
-	$dark-d2: var(--dark-d2);
-	$dark-l1: var(--dark-l1);
-	$dark-l2: var(--dark-l2);
-
-	$theme-colors: ();
-	$theme-colors: map-merge(
-		(
-			'danger': $danger,
-			'dark': $dark,
-			'info': $info,
-			'light': $light,
-			'primary': $primary,
-			'secondary': $secondary,
-			'success': $success,
-			'warning': $warning,
-		),
-		$theme-colors
-	);
-
-	// Set a specific jump point for requesting color jumps
-
-	$theme-color-interval: 8%;
-
-	// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-
-	$yiq-contrasted-threshold: 150;
-
-	$yiq-text-dark: $gray-900;
-	$yiq-text-light: $white;
-
-	// Spacing
-
-	$spacer: var(--spacer);
-	$spacers: ();
-	$spacers: map-deep-merge(
-		(
-			0: 0,
-			1: calc(#{$spacer} * 0.25),
-			2: calc(#{$spacer} * 0.5),
-			3: calc(#{$spacer} * 1),
-			4: calc(#{$spacer} * 1.5),
-			5: calc(#{$spacer} * 3),
-			6: calc(#{$spacer} * 4.5),
-			7: calc(#{$spacer} * 6),
-			8: calc(#{$spacer} * 7.5),
-			9: calc(#{$spacer} * 9),
-			10: calc(#{$spacer} * 10),
-		),
-		$spacers
-	);
-
-	// This variable affects the `.h-*` and `.w-*` classes.
-
-	$sizes: ();
-	$sizes: map-merge(
-		(
-			100: 100%,
-			25: 25%,
-			50: 50%,
-			75: 75%,
-			auto: auto,
-		),
-		$sizes
-	);
-
-	// Reusable Values
-
-	$line-height-lg: var(--line-height-lg);
-	$line-height-sm: var(--line-height-sm);
-
-	$line-height-base: var(--line-height-base);
-
-	$border-color: var(--border-color);
-	$border-width: var(--border-width);
-
-	$border-radius: var(--border-radius);
-
-	$border-radius-lg: var(--border-radius-lg);
-	$border-radius-sm: var(--border-radius-sm);
-
-	$rounded-0-border-radius: var(--rounded-0-border-radius);
-	$rounded-border-radius: var(--rounded-border-radius);
-	$rounded-circle-border-radius: var(--rounded-circle-border-radius);
-	$rounded-pill: var(--rounded-pill);
-
-	$box-shadow: var(--box-shadow);
-
-	$box-shadow-lg: var(--box-shadow-lg);
-	$box-shadow-sm: var(--box-shadow-sm);
-
-	$transition-base: var(--transition-base);
-	$transition-collapse: var(--transition-collapse);
-	$transition-fade: var(--transition-fade);
-
-	$embed-responsive-aspect-ratios: ();
-	$embed-responsive-aspect-ratios: join(
-		((21 9), (16 9), (4 3), (1 1)),
-		$embed-responsive-aspect-ratios
-	);
-
-	$component-transition: var(--component-transition);
-
-	$component-active-bg: var(--component-active-background-color);
-	$component-active-color: var(--component-active-color, $white);
-
-	$component-focus-box-shadow: var(--component-focus-box-shadow);
-	$component-focus-inset-box-shadow: var(--component-focus-inset-box-shadow);
-
-	$component-disabled-opacity: var(--component-disabled-opacity);
-
-	// Grid
-
-	$grid-breakpoints: (
-		xs: 0,
-		sm: 576px,
-		md: 768px,
-		lg: 992px,
-		xl: 1280px,
-	);
-
-	// Grid columns
-
-	$grid-columns: 12;
-	$grid-gutter-width: 24px;
-	$grid-row-columns: 6;
-
-	$clay-container: ();
-	$clay-container: map-merge(
-		(
-			margin-left: auto,
-			margin-right: auto,
-			padding-left: calc(#{$grid-gutter-width} * 0.5),
-			padding-right: calc(#{$grid-gutter-width} * 0.5),
-			width: 100%,
-		),
-		$clay-container
-	);
-
-	$clay-container-fluid: ();
-	$clay-container-fluid: map-merge(
-		(
-			margin-left: auto,
-			margin-right: auto,
-			padding-left: calc(#{$grid-gutter-width} * 0.5),
-			padding-right: calc(#{$grid-gutter-width} * 0.5),
-			width: 100%,
-		),
-		$clay-container-fluid
-	);
-
-	$container-max-widths: (
-		sm: 540px,
-
-		md: 720px,
-
-		lg: 960px,
-
-		xl: 1140px,
-
-		xxl: 1392px,
-
-		xxxl: 1872px,
-	);
-
-	@include _assert-ascending($container-max-widths, '$container-max-widths');
-
-	$container-form-lg: ();
-	$container-form-lg: map-deep-merge(
-		(
-			breakpoint-up: lg,
-			padding-bottom-mobile: 1rem,
-			padding-bottom: 3rem,
-			padding-top-mobile: 1rem,
-			padding-top: 3rem,
-		),
-		$container-form-lg
-	);
-
-	$container-view: ();
-	$container-view: map-deep-merge(
-		(
-			padding-bottom: 1.5rem,
-			padding-top: 1.5rem,
-		),
-		$container-view
-	);
-
-	$moz-osx-font-smoothing: grayscale;
-	$webkit-font-smoothing: antialiased;
-
-	$font-import-url: null;
-
-	$font-family-monospace: var(--font-family-monospace);
-	$font-family-sans-serif: var(--font-family-sans-serif);
-	$font-family-serif: var(--font-family-serif);
-
-	$font-family-base: var(--font-family-base);
-
-	$font-size-base: var(--font-size-base);
-
-	$font-size-lg: var(--font-size-lg);
-	$font-size-sm: var(--font-size-sm);
-
-	$font-size-base-mobile: $font-size-base;
-	$font-size-lg-mobile: $font-size-lg;
-
-	$font-weight-bold: var(--font-weight-bold);
-	$font-weight-bolder: var(--font-weight-bolder);
-	$font-weight-light: var(--font-weight-light);
-	$font-weight-lighter: var(--font-weight-lighter);
-	$font-weight-normal: var(--font-weight-normal);
-	$font-weight-semi-bold: var(--font-weight-semi-bold);
-
-	$font-weight-base: $font-weight-normal;
-
-	$h1-font-size: var(--h1-font-size);
-
-	$h1-font-size-mobile: null;
-
-	$h1: ();
-	$h1: map-deep-merge(
-		(
-			font-size: $h1-font-size,
-
-			media-breakpoint-down: (
-				sm: (
-					font-size: $h1-font-size-mobile,
-				),
+// Global Variables
+
+$clay-unset: clay-unset !default;
+
+// An alias for `$clay-unset`
+
+$c-unset: $clay-unset !default;
+
+$clay-unset-placeholder: clay-unset-placeholder !default;
+
+$enable-bs4-deprecated: false !default;
+$enable-c-inner: true !default;
+$enable-focus-visible: true !default;
+
+$focus-visible-selector: if(
+	$enable-focus-visible,
+	'&:focus-visible',
+	'&:focus'
+) !default;
+
+$c-prefers-focus-selector: if(
+	$enable-focus-visible,
+	'.c-prefers-focus &:focus',
+	null
+) !default;
+
+$enable-lexicon-flat-colors: true !default;
+$enable-scaling-components: true !default;
+
+$scaling-breakpoint-down: sm !default;
+
+$enable-clay-color-functions-process-fallback: false !default;
+
+$enable-caret: false !default;
+$enable-deprecation-messages: true !default;
+$enable-gradients: false !default;
+$enable-grid-classes: true !default;
+$enable-pagination-sizes: false !default;
+$enable-pointer-cursor-for-buttons: true !default;
+$enable-prefers-reduced-motion-media-query: true !default;
+$enable-print-styles: true !default;
+$enable-responsive-font-sizes: false !default;
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-transitions: true !default;
+$enable-validation-icons: true !default;
+
+// Deprecated, no longer affects any compiled CSS
+
+$enable-hover-media-query: false !default;
+
+// Theme Base Colors
+
+$black: var(--black) !default;
+$white: var(--white) !default;
+
+$gray-100: var(--gray-100) !default;
+$gray-200: var(--gray-200) !default;
+$gray-300: var(--gray-300) !default;
+$gray-400: var(--gray-400) !default;
+$gray-500: var(--gray-500) !default;
+$gray-600: var(--gray-600) !default;
+$gray-700: var(--gray-700) !default;
+$gray-800: var(--gray-800) !default;
+$gray-900: var(--gray-900) !default;
+
+$blue: var(--blue) !default;
+
+$blue-d1: var(--blue-d1) !default;
+$blue-d2: var(--blue-d2) !default;
+$blue-d3: var(--blue-d3) !default;
+$blue-d4: var(--blue-d4) !default;
+$blue-l1: var(--blue-l1) !default;
+$blue-l2: var(--blue-l2) !default;
+$blue-l3: var(--blue-l3) !default;
+$blue-l4: var(--blue-l4) !default;
+$blue-l5: var(--blue-l5) !default;
+
+$indigo: var(--indigo) !default;
+
+$indigo-d1: var(--indigo-d1) !default;
+$indigo-d2: var(--indigo-d2) !default;
+$indigo-d3: var(--indigo-d3) !default;
+$indigo-d4: var(--indigo-d4) !default;
+$indigo-l1: var(--indigo-l1) !default;
+$indigo-l2: var(--indigo-l2) !default;
+$indigo-l3: var(--indigo-l3) !default;
+$indigo-l4: var(--indigo-l4) !default;
+$indigo-l5: var(--indigo-l5) !default;
+
+$purple: var(--purple) !default;
+
+$purple-d1: var(--purple-d1) !default;
+$purple-d2: var(--purple-d2) !default;
+$purple-d3: var(--purple-d3) !default;
+$purple-d4: var(--purple-d4) !default;
+$purple-l1: var(--purple-l1) !default;
+$purple-l2: var(--purple-l2) !default;
+$purple-l3: var(--purple-l3) !default;
+$purple-l4: var(--purple-l4) !default;
+$purple-l5: var(--purple-l5) !default;
+
+$pink: var(--pink) !default;
+
+$pink-d1: var(--pink-d1) !default;
+$pink-d2: var(--pink-d2) !default;
+$pink-d3: var(--pink-d3) !default;
+$pink-d4: var(--pink-d4) !default;
+$pink-l1: var(--pink-l1) !default;
+$pink-l2: var(--pink-l2) !default;
+$pink-l3: var(--pink-l3) !default;
+$pink-l4: var(--pink-l4) !default;
+$pink-l5: var(--pink-l5) !default;
+
+$red: var(--red) !default;
+
+$red-d1: var(--red-d1) !default;
+$red-d2: var(--red-d2) !default;
+$red-d3: var(--red-d3) !default;
+$red-d4: var(--red-d4) !default;
+$red-l1: var(--red-l1) !default;
+$red-l2: var(--red-l2) !default;
+$red-l3: var(--red-l3) !default;
+$red-l4: var(--red-l4) !default;
+$red-l5: var(--red-l5) !default;
+
+$orange: var(--orange) !default;
+
+$orange-d1: var(--orange-d1) !default;
+$orange-d2: var(--orange-d2) !default;
+$orange-d3: var(--orange-d3) !default;
+$orange-d4: var(--orange-d4) !default;
+$orange-l1: var(--orange-l1) !default;
+$orange-l2: var(--orange-l2) !default;
+$orange-l3: var(--orange-l3) !default;
+$orange-l4: var(--orange-l4) !default;
+$orange-l5: var(--orange-l5) !default;
+
+$yellow: var(--yellow) !default;
+
+$yellow-d1: var(--yellow-d1) !default;
+$yellow-d2: var(--yellow-d2) !default;
+$yellow-d3: var(--yellow-d3) !default;
+$yellow-d4: var(--yellow-d4) !default;
+$yellow-l1: var(--yellow-l1) !default;
+$yellow-l2: var(--yellow-l2) !default;
+$yellow-l3: var(--yellow-l3) !default;
+$yellow-l4: var(--yellow-l4) !default;
+$yellow-l5: var(--yellow-l5) !default;
+
+$green: var(--green) !default;
+
+$green-d1: var(--green-d1) !default;
+$green-d2: var(--green-d2) !default;
+$green-d3: var(--green-d3) !default;
+$green-d4: var(--green-d4) !default;
+$green-l1: var(--green-l1) !default;
+$green-l2: var(--green-l2) !default;
+$green-l3: var(--green-l3) !default;
+$green-l4: var(--green-l4) !default;
+$green-l5: var(--green-l5) !default;
+
+$teal: var(--teal) !default;
+
+$teal-d1: var(--teal-d1) !default;
+$teal-d2: var(--teal-d2) !default;
+$teal-d3: var(--teal-d3) !default;
+$teal-d4: var(--teal-d4) !default;
+$teal-l1: var(--teal-l1) !default;
+$teal-l2: var(--teal-l2) !default;
+$teal-l3: var(--teal-l3) !default;
+$teal-l4: var(--teal-l4) !default;
+$teal-l5: var(--teal-l5) !default;
+
+$cyan: var(--cyan) !default;
+
+$cyan-d1: var(--cyan-d1) !default;
+$cyan-d2: var(--cyan-d2) !default;
+$cyan-d3: var(--cyan-d3) !default;
+$cyan-d4: var(--cyan-d4) !default;
+$cyan-l1: var(--cyan-l1) !default;
+$cyan-l2: var(--cyan-l2) !default;
+$cyan-l3: var(--cyan-l3) !default;
+$cyan-l4: var(--cyan-l4) !default;
+$cyan-l5: var(--cyan-l5) !default;
+
+$primary: var(--primary) !default;
+
+$primary-d1: var(--primary-d1) !default;
+$primary-d2: var(--primary-d2) !default;
+$primary-l0: var(--primary-l0) !default;
+$primary-l1: var(--primary-l1) !default;
+$primary-l2: var(--primary-l2) !default;
+$primary-l3: var(--primary-l3) !default;
+
+$secondary: var(--secondary) !default;
+
+$secondary-d1: var(--secondary-d1) !default;
+$secondary-d2: var(--secondary-d2) !default;
+$secondary-l0: var(--secondary-l0) !default;
+$secondary-l1: var(--secondary-l1) !default;
+$secondary-l2: var(--secondary-l2) !default;
+$secondary-l3: var(--secondary-l3) !default;
+
+$info: var(--info) !default;
+
+$info-d1: var(--info-d1) !default;
+$info-d2: var(--info-d2) !default;
+$info-l1: var(--info-l1) !default;
+$info-l2: var(--info-l2) !default;
+
+$success: var(--success) !default;
+
+$success-d1: var(--success-d1) !default;
+$success-d2: var(--success-d2) !default;
+$success-l1: var(--success-l1) !default;
+$success-l2: var(--success-l2) !default;
+
+$warning: var(--warning) !default;
+
+$warning-d1: var(--warning-d1) !default;
+$warning-d2: var(--warning-d2) !default;
+$warning-l1: var(--warning-l1) !default;
+$warning-l2: var(--warning-l2) !default;
+
+$danger: var(--danger) !default;
+
+$danger-d1: var(--danger-d1) !default;
+$danger-d2: var(--danger-d2) !default;
+$danger-l1: var(--danger-l1) !default;
+$danger-l2: var(--danger-l2) !default;
+
+$light: var(--light) !default;
+
+$light-d1: var(--light-d1) !default;
+$light-d2: var(--light-d2) !default;
+$light-l1: var(--light-l1) !default;
+$light-l2: var(--light-l2) !default;
+
+$dark: var(--dark) !default;
+
+$dark-d1: var(--dark-d1) !default;
+$dark-d2: var(--dark-d2) !default;
+$dark-l1: var(--dark-l1) !default;
+$dark-l2: var(--dark-l2) !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+	(
+		'danger': $danger,
+		'dark': $dark,
+		'info': $info,
+		'light': $light,
+		'primary': $primary,
+		'secondary': $secondary,
+		'success': $success,
+		'warning': $warning,
+	),
+	$theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+
+$theme-color-interval: 8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+
+$yiq-contrasted-threshold: 150 !default;
+
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
+
+// Spacing
+
+$spacer: var(--spacer) !default;
+$spacers: () !default;
+$spacers: map-deep-merge(
+	(
+		0: 0,
+		1: calc(#{$spacer} * 0.25),
+		2: calc(#{$spacer} * 0.5),
+		3: calc(#{$spacer} * 1),
+		4: calc(#{$spacer} * 1.5),
+		5: calc(#{$spacer} * 3),
+		6: calc(#{$spacer} * 4.5),
+		7: calc(#{$spacer} * 6),
+		8: calc(#{$spacer} * 7.5),
+		9: calc(#{$spacer} * 9),
+		10: calc(#{$spacer} * 10),
+	),
+	$spacers
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+
+$sizes: () !default;
+$sizes: map-merge(
+	(
+		100: 100%,
+		25: 25%,
+		50: 50%,
+		75: 75%,
+		auto: auto,
+	),
+	$sizes
+);
+
+// Reusable Values
+
+$line-height-lg: var(--line-height-lg) !default;
+$line-height-sm: var(--line-height-sm) !default;
+
+$line-height-base: var(--line-height-base) !default;
+
+$border-color: var(--border-color) !default;
+$border-width: var(--border-width) !default;
+
+$border-radius: var(--border-radius) !default;
+
+$border-radius-lg: var(--border-radius-lg) !default;
+$border-radius-sm: var(--border-radius-sm) !default;
+
+$rounded-0-border-radius: var(--rounded-0-border-radius) !default;
+$rounded-border-radius: var(--rounded-border-radius) !default;
+$rounded-circle-border-radius: var(--rounded-circle-border-radius) !default;
+$rounded-pill: var(--rounded-pill) !default;
+
+$box-shadow: var(--box-shadow) !default;
+
+$box-shadow-lg: var(--box-shadow-lg) !default;
+$box-shadow-sm: var(--box-shadow-sm) !default;
+
+$transition-base: var(--transition-base) !default;
+$transition-collapse: var(--transition-collapse) !default;
+$transition-fade: var(--transition-fade) !default;
+
+$embed-responsive-aspect-ratios: () !default;
+$embed-responsive-aspect-ratios: join(
+	((21 9), (16 9), (4 3), (1 1)),
+	$embed-responsive-aspect-ratios
+);
+
+$component-transition: var(--component-transition) !default;
+
+$component-active-bg: var(--component-active-background-color) !default;
+$component-active-color: var(--component-active-color, $white) !default;
+
+$component-focus-box-shadow: var(--component-focus-box-shadow) !default;
+$component-focus-inset-box-shadow: var(
+	--component-focus-inset-box-shadow
+) !default;
+
+$component-disabled-opacity: var(--component-disabled-opacity) !default;
+
+// Grid
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1280px,
+) !default;
+
+// Grid columns
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 24px !default;
+$grid-row-columns: 6 !default;
+
+$clay-container: () !default;
+$clay-container: map-merge(
+	(
+		margin-left: auto,
+		margin-right: auto,
+		padding-left: calc(#{$grid-gutter-width} * 0.5),
+		padding-right: calc(#{$grid-gutter-width} * 0.5),
+		width: 100%,
+	),
+	$clay-container
+);
+
+$clay-container-fluid: () !default;
+$clay-container-fluid: map-merge(
+	(
+		margin-left: auto,
+		margin-right: auto,
+		padding-left: calc(#{$grid-gutter-width} * 0.5),
+		padding-right: calc(#{$grid-gutter-width} * 0.5),
+		width: 100%,
+	),
+	$clay-container-fluid
+);
+
+$container-max-widths: (
+	sm: 540px,
+
+	md: 720px,
+
+	lg: 960px,
+
+	xl: 1140px,
+
+	xxl: 1392px,
+
+	xxxl: 1872px,
+) !default;
+
+@include _assert-ascending($container-max-widths, '$container-max-widths');
+
+$container-form-lg: () !default;
+$container-form-lg: map-deep-merge(
+	(
+		breakpoint-up: lg,
+		padding-bottom-mobile: 1rem,
+		padding-bottom: 3rem,
+		padding-top-mobile: 1rem,
+		padding-top: 3rem,
+	),
+	$container-form-lg
+);
+
+$container-view: () !default;
+$container-view: map-deep-merge(
+	(
+		padding-bottom: 1.5rem,
+		padding-top: 1.5rem,
+	),
+	$container-view
+);
+
+$moz-osx-font-smoothing: grayscale !default;
+$webkit-font-smoothing: antialiased !default;
+
+$font-import-url: null !default;
+
+$font-family-monospace: var(--font-family-monospace) !default;
+$font-family-sans-serif: var(--font-family-sans-serif) !default;
+$font-family-serif: var(--font-family-serif) !default;
+
+$font-family-base: var(--font-family-base) !default;
+
+$font-size-base: var(--font-size-base) !default;
+
+$font-size-lg: var(--font-size-lg) !default;
+$font-size-sm: var(--font-size-sm) !default;
+
+$font-size-base-mobile: $font-size-base !default;
+$font-size-lg-mobile: $font-size-lg !default;
+
+$font-weight-bold: var(--font-weight-bold) !default;
+$font-weight-bolder: var(--font-weight-bolder) !default;
+$font-weight-light: var(--font-weight-light) !default;
+$font-weight-lighter: var(--font-weight-lighter) !default;
+$font-weight-normal: var(--font-weight-normal) !default;
+$font-weight-semi-bold: var(--font-weight-semi-bold) !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$h1-font-size: var(--h1-font-size) !default;
+
+$h1-font-size-mobile: null !default;
+
+$h1: () !default;
+$h1: map-deep-merge(
+	(
+		font-size: $h1-font-size,
+
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h1-font-size-mobile,
 			),
 		),
-		$h1
-	);
+	),
+	$h1
+);
 
-	$h2-font-size: var(--h2-font-size);
+$h2-font-size: var(--h2-font-size) !default;
 
-	$h2-font-size-mobile: null;
+$h2-font-size-mobile: null !default;
 
-	$h2: ();
-	$h2: map-deep-merge(
-		(
-			font-size: $h2-font-size,
+$h2: () !default;
+$h2: map-deep-merge(
+	(
+		font-size: $h2-font-size,
 
-			media-breakpoint-down: (
-				sm: (
-					font-size: $h2-font-size-mobile,
-				),
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h2-font-size-mobile,
 			),
 		),
-		$h2
-	);
+	),
+	$h2
+);
 
-	$h3-font-size: var(--h3-font-size);
+$h3-font-size: var(--h3-font-size) !default;
 
-	$h3-font-size-mobile: null;
+$h3-font-size-mobile: null !default;
 
-	$h3: ();
-	$h3: map-deep-merge(
-		(
-			font-size: $h3-font-size,
+$h3: () !default;
+$h3: map-deep-merge(
+	(
+		font-size: $h3-font-size,
 
-			media-breakpoint-down: (
-				sm: (
-					font-size: $h3-font-size-mobile,
-				),
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h3-font-size-mobile,
 			),
 		),
-		$h3
-	);
+	),
+	$h3
+);
 
-	$h4-font-size: var(--h4-font-size);
+$h4-font-size: var(--h4-font-size) !default;
 
-	$h4-font-size-mobile: null;
+$h4-font-size-mobile: null !default;
 
-	$h4: ();
-	$h4: map-deep-merge(
-		(
-			font-size: $h4-font-size,
+$h4: () !default;
+$h4: map-deep-merge(
+	(
+		font-size: $h4-font-size,
 
-			media-breakpoint-down: (
-				sm: (
-					font-size: $h4-font-size-mobile,
-				),
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h4-font-size-mobile,
 			),
 		),
-		$h4
-	);
+	),
+	$h4
+);
 
-	$h5-font-size: var(--h5-font-size);
+$h5-font-size: var(--h5-font-size) !default;
 
-	$h5-font-size-mobile: null;
+$h5-font-size-mobile: null !default;
 
-	$h5: ();
-	$h5: map-deep-merge(
-		(
-			font-size: $h5-font-size,
+$h5: () !default;
+$h5: map-deep-merge(
+	(
+		font-size: $h5-font-size,
 
-			media-breakpoint-down: (
-				sm: (
-					font-size: $h5-font-size-mobile,
-				),
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h5-font-size-mobile,
 			),
 		),
-		$h5
-	);
+	),
+	$h5
+);
 
-	$h6-font-size: var(--h6-font-size);
+$h6-font-size: var(--h6-font-size) !default;
 
-	$h6-font-size-mobile: null;
+$h6-font-size-mobile: null !default;
 
-	$h6: ();
-	$h6: map-deep-merge(
-		(
-			font-size: $h6-font-size,
+$h6: () !default;
+$h6: map-deep-merge(
+	(
+		font-size: $h6-font-size,
 
-			media-breakpoint-down: (
-				sm: (
-					font-size: $h6-font-size-mobile,
-				),
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h6-font-size-mobile,
 			),
 		),
-		$h6
-	);
+	),
+	$h6
+);
 
-	$headings-color: var(--headings-color);
-	$headings-font-family: var(--headings-font-family);
-	$headings-font-weight: var(--headings-font-weight);
-	$headings-line-height: var(--headings-line-height);
-	$headings-margin-bottom: var(--headings-margin-bottom);
+$headings-color: var(--headings-color) !default;
+$headings-font-family: var(--headings-font-family) !default;
+$headings-font-weight: var(--headings-font-weight) !default;
+$headings-line-height: var(--headings-line-height) !default;
+$headings-margin-bottom: var(--headings-margin-bottom) !default;
 
-	$headings: ();
-	$headings: map-deep-merge(
-		(
-			color: $headings-color,
-			font-family: $headings-font-family,
-			font-weight: $headings-font-weight,
-			line-height: $headings-line-height,
-			margin-bottom: $headings-margin-bottom,
+$headings: () !default;
+$headings: map-deep-merge(
+	(
+		color: $headings-color,
+		font-family: $headings-font-family,
+		font-weight: $headings-font-weight,
+		line-height: $headings-line-height,
+		margin-bottom: $headings-margin-bottom,
+	),
+	$headings
+);
+
+// Body
+
+$body-bg: var(--body-background-color) !default;
+$body-color: var(--body-color) !default;
+$body-moz-osx-font-smoothing: $moz-osx-font-smoothing !default;
+$body-text-align: inherit !default;
+$body-webkit-font-smoothing: $webkit-font-smoothing !default;
+
+$c-body: () !default;
+$c-body: map-merge(
+	(
+		-moz-osx-font-smoothing: $body-moz-osx-font-smoothing,
+		-ms-overflow-style: scrollbar,
+		-webkit-font-smoothing: $body-webkit-font-smoothing,
+		background-color: $body-bg,
+		color: $body-color,
+		font-family: var(--body-font-family),
+		font-size: var(--body-font-size),
+		font-weight: var(--body-font-weight),
+		line-height: var(--body-line-height),
+		margin: var(--body-margin),
+		text-align: $body-text-align
+	),
+	$c-body
+);
+
+// Link
+
+$link-color: var(--link-color) !default;
+$link-decoration: var(--link-decoration) !default;
+$link-hover-color: var(--link-hover-color) !default;
+$link-hover-decoration: var(--link-hover-decoration) !default;
+
+$link: () !default;
+$link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $link-color,
+		text-decoration: $link-decoration,
+		text-underline-offset: 0.23em,
+		transition: clay-enable-transitions($component-transition),
+		hover: (
+			color: $link-hover-color,
+			text-decoration: $link-hover-decoration,
 		),
-		$headings
-	);
 
-	// Body
-
-	$body-bg: var(--body-background-color);
-	$body-color: var(--body-color);
-	$body-moz-osx-font-smoothing: $moz-osx-font-smoothing;
-	$body-text-align: inherit;
-	$body-webkit-font-smoothing: $webkit-font-smoothing;
-
-	$c-body: ();
-	$c-body: map-merge(
-		(
-			-moz-osx-font-smoothing: $body-moz-osx-font-smoothing,
-			-ms-overflow-style: scrollbar,
-			-webkit-font-smoothing: $body-webkit-font-smoothing,
-			background-color: $body-bg,
-			color: $body-color,
-			font-family: var(--body-font-family),
-			font-size: var(--body-font-size),
-			font-weight: var(--body-font-weight),
-			line-height: var(--body-line-height),
-			margin: var(--body-margin),
-			text-align: $body-text-align
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
 		),
-		$c-body
-	);
+	),
+	$link
+);
 
-	// Link
+// Cursors
 
-	$link-color: var(--link-color);
-	$link-decoration: var(--link-decoration);
-	$link-hover-color: var(--link-hover-color);
-	$link-hover-decoration: var(--link-hover-decoration);
+$disabled-cursor: not-allowed !default;
+$link-cursor: pointer !default;
 
-	$link: ();
-	$link: map-deep-merge(
-		(
-			border-radius: 1px,
-			color: $link-color,
-			text-decoration: $link-decoration,
-			text-underline-offset: 0.23em,
-			transition: clay-enable-transitions($component-transition),
-			hover: (
-				color: $link-hover-color,
-				text-decoration: $link-hover-decoration,
-			),
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 
-			focus: (
-				box-shadow: $component-focus-box-shadow,
-				outline: 0,
-			),
-		),
-		$link
-	);
+$emphasized-link-hover-darken-percentage: 15% !default;
 
-	// Cursors
+// Paragraph
 
-	$disabled-cursor: not-allowed;
-	$link-cursor: pointer;
+$paragraph-margin-bottom: var(--paragraph-margin-bottom) !default;
 
-	// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$display-line-height: $headings-line-height !default;
 
-	$emphasized-link-hover-darken-percentage: 15%;
+$display1-size: 6rem !default;
+$display1-weight: 300 !default;
 
-	// Paragraph
+$display-1: () !default;
+$display-1: map-deep-merge(
+	(
+		font-size: var(--display-1-font-size, $display1-size),
+		font-weight: var(--display-1-font-weight, $display1-weight),
+		line-height: var(--display-1-line-height, $display-line-height),
+	),
+	$display-1
+);
 
-	$paragraph-margin-bottom: var(--paragraph-margin-bottom);
+$display2-size: 5.5rem !default;
+$display2-weight: 300 !default;
 
-	$display-line-height: $headings-line-height;
+$display-2: () !default;
+$display-2: map-deep-merge(
+	(
+		font-size: var(--display-2-font-size, $display2-size),
+		font-weight: var(--display-2-font-weight, $display2-weight),
+		line-height: $display-line-height,
+	),
+	$display-2
+);
 
-	$display1-size: 6rem;
-	$display1-weight: 300;
+$display3-size: 4.5rem !default;
+$display3-weight: 300 !default;
 
-	$display-1: ();
-	$display-1: map-deep-merge(
-		(
-			font-size: var(--display-1-font-size, $display1-size),
-			font-weight: var(--display-1-font-weight, $display1-weight),
-			line-height: var(--display-1-line-height, $display-line-height),
-		),
-		$display-1
-	);
+$display-3: () !default;
+$display-3: map-deep-merge(
+	(
+		font-size: var(--display-3-font-size, $display3-size),
+		font-weight: var(--display-3-font-weight, $display3-weight),
+		line-height: var(--display-3-line-height, $display-line-height),
+	),
+	$display-3
+);
 
-	$display2-size: 5.5rem;
-	$display2-weight: 300;
+$display4-size: 3.5rem !default;
+$display4-weight: 300 !default;
 
-	$display-2: ();
-	$display-2: map-deep-merge(
-		(
-			font-size: var(--display-2-font-size, $display2-size),
-			font-weight: var(--display-2-font-weight, $display2-weight),
-			line-height: $display-line-height,
-		),
-		$display-2
-	);
+$display-4: () !default;
+$display-4: map-deep-merge(
+	(
+		font-size: var(--display-4-font-size, $display4-size),
+		font-weight: var(--display-4-font-weight, $display4-weight),
+		line-height: var(--display-4-line-height, $display-line-height),
+	),
+	$display-4
+);
 
-	$display3-size: 4.5rem;
-	$display3-weight: 300;
+$lead-font-size: var(--lead-font-size) !default;
+$lead-font-weight: var(--lead-font-weight) !default;
 
-	$display-3: ();
-	$display-3: map-deep-merge(
-		(
-			font-size: var(--display-3-font-size, $display3-size),
-			font-weight: var(--display-3-font-weight, $display3-weight),
-			line-height: var(--display-3-line-height, $display-line-height),
-		),
-		$display-3
-	);
+$small-font-size: 0.875rem !default;
 
-	$display4-size: 3.5rem;
-	$display4-weight: 300;
+$text-muted: var(--text-muted) !default;
 
-	$display-4: ();
-	$display-4: map-deep-merge(
-		(
-			font-size: var(--display-4-font-size, $display4-size),
-			font-weight: var(--display-4-font-weight, $display4-weight),
-			line-height: var(--display-4-line-height, $display-line-height),
-		),
-		$display-4
-	);
+$blockquote-font-size: var(--blockquote-font-size) !default;
 
-	$lead-font-size: var(--lead-font-size);
-	$lead-font-weight: var(--lead-font-weight);
+$blockquote-small-color: var(--blockquote-small-color) !default;
+$blockquote-small-font-size: var(--blockquote-small-font-size) !default;
 
-	$small-font-size: 0.875rem;
+$hr-border-color: var(--hr-border-color) !default;
+$hr-border-width: var(--hr-border-width) !default;
+$hr-margin-y: var(--hr-margin-y) !default;
 
-	$text-muted: var(--text-muted);
+$mark-bg: #fcf8e3 !default;
+$mark-color: null !default;
+$mark-padding: 0.2em !default;
 
-	$blockquote-font-size: var(--blockquote-font-size);
+$mark: () !default;
+$mark: map-deep-merge(
+	(
+		background-color: $mark-bg,
+		color: $mark-color,
+		display: inline,
+		line-height: normal,
+		padding: $mark-padding,
+		position: relative,
+		white-space: pre-wrap,
+	),
+	$mark
+);
 
-	$blockquote-small-color: var(--blockquote-small-color);
-	$blockquote-small-font-size: var(--blockquote-small-font-size);
+$clay-dark-mark: () !default;
+$clay-dark-mark: map-deep-merge(
+	(
+		background-color: $dark-l2,
+		color: $white,
+	),
+	$clay-dark-mark
+);
 
-	$hr-border-color: var(--hr-border-color);
-	$hr-border-width: var(--hr-border-width);
-	$hr-margin-y: var(--hr-margin-y);
+$dt-font-weight: $font-weight-bold !default;
 
-	$mark-bg: #fcf8e3;
-	$mark-color: null;
-	$mark-padding: 0.2em;
+$code-color: var(--code-color) !default;
+$code-font-size: var(--code-font-size) !default;
 
-	$mark: ();
-	$mark: map-deep-merge(
-		(
-			background-color: $mark-bg,
-			color: $mark-color,
-			display: inline,
-			line-height: normal,
-			padding: $mark-padding,
-			position: relative,
-			white-space: pre-wrap,
-		),
-		$mark
-	);
+$kbd-bg: $gray-900 !default;
+$kbd-box-shadow: inset 0 -0.1rem 0 unquote('rgb(from #{$black} r g b / 0.25)') !default;
+$kbd-color: $white !default;
+$kbd-font-size: $code-font-size !default;
+$kbd-padding-x: 0.4rem !default;
+$kbd-padding-y: 0.2rem !default;
 
-	$clay-dark-mark: ();
-	$clay-dark-mark: map-deep-merge(
-		(
-			background-color: $dark-l2,
-			color: $white,
-		),
-		$clay-dark-mark
-	);
+$nested-kbd-font-weight: $font-weight-bold !default;
 
-	$dt-font-weight: $font-weight-bold;
+$pre-color: $gray-900 !default;
+$pre-scrollable-max-height: 340px !default;
 
-	$code-color: var(--code-color);
-	$code-font-size: var(--code-font-size);
+$list-inline-padding: 0.5rem !default;
 
-	$kbd-bg: $gray-900;
-	$kbd-box-shadow: inset
-		0 -0.1rem
-		0
-		unquote('rgb(from #{$black} r g b / 0.25)');
-	$kbd-color: $white;
-	$kbd-font-size: $code-font-size;
-	$kbd-padding-x: 0.4rem;
-	$kbd-padding-y: 0.2rem;
+$mark-bg: #fcf8e3 !default;
 
-	$nested-kbd-font-weight: $font-weight-bold;
+$fieldset: () !default;
+$fieldset: map-merge(
+	(
+		border: 0rem,
+		margin: 0rem,
+		min-width: 0rem,
+		padding: 0rem,
+	),
+	$fieldset
+);
 
-	$pre-color: $gray-900;
-	$pre-scrollable-max-height: 340px;
+$legend: () !default;
+$legend: map-merge(
+	(
+		color: inherit,
+		display: block,
+		font-size: 1.5rem,
+		line-height: inherit,
+		margin-bottom: 0.5rem,
+		max-width: 100%,
+		padding: 0rem,
+		white-space: normal,
+		width: 100%,
+	),
+	$legend
+);
 
-	$list-inline-padding: 0.5rem;
+// Button
 
-	$mark-bg: #fcf8e3;
+$c-button-base: () !default;
+$c-button-base: map-merge(
+	(-webkit-appearance: button, cursor: $link-cursor),
+	$c-button-base
+);
 
-	$fieldset: ();
-	$fieldset: map-merge(
-		(
-			border: 0rem,
-			margin: 0rem,
-			min-width: 0rem,
-			padding: 0rem,
-		),
-		$fieldset
-	);
+// Buttons + Forms
 
-	$legend: ();
-	$legend: map-merge(
-		(
-			color: inherit,
-			display: block,
-			font-size: 1.5rem,
-			line-height: inherit,
-			margin-bottom: 0.5rem,
-			max-width: 100%,
-			padding: 0rem,
-			white-space: normal,
-			width: 100%,
-		),
-		$legend
-	);
+$label-margin-bottom: 0.5rem !default;
 
-	// Button
+$input-btn-font-family: null !default;
+$input-btn-font-size: $font-size-base !default;
+$input-btn-line-height: $line-height-base !default;
+$input-btn-padding-x: 0.75rem !default;
+$input-btn-padding-y: 0.375rem !default;
 
-	$c-button-base: ();
-	$c-button-base: map-merge(
-		(-webkit-appearance: button, cursor: $link-cursor),
-		$c-button-base
-	);
+$input-btn-focus-width: 0.2rem !default;
 
-	// Buttons + Forms
+$input-btn-focus-color: unquote(
+	'rgb(from #{$component-active-bg} r g b / 0.25)'
+) !default;
 
-	$label-margin-bottom: 0.5rem;
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-	$input-btn-font-family: null;
-	$input-btn-font-size: $font-size-base;
-	$input-btn-line-height: $line-height-base;
-	$input-btn-padding-x: 0.75rem;
-	$input-btn-padding-y: 0.375rem;
+$input-btn-font-size-sm: $font-size-sm !default;
+$input-btn-line-height-sm: $line-height-sm !default;
+$input-btn-padding-x-sm: 0.5rem !default;
+$input-btn-padding-y-sm: 0.25rem !default;
 
-	$input-btn-focus-width: 0.2rem;
+$input-btn-font-size-lg: $font-size-lg !default;
+$input-btn-line-height-lg: $line-height-lg !default;
+$input-btn-padding-x-lg: 1rem !default;
+$input-btn-padding-y-lg: 0.5rem !default;
 
-	$input-btn-focus-color: unquote(
-		'rgb(from #{$component-active-bg} r g b / 0.25)'
-	);
+$input-btn-border-width: $border-width !default;
 
-	$input-btn-focus-box-shadow: 0
-		0
-		0
-		$input-btn-focus-width
-		$input-btn-focus-color;
+// Print
 
-	$input-btn-font-size-sm: $font-size-sm;
-	$input-btn-line-height-sm: $line-height-sm;
-	$input-btn-padding-x-sm: 0.5rem;
-	$input-btn-padding-y-sm: 0.25rem;
-
-	$input-btn-font-size-lg: $font-size-lg;
-	$input-btn-line-height-lg: $line-height-lg;
-	$input-btn-padding-x-lg: 1rem;
-	$input-btn-padding-y-lg: 0.5rem;
-
-	$input-btn-border-width: $border-width;
-
-	// Print
-
-	$print-body-min-width: map-get($grid-breakpoints, 'lg');
-	$print-page-size: a3;
-}
+$print-body-min-width: map-get($grid-breakpoints, 'lg') !default;
+$print-page-size: a3 !default;

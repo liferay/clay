@@ -1,1250 +1,1229 @@
-@if ($enable-atlas-custom-properties) {
-	// .dropdown-toggle
+// .dropdown-toggle
 
-	$dropdown-toggle: ();
-	$dropdown-toggle: map-deep-merge(
-		(
-			white-space: nowrap,
+$dropdown-toggle: () !default;
+$dropdown-toggle: map-deep-merge(
+	(
+		white-space: nowrap,
+	),
+	$dropdown-toggle
+);
+
+// .dropdown-menu
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-bg: var(--dropdown-background-color, $white) !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-border-color: var(--dropdown-border-color, $gray-300) !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-border-style: var(--dropdown-border-style, solid) !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-border-width: var(--dropdown-border-width, 0) !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-border-radius: var(--dropdown-border-radius, $border-radius) !default;
+
+// @deprecated as of v3.x with no replacement
+
+$dropdown-inner-border-radius: $dropdown-border-radius
+	calc(#{$dropdown-border-width} * -1) !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-box-shadow: var(
+	--dropdown-box-shadow,
+	0 1px 5px -1px rgba(0, 0, 0, 0.3)
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-color: var(--dropdown-color, $body-color) !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-font-size: var(--dropdown-font-size, 0.875rem) !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-max-height: 500px !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-max-width: 240px !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-min-height: 40px !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-min-width: 240px !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-font-size-mobile: null !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-max-height-mobile: 295px !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-max-width-mobile: 230px !default;
+
+$dropdown-padding-y: 0.375rem !default;
+$dropdown-spacer: 0.3125rem !default;
+
+$dropdown-menu: () !default;
+$dropdown-menu: map-deep-merge(
+	(
+		breakpoint-down: md,
+
+		background-clip: padding-box,
+		background-color: $dropdown-bg,
+		border-color: $dropdown-border-color,
+		border-radius: clay-enable-rounded($dropdown-border-radius),
+		border-style: $dropdown-border-style,
+		border-width: $dropdown-border-width,
+		box-shadow: clay-enable-shadows($dropdown-box-shadow),
+		color: $dropdown-color,
+		display: none,
+		float: left,
+		font-size: $dropdown-font-size,
+		left: 0rem,
+		list-style: none,
+		margin: $dropdown-spacer 0rem 0rem,
+		max-height: $dropdown-max-height,
+		max-width: $dropdown-max-width,
+		min-height: $dropdown-min-height,
+		min-width: $dropdown-min-width,
+		overflow: auto,
+		padding: $dropdown-padding-y 0rem,
+		position: absolute,
+		text-align: left,
+		top: 100%,
+		z-index: $zindex-dropdown,
+
+		mobile: (
+			font-size: $dropdown-font-size-mobile,
+			max-height: $dropdown-max-height-mobile,
+			max-width: $dropdown-max-width-mobile,
 		),
-		$dropdown-toggle
-	);
 
-	// .dropdown-menu
+		show: (
+			display: block,
+		),
+	),
+	$dropdown-menu
+);
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// .dropdown-item
 
-	$dropdown-bg: var(--dropdown-background-color, $white);
+$dropdown-item-padding-x: var(--dropdown-item-padding-x, 1rem) !default;
+$dropdown-item-padding-y: var(--dropdown-item-padding-y, 0.5rem) !default;
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// @deprecated as of v3.x use map $dropdown-item instead
 
-	$dropdown-border-color: var(--dropdown-border-color, $gray-300);
+$dropdown-item-disabled-cursor: $disabled-cursor !default;
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// @deprecated as of v3.x use map $dropdown-item instead
 
-	$dropdown-border-style: var(--dropdown-border-style, solid);
+$dropdown-link-color: var(--dropdown-item-color, $gray-600) !default;
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// @deprecated as of v3.x use map $dropdown-item instead
 
-	$dropdown-border-width: var(--dropdown-border-width, 0);
+$dropdown-link-font-weight: var(
+	--dropdown-item-font-weight,
+	$font-weight-normal
+) !default;
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// @deprecated as of v3.x use map $dropdown-item instead
 
-	$dropdown-border-radius: var(--dropdown-border-radius, $border-radius);
+$dropdown-link-hover-bg: var(
+	--dropdown-item-hover-background-color,
+	$primary-l3
+) !default;
 
-	// @deprecated as of v3.x with no replacement
+// @deprecated as of v3.x use map $dropdown-item instead
 
-	$dropdown-inner-border-radius: $dropdown-border-radius
-		calc(#{$dropdown-border-width} * -1);
+$dropdown-link-hover-color: var(
+	--dropdown-item-hover-color,
+	$gray-900
+) !default;
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// @deprecated as of v3.x use map $dropdown-item instead
 
-	$dropdown-box-shadow: var(
-		--dropdown-box-shadow,
-		0 1px 5px -1px rgba(0, 0, 0, 0.3)
-	);
+$dropdown-link-active-bg: var(
+	--dropdown-item-active-background-color,
+	$dropdown-link-hover-bg
+) !default;
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// @deprecated as of v3.x use map $dropdown-item instead
 
-	$dropdown-color: var(--dropdown-color, $body-color);
+$dropdown-link-active-color: var(
+	--dropdown-item-active-color,
+	$dropdown-link-hover-color
+) !default;
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// @deprecated as of v3.x use map $dropdown-item instead
 
-	$dropdown-font-size: var(--dropdown-font-size, 0.875rem);
+$dropdown-link-active-font-weight: var(
+	--dropdown-item-active-font-weight,
+	$font-weight-semi-bold
+) !default;
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// @deprecated as of v3.x use map $dropdown-item instead
 
-	$dropdown-max-height: 500px;
+$dropdown-link-disabled-color: var(
+	--dropdown-item-disabled-color,
+	$gray-500
+) !default;
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+// .dropdown-item `background-color`, `border-width`, `text-align` for `<button>`s
 
-	$dropdown-max-width: 240px;
+$dropdown-item-base: () !default;
+$dropdown-item-base: map-deep-merge(
+	(
+		background-color: transparent,
+		border-radius: 0px,
+		border-width: 0px,
+		clear: both,
+		color: $dropdown-link-color,
+		cursor: $link-cursor,
+		display: block,
+		font-size: inherit,
+		font-weight: $font-weight-normal,
+		overflow: hidden,
+		padding-bottom: $dropdown-item-padding-y,
+		padding-left: $dropdown-item-padding-x,
+		padding-right: $dropdown-item-padding-x,
+		padding-top: $dropdown-item-padding-y,
+		position: relative,
+		text-align: inherit,
+		transition: none,
+		width: 100%,
+		word-wrap: break-word,
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+		hover: (
+			background-color: $dropdown-link-hover-bg,
+			color: $dropdown-link-hover-color,
+			text-decoration: none,
+		),
 
-	$dropdown-min-height: 40px;
+		focus: (
+			background-color: $dropdown-link-hover-bg,
+			box-shadow: $component-focus-inset-box-shadow,
+			color: $dropdown-link-hover-color,
+			outline: 0,
+			text-decoration: none,
+		),
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+		active: (
+			background-color: $dropdown-link-active-bg,
+			color: $dropdown-link-active-color,
+			text-decoration: none,
+		),
 
-	$dropdown-min-width: 240px;
+		active-class: (
+			font-weight: $dropdown-link-active-font-weight,
+			pointer-events: none,
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
+			c-kbd-inline: (
+				color: $dropdown-link-active-color,
+			),
+		),
 
-	$dropdown-font-size-mobile: null;
+		disabled: (
+			background-color: transparent,
+			box-shadow: none,
+			color: $dropdown-link-disabled-color,
+			cursor: $dropdown-item-disabled-cursor,
+			opacity: 1,
+			outline: 0,
 
-	// @deprecated as of v3.x use map $dropdown-menu instead
-
-	$dropdown-max-height-mobile: 295px;
-
-	// @deprecated as of v3.x use map $dropdown-menu instead
-
-	$dropdown-max-width-mobile: 230px;
-
-	$dropdown-padding-y: 0.375rem;
-	$dropdown-spacer: 0.3125rem;
-
-	$dropdown-menu: ();
-	$dropdown-menu: map-deep-merge(
-		(
-			breakpoint-down: md,
-
-			background-clip: padding-box,
-			background-color: $dropdown-bg,
-			border-color: $dropdown-border-color,
-			border-radius: clay-enable-rounded($dropdown-border-radius),
-			border-style: $dropdown-border-style,
-			border-width: $dropdown-border-width,
-			box-shadow: clay-enable-shadows($dropdown-box-shadow),
-			color: $dropdown-color,
-			display: none,
-			float: left,
-			font-size: $dropdown-font-size,
-			left: 0rem,
-			list-style: none,
-			margin: $dropdown-spacer 0rem 0rem,
-			max-height: $dropdown-max-height,
-			max-width: $dropdown-max-width,
-			min-height: $dropdown-min-height,
-			min-width: $dropdown-min-width,
-			overflow: auto,
-			padding: $dropdown-padding-y 0rem,
-			position: absolute,
-			text-align: left,
-			top: 100%,
-			z-index: $zindex-dropdown,
-
-			mobile: (
-				font-size: $dropdown-font-size-mobile,
-				max-height: $dropdown-max-height-mobile,
-				max-width: $dropdown-max-width-mobile,
+			active: (
+				pointer-events: none,
 			),
 
-			show: (
-				display: block,
+			c-kbd-inline: (
+				color: $dropdown-link-disabled-color,
 			),
 		),
-		$dropdown-menu
-	);
 
-	// .dropdown-item
+		c-kbd-inline: (
+			color: $gray-500,
+			line-height: calc(#{$dropdown-font-size} * #{$line-height-base}),
+		),
 
-	$dropdown-item-padding-x: var(--dropdown-item-padding-x, 1rem);
-	$dropdown-item-padding-y: var(--dropdown-item-padding-y, 0.5rem);
+		'&.autofit-row': (
+			align-items: center,
+			padding-left: calc(#{$dropdown-item-padding-x} - 0.25rem),
+			padding-right: calc(#{$dropdown-item-padding-x} - 0.25rem),
+			autofit-col: (
+				padding-left: 0.25rem,
+				padding-right: 0.25rem,
+			),
+		),
 
-	@if ($enable-atlas-custom-properties) {
-		// @deprecated as of v3.x use map $dropdown-item instead
+		autofit-row: (
+			align-items: center,
+			margin-left: -0.25rem,
+			margin-right: -0.25rem,
+			width: auto,
 
-		$dropdown-item-disabled-cursor: $disabled-cursor;
+			autofit-col: (
+				padding-left: 0.25rem,
+				padding-right: 0.25rem,
+			),
+		),
 
-		// @deprecated as of v3.x use map $dropdown-item instead
+		inline-item: (
+			line-height: 1,
 
-		$dropdown-link-color: var(--dropdown-item-color, $gray-600);
+			lexicon-icon: (
+				font-size: 1rem,
+				margin-top: 0rem,
+			),
+		),
 
-		// @deprecated as of v3.x use map $dropdown-item instead
+		label: (
+			margin-bottom: 0rem,
+			margin-top: 0.3125rem,
+		),
+	),
+	$dropdown-item-base
+);
 
-		$dropdown-link-font-weight: var(
-			--dropdown-item-font-weight,
-			$font-weight-normal
-		);
+// .dropdown-item-text
 
-		// @deprecated as of v3.x use map $dropdown-item instead
+$dropdown-item-text: () !default;
+$dropdown-item-text: map-merge(
+	(
+		color: map-get($dropdown-item-base, color),
+		display: map-get($dropdown-item-base, display),
+		font-weight: map-get($dropdown-item-base, font-weight),
+		padding: map-get($dropdown-item-base, padding),
+		padding-bottom: map-get($dropdown-item-base, padding-bottom),
+		padding-left: map-get($dropdown-item-base, padding-left),
+		padding-right: map-get($dropdown-item-base, padding-right),
+		padding-top: map-get($dropdown-item-base, padding-top),
+	),
+	$dropdown-item-text
+);
 
-		$dropdown-link-hover-bg: var(
-			--dropdown-item-hover-background-color,
-			$primary-l3
-		);
+// .dropdown-header
 
-		// @deprecated as of v3.x use map $dropdown-item instead
+// @deprecated as of v3.x use map $dropdown-header instead
 
-		$dropdown-link-hover-color: var(--dropdown-item-hover-color, $gray-900);
+$dropdown-header-color: var(--dropdown-header-color, $gray-900) !default;
 
-		// @deprecated as of v3.x use map $dropdown-item instead
+// @deprecated as of v3.x use map $dropdown-header instead
 
-		$dropdown-link-active-bg: var(
-			--dropdown-item-active-background-color,
-			$dropdown-link-hover-bg
-		);
+$dropdown-header-font-size: var(--dropdown-header-font-size, 0.875rem) !default;
 
-		// @deprecated as of v3.x use map $dropdown-item instead
+// @deprecated as of v3.x use map $dropdown-header instead
 
-		$dropdown-link-active-color: var(
-			--dropdown-item-active-color,
-			$dropdown-link-hover-color
-		);
+$dropdown-header-margin-bottom: var(
+	--dropdown-header-margin-bottom,
+	0rem
+) !default;
 
-		// @deprecated as of v3.x use map $dropdown-item instead
+// @deprecated as of v3.x use map $dropdown-header instead
 
-		$dropdown-link-active-font-weight: var(
-			--dropdown-item-active-font-weight,
-			$font-weight-semi-bold
-		);
+$dropdown-header-margin-top: var(
+	--dropdown-header-margin-top,
+	0.625rem
+) !default;
 
-		// @deprecated as of v3.x use map $dropdown-item instead
+// @deprecated as of v3.x use map $dropdown-header instead
 
-		$dropdown-link-disabled-color: var(
-			--dropdown-item-disabled-color,
-			$gray-500
-		);
+$dropdown-header-padding-x: var(
+	--dropdown-header-padding-x,
+	$dropdown-item-padding-x
+) !default;
 
-		// .dropdown-item `background-color`, `border-width`, `text-align` for `<button>`s
+// @deprecated as of v3.x use map $dropdown-header instead
 
-		$dropdown-item-base: ();
-		$dropdown-item-base: map-deep-merge(
-			(
-				background-color: transparent,
-				border-radius: 0px,
-				border-width: 0px,
-				clear: both,
-				color: $dropdown-link-color,
-				cursor: $link-cursor,
-				display: block,
-				font-size: inherit,
-				font-weight: $font-weight-normal,
-				overflow: hidden,
-				padding-bottom: $dropdown-item-padding-y,
-				padding-left: $dropdown-item-padding-x,
-				padding-right: $dropdown-item-padding-x,
-				padding-top: $dropdown-item-padding-y,
-				position: relative,
-				text-align: inherit,
-				transition: none,
-				width: 100%,
-				word-wrap: break-word,
+$dropdown-header-padding-y: var(
+	--dropdown-header-padding-y,
+	$dropdown-padding-y
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-text-transform: var(
+	--dropdown-header-text-transform,
+	none
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-font-size-mobile: null !default;
+
+$dropdown-header: () !default;
+$dropdown-header: map-deep-merge(
+	(
+		breakpoint-down: sm,
+
+		color: $dropdown-header-color,
+		display: block,
+		font-size: $dropdown-header-font-size,
+		margin-bottom: $dropdown-header-margin-bottom,
+		margin-top: $dropdown-header-margin-top,
+		padding-bottom: $dropdown-header-padding-y,
+		padding-left: $dropdown-header-padding-x,
+		padding-right: $dropdown-header-padding-x,
+		padding-top: $dropdown-header-padding-y,
+		position: relative,
+		text-transform: $dropdown-header-text-transform,
+		word-wrap: break-word,
+
+		mobile: (
+			font-size: $dropdown-header-font-size-mobile,
+		),
+
+		first-child: (
+			margin-top: 0rem,
+		),
+	),
+	$dropdown-header
+);
+
+// .dropdown-subheader
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-color: var(
+	--dropdown-subheader-color,
+	$dropdown-header-color
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-font-size: var(
+	--dropdown-subheader-font-size,
+	0.75rem
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-font-weight: var(
+	--dropdown-subheader-font-weight,
+	$font-weight-semi-bold
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-margin-bottom: var(
+	--dropdown-subheader-margin-bottom
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-margin-top: var(
+	--dropdown-subheader-margin-top,
+	0.625rem
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-padding-x: var(
+	--dropdown-subheader-padding-x,
+	$dropdown-header-padding-x
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-padding-y: var(
+	--dropdown-subheader-padding-y,
+	$dropdown-header-padding-y
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-text-transform: var(
+	--dropdown-subheader-text-transform,
+	uppercase
+) !default;
+
+$dropdown-subheader: () !default;
+$dropdown-subheader: map-deep-merge(
+	(
+		color: $dropdown-subheader-color,
+		font-size: $dropdown-subheader-font-size,
+		font-weight: $dropdown-subheader-font-weight,
+		margin-bottom: $dropdown-subheader-margin-bottom,
+		margin-top: $dropdown-subheader-margin-top,
+		padding-bottom: $dropdown-subheader-padding-y,
+		padding-left: $dropdown-subheader-padding-x,
+		padding-right: $dropdown-subheader-padding-x,
+		padding-top: $dropdown-subheader-padding-y,
+		text-transform: $dropdown-subheader-text-transform,
+		white-space: normal,
+		word-wrap: break-word,
+
+		first-child: (
+			margin-top: 0rem,
+		),
+	),
+	$dropdown-subheader
+);
+
+// .dropdown-caption
+
+// @deprecated as of v3.x use map $dropdown-caption instead
+
+$dropdown-caption-color: var(--dropdown-caption-color, $gray-600) !default;
+
+// @deprecated as of v3.x use map $dropdown-caption instead
+
+$dropdown-caption-font-size: var(
+	--dropdown-caption-font-size,
+	0.875rem
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-caption instead
+
+$dropdown-caption-font-weight: var(
+	--dropdown-caption-font-weight,
+	$font-weight-normal
+) !default;
+
+$dropdown-caption: () !default;
+$dropdown-caption: map-merge(
+	(
+		color: $dropdown-caption-color,
+		font-size: $dropdown-caption-font-size,
+		font-weight: $dropdown-caption-font-weight,
+		padding: $dropdown-item-padding-y $dropdown-item-padding-x,
+		white-space: normal,
+		word-wrap: break-word,
+	),
+	$dropdown-caption
+);
+
+// .dropdown-divider
+
+// @deprecated as of v3.x use map $dropdown-divider instead
+
+$dropdown-divider-bg: var(
+	--dropdown-divider-bg,
+	$dropdown-border-color
+) !default;
+
+// @deprecated as of v3.x use map $dropdown-divider instead
+
+$dropdown-divider-margin-y: var(
+	--dropdown-divider-margin-y,
+	calc(#{$spacer} * 0.5)
+) !default;
+
+$dropdown-divider: () !default;
+$dropdown-divider: map-merge(
+	(
+		border-top: 1px solid $dropdown-divider-bg,
+		height: 0rem,
+		margin: $dropdown-divider-margin-y 0rem,
+		overflow: hidden,
+	),
+	$dropdown-divider
+);
+
+// .dropdown-section
+
+// @deprecated as of v3.x use map $dropdown-section instead
+
+$dropdown-section-custom-control: () !default;
+$dropdown-section-custom-control: map-deep-merge(
+	(
+		margin-bottom: 0rem,
+	),
+	$dropdown-section-custom-control
+);
+
+// @deprecated as of v3.x use map $dropdown-section instead
+
+$dropdown-section-custom-control-label: () !default;
+$dropdown-section-custom-control-label: map-deep-merge(
+	(
+		color: $secondary,
+	),
+	$dropdown-section-custom-control-label
+);
+
+// @deprecated as of v3.x use map $dropdown-section instead
+
+$dropdown-section-custom-control-label-text: () !default;
+$dropdown-section-custom-control-label-text: map-deep-merge(
+	(
+		padding-left: 1rem,
+	),
+	$dropdown-section-custom-control-label-text
+);
+
+// @deprecated as of v3.x use map $dropdown-section instead
+
+$dropdown-section-active-custom-control-label: () !default;
+$dropdown-section-active-custom-control-label: map-deep-merge(
+	(
+		color: $gray-900,
+	),
+	$dropdown-section-active-custom-control-label
+);
+
+$dropdown-section: () !default;
+$dropdown-section: map-deep-merge(
+	(
+		padding: $dropdown-item-padding-y $dropdown-item-padding-x,
+
+		form-group: (
+			form-group: (
+				margin-top: calc(#{$dropdown-item-padding-y} * 2),
+			),
+		),
+
+		custom-control: $dropdown-section-custom-control,
+
+		custom-control-label: $dropdown-section-custom-control-label,
+
+		custom-control-label-text: $dropdown-section-custom-control-label-text,
+
+		custom-control-outside: (
+			label: (
+				padding-left: 1.75rem,
+			),
+		),
+
+		active: (
+			custom-control-label: $dropdown-section-active-custom-control-label,
+		),
+	),
+	$dropdown-section
+);
+
+// .dropdown-footer
+
+$dropdown-footer: () !default;
+$dropdown-footer: map-merge(
+	(
+		box-shadow: -1px -2px 3px -3px rgba(0, 0, 0, 0.5),
+		padding: 0.5rem $dropdown-item-padding-x 0rem,
+		position: relative,
+	),
+	$dropdown-footer
+);
+
+// Dropdown Inline Scroller
+
+$dropdown-inline-scroller-max-height: 200px !default;
+$dropdown-inline-scroller-max-height-mobile: none !default;
+
+// Dropdown Item Indicator
+
+$dropdown-item-indicator-size: var(
+	--dropdown-item-indicator-size,
+	1rem
+) !default;
+
+$dropdown-item-indicator-spacer-x: var(
+	--dropdown-item-indicator-spacer-x,
+	0.75rem
+) !default;
+
+$dropdown-item-indicator-start: () !default;
+$dropdown-item-indicator-start: map-deep-merge(
+	(
+		align-items: center,
+		color: inherit,
+		display: inline-flex,
+		height: $dropdown-item-indicator-size,
+		justify-content: center,
+		left: $dropdown-item-padding-x,
+		position: absolute,
+		right: auto,
+		top:
+			calc(
+				#{$dropdown-item-padding-y} - ((
+								#{$dropdown-item-indicator-size} - (1em * #{$line-height-base})
+							) / 2)
+			),
+		width: $dropdown-item-indicator-size,
+
+		lexicon-icon: (
+			font-size: 1rem,
+			margin-top: 0rem,
+		),
+	),
+	$dropdown-item-indicator-start
+);
+
+$dropdown-item-indicator-text-start: () !default;
+$dropdown-item-indicator-text-start: map-deep-merge(
+	(
+		color: inherit,
+		display: block,
+		padding-left:
+			calc(
+				#{$dropdown-item-indicator-size} + #{$dropdown-item-indicator-spacer-x}
+			),
+		text-decoration: inherit,
+		width: 100%,
+
+		hover: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+
+		focus: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+	),
+	$dropdown-item-indicator-text-start
+);
+
+$dropdown-item-indicator-end: () !default;
+$dropdown-item-indicator-end: map-deep-merge(
+	(
+		align-items: center,
+		color: inherit,
+		display: inline-flex,
+		height: $dropdown-item-indicator-size,
+		justify-content: center,
+		left: auto,
+		position: absolute,
+		right: $dropdown-item-padding-x,
+		top:
+			calc(
+				#{$dropdown-item-padding-y} - ((
+								#{$dropdown-item-indicator-size} - (1em * #{$line-height-base})
+							) / 2)
+			),
+		width: $dropdown-item-indicator-size,
+
+		lexicon-icon: (
+			font-size: 16px,
+			margin-top: 0rem,
+		),
+	),
+	$dropdown-item-indicator-end
+);
+
+$dropdown-item-indicator-text-end: () !default;
+$dropdown-item-indicator-text-end: map-deep-merge(
+	(
+		color: inherit,
+		display: block,
+		padding-right:
+			calc(
+				#{$dropdown-item-indicator-size} + #{$dropdown-item-indicator-spacer-x}
+			),
+		text-decoration: inherit,
+		width: 100%,
+
+		hover: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+
+		focus: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+	),
+	$dropdown-item-indicator-text-end
+);
+
+// .dropdown-menu-top
+
+$dropdown-menu-top: () !default;
+$dropdown-menu-top: map-deep-merge(
+	(
+		bottom: 100% !important,
+		left: 0rem !important,
+		margin-top: 0rem,
+		margin-bottom: $dropdown-spacer,
+		right: auto !important,
+		top: auto !important,
+		transform: none !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-top
+);
+
+// .dropdown-menu-top-right
+
+$dropdown-menu-top-right: () !default;
+$dropdown-menu-top-right: map-deep-merge(
+	(
+		bottom: 100% !important,
+		left: auto !important,
+		margin-top: 0rem,
+		margin-bottom: $dropdown-spacer,
+		right: 0rem !important,
+		top: auto !important,
+		transform: none !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-top-right
+);
+
+// .dropdown-menu-top-center
+
+$dropdown-menu-top-center: () !default;
+$dropdown-menu-top-center: map-deep-merge(
+	(
+		bottom: 100% !important,
+		left: 50% !important,
+		margin-top: 0rem,
+		margin-bottom: $dropdown-spacer,
+		right: auto !important,
+		top: auto !important,
+		transform: translateX(-50%) !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-top-center
+);
+
+// .dropdown-menu-center
+
+$dropdown-menu-center: () !default;
+$dropdown-menu-center: map-deep-merge(
+	(
+		bottom: auto !important,
+		left: 50% !important,
+		right: auto !important,
+		top: 100% !important,
+		transform: translateX(-50%) !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-center
+);
+
+// .dropdown-menu-left-side
+
+$dropdown-menu-left-side: () !default;
+$dropdown-menu-left-side: map-deep-merge(
+	(
+		bottom: auto !important,
+		left: auto !important,
+		margin-right: $dropdown-spacer,
+		margin-top: 0rem,
+		right: 100% !important,
+		top: 0rem !important,
+		transform: none !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-left-side
+);
+
+// .dropdown-menu-left-side-bottom
+
+$dropdown-menu-left-side-bottom: () !default;
+$dropdown-menu-left-side-bottom: map-deep-merge(
+	(
+		bottom: 0rem !important,
+		left: auto !important,
+		margin-right: $dropdown-spacer,
+		margin-top: 0rem,
+		right: 100% !important,
+		top: auto !important,
+		transform: none !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-left-side-bottom
+);
+
+// .dropdown-menu-left-side-middle
+
+$dropdown-menu-left-side-middle: () !default;
+$dropdown-menu-left-side-middle: map-deep-merge(
+	(
+		bottom: auto !important,
+		left: auto !important,
+		margin-right: $dropdown-spacer,
+		margin-top: 0rem,
+		right: 100% !important,
+		top: 50% !important,
+		transform: translate(0, -50%) !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-left-side-middle
+);
+
+// .dropdown-menu-right-side
+
+$dropdown-menu-right-side: () !default;
+$dropdown-menu-right-side: map-deep-merge(
+	(
+		bottom: auto !important,
+		left: 100% !important,
+		margin-left: $dropdown-spacer,
+		margin-top: 0rem,
+		right: auto !important,
+		top: 0rem !important,
+		transform: none !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-right-side
+);
+
+// .dropdown-menu-right-side-bottom
+
+$dropdown-menu-right-side-bottom: () !default;
+$dropdown-menu-right-side-bottom: map-deep-merge(
+	(
+		bottom: 0rem !important,
+		left: 100% !important,
+		margin-left: $dropdown-spacer,
+		margin-top: 0rem,
+		right: auto !important,
+		top: auto !important,
+		transform: none !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-right-side-bottom
+);
+
+// .dropdown-menu-right-side-middle
+
+$dropdown-menu-right-side-middle: () !default;
+$dropdown-menu-right-side-middle: map-deep-merge(
+	(
+		bottom: auto !important,
+		left: 100% !important,
+		margin-left: $dropdown-spacer,
+		margin-top: 0rem,
+		right: auto !important,
+		top: 50% !important,
+		transform: translate(0, -50%) !important,
+		will-change: auto !important,
+	),
+	$dropdown-menu-right-side-middle
+);
+
+// .dropdown-full, .dropdown-wide
+
+$dropdown-full-wide-header-spacer-y: 20px !default;
+
+// .dropdown-wide
+
+$dropdown-wide-width: 500px !default;
+
+// .dropdown-menu-width-shrink
+
+$dropdown-menu-width-shrink: () !default;
+$dropdown-menu-width-shrink: map-deep-merge(
+	(
+		min-width: 0rem,
+	),
+	$dropdown-menu-width-shrink
+);
+
+// .dropdown-menu-width-full
+
+$dropdown-menu-width-full: () !default;
+$dropdown-menu-width-full: map-merge(
+	(
+		left: 12px !important,
+		right: 12px !important,
+		max-width: none,
+		min-width: 0rem,
+		width: calc(100% - 24px),
+	),
+	$dropdown-menu-width-full
+);
+
+// .dropdown-menu-width-sm
+
+$dropdown-menu-width-sm: () !default;
+$dropdown-menu-width-sm: map-merge(
+	(
+		max-width: none,
+		min-width: 0rem,
+		width: 500px,
+	),
+	$dropdown-menu-width-sm
+);
+
+$dropdown-menu-width-sm-sm-down: () !default;
+$dropdown-menu-width-sm-sm-down: map-merge(
+	(
+		left: 12px !important,
+		right: 12px !important,
+		width: calc(100% - 24px),
+	),
+	$dropdown-menu-width-sm-sm-down
+);
+
+// Dropdown Menu Height
+
+$dropdown-menu-height-auto: () !default;
+$dropdown-menu-height-auto: map-merge(
+	(
+		height: auto,
+		max-height: none,
+		min-height: 0rem,
+	),
+	$dropdown-menu-height-auto
+);
+
+// Autocomplete Dropdown Menu
+
+$autocomplete-dropdown-menu: () !default;
+$autocomplete-dropdown-menu: map-deep-merge(
+	(
+		max-height: 160px,
+		max-width: none,
+		width: 100%,
+	),
+	$autocomplete-dropdown-menu
+);
+
+// .dropdown-action
+
+// @deprecated as of v3.x use map $dropdown-action instead
+
+$dropdown-action-toggle-border-radius: $border-radius !default;
+
+// @deprecated as of v3.x use map $dropdown-action instead
+
+$dropdown-action-toggle-font-size: 1rem !default;
+
+// @deprecated as of v3.x use map $dropdown-action instead
+
+$dropdown-action-toggle-disabled-cursor: $disabled-cursor !default;
+
+// @deprecated as of v3.x use map $dropdown-action instead
+
+$dropdown-action-toggle-disabled-opacity: $btn-disabled-opacity !default;
+
+$dropdown-action-toggle-size: if(
+	variable-exists(btn-monospaced-size-sm),
+	$btn-monospaced-size-sm,
+	2rem
+) !default;
+
+$dropdown-action: () !default;
+$dropdown-action: map-deep-merge(
+	(
+		display: inline-block,
+		font-size: $dropdown-action-toggle-font-size,
+		vertical-align: middle,
+
+		dropdown-toggle: (
+			align-items: center,
+			border-radius:
+				clay-enable-rounded($dropdown-action-toggle-border-radius),
+			cursor: $link-cursor,
+			display: flex,
+			font-size: inherit,
+			font-weight: inherit,
+			height: $dropdown-action-toggle-size,
+			justify-content: center,
+			line-height: inherit,
+			padding: 0rem,
+			text-transform: inherit,
+			vertical-align: baseline,
+			width: $dropdown-action-toggle-size,
+
+			disabled: (
+				cursor: $dropdown-action-toggle-disabled-cursor,
+				opacity: $dropdown-action-toggle-disabled-opacity,
+			),
+
+			lexicon-icon: (
+				margin-top: 0rem,
+			),
+
+			inline-item: (
+				lexicon-icon: (
+					margin-top: 0rem,
+				),
+			),
+		),
+	),
+	$dropdown-action
+);
+
+// Alert inside Dropdowns
+
+$dropdown-alert-font-size: null !default;
+$dropdown-alert-line-height: normal !default;
+$dropdown-alert-margin: 0.5rem !default;
+$dropdown-alert-padding-x: $dropdown-header-padding-x !default;
+$dropdown-alert-padding-y: $dropdown-header-padding-y !default;
+
+$dropdown-menu-alert: () !default;
+$dropdown-menu-alert: map-deep-merge(
+	(
+		font-size: $dropdown-alert-font-size,
+		line-height: $dropdown-alert-line-height,
+		margin: $dropdown-alert-margin,
+		padding: $dropdown-alert-padding-y $dropdown-alert-padding-x,
+
+		first-child: (
+			margin-top: 0rem,
+		),
+
+		last-child: (
+			margin-bottom: 0rem,
+		),
+	),
+	$dropdown-menu-alert
+);
+
+$dropdown-menu-alert-fluid: () !default;
+$dropdown-menu-alert-fluid: map-deep-merge(
+	(
+		margin-left: 0rem,
+		margin-right: 0rem,
+
+		first-child: (
+			margin-top: calc(#{$dropdown-padding-y} * -1),
+		),
+
+		last-child: (
+			margin-bottom: calc(#{$dropdown-padding-y} * -1),
+		),
+	),
+	$dropdown-menu-alert-fluid
+);
+
+$dropdown-menu: map-deep-merge(
+	(
+		alert:
+			map-deep-merge($dropdown-menu-alert, map-get($dropdown-menu, alert)),
+		alert-fluid:
+			map-deep-merge(
+				$dropdown-menu-alert-fluid,
+				map-get($dropdown-menu, alert-fluid)
+			),
+	),
+	$dropdown-menu
+);
+
+// Dropdown Menu Variants
+
+$dropdown-menu-palette: () !default;
+$dropdown-menu-palette: map-deep-merge(
+	(
+		'.dropdown-menu-select.dropdown-menu': (
+			dropdown-header: (
+				padding-bottom: 0.375rem,
+				padding-left: 1.75rem,
+				padding-right: 0.5rem,
+				padding-top: 0.3125rem,
+			),
+
+			dropdown-subheader: (
+				padding-bottom: 0.4375rem,
+				padding-left: 1.75rem,
+				padding-right: 0.5rem,
+				padding-top: 0.4375rem,
+			),
+
+			dropdown-section: (
+				padding-left: 1.75rem,
+				padding-right: 0.5rem,
+			),
+
+			dropdown-item: (
+				padding-bottom: 0.375rem,
+				padding-left: 1.75rem,
+				padding-right: 0.5rem,
+				padding-top: 0.3125rem,
+			),
+
+			dropdown-item-scroll: (
+				font-size: 1rem,
+				height: 2rem,
+				padding: 0rem,
+				position: absolute,
+				text-align: center,
+				z-index: 1,
 
 				hover: (
 					background-color: $dropdown-link-hover-bg,
+					background-image: none,
 					color: $dropdown-link-hover-color,
-					text-decoration: none,
 				),
 
 				focus: (
 					background-color: $dropdown-link-hover-bg,
-					box-shadow: $component-focus-inset-box-shadow,
+					background-image: none,
 					color: $dropdown-link-hover-color,
-					outline: 0,
-					text-decoration: none,
 				),
 
 				active: (
 					background-color: $dropdown-link-active-bg,
+					background-image: none,
 					color: $dropdown-link-active-color,
-					text-decoration: none,
-				),
-
-				active-class: (
-					font-weight: $dropdown-link-active-font-weight,
-					pointer-events: none,
-
-					c-kbd-inline: (
-						color: $dropdown-link-active-color,
-					),
 				),
 
 				disabled: (
 					background-color: transparent,
-					box-shadow: none,
+					background-image: none,
 					color: $dropdown-link-disabled-color,
 					cursor: $dropdown-item-disabled-cursor,
-					opacity: 1,
-					outline: 0,
-
-					active: (
-						pointer-events: none,
-					),
-
-					c-kbd-inline: (
-						color: $dropdown-link-disabled-color,
-					),
-				),
-
-				c-kbd-inline: (
-					color: $gray-500,
-					line-height:
-						calc(#{$dropdown-font-size} * #{$line-height-base}),
-				),
-
-				'&.autofit-row': (
-					align-items: center,
-					padding-left: calc(#{$dropdown-item-padding-x} - 0.25rem),
-					padding-right: calc(#{$dropdown-item-padding-x} - 0.25rem),
-					autofit-col: (
-						padding-left: 0.25rem,
-						padding-right: 0.25rem,
-					),
-				),
-
-				autofit-row: (
-					align-items: center,
-					margin-left: -0.25rem,
-					margin-right: -0.25rem,
-					width: auto,
-
-					autofit-col: (
-						padding-left: 0.25rem,
-						padding-right: 0.25rem,
-					),
-				),
-
-				inline-item: (
-					line-height: 1,
-
-					lexicon-icon: (
-						font-size: 1rem,
-						margin-top: 0rem,
-					),
-				),
-
-				label: (
-					margin-bottom: 0rem,
-					margin-top: 0.3125rem,
 				),
 			),
-			$dropdown-item-base
-		);
 
-		// .dropdown-item-text
-
-		$dropdown-item-text: ();
-		$dropdown-item-text: map-merge(
-			(
-				color: map-get($dropdown-item-base, color),
-				display: map-get($dropdown-item-base, display),
-				font-weight: map-get($dropdown-item-base, font-weight),
-				padding: map-get($dropdown-item-base, padding),
-				padding-bottom: map-get($dropdown-item-base, padding-bottom),
-				padding-left: map-get($dropdown-item-base, padding-left),
-				padding-right: map-get($dropdown-item-base, padding-right),
-				padding-top: map-get($dropdown-item-base, padding-top),
-			),
-			$dropdown-item-text
-		);
-
-		// .dropdown-header
-
-		// @deprecated as of v3.x use map $dropdown-header instead
-
-		$dropdown-header-color: var(--dropdown-header-color, $gray-900);
-
-		// @deprecated as of v3.x use map $dropdown-header instead
-
-		$dropdown-header-font-size: var(--dropdown-header-font-size, 0.875rem);
-
-		// @deprecated as of v3.x use map $dropdown-header instead
-
-		$dropdown-header-margin-bottom: var(
-			--dropdown-header-margin-bottom,
-			0rem
-		);
-
-		// @deprecated as of v3.x use map $dropdown-header instead
-
-		$dropdown-header-margin-top: var(
-			--dropdown-header-margin-top,
-			0.625rem
-		);
-
-		// @deprecated as of v3.x use map $dropdown-header instead
-
-		$dropdown-header-padding-x: var(
-			--dropdown-header-padding-x,
-			$dropdown-item-padding-x
-		);
-
-		// @deprecated as of v3.x use map $dropdown-header instead
-
-		$dropdown-header-padding-y: var(
-			--dropdown-header-padding-y,
-			$dropdown-padding-y
-		);
-
-		// @deprecated as of v3.x use map $dropdown-header instead
-
-		$dropdown-header-text-transform: var(
-			--dropdown-header-text-transform,
-			none
-		);
-
-		// @deprecated as of v3.x use map $dropdown-header instead
-
-		$dropdown-header-font-size-mobile: null;
-
-		$dropdown-header: ();
-		$dropdown-header: map-deep-merge(
-			(
-				breakpoint-down: sm,
-
-				color: $dropdown-header-color,
-				display: block,
-				font-size: $dropdown-header-font-size,
-				margin-bottom: $dropdown-header-margin-bottom,
-				margin-top: $dropdown-header-margin-top,
-				padding-bottom: $dropdown-header-padding-y,
-				padding-left: $dropdown-header-padding-x,
-				padding-right: $dropdown-header-padding-x,
-				padding-top: $dropdown-header-padding-y,
-				position: relative,
-				text-transform: $dropdown-header-text-transform,
-				word-wrap: break-word,
-
-				mobile: (
-					font-size: $dropdown-header-font-size-mobile,
-				),
-
-				first-child: (
-					margin-top: 0rem,
-				),
-			),
-			$dropdown-header
-		);
-
-		// .dropdown-subheader
-
-		// @deprecated as of v3.x use map $dropdown-subheader instead
-
-		$dropdown-subheader-color: var(
-			--dropdown-subheader-color,
-			$dropdown-header-color
-		);
-
-		// @deprecated as of v3.x use map $dropdown-subheader instead
-
-		$dropdown-subheader-font-size: var(
-			--dropdown-subheader-font-size,
-			0.75rem
-		);
-
-		// @deprecated as of v3.x use map $dropdown-subheader instead
-
-		$dropdown-subheader-font-weight: var(
-			--dropdown-subheader-font-weight,
-			$font-weight-semi-bold
-		);
-
-		// @deprecated as of v3.x use map $dropdown-subheader instead
-
-		$dropdown-subheader-margin-bottom: var(
-			--dropdown-subheader-margin-bottom
-		);
-
-		// @deprecated as of v3.x use map $dropdown-subheader instead
-
-		$dropdown-subheader-margin-top: var(
-			--dropdown-subheader-margin-top,
-			0.625rem
-		);
-
-		// @deprecated as of v3.x use map $dropdown-subheader instead
-
-		$dropdown-subheader-padding-x: var(
-			--dropdown-subheader-padding-x,
-			$dropdown-header-padding-x
-		);
-
-		// @deprecated as of v3.x use map $dropdown-subheader instead
-
-		$dropdown-subheader-padding-y: var(
-			--dropdown-subheader-padding-y,
-			$dropdown-header-padding-y
-		);
-
-		// @deprecated as of v3.x use map $dropdown-subheader instead
-
-		$dropdown-subheader-text-transform: var(
-			--dropdown-subheader-text-transform,
-			uppercase
-		);
-
-		$dropdown-subheader: ();
-		$dropdown-subheader: map-deep-merge(
-			(
-				color: $dropdown-subheader-color,
-				font-size: $dropdown-subheader-font-size,
-				font-weight: $dropdown-subheader-font-weight,
-				margin-bottom: $dropdown-subheader-margin-bottom,
-				margin-top: $dropdown-subheader-margin-top,
-				padding-bottom: $dropdown-subheader-padding-y,
-				padding-left: $dropdown-subheader-padding-x,
-				padding-right: $dropdown-subheader-padding-x,
-				padding-top: $dropdown-subheader-padding-y,
-				text-transform: $dropdown-subheader-text-transform,
-				white-space: normal,
-				word-wrap: break-word,
-
-				first-child: (
-					margin-top: 0rem,
-				),
-			),
-			$dropdown-subheader
-		);
-
-		// .dropdown-caption
-
-		// @deprecated as of v3.x use map $dropdown-caption instead
-
-		$dropdown-caption-color: var(--dropdown-caption-color, $gray-600);
-
-		// @deprecated as of v3.x use map $dropdown-caption instead
-
-		$dropdown-caption-font-size: var(
-			--dropdown-caption-font-size,
-			0.875rem
-		);
-
-		// @deprecated as of v3.x use map $dropdown-caption instead
-
-		$dropdown-caption-font-weight: var(
-			--dropdown-caption-font-weight,
-			$font-weight-normal
-		);
-
-		$dropdown-caption: ();
-		$dropdown-caption: map-merge(
-			(
-				color: $dropdown-caption-color,
-				font-size: $dropdown-caption-font-size,
-				font-weight: $dropdown-caption-font-weight,
-				padding: $dropdown-item-padding-y $dropdown-item-padding-x,
-				white-space: normal,
-				word-wrap: break-word,
-			),
-			$dropdown-caption
-		);
-
-		// .dropdown-divider
-
-		// @deprecated as of v3.x use map $dropdown-divider instead
-
-		$dropdown-divider-bg: var(
-			--dropdown-divider-bg,
-			$dropdown-border-color
-		);
-
-		// @deprecated as of v3.x use map $dropdown-divider instead
-
-		$dropdown-divider-margin-y: var(
-			--dropdown-divider-margin-y,
-			calc(#{$spacer} * 0.5)
-		);
-
-		$dropdown-divider: ();
-		$dropdown-divider: map-merge(
-			(
-				border-top: 1px solid $dropdown-divider-bg,
-				height: 0rem,
-				margin: $dropdown-divider-margin-y 0rem,
-				overflow: hidden,
-			),
-			$dropdown-divider
-		);
-
-		// .dropdown-section
-
-		// @deprecated as of v3.x use map $dropdown-section instead
-
-		$dropdown-section-custom-control: ();
-		$dropdown-section-custom-control: map-deep-merge(
-			(
-				margin-bottom: 0rem,
-			),
-			$dropdown-section-custom-control
-		);
-
-		// @deprecated as of v3.x use map $dropdown-section instead
-
-		$dropdown-section-custom-control-label: ();
-		$dropdown-section-custom-control-label: map-deep-merge(
-			(
-				color: $secondary,
-			),
-			$dropdown-section-custom-control-label
-		);
-
-		// @deprecated as of v3.x use map $dropdown-section instead
-
-		$dropdown-section-custom-control-label-text: ();
-		$dropdown-section-custom-control-label-text: map-deep-merge(
-			(
-				padding-left: 1rem,
-			),
-			$dropdown-section-custom-control-label-text
-		);
-
-		// @deprecated as of v3.x use map $dropdown-section instead
-
-		$dropdown-section-active-custom-control-label: ();
-		$dropdown-section-active-custom-control-label: map-deep-merge(
-			(
-				color: $gray-900,
-			),
-			$dropdown-section-active-custom-control-label
-		);
-
-		$dropdown-section: ();
-		$dropdown-section: map-deep-merge(
-			(
-				padding: $dropdown-item-padding-y $dropdown-item-padding-x,
-
-				form-group: (
-					form-group: (
-						margin-top: calc(#{$dropdown-item-padding-y} * 2),
+			dropdown-item-scroll-up: (
+				background-image: (
+					linear-gradient(
+						to bottom,
+						rgba(255, 255, 255, 1) 84%,
+						rgba(255, 255, 255, 0) 100%
 					),
 				),
+				top: $dropdown-padding-y,
+			),
 
-				custom-control: $dropdown-section-custom-control,
-
-				custom-control-label: $dropdown-section-custom-control-label,
-
-				custom-control-label-text:
-					$dropdown-section-custom-control-label-text,
-
-				custom-control-outside: (
-					label: (
-						padding-left: 1.75rem,
+			dropdown-item-scroll-down: (
+				background-image: (
+					linear-gradient(
+						to top,
+						rgba(255, 255, 255, 1) 84%,
+						rgba(255, 255, 255, 0) 100%
 					),
 				),
+				bottom: $dropdown-padding-y,
+			),
 
-				active: (
-					custom-control-label:
-						$dropdown-section-active-custom-control-label,
+			dropdown-divider: (
+				margin: 0.3125rem 0rem,
+			),
+
+			dropdown-menu-indicator-start: (
+				dropdown-item-indicator-start: (
+					left: 0.5rem,
 				),
 			),
-			$dropdown-section
-		);
 
-		// .dropdown-footer
-
-		$dropdown-footer: ();
-		$dropdown-footer: map-merge(
-			(
-				box-shadow: -1px -2px 3px -3px rgba(0, 0, 0, 0.5),
-				padding: 0.5rem $dropdown-item-padding-x 0rem,
-				position: relative,
-			),
-			$dropdown-footer
-		);
-
-		// Dropdown Inline Scroller
-
-		$dropdown-inline-scroller-max-height: 200px;
-		$dropdown-inline-scroller-max-height-mobile: none;
-
-		// Dropdown Item Indicator
-
-		$dropdown-item-indicator-size: var(
-			--dropdown-item-indicator-size,
-			1rem
-		);
-
-		$dropdown-item-indicator-spacer-x: var(
-			--dropdown-item-indicator-spacer-x,
-			0.75rem
-		);
-
-		$dropdown-item-indicator-start: ();
-		$dropdown-item-indicator-start: map-deep-merge(
-			(
-				align-items: center,
-				color: inherit,
-				display: inline-flex,
-				height: $dropdown-item-indicator-size,
-				justify-content: center,
-				left: $dropdown-item-padding-x,
-				position: absolute,
-				right: auto,
-				top:
-					calc(
-						#{$dropdown-item-padding-y} -
-							(
-								(
-										#{$dropdown-item-indicator-size} -
-											(1em * #{$line-height-base})
-									) /
-									2
-							)
-					),
-				width: $dropdown-item-indicator-size,
-
-				lexicon-icon: (
-					font-size: 1rem,
-					margin-top: 0rem,
+			dropdown-menu-indicator-end: (
+				dropdown-item-indicator-end: (
+					right: 0.5rem,
 				),
 			),
-			$dropdown-item-indicator-start
-		);
 
-		$dropdown-item-indicator-text-start: ();
-		$dropdown-item-indicator-text-start: map-deep-merge(
-			(
-				color: inherit,
-				display: block,
-				padding-left:
-					calc(
-						#{$dropdown-item-indicator-size} +
-							#{$dropdown-item-indicator-spacer-x}
-					),
-				text-decoration: inherit,
-				width: 100%,
-
-				hover: (
-					color: inherit,
-					text-decoration: inherit,
-				),
-
-				focus: (
-					color: inherit,
-					text-decoration: inherit,
-				),
+			inline-scroller: (
+				max-height: 224px,
 			),
-			$dropdown-item-indicator-text-start
-		);
+		),
 
-		$dropdown-item-indicator-end: ();
-		$dropdown-item-indicator-end: map-deep-merge(
-			(
-				align-items: center,
-				color: inherit,
-				display: inline-flex,
-				height: $dropdown-item-indicator-size,
-				justify-content: center,
-				left: auto,
-				position: absolute,
-				right: $dropdown-item-padding-x,
-				top:
-					calc(
-						#{$dropdown-item-padding-y} -
-							(
-								(
-										#{$dropdown-item-indicator-size} -
-											(1em * #{$line-height-base})
-									) /
-									2
-							)
-					),
-				width: $dropdown-item-indicator-size,
-
-				lexicon-icon: (
-					font-size: 16px,
-					margin-top: 0rem,
-				),
+		'.dropdown-menu-select.dropdown-menu-height-lg': (
+			inline-scroller: (
+				max-height: 432px,
 			),
-			$dropdown-item-indicator-end
-		);
-
-		$dropdown-item-indicator-text-end: ();
-		$dropdown-item-indicator-text-end: map-deep-merge(
-			(
-				color: inherit,
-				display: block,
-				padding-right:
-					calc(
-						#{$dropdown-item-indicator-size} +
-							#{$dropdown-item-indicator-spacer-x}
-					),
-				text-decoration: inherit,
-				width: 100%,
-
-				hover: (
-					color: inherit,
-					text-decoration: inherit,
-				),
-
-				focus: (
-					color: inherit,
-					text-decoration: inherit,
-				),
-			),
-			$dropdown-item-indicator-text-end
-		);
-
-		// .dropdown-menu-top
-
-		$dropdown-menu-top: ();
-		$dropdown-menu-top: map-deep-merge(
-			(
-				bottom: 100% !important,
-				left: 0rem !important,
-				margin-top: 0rem,
-				margin-bottom: $dropdown-spacer,
-				right: auto !important,
-				top: auto !important,
-				transform: none !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-top
-		);
-
-		// .dropdown-menu-top-right
-
-		$dropdown-menu-top-right: ();
-		$dropdown-menu-top-right: map-deep-merge(
-			(
-				bottom: 100% !important,
-				left: auto !important,
-				margin-top: 0rem,
-				margin-bottom: $dropdown-spacer,
-				right: 0rem !important,
-				top: auto !important,
-				transform: none !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-top-right
-		);
-
-		// .dropdown-menu-top-center
-
-		$dropdown-menu-top-center: ();
-		$dropdown-menu-top-center: map-deep-merge(
-			(
-				bottom: 100% !important,
-				left: 50% !important,
-				margin-top: 0rem,
-				margin-bottom: $dropdown-spacer,
-				right: auto !important,
-				top: auto !important,
-				transform: translateX(-50%) !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-top-center
-		);
-
-		// .dropdown-menu-center
-
-		$dropdown-menu-center: ();
-		$dropdown-menu-center: map-deep-merge(
-			(
-				bottom: auto !important,
-				left: 50% !important,
-				right: auto !important,
-				top: 100% !important,
-				transform: translateX(-50%) !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-center
-		);
-
-		// .dropdown-menu-left-side
-
-		$dropdown-menu-left-side: ();
-		$dropdown-menu-left-side: map-deep-merge(
-			(
-				bottom: auto !important,
-				left: auto !important,
-				margin-right: $dropdown-spacer,
-				margin-top: 0rem,
-				right: 100% !important,
-				top: 0rem !important,
-				transform: none !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-left-side
-		);
-
-		// .dropdown-menu-left-side-bottom
-
-		$dropdown-menu-left-side-bottom: ();
-		$dropdown-menu-left-side-bottom: map-deep-merge(
-			(
-				bottom: 0rem !important,
-				left: auto !important,
-				margin-right: $dropdown-spacer,
-				margin-top: 0rem,
-				right: 100% !important,
-				top: auto !important,
-				transform: none !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-left-side-bottom
-		);
-
-		// .dropdown-menu-left-side-middle
-
-		$dropdown-menu-left-side-middle: ();
-		$dropdown-menu-left-side-middle: map-deep-merge(
-			(
-				bottom: auto !important,
-				left: auto !important,
-				margin-right: $dropdown-spacer,
-				margin-top: 0rem,
-				right: 100% !important,
-				top: 50% !important,
-				transform: translate(0, -50%) !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-left-side-middle
-		);
-
-		// .dropdown-menu-right-side
-
-		$dropdown-menu-right-side: ();
-		$dropdown-menu-right-side: map-deep-merge(
-			(
-				bottom: auto !important,
-				left: 100% !important,
-				margin-left: $dropdown-spacer,
-				margin-top: 0rem,
-				right: auto !important,
-				top: 0rem !important,
-				transform: none !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-right-side
-		);
-
-		// .dropdown-menu-right-side-bottom
-
-		$dropdown-menu-right-side-bottom: ();
-		$dropdown-menu-right-side-bottom: map-deep-merge(
-			(
-				bottom: 0rem !important,
-				left: 100% !important,
-				margin-left: $dropdown-spacer,
-				margin-top: 0rem,
-				right: auto !important,
-				top: auto !important,
-				transform: none !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-right-side-bottom
-		);
-
-		// .dropdown-menu-right-side-middle
-
-		$dropdown-menu-right-side-middle: ();
-		$dropdown-menu-right-side-middle: map-deep-merge(
-			(
-				bottom: auto !important,
-				left: 100% !important,
-				margin-left: $dropdown-spacer,
-				margin-top: 0rem,
-				right: auto !important,
-				top: 50% !important,
-				transform: translate(0, -50%) !important,
-				will-change: auto !important,
-			),
-			$dropdown-menu-right-side-middle
-		);
-
-		// .dropdown-full, .dropdown-wide
-
-		$dropdown-full-wide-header-spacer-y: 20px;
-
-		// .dropdown-wide
-
-		$dropdown-wide-width: 500px;
-
-		// .dropdown-menu-width-shrink
-
-		$dropdown-menu-width-shrink: ();
-		$dropdown-menu-width-shrink: map-deep-merge(
-			(
-				min-width: 0rem,
-			),
-			$dropdown-menu-width-shrink
-		);
-
-		// .dropdown-menu-width-full
-
-		$dropdown-menu-width-full: ();
-		$dropdown-menu-width-full: map-merge(
-			(
-				left: 12px !important,
-				right: 12px !important,
-				max-width: none,
-				min-width: 0rem,
-				width: calc(100% - 24px),
-			),
-			$dropdown-menu-width-full
-		);
-
-		// .dropdown-menu-width-sm
-
-		$dropdown-menu-width-sm: ();
-		$dropdown-menu-width-sm: map-merge(
-			(
-				max-width: none,
-				min-width: 0rem,
-				width: 500px,
-			),
-			$dropdown-menu-width-sm
-		);
-
-		$dropdown-menu-width-sm-sm-down: ();
-		$dropdown-menu-width-sm-sm-down: map-merge(
-			(
-				left: 12px !important,
-				right: 12px !important,
-				width: calc(100% - 24px),
-			),
-			$dropdown-menu-width-sm-sm-down
-		);
-
-		// Dropdown Menu Height
-
-		$dropdown-menu-height-auto: ();
-		$dropdown-menu-height-auto: map-merge(
-			(
-				height: auto,
-				max-height: none,
-				min-height: 0rem,
-			),
-			$dropdown-menu-height-auto
-		);
-
-		// Autocomplete Dropdown Menu
-
-		$autocomplete-dropdown-menu: ();
-		$autocomplete-dropdown-menu: map-deep-merge(
-			(
-				max-height: 160px,
-				max-width: none,
-				width: 100%,
-			),
-			$autocomplete-dropdown-menu
-		);
-
-		// .dropdown-action
-
-		// @deprecated as of v3.x use map $dropdown-action instead
-
-		$dropdown-action-toggle-border-radius: $border-radius;
-
-		// @deprecated as of v3.x use map $dropdown-action instead
-
-		$dropdown-action-toggle-font-size: 1rem;
-
-		// @deprecated as of v3.x use map $dropdown-action instead
-
-		$dropdown-action-toggle-disabled-cursor: $disabled-cursor;
-
-		// @deprecated as of v3.x use map $dropdown-action instead
-
-		$dropdown-action-toggle-disabled-opacity: $btn-disabled-opacity;
-
-		$dropdown-action-toggle-size: if(
-			variable-exists(btn-monospaced-size-sm),
-			$btn-monospaced-size-sm,
-			2rem
-		);
-
-		$dropdown-action: ();
-		$dropdown-action: map-deep-merge(
-			(
-				display: inline-block,
-				font-size: $dropdown-action-toggle-font-size,
-				vertical-align: middle,
-
-				dropdown-toggle: (
-					align-items: center,
-					border-radius:
-						clay-enable-rounded(
-							$dropdown-action-toggle-border-radius
-						),
-					cursor: $link-cursor,
-					display: flex,
-					font-size: inherit,
-					font-weight: inherit,
-					height: $dropdown-action-toggle-size,
-					justify-content: center,
-					line-height: inherit,
-					padding: 0rem,
-					text-transform: inherit,
-					vertical-align: baseline,
-					width: $dropdown-action-toggle-size,
-
-					disabled: (
-						cursor: $dropdown-action-toggle-disabled-cursor,
-						opacity: $dropdown-action-toggle-disabled-opacity,
-					),
-
-					lexicon-icon: (
-						margin-top: 0rem,
-					),
-
-					inline-item: (
-						lexicon-icon: (
-							margin-top: 0rem,
-						),
-					),
-				),
-			),
-			$dropdown-action
-		);
-
-		// Alert inside Dropdowns
-
-		$dropdown-alert-font-size: null;
-		$dropdown-alert-line-height: normal;
-		$dropdown-alert-margin: 0.5rem;
-		$dropdown-alert-padding-x: $dropdown-header-padding-x;
-		$dropdown-alert-padding-y: $dropdown-header-padding-y;
-
-		$dropdown-menu-alert: ();
-		$dropdown-menu-alert: map-deep-merge(
-			(
-				font-size: $dropdown-alert-font-size,
-				line-height: $dropdown-alert-line-height,
-				margin: $dropdown-alert-margin,
-				padding: $dropdown-alert-padding-y $dropdown-alert-padding-x,
-
-				first-child: (
-					margin-top: 0rem,
-				),
-
-				last-child: (
-					margin-bottom: 0rem,
-				),
-			),
-			$dropdown-menu-alert
-		);
-
-		$dropdown-menu-alert-fluid: ();
-		$dropdown-menu-alert-fluid: map-deep-merge(
-			(
-				margin-left: 0rem,
-				margin-right: 0rem,
-
-				first-child: (
-					margin-top: calc(#{$dropdown-padding-y} * -1),
-				),
-
-				last-child: (
-					margin-bottom: calc(#{$dropdown-padding-y} * -1),
-				),
-			),
-			$dropdown-menu-alert-fluid
-		);
-
-		$dropdown-menu: map-deep-merge(
-			(
-				alert:
-					map-deep-merge(
-						$dropdown-menu-alert,
-						map-get($dropdown-menu, alert)
-					),
-				alert-fluid:
-					map-deep-merge(
-						$dropdown-menu-alert-fluid,
-						map-get($dropdown-menu, alert-fluid)
-					),
-			),
-			$dropdown-menu
-		);
-
-		// Dropdown Menu Variants
-
-		$dropdown-menu-palette: ();
-		$dropdown-menu-palette: map-deep-merge(
-			(
-				'.dropdown-menu-select.dropdown-menu': (
-					dropdown-header: (
-						padding-bottom: 0.375rem,
-						padding-left: 1.75rem,
-						padding-right: 0.5rem,
-						padding-top: 0.3125rem,
-					),
-
-					dropdown-subheader: (
-						padding-bottom: 0.4375rem,
-						padding-left: 1.75rem,
-						padding-right: 0.5rem,
-						padding-top: 0.4375rem,
-					),
-
-					dropdown-section: (
-						padding-left: 1.75rem,
-						padding-right: 0.5rem,
-					),
-
-					dropdown-item: (
-						padding-bottom: 0.375rem,
-						padding-left: 1.75rem,
-						padding-right: 0.5rem,
-						padding-top: 0.3125rem,
-					),
-
-					dropdown-item-scroll: (
-						font-size: 1rem,
-						height: 2rem,
-						padding: 0rem,
-						position: absolute,
-						text-align: center,
-						z-index: 1,
-
-						hover: (
-							background-color: $dropdown-link-hover-bg,
-							background-image: none,
-							color: $dropdown-link-hover-color,
-						),
-
-						focus: (
-							background-color: $dropdown-link-hover-bg,
-							background-image: none,
-							color: $dropdown-link-hover-color,
-						),
-
-						active: (
-							background-color: $dropdown-link-active-bg,
-							background-image: none,
-							color: $dropdown-link-active-color,
-						),
-
-						disabled: (
-							background-color: transparent,
-							background-image: none,
-							color: $dropdown-link-disabled-color,
-							cursor: $dropdown-item-disabled-cursor,
-						),
-					),
-
-					dropdown-item-scroll-up: (
-						background-image: (
-							linear-gradient(
-								to bottom,
-								rgba(255, 255, 255, 1) 84%,
-								rgba(255, 255, 255, 0) 100%
-							),
-						),
-						top: $dropdown-padding-y,
-					),
-
-					dropdown-item-scroll-down: (
-						background-image: (
-							linear-gradient(
-								to top,
-								rgba(255, 255, 255, 1) 84%,
-								rgba(255, 255, 255, 0) 100%
-							),
-						),
-						bottom: $dropdown-padding-y,
-					),
-
-					dropdown-divider: (
-						margin: 0.3125rem 0rem,
-					),
-
-					dropdown-menu-indicator-start: (
-						dropdown-item-indicator-start: (
-							left: 0.5rem,
-						),
-					),
-
-					dropdown-menu-indicator-end: (
-						dropdown-item-indicator-end: (
-							right: 0.5rem,
-						),
-					),
-
-					inline-scroller: (
-						max-height: 224px,
-					),
-				),
-
-				'.dropdown-menu-select.dropdown-menu-height-lg': (
-					inline-scroller: (
-						max-height: 432px,
-					),
-				),
-			),
-			$dropdown-menu-palette
-		);
-	}
-}
+		),
+	),
+	$dropdown-menu-palette
+);

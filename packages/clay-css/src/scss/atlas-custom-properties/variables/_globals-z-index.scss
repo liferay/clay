@@ -1,50 +1,48 @@
-@if ($enable-atlas-custom-properties) {
-	$zindex-dropdown: 1000;
+$zindex-dropdown: 1000 !default;
 
-	$zindex-sticky: 989;
+$zindex-sticky: 989 !default;
 
-	$zindex-fixed: 1030;
+$zindex-fixed: 1030 !default;
 
-	$zindex-modal-backdrop: 1040;
-	$zindex-modal: 1050;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
 
-	$zindex-popover: 1060;
+$zindex-popover: 1060 !default;
 
-	$zindex-tooltip: 1070;
+$zindex-tooltip: 1070 !default;
 
-	$zindex-alert-notifications: 5000;
+$zindex-alert-notifications: 5000 !default;
 
-	$zindex-clay-range-input-form-control: 1;
+$zindex-clay-range-input-form-control: 1 !default;
 
-	$zindex-input-group-hover: 3;
+$zindex-input-group-hover: 3 !default;
 
-	$zindex-input-group-focus: calc(#{$zindex-input-group-hover} + 1); // 4
+$zindex-input-group-focus: calc(#{$zindex-input-group-hover} + 1) !default; // 4
 
-	$zindex-navbar-collapse-absolute: 500;
+$zindex-navbar-collapse-absolute: 500 !default;
 
-	$zindex-navbar-overlay: 450;
+$zindex-navbar-overlay: 450 !default;
 
-	$zindex-navbar-toggler-focus: 525;
+$zindex-navbar-toggler-focus: 525 !default;
 
-	$zindex-menubar-vertical-expand-md-collapse-mobile: calc(
-		#{$zindex-navbar-collapse-absolute} - 1
-	); // 499
+$zindex-menubar-vertical-expand-md-collapse-mobile: calc(
+	#{$zindex-navbar-collapse-absolute} - 1
+) !default; // 499
 
-	$zindex-menubar-vertical-expand-lg-collapse-mobile: calc(
-		#{$zindex-navbar-collapse-absolute} - 1
-	); // 499
+$zindex-menubar-vertical-expand-lg-collapse-mobile: calc(
+	#{$zindex-navbar-collapse-absolute} - 1
+) !default; // 499
 
-	$zindex-pagination-link-focus: 4;
+$zindex-pagination-link-focus: 4 !default;
 
-	$zindex-pagination-link-active: 3;
+$zindex-pagination-link-active: 3 !default;
 
-	$zindex-pagination-link-disabled: 0;
+$zindex-pagination-link-disabled: 0 !default;
 
-	$zindex-panel-header-link-focus: 1;
+$zindex-panel-header-link-focus: 1 !default;
 
-	$zindex-sidenav: calc(#{$zindex-dropdown} - 25); // 975
+$zindex-sidenav: calc(#{$zindex-dropdown} - 25) !default; // 975
 
-	$zindex-c-slideout: $zindex-sidenav; // 975
+$zindex-c-slideout: $zindex-sidenav !default; // 975
 
-	$zindex-c-slideout-height-full: calc(#{$zindex-fixed} + 5); // 1035
-}
+$zindex-c-slideout-height-full: calc(#{$zindex-fixed} + 5) !default; // 1035
