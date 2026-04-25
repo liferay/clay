@@ -810,6 +810,8 @@ textarea.form-control-sm,
 	}
 
 	label {
+		font-size: $form-group-sm-input-label-font-size;
+		line-height: $form-group-sm-input-label-line-height;
 		margin-bottom: $form-group-sm-input-label-margin-bottom;
 	}
 

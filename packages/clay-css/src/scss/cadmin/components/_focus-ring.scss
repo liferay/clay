@@ -1,0 +1,126 @@
+$cadmin-focus-ring-animation-name: clay-focus-ring !default;
+$cadmin-focus-ring-animation-duration: 1s !default;
+$cadmin-focus-ring-animation-timing-function: cubic-bezier(
+	0.2,
+	0,
+	0,
+	1
+) !default;
+$cadmin-focus-ring-animation: $cadmin-focus-ring-animation-name
+	$cadmin-focus-ring-animation-duration
+	$cadmin-focus-ring-animation-timing-function !default;
+
+$cadmin-focus-ring-animation-from-box-shadow:
+	0 0 0 4px $cadmin-white,
+	0 0 0 12px $cadmin-primary-l2 !default;
+$cadmin-focus-ring-animation-to-box-shadow:
+	0 0 0 2px $cadmin-white,
+	0 0 0 4px $cadmin-primary-l0 !default;
+
+$cadmin-focus-ring-pulse-animation-name: clay-cadmin-focus-ring-pulse !default;
+$cadmin-focus-ring-pulse-animation: $cadmin-focus-ring-pulse-animation-name
+	$cadmin-focus-ring-animation-duration
+	$cadmin-focus-ring-animation-timing-function !default;
+
+@at-root {
+	@keyframes #{$cadmin-focus-ring-animation-name} {
+		0%,
+		50% {
+			opacity: 0;
+			transform: scale(1.5);
+		}
+
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes #{$cadmin-focus-ring-pulse-animation-name} {
+		0%,
+		50% {
+			box-shadow: $cadmin-focus-ring-animation-from-box-shadow;
+		}
+
+		100% {
+			box-shadow: $cadmin-focus-ring-animation-to-box-shadow;
+		}
+	}
+
+	@if $cadmin-enable-prefers-reduced-motion-media-query {
+		@media (prefers-reduced-motion: reduce) {
+			@keyframes #{$cadmin-focus-ring-animation-name} {
+				0%,
+				60% {
+					opacity: 0;
+				}
+
+				61% {
+					opacity: 1;
+				}
+			}
+
+			@keyframes #{$cadmin-focus-ring-pulse-animation-name} {
+				0%,
+				60% {
+					box-shadow: $cadmin-focus-ring-animation-from-box-shadow;
+				}
+
+				61% {
+					box-shadow: $cadmin-focus-ring-animation-to-box-shadow;
+				}
+			}
+		}
+	}
+
+	html#{$cadmin-selector} .c-prefers-focus-ring .cadmin {
+		:focus-visible,
+		.focus {
+			position: relative;
+			z-index: 1;
+
+			&::after {
+				animation: $cadmin-focus-ring-animation;
+				border-radius: inherit;
+				box-shadow: $cadmin-focus-ring-animation-to-box-shadow;
+				content: '';
+				inset: 0;
+				pointer-events: none;
+				position: absolute;
+			}
+		}
+
+		.custom-control-input:focus-visible ~ .custom-control-label::after {
+			animation: $cadmin-focus-ring-pulse-animation;
+			box-shadow: $cadmin-focus-ring-animation-to-box-shadow;
+		}
+	}
+
+	html#{$cadmin-selector} .c-prefers-focus-ring.c-tab-returning .cadmin {
+		:focus-visible,
+		.focus {
+			&::after {
+				animation-name: none;
+			}
+		}
+
+		.custom-control-input:focus-visible ~ .custom-control-label::after {
+			animation-name: none;
+		}
+	}
+
+	html#{$cadmin-selector}
+		.c-prefers-reduced-motion.c-prefers-focus-ring
+		.cadmin {
+		:focus-visible,
+		.focus {
+			&::after {
+				animation: none;
+			}
+		}
+
+		.custom-control-input:focus-visible ~ .custom-control-label::after {
+			animation: none;
+		}
+	}
+}

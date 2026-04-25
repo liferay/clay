@@ -93,6 +93,14 @@ interface ITreeViewProps<T extends Record<string, any>>
 	messages?: DragAndDropMessages;
 
 	/**
+	 * Callback called when the user activates an item with the Enter key.
+	 * When provided, it replaces the default Enter behavior (which otherwise
+	 * toggles selection). Use this to wire up application-specific actions
+	 * such as opening the item, navigating, or triggering a custom command.
+	 */
+	onItemActivate?: (item: T) => void;
+
+	/**
 	 * The callback is called whenever there is an item dragging over
 	 * another item.
 	 */
@@ -183,6 +191,7 @@ export function TreeView<T extends Record<string, any>>({
 	messages,
 	nestedKey = 'children',
 	onExpandedChange,
+	onItemActivate,
 	onItemHover,
 	onItemInvalidMove,
 	onItemMove,
@@ -233,6 +242,7 @@ export function TreeView<T extends Record<string, any>>({
 		expanderIcons,
 		itemNameKey,
 		nestedKey,
+		onItemActivate,
 		onItemHover,
 		onItemInvalidMove,
 		onItemMove,

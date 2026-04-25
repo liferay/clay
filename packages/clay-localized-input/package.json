@@ -3,13 +3,13 @@
 		"extends browserslist-config-clay"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.159.0",
-		"@clayui/core": "^3.159.0",
-		"@clayui/drop-down": "^3.159.0",
-		"@clayui/form": "^3.159.0",
-		"@clayui/icon": "^3.159.0",
-		"@clayui/label": "^3.159.0",
-		"@clayui/layout": "^3.159.0",
+		"@clayui/button": "^3.161.0",
+		"@clayui/core": "^3.161.0",
+		"@clayui/drop-down": "^3.161.0",
+		"@clayui/form": "^3.161.0",
+		"@clayui/icon": "^3.161.0",
+		"@clayui/label": "^3.161.0",
+		"@clayui/layout": "^3.161.0",
 		"classnames": "2.3.1"
 	},
 	"description": "ClayLocalizedInput component",
@@ -24,7 +24,7 @@
 	"main": "src/index.tsx",
 	"name": "@clayui/localized-input",
 	"peerDependencies": {
-		"@clayui/css": "^3.159.0",
+		"@clayui/css": "^3.161.0",
 		"react": "^16.0.0 || ^17.0.0 || ^18.0.0",
 		"react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
 	},
@@ -36,5 +36,5 @@
 		"buildTypes": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"test": "jest --config ../../jest.config.js"
 	},
-	"version": "3.159.0"
+	"version": "3.161.0"
 }

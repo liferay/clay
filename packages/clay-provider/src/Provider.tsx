@@ -8,6 +8,7 @@ import React, {useContext, useMemo} from 'react';
 
 import {DataClient} from './DataClient';
 import {useReducedMotion} from './useReducedMotion';
+import {useTabReturnFocusRingAnimation} from './useTabReturnFocusRingAnimation';
 
 interface IProviderProps
 	extends Omit<IProviderContext, 'client' | 'prefersReducedMotion'> {
@@ -67,6 +68,8 @@ export function Provider({
 	);
 
 	const isReducedMotion = useReducedMotion(reducedMotion);
+
+	useTabReturnFocusRingAnimation();
 
 	return (
 		<Context.Provider

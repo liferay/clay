@@ -102,6 +102,7 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 			expandDoubleClick,
 			expandedKeys,
 			nestedKey,
+			onItemActivate,
 			onRenameItem,
 			onSelect,
 			open,
@@ -455,6 +456,27 @@ export const Item = React.forwardRef<HTMLDivElement, ITreeViewItemProps>(
 										lastListElement.firstElementChild as HTMLDivElement;
 
 									linkElement.focus();
+									break;
+								}
+								case Keys.Enter: {
+									if (source) {
+										break;
+									}
+
+									if (onItemActivate) {
+										onItemActivate(
+											removeItemInternalProps(item)
+										);
+
+										break;
+									}
+
+									selection.toggleSelection(item.key);
+
+									if (onSelect) {
+										onSelect(removeItemInternalProps(item));
+									}
+
 									break;
 								}
 								case Keys.Spacebar: {

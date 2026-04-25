@@ -837,3 +837,8 @@ $input-btn-border-width: $border-width !default;
 
 $print-body-min-width: map-get($grid-breakpoints, 'lg') !default;
 $print-page-size: a3 !default;
+
+$focus-ring-animation-from-box-shadow: var(
+	--focus-ring-animation-from-box-shadow
+);
+$focus-ring-animation-to-box-shadow: var(--focus-ring-animation-to-box-shadow);

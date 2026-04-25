@@ -698,6 +698,8 @@ textarea.form-control-sm,
 	}
 
 	label {
+		font-size: $cadmin-form-group-sm-input-label-font-size;
+		line-height: $cadmin-form-group-sm-input-label-line-height;
 		margin-bottom: $cadmin-form-group-sm-input-label-margin-bottom;
 	}
 

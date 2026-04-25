@@ -388,6 +388,109 @@ describe('TreeView incremental interactions', () => {
 
 				expect(rootCheckbox.checked).toBeTruthy();
 			});
+
+			it('pressing enter selects item', () => {
+				const {container, getByRole} = render(
+					<Provider spritemap={spritemap}>
+						<TreeView>
+							<TreeView.Item key="Root">
+								<TreeView.ItemStack>
+									<OptionalCheckbox />
+									Root
+								</TreeView.ItemStack>
+
+								<TreeView.Group>
+									<TreeView.Item key="Item">
+										<OptionalCheckbox />
+										Item
+									</TreeView.Item>
+								</TreeView.Group>
+							</TreeView.Item>
+						</TreeView>
+					</Provider>
+				);
+
+				const root = getByRole('treeitem');
+
+				const rootCheckbox = container.querySelector(
+					'input.custom-control-input[type=checkbox]'
+				) as HTMLInputElement;
+
+				fireEvent.keyDown(root, {key: 'Enter'});
+
+				expect(rootCheckbox.checked).toBeTruthy();
+			});
+
+			it('pressing enter calls onItemActivate and does not select the item', () => {
+				const onItemActivate = jest.fn();
+
+				const {container, getByRole} = render(
+					<Provider spritemap={spritemap}>
+						<TreeView
+							defaultItems={[{id: 'Root', name: 'Root'}]}
+							onItemActivate={onItemActivate}
+						>
+							{(item) => (
+								<TreeView.Item>
+									<TreeView.ItemStack>
+										<OptionalCheckbox />
+
+										{item.name}
+									</TreeView.ItemStack>
+								</TreeView.Item>
+							)}
+						</TreeView>
+					</Provider>
+				);
+
+				const root = getByRole('treeitem');
+
+				const rootCheckbox = container.querySelector(
+					'input.custom-control-input[type=checkbox]'
+				) as HTMLInputElement;
+
+				fireEvent.keyDown(root, {key: 'Enter'});
+
+				expect(onItemActivate).toHaveBeenCalledTimes(1);
+				expect(onItemActivate).toHaveBeenCalledWith(
+					expect.objectContaining({id: 'Root', name: 'Root'})
+				);
+				expect(rootCheckbox.checked).toBeFalsy();
+			});
+
+			it('pressing space still selects the item when onItemActivate is provided', () => {
+				const onItemActivate = jest.fn();
+
+				const {container, getByRole} = render(
+					<Provider spritemap={spritemap}>
+						<TreeView
+							defaultItems={[{id: 'Root', name: 'Root'}]}
+							onItemActivate={onItemActivate}
+						>
+							{(item) => (
+								<TreeView.Item>
+									<TreeView.ItemStack>
+										<OptionalCheckbox />
+
+										{item.name}
+									</TreeView.ItemStack>
+								</TreeView.Item>
+							)}
+						</TreeView>
+					</Provider>
+				);
+
+				const root = getByRole('treeitem');
+
+				const rootCheckbox = container.querySelector(
+					'input.custom-control-input[type=checkbox]'
+				) as HTMLInputElement;
+
+				fireEvent.keyDown(root, {key: ' '});
+
+				expect(onItemActivate).not.toHaveBeenCalled();
+				expect(rootCheckbox.checked).toBeTruthy();
+			});
 		});
 
 		it('clicking the item link selects the item in the single selection', () => {

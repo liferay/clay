@@ -42,6 +42,7 @@ export interface ITreeViewContext<T extends Record<string, any>>
 	expanderIcons?: Icons;
 	itemNameKey?: string;
 	nestedKey?: string;
+	onItemActivate?: (item: T) => void;
 	onItemHover?: (
 		items: T | Set<Key>,
 		parentItem: T,

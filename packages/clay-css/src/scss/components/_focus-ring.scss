@@ -1,0 +1,115 @@
+$focus-ring-animation-name: clay-focus-ring !default;
+$focus-ring-animation-duration: 1s !default;
+$focus-ring-animation-timing-function: cubic-bezier(0.2, 0, 0, 1) !default;
+$focus-ring-animation: $focus-ring-animation-name $focus-ring-animation-duration
+	$focus-ring-animation-timing-function !default;
+
+$focus-ring-animation-from-box-shadow:
+	0 0 0 0.25rem $white,
+	0 0 0 0.75rem $primary-l2 !default;
+$focus-ring-animation-to-box-shadow:
+	0 0 0 0.125rem $white,
+	0 0 0 0.25rem $primary-l0 !default;
+
+$focus-ring-pulse-animation-name: clay-focus-ring-pulse !default;
+$focus-ring-pulse-animation: $focus-ring-pulse-animation-name
+	$focus-ring-animation-duration $focus-ring-animation-timing-function !default;
+
+@keyframes #{$focus-ring-animation-name} {
+	0%,
+	50% {
+		opacity: 0;
+		transform: scale(1.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes #{$focus-ring-pulse-animation-name} {
+	0%,
+	50% {
+		box-shadow: $focus-ring-animation-from-box-shadow;
+	}
+
+	100% {
+		box-shadow: $focus-ring-animation-to-box-shadow;
+	}
+}
+
+@if $enable-prefers-reduced-motion-media-query {
+	@media (prefers-reduced-motion: reduce) {
+		@keyframes #{$focus-ring-animation-name} {
+			0%,
+			60% {
+				opacity: 0;
+			}
+
+			61% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes #{$focus-ring-pulse-animation-name} {
+			0%,
+			60% {
+				box-shadow: $focus-ring-animation-from-box-shadow;
+			}
+
+			61% {
+				box-shadow: $focus-ring-animation-to-box-shadow;
+			}
+		}
+	}
+}
+
+.c-prefers-focus-ring {
+	:focus-visible,
+	.focus {
+		position: relative;
+		z-index: 1;
+
+		&::after {
+			animation: $focus-ring-animation;
+			border-radius: inherit;
+			box-shadow: $focus-ring-animation-to-box-shadow;
+			content: '';
+			inset: 0;
+			pointer-events: none;
+			position: absolute;
+		}
+	}
+
+	.custom-control-input:focus-visible ~ .custom-control-label::after {
+		animation: $focus-ring-pulse-animation;
+		box-shadow: $focus-ring-animation-to-box-shadow;
+	}
+
+	&.c-tab-returning {
+		:focus-visible,
+		.focus {
+			&::after {
+				animation-name: none;
+			}
+		}
+
+		.custom-control-input:focus-visible ~ .custom-control-label::after {
+			animation-name: none;
+		}
+	}
+
+	&.c-prefers-reduced-motion {
+		:focus-visible,
+		.focus {
+			&::after {
+				animation: none;
+			}
+		}
+
+		.custom-control-input:focus-visible ~ .custom-control-label::after {
+			animation: none;
+		}
+	}
+}

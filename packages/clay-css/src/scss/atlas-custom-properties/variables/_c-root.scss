@@ -333,6 +333,11 @@ $c-root: map-merge(
 
 		--code-color: $pink,
 		--code-font-size: 87.5%,
+
+		--focus-ring-animation-from-box-shadow:
+			unquote('0 0 0 0.25rem #{$white}, 0 0 0 0.75rem #{$primary-l2}'),
+		--focus-ring-animation-to-box-shadow:
+			unquote('0 0 0 0.125rem #{$white}, 0 0 0 0.25rem #{$primary-l0}'),
 	),
 	$c-root
 );
