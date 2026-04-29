@@ -52,7 +52,7 @@ $breadcrumb-active-color: $gray-900 !default;
 $breadcrumb-active-font-weight: $font-weight-semi-bold !default;
 
 $breadcrumb-item: () !default;
-$breadcrumb-item: map-merge(
+$breadcrumb-item: map-deep-merge(
 	(
 		font-size: var(--breadcrumb-font-size, $breadcrumb-font-size),
 		font-weight: var(--breadcrumb-font-weight, $breadcrumb-font-weight),
