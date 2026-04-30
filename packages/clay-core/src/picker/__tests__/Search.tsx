@@ -228,6 +228,32 @@ describe('Picker search', () => {
 		expect(combobox).toHaveTextContent('Mango');
 	});
 
+	it('preserves the trigger label of the selected item when the search filter excludes it', async () => {
+		const {getByPlaceholderText, getByRole, queryByRole} = render(
+			<Picker defaultSelectedKey="Mango" items={items} searchable>
+				{(item) => <Option key={item}>{item}</Option>}
+			</Picker>
+		);
+
+		const combobox = getByRole('combobox');
+
+		expect(combobox).toHaveTextContent('Mango');
+
+		fireEvent.click(combobox);
+
+		const searchInput = getByPlaceholderText('Search');
+
+		fireEvent.change(searchInput, {target: {value: 'Apple'}});
+
+		await waitFor(() => {
+			expect(
+				queryByRole('option', {name: 'Mango'})
+			).not.toBeInTheDocument();
+		});
+
+		expect(combobox).toHaveTextContent('Mango');
+	});
+
 	it('renders search input with correct accessibility attributes', () => {
 		const {getByPlaceholderText, getByRole} = render(
 			<Picker items={items} searchable>

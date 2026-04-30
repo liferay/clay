@@ -121,13 +121,14 @@ export function Option({
 	}
 
 	const As = href ? 'a' : 'button';
+	const asProps = href ? {href} : {type: 'button' as const};
 
 	return (
 		<li role="presentation">
 			<As
 				{...otherProps}
 				{...hoverProps}
-				{...(href ? {href} : {})}
+				{...asProps}
 				aria-describedby={ariaDescribedby}
 				aria-label={ariaLabel}
 				aria-labelledby={ariaLabelledby}

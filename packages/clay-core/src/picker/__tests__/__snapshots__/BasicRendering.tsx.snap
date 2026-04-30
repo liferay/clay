@@ -151,6 +151,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
             id="Apple"
             role="option"
             tabindex="-1"
+            type="button"
           >
             Apple
           </button>
@@ -164,6 +165,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
             id="Banana"
             role="option"
             tabindex="-1"
+            type="button"
           >
             Banana
           </button>
@@ -177,6 +179,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
             id="Blueberry"
             role="option"
             tabindex="-1"
+            type="button"
           >
             Blueberry
           </button>

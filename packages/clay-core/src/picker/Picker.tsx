@@ -28,6 +28,7 @@ import {LiveAnnouncer} from '../live-announcer';
 import {Search} from './Search';
 import {PickerContext} from './context';
 import {useSearch} from './useSearch';
+import {useTriggerLabel} from './useTriggerLabel';
 
 import type {ICollectionProps} from '../collection';
 import type {AnnouncerAPI} from '../live-announcer';
@@ -447,6 +448,11 @@ export function Picker<T extends Record<string, any> | string | number>({
 		selectedKey,
 	};
 
+	const selectedItem =
+		selectedKey !== undefined ? collection.getItem(selectedKey) : undefined;
+
+	const triggerLabel = useTriggerLabel(selectedKey, selectedItem);
+
 	if (context.isMobile) {
 		return (
 			<select
@@ -576,9 +582,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 				tabIndex={0}
 				type="button"
 			>
-				{selectedKey
-					? collection.getItem(selectedKey)?.value
-					: placeholder}
+				{triggerLabel ?? placeholder}
 			</As>
 
 			{active && (
