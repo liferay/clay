@@ -192,6 +192,7 @@ export function ClayCardWithInfo({
 							['aspect-ratio-item-vertical-flush']: flushVertical,
 						}
 					)}
+					draggable={false}
 					{...(typeof imgProps === 'string'
 						? {src: imgProps}
 						: imgProps)}

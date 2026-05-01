@@ -34,6 +34,6 @@ export {useIsMobileDevice} from './useIsMobileDevice';
 export {useMousePosition} from './useMousePosition';
 export {useNavigation, isTypeahead, getFocusableList} from './useNavigation';
 export {useObservedMaxWidth} from './useObservedMaxWidth';
-export {useOverlayPosition} from './useOverlayPositon';
-export type {AlignPoints} from './useOverlayPositon';
+export {useOverlayPosition} from './useOverlayPosition';
+export type {AlignPoints} from './useOverlayPosition';
 export {usePrevious} from './usePrevious';

@@ -26,6 +26,18 @@ export function doAlign<T extends HTMLElement, K extends HTMLElement>({
 	targetElement,
 	...config
 }: AlignProps<T, K>): Required<AlignBase> {
+
+	// Clear any inline positioning written by a previous alignment pass.
+	// `dom-align` only sets one of `left`/`right` (and one of `top`/`bottom`)
+	// per call based on `useCssRight`, so when the resolved direction flips
+	// across calls the opposite side is left behind and both rules apply at
+	// once, producing the RTL flicker reported in LPD-69776.
+
+	sourceElement.style.bottom = '';
+	sourceElement.style.left = '';
+	sourceElement.style.right = '';
+	sourceElement.style.top = '';
+
 	return domAlign(sourceElement, targetElement, {
 		...config,
 		useCssRight: isRtl(sourceElement),

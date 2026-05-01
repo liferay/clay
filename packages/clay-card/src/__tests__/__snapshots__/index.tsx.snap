@@ -1926,6 +1926,7 @@ exports[`ClayCardWithInfo renders as image card specifying imageProps and not th
           >
             <img
               class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+              draggable="false"
               src="path/to/an/image"
             />
             <span
@@ -2004,6 +2005,7 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and i
           >
             <img
               class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+              draggable="false"
               src="path/to/an/image"
             />
             <span
@@ -2167,6 +2169,7 @@ exports[`ClayCardWithInfo renders as image card with flush horizontal 1`] = `
           >
             <img
               class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+              draggable="false"
               src="path/to/an/image"
             />
             <span
@@ -2245,6 +2248,7 @@ exports[`ClayCardWithInfo renders as image card with flush vertical 1`] = `
           >
             <img
               class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-vertical-flush"
+              draggable="false"
               src="path/to/an/image"
             />
             <span

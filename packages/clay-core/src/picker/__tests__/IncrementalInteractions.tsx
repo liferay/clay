@@ -188,6 +188,111 @@ describe('Picker incremental interactions', () => {
 		expect(combobox.getAttribute('aria-activedescendant')).toBe('Banana');
 	});
 
+	it('scrolls the selected option into view when expanding the menu', () => {
+		const items = Array.from({length: 50}, (_, i) => `Item ${i + 1}`);
+
+		const ITEM_HEIGHT = 20;
+		const LIST_CLIENT_HEIGHT = 200;
+
+		const originalScrollTo = HTMLElement.prototype.scrollTo;
+
+		HTMLElement.prototype.scrollTo = jest.fn() as any;
+
+		const getBoundingClientRectSpy = jest
+			.spyOn(Element.prototype, 'getBoundingClientRect')
+			.mockImplementation(function (this: HTMLElement) {
+				if (this.getAttribute('role') === 'option') {
+					const top = items.indexOf(this.id) * ITEM_HEIGHT;
+
+					return {
+						bottom: top + ITEM_HEIGHT,
+						height: ITEM_HEIGHT,
+						left: 0,
+						right: 0,
+						toJSON: () => ({}),
+						top,
+						width: 0,
+						x: 0,
+						y: top,
+					};
+				}
+
+				if (this.getAttribute('role') === 'listbox') {
+					return {
+						bottom: LIST_CLIENT_HEIGHT,
+						height: LIST_CLIENT_HEIGHT,
+						left: 0,
+						right: 0,
+						toJSON: () => ({}),
+						top: 0,
+						width: 0,
+						x: 0,
+						y: 0,
+					};
+				}
+
+				return {
+					bottom: 0,
+					height: 0,
+					left: 0,
+					right: 0,
+					toJSON: () => ({}),
+					top: 0,
+					width: 0,
+					x: 0,
+					y: 0,
+				};
+			});
+
+		const clientHeightSpy = jest
+			.spyOn(HTMLElement.prototype, 'clientHeight', 'get')
+			.mockImplementation(function (this: HTMLElement) {
+				return this.getAttribute('role') === 'listbox'
+					? LIST_CLIENT_HEIGHT
+					: 0;
+			});
+
+		const scrollHeightSpy = jest
+			.spyOn(HTMLElement.prototype, 'scrollHeight', 'get')
+			.mockImplementation(function (this: HTMLElement) {
+				return this.getAttribute('role') === 'listbox'
+					? items.length * ITEM_HEIGHT
+					: 0;
+			});
+
+		try {
+			const {getByRole} = render(
+				<Picker items={items} selectedKey="Item 40">
+					{(item) => <Option key={item}>{item}</Option>}
+				</Picker>
+			);
+
+			userEvent.click(getByRole('combobox'));
+
+			const selectedIndex = items.indexOf('Item 40');
+
+			const expected = Math.max(
+				0,
+				Math.min(
+					selectedIndex * ITEM_HEIGHT -
+						(LIST_CLIENT_HEIGHT - ITEM_HEIGHT) / 2,
+					items.length * ITEM_HEIGHT - LIST_CLIENT_HEIGHT
+				)
+			);
+
+			expect(getByRole('listbox').scrollTop).toBe(expected);
+		}
+		finally {
+			getBoundingClientRectSpy.mockRestore();
+
+			clientHeightSpy.mockRestore();
+
+			scrollHeightSpy.mockRestore();
+
+			HTMLElement.prototype.scrollTo = originalScrollTo;
+		}
+	});
+
 	describe('expanded menu', () => {
 		it.concurrent.each([
 			['enter', '[Enter]'],

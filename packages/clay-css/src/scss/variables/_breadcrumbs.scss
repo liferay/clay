@@ -132,6 +132,7 @@ $breadcrumb-link: map-deep-merge(
 	(
 		color: $breadcrumb-link-color,
 		display: block,
+		line-height: 1.5rem,
 		text-decoration: $breadcrumb-link-text-decoration,
 		text-transform: $breadcrumb-text-transform,
 
@@ -154,6 +155,8 @@ $breadcrumb-toggle: () !default;
 $breadcrumb-toggle: map-merge(
 	(
 		color: $breadcrumb-link-color,
+		flex-shrink: 0,
+		margin-top: $breadcrumb-padding-y,
 	),
 	$breadcrumb-toggle
 );
@@ -161,7 +164,6 @@ $breadcrumb-toggle: map-merge(
 $breadcrumb-bar: () !default;
 $breadcrumb-bar: map-deep-merge(
 	(
-		align-items: center,
 		display: flex,
 	),
 	$breadcrumb-bar

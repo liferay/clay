@@ -271,16 +271,17 @@ export const Popover = React.forwardRef(function Popover(
 				!popoverRef.current.contains(event.relatedTarget)
 			) {
 				setShow(false);
+				triggerRef.current?.focus();
 			}
 		};
 
 		if (internalShow) {
 			document.addEventListener('keydown', handleKeyDown);
-			window.addEventListener('blur', onBlur);
+			window.addEventListener('focusout', onBlur);
 
 			return () => {
 				document.removeEventListener('keydown', handleKeyDown);
-				window.removeEventListener('blur', onBlur);
+				window.removeEventListener('focusout', onBlur);
 			};
 		}
 	}, [internalShow]);
