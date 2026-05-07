@@ -25,6 +25,10 @@
 		@include clay-menubar-vertical-variant(
 			$menubar-vertical-transparent-md
 		);
+
+		.nav-link * {
+			letter-spacing: normal;
+		}
 	}
 
 	&.menubar-decorated {
@@ -61,6 +65,10 @@
 		@include clay-menubar-vertical-variant(
 			$menubar-vertical-transparent-lg
 		);
+
+		.nav-link * {
+			letter-spacing: normal;
+		}
 	}
 
 	&.menubar-decorated {

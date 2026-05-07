@@ -11,24 +11,7 @@ $focus-ring-animation-to-box-shadow:
 	0 0 0 0.125rem $white,
 	0 0 0 0.25rem $primary-l0 !default;
 
-$focus-ring-pulse-animation-name: clay-focus-ring-pulse !default;
-$focus-ring-pulse-animation: $focus-ring-pulse-animation-name
-	$focus-ring-animation-duration $focus-ring-animation-timing-function !default;
-
 @keyframes #{$focus-ring-animation-name} {
-	0%,
-	50% {
-		opacity: 0;
-		transform: scale(1.5);
-	}
-
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
-}
-
-@keyframes #{$focus-ring-pulse-animation-name} {
 	0%,
 	50% {
 		box-shadow: $focus-ring-animation-from-box-shadow;
@@ -44,17 +27,6 @@ $focus-ring-pulse-animation: $focus-ring-pulse-animation-name
 		@keyframes #{$focus-ring-animation-name} {
 			0%,
 			60% {
-				opacity: 0;
-			}
-
-			61% {
-				opacity: 1;
-			}
-		}
-
-		@keyframes #{$focus-ring-pulse-animation-name} {
-			0%,
-			60% {
 				box-shadow: $focus-ring-animation-from-box-shadow;
 			}
 
@@ -66,49 +38,26 @@ $focus-ring-pulse-animation: $focus-ring-pulse-animation-name
 }
 
 .c-prefers-focus-ring {
-	:focus-visible,
+	.custom-control-input:focus-visible ~ .custom-control-label::after,
+	.toggle-switch-check:focus-visible ~ .toggle-switch-bar::before,
+	:focus-visible:not(.custom-control-input):not(.toggle-switch-check),
 	.focus {
-		position: relative;
-		z-index: 1;
-
-		&::after {
-			animation: $focus-ring-animation;
-			border-radius: inherit;
-			box-shadow: $focus-ring-animation-to-box-shadow;
-			content: '';
-			inset: 0;
-			pointer-events: none;
-			position: absolute;
-		}
-	}
-
-	.custom-control-input:focus-visible ~ .custom-control-label::after {
-		animation: $focus-ring-pulse-animation;
+		animation: $focus-ring-animation;
 		box-shadow: $focus-ring-animation-to-box-shadow;
 	}
 
-	&.c-tab-returning {
-		:focus-visible,
-		.focus {
-			&::after {
-				animation-name: none;
-			}
-		}
-
-		.custom-control-input:focus-visible ~ .custom-control-label::after {
-			animation-name: none;
-		}
+	:focus-visible:not(.toggle-switch-check):not(.custom-control-input),
+	.focus {
+		position: relative;
+		z-index: 1;
 	}
 
+	&.c-tab-returning,
 	&.c-prefers-reduced-motion {
-		:focus-visible,
+		.custom-control-input:focus-visible ~ .custom-control-label::after,
+		.toggle-switch-check:focus-visible ~ .toggle-switch-bar::before,
+		:focus-visible:not(.custom-control-input):not(.toggle-switch-check),
 		.focus {
-			&::after {
-				animation: none;
-			}
-		}
-
-		.custom-control-input:focus-visible ~ .custom-control-label::after {
 			animation: none;
 		}
 	}
