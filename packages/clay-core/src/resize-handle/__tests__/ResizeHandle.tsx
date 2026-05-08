@@ -3,33 +3,34 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
-import {PanelResizer, Position} from '..';
 import {fireEvent, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
+import {Position, ResizeHandle} from '../ResizeHandle';
+
 import '@testing-library/jest-dom';
 
 function renderComponent({
-	onChange,
+	onChange = jest.fn(),
 	position = 'left',
 }: {
-	onChange: () => void;
+	onChange?: () => void;
 	position?: Position;
 }) {
 	return render(
-		<PanelResizer
+		<ResizeHandle
 			data-testid="resizer"
-			onPanelWidthChange={onChange}
-			panelWidth={500}
-			panelWidthMax={600}
-			panelWidthMin={200}
+			maxWidth={600}
+			minWidth={200}
+			onWidthChange={onChange}
 			position={position}
+			width={500}
 		/>
 	);
 }
 
-describe('PanelResizer', () => {
+describe('ResizeHandle', () => {
 	test('uses the arrow keys, respecting left position', () => {
 		const onChange = jest.fn();
 
@@ -122,6 +123,52 @@ describe('PanelResizer', () => {
 		simulateMouseEvent(document, 'pointermove', 650);
 
 		expect(onChange).toHaveBeenLastCalledWith(600);
+	});
+
+	describe('c-horizontal-resizer-end modifier', () => {
+		afterEach(() => {
+			document.dir = '';
+		});
+
+		test('LTR: applied only when position="right"', () => {
+			document.dir = 'ltr';
+
+			const {unmount} = renderComponent({
+				position: 'left',
+			});
+
+			expect(screen.getByTestId('resizer')).not.toHaveClass(
+				'c-horizontal-resizer-end'
+			);
+
+			unmount();
+
+			renderComponent({position: 'right'});
+
+			expect(screen.getByTestId('resizer')).toHaveClass(
+				'c-horizontal-resizer-end'
+			);
+		});
+
+		test('RTL: inverted to compensate the converter flip (applied only when position="left")', () => {
+			document.dir = 'rtl';
+
+			const {unmount} = renderComponent({
+				position: 'left',
+			});
+
+			expect(screen.getByTestId('resizer')).toHaveClass(
+				'c-horizontal-resizer-end'
+			);
+
+			unmount();
+
+			renderComponent({position: 'right'});
+
+			expect(screen.getByTestId('resizer')).not.toHaveClass(
+				'c-horizontal-resizer-end'
+			);
+		});
 	});
 });
 

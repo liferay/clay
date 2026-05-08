@@ -4,11 +4,12 @@
  */
 
 import {useProvider} from '@clayui/provider';
-import {PanelResizer, usePrevious} from '@clayui/shared';
+import {usePrevious} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useContext, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
+import {ResizeHandle} from '../resize-handle';
 import {ContentContext} from './Content';
 import {VerticalBarContext} from './context';
 
@@ -127,13 +128,13 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 				{children}
 
 				{resize && (
-					<PanelResizer
+					<ResizeHandle
 						aria-controls={`${id}-tabpanel-${keyValue}`}
-						onPanelWidthChange={onPanelWidthChange}
-						panelWidth={panelWidth}
-						panelWidthMax={panelWidthMax}
-						panelWidthMin={panelWidthMin}
+						maxWidth={panelWidthMax}
+						minWidth={panelWidthMin}
+						onWidthChange={onPanelWidthChange}
 						position={position}
+						width={panelWidth}
 					/>
 				)}
 			</div>

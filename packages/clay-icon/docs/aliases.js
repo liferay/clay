@@ -457,6 +457,22 @@ export const iconsData = [
 		name: 'arrow-join',
 	},
 	{
+		aliases: ['down', 'key', 'keyboard', 'navigation'],
+		name: 'arrow-key-down',
+	},
+	{
+		aliases: ['key', 'keyboard', 'left', 'navigation'],
+		name: 'arrow-key-left',
+	},
+	{
+		aliases: ['key', 'keyboard', 'navigation', 'right'],
+		name: 'arrow-key-right',
+	},
+	{
+		aliases: ['key', 'keyboard', 'navigation', 'up'],
+		name: 'arrow-key-up',
+	},
+	{
 		aliases: [''],
 		name: 'arrow-right-full',
 	},

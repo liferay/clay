@@ -5,8 +5,10 @@
 
 import {createContext} from 'react';
 
-import type {InternalDispatch, Position} from '@clayui/shared';
+import type {InternalDispatch} from '@clayui/shared';
 import type {Key} from 'react';
+
+import type {Position} from '../resize-handle';
 
 type Context = {
 	activation?: 'manual' | 'automatic';

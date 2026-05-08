@@ -6,6 +6,14 @@
 export type {ICollectionProps} from './collection';
 export {FocusTrap} from './focus-trap';
 export {IconSelector} from './icon-selector';
+export {KeyboardArrowsIndicator} from './keyboard-arrows-indicator';
+export type {
+	KeyboardArrowsIndicatorDirection,
+	KeyboardArrowsIndicatorPlacement,
+	KeyboardArrowsIndicatorProps,
+	KeyboardArrowsIndicatorSize,
+	KeyboardArrowsIndicatorVisibility,
+} from './keyboard-arrows-indicator';
 export {LanguagePicker} from './language-picker';
 
 export type {Item} from './language-picker';
@@ -13,6 +21,8 @@ export type {AnnouncerAPI} from './live-announcer';
 export {Nav} from './nav';
 export {OverlayMask} from './overlay-mask';
 export {Picker, Option} from './picker';
+export {ResizeHandle} from './resize-handle';
+export type {Position} from './resize-handle';
 export {SidePanel} from './side-panel';
 export {SidePanelWithDrilldown} from './side-panel';
 export type {SidePanelProps} from './side-panel';

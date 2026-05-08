@@ -6,7 +6,6 @@
 import {useProvider} from '@clayui/provider';
 import {
 	Keys,
-	PanelResizer,
 	useControlledState,
 	useId,
 	useIsMobileDevice,
@@ -17,6 +16,7 @@ import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import {FocusTrap} from '../focus-trap';
+import {ResizeHandle} from '../resize-handle';
 import {Body} from './Body';
 import {Footer} from './Footer';
 import {Header} from './Header';
@@ -348,12 +348,12 @@ export function SidePanel({
 						</FocusTrap>
 
 						{isResizable && (
-							<PanelResizer
-								onPanelWidthChange={setResizeWidth}
-								panelWidth={panelWidth}
-								panelWidthMax={sidePanelObservedMaxWidth}
-								panelWidthMin={PANEL_WIDTH_MIN}
+							<ResizeHandle
+								maxWidth={sidePanelObservedMaxWidth}
+								minWidth={PANEL_WIDTH_MIN}
+								onWidthChange={setResizeWidth}
 								position={direction}
+								width={panelWidth}
 							/>
 						)}
 					</SidePanelContext.Provider>

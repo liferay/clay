@@ -1,0 +1,82 @@
+// Keyboard arrows indicator
+//
+// A visual hint showing which arrow keys move focus inside a component. The
+// four directional keys are laid out in the inverted-T arrangement found on
+// physical keyboards. Keys not part of the active direction are rendered
+// muted so the layout stays recognizable.
+
+.clay-keyboard-arrows-indicator {
+	column-gap: 0.15em;
+	display: inline-grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	row-gap: 0.15em;
+}
+
+.clay-keyboard-arrows-indicator-md {
+	font-size: 1rem; // 16px keycaps
+}
+
+.clay-keyboard-arrows-indicator-sm {
+	font-size: 0.75rem; // 12px keycaps
+}
+
+.clay-keyboard-arrows-indicator-key {
+	display: inline-flex;
+
+	.lexicon-icon {
+		height: 1em;
+		margin-top: 0;
+		width: 1em;
+	}
+}
+
+.clay-keyboard-arrows-indicator-key-up {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.clay-keyboard-arrows-indicator-key-left {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.clay-keyboard-arrows-indicator-key-down {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.clay-keyboard-arrows-indicator-key-right {
+	grid-column: 3;
+	grid-row: 2;
+}
+
+.clay-keyboard-arrows-indicator-key-inactive {
+	opacity: 0.25;
+}
+
+// Modifier for popup-style consumers (DropDown, Picker, Autocomplete, etc.)
+// that want the indicator pinned to the bottom-right of the popup chrome.
+// Visibility is implicit: the popup itself is conditionally rendered only
+// while open, so the indicator follows.
+
+.clay-keyboard-arrows-indicator-floating {
+	bottom: 0.25rem;
+	pointer-events: none;
+	position: absolute;
+	right: 0.5rem;
+}
+
+// Modifier for inline consumers (Table, MultiSelect, VerticalNav,
+// VerticalBar, DatePicker calendar). The indicator is hidden by default
+// and revealed only when its direct parent has `:focus-within` (i.e. the
+// consumer's focusable scope contains the focused element). Consumers
+// place the indicator as a direct child of the focusable container.
+
+.clay-keyboard-arrows-indicator-on-focus {
+	visibility: hidden;
+}
+
+:focus-within > .clay-keyboard-arrows-indicator-on-focus {
+	visibility: visible;
+}

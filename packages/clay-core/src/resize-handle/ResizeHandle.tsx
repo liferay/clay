@@ -3,84 +3,89 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
+import {Keys} from '@clayui/shared';
+import classnames from 'classnames';
 import React from 'react';
-
-import {Keys} from './Keys';
 
 export type Position = 'left' | 'right';
 
 type Props = {
 
 	/**
-	 * Callback is called every time the panel width changes (Controlled).
+	 * The maximum width allowed.
 	 */
-
-	onPanelWidthChange: (width: number) => void;
+	maxWidth: number;
 
 	/**
-	 * Property to set the panel width (controlled).
+	 * The minimum width allowed.
 	 */
-	panelWidth?: number;
+	minWidth: number;
 
 	/**
-	 * The maximum width for the panel.
+	 * Callback called every time the width changes (controlled).
 	 */
-	panelWidthMax: number;
+	onWidthChange: (width: number) => void;
 
 	/**
-	 * The minimum width for the panel.
-	 */
-	panelWidthMin: number;
-
-	/**
-	 * The side of the screen where the panel is located.
+	 * The side of the screen where the resized element is located.
 	 */
 	position: Position;
-};
+
+	/**
+	 * Property to set the current width (controlled).
+	 */
+	width?: number;
+} & Omit<
+	React.HTMLAttributes<HTMLDivElement>,
+	'onKeyDown' | 'onKeyUp' | 'onPointerDown'
+>;
 
 const MAIN_MOUSE_BUTTON = 0;
 
 let keyDownCounter = 0;
 
-export function PanelResizer({
-	onPanelWidthChange,
-	panelWidth = 320,
-	panelWidthMax,
-	panelWidthMin,
+export function ResizeHandle({
+	maxWidth,
+	minWidth,
+	onWidthChange,
 	position,
+	width = 320,
 	...otherProps
 }: Props) {
 	const positionLeft = position === 'left';
 
-	const decreasePanelWidth = (delta = 1) => {
-		const width = Math.round(panelWidth - delta);
+	const decreaseWidth = (delta = 1) => {
+		const nextWidth = Math.round(width - delta);
 
-		if (width > panelWidthMin - 100 && width < panelWidthMin) {
-			onPanelWidthChange(panelWidthMin);
+		if (nextWidth > minWidth - 100 && nextWidth < minWidth) {
+			onWidthChange(minWidth);
 		}
-		else if (width > panelWidthMin) {
-			onPanelWidthChange(width);
+		else if (nextWidth > minWidth) {
+			onWidthChange(nextWidth);
 		}
 	};
 
-	const increasePanelWidth = (delta = 1) => {
-		const width = Math.round(panelWidth + delta);
+	const increaseWidth = (delta = 1) => {
+		const nextWidth = Math.round(width + delta);
 
-		if (width > panelWidthMax && width < panelWidthMax + 100) {
-			onPanelWidthChange(panelWidthMax);
+		if (nextWidth > maxWidth && nextWidth < maxWidth + 100) {
+			onWidthChange(maxWidth);
 		}
-		else if (width < panelWidthMax) {
-			onPanelWidthChange(width);
+		else if (nextWidth < maxWidth) {
+			onWidthChange(nextWidth);
 		}
 	};
 
 	return (
 		<div
 			aria-orientation="vertical"
-			aria-valuemax={panelWidthMax}
-			aria-valuemin={panelWidthMin}
-			aria-valuenow={panelWidth}
-			className="c-horizontal-resizer"
+			aria-valuemax={maxWidth}
+			aria-valuemin={minWidth}
+			aria-valuenow={width}
+			className={classnames('c-horizontal-resizer', {
+				'c-horizontal-resizer-end':
+					document.dir === 'rtl' ? positionLeft : !positionLeft,
+			})}
 			{...otherProps}
 			onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) => {
 				const delta = keyDownCounter > 7 ? 10 : 1;
@@ -89,32 +94,32 @@ export function PanelResizer({
 
 				switch (event.key) {
 					case Keys.Down: {
-						decreasePanelWidth(delta);
+						decreaseWidth(delta);
 
 						break;
 					}
 					case Keys.Left: {
 						if (positionLeft) {
-							decreasePanelWidth(delta);
+							decreaseWidth(delta);
 						}
 						else {
-							increasePanelWidth(delta);
+							increaseWidth(delta);
 						}
 
 						break;
 					}
 					case Keys.Right: {
 						if (positionLeft) {
-							increasePanelWidth(delta);
+							increaseWidth(delta);
 						}
 						else {
-							decreasePanelWidth(delta);
+							decreaseWidth(delta);
 						}
 
 						break;
 					}
 					case Keys.Up: {
-						increasePanelWidth(delta);
+						increaseWidth(delta);
 
 						break;
 					}
@@ -136,13 +141,13 @@ export function PanelResizer({
 						(event.pageX >= startXPos && positionLeft) ||
 						(event.pageX < startXPos && !positionLeft)
 					) {
-						increasePanelWidth(delta);
+						increaseWidth(delta);
 					}
 					else if (
 						(event.pageX < startXPos && positionLeft) ||
 						(event.pageX >= startXPos && !positionLeft)
 					) {
-						decreasePanelWidth(delta);
+						decreaseWidth(delta);
 					}
 				}
 

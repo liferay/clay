@@ -1,11 +1,22 @@
 .c-horizontal-resizer {
 	@include clay-css($c-horizontal-resizer);
 
-	&:hover {
-		@include clay-css(map-get($c-horizontal-resizer, hover));
+	&::before {
+		@include clay-css(map-get($c-horizontal-resizer, before));
 	}
 
-	&:focus {
-		@include clay-css(map-get($c-horizontal-resizer, focus));
+	&:hover::before {
+		@include clay-css(map-deep-get($c-horizontal-resizer, hover, before));
 	}
+
+	&:focus-visible::before {
+		@include clay-css(map-deep-get($c-horizontal-resizer, focus, before));
+	}
+}
+
+.c-horizontal-resizer-end {
+	left: 0rem;
+	margin-left: -0.25rem;
+	margin-right: 0rem;
+	right: auto;
 }

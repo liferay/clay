@@ -1,0 +1,95 @@
+---
+title: "Resize Handle"
+description: "A drag handle that lets users resize the width of an adjacent element using the pointer or the keyboard."
+packageNpm: "@clayui/core"
+packageStatus: "Beta"
+packageUse: "import {ResizeHandle} from '@clayui/core';"
+packageTypes: ["clay-core/src/resize-handle/ResizeHandle.tsx"]
+---
+
+## Example
+
+```jsx preview
+import { Provider, ResizeHandle } from "@clayui/core";
+import React from "react";
+
+import "@clayui/css/lib/css/atlas.css";
+
+export default function App() {
+  const [width, setWidth] = React.useState(320);
+
+  return (
+    <Provider spritemap="/public/icons.svg">
+      <div
+        className="border rounded d-flex overflow-hidden"
+        style={{ height: 280 }}
+      >
+        <div className="bg-light p-3 position-relative" style={{ width }}>
+          <div className="text-secondary">Resizable region</div>
+          <div className="text-weight-semi-bold">{width}px</div>
+
+          <ResizeHandle
+            maxWidth={480}
+            minWidth={240}
+            onWidthChange={setWidth}
+            position="left"
+            width={width}
+          />
+        </div>
+
+        <div className="bg-white flex-grow-1 p-3">
+          <div className="text-secondary">Remaining region</div>
+          <div className="text-weight-semi-bold">Fills the rest</div>
+        </div>
+      </div>
+    </Provider>
+  );
+}
+```
+
+## Introduction
+
+`ResizeHandle` is a low-level primitive used to resize an adjacent element. It is the building block behind the resizable behavior of components like `SidePanel` and `VerticalBar`, but you can use it directly whenever you need to expose a draggable handle on the edge of a resizable element.
+
+The component is fully controlled: it does not store the width internally. You must hold the width in state and update it from `onWidthChange`.
+
+## Anatomy
+
+```jsx
+import { ResizeHandle } from "@clayui/core";
+
+<ResizeHandle
+  maxWidth={480}
+  minWidth={240}
+  onWidthChange={setWidth}
+  position="left"
+  width={width}
+/>;
+```
+
+## Position
+
+The `position` prop indicates which side of the screen the resized element is anchored to. It controls how horizontal pointer movement and the `Left` / `Right` arrow keys map to _increase_ or _decrease_ the width.
+
+- `position="left"` — the element is on the left side of the screen. Dragging the handle to the right (or pressing `Right`) increases the width.
+- `position="right"` — the element is on the right side of the screen. Dragging the handle to the left (or pressing `Left`) increases the width.
+
+## Constraints
+
+`minWidth` and `maxWidth` are required and define the boundaries the handle will respect when the user drags or presses an arrow key. The component snaps to the limit when the pointer crosses it, preventing the element from shrinking or growing beyond what the design allows.
+
+## Accessibility
+
+`ResizeHandle` follows the [WAI-ARIA `separator` pattern](https://www.w3.org/WAI/ARIA/apg/patterns/windowsplitter/) for window splitters:
+
+- Renders with `role="separator"` and `aria-orientation="vertical"`.
+- Reflects the current width through `aria-valuenow`, with `aria-valuemin` / `aria-valuemax` matching the configured boundaries.
+- `tabIndex={0}` so the handle is reachable with the keyboard.
+
+### Keyboard interaction
+
+- `Left` / `Right` — decrease or increase the width (mapping depends on `position`).
+- `Up` / `Down` — increase or decrease the width.
+- Holding a key accelerates the change after a few key repeats (1px per step, then 10px per step).
+
+When labeling the handle from a parent component, set `aria-label` on `ResizeHandle` directly so screen readers announce its purpose (for example, _"Resize navigation panel"_).
