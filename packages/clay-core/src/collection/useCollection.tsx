@@ -381,13 +381,7 @@ export function useCollection<
 				}
 			);
 		},
-		[
-			performItemRender,
-			publicApi,
-			virtualizerItems?.length,
-			visibleKeys,
-			itemIdKey,
-		]
+		[performItemRender, publicApi, virtualizerItems, visibleKeys, itemIdKey]
 	);
 
 	const getItem = useCallback((key: React.Key) => {
