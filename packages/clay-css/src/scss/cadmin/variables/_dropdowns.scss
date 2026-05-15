@@ -285,7 +285,9 @@ $cadmin-dropdown-subheader-text-transform: uppercase !default;
 $cadmin-dropdown-subheader: () !default;
 $cadmin-dropdown-subheader: map-deep-merge(
 	(
+		align-items: center,
 		color: $cadmin-dropdown-subheader-color,
+		display: flex,
 		font-size: $cadmin-dropdown-subheader-font-size,
 		font-weight: $cadmin-dropdown-subheader-font-weight,
 		margin-bottom: $cadmin-dropdown-subheader-margin-bottom,

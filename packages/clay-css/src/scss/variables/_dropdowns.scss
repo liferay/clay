@@ -384,7 +384,9 @@ $dropdown-subheader-text-transform: uppercase !default;
 $dropdown-subheader: () !default;
 $dropdown-subheader: map-deep-merge(
 	(
+		align-items: center,
 		color: $dropdown-subheader-color,
+		display: flex,
 		font-size: $dropdown-subheader-font-size,
 		font-weight: $dropdown-subheader-font-weight,
 		margin-bottom: $dropdown-subheader-margin-bottom,
