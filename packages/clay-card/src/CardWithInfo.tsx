@@ -229,6 +229,7 @@ export function ClayCardWithInfo({
 		<ClayCard
 			{...otherProps}
 			active={selected}
+			disabled={disabled}
 			displayType={isCardType.image ? 'image' : 'file'}
 			selectable={!!onSelectChange}
 		>

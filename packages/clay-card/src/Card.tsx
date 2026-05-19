@@ -24,6 +24,11 @@ interface ICardProps extends IContext {
 	active?: boolean;
 
 	/**
+	 * Flag that indicates if `disabled` class is applied
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Determines the style of the card
 	 */
 	displayType?: 'file' | 'image' | 'user';
@@ -44,6 +49,7 @@ function CardBase({
 	active,
 	children,
 	className,
+	disabled = false,
 	displayType,
 	selectable = false,
 	...otherProps
@@ -62,6 +68,7 @@ function CardBase({
 					{
 						active,
 						'card': !selectable,
+						disabled,
 						'file-card': isCardType.file,
 						'form-check-card form-check form-check-top-left':
 							selectable,

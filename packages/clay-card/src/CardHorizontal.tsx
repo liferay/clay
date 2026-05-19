@@ -16,6 +16,11 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	active?: boolean;
 
 	/**
+	 * Flag that indicates if `disabled` class is applied
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Flag that indicates if the card can be selectable.
 	 */
 	selectable?: boolean;
@@ -40,6 +45,7 @@ export function ClayCardHorizontal({
 	active,
 	children,
 	className,
+	disabled,
 	selectable,
 	...otherProps
 }: IProps) {
@@ -51,6 +57,7 @@ export function ClayCardHorizontal({
 					{
 						active,
 						'card card-horizontal': !selectable,
+						disabled,
 						'form-check-card form-check form-check-middle-left':
 							selectable,
 					},

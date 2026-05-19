@@ -39,7 +39,7 @@ function ClayCheckboxWithState(props: any) {
 		</ClayCheckbox>
 	);
 }
-export function CardWithInfo(args: any) {
+export function CardWithInfo(args: {disabled?: boolean}) {
 	const [value, setValue] = useState<boolean>(false);
 	const [radioValue, setRadioValue] = useState<string>('');
 
@@ -107,6 +107,7 @@ export function CardWithInfo(args: any) {
 					<ClayCard.Group label="Radio Card Group">
 						<ClayCardWithInfo
 							description="A cool description"
+							disabled={args.disabled}
 							labels={[
 								{
 									displayType: 'danger',
@@ -124,6 +125,7 @@ export function CardWithInfo(args: any) {
 
 						<ClayCardWithInfo
 							description="A cool description"
+							disabled={args.disabled}
 							labels={[
 								{
 									displayType: 'success',
@@ -372,7 +374,6 @@ export function CardWithUser(args: any) {
 				<div className="col-md-4">
 					<ClayCardWithUser
 						description="Assistant to the regional manager"
-						disabled={args.disabled}
 						name="Abraham Kuyper"
 						stickerTitle="User Icon"
 						userImageSrc="https://via.placeholder.com/256"

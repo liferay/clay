@@ -6,8 +6,5 @@
 export {KeyboardArrowsIndicator} from './KeyboardArrowsIndicator';
 export type {
 	Direction as KeyboardArrowsIndicatorDirection,
-	Placement as KeyboardArrowsIndicatorPlacement,
 	Props as KeyboardArrowsIndicatorProps,
-	Size as KeyboardArrowsIndicatorSize,
-	Visibility as KeyboardArrowsIndicatorVisibility,
 } from './KeyboardArrowsIndicator';

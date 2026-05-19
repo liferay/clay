@@ -2,6 +2,42 @@
 	@include clay-css(setter($cadmin-lexicon-icon, ()));
 }
 
+.lexicon-icon-arrows-all {
+	background-color: unquote('hsl(from #{$cadmin-white} h s l / 0.6)');
+	border: 1px solid $cadmin-border-color;
+	border-radius: 0.1413em; // 6.5/46
+	height: 0.73913em; // 34/46 aspect ratio
+	margin-top: 0;
+	width: 1em;
+
+	.lx-arrows-all-chevron {
+		fill: $cadmin-white;
+	}
+}
+
+.clay-keyboard-arrows-horizontal {
+	.lx-arrows-all-keycap-down,
+	.lx-arrows-all-keycap-up {
+		fill: $cadmin-gray-300;
+	}
+}
+
+.clay-keyboard-arrows-vertical {
+	.lx-arrows-all-keycap-left,
+	.lx-arrows-all-keycap-right {
+		fill: $cadmin-gray-300;
+	}
+}
+
+.clay-keyboard-arrows-indicator {
+	display: inline-flex;
+	font-size: 2.875rem; // 46px — natural design size
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}
+
 .order-arrow-down-active {
 	.order-arrow-arrow-down {
 		fill: $cadmin-order-arrow-down-active-color;

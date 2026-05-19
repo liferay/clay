@@ -1374,7 +1374,7 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
 exports[`ClayCardWithHorizontal renders as disabled 1`] = `
 <div>
   <div
-    class="form-check-card form-check form-check-middle-left card-type-directory"
+    class="disabled form-check-card form-check form-check-middle-left card-type-directory"
   >
     <div
       class="custom-control custom-checkbox"
@@ -1655,7 +1655,7 @@ exports[`ClayCardWithHorizontal renders with no truncate text 1`] = `
 exports[`ClayCardWithHorizontal renders with radio button 1`] = `
 <div>
   <div
-    class="form-check-card form-check form-check-middle-left card-type-directory"
+    class="disabled form-check-card form-check form-check-middle-left card-type-directory"
   >
     <div
       class="custom-control custom-radio"
@@ -1732,7 +1732,7 @@ exports[`ClayCardWithHorizontal renders with radio button 1`] = `
 exports[`ClayCardWithInfo renders as disabled 1`] = `
 <div>
   <div
-    class="file-card form-check-card form-check form-check-top-left card-type-asset"
+    class="disabled file-card form-check-card form-check form-check-top-left card-type-asset"
   >
     <div
       class="card"
@@ -1818,7 +1818,7 @@ exports[`ClayCardWithInfo renders as disabled 1`] = `
 exports[`ClayCardWithInfo renders as file card specifying the displayType 1`] = `
 <div>
   <div
-    class="file-card form-check-card form-check form-check-top-left card-type-asset"
+    class="disabled file-card form-check-card form-check form-check-top-left card-type-asset"
   >
     <div
       class="card"
@@ -1904,7 +1904,7 @@ exports[`ClayCardWithInfo renders as file card specifying the displayType 1`] = 
 exports[`ClayCardWithInfo renders as image card specifying imageProps and not the displayType 1`] = `
 <div>
   <div
-    class="form-check-card form-check form-check-top-left image-card card-type-asset"
+    class="disabled form-check-card form-check form-check-top-left image-card card-type-asset"
   >
     <div
       class="card"
@@ -1983,7 +1983,7 @@ exports[`ClayCardWithInfo renders as image card specifying imageProps and not th
 exports[`ClayCardWithInfo renders as image card specifying the displayType and imageProps 1`] = `
 <div>
   <div
-    class="form-check-card form-check form-check-top-left image-card card-type-asset"
+    class="disabled form-check-card form-check form-check-top-left image-card card-type-asset"
   >
     <div
       class="card"
@@ -2062,7 +2062,7 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and i
 exports[`ClayCardWithInfo renders as image card specifying the displayType and no imageProps 1`] = `
 <div>
   <div
-    class="form-check-card form-check form-check-top-left image-card card-type-asset"
+    class="disabled form-check-card form-check form-check-top-left image-card card-type-asset"
   >
     <div
       class="card"
@@ -3024,7 +3024,7 @@ exports[`ClayCardWithUser renders ClayCardWithNavigation with image 1`] = `
 exports[`ClayCardWithUser renders as disabled 1`] = `
 <div>
   <div
-    class="form-check-card form-check form-check-top-left user-card card-type-asset"
+    class="disabled form-check-card form-check form-check-top-left user-card card-type-asset"
   >
     <div
       class="card"

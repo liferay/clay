@@ -1,20 +1,25 @@
 $cadmin-card-bg: $cadmin-white !default;
-$cadmin-card-border-color: rgba($cadmin-black, 0.125) !default;
+$cadmin-card-border-color: $cadmin-secondary-l2 !default;
+$cadmin-card-border-radius: $cadmin-border-radius-xl !default;
 $cadmin-card-border-style: solid !default;
-$cadmin-card-border-width: 0px !default;
-
-$cadmin-card-border-radius: $cadmin-border-radius !default;
-$cadmin-card-inner-border-radius: calc(
-	#{$cadmin-card-border-radius} - #{$cadmin-card-border-width}
-) !default;
-
-$cadmin-card-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6) !default;
+$cadmin-card-border-width: $cadmin-border-width !default;
+$cadmin-card-box-shadow: null !default;
 $cadmin-card-color: null !default;
 $cadmin-card-height: null !default;
 $cadmin-card-margin-bottom: 24px !default;
-
 $cadmin-card-spacer-x: 20px !default;
 $cadmin-card-spacer-y: 12px !default;
+$cadmin-card-transition:
+	$cadmin-component-transition,
+	transform 0.15s ease-in-out !default;
+
+$cadmin-card-hover-box-shadow: unquote(
+	'0 0.25rem 0.75rem -0.25rem rgb(from #{$cadmin-black} r g b / 0.25)'
+) !default;
+
+$cadmin-card-inner-border-radius: calc(
+	#{$cadmin-card-border-radius} - #{$cadmin-card-border-width}
+) !default;
 
 $cadmin-card-cap-bg: rgba($cadmin-black, 0.03) !default;
 $cadmin-card-cap-color: null !default;
@@ -160,12 +165,15 @@ $card: map-deep-merge(
 		border-radius: clay-enable-rounded($cadmin-card-border-radius),
 		border-style: $cadmin-card-border-style,
 		border-width: $cadmin-card-border-width,
-		box-shadow: clay-enable-shadows($cadmin-card-box-shadow),
 		display: block,
 		height: $cadmin-card-height,
 		margin-bottom: $cadmin-card-margin-bottom,
 		min-width: 0px,
+		outline-color: transparent,
+		outline-style: solid,
+		outline-width: $cadmin-card-border-width,
 		position: relative,
+		transition: $cadmin-card-transition,
 		word-wrap: break-word,
 
 		aspect-ratio: (
@@ -193,6 +201,10 @@ $card: map-deep-merge(
 		hr: (
 			margin-left: 0px,
 			margin-right: 0px,
+		),
+
+		hover: (
+			box-shadow: clay-enable-shadows($cadmin-card-hover-box-shadow),
 		),
 	),
 	$card
@@ -371,8 +383,97 @@ $cadmin-checkbox-right-card-padding: $cadmin-checkbox-left-card-padding !default
 
 $cadmin-checkbox-position: 16px !default;
 
-$cadmin-form-check-card-checked-box-shadow: 0 0 0 2px
-	clay-lighten($cadmin-component-active-bg, 22.94) !default;
+$cadmin-form-check-card-checked-box-shadow: null !default;
+
+$cadmin-form-check-card: () !default;
+$cadmin-form-check-card: map-deep-merge(
+	(
+		margin-bottom: $cadmin-card-margin-bottom,
+		margin-top: 0px,
+		padding-left: 0px,
+		transition: $cadmin-card-transition,
+
+		hover: (
+			card: (
+				border-color: $cadmin-primary-l1,
+				box-shadow: $cadmin-form-check-card-checked-box-shadow,
+				outline-color: $cadmin-primary-l1,
+			),
+		),
+
+		active: (
+			card: (
+				border-color: $cadmin-primary,
+				box-shadow: $cadmin-form-check-card-checked-box-shadow,
+				outline-color: $cadmin-primary,
+			),
+		),
+
+		checked: (
+			card: (
+				border-color: $cadmin-primary,
+				box-shadow: $cadmin-form-check-card-checked-box-shadow,
+				outline-color: $cadmin-primary,
+			),
+		),
+
+		disabled: (
+			card: (
+				box-shadow: none,
+				border-color: $cadmin-card-border-color,
+				outline-color: transparent,
+			),
+		),
+
+		card: (
+			margin-bottom: 0px,
+		),
+
+		form-check-input: (
+			margin-left: 0px,
+			margin-top: 0px,
+			opacity: 0,
+			position: absolute,
+			z-index: 1,
+		),
+
+		form-check-label: (
+			color: $cadmin-body-color,
+			display: inline,
+			font-weight: $cadmin-font-weight-normal,
+			padding-left: 0px,
+			position: static,
+		),
+
+		custom-control: (
+			display: inline,
+			margin-right: 0px,
+			position: static,
+
+			label: (
+				font-weight: $cadmin-font-weight-normal,
+				padding-left: 0px,
+			),
+
+			custom-control-label: (
+				opacity: 0,
+				position: absolute,
+				z-index: 1,
+			),
+
+			custom-control-input: (
+				z-index: 2,
+
+				checked: (
+					card: (
+						box-shadow: $cadmin-form-check-card-checked-box-shadow,
+					),
+				),
+			),
+		),
+	),
+	$cadmin-form-check-card
+);
 
 // Card Interactive
 
@@ -416,8 +517,7 @@ $cadmin-card-interactive: () !default;
 $cadmin-card-interactive: map-deep-merge(
 	(
 		cursor: $cadmin-link-cursor,
-		outline: 0,
-		transition: $cadmin-component-transition,
+		transition: $cadmin-card-transition,
 
 		hover: (
 			background-color: #f7f8f9,
@@ -425,8 +525,12 @@ $cadmin-card-interactive: map-deep-merge(
 		),
 
 		focus: (
-			box-shadow: #{0 0 0 2px #fff,
-			0 0 0 4px #719aff},
+			border-color: $cadmin-primary-l1,
+			box-shadow: none,
+			outline-color: $cadmin-primary-l1,
+			outline-offset: 0,
+			outline-style: solid,
+			outline-width: $cadmin-card-border-width,
 		),
 
 		active: (
@@ -441,6 +545,10 @@ $cadmin-card-interactive: map-deep-merge(
 );
 
 // Card Interactive Primary
+
+$cadmin-card-interactive-primary-hover-box-shadow: unquote(
+	'#{$cadmin-card-hover-box-shadow}, 0px -2.5rem 0px -2.25rem #{$cadmin-primary} inset'
+) !default;
 
 $cadmin-card-interactive-primary-after-highlight: () !default;
 $cadmin-card-interactive-primary-after-highlight: map-deep-merge(
@@ -463,15 +571,19 @@ $cadmin-card-interactive-primary-after-highlight: map-deep-merge(
 $cadmin-card-interactive-primary: () !default;
 $cadmin-card-interactive-primary: map-deep-merge(
 	(
+		hover: (
+			box-shadow: $cadmin-card-interactive-primary-hover-box-shadow,
+		),
+
 		focus: (
-			background-color: $cadmin-gray-100,
+			box-shadow: $cadmin-card-interactive-primary-hover-box-shadow,
 		),
 
 		active: (
-			background-color: $cadmin-gray-200,
+			box-shadow: $cadmin-card-interactive-primary-hover-box-shadow,
 		),
 
-		after-highlight: $cadmin-card-interactive-primary-after-highlight,
+		after-highlight: null,
 	),
 	$cadmin-card-interactive-primary
 );
@@ -485,14 +597,8 @@ $cadmin-card-interactive-secondary: map-deep-merge(
 
 		hover: (
 			background-color: $cadmin-white,
-			border-color: transparent,
-			box-shadow: 0 0 0 2px #719aff,
 			color: $cadmin-gray-900,
-		),
-
-		focus: (
-			border-color: transparent,
-			box-shadow: 0 0 0 2px #719aff,
+			transform: translateY(-0.25rem),
 		),
 
 		active: (
@@ -507,6 +613,12 @@ $cadmin-card-interactive-secondary: map-deep-merge(
 $cadmin-card-type-asset: () !default;
 $cadmin-card-type-asset: map-deep-merge(
 	(
+		transition: $cadmin-card-transition,
+
+		hover: (
+			transform: translateY(-0.25rem),
+		),
+
 		aspect-ratio: (
 			border-color: $cadmin-gray-300,
 			border-style: solid,
@@ -557,6 +669,10 @@ $cadmin-card-type-asset: map-deep-merge(
 
 		card-row: (
 			align-items: flex-start,
+		),
+
+		disabled: (
+			transform: none,
 		),
 
 		dropdown-action: (
@@ -811,6 +927,10 @@ $cadmin-template-card: () !default;
 $cadmin-template-card: map-deep-merge(
 	(
 		card-body: $cadmin-template-card-body,
+
+		hover: (
+			transform: translateY(-0.25rem),
+		),
 	),
 	$cadmin-template-card
 );

@@ -308,70 +308,18 @@
 // Checkbox and Radio Cards
 
 .form-check-card {
-	margin-bottom: $cadmin-card-margin-bottom;
-	margin-top: 0;
-	padding-left: 0;
+	@include clay-form-check-card-variant($cadmin-form-check-card);
 
-	.card {
-		margin-bottom: 0;
-	}
-
-	.custom-control {
-		display: inline;
-		margin-right: 0;
-		position: static;
-
-		> label {
-			font-weight: $cadmin-font-weight-normal;
-			padding-left: 0;
-		}
-	}
-
-	.custom-control-input {
-		z-index: 2;
-	}
-
-	.custom-control-label {
-		position: absolute;
-		z-index: 1;
-	}
-
-	.form-check-input {
-		margin-left: 0;
-		margin-top: 0;
-		position: absolute;
-		z-index: 1;
-	}
-
-	.form-check-label {
-		color: $cadmin-body-color;
-		display: inline;
-		font-weight: $cadmin-font-weight-normal;
-		padding-left: 0;
-		position: static;
-	}
-
-	&.active .card,
-	.custom-control-input:checked ~ .card,
 	.form-check-input:checked ~ .card {
-		box-shadow: $cadmin-form-check-card-checked-box-shadow;
-	}
-}
-
-.form-check-card {
-	&:hover {
-		.card {
-			box-shadow: $cadmin-form-check-card-checked-box-shadow;
-		}
-	}
-}
-
-.custom-control-input,
-.form-check-input {
-	&:hover {
-		~ .card {
-			box-shadow: $cadmin-form-check-card-checked-box-shadow;
-		}
+		@include clay-card-variant(
+			map-deep-get(
+				$cadmin-form-check-card,
+				custom-control,
+				custom-control-input,
+				checked,
+				card
+			)
+		);
 	}
 }
 

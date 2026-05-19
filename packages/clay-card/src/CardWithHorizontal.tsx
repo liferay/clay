@@ -152,6 +152,7 @@ export function ClayCardWithHorizontal({
 		<ClayCardHorizontal
 			{...otherProps}
 			active={selected}
+			disabled={disabled}
 			selectable={!!onSelectChange}
 		>
 			{onSelectChange &&

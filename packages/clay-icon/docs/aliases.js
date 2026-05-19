@@ -457,22 +457,6 @@ export const iconsData = [
 		name: 'arrow-join',
 	},
 	{
-		aliases: ['down', 'key', 'keyboard', 'navigation'],
-		name: 'arrow-key-down',
-	},
-	{
-		aliases: ['key', 'keyboard', 'left', 'navigation'],
-		name: 'arrow-key-left',
-	},
-	{
-		aliases: ['key', 'keyboard', 'navigation', 'right'],
-		name: 'arrow-key-right',
-	},
-	{
-		aliases: ['key', 'keyboard', 'navigation', 'up'],
-		name: 'arrow-key-up',
-	},
-	{
 		aliases: [''],
 		name: 'arrow-right-full',
 	},
@@ -491,6 +475,10 @@ export const iconsData = [
 	{
 		aliases: ['down', 'join', 'workflow'],
 		name: 'arrow-xor',
+	},
+	{
+		aliases: ['key', 'keyboard', 'navigation'],
+		name: 'arrows-all',
 	},
 	{
 		aliases: ['*', 'mandatory', 'required'],

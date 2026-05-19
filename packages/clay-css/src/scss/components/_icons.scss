@@ -2,16 +2,40 @@
 	@include clay-css($lexicon-icon);
 }
 
-.lexicon-icon-sm {
-	@include clay-css($lexicon-icon-sm);
+.lexicon-icon-arrows-all {
+	background-color: unquote('hsl(from #{$white} h s l / 0.6)');
+	border: 1px solid $border-color;
+	border-radius: 0.1413em; // 6.5/46
+	height: 0.73913em; // 34/46 aspect ratio
+	margin-top: 0;
+	width: 1em;
+
+	.lx-arrows-all-chevron {
+		fill: $white;
+	}
 }
 
-.lexicon-icon-lg {
-	@include clay-css($lexicon-icon-lg);
+.clay-keyboard-arrows-horizontal {
+	.lx-arrows-all-keycap-down,
+	.lx-arrows-all-keycap-up {
+		fill: $gray-300;
+	}
 }
 
-.lexicon-icon-xl {
-	@include clay-css($lexicon-icon-xl);
+.clay-keyboard-arrows-vertical {
+	.lx-arrows-all-keycap-left,
+	.lx-arrows-all-keycap-right {
+		fill: $gray-300;
+	}
+}
+
+.clay-keyboard-arrows-indicator {
+	display: inline-flex;
+	font-size: 2.875rem; // 46px — natural design size
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
 }
 
 .order-arrow-down-active {
@@ -101,4 +125,16 @@ button.collapse-icon,
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
+}
+
+.lexicon-icon-sm {
+	@include clay-css($lexicon-icon-sm);
+}
+
+.lexicon-icon-lg {
+	@include clay-css($lexicon-icon-lg);
+}
+
+.lexicon-icon-xl {
+	@include clay-css($lexicon-icon-xl);
 }

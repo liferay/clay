@@ -9,10 +9,7 @@ export {IconSelector} from './icon-selector';
 export {KeyboardArrowsIndicator} from './keyboard-arrows-indicator';
 export type {
 	KeyboardArrowsIndicatorDirection,
-	KeyboardArrowsIndicatorPlacement,
 	KeyboardArrowsIndicatorProps,
-	KeyboardArrowsIndicatorSize,
-	KeyboardArrowsIndicatorVisibility,
 } from './keyboard-arrows-indicator';
 export {LanguagePicker} from './language-picker';
 

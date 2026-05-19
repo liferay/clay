@@ -169,6 +169,7 @@ export function ClayCardWithUser({
 		<ClayCard
 			{...otherProps}
 			active={selected}
+			disabled={disabled}
 			displayType="user"
 			selectable={!!onSelectChange}
 		>

@@ -9,6 +9,7 @@ $card-height: null !default;
 $card-margin-bottom: 1.5rem !default;
 $card-spacer-x: 1.25rem !default;
 $card-spacer-y: 0.75rem !default;
+$card-transition: null !default;
 
 $card-inner-border-radius: calc(
 	#{$card-border-radius} - #{$card-border-width}
@@ -182,6 +183,7 @@ $card: map-deep-merge(
 		margin-bottom: $card-margin-bottom,
 		min-width: 0rem,
 		position: relative,
+		transition: $card-transition,
 		word-wrap: break-word,
 
 		aspect-ratio: (
@@ -401,6 +403,14 @@ $form-check-card: map-deep-merge(
 		checked: (
 			card: (
 				box-shadow: $form-check-card-checked-box-shadow,
+			),
+		),
+
+		disabled: (
+			card: (
+				box-shadow: none,
+				border-color: $card-border-color,
+				outline-color: transparent,
 			),
 		),
 
@@ -738,6 +748,8 @@ $card-interactive: map-deep-merge(
 
 // Card Interactive Primary
 
+$card-interactive-primary-hover-box-shadow: null !default;
+
 $card-interactive-primary-after-highlight: () !default;
 $card-interactive-primary-after-highlight: map-deep-merge(
 	(
@@ -759,6 +771,9 @@ $card-interactive-primary-after-highlight: map-deep-merge(
 $card-interactive-primary: () !default;
 $card-interactive-primary: map-deep-merge(
 	(
+		hover: (
+			box-shadow: $card-interactive-primary-hover-box-shadow,
+		),
 		focus: (
 			background-color: $gray-100,
 		),
@@ -844,6 +859,10 @@ $card-type-asset: map-deep-merge(
 
 		card-row: (
 			align-items: flex-start,
+		),
+
+		disabled: (
+			transform: none,
 		),
 
 		dropdown-action: (

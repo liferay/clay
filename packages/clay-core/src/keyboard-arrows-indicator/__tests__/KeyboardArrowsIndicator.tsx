@@ -13,91 +13,29 @@ import {KeyboardArrowsIndicator} from '../../';
 describe('KeyboardArrowsIndicator', () => {
 	afterEach(cleanup);
 
-	it('renders four keys in inverted-T layout', () => {
+	it('always renders the arrows-all composite icon', () => {
 		const {container} = render(<KeyboardArrowsIndicator direction="all" />);
 
-		const keys = container.querySelectorAll(
-			'.clay-keyboard-arrows-indicator-key'
-		);
+		const use = container.querySelector('svg use');
 
-		expect(keys).toHaveLength(4);
+		expect(use).toBeInTheDocument();
 		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-key-up')
-		).toBeInTheDocument();
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-key-down')
-		).toBeInTheDocument();
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-key-left')
-		).toBeInTheDocument();
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-key-right')
-		).toBeInTheDocument();
+			use!.getAttribute('href') ?? use!.getAttribute('xlink:href')
+		).toContain('#arrows-all');
 	});
 
-	it('marks no key inactive when direction is "all"', () => {
-		const {container} = render(<KeyboardArrowsIndicator direction="all" />);
+	it.each(['all', 'horizontal', 'vertical'] as const)(
+		'applies the matching state class for direction "%s"',
+		(direction) => {
+			const {container} = render(
+				<KeyboardArrowsIndicator direction={direction} />
+			);
 
-		expect(
-			container.querySelectorAll(
-				'.clay-keyboard-arrows-indicator-key-inactive'
-			)
-		).toHaveLength(0);
-	});
-
-	it('mutes up and down keys when direction is "horizontal"', () => {
-		const {container} = render(
-			<KeyboardArrowsIndicator direction="horizontal" />
-		);
-
-		expect(
-			container.querySelector(
-				'.clay-keyboard-arrows-indicator-key-up.clay-keyboard-arrows-indicator-key-inactive'
-			)
-		).toBeInTheDocument();
-		expect(
-			container.querySelector(
-				'.clay-keyboard-arrows-indicator-key-down.clay-keyboard-arrows-indicator-key-inactive'
-			)
-		).toBeInTheDocument();
-		expect(
-			container.querySelector(
-				'.clay-keyboard-arrows-indicator-key-left.clay-keyboard-arrows-indicator-key-inactive'
-			)
-		).not.toBeInTheDocument();
-		expect(
-			container.querySelector(
-				'.clay-keyboard-arrows-indicator-key-right.clay-keyboard-arrows-indicator-key-inactive'
-			)
-		).not.toBeInTheDocument();
-	});
-
-	it('mutes left and right keys when direction is "vertical"', () => {
-		const {container} = render(
-			<KeyboardArrowsIndicator direction="vertical" />
-		);
-
-		expect(
-			container.querySelector(
-				'.clay-keyboard-arrows-indicator-key-left.clay-keyboard-arrows-indicator-key-inactive'
-			)
-		).toBeInTheDocument();
-		expect(
-			container.querySelector(
-				'.clay-keyboard-arrows-indicator-key-right.clay-keyboard-arrows-indicator-key-inactive'
-			)
-		).toBeInTheDocument();
-		expect(
-			container.querySelector(
-				'.clay-keyboard-arrows-indicator-key-up.clay-keyboard-arrows-indicator-key-inactive'
-			)
-		).not.toBeInTheDocument();
-		expect(
-			container.querySelector(
-				'.clay-keyboard-arrows-indicator-key-down.clay-keyboard-arrows-indicator-key-inactive'
-			)
-		).not.toBeInTheDocument();
-	});
+			expect(
+				container.querySelector('.clay-keyboard-arrows-indicator')
+			).toHaveClass(`clay-keyboard-arrows-${direction}`);
+		}
+	);
 
 	it.each([
 		['all', 'Use arrow keys to navigate'],
@@ -137,22 +75,6 @@ describe('KeyboardArrowsIndicator', () => {
 		).toHaveAttribute('role', 'img');
 	});
 
-	it('applies the size modifier class', () => {
-		const {container, rerender} = render(
-			<KeyboardArrowsIndicator direction="all" />
-		);
-
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-md')
-		).toBeInTheDocument();
-
-		rerender(<KeyboardArrowsIndicator direction="all" size="sm" />);
-
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-sm')
-		).toBeInTheDocument();
-	});
-
 	it('forwards a custom className', () => {
 		const {container} = render(
 			<KeyboardArrowsIndicator className="my-hint" direction="all" />
@@ -161,41 +83,5 @@ describe('KeyboardArrowsIndicator', () => {
 		expect(
 			container.querySelector('.clay-keyboard-arrows-indicator')
 		).toHaveClass('my-hint');
-	});
-
-	it('omits the floating class by default and applies it for placement="floating"', () => {
-		const {container, rerender} = render(
-			<KeyboardArrowsIndicator direction="all" />
-		);
-
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-floating')
-		).not.toBeInTheDocument();
-
-		rerender(
-			<KeyboardArrowsIndicator direction="all" placement="floating" />
-		);
-
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-floating')
-		).toBeInTheDocument();
-	});
-
-	it('omits the on-focus class by default and applies it for visibility="on-focus"', () => {
-		const {container, rerender} = render(
-			<KeyboardArrowsIndicator direction="all" />
-		);
-
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-on-focus')
-		).not.toBeInTheDocument();
-
-		rerender(
-			<KeyboardArrowsIndicator direction="all" visibility="on-focus" />
-		);
-
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator-on-focus')
-		).toBeInTheDocument();
 	});
 });

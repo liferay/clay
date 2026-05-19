@@ -2027,6 +2027,20 @@
 				}
 			}
 
+			$_disabled: map-get($map, disabled);
+
+			@if ($_disabled) {
+				&.disabled {
+					$_card: map-get($_disabled, card);
+
+					@if ($_card) {
+						.card {
+							@include clay-card-variant($_card);
+						}
+					}
+				}
+			}
+
 			$_card: map-get($map, card);
 
 			@if ($_card) {
