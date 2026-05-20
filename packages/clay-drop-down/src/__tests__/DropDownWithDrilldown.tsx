@@ -9,7 +9,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {cleanup, fireEvent, render} from '@testing-library/react';
+import {cleanup, fireEvent, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
@@ -198,5 +198,27 @@ describe('ClayDropDownWithDrilldown', () => {
 		expect(onActiveChange).toBeCalled();
 
 		expect(document.body).toMatchSnapshot();
+	});
+
+	it('forwards other props to the underlying DropDown container', () => {
+		const onMouseEnter = jest.fn();
+
+		render(
+			<ClayDropDownWithDrilldown
+				data-testid="drilldown"
+				defaultActive
+				defaultActiveMenu="x0a3"
+				menus={{
+					x0a3: [{href: '#', title: 'Hash Link'}],
+				}}
+				onMouseEnter={onMouseEnter}
+				spritemap="#"
+				trigger={<button data-testid="trigger" />}
+			/>
+		);
+
+		fireEvent.mouseEnter(screen.getByTestId('drilldown'));
+
+		expect(onMouseEnter).toHaveBeenCalledTimes(1);
 	});
 });

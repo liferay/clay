@@ -30,13 +30,11 @@ import Section from './Section';
 
 import type {AlignPoints, InternalDispatch} from '@clayui/shared';
 
+import type {DropDownHTMLAttributes} from './types';
+
 const {Collection} = __NOT_PUBLIC_COLLECTION;
 
-interface IProps<T>
-	extends Omit<
-		React.HTMLAttributes<HTMLDivElement | HTMLLIElement>,
-		'children'
-	> {
+interface IProps<T> extends DropDownHTMLAttributes {
 
 	/**
 	 * Flag to indicate if the DropDown menu is active or not (controlled).

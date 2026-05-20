@@ -233,4 +233,22 @@ describe('ClayDropDownWithItems', () => {
 
 		expect(screen.getByText('linkable')).toBeDefined();
 	});
+
+	it('forwards other props to the underlying ClayDropDown container', () => {
+		const onMouseEnter = jest.fn();
+
+		render(
+			<ClayDropDownWithItems
+				data-testid="dropdown"
+				items={[{label: 'clickable'}]}
+				onMouseEnter={onMouseEnter}
+				spritemap={spritemap}
+				trigger={<ClayButton>Click Me</ClayButton>}
+			/>
+		);
+
+		fireEvent.mouseEnter(screen.getByTestId('dropdown'));
+
+		expect(onMouseEnter).toHaveBeenCalledTimes(1);
+	});
 });

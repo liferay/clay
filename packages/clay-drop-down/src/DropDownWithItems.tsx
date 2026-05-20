@@ -18,6 +18,7 @@ import type {AlignPoints, InternalDispatch} from '@clayui/shared';
 
 import type {Item} from './Items';
 import type {IProps as SearchProps} from './Search';
+import type {DropDownHTMLAttributes} from './types';
 
 export type Props = {
 
@@ -150,7 +151,7 @@ export type Props = {
 	 * Flag indicating if the caret icon should be displayed on the right side.
 	 */
 	triggerIcon?: string | null;
-};
+} & DropDownHTMLAttributes;
 
 let counter = 0;
 
@@ -208,6 +209,7 @@ export function ClayDropDownWithItems({
 	triggerIcon = null,
 	spritemap,
 	trigger,
+	...otherProps
 }: Props) {
 	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
 	const [internalActive, setInternalActive] = useControlledState({
@@ -241,6 +243,7 @@ export function ClayDropDownWithItems({
 	if (hasContextual && isMobile) {
 		return (
 			<ClayDropDownWithDrilldown
+				{...otherProps}
 				active={internalActive}
 				alignmentByViewport={alignmentByViewport}
 				alignmentPosition={alignmentPosition}
@@ -269,6 +272,7 @@ export function ClayDropDownWithItems({
 	else {
 		return (
 			<ClayDropDown
+				{...otherProps}
 				active={internalActive}
 				alignmentByViewport={alignmentByViewport}
 				alignmentPosition={alignmentPosition}
