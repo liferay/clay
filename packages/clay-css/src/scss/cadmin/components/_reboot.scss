@@ -77,7 +77,9 @@ html#{$cadmin-selector} {
 		tr,
 		ul,
 		var {
-			@extend %cadmin-reset !optional;
+			&:where(:not(.ck, .ck *)) {
+				@extend %cadmin-reset !optional;
+			}
 		}
 
 		// Shim for "new" HTML5 structural elements to display correctly (IE11)

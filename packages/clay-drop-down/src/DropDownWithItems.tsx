@@ -199,6 +199,7 @@ export function ClayDropDownWithItems({
 	menuElementAttrs,
 	menuHeight,
 	menuWidth,
+	messages: _messages,
 	offsetFn,
 	onActiveChange,
 	onSearchValueChange = () => {},
