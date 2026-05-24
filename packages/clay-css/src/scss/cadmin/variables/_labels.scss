@@ -1,11 +1,11 @@
 // .label
 
 $cadmin-label-border-color: $cadmin-gray-900 !default;
-$cadmin-label-border-radius: 2px !default; // 2px
+$cadmin-label-border-radius: $cadmin-border-radius !default; // 4px
 $cadmin-label-border-style: solid !default;
 $cadmin-label-border-width: 1px !default;
 $cadmin-label-color: null !default;
-$cadmin-label-font-size: 10px !default; // 10px
+$cadmin-label-font-size: 12px !default; // 12px
 $cadmin-label-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-label-height: null !default;
 $cadmin-label-line-height: 1 !default;
@@ -13,7 +13,7 @@ $cadmin-label-padding-x: 4px !default; // 4px
 $cadmin-label-padding-y: 2px !default; // 2px
 $cadmin-label-spacer-x: 4px !default; // 4px
 $cadmin-label-spacer-y: 2px !default; // 2px
-$cadmin-label-text-transform: uppercase !default;
+$cadmin-label-text-transform: none !default;
 
 // .label .sticker
 
@@ -250,7 +250,7 @@ $cadmin-label-item-after: map-merge(
 $cadmin-label-lg: () !default;
 $cadmin-label-lg: map-deep-merge(
 	(
-		font-size: 12px,
+		font-size: 14px,
 		height: auto,
 		min-height: 24px,
 		padding-bottom: 5px,
@@ -368,7 +368,7 @@ $cadmin-label-primary: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
-$cadmin-label-secondary-color: $cadmin-secondary !default;
+$cadmin-label-secondary-color: $cadmin-dark-l2 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
@@ -446,7 +446,7 @@ $cadmin-label-secondary: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
-$cadmin-label-success-color: $cadmin-success !default;
+$cadmin-label-success-color: $cadmin-success-d1 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
@@ -524,7 +524,7 @@ $cadmin-label-success: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
-$cadmin-label-info-color: $cadmin-info !default;
+$cadmin-label-info-color: $cadmin-info-d1 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
@@ -602,7 +602,7 @@ $cadmin-label-info: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
-$cadmin-label-warning-color: $cadmin-warning !default;
+$cadmin-label-warning-color: $cadmin-warning-d1 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
@@ -680,7 +680,7 @@ $cadmin-label-warning: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
-$cadmin-label-danger-color: $cadmin-danger !default;
+$cadmin-label-danger-color: $cadmin-danger-d1 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
@@ -933,13 +933,13 @@ $cadmin-label-inverse-primary: map-deep-merge(
 $cadmin-label-inverse-secondary: () !default;
 $cadmin-label-inverse-secondary: map-deep-merge(
 	(
-		background-color: $cadmin-secondary,
-		border-color: $cadmin-secondary,
-		color: $cadmin-white,
+		background-color: $cadmin-secondary-l3,
+		border-color: $cadmin-secondary-l3,
+		color: $cadmin-dark-d2,
 
 		href: (
 			hover: (
-				color: $cadmin-white,
+				color: $cadmin-dark-d2,
 			),
 		),
 	),
@@ -949,13 +949,13 @@ $cadmin-label-inverse-secondary: map-deep-merge(
 $cadmin-label-inverse-success: () !default;
 $cadmin-label-inverse-success: map-deep-merge(
 	(
-		background-color: $cadmin-success,
-		border-color: $cadmin-success,
-		color: $cadmin-white,
+		background-color: $cadmin-success-l2,
+		border-color: $cadmin-success-l2,
+		color: $cadmin-success-d2,
 
 		href: (
 			hover: (
-				color: $cadmin-white,
+				color: $cadmin-success-d2,
 			),
 		),
 	),
@@ -965,13 +965,13 @@ $cadmin-label-inverse-success: map-deep-merge(
 $cadmin-label-inverse-info: () !default;
 $cadmin-label-inverse-info: map-deep-merge(
 	(
-		background-color: $cadmin-info,
-		border-color: $cadmin-info,
-		color: $cadmin-white,
+		background-color: $cadmin-info-l2,
+		border-color: $cadmin-info-l2,
+		color: $cadmin-info-d2,
 
 		href: (
 			hover: (
-				color: $cadmin-white,
+				color: $cadmin-info-d2,
 			),
 		),
 	),
@@ -981,13 +981,13 @@ $cadmin-label-inverse-info: map-deep-merge(
 $cadmin-label-inverse-warning: () !default;
 $cadmin-label-inverse-warning: map-deep-merge(
 	(
-		background-color: $cadmin-warning,
-		border-color: $cadmin-warning,
-		color: $cadmin-white,
+		background-color: $cadmin-warning-l2,
+		border-color: $cadmin-warning-l2,
+		color: $cadmin-warning-d2,
 
 		href: (
 			hover: (
-				color: $cadmin-white,
+				color: $cadmin-warning-d2,
 			),
 		),
 	),
@@ -997,13 +997,13 @@ $cadmin-label-inverse-warning: map-deep-merge(
 $cadmin-label-inverse-danger: () !default;
 $cadmin-label-inverse-danger: map-deep-merge(
 	(
-		background-color: $cadmin-danger,
-		border-color: $cadmin-danger,
-		color: $cadmin-white,
+		background-color: $cadmin-danger-l2,
+		border-color: $cadmin-danger-l2,
+		color: $cadmin-danger-d2,
 
 		href: (
 			hover: (
-				color: $cadmin-white,
+				color: $cadmin-danger-d2,
 			),
 		),
 	),

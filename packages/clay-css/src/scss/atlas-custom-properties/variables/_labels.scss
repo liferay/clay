@@ -13,7 +13,7 @@ $label-padding-x: var(--label-padding-x, 0.25rem) !default;
 $label-padding-y: var(--label-padding-y, 0.125rem) !default;
 $label-spacer-x: var(--label-spacer-x, 0.25rem) !default;
 $label-spacer-y: var(--label-spacer-y, 0.125rem) !default;
-$label-text-transform: var(--label-text-transform, uppercase) !default;
+$label-text-transform: var(--label-text-transform, none) !default;
 
 // .label .sticker
 
@@ -255,7 +255,7 @@ $label-lg: () !default;
 $label-lg: map-deep-merge(
 	(
 		border-radius: var(--label-lg-border-radius, $border-radius-lg),
-		font-size: var(--label-lg-font-size, 0.75rem),
+		font-size: var(--label-lg-font-size, 0.875rem),
 		height: var(--label-lg-height, auto),
 		min-height: var(--label-lg-min-height, 1.5rem),
 		padding-bottom: var(--label-lg-padding-bottom, 0.3125rem),
@@ -393,7 +393,7 @@ $label-primary: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$label-secondary` instead
 
-$label-secondary-color: $secondary !default;
+$label-secondary-color: $dark-l2 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$label-secondary` instead
 
@@ -498,7 +498,7 @@ $label-secondary: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$label-success` instead
 
-$label-success-color: $success !default;
+$label-success-color: $success-d1 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$label-success` instead
 
@@ -597,7 +597,7 @@ $label-success: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$label-info` instead
 
-$label-info-color: $info !default;
+$label-info-color: $info-d1 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$label-info` instead
 
@@ -692,7 +692,7 @@ $label-info: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$label-warning` instead
 
-$label-warning-color: $warning !default;
+$label-warning-color: $warning-d1 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$label-warning` instead
 
@@ -791,7 +791,7 @@ $label-warning: map-deep-merge(
 
 // @deprecated as of v2.4.1 use the Sass map `$label-danger` instead
 
-$label-danger-color: $danger !default;
+$label-danger-color: $danger-d1 !default;
 
 // @deprecated as of v2.4.1 use the Sass map `$label-danger` instead
 
@@ -1117,36 +1117,36 @@ $label-inverse-secondary: () !default;
 $label-inverse-secondary: map-deep-merge(
 	(
 		background-color:
-			var(--label-inverse-secondary-background-color, $secondary),
+			var(--label-inverse-secondary-background-color, $secondary-l3),
 		border-color: var(--label-inverse-secondary-border-color, transparent),
-		color: var(--label-inverse-secondary-color, $white),
+		color: var(--label-inverse-secondary-color, $dark-d2),
 		href: (
 			hover: (
 				background-color:
 					var(
 						--label-inverse-secondary-hover-background-color,
-						$secondary-d1
+						$secondary-l3
 					),
 				border-color:
 					var(
 						--label-inverse-secondary-hover-border-color,
 						transparent
 					),
-				color: var(--label-inverse-secondary-hover-color, $white),
+				color: var(--label-inverse-secondary-hover-color, $dark-d2),
 			),
 
 			focus: (
 				background-color:
 					var(
 						--label-inverse-secondary-focus-background-color,
-						$secondary-d1
+						$secondary-l3
 					),
 				border-color:
 					var(
 						--label-inverse-secondary-focus-border-color,
 						transparent
 					),
-				color: var(--label-inverse-secondary-focus-color, $white),
+				color: var(--label-inverse-secondary-focus-color, $dark-d2),
 			),
 		),
 	),
@@ -1157,30 +1157,30 @@ $label-inverse-success: () !default;
 $label-inverse-success: map-deep-merge(
 	(
 		background-color:
-			var(--label-inverse-success-background-color, $success),
+			var(--label-inverse-success-background-color, $success-l2),
 		border-color: var(--label-inverse-success-border-color, transparent),
-		color: var(--label-inverse-success-color, $white),
+		color: var(--label-inverse-success-color, $success-d2),
 		href: (
 			hover: (
 				background-color:
 					var(
 						--label-inverse-success-hover-background-color,
-						$success-d2
+						$success-l2
 					),
 				border-color:
 					var(--label-inverse-success-hover-border-color, transparent),
-				color: var(--label-inverse-success-hover-color, $white),
+				color: var(--label-inverse-success-hover-color, $success-d2),
 			),
 
 			focus: (
 				background-color:
 					var(
 						--label-inverse-success-focus-background-color,
-						$success
+						$success-l2
 					),
 				border-color:
 					var(--label-inverse-success-focus-border-color, transparent),
-				color: var(--label-inverse-success-focus-color, $white),
+				color: var(--label-inverse-success-focus-color, $success-d2),
 			),
 		),
 	),
@@ -1190,24 +1190,24 @@ $label-inverse-success: map-deep-merge(
 $label-inverse-info: () !default;
 $label-inverse-info: map-deep-merge(
 	(
-		background-color: var(--label-inverse-info-background-color, $info),
+		background-color: var(--label-inverse-info-background-color, $info-l2),
 		border-color: var(--label-inverse-info-border-color, transparent),
-		color: var(--label-inverse-info-color, $white),
+		color: var(--label-inverse-info-color, $info-d2),
 		href: (
 			hover: (
 				background-color:
-					var(--label-inverse-info-hover-background-color, $info-d2),
+					var(--label-inverse-info-hover-background-color, $info-l2),
 				border-color:
 					var(--label-inverse-info-hover-border-color, transparent),
-				color: var(--label-inverse-info-hover-color, $white),
+				color: var(--label-inverse-info-hover-color, $info-d2),
 			),
 
 			focus: (
 				background-color:
-					var(--label-inverse-info-focus-background-color, $info-d2),
+					var(--label-inverse-info-focus-background-color, $info-l2),
 				border-color:
 					var(--label-inverse-info-focus-border-color, transparent),
-				color: var(--label-inverse-info-focus-color, $white),
+				color: var(--label-inverse-info-focus-color, $info-d2),
 			),
 		),
 	),
@@ -1218,30 +1218,30 @@ $label-inverse-warning: () !default;
 $label-inverse-warning: map-deep-merge(
 	(
 		background-color:
-			var(--label-inverse-warning-background-color, $warning),
+			var(--label-inverse-warning-background-color, $warning-l2),
 		border-color: var(--label-inverse-warning-border-color, transparent),
-		color: var(--label-inverse-warning-color, $white),
+		color: var(--label-inverse-warning-color, $warning-d2),
 		href: (
 			hover: (
 				background-color:
 					var(
 						--label-inverse-warning-hover-background-color,
-						$warning-d2
+						$warning-l2
 					),
 				border-color:
 					var(--label-inverse-warning-hover-border-color, transparent),
-				color: var(--label-inverse-warning-hover-color, $white),
+				color: var(--label-inverse-warning-hover-color, $warning-d2),
 			),
 
 			focus: (
 				background-color:
 					var(
 						--label-inverse-warning-focus-background-color,
-						$warning-d2
+						$warning-l2
 					),
 				border-color:
 					var(--label-inverse-warning-focus-border-color, transparent),
-				color: var(--label-inverse-warning-focus-color, $white),
+				color: var(--label-inverse-warning-focus-color, $warning-d2),
 			),
 		),
 	),
@@ -1251,30 +1251,31 @@ $label-inverse-warning: map-deep-merge(
 $label-inverse-danger: () !default;
 $label-inverse-danger: map-deep-merge(
 	(
-		background-color: var(--label-inverse-danger-background-color, $danger),
+		background-color:
+			var(--label-inverse-danger-background-color, $danger-l2),
 		border-color: var(--label-inverse-danger-border-color, transparent),
-		color: var(--label-inverse-danger-color, $white),
+		color: var(--label-inverse-danger-color, $danger-d2),
 		href: (
 			hover: (
 				background-color:
 					var(
 						--label-inverse-danger-hover-background-color,
-						$danger-d2
+						$danger-l2
 					),
 				border-color:
 					var(--label-inverse-danger-hover-border-color, transparent),
-				color: var(--label-inverse-danger-hover-color, $white),
+				color: var(--label-inverse-danger-hover-color, $danger-d2),
 			),
 
 			focus: (
 				background-color:
 					var(
 						--label-inverse-danger-focus-background-color,
-						$danger-d2
+						$danger-l2
 					),
 				border-color:
 					var(--label-inverse-danger-focus-border-color, transparent),
-				color: var(--label-inverse-danger-focus-color, $white),
+				color: var(--label-inverse-danger-focus-color, $danger-d2),
 			),
 		),
 	),

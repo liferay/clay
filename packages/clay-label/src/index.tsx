@@ -77,6 +77,11 @@ interface IBaseProps extends React.BaseHTMLAttributes<HTMLSpanElement> {
 		| 'unstyled';
 
 	/**
+	 * Flag to indicate if the label should be of the `inverse` variant.
+	 */
+	inverse?: boolean;
+
+	/**
 	 * Flag to indicate if the label should be of the `large` variant.
 	 */
 	large?: boolean;
@@ -89,18 +94,22 @@ const OldLabel = React.forwardRef<HTMLSpanElement, IBaseProps>(
 			className,
 			dismissible,
 			displayType = 'secondary',
+			inverse = false,
 			large = false,
 			...otherProps
 		},
 		ref
 	) => {
+		const useInverse = inverse && displayType !== 'unstyled';
+
 		return (
 			<span
 				{...otherProps}
 				className={classNames('label', className, {
 					'label-dismissible': dismissible,
 					'label-lg': large,
-					[`label-${displayType}`]: displayType,
+					[`label-${displayType}`]: !useInverse && displayType,
+					[`label-inverse-${displayType}`]: useInverse,
 				})}
 				ref={ref}
 			>
