@@ -9,7 +9,7 @@ exports[`SidePanel basic rendering render basic content 1`] = `
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
       <div
-        aria-labelledby="clay-id-1"
+        aria-labelledby="clay-id-2"
         class="sidebar sidebar-light"
         id="sidepanel"
         inert=""
@@ -29,7 +29,7 @@ exports[`SidePanel basic rendering render basic content 1`] = `
               >
                 <span
                   class="component-title"
-                  id="clay-id-1"
+                  id="clay-id-2"
                 >
                   Title
                 </span>
@@ -80,7 +80,7 @@ exports[`SidePanel basic rendering render component with open state 1`] = `
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
       <div
-        aria-labelledby="clay-id-2"
+        aria-labelledby="clay-id-4"
         class="sidebar sidebar-light c-slideout-show"
         id="sidepanel"
         tabindex="-1"
@@ -102,7 +102,7 @@ exports[`SidePanel basic rendering render component with open state 1`] = `
               >
                 <span
                   class="component-title"
-                  id="clay-id-2"
+                  id="clay-id-4"
                 >
                   Title
                 </span>
@@ -176,7 +176,7 @@ exports[`SidePanel basic rendering render with custom aria-label 1`] = `
               >
                 <span
                   class="component-title"
-                  id="clay-id-3"
+                  id="clay-id-6"
                 >
                   Title
                 </span>
@@ -227,7 +227,7 @@ exports[`SidePanel basic rendering render with custom width 1`] = `
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
       <div
-        aria-labelledby="clay-id-4"
+        aria-labelledby="clay-id-8"
         class="sidebar sidebar-light"
         id="sidepanel"
         inert=""
@@ -248,7 +248,7 @@ exports[`SidePanel basic rendering render with custom width 1`] = `
               >
                 <span
                   class="component-title"
-                  id="clay-id-4"
+                  id="clay-id-8"
                 >
                   Title
                 </span>
@@ -299,7 +299,7 @@ exports[`SidePanel basic rendering render with fluid width 1`] = `
       class="c-slideout c-slideout-absolute c-slideout-push c-slideout-end"
     >
       <div
-        aria-labelledby="clay-id-5"
+        aria-labelledby="clay-id-10"
         class="sidebar sidebar-light"
         id="sidepanel"
         inert=""
@@ -319,7 +319,7 @@ exports[`SidePanel basic rendering render with fluid width 1`] = `
               >
                 <span
                   class="component-title"
-                  id="clay-id-5"
+                  id="clay-id-10"
                 >
                   Title
                 </span>

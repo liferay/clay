@@ -23,13 +23,24 @@ $c-horizontal-resizer: map-merge(
 
 		hover: (
 			before: (
-				background-color: $primary-l0,
+				background-color: $primary,
+			),
+		),
+
+		active: (
+			before: (
+				background-color: $primary-d2,
 			),
 		),
 
 		focus: (
+			box-shadow: $component-focus-inset-box-shadow,
+			outline: 0,
+
 			before: (
-				background-color: $primary-l0,
+				background-color: $primary,
+				bottom: 0.25rem,
+				top: 0.25rem,
 			),
 		),
 	),

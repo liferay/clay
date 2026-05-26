@@ -24,11 +24,16 @@ export default function App() {
         className="border rounded d-flex overflow-hidden"
         style={{ height: 280 }}
       >
-        <div className="bg-light p-3 position-relative" style={{ width }}>
+        <div
+          className="bg-light p-3 position-relative"
+          id="resizable-region"
+          style={{ width }}
+        >
           <div className="text-secondary">Resizable region</div>
           <div className="text-weight-semi-bold">{width}px</div>
 
           <ResizeHandle
+            aria-controls="resizable-region"
             maxWidth={480}
             minWidth={240}
             onWidthChange={setWidth}
@@ -59,6 +64,7 @@ The component is fully controlled: it does not store the width internally. You m
 import { ResizeHandle } from "@clayui/core";
 
 <ResizeHandle
+  aria-controls="resizable-region"
   maxWidth={480}
   minWidth={240}
   onWidthChange={setWidth}
@@ -84,6 +90,9 @@ The `position` prop indicates which side of the screen the resized element is an
 
 - Renders with `role="separator"` and `aria-orientation="vertical"`.
 - Reflects the current width through `aria-valuenow`, with `aria-valuemin` / `aria-valuemax` matching the configured boundaries.
+- Sets `aria-valuetext` to the current width in pixels (for example, _"320px"_). Without it, screen readers fall back to announcing the value as a percentage of the `aria-valuemin` / `aria-valuemax` range, which is misleading because the underlying values are pixel measurements.
+- Provides a localized accessible name through `aria-label`, with a default per `position` (_"Resize left side"_ or _"Resize right side"_). Pass `aria-label` explicitly to override it with a more specific or translated string (for example, _"Resize navigation panel"_).
+- Requires `aria-controls` to be set to the `id` of the element being resized. The component cannot infer it because it does not know which element it resizes — it only emits the new width through `onWidthChange`, and the consumer is the one that applies it. Supplying `aria-controls` lets assistive technology identify the controlled region.
 - `tabIndex={0}` so the handle is reachable with the keyboard.
 
 ### Keyboard interaction
@@ -91,5 +100,3 @@ The `position` prop indicates which side of the screen the resized element is an
 - `Left` / `Right` — decrease or increase the width (mapping depends on `position`).
 - `Up` / `Down` — increase or decrease the width.
 - Holding a key accelerates the change after a few key repeats (1px per step, then 10px per step).
-
-When labeling the handle from a parent component, set `aria-label` on `ResizeHandle` directly so screen readers announce its purpose (for example, _"Resize navigation panel"_).

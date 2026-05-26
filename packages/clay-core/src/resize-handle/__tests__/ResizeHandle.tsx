@@ -20,6 +20,7 @@ function renderComponent({
 }) {
 	return render(
 		<ResizeHandle
+			aria-controls="resizable-region"
 			data-testid="resizer"
 			maxWidth={600}
 			minWidth={200}

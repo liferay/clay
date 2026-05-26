@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
+import {useId} from '@clayui/shared';
 import React, {useState} from 'react';
 
 import {ResizeHandle} from '../src/resize-handle';
@@ -17,19 +18,24 @@ export default {
 
 export function ResizingLeft() {
 	const [width, setWidth] = useState(320);
+	const id = useId();
 
 	return (
 		<div
 			className="border d-flex overflow-hidden rounded"
 			style={{height: 280}}
 		>
-			<div className="bg-light p-3 position-relative" style={{width}}>
+			<div
+				className="bg-light p-3 position-relative"
+				id={id}
+				style={{width}}
+			>
 				<div className="text-secondary">Resizable region</div>
 
 				<div className="text-weight-semi-bold">{width}px</div>
 
 				<ResizeHandle
-					aria-label="Resize region"
+					aria-controls={id}
 					maxWidth={MAX_WIDTH}
 					minWidth={MIN_WIDTH}
 					onWidthChange={setWidth}
@@ -49,6 +55,7 @@ export function ResizingLeft() {
 
 export function ResizingRight() {
 	const [width, setWidth] = useState(320);
+	const id = useId();
 
 	return (
 		<div
@@ -61,13 +68,17 @@ export function ResizingRight() {
 				<div className="text-weight-semi-bold">Fills the rest</div>
 			</div>
 
-			<div className="bg-light p-3 position-relative" style={{width}}>
+			<div
+				className="bg-light p-3 position-relative"
+				id={id}
+				style={{width}}
+			>
 				<div className="text-secondary">Resizable region</div>
 
 				<div className="text-weight-semi-bold">{width}px</div>
 
 				<ResizeHandle
-					aria-label="Resize region"
+					aria-controls={id}
 					maxWidth={MAX_WIDTH}
 					minWidth={MIN_WIDTH}
 					onWidthChange={setWidth}

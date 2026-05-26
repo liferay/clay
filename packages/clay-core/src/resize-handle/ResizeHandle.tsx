@@ -12,39 +12,50 @@ export type Position = 'left' | 'right';
 type Props = {
 
 	/**
+	 * ID of the element being resized.
+	 */
+	'aria-controls': string;
+
+	/**
 	 * The maximum width allowed.
 	 */
-	maxWidth: number;
+	'maxWidth': number;
 
 	/**
 	 * The minimum width allowed.
 	 */
-	minWidth: number;
+	'minWidth': number;
 
 	/**
 	 * Callback called every time the width changes (controlled).
 	 */
-	onWidthChange: (width: number) => void;
+	'onWidthChange': (width: number) => void;
 
 	/**
 	 * The side of the screen where the resized element is located.
 	 */
-	position: Position;
+	'position': Position;
 
 	/**
 	 * Property to set the current width (controlled).
 	 */
-	width?: number;
+	'width'?: number;
 } & Omit<
 	React.HTMLAttributes<HTMLDivElement>,
-	'onKeyDown' | 'onKeyUp' | 'onPointerDown'
+	'aria-controls' | 'className' | 'onKeyDown' | 'onKeyUp' | 'onPointerDown'
 >;
+
+const DEFAULT_ARIA_LABELS: Record<Position, string> = {
+	left: 'Resize left side',
+	right: 'Resize right side',
+};
 
 const MAIN_MOUSE_BUTTON = 0;
 
 let keyDownCounter = 0;
 
 export function ResizeHandle({
+	'aria-controls': ariaControls,
 	maxWidth,
 	minWidth,
 	onWidthChange,
@@ -78,15 +89,18 @@ export function ResizeHandle({
 
 	return (
 		<div
+			aria-label={DEFAULT_ARIA_LABELS[position]}
 			aria-orientation="vertical"
 			aria-valuemax={maxWidth}
 			aria-valuemin={minWidth}
 			aria-valuenow={width}
+			aria-valuetext={`${width}px`}
+			{...otherProps}
+			aria-controls={ariaControls}
 			className={classnames('c-horizontal-resizer', {
 				'c-horizontal-resizer-end':
 					document.dir === 'rtl' ? positionLeft : !positionLeft,
 			})}
-			{...otherProps}
 			onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) => {
 				const delta = keyDownCounter > 7 ? 10 : 1;
 

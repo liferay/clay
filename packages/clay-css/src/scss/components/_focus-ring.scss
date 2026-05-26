@@ -46,7 +46,9 @@ $focus-ring-animation-to-box-shadow:
 		box-shadow: $focus-ring-animation-to-box-shadow;
 	}
 
-	:focus-visible:not(.toggle-switch-check):not(.custom-control-input),
+	:focus-visible:not(.c-horizontal-resizer):not(.toggle-switch-check):not(
+			.custom-control-input
+		),
 	.focus {
 		position: relative;
 		z-index: 1;

@@ -22,13 +22,24 @@ $cadmin-c-horizontal-resizer: map-merge(
 
 		hover: (
 			before: (
-				background-color: $cadmin-primary-l0,
+				background-color: $cadmin-primary,
+			),
+		),
+
+		active: (
+			before: (
+				background-color: $cadmin-primary-d2,
 			),
 		),
 
 		focus: (
+			box-shadow: $cadmin-component-focus-inset-box-shadow,
+			outline: 0,
+
 			before: (
-				background-color: $cadmin-primary-l0,
+				background-color: $cadmin-primary,
+				bottom: 0.25rem,
+				top: 0.25rem,
 			),
 		),
 	),

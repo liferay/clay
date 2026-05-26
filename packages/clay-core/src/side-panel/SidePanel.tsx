@@ -153,6 +153,7 @@ export function SidePanel({
 	displayType = 'light',
 	externalSidePanelRef,
 	fluid = false,
+	'id': externalId,
 	onOpenChange,
 	'open': externalOpen,
 	'panelWidth': externalPanelWidth,
@@ -247,10 +248,12 @@ export function SidePanel({
 		}
 	}, [closeOnEscape, open]);
 
+	const internalPanelId = useId();
 	const titleId = useId();
 
 	const offsetTop = useOffsetTop(containerRef);
 
+	const panelId = externalId ?? internalPanelId;
 	const panelWidth = isResizable
 		? Math.min(sidePanelObservedMaxWidth, resizeWidth)
 		: externalPanelWidth && Math.max(externalPanelWidth, PANEL_WIDTH_MIN);
@@ -336,6 +339,7 @@ export function SidePanel({
 					aria-labelledby={
 						!ariaLabelledby && !ariaLabel ? titleId : ariaLabelledby
 					}
+					id={panelId}
 					ref={sidePanelRef}
 					style={panelWidth ? {width: panelWidth} : undefined}
 					tabIndex={-1}
@@ -349,6 +353,7 @@ export function SidePanel({
 
 						{isResizable && (
 							<ResizeHandle
+								aria-controls={panelId}
 								maxWidth={sidePanelObservedMaxWidth}
 								minWidth={PANEL_WIDTH_MIN}
 								onWidthChange={setResizeWidth}

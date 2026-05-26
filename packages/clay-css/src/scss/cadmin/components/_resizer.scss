@@ -11,6 +11,16 @@
 		);
 	}
 
+	&:active::before {
+		@include clay-css(
+			map-deep-get($cadmin-c-horizontal-resizer, active, before)
+		);
+	}
+
+	&:focus-visible {
+		@include clay-css(map-get($cadmin-c-horizontal-resizer, focus));
+	}
+
 	&:focus-visible::before {
 		@include clay-css(
 			map-deep-get($cadmin-c-horizontal-resizer, focus, before)
