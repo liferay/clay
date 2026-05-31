@@ -22,6 +22,7 @@ export interface IAriaLabels {
 	dialog?: string;
 	input?: string;
 	openCalendar?: string;
+	outOfRange?: string;
 	selectMonth: string;
 	selectYear: string;
 }

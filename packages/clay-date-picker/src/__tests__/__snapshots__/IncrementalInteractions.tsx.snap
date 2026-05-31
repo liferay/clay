@@ -2,15 +2,19 @@
 
 exports[`IncrementalInteractions clicking a month on the selector should change the content to the corresponding month 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -843,6 +847,11 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
         class="input-group"
         style=""
       >
@@ -1667,15 +1676,19 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
 
 exports[`IncrementalInteractions clicking on the date icon should open the dropdown 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -2505,15 +2518,19 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
 
 exports[`IncrementalInteractions clicking on the year selector should switch to the year of the corresponding month selected 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -3361,6 +3378,11 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
         class="input-group"
         style=""
       >
@@ -4190,15 +4212,19 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
 
 exports[`IncrementalInteractions date entered in the input element should reflect on the date picker 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div

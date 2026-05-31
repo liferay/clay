@@ -37,42 +37,16 @@ describe('KeyboardArrowsIndicator', () => {
 		}
 	);
 
-	it.each([
-		['all', 'Use arrow keys to navigate'],
-		['horizontal', 'Use left and right arrow keys to navigate'],
-		['vertical', 'Use up and down arrow keys to navigate'],
-	] as const)(
-		'sets the default aria-label for direction "%s"',
-		(direction, expected) => {
-			const {container} = render(
-				<KeyboardArrowsIndicator direction={direction} />
-			);
-
-			expect(
-				container.querySelector('.clay-keyboard-arrows-indicator')
-			).toHaveAttribute('aria-label', expected);
-		}
-	);
-
-	it('honors a custom label override', () => {
-		const {container} = render(
-			<KeyboardArrowsIndicator
-				direction="all"
-				label="Press the arrow keys to move focus"
-			/>
-		);
-
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator')
-		).toHaveAttribute('aria-label', 'Press the arrow keys to move focus');
-	});
-
-	it('exposes the indicator as an image to assistive technology', () => {
+	it('is hidden from assistive technology as a purely visual hint', () => {
 		const {container} = render(<KeyboardArrowsIndicator direction="all" />);
 
-		expect(
-			container.querySelector('.clay-keyboard-arrows-indicator')
-		).toHaveAttribute('role', 'img');
+		const indicator = container.querySelector(
+			'.clay-keyboard-arrows-indicator'
+		);
+
+		expect(indicator).toHaveAttribute('aria-hidden', 'true');
+		expect(indicator).not.toHaveAttribute('role');
+		expect(indicator).not.toHaveAttribute('aria-label');
 	});
 
 	it('forwards a custom className', () => {
@@ -83,5 +57,36 @@ describe('KeyboardArrowsIndicator', () => {
 		expect(
 			container.querySelector('.clay-keyboard-arrows-indicator')
 		).toHaveClass('my-hint');
+	});
+
+	it('does not apply the floating modifier when no anchorRef is provided', () => {
+		const {container} = render(<KeyboardArrowsIndicator direction="all" />);
+
+		expect(
+			container.querySelector('.clay-keyboard-arrows-indicator')
+		).not.toHaveClass('clay-keyboard-arrows-indicator-floating');
+	});
+
+	it('applies the floating modifier when an anchorRef is provided', () => {
+		function Harness() {
+			const anchorRef = React.useRef<HTMLDivElement>(null);
+
+			return (
+				<>
+					<div ref={anchorRef}>Anchor</div>
+
+					<KeyboardArrowsIndicator
+						anchorRef={anchorRef}
+						direction="vertical"
+					/>
+				</>
+			);
+		}
+
+		const {container} = render(<Harness />);
+
+		expect(
+			container.querySelector('.clay-keyboard-arrows-indicator')
+		).toHaveClass('clay-keyboard-arrows-indicator-floating');
 	});
 });

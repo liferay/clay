@@ -758,10 +758,17 @@
 			}
 
 			@if (length($href) != 0) {
-				&[href],
+				&[href] {
+					@include clay-link($href);
+				}
+			}
+
+			$_tabindex: map-get($map, tabindex);
+
+			@if (length($_tabindex) != 0) {
 				&[type],
 				&[tabindex] {
-					@include clay-link($href);
+					@include clay-link($_tabindex);
 				}
 			}
 

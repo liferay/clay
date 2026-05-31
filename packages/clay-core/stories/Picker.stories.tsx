@@ -452,3 +452,36 @@ export function Width() {
 		</div>
 	);
 }
+export function KeyboardArrowsIndicator() {
+	const pickerId = useId();
+	const labelId = useId();
+
+	return (
+		<div style={{width: '200px'}}>
+			<Form.Group>
+				<label htmlFor={pickerId} id={labelId}>
+					Choose a fruit
+				</label>
+
+				<Picker
+					aria-labelledby={labelId}
+					defaultActive
+					displayKeyboardArrowsIndicator
+					id={pickerId}
+				>
+					<Option key="apple">Apple</Option>
+
+					<Option key="banana">Banana</Option>
+
+					<Option key="mangos">Mangos</Option>
+
+					<Option key="blueberry">Blueberry</Option>
+
+					<Option key="cherry">Cherry</Option>
+
+					<Option key="grape">Grape</Option>
+				</Picker>
+			</Form.Group>
+		</div>
+	);
+}

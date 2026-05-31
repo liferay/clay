@@ -4,6 +4,7 @@
  */
 
 import {
+	KeyboardArrowsIndicator,
 	__NOT_PUBLIC_COLLECTION,
 	__NOT_PUBLIC_LIVE_ANNOUNCER,
 } from '@clayui/core';
@@ -11,6 +12,7 @@ import DropDown from '@clayui/drop-down';
 import {ClayInput as Input} from '@clayui/form';
 import LoadingIndicator from '@clayui/loading-indicator';
 import {
+	ClayPortal,
 	InternalDispatch,
 	Keys,
 	Overlay,
@@ -114,6 +116,15 @@ export interface IProps<T>
 	 * Direction the menu will render relative to the Autocomplete.
 	 */
 	direction?: 'bottom' | 'top';
+
+	/**
+	 * Flag to render the `KeyboardArrowsIndicator` alongside the Autocomplete
+	 * input, hinting that up and down arrow keys can be used to navigate
+	 * the suggestions list. The indicator floats to the right of the input
+	 * and flips to the left when it would overflow the viewport. It is
+	 * only rendered while the suggestions panel is open.
+	 */
+	displayKeyboardArrowsIndicator?: boolean;
 
 	/**
 	 * The estimated height of an item that is used by the virtualizer.
@@ -244,6 +255,7 @@ function AutocompleteInner<T extends Item>(
 		defaultItems,
 		defaultValue,
 		direction = 'bottom',
+		displayKeyboardArrowsIndicator = false,
 		estimateSize,
 		filterKey,
 		items: externalItems,
@@ -784,6 +796,15 @@ function AutocompleteInner<T extends Item>(
 						<InfiniteScrollFeedback />
 					</div>
 				</Overlay>
+			)}
+
+			{active && displayKeyboardArrowsIndicator && (
+				<ClayPortal>
+					<KeyboardArrowsIndicator
+						anchorRef={inputElementRef}
+						direction="vertical"
+					/>
+				</ClayPortal>
 			)}
 
 			{isLoading && (

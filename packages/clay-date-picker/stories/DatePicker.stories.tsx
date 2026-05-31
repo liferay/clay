@@ -283,3 +283,54 @@ export function InDropdownMenu() {
 		</>
 	);
 }
+export function KeyboardArrowsIndicator() {
+	return (
+		<ClayDatePickerWithState
+			defaultExpanded
+			displayKeyboardArrowsIndicator
+			placeholder="YYYY-MM-DD"
+			years={{
+				end: new Date().getFullYear(),
+				start: 1998,
+			}}
+		/>
+	);
+}
+export function MinMax() {
+	const today = new Date();
+	const format = (date: Date) =>
+		`${date.getFullYear()}-${String(date.getMonth() + 1).padStart(
+			2,
+			'0'
+		)}-${String(date.getDate()).padStart(2, '0')}`;
+
+	const min = new Date(today);
+	min.setDate(today.getDate() - 5);
+
+	const max = new Date(today);
+	max.setDate(today.getDate() + 5);
+
+	return (
+		<>
+			<ClayDatePickerWithState
+				max={format(max)}
+				min={format(min)}
+				placeholder="YYYY-MM-DD"
+				years={{
+					end: today.getFullYear() + 1,
+					start: today.getFullYear() - 1,
+				}}
+			/>
+			<ClayDatePickerWithState
+				max={`${format(max)} 18:00`}
+				min={`${format(min)} 09:00`}
+				placeholder="YYYY-MM-DD HH:mm"
+				time
+				years={{
+					end: today.getFullYear() + 1,
+					start: today.getFullYear() - 1,
+				}}
+			/>
+		</>
+	);
+}

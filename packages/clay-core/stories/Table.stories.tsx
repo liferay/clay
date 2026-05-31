@@ -288,6 +288,63 @@ export function Treegrid() {
 		</Table>
 	);
 }
+export function KeyboardArrowsIndicator() {
+	const [expandedKeys, setExpandedKeys] = useState<Set<React.Key>>(
+		new Set([2, 3])
+	);
+
+	const columns = [
+		{
+			id: 'name',
+			name: 'Name',
+		},
+		{
+			id: 'type',
+			name: 'Type',
+		},
+	];
+
+	const ICON_TYPES = {
+		Folder: <Icon symbol="folder" />,
+		Image: <Icon symbol="picture" />,
+		Text: <Icon symbol="document" />,
+		Vector: <Icon symbol="document-vector" />,
+	};
+
+	return (
+		<Table
+			aria-label="File Explorer"
+			displayKeyboardArrowsIndicator
+			expandedKeys={expandedKeys}
+			nestedKey="children"
+			onExpandedChange={setExpandedKeys}
+		>
+			<Head items={columns}>
+				{(column) => (
+					<Cell className="table-cell-minw-300" key={column.id}>
+						{column.name}
+					</Cell>
+				)}
+			</Head>
+
+			<Body defaultItems={items}>
+				{(row) => (
+					<Row>
+						<Cell key={`${row.id}:name`}>
+							{ICON_TYPES[row['type']]}
+
+							<Text size={3} weight="semi-bold">
+								{row['name']}
+							</Text>
+						</Cell>
+
+						<Cell key={`${row.id}:type`}>{row['type']}</Cell>
+					</Row>
+				)}
+			</Body>
+		</Table>
+	);
+}
 export function AsyncLoad() {
 	return (
 		<Table

@@ -29,7 +29,7 @@ $table-responsive-margin-bottom: var(
 // Table
 
 $table-bg: var(--table-background-color, $white) !default;
-$table-border-color: var(--table-border-color, $gray-300) !default;
+$table-border-color: var(--table-border-color, $gray-400) !default;
 $table-border-width: var(--table-border-width, $border-width) !default;
 $table-color: var(--table-color, $body-color) !default;
 $table-font-size: var(--table-font-size, 14px) !default;
@@ -773,7 +773,7 @@ $table-border-level: -6 !default;
 // Table List
 
 $table-list-bg: var(--table-list-background-color, $white) !default;
-$table-list-border-color: var(--table-list-border-color, $gray-300) !default;
+$table-list-border-color: var(--table-list-border-color, $gray-400) !default;
 $table-list-border-radius: var(
 	--table-list-border-radius,
 	$border-radius

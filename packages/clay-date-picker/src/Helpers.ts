@@ -20,11 +20,51 @@ export type WeekDays = Array<IDay>;
 
 export type Month = Array<WeekDays>;
 
+export function addMonths(date: number | Date, months: number) {
+	date = clone(date);
+
+	date.setMonth(date.getMonth() + months);
+
+	return date;
+}
+
+export function clamp(date: Date, min?: Date, max?: Date) {
+	if (min && isBefore(date, min)) {
+		return clone(min);
+	}
+
+	if (max && isAfter(date, max)) {
+		return clone(max);
+	}
+
+	return clone(date);
+}
+
 /**
  * Clone a date object.
  */
 export function clone(date: number | Date) {
 	return new Date(date instanceof Date ? date.getTime() : date);
+}
+
+export function isAfter(a: Date, b: Date) {
+	return a.getTime() > b.getTime();
+}
+
+export function isBefore(a: Date, b: Date) {
+	return a.getTime() < b.getTime();
+}
+
+export function isSameDay(a: Date, b: Date) {
+	return (
+		a.getFullYear() === b.getFullYear() &&
+		a.getMonth() === b.getMonth() &&
+		a.getDate() === b.getDate()
+	);
+}
+
+export function isValid(date: Date) {
+	return date instanceof Date && !isNaN(date.getTime());
 }
 
 export function range({end, start}: {end: number; start: number}) {
@@ -34,14 +74,6 @@ export function range({end, start}: {end: number; start: number}) {
 		},
 		(_v, k) => k + start
 	);
-}
-
-export function addMonths(date: number | Date, months: number) {
-	date = clone(date);
-
-	date.setMonth(date.getMonth() + months);
-
-	return date;
 }
 
 export function setDate(
@@ -66,10 +98,6 @@ export function setDate(
 
 		return acc;
 	}, date);
-}
-
-export function isValid(date: Date) {
-	return date instanceof Date && !isNaN(date.getTime());
 }
 
 export function setMonth(

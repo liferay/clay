@@ -18,3 +18,14 @@ export function Default() {
 		</div>
 	);
 }
+export function KeyboardArrowsIndicator() {
+	return (
+		<div>
+			<IconSelector
+				defaultActive
+				displayKeyboardArrowsIndicator
+				spritemap={spritemap}
+			/>
+		</div>
+	);
+}

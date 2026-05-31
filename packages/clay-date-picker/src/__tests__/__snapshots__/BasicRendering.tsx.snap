@@ -7,6 +7,11 @@ exports[`BasicRendering renders by default 1`] = `
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
         class="input-group"
       >
         <div
@@ -832,15 +837,19 @@ exports[`BasicRendering renders by default 1`] = `
 
 exports[`BasicRendering renders date picker with dropdown open 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -1675,6 +1684,11 @@ exports[`BasicRendering renders date picker with native picker 1`] = `
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
         class="input-group"
       >
         <div
@@ -1700,15 +1714,19 @@ exports[`BasicRendering renders date picker with native picker 1`] = `
 
 exports[`BasicRendering renders date picker with time 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -2681,15 +2699,19 @@ exports[`BasicRendering renders date picker with time 1`] = `
 
 exports[`BasicRendering renders the date picker with years range 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div

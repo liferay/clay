@@ -5,6 +5,7 @@
 
 import Icon from '@clayui/icon';
 import {
+	ClayPortal,
 	InternalDispatch,
 	useControlledState,
 	useNavigation,
@@ -14,6 +15,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import warning from 'warning';
 
 import {Collection, useCollection} from '../collection';
+import {KeyboardArrowsIndicator} from '../keyboard-arrows-indicator';
 import {Nav} from '../nav';
 import {Item} from './Item';
 import {Trigger} from './Trigger';
@@ -61,6 +63,15 @@ type Props<T extends Record<string, any> | string> = {
 	 * Property to set the initial value of `expandedKeys` (uncontrolled).
 	 */
 	'defaultExpandedKeys'?: Set<React.Key>;
+
+	/**
+	 * Flag to render the `KeyboardArrowsIndicator` alongside the
+	 * navigation, hinting that all four arrow keys are active: up and
+	 * down to step between items, left and right to collapse and expand
+	 * tree nodes. The indicator floats to the right of the nav and flips
+	 * to the left when it would overflow the viewport.
+	 */
+	'displayKeyboardArrowsIndicator'?: boolean;
 
 	/**
 	 * Determines the Vertical Nav variant to use.
@@ -161,6 +172,7 @@ function VerticalNav<T extends Record<string, any> | string>({
 	children,
 	collapse,
 	decorated,
+	displayKeyboardArrowsIndicator = false,
 	displayType = 'transparent',
 	defaultExpandedKeys = new Set(),
 	'expandedKeys': externalExpandedKeys,
@@ -353,6 +365,16 @@ function VerticalNav<T extends Record<string, any> | string>({
 			)}
 
 			{!collapse && content}
+
+			{displayKeyboardArrowsIndicator && (
+				<ClayPortal>
+					<KeyboardArrowsIndicator
+						anchorRef={containerRef}
+						direction="all"
+						placement="tooltip-top"
+					/>
+				</ClayPortal>
+			)}
 		</nav>
 	);
 }

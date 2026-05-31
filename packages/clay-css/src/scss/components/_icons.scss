@@ -38,6 +38,81 @@
 	}
 }
 
+.clay-keyboard-arrows-indicator-floating {
+	background-color: $white;
+	border-radius: 0.1413em; // matches `.lexicon-icon-arrows-all`
+	position: absolute;
+
+	// Position timing matches `$c-slideout-transition-in` so the
+	// indicator slides in lockstep with a `VerticalBar` panel opening
+	// rather than vanishing and reappearing at the new position. The
+	// focus-within toggle stays instantaneous.
+	transition:
+		bottom 0.3s ease-in-out,
+		left 0.3s ease-in-out,
+		right 0.3s ease-in-out,
+		top 0.3s ease-in-out;
+	z-index: $zindex-tooltip;
+
+	&.clay-keyboard-arrows-indicator-floating-hidden {
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+
+	// `tooltip` placement (default): the indicator sits next to the
+	// anchor with a directional CSS-triangle arrow. The arrow's fill
+	// matches the icon's semi-transparent white surface, with the icon's
+	// border color outlining it.
+
+	&.clay-keyboard-arrows-indicator-floating-tooltip {
+		&::before,
+		&::after {
+			border-style: solid;
+			content: '';
+			height: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 0;
+		}
+
+		// Default: indicator sits to the right of the anchor, so the arrow
+		// points left (toward the anchor).
+
+		&::before {
+			border-color: transparent $border-color transparent transparent;
+			border-width: 7px 7px 7px 0;
+			left: -7px;
+		}
+
+		&::after {
+			border-color: transparent $white transparent transparent;
+			border-width: 6px 6px 6px 0;
+			left: -6px;
+		}
+
+		&.clay-keyboard-arrows-indicator-floating-flipped {
+			// Flipped: indicator sits to the left of the anchor, so the
+			// arrow points right (toward the anchor).
+
+			&::before {
+				border-color: transparent transparent transparent $border-color;
+				border-width: 7px 0 7px 7px;
+				left: auto;
+				right: -7px;
+			}
+
+			&::after {
+				border-color: transparent transparent transparent $white;
+				border-width: 6px 0 6px 6px;
+				left: auto;
+				right: -6px;
+			}
+		}
+	}
+}
+
 .order-arrow-down-active {
 	.order-arrow-arrow-down {
 		fill: $order-arrow-down-active-color;

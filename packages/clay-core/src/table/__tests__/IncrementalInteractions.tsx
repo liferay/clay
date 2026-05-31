@@ -890,5 +890,117 @@ describe('Table incremental interactions', () => {
 				expect(firstRow).toHaveFocus();
 			});
 		});
+
+		describe('keyboard arrows indicator', () => {
+			it('does not render the indicator by default', () => {
+				render(
+					<Table columnsVisibility={false} nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body defaultItems={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+
+											{/** @ts-ignore */}
+
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				expect(
+					document.body.querySelector(
+						'.clay-keyboard-arrows-indicator'
+					)
+				).not.toBeInTheDocument();
+			});
+
+			it('renders the floating indicator with direction "all" when enabled', () => {
+				render(
+					<Table
+						columnsVisibility={false}
+						displayKeyboardArrowsIndicator
+						nestedKey="children"
+					>
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body defaultItems={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+
+											{/** @ts-ignore */}
+
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				const indicator = document.body.querySelector(
+					'.clay-keyboard-arrows-indicator'
+				);
+
+				expect(indicator).toBeInTheDocument();
+				expect(indicator).toHaveClass('clay-keyboard-arrows-all');
+				expect(indicator).toHaveClass(
+					'clay-keyboard-arrows-indicator-floating'
+				);
+			});
+
+			it('does not render the indicator when nestedKey is omitted', () => {
+				render(
+					<Table
+						columnsVisibility={false}
+						displayKeyboardArrowsIndicator
+					>
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body defaultItems={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+
+											{/** @ts-ignore */}
+
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				expect(
+					document.body.querySelector(
+						'.clay-keyboard-arrows-indicator'
+					)
+				).not.toBeInTheDocument();
+			});
+		});
 	});
 });

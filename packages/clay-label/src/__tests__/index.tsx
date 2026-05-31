@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
-import ClayLabel from '..';
+import ClayLabel, {ContentLabel} from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
@@ -105,6 +105,32 @@ describe('Rendering', () => {
 
 				<ClayLabel.ItemAfter>Content after</ClayLabel.ItemAfter>
 			</ClayLabel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+});
+
+describe('ContentLabel rendering', () => {
+	it('renders with a content displayType', () => {
+		const testRenderer = TestRenderer.create(
+			<ContentLabel displayType="content-2">Content 2 Label</ContentLabel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders as closable', () => {
+		const testRenderer = TestRenderer.create(
+			<ContentLabel
+				closeButtonProps={{
+					onClick: () => {},
+				}}
+				displayType="content-1"
+				spritemap={spritemap}
+			>
+				Content Closable
+			</ContentLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();

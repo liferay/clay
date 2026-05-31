@@ -1336,6 +1336,366 @@ $label-inverse-dark: map-deep-merge(
 	$label-inverse-dark
 );
 
+$label-inverse-content-0: () !default;
+$label-inverse-content-0: map-deep-merge(
+	(
+		background-color:
+			var(--label-inverse-content-0-background-color, $secondary-l3),
+		border-color: var(--label-inverse-content-0-border-color, transparent),
+		color: var(--label-inverse-content-0-color, $dark-d2),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--label-inverse-content-0-hover-background-color,
+						$secondary-l3
+					),
+				border-color:
+					var(
+						--label-inverse-content-0-hover-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-0-hover-color, $dark-d2),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--label-inverse-content-0-focus-background-color,
+						$secondary-l3
+					),
+				border-color:
+					var(
+						--label-inverse-content-0-focus-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-0-focus-color, $dark-d2),
+			),
+		),
+	),
+	$label-inverse-content-0
+);
+
+$label-inverse-content-1: () !default;
+$label-inverse-content-1: map-deep-merge(
+	(
+		background-color:
+			var(--label-inverse-content-1-background-color, $purple-l5),
+		border-color: var(--label-inverse-content-1-border-color, transparent),
+		color: var(--label-inverse-content-1-color, $purple-d2),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--label-inverse-content-1-hover-background-color,
+						$purple-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-1-hover-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-1-hover-color, $purple-d2),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--label-inverse-content-1-focus-background-color,
+						$purple-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-1-focus-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-1-focus-color, $purple-d2),
+			),
+		),
+	),
+	$label-inverse-content-1
+);
+
+$label-inverse-content-2: () !default;
+$label-inverse-content-2: map-deep-merge(
+	(
+		background-color:
+			var(--label-inverse-content-2-background-color, $yellow-l5),
+		border-color: var(--label-inverse-content-2-border-color, transparent),
+		color: var(--label-inverse-content-2-color, $yellow-d4),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--label-inverse-content-2-hover-background-color,
+						$yellow-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-2-hover-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-2-hover-color, $yellow-d4),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--label-inverse-content-2-focus-background-color,
+						$yellow-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-2-focus-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-2-focus-color, $yellow-d4),
+			),
+		),
+	),
+	$label-inverse-content-2
+);
+
+$label-inverse-content-3: () !default;
+$label-inverse-content-3: map-deep-merge(
+	(
+		background-color:
+			var(--label-inverse-content-3-background-color, $green-l5),
+		border-color: var(--label-inverse-content-3-border-color, transparent),
+		color: var(--label-inverse-content-3-color, $green-d2),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--label-inverse-content-3-hover-background-color,
+						$green-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-3-hover-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-3-hover-color, $green-d2),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--label-inverse-content-3-focus-background-color,
+						$green-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-3-focus-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-3-focus-color, $green-d2),
+			),
+		),
+	),
+	$label-inverse-content-3
+);
+
+$label-inverse-content-4: () !default;
+$label-inverse-content-4: map-deep-merge(
+	(
+		background-color:
+			var(--label-inverse-content-4-background-color, $red-l5),
+		border-color: var(--label-inverse-content-4-border-color, transparent),
+		color: var(--label-inverse-content-4-color, $red-d2),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--label-inverse-content-4-hover-background-color,
+						$red-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-4-hover-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-4-hover-color, $red-d2),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--label-inverse-content-4-focus-background-color,
+						$red-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-4-focus-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-4-focus-color, $red-d2),
+			),
+		),
+	),
+	$label-inverse-content-4
+);
+
+$label-inverse-content-5: () !default;
+$label-inverse-content-5: map-deep-merge(
+	(
+		background-color:
+			var(--label-inverse-content-5-background-color, $teal-l5),
+		border-color: var(--label-inverse-content-5-border-color, transparent),
+		color: var(--label-inverse-content-5-color, $teal-d2),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--label-inverse-content-5-hover-background-color,
+						$teal-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-5-hover-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-5-hover-color, $teal-d2),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--label-inverse-content-5-focus-background-color,
+						$teal-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-5-focus-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-5-focus-color, $teal-d2),
+			),
+		),
+	),
+	$label-inverse-content-5
+);
+
+$label-inverse-content-6: () !default;
+$label-inverse-content-6: map-deep-merge(
+	(
+		background-color:
+			var(--label-inverse-content-6-background-color, $cyan-l5),
+		border-color: var(--label-inverse-content-6-border-color, transparent),
+		color: var(--label-inverse-content-6-color, $cyan-d2),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--label-inverse-content-6-hover-background-color,
+						$cyan-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-6-hover-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-6-hover-color, $cyan-d2),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--label-inverse-content-6-focus-background-color,
+						$cyan-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-6-focus-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-6-focus-color, $cyan-d2),
+			),
+		),
+	),
+	$label-inverse-content-6
+);
+
+$label-inverse-content-7: () !default;
+$label-inverse-content-7: map-deep-merge(
+	(
+		background-color:
+			var(--label-inverse-content-7-background-color, $orange-l5),
+		border-color: var(--label-inverse-content-7-border-color, transparent),
+		color: var(--label-inverse-content-7-color, $orange-d2),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--label-inverse-content-7-hover-background-color,
+						$orange-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-7-hover-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-7-hover-color, $orange-d2),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--label-inverse-content-7-focus-background-color,
+						$orange-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-7-focus-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-7-focus-color, $orange-d2),
+			),
+		),
+	),
+	$label-inverse-content-7
+);
+
+$label-inverse-content-8: () !default;
+$label-inverse-content-8: map-deep-merge(
+	(
+		background-color:
+			var(--label-inverse-content-8-background-color, $pink-l5),
+		border-color: var(--label-inverse-content-8-border-color, transparent),
+		color: var(--label-inverse-content-8-color, $pink-d2),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--label-inverse-content-8-hover-background-color,
+						$pink-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-8-hover-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-8-hover-color, $pink-d2),
+			),
+
+			focus: (
+				background-color:
+					var(
+						--label-inverse-content-8-focus-background-color,
+						$pink-l5
+					),
+				border-color:
+					var(
+						--label-inverse-content-8-focus-border-color,
+						transparent
+					),
+				color: var(--label-inverse-content-8-focus-color, $pink-d2),
+			),
+		),
+	),
+	$label-inverse-content-8
+);
+
 $label-palette: () !default;
 $label-palette: map-deep-merge(
 	(
@@ -1370,6 +1730,24 @@ $label-palette: map-deep-merge(
 		inverse-light: $label-inverse-light,
 
 		inverse-dark: $label-inverse-dark,
+
+		inverse-content-0: $label-inverse-content-0,
+
+		inverse-content-1: $label-inverse-content-1,
+
+		inverse-content-2: $label-inverse-content-2,
+
+		inverse-content-3: $label-inverse-content-3,
+
+		inverse-content-4: $label-inverse-content-4,
+
+		inverse-content-5: $label-inverse-content-5,
+
+		inverse-content-6: $label-inverse-content-6,
+
+		inverse-content-7: $label-inverse-content-7,
+
+		inverse-content-8: $label-inverse-content-8,
 	),
 	$label-palette
 );

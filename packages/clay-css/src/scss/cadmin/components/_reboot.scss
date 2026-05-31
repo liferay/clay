@@ -241,7 +241,9 @@ html#{$cadmin-selector} {
 
 			// Remove the margin in Safari
 
-			margin: 0;
+			@supports (-webkit-hyphens: none) {
+				margin: 0;
+			}
 		}
 
 		button,

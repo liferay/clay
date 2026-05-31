@@ -732,3 +732,35 @@ export function InfiniteScroll() {
 		</div>
 	);
 }
+export function KeyboardArrowsIndicator() {
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-1"
+							id="clay-autocomplete-label-1"
+						>
+							Numbers (one-five)
+						</label>
+
+						<ClayAutocomplete
+							defaultActive
+							displayKeyboardArrowsIndicator
+							placeholder="Enter a number from One to Five"
+						>
+							{['one', 'two', 'three', 'four', 'five'].map(
+								(item) => (
+									<ClayAutocomplete.Item key={item}>
+										{item}
+									</ClayAutocomplete.Item>
+								)
+							)}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}

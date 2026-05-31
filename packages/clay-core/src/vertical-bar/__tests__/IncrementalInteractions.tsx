@@ -200,4 +200,66 @@ describe('VerticalBar incremental interactions', () => {
 			expect(tagPanel.classList).toContain('c-slideout-show');
 		});
 	});
+
+	describe('keyboard arrows indicator', () => {
+		function renderWithIndicator(extraProps = {}) {
+			return render(
+				<VerticalBar {...extraProps}>
+					<VerticalBar.Content>
+						<VerticalBar.Panel>Tag</VerticalBar.Panel>
+
+						<VerticalBar.Panel>Message</VerticalBar.Panel>
+					</VerticalBar.Content>
+
+					<VerticalBar.Bar>
+						<VerticalBar.Item>
+							<Button aria-label="Tag" displayType={null}>
+								<Icon spritemap={spritemap} symbol="tag" />
+							</Button>
+						</VerticalBar.Item>
+
+						<VerticalBar.Item>
+							<Button aria-label="Message" displayType={null}>
+								<Icon spritemap={spritemap} symbol="message" />
+							</Button>
+						</VerticalBar.Item>
+					</VerticalBar.Bar>
+				</VerticalBar>
+			);
+		}
+
+		it('does not render the indicator by default', () => {
+			renderWithIndicator();
+
+			expect(
+				document.body.querySelector('.clay-keyboard-arrows-indicator')
+			).not.toBeInTheDocument();
+		});
+
+		it('renders the floating indicator alongside the bar when enabled', () => {
+			renderWithIndicator({displayKeyboardArrowsIndicator: true});
+
+			const indicator = document.body.querySelector(
+				'.clay-keyboard-arrows-indicator'
+			);
+
+			expect(indicator).toBeInTheDocument();
+			expect(indicator).toHaveClass('clay-keyboard-arrows-vertical');
+			expect(indicator).toHaveClass(
+				'clay-keyboard-arrows-indicator-floating'
+			);
+		});
+
+		it('keeps the indicator visible after a panel opens', () => {
+			const {getByLabelText} = renderWithIndicator({
+				displayKeyboardArrowsIndicator: true,
+			});
+
+			fireEvent.click(getByLabelText('Tag'));
+
+			expect(
+				document.body.querySelector('.clay-keyboard-arrows-indicator')
+			).toBeInTheDocument();
+		});
+	});
 });

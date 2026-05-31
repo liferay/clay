@@ -89,3 +89,38 @@ export function ResizingRight() {
 		</div>
 	);
 }
+
+export function KeyboardArrowsIndicator() {
+	const [width, setWidth] = useState(320);
+
+	return (
+		<div
+			className="border d-flex overflow-hidden rounded"
+			style={{height: 280}}
+		>
+			<div className="bg-light p-3 position-relative" style={{width}}>
+				<div className="text-secondary">Resizable region</div>
+
+				<div className="text-weight-semi-bold">{width}px</div>
+
+				<ResizeHandle
+					aria-label="Resize region"
+					displayKeyboardArrowsIndicator
+					maxWidth={MAX_WIDTH}
+					minWidth={MIN_WIDTH}
+					onWidthChange={setWidth}
+					position="left"
+					width={width}
+				/>
+			</div>
+
+			<div className="bg-white flex-grow-1 p-3">
+				<div className="text-secondary">Remaining region</div>
+
+				<div className="text-weight-semi-bold">
+					Tab into the resizer to see the indicator.
+				</div>
+			</div>
+		</div>
+	);
+}

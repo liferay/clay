@@ -1,5 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ContentLabel rendering renders as closable 1`] = `
+<span
+  className="label label-dismissible label-inverse-content-1"
+>
+  <span
+    className="label-item label-item-expand"
+  >
+    Content Closable
+  </span>
+  <span
+    className="label-item label-item-after"
+  >
+    <button
+      className="close"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-times-small"
+        role="presentation"
+      >
+        <use
+          href="path/to/spritemap#times-small"
+        />
+      </svg>
+    </button>
+  </span>
+</span>
+`;
+
+exports[`ContentLabel rendering renders with a content displayType 1`] = `
+<span
+  className="label label-inverse-content-2"
+>
+  <span
+    className="label-item label-item-expand"
+  >
+    Content 2 Label
+  </span>
+</span>
+`;
+
 exports[`Rendering as a link 1`] = `
 <span
   className="label label-secondary"

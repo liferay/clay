@@ -37,6 +37,7 @@ const ALIGN_MAP = {
 	BottomCenter: ['tc', 'bc'],
 	BottomLeft: ['tl', 'bl'],
 	BottomRight: ['tr', 'br'],
+	Center: ['cc', 'cc'],
 	LeftBottom: ['br', 'bl'],
 	LeftCenter: ['cr', 'cl'],
 	LeftTop: ['tr', 'tl'],

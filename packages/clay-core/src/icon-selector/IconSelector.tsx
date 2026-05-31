@@ -7,6 +7,7 @@ import Button, {ClayButtonWithIcon} from '@clayui/button';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import {
+	ClayPortal,
 	FOCUSABLE_ELEMENTS,
 	InternalDispatch,
 	Keys,
@@ -21,6 +22,7 @@ import {
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {FocusMenu} from '../focus-trap';
+import {KeyboardArrowsIndicator} from '../keyboard-arrows-indicator';
 
 enum alignPosition {
 	bottomLeft = 5,
@@ -48,6 +50,15 @@ export type Props = {
 	 * Direction the menu will render relative to the trigger.
 	 */
 	direction?: 'bottom' | 'top';
+
+	/**
+	 * Flag to render the `KeyboardArrowsIndicator` alongside the icon
+	 * panel, hinting that up and down arrow keys can be used to step
+	 * through the icons. The indicator floats to the right of the panel
+	 * and flips to the left when it would overflow the viewport. It is
+	 * only rendered while the icon panel is open.
+	 */
+	displayKeyboardArrowsIndicator?: boolean;
 
 	/**
 	 * Messages for the Icon Selector.
@@ -116,6 +127,7 @@ export function IconSelector({
 	defaultActive,
 	defaultSelectedIcon,
 	direction = 'bottom',
+	displayKeyboardArrowsIndicator = false,
 	messages = defaultMessages,
 	selectedIcon: externalSelectedIcon,
 	onIconChange,
@@ -426,6 +438,15 @@ export function IconSelector({
 						</FocusMenu>
 					</div>
 				</Overlay>
+			)}
+
+			{active && displayKeyboardArrowsIndicator && (
+				<ClayPortal>
+					<KeyboardArrowsIndicator
+						anchorRef={menuRef}
+						direction="vertical"
+					/>
+				</ClayPortal>
 			)}
 		</>
 	);

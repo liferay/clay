@@ -101,11 +101,6 @@ $custom-control-label: map-deep-merge(
 			border-width: $custom-control-indicator-border-width,
 			box-shadow:
 				clay-enable-shadows($custom-control-indicator-box-shadow),
-			top: 0.25rem,
-		),
-
-		after: (
-			top: $custom-control-indicator-position-top,
 		),
 	),
 	$custom-control-label

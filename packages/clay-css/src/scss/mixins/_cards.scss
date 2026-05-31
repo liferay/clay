@@ -2002,7 +2002,8 @@
 			$_checked: map-get($map, checked);
 
 			@if ($_checked) {
-				&.checked {
+				&.checked,
+				&:has(.custom-control-input:checked) {
 					$_card: map-get($_checked, card);
 
 					@if ($_card) {
@@ -2030,7 +2031,10 @@
 			$_disabled: map-get($map, disabled);
 
 			@if ($_disabled) {
-				&.disabled {
+				&.disabled,
+				&:has(.custom-control-input:disabled) {
+					@include clay-css($_disabled);
+
 					$_card: map-get($_disabled, card);
 
 					@if ($_card) {

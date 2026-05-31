@@ -38,6 +38,67 @@
 	}
 }
 
+.clay-keyboard-arrows-indicator-floating {
+	background-color: $cadmin-white;
+	border-radius: 0.1413em;
+	position: absolute;
+	transition:
+		bottom 0.3s ease-in-out,
+		left 0.3s ease-in-out,
+		right 0.3s ease-in-out,
+		top 0.3s ease-in-out;
+	z-index: $cadmin-zindex-tooltip;
+
+	&.clay-keyboard-arrows-indicator-floating-hidden {
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+
+	&.clay-keyboard-arrows-indicator-floating-tooltip {
+		&::before,
+		&::after {
+			border-style: solid;
+			content: '';
+			height: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 0;
+		}
+
+		&::before {
+			border-color: transparent $cadmin-border-color transparent
+				transparent;
+			border-width: 7px 7px 7px 0;
+			left: -7px;
+		}
+
+		&::after {
+			border-color: transparent $cadmin-white transparent transparent;
+			border-width: 6px 6px 6px 0;
+			left: -6px;
+		}
+
+		&.clay-keyboard-arrows-indicator-floating-flipped {
+			&::before {
+				border-color: transparent transparent transparent
+					$cadmin-border-color;
+				border-width: 7px 0 7px 7px;
+				left: auto;
+				right: -7px;
+			}
+
+			&::after {
+				border-color: transparent transparent transparent $cadmin-white;
+				border-width: 6px 0 6px 6px;
+				left: auto;
+				right: -6px;
+			}
+		}
+	}
+}
+
 .order-arrow-down-active {
 	.order-arrow-arrow-down {
 		fill: $cadmin-order-arrow-down-active-color;

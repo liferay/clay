@@ -480,6 +480,47 @@ describe('ClayDropDown', () => {
 		expect(vegetable3).toBeDefined();
 	});
 
+	it('keeps the outer dropdown accessible when a nested dropdown inside one of its items opens', async () => {
+		const HIDDEN_SELECTOR =
+			'[aria-hidden="true"], [data-aria-hidden="true"]';
+
+		const {getByText} = render(
+			<div>
+				<p>Baseline</p>
+
+				<ClayDropDown trigger={<button>Outer Trigger</button>}>
+					<ClayDropDown.ItemList>
+						<ClayDropDown.Item>Outer Item</ClayDropDown.Item>
+
+						<ClayDropDown.Item>
+							<ClayDropDown
+								trigger={<button>Inner Trigger</button>}
+							>
+								<ClayDropDown.ItemList>
+									<ClayDropDown.Item>
+										Inner Item
+									</ClayDropDown.Item>
+								</ClayDropDown.ItemList>
+							</ClayDropDown>
+						</ClayDropDown.Item>
+					</ClayDropDown.ItemList>
+				</ClayDropDown>
+			</div>
+		);
+
+		await userEvent.click(getByText('Outer Trigger'));
+
+		await userEvent.click(getByText('Inner Trigger'));
+
+		expect(getByText('Outer Item').closest(HIDDEN_SELECTOR)).toBeNull();
+		expect(getByText('Inner Item').closest(HIDDEN_SELECTOR)).toBeNull();
+
+		// Baseline: content outside the overlay chain must end up suppressed,
+		// proving the aria-hidden library actually ran.
+
+		expect(getByText('Baseline').closest(HIDDEN_SELECTOR)).not.toBeNull();
+	});
+
 	it('render dynamic content with group and search', () => {
 		const {getAllByRole: cGetAllByRole, getByRole} = render(
 			<ClayDropDown trigger={<button>Click Me</button>}>
@@ -539,5 +580,47 @@ describe('ClayDropDown', () => {
 
 		expect(fruits.length).toBe(1);
 		expect(vegetables.length).toBe(1);
+	});
+
+	it('does not render the keyboard arrows indicator by default', () => {
+		const {container} = render(
+			<DropDownWithState>
+				<ClayDropDown.ItemList>
+					<ClayDropDown.Item href="#one" spritemap="/foo/bar">
+						one
+					</ClayDropDown.Item>
+				</ClayDropDown.ItemList>
+			</DropDownWithState>
+		);
+
+		fireEvent.click(container.querySelector('.dropdown-toggle')!);
+
+		expect(
+			document.body.querySelector('.clay-keyboard-arrows-indicator')
+		).not.toBeInTheDocument();
+	});
+
+	it('renders the floating indicator alongside the trigger when enabled', () => {
+		const {container} = render(
+			<DropDownWithState displayKeyboardArrowsIndicator>
+				<ClayDropDown.ItemList>
+					<ClayDropDown.Item href="#one" spritemap="/foo/bar">
+						one
+					</ClayDropDown.Item>
+				</ClayDropDown.ItemList>
+			</DropDownWithState>
+		);
+
+		fireEvent.click(container.querySelector('.dropdown-toggle')!);
+
+		const indicator = document.body.querySelector(
+			'.clay-keyboard-arrows-indicator'
+		);
+
+		expect(indicator).toBeInTheDocument();
+		expect(indicator).toHaveClass('clay-keyboard-arrows-vertical');
+		expect(indicator).toHaveClass(
+			'clay-keyboard-arrows-indicator-floating'
+		);
 	});
 });

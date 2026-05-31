@@ -918,7 +918,7 @@ $cadmin-label-inverse-primary: () !default;
 $cadmin-label-inverse-primary: map-deep-merge(
 	(
 		background-color: $cadmin-primary,
-		border-color: $cadmin-primary,
+		border-color: transparent,
 		color: $cadmin-white,
 
 		href: (
@@ -934,7 +934,7 @@ $cadmin-label-inverse-secondary: () !default;
 $cadmin-label-inverse-secondary: map-deep-merge(
 	(
 		background-color: $cadmin-secondary-l3,
-		border-color: $cadmin-secondary-l3,
+		border-color: transparent,
 		color: $cadmin-dark-d2,
 
 		href: (
@@ -950,7 +950,7 @@ $cadmin-label-inverse-success: () !default;
 $cadmin-label-inverse-success: map-deep-merge(
 	(
 		background-color: $cadmin-success-l2,
-		border-color: $cadmin-success-l2,
+		border-color: transparent,
 		color: $cadmin-success-d2,
 
 		href: (
@@ -966,7 +966,7 @@ $cadmin-label-inverse-info: () !default;
 $cadmin-label-inverse-info: map-deep-merge(
 	(
 		background-color: $cadmin-info-l2,
-		border-color: $cadmin-info-l2,
+		border-color: transparent,
 		color: $cadmin-info-d2,
 
 		href: (
@@ -982,7 +982,7 @@ $cadmin-label-inverse-warning: () !default;
 $cadmin-label-inverse-warning: map-deep-merge(
 	(
 		background-color: $cadmin-warning-l2,
-		border-color: $cadmin-warning-l2,
+		border-color: transparent,
 		color: $cadmin-warning-d2,
 
 		href: (
@@ -998,7 +998,7 @@ $cadmin-label-inverse-danger: () !default;
 $cadmin-label-inverse-danger: map-deep-merge(
 	(
 		background-color: $cadmin-danger-l2,
-		border-color: $cadmin-danger-l2,
+		border-color: transparent,
 		color: $cadmin-danger-d2,
 
 		href: (
@@ -1014,7 +1014,7 @@ $cadmin-label-inverse-light: () !default;
 $cadmin-label-inverse-light: map-deep-merge(
 	(
 		background-color: $cadmin-light,
-		border-color: $cadmin-light,
+		border-color: transparent,
 		color: $cadmin-dark,
 
 		href: (
@@ -1030,7 +1030,7 @@ $cadmin-label-inverse-dark: () !default;
 $cadmin-label-inverse-dark: map-deep-merge(
 	(
 		background-color: $cadmin-dark,
-		border-color: $cadmin-dark,
+		border-color: transparent,
 		color: $cadmin-white,
 
 		href: (
@@ -1040,6 +1040,150 @@ $cadmin-label-inverse-dark: map-deep-merge(
 		),
 	),
 	$cadmin-label-inverse-dark
+);
+
+$cadmin-label-inverse-content-0: () !default;
+$cadmin-label-inverse-content-0: map-deep-merge(
+	(
+		background-color: $cadmin-secondary-l3,
+		border-color: transparent,
+		color: $cadmin-dark-d2,
+
+		href: (
+			hover: (
+				color: $cadmin-dark-d2,
+			),
+		),
+	),
+	$cadmin-label-inverse-content-0
+);
+
+$cadmin-label-inverse-content-1: () !default;
+$cadmin-label-inverse-content-1: map-deep-merge(
+	(
+		background-color: $cadmin-purple-l5,
+		border-color: transparent,
+		color: $cadmin-purple-d2,
+
+		href: (
+			hover: (
+				color: $cadmin-purple-d2,
+			),
+		),
+	),
+	$cadmin-label-inverse-content-1
+);
+
+$cadmin-label-inverse-content-2: () !default;
+$cadmin-label-inverse-content-2: map-deep-merge(
+	(
+		background-color: $cadmin-yellow-l5,
+		border-color: transparent,
+		color: $cadmin-yellow-d4,
+
+		href: (
+			hover: (
+				color: $cadmin-yellow-d4,
+			),
+		),
+	),
+	$cadmin-label-inverse-content-2
+);
+
+$cadmin-label-inverse-content-3: () !default;
+$cadmin-label-inverse-content-3: map-deep-merge(
+	(
+		background-color: $cadmin-green-l5,
+		border-color: transparent,
+		color: $cadmin-green-d2,
+
+		href: (
+			hover: (
+				color: $cadmin-green-d2,
+			),
+		),
+	),
+	$cadmin-label-inverse-content-3
+);
+
+$cadmin-label-inverse-content-4: () !default;
+$cadmin-label-inverse-content-4: map-deep-merge(
+	(
+		background-color: $cadmin-red-l5,
+		border-color: transparent,
+		color: $cadmin-red-d2,
+
+		href: (
+			hover: (
+				color: $cadmin-red-d2,
+			),
+		),
+	),
+	$cadmin-label-inverse-content-4
+);
+
+$cadmin-label-inverse-content-5: () !default;
+$cadmin-label-inverse-content-5: map-deep-merge(
+	(
+		background-color: $cadmin-teal-l5,
+		border-color: transparent,
+		color: $cadmin-teal-d2,
+
+		href: (
+			hover: (
+				color: $cadmin-teal-d2,
+			),
+		),
+	),
+	$cadmin-label-inverse-content-5
+);
+
+$cadmin-label-inverse-content-6: () !default;
+$cadmin-label-inverse-content-6: map-deep-merge(
+	(
+		background-color: $cadmin-cyan-l5,
+		border-color: transparent,
+		color: $cadmin-cyan-d2,
+
+		href: (
+			hover: (
+				color: $cadmin-cyan-d2,
+			),
+		),
+	),
+	$cadmin-label-inverse-content-6
+);
+
+$cadmin-label-inverse-content-7: () !default;
+$cadmin-label-inverse-content-7: map-deep-merge(
+	(
+		background-color: $cadmin-orange-l5,
+		border-color: transparent,
+		color: $cadmin-orange-d2,
+
+		href: (
+			hover: (
+				color: $cadmin-orange-d2,
+			),
+		),
+	),
+	$cadmin-label-inverse-content-7
+);
+
+$cadmin-label-inverse-content-8: () !default;
+$cadmin-label-inverse-content-8: map-deep-merge(
+	(
+		background-color: $cadmin-pink-l5,
+		border-color: transparent,
+		color: $cadmin-pink-d2,
+
+		href: (
+			hover: (
+				color: $cadmin-pink-d2,
+			),
+		),
+	),
+	$cadmin-label-inverse-content-8
 );
 
 $cadmin-label-palette: () !default;
@@ -1076,6 +1220,24 @@ $cadmin-label-palette: map-deep-merge(
 		inverse-light: $cadmin-label-inverse-light,
 
 		inverse-dark: $cadmin-label-inverse-dark,
+
+		inverse-content-0: $cadmin-label-inverse-content-0,
+
+		inverse-content-1: $cadmin-label-inverse-content-1,
+
+		inverse-content-2: $cadmin-label-inverse-content-2,
+
+		inverse-content-3: $cadmin-label-inverse-content-3,
+
+		inverse-content-4: $cadmin-label-inverse-content-4,
+
+		inverse-content-5: $cadmin-label-inverse-content-5,
+
+		inverse-content-6: $cadmin-label-inverse-content-6,
+
+		inverse-content-7: $cadmin-label-inverse-content-7,
+
+		inverse-content-8: $cadmin-label-inverse-content-8,
 	),
 	$cadmin-label-palette
 );

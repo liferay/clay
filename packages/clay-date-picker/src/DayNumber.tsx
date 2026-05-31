@@ -16,6 +16,7 @@ type Props = {
 	index: number;
 	isFocused: boolean;
 	onClick: (date: Date) => void;
+	outOfRange?: boolean;
 	range?: boolean;
 };
 
@@ -26,6 +27,7 @@ function ClayDatePickerDayNumber({
 	index,
 	isFocused,
 	onClick,
+	outOfRange,
 	range,
 }: Props) {
 	const {date, nextMonth, previousMonth} = day;
@@ -57,6 +59,14 @@ function ClayDatePickerDayNumber({
 			role="gridcell"
 		>
 			<button
+
+				// Out-of-range days use `aria-disabled` rather than the HTML
+				// `disabled` attribute so they remain focusable, which keeps
+				// the grid's arrow-key navigation continuous across them. The
+				// click still propagates so the parent can short-circuit
+				// uniformly and surface the rejection to assistive tech.
+
+				aria-disabled={outOfRange ? true : undefined}
 				aria-label={setDate(date, {
 					hours: 12,
 					milliseconds: 0,
@@ -69,7 +79,7 @@ function ClayDatePickerDayNumber({
 						'active':
 							hasStartDateSelected ||
 							(range && hasEndDateSelected),
-						disabled,
+						'disabled': disabled || outOfRange,
 						'next-month-date': nextMonth,
 						'previous-month-date': previousMonth,
 					}

@@ -407,6 +407,8 @@ $form-check-card: map-deep-merge(
 		),
 
 		disabled: (
+			transform: none,
+
 			card: (
 				box-shadow: none,
 				border-color: $card-border-color,

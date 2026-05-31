@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
-import {sub, useControlledState, useId} from '@clayui/shared';
+import {ClayPortal, sub, useControlledState, useId} from '@clayui/shared';
 import RootTable from '@clayui/table';
 import classNames from 'classnames';
 import React, {useCallback, useRef, useState} from 'react';
@@ -11,6 +11,7 @@ import {createPortal} from 'react-dom';
 
 import {FocusWithinProvider} from '../aria';
 import {useForwardRef} from '../hooks';
+import {KeyboardArrowsIndicator} from '../keyboard-arrows-indicator';
 import {LiveAnnouncer} from '../live-announcer';
 import {Sorting, TableContext} from './context';
 import {useTreeNavigation} from './useTreeNavigation';
@@ -60,6 +61,17 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	 * Default value for visible columns in the table (uncontrolled).
 	 */
 	defaultVisibleColumns?: Map<React.Key, number>;
+
+	/**
+	 * Flag to render the `KeyboardArrowsIndicator` alongside the table,
+	 * hinting that all four arrow keys are active for navigating the
+	 * grid (up and down between rows, left and right between cells and
+	 * to collapse or expand nested rows). The indicator floats to the
+	 * right of the table and flips to the left when it would overflow
+	 * the viewport. It is only rendered when `nestedKey` is set, since
+	 * arrow-key navigation is exclusive to the treegrid mode.
+	 */
+	displayKeyboardArrowsIndicator?: boolean;
 
 	/**
 	 * The currently expanded keys in the collection (controlled).
@@ -187,6 +199,7 @@ export const Table = React.forwardRef(
 			defaultExpandedKeys = defaultSet,
 			defaultSort,
 			defaultVisibleColumns = new Map(),
+			displayKeyboardArrowsIndicator = false,
 			expandedKeys: externalExpandedKeys,
 			itemIdKey = 'id',
 			messages = {
@@ -352,6 +365,15 @@ export const Table = React.forwardRef(
 						{messages!.sortDescription}
 					</div>,
 					document.body
+				)}
+
+				{nestedKey && displayKeyboardArrowsIndicator && (
+					<ClayPortal>
+						<KeyboardArrowsIndicator
+							anchorRef={ref}
+							direction="all"
+						/>
+					</ClayPortal>
 				)}
 			</RootTable>
 		);

@@ -43,6 +43,22 @@ export function Group<T extends Record<any, any>>({
 
 	const item = useItem();
 
+	const nodeRef = React.useRef<HTMLDivElement>(null);
+
+	const setNodeHeightZero = () => {
+		nodeRef.current?.setAttribute('style', 'height: 0px');
+	};
+
+	const setNodeFullHeight = () => {
+		if (nodeRef.current) {
+			setElementFullHeight(nodeRef.current);
+		}
+	};
+
+	const removeStyleAttribute = () => {
+		nodeRef.current?.removeAttribute('style');
+	};
+
 	return (
 		<CSSTransition
 			className={classNames('collapse', className, {
@@ -62,21 +78,16 @@ export function Group<T extends Record<any, any>>({
 			}
 			id={item.key}
 			in={expandedKeys.has(item.key)}
-			onEnter={(element: HTMLElement) =>
-				element.setAttribute('style', 'height: 0px')
-			}
-			onEntered={(element: HTMLElement) =>
-				element.removeAttribute('style')
-			}
-			onEntering={(element: HTMLElement) => setElementFullHeight(element)}
-			onExit={(element) => setElementFullHeight(element)}
-			onExiting={(element) =>
-				element.setAttribute('style', 'height: 0px')
-			}
+			nodeRef={nodeRef}
+			onEnter={setNodeHeightZero}
+			onEntered={removeStyleAttribute}
+			onEntering={setNodeFullHeight}
+			onExit={setNodeFullHeight}
+			onExiting={setNodeHeightZero}
 			timeout={prefersReducedMotion ? 0 : 250}
 			unmountOnExit
 		>
-			<div>
+			<div ref={nodeRef}>
 				<Collection<T> as={List} items={items} {...otherProps}>
 					{children}
 				</Collection>

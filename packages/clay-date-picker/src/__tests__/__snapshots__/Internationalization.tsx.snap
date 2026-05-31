@@ -2,15 +2,19 @@
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Friday 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -839,15 +843,19 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Monday 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -1676,15 +1684,19 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Saturday 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -2513,15 +2525,19 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Sunday 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -3350,15 +3366,19 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Thursday 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -4187,15 +4207,19 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Tuesday 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -5128,15 +5152,19 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Wednesday 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div
@@ -5965,15 +5993,19 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
 
 exports[`Internationalization renders the date picker in russian 1`] = `
 <body>
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-  >
+  <div>
     <div
       class="date-picker"
     >
       <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="sr-only"
+      />
+      <div
+        aria-hidden="true"
         class="input-group"
+        data-aria-hidden="true"
         style=""
       >
         <div

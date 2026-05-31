@@ -6,7 +6,27 @@
 import ClayTimePicker, {Input} from '@clayui/time-picker';
 import React from 'react';
 
+type ConfigMaxMin = {
+	max: number;
+	min: number;
+};
+
+type ConfigAmPm = {
+	am: string;
+	pm: string;
+};
+
+type TimePickerConfig = {
+	ampm: ConfigAmPm;
+	hours: ConfigMaxMin;
+	minutes: ConfigMaxMin;
+};
+
 type Props = {
+	config?: {
+		use12Hours: TimePickerConfig;
+		use24Hours: TimePickerConfig;
+	};
 	currentTime: string;
 	disabled?: boolean;
 	onTimeChange: (
@@ -27,6 +47,7 @@ type Props = {
 const DEFAULT_VALUE = '--';
 
 function ClayDatePickerTimePicker({
+	config,
 	currentTime,
 	disabled,
 	onTimeChange,
@@ -70,6 +91,7 @@ function ClayDatePickerTimePicker({
 	return (
 		<div className="time-picker">
 			<ClayTimePicker
+				config={config}
 				disabled={disabled}
 				icon
 				onInputChange={handleOnChange}

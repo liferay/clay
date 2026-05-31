@@ -8,8 +8,10 @@ import ACT, {
 	Item as AutocompleteItem,
 } from '@clayui/autocomplete';
 import {ClayButtonWithIcon} from '@clayui/button';
+import {KeyboardArrowsIndicator} from '@clayui/core';
 import {ClayInput} from '@clayui/form';
 import {
+	ClayPortal,
 	FocusScope,
 	InternalDispatch,
 	getLocatorValue,
@@ -114,6 +116,15 @@ export interface IProps<T extends Record<string, any> = Item>
 	 * Flag to disabled Clear All functionality.
 	 */
 	disabledClearAll?: boolean;
+
+	/**
+	 * Flag to render the `KeyboardArrowsIndicator` alongside the MultiSelect
+	 * input, hinting that up and down arrow keys can be used to navigate
+	 * the suggestions list. The indicator floats to the right of the input
+	 * and flips to the left when it would overflow the viewport. It is
+	 * only rendered while the suggestions panel is open.
+	 */
+	displayKeyboardArrowsIndicator?: boolean;
 
 	/**
 	 * Defines the description of hotkeys for the component, use this
@@ -270,6 +281,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 		defaultValue = '',
 		disabled,
 		disabledClearAll,
+		displayKeyboardArrowsIndicator = false,
 		hotkeysDescription,
 		inputName,
 		inputValue,
@@ -467,148 +479,162 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 	);
 
 	return (
-		<Container {...containerProps}>
-			<div
-				className={classNames(
-					'form-control form-control-tag-group input-group',
-					{
-						focus: isFocused && isValid,
-						[`form-control-tag-group-${size}`]: size,
-					}
-				)}
-				ref={containerRef}
-			>
-				<Autocomplete<T>
-					{...otherProps}
-					UNSAFE_loadingShrink
-					active={MenuRenderer ? false : active}
-					allowsCustomLabel={
-						typeof locator.label === 'function' ||
-						typeof locator.value === 'function'
-							? false
-							: allowsCustomLabel
-					}
-					ariaDescriptionId={ariaDescriptionId}
-					as={Labels}
-					closeButtonAriaLabel={closeButtonAriaLabel}
-					containerElementRef={containerRef}
-					defaultItems={!hasAsyncItems ? sourceItems : undefined}
-					disabled={disabled}
-					filterKey={locator.label}
-					inputName={inputName}
-					items={hasAsyncItems ? sourceItems : undefined}
-					labels={items}
-					lastChangesRef={lastChangesRef}
-					loadingState={loadingState}
-					locator={locator}
-					menuTrigger="focus"
-					messages={messages}
-					onActiveChange={MenuRenderer ? () => {} : setActive}
-					onChange={setValue}
-					onFocus={
-						MenuRenderer && sourceItems
-							? (event: React.FocusEvent<HTMLInputElement>) => {
-									if (otherProps.onFocus) {
-										otherProps.onFocus(event);
-									}
-
-									setActive(
-										!!value && sourceItems.length !== 0
-									);
-								}
-							: otherProps.onFocus
-					}
-					onFocusChange={setIsFocused}
-					onItemsChange={hasAsyncItems ? () => {} : undefined}
-					onLabelsChange={setItems}
-					onLoadMore={onLoadMore}
-					placeholder={placeholder}
-					ref={inputElementRef}
-					selectedKeys={selectedKeys}
-					spritemap={spritemap}
-					suggestionList={sourceItems ?? []}
-					value={value}
+		<>
+			<Container {...containerProps}>
+				<div
+					className={classNames(
+						'form-control form-control-tag-group input-group',
+						{
+							focus: isFocused && isValid,
+							[`form-control-tag-group-${size}`]: size,
+						}
+					)}
+					ref={containerRef}
 				>
-					{memoizedChildren}
-				</Autocomplete>
+					<Autocomplete<T>
+						{...otherProps}
+						UNSAFE_loadingShrink
+						active={MenuRenderer ? false : active}
+						allowsCustomLabel={
+							typeof locator.label === 'function' ||
+							typeof locator.value === 'function'
+								? false
+								: allowsCustomLabel
+						}
+						ariaDescriptionId={ariaDescriptionId}
+						as={Labels}
+						closeButtonAriaLabel={closeButtonAriaLabel}
+						containerElementRef={containerRef}
+						defaultItems={!hasAsyncItems ? sourceItems : undefined}
+						disabled={disabled}
+						filterKey={locator.label}
+						inputName={inputName}
+						items={hasAsyncItems ? sourceItems : undefined}
+						labels={items}
+						lastChangesRef={lastChangesRef}
+						loadingState={loadingState}
+						locator={locator}
+						menuTrigger="focus"
+						messages={messages}
+						onActiveChange={MenuRenderer ? () => {} : setActive}
+						onChange={setValue}
+						onFocus={
+							MenuRenderer && sourceItems
+								? (
+										event: React.FocusEvent<HTMLInputElement>
+									) => {
+										if (otherProps.onFocus) {
+											otherProps.onFocus(event);
+										}
 
-				{sourceItems && MenuRenderer && !!sourceItems.length && (
-					<ACT.DropDown
-						active={active}
-						alignElementRef={containerRef}
-						alignmentByViewport={alignmentByViewport}
-						onActiveChange={setActive}
+										setActive(
+											!!value && sourceItems.length !== 0
+										);
+									}
+								: otherProps.onFocus
+						}
+						onFocusChange={setIsFocused}
+						onItemsChange={hasAsyncItems ? () => {} : undefined}
+						onLabelsChange={setItems}
+						onLoadMore={onLoadMore}
+						placeholder={placeholder}
+						ref={inputElementRef}
+						selectedKeys={selectedKeys}
+						spritemap={spritemap}
+						suggestionList={sourceItems ?? []}
+						value={value}
 					>
-						<MenuRenderer
-							inputValue={value}
-							locator={locator}
-							onItemClick={(item) => {
-								setItems([...items, item as unknown as T]);
-								setValue('');
+						{memoizedChildren}
+					</Autocomplete>
 
-								if (inputElementRef.current) {
-									inputElementRef.current.focus();
-								}
-							}}
-							sourceItems={sourceItems}
-							value={value}
-						/>
-					</ACT.DropDown>
-				)}
-
-				{!disabled &&
-					!disabledClearAll &&
-					(value || !!items.length) && (
-						<ClayInput.GroupItem shrink>
-							<ClayButtonWithIcon
-								aria-label={clearAllTitle}
-								borderless
-								className="component-action"
-								displayType="secondary"
-								onClick={() => {
-									if (onClearAllButtonClick) {
-										onClearAllButtonClick();
-									}
-									else {
-										setItems([]);
-										setValue('');
-									}
+					{sourceItems && MenuRenderer && !!sourceItems.length && (
+						<ACT.DropDown
+							active={active}
+							alignElementRef={containerRef}
+							alignmentByViewport={alignmentByViewport}
+							onActiveChange={setActive}
+						>
+							<MenuRenderer
+								inputValue={value}
+								locator={locator}
+								onItemClick={(item) => {
+									setItems([...items, item as unknown as T]);
+									setValue('');
 
 									if (inputElementRef.current) {
 										inputElementRef.current.focus();
 									}
 								}}
-								outline
-								spritemap={spritemap}
-								symbol="times-circle"
-								title={clearAllTitle}
+								sourceItems={sourceItems}
+								value={value}
 							/>
-						</ClayInput.GroupItem>
+						</ACT.DropDown>
 					)}
 
-				<div className="sr-only">
-					<span id={ariaDescriptionId}>
-						{hotkeysDescription ?? messages.hotkeys}
-					</span>
+					{!disabled &&
+						!disabledClearAll &&
+						(value || !!items.length) && (
+							<ClayInput.GroupItem shrink>
+								<ClayButtonWithIcon
+									aria-label={clearAllTitle}
+									borderless
+									className="component-action"
+									displayType="secondary"
+									onClick={() => {
+										if (onClearAllButtonClick) {
+											onClearAllButtonClick();
+										}
+										else {
+											setItems([]);
+											setValue('');
+										}
 
-					<span aria-live="polite" aria-relevant="text">
-						{lastChangesRef.current
-							? sub(
-									liveRegion
-										? liveRegion[
-												lastChangesRef.current.action
-											]
-										: lastChangesRef.current.action ===
-											  'added'
-											? messages.labelAdded
-											: messages.labelRemoved,
-									[lastChangesRef.current.label]
-								)
-							: null}
-					</span>
+										if (inputElementRef.current) {
+											inputElementRef.current.focus();
+										}
+									}}
+									outline
+									spritemap={spritemap}
+									symbol="times-circle"
+									title={clearAllTitle}
+								/>
+							</ClayInput.GroupItem>
+						)}
+
+					<div className="sr-only">
+						<span id={ariaDescriptionId}>
+							{hotkeysDescription ?? messages.hotkeys}
+						</span>
+
+						<span aria-live="polite" aria-relevant="text">
+							{lastChangesRef.current
+								? sub(
+										liveRegion
+											? liveRegion[
+													lastChangesRef.current
+														.action
+												]
+											: lastChangesRef.current.action ===
+												  'added'
+												? messages.labelAdded
+												: messages.labelRemoved,
+										[lastChangesRef.current.label]
+									)
+								: null}
+						</span>
+					</div>
 				</div>
-			</div>
-		</Container>
+			</Container>
+
+			{active && displayKeyboardArrowsIndicator && (
+				<ClayPortal>
+					<KeyboardArrowsIndicator
+						anchorRef={containerRef}
+						direction="vertical"
+					/>
+				</ClayPortal>
+			)}
+		</>
 	);
 }) as Component;
 

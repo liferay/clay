@@ -74,7 +74,7 @@ describe('IncrementalInteractions', () => {
 		fireEvent.change(input, {target: {value: '2019-04-10'}});
 
 		expect(input.value).toBe('2019-04-10');
-		expect(dayNumber.classList).toContain('active');
+		expect(dayNumber).toHaveClass('active');
 		expect(monthSelect.value).toBe('3');
 		expect(yearSelect.value).toBe('2019');
 		expect(document.body).toMatchSnapshot();
@@ -93,7 +93,7 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(getByTestId('date-button'), {});
 
-		expect(dropdown.classList).toContain('show');
+		expect(dropdown).toHaveClass('show');
 		expect(document.body).toMatchSnapshot();
 	});
 
@@ -111,7 +111,7 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(getByTestId('date-button'), {});
 
-		expect(dropdown.classList).not.toContain('show');
+		expect(dropdown).not.toHaveClass('show');
 		expect(document.body).toMatchSnapshot();
 	});
 
@@ -133,7 +133,7 @@ describe('IncrementalInteractions', () => {
 
 		userEvent.click(getByTestId('outsideElement'));
 
-		expect(dropdown.classList).not.toContain('show');
+		expect(dropdown).not.toHaveClass('show');
 		expect(document.body).toMatchSnapshot();
 	});
 
@@ -231,7 +231,7 @@ describe('IncrementalInteractions', () => {
 		expect(input.value).toBe(formatDate(currentDate, 'yyyy-MM-dd'));
 
 		const dayNumber = getByLabelText(currentDate.toDateString());
-		expect(dayNumber.classList).toContain('active');
+		expect(dayNumber).toHaveClass('active');
 	});
 
 	it('clicking on the next arrow button the content must be updated with the corresponding month', () => {
@@ -340,7 +340,7 @@ describe('IncrementalInteractions', () => {
 		expect(input.value).toBe('2019-04-28');
 		expect(yearSelect.value).toBe('2019');
 		expect(monthSelect.value).toBe('3');
-		expect(dayNumber.classList).toContain('active');
+		expect(dayNumber).toHaveClass('active');
 	});
 
 	it('clicking on the days number previous-month or next-month should change the date and the input value', () => {
@@ -524,8 +524,8 @@ describe('IncrementalInteractions', () => {
 
 			fireEvent.click(dayNumber);
 
-			expect(dayNumber.classList).toContain('active');
-			expect(endDate.classList).toContain('active');
+			expect(dayNumber).toHaveClass('active');
+			expect(endDate).toHaveClass('active');
 		});
 
 		it('clicking on the day later the start date sets the end date for the selected date', () => {
@@ -548,8 +548,8 @@ describe('IncrementalInteractions', () => {
 
 			fireEvent.click(dayNumber);
 
-			expect(startDate.classList).toContain('active');
-			expect(dayNumber.classList).toContain('active');
+			expect(startDate).toHaveClass('active');
+			expect(dayNumber).toHaveClass('active');
 		});
 
 		it.each(['2019 04 23', '2019 04 10', '2019 04 30'])(
@@ -574,16 +574,16 @@ describe('IncrementalInteractions', () => {
 
 				fireEvent.click(endDate);
 
-				expect(startDate.classList).toContain('active');
-				expect(endDate.classList).toContain('active');
+				expect(startDate).toHaveClass('active');
+				expect(endDate).toHaveClass('active');
 
 				const dayNumber = getByLabelText(new Date(date).toDateString());
 
 				fireEvent.click(dayNumber);
 
-				expect(dayNumber.classList).toContain('active');
-				expect(startDate.classList).not.toContain('active');
-				expect(endDate.classList).not.toContain('active');
+				expect(dayNumber).toHaveClass('active');
+				expect(startDate).not.toHaveClass('active');
+				expect(endDate).not.toHaveClass('active');
 			}
 		);
 	});
@@ -691,7 +691,7 @@ describe('IncrementalInteractions', () => {
 		expect(input.value).toBe(formatDate(currentDate, 'yyyy-MM-dd'));
 
 		const dayNumber = getByLabelText(currentDate.toDateString());
-		expect(dayNumber.classList).toContain('active');
+		expect(dayNumber).toHaveClass('active');
 	});
 
 	it('updates date state when resetting input value using the controlled mode', () => {
@@ -728,8 +728,8 @@ describe('IncrementalInteractions', () => {
 		const dayNumber = getByLabelText(new Date('2019 04 10').toDateString());
 		const endDate = getByLabelText(new Date('2019 04 15').toDateString());
 
-		expect(dayNumber.classList).toContain('active');
-		expect(endDate.classList).toContain('active');
+		expect(dayNumber).toHaveClass('active');
+		expect(endDate).toHaveClass('active');
 
 		fireEvent.click(resetButton);
 
@@ -740,9 +740,9 @@ describe('IncrementalInteractions', () => {
 		);
 
 		expect(input.value).toBe('');
-		expect(defaultDate.classList).toContain('active');
-		expect(dayNumber.classList).not.toContain('active');
-		expect(endDate.classList).not.toContain('active');
+		expect(defaultDate).toHaveClass('active');
+		expect(dayNumber).not.toHaveClass('active');
+		expect(endDate).not.toHaveClass('active');
 	});
 
 	it('clicking the dot button should set the current time when the button is clicked', () => {
@@ -799,5 +799,302 @@ describe('IncrementalInteractions', () => {
 		expect(getByTestId('minutes')).toHaveDisplayValue('00');
 
 		jest.useRealTimers();
+	});
+
+	describe('keyboard arrows indicator', () => {
+		it('does not render the indicator by default', () => {
+			const {getByTestId} = render(
+				<ClayDatePicker
+					defaultMonth={new Date(2019, 3, 18)}
+					placeholder="YYYY-MM-DD"
+					spritemap={spritemap}
+					years={{end: 2019, start: 2019}}
+				/>
+			);
+
+			fireEvent.click(getByTestId('date-button'));
+
+			expect(
+				document.body.querySelector('.clay-keyboard-arrows-indicator')
+			).not.toBeInTheDocument();
+		});
+
+		it('renders the floating indicator with direction "all" when enabled', () => {
+			const {getByTestId} = render(
+				<ClayDatePicker
+					defaultMonth={new Date(2019, 3, 18)}
+					displayKeyboardArrowsIndicator
+					placeholder="YYYY-MM-DD"
+					spritemap={spritemap}
+					years={{end: 2019, start: 2019}}
+				/>
+			);
+
+			fireEvent.click(getByTestId('date-button'));
+
+			const indicator = document.body.querySelector(
+				'.clay-keyboard-arrows-indicator'
+			);
+
+			expect(indicator).toBeInTheDocument();
+			expect(indicator).toHaveClass('clay-keyboard-arrows-all');
+			expect(indicator).toHaveClass(
+				'clay-keyboard-arrows-indicator-floating'
+			);
+		});
+	});
+
+	describe('min/max', () => {
+		it('disables days before min in the calendar grid', () => {
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					min="2019-04-10"
+					spritemap={spritemap}
+				/>
+			);
+
+			const beforeMin = getByLabelText(
+				new Date('2019 04 09').toDateString()
+			);
+			const atMin = getByLabelText(new Date('2019 04 10').toDateString());
+			const afterMin = getByLabelText(
+				new Date('2019 04 11').toDateString()
+			);
+
+			expect(beforeMin).toHaveAttribute('aria-disabled', 'true');
+			expect(atMin).not.toHaveAttribute('aria-disabled');
+			expect(afterMin).not.toHaveAttribute('aria-disabled');
+		});
+
+		it('disables days after max in the calendar grid', () => {
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					max="2019-04-20"
+					spritemap={spritemap}
+				/>
+			);
+
+			const beforeMax = getByLabelText(
+				new Date('2019 04 19').toDateString()
+			);
+			const atMax = getByLabelText(new Date('2019 04 20').toDateString());
+			const afterMax = getByLabelText(
+				new Date('2019 04 21').toDateString()
+			);
+
+			expect(beforeMax).not.toHaveAttribute('aria-disabled');
+			expect(atMax).not.toHaveAttribute('aria-disabled');
+			expect(afterMax).toHaveAttribute('aria-disabled', 'true');
+		});
+
+		it('keeps out-of-range days focusable so the grid can navigate over them', () => {
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					min="2019-04-10"
+					spritemap={spritemap}
+				/>
+			);
+
+			const beforeMin = getByLabelText(
+				new Date('2019 04 09').toDateString()
+			);
+
+			// Native HTML disabled would block focus entirely; aria-disabled
+			// keeps the button focusable for arrow-key grid navigation.
+
+			expect(beforeMin).toBeEnabled();
+		});
+
+		it('selects a valid day inside the range', async () => {
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					max="2019-04-20"
+					min="2019-04-10"
+					spritemap={spritemap}
+				/>
+			);
+
+			const input = getByLabelText(ariaLabels.input) as HTMLInputElement;
+			const dayNumber = getByLabelText(
+				new Date('2019 04 15').toDateString()
+			);
+
+			await userEvent.click(dayNumber);
+
+			expect(input.value).toBe('2019-04-15');
+			expect(dayNumber).toHaveClass('active');
+		});
+
+		it('does not commit a click on a disabled day', async () => {
+			const onChange = jest.fn();
+
+			const {getByLabelText} = render(
+				<ClayDatePicker
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					defaultMonth={new Date(2019, 3, 18)}
+					min="2019-04-10"
+					onChange={onChange}
+					spritemap={spritemap}
+					years={{end: 2019, start: 2019}}
+				/>
+			);
+
+			await userEvent.click(
+				getByLabelText(new Date('2019 04 05').toDateString())
+			);
+
+			expect(onChange).not.toHaveBeenCalled();
+		});
+
+		it('does not commit out-of-range values typed into the input', async () => {
+			const onChange = jest.fn();
+
+			const {getByLabelText} = render(
+				<ClayDatePicker
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					defaultMonth={new Date(2019, 3, 18)}
+					min="2019-04-10"
+					onChange={onChange}
+					spritemap={spritemap}
+					years={{end: 2019, start: 2019}}
+				/>
+			);
+
+			const input = getByLabelText(ariaLabels.input) as HTMLInputElement;
+
+			await userEvent.type(input, '2019-04-05');
+
+			const dayNumber = getByLabelText(
+				new Date('2019 04 05').toDateString()
+			);
+
+			expect(dayNumber).not.toHaveClass('active');
+		});
+
+		it('warns and ignores both bounds when min >= max', () => {
+			const warnSpy = jest
+				.spyOn(console, 'warn')
+				.mockImplementation(() => {});
+
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					max="2019-04-10"
+					min="2019-04-20"
+					spritemap={spritemap}
+				/>
+			);
+
+			expect(warnSpy).toHaveBeenCalled();
+
+			const beforeMin = getByLabelText(
+				new Date('2019 04 05').toDateString()
+			);
+			const afterMax = getByLabelText(
+				new Date('2019 04 25').toDateString()
+			);
+
+			expect(beforeMin).not.toHaveAttribute('aria-disabled');
+			expect(afterMax).not.toHaveAttribute('aria-disabled');
+
+			warnSpy.mockRestore();
+		});
+
+		it('applies min/max to both endpoints in range mode', () => {
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					max="2019-04-20"
+					min="2019-04-10"
+					range
+					spritemap={spritemap}
+				/>
+			);
+
+			expect(
+				getByLabelText(new Date('2019 04 09').toDateString())
+			).toHaveAttribute('aria-disabled', 'true');
+			expect(
+				getByLabelText(new Date('2019 04 21').toDateString())
+			).toHaveAttribute('aria-disabled', 'true');
+		});
+
+		it('does not commit a time edit that falls outside min on the boundary day', async () => {
+			const onChange = jest.fn();
+
+			const {getByTestId} = render(
+				<ClayDatePicker
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					defaultMonth={new Date(2019, 3, 10, 12, 0)}
+					min="2019-04-10 10:00"
+					onChange={onChange}
+					spritemap={spritemap}
+					time
+					value="2019-04-10 12:00"
+					years={{end: 2019, start: 2019}}
+				/>
+			);
+
+			const hoursInput = getByTestId('hours');
+
+			await userEvent.click(hoursInput);
+
+			// Hours start at 12, arrow down loops via config min=10 (down from
+			// 12 → 11 → 10). Further presses are clamped/wrapped by config.
+
+			await userEvent.keyboard('{ArrowDown}{ArrowDown}{ArrowDown}');
+
+			// `onChange` should not have been called with a value below 10:00.
+
+			const calls = onChange.mock.calls
+				.map((call: Array<string>) => call[0])
+				.filter((value): value is string => Boolean(value));
+
+			expect(calls.length).toBeGreaterThan(0);
+
+			calls.forEach((value) => {
+				const [, hh] = value.split(' ');
+
+				expect(Number(hh!.split(':')[0])).toBeGreaterThanOrEqual(10);
+			});
+		});
+
+		it('announces out-of-range rejections via a polite live region', async () => {
+			const {container, getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={{
+						...ariaLabels,
+						outOfRange: 'Out of range',
+					}}
+					defaultExpanded
+					min="2019-04-10"
+					spritemap={spritemap}
+				/>
+			);
+
+			const liveRegion = container.querySelector('[aria-live="polite"]');
+
+			expect(liveRegion).toBeInTheDocument();
+			expect(liveRegion).toHaveTextContent('');
+
+			await userEvent.click(
+				getByLabelText(new Date('2019 04 05').toDateString())
+			);
+
+			expect(liveRegion).toHaveTextContent('Out of range');
+		});
 	});
 });

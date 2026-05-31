@@ -671,3 +671,26 @@ export function CascadingMenu() {
 		/>
 	);
 }
+export function KeyboardArrowsIndicator() {
+	return (
+		<ClayDropDown
+			defaultActive
+			displayKeyboardArrowsIndicator
+			trigger={<ClayButton>Choose a fruit</ClayButton>}
+		>
+			<ClayDropDown.ItemList>
+				<ClayDropDown.Item href="#apple">Apple</ClayDropDown.Item>
+
+				<ClayDropDown.Item href="#banana">Banana</ClayDropDown.Item>
+
+				<ClayDropDown.Item href="#blueberry">
+					Blueberry
+				</ClayDropDown.Item>
+
+				<ClayDropDown.Item href="#cherry">Cherry</ClayDropDown.Item>
+
+				<ClayDropDown.Item href="#grape">Grape</ClayDropDown.Item>
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+}

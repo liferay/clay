@@ -232,3 +232,113 @@ DynamicContent.args = {
 	barDisplayType: 'light',
 	contentDisplayType: 'light',
 };
+
+export function KeyboardArrowsIndicator(args: any) {
+	return (
+		<>
+			<VerticalBar
+				activation={args.activation}
+				displayKeyboardArrowsIndicator
+				position="left"
+				resize={args.enableResize}
+			>
+				<VerticalBar.Bar displayType={args.barDisplayType}>
+					<VerticalBar.Item>
+						<Button aria-label="Tag tab" displayType={null}>
+							<Icon symbol="tag" />
+						</Button>
+					</VerticalBar.Item>
+
+					<VerticalBar.Item divider>
+						<Button aria-label="Message tab" displayType={null}>
+							<Icon symbol="message" />
+						</Button>
+					</VerticalBar.Item>
+
+					<VerticalBar.Item>
+						<Button
+							aria-label="Effects tab"
+							displayType={null}
+							onClick={(event) => {
+								event.preventDefault();
+
+								alert('Clicked');
+							}}
+						>
+							<Icon symbol="effects" />
+						</Button>
+					</VerticalBar.Item>
+				</VerticalBar.Bar>
+
+				<VerticalBar.Content displayType={args.contentDisplayType}>
+					<VerticalBar.Panel tabIndex={0}>
+						<div className="sidebar-header">
+							<div className="component-title">Tag</div>
+						</div>
+					</VerticalBar.Panel>
+
+					<VerticalBar.Panel tabIndex={0}>
+						<div className="sidebar-header">
+							<div className="component-title">Message</div>
+						</div>
+					</VerticalBar.Panel>
+				</VerticalBar.Content>
+			</VerticalBar>
+
+			<VerticalBar
+				activation={args.activation}
+				displayKeyboardArrowsIndicator
+				position="right"
+				resize={args.enableResize}
+			>
+				<VerticalBar.Content displayType={args.contentDisplayType}>
+					<VerticalBar.Panel tabIndex={0}>
+						<div className="sidebar-header">
+							<div className="component-title">Tag</div>
+						</div>
+					</VerticalBar.Panel>
+
+					<VerticalBar.Panel tabIndex={0}>
+						<div className="sidebar-header">
+							<div className="component-title">Message</div>
+						</div>
+					</VerticalBar.Panel>
+				</VerticalBar.Content>
+
+				<VerticalBar.Bar displayType={args.barDisplayType}>
+					<VerticalBar.Item>
+						<Button aria-label="Tag tab" displayType={null}>
+							<Icon symbol="tag" />
+						</Button>
+					</VerticalBar.Item>
+
+					<VerticalBar.Item divider>
+						<Button aria-label="Message tab" displayType={null}>
+							<Icon symbol="message" />
+						</Button>
+					</VerticalBar.Item>
+
+					<VerticalBar.Item>
+						<Button
+							aria-label="Effects tab"
+							displayType={null}
+							onClick={(event) => {
+								event.preventDefault();
+
+								alert('Clicked');
+							}}
+						>
+							<Icon symbol="effects" />
+						</Button>
+					</VerticalBar.Item>
+				</VerticalBar.Bar>
+			</VerticalBar>
+		</>
+	);
+}
+
+KeyboardArrowsIndicator.args = {
+	activation: 'manual',
+	barDisplayType: 'light',
+	contentDisplayType: 'light',
+};

@@ -80,6 +80,15 @@ $cadmin-custom-control-indicator-disabled-checked-border-color: $cadmin-custom-c
 
 $cadmin-custom-control-indicator-checked-disabled-border-color: $cadmin-custom-control-indicator-disabled-checked-border-color !default;
 
+// .custom-control-input
+
+$cadmin-custom-control-input-size: 24px !default;
+$cadmin-custom-control-input-offset: calc(
+	(
+			#{$cadmin-custom-control-input-size} - #{$cadmin-custom-control-indicator-size}
+		) / -2
+) !default;
+
 // Custom Control
 
 $cadmin-custom-control-cursor: null !default;
@@ -135,12 +144,13 @@ $cadmin-custom-control-label: map-deep-merge(
 	(
 		color: $cadmin-custom-control-label-color,
 		cursor: $cadmin-custom-control-description-cursor,
+		display: inline-block,
 		font-size: $cadmin-custom-control-description-font-size,
 		font-weight: $cadmin-custom-control-description-font-weight,
 		line-height: $cadmin-custom-control-description-line-height,
 		margin-bottom: 0px,
+		max-width: 100%,
 		position: static,
-		vertical-align: top,
 
 		before: (
 			background-color: $cadmin-custom-control-indicator-bg,
@@ -156,7 +166,7 @@ $cadmin-custom-control-label: map-deep-merge(
 			height: $cadmin-custom-control-indicator-size,
 			left: 0px,
 			position: relative,
-			top: 4px,
+			top: $cadmin-custom-control-indicator-position-top,
 			transition: clay-enable-transitions($cadmin-custom-forms-transition),
 			width: $cadmin-custom-control-indicator-size,
 			z-index: 0,
@@ -167,11 +177,11 @@ $cadmin-custom-control-label: map-deep-merge(
 			border-radius: $cadmin-rounded-circle-border-radius,
 			content: '',
 			display: block,
-			height: 24px,
-			left: -4px,
+			height: $cadmin-custom-control-input-size,
+			left: $cadmin-custom-control-input-offset,
 			position: absolute,
-			top: $cadmin-custom-control-indicator-position-top,
-			width: 24px,
+			top: $cadmin-custom-control-input-offset,
+			width: $cadmin-custom-control-input-size,
 			z-index: 0,
 		),
 	),
@@ -211,6 +221,8 @@ $cadmin-custom-control-label-text: () !default;
 $cadmin-custom-control-label-text: map-deep-merge(
 	(
 		padding-left: $cadmin-custom-control-description-padding-left,
+		position: relative,
+		top: -4px,
 	),
 	$cadmin-custom-control-label-text
 );
@@ -258,12 +270,12 @@ $cadmin-custom-control-input: () !default;
 $cadmin-custom-control-input: map-deep-merge(
 	(
 		cursor: $cadmin-form-check-input-cursor,
-		height: 24px,
-		left: -4px,
+		height: $cadmin-custom-control-input-size,
+		left: $cadmin-custom-control-input-offset,
 		opacity: 0,
 		position: absolute,
-		top: $cadmin-custom-control-indicator-position-top,
-		width: 24px,
+		top: $cadmin-custom-control-input-offset,
+		width: $cadmin-custom-control-input-size,
 		z-index: 1,
 
 		focus: (

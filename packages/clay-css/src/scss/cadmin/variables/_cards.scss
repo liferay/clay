@@ -418,6 +418,8 @@ $cadmin-form-check-card: map-deep-merge(
 		),
 
 		disabled: (
+			transform: none,
+
 			card: (
 				box-shadow: none,
 				border-color: $cadmin-card-border-color,
@@ -456,7 +458,6 @@ $cadmin-form-check-card: map-deep-merge(
 			),
 
 			custom-control-label: (
-				opacity: 0,
 				position: absolute,
 				z-index: 1,
 			),

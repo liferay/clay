@@ -143,6 +143,47 @@ export default function App() {
 }
 ```
 
+## Min and Max
+
+Use [`min`](#api-min) and [`max`](#api-max) to constrain the range of selectable dates. Both props are optional and may be supplied independently. They are strings formatted using the same [`dateFormat`](#api-dateFormat) (followed by a time portion when [`time`](#api-time) is `true`):
+
+- When `min` is provided, any date strictly before `min` is disabled.
+- When `max` is provided, any date strictly after `max` is disabled.
+- For date-time pickers, the hours and minutes are also constrained when the selected day equals `min` or `max`.
+- In range mode, both endpoints respect the bounds.
+- If `min >= max`, a warning is logged to the console and both bounds are ignored.
+
+Month and year navigation remain available across the full visible range; only the selection is constrained.
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import DatePicker from '@clayui/date-picker';
+import React, {useState} from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	const [value, setValue] = useState(null);
+
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<label htmlFor="datePickerMinMax">Min and Max</label>
+				<DatePicker
+					id="datePickerMinMax"
+					max="2030-12-31"
+					min="2025-01-01"
+					onChange={setValue}
+					placeholder="YYYY-MM-DD"
+					value={value}
+					years={{end: 2030, start: 2025}}
+				/>
+			</div>
+		</Provider>
+	);
+}
+```
+
 ## Internationalization
 
 To set internationalization of the component, you need to configure the props according to the language. Date Picker offers low level APIs to configure [`firstDayOfWeek`](#api-firstDayOfWeek), [`weekdaysShort`](#api-weekdaysShort), [`months`](#api-months), [`timezone`](#api-timezone) and [`dateFormat`](#api-dateFormat), you can follow the example below to set up a Date Picker for Russian.
