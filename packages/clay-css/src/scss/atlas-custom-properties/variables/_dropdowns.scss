@@ -39,7 +39,7 @@ $dropdown-inner-border-radius: $dropdown-border-radius
 
 $dropdown-box-shadow: var(
 	--dropdown-box-shadow,
-	0 1px 5px -1px rgba(0, 0, 0, 0.3)
+	unquote('0 1px 5px -1px hsl(from #{$black} h s l / 0.3)')
 ) !default;
 
 // @deprecated as of v3.x use map $dropdown-menu instead
@@ -613,7 +613,8 @@ $dropdown-section: map-deep-merge(
 $dropdown-footer: () !default;
 $dropdown-footer: map-merge(
 	(
-		box-shadow: -1px -2px 3px -3px rgba(0, 0, 0, 0.5),
+		box-shadow:
+			unquote('-1px -2px 3px -3px hsl(from #{$black} h s l / 0.5)'),
 		padding: 0.5rem $dropdown-item-padding-x 0rem,
 		position: relative,
 	),
@@ -1177,24 +1178,18 @@ $dropdown-menu-palette: map-deep-merge(
 			),
 
 			dropdown-item-scroll-up: (
-				background-image: (
-					linear-gradient(
-						to bottom,
-						rgba(255, 255, 255, 1) 84%,
-						rgba(255, 255, 255, 0) 100%
+				background-image:
+					unquote(
+						'linear-gradient(to bottom, hsl(from #{$white} h s l / 1) 84%, hsl(from #{$white} h s l / 0) 100%)'
 					),
-				),
 				top: $dropdown-padding-y,
 			),
 
 			dropdown-item-scroll-down: (
-				background-image: (
-					linear-gradient(
-						to top,
-						rgba(255, 255, 255, 1) 84%,
-						rgba(255, 255, 255, 0) 100%
+				background-image:
+					unquote(
+						'linear-gradient(to top, hsl(from #{$white} h s l / 1) 84%, hsl(from #{$white} h s l / 0) 100%)'
 					),
-				),
 				bottom: $dropdown-padding-y,
 			),
 

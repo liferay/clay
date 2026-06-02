@@ -46,11 +46,11 @@ $cadmin-component-link: map-deep-merge(
 		transition: box-shadow 0.15s ease-in-out,
 
 		hover: (
-			color: clay-darken($cadmin-gray-600, 15%),
+			color: $cadmin-gray-900,
 		),
 
 		focus: (
-			color: clay-darken($cadmin-gray-600, 15%),
+			color: $cadmin-gray-900,
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
@@ -66,11 +66,11 @@ $cadmin-link-primary: map-deep-merge(
 		transition: box-shadow 0.15s ease-in-out,
 
 		hover: (
-			color: clay-darken($cadmin-primary, 15%),
+			color: $cadmin-primary-d1,
 		),
 
 		focus: (
-			color: clay-darken($cadmin-primary, 15%),
+			color: $cadmin-primary-d1,
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
@@ -197,7 +197,9 @@ $cadmin-link-outline-primary: map-deep-merge(
 
 		active: (
 			background-color:
-				clay-lighten(clay-desaturate($cadmin-primary, 42.05), 41.76),
+				unquote(
+					'hsl(from #{$cadmin-primary} h calc(s - 42.05%) calc(l + 41.76%))'
+				),
 			color: $cadmin-primary,
 		),
 
@@ -218,17 +220,20 @@ $cadmin-link-outline-secondary: map-deep-merge(
 		color: $cadmin-secondary,
 
 		hover: (
-			background-color: rgba($cadmin-gray-900, 0.03),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 			color: $cadmin-gray-900,
 		),
 
 		focus: (
-			background-color: rgba($cadmin-gray-900, 0.03),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 			color: $cadmin-gray-900,
 		),
 
 		active: (
-			background-color: rgba($cadmin-gray-900, 0.06),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.06)'),
 			color: $cadmin-gray-900,
 		),
 
@@ -295,11 +300,11 @@ $cadmin-component-title-link: map-deep-merge(
 		transition: box-shadow 0.15s ease-in-out,
 
 		hover: (
-			color: clay-darken($cadmin-gray-900, 15%),
+			color: unquote('hsl(from #{$cadmin-gray-900} h s calc(l - 15))'),
 		),
 
 		focus: (
-			color: clay-darken($cadmin-gray-900, 15%),
+			color: unquote('hsl(from #{$cadmin-gray-900} h s calc(l - 15))'),
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
@@ -375,19 +380,22 @@ $cadmin-component-action: map-deep-merge(
 		vertical-align: middle,
 		width: map-get($cadmin-link-monospaced, width),
 		hover: (
-			background-color: rgba($cadmin-gray-900, 0.03),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 			color: $cadmin-gray-900,
 		),
 
 		focus: (
-			background-color: rgba($cadmin-gray-900, 0.03),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-gray-900,
 			outline: 0,
 		),
 
 		active: (
-			background-color: rgba($cadmin-gray-900, 0.06),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.06)'),
 			color: $cadmin-gray-900,
 		),
 

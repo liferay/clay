@@ -7,7 +7,9 @@ $cadmin-popover-inner-border-radius: calc(
 	#{$cadmin-popover-border-radius} - #{$cadmin-popover-border-width}
 ) !default;
 
-$cadmin-popover-box-shadow: 0 1px 15px -2px rgba(0, 0, 0, 0.2) !default;
+$cadmin-popover-box-shadow: unquote(
+	'0 1px 15px -2px hsl(from #{$cadmin-black} h s l / 0.2)'
+) !default;
 $cadmin-popover-font-size: $cadmin-font-size-sm !default;
 $cadmin-popover-max-width: 232px !default; // 232px
 
@@ -135,7 +137,7 @@ $cadmin-popover-header: map-deep-merge(
 		color: $cadmin-popover-header-color,
 		background-color: $cadmin-popover-header-bg,
 		border-bottom: $cadmin-popover-border-width solid
-			clay-darken($cadmin-popover-header-bg, 5%),
+			unquote('hsl(from #{$cadmin-popover-header-bg} h s calc(l - 5))'),
 		border-color: $cadmin-popover-header-border-color,
 		border-top-left-radius:
 			clay-enable-rounded($cadmin-popover-offset-border-width),

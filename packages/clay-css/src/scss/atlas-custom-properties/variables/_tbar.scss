@@ -167,7 +167,10 @@ $tbar-light: () !default;
 $tbar-light: map-deep-merge(
 	(
 		background-color: $white,
-		box-shadow: inset 1px 0 0 0 $gray-200#{','} inset -1px 0 0 0 $gray-200,
+		box-shadow:
+			unquote(
+				'inset 1px 0 0 0 #{$gray-200}, inset -1px 0 0 0 #{$gray-200}'
+			),
 		color: $secondary,
 
 		tbar-divider-before: (
@@ -208,8 +211,10 @@ $tbar-dark-d1: () !default;
 $tbar-dark-d1: map-deep-merge(
 	(
 		background-color: $dark-d1,
-		box-shadow: inset 1px 0 0 0 unquote('hsl(from #{$white} h s l / 0.06)')
-			#{','} inset -1px 0 0 0 unquote('hsl(from #{$white} h s l / 0.06)'),
+		box-shadow:
+			unquote(
+				'inset 1px 0 0 0 hsl(from #{$white} h s l / 0.06), inset -1px 0 0 0 hsl(from #{$white} h s l / 0.06)'
+			),
 		color: $gray-500,
 
 		tbar-divider-before: (
@@ -263,8 +268,10 @@ $tbar-dark-l2: () !default;
 $tbar-dark-l2: map-deep-merge(
 	(
 		background-color: $dark-l2,
-		box-shadow: inset 1px 0 0 0 unquote('hsl(from #{$white} h s l / 0.06)')
-			#{','} inset -1px 0 0 0 unquote('hsl(from #{$white} h s l / 0.06)'),
+		box-shadow:
+			unquote(
+				'inset 1px 0 0 0 hsl(from #{$white} h s l / 0.06), inset -1px 0 0 0 hsl(from #{$white} h s l / 0.06)'
+			),
 		border-color: unquote('hsl(from #{$white} h s l / 0.06)'),
 		color: $gray-500,
 

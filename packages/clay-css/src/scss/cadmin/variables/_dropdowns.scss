@@ -19,7 +19,9 @@ $cadmin-dropdown-border-radius: $cadmin-border-radius !default;
 $cadmin-dropdown-inner-border-radius: $cadmin-dropdown-border-radius
 	calc(#{$cadmin-dropdown-border-width} * -1) !default;
 
-$cadmin-dropdown-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3) !default;
+$cadmin-dropdown-box-shadow: unquote(
+	'0 1px 5px -1px hsl(from #{$cadmin-black} h s l / 0.3)'
+) !default;
 $cadmin-dropdown-color: $cadmin-body-color !default;
 $cadmin-dropdown-font-size: 14px !default; // 14px
 $cadmin-dropdown-max-height: 500px !default;
@@ -85,10 +87,7 @@ $cadmin-dropdown-item-indicator-spacer-x: 12px !default;
 $cadmin-dropdown-link-color: $cadmin-gray-600 !default;
 $cadmin-dropdown-link-font-weight: $cadmin-font-weight-normal !default;
 
-$cadmin-dropdown-link-hover-bg: clay-lighten(
-	$cadmin-component-active-bg,
-	44.9
-) !default;
+$cadmin-dropdown-link-hover-bg: $cadmin-primary-l3 !default;
 $cadmin-dropdown-link-hover-color: $cadmin-gray-900 !default;
 
 $cadmin-dropdown-link-active-bg: $cadmin-dropdown-link-hover-bg !default;
@@ -413,7 +412,8 @@ $cadmin-dropdown-section: map-deep-merge(
 $cadmin-dropdown-footer: () !default;
 $cadmin-dropdown-footer: map-merge(
 	(
-		box-shadow: -1px -2px 3px -3px rgba(0, 0, 0, 0.5),
+		box-shadow:
+			unquote('-1px -2px 3px -3px hsl(from #{$cadmin-black} h s l / 0.5)'),
 		padding: 8px $cadmin-dropdown-item-padding-x 0px,
 		position: relative,
 	),
@@ -910,24 +910,18 @@ $cadmin-dropdown-menu-palette: map-deep-merge(
 			),
 
 			dropdown-item-scroll-up: (
-				background-image: (
-					linear-gradient(
-						to bottom,
-						rgba(255, 255, 255, 1) 84%,
-						rgba(255, 255, 255, 0) 100%
+				background-image:
+					unquote(
+						'linear-gradient(to bottom, hsl(from #{$cadmin-white} h s l / 1) 84%, hsl(from #{$cadmin-white} h s l / 0) 100%)'
 					),
-				),
 				top: $cadmin-dropdown-padding-y,
 			),
 
 			dropdown-item-scroll-down: (
-				background-image: (
-					linear-gradient(
-						to top,
-						rgba(255, 255, 255, 1) 84%,
-						rgba(255, 255, 255, 0) 100%
+				background-image:
+					unquote(
+						'linear-gradient(to top, hsl(from #{$cadmin-white} h s l / 1) 84%, hsl(from #{$cadmin-white} h s l / 0) 100%)'
 					),
-				),
 				bottom: $cadmin-dropdown-padding-y,
 			),
 

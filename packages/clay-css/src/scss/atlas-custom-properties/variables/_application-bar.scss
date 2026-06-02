@@ -38,15 +38,18 @@ $application-bar-dark: map-deep-merge(
 				font-weight: $font-weight-semi-bold,
 
 				hover: (
-					background-color: rgba(255, 255, 255, 0.03),
+					background-color:
+						unquote('hsl(from #{$white} h s l / 0.03)'),
 				),
 
 				focus: (
-					background-color: rgba(255, 255, 255, 0.03),
+					background-color:
+						unquote('hsl(from #{$white} h s l / 0.03)'),
 				),
 
 				active: (
-					background-color: rgba(255, 255, 255, 0.06),
+					background-color:
+						unquote('hsl(from #{$white} h s l / 0.06)'),
 				),
 
 				disabled: (

@@ -898,7 +898,7 @@ $product-card: map-deep-merge(
 	(
 		aspect-ratio: (
 			background-color: $white,
-			background-image: linear-gradient(0deg, #ebebeb, #ebebeb),
+			background-image: linear-gradient(0deg, $gray-200, $gray-200),
 		),
 
 		card-body: (

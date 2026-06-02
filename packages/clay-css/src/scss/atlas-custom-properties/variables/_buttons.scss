@@ -1185,6 +1185,7 @@ $btn-outline-success: map-deep-merge(
 			background-color:
 				map-deep-get($btn-success, active, background-color),
 			box-shadow: map-deep-get($btn-success, active, box-shadow),
+			color: map-deep-get($btn-success, active, color),
 		),
 
 		disabled: (

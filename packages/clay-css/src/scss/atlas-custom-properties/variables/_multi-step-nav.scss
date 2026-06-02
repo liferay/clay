@@ -230,10 +230,7 @@ $multi-step-item-error: map-deep-merge(
 					$danger
 				),
 			background-image:
-				var(
-					--multi-step-item-error-multi-step-icon-background-image,
-					clay-icon(times, #fff)
-				),
+				var(--multi-step-item-error-icon, clay-icon(times, #fff)),
 			color: var(--multi-step-item-error-multi-step-icon-color, $white),
 			text-indent: -100px,
 
@@ -261,7 +258,7 @@ $multi-step-icon-complete-bg: var(
 	$gray-600
 ) !default;
 $multi-step-icon-complete-bg-image: var(
-	--multi-step-icon-complete-bg-image,
+	--multi-step-icon-complete-icon,
 	clay-icon(check, #fff)
 ) !default;
 $multi-step-icon-complete-bg-position: var(

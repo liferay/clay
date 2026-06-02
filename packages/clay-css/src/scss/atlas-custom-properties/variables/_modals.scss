@@ -1,5 +1,5 @@
-$modal-backdrop-bg: var(--modal-backdrop-bg, $gray-800) !default;
-$modal-backdrop-opacity: var(--modal-backdrop-opacity, 0.8) !default;
+$modal-backdrop-bg: var(--modal-backdrop-background-color) !default;
+$modal-backdrop-opacity: var(--modal-backdrop-opacity) !default;
 
 $modal-backdrop: () !default;
 $modal-backdrop: map-deep-merge(
@@ -54,7 +54,8 @@ $modal-content-inner-border-radius: calc(
 	#{$modal-content-border-radius} - #{$modal-content-border-width}
 ) !default;
 
-$modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
+$modal-content-box-shadow-xs: 0 0 3px 1px
+	unquote('hsl(from #{$black} h s l / 0.3)') !default;
 
 $modal-content-box-shadow-sm-up: var(
 	--modal-content-box-shadow-sm-up,

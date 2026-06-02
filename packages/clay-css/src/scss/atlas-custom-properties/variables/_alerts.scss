@@ -406,7 +406,9 @@ $alert-notifications-fixed: map-deep-merge(
 
 // .alert-notifications
 
-$alert-notifications-box-shadow: null !default;
+$alert-notifications-box-shadow: unquote(
+	'0 0.5rem 2rem -0.25rem hsl(from #{$black} h s l / 0.3)'
+) !default;
 $alert-notifications-max-width: 22.5rem !default;
 
 $alert-notification: () !default;

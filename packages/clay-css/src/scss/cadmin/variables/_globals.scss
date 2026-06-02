@@ -50,19 +50,19 @@ $cadmin-enable-hover-media-query: false !default;
 
 $cadmin-selector: ':not(#__):not(#___)' !default;
 
-$cadmin-white: #fff !default;
+$cadmin-white: var(--cadmin-white) !default;
 
-$cadmin-gray-100: #f7f8f9 !default;
-$cadmin-gray-200: #f1f2f5 !default;
-$cadmin-gray-300: #e7e7ed !default;
-$cadmin-gray-400: #cdced9 !default;
-$cadmin-gray-500: #a7a9bc !default;
-$cadmin-gray-600: #6b6c7e !default;
-$cadmin-gray-700: #495057 !default;
-$cadmin-gray-800: #393a4a !default;
-$cadmin-gray-900: #272833 !default;
+$cadmin-gray-100: var(--cadmin-gray-100) !default;
+$cadmin-gray-200: var(--cadmin-gray-200) !default;
+$cadmin-gray-300: var(--cadmin-gray-300) !default;
+$cadmin-gray-400: var(--cadmin-gray-400) !default;
+$cadmin-gray-500: var(--cadmin-gray-500) !default;
+$cadmin-gray-600: var(--cadmin-gray-600) !default;
+$cadmin-gray-700: var(--cadmin-gray-700) !default;
+$cadmin-gray-800: var(--cadmin-gray-800) !default;
+$cadmin-gray-900: var(--cadmin-gray-900) !default;
 
-$cadmin-black: #000 !default;
+$cadmin-black: var(--cadmin-black) !default;
 
 $cadmin-grays: () !default;
 $cadmin-grays: map-merge(
@@ -80,145 +80,125 @@ $cadmin-grays: map-merge(
 	$cadmin-grays
 );
 
-$cadmin-blue: if($cadmin-enable-lexicon-flat-colors, #006eff, #0b5fff) !default;
+$cadmin-blue: var(--cadmin-blue) !default;
 
-$cadmin-blue-d1: #006be6 !default;
-$cadmin-blue-d2: #005fcc !default;
-$cadmin-blue-d3: #0053b3 !default;
-$cadmin-blue-d4: #004799 !default;
-$cadmin-blue-l1: #338fff !default;
-$cadmin-blue-l2: #66abff !default;
-$cadmin-blue-l3: #97c5ff !default;
-$cadmin-blue-l4: #cce3ff !default;
-$cadmin-blue-l5: #e5f1ff !default;
+$cadmin-blue-d1: var(--cadmin-blue-d1) !default;
+$cadmin-blue-d2: var(--cadmin-blue-d2) !default;
+$cadmin-blue-d3: var(--cadmin-blue-d3) !default;
+$cadmin-blue-d4: var(--cadmin-blue-d4) !default;
+$cadmin-blue-l1: var(--cadmin-blue-l1) !default;
+$cadmin-blue-l2: var(--cadmin-blue-l2) !default;
+$cadmin-blue-l3: var(--cadmin-blue-l3) !default;
+$cadmin-blue-l4: var(--cadmin-blue-l4) !default;
+$cadmin-blue-l5: var(--cadmin-blue-l5) !default;
 
-$cadmin-indigo: if(
-	$cadmin-enable-lexicon-flat-colors,
-	#4d5fff,
-	#6610f2
-) !default;
+$cadmin-indigo: var(--cadmin-indigo) !default;
 
-$cadmin-indigo-d1: #3347ff !default;
-$cadmin-indigo-d2: #1a30ff !default;
-$cadmin-indigo-d3: #001aff !default;
-$cadmin-indigo-d4: #0017e5 !default;
-$cadmin-indigo-l1: #808cff !default;
-$cadmin-indigo-l2: #99a3ff !default;
-$cadmin-indigo-l3: #b2baff !default;
-$cadmin-indigo-l4: #ccd1ff !default;
-$cadmin-indigo-l5: #e5e8ff !default;
+$cadmin-indigo-d1: var(--cadmin-indigo-d1) !default;
+$cadmin-indigo-d2: var(--cadmin-indigo-d2) !default;
+$cadmin-indigo-d3: var(--cadmin-indigo-d3) !default;
+$cadmin-indigo-d4: var(--cadmin-indigo-d4) !default;
+$cadmin-indigo-l1: var(--cadmin-indigo-l1) !default;
+$cadmin-indigo-l2: var(--cadmin-indigo-l2) !default;
+$cadmin-indigo-l3: var(--cadmin-indigo-l3) !default;
+$cadmin-indigo-l4: var(--cadmin-indigo-l4) !default;
+$cadmin-indigo-l5: var(--cadmin-indigo-l5) !default;
 
-$cadmin-purple: if(
-	$cadmin-enable-lexicon-flat-colors,
-	#aa33ff,
-	#6f42c1
-) !default;
+$cadmin-purple: var(--cadmin-purple) !default;
 
-$cadmin-purple-d1: #9f1aff !default;
-$cadmin-purple-d2: #9500ff !default;
-$cadmin-purple-d3: #8600e6 !default;
-$cadmin-purple-d4: #7700cc !default;
-$cadmin-purple-l1: #bf66ff !default;
-$cadmin-purple-l2: #ca80ff !default;
-$cadmin-purple-l3: #d499ff !default;
-$cadmin-purple-l4: #dfb3ff !default;
-$cadmin-purple-l5: #f2e5ff !default;
+$cadmin-purple-d1: var(--cadmin-purple-d1) !default;
+$cadmin-purple-d2: var(--cadmin-purple-d2) !default;
+$cadmin-purple-d3: var(--cadmin-purple-d3) !default;
+$cadmin-purple-d4: var(--cadmin-purple-d4) !default;
+$cadmin-purple-l1: var(--cadmin-purple-l1) !default;
+$cadmin-purple-l2: var(--cadmin-purple-l2) !default;
+$cadmin-purple-l3: var(--cadmin-purple-l3) !default;
+$cadmin-purple-l4: var(--cadmin-purple-l4) !default;
+$cadmin-purple-l5: var(--cadmin-purple-l5) !default;
 
-$cadmin-pink: if($cadmin-enable-lexicon-flat-colors, #e50082, #e83e8c) !default;
+$cadmin-pink: var(--cadmin-pink) !default;
 
-$cadmin-pink-d1: #cc0074 !default;
-$cadmin-pink-d2: #b30065 !default;
-$cadmin-pink-d3: #990057 !default;
-$cadmin-pink-d4: #800048 !default;
-$cadmin-pink-l1: #ff4db2 !default;
-$cadmin-pink-l2: #ff80c8 !default;
-$cadmin-pink-l3: #ff99d3 !default;
-$cadmin-pink-l4: #ffb3de !default;
-$cadmin-pink-l5: #ffe5f4 !default;
+$cadmin-pink-d1: var(--cadmin-pink-d1) !default;
+$cadmin-pink-d2: var(--cadmin-pink-d2) !default;
+$cadmin-pink-d3: var(--cadmin-pink-d3) !default;
+$cadmin-pink-d4: var(--cadmin-pink-d4) !default;
+$cadmin-pink-l1: var(--cadmin-pink-l1) !default;
+$cadmin-pink-l2: var(--cadmin-pink-l2) !default;
+$cadmin-pink-l3: var(--cadmin-pink-l3) !default;
+$cadmin-pink-l4: var(--cadmin-pink-l4) !default;
+$cadmin-pink-l5: var(--cadmin-pink-l5) !default;
 
-$cadmin-red: if($cadmin-enable-lexicon-flat-colors, #e60000, #da1414) !default;
+$cadmin-red: var(--cadmin-red) !default;
 
-$cadmin-red-d1: #cc0000 !default;
-$cadmin-red-d2: #b30000 !default;
-$cadmin-red-d3: #990000 !default;
-$cadmin-red-d4: #800000 !default;
-$cadmin-red-l1: #ff4d4d !default;
-$cadmin-red-l2: #ff6666 !default;
-$cadmin-red-l3: #ff8080 !default;
-$cadmin-red-l4: #ff9999 !default;
-$cadmin-red-l5: #ffe5e5 !default;
+$cadmin-red-d1: var(--cadmin-red-d1) !default;
+$cadmin-red-d2: var(--cadmin-red-d2) !default;
+$cadmin-red-d3: var(--cadmin-red-d3) !default;
+$cadmin-red-d4: var(--cadmin-red-d4) !default;
+$cadmin-red-l1: var(--cadmin-red-l1) !default;
+$cadmin-red-l2: var(--cadmin-red-l2) !default;
+$cadmin-red-l3: var(--cadmin-red-l3) !default;
+$cadmin-red-l4: var(--cadmin-red-l4) !default;
+$cadmin-red-l5: var(--cadmin-red-l5) !default;
 
-$cadmin-orange: if(
-	$cadmin-enable-lexicon-flat-colors,
-	#cc4e00,
-	#b95000
-) !default;
+$cadmin-orange: var(--cadmin-orange) !default;
 
-$cadmin-orange-d1: #b34400 !default;
-$cadmin-orange-d2: #993b00 !default;
-$cadmin-orange-d3: #803100 !default;
-$cadmin-orange-d4: #662700 !default;
-$cadmin-orange-l1: #ff6200 !default;
-$cadmin-orange-l2: #ff8133 !default;
-$cadmin-orange-l3: #ffa166 !default;
-$cadmin-orange-l4: #ffc099 !default;
-$cadmin-orange-l5: #fff0e5 !default;
+$cadmin-orange-d1: var(--cadmin-orange-d1) !default;
+$cadmin-orange-d2: var(--cadmin-orange-d2) !default;
+$cadmin-orange-d3: var(--cadmin-orange-d3) !default;
+$cadmin-orange-d4: var(--cadmin-orange-d4) !default;
+$cadmin-orange-l1: var(--cadmin-orange-l1) !default;
+$cadmin-orange-l2: var(--cadmin-orange-l2) !default;
+$cadmin-orange-l3: var(--cadmin-orange-l3) !default;
+$cadmin-orange-l4: var(--cadmin-orange-l4) !default;
+$cadmin-orange-l5: var(--cadmin-orange-l5) !default;
 
-$cadmin-yellow: if(
-	$cadmin-enable-lexicon-flat-colors,
-	#ffbb00,
-	#ffc107
-) !default;
+$cadmin-yellow: var(--cadmin-yellow) !default;
 
-$cadmin-yellow-d1: #e6a800 !default;
-$cadmin-yellow-d2: #cc9600 !default;
-$cadmin-yellow-d3: #b38900 !default;
-$cadmin-yellow-d4: #997000 !default;
-$cadmin-yellow-l1: #ffc933 !default;
-$cadmin-yellow-l2: #ffd666 !default;
-$cadmin-yellow-l3: #ffe499 !default;
-$cadmin-yellow-l4: #fff1cc !default;
-$cadmin-yellow-l5: #fff8e5 !default;
+$cadmin-yellow-d1: var(--cadmin-yellow-d1) !default;
+$cadmin-yellow-d2: var(--cadmin-yellow-d2) !default;
+$cadmin-yellow-d3: var(--cadmin-yellow-d3) !default;
+$cadmin-yellow-d4: var(--cadmin-yellow-d4) !default;
+$cadmin-yellow-l1: var(--cadmin-yellow-l1) !default;
+$cadmin-yellow-l2: var(--cadmin-yellow-l2) !default;
+$cadmin-yellow-l3: var(--cadmin-yellow-l3) !default;
+$cadmin-yellow-l4: var(--cadmin-yellow-l4) !default;
+$cadmin-yellow-l5: var(--cadmin-yellow-l5) !default;
 
-$cadmin-green: if(
-	$cadmin-enable-lexicon-flat-colors,
-	#458613,
-	#287d3d
-) !default;
+$cadmin-green: var(--cadmin-green) !default;
 
-$cadmin-green-d1: #397010 !default;
-$cadmin-green-d2: #2e590d !default;
-$cadmin-green-d3: #22430a !default;
-$cadmin-green-d4: #162d06 !default;
-$cadmin-green-l1: #53a117 !default;
-$cadmin-green-l2: #67c91d !default;
-$cadmin-green-l3: #81e236 !default;
-$cadmin-green-l4: #9de963 !default;
-$cadmin-green-l5: #f1fce9 !default;
+$cadmin-green-d1: var(--cadmin-green-d1) !default;
+$cadmin-green-d2: var(--cadmin-green-d2) !default;
+$cadmin-green-d3: var(--cadmin-green-d3) !default;
+$cadmin-green-d4: var(--cadmin-green-d4) !default;
+$cadmin-green-l1: var(--cadmin-green-l1) !default;
+$cadmin-green-l2: var(--cadmin-green-l2) !default;
+$cadmin-green-l3: var(--cadmin-green-l3) !default;
+$cadmin-green-l4: var(--cadmin-green-l4) !default;
+$cadmin-green-l5: var(--cadmin-green-l5) !default;
 
-$cadmin-teal: if($cadmin-enable-lexicon-flat-colors, #1b7e6e, #20c997) !default;
+$cadmin-teal: var(--cadmin-teal) !default;
 
-$cadmin-teal-d1: #16695b !default;
-$cadmin-teal-d2: #125449 !default;
-$cadmin-teal-d3: #0d3f37 !default;
-$cadmin-teal-d4: #092a25 !default;
-$cadmin-teal-l1: #24a892 !default;
-$cadmin-teal-l2: #42d7be !default;
-$cadmin-teal-l3: #6ce0cc !default;
-$cadmin-teal-l4: #96e9db !default;
-$cadmin-teal-l5: #eafbf8 !default;
+$cadmin-teal-d1: var(--cadmin-teal-d1) !default;
+$cadmin-teal-d2: var(--cadmin-teal-d2) !default;
+$cadmin-teal-d3: var(--cadmin-teal-d3) !default;
+$cadmin-teal-d4: var(--cadmin-teal-d4) !default;
+$cadmin-teal-l1: var(--cadmin-teal-l1) !default;
+$cadmin-teal-l2: var(--cadmin-teal-l2) !default;
+$cadmin-teal-l3: var(--cadmin-teal-l3) !default;
+$cadmin-teal-l4: var(--cadmin-teal-l4) !default;
+$cadmin-teal-l5: var(--cadmin-teal-l5) !default;
 
-$cadmin-cyan: if($cadmin-enable-lexicon-flat-colors, #0077b3, #17a2b8) !default;
+$cadmin-cyan: var(--cadmin-cyan) !default;
 
-$cadmin-cyan-d1: #006699 !default;
-$cadmin-cyan-d2: #005580 !default;
-$cadmin-cyan-d3: #004466 !default;
-$cadmin-cyan-d4: #00334d !default;
-$cadmin-cyan-l1: #0099e6 !default;
-$cadmin-cyan-l2: #33bbff !default;
-$cadmin-cyan-l3: #66ccff !default;
-$cadmin-cyan-l4: #99ddff !default;
-$cadmin-cyan-l5: #e5f6ff !default;
+$cadmin-cyan-d1: var(--cadmin-cyan-d1) !default;
+$cadmin-cyan-d2: var(--cadmin-cyan-d2) !default;
+$cadmin-cyan-d3: var(--cadmin-cyan-d3) !default;
+$cadmin-cyan-d4: var(--cadmin-cyan-d4) !default;
+$cadmin-cyan-l1: var(--cadmin-cyan-l1) !default;
+$cadmin-cyan-l2: var(--cadmin-cyan-l2) !default;
+$cadmin-cyan-l3: var(--cadmin-cyan-l3) !default;
+$cadmin-cyan-l4: var(--cadmin-cyan-l4) !default;
+$cadmin-cyan-l5: var(--cadmin-cyan-l5) !default;
 
 $cadmin-colors: () !default;
 $cadmin-colors: map-merge(
@@ -252,110 +232,65 @@ $cadmin-colors: map-merge(
 	$cadmin-colors
 );
 
-$cadmin-primary: #0b5fff !default;
+$cadmin-primary: var(--cadmin-primary) !default;
 
-$cadmin-primary-d1: clay-darken($cadmin-primary, 5.1) !default;
-$cadmin-primary-d2: clay-darken($cadmin-primary, 10) !default;
-$cadmin-primary-l0: clay-lighten($cadmin-primary, 14.9) !default;
-$cadmin-primary-l1: clay-lighten($cadmin-primary, 22.94) !default;
-$cadmin-primary-l2: clay-lighten($cadmin-primary, 32.94) !default;
-$cadmin-primary-l3: clay-lighten($cadmin-primary, 44.9) !default;
+$cadmin-primary-d1: var(--cadmin-primary-d1) !default;
+$cadmin-primary-d2: var(--cadmin-primary-d2) !default;
+$cadmin-primary-l0: var(--cadmin-primary-l0) !default;
+$cadmin-primary-l1: var(--cadmin-primary-l1) !default;
+$cadmin-primary-l2: var(--cadmin-primary-l2) !default;
+$cadmin-primary-l3: var(--cadmin-primary-l3) !default;
 
-$cadmin-secondary: #6b6c7e !default;
+$cadmin-secondary: var(--cadmin-secondary) !default;
 
-$cadmin-secondary-d1: clay-darken(
-	clay-saturate($cadmin-secondary, 4.82),
-	20
-) !default;
-$cadmin-secondary-d2: clay-darken(
-	clay-saturate($cadmin-secondary, 5.36),
-	23.92
-) !default;
-$cadmin-secondary-l0: clay-lighten(
-	clay-saturate(clay-adjust-hue($cadmin-secondary, 32), 1.25),
-	15.29
-);
-$cadmin-secondary-l1: clay-lighten(
-	clay-saturate(clay-adjust-hue($cadmin-secondary, -3), 5.39),
-	23.92
-) !default;
-$cadmin-secondary-l2: clay-lighten(
-	clay-saturate(clay-adjust-hue($cadmin-secondary, -2), 5.48),
-	37.06
-) !default;
-$cadmin-secondary-l3: clay-lighten(
-	clay-saturate(clay-adjust-hue($cadmin-secondary, 3), 6.13),
-	46.08
-) !default;
+$cadmin-secondary-d1: var(--cadmin-secondary-d1) !default;
+$cadmin-secondary-d2: var(--cadmin-secondary-d2) !default;
+$cadmin-secondary-l0: var(--cadmin-secondary-l0) !default;
+$cadmin-secondary-l1: var(--cadmin-secondary-l1) !default;
+$cadmin-secondary-l2: var(--cadmin-secondary-l2) !default;
+$cadmin-secondary-l3: var(--cadmin-secondary-l3) !default;
 
-$cadmin-info: #2e5aac !default;
+$cadmin-info: var(--cadmin-info) !default;
 
-$cadmin-info-d1: clay-darken($cadmin-info, 5) !default;
-$cadmin-info-d2: clay-darken($cadmin-info, 10) !default;
-$cadmin-info-l1: clay-lighten(
-	clay-saturate($cadmin-info, 0.59),
-	28.04
-) !default;
-$cadmin-info-l2: clay-lighten(
-	clay-desaturate($cadmin-info, 3.25),
-	52.94
-) !default;
+$cadmin-info-d1: var(--cadmin-info-d1) !default;
+$cadmin-info-d2: var(--cadmin-info-d2) !default;
+$cadmin-info-l1: var(--cadmin-info-l1) !default;
+$cadmin-info-l2: var(--cadmin-info-l2) !default;
 
-$cadmin-success: #287d3c !default;
+$cadmin-success: var(--cadmin-success) !default;
 
-$cadmin-success-d1: clay-darken($cadmin-success, 5) !default;
-$cadmin-success-d2: clay-darken($cadmin-success, 10) !default;
-$cadmin-success-l1: clay-lighten(
-	clay-desaturate($cadmin-success, 0.14),
-	24.95
-) !default;
-$cadmin-success-l2: clay-lighten(
-	clay-desaturate($cadmin-success, 1.52),
-	62.94
-) !default;
+$cadmin-success-d1: var(--cadmin-success-d1) !default;
+$cadmin-success-d2: var(--cadmin-success-d2) !default;
+$cadmin-success-l1: var(--cadmin-success-l1) !default;
+$cadmin-success-l2: var(--cadmin-success-l2) !default;
 
-$cadmin-warning: #b95000 !default;
+$cadmin-warning: var(--cadmin-warning) !default;
 
-$cadmin-warning-d1: clay-darken($cadmin-warning, 5.1) !default;
-$cadmin-warning-d2: clay-darken($cadmin-warning, 10) !default;
-$cadmin-warning-l1: clay-lighten($cadmin-warning, 24.9) !default;
-$cadmin-warning-l2: clay-lighten($cadmin-warning, 60) !default;
+$cadmin-warning-d1: var(--cadmin-warning-d1) !default;
+$cadmin-warning-d2: var(--cadmin-warning-d2) !default;
+$cadmin-warning-l1: var(--cadmin-warning-l1) !default;
+$cadmin-warning-l2: var(--cadmin-warning-l2) !default;
 
-$cadmin-danger: #da1414 !default;
+$cadmin-danger: var(--cadmin-danger) !default;
 
-$cadmin-danger-d1: clay-darken($cadmin-danger, 5) !default;
-$cadmin-danger-d2: clay-darken($cadmin-danger, 10) !default;
-$cadmin-danger-l1: clay-lighten(
-	clay-desaturate($cadmin-danger, 0.25),
-	28.04
-) !default;
-$cadmin-danger-l2: clay-lighten(
-	clay-saturate($cadmin-danger, 5.04),
-	50
-) !default;
+$cadmin-danger-d1: var(--cadmin-danger-d1) !default;
+$cadmin-danger-d2: var(--cadmin-danger-d2) !default;
+$cadmin-danger-l1: var(--cadmin-danger-l1) !default;
+$cadmin-danger-l2: var(--cadmin-danger-l2) !default;
 
-$cadmin-light: #f1f2f5 !default;
+$cadmin-light: var(--cadmin-light) !default;
 
-$cadmin-light-d1: clay-darken($cadmin-light, 5.1) !default;
-$cadmin-light-d2: clay-darken($cadmin-light, 10) !default;
-$cadmin-light-l1: clay-lighten(
-	clay-desaturate(clay-adjust-hue($cadmin-light, -15), 2.38),
-	1.96
-) !default;
-$cadmin-light-l2: clay-lighten(
-	clay-desaturate(clay-adjust-hue($cadmin-light, -225), 16.67),
-	4.71
-) !default;
+$cadmin-light-d1: var(--cadmin-light-d1) !default;
+$cadmin-light-d2: var(--cadmin-light-d2) !default;
+$cadmin-light-l1: var(--cadmin-light-l1) !default;
+$cadmin-light-l2: var(--cadmin-light-l2) !default;
 
-$cadmin-dark: #272833 !default;
+$cadmin-dark: var(--cadmin-dark) !default;
 
-$cadmin-dark-d1: clay-darken($cadmin-dark, 5.1) !default;
-$cadmin-dark-d2: clay-darken($cadmin-dark, 10) !default;
-$cadmin-dark-l1: clay-lighten(clay-saturate($cadmin-dark, 0.18), 4.12) !default;
-$cadmin-dark-l2: clay-lighten(
-	clay-desaturate($cadmin-dark, 0.36),
-	8.04
-) !default;
+$cadmin-dark-d1: var(--cadmin-dark-d1) !default;
+$cadmin-dark-d2: var(--cadmin-dark-d2) !default;
+$cadmin-dark-l1: var(--cadmin-dark-l1) !default;
+$cadmin-dark-l2: var(--cadmin-dark-l2) !default;
 
 $cadmin-theme-colors: () !default;
 $cadmin-theme-colors: map-merge(
@@ -447,9 +382,15 @@ $cadmin-rounded-border-radius: $cadmin-border-radius !default;
 $cadmin-rounded-circle-border-radius: 5000px !default;
 $cadmin-rounded-pill: 800px !default;
 
-$cadmin-box-shadow: 0 8px 16px rgba($cadmin-black, 0.15) !default;
-$cadmin-box-shadow-sm: 0 2px 4px rgba($cadmin-black, 0.075) !default;
-$cadmin-box-shadow-lg: 0 16px 48px rgba($cadmin-black, 0.175) !default;
+$cadmin-box-shadow: unquote(
+	'0 8px 16px hsl(from #{$cadmin-black} h s l / 0.15)'
+) !default;
+$cadmin-box-shadow-sm: unquote(
+	'0 2px 4px hsl(from #{$cadmin-black} h s l / 0.075)'
+) !default;
+$cadmin-box-shadow-lg: unquote(
+	'0 16px 48px hsl(from #{$cadmin-black} h s l / 0.175)'
+) !default;
 
 $cadmin-caret-width: 0.3em !default;
 
@@ -472,12 +413,12 @@ $cadmin-component-transition:
 	border-color 0.15s ease-in-out,
 	box-shadow 0.15s ease-in-out !default;
 
-$cadmin-component-focus-box-shadow:
-	#{0 0 0 2px $cadmin-white,
-	0 0 0 4px $cadmin-primary-l0} !default;
-$cadmin-component-focus-inset-box-shadow:
-	#{inset 0 0 0 2px $cadmin-primary-l0,
-	inset 0 0 0 4px $cadmin-white} !default;
+$cadmin-component-focus-box-shadow: unquote(
+	'0 0 0 2px #{$cadmin-white}, 0 0 0 4px #{$cadmin-primary-l0}'
+) !default;
+$cadmin-component-focus-inset-box-shadow: unquote(
+	'inset 0 0 0 2px #{$cadmin-primary-l0}, inset 0 0 0 4px #{$cadmin-white}'
+) !default;
 
 $cadmin-component-active-bg: $cadmin-primary !default;
 $cadmin-component-active-color: $cadmin-white !default;
@@ -995,11 +936,13 @@ $cadmin-blockquote-small-font-size: $cadmin-small-font-size !default;
 
 $cadmin-blockquote-font-size: calc(#{$cadmin-font-size-base} * 1.25) !default;
 
-$cadmin-hr-border-color: rgba($cadmin-black, 0.1) !default;
+$cadmin-hr-border-color: unquote(
+	'hsl(from #{$cadmin-black} h s l / 0.1)'
+) !default;
 $cadmin-hr-border-width: $cadmin-border-width !default;
 $cadmin-hr-margin-y: $cadmin-spacer !default;
 
-$cadmin-mark-bg: $cadmin-yellow-l3 !default;
+$cadmin-mark-bg: var(--cadmin-yellow-l3) !default;
 $cadmin-mark-color: null !default;
 $cadmin-mark-padding: null !default;
 
@@ -1032,7 +975,9 @@ $cadmin-code-color: $cadmin-red !default;
 $cadmin-code-font-size: 87.5% !default;
 
 $cadmin-kbd-bg: $cadmin-gray-900 !default;
-$cadmin-kbd-box-shadow: inset 0 -1.6px 0 rgba($cadmin-black, 0.25) !default;
+$cadmin-kbd-box-shadow: unquote(
+	'inset 0 -1.6px 0 hsl(from #{$cadmin-black} h s l / 0.25)'
+) !default;
 $cadmin-kbd-color: $cadmin-white !default;
 $cadmin-kbd-font-size: $cadmin-code-font-size !default;
 $cadmin-kbd-padding-x: 6.4px !default;
@@ -1057,7 +1002,9 @@ $cadmin-input-btn-padding-y: 6px !default;
 
 $cadmin-input-btn-focus-width: 3.2px !default;
 
-$cadmin-input-btn-focus-color: rgba($cadmin-component-active-bg, 0.25) !default;
+$cadmin-input-btn-focus-color: unquote(
+	'hsl(from #{$cadmin-component-active-bg} h s l / 0.25)'
+) !default;
 
 $cadmin-input-btn-focus-box-shadow: 0 0 0 $cadmin-input-btn-focus-width
 	$cadmin-input-btn-focus-color !default;

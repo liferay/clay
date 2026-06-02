@@ -21,7 +21,9 @@ $cadmin-card-inner-border-radius: calc(
 	#{$cadmin-card-border-radius} - #{$cadmin-card-border-width}
 ) !default;
 
-$cadmin-card-cap-bg: rgba($cadmin-black, 0.03) !default;
+$cadmin-card-cap-bg: unquote(
+	'hsl(from #{$cadmin-black} h s l / 0.03)'
+) !default;
 $cadmin-card-cap-color: null !default;
 
 // .card-body
@@ -521,7 +523,7 @@ $cadmin-card-interactive: map-deep-merge(
 		transition: $cadmin-card-transition,
 
 		hover: (
-			background-color: #f7f8f9,
+			background-color: $cadmin-gray-100,
 			text-decoration: none,
 		),
 
@@ -535,7 +537,7 @@ $cadmin-card-interactive: map-deep-merge(
 		),
 
 		active: (
-			background-color: #f1f2f5,
+			background-color: $cadmin-gray-200,
 		),
 
 		after-highlight: $cadmin-card-interactive-after-highlight,

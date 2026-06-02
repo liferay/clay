@@ -67,9 +67,8 @@ $cadmin-custom-control-indicator-checked-active-border-color: $cadmin-custom-con
 
 // @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-disabled-bg` instead
 
-$cadmin-custom-control-indicator-disabled-checked-bg: clay-lighten(
-	$cadmin-component-active-bg,
-	32.94
+$cadmin-custom-control-indicator-disabled-checked-bg: unquote(
+	'hsl(from #{$cadmin-component-active-bg} h s calc(l + 32.94))'
 ) !default;
 
 $cadmin-custom-control-indicator-checked-disabled-bg: $cadmin-custom-control-indicator-disabled-checked-bg !default;
@@ -173,7 +172,10 @@ $cadmin-custom-control-label: map-deep-merge(
 		),
 
 		after: (
-			background: no-repeat 50% / #{$cadmin-custom-control-indicator-bg-size},
+			background:
+				unquote(
+					'no-repeat 50% / #{$cadmin-custom-control-indicator-bg-size}'
+				),
 			border-radius: $cadmin-rounded-circle-border-radius,
 			content: '',
 			display: block,
@@ -381,9 +383,9 @@ $cadmin-custom-control-primary-label-text: map-merge(
 
 $cadmin-custom-checkbox-indicator-border-radius: 2px !default; // 2px
 
-$cadmin-custom-checkbox-indicator-icon-checked: clay-icon(
-	check-small,
-	$cadmin-custom-control-indicator-checked-color
+$cadmin-custom-checkbox-indicator-icon-checked: var(
+	--cadmin-custom-checkbox-indicator-icon-checked,
+	clay-icon(check-small, #fff)
 ) !default;
 $cadmin-custom-checkbox-indicator-icon-checked-bg-size: 16px !default;
 
@@ -395,9 +397,9 @@ $cadmin-custom-control-indicator-indeterminate-border-color: $cadmin-custom-cont
 $cadmin-custom-checkbox-indicator-indeterminate-box-shadow: null !default;
 $cadmin-custom-checkbox-indicator-indeterminate-color: $cadmin-custom-control-indicator-checked-color !default;
 
-$cadmin-custom-checkbox-indicator-icon-indeterminate: clay-icon(
-	hr,
-	$cadmin-custom-checkbox-indicator-indeterminate-color
+$cadmin-custom-checkbox-indicator-icon-indeterminate: var(
+	--cadmin-custom-checkbox-indicator-icon-indeterminate,
+	clay-icon(hr, #fff)
 ) !default;
 $cadmin-custom-checkbox-indicator-icon-indeterminate-bg-size: 16px !default;
 
@@ -443,7 +445,10 @@ $cadmin-custom-checkbox: map-deep-merge(
 
 						after: (
 							background-image:
-								clay-icon(check-small, $cadmin-secondary),
+								var(
+									--cadmin-custom-checkbox-indicator-icon-checked-readonly,
+									clay-icon(check-small, #6b6c7e),
+								),
 						),
 					),
 
@@ -502,7 +507,11 @@ $cadmin-custom-checkbox: map-deep-merge(
 						),
 
 						after: (
-							background-image: clay-icon(hr, $cadmin-secondary),
+							background-image:
+								var(
+									--cadmin-custom-checkbox-indicator-icon-indeterminate-readonly,
+									clay-icon(hr, #6b6c7e),
+								),
 						),
 					),
 
@@ -528,9 +537,9 @@ $cadmin-custom-checkbox: map-deep-merge(
 
 $cadmin-custom-radio-indicator-border-radius: 50% !default;
 
-$cadmin-custom-radio-indicator-icon-checked: clay-icon(
-	circle,
-	$cadmin-white
+$cadmin-custom-radio-indicator-icon-checked: var(
+	--cadmin-custom-radio-indicator-icon-checked,
+	clay-icon(circle, #fff)
 ) !default;
 $cadmin-custom-radio-indicator-icon-checked-bg-size: 8px !default;
 

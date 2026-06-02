@@ -501,6 +501,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 								? false
 								: allowsCustomLabel
 						}
+						allowsCustomValue
 						ariaDescriptionId={ariaDescriptionId}
 						as={Labels}
 						closeButtonAriaLabel={closeButtonAriaLabel}

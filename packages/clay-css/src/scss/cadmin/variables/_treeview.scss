@@ -279,7 +279,7 @@ $cadmin-treeview-light: map-deep-merge(
 
 			disabled: (
 				background-color: transparent,
-				color: rgba($cadmin-gray-600, 0.5),
+				color: unquote('hsl(from #{$cadmin-gray-600} h s l / 0.5)'),
 			),
 
 			show: (
@@ -339,7 +339,7 @@ $cadmin-treeview-dark: map-deep-merge(
 
 			disabled: (
 				background-color: transparent,
-				color: rgba($cadmin-secondary-l1, 0.5),
+				color: unquote('hsl(from #{$cadmin-secondary-l1} h s l / 0.5)'),
 			),
 
 			show: (

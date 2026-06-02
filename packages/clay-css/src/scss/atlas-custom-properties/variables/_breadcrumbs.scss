@@ -42,7 +42,10 @@ $breadcrumb-divider-color: $breadcrumb-link-color !default;
 $breadcrumb-divider-font-family: null !default;
 $breadcrumb-divider-font-weight: null !default;
 
-$breadcrumb-divider-svg-icon: clay-icon(angle-right, #6b6c7e) !default;
+$breadcrumb-divider-svg-icon: var(
+	--breadcrumb-divider-svg-icon,
+	clay-icon(angle-right, #6b6c7e)
+) !default;
 $breadcrumb-divider-svg-icon-height: 0.6em !default;
 $breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;
 

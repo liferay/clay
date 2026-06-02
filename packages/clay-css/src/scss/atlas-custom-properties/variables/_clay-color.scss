@@ -508,8 +508,8 @@ $clay-color-slider: map-deep-merge(
 
 			focus: (
 				clay-range-thumb: (
-					box-shadow: #{0 0 0 2px $white,
-					0 0 0 4px $primary-l1},
+					box-shadow:
+						unquote('0 0 0 2px #{$white},0 0 0 4px #{$primary-l1}'),
 				),
 			),
 		),

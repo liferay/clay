@@ -538,12 +538,10 @@ $c-tr-table-focus: map-deep-merge(
 			outline: 0,
 
 			before: (
-				box-shadow: (
-					inset 0 2px 0 0 $primary-l0,
-					inset 0 4px 0 0 $white,
-					inset 0 -2px 0 0 $primary-l0,
-					inset 0 -4px 0 0 $white,
-				),
+				box-shadow:
+					unquote(
+						'inset 0 2px 0 0 #{$primary-l0},inset 0 4px 0 0 #{$white},inset 0 -2px 0 0 #{$primary-l0},inset 0 -4px 0 0 #{$white}'
+					),
 				content: '',
 				display: block,
 				position: absolute,
@@ -557,10 +555,10 @@ $c-tr-table-focus: map-deep-merge(
 
 			first-child: (
 				after: (
-					box-shadow: (
-						inset 2px 0 0 0 $primary-l0,
-						inset 4px 0 0 0 $white,
-					),
+					box-shadow:
+						unquote(
+							'inset 2px 0 0 0 #{$primary-l0},inset 4px 0 0 0 #{$white}'
+						),
 					content: '',
 					display: block,
 					position: absolute,
@@ -575,10 +573,10 @@ $c-tr-table-focus: map-deep-merge(
 
 			last-child: (
 				after: (
-					box-shadow: (
-						inset -2px 0 0 0 $primary-l0,
-						inset -4px 0 0 0 $white,
-					),
+					box-shadow:
+						unquote(
+							'inset -2px 0 0 0 #{$primary-l0},inset -4px 0 0 0 #{$white}'
+						),
 					content: '',
 					display: block,
 					position: absolute,
@@ -1029,7 +1027,7 @@ $table-list-action-link: map-deep-merge(
 			background-color:
 				var(
 					--table-list-action-link-background-color,
-					rgba(0, 0, 0, 0.02)
+					unquote('hsl(from #{$black} h s l / 0.02)')
 				),
 			color: var(--table-list-action-link-hover-color, $gray-900),
 			text-decoration: none,
@@ -1039,7 +1037,7 @@ $table-list-action-link: map-deep-merge(
 			background-color:
 				var(
 					--table-list-action-link-focus-background-color,
-					rgba(0, 0, 0, 0.02)
+					unquote('hsl(from #{$black} h s l / 0.02)')
 				),
 			box-shadow: $component-focus-box-shadow,
 			color: var(--table-list-action-link-focus-color, $gray-900),
@@ -1050,7 +1048,7 @@ $table-list-action-link: map-deep-merge(
 			background-color:
 				var(
 					--table-list-action-link-active-background-color,
-					rgba(0, 0, 0, 0.04)
+					unquote('hsl(from #{$black} h s l / 0.04)')
 				),
 		),
 

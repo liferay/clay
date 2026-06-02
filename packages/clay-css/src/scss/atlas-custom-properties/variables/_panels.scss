@@ -348,8 +348,8 @@ $panel-unstyled-header-link: map-deep-merge(
 		border-radius: 1px,
 
 		focus: (
-			box-shadow: #{0 0 0 4px $body-bg,
-			0 0 0 6px $primary-l0},
+			box-shadow:
+				unquote('0 0 0 4px #{$body-bg}, 0 0 0 6px #{$primary-l0}'),
 		),
 	),
 	$panel-unstyled-header-link

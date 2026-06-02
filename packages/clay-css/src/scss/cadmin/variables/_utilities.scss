@@ -217,7 +217,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-blue !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-blue, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-blue} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -225,7 +228,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-indigo !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-indigo, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-indigo} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -233,7 +239,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-purple !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-purple, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-purple} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -241,7 +250,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-pink !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-pink, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-pink} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -249,7 +261,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-red !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-red, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-red} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -257,7 +272,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-orange !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-orange, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-orange} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -265,7 +283,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-yellow !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-yellow, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-yellow} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -273,7 +294,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-green !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-green, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-green} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -281,7 +305,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-teal !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-teal, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-teal} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -289,7 +316,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-cyan !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-cyan, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-cyan} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -297,7 +327,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-primary !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-primary, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-primary} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -305,8 +338,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-primary-l3 !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-primary-l3, 10%)
-					!important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-primary-l3} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -314,7 +349,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-secondary !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-secondary, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-secondary} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -322,7 +360,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-success !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-success, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-success} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -330,7 +371,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-info !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-info, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-info} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -338,7 +382,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-warning !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-warning, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-warning} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -346,7 +393,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-danger !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-danger, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-danger} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -354,7 +404,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-light !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-light, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-light} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -362,7 +415,10 @@ $cadmin-bg-theme-colors: map-deep-merge(
 			background-color: $cadmin-dark !important,
 
 			hover: (
-				background-color: clay-darken($cadmin-dark, 10%) !important,
+				background-color:
+					unquote(
+						'hsl(from #{$cadmin-dark} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -378,90 +434,6 @@ $cadmin-bg-theme-colors: map-deep-merge(
 );
 
 $cadmin-bg-gradient-theme-colors: () !default;
-$cadmin-bg-gradient-theme-colors: map-deep-merge(
-	(
-		'primary': (
-			background: $cadmin-primary
-				linear-gradient(
-					180deg,
-					clay-mix($cadmin-body-bg, $cadmin-primary, 15%),
-					$cadmin-primary
-				)
-				repeat-x !important,
-		),
-
-		'secondary': (
-			background: $cadmin-secondary
-				linear-gradient(
-					180deg,
-					clay-mix($cadmin-body-bg, $cadmin-secondary, 15%),
-					$cadmin-secondary
-				)
-				repeat-x !important,
-		),
-
-		'success': (
-			background: $cadmin-success
-				linear-gradient(
-					180deg,
-					clay-clay-mix($cadmin-body-bg, $cadmin-success, 15%),
-					$cadmin-success
-				)
-				repeat-x !important,
-		),
-
-		'info': (
-			background: $cadmin-info
-				linear-gradient(
-					180deg,
-					clay-mix($cadmin-body-bg, $cadmin-info, 15%),
-					$cadmin-info
-				)
-				repeat-x !important,
-		),
-
-		'warning': (
-			background: $cadmin-warning
-				linear-gradient(
-					180deg,
-					clay-mix($cadmin-body-bg, $cadmin-warning, 15%),
-					$cadmin-warning
-				)
-				repeat-x !important,
-		),
-
-		'danger': (
-			background: $cadmin-danger
-				linear-gradient(
-					180deg,
-					clay-mix($cadmin-body-bg, $cadmin-danger, 15%),
-					$cadmin-danger
-				)
-				repeat-x !important,
-		),
-
-		'light': (
-			background: $cadmin-light
-				linear-gradient(
-					180deg,
-					clay-mix($cadmin-body-bg, $cadmin-light, 15%),
-					$cadmin-light
-				)
-				repeat-x !important,
-		),
-
-		'dark': (
-			background: $cadmin-dark
-				linear-gradient(
-					180deg,
-					clay-mix($cadmin-body-bg, $cadmin-dark, 15%),
-					$cadmin-dark
-				)
-				repeat-x !important,
-		),
-	),
-	$cadmin-bg-gradient-theme-colors
-);
 
 // Border
 
@@ -572,11 +544,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-blue,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-blue} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -585,11 +555,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-indigo,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-indigo} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -598,11 +566,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-purple,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-purple} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -611,11 +577,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-pink,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-pink} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -624,11 +588,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-red,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-red} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -637,11 +599,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-orange,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-orange} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -650,11 +610,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-yellow,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-yellow} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -663,11 +621,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-green,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-green} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -676,11 +632,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-teal,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-teal} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -689,11 +643,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-cyan,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-cyan} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -702,11 +654,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-primary,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-primary} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -715,11 +665,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-secondary,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-secondary} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -728,11 +676,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-success,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-success} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -741,11 +687,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-info,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-info} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -754,11 +698,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-warning,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-warning} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -767,11 +709,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-danger,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-danger} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -780,11 +720,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-light,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-light} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -793,11 +731,9 @@ $cadmin-text-theme-colors: map-deep-merge(
 
 			hover: (
 				color:
-					clay-darken(
-						$cadmin-dark,
-						$cadmin-emphasized-link-hover-darken-percentage
-					)
-					!important,
+					unquote(
+						'hsl(from #{$cadmin-dark} h s calc(l - 10)) !important'
+					),
 			),
 		),
 
@@ -810,11 +746,11 @@ $cadmin-text-theme-colors: map-deep-merge(
 		),
 
 		'black-50': (
-			color: rgba($cadmin-black, 0.5) !important,
+			color: unquote('hsl(from #{$cadmin-black} h s l / 0.5) !important'),
 		),
 
 		'white-50': (
-			color: rgba($cadmin-white, 0.5) !important,
+			color: unquote('hsl(from #{$cadmin-white} h s l / 0.5) !important'),
 		),
 	),
 	$cadmin-text-theme-colors

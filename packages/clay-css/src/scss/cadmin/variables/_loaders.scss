@@ -45,8 +45,7 @@ $cadmin-loading-animation: map-deep-merge(
 			display: block,
 			height: 1em,
 
-			-webkit-mask: #{conic-gradient(transparent 10%, #000),
-			linear-gradient(#000 0 0) content-box},
+			-webkit-mask: unquote('conic-gradient(transparent 10%, #000), linear-gradient(#000 0 0) content-box'),
 			-webkit-mask-composite: source-out,
 
 			mask-composite: subtract,
@@ -145,8 +144,7 @@ $cadmin-loading-animation-squares: map-deep-merge(
 				height: 1em,
 				left: auto,
 
-				-webkit-mask: #{conic-gradient(transparent 10%, #000),
-				linear-gradient(#000 0 0) content-box},
+				-webkit-mask: unquote('conic-gradient(transparent 10%, #000), linear-gradient(#000 0 0) content-box'),
 				-webkit-mask-composite: source-out,
 
 				mask-composite: subtract,

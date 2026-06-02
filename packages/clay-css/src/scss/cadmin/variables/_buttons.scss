@@ -39,7 +39,7 @@ $cadmin-btn: map-deep-merge(
 		border-style: solid,
 		border-width: $cadmin-btn-border-width,
 		border-radius: clay-enable-rounded($cadmin-btn-border-radius),
-		box-shadow: clay-enable-shadows([$cadmin-btn-box-shadow]),
+		box-shadow: clay-enable-shadows($cadmin-btn-box-shadow),
 		color: $cadmin-body-color,
 		cursor: $cadmin-btn-cursor,
 		display: inline-block,
@@ -78,14 +78,14 @@ $cadmin-btn: map-deep-merge(
 		),
 
 		active: (
-			box-shadow: clay-enable-shadows([$cadmin-btn-active-box-shadow]),
+			box-shadow: clay-enable-shadows($cadmin-btn-active-box-shadow),
 			focus: (
 				box-shadow: c-unset,
 			),
 		),
 
 		active-class: (
-			box-shadow: clay-enable-shadows([$cadmin-btn-active-box-shadow]),
+			box-shadow: clay-enable-shadows($cadmin-btn-active-box-shadow),
 		),
 
 		disabled: (
@@ -399,7 +399,7 @@ $cadmin-btn-block-spacing-y: 8px !default;
 $cadmin-btn-unstyled: () !default;
 $cadmin-btn-unstyled: map-deep-merge(
 	(
-		background-color: rgba(0, 0, 0, 0.001),
+		background-color: unquote('hsl(from #{$cadmin-black} h s l / 0.001)'),
 		border-width: 0px,
 		cursor: $cadmin-btn-cursor,
 		font-size: inherit,
@@ -492,33 +492,33 @@ $cadmin-btn-primary: map-deep-merge(
 		background-color: $cadmin-primary,
 		background-image: clay-enable-gradients($cadmin-primary),
 		border-color: transparent,
-		color: color-yiq($cadmin-primary),
+		color: $cadmin-white,
 		hover: (
 			background-color: $cadmin-primary-d1,
 			background-image: clay-enable-gradients($cadmin-primary-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-primary, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		focus: (
 			background-color: $cadmin-primary-d1,
 			background-image: clay-enable-gradients($cadmin-primary-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-primary, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		active: (
 			background-color: $cadmin-primary-d2,
 			background-image: clay-enable-gradients(none),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-primary, 10%)),
+			color: $cadmin-white,
 		),
 
 		disabled: (
 			background-color: $cadmin-primary,
 			background-image: clay-enable-gradients($cadmin-primary),
 			border-color: transparent,
-			color: color-yiq($cadmin-primary),
+			color: $cadmin-white,
 		),
 	),
 	$cadmin-btn-primary
@@ -529,34 +529,34 @@ $cadmin-btn-secondary: map-deep-merge(
 	(
 		background-color: $cadmin-white,
 		background-image: clay-enable-gradients($cadmin-white),
-		border-color: $cadmin-secondary-l2,
+		border-color: $cadmin-secondary-l0,
 		color: $cadmin-secondary,
 
 		hover: (
 			background-color: $cadmin-gray-100,
 			background-image: clay-enable-gradients($cadmin-gray-100),
-			border-color: $cadmin-secondary-l2,
+			border-color: $cadmin-secondary-l0,
 			color: $cadmin-gray-900,
 		),
 
 		focus: (
 			background-color: $cadmin-gray-100,
 			background-image: clay-enable-gradients($cadmin-gray-100),
-			border-color: $cadmin-secondary-l2,
+			border-color: $cadmin-secondary-l0,
 			color: $cadmin-gray-900,
 		),
 
 		active: (
 			background-color: $cadmin-gray-200,
 			background-image: clay-enable-gradients(none),
-			border-color: $cadmin-secondary-l2,
+			border-color: $cadmin-secondary-l0,
 			color: $cadmin-gray-900,
 		),
 
 		disabled: (
 			background-color: $cadmin-white,
 			background-image: clay-enable-gradients($cadmin-white),
-			border-color: $cadmin-secondary-l2,
+			border-color: $cadmin-secondary-l0,
 			color: $cadmin-secondary,
 		),
 	),
@@ -569,33 +569,33 @@ $cadmin-btn-success: map-deep-merge(
 		background-color: $cadmin-success,
 		background-image: clay-enable-gradients($cadmin-success),
 		border-color: transparent,
-		color: color-yiq($cadmin-success),
+		color: $cadmin-white,
 		hover: (
 			background-color: $cadmin-success-d1,
 			background-image: clay-enable-gradients($cadmin-success-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-success, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		focus: (
 			background-color: $cadmin-success-d1,
 			background-image: clay-enable-gradients($cadmin-success-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-success, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		active: (
 			background-color: $cadmin-success-d2,
 			background-image: clay-enable-gradients(none),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-success, 10%)),
+			color: $cadmin-white,
 		),
 
 		disabled: (
 			background-color: $cadmin-success,
 			background-image: clay-enable-gradients($cadmin-success),
 			border-color: transparent,
-			color: color-yiq($cadmin-success),
+			color: $cadmin-white,
 		),
 	),
 	$cadmin-btn-success
@@ -607,33 +607,33 @@ $cadmin-btn-info: map-deep-merge(
 		background-color: $cadmin-info,
 		background-image: clay-enable-gradients($cadmin-info),
 		border-color: transparent,
-		color: color-yiq($cadmin-info),
+		color: $cadmin-white,
 		hover: (
 			background-color: $cadmin-info-d1,
 			background-image: clay-enable-gradients($cadmin-info-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-info, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		focus: (
 			background-color: $cadmin-info-d1,
 			background-image: clay-enable-gradients($cadmin-info-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-info, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		active: (
 			background-color: $cadmin-info-d2,
 			background-image: clay-enable-gradients(none),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-info, 10%)),
+			color: $cadmin-white,
 		),
 
 		disabled: (
 			background-color: $cadmin-info,
 			background-image: clay-enable-gradients($cadmin-info),
 			border-color: transparent,
-			color: color-yiq($cadmin-info),
+			color: $cadmin-white,
 		),
 	),
 	$cadmin-btn-info
@@ -645,34 +645,33 @@ $cadmin-btn-warning: map-deep-merge(
 		background-color: $cadmin-warning,
 		background-image: clay-enable-gradients($cadmin-warning),
 		border-color: transparent,
-		color: color-yiq($cadmin-warning),
+		color: $cadmin-white,
 		hover: (
 			background-color: $cadmin-warning-d1,
 			background-image: clay-enable-gradients($cadmin-warning-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-warning, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		focus: (
 			background-color: $cadmin-warning-d1,
 			background-image: clay-enable-gradients($cadmin-warning-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-warning, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		active: (
 			background-color: $cadmin-warning-d2,
-			background-image:
-				clay-enable-gradients(clay-darken($cadmin-warning, 10%)),
+			background-image: clay-enable-gradients($cadmin-warning-d2),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-warning, 10%)),
+			color: $cadmin-white,
 		),
 
 		disabled: (
 			background-color: $cadmin-warning,
 			background-image: clay-enable-gradients($cadmin-warning),
 			border-color: transparent,
-			color: color-yiq($cadmin-warning),
+			color: $cadmin-white,
 		),
 	),
 	$cadmin-btn-warning
@@ -684,33 +683,33 @@ $cadmin-btn-danger: map-deep-merge(
 		background-color: $cadmin-danger,
 		background-image: clay-enable-gradients($cadmin-danger),
 		border-color: transparent,
-		color: color-yiq($cadmin-danger),
+		color: $cadmin-white,
 		hover: (
 			background-color: $cadmin-danger-d1,
 			background-image: clay-enable-gradients($cadmin-danger-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-danger, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		focus: (
 			background-color: $cadmin-danger-d1,
 			background-image: clay-enable-gradients($cadmin-danger-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-danger, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		active: (
 			background-color: $cadmin-danger-d2,
 			background-image: clay-enable-gradients(none),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-danger, 10%)),
+			color: $cadmin-white,
 		),
 
 		disabled: (
 			background-color: $cadmin-danger,
 			background-image: clay-enable-gradients(none),
 			border-color: transparent,
-			color: color-yiq($cadmin-danger),
+			color: $cadmin-white,
 		),
 	),
 	$cadmin-btn-danger
@@ -728,28 +727,28 @@ $cadmin-btn-light: map-deep-merge(
 			background-color: $cadmin-light-d1,
 			background-image: clay-enable-gradients($cadmin-light-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-light, 7.5%)),
+			color: $cadmin-gray-900,
 		),
 
 		focus: (
 			background-color: $cadmin-light-d1,
 			background-image: clay-enable-gradients($cadmin-light-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-light, 7.5%)),
+			color: $cadmin-gray-900,
 		),
 
 		active: (
 			background-color: $cadmin-light-d2,
 			background-image: clay-enable-gradients(none),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-light, 10%)),
+			color: $cadmin-gray-900,
 		),
 
 		disabled: (
 			background-color: $cadmin-light,
 			background-image: clay-enable-gradients($cadmin-light),
 			border-color: transparent,
-			color: color-yiq($cadmin-light),
+			color: $cadmin-gray-900,
 		),
 	),
 	$cadmin-btn-light
@@ -761,33 +760,33 @@ $cadmin-btn-dark: map-deep-merge(
 		background-color: $cadmin-dark,
 		background-image: clay-enable-gradients($cadmin-dark),
 		border-color: transparent,
-		color: color-yiq($cadmin-dark),
+		color: $cadmin-white,
 		hover: (
 			background-color: $cadmin-dark-d1,
 			background-image: clay-enable-gradients($cadmin-dark-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-dark, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		focus: (
 			background-color: $cadmin-dark-d1,
 			background-image: clay-enable-gradients($cadmin-dark-d1),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-dark, 7.5%)),
+			color: $cadmin-white,
 		),
 
 		active: (
 			background-color: $cadmin-dark-d2,
 			background-image: clay-enable-gradients(none),
 			border-color: transparent,
-			color: color-yiq(clay-darken($cadmin-dark, 10%)),
+			color: $cadmin-white,
 		),
 
 		disabled: (
 			background-color: $cadmin-dark,
 			background-image: clay-enable-gradients($cadmin-dark),
 			border-color: transparent,
-			color: color-yiq($cadmin-dark),
+			color: $cadmin-white,
 		),
 	),
 	$cadmin-btn-dark
@@ -799,7 +798,7 @@ $cadmin-btn-link: () !default;
 $cadmin-btn-link: map-deep-merge(
 	(
 		border-radius: 1px,
-		box-shadow: clay-enable-shadows([none]),
+		box-shadow: clay-enable-shadows(none),
 		color: $cadmin-link-color,
 		font-weight: $cadmin-font-weight-normal,
 		text-decoration: $cadmin-link-decoration,
@@ -815,7 +814,7 @@ $cadmin-btn-link: map-deep-merge(
 		),
 
 		active: (
-			box-shadow: clay-enable-shadows([none]),
+			box-shadow: clay-enable-shadows(none),
 		),
 
 		disabled: (
@@ -870,127 +869,151 @@ $cadmin-btn-palette: map-deep-merge(
 		),
 
 		'.btn-translucent.btn-primary': (
-			background-color: rgba($cadmin-primary-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-primary-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-primary-d1,
 
 			hover: (
-				background-color: rgba($cadmin-primary-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary-d1} h s l / 0.06)'),
 				color: $cadmin-primary-d1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-primary-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary-d1} h s l / 0.06)'),
 				color: $cadmin-primary-d1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-primary-d1, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary-d1} h s l / 0.08)'),
 				color: $cadmin-primary-d1,
 			),
 		),
 
 		'.btn-translucent.btn-info, .btn-beta': (
-			background-color: rgba($cadmin-info-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-info-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-info-d1,
 
 			hover: (
-				background-color: rgba($cadmin-info-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-info-d1} h s l / 0.06)'),
 				color: $cadmin-info-d1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-info-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-info-d1} h s l / 0.06)'),
 				color: $cadmin-info-d1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-info-d1, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-info-d1} h s l / 0.08)'),
 				color: $cadmin-info-d1,
 			),
 		),
 
 		'.btn-translucent.btn-success': (
-			background-color: rgba($cadmin-success-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-success-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-success-d1,
 
 			hover: (
-				background-color: rgba($cadmin-success-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-success-d1} h s l / 0.06)'),
 				color: $cadmin-success-d1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-success-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-success-d1} h s l / 0.06)'),
 				color: $cadmin-success-d1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-success-d1, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-success-d1} h s l / 0.08)'),
 				color: $cadmin-success-d1,
 			),
 		),
 
 		'.btn-translucent.btn-warning': (
-			background-color: rgba($cadmin-warning-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-warning-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-warning-d1,
 
 			hover: (
-				background-color: rgba($cadmin-warning-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-warning-d1} h s l / 0.06)'),
 				color: $cadmin-warning-d1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-warning-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-warning-d1} h s l / 0.06)'),
 				color: $cadmin-warning-d1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-warning-d1, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-warning-d1} h s l / 0.08)'),
 				color: $cadmin-warning-d1,
 			),
 		),
 
 		'.btn-translucent.btn-danger': (
-			background-color: rgba($cadmin-danger-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-danger-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-danger-d1,
 
 			hover: (
-				background-color: rgba($cadmin-danger-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-danger-d1} h s l / 0.06)'),
 				color: $cadmin-danger-d1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-danger-d1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-danger-d1} h s l / 0.06)'),
 				color: $cadmin-danger-d1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-danger-d1, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-danger-d1} h s l / 0.08)'),
 				color: $cadmin-danger-d1,
 			),
 		),
 
 		'%clay-dark-btn-translucent-primary': (
-			background-color: rgba($cadmin-primary-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-primary-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-primary-l1,
 
 			hover: (
-				background-color: rgba($cadmin-primary-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary-l2} h s l / 0.06)'),
 				color: $cadmin-primary-l1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-primary-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary-l2} h s l / 0.06)'),
 				color: $cadmin-primary-l1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-primary-l2, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary-l2} h s l / 0.08)'),
 				color: $cadmin-primary-l1,
 			),
 		),
@@ -1004,22 +1027,26 @@ $cadmin-btn-palette: map-deep-merge(
 		),
 
 		'%clay-dark-btn-translucent-info': (
-			background-color: rgba($cadmin-info-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-info-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-info-l1,
 
 			hover: (
-				background-color: rgba($cadmin-info-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-info-l2} h s l / 0.06)'),
 				color: $cadmin-info-l1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-info-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-info-l2} h s l / 0.06)'),
 				color: $cadmin-info-l1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-info-l2, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-info-l2} h s l / 0.08)'),
 				color: $cadmin-info-l1,
 			),
 		),
@@ -1033,22 +1060,26 @@ $cadmin-btn-palette: map-deep-merge(
 		),
 
 		'%clay-dark-btn-translucent-success': (
-			background-color: rgba($cadmin-success-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-success-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-success-l1,
 
 			hover: (
-				background-color: rgba($cadmin-success-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-success-l2} h s l / 0.06)'),
 				color: $cadmin-success-l1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-success-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-success-l2} h s l / 0.06)'),
 				color: $cadmin-success-l1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-success-l2, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-success-l2} h s l / 0.08)'),
 				color: $cadmin-success-l1,
 			),
 		),
@@ -1062,22 +1093,26 @@ $cadmin-btn-palette: map-deep-merge(
 		),
 
 		'%clay-dark-btn-translucent-warning': (
-			background-color: rgba($cadmin-warning-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-warning-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-warning-l1,
 
 			hover: (
-				background-color: rgba($cadmin-warning-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-warning-l2} h s l / 0.06)'),
 				color: $cadmin-warning-l1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-warning-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-warning-l2} h s l / 0.06)'),
 				color: $cadmin-warning-l1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-warning-l2, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-warning-l2} h s l / 0.08)'),
 				color: $cadmin-warning-l1,
 			),
 		),
@@ -1091,22 +1126,26 @@ $cadmin-btn-palette: map-deep-merge(
 		),
 
 		'%clay-dark-btn-translucent-danger': (
-			background-color: rgba($cadmin-danger-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-danger-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-danger-l1,
 
 			hover: (
-				background-color: rgba($cadmin-danger-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-danger-l2} h s l / 0.06)'),
 				color: $cadmin-danger-l1,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-danger-l2, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-danger-l2} h s l / 0.06)'),
 				color: $cadmin-danger-l1,
 			),
 
 			active: (
-				background-color: rgba($cadmin-danger-l2, 0.08),
+				background-color:
+					unquote('hsl(from #{$cadmin-danger-l2} h s l / 0.08)'),
 				color: $cadmin-danger-l1,
 			),
 		),
@@ -1131,19 +1170,22 @@ $cadmin-btn-outline-primary: map-deep-merge(
 		color: $cadmin-primary,
 
 		hover: (
-			background-color: rgba($cadmin-primary, 0.06),
+			background-color:
+				unquote('hsl(from #{$cadmin-primary} h s l / 0.06)'),
 			border-color: $cadmin-primary,
 			color: $cadmin-primary-d1,
 		),
 
 		focus: (
-			background-color: rgba($cadmin-primary, 0.06),
+			background-color:
+				unquote('hsl(from #{$cadmin-primary} h s l / 0.06)'),
 			box-shadow: map-get($cadmin-btn-primary, focus-box-shadow),
 			color: $cadmin-primary-d1,
 		),
 
 		active: (
-			background-color: rgba($cadmin-primary, 0.12),
+			background-color:
+				unquote('hsl(from #{$cadmin-primary} h s l / 0.12)'),
 			border-color: $cadmin-primary,
 			color: $cadmin-primary-d1,
 		),
@@ -1164,13 +1206,15 @@ $cadmin-btn-outline-secondary: map-deep-merge(
 		color: $cadmin-secondary,
 
 		hover: (
-			background-color: rgba($cadmin-gray-900, 0.06),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.06)'),
 			border-color: transparent,
 			color: map-get(map-get($cadmin-btn-secondary, hover), color),
 		),
 
 		focus: (
-			background-color: rgba($cadmin-gray-900, 0.06),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.06)'),
 			border-color: transparent,
 			box-shadow:
 				map-get(map-get($cadmin-btn-secondary, focus), box-shadow),
@@ -1178,7 +1222,8 @@ $cadmin-btn-outline-secondary: map-deep-merge(
 		),
 
 		active: (
-			background-color: rgba($cadmin-gray-900, 0.12),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.12)'),
 			border-color: transparent,
 			color: map-get(map-get($cadmin-btn-secondary, active), color),
 		),
@@ -1202,7 +1247,7 @@ $cadmin-btn-outline-success: map-deep-merge(
 			background-color:
 				map-get(map-get($cadmin-btn-success, hover), background-color),
 			border-color: $cadmin-success,
-			color: color-yiq($cadmin-success),
+			color: $cadmin-white,
 		),
 
 		focus: (
@@ -1215,7 +1260,7 @@ $cadmin-btn-outline-success: map-deep-merge(
 			background-color:
 				map-get(map-get($cadmin-btn-success, active), background-color),
 			border-color: $cadmin-success,
-			color: color-yiq($cadmin-success),
+			color: $cadmin-white,
 		),
 
 		disabled: (
@@ -1237,7 +1282,7 @@ $cadmin-btn-outline-info: map-deep-merge(
 			background-color:
 				map-get(map-get($cadmin-btn-info, hover), background-color),
 			border-color: $cadmin-info,
-			color: color-yiq($cadmin-info),
+			color: $cadmin-white,
 		),
 
 		focus: (
@@ -1252,7 +1297,7 @@ $cadmin-btn-outline-info: map-deep-merge(
 				map-get(map-get($cadmin-btn-info, active), background-color),
 			border-color: $cadmin-info,
 			box-shadow: map-get(map-get($cadmin-btn-info, active), box-shadow),
-			color: color-yiq($cadmin-info),
+			color: $cadmin-white,
 		),
 
 		disabled: (
@@ -1274,7 +1319,7 @@ $cadmin-btn-outline-warning: map-deep-merge(
 			background-color:
 				map-get(map-get($cadmin-btn-warning, hover), background-color),
 			border-color: $cadmin-warning,
-			color: color-yiq($cadmin-warning),
+			color: $cadmin-white,
 		),
 
 		focus: (
@@ -1290,7 +1335,7 @@ $cadmin-btn-outline-warning: map-deep-merge(
 			border-color: $cadmin-warning,
 			box-shadow:
 				map-get(map-get($cadmin-btn-warning, active), box-shadow),
-			color: color-yiq($cadmin-warning),
+			color: $cadmin-white,
 		),
 
 		disabled: (
@@ -1312,7 +1357,7 @@ $cadmin-btn-outline-danger: map-deep-merge(
 			background-color:
 				map-get(map-get($cadmin-btn-danger, hover), background-color),
 			border-color: $cadmin-danger,
-			color: color-yiq($cadmin-danger),
+			color: $cadmin-white,
 		),
 
 		focus: (
@@ -1326,7 +1371,7 @@ $cadmin-btn-outline-danger: map-deep-merge(
 			background-color:
 				map-get(map-get($cadmin-btn-danger, active), background-color),
 			border-color: $cadmin-danger,
-			color: color-yiq($cadmin-danger),
+			color: $cadmin-white,
 		),
 
 		disabled: (
@@ -1348,7 +1393,7 @@ $cadmin-btn-outline-light: map-deep-merge(
 			background-color:
 				map-get(map-get($cadmin-btn-light, hover), background-color),
 			border-color: $cadmin-light,
-			color: color-yiq($cadmin-light),
+			color: $cadmin-gray-900,
 		),
 
 		focus: (
@@ -1363,15 +1408,7 @@ $cadmin-btn-outline-light: map-deep-merge(
 				map-get(map-get($cadmin-btn-light, active), background-color),
 			border-color: $cadmin-light,
 			box-shadow: map-get(map-get($cadmin-btn-light, active), box-shadow),
-			color: color-yiq($cadmin-light),
-			focus: (
-				box-shadow:
-					clay-enable-shadows(
-						[ $cadmin-btn-active-box-shadow#{','} 0 0 0 $cadmin-btn-focus-width
-							rgba($cadmin-light, 0.5),
-						0 0 0 $cadmin-btn-focus-width rgba($cadmin-light, 0.5)]
-					),
-			),
+			color: $cadmin-gray-900,
 		),
 
 		disabled: (
@@ -1393,7 +1430,7 @@ $cadmin-btn-outline-dark: map-deep-merge(
 			background-color:
 				map-get(map-get($cadmin-btn-dark, hover), background-color),
 			border-color: $cadmin-dark,
-			color: color-yiq($cadmin-dark),
+			color: $cadmin-white,
 		),
 
 		focus: (
@@ -1408,17 +1445,7 @@ $cadmin-btn-outline-dark: map-deep-merge(
 				map-get(map-get($cadmin-btn-dark, active), background-color),
 			border-color: $cadmin-dark,
 			box-shadow: map-get(map-get($cadmin-btn-dark, active), box-shadow),
-			color: color-yiq($cadmin-dark),
-			focus: (
-				box-shadow:
-					if(
-						$cadmin-enable-shadows and $cadmin-btn-active-box-shadow
-							!= none,
-						$cadmin-btn-active-box-shadow#{','} 0 0 0 $cadmin-btn-focus-width
-							rgba($cadmin-dark, 0.5),
-						0 0 0 $cadmin-btn-focus-width rgba($cadmin-dark, 0.5)
-					),
-			),
+			color: $cadmin-white,
 		),
 
 		disabled: (
@@ -1474,17 +1501,20 @@ $cadmin-btn-outline-palette: map-deep-merge(
 			color: $cadmin-primary-l1,
 
 			hover: (
-				background-color: rgba($cadmin-primary-l1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary-l1} h s l / 0.06)'),
 				color: $cadmin-primary-l2,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-primary-l1, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary-l1} h s l / 0.06)'),
 				color: $cadmin-primary-l2,
 			),
 
 			active: (
-				background-color: rgba($cadmin-primary-l1, 0.12),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary-l1} h s l / 0.12)'),
 				color: $cadmin-primary-l2,
 			),
 
@@ -1503,17 +1533,20 @@ $cadmin-btn-outline-palette: map-deep-merge(
 			color: $cadmin-secondary-l1,
 
 			hover: (
-				background-color: rgba($cadmin-white, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-white} h s l / 0.06)'),
 				color: $cadmin-white,
 			),
 
 			focus: (
-				background-color: rgba($cadmin-white, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-white} h s l / 0.06)'),
 				color: $cadmin-white,
 			),
 
 			active: (
-				background-color: rgba($cadmin-white, 0.12),
+				background-color:
+					unquote('hsl(from #{$cadmin-white} h s l / 0.12)'),
 				color: $cadmin-white,
 			),
 

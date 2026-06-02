@@ -179,8 +179,7 @@ $sheet-subtitle-link: map-deep-merge(
 		),
 
 		focus: (
-			box-shadow: #{0 0 0 4px $white,
-			0 0 0 6px $primary-l0},
+			box-shadow: unquote('0 0 0 4px #{$white}, 0 0 0 6px #{$primary-l0}'),
 			outline: 0,
 		),
 	),

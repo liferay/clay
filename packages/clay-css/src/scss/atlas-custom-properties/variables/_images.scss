@@ -2,7 +2,9 @@ $thumbnail-bg: $body-bg !default;
 $thumbnail-border-color: $gray-300 !default;
 $thumbnail-border-radius: $border-radius !default;
 $thumbnail-border-width: $border-width !default;
-$thumbnail-box-shadow: 0 1px 2px unquote('hsl(from #{$black} h s l / 0.075)') !default;
+$thumbnail-box-shadow: unquote(
+	'0 1px 2px hsl(from #{$black} h s l / 0.075)'
+) !default;
 $thumbnail-padding: 0.25rem !default;
 
 $figure-caption-color: $gray-600 !default;

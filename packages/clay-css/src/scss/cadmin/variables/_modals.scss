@@ -1,5 +1,7 @@
-$cadmin-modal-backdrop-bg: $cadmin-gray-800 !default;
-$cadmin-modal-backdrop-opacity: 0.8 !default;
+$cadmin-modal-backdrop-bg: var(
+	--cadmin-modal-backdrop-background-color
+) !default;
+$cadmin-modal-backdrop-opacity: var(--cadmin-modal-backdrop-opacity) !default;
 
 $cadmin-modal-backdrop: () !default;
 $cadmin-modal-backdrop: map-deep-merge(
@@ -45,9 +47,13 @@ $cadmin-modal-content-inner-border-radius: calc(
 	#{$cadmin-modal-content-border-radius} - #{$cadmin-modal-content-border-width}
 ) !default;
 
-$cadmin-modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
+$cadmin-modal-content-box-shadow-xs: unquote(
+	'0 0 3px 1px hsl(from #{$cadmin-black} h s l / 0.2)'
+) !default;
 
-$cadmin-modal-content-box-shadow-sm-up: 0 8px 16px rgba($cadmin-black, 0.5) !default;
+$cadmin-modal-content-box-shadow-sm-up: unquote(
+	'0 8px 16px hsl(from #{$cadmin-black} h s l / 0.5)'
+) !default;
 
 $cadmin-modal-content: () !default;
 $cadmin-modal-content: map-deep-merge(

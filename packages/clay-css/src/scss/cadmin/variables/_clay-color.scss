@@ -96,15 +96,18 @@ $cadmin-clay-color-dropdown-menu-close: map-deep-merge(
 		opacity: 1,
 
 		hover: (
-			background-color: rgba($cadmin-gray-900, 0.03),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 		),
 
 		focus: (
-			background-color: rgba($cadmin-gray-900, 0.03),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 		),
 
 		active: (
-			background-color: rgba($cadmin-gray-900, 0.06),
+			background-color:
+				unquote('hsl(from #{$cadmin-gray-900} h s l / 0.06)'),
 		),
 
 		disabled: (
@@ -265,8 +268,10 @@ $cadmin-clay-color-map: map-merge(
 $cadmin-clay-color-map-hsb: () !default;
 $cadmin-clay-color-map-hsb: map-merge(
 	(
-		background-image: #{linear-gradient(to top, #000, rgba(0, 0, 0, 0)),
-		linear-gradient(to right, #fff, rgba(255, 255, 255, 0))},
+		background-image:
+			unquote(
+				'linear-gradient(to top, #000, rgba(0, 0, 0, 0)), linear-gradient(to right, #fff, rgba(255, 255, 255, 0))'
+			),
 	),
 	$cadmin-clay-color-map-hsb
 );
@@ -434,8 +439,10 @@ $cadmin-clay-color-slider: map-deep-merge(
 
 			focus: (
 				clay-range-thumb: (
-					box-shadow: #{0 0 0 2px $cadmin-white,
-					0 0 0 4px $cadmin-primary-l1},
+					box-shadow:
+						unquote(
+							'0 0 0 2px #{$cadmin-white}, 0 0 0 4px #{$cadmin-primary-l1}'
+						),
 				),
 			),
 		),
@@ -475,26 +482,11 @@ $cadmin-clay-color-slider-alpha: map-deep-merge(
 
 			clay-range-track: (
 				background-color: $cadmin-white,
-				background-image: #{linear-gradient(
-						45deg,
-						#e7e7ed 25%,
-						transparent 25%
+				background-image:
+					unquote(
+						'linear-gradient(45deg, #e7e7ed 25%, transparent 25%), linear-gradient(-45deg, #e7e7ed 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e7e7ed 75%), linear-gradient(-45deg, transparent 75%, #e7e7ed 75%)'
 					),
-				linear-gradient(
-					-45deg,
-					#e7e7ed 25%,
-					transparent 25%,
-				),
-				linear-gradient(
-					45deg,
-					transparent 75%,
-					#e7e7ed 75%,
-				),
-				linear-gradient(-45deg, transparent 75%, #e7e7ed 75%)},
-				background-position: #{0 0,
-				0 4px,
-				4px -4px,
-				-4px 0px},
+				background-position: unquote('0 0, 0 4px, 4px -4px, -4px 0px'),
 				background-size: 8px 8px,
 			),
 

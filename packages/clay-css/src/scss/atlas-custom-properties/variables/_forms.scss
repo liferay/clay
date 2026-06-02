@@ -955,7 +955,10 @@ $input-danger-label-color: null !default;
 
 $input-danger-select-icon-color: $input-danger-border-color !default;
 
-$input-danger-select-icon: clay-icon(caret-double-l, #f48989) !default;
+$input-danger-select-icon: var(
+	--input-danger-select-icon,
+	clay-icon(caret-double-l, #f48989)
+) !default;
 
 $input-danger-select: () !default;
 $input-danger-select: map-deep-merge(
@@ -1143,7 +1146,10 @@ $input-warning-label-color: null !default;
 
 $input-warning-select-icon-color: $input-warning-border-color !default;
 
-$input-warning-select-icon: clay-icon(caret-double-l, #ff8f39) !default;
+$input-warning-select-icon: var(
+	--input-warning-select-icon,
+	clay-icon(caret-double-l, #ff8f39)
+) !default;
 
 $input-warning-select: () !default;
 $input-warning-select: map-deep-merge(
@@ -1331,7 +1337,10 @@ $input-success-label-color: null !default;
 
 $input-success-select-icon-color: $input-success-border-color !default;
 
-$input-success-select-icon: clay-icon(caret-double-l, #5aca75) !default;
+$input-success-select-icon: var(
+	--input-success-select-icon,
+	clay-icon(caret-double-l, #5aca75)
+) !default;
 
 $input-success-select: () !default;
 $input-success-select: map-deep-merge(
@@ -1461,15 +1470,24 @@ $input-select-focus-bg: $input-focus-bg !default;
 
 $input-select-icon-color: $gray-600 !default;
 
-$input-select-icon: clay-icon(caret-double-l, #6b6c7e) !default;
+$input-select-icon: var(
+	--input-select-icon,
+	clay-icon(caret-double-l, #6b6c7e)
+) !default;
 
 $input-select-icon-focus-color: $input-select-icon-color !default;
 
-$input-select-icon-focus: clay-icon(caret-double-l, #6b6c7e) !default;
+$input-select-icon-focus: var(
+	--input-select-icon-focus,
+	clay-icon(caret-double-l, #6b6c7e)
+) !default;
 
 $input-select-icon-disabled-color: $gray-500 !default;
 
-$input-select-icon-disabled: clay-icon(caret-double-l, #a7a9bc) !default;
+$input-select-icon-disabled: var(
+	--input-select-icon-disabled,
+	clay-icon(caret-double-l, #a7a9bc)
+) !default;
 
 $input-select: () !default;
 $input-select: map-deep-merge(
@@ -1561,7 +1579,11 @@ $form-control-select-palette: map-deep-merge(
 			),
 
 			focus: (
-				background-image: clay-icon(caret-double-l, #272833),
+				background-image:
+					var(
+						--form-control-select-secondary-icon-focus,
+						clay-icon(caret-double-l, #272833)
+					),
 				color: $gray-900,
 			),
 
@@ -1573,7 +1595,11 @@ $form-control-select-palette: map-deep-merge(
 
 			show: (
 				background-color: $gray-200,
-				background-image: clay-icon(caret-double-l, #272833),
+				background-image:
+					var(
+						--form-control-select-secondary-icon-show,
+						clay-icon(caret-double-l, #272833)
+					),
 				color: $gray-900,
 			),
 		),

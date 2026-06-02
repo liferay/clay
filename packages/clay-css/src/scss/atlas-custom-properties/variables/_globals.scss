@@ -754,7 +754,9 @@ $code-color: var(--code-color) !default;
 $code-font-size: var(--code-font-size) !default;
 
 $kbd-bg: $gray-900 !default;
-$kbd-box-shadow: inset 0 -0.1rem 0 unquote('rgb(from #{$black} r g b / 0.25)') !default;
+$kbd-box-shadow: unquote(
+	'inset 0 -0.1rem 0 hsl(from #{$black} h s l / 0.25)'
+) !default;
 $kbd-color: $white !default;
 $kbd-font-size: $code-font-size !default;
 $kbd-padding-x: 0.4rem !default;

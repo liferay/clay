@@ -1,0 +1,41 @@
+@if (variable-exists(cadmin-c-root)) {
+	html#{$cadmin-selector} {
+		&:root .cadmin {
+			@include clay-css($cadmin-c-root);
+		}
+	}
+
+	html#{$cadmin-selector} {
+		&[data-color-scheme='light']:root .cadmin {
+			color-scheme: light;
+		}
+	}
+}
+
+@if (variable-exists(cadmin-c-dark)) {
+	@media (prefers-color-scheme: dark) {
+		html#{$cadmin-selector}:root .cadmin {
+			@include clay-css($cadmin-c-dark);
+		}
+	}
+
+	html#{$cadmin-selector} {
+		&[data-color-scheme='dark']:root .cadmin {
+			@include clay-css($cadmin-c-dark);
+		}
+	}
+}
+
+@if (variable-exists(cadmin-c-dark-high-contrast)) {
+	@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+		html#{$cadmin-selector}:root .cadmin {
+			@include clay-css($cadmin-c-dark-high-contrast);
+		}
+	}
+
+	html#{$cadmin-selector} {
+		&[data-color-scheme='dark-high-contrast']:root .cadmin {
+			@include clay-css($cadmin-c-dark-high-contrast);
+		}
+	}
+}

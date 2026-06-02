@@ -1,7 +1,14 @@
-:root {
-	@if (variable-exists(c-root)) {
+@if (variable-exists(c-root)) {
+	:root {
 		@include clay-css($c-root);
-	} @else {
+	}
+
+	[data-color-scheme='light']:root,
+	:root [data-color-scheme='light'] {
+		color-scheme: light;
+	}
+} @else {
+	:root {
 		// Custom variable values only support SassScript inside `#{}`
 
 		@each $color, $value in $colors {
@@ -20,5 +27,31 @@
 
 		--font-family-sans-serif: #{inspect($font-family-sans-serif)};
 		--font-family-monospace: #{inspect($font-family-monospace)};
+	}
+}
+
+@if (variable-exists(c-dark)) {
+	@media (prefers-color-scheme: dark) {
+		:root {
+			@include clay-css($c-dark);
+		}
+	}
+
+	[data-color-scheme='dark']:root,
+	:root [data-color-scheme='dark'] {
+		@include clay-css($c-dark);
+	}
+}
+
+@if (variable-exists(c-dark-high-contrast)) {
+	@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+		:root {
+			@include clay-css($c-dark-high-contrast);
+		}
+	}
+
+	[data-color-scheme='dark-high-contrast']:root,
+	:root [data-color-scheme='dark-high-contrast'] {
+		@include clay-css($c-dark-high-contrast);
 	}
 }

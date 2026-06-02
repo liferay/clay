@@ -394,7 +394,10 @@ $custom-control-primary-label-text: map-deep-merge(
 
 $custom-checkbox-indicator-border-radius: 0.125rem !default;
 
-$custom-checkbox-indicator-icon-checked: clay-icon(check-small, #fff) !default;
+$custom-checkbox-indicator-icon-checked: var(
+	--custom-checkbox-indicator-icon-checked,
+	clay-icon(check-small, #fff)
+) !default;
 $custom-checkbox-indicator-icon-checked-bg-size: 1rem !default;
 
 $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
@@ -405,7 +408,10 @@ $custom-control-indicator-indeterminate-border-color: $custom-control-indicator-
 $custom-checkbox-indicator-indeterminate-box-shadow: none !default;
 $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
 
-$custom-checkbox-indicator-icon-indeterminate: clay-icon(hr, #fff) !default;
+$custom-checkbox-indicator-icon-indeterminate: var(
+	--custom-checkbox-indicator-icon-indeterminate,
+	clay-icon(hr, #fff)
+) !default;
 $custom-checkbox-indicator-icon-indeterminate-bg-size: 1rem !default;
 
 $custom-checkbox: () !default;
@@ -451,7 +457,11 @@ $custom-checkbox: map-deep-merge(
 						),
 
 						after: (
-							background-image: clay-icon(check-small, #6b6c7e),
+							background-image:
+								var(
+									--custom-checkbox-indicator-icon-checked-readonly,
+									clay-icon(check-small, #cdced9)
+								),
 						),
 					),
 
@@ -507,7 +517,11 @@ $custom-checkbox: map-deep-merge(
 						),
 
 						after: (
-							background-image: clay-icon(hr, #6b6c7e),
+							background-image:
+								var(
+									--custom-checkbox-indicator-icon-indeterminate-readonly,
+									clay-icon(hr, #cdced9)
+								),
 						),
 					),
 
@@ -533,7 +547,10 @@ $custom-checkbox: map-deep-merge(
 
 $custom-radio-indicator-border-radius: 50% !default;
 
-$custom-radio-indicator-icon-checked: clay-icon(circle, #fff) !default;
+$custom-radio-indicator-icon-checked: var(
+	--custom-radio-indicator-icon-checked,
+	clay-icon(circle, #fff)
+) !default;
 $custom-radio-indicator-icon-checked-bg-size: 0.5rem !default;
 
 $custom-radio-indicator-disabled-border-color: $custom-control-indicator-disabled-bg !default;
@@ -665,8 +682,9 @@ $custom-select-border-width: if(
 
 // @deprecated as of v3.x with no replacement
 
-$custom-select-box-shadow: inset 0 1px 2px
-	unquote('hsl(from #{$black} h s l / 0.075)') !default;
+$custom-select-box-shadow: unquote(
+	'inset 0 1px 2px hsl(from #{$black} h s l / 0.075)'
+) !default;
 
 // @deprecated as of v3.x with no replacement
 
@@ -882,8 +900,9 @@ $custom-range-track-border-radius: 1rem !default;
 
 // @deprecated as of v3.x with no replacement
 
-$custom-range-track-box-shadow: inset 0 0.25rem 0.25rem
-	unquote('hsl(from #{$black} h s l / 0.1)') !default;
+$custom-range-track-box-shadow: unquote(
+	'inset 0 0.25rem 0.25rem hsl(from #{$black} h s l / 0.1)'
+) !default;
 
 // @deprecated as of v3.x with no replacement
 
@@ -911,8 +930,9 @@ $custom-range-thumb-border-radius: 1rem !default;
 
 // @deprecated as of v3.x with no replacement
 
-$custom-range-thumb-box-shadow: 0 0.1rem 0.25rem
-	unquote('hsl(from #{$black} h s l / 0.1)') !default;
+$custom-range-thumb-box-shadow: unquote(
+	'0 0.1rem 0.25rem hsl(from #{$black} h s l / 0.1)'
+) !default;
 
 // @deprecated as of v3.x with no replacement
 
@@ -985,7 +1005,7 @@ $custom-file-border-radius: if(
 $custom-file-box-shadow: if(
 	variable-exists(input-box-shadow),
 	$input-box-shadow,
-	inset 0 1px 1px unquote('hsl(from #{$black} h s l / 0.075)')
+	unquote('inset 0 1px 1px hsl(from #{$black} h s l / 0.075)')
 ) !default;
 
 // @deprecated as of v3.x with no replacement

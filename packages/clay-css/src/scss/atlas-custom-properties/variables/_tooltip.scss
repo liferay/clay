@@ -2,7 +2,7 @@ $tooltip-bg: var(--tooltip-background-color, $dark-d2) !default;
 $tooltip-border-radius: var(--tooltip-border-radius, $border-radius) !default;
 $tooltip-box-shadow: var(
 	--tooltip-box-shadow,
-	0 1px 4px 0px rgba(0, 0, 0, 0.4)
+	unquote('0 1px 4px 0px hsl(from #{$black} h s l / 0.4)')
 ) !default;
 $tooltip-color: var(--tooltip-color, $white) !default;
 $tooltip-font-size: var(--tooltip-font-size, 14px) !default;

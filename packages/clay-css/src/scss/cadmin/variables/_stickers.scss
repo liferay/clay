@@ -340,7 +340,7 @@ $cadmin-sticker-danger: map-deep-merge(
 
 // .sticker-light
 
-$cadmin-sticker-light-bg: color-yiq($cadmin-white) !default;
+$cadmin-sticker-light-bg: $cadmin-gray-900 !default;
 $cadmin-sticker-light-border-color: null !default;
 $cadmin-sticker-light-color: $cadmin-light !default;
 

@@ -76,7 +76,7 @@ $clay-range-input: map-deep-merge(
 			box-shadow:
 				var(
 					--clay-range-thumb-box-shadow,
-					0 1px 5px -1px rgba(0, 0, 0, 0.3)
+					unquote('0 1px 5px -1px hsl(from #{$black} h s l / 0.3)')
 				),
 			height: var(--clay-range-thumb-height, 24px),
 			margin-top: var(--clay-range-thumb-margin-top, -0.75rem),

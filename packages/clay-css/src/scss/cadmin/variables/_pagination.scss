@@ -7,14 +7,18 @@ $cadmin-pagination-line-height: 1 !default;
 $cadmin-pagination-padding-x: 10px !default; // 10px
 $cadmin-pagination-padding-y: 0px !default;
 
-$cadmin-pagination-hover-bg: rgba($cadmin-gray-900, 0.04) !default;
+$cadmin-pagination-hover-bg: unquote(
+	'hsl(from #{$cadmin-gray-900} h s l / 0.04)'
+) !default;
 $cadmin-pagination-hover-border-color: transparent !default;
 $cadmin-pagination-hover-color: $cadmin-gray-900 !default;
 
 $cadmin-pagination-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
 $cadmin-pagination-focus-outline: 0 !default;
 
-$cadmin-pagination-active-bg: rgba($cadmin-primary, 0.06) !default;
+$cadmin-pagination-active-bg: unquote(
+	'hsl(from #{$cadmin-primary} h s l / 0.06)'
+) !default;
 $cadmin-pagination-active-border-color: transparent !default;
 $cadmin-pagination-active-color: $cadmin-gray-900 !default;
 

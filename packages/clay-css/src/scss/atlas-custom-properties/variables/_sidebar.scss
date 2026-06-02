@@ -331,7 +331,10 @@ $sidebar-light: map-deep-merge(
 		border-color: var(--sidebar-light-border-color, $gray-300),
 		border-left-width: var(--sidebar-light-border-left-width, 0),
 		box-shadow:
-			var(--sidebar-light-box-shadow, -4px 0 8px -4px rgba(0, 0, 0, 0.1)),
+			var(
+				--sidebar-light-box-shadow,
+				unquote('-4px 0 8px -4px hsl(from #{$black} h s l / 0.1)')
+			),
 		color: var(--sidebar-light-color, $gray-900),
 		sidebar-header: (
 			background-color:
@@ -349,7 +352,7 @@ $sidebar-light: map-deep-merge(
 			box-shadow:
 				var(
 					--sidebar-light-sidenav-start-box-shadow,
-					4px 0 8px -4px rgba(0, 0, 0, 0.1)
+					unquote('4px 0 8px -4px hsl(from #{$black} h s l / 0.1)')
 				),
 		),
 
@@ -372,8 +375,10 @@ $sidebar-light: map-deep-merge(
 			header: (
 				link: (
 					focus: (
-						box-shadow: #{0 0 0 4px $white,
-						0 0 0 6px $primary-l0},
+						box-shadow:
+							unquote(
+								'0 0 0 4px #{$white},0 0 0 6px #{$primary-l0}'
+							),
 					),
 				),
 			),
@@ -465,7 +470,10 @@ $sidebar-c-slideout-start: () !default;
 $sidebar-c-slideout-start: map-deep-merge(
 	(
 		'.sidebar-light': (
-			box-shadow: 0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+			box-shadow:
+				unquote(
+					'0.25rem 0 0.5rem -0.25rem hsl(from #{$black} h s l / 0.1)'
+				),
 		),
 	),
 	$sidebar-c-slideout-start

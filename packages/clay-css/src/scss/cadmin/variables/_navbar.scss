@@ -56,9 +56,8 @@ $cadmin-navbar-toggler-padding-y: 4px !default;
 
 // Navbar Underline
 
-$cadmin-navbar-underline-active-bg: clay-lighten(
-	$cadmin-component-active-bg,
-	22.94
+$cadmin-navbar-underline-active-bg: unquote(
+	'hsl(from #{$cadmin-component-active-bg} h s calc(l + 22.9))'
 ) !default;
 
 $cadmin-navbar-underline: () !default;
@@ -125,7 +124,9 @@ $cadmin-navbar-dark-brand-color: $cadmin-navbar-dark-active-color !default;
 
 $cadmin-navbar-dark-brand-hover-color: $cadmin-navbar-dark-active-color !default;
 
-$cadmin-navbar-dark-toggler-border-color: rgba($cadmin-white, 0.1) !default;
+$cadmin-navbar-dark-toggler-border-color: unquote(
+	'hsl(from #{$cadmin-white} h s l / 0.1)'
+) !default;
 $cadmin-navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$cadmin-navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 
 // Navbar Light
@@ -142,5 +143,7 @@ $cadmin-navbar-light-brand-color: $cadmin-navbar-light-active-color !default;
 
 $cadmin-navbar-light-brand-hover-color: $cadmin-navbar-light-active-color !default;
 
-$cadmin-navbar-light-toggler-border-color: rgba($cadmin-black, 0.1) !default;
+$cadmin-navbar-light-toggler-border-color: unquote(
+	'hsl(from #{$cadmin-black} h s l / 0.1)'
+) !default;
 $cadmin-navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$cadmin-navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;

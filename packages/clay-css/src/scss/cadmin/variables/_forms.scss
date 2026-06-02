@@ -28,13 +28,9 @@ $cadmin-input-height-mobile: null !default;
 
 // Input Focus
 
-$cadmin-input-focus-bg: clay-lighten(
-	$cadmin-component-active-bg,
-	44.9
-) !default;
-$cadmin-input-focus-border-color: clay-lighten(
-	$cadmin-component-active-bg,
-	22.94
+$cadmin-input-focus-bg: $cadmin-primary-l3 !default;
+$cadmin-input-focus-border-color: unquote(
+	'hsl(from #{$cadmin-component-active-bg} h s calc(l + 22.9))'
 ) !default;
 $cadmin-input-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
 $cadmin-input-focus-color: $cadmin-input-color !default;
@@ -812,9 +808,9 @@ $cadmin-input-danger-label-color: null !default;
 
 $cadmin-input-danger-select-icon-color: $cadmin-input-danger-border-color !default;
 
-$cadmin-input-danger-select-icon: clay-icon(
-	caret-double-l,
-	$cadmin-input-danger-select-icon-color
+$cadmin-input-danger-select-icon: var(
+	--cadmin-input-danger-select-icon,
+	clay-icon(caret-double-l, #f48989)
 ) !default;
 
 $cadmin-input-danger-select: () !default;
@@ -999,9 +995,9 @@ $cadmin-input-warning-label-color: null !default;
 
 $cadmin-input-warning-select-icon-color: $cadmin-input-warning-border-color !default;
 
-$cadmin-input-warning-select-icon: clay-icon(
-	caret-double-l,
-	$cadmin-input-warning-select-icon-color
+$cadmin-input-warning-select-icon: var(
+	--cadmin-input-warning-select-icon,
+	clay-icon(caret-double-l, #ff8f39)
 ) !default;
 
 $cadmin-input-warning-select: () !default;
@@ -1186,9 +1182,9 @@ $cadmin-input-success-label-color: null !default;
 
 $cadmin-input-success-select-icon-color: $cadmin-input-success-border-color !default;
 
-$cadmin-input-success-select-icon: clay-icon(
-	caret-double-l,
-	$cadmin-input-success-select-icon-color
+$cadmin-input-success-select-icon: var(
+	--cadmin-input-success-select-icon,
+	clay-icon(caret-double-l, #5aca75)
 ) !default;
 
 $cadmin-input-success-select: () !default;
@@ -1328,23 +1324,23 @@ $cadmin-input-select-focus-bg: null !default;
 
 $cadmin-input-select-icon-color: $cadmin-gray-600 !default;
 
-$cadmin-input-select-icon: clay-icon(
-	caret-double-l,
-	$cadmin-input-select-icon-color
+$cadmin-input-select-icon: var(
+	--cadmin-input-select-icon,
+	clay-icon(caret-double-l, #6b6c7e)
 ) !default;
 
 $cadmin-input-select-icon-focus-color: $cadmin-input-select-icon-color !default;
 
-$cadmin-input-select-icon-focus: clay-icon(
-	caret-double-l,
-	$cadmin-input-select-icon-focus-color
+$cadmin-input-select-icon-focus: var(
+	--cadmin-input-select-icon-focus,
+	clay-icon(caret-double-l, #6b6c7e)
 ) !default;
 
 $cadmin-input-select-icon-disabled-color: $cadmin-gray-500 !default;
 
-$cadmin-input-select-icon-disabled: clay-icon(
-	caret-double-l,
-	$cadmin-input-select-icon-disabled-color
+$cadmin-input-select-icon-disabled: var(
+	--cadmin-input-select-icon-disabled,
+	clay-icon(caret-double-l, #a7a9bc)
 ) !default;
 
 $cadmin-input-select: () !default;
@@ -1421,7 +1417,11 @@ $cadmin-form-control-select-palette: map-deep-merge(
 			),
 
 			focus: (
-				background-image: clay-icon(caret-double-l, $cadmin-gray-900),
+				background-image:
+					var(
+						--cadmin-form-control-select-secondary-icon-focus,
+						clay-icon(caret-double-l, #272833)
+					),
 				color: $cadmin-gray-900,
 			),
 
@@ -1433,7 +1433,11 @@ $cadmin-form-control-select-palette: map-deep-merge(
 
 			show: (
 				background-color: $cadmin-gray-200,
-				background-image: clay-icon(caret-double-l, $cadmin-gray-900),
+				background-image:
+					var(
+						--cadmin-form-control-select-secondary-icon-show,
+						clay-icon(caret-double-l, #272833)
+					),
 				color: $cadmin-gray-900,
 			),
 		),

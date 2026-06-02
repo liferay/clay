@@ -249,7 +249,7 @@ $sticker-top-right: map-merge(
 
 // .sticker-outside
 
-$sticker-outside-offset: calc(#{$sticker-size} * 0.5) !default;
+$sticker-outside-offset: calc(#{$sticker-size} * -0.5) !default;
 
 $sticker-outside: () !default;
 $sticker-outside: map-deep-merge(
@@ -293,7 +293,7 @@ $sticker-user-icon: map-deep-merge(
 	(
 		background-color: $white,
 		border-radius: $rounded-circle-border-radius,
-		box-shadow: 0 0 0 1px unquote('rgb(from #{$black} r g b / 0.125)'),
+		box-shadow: unquote('0 0 0 1px hsl(from #{$black} h s l / 0.125)'),
 	),
 	$sticker-user-icon
 );

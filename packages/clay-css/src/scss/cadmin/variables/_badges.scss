@@ -548,37 +548,43 @@ $cadmin-badge-palette: map-deep-merge(
 		dark: $cadmin-badge-dark,
 
 		'.badge-translucent.badge-primary': (
-			background-color: rgba($cadmin-primary-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-primary-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-primary-d1,
 		),
 
 		'.badge-translucent.badge-info, .badge-beta': (
-			background-color: rgba($cadmin-info-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-info-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-info-d1,
 		),
 
 		'.badge-translucent.badge-success': (
-			background-color: rgba($cadmin-success-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-success-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-success-d1,
 		),
 
 		'.badge-translucent.badge-warning': (
-			background-color: rgba($cadmin-warning-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-warning-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-warning-d1,
 		),
 
 		'.badge-translucent.badge-danger': (
-			background-color: rgba($cadmin-danger-d1, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-danger-d1} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-danger-d1,
 		),
 
 		'%clay-dark-badge-translucent-primary': (
-			background-color: rgba($cadmin-primary-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-primary-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-primary-l1,
 		),
@@ -592,7 +598,8 @@ $cadmin-badge-palette: map-deep-merge(
 		),
 
 		'%clay-dark-badge-translucent-info': (
-			background-color: rgba($cadmin-info-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-info-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-info-l1,
 		),
@@ -606,7 +613,8 @@ $cadmin-badge-palette: map-deep-merge(
 		),
 
 		'%clay-dark-badge-translucent-success': (
-			background-color: rgba($cadmin-success-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-success-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-success-l1,
 		),
@@ -620,7 +628,8 @@ $cadmin-badge-palette: map-deep-merge(
 		),
 
 		'%clay-dark-badge-translucent-warning': (
-			background-color: rgba($cadmin-warning-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-warning-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-warning-l1,
 		),
@@ -634,7 +643,8 @@ $cadmin-badge-palette: map-deep-merge(
 		),
 
 		'%clay-dark-badge-translucent-danger': (
-			background-color: rgba($cadmin-danger-l2, 0.04),
+			background-color:
+				unquote('hsl(from #{$cadmin-danger-l2} h s l / 0.04)'),
 			border-color: transparent,
 			color: $cadmin-danger-l1,
 		),

@@ -617,16 +617,19 @@ $cadmin-management-bar-light: map-deep-merge(
 
 				hover: (
 					color: $cadmin-gray-900,
-					background-color: rgba($cadmin-gray-900, 0.03),
+					background-color:
+						unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 				),
 
 				focus: (
 					color: $cadmin-gray-900,
-					background-color: rgba($cadmin-gray-900, 0.03),
+					background-color:
+						unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 				),
 
 				active: (
-					background-color: rgba($cadmin-gray-900, 0.06),
+					background-color:
+						unquote('hsl(from #{$cadmin-gray-900} h s l / 0.06)'),
 					color: $cadmin-navbar-light-active-color,
 				),
 
@@ -659,16 +662,19 @@ $cadmin-management-bar-primary: map-deep-merge(
 
 				hover: (
 					color: $cadmin-gray-900,
-					background-color: rgba($cadmin-gray-900, 0.03),
+					background-color:
+						unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 				),
 
 				focus: (
 					color: $cadmin-gray-900,
-					background-color: rgba($cadmin-gray-900, 0.03),
+					background-color:
+						unquote('hsl(from #{$cadmin-gray-900} h s l / 0.03)'),
 				),
 
 				active: (
-					background-color: rgba($cadmin-gray-900, 0.06),
+					background-color:
+						unquote('hsl(from #{$cadmin-gray-900} h s l / 0.06)'),
 					color: $cadmin-navbar-light-active-color,
 				),
 

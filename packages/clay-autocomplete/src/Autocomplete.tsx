@@ -670,15 +670,52 @@ function AutocompleteInner<T extends Item>(
 							break;
 						}
 						case Keys.Enter: {
+							if (active && activeDescendant) {
+								event.preventDefault();
+
+								setActive(false);
+
+								onPress();
+
+								break;
+							}
+
+							// Typing into the input clears activeDescendant, so
+							// an exact match would otherwise require an extra
+							// arrow-down before Enter to commit it. Select the
+							// match directly when one exists.
+
+							if (active && value) {
+								const lowerValue = value.toLowerCase();
+
+								const matchedKey = collection
+									.getItems()
+									.find(
+										(key) =>
+											collection
+												.getItem(key)
+												?.value?.toLowerCase() ===
+											lowerValue
+									);
+
+								if (matchedKey && menuRef.current) {
+									event.preventDefault();
+
+									setActive(false);
+
+									const matchedElement =
+										menuRef.current.querySelector(
+											`#${CSS.escape(String(matchedKey))}`
+										) as HTMLElement | null;
+
+									matchedElement?.click();
+
+									break;
+								}
+							}
+
 							setActive(false);
 
-							if (active && activeDescendant) {
-								onPress();
-							}
-
-							if (!active && event.key === Keys.Esc) {
-								setValue('');
-							}
 							break;
 						}
 						case Keys.Home:

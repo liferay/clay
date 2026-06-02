@@ -773,7 +773,7 @@ $card-interactive: map-deep-merge(
 		transition: c-unset,
 
 		hover: (
-			background-color: #f7f8f9,
+			background-color: $gray-100,
 			text-decoration: none,
 		),
 
@@ -787,7 +787,7 @@ $card-interactive: map-deep-merge(
 		),
 
 		active: (
-			background-color: #f1f2f5,
+			background-color: $gray-200,
 		),
 
 		after-highlight: c-unset,
@@ -968,7 +968,7 @@ $product-card: map-deep-merge(
 	(
 		aspect-ratio: (
 			background-color: $white,
-			background-image: linear-gradient(0deg, #ebebeb, #ebebeb),
+			background-image: linear-gradient(0deg, $gray-300, $gray-300),
 		),
 
 		card-body: (

@@ -9,11 +9,10 @@ $cadmin-menubar-primary: map-deep-merge(
 			border-radius: 0px,
 			color: $cadmin-gray-900,
 			line-height: 24px,
-			transition: #{color 0.15s ease-in-out,
-			background-color 0.15s ease-in-out,
-			border-color 0.15s ease-in-out,
-			box-shadow 0.15s ease-in-out},
-
+			transition:
+				unquote(
+					'color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out'
+				),
 			before: (
 				bottom: 0px,
 				content: '',
@@ -220,11 +219,10 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 			letter-spacing: 0.32px,
 			line-height: 24px,
 			margin-bottom: 4px,
-			transition: #{color 0.15s ease-in-out,
-			background-color 0.15s ease-in-out,
-			border-color 0.15s ease-in-out,
-			box-shadow 0.15s ease-in-out},
-
+			transition:
+				unquote(
+					'color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out'
+				),
 			before: (
 				border-radius: $cadmin-border-radius 0px 0px
 					$cadmin-border-radius,
@@ -237,7 +235,8 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 			),
 
 			hover: (
-				background-color: rgba($cadmin-gray-900, 0.04),
+				background-color:
+					unquote('hsl(from #{$cadmin-gray-900} h s l / 0.04)'),
 				color: $cadmin-gray-900,
 				font-weight: $cadmin-font-weight-semi-bold,
 				letter-spacing: 0px,
@@ -268,7 +267,8 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 			),
 
 			active-class: (
-				background-color: rgba($cadmin-primary, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary} h s l / 0.06)'),
 				color: $cadmin-gray-900,
 				font-weight: $cadmin-font-weight-semi-bold,
 				letter-spacing: 0px,
@@ -282,7 +282,7 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 			disabled: (
 				background-color: transparent,
 				box-shadow: none,
-				color: rgba($cadmin-black, 0.3),
+				color: unquote('hsl(from #{$cadmin-black} h s l / 0.3)'),
 				font-weight: $cadmin-font-weight-normal,
 				letter-spacing: 0.32px,
 
@@ -325,7 +325,10 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 					),
 
 					hover: (
-						background-color: rgba($cadmin-gray-900, 0.04),
+						background-color:
+							unquote(
+								'hsl(from #{$cadmin-gray-900} h s l / 0.04)'
+							),
 						box-shadow: none,
 						color: $cadmin-gray-900,
 					),
@@ -339,7 +342,8 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 					),
 
 					active-class: (
-						background-color: rgba($cadmin-primary, 0.06),
+						background-color:
+							unquote('hsl(from #{$cadmin-primary} h s l / 0.06)'),
 						box-shadow: none,
 						color: $cadmin-gray-900,
 						font-weight: $cadmin-font-weight-semi-bold,
@@ -362,7 +366,11 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 					border-color: $cadmin-gray-300,
 					border-radius: clay-enable-rounded($cadmin-border-radius),
 					box-shadow:
-						clay-enable-shadows(0 1px 5px -1px rgba(0, 0, 0, 0.3)),
+						clay-enable-shadows(
+							unquote(
+								'0 1px 5px -1px hsl(from #{$cadmin-black} h s l / 0.3)'
+							)
+						),
 				),
 
 				menubar-toggler: (
@@ -523,11 +531,10 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 			color: $cadmin-gray-600,
 			letter-spacing: 0.32px,
 			margin-bottom: 4px,
-			transition: #{color 0.15s ease-in-out,
-			background-color 0.15s ease-in-out,
-			border-color 0.15s ease-in-out,
-			box-shadow 0.15s ease-in-out},
-
+			transition:
+				unquote(
+					'color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out'
+				),
 			before: (
 				border-radius: $cadmin-border-radius 0px 0px
 					$cadmin-border-radius,
@@ -540,7 +547,8 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 			),
 
 			hover: (
-				background-color: rgba($cadmin-gray-900, 0.04),
+				background-color:
+					unquote('hsl(from #{$cadmin-gray-900} h s l / 0.04)'),
 				color: $cadmin-gray-900,
 				font-weight: $cadmin-font-weight-semi-bold,
 				letter-spacing: 0px,
@@ -569,7 +577,8 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 			),
 
 			active-class: (
-				background-color: rgba($cadmin-primary, 0.06),
+				background-color:
+					unquote('hsl(from #{$cadmin-primary} h s l / 0.06)'),
 				color: $cadmin-gray-900,
 				font-weight: $cadmin-font-weight-semi-bold,
 				letter-spacing: 0px,
@@ -583,7 +592,7 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 			disabled: (
 				background-color: transparent,
 				box-shadow: none,
-				color: rgba($cadmin-black, 0.3),
+				color: unquote('hsl(from #{$cadmin-black} h s l / 0.3)'),
 				font-weight: $cadmin-font-weight-normal,
 				letter-spacing: 0.32px,
 
@@ -626,7 +635,10 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 					),
 
 					hover: (
-						background-color: rgba($cadmin-gray-900, 0.04),
+						background-color:
+							unquote(
+								'hsl(from #{$cadmin-gray-900} h s l / 0.04)'
+							),
 						box-shadow: none,
 					),
 
@@ -638,7 +650,8 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 					),
 
 					active-class: (
-						background-color: rgba($cadmin-primary, 0.06),
+						background-color:
+							unquote('hsl(from #{$cadmin-primary} h s l / 0.06)'),
 						box-shadow: none,
 						color: $cadmin-gray-900,
 						font-weight: $cadmin-font-weight-semi-bold,
@@ -661,7 +674,11 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 					border-color: $cadmin-gray-300,
 					border-radius: clay-enable-rounded($cadmin-border-radius),
 					box-shadow:
-						clay-enable-shadows(0 1px 5px -1px rgba(0, 0, 0, 0.3)),
+						clay-enable-shadows(
+							unquote(
+								'0 1px 5px -1px hsl(from #{$cadmin-black} h s l / 0.3)'
+							)
+						),
 				),
 
 				menubar-toggler: (

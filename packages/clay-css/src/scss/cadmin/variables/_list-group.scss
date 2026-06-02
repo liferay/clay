@@ -14,10 +14,7 @@ $cadmin-list-group-margin-top: null !default;
 
 $cadmin-list-group-action-color: $cadmin-gray-700 !default;
 
-$cadmin-list-group-hover-bg: clay-lighten(
-	$cadmin-component-active-bg,
-	44.9
-) !default;
+$cadmin-list-group-hover-bg: $cadmin-primary-l3 !default;
 
 $cadmin-list-group-action-hover-color: $cadmin-list-group-action-color !default;
 
@@ -280,13 +277,18 @@ $cadmin-list-group-notification-item: () !default;
 $cadmin-list-group-notification-item-primary: () !default;
 $cadmin-list-group-notification-item-primary: map-deep-merge(
 	(
-		border-left-color: clay-lighten($cadmin-component-active-bg, 22.94),
+		border-left-color:
+			unquote(
+				'hsl(from #{$cadmin-component-active-bg} h s calc(l + 22.9))'
+			),
 		border-left-width: 8px,
 		border-bottom-left-radius: 0px,
 		border-top-left-radius: 0px,
 
 		active-border-left-color:
-			clay-lighten($cadmin-component-active-bg, 22.94),
+			unquote(
+				'hsl(from #{$cadmin-component-active-bg} h s calc(l + 22.9))'
+			),
 	),
 	$cadmin-list-group-notification-item-primary
 );

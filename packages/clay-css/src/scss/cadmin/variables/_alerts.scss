@@ -409,7 +409,9 @@ $cadmin-alert-notifications-fixed: map-deep-merge(
 
 // .alert-notification
 
-$cadmin-alert-notifications-box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.3) !default;
+$cadmin-alert-notifications-box-shadow: unquote(
+	'0 8px 32px -4px hsl(from #{$cadmin-black} h s l / 0.3)'
+) !default;
 $cadmin-alert-notifications-max-width: 360px !default;
 
 $cadmin-alert-notification: () !default;
@@ -659,12 +661,12 @@ $cadmin-alert-primary-btn: map-deep-merge(
 		hover: (
 			background-color: $cadmin-primary,
 			border-color: $cadmin-primary,
-			color: color-yiq($cadmin-primary),
+			color: $cadmin-white,
 		),
 
 		active: (
-			background-color: clay-darken($cadmin-primary, 5%),
-			border-color: clay-darken($cadmin-primary, 5%),
+			background-color: $cadmin-primary-d1,
+			border-color: $cadmin-primary-d1,
 		),
 	),
 	$cadmin-alert-primary-btn
@@ -728,12 +730,12 @@ $cadmin-alert-secondary-btn: map-deep-merge(
 		hover: (
 			background-color: $cadmin-secondary,
 			border-color: $cadmin-secondary,
-			color: color-yiq($cadmin-secondary),
+			color: $cadmin-white,
 		),
 
 		active: (
-			background-color: clay-darken($cadmin-secondary, 5%),
-			border-color: clay-darken($cadmin-secondary, 5%),
+			background-color: $cadmin-secondary-d1,
+			border-color: $cadmin-secondary-d1,
 		),
 	),
 	$cadmin-alert-secondary-btn
@@ -797,12 +799,12 @@ $cadmin-alert-success-btn: map-deep-merge(
 		hover: (
 			background-color: $cadmin-success,
 			border-color: $cadmin-success,
-			color: color-yiq($cadmin-success),
+			color: $cadmin-white,
 		),
 
 		active: (
-			background-color: clay-darken($cadmin-success, 5%),
-			border-color: clay-darken($cadmin-success, 5%),
+			background-color: $cadmin-success-d1,
+			border-color: $cadmin-success-d1,
 		),
 	),
 	$cadmin-alert-success-btn
@@ -866,12 +868,12 @@ $cadmin-alert-info-btn: map-deep-merge(
 		hover: (
 			background-color: $cadmin-info,
 			border-color: $cadmin-info,
-			color: color-yiq($cadmin-info),
+			color: $cadmin-white,
 		),
 
 		active: (
-			background-color: clay-darken($cadmin-info, 5%),
-			border-color: clay-darken($cadmin-info, 5%),
+			background-color: $cadmin-info-d1,
+			border-color: $cadmin-info-d1,
 		),
 	),
 	$cadmin-alert-info-btn
@@ -935,12 +937,12 @@ $cadmin-alert-warning-btn: map-deep-merge(
 		hover: (
 			background-color: $cadmin-warning,
 			border-color: $cadmin-warning,
-			color: color-yiq($cadmin-warning),
+			color: $cadmin-white,
 		),
 
 		active: (
-			background-color: clay-darken($cadmin-warning, 5%),
-			border-color: clay-darken($cadmin-warning, 5%),
+			background-color: $cadmin-warning-d1,
+			border-color: $cadmin-warning-d1,
 		),
 	),
 	$cadmin-alert-warning-btn
@@ -1004,12 +1006,12 @@ $cadmin-alert-danger-btn: map-deep-merge(
 		hover: (
 			background-color: $cadmin-danger,
 			border-color: $cadmin-danger,
-			color: color-yiq($cadmin-danger),
+			color: $cadmin-white,
 		),
 
 		active: (
-			background-color: clay-darken($cadmin-danger, 5%),
-			border-color: clay-darken($cadmin-danger, 5%),
+			background-color: $cadmin-danger-d1,
+			border-color: $cadmin-danger-d1,
 		),
 	),
 	$cadmin-alert-danger-btn
@@ -1077,8 +1079,8 @@ $cadmin-alert-light-btn: map-deep-merge(
 		),
 
 		active: (
-			background-color: clay-darken($cadmin-dark, 5%),
-			border-color: clay-darken($cadmin-dark, 5%),
+			background-color: $cadmin-dark-d1,
+			border-color: $cadmin-dark-d1,
 		),
 	),
 	$cadmin-alert-light-btn
@@ -1142,12 +1144,12 @@ $cadmin-alert-dark-btn: map-deep-merge(
 		hover: (
 			background-color: $cadmin-dark,
 			border-color: $cadmin-dark,
-			color: color-yiq($cadmin-dark),
+			color: $cadmin-white,
 		),
 
 		active: (
-			background-color: clay-darken($cadmin-dark, 5%),
-			border-color: clay-darken($cadmin-dark, 5%),
+			background-color: $cadmin-dark-d1,
+			border-color: $cadmin-dark-d1,
 		),
 	),
 	$cadmin-alert-dark-btn
