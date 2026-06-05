@@ -37,6 +37,37 @@ export default function App() {
 
 We recommend that you review the use cases in the [Storybook](https://storybook.clayui.com/?path=/story/design-system-components-badge--default).
 
+## Icon
+
+A badge can display an optional icon alongside its text by passing the `symbol` attribute with the id of an icon in the spritemap. The icon is rendered after the label, sized relative to the text, and inherits the badge color. The spritemap is resolved from the `spritemap` attribute or inherited from a parent `Provider`.
+
+Use the icon to reinforce the meaning of a short value, such as a status or a trend. Avoid icon-only badges without a `label`, and avoid pairing an icon with long or multi-line text, since badges are meant for short values.
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Badge from '@clayui/badge';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<Badge displayType="success" label="100" symbol="check" />
+				<Badge displayType="info" label="100" symbol="info-circle" />
+				<Badge displayType="warning" label="100" symbol="warning-full" />
+				<Badge
+					displayType="danger"
+					label="100"
+					symbol="exclamation-full"
+				/>
+			</div>
+		</Provider>
+	);
+}
+```
+
 ## Translucent
 
 The boolean attribute `translucent` renders a badge with an opaque background color optimized for light backgrounds.

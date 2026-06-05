@@ -254,7 +254,7 @@ $label-item-after: map-merge(
 $label-lg: () !default;
 $label-lg: map-deep-merge(
 	(
-		border-radius: var(--label-lg-border-radius, $border-radius-lg),
+		border-radius: var(--label-lg-border-radius, $label-border-radius),
 		font-size: var(--label-lg-font-size, 0.875rem),
 		height: var(--label-lg-height, auto),
 		min-height: var(--label-lg-min-height, 1.5rem),
