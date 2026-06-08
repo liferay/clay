@@ -81,6 +81,39 @@ Default.args = {
 	isValid: false,
 	size: null,
 };
+export function AllowsCustomLabel(args: any) {
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
+		{
+			label: 'one',
+			value: '1',
+		},
+	]);
+
+	return (
+		<>
+			<label htmlFor="multiSelect" id="multi-select-label">
+				Multi Select
+			</label>
+
+			<ClayMultiSelect
+				allowsCustomLabel={args.allowsCustomLabel}
+				aria-labelledby="multi-select-label"
+				id="multiSelect"
+				inputName="myInput"
+				items={items}
+				onChange={setValue}
+				onItemsChange={(val) => setItems(val as any)}
+				sourceItems={sourceItems}
+				value={value}
+			/>
+		</>
+	);
+}
+
+AllowsCustomLabel.args = {
+	allowsCustomLabel: true,
+};
 
 export const ComparingItems = () => {
 	const [items, setItems] = useState([
