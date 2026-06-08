@@ -1,7 +1,7 @@
-# name: Clay Release
+name: Clay Release
 
-# on:
-#     workflow_dispatch:
+on:
+    workflow_dispatch:
 #         inputs:
 #             version:
 #                 required: false
@@ -12,12 +12,12 @@
 #     id-token: write # Required for OIDC
 #     contents: write
 
-# jobs:
-#     test:
-#         name: Unit tests and lint
-#         runs-on: ubuntu-latest
-#         steps:
-#             - uses: actions/checkout@v2
+jobs:
+    test:
+        name: Unit tests and lint
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
 #             - uses: actions/setup-node@v2
 #               with:
 #                   node-version: '22.x'
