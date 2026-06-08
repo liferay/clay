@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.136.3](https://github.com/liferay/clay/compare/v3.136.2...v3.136.3) (2026-06-08)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete,@clayui/multi-select:** improve Enter key handling ([f45cd0c](https://github.com/liferay/clay/commit/f45cd0c6f2a31b750d1ace83175920395ba0e3a3))
+
 ## [3.136.2](https://github.com/liferay/clay/compare/v3.136.1...v3.136.2) (2026-01-14)
 
 **Note:** Version bump only for package @clayui/multi-select
