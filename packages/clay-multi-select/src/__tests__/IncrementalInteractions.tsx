@@ -148,4 +148,87 @@ describe('MultiSelect incremental interactions', () => {
 
 		expect(document.activeElement).toEqual(close);
 	});
+
+	it('pressing enter on an exact label match adds the source item and clears the input', () => {
+		const onItemsChange = jest.fn();
+		const sourceItems = [
+			{label: 'one', value: '1'},
+			{label: 'two', value: '2'},
+		];
+
+		const {getByRole} = render(
+			<MultiSelect
+				onItemsChange={onItemsChange}
+				sourceItems={sourceItems}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		const combobox = getByRole('combobox') as HTMLInputElement;
+
+		userEvent.type(combobox, 'one');
+
+		userEvent.keyboard('[Enter]');
+
+		expect(onItemsChange).toHaveBeenLastCalledWith([sourceItems[0]]);
+
+		expect(combobox.value).toBe('');
+	});
+
+	it('pressing enter on a non-matching value with allowsCustomLabel false preserves the input', () => {
+		const onItemsChange = jest.fn();
+		const sourceItems = [
+			{label: 'one', value: '1'},
+			{label: 'two', value: '2'},
+		];
+
+		const {getByRole} = render(
+			<MultiSelect
+				allowsCustomLabel={false}
+				onItemsChange={onItemsChange}
+				sourceItems={sourceItems}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		const combobox = getByRole('combobox') as HTMLInputElement;
+
+		userEvent.type(combobox, 'foo');
+
+		userEvent.keyboard('[Enter]');
+
+		expect(onItemsChange).not.toHaveBeenCalled();
+
+		expect(combobox.value).toBe('foo');
+	});
+
+	it('pressing enter on a non-matching value with allowsCustomLabel true adds it as a custom label', () => {
+		const onItemsChange = jest.fn();
+		const sourceItems = [
+			{label: 'one', value: '1'},
+			{label: 'two', value: '2'},
+		];
+
+		const {getByRole} = render(
+			<MultiSelect
+				onItemsChange={onItemsChange}
+				sourceItems={sourceItems}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		const combobox = getByRole('combobox') as HTMLInputElement;
+
+		userEvent.type(combobox, 'foo');
+
+		userEvent.keyboard('[Enter]');
+
+		expect(onItemsChange).toHaveBeenCalledTimes(1);
+
+		expect(onItemsChange).toHaveBeenLastCalledWith([
+			expect.objectContaining({label: 'foo', value: 'foo'}),
+		]);
+
+		expect(combobox.value).toBe('');
+	});
 });

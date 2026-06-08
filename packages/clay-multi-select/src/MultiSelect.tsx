@@ -420,6 +420,7 @@ export const MultiSelect = React.forwardRef(function MultiSelectInner<
 					UNSAFE_loadingShrink
 					active={MenuRenderer ? false : active}
 					allowsCustomLabel={allowsCustomLabel}
+					allowsCustomValue
 					ariaDescriptionId={ariaDescriptionId}
 					as={Labels}
 					closeButtonAriaLabel={closeButtonAriaLabel}

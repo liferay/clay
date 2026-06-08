@@ -363,7 +363,10 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 									event.preventDefault();
 								}
 
-								if (key === Keys.Enter && activeDescendant) {
+								if (
+									key === Keys.Enter &&
+									(activeDescendant || event.defaultPrevented)
+								) {
 									return;
 								}
 
