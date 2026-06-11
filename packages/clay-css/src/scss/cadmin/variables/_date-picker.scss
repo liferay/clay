@@ -322,7 +322,7 @@ $cadmin-date-picker-date: () !default;
 $cadmin-date-picker-date: map-deep-merge(
 	(
 		border-radius: 100px,
-		color: $cadmin-gray-600,
+		color: $cadmin-gray-900,
 		cursor: $cadmin-link-cursor,
 		position: relative,
 
@@ -355,7 +355,7 @@ $cadmin-date-picker-date: map-deep-merge(
 $cadmin-date-picker-previous-month-date: () !default;
 $cadmin-date-picker-previous-month-date: map-deep-merge(
 	(
-		color: $cadmin-gray-500,
+		color: $cadmin-gray-600,
 
 		active: (
 			background-color: $cadmin-primary-l2,
@@ -368,7 +368,7 @@ $cadmin-date-picker-previous-month-date: map-deep-merge(
 $cadmin-date-picker-next-month-date: () !default;
 $cadmin-date-picker-next-month-date: map-deep-merge(
 	(
-		color: $cadmin-gray-500,
+		color: $cadmin-gray-600,
 
 		active: (
 			background-color: $cadmin-primary-l2,
