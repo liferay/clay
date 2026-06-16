@@ -338,7 +338,7 @@ $sidebar-light: map-deep-merge(
 		color: var(--sidebar-light-color, $gray-900),
 		sidebar-header: (
 			background-color:
-				var(--sidebar-light-sidebar-header-background-color, $white),
+				var(--sidebar-light-sidebar-header-background-color, inherit),
 			border:
 				var(--sidebar-light-sidebar-header-border, 0px solid $gray-300),
 		),

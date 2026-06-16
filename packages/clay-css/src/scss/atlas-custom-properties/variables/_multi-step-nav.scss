@@ -84,7 +84,7 @@ $data-multi-step-icon-before-content: unquote(
 
 $multi-step-divider-bg: var(--multi-step-divider-bg, $gray-200) !default;
 $multi-step-divider-height: var(--multi-step-divider-height, 4px) !default;
-$multi-step-divider-spacer-x: var(--multi-step-divider-spacer-x, 0) !default;
+$multi-step-divider-spacer-x: var(--multi-step-divider-spacer-x, 0px) !default;
 $multi-step-divider-top: var(
 	--multi-step-divider-top,
 	calc(#{$multi-step-divider-height} * 0.5 + #{$multi-step-icon-size} * 0.5)
