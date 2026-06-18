@@ -104,7 +104,7 @@ $cadmin-custom-control-margin-top: null !default;
 
 // @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
 
-$cadmin-custom-control-min-height: 24px !default;
+$cadmin-custom-control-min-height: $cadmin-custom-control-indicator-size !default;
 
 // .custom-control-label
 
@@ -122,7 +122,7 @@ $cadmin-custom-control-description-font-weight: $cadmin-font-weight-normal !defa
 
 // @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
 
-$cadmin-custom-control-description-line-height: $cadmin-custom-control-min-height !default;
+$cadmin-custom-control-description-line-height: 24px !default;
 
 // @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-text` instead
 

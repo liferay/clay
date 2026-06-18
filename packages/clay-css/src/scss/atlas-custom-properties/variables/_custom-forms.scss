@@ -106,7 +106,7 @@ $custom-control-margin-top: null !default;
 
 // @deprecated after of v3.5.0 use the Sass map `$custom-control` instead
 
-$custom-control-min-height: 1.5rem !default;
+$custom-control-min-height: $custom-control-indicator-size !default;
 
 // .custom-control-label
 
@@ -132,7 +132,7 @@ $custom-control-description-font-weight: $font-weight-normal !default;
 
 // @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
 
-$custom-control-description-line-height: $custom-control-min-height !default;
+$custom-control-description-line-height: 1.5rem !default;
 
 // @deprecated as of v2.19.0 use the Sass map `$custom-control-label-text` instead
 
