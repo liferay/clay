@@ -178,6 +178,11 @@ export function Head<T extends Record<string, any>>(
 
 												<Layout.ContentCol float="end">
 													<Toggle
+														aria-label={
+															collection.getItem(
+																item
+															).value
+														}
 														containerProps={{
 															style: {
 																marginBottom: 0,

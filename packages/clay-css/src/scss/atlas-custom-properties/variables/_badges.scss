@@ -313,6 +313,106 @@ $badge-palette: map-deep-merge(
 		warning: $badge-warning,
 
 		danger: $badge-danger,
+
+		'.badge-translucent.badge-primary': (
+			background-color: unquote('hsl(from #{$primary-d1} h s l / 0.04)'),
+			border-color: transparent,
+			color: $primary-d1,
+		),
+
+		'.badge-translucent.badge-info, .badge-beta': (
+			background-color: unquote('hsl(from #{$info-d1} h s l / 0.04)'),
+			border-color: transparent,
+			color: $info-d1,
+		),
+
+		'.badge-translucent.badge-success': (
+			background-color: unquote('hsl(from #{$success-d1} h s l / 0.04)'),
+			border-color: transparent,
+			color: $success-d1,
+		),
+
+		'.badge-translucent.badge-warning': (
+			background-color: unquote('hsl(from #{$warning-d1} h s l / 0.04)'),
+			border-color: transparent,
+			color: $warning-d1,
+		),
+
+		'.badge-translucent.badge-danger': (
+			background-color: unquote('hsl(from #{$danger-d1} h s l / 0.04)'),
+			border-color: transparent,
+			color: $danger-d1,
+		),
+
+		'%clay-dark-badge-translucent-primary': (
+			background-color: unquote('hsl(from #{$primary-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $primary-l1,
+		),
+
+		'.clay-dark .badge-translucent.badge-primary': (
+			extend: '%clay-dark-badge-translucent-primary',
+		),
+
+		'.clay-dark.badge-translucent.badge-primary': (
+			extend: '%clay-dark-badge-translucent-primary',
+		),
+
+		'%clay-dark-badge-translucent-info': (
+			background-color: unquote('hsl(from #{$info-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $info-l1,
+		),
+
+		'.clay-dark .badge-translucent.badge-info, .badge-beta-dark': (
+			extend: '%clay-dark-badge-translucent-info',
+		),
+
+		'.clay-dark.badge-translucent.badge-info': (
+			extend: '%clay-dark-badge-translucent-info',
+		),
+
+		'%clay-dark-badge-translucent-success': (
+			background-color: unquote('hsl(from #{$success-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $success-l1,
+		),
+
+		'.clay-dark .badge-translucent.badge-success': (
+			extend: '%clay-dark-badge-translucent-success',
+		),
+
+		'.clay-dark.badge-translucent.badge-success': (
+			extend: '%clay-dark-badge-translucent-success',
+		),
+
+		'%clay-dark-badge-translucent-warning': (
+			background-color: unquote('hsl(from #{$warning-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $warning-l1,
+		),
+
+		'.clay-dark .badge-translucent.badge-warning': (
+			extend: '%clay-dark-badge-translucent-warning',
+		),
+
+		'.clay-dark.badge-translucent.badge-warning': (
+			extend: '%clay-dark-badge-translucent-warning',
+		),
+
+		'%clay-dark-badge-translucent-danger': (
+			background-color: unquote('hsl(from #{$danger-l2} h s l / 0.04)'),
+			border-color: transparent,
+			color: $danger-l1,
+		),
+
+		'.clay-dark .badge-translucent.badge-danger': (
+			extend: '%clay-dark-badge-translucent-danger',
+		),
+
+		'.clay-dark.badge-translucent.badge-danger': (
+			extend: '%clay-dark-badge-translucent-danger',
+		),
 	),
 	$badge-palette
 );
