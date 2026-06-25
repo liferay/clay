@@ -225,6 +225,7 @@ const Menu = React.forwardRef<HTMLDivElement, IProps>(
 						})}
 						ref={menuRef}
 						role={role}
+						tabIndex={active ? 0 : undefined}
 					>
 						{children}
 					</div>

@@ -72,6 +72,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
         id="clay-id-13"
         role="dialog"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <div
           aria-label="Use the calendar to choose a Date. Current selection July 2019"
@@ -1746,6 +1747,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
         id="clay-id-4"
         role="dialog"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <div
           aria-label="Use the calendar to choose a Date. Current selection April 2019"
@@ -2588,6 +2590,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
         id="clay-id-16"
         role="dialog"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <div
           aria-label="Use the calendar to choose a Date. Current selection April 2018"
@@ -4282,6 +4285,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
         id="clay-id-1"
         role="dialog"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <div
           aria-label="Use the calendar to choose a Date. Current selection April 2019"

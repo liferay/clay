@@ -117,6 +117,15 @@ $close: map-deep-merge(
 		lexicon-icon: (
 			margin-top: 0rem,
 		),
+
+		'&.sr-only-focusable:focus': (
+			height: 2rem,
+			position: absolute,
+			right: 0,
+			top: 0,
+			width: 2rem,
+			z-index: 1,
+		),
 	),
 	$close
 );

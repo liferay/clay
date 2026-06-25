@@ -112,6 +112,15 @@ $cadmin-close: map-deep-merge(
 		lexicon-icon: (
 			margin-top: 0px,
 		),
+
+		'&.sr-only-focusable:focus': (
+			height: 32px,
+			position: absolute,
+			right: 0,
+			top: 0,
+			width: 32px,
+			z-index: 1,
+		),
 	),
 	$cadmin-close
 );

@@ -465,6 +465,27 @@
 					@include clay-css($lexicon-icon);
 				}
 			}
+
+			$base: map-remove(
+				$base,
+				'active',
+				'active-class',
+				'btn-focus',
+				'c-inner',
+				'disabled',
+				'disabled-active',
+				'focus',
+				'hover',
+				'lexicon-icon'
+			);
+
+			@each $selector, $value in $base {
+				@if not clay-is-map-unset($value) {
+					#{$selector} {
+						@include clay-map-to-css($value);
+					}
+				}
+			}
 		}
 	}
 }

@@ -7,6 +7,7 @@ import Button from '@clayui/button';
 import {ClayToggle as Toggle} from '@clayui/form';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
+import {useId} from '@clayui/shared';
 import React, {useEffect, useLayoutEffect} from 'react';
 
 import {ChildrenFunction, Collection, useCollection} from '../collection';
@@ -17,26 +18,29 @@ import {useTable} from './context';
 
 type HeaderProps = {
 	description: string;
+	descriptionId: string;
 	name: string;
+	nameId: string;
 };
 
-const Header = React.forwardRef<HTMLLIElement, HeaderProps>(
-	function HeaderInner({description, name}: HeaderProps, ref) {
-		return (
-			<li key={name} ref={ref} role="presentation" tabIndex={-1}>
-				<div className="dropdown-subheader mb-0">
-					{name.toUpperCase()}
-				</div>
+function Header({description, descriptionId, name, nameId}: HeaderProps) {
+	return (
+		<>
+			<div className="dropdown-subheader mb-0" id={nameId}>
+				{name.toUpperCase()}
+			</div>
 
-				<div className="dropdown-section py-0 text-secondary">
-					{description}
-				</div>
+			<div
+				className="dropdown-section py-0 text-secondary"
+				id={descriptionId}
+			>
+				{description}
+			</div>
 
-				<div className="dropdown-divider" />
-			</li>
-		);
-	}
-);
+			<div className="dropdown-divider" />
+		</>
+	);
+}
 
 const useIsomorphicEffect =
 	typeof window === 'undefined' ? useEffect : useLayoutEffect;
@@ -78,6 +82,9 @@ export function Head<T extends Record<string, any>>(
 		visibleKeys: new Set(visibleColumns.keys()),
 	});
 
+	const columnsVisibilityDescriptionId = useId();
+	const columnsVisibilityHeaderId = useId();
+
 	useIsomorphicEffect(() => {
 		if (visibleColumns.size === 0) {
 			onVisibleColumnsChange(collection.getItems(), 0);
@@ -103,23 +110,32 @@ export function Head<T extends Record<string, any>>(
 									'input[role="switch"]',
 								]}
 								alwaysClose={false}
-								items={[
-									{
-										description:
+								aria-describedby={
+									columnsVisibilityDescriptionId
+								}
+								aria-labelledby={columnsVisibilityHeaderId}
+								header={
+									<Header
+										description={
 											messages[
 												'columnsVisibilityDescription'
-											]!,
-										name: messages[
-											'columnsVisibilityHeader'
-										]!,
-									},
-									...collection
-										.getItems()
-										.filter(
-											(item) =>
-												!alwaysVisibleColumns.has(item)
-										),
-								]}
+											]!
+										}
+										descriptionId={
+											columnsVisibilityDescriptionId
+										}
+										name={
+											messages['columnsVisibilityHeader']!
+										}
+										nameId={columnsVisibilityHeaderId}
+									/>
+								}
+								items={collection
+									.getItems()
+									.filter(
+										(item) =>
+											!alwaysVisibleColumns.has(item)
+									)}
 								style={{
 									maxWidth: '210px',
 									minWidth: '210px',
@@ -139,97 +155,84 @@ export function Head<T extends Record<string, any>>(
 									</Button>
 								}
 							>
-								{(item) =>
-									typeof item === 'object' ? (
-										<Header
-											description={item.description}
-											key={item.name}
-											name={item.name}
-										/>
-									) : (
-										<Item
-											key={item}
-											onClick={() => {
-												if (
-													visibleColumns.has(item) &&
-													visibleColumns.size === 1
-												) {
-													return;
-												}
-
-												onVisibleColumnsChange(
-													item,
-													collection.getItem(item)
-														.index
-												);
-											}}
-											tabIndex={-1}
-											textValue={
-												collection.getItem(item).value
+								{(item) => (
+									<Item
+										key={item}
+										onClick={() => {
+											if (
+												visibleColumns.has(item) &&
+												visibleColumns.size === 1
+											) {
+												return;
 											}
-										>
-											<Layout.ContentRow verticalAlign="center">
-												<Layout.ContentCol expand>
-													{
+
+											onVisibleColumnsChange(
+												item,
+												collection.getItem(item).index
+											);
+										}}
+										tabIndex={-1}
+										textValue={
+											collection.getItem(item).value
+										}
+									>
+										<Layout.ContentRow verticalAlign="center">
+											<Layout.ContentCol expand>
+												{collection.getItem(item).value}
+											</Layout.ContentCol>
+
+											<Layout.ContentCol float="end">
+												<Toggle
+													aria-label={
 														collection.getItem(item)
 															.value
 													}
-												</Layout.ContentCol>
+													containerProps={{
+														style: {
+															marginBottom: 0,
+														},
+													}}
+													disabled={
+														visibleColumns.has(
+															item
+														) &&
+														visibleColumns.size -
+															alwaysVisibleColumns.size ===
+															1
+													}
+													onChange={(event) => {
+														event.stopPropagation();
 
-												<Layout.ContentCol float="end">
-													<Toggle
-														aria-label={
+														onVisibleColumnsChange(
+															item,
 															collection.getItem(
 																item
-															).value
+															).index
+														);
+													}}
+													onKeyDown={(event) => {
+														switch (event.key) {
+															case 'Enter':
+																onVisibleColumnsChange(
+																	item,
+																	collection.getItem(
+																		item
+																	).index
+																);
+																break;
+															default:
+																break;
 														}
-														containerProps={{
-															style: {
-																marginBottom: 0,
-															},
-														}}
-														disabled={
-															visibleColumns.has(
-																item
-															) &&
-															visibleColumns.size -
-																alwaysVisibleColumns.size ===
-																1
-														}
-														onChange={(event) => {
-															event.stopPropagation();
-
-															onVisibleColumnsChange(
-																item,
-																collection.getItem(
-																	item
-																).index
-															);
-														}}
-														onKeyDown={(event) => {
-															switch (event.key) {
-																case 'Enter':
-																	onVisibleColumnsChange(
-																		item,
-																		collection.getItem(
-																			item
-																		).index
-																	);
-																	break;
-																default:
-																	break;
-															}
-														}}
-														sizing="sm"
-														toggled={visibleColumns.has(
-															item
-														)}
-													/>
-												</Layout.ContentCol>
-											</Layout.ContentRow>
-										</Item>
-									)
-								}
+													}}
+													sizing="sm"
+													toggled={visibleColumns.has(
+														item
+													)}
+												/>
+											</Layout.ContentCol>
+										</Layout.ContentRow>
+									</Item>
+								)}
 							</Menu>
 						</Cell>
 					)}

@@ -908,6 +908,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
         id="clay-id-7"
         role="dialog"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <div
           aria-label="Use the calendar to choose a Date. Current selection April 2019"
@@ -1785,6 +1786,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
         id="clay-id-10"
         role="dialog"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <div
           aria-label="Use the calendar to choose a Date. Current selection April 2019"
@@ -2770,6 +2772,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
         id="clay-id-14"
         role="dialog"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <div
           aria-label="Use the calendar to choose a Date. Current selection April 2019"

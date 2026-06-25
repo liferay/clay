@@ -23,6 +23,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
         id="clay-dropdown-menu-1"
         role="presentation"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <div
           class="drilldown-inner"
@@ -194,6 +195,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
         id="clay-dropdown-menu-2"
         role="presentation"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <div
           class="drilldown-inner"

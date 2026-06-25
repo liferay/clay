@@ -44,6 +44,12 @@ type Props<T> = {
 	'alwaysClose'?: boolean;
 
 	/**
+	 * The `aria-describedby` attribute identifies the element (or elements) that
+	 * describes the element it is applied to.
+	 */
+	'aria-describedby'?: string;
+
+	/**
 	 * The `aria-label` attribute defines a string value that labels an interactive
 	 * element.
 	 */
@@ -79,6 +85,13 @@ type Props<T> = {
 	'disabled'?: boolean;
 
 	/**
+	 * Content rendered as a sibling of the `<ul>` menu element, before the menu
+	 * items. Useful for non-interactive descriptive content that should not be
+	 * a child of the `role="menu"` element.
+	 */
+	'header'?: React.ReactNode;
+
+	/**
 	 * Callback for when the active state changes (controlled).
 	 */
 	'onActiveChange'?: InternalDispatch<boolean>;
@@ -108,6 +121,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 		className,
 		defaultActive,
 		disabled,
+		header,
 		items,
 		onActiveChange,
 		role = 'menu',
@@ -290,6 +304,8 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 							role="presentation"
 							style={style}
 						>
+							{header}
+
 							<FocusMenu
 								focusableElements={UNSAFE_focusableElements}
 								menuRef={menuRef}

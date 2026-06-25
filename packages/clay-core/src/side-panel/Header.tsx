@@ -23,6 +23,11 @@ type Props = {
 	className?: string;
 
 	/**
+	 * HTML properties that are applied to the close button.
+	 */
+	closeButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+	/**
 	 * Messages for the Side Panel Header.
 	 */
 	messages?: Messages;
@@ -48,6 +53,7 @@ export type Messages = {
 export function Header({
 	children,
 	className,
+	closeButtonProps,
 	messages = {
 		backAriaLabel: 'Go back.',
 		closeAriaLabel: 'Close the side panel.',
@@ -85,8 +91,18 @@ export function Header({
 				<div className="autofit-col">
 					<button
 						aria-label={messages.closeAriaLabel}
-						className="close"
-						onClick={() => onOpenChange(false)}
+						{...closeButtonProps}
+						className={classnames(
+							'close',
+							closeButtonProps?.className
+						)}
+						onClick={(event) => {
+							closeButtonProps?.onClick?.(event);
+
+							if (!event.defaultPrevented) {
+								onOpenChange(false);
+							}
+						}}
 						type="button"
 					>
 						<Icon symbol="times" />

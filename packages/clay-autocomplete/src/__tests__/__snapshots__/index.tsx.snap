@@ -37,6 +37,7 @@ exports[`ClayAutocomplete renders DropDown with alignment with container 1`] = `
         class="dropdown-menu autocomplete-dropdown-menu show"
         role="presentation"
         style="max-width: none;"
+        tabindex="0"
       />
     </div>
   </div>

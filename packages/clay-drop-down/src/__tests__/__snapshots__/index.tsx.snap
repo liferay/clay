@@ -24,6 +24,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
         id="clay-dropdown-menu-2"
         role="presentation"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <ul
           class="list-unstyled"
@@ -96,6 +97,7 @@ exports[`ClayDropDown renders with groups 1`] = `
         id="clay-dropdown-menu-7"
         role="presentation"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <ul
           class="list-unstyled"
@@ -240,6 +242,7 @@ exports[`ClayDropDown renders with icons 1`] = `
         id="clay-dropdown-menu-6"
         role="presentation"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <ul
           class="list-unstyled"
@@ -357,6 +360,7 @@ exports[`ClayDropDown renders with search input 1`] = `
         id="clay-dropdown-menu-5"
         role="presentation"
         style="left: -999px; top: -995px;"
+        tabindex="0"
       >
         <form
           class=""
