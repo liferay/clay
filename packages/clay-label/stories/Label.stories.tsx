@@ -23,9 +23,6 @@ export default {
 		inverse: {
 			control: {type: 'boolean'},
 		},
-		large: {
-			control: {type: 'boolean'},
-		},
 	},
 	component: ClayLabel,
 	title: 'Design System/Components/Label',
@@ -52,7 +49,6 @@ export function Default(args: typeof Default.args) {
 			displayType={args.displayType as 'secondary'}
 			href={args.href}
 			inverse={args.inverse}
-			large={args.large}
 		>
 			{args.label}
 		</ClayLabel>
@@ -65,7 +61,28 @@ Default.args = {
 	href: '',
 	inverse: false,
 	label: 'Label',
-	large: false,
+};
+
+export function Sizes(args: typeof Sizes.args) {
+	return (
+		<div className="align-items-center c-gap-2 d-flex">
+			<ClayLabel displayType={args.displayType as 'secondary'} size="sm">
+				Small
+			</ClayLabel>
+
+			<ClayLabel displayType={args.displayType as 'secondary'}>
+				Default
+			</ClayLabel>
+
+			<ClayLabel displayType={args.displayType as 'secondary'} size="lg">
+				Large
+			</ClayLabel>
+		</div>
+	);
+}
+
+Sizes.args = {
+	displayType: 'secondary',
 };
 
 export function SeeAll(args: typeof Default.args) {
@@ -86,7 +103,6 @@ export function SeeAll(args: typeof Default.args) {
 						displayType={displayType}
 						href={args.href}
 						inverse={args.inverse}
-						large={args.large}
 					>
 						{args.label}
 					</ClayLabel>
@@ -101,7 +117,6 @@ SeeAll.args = {
 	href: '',
 	inverse: false,
 	label: 'Label',
-	large: false,
 };
 
 export function Truncate(args: typeof Default.args) {
@@ -112,7 +127,6 @@ export function Truncate(args: typeof Default.args) {
 					displayType={displayType}
 					inverse={args.inverse}
 					key={displayType}
-					large={args.large}
 				>
 					<span className="text-truncate">
 						this is a very long bit of text, can you see the end of
@@ -126,7 +140,6 @@ export function Truncate(args: typeof Default.args) {
 
 Truncate.args = {
 	inverse: false,
-	large: false,
 };
 
 export function ContentBefore(args: typeof Default.args) {
@@ -137,7 +150,6 @@ export function ContentBefore(args: typeof Default.args) {
 					displayType={displayType}
 					inverse={args.inverse}
 					key={displayType}
-					large={args.large}
 					withClose={false}
 				>
 					<ClayLabel.ItemBefore>
@@ -153,7 +165,6 @@ export function ContentBefore(args: typeof Default.args) {
 
 ContentBefore.args = {
 	inverse: false,
-	large: false,
 };
 
 const contentDisplayTypes = [
@@ -185,7 +196,6 @@ export function ContentVariants(args: typeof ContentVariants.args) {
 						closeButtonProps={closeButtonProps}
 						displayType={displayType}
 						href={args.href}
-						large={args.large}
 					>
 						{args.label}
 					</ContentLabel>
@@ -199,5 +209,4 @@ ContentVariants.args = {
 	closeable: false,
 	href: '',
 	label: 'Label',
-	large: false,
 };

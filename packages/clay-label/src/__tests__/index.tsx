@@ -27,6 +27,28 @@ describe('Rendering', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
+	it('renders the sm size with a label-sm class', () => {
+		const {container} = render(
+			<ClayLabel size="sm">Small Label</ClayLabel>
+		);
+
+		expect(container.querySelector('.label-sm')).toBeTruthy();
+	});
+
+	it('renders the lg size with a label-lg class', () => {
+		const {container} = render(
+			<ClayLabel size="lg">Large Label</ClayLabel>
+		);
+
+		expect(container.querySelector('.label-lg')).toBeTruthy();
+	});
+
+	it('renders the deprecated large prop with a label-lg class', () => {
+		const {container} = render(<ClayLabel large>Large Label</ClayLabel>);
+
+		expect(container.querySelector('.label-lg')).toBeTruthy();
+	});
+
 	it('renders as inverse displayType', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel displayType="success" inverse>

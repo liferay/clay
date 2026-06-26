@@ -282,10 +282,42 @@ $label-lg: map-deep-merge(
 	$label-lg
 );
 
+$label-sm: () !default;
+$label-sm: map-deep-merge(
+	(
+		border-radius: var(--label-sm-border-radius, $label-border-radius),
+		font-size: var(--label-sm-font-size, 0.75rem),
+		height: var(--label-sm-height, auto),
+		min-height: var(--label-sm-min-height, 1rem),
+		padding-bottom: var(--label-sm-padding-bottom, 0.0625rem),
+		padding-left: var(--label-sm-padding-left, 0.25rem),
+		padding-right: var(--label-sm-padding-right, 0.25rem),
+		padding-top: var(--label-sm-padding-top, 0.0625rem),
+		text-transform: var(--label-sm-text-transform, none),
+		label-item: (
+			margin-bottom: -1px,
+			margin-top: -1px,
+		),
+
+		lexicon-icon: (
+			height: 1em,
+			width: 1em,
+		),
+
+		sticker: (
+			height: var(--label-sm-sticker-height, 0.75rem),
+			line-height: var(--label-sm-sticker-line-height, 0.75rem),
+			width: var(--label-sm-sticker-width, 0.75rem),
+		),
+	),
+	$label-sm
+);
+
 $label-sizes: () !default;
 $label-sizes: map-deep-merge(
 	(
 		label-lg: $label-lg,
+		label-sm: $label-sm,
 	),
 	$label-sizes
 );

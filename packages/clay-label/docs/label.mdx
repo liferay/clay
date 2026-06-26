@@ -79,6 +79,36 @@ export default function App() {
 }
 ```
 
+## Sizes
+
+Use the [`size`](#api-size) property to render a smaller (`sm`) or larger (`lg`) label. When omitted, the label uses its default size.
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import Label from '@clayui/label';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="p-4">
+				<>
+					<Label displayType="success" size="sm">
+						Small
+					</Label>
+					<Label displayType="success">Default</Label>
+					<Label displayType="success" size="lg">
+						Large
+					</Label>
+				</>
+			</div>
+		</Provider>
+	);
+}
+```
+
 ## Closing Actions
 
 <div class="clay-site-alert alert alert-warning">

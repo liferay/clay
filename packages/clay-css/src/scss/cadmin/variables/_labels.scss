@@ -278,10 +278,42 @@ $cadmin-label-lg: map-deep-merge(
 	$cadmin-label-lg
 );
 
+$cadmin-label-sm: () !default;
+$cadmin-label-sm: map-deep-merge(
+	(
+		font-size: 12px,
+		height: auto,
+		min-height: 16px,
+		padding-bottom: 1px,
+		padding-left: 4px,
+		padding-right: 4px,
+		padding-top: 1px,
+		text-transform: none,
+
+		label-item: (
+			margin-bottom: -1px,
+			margin-top: -1px,
+		),
+
+		lexicon-icon: (
+			height: 1em,
+			width: 1em,
+		),
+
+		sticker: (
+			height: 12px,
+			line-height: 12px,
+			width: 12px,
+		),
+	),
+	$cadmin-label-sm
+);
+
 $cadmin-label-sizes: () !default;
 $cadmin-label-sizes: map-deep-merge(
 	(
 		label-lg: $cadmin-label-lg,
+		label-sm: $cadmin-label-sm,
 	),
 	$cadmin-label-sizes
 );

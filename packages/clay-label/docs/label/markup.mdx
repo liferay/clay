@@ -218,9 +218,12 @@ Outputs:
 
 ## Sizes
 
-Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)` to create a custom sized label:
+Use `label-sm` to make the label smaller or `label-lg` to make it larger, or use the mixin `label-size($sassMap)` to create a custom sized label:
 
 <div className="sheet-example">
+	<span className="label label-sm label-secondary">
+		<span className="label-item label-item-expand">Small Label</span>
+	</span>
 	<span className="label label-secondary">
 		<span className="label-item label-item-expand">Normal Label</span>
 	</span>
@@ -230,6 +233,9 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 </div>
 
 ```html
+<span class="label label-sm label-secondary">
+	<span class="label-item label-item-expand"> Small Label </span>
+</span>
 <span class="label label-secondary">
 	<span class="label-item label-item-expand"> Normal Label </span>
 </span>

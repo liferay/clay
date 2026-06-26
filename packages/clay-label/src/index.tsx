@@ -99,8 +99,14 @@ interface IBaseProps<T extends string = string>
 
 	/**
 	 * Flag to indicate if the label should be of the `large` variant.
+	 * @deprecated Use `size="lg"` instead.
 	 */
 	large?: boolean;
+
+	/**
+	 * Determines the size of the label.
+	 */
+	size?: 'lg' | 'sm';
 }
 
 const OldLabel = React.forwardRef<HTMLSpanElement, IBaseProps>(
@@ -112,6 +118,7 @@ const OldLabel = React.forwardRef<HTMLSpanElement, IBaseProps>(
 			displayType,
 			inverse = false,
 			large = false,
+			size,
 			...otherProps
 		},
 		ref
@@ -123,8 +130,9 @@ const OldLabel = React.forwardRef<HTMLSpanElement, IBaseProps>(
 				{...otherProps}
 				className={classNames('label', className, {
 					'label-dismissible': dismissible,
-					'label-lg': large,
+					'label-lg': !size && large,
 					[`label-${displayType}`]: !useInverse && displayType,
+					[`label-${size}`]: size,
 					[`label-inverse-${displayType}`]: useInverse,
 				})}
 				ref={ref}

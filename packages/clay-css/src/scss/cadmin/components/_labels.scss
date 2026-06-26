@@ -71,7 +71,7 @@
 				@include clay-label-variant($value);
 			}
 		} @else if (starts-with($size, 'label-')) {
-			$placeholder: '%#{size}';
+			$placeholder: '%#{$size}';
 
 			#{$placeholder} {
 				@include clay-label-variant($value);

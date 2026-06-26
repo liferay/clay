@@ -257,12 +257,30 @@ $label-lg: map-deep-merge(
 	$label-lg
 );
 
+// .label-sm
+
+$label-sm: () !default;
+$label-sm: map-deep-merge(
+	(
+		font-size: 0.75rem,
+		height: auto,
+		min-height: 1rem,
+		padding-bottom: 0.0625rem,
+		padding-left: 0.25rem,
+		padding-right: 0.25rem,
+		padding-top: 0.0625rem,
+		text-transform: none,
+	),
+	$label-sm
+);
+
 // Label Sizes
 
 $label-sizes: () !default;
 $label-sizes: map-deep-merge(
 	(
 		label-lg: $label-lg,
+		label-sm: $label-sm,
 	),
 	$label-sizes
 );
