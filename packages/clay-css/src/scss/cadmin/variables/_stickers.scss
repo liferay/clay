@@ -393,9 +393,9 @@ $cadmin-sticker-outline-0: map-deep-merge(
 $cadmin-sticker-outline-1: () !default;
 $cadmin-sticker-outline-1: map-deep-merge(
 	(
-		background-color: $cadmin-purple-l5,
-		border: 1px solid $cadmin-purple,
-		color: $cadmin-purple,
+		background-color: $cadmin-indigo-l5,
+		border: 1px solid $cadmin-indigo,
+		color: $cadmin-indigo,
 	),
 	$cadmin-sticker-outline-1
 );

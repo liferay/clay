@@ -463,9 +463,9 @@ $sticker-outline-0: map-deep-merge(
 $sticker-outline-1: () !default;
 $sticker-outline-1: map-deep-merge(
 	(
-		background-color: var(--sticker-outline-1-background-color, $purple-l5),
-		border: var(--sticker-outline-1-border, 1px solid $purple),
-		color: var(--sticker-outline-1-color, $purple),
+		background-color: var(--sticker-outline-1-background-color, $indigo-l5),
+		border: var(--sticker-outline-1-border, 1px solid $indigo),
+		color: var(--sticker-outline-1-color, $indigo),
 	),
 	$sticker-outline-1
 );
