@@ -720,3 +720,85 @@ export function ProductCard() {
 		</div>
 	);
 }
+export function CardPageViews() {
+	const labels = [
+		'One',
+		'Two',
+		'Three',
+		'Four',
+		'Five',
+		'Six',
+		'Seven',
+		'Eight',
+	];
+
+	// The card has no size of its own. .card-page and its dense/horizontal
+	// variants are CSS Grid containers whose column count is derived from the
+	// container width (auto-fill), so resize the preview to see the columns
+	// reflow. The container works the same whether it is a div, ul, or dl.
+
+	const renderCard = (label: string) => (
+		<ClayCard displayType="image" key={label}>
+			<ClayCard.AspectRatio className="card-item-first">
+				<div
+					className="aspect-ratio-item aspect-ratio-item-fluid"
+					style={{backgroundColor: '#e7e7ed'}}
+				/>
+			</ClayCard.AspectRatio>
+
+			<ClayCard.Body>
+				<ClayCard.Description displayType="title">
+					{label}
+				</ClayCard.Description>
+
+				<ClayCard.Description displayType="subtitle">
+					Columns adapt to the container width
+				</ClayCard.Description>
+			</ClayCard.Body>
+		</ClayCard>
+	);
+
+	return (
+		<>
+			<p>card-page (default — min 296px columns)</p>
+
+			<div className="card-page">
+				{labels.map((label) => (
+					<div className="card-page-item-asset" key={label}>
+						{renderCard(label)}
+					</div>
+				))}
+			</div>
+
+			<p className="c-mt-4">card-page as a list (ul / li markup)</p>
+
+			<ul className="card-page">
+				{labels.map((label) => (
+					<li className="card-page-item-asset" key={label}>
+						{renderCard(label)}
+					</li>
+				))}
+			</ul>
+
+			<p className="c-mt-4">card-page-dense (min 190px columns)</p>
+
+			<div className="card-page card-page-dense">
+				{labels.map((label) => renderCard(label))}
+			</div>
+
+			<p className="c-mt-4">
+				card-page-horizontal (min 288px columns, horizontal cards)
+			</p>
+
+			<div className="card-page card-page-horizontal">
+				{labels.map((label) => (
+					<ClayCardWithHorizontal
+						href="#"
+						key={label}
+						title={label}
+					/>
+				))}
+			</div>
+		</>
+	);
+}

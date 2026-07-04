@@ -534,10 +534,20 @@
 
 // Card Page
 
+// Card Page Layout Views
+//
+// .card-page (and its dense/horizontal variants) is a CSS Grid container: the
+// column count follows from the container width and a minimum column width
+// (auto-fill), so the cards carry no size of their own and reflow instead of
+// breaking in narrow containers. The container works the same as a div, ul, or
+// dl.
+
 .card-page {
 	@include clay-map-to-css($card-page);
 
 	&.card-page-equal-height {
+		grid-auto-rows: 1fr;
+
 		.card-page-item,
 		.card-page-item-asset,
 		.card-page-item-directory {
@@ -557,10 +567,16 @@
 	}
 }
 
+.card-page-dense {
+	@include clay-map-to-css($card-page-dense);
+}
+
+.card-page-horizontal {
+	@include clay-map-to-css($card-page-horizontal);
+}
+
 .card-page-item-header {
-	padding-left: calc(#{$grid-gutter-width} * 0.5);
-	padding-right: calc(#{$grid-gutter-width} * 0.5);
-	width: 100%;
+	grid-column: 1 / -1;
 }
 
 .card-page-item-directory {
