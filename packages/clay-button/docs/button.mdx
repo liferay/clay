@@ -41,6 +41,37 @@ export default function App() {
 }
 ```
 
+For actions that trigger or involve AI-assisted workflows, use the `ai` display
+type. `ClayAIButton` wraps it, always rendering the AI icon and a `Chat with AI`
+label (override it with `label`). The `gradient` prop switches the filled
+variant from solid purple to the "calling" gradient, `link` renders a borderless
+link, and the base flags (`outline`, `borderless`, `translucent`, `monospaced`)
+still apply:
+
+```jsx preview
+import {Provider} from '@clayui/core';
+import {ClayAIButton} from '@clayui/button';
+import React from 'react';
+
+import '@clayui/css/lib/css/atlas.css';
+
+export default function App() {
+	return (
+		<Provider spritemap="/public/icons.svg">
+			<div className="align-items-center c-gap-2 d-flex">
+				<ClayAIButton gradient />
+				<ClayAIButton />
+				<ClayAIButton outline />
+				<ClayAIButton borderless />
+				<ClayAIButton link />
+				<ClayAIButton translucent />
+				<ClayAIButton gradient monospaced />
+			</div>
+		</Provider>
+	);
+}
+```
+
 ## Group
 
 You can use the variant `Button.Group` for creating button groups:
