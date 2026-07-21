@@ -158,8 +158,8 @@ $table-quick-action-menu-bg: if(
 	$table-bg
 ) !default;
 
-$table-quick-action-menu-accent-bg: $table-accent-bg !default;
 $table-quick-action-menu-accent-active-bg: $table-hover-bg !default;
+$table-quick-action-menu-accent-bg: $table-accent-bg !default;
 
 $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
@@ -296,8 +296,8 @@ $table-action-link: map-deep-merge(
 					--table-action-link-focus-background-color,
 					unquote('hsl(from #{$black} h s l / 0.02)')
 				),
-			color: var(--table-action-link-focus-color, $gray-900),
 			box-shadow: $component-focus-box-shadow,
+			color: var(--table-action-link-focus-color, $gray-900),
 			outline: 0,
 		),
 
@@ -538,54 +538,54 @@ $c-tr-table-focus: map-deep-merge(
 			outline: 0,
 
 			before: (
+				bottom: calc(#{$table-border-width} * -1),
 				box-shadow:
 					unquote(
 						'inset 0 2px 0 0 #{$primary-l0},inset 0 4px 0 0 #{$white},inset 0 -2px 0 0 #{$primary-l0},inset 0 -4px 0 0 #{$white}'
 					),
 				content: '',
 				display: block,
-				position: absolute,
 				left: calc(#{$table-border-width} * -1),
+				pointer-events: none,
+				position: absolute,
 				right: calc(#{$table-border-width} * -1),
 				top: calc(#{$table-border-width} * -1),
-				bottom: calc(#{$table-border-width} * -1),
-				pointer-events: none,
 				z-index: 1,
 			),
 
 			first-child: (
 				after: (
+					bottom: $table-border-width,
 					box-shadow:
 						unquote(
 							'inset 2px 0 0 0 #{$primary-l0},inset 4px 0 0 0 #{$white}'
 						),
 					content: '',
 					display: block,
-					position: absolute,
-					pointer-events: none,
-					top: $table-border-width,
-					bottom: $table-border-width,
 					left: calc(#{$table-border-width} * -1),
-					z-index: 1,
+					pointer-events: none,
+					position: absolute,
+					top: $table-border-width,
 					width: 0.25rem,
+					z-index: 1,
 				),
 			),
 
 			last-child: (
 				after: (
+					bottom: $table-border-width,
 					box-shadow:
 						unquote(
 							'inset -2px 0 0 0 #{$primary-l0},inset -4px 0 0 0 #{$white}'
 						),
 					content: '',
 					display: block,
-					position: absolute,
 					pointer-events: none,
-					top: $table-border-width,
-					bottom: $table-border-width,
+					position: absolute,
 					right: calc(#{$table-border-width} * -1),
-					z-index: 1,
+					top: $table-border-width,
 					width: 0.25rem,
+					z-index: 1,
 				),
 			),
 		),
@@ -686,9 +686,9 @@ $c-table-nested-rows: () !default;
 $c-table-nested-rows: map-deep-merge(
 	(
 		autofit-col: (
+			min-width: 1.75rem,
 			padding-left: 0.125rem,
 			padding-right: 0.125rem,
-			min-width: 1.75rem,
 		),
 
 		autofit-col-checkbox: (

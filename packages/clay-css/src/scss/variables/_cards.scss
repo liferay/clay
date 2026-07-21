@@ -411,8 +411,8 @@ $form-check-card: map-deep-merge(
 			transform: none,
 
 			card: (
-				box-shadow: none,
 				border-color: $card-border-color,
+				box-shadow: none,
 				outline-color: transparent,
 			),
 		),
@@ -777,6 +777,7 @@ $card-interactive-primary: map-deep-merge(
 		hover: (
 			box-shadow: $card-interactive-primary-hover-box-shadow,
 		),
+
 		focus: (
 			background-color: $gray-100,
 		),

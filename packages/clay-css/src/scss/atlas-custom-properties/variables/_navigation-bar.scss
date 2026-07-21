@@ -39,8 +39,8 @@ $navigation-bar-base: map-deep-merge(
 			nav-link: (
 				border-radius: clay-enable-rounded($border-radius),
 				border-width: 0,
-				outline: 0,
 				font-size: inherit,
+				outline: 0,
 
 				focus: (
 					box-shadow: $component-focus-box-shadow,
@@ -184,6 +184,7 @@ $navigation-bar-base: map-deep-merge(
 										null
 									),
 							),
+
 							dropdown-item: (
 								padding-bottom:
 									setter(

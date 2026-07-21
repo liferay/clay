@@ -49,13 +49,13 @@ $list-group-item-flex-checkbox-offset-top: var(
 	--list-group-item-flex-checkbox-offset-top,
 	3px
 ) !default;
-$list-group-item-flex-offset-top: var(
-	--list-group-item-flex-offset-top,
-	1px
-) !default;
 $list-group-item-flex-list-group-title-offset-top: var(
 	--list-group-item-flex-list-group-title-offset-top,
 	-4px
+) !default;
+$list-group-item-flex-offset-top: var(
+	--list-group-item-flex-offset-top,
+	1px
 ) !default;
 
 $list-group-item-flex: () !default;
@@ -263,8 +263,8 @@ $list-group-text: () !default;
 $list-group-text: map-deep-merge(
 	(
 		color: var(--list-group-text-color, $gray-600),
-		margin-bottom: var(--list-group-text-margin-bottom, 0),
 		href: $list-group-text-link,
+		margin-bottom: var(--list-group-text-margin-bottom, 0),
 	),
 	$list-group-text
 );

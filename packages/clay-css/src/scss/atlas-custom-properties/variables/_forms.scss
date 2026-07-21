@@ -81,14 +81,14 @@ $input: () !default;
 $input: map-deep-merge(
 	(
 		background-color: $input-bg,
-		border-color: $input-border-color,
-		border-style: $input-border-style,
-		border-width: $input-border-width,
 		border-bottom-width: $input-border-bottom-width,
+		border-color: $input-border-color,
 		border-left-width: $input-border-left-width,
-		border-right-width: $input-border-right-width,
-		border-top-width: $input-border-top-width,
 		border-radius: $input-border-radius,
+		border-right-width: $input-border-right-width,
+		border-style: $input-border-style,
+		border-top-width: $input-border-top-width,
+		border-width: $input-border-width,
 		box-shadow: $input-box-shadow,
 		color: $input-color,
 		display: block,
@@ -1436,6 +1436,7 @@ $has-success: map-deep-merge(
 					border-color: $input-success-border-color,
 					box-shadow: $input-success-box-shadow,
 				),
+
 				focus: (
 					box-shadow: none,
 
@@ -1862,8 +1863,8 @@ $input-group-item: map-deep-merge(
 		dropdown: (
 			display: flex,
 			flex-wrap: wrap,
-			word-wrap: break-word,
 			width: 100%,
+			word-wrap: break-word,
 		),
 	),
 	$input-group-item

@@ -321,10 +321,10 @@ $spacers: map-deep-merge(
 $sizes: () !default;
 $sizes: map-merge(
 	(
-		100: 100%,
 		25: 25%,
 		50: 50%,
 		75: 75%,
+		100: 100%,
 		auto: auto,
 	),
 	$sizes
@@ -382,9 +382,13 @@ $component-disabled-opacity: var(--component-disabled-opacity) !default;
 
 $grid-breakpoints: (
 	xs: 0,
+
 	sm: 576px,
+
 	md: 768px,
+
 	lg: 992px,
+
 	xl: 1280px,
 ) !default;
 
@@ -438,10 +442,12 @@ $container-form-lg: () !default;
 $container-form-lg: map-deep-merge(
 	(
 		breakpoint-up: lg,
-		padding-bottom-mobile: 1rem,
+
 		padding-bottom: 3rem,
-		padding-top-mobile: 1rem,
 		padding-top: 3rem,
+
+		padding-bottom-mobile: 1rem,
+		padding-top-mobile: 1rem,
 	),
 	$container-form-lg
 );

@@ -8,6 +8,7 @@ $cadmin-navigation-bar-size: map-deep-merge(
 		height: 48px,
 		padding-x: 0px,
 		padding-y: 0px,
+
 		link-padding-x: 16px,
 
 		nav-item-dropdown-margin-top: 0px,
@@ -40,8 +41,8 @@ $cadmin-navigation-bar-base: map-deep-merge(
 			nav-link: (
 				border-radius: clay-enable-rounded($cadmin-border-radius),
 				border-width: 0px,
-				outline: 0,
 				font-size: inherit,
+				outline: 0,
 
 				focus: (
 					box-shadow: $cadmin-component-focus-box-shadow,
@@ -203,6 +204,7 @@ $cadmin-navigation-bar-base: map-deep-merge(
 										null
 									),
 							),
+
 							dropdown-item: (
 								padding-bottom:
 									setter(

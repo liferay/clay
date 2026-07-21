@@ -161,8 +161,8 @@ $sidebar: map-deep-merge(
 				var(--sidebar-header-padding-left, $sidebar-padding-left),
 			padding-right: var(--sidebar-header-padding-right, 16px),
 			padding-top: var(--sidebar-header-padding-top, $sidebar-padding-top),
-			component-title: $sidebar-header-component-title,
 			component-subtitle: $sidebar-header-component-subtitle,
+			component-title: $sidebar-header-component-title,
 
 			autofit-row: (
 				margin-left: var(--sidebar-header-autofit-row-margin-left, -4px),
@@ -344,8 +344,10 @@ $sidebar-light: map-deep-merge(
 		),
 
 		sidebar-footer: (
-			background-color: var(--sidebar-light-sidebar-footer, $white),
-			border: var(--sidebar-light-sidebar-footer, 0px solid $gray-300),
+			background-color:
+				var(--sidebar-light-sidebar-footer-background-color, $white),
+			border:
+				var(--sidebar-light-sidebar-footer-border, 0px solid $gray-300),
 		),
 
 		sidenav-start: (
@@ -410,6 +412,7 @@ $sidebar-dark: map-deep-merge(
 		sidebar-header: (
 			component-title: (
 				color: inherit,
+
 				href: (
 					color: inherit,
 				),
@@ -497,6 +500,7 @@ $sidebar-palette: map-deep-merge(
 			sidebar-header: (
 				component-title: (
 					color: inherit,
+
 					href: (
 						color: inherit,
 					),

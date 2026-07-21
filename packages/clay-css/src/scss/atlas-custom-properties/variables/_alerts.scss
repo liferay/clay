@@ -149,9 +149,9 @@ $alert: () !default;
 $alert: map-deep-merge(
 	(
 		border-color: transparent,
+		border-radius: clay-enable-rounded($alert-border-radius),
 		border-style: $alert-border-style,
 		border-width: $alert-border-width,
-		border-radius: clay-enable-rounded($alert-border-radius),
 		display: block,
 		font-size: $alert-font-size,
 		margin-bottom: $alert-margin-bottom,
@@ -349,6 +349,7 @@ $alert-notifications-absolute: () !default;
 $alert-notifications-absolute: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		bottom: $alert-notifications-absolute-bottom,
 		height: 0rem,
 		left: $alert-notifications-absolute-left,
@@ -387,6 +388,7 @@ $alert-notifications-fixed: () !default;
 $alert-notifications-fixed: map-deep-merge(
 	(
 		breakpoint-down: sm,
+
 		bottom: $alert-notifications-fixed-bottom,
 		left: $alert-notifications-fixed-left,
 		position: fixed,
@@ -518,9 +520,9 @@ $alert-inline: map-deep-merge(
 			align-items: center,
 			margin-bottom: calc(#{$alert-padding-y} * -1 - 1px),
 			margin-top: calc(#{$alert-padding-y} * -1 - 1px),
+			min-height: 3.5rem,
 			padding-bottom: 0.5625rem,
 			padding-top: 0.5625rem,
-			min-height: 3.5rem,
 
 			btn-group: (
 				margin-right: 2rem,

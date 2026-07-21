@@ -136,8 +136,8 @@ $cadmin-menubar-primary: map-deep-merge(
 
 		menubar-action: (
 			position: absolute,
-			top: 10px,
 			right: 32px,
+			top: 10px,
 		),
 	),
 	$cadmin-menubar-primary
@@ -644,6 +644,7 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 
 					focus: (
 						background-color: transparent,
+
 						after: (
 							box-shadow: $cadmin-component-focus-inset-box-shadow,
 						),

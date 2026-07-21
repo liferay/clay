@@ -51,8 +51,8 @@ $cadmin-table-striped-order: odd !default;
 // Table Cell applies to `th` and `td`
 
 $cadmin-table-cell-gutters: 20px !default;
-$cadmin-table-cell-padding-lg: 17px !default;
 $cadmin-table-cell-padding: 8px 16px !default;
+$cadmin-table-cell-padding-lg: 17px !default;
 $cadmin-table-cell-padding-sm: 4px 16px !default;
 
 $cadmin-table-cell-expand-min-width: 200px !default; // 200px
@@ -126,14 +126,14 @@ $cadmin-table-divider-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-table-divider-padding: 8px 16px 8px $cadmin-table-cell-gutters !default;
 $cadmin-table-divider-text-transform: uppercase !default;
 
+$cadmin-table-quick-action-menu-accent-active-bg: $cadmin-table-hover-bg !default;
+$cadmin-table-quick-action-menu-accent-bg: $cadmin-table-accent-bg !default;
 $cadmin-table-quick-action-menu-align-items: flex-start !default;
 $cadmin-table-quick-action-menu-bg: if(
 	$cadmin-table-bg == transparent,
 	$cadmin-body-bg,
 	$cadmin-table-bg
 ) !default;
-$cadmin-table-quick-action-menu-accent-bg: $cadmin-table-accent-bg !default;
-$cadmin-table-quick-action-menu-accent-active-bg: $cadmin-table-hover-bg !default;
 
 $cadmin-table-quick-action-menu-hover-bg: $cadmin-table-hover-bg !default;
 
@@ -251,8 +251,8 @@ $cadmin-table-action-link: map-deep-merge(
 
 		focus: (
 			background-color: unquote('hsl(from #{$cadmin-black} h s l / 0.02)'),
-			color: $cadmin-gray-900,
 			box-shadow: $cadmin-component-focus-box-shadow,
+			color: $cadmin-gray-900,
 			outline: 0,
 		),
 
@@ -370,6 +370,7 @@ $cadmin-c-table: map-deep-merge(
 
 		table-active: (
 			background-color: $cadmin-table-active-bg,
+
 			quick-action-menu: (
 				background-color: $cadmin-table-quick-action-menu-active-bg,
 			),
@@ -488,6 +489,7 @@ $cadmin-c-tr-table-focus: map-deep-merge(
 	(
 		td: (
 			before: (
+				bottom: calc(#{$cadmin-table-border-width} * -1),
 				box-shadow: (
 					inset 0 2px 0 0 $cadmin-primary-l0,
 					inset 0 4px 0 0 $cadmin-white,
@@ -496,48 +498,47 @@ $cadmin-c-tr-table-focus: map-deep-merge(
 				),
 				content: '',
 				display: block,
-				position: absolute,
 				left: calc(#{$cadmin-table-border-width} * -1),
+				pointer-events: none,
+				position: absolute,
 				right: calc(#{$cadmin-table-border-width} * -1),
 				top: calc(#{$cadmin-table-border-width} * -1),
-				bottom: calc(#{$cadmin-table-border-width} * -1),
-				pointer-events: none,
 				z-index: 1,
 			),
 
 			first-child: (
 				after: (
+					bottom: $cadmin-table-border-width,
 					box-shadow: (
 						inset 2px 0 0 0 $cadmin-primary-l0,
 						inset 4px 0 0 0 $cadmin-white,
 					),
 					content: '',
 					display: block,
-					position: absolute,
-					pointer-events: none,
-					top: $cadmin-table-border-width,
-					bottom: $cadmin-table-border-width,
 					left: calc(#{$cadmin-table-border-width} * -1),
-					z-index: 1,
+					pointer-events: none,
+					position: absolute,
+					top: $cadmin-table-border-width,
 					width: 4px,
+					z-index: 1,
 				),
 			),
 
 			last-child: (
 				after: (
+					bottom: $cadmin-table-border-width,
 					box-shadow: (
 						inset -2px 0 0 0 $cadmin-primary-l0,
 						inset -4px 0 0 0 $cadmin-white,
 					),
 					content: '',
 					display: block,
-					position: absolute,
 					pointer-events: none,
-					top: $cadmin-table-border-width,
-					bottom: $cadmin-table-border-width,
+					position: absolute,
 					right: calc(#{$cadmin-table-border-width} * -1),
-					z-index: 1,
+					top: $cadmin-table-border-width,
 					width: 4px,
+					z-index: 1,
 				),
 			),
 		),
@@ -598,9 +599,9 @@ $cadmin-c-table-nested-rows: () !default;
 $cadmin-c-table-nested-rows: map-deep-merge(
 	(
 		autofit-col: (
+			min-width: 28px,
 			padding-left: 2px,
 			padding-right: 2px,
-			min-width: 28px,
 		),
 
 		autofit-col-checkbox: (
@@ -801,8 +802,8 @@ $cadmin-table-list-divider-padding-y: 8px !default;
 $cadmin-table-list-quick-action-menu-align-items: center !default;
 $cadmin-table-list-quick-action-menu-bg: $cadmin-table-list-bg !default;
 
-$cadmin-table-list-quick-action-menu-accent-bg: $cadmin-table-list-accent-bg !default;
 $cadmin-table-list-quick-action-menu-accent-active-bg: $cadmin-table-list-active-bg !default;
+$cadmin-table-list-quick-action-menu-accent-bg: $cadmin-table-list-accent-bg !default;
 
 $cadmin-table-list-quick-action-menu-hover-bg: $cadmin-table-list-hover-bg !default;
 
@@ -926,6 +927,7 @@ $cadmin-c-table-list: map-merge(
 				$cadmin-c-table-list-thead,
 				(
 					background-color: $cadmin-table-list-head-bg,
+
 					table-cell: (
 						border-bottom-width: 0px,
 						font-size: $cadmin-table-list-head-font-size,
@@ -970,6 +972,7 @@ $cadmin-c-table-list: map-merge(
 
 		table-active: (
 			background-color: $cadmin-table-list-active-bg,
+
 			quick-action-menu: (
 				background-color: $cadmin-table-list-quick-action-menu-active-bg,
 			),

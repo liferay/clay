@@ -37,9 +37,9 @@ $btn: map-deep-merge(
 	(
 		background-color: transparent,
 		border-color: transparent,
+		border-radius: clay-enable-rounded($btn-border-radius),
 		border-style: solid,
 		border-width: $btn-border-width,
-		border-radius: clay-enable-rounded($btn-border-radius),
 		box-shadow: clay-enable-shadows($btn-box-shadow),
 		color: $body-color,
 		cursor: $btn-cursor,
@@ -129,6 +129,7 @@ $btn-font-size-lg: $input-btn-font-size-lg !default;
 $btn-line-height-lg: $input-btn-line-height-lg !default;
 $btn-padding-x-lg: $input-btn-padding-x-lg !default;
 $btn-padding-y-lg: $input-btn-padding-y-lg !default;
+
 $btn-inline-item-font-size-lg: null !default;
 $btn-section-font-size-lg: 0.8125rem !default; // 13px
 
@@ -173,6 +174,7 @@ $btn-font-size-sm: $input-btn-font-size-sm !default;
 $btn-line-height-sm: $input-btn-line-height-sm !default;
 $btn-padding-x-sm: $input-btn-padding-x-sm !default;
 $btn-padding-y-sm: $input-btn-padding-y-sm !default;
+
 $btn-inline-item-font-size-sm: null !default;
 $btn-section-font-size-sm: 0.5625rem !default; // 9px
 

@@ -47,6 +47,7 @@ $nav-link-btn-unstyled: () !default;
 $nav-link-btn-unstyled: map-deep-merge(
 	(
 		width: 100%,
+
 		disabled-opacity: 1,
 
 		c-inner: (
@@ -399,8 +400,8 @@ $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg
 $nav-tabs-link-active-color: $gray-700 !default;
 
 $nav-tabs-link-show-bg: $nav-tabs-link-active-bg !default;
-$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
 $nav-tabs-link-show-border-color: $nav-tabs-link-active-border-color !default;
+$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
 
 // .nav-tabs .nav-link[aria-expanded="true"]
 
@@ -418,9 +419,9 @@ $nav-tabs-link: () !default;
 $nav-tabs-link: map-deep-merge(
 	(
 		border-color: transparent,
+		border-radius: $nav-tabs-border-radius,
 		border-style: solid,
 		border-width: $nav-tabs-border-width,
-		border-radius: $nav-tabs-border-radius,
 		color: $nav-tabs-link-color,
 		padding-bottom: $nav-tabs-link-padding-y,
 		padding-left: $nav-tabs-link-padding-x,

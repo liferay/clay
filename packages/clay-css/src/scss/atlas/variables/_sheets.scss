@@ -19,14 +19,16 @@ $sheet-footer-margin-top-mobile: 1rem !default; // 16px
 
 $sheet-title-font-size: 1.25rem !default; // 20px
 $sheet-title-font-weight: $font-weight-bold !default;
+
 $sheet-title-margin-bottom-mobile: 1rem !default; // 16px
 
 // Sheet Subtitle
 
-$sheet-subtitle-color: $body-color !default;
 $sheet-subtitle-border-color: $gray-500 !default;
+$sheet-subtitle-color: $body-color !default;
 $sheet-subtitle-font-size: 0.875rem !default; // 14px
 $sheet-subtitle-padding-y: 0.5rem !default; // 8px
+
 $sheet-subtitle-margin-bottom-mobile: 1rem !default; // 16px
 
 // Sheet Subtitle as Panel Header

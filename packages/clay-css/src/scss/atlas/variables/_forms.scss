@@ -39,12 +39,12 @@ $input: () !default;
 $input: map-deep-merge(
 	(
 		background-color: $input-bg,
-		border-color: $input-border-color,
-		border-width: $input-border-width,
 		border-bottom-width: $input-border-bottom-width,
+		border-color: $input-border-color,
 		border-left-width: $input-border-left-width,
 		border-right-width: $input-border-right-width,
 		border-top-width: $input-border-top-width,
+		border-width: $input-border-width,
 		box-shadow: $input-box-shadow,
 		color: $input-color,
 		height: $input-height,
@@ -477,6 +477,7 @@ $input-select-size: map-deep-merge(
 
 		option: (
 			padding: 0.4375rem 0.5rem,
+
 			hover: (
 				background-image: linear-gradient(#{$gray-300}, #{$gray-300}),
 			),
@@ -551,7 +552,9 @@ $input-group-addon-color: $gray-600 !default;
 $input-group-addon-font-weight: $font-weight-semi-bold !default;
 $input-group-addon-min-width: 2.5rem !default; // 40px
 $input-group-addon-padding-x: 0.75rem !default; // 12px
+
 $input-group-item-margin-left: 0.5rem !default;
+
 $input-group-item: () !default;
 $input-group-item: map-deep-merge(
 	(
@@ -589,8 +592,8 @@ $input-group-item: map-deep-merge(
 		dropdown: (
 			display: flex,
 			flex-wrap: wrap,
-			word-wrap: break-word,
 			width: 100%,
+			word-wrap: break-word,
 		),
 	),
 	$input-group-item
