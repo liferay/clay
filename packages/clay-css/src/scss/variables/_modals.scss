@@ -87,13 +87,13 @@ $modal-header-height-mobile: null !default;
 $modal-header: () !default;
 $modal-header: map-deep-merge(
 	(
-		breakpoint-down: sm,
-
 		align-items: center,
 		background-color: $modal-header-bg,
 		border-color: $modal-header-border-color,
 		border-style: solid,
-		border-top-radius:
+		border-top-left-radius:
+			clay-enable-rounded($modal-content-inner-border-radius),
+		border-top-right-radius:
 			clay-enable-rounded($modal-content-inner-border-radius),
 		border-width: 0px 0px $modal-header-border-width 0px,
 		color: $modal-header-color,
@@ -111,8 +111,10 @@ $modal-header: map-deep-merge(
 			margin-top: 0rem,
 		),
 
-		mobile: (
-			height: $modal-header-height-mobile,
+		media-breakpoint-down: (
+			sm: (
+				height: $modal-header-height-mobile,
+			),
 		),
 	),
 	$modal-header

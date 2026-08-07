@@ -94,14 +94,14 @@ $cadmin-modal-header-height-mobile: null !default;
 $cadmin-modal-header: () !default;
 $cadmin-modal-header: map-deep-merge(
 	(
-		breakpoint-down: sm,
-
 		align-items: center,
 		background-color: $cadmin-modal-header-bg,
 		border-color: $cadmin-modal-header-border-color,
 		border-style: solid,
 		border-width: 0px 0px $cadmin-modal-header-border-width 0px,
-		border-top-radius:
+		border-top-left-radius:
+			clay-enable-rounded($cadmin-modal-content-inner-border-radius),
+		border-top-right-radius:
 			clay-enable-rounded($cadmin-modal-content-inner-border-radius),
 		color: $cadmin-modal-header-color,
 		display: flex,
@@ -117,8 +117,10 @@ $cadmin-modal-header: map-deep-merge(
 			margin-top: 0px,
 		),
 
-		mobile: (
-			height: $cadmin-modal-header-height-mobile,
+		media-breakpoint-down: (
+			sm: (
+				height: $cadmin-modal-header-height-mobile,
+			),
 		),
 	),
 	$cadmin-modal-header

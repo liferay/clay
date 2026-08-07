@@ -4,12 +4,14 @@
  */
 
 import ClayButton from '@clayui/button';
+import {Heading} from '@clayui/core';
 import {ClayCheckbox, ClayInput, ClayRadio} from '@clayui/form';
 import ClayModal, {useModal} from '@clayui/modal';
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import ClayDropDown, {
 	Align,
+	ClayDropDownWithAI,
 	ClayDropDownWithDrilldown,
 	ClayDropDownWithItems,
 } from '../src';
@@ -692,5 +694,316 @@ export function KeyboardArrowsIndicator() {
 				<ClayDropDown.Item href="#grape">Grape</ClayDropDown.Item>
 			</ClayDropDown.ItemList>
 		</ClayDropDown>
+	);
+}
+
+const AI_ITEMS = [
+	{label: 'Improve writing', symbolLeft: 'stars'},
+	{label: 'Fix spelling & grammar', symbolLeft: 'check'},
+	{
+		label: 'Translate to',
+		symbolLeft: 'text',
+		symbolRight: 'angle-right',
+	},
+	{label: 'Make shorter', symbolLeft: 'list'},
+	{label: 'Make longer', symbolLeft: 'list'},
+];
+
+type AIFlowState = 'menu' | 'prompt' | 'result' | 'working';
+
+// Shared controlled flow: opens, walks menu -> prompt -> working, then fakes
+// the async AI request to reach result.
+
+function useAIFlow() {
+	const [active, setActive] = useState(false);
+	const [aiState, setAiState] = useState<AIFlowState>('menu');
+
+	return {
+		active,
+		aiState,
+		flowProps: {
+			active,
+			aiState,
+			onAccept: () => {
+				setActive(false);
+				setAiState('menu');
+			},
+			onActiveChange: setActive,
+			onAiStateChange: setAiState,
+			onReset: () => setAiState('menu'),
+			onSubmit: () => {
+
+				// Fake the async AI request; ignore the result if the user has
+				// meanwhile moved away from the working state (e.g. re-opened
+				// the menu with a right-click).
+
+				setTimeout(
+					() =>
+						setAiState((state) =>
+							state === 'working' ? 'result' : state
+						),
+					1500
+				);
+			},
+		},
+		setActive,
+		setAiState,
+	};
+}
+
+function AIDefault() {
+	const {flowProps} = useAIFlow();
+
+	return (
+		<ClayDropDownWithAI
+			{...flowProps}
+			items={AI_ITEMS}
+			trigger={<ClayButton>AI actions</ClayButton>}
+			workingLabel="Improving writing…"
+		/>
+	);
+}
+
+function AIInput() {
+	const {flowProps} = useAIFlow();
+
+	return (
+		<ClayDropDownWithAI
+			{...flowProps}
+			items={AI_ITEMS}
+			trigger={
+				<div>
+					<ClayInput
+						aria-label="Click to open the AI menu"
+						defaultValue="I like milk"
+					/>
+				</div>
+			}
+			workingLabel="Improving writing…"
+		/>
+	);
+}
+
+function AIInputSelection() {
+	const {active, aiState, flowProps, setActive, setAiState} = useAIFlow();
+
+	return (
+		<ClayDropDownWithAI
+			{...flowProps}
+			items={AI_ITEMS}
+			openOnClick={false}
+			trigger={
+				<div
+					onClick={() => {
+						if (aiState === 'menu' || aiState === 'prompt') {
+							setActive(false);
+						}
+					}}
+					onContextMenu={(event) => {
+						event.preventDefault();
+
+						// The working and result states can only be dismissed by
+						// their own controls, so ignore the right-click there.
+
+						if (
+							active &&
+							aiState !== 'menu' &&
+							aiState !== 'prompt'
+						) {
+							return;
+						}
+
+						setAiState('menu');
+						setActive(true);
+					}}
+				>
+					<ClayInput
+						aria-label="Right-click to open the AI menu"
+						defaultValue="I like milk"
+					/>
+				</div>
+			}
+		/>
+	);
+}
+
+const AI_FIELD_TEXT = 'I like milk';
+
+const AI_WORKING_KEYFRAMES = `
+@keyframes ai-working-pulse {
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.4;
+	}
+}
+`;
+
+function AIRealUsage() {
+	const {active, aiState, flowProps, setActive, setAiState} = useAIFlow();
+	const fieldRef = useRef<HTMLDivElement>(null);
+	const highlightRef = useRef<HTMLSpanElement | null>(null);
+
+	const working = active && aiState === 'working';
+
+	useEffect(() => {
+		if (fieldRef.current && !fieldRef.current.textContent) {
+			fieldRef.current.textContent = AI_FIELD_TEXT;
+		}
+	}, []);
+
+	// Remove the highlight once the flow closes, restoring plain text.
+
+	useEffect(() => {
+		const span = highlightRef.current;
+
+		if (!active && span?.parentNode) {
+			span.replaceWith(document.createTextNode(span.textContent ?? ''));
+
+			fieldRef.current?.normalize();
+
+			highlightRef.current = null;
+		}
+	}, [active]);
+
+	const highlightSelection = () => {
+		const windowSelection = window.getSelection();
+
+		if (windowSelection?.rangeCount && !windowSelection.isCollapsed) {
+			const span = document.createElement('span');
+
+			span.style.background =
+				'var(--Color-Charts-Purple-purple-l5, #F2E5FF)';
+
+			try {
+				windowSelection.getRangeAt(0).surroundContents(span);
+
+				highlightRef.current = span;
+			}
+			catch (error) {
+
+				// The selection spans multiple nodes; skip the highlight.
+
+				highlightRef.current = null;
+			}
+		}
+	};
+
+	return (
+		<ClayDropDownWithAI
+			{...flowProps}
+			items={AI_ITEMS}
+			onAccept={() => setActive(false)}
+			onReset={() => setActive(false)}
+			openOnClick={false}
+			trigger={
+				<div className="position-relative">
+					<style>{AI_WORKING_KEYFRAMES}</style>
+
+					<div
+						aria-label="Right-click to run AI on this field"
+						className="form-control"
+						contentEditable
+						onContextMenu={(event) => {
+							event.preventDefault();
+
+							if (!active) {
+								highlightSelection();
+
+								setAiState('menu');
+								setActive(true);
+							}
+						}}
+						ref={fieldRef}
+						role="textbox"
+						suppressContentEditableWarning
+					/>
+
+					{working ? (
+						<div
+							className="position-absolute"
+							style={{
+								background: '#fff',
+								borderRadius: '0.25rem',
+								inset: 0,
+							}}
+						>
+							<div
+								className="position-absolute"
+								style={{
+									animation:
+										'ai-working-pulse 1.5s ease-in-out infinite',
+									background:
+										'linear-gradient(270deg, rgba(77, 95, 255, 0.1) 0%, rgba(149, 0, 255, 0.1) 100%)',
+									borderRadius: '0.25rem',
+									inset: 0,
+								}}
+							/>
+						</div>
+					) : null}
+				</div>
+			}
+		/>
+	);
+}
+
+export function AI() {
+	return (
+		<div className="c-gap-5 d-flex flex-column">
+			<div>
+				<Heading level={3}>Default (button trigger)</Heading>
+
+				<AIDefault />
+			</div>
+
+			<div>
+				<Heading level={3}>Input trigger</Heading>
+
+				<AIInput />
+			</div>
+
+			<div>
+				<Heading level={3}>Input trigger with right-click</Heading>
+
+				<p className="text-secondary">
+					The consumer wires the right-click opener on the field and
+					turns <code>openOnClick</code>
+
+					off, so a left-click dismisses the flow while in the{' '}
+
+					<code>menu</code> or <code>prompt</code> state.
+				</p>
+
+				<AIInputSelection />
+			</div>
+
+			<div>
+				<Heading level={3}>Real Usage</Heading>
+
+				<p className="text-secondary">
+					The consumer owns the <code>trigger</code>, here a{' '}
+
+					<code>contentEditable </code>
+					field, and drives the controlled
+					<code> aiState </code>
+
+					and <code>active</code>
+					props so the field can mirror each state. Right-clicking (
+					<code>onContextMenu</code>) opens the menu with{' '}
+
+					<code>openOnClick</code> off, the selected text is
+					highlighted while the flow is open, a pulsing block covers
+					the field while <code>working</code>, and{' '}
+
+					<code>onAccept</code>/<code>onReset</code> close the flow
+					and restore the field.
+				</p>
+
+				<AIRealUsage />
+			</div>
+		</div>
 	);
 }
