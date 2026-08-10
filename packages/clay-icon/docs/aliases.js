@@ -338,6 +338,10 @@ export const iconsData = [
 		name: 'adjust',
 	},
 	{
+		aliases: ['actions', 'ai', 'autonomous'],
+		name: 'agent',
+	},
+	{
 		aliases: ['texts', 'lines', 'editor'],
 		name: 'align-center',
 	},
@@ -738,6 +742,10 @@ export const iconsData = [
 	{
 		aliases: ['analytics', 'proportion', 'segment', 'slice'],
 		name: 'chart-pie',
+	},
+	{
+		aliases: ['agent', 'ai', 'chatbot'],
+		name: 'chat-spark',
 	},
 	{
 		aliases: ['chat', 'bot'],
@@ -1358,6 +1366,10 @@ export const iconsData = [
 	{
 		aliases: ['shop', 'store'],
 		name: 'marketplace',
+	},
+	{
+		aliases: ['ai', 'connector', 'plugin', 'server'],
+		name: 'mcp',
 	},
 	{
 		aliases: ['approval', 'ranking', 'reward'],
