@@ -31,7 +31,7 @@
 	"description": "Liferay's web implementation of the Lexicon Design Language",
 	"devDependencies": {
 		"jsdom": "^18.0.0",
-		"sass": "^1.42.0",
+		"sass": "1.77.5",
 		"sassdoc": "^2.5.1",
 		"svgo": "^2.7.0"
 	},
@@ -57,5 +57,5 @@
 		"link": "npm link",
 		"prepublish": "yarn compile"
 	},
-	"version": "3.165.0"
+	"version": "3.166.0"
 }
