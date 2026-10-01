@@ -362,8 +362,9 @@ exports[`Table basic rendering render with sort column 1`] = `
                 class="autofit-col"
               >
                 <button
+                  aria-label="sort by Name"
                   class="component-action"
-                  title="sortable column"
+                  title="sort by Name"
                   type="button"
                 >
                   <svg
@@ -407,8 +408,9 @@ exports[`Table basic rendering render with sort column 1`] = `
                 class="autofit-col"
               >
                 <button
+                  aria-label="sort by Type"
                   class="component-action"
-                  title="sortable column"
+                  title="sort by Type"
                   type="button"
                 >
                   <svg
