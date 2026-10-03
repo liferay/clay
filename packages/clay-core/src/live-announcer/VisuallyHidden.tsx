@@ -30,7 +30,7 @@ export const VisuallyHidden = React.forwardRef<HTMLDivElement, Props>(
 				{...props}
 				data-live-announcer={liveAnnouncer}
 				ref={ref}
-				style={styles}
+				style={liveAnnouncer ? {...styles, position: 'fixed'} : styles}
 			>
 				{children}
 			</div>
