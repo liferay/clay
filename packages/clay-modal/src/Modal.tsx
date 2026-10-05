@@ -23,6 +23,7 @@ import Header, {
 } from './Header';
 import {useUserInteractions} from './Hook';
 import {Observer, ObserverType} from './types';
+import {useModalStack} from './useModalStack';
 
 interface IProps
 	extends React.HTMLAttributes<HTMLDivElement>,
@@ -62,7 +63,7 @@ interface IProps
 	size?: 'full-screen' | 'lg' | 'sm';
 
 	/**
-	 * Allows setting a custom z-index value, overriding the default one which is 1040, modal body z-index will be +10 of this value
+	 * Allows setting a custom z-index value, overriding the default one which is 1040, modal body z-index will be +10 of this value. Without it, a modal opened over another modal is stacked above it automatically; setting it turns that off.
 	 */
 	zIndex?: number;
 }
@@ -110,6 +111,8 @@ function Modal({
 	useEffect(() => {
 		observer.dispatch(ObserverType.RestoreFocus, document.activeElement);
 		observer.dispatch(ObserverType.Open);
+
+		return () => observer.dispatch(ObserverType.Unmount);
 	}, []);
 	useEffect(() => {
 		if (modalBodyElementRef.current && show && content) {
@@ -128,6 +131,12 @@ function Modal({
 
 		return `clay-modal-label-${counter}`;
 	}, []);
+
+	const {zIndex: stackZIndex} = useModalStack(modalElementRef, {
+		active: show && content,
+		disabled: zIndex !== undefined,
+	});
+
 	useEffect(() => {
 		if (show && content) {
 			stack.push(modalElementRef);
@@ -153,6 +162,12 @@ function Modal({
 		}
 	}, [show]);
 
+	const backdropZIndex = zIndex ?? stackZIndex;
+	const modalZIndex =
+		zIndex === undefined
+			? stackZIndex && stackZIndex + 1
+			: zIndex && zIndex + 10;
+
 	return (
 		<ClayPortal
 			{...containerProps}
@@ -164,7 +179,7 @@ function Modal({
 				className={classNames('modal-backdrop fade', {
 					show,
 				})}
-				style={{zIndex}}
+				style={{zIndex: backdropZIndex}}
 			/>
 
 			<div
@@ -173,7 +188,7 @@ function Modal({
 					show,
 				})}
 				ref={modalElementRef}
-				style={{zIndex: zIndex && zIndex + 10}}
+				style={{zIndex: modalZIndex}}
 			>
 				<div
 					className={classNames('modal-dialog', {

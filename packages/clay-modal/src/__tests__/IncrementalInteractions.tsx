@@ -13,6 +13,25 @@ import ReactDOM from 'react-dom';
 
 const spritemap = 'icons.svg';
 
+function ModalUnmountedWithoutClose() {
+	const [visible, setVisible] = React.useState(false);
+	const {observer} = useModal();
+
+	return (
+		<>
+			{visible && <ClayModal observer={observer} spritemap={spritemap} />}
+
+			<Button aria-label="show" onClick={() => setVisible(true)}>
+				Show
+			</Button>
+
+			<Button aria-label="hide" onClick={() => setVisible(false)}>
+				Hide
+			</Button>
+		</>
+	);
+}
+
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	children?: any;
 	initialVisible?: boolean;
@@ -49,6 +68,70 @@ function ModalWithHookState() {
 	);
 }
 
+interface IStackedModalsProps {
+	lowerClassName?: string;
+	lowerZIndex?: number;
+	upperZIndex?: number;
+}
+
+function StackedModals({
+	lowerClassName,
+	lowerZIndex,
+	upperZIndex,
+}: IStackedModalsProps) {
+	const lower = useModal();
+	const upper = useModal();
+
+	return (
+		<>
+			{lower.open && (
+				<ClayModal
+					className={lowerClassName}
+					observer={lower.observer}
+					spritemap={spritemap}
+					zIndex={lowerZIndex}
+				/>
+			)}
+
+			{upper.open && (
+				<ClayModal
+					observer={upper.observer}
+					spritemap={spritemap}
+					zIndex={upperZIndex}
+				/>
+			)}
+
+			<Button
+				aria-label="openLower"
+				onClick={() => lower.onOpenChange(true)}
+			>
+				Lower
+			</Button>
+
+			<Button
+				aria-label="openUpper"
+				onClick={() => upper.onOpenChange(true)}
+			>
+				Upper
+			</Button>
+
+			<Button
+				aria-label="closeLower"
+				onClick={() => lower.onOpenChange(false)}
+			>
+				Close lower
+			</Button>
+
+			<Button
+				aria-label="closeUpper"
+				onClick={() => upper.onOpenChange(false)}
+			>
+				Close upper
+			</Button>
+		</>
+	);
+}
+
 describe('Modal -> IncrementalInteractions', () => {
 	afterEach(() => {
 		jest.clearAllTimers();
@@ -73,11 +156,11 @@ describe('Modal -> IncrementalInteractions', () => {
 	it('open the modal', () => {
 		const {container, getByLabelText} = render(<ModalWithState />);
 
-		expect(document.body.classList).not.toContain('modal-open');
+		expect(document.body).not.toHaveClass('modal-open');
 
 		fireEvent.click(getByLabelText('button'), {});
 
-		expect(document.body.classList).toContain('modal-open');
+		expect(document.body).toHaveClass('modal-open');
 		expect(
 			container.querySelector('.modal-backdrop.fade.show')
 		).toBeDefined();
@@ -89,11 +172,11 @@ describe('Modal -> IncrementalInteractions', () => {
 	it('open the modal with useModal state', () => {
 		const {container, getByLabelText} = render(<ModalWithHookState />);
 
-		expect(document.body.classList).not.toContain('modal-open');
+		expect(document.body).not.toHaveClass('modal-open');
 
 		fireEvent.click(getByLabelText('button'), {});
 
-		expect(document.body.classList).toContain('modal-open');
+		expect(document.body).toHaveClass('modal-open');
 		expect(
 			container.querySelector('.modal-backdrop.fade.show')
 		).toBeDefined();
@@ -121,9 +204,11 @@ describe('Modal -> IncrementalInteractions', () => {
 		fireEvent.mouseDown(modalEl!);
 		fireEvent.mouseUp(modalEl!);
 
-		expect(document.body.classList).not.toContain('modal-open');
-		expect(document.querySelector(backdropElSelector)).toBeNull();
-		expect(document.querySelector(modalElSelector)).toBeNull();
+		expect(document.body).not.toHaveClass('modal-open');
+		expect(
+			document.querySelector(backdropElSelector)
+		).not.toBeInTheDocument();
+		expect(document.querySelector(modalElSelector)).not.toBeInTheDocument();
 	});
 
 	it('do not close modal when event is prevented by clicking on overlay', () => {
@@ -158,7 +243,7 @@ describe('Modal -> IncrementalInteractions', () => {
 
 		fireEvent.click(modalEl!, {});
 
-		expect(document.body.classList).toContain('modal-open');
+		expect(document.body).toHaveClass('modal-open');
 		expect(document.querySelector(backdropElSelector)).toBeDefined();
 		expect(document.querySelector(modalElSelector)).toBeDefined();
 	});
@@ -181,9 +266,11 @@ describe('Modal -> IncrementalInteractions', () => {
 
 		fireEvent.keyDown(container, {key: 'Escape'});
 
-		expect(document.body.classList).not.toContain('modal-open');
-		expect(document.querySelector(backdropElSelector)).toBeNull();
-		expect(document.querySelector(modalElSelector)).toBeNull();
+		expect(document.body).not.toHaveClass('modal-open');
+		expect(
+			document.querySelector(backdropElSelector)
+		).not.toBeInTheDocument();
+		expect(document.querySelector(modalElSelector)).not.toBeInTheDocument();
 	});
 
 	it('close the modal when clicking on the close button of the Header component', () => {
@@ -209,9 +296,11 @@ describe('Modal -> IncrementalInteractions', () => {
 
 		fireEvent.click(buttonHeaderCloseEl);
 
-		expect(document.body.classList).not.toContain('modal-open');
-		expect(document.querySelector(backdropElSelector)).toBeNull();
-		expect(document.querySelector(modalElSelector)).toBeNull();
+		expect(document.body).not.toHaveClass('modal-open');
+		expect(
+			document.querySelector(backdropElSelector)
+		).not.toBeInTheDocument();
+		expect(document.querySelector(modalElSelector)).not.toBeInTheDocument();
 	});
 
 	it('close the modal when click on the button of Footer component', () => {
@@ -255,9 +344,11 @@ describe('Modal -> IncrementalInteractions', () => {
 
 		fireEvent.click(buttonFooterCloseEl);
 
-		expect(document.body.classList).not.toContain('modal-open');
-		expect(document.querySelector(backdropElSelector)).toBeNull();
-		expect(document.querySelector(modalElSelector)).toBeNull();
+		expect(document.body).not.toHaveClass('modal-open');
+		expect(
+			document.querySelector(backdropElSelector)
+		).not.toBeInTheDocument();
+		expect(document.querySelector(modalElSelector)).not.toBeInTheDocument();
 	});
 });
 
@@ -319,8 +410,8 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 			jest.runAllTimers();
 		});
 
-		expect(document.querySelector('modal-header')).toBeNull();
-		expect(document.querySelector('modal-footer')).toBeNull();
+		expect(document.querySelector('modal-header')).not.toBeInTheDocument();
+		expect(document.querySelector('modal-footer')).not.toBeInTheDocument();
 	});
 
 	it('renders a modal when dispatching Open by provider', () => {
@@ -424,5 +515,164 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 		fireEvent.click(button, {});
 
 		expect(document.body).toMatchSnapshot();
+	});
+});
+
+describe('Modal -> IncrementalInteractions -> stacked modals', () => {
+	let styleElement: HTMLStyleElement;
+
+	function openStackedModals(getByLabelText: (label: string) => HTMLElement) {
+		fireEvent.click(getByLabelText('openLower'));
+
+		act(() => {
+			jest.advanceTimersByTime(100);
+		});
+
+		fireEvent.click(getByLabelText('openUpper'));
+
+		act(() => {
+			jest.advanceTimersByTime(100);
+		});
+	}
+
+	beforeAll(() => {
+		jest.useFakeTimers();
+
+		// @ts-ignore
+
+		ReactDOM.createPortal = jest.fn((element) => {
+			return element;
+		});
+	});
+
+	beforeEach(() => {
+		styleElement = document.createElement('style');
+		styleElement.textContent =
+			'.modal {z-index: 1050} .modal-backdrop {z-index: 1040}';
+
+		document.head.appendChild(styleElement);
+	});
+
+	afterEach(() => {
+		jest.clearAllTimers();
+
+		cleanup();
+
+		styleElement.remove();
+	});
+
+	afterAll(() => {
+		jest.useRealTimers();
+	});
+
+	it('stacks the top modal one above the z-index of the modal below', () => {
+		const {getByLabelText} = render(<StackedModals />);
+
+		openStackedModals(getByLabelText);
+
+		const backdrops =
+			document.querySelectorAll<HTMLElement>('.modal-backdrop');
+		const modals = document.querySelectorAll<HTMLElement>('.modal');
+
+		expect(modals).toHaveLength(2);
+		expect(backdrops[0].style.zIndex).toBe('');
+		expect(backdrops[1].style.zIndex).toBe('1051');
+		expect(modals[0].style.zIndex).toBe('');
+		expect(modals[1].style.zIndex).toBe('1052');
+	});
+
+	it('stacks the top modal when the modal below has an unparsable z-index', () => {
+		styleElement.textContent += '.modal.lower-modal {z-index: auto}';
+
+		const {getByLabelText} = render(
+			<StackedModals lowerClassName="lower-modal" />
+		);
+
+		openStackedModals(getByLabelText);
+
+		const backdrops =
+			document.querySelectorAll<HTMLElement>('.modal-backdrop');
+		const modals = document.querySelectorAll<HTMLElement>('.modal');
+
+		expect(modals).toHaveLength(2);
+		expect(backdrops[0].style.zIndex).toBe('');
+		expect(backdrops[1].style.zIndex).toBe('1051');
+		expect(modals[0].style.zIndex).toBe('');
+		expect(modals[1].style.zIndex).toBe('1052');
+	});
+
+	it('stacks the top modal above a modal with an explicit zIndex', () => {
+		const {getByLabelText} = render(<StackedModals lowerZIndex={2040} />);
+
+		openStackedModals(getByLabelText);
+
+		const backdrops =
+			document.querySelectorAll<HTMLElement>('.modal-backdrop');
+		const modals = document.querySelectorAll<HTMLElement>('.modal');
+
+		expect(modals).toHaveLength(2);
+		expect(backdrops[0].style.zIndex).toBe('2040');
+		expect(backdrops[1].style.zIndex).toBe('2051');
+		expect(modals[0].style.zIndex).toBe('2050');
+		expect(modals[1].style.zIndex).toBe('2052');
+	});
+
+	it('stacks the top modal when its explicit zIndex is removed while open', () => {
+		const {getByLabelText, rerender} = render(
+			<StackedModals upperZIndex={1000} />
+		);
+
+		openStackedModals(getByLabelText);
+
+		const backdrops =
+			document.querySelectorAll<HTMLElement>('.modal-backdrop');
+		const modals = document.querySelectorAll<HTMLElement>('.modal');
+
+		expect(backdrops[1].style.zIndex).toBe('1000');
+		expect(modals[1].style.zIndex).toBe('1010');
+
+		rerender(<StackedModals />);
+
+		expect(backdrops[0].style.zIndex).toBe('');
+		expect(backdrops[1].style.zIndex).toBe('1051');
+		expect(modals[0].style.zIndex).toBe('');
+		expect(modals[1].style.zIndex).toBe('1052');
+	});
+
+	it('keeps modal-open on the body until the last modal closes', () => {
+		const {getByLabelText} = render(<StackedModals />);
+
+		openStackedModals(getByLabelText);
+
+		fireEvent.click(getByLabelText('closeUpper'));
+
+		act(() => {
+			jest.advanceTimersByTime(100);
+		});
+
+		expect(document.body).toHaveClass('modal-open');
+		expect(document.querySelectorAll('.modal')).toHaveLength(1);
+
+		fireEvent.click(getByLabelText('closeLower'));
+
+		act(() => {
+			jest.advanceTimersByTime(100);
+		});
+
+		expect(document.body).not.toHaveClass('modal-open');
+		expect(document.querySelectorAll('.modal')).toHaveLength(0);
+	});
+
+	it('releases modal-open when the modal unmounts without closing', () => {
+		const {getByLabelText} = render(<ModalUnmountedWithoutClose />);
+
+		fireEvent.click(getByLabelText('show'));
+
+		expect(document.body).toHaveClass('modal-open');
+
+		fireEvent.click(getByLabelText('hide'));
+
+		expect(document.body).not.toHaveClass('modal-open');
+		expect(document.querySelector('.modal')).not.toBeInTheDocument();
 	});
 });
