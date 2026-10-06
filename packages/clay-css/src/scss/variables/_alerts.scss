@@ -300,7 +300,8 @@ $alert-fluid-dismissible-container: map-merge(
 		padding-left: $alert-dismissible-padding-left,
 		padding-right:
 			calc(
-				#{$alert-dismissible-padding-right} + #{$grid-gutter-width * 0.5}
+				#{$alert-dismissible-padding-right} + #{$grid-gutter-width} *
+					0.5
 			),
 		padding-top: $alert-dismissible-padding-top,
 		position: relative,
@@ -315,7 +316,7 @@ $alert-fluid-dismissible-container: map-merge(
 $alert-fluid-close: () !default;
 $alert-fluid-close: map-deep-merge(
 	(
-		right: calc(#{$grid-gutter-width * 0.5} + 0.25rem),
+		right: calc(#{$grid-gutter-width} * 0.5 + 0.25rem),
 	),
 	$alert-fluid-close
 );
