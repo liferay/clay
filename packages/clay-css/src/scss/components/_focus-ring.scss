@@ -4,6 +4,8 @@ $focus-ring-animation-timing-function: cubic-bezier(0.2, 0, 0, 1) !default;
 $focus-ring-animation: $focus-ring-animation-name $focus-ring-animation-duration
 	$focus-ring-animation-timing-function !default;
 
+$focus-ring-reduced-motion-animation-name: clay-focus-ring-reduced-motion !default;
+
 $focus-ring-animation-from-box-shadow:
 	0 0 0 0.25rem $white,
 	0 0 0 0.75rem $primary-l2 !default;
@@ -22,18 +24,14 @@ $focus-ring-animation-to-box-shadow:
 	}
 }
 
-@if $enable-prefers-reduced-motion-media-query {
-	@media (prefers-reduced-motion: reduce) {
-		@keyframes #{$focus-ring-animation-name} {
-			0%,
-			60% {
-				box-shadow: $focus-ring-animation-from-box-shadow;
-			}
+@keyframes #{$focus-ring-reduced-motion-animation-name} {
+	0%,
+	60% {
+		box-shadow: $focus-ring-animation-from-box-shadow;
+	}
 
-			61% {
-				box-shadow: $focus-ring-animation-to-box-shadow;
-			}
-		}
+	61% {
+		box-shadow: $focus-ring-animation-to-box-shadow;
 	}
 }
 
@@ -44,6 +42,12 @@ $focus-ring-animation-to-box-shadow:
 	.focus {
 		animation: $focus-ring-animation;
 		box-shadow: $focus-ring-animation-to-box-shadow;
+
+		@if $enable-prefers-reduced-motion-media-query {
+			@media (prefers-reduced-motion: reduce) {
+				animation-name: $focus-ring-reduced-motion-animation-name;
+			}
+		}
 	}
 
 	:focus-visible:not(.c-horizontal-resizer):not(.toggle-switch-check):not(
@@ -54,8 +58,16 @@ $focus-ring-animation-to-box-shadow:
 		z-index: 1;
 	}
 
-	&.c-tab-returning,
 	&.c-prefers-reduced-motion {
+		.custom-control-input:focus-visible ~ .custom-control-label::after,
+		.toggle-switch-check:focus-visible ~ .toggle-switch-bar::before,
+		:focus-visible:not(.custom-control-input):not(.toggle-switch-check),
+		.focus {
+			animation-name: $focus-ring-reduced-motion-animation-name;
+		}
+	}
+
+	&.c-tab-returning {
 		.custom-control-input:focus-visible ~ .custom-control-label::after,
 		.toggle-switch-check:focus-visible ~ .toggle-switch-bar::before,
 		:focus-visible:not(.custom-control-input):not(.toggle-switch-check),
