@@ -42,3 +42,15 @@ Icons need the path where to find the icon collection to be rendered. Clay compo
 	<Icon symbol="times" />
 </Provider>
 ```
+
+### Disable Auto Close
+
+Set `persistentAlerts` to keep alerts that define `autoClose` open until the user dismisses them. A nested `Provider` that does not set `persistentAlerts` inherits the value from its parent `Provider`.
+
+```jsx
+<Provider persistentAlerts spritemap={spritemap}>
+	<Alert autoClose={5000} onClose={() => {}}>
+		This alert stays until dismissed.
+	</Alert>
+</Provider>
+```

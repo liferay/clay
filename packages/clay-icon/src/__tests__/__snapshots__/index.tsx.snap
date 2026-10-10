@@ -11,6 +11,17 @@ exports[`ClayIcon renders 1`] = `
 </svg>
 `;
 
+exports[`ClayIcon renders the className when \`illustration\` is true 1`] = `
+<svg
+  className="custom-icon"
+  role="presentation"
+>
+  <use
+    href="/path/to/some/empty_states.svg#success-state"
+  />
+</svg>
+`;
+
 exports[`ClayIcon renders with context spritemap 1`] = `
 <svg
   className="lexicon-icon lexicon-icon-cool-icon"
@@ -18,6 +29,16 @@ exports[`ClayIcon renders with context spritemap 1`] = `
 >
   <use
     href="foo/bar.svg#cool-icon"
+  />
+</svg>
+`;
+
+exports[`ClayIcon renders without the lexicon-icon classes when \`illustration\` is true 1`] = `
+<svg
+  role="presentation"
+>
+  <use
+    href="/path/to/some/empty_states.svg#success-state"
   />
 </svg>
 `;

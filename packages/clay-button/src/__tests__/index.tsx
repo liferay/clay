@@ -257,7 +257,7 @@ describe('Button accessibility error', () => {
 			</Button>
 		);
 
-		expect(console.error).toBeCalledWith(
+		expect(console.error).toHaveBeenCalledWith(
 			expect.stringContaining(
 				'Button Accessibility: Component has only the Icon declared.'
 			)
@@ -282,7 +282,7 @@ describe('Button accessibility error', () => {
 				</Button>
 			);
 
-			expect(console.error).not.toBeCalledWith(
+			expect(console.error).not.toHaveBeenCalledWith(
 				expect.stringContaining(
 					'Button Accessibility: Component has only the Icon declared.'
 				)

@@ -195,7 +195,7 @@ describe('ClayDropDownWithDrilldown', () => {
 
 		userEvent.click(item!);
 
-		expect(onActiveChange).toBeCalled();
+		expect(onActiveChange).toHaveBeenCalled();
 
 		expect(document.body).toMatchSnapshot();
 	});

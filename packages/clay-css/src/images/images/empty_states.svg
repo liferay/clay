@@ -1,0 +1,1380 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<symbol fill="none" id="action-toolbar" viewBox="0 0 256 256">
+		<style>
+			@keyframes action-toolbar-es12-breathe {from { transform: scale(1); } to { transform: scale(1.03); }}
+			@keyframes action-toolbar-es12-float {from { transform: translateY(-1.5px); } to { transform: translateY(1.5px); }}
+			@keyframes action-toolbar-es12-glow {from { opacity: 0; } to { opacity: .5; }}
+			@keyframes action-toolbar-es12-pop {0% { transform: scale(1); animation-timing-function: cubic-bezier(.23, 1, .32, 1); } 5% { transform: scale(1.05); animation-timing-function: cubic-bezier(.45, 0, .55, 1); } 18%, 100% { transform: scale(1); }}
+			.action-toolbar-es12-halo { transform-box: fill-box; transform-origin: center; animation: action-toolbar-es12-breathe calc(3s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.action-toolbar-es12-pill { transform-box: fill-box; transform-origin: center; animation: action-toolbar-es12-float calc(2.4s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.action-toolbar-es12-shimmer { animation: action-toolbar-es12-glow calc(2.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.action-toolbar-es12-pop { transform-box: fill-box; transform-origin: center; animation: action-toolbar-es12-pop calc(3.4s * var(--c-empty-state-image-animation-speed, 1)) infinite; }
+			.action-toolbar-es12-pop-2 { animation-delay: calc(-1.7s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<g class="action-toolbar-es12-halo">
+				<circle cx="128" cy="128" fill="var(--c-empty-state-primary-l3, #f0f5ff)" r="80" />
+				<circle cx="128.5" cy="128.5" fill="url(#action-toolbar-paint0_linear_10_281)" r="54.5" />
+			</g>
+			<g class="action-toolbar-es12-pill">
+				<rect fill="url(#action-toolbar-paint1_linear_10_281)" height="36" rx="8" width="148" x="54" y="110" />
+				<path d="M71.4047 119.864C72.1562 118.712 73.8438 118.712 74.5953 119.864L74.9686 120.436C75.3979 121.095 76.1873 121.422 76.9562 121.26L77.6249 121.119C78.971 120.836 80.1643 122.029 79.881 123.375L79.7403 124.044C79.5785 124.813 79.9054 125.602 80.5636 126.031L81.1359 126.405C82.288 127.156 82.288 128.844 81.1359 129.595L80.5636 129.969C79.9054 130.398 79.5785 131.187 79.7403 131.956L79.881 132.625C80.1643 133.971 78.971 135.164 77.6249 134.881L76.9562 134.74C76.1873 134.578 75.3979 134.905 74.9686 135.564L74.5953 136.136C73.8438 137.288 72.1562 137.288 71.4047 136.136L71.0314 135.564C70.6021 134.905 69.8127 134.578 69.0438 134.74L68.3751 134.881C67.029 135.164 65.8357 133.971 66.119 132.625L66.2597 131.956C66.4215 131.187 66.0946 130.398 65.4364 129.969L64.8641 129.595C63.712 128.844 63.712 127.156 64.8641 126.405L65.4364 126.031C66.0946 125.602 66.4215 124.813 66.2597 124.044L66.119 123.375C65.8357 122.029 67.029 120.836 68.3751 121.119L69.0438 121.26C69.8127 121.422 70.6021 121.095 71.0314 120.436L71.4047 119.864Z" fill="url(#action-toolbar-paint2_linear_10_281)" />
+				<rect fill="url(#action-toolbar-paint3_linear_10_281)" height="14" rx="7" width="85" x="88" y="121" />
+				<g clip-path="url(#action-toolbar-es12ShimmerClip)">
+					<rect class="action-toolbar-es12-shimmer" fill="var(--c-empty-state-white, #fff)" height="22" opacity="0" width="100" x="84" y="117" />
+				</g>
+				<rect fill="url(#action-toolbar-paint4_linear_10_281)" height="15" rx="6.5" transform="matrix(-1 0 0 1 192 120)" width="13" />
+			</g>
+			<circle class="action-toolbar-es12-pop action-toolbar-es12-pop-2" cx="78" cy="184" fill="url(#action-toolbar-paint5_linear_10_281)" r="28" />
+			<circle class="action-toolbar-es12-pop" cx="179" cy="72" fill="url(#action-toolbar-paint6_linear_10_281)" r="28" />
+			<g class="action-toolbar-es12-pop">
+				<path d="M167.173 65.8364C165.609 64.2725 165.609 61.7369 167.173 60.1729C168.737 58.609 171.273 58.609 172.837 60.1729L189.827 77.1634C191.391 78.7274 191.391 81.263 189.827 82.8269C188.263 84.3909 185.728 84.3909 184.164 82.8269L167.173 65.8364Z" fill="var(--c-empty-state-primary-d1, #0053f0)" />
+				<path d="M184.163 60.1731C185.727 58.6091 188.263 58.6091 189.827 60.1731C191.391 61.737 191.391 64.2726 189.827 65.8366L172.836 82.8271C171.272 84.391 168.737 84.391 167.173 82.8271C165.609 81.2631 165.609 78.7275 167.173 77.1636L184.163 60.1731Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+				<path d="M184.163 71.5L178.499 77.1629L172.836 71.5L178.499 65.8352L184.163 71.5Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+			</g>
+			<g class="action-toolbar-es12-pop action-toolbar-es12-pop-2">
+				<path d="M63.9718 186.544C62.5667 185.139 62.5667 182.861 63.9718 181.456C65.377 180.051 67.6552 180.051 69.0604 181.456L76.6932 189.089C78.0984 190.494 78.0984 192.772 76.6932 194.177C75.288 195.582 73.0098 195.582 71.6047 194.177L63.9718 186.544Z" fill="var(--c-empty-state-primary-d1, #0053f0)" />
+				<path d="M86.9393 173.823C88.3445 172.418 90.6227 172.418 92.0279 173.823C93.433 175.228 93.433 177.506 92.0279 178.911L76.7622 194.177C75.3571 195.582 73.0789 195.582 71.6737 194.177C70.2685 192.772 70.2685 190.494 71.6737 189.089L86.9393 173.823Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+				<path d="M76.6932 189.089C78.0984 190.494 78.0984 192.772 76.6932 194.177C75.9992 194.871 75.0918 195.22 74.1823 195.229C73.2733 195.22 72.3673 194.871 71.6737 194.177C70.2685 192.772 70.2685 190.494 71.6737 189.089L74.1823 186.578L76.6932 189.089Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+			</g>
+		</g>
+		<defs>
+			<clipPath id="action-toolbar-es12ShimmerClip">
+				<rect height="14" rx="7" width="85" x="88" y="121" />
+			</clipPath>
+			<linearGradient x1="0" x2="1" y1="0" y2="0">
+				<stop stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0" />
+				<stop offset="0.5" stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0.4" />
+				<stop offset="1" stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="action-toolbar-paint0_linear_10_281" x1="128.5" x2="128.5" y1="74" y2="183">
+				<stop stop-color="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" />
+				<stop offset="1" stop-color="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" stop-opacity="0.6" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="action-toolbar-paint1_linear_10_281" x1="128" x2="128" y1="110" y2="146">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="action-toolbar-paint2_linear_10_281" x1="73" x2="73" y1="119" y2="137">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="action-toolbar-paint3_linear_10_281" x1="88" x2="173" y1="128" y2="128">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="action-toolbar-paint4_linear_10_281" x1="6.5" x2="6.5" y1="0" y2="15">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="action-toolbar-paint5_linear_10_281" x1="78" x2="78" y1="156" y2="212">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary, #0b5fff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="action-toolbar-paint6_linear_10_281" x1="179" x2="179" y1="44" y2="100">
+				<stop stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l0, #5791ff)" stop-opacity="0.2" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="ai-burst" viewBox="0 0 256 256">
+		<style>
+			@keyframes ai-burst-es14core {from { transform: scale(1); } to { transform: scale(1.04); }}
+			@keyframes ai-burst-es14twinkle {from { opacity: 1; transform: scale(1); } to { opacity: .65; transform: scale(.97); }}
+			@keyframes ai-burst-es14ring {from { opacity: 1; } to { opacity: .45; }}
+			@keyframes ai-burst-es14orb {from { transform: translateY(-2.5px); } to { transform: translateY(2.5px); }}
+			.ai-burst-es14-core,
+			.ai-burst-es14-spk { transform-box: fill-box; transform-origin: center; }
+			.ai-burst-es14-core { animation: ai-burst-es14core calc(1.7s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-burst-es14-spk { animation: ai-burst-es14twinkle calc(1.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; animation-delay: calc(-.5s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-burst-es14-h1,
+			.ai-burst-es14-h2 { animation: ai-burst-es14ring calc(2.4s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-burst-es14-h2 { animation-delay: calc(-1.2s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-burst-es14-cTL,
+			.ai-burst-es14-cTR,
+			.ai-burst-es14-cBL,
+			.ai-burst-es14-cBR { animation: ai-burst-es14orb calc(2.2s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-burst-es14-cTR { animation-delay: calc(-.4s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-burst-es14-cBL { animation-delay: calc(-.8s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-burst-es14-cBR { animation-delay: calc(-1.2s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<path class="ai-burst-es14-h1" d="M211 128C211 173.84 173.84 211 128 211C82.1604 211 45 173.84 45 128C45 82.1604 82.1604 45 128 45C173.84 45 211 82.1604 211 128ZM107.718 128C107.718 139.201 116.799 148.282 128 148.282C139.201 148.282 148.282 139.201 148.282 128C148.282 116.799 139.201 107.718 128 107.718C116.799 107.718 107.718 116.799 107.718 128Z" fill="url(#ai-burst-es14-paint0_linear_10_281)" />
+			<path class="ai-burst-es14-h2" d="M184 128C184 158.928 158.928 184 128 184C97.0721 184 72 158.928 72 128C72 97.0721 97.0721 72 128 72C158.928 72 184 97.0721 184 128ZM111.57 128C111.57 137.074 118.926 144.43 128 144.43C137.074 144.43 144.43 137.074 144.43 128C144.43 118.926 137.074 111.57 128 111.57C118.926 111.57 111.57 118.926 111.57 128Z" fill="url(#ai-burst-es14-paint1_linear_10_281)" />
+			<g class="ai-burst-es14-core">
+				<circle cx="128" cy="127.5" fill="var(--c-empty-state-purple-d1, #9f1aff)" r="28" />
+				<circle cx="128.031" cy="127.328" fill="url(#ai-burst-es14-paint2_linear_10_281)" r="13.75" />
+			</g>
+			<path class="ai-burst-es14-spk" d="M137.055 110.11C137.307 109.099 138.744 109.099 138.996 110.11L140.273 115.238C140.362 115.597 140.643 115.877 141.002 115.967L146.129 117.244C147.141 117.496 147.141 118.933 146.129 119.185L141.002 120.462C140.643 120.551 140.362 120.832 140.273 121.191L138.996 126.318C138.744 127.33 137.307 127.33 137.055 126.318L135.778 121.191C135.688 120.832 135.408 120.551 135.049 120.462L129.921 119.185C128.91 118.933 128.91 117.496 129.921 117.244L135.049 115.967C135.408 115.877 135.688 115.597 135.778 115.238L137.055 110.11Z" fill="var(--c-empty-state-primary-l3, #f0f5ff)" fill-opacity="0.8" />
+			<g class="ai-burst-es14-cTL">
+				<circle cx="72" cy="72" fill="url(#ai-burst-es14-paint3_linear_10_281)" r="16" />
+				<path d="M69.923 65.4624C70.8753 63.9149 73.1247 63.9149 74.077 65.4624L79.4677 74.2223C80.4676 75.8472 79.2986 77.9392 77.3907 77.9392H66.6092C64.7013 77.9392 63.5323 75.8472 64.5322 74.2223L69.923 65.4624Z" fill="url(#ai-burst-es14-paint4_linear_10_281)" />
+			</g>
+			<g class="ai-burst-es14-cBR">
+				<circle cx="184" cy="181.539" fill="url(#ai-burst-es14-paint5_linear_10_281)" r="16" />
+				<circle cx="184" cy="181.539" fill="url(#ai-burst-es14-paint6_linear_10_281)" r="16" />
+			</g>
+			<g class="ai-burst-es14-cTR">
+				<circle cx="168" cy="90.2144" fill="url(#ai-burst-es14-paint7_linear_10_281)" r="16" />
+				<path d="M167.021 80.7722C167.243 79.7126 168.756 79.7126 168.979 80.7722L169.608 83.7736C169.754 84.4702 170.561 84.7955 171.149 84.3952L173.592 82.7336C174.474 82.1339 175.556 83.1462 175.017 84.0661L173.302 86.9923C172.963 87.5702 173.277 88.3112 173.928 88.4696L177.105 89.2427C178.123 89.4904 178.123 90.9382 177.105 91.1859L173.928 91.959C173.277 92.1174 172.963 92.8584 173.302 93.4363L175.017 96.3625C175.556 97.2824 174.474 98.2947 173.592 97.695L171.149 96.0334C170.561 95.6331 169.754 95.9584 169.608 96.655L168.979 99.6564C168.756 100.716 167.243 100.716 167.021 99.6564L166.392 96.655C166.246 95.9584 165.439 95.6331 164.851 96.0334L162.408 97.695C161.526 98.2947 160.444 97.2824 160.983 96.3625L162.698 93.4363C163.037 92.8584 162.723 92.1174 162.072 91.959L158.895 91.1859C157.877 90.9382 157.877 89.4904 158.895 89.2427L162.072 88.4696C162.723 88.3112 163.037 87.5702 162.698 86.9923L160.983 84.0661C160.444 83.1462 161.526 82.1339 162.408 82.7336L164.851 84.3952C165.439 84.7955 166.246 84.4702 166.392 83.7736L167.021 80.7722Z" fill="url(#ai-burst-es14-paint8_linear_10_281)" />
+			</g>
+			<circle class="ai-burst-es14-cBL" cx="88" cy="165.539" fill="url(#ai-burst-es14-paint9_linear_10_281)" r="16" />
+			<circle class="ai-burst-es14-cBR" cx="184" cy="181.539" fill="url(#ai-burst-es14-paint10_linear_10_281)" r="8" />
+			<g class="ai-burst-es14-cBL">
+				<rect fill="url(#ai-burst-es14-paint11_linear_10_281)" height="12.9667" rx="2" transform="rotate(-45 78.8312 165.539)" width="12.9667" x="78.8312" y="165.539" />
+			</g>
+		</g>
+		<defs>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint0_linear_10_281" x1="128" x2="128" y1="45" y2="211">
+				<stop stop-color="var(--c-empty-state-primary-l2, #b3cdff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l2, #b3cdff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint1_linear_10_281" x1="128" x2="128" y1="72" y2="184">
+				<stop stop-color="var(--c-empty-state-purple-l3, #d499ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-l3, #d499ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint2_linear_10_281" x1="128.031" x2="128.031" y1="113.578" y2="141.078">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.6" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint3_linear_10_281" x1="72" x2="72" y1="56" y2="88">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint4_linear_10_281" x1="72" x2="72" y1="64.3018" y2="77.9392">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint5_linear_10_281" x1="184" x2="184" y1="165.539" y2="197.539">
+				<stop stop-color="var(--c-empty-state-purple-l1, #bf66ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-d4, #70c)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint6_linear_10_281" x1="184" x2="184" y1="165.539" y2="197.539">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint7_linear_10_281" x1="168" x2="168" y1="74.2144" y2="106.214">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint8_linear_10_281" x1="168" x2="168" y1="76.1055" y2="104.323">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint9_linear_10_281" x1="88" x2="88" y1="149.539" y2="181.539">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint10_linear_10_281" x1="184" x2="184" y1="173.539" y2="189.539">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-burst-es14-paint11_linear_10_281" x1="85.3145" x2="85.3145" y1="165.539" y2="178.505">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="ai-chat" viewBox="0 0 256 256">
+		<style>
+			@keyframes ai-chat-es16in {0% { opacity: 0; transform: translateY(4px); animation-timing-function: cubic-bezier(.23, 1, .32, 1); } 11% { opacity: 1; transform: translateY(0); animation-timing-function: linear; } 78% { opacity: 1; transform: translateY(0); animation-timing-function: cubic-bezier(.4, 0, .7, 1); } 93%, 100% { opacity: 0; transform: translateY(-3px); }}
+			@keyframes ai-chat-es16twinkle {from { opacity: 1; transform: scale(1); } to { opacity: .65; transform: scale(.97); }}
+			@keyframes ai-chat-es16float {from { transform: translateY(-2.5px); } to { transform: translateY(2.5px); }}
+			.ai-chat-es16-b1,
+			.ai-chat-es16-b2,
+			.ai-chat-es16-b3 { animation: ai-chat-es16in calc(5.4s * var(--c-empty-state-image-animation-speed, 1)) infinite; }
+			.ai-chat-es16-b2 { animation-delay: calc(.45s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-chat-es16-b3 { animation-delay: calc(.9s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-chat-es16-spk { transform-box: fill-box; transform-origin: center; animation: ai-chat-es16twinkle calc(1.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-chat-es16-spk2 { animation-delay: calc(-.5s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-chat-es16-spk3 { animation-delay: calc(-1s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-chat-es16-dot { animation: ai-chat-es16float calc(2.2s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-chat-es16-dot2 { animation-delay: calc(-.8s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<rect height="163.5" rx="13" stroke="var(--c-empty-state-primary-l0, #5791ff)" stroke-width="2" width="150" x="53.5" y="46.25" />
+			<rect fill="url(#ai-chat-es16-paint0_linear_10_281)" height="159.5" rx="11" stroke="var(--c-empty-state-white, #fff)" stroke-width="2" width="146" x="55.5" y="48.25" />
+			<rect class="ai-chat-es16-b1" fill="url(#ai-chat-es16-paint1_linear_10_281)" height="32" rx="16" width="104" x="64" y="60.75" />
+			<rect class="ai-chat-es16-b3" fill="url(#ai-chat-es16-paint2_linear_10_281)" height="32" rx="16" width="104" x="64" y="156.75" />
+			<g class="ai-chat-es16-b1">
+				<path class="ai-chat-es16-spk" d="M77.7592 70.4221C78.3437 69.526 79.6563 69.526 80.2408 70.4221L80.5312 70.8672C80.865 71.3791 81.479 71.6334 82.0771 71.5076L82.5971 71.3981C83.6441 71.1778 84.5722 72.1059 84.3519 73.1529L84.2424 73.6729C84.1166 74.271 84.3709 74.885 84.8828 75.2188L85.3279 75.5092C86.224 76.0937 86.224 77.4063 85.3279 77.9908L84.8828 78.2812C84.3709 78.615 84.1166 79.229 84.2424 79.8271L84.3519 80.3471C84.5722 81.3941 83.6441 82.3222 82.5971 82.1019L82.0771 81.9924C81.479 81.8666 80.865 82.1209 80.5312 82.6328L80.2408 83.0779C79.6563 83.974 78.3437 83.974 77.7592 83.0779L77.4688 82.6328C77.135 82.1209 76.521 81.8666 75.9229 81.9924L75.4029 82.1019C74.3559 82.3222 73.4278 81.3941 73.6481 80.3471L73.7576 79.8271C73.8834 79.229 73.6291 78.615 73.1172 78.2812L72.6721 77.9908C71.776 77.4063 71.776 76.0937 72.6721 75.5092L73.1172 75.2188C73.6291 74.885 73.8834 74.271 73.7576 73.6729L73.6481 73.1529C73.4278 72.1059 74.3559 71.1778 75.4029 71.3981L75.9229 71.5076C76.521 71.6334 77.135 71.3791 77.4688 70.8672L77.7592 70.4221Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+			</g>
+			<rect class="ai-chat-es16-b1" fill="url(#ai-chat-es16-paint3_linear_10_281)" height="12" rx="6" width="60" x="92" y="70.75" />
+			<circle class="ai-chat-es16-dot" cx="184" cy="84.75" fill="url(#ai-chat-es16-paint4_linear_10_281)" r="8" />
+			<circle class="ai-chat-es16-dot ai-chat-es16-dot2" cx="184" cy="180.75" fill="url(#ai-chat-es16-paint5_linear_10_281)" r="8" />
+			<g class="ai-chat-es16-b2">
+				<rect fill="url(#ai-chat-es16-paint6_linear_10_281)" height="32" rx="16" width="104" x="88" y="108.75" />
+				<rect fill="url(#ai-chat-es16-paint7_linear_10_281)" height="12" rx="6" transform="matrix(-1 0 0 1 175.816 118.75)" width="58.8164" />
+				<path class="ai-chat-es16-spk ai-chat-es16-spk2" d="M103.306 118.293C103.463 117.569 104.537 117.569 104.694 118.293L105.141 120.346C105.244 120.822 105.816 121.045 106.234 120.771L107.967 119.635C108.592 119.225 109.36 119.917 108.978 120.546L107.761 122.547C107.521 122.942 107.743 123.449 108.205 123.557L110.458 124.086C111.181 124.255 111.181 125.245 110.458 125.414L108.205 125.943C107.743 126.051 107.521 126.558 107.761 126.953L108.978 128.954C109.36 129.583 108.592 130.275 107.967 129.865L106.234 128.729C105.816 128.455 105.244 128.678 105.141 129.154L104.694 131.207C104.537 131.931 103.463 131.931 103.306 131.207L102.859 129.154C102.756 128.678 102.184 128.455 101.766 128.729L100.033 129.865C99.4079 130.275 98.6399 129.583 99.0224 128.954L100.239 126.953C100.479 126.558 100.257 126.051 99.7948 125.943L97.5416 125.414C96.8195 125.245 96.8195 124.255 97.5416 124.086L99.7948 123.557C100.257 123.449 100.479 122.942 100.239 122.547L99.0224 120.546C98.6399 119.917 99.4079 119.225 100.033 119.635L101.766 120.771C102.184 121.045 102.756 120.822 102.859 120.346L103.306 118.293Z" fill="url(#ai-chat-es16-paint8_linear_10_281)" />
+				<circle cx="72" cy="132.75" fill="url(#ai-chat-es16-paint9_linear_10_281)" r="8" />
+				<path class="ai-chat-es16-spk ai-chat-es16-spk3" d="M76.656 122.305C76.8046 121.708 77.6524 121.708 77.801 122.305L78.5545 125.33C78.6072 125.542 78.7726 125.707 78.9844 125.76L82.0097 126.513C82.6062 126.662 82.6062 127.51 82.0097 127.658L78.9844 128.412C78.7726 128.465 78.6072 128.63 78.5545 128.842L77.801 131.867C77.6524 132.464 76.8046 132.464 76.656 131.867L75.9025 128.842C75.8498 128.63 75.6844 128.465 75.4726 128.412L72.4474 127.658C71.8509 127.51 71.8509 126.662 72.4474 126.513L75.4726 125.76C75.6844 125.707 75.8498 125.542 75.9025 125.33L76.656 122.305Z" fill="url(#ai-chat-es16-paint10_linear_10_281)" />
+				<path d="M104 140.75H112L105.707 147.043C105.077 147.673 104 147.227 104 146.336V144.75V140.75Z" fill="var(--c-empty-state-purple-d1, #9f1aff)" />
+			</g>
+			<path class="ai-chat-es16-b1" d="M144 92.75H136L142.293 99.0429C142.923 99.6729 144 99.2267 144 98.3358V96.75V92.75Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+			<path class="ai-chat-es16-b3" d="M144 188.75H136L142.293 195.043C142.923 195.673 144 195.227 144 194.336V192.75V188.75Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+		</g>
+		<defs>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint0_linear_10_281" x1="128.5" x2="128.5" y1="47.25" y2="208.75">
+				<stop stop-color="var(--c-empty-state-white, #fff)" />
+				<stop offset="1" stop-color="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint1_linear_10_281" x1="116" x2="116" y1="60.75" y2="92.75">
+				<stop stop-color="var(--c-empty-state-white, #fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l2, #b3cdff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint2_linear_10_281" x1="116" x2="116" y1="156.75" y2="188.75">
+				<stop stop-color="var(--c-empty-state-white, #fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l2, #b3cdff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint3_linear_10_281" x1="92" x2="152" y1="76.75" y2="76.75">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint4_linear_10_281" x1="184" x2="184" y1="76.75" y2="92.75">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint5_linear_10_281" x1="184" x2="184" y1="172.75" y2="188.75">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint6_linear_10_281" x1="140" x2="140" y1="108.75" y2="140.75">
+				<stop stop-color="var(--c-empty-state-purple-l3, #d499ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-d1, #9f1aff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint7_linear_10_281" x1="0" x2="58.8164" y1="6" y2="6">
+				<stop stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" stop-opacity="0" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint8_linear_10_281" x1="104" x2="104" y1="115.102" y2="134.398">
+				<stop stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint9_linear_10_281" x1="72" x2="72" y1="124.75" y2="140.75">
+				<stop stop-color="var(--c-empty-state-purple-l4, #dfb3ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple, #a3f)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-chat-es16-paint10_linear_10_281" x1="77.2285" x2="77.2285" y1="121.857" y2="132.314">
+				<stop stop-color="var(--c-empty-state-purple-l2, #ca80ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-d2, #9500ff)" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="ai-prompt" viewBox="0 0 256 256">
+		<style>
+			@keyframes ai-prompt-es18-float {from { transform: translateY(-3px); } to { transform: translateY(3px); }}
+			@keyframes ai-prompt-es18-twinkle {from { opacity: 1; transform: scale(1); } to { opacity: .65; transform: scale(.97); }}
+			@keyframes ai-prompt-es18-glow {from { opacity: 0; } to { opacity: .3; }}
+			@keyframes ai-prompt-es18-pop {0% { transform: scale(1); animation-timing-function: cubic-bezier(.23, 1, .32, 1); } 5% { transform: scale(1.05); animation-timing-function: cubic-bezier(.45, 0, .55, 1); } 18%, 100% { transform: scale(1); }}
+			.ai-prompt-es18-chip { transform-box: fill-box; transform-origin: center; animation: ai-prompt-es18-float calc(2.4s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-prompt-es18-chip-2 { animation-delay: calc(-.8s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-prompt-es18-chip-3 { animation-delay: calc(-1.6s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-prompt-es18-spark { transform-box: fill-box; transform-origin: center; animation: ai-prompt-es18-twinkle calc(1.8s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-prompt-es18-shimmer { animation: ai-prompt-es18-glow calc(2.8s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-prompt-es18-pop { transform-box: fill-box; transform-origin: center; animation: ai-prompt-es18-pop calc(3.4s * var(--c-empty-state-image-animation-speed, 1)) infinite; }
+		</style>
+		<g>
+			<rect height="100" rx="13" stroke="var(--c-empty-state-primary-l0, #5791ff)" stroke-width="2" width="164" x="46" y="78" />
+			<rect fill="url(#ai-prompt-es18-paint0_linear_10_281)" height="96" rx="11" stroke="var(--c-empty-state-white, #fff)" stroke-width="2" width="160" x="48" y="80" />
+			<g class="ai-prompt-es18-chip">
+				<rect fill="url(#ai-prompt-es18-paint1_linear_10_281)" height="30.2737" rx="6" transform="rotate(-45 160 106.407)" width="30.2737" x="160" y="106.407" />
+			</g>
+			<path class="ai-prompt-es18-chip ai-prompt-es18-chip-2" d="M122.33 91.8936C124.7 88.0355 130.3 88.0355 132.67 91.8936L146.09 113.733C148.579 117.784 145.669 123 140.919 123H114.081C109.331 123 106.421 117.784 108.91 113.733L122.33 91.8936Z" fill="url(#ai-prompt-es18-paint2_linear_10_281)" />
+			<g class="ai-prompt-es18-chip ai-prompt-es18-chip-3">
+				<path class="ai-prompt-es18-spark" d="M74.0165 87.5527C74.4669 85.4824 77.5331 85.4824 77.9835 87.5527L79.2592 93.4166C79.5553 94.7776 81.1898 95.4131 82.3826 94.631L87.3334 91.3847C89.1203 90.213 91.3145 92.1909 90.2217 93.9881L86.7455 99.705C86.059 100.834 86.6956 102.282 88.0147 102.591L94.4525 104.102C96.5158 104.586 96.5158 107.414 94.4525 107.898L88.0147 109.409C86.6956 109.718 86.059 111.166 86.7455 112.295L90.2217 118.012C91.3145 119.809 89.1203 121.787 87.3334 120.615L82.3826 117.369C81.1898 116.587 79.5553 117.222 79.2592 118.583L77.9835 124.447C77.5331 126.518 74.4669 126.518 74.0165 124.447L72.7408 118.583C72.4447 117.222 70.8102 116.587 69.6174 117.369L64.6666 120.615C62.8797 121.787 60.6855 119.809 61.7783 118.012L65.2545 112.295C65.941 111.166 65.3044 109.718 63.9853 109.409L57.5475 107.898C55.4842 107.414 55.4842 104.586 57.5475 104.102L63.9853 102.591C65.3044 102.282 65.941 100.834 65.2545 99.705L61.7783 93.9881C60.6855 92.1909 62.8797 90.213 64.6666 91.3847L69.6174 94.631C70.8102 95.4131 72.4447 94.7776 72.7408 93.4166L74.0165 87.5527Z" fill="url(#ai-prompt-es18-paint3_linear_10_281)" />
+			</g>
+			<rect fill="url(#ai-prompt-es18-paint4_linear_10_281)" height="24" rx="12" width="104" x="56" y="142" />
+			<g clip-path="url(#ai-prompt-es18FieldClip)">
+				<rect class="ai-prompt-es18-shimmer" fill="var(--c-empty-state-white, #fff)" height="32" opacity="0" width="112" x="52" y="138" />
+			</g>
+			<path class="ai-prompt-es18-pop" d="M188 142C194.627 142 200 147.373 200 154C200 160.627 194.627 166 188 166C181.373 166 176 160.627 176 154C176 147.373 181.373 142 188 142ZM188.875 147.301C188.419 146.907 187.613 146.892 187.118 147.301L184.372 149.914C183.229 151.14 184.978 152.648 186.129 151.586L186.77 150.976V159.837C186.77 161.388 189.223 161.388 189.224 159.837V150.976L189.864 151.586C191.084 152.677 192.76 151.042 191.621 149.914L188.875 147.301Z" fill="url(#ai-prompt-es18-paint5_linear_10_281)" />
+		</g>
+		<defs>
+			<clipPath id="ai-prompt-es18FieldClip">
+				<rect height="24" rx="12" width="104" x="56" y="142" />
+			</clipPath>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-prompt-es18-paint0_linear_10_281" x1="128" x2="128" y1="79" y2="177">
+				<stop stop-color="var(--c-empty-state-white, #fff)" />
+				<stop offset="1" stop-color="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-prompt-es18-paint1_linear_10_281" x1="175.137" x2="175.137" y1="106.407" y2="136.68">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-prompt-es18-paint2_linear_10_281" x1="127.5" x2="127.5" y1="89" y2="123">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-prompt-es18-paint3_linear_10_281" x1="76" x2="76" y1="78.435" y2="133.565">
+				<stop stop-color="var(--c-empty-state-purple-d1, #9f1aff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-d1, #9f1aff)" stop-opacity="0.3" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-prompt-es18-paint4_linear_10_281" x1="56" x2="160" y1="154" y2="154">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-prompt-es18-paint5_linear_10_281" x1="188" x2="188" y1="142" y2="166">
+				<stop stop-color="var(--c-empty-state-purple-l4, #dfb3ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-l4, #dfb3ff)" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="ai-workflow" viewBox="0 0 256 256">
+		<style>
+			@keyframes ai-workflow-es17spin {from { transform: rotate(0deg); } to { transform: rotate(360deg); }}
+			@keyframes ai-workflow-es17twinkle {from { opacity: 1; transform: scale(1); } to { opacity: .65; transform: scale(.97); }}
+			@keyframes ai-workflow-es17pulse {from { opacity: 1; } to { opacity: .9; }}
+			@keyframes ai-workflow-es17-glow {from { opacity: 0; } to { opacity: .5; }}
+			.ai-workflow-es17-gear,
+			.ai-workflow-es17-spk { transform-box: fill-box; transform-origin: center; }
+			.ai-workflow-es17-gear { animation: ai-workflow-es17spin calc(8s * var(--c-empty-state-image-animation-speed, 1)) linear infinite; }
+			.ai-workflow-es17-spk { animation: ai-workflow-es17twinkle calc(1.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; animation-delay: calc(-.5s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-workflow-es17-pA,
+			.ai-workflow-es17-pB,
+			.ai-workflow-es17-pC { animation: ai-workflow-es17pulse calc(1.7s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-workflow-es17-pB { animation-delay: calc(-.55s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-workflow-es17-pC { animation-delay: calc(-1.1s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-workflow-es17-sweep-a,
+			.ai-workflow-es17-sweep-b,
+			.ai-workflow-es17-shim-1,
+			.ai-workflow-es17-shim-2,
+			.ai-workflow-es17-shim-3 { animation: ai-workflow-es17-glow calc(2.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.ai-workflow-es17-sweep-b { animation-delay: calc(-.8s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-workflow-es17-shim-2 { animation-delay: calc(-.5s * var(--c-empty-state-image-animation-speed, 1)); }
+			.ai-workflow-es17-shim-3 { animation-delay: calc(-1s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<rect fill="url(#ai-workflow-es17-paint0_linear_10_281)" height="94.0381" width="4" x="72" y="89" />
+			<g mask="url(#ai-workflow-es17-mask-a)">
+				<rect class="ai-workflow-es17-sweep-a" fill="var(--c-empty-state-white, #fff)" height="105" opacity="0" width="12" x="70" y="85" />
+			</g>
+			<rect class="ai-workflow-es17-pA" height="34" rx="9" stroke="var(--c-empty-state-primary-l0, #5791ff)" stroke-width="2" width="129" x="39" y="55" />
+			<rect class="ai-workflow-es17-pB" height="34" rx="9" stroke="var(--c-empty-state-primary-l0, #5791ff)" stroke-width="2" width="108" x="103" y="111" />
+			<rect class="ai-workflow-es17-pA" fill="url(#ai-workflow-es17-paint1_linear_10_281)" height="30" rx="7" stroke="var(--c-empty-state-white, #fff)" stroke-width="2" width="125" x="41" y="57" />
+			<rect class="ai-workflow-es17-pB" fill="url(#ai-workflow-es17-paint2_linear_10_281)" height="30" rx="7" stroke="var(--c-empty-state-white, #fff)" stroke-width="2" width="104" x="105" y="113" />
+			<rect class="ai-workflow-es17-pA" fill="url(#ai-workflow-es17-paint3_linear_10_281)" height="14" rx="7" width="83" x="74" y="65" />
+			<g clip-path="url(#ai-workflow-es17-clip-1)">
+				<rect class="ai-workflow-es17-shim-1" fill="var(--c-empty-state-white, #fff)" height="14" opacity="0" width="90" x="74" y="65" />
+			</g>
+			<rect class="ai-workflow-es17-pB" fill="url(#ai-workflow-es17-paint4_linear_10_281)" height="14" rx="7" width="67" x="133" y="121" />
+			<g clip-path="url(#ai-workflow-es17-clip-2)">
+				<rect class="ai-workflow-es17-shim-2" fill="var(--c-empty-state-white, #fff)" height="14" opacity="0" width="74" x="133" y="121" />
+			</g>
+			<g class="ai-workflow-es17-pA">
+				<path class="ai-workflow-es17-gear" d="M57.4047 63.8641C58.1562 62.712 59.8438 62.712 60.5953 63.8641L60.9686 64.4364C61.3979 65.0946 62.1873 65.4215 62.9562 65.2597L63.6249 65.119C64.971 64.8357 66.1643 66.029 65.881 67.3751L65.7403 68.0438C65.5785 68.8127 65.9054 69.6021 66.5636 70.0314L67.1359 70.4047C68.288 71.1562 68.288 72.8438 67.1359 73.5953L66.5636 73.9686C65.9054 74.3979 65.5785 75.1873 65.7403 75.9562L65.881 76.6249C66.1643 77.971 64.971 79.1643 63.6249 78.881L62.9562 78.7403C62.1873 78.5785 61.3979 78.9054 60.9686 79.5636L60.5953 80.1359C59.8438 81.288 58.1562 81.288 57.4047 80.1359L57.0314 79.5636C56.6021 78.9054 55.8127 78.5785 55.0438 78.7403L54.3751 78.881C53.029 79.1643 51.8357 77.971 52.119 76.6249L52.2597 75.9562C52.4215 75.1873 52.0946 74.3979 51.4364 73.9686L50.8641 73.5953C49.712 72.8438 49.712 71.1562 50.8641 70.4047L51.4364 70.0314C52.0946 69.6021 52.4215 68.8127 52.2597 68.0438L52.119 67.3751C51.8357 66.029 53.029 64.8357 54.3751 65.119L55.0438 65.2597C55.8127 65.4215 56.6021 65.0946 57.0314 64.4364L57.4047 63.8641Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+			</g>
+			<path d="M156 160C156 162.209 154.209 164 152 164H109C108.448 164 108 164.448 108 165V180H104V164C104 161.791 105.791 160 108 160H151C151.552 160 152 159.552 152 159V144H156V160Z" fill="url(#ai-workflow-es17-paint5_linear_10_281)" />
+			<g mask="url(#ai-workflow-es17-mask-b)">
+				<rect class="ai-workflow-es17-sweep-b" fill="var(--c-empty-state-white, #fff)" height="45" opacity="0" width="60" x="100" y="140" />
+			</g>
+			<rect class="ai-workflow-es17-pC" fill="url(#ai-workflow-es17-paint6_linear_10_281)" height="32" rx="16" width="128" x="64" y="179" />
+			<circle class="ai-workflow-es17-pC" cx="81.9846" cy="195.272" fill="url(#ai-workflow-es17-paint7_linear_10_281)" r="7.98458" />
+			<g class="ai-workflow-es17-pC">
+				<path class="ai-workflow-es17-spk" d="M87.2245 185.274C87.3707 184.687 88.2052 184.687 88.3514 185.274L89.0931 188.252C89.145 188.46 89.3078 188.623 89.5162 188.675L92.494 189.416C93.0811 189.563 93.0811 190.397 92.494 190.543L89.5162 191.285C89.3078 191.337 89.145 191.5 89.0931 191.708L88.3514 194.686C88.2052 195.273 87.3707 195.273 87.2245 194.686L86.4828 191.708C86.4309 191.5 86.2681 191.337 86.0597 191.285L83.082 190.543C82.4948 190.397 82.4948 189.563 83.082 189.416L86.0597 188.675C86.2681 188.623 86.4309 188.46 86.4828 188.252L87.2245 185.274Z" fill="var(--c-empty-state-purple-l5, #f2e5ff)" fill-opacity="0.83" />
+			</g>
+			<rect fill="url(#ai-workflow-es17-paint8_linear_10_281)" height="14" rx="7" transform="rotate(90 81 115)" width="26" x="81" y="115" />
+			<rect fill="url(#ai-workflow-es17-paint9_linear_10_281)" height="10" rx="5" width="26" x="118" y="157" />
+			<rect class="ai-workflow-es17-pC" fill="url(#ai-workflow-es17-paint10_linear_10_281)" height="14" rx="7" width="78" x="98" y="188" />
+			<g clip-path="url(#ai-workflow-es17-clip-3)">
+				<rect class="ai-workflow-es17-shim-3" fill="var(--c-empty-state-white, #fff)" height="14" opacity="0" width="85" x="98" y="188" />
+			</g>
+			<rect class="ai-workflow-es17-pB" fill="var(--c-empty-state-primary, #0b5fff)" height="15" rx="6.5" transform="matrix(-1 0 0 1 127 120)" width="13" />
+		</g>
+		<defs>
+			<mask height="100" id="ai-workflow-es17-mask-a" maskUnits="userSpaceOnUse" width="14" x="68" y="84">
+				<rect fill="white" height="94.0381" width="4" x="72" y="89" />
+			</mask>
+			<mask height="44" id="ai-workflow-es17-mask-b" maskUnits="userSpaceOnUse" width="60" x="100" y="140">
+				<path d="M156 160C156 162.209 154.209 164 152 164H109C108.448 164 108 164.448 108 165V180H104V164C104 161.791 105.791 160 108 160H151C151.552 160 152 159.552 152 159V144H156V160Z" fill="white" />
+			</mask>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint0_linear_10_281" x1="74" x2="74" y1="89" y2="183.038">
+				<stop stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-d1, #9f1aff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint1_linear_10_281" x1="103.5" x2="103.5" y1="56" y2="88">
+				<stop stop-color="var(--c-empty-state-white, #fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l2, #b3cdff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint2_linear_10_281" x1="157" x2="157" y1="112" y2="144">
+				<stop stop-color="var(--c-empty-state-white, #fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l2, #b3cdff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint3_linear_10_281" x1="74" x2="157" y1="72" y2="72">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint4_linear_10_281" x1="133" x2="200" y1="128" y2="128">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint5_linear_10_281" x1="130" x2="130" y1="144" y2="180">
+				<stop stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-d1, #9f1aff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint6_linear_10_281" x1="128" x2="128" y1="179" y2="211">
+				<stop stop-color="var(--c-empty-state-purple-d1, #9f1aff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple, #a3f)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint7_linear_10_281" x1="81.9846" x2="81.9846" y1="187.288" y2="203.257">
+				<stop stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" stop-opacity="0.8" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint8_linear_10_281" x1="107" x2="81" y1="122" y2="122">
+				<stop stop-color="var(--c-empty-state-purple, #a3f)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint9_linear_10_281" x1="144" x2="118" y1="162" y2="162">
+				<stop stop-color="var(--c-empty-state-purple, #a3f)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple, #a3f)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="ai-workflow-es17-paint10_linear_10_281" x1="98" x2="176" y1="195" y2="195">
+				<stop stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" stop-opacity="0" />
+			</linearGradient>
+			<clipPath id="ai-workflow-es17-clip-1">
+				<rect height="14" rx="7" width="83" x="74" y="65" />
+			</clipPath>
+			<clipPath id="ai-workflow-es17-clip-2">
+				<rect height="14" rx="7" width="67" x="133" y="121" />
+			</clipPath>
+			<clipPath id="ai-workflow-es17-clip-3">
+				<rect height="14" rx="7" width="78" x="98" y="188" />
+			</clipPath>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="audience" viewBox="0 0 256 256">
+		<style>
+			@keyframes audience-es09-ring {from { opacity: 1; } to { opacity: .42; }}
+			@keyframes audience-es09-breathe {from { transform: scale(1); } to { transform: scale(1.035); }}
+			@keyframes audience-es09-float {from { transform: translateY(-3.5px); } to { transform: translateY(3.5px); }}
+			.audience-es09-ring { animation: audience-es09-ring calc(2.4s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.audience-es09-ring-2 { animation-delay: calc(-1.2s * var(--c-empty-state-image-animation-speed, 1)); }
+			.audience-es09-avatar { transform-box: fill-box; transform-origin: center; animation: audience-es09-breathe calc(1.8s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.audience-es09-chip { transform-box: fill-box; transform-origin: center; animation: audience-es09-float calc(2.2s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.audience-es09-chip-2 { animation-delay: calc(-.7s * var(--c-empty-state-image-animation-speed, 1)); }
+			.audience-es09-chip-3 { animation-delay: calc(-1.4s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<path class="audience-es09-ring" d="M211 128C211 173.84 173.84 211 128 211C82.1604 211 45 173.84 45 128C45 82.1604 82.1604 45 128 45C173.84 45 211 82.1604 211 128ZM107.718 128C107.718 139.201 116.799 148.282 128 148.282C139.201 148.282 148.282 139.201 148.282 128C148.282 116.799 139.201 107.718 128 107.718C116.799 107.718 107.718 116.799 107.718 128Z" fill="url(#audience-paint0_linear_10_281)" />
+			<path class="audience-es09-ring audience-es09-ring-2" d="M184 128C184 158.928 158.928 184 128 184C97.0721 184 72 158.928 72 128C72 97.0721 97.0721 72 128 72C158.928 72 184 97.0721 184 128ZM111.57 128C111.57 137.074 118.926 144.43 128 144.43C137.074 144.43 144.43 137.074 144.43 128C144.43 118.926 137.074 111.57 128 111.57C118.926 111.57 111.57 118.926 111.57 128Z" fill="url(#audience-paint1_linear_10_281)" />
+			<g class="audience-es09-chip">
+				<rect fill="url(#audience-paint2_linear_10_281)" height="43" rx="8" width="40" x="172" y="142" />
+				<rect fill="url(#audience-paint3_linear_10_281)" height="8" rx="4" width="30" x="177" y="150" />
+				<rect fill="url(#audience-paint4_linear_10_281)" height="16" rx="5" width="30" x="177" y="163" />
+			</g>
+			<g class="audience-es09-chip audience-es09-chip-2">
+				<rect fill="url(#audience-paint5_linear_10_281)" height="32" rx="6" width="39" x="56" y="169" />
+				<path d="M77.8283 183.845C78.9398 179.84 86.404 180.36 86.3996 184.592V190.628C86.3993 192.091 83.6652 192.217 83.967 190.139C79.0932 196.41 71.7208 184.766 83.9621 185.482C84.4081 182.094 80.2657 182.758 80.0119 184.387C79.863 185.457 77.4565 185.334 77.8283 183.845ZM67.9709 179.307C68.6405 177.586 71.0114 177.543 71.6809 179.307L75.5657 190.187C76.0688 191.637 73.9032 192.558 73.2864 190.964L72.3889 188.229H67.2532L66.3557 190.969C65.7648 192.51 63.5652 191.693 64.0764 190.191L67.9709 179.307ZM83.9709 187.104C81.1316 186.942 79.7667 187.225 79.7317 188.68C79.7317 190.693 84.2112 190.947 83.9709 187.104ZM69.7951 180.456L67.8742 186.325H71.7639L69.843 180.456H69.7951Z" fill="url(#audience-paint6_linear_10_281)" />
+			</g>
+			<g class="audience-es09-avatar">
+				<circle cx="128" cy="125" fill="var(--c-empty-state-primary, #0b5fff)" r="28" />
+				<circle cx="128" cy="114" fill="url(#audience-paint7_linear_10_281)" r="8" />
+				<path d="M113 134.2C113 128.567 117.567 124 123.2 124H132.8C138.433 124 143 128.567 143 134.2C143 137.956 139.956 141 136.2 141H119.8C116.044 141 113 137.956 113 134.2Z" fill="url(#audience-paint8_linear_10_281)" />
+			</g>
+			<g class="audience-es09-chip audience-es09-chip-3">
+				<rect fill="url(#audience-paint9_linear_10_281)" height="32" rx="8" width="48" x="72" y="36" />
+				<g>
+					<path clip-rule="evenodd" d="M91.7047 44C87.41 44 86.8931 48.9763 86.8931 51.432C86.8931 53.8875 87.4971 59 91.7047 59C95.9703 59 96.5162 53.8875 96.5162 51.432C96.5162 48.9883 95.9703 44 91.7047 44ZM93.716 48.1064C93.404 46.9764 92.8291 46.0176 91.7028 46.0414C89.2944 45.994 89.2762 50.0294 89.3633 52.5444L93.716 48.1064ZM91.7028 56.9527C90.6074 56.9053 90.0325 55.9643 89.7188 54.8639L94.0479 50.4497L94.0442 50.8127C94.0206 53.3159 93.988 56.9527 91.7028 56.9527Z" fill="url(#audience-paint10_linear_10_281)" fill-rule="evenodd" />
+					<path clip-rule="evenodd" d="M103.188 44C98.8938 44 98.377 48.9763 98.377 51.432C98.377 53.8875 98.9809 59 103.188 59C107.454 59 108 53.8875 108 51.432C108 48.9883 107.454 44 103.188 44ZM103.188 46.0414C104.315 46.0176 104.89 46.9764 105.203 48.1064L100.851 52.5444C100.756 50.0294 100.78 45.994 103.188 46.0414ZM101.204 54.8639C101.518 55.9643 102.093 56.9053 103.188 56.9527C105.472 56.9527 105.506 53.3029 105.53 50.7994L105.533 50.4497L101.204 54.8639Z" fill="url(#audience-paint11_linear_10_281)" fill-rule="evenodd" />
+					<path d="M85.7143 56.9881C85.7143 58.0339 84.8836 58.8817 83.8571 58.8817C82.8306 58.8817 82 58.0339 82 56.9881C82 55.9424 82.8306 55.0946 83.8571 55.0946C84.8836 55.0946 85.7143 55.9424 85.7143 56.9881Z" fill="url(#audience-paint12_linear_10_281)" />
+				</g>
+			</g>
+		</g>
+		<defs>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint0_linear_10_281" x1="128" x2="128" y1="45" y2="211">
+				<stop stop-color="var(--c-empty-state-primary-l2, #b3cdff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l2, #b3cdff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint1_linear_10_281" x1="128" x2="128" y1="72" y2="184">
+				<stop stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l0, #5791ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint2_linear_10_281" x1="192" x2="192" y1="142" y2="185">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint3_linear_10_281" x1="177" x2="207" y1="154" y2="154">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint4_linear_10_281" x1="177" x2="207" y1="171" y2="171">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint5_linear_10_281" x1="75.5" x2="75.5" y1="169" y2="201">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint6_linear_10_281" x1="75.1998" x2="75.1998" y1="178" y2="192">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint7_linear_10_281" x1="128" x2="128" y1="106" y2="122">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint8_linear_10_281" x1="128" x2="128" y1="124" y2="141">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint9_linear_10_281" x1="96" x2="96" y1="36" y2="68">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint10_linear_10_281" x1="95" x2="95" y1="44" y2="59">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint11_linear_10_281" x1="95" x2="95" y1="44" y2="59">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="audience-paint12_linear_10_281" x1="95" x2="95" y1="44" y2="59">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="contenttypes" viewBox="0 0 256 256">
+		<style>
+			@keyframes contenttypes-es05-float {from { transform: translateY(-3.5px); } to { transform: translateY(3.5px); }}
+			@keyframes contenttypes-es05-spin {from { transform: rotate(0deg); } to { transform: rotate(360deg); }}
+			.contenttypes-es05-chip { transform-box: fill-box; transform-origin: center; animation: contenttypes-es05-float calc(2.2s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.contenttypes-es05-chip-aa { animation-delay: calc(-.7s * var(--c-empty-state-image-animation-speed, 1)); }
+			.contenttypes-es05-chip-num { animation-delay: calc(-1.4s * var(--c-empty-state-image-animation-speed, 1)); }
+			.contenttypes-es05-gear { transform-box: fill-box; transform-origin: center; animation: contenttypes-es05-spin calc(8s * var(--c-empty-state-image-animation-speed, 1)) linear infinite; }
+		</style>
+		<g>
+			<rect fill="var(--c-empty-state-primary-l3, #f0f5ff)" height="117" rx="14.5" stroke="var(--c-empty-state-primary-l0, #5791ff)" stroke-width="5" width="153" x="51.5" y="69.5" />
+			<rect fill="var(--c-empty-state-primary-l3, #f0f5ff)" height="115" rx="13.5" stroke="var(--c-empty-state-white, #fff)" stroke-width="3" width="151" x="52.5" y="70.5" />
+			<rect fill="var(--c-empty-state-primary-l1, #80acff)" height="16" rx="8" width="32" x="64" y="104" />
+			<path d="M54 84C54 77.3726 59.3726 72 66 72H189.5C196.127 72 201.5 77.3726 201.5 84V88H54V84Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+			<g class="contenttypes-es05-chip">
+				<rect fill="url(#contenttypes-paint0_linear_10_281)" height="32" rx="8" width="40" x="41" y="80" />
+				<g class="contenttypes-es05-gear">
+					<path d="M59.2274 86.9601C60.0624 85.68 61.9376 85.68 62.7726 86.9601L63.1874 87.596C63.6644 88.3273 64.5414 88.6906 65.3958 88.5108L66.1387 88.3544C67.6344 88.0397 68.9603 89.3656 68.6456 90.8613L68.4892 91.6042C68.3094 92.4586 68.6727 93.3356 69.404 93.8126L70.0399 94.2274C71.32 95.0624 71.32 96.9376 70.0399 97.7726L69.404 98.1874C68.6727 98.6644 68.3094 99.5414 68.4892 100.396L68.6456 101.139C68.9603 102.634 67.6344 103.96 66.1387 103.646L65.3958 103.489C64.5414 103.309 63.6643 103.673 63.1874 104.404L62.7726 105.04C61.9376 106.32 60.0624 106.32 59.2274 105.04L58.8126 104.404C58.3356 103.673 57.4586 103.309 56.6042 103.489L55.8613 103.646C54.3656 103.96 53.0397 102.634 53.3544 101.139L53.5108 100.396C53.6906 99.5414 53.3273 98.6643 52.596 98.1874L51.9601 97.7726C50.68 96.9376 50.68 95.0624 51.9601 94.2274L52.596 93.8126C53.3273 93.3356 53.6906 92.4586 53.5108 91.6042L53.3544 90.8613C53.0397 89.3656 54.3656 88.0397 55.8613 88.3544L56.6042 88.5108C57.4586 88.6906 58.3356 88.3273 58.8126 87.596L59.2274 86.9601Z" fill="url(#contenttypes-paint1_linear_10_281)" />
+				</g>
+			</g>
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="16" rx="4" width="40" x="104" y="104" />
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="32" rx="4" width="85" x="104" y="128" />
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="8" rx="4" transform="matrix(1 0 0 -1 104 176)" width="85" />
+			<rect fill="var(--c-empty-state-primary-l1, #80acff)" height="16" rx="8" width="40" x="152" y="104" />
+			<rect fill="var(--c-empty-state-primary-l1, #80acff)" height="48" rx="8" width="32" x="64" y="128" />
+			<rect class="contenttypes-es05-chip contenttypes-es05-chip-aa" fill="url(#contenttypes-paint2_linear_10_281)" height="32" rx="8" width="43" x="172" y="112" />
+			<rect class="contenttypes-es05-chip contenttypes-es05-chip-num" fill="url(#contenttypes-paint3_linear_10_281)" height="32" rx="8" width="48" x="72" y="164" />
+			<path class="contenttypes-es05-chip contenttypes-es05-chip-aa" d="M196.828 126.845C197.94 122.84 205.404 123.36 205.4 127.592V133.628C205.399 135.091 202.665 135.217 202.967 133.139C198.093 139.41 190.721 127.766 202.962 128.482C203.408 125.094 199.266 125.758 199.012 127.387C198.863 128.457 196.457 128.334 196.828 126.845ZM186.971 122.307C187.641 120.586 190.012 120.543 190.681 122.307L194.566 133.187C195.069 134.637 192.903 135.558 192.286 133.964L191.39 131.23H186.253L185.357 133.969C184.766 135.51 182.565 134.693 183.077 133.19L186.971 122.307ZM202.971 130.104C200.132 129.942 198.767 130.225 198.732 131.68C198.732 133.693 203.211 133.947 202.971 130.104ZM188.795 123.456L186.874 129.325H190.764L188.843 123.456H188.795Z" fill="url(#contenttypes-paint4_linear_10_281)" />
+			<g class="contenttypes-es05-chip contenttypes-es05-chip-num">
+				<path clip-rule="evenodd" d="M91.7047 172C87.41 172 86.8931 176.976 86.8931 179.432C86.8931 181.887 87.4971 187 91.7047 187C95.9703 187 96.5162 181.887 96.5162 179.432C96.5162 176.988 95.9703 172 91.7047 172ZM93.716 176.106C93.404 174.976 92.8291 174.018 91.7028 174.041C89.2944 173.994 89.2762 178.029 89.3633 180.544L93.716 176.106ZM91.7028 184.953C90.6074 184.905 90.0325 183.964 89.7188 182.864L94.0479 178.45L94.0442 178.813C94.0206 181.316 93.988 184.953 91.7028 184.953Z" fill="url(#contenttypes-paint5_linear_10_281)" fill-rule="evenodd" />
+				<path clip-rule="evenodd" d="M103.188 172C98.8938 172 98.377 176.976 98.377 179.432C98.377 181.887 98.9809 187 103.188 187C107.454 187 108 181.887 108 179.432C108 176.988 107.454 172 103.188 172ZM103.188 174.041C104.315 174.018 104.89 174.976 105.203 176.106L100.851 180.544C100.756 178.029 100.78 173.994 103.188 174.041ZM101.204 182.864C101.518 183.964 102.093 184.905 103.188 184.953C105.472 184.953 105.506 181.303 105.53 178.799L105.533 178.45L101.204 182.864Z" fill="url(#contenttypes-paint6_linear_10_281)" fill-rule="evenodd" />
+				<path d="M85.7143 184.988C85.7143 186.034 84.8836 186.882 83.8571 186.882C82.8306 186.882 82 186.034 82 184.988C82 183.942 82.8306 183.095 83.8571 183.095C84.8836 183.095 85.7143 183.942 85.7143 184.988Z" fill="url(#contenttypes-paint7_linear_10_281)" />
+			</g>
+		</g>
+		<defs>
+			<linearGradient gradientUnits="userSpaceOnUse" id="contenttypes-paint0_linear_10_281" x1="61" x2="61" y1="80" y2="112">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="contenttypes-paint1_linear_10_281" x1="61" x2="61" y1="86" y2="106">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.3" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="contenttypes-paint2_linear_10_281" x1="193.5" x2="193.5" y1="112" y2="144">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="contenttypes-paint3_linear_10_281" x1="96" x2="96" y1="164" y2="196">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="contenttypes-paint4_linear_10_281" x1="194.2" x2="194.2" y1="121" y2="135">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.3" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="contenttypes-paint5_linear_10_281" x1="95" x2="95" y1="172" y2="187">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.3" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="contenttypes-paint6_linear_10_281" x1="95" x2="95" y1="172" y2="187">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.3" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="contenttypes-paint7_linear_10_281" x1="95" x2="95" y1="172" y2="187">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.3" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="discovery" viewBox="0 0 256 256">
+		<style>
+			@keyframes discovery-es07-ring {from { opacity: .55; } to { opacity: 1; }}
+			@keyframes discovery-es07-beat {0% { transform: scale(1); animation-timing-function: cubic-bezier(.4, 0, .7, 1); } 12% { transform: scale(.92); animation-timing-function: cubic-bezier(.2, .9, .35, 1); } 24% { transform: scale(1.06); animation-timing-function: cubic-bezier(.45, 0, .55, 1); } 48%, 100% { transform: scale(1); }}
+			@keyframes discovery-es07-ping {0%, 24% { transform: scale(1); opacity: .45; } 100% { transform: scale(3.4); opacity: 0; }}
+			@keyframes discovery-es07-float {from { transform: translateY(-3.5px); } to { transform: translateY(3.5px); }}
+			.discovery-es07-ring { animation: discovery-es07-ring calc(3.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.discovery-es07-ring-outer { animation-delay: calc(-1.2s * var(--c-empty-state-image-animation-speed, 1)); }
+			.discovery-es07-core,
+			.discovery-es07-nucleus { transform-box: fill-box; transform-origin: center; animation: discovery-es07-beat calc(2.8s * var(--c-empty-state-image-animation-speed, 1)) infinite; }
+			.discovery-es07-ping { transform-box: fill-box; transform-origin: center; animation: discovery-es07-ping calc(2.8s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.2, .6, .35, 1) infinite; }
+			.discovery-es07-chip { transform-box: fill-box; transform-origin: center; animation: discovery-es07-float calc(2.2s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.discovery-es07-chip-num { animation-delay: calc(-.5s * var(--c-empty-state-image-animation-speed, 1)); }
+			.discovery-es07-chip-gear { animation-delay: calc(-1s * var(--c-empty-state-image-animation-speed, 1)); }
+			.discovery-es07-chip-card { animation-delay: calc(-1.5s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<path class="discovery-es07-ring discovery-es07-ring-outer" d="M172.795 197.875C187.872 188.209 199.419 173.926 205.71 157.157C212.002 140.389 212.701 122.036 207.703 104.838C202.705 87.6396 192.278 72.5194 177.979 61.7349C163.681 50.9504 146.277 45.0802 128.368 45.0008C110.459 44.9214 93.0039 50.6371 78.6102 61.2943C64.2165 71.9516 53.6562 86.9787 48.5059 104.132C43.3557 121.285 43.8919 139.644 50.0345 156.467C56.1771 173.29 67.5965 187.676 82.5876 197.475L116.903 144.977C113.24 142.582 110.449 139.067 108.948 134.956C107.447 130.845 107.316 126.359 108.575 122.168C109.833 117.976 112.414 114.304 115.931 111.7C119.448 109.096 123.714 107.699 128.09 107.718C132.466 107.738 136.719 109.172 140.213 111.807C143.707 114.443 146.255 118.138 147.476 122.34C148.697 126.543 148.527 131.027 146.989 135.125C145.452 139.222 142.63 142.713 138.946 145.075L172.795 197.875Z" fill="url(#discovery-paint0_linear_10_281)" />
+			<path class="discovery-es07-ring" d="M158.223 175.144C168.396 168.623 176.186 158.986 180.431 147.672C184.676 136.359 185.147 123.976 181.775 112.372C178.403 100.769 171.368 90.5673 161.721 83.291C152.074 76.0148 140.332 72.0541 128.248 72.0006C116.165 71.947 104.388 75.8033 94.6768 82.9938C84.9654 90.1842 77.8403 100.323 74.3654 111.896C70.8906 123.469 71.2524 135.856 75.3967 147.207C79.5411 158.557 87.2458 168.263 97.3603 174.874L119.01 141.753C116.043 139.813 113.782 136.965 112.566 133.635C111.35 130.305 111.244 126.671 112.264 123.275C113.283 119.88 115.374 116.905 118.223 114.795C121.072 112.686 124.528 111.554 128.073 111.57C131.618 111.586 135.063 112.748 137.894 114.882C140.724 117.017 142.788 120.01 143.778 123.415C144.767 126.819 144.629 130.453 143.383 133.772C142.138 137.091 139.852 139.919 136.867 141.832L158.223 175.144Z" fill="url(#discovery-paint1_linear_10_281)" />
+			<circle class="discovery-es07-ping" cx="128" cy="128" fill="var(--c-empty-state-primary, #0b5fff)" r="24" />
+			<circle class="discovery-es07-nucleus" cx="128" cy="128" fill="var(--c-empty-state-primary, #0b5fff)" r="24" />
+			<circle class="discovery-es07-core" cx="128" cy="128" fill="var(--c-empty-state-primary-l3, #f0f5ff)" r="12" />
+			<g class="discovery-es07-chip discovery-es07-chip-gear">
+				<rect fill="url(#discovery-paint2_linear_10_281)" height="40" rx="6" width="36" x="37" y="144" />
+				<path d="M52.8729 153.152C53.8749 151.616 56.1251 151.616 57.1271 153.152L57.6248 153.915C58.1972 154.793 59.2497 155.229 60.275 155.013L61.1665 154.825C62.9613 154.448 64.5524 156.039 64.1747 157.834L63.987 158.725C63.7713 159.75 64.2072 160.803 65.0848 161.375L65.8478 161.873C67.3841 162.875 67.3841 165.125 65.8478 166.127L65.0848 166.625C64.2072 167.197 63.7713 168.25 63.987 169.275L64.1747 170.166C64.5524 171.961 62.9613 173.552 61.1665 173.175L60.275 172.987C59.2497 172.771 58.1972 173.207 57.6248 174.085L57.1271 174.848C56.1251 176.384 53.8749 176.384 52.8729 174.848L52.3752 174.085C51.8028 173.207 50.7503 172.771 49.725 172.987L48.8335 173.175C47.0387 173.552 45.4476 171.961 45.8253 170.166L46.013 169.275C46.2287 168.25 45.7928 167.197 44.9152 166.625L44.1522 166.127C42.6159 165.125 42.6159 162.875 44.1522 161.873L44.9152 161.375C45.7928 160.803 46.2287 159.75 46.013 158.725L45.8253 157.834C45.4476 156.039 47.0387 154.448 48.8335 154.825L49.725 155.013C50.7503 155.229 51.8028 154.793 52.3752 153.915L52.8729 153.152Z" fill="url(#discovery-paint3_linear_10_281)" />
+			</g>
+			<g class="discovery-es07-chip discovery-es07-chip-aa">
+				<rect fill="url(#discovery-paint4_linear_10_281)" height="32" rx="6" width="39" x="67" y="36" />
+				<path d="M88.8284 50.8447C89.9399 46.8399 97.4031 47.3597 97.3987 51.5918V57.6279C97.3984 59.0908 94.6644 59.2173 94.9661 57.1387C90.0922 63.4099 82.7208 51.7662 94.9622 52.4824C95.4081 49.0936 91.2647 49.7577 91.011 51.3867C90.8619 52.4565 88.4565 52.3339 88.8284 50.8447ZM78.97 46.3066C79.6394 44.5863 82.0103 44.5428 82.6799 46.3066L86.5657 57.1865C87.0688 58.6365 84.9033 59.558 84.2864 57.9639L83.3889 55.2295H78.2532L77.3557 57.9688C76.7649 59.5098 74.5651 58.6934 75.0764 57.1914L78.97 46.3066ZM94.971 54.1035C92.1316 53.9419 90.7668 54.2254 90.7317 55.6797C90.7317 57.693 95.2112 57.9465 94.971 54.1035ZM80.7952 47.4561L78.8743 53.3252H82.7639L80.843 47.4561H80.7952Z" fill="url(#discovery-paint5_linear_10_281)" />
+			</g>
+			<g class="discovery-es07-chip discovery-es07-chip-num">
+				<rect fill="url(#discovery-paint6_linear_10_281)" height="40" rx="6" width="43" x="177" y="80" />
+				<g>
+					<path clip-rule="evenodd" d="M194.824 91C190.034 91 189.458 96.6399 189.458 99.423C189.458 102.206 190.131 108 194.824 108C199.582 108 200.191 102.206 200.191 99.423C200.191 96.6534 199.582 91 194.824 91ZM197.068 95.6539C196.72 94.3732 196.079 93.2866 194.822 93.3136C192.136 93.2599 192.116 97.8334 192.213 100.684L197.068 95.6539ZM194.822 105.68C193.601 105.626 192.959 104.56 192.609 103.312L197.438 98.3096L197.434 98.721C197.408 101.558 197.371 105.68 194.822 105.68Z" fill="url(#discovery-paint7_linear_10_281)" fill-rule="evenodd" />
+					<path clip-rule="evenodd" d="M207.633 91C202.843 91 202.267 96.6399 202.267 99.423C202.267 102.206 202.94 108 207.633 108C212.391 108 213 102.206 213 99.423C213 96.6534 212.391 91 207.633 91ZM207.633 93.3136C208.89 93.2866 209.531 94.3732 209.881 95.6539L205.026 100.684C204.921 97.8334 204.947 93.2599 207.633 93.3136ZM205.42 103.312C205.77 104.56 206.411 105.626 207.633 105.68C210.18 105.68 210.219 101.543 210.245 98.706L210.249 98.3096L205.42 103.312Z" fill="url(#discovery-paint8_linear_10_281)" fill-rule="evenodd" />
+					<path d="M188.143 105.72C188.143 106.905 187.216 107.866 186.071 107.866C184.926 107.866 184 106.905 184 105.72C184 104.535 184.926 103.574 186.071 103.574C187.216 103.574 188.143 104.535 188.143 105.72Z" fill="url(#discovery-paint9_linear_10_281)" />
+				</g>
+			</g>
+			<g class="discovery-es07-chip discovery-es07-chip-card">
+				<rect fill="url(#discovery-paint10_linear_10_281)" height="43" rx="8" width="40" x="152" y="168" />
+				<rect fill="url(#discovery-paint11_linear_10_281)" height="8" rx="4" width="30" x="157" y="176" />
+				<rect fill="url(#discovery-paint12_linear_10_281)" height="16" rx="5" width="30" x="157" y="189" />
+			</g>
+		</g>
+		<defs>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint0_linear_10_281" x1="128" x2="128" y1="45" y2="211">
+				<stop stop-color="var(--c-empty-state-primary-l2, #b3cdff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l2, #b3cdff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint1_linear_10_281" x1="128" x2="128" y1="72" y2="184">
+				<stop stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l0, #5791ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint2_linear_10_281" x1="55" x2="55" y1="144" y2="184">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint3_linear_10_281" x1="55" x2="55" y1="152" y2="176">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint4_linear_10_281" x1="86.5" x2="86.5" y1="36" y2="68">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint5_linear_10_281" x1="86.1994" x2="86.1994" y1="45" y2="59.0003">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint6_linear_10_281" x1="198.5" x2="198.5" y1="80" y2="120">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint7_linear_10_281" x1="198.5" x2="198.5" y1="91" y2="108">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint8_linear_10_281" x1="198.5" x2="198.5" y1="91" y2="108">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint9_linear_10_281" x1="198.5" x2="198.5" y1="91" y2="108">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint10_linear_10_281" x1="172" x2="172" y1="168" y2="211">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint11_linear_10_281" x1="157" x2="187" y1="180" y2="180">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="discovery-paint12_linear_10_281" x1="157" x2="187" y1="197" y2="197">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="document" viewBox="0 0 256 256">
+		<style>
+			@keyframes document-es08-float {from { transform: translateY(0); } to { transform: translateY(-3px); }}
+			@keyframes document-es08-fill {from { opacity: 1; } to { opacity: .5; }}
+			.document-es08-doc,
+			.document-es08-chip-img,
+			.document-es08-chip-num { transform-box: fill-box; transform-origin: center; animation: document-es08-float calc(2.8s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.document-es08-line { transform-box: fill-box; transform-origin: center; animation: document-es08-float calc(2.8s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate, document-es08-fill calc(1.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.document-es08-line-2 { animation-delay: calc(0s * var(--c-empty-state-image-animation-speed, 1)), calc(-.4s * var(--c-empty-state-image-animation-speed, 1)); }
+			.document-es08-line-3 { animation-delay: calc(0s * var(--c-empty-state-image-animation-speed, 1)), calc(-.8s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<circle cx="128" cy="128" fill="var(--c-empty-state-primary-l3, #f0f5ff)" r="80" />
+			<path class="document-es08-chip-num" d="M220 165.077V206C220 213.732 213.732 220 206 220H172C164.268 220 158 213.732 158 206V188.576C166.572 186.739 173 179.121 173 170V136H195.2L220 165.077ZM168 170C168 176.342 163.783 181.697 158 183.418V150C158 143.658 162.217 138.302 168 136.581V170Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+			<g class="document-es08-chip-img">
+				<path d="M73.2549 36.0635V51C73.2549 58.732 79.5229 65 87.2549 65H97.9346L98 65.0771V71.4229C90.0042 73.1362 83.8745 79.8797 83.0859 88.1807C81.8004 87.5755 80.3688 87.2354 78.8584 87.2354C73.3018 87.2354 68.7969 91.8061 68.7969 97.4443C68.7969 103.083 73.3019 107.653 78.8584 107.653C80.3353 107.653 81.7366 107.327 83 106.747V120H50C42.268 120 36 113.732 36 106V50C36 42.268 42.268 36 50 36H73.2002L73.2549 36.0635ZM98 106C98 112.342 93.7827 117.697 88 119.418V101.705C88.5881 100.408 88.9189 98.9657 88.9189 97.4443C88.9189 95.9227 88.5883 94.4799 88 93.1826V90C88 83.6581 92.2172 78.3022 98 76.5811V106ZM59.1504 89.4121C57.7984 87.2152 54.6049 87.2152 53.2529 89.4121L45.6006 101.848C44.181 104.154 45.8402 107.125 48.5488 107.125H63.8545C66.5631 107.125 68.2233 104.154 66.8037 101.848L59.1504 89.4121Z" fill="var(--c-empty-state-primary-d2, #004ad7)" />
+				<g>
+					<path d="M53.2532 89.4119C54.6052 87.2149 57.7986 87.2149 59.1505 89.4119L66.8036 101.848C68.2232 104.155 66.5635 107.125 63.8549 107.125H48.5488C45.8402 107.125 44.1805 104.155 45.6001 101.848L53.2532 89.4119Z" fill="url(#document-paint0_linear_10_281)" />
+					<path d="M53.2532 89.4119C54.6052 87.2149 57.7986 87.2149 59.1505 89.4119L66.8036 101.848C68.2232 104.155 66.5635 107.125 63.8549 107.125H48.5488C45.8402 107.125 44.1805 104.155 45.6001 101.848L53.2532 89.4119Z" fill="url(#document-paint1_linear_10_281)" />
+				</g>
+				<g>
+					<path d="M78.8584 87.2354C80.3688 87.2354 81.8004 87.5755 83.0859 88.1807C83.0291 88.7794 83 89.3863 83 90V106.747C81.7366 107.327 80.3353 107.653 78.8584 107.653C73.3019 107.653 68.7969 103.083 68.7969 97.4443C68.7969 91.8061 73.3018 87.2354 78.8584 87.2354ZM88 93.1826C88.5883 94.4799 88.9189 95.9227 88.9189 97.4443C88.9189 98.9657 88.5881 100.408 88 101.705V93.1826Z" fill="url(#document-paint2_linear_10_281)" />
+					<path d="M78.8584 87.2354C80.3688 87.2354 81.8004 87.5755 83.0859 88.1807C83.0291 88.7794 83 89.3863 83 90V106.747C81.7366 107.327 80.3353 107.653 78.8584 107.653C73.3019 107.653 68.7969 103.083 68.7969 97.4443C68.7969 91.8061 73.3018 87.2354 78.8584 87.2354ZM88 93.1826C88.5883 94.4799 88.9189 95.9227 88.9189 97.4443C88.9189 98.9657 88.5881 100.408 88 101.705V93.1826Z" fill="url(#document-paint3_linear_10_281)" />
+				</g>
+				<path d="M98 65H87.2546C79.5227 65 73.2546 58.732 73.2546 51V36L98 65Z" fill="url(#document-paint4_linear_10_281)" />
+			</g>
+			<g class="document-es08-chip-num">
+				<path clip-rule="evenodd" d="M189.437 192C183.491 192 182.775 198.635 182.775 201.909C182.775 205.183 183.611 212 189.437 212C195.343 212 196.099 205.183 196.099 201.909C196.099 198.651 195.343 192 189.437 192ZM192.222 197.475C191.79 195.969 190.994 194.69 189.435 194.722C186.1 194.659 186.075 200.039 186.195 203.393L192.222 197.475ZM189.435 209.27C187.918 209.207 187.122 207.952 186.688 206.485L192.682 200.6L192.677 201.084C192.644 204.421 192.599 209.27 189.435 209.27Z" fill="url(#document-paint5_linear_10_281)" fill-rule="evenodd" />
+				<path clip-rule="evenodd" d="M205.338 192C199.391 192 198.676 198.635 198.676 201.909C198.676 205.183 199.512 212 205.338 212C211.244 212 212 205.183 212 201.909C212 198.651 211.244 192 205.338 192ZM205.338 194.722C206.897 194.69 207.693 195.969 208.128 197.475L202.101 203.393C201.97 200.039 202.003 194.659 205.338 194.722ZM202.591 206.485C203.025 207.952 203.821 209.207 205.338 209.27C208.499 209.27 208.547 204.404 208.58 201.066L208.585 200.6L202.591 206.485Z" fill="url(#document-paint6_linear_10_281)" fill-rule="evenodd" />
+				<path d="M181.143 209.318C181.143 210.712 179.993 211.842 178.571 211.842C177.15 211.842 176 210.712 176 209.318C176 207.923 177.15 206.793 178.571 206.793C179.993 206.793 181.143 207.923 181.143 209.318Z" fill="url(#document-paint7_linear_10_281)" />
+			</g>
+			<path class="document-es08-doc" d="M88 90C88 82.268 94.268 76 102 76H136L168 113.385V170C168 177.732 161.732 184 154 184H102C94.268 184 88 177.732 88 170V90Z" fill="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" />
+			<rect class="document-es08-line" fill="var(--c-empty-state-primary-l1, #80acff)" height="16" rx="6" width="48" x="104" y="104" />
+			<path class="document-es08-doc" d="M168 113.361L150 113.361C142.268 113.361 136 107.093 136 99.3608V76L152 94L168 113.361Z" fill="url(#document-paint8_linear_10_281)" />
+			<path class="document-es08-chip-num" d="M220 165H209.255C201.523 165 195.255 158.732 195.255 151V136L220 165Z" fill="url(#document-paint9_linear_10_281)" />
+			<rect class="document-es08-line document-es08-line-3" fill="url(#document-paint10_linear_10_281)" height="24" rx="6" width="48" x="104" y="144" />
+			<g class="document-es08-line document-es08-line-2">
+				<rect fill="url(#document-paint11_linear_10_281)" height="8" rx="4" transform="matrix(1 0 0 -1 104 136)" width="8" />
+				<rect fill="url(#document-paint12_linear_10_281)" height="8" rx="4" transform="matrix(1 0 0 -1 120 136)" width="32" />
+			</g>
+		</g>
+		<defs>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint0_linear_10_281" x1="56.2019" x2="56.2019" y1="87.7642" y2="107.125">
+				<stop stop-color="var(--c-empty-state-primary-d2, #004ad7)" stop-opacity="0.5" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint1_linear_10_281" x1="56.2019" x2="56.2019" y1="87.7642" y2="107.125">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint2_linear_10_281" x1="78.8579" x2="78.8579" y1="87.2354" y2="107.653">
+				<stop stop-color="var(--c-empty-state-primary-d2, #004ad7)" stop-opacity="0.5" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint3_linear_10_281" x1="78.8579" x2="78.8579" y1="87.2354" y2="107.653">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint4_linear_10_281" x1="74.4084" x2="98.9138" y1="63.594" y2="40.2259">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint5_linear_10_281" x1="194" x2="194" y1="192" y2="212">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint6_linear_10_281" x1="194" x2="194" y1="192" y2="212">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint7_linear_10_281" x1="194" x2="194" y1="192" y2="212">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint8_linear_10_281" x1="136" x2="168" y1="112" y2="72.5">
+				<stop stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary, #0b5fff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint9_linear_10_281" x1="196" x2="216.5" y1="165" y2="144.5">
+				<stop stop-color="var(--c-empty-state-primary-l2, #b3cdff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint10_linear_10_281" x1="128" x2="128" y1="144" y2="168">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint11_linear_10_281" x1="0" x2="8" y1="4" y2="4">
+				<stop stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary, #0b5fff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="document-paint12_linear_10_281" x1="32" x2="0" y1="4" y2="4">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="knowledge-graph" viewBox="0 0 256 256">
+		<style>
+			@keyframes knowledge-graph-es15twinkle {from { opacity: 1; transform: scale(1); } to { opacity: .65; transform: scale(.97); }}
+			@keyframes knowledge-graph-es15drift {from { transform: translate(-2px, 1.6px) rotate(-.7deg); } to { transform: translate(2px, -1.6px) rotate(.7deg); }}
+			@keyframes knowledge-graph-es15glow {from { opacity: 0; } to { opacity: .45; }}
+			.knowledge-graph-es15-spk { transform-box: fill-box; transform-origin: center; animation: knowledge-graph-es15twinkle calc(1.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; animation-delay: calc(-.5s * var(--c-empty-state-image-animation-speed, 1)); }
+			.knowledge-graph-es15-drift { transform-box: view-box; transform-origin: 128px 128px; animation: knowledge-graph-es15drift calc(4.4s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.knowledge-graph-es15-sweep { animation: knowledge-graph-es15glow calc(2.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+		</style>
+		<g>
+			<g class="knowledge-graph-es15-drift">
+				<rect fill="url(#knowledge-graph-es15-paint0_linear_10_281)" height="6" transform="rotate(-8.86089 68.1875 80)" width="121.146" x="68.1875" y="80" />
+				<rect fill="url(#knowledge-graph-es15-paint1_linear_10_281)" height="6" transform="rotate(-31.1171 82.9104 173.414)" width="67.0876" x="82.9104" y="173.414" />
+				<rect fill="url(#knowledge-graph-es15-paint2_linear_10_281)" height="6" transform="rotate(51.6553 77.7993 94.7686)" width="27.5495" x="77.7993" y="94.7686" />
+				<rect fill="url(#knowledge-graph-es15-paint3_linear_10_281)" height="6" transform="rotate(39.5768 109.483 133.921)" width="77.2206" x="109.483" y="133.921" />
+				<rect fill="url(#knowledge-graph-es15-paint4_linear_10_281)" height="6" transform="rotate(-34.3057 109.217 116.617)" width="80.1002" x="109.217" y="116.617" />
+				<rect fill="url(#knowledge-graph-es15-paint5_linear_10_281)" height="6" transform="rotate(109.782 185.369 79.0396)" width="25.6713" x="185.369" y="79.0396" />
+				<rect fill="url(#knowledge-graph-es15-paint6_linear_10_281)" height="6" transform="rotate(177.389 138.965 129.885)" width="23.1278" x="138.965" y="129.885" />
+				<rect fill="url(#knowledge-graph-es15-paint7_linear_10_281)" height="6" transform="rotate(-174.955 163.287 194.062)" width="80.5698" x="163.287" y="194.062" />
+				<g mask="url(#knowledge-graph-es15-mask)">
+					<rect class="knowledge-graph-es15-sweep" fill="var(--c-empty-state-white, #fff)" height="160" opacity="0" width="155" x="55" y="50" />
+				</g>
+				<g>
+					<circle cx="64" cy="84" fill="url(#knowledge-graph-es15-paint8_linear_10_281)" r="20" />
+					<ellipse cx="64" cy="84" fill="url(#knowledge-graph-es15-paint9_linear_10_281)" rx="10.061" ry="10.2089" />
+				</g>
+				<g>
+					<circle cx="164" cy="127.5" fill="url(#knowledge-graph-es15-paint10_linear_10_281)" r="28" />
+					<circle cx="164.298" cy="128.182" fill="url(#knowledge-graph-es15-paint11_linear_10_281)" r="14.9365" />
+					<path class="knowledge-graph-es15-spk" d="M173.66 108.764C173.912 107.753 175.349 107.753 175.601 108.764L177.084 114.721C177.174 115.08 177.454 115.36 177.813 115.45L183.77 116.933C184.781 117.185 184.781 118.622 183.77 118.874L177.813 120.358C177.454 120.447 177.174 120.727 177.084 121.086L175.601 127.043C175.349 128.054 173.912 128.054 173.66 127.043L172.176 121.086C172.087 120.727 171.807 120.447 171.448 120.358L165.491 118.874C164.48 118.622 164.48 117.185 165.491 116.933L171.448 115.45C171.807 115.36 172.087 115.08 172.176 114.721L173.66 108.764Z" fill="var(--c-empty-state-purple-l5, #f2e5ff)" fill-opacity="0.83" />
+				</g>
+				<g>
+					<circle cx="76" cy="180" fill="url(#knowledge-graph-es15-paint12_linear_10_281)" r="12" />
+					<rect fill="url(#knowledge-graph-es15-paint13_linear_10_281)" height="12.1154" rx="4.625" transform="matrix(-1 0 0 1 80.625 173.942)" width="9.25" />
+				</g>
+				<g>
+					<circle cx="176" cy="192" fill="url(#knowledge-graph-es15-paint14_linear_10_281)" r="16" />
+					<circle cx="176" cy="192" fill="url(#knowledge-graph-es15-paint15_linear_10_281)" r="16" />
+				</g>
+				<g>
+					<circle cx="187.666" cy="64" fill="url(#knowledge-graph-es15-paint16_linear_10_281)" r="16" />
+					<path d="M186.773 55.6987C186.976 54.7671 188.356 54.7671 188.558 55.6987L189.132 58.3375C189.266 58.9499 190.001 59.2359 190.538 58.884L192.766 57.4231C193.57 56.8959 194.557 57.7859 194.066 58.5947L192.501 61.1673C192.192 61.6753 192.479 62.3268 193.072 62.4661L195.969 63.1458C196.898 63.3636 196.898 64.6364 195.969 64.8542L193.072 65.5339C192.479 65.6732 192.192 66.3247 192.501 66.8327L194.066 69.4053C194.557 70.2141 193.57 71.1041 192.766 70.5769L190.538 69.116C190.001 68.7641 189.266 69.0501 189.132 69.6625L188.558 72.3013C188.356 73.2329 186.976 73.2329 186.773 72.3013L186.199 69.6625C186.066 69.0501 185.33 68.7641 184.794 69.116L182.566 70.5769C181.762 71.1041 180.774 70.2141 181.266 69.4053L182.83 66.8327C183.139 66.3247 182.853 65.6732 182.259 65.5339L179.362 64.8542C178.434 64.6364 178.434 63.3636 179.362 63.1458L182.259 62.4661C182.853 62.3268 183.139 61.6753 182.83 61.1673L181.266 58.5947C180.774 57.7859 181.762 56.8959 182.566 57.4231L184.794 58.884C185.33 59.2359 186.066 58.9499 186.199 58.3375L186.773 55.6987Z" fill="url(#knowledge-graph-es15-paint17_linear_10_281)" />
+				</g>
+				<g>
+					<circle cx="101.126" cy="128.5" fill="url(#knowledge-graph-es15-paint18_linear_10_281)" r="16" />
+					<rect fill="url(#knowledge-graph-es15-paint19_linear_10_281)" height="12.9667" rx="2" transform="rotate(-45 91.9575 128.5)" width="12.9667" x="91.9575" y="128.5" />
+				</g>
+				<path d="M173.923 186.342C174.875 184.794 177.125 184.794 178.077 186.342L183.468 195.102C184.468 196.727 183.299 198.819 181.391 198.819H170.609C168.701 198.819 167.532 196.727 168.532 195.102L173.923 186.342Z" fill="url(#knowledge-graph-es15-paint20_linear_10_281)" />
+			</g>
+		</g>
+		<defs>
+			<mask height="145" id="knowledge-graph-es15-mask" maskUnits="userSpaceOnUse" width="140" x="60" y="55">
+				<rect fill="white" height="6" transform="rotate(-8.86089 68.1875 80)" width="121.146" x="68.1875" y="80" />
+				<rect fill="white" height="6" transform="rotate(-31.1171 82.9104 173.414)" width="67.0876" x="82.9104" y="173.414" />
+				<rect fill="white" height="6" transform="rotate(51.6553 77.7993 94.7686)" width="27.5495" x="77.7993" y="94.7686" />
+				<rect fill="white" height="6" transform="rotate(39.5768 109.483 133.921)" width="77.2206" x="109.483" y="133.921" />
+				<rect fill="white" height="6" transform="rotate(-34.3057 109.217 116.617)" width="80.1002" x="109.217" y="116.617" />
+				<rect fill="white" height="6" transform="rotate(109.782 185.369 79.0396)" width="25.6713" x="185.369" y="79.0396" />
+				<rect fill="white" height="6" transform="rotate(177.389 138.965 129.885)" width="23.1278" x="138.965" y="129.885" />
+				<rect fill="white" height="6" transform="rotate(-174.955 163.287 194.062)" width="80.5698" x="163.287" y="194.062" />
+			</mask>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint0_linear_10_281" x1="68.1875" x2="189.334" y1="83" y2="83">
+				<stop stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint1_linear_10_281" x1="82.9104" x2="149.998" y1="176.414" y2="176.414">
+				<stop stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-d1, #9f1aff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint2_linear_10_281" x1="77.7993" x2="105.349" y1="97.7686" y2="97.7686">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary, #0b5fff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint3_linear_10_281" x1="109.483" x2="186.704" y1="136.921" y2="136.921">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary, #0b5fff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint4_linear_10_281" x1="109.217" x2="189.317" y1="119.617" y2="119.617">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint5_linear_10_281" x1="185.369" x2="211.041" y1="82.0396" y2="82.0396">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-l1, #bf66ff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint6_linear_10_281" x1="162.093" x2="138.965" y1="132.885" y2="132.885">
+				<stop stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple, #a3f)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint7_linear_10_281" x1="243.857" x2="163.287" y1="197.062" y2="197.062">
+				<stop stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l0, #5791ff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint8_linear_10_281" x1="64" x2="64" y1="64" y2="104">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint9_linear_10_281" x1="64" x2="64" y1="73.791" y2="94.2089">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint10_linear_10_281" x1="164" x2="164" y1="99.5" y2="155.5">
+				<stop stop-color="var(--c-empty-state-purple-l1, #bf66ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-d3, #8600e6)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint11_linear_10_281" x1="164.298" x2="164.298" y1="113.245" y2="143.118">
+				<stop stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" stop-opacity="0.8" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-l5, #f2e5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint12_linear_10_281" x1="76" x2="76" y1="168" y2="192">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint13_linear_10_281" x1="4.625" x2="4.625" y1="0" y2="12.1154">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint14_linear_10_281" x1="176" x2="176" y1="176" y2="208">
+				<stop stop-color="var(--c-empty-state-purple-l2, #ca80ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-purple-l3, #d499ff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint15_linear_10_281" x1="176" x2="176" y1="176" y2="208">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint16_linear_10_281" x1="187.666" x2="187.666" y1="48" y2="80">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint17_linear_10_281" x1="187.666" x2="187.666" y1="55" y2="73">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint18_linear_10_281" x1="101.126" x2="101.126" y1="112.5" y2="144.5">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint19_linear_10_281" x1="98.4409" x2="98.4409" y1="128.5" y2="141.467">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="knowledge-graph-es15-paint20_linear_10_281" x1="176" x2="176" y1="185.181" y2="198.819">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="pagebuilder" viewBox="0 0 256 256">
+		<style>
+			@keyframes pagebuilder-es04-float {from { transform: translateY(-3px); } to { transform: translateY(3px); }}
+			@keyframes pagebuilder-es04-spin {from { transform: rotate(0deg); } to { transform: rotate(360deg); }}
+			.pagebuilder-es-chip-a { transform-box: view-box; animation: pagebuilder-es04-float calc(2.2s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.pagebuilder-es-chip-b { transform-box: view-box; animation: pagebuilder-es04-float calc(2.2s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate reverse; }
+			.pagebuilder-es-gear { transform-box: fill-box; transform-origin: center; animation: pagebuilder-es04-spin calc(8s * var(--c-empty-state-image-animation-speed, 1)) linear infinite; }
+		</style>
+		<g>
+			<rect fill="var(--c-empty-state-primary-l3, #f0f5ff)" height="117" rx="14.5" stroke="var(--c-empty-state-primary-l0, #5791ff)" stroke-width="5" width="153" x="51.5" y="69.5" />
+			<rect fill="var(--c-empty-state-primary-l3, #f0f5ff)" height="115" rx="13.5" stroke="var(--c-empty-state-white, #fff)" stroke-width="3" width="151" x="52.5" y="70.5" />
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="16" rx="4" width="31" x="65" y="104" />
+			<rect fill="var(--c-empty-state-primary-l1, #80acff)" height="40" rx="8" width="40" x="64" y="136" />
+			<path d="M54 84C54 77.3726 59.3726 72 66 72H189.5C196.127 72 201.5 77.3726 201.5 84V88H54V84Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+			<rect fill="var(--c-empty-state-primary-l1, #80acff)" height="32" rx="8" width="80" x="112" y="144" />
+			<rect class="pagebuilder-es-chip-a" fill="url(#pagebuilder-paint0_linear_10_281)" height="40" rx="8" width="39.999" x="36" y="112" />
+			<path class="pagebuilder-es-chip-a" d="M46.0894 117.846C47.0416 116.299 49.291 116.299 50.2433 117.846L55.6341 126.606C56.634 128.231 55.465 130.323 53.5571 130.323H42.7756C40.8677 130.323 39.6987 128.231 40.6986 126.606L46.0894 117.846Z" fill="url(#pagebuilder-paint1_linear_10_281)" />
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="16" rx="4" width="48" x="144" y="104" />
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="16" rx="4" width="32" x="104" y="104" />
+			<rect class="pagebuilder-es-chip-b" fill="url(#pagebuilder-paint2_linear_10_281)" height="32" rx="8" width="92" x="128" y="128" />
+			<circle class="pagebuilder-es-chip-a" cx="64" cy="140" fill="url(#pagebuilder-paint3_linear_10_281)" r="7" />
+			<g class="pagebuilder-es-chip-b">
+				<path class="pagebuilder-es-gear" d="M144.639 134.008C145.516 132.664 147.484 132.664 148.361 134.008L148.797 134.676C149.298 135.444 150.219 135.825 151.116 135.636L151.896 135.472C153.466 135.142 154.858 136.534 154.528 138.104L154.364 138.884C154.175 139.781 154.556 140.702 155.324 141.203L155.992 141.639C157.336 142.516 157.336 144.484 155.992 145.361L155.324 145.797C154.556 146.298 154.175 147.219 154.364 148.116L154.528 148.896C154.858 150.466 153.466 151.858 151.896 151.528L151.116 151.364C150.219 151.175 149.298 151.556 148.797 152.324L148.361 152.992C147.484 154.336 145.516 154.336 144.639 152.992L144.203 152.324C143.702 151.556 142.781 151.175 141.884 151.364L141.104 151.528C139.534 151.858 138.142 150.466 138.472 148.896L138.636 148.116C138.825 147.219 138.444 146.298 137.676 145.797L137.008 145.361C135.664 144.484 135.664 142.516 137.008 141.639L137.676 141.203C138.444 140.702 138.825 139.781 138.636 138.884L138.472 138.104C138.142 136.534 139.534 135.142 141.104 135.472L141.884 135.636C142.781 135.825 143.702 135.444 144.203 134.676L144.639 134.008Z" fill="url(#pagebuilder-paint4_linear_10_281)" />
+			</g>
+			<rect class="pagebuilder-es-chip-b" fill="url(#pagebuilder-paint5_linear_10_281)" height="15" rx="7.5" width="30" x="163" y="136" />
+			<g class="pagebuilder-es-chip-b">
+				<rect fill="url(#pagebuilder-paint6_linear_10_281)" height="15" rx="6.5" transform="matrix(-1 0 0 1 212 136)" width="13" />
+			</g>
+		</g>
+		<defs>
+			<linearGradient gradientUnits="userSpaceOnUse" id="pagebuilder-paint0_linear_10_281" x1="55.9995" x2="55.9995" y1="112" y2="152">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="pagebuilder-paint1_linear_10_281" x1="48.1663" x2="48.1663" y1="116.686" y2="130.323">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="pagebuilder-paint2_linear_10_281" x1="174" x2="174" y1="128" y2="160">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="pagebuilder-paint3_linear_10_281" x1="64" x2="64" y1="133" y2="147">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="pagebuilder-paint4_linear_10_281" x1="146.5" x2="146.5" y1="133" y2="154">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="pagebuilder-paint5_linear_10_281" x1="163" x2="193" y1="143.5" y2="143.5">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="pagebuilder-paint6_linear_10_281" x1="6.5" x2="6.5" y1="0" y2="15">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="success-state" viewBox="0 0 256 256">
+		<style>
+			@keyframes rocket-il-rocket-launch {0% { transform: translateY(0); animation-timing-function: cubic-bezier(.5, 0, .75, .3); } 22% { transform: translateY(4px); animation-timing-function: cubic-bezier(.2, .9, .35, 1); } 45% { transform: translateY(-10px); animation-timing-function: cubic-bezier(.45, 0, .55, 1); } 100% { transform: translateY(0); }}
+			.rocket-il-body { transform-box: view-box; transform-origin: 128.5px 118px; animation: rocket-il-rocket-launch calc(4.4s * var(--c-empty-state-image-animation-speed, 1)) infinite; }
+		</style>
+		<g>
+			<path clip-rule="evenodd" d="M126.439 55.5081C137.555 55.6765 147.366 41.2612 157.808 45.0681C168.148 48.838 167.078 65.1236 174.661 73.0886C181.629 80.4076 194.529 80.8271 199.961 89.3441C205.321 97.7478 201.897 108.946 203.773 118.73C205.816 129.394 213.873 139.448 211.6 150.066C209.352 160.564 198.775 166.982 191.71 175.077C184.973 182.796 180.173 193.399 170.592 197.053C160.772 200.797 149.629 192.654 139.39 195.029C128.577 197.537 121.592 211.436 110.499 210.99C99.951 210.565 93.7878 198.526 84.9018 192.838C76.1377 187.227 64.4362 185.635 58.0596 177.42C51.6861 169.209 50.6335 157.995 49.8185 147.641C49.0603 138.009 53.9794 128.783 53.4719 119.134C52.8778 107.838 43.6129 97.113 46.587 86.198C49.4375 75.7367 60.6527 69.9472 68.8215 62.8015C76.8977 55.737 84.0459 45.4604 94.6996 44.1118C105.95 42.6877 115.1 55.3363 126.439 55.5081Z" fill="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" fill-rule="evenodd" />
+			<circle cx="196" cy="88" fill="var(--c-empty-state-primary-l2, #b3cdff)" r="12" />
+			<g>
+				<path d="M63.6497 50.4917C64.2873 48.7347 66.7722 48.7347 67.4098 50.4917L70.6111 59.3133C70.8157 59.8772 71.2627 60.3194 71.8286 60.5181L80.7011 63.6329C82.4845 64.259 82.4845 66.781 80.7011 67.4071L71.8286 70.5219C71.2627 70.7206 70.8157 71.1629 70.6111 71.7268L67.4098 80.5484C66.7722 82.3054 64.2873 82.3054 63.6497 80.5484L60.4484 71.7268C60.2437 71.1629 59.7968 70.7206 59.2308 70.5219L50.3583 67.4071C48.575 66.781 48.575 64.259 50.3583 63.6329L59.2308 60.5181C59.7968 60.3194 60.2437 59.8772 60.4484 59.3133L63.6497 50.4917Z" fill="var(--c-empty-state-primary-l1, #80acff)" />
+				<path d="M71.4756 60.3516C71.587 60.4173 71.7049 60.4749 71.8291 60.5186L80.7012 63.6328C82.4845 64.2589 82.4845 66.7811 80.7012 67.4072L71.8291 70.5215C71.2632 70.7202 70.816 71.1628 70.6113 71.7266L67.4102 80.5488C66.7724 82.3054 64.2872 82.3054 63.6494 80.5488L60.4482 71.7266C60.2436 71.1628 59.7964 70.7202 59.2305 70.5215L59.0928 70.4727C62.3677 67.8981 65.8024 65.4424 68.8213 62.8018C69.7157 62.0194 70.5979 61.1962 71.4756 60.3516Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+			</g>
+			<path d="M186.801 80.2969C191.958 82.526 197.039 84.7635 199.961 89.3438C201.626 91.9548 202.443 94.836 202.835 97.8604C200.895 99.2076 198.541 100 196 100C189.373 100 184 94.6274 184 88C184 85.0672 185.053 82.3814 186.801 80.2969Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+			<g class="rocket-il-body">
+				<path d="M75.1179 130.16C75.1179 123.854 78.4177 118.008 83.8164 114.75L121.994 91.706C124.647 90.105 128.034 91.9975 128.061 95.0957L128.469 141.864C128.486 143.912 126.957 145.648 124.932 145.949C119.28 146.789 108.167 148.759 100.925 152.101C92.8983 155.806 83.5906 163.982 78.6406 168.644C77.3338 169.875 75.1179 168.948 75.1179 167.152V130.16Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+				<path d="M181.882 130.16C181.882 123.854 178.582 118.008 173.184 114.75L135.006 91.706C132.353 90.105 128.966 91.9975 128.939 95.0957L128.531 141.864C128.514 143.912 130.043 145.648 132.068 145.949C137.72 146.789 148.833 148.759 156.075 152.101C164.102 155.806 173.409 163.982 178.359 168.644C179.666 169.875 181.882 168.948 181.882 167.152V130.16Z" fill="var(--c-empty-state-primary-d1, #0053f0)" />
+				<path d="M128 24C134.8 24 162 54.4446 162 92C162 117.986 154.711 140.566 144 152.013V155C144 157.761 141.761 160 139 160H118C114.686 160 112 157.314 112 154V152.013C101.289 140.566 94 117.986 94 92C94 54.4446 121.2 24 128 24Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+				<path d="M128 24C134.8 24 162 54.4446 162 92C162 117.986 154.711 140.566 144 152.013V155C144 157.761 141.761 160 139 160H128V24Z" fill="var(--c-empty-state-primary-l1, #80acff)" />
+				<path d="M128 24C132.753 24 147.471 38.8756 155.902 60.6562C148.696 67.6744 138.854 72 128 72C117.146 72 107.304 67.6744 100.098 60.6562C108.529 38.8756 123.247 24 128 24Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+				<path d="M153.349 54.6553C154.247 56.5891 155.103 58.5915 155.902 60.6562C148.696 67.6744 138.854 72 128 72C117.146 72 107.303 67.6747 100.097 60.6562C100.896 58.5915 101.752 56.5891 102.65 54.6553C108.876 61.6168 117.926 66 128 66C138.074 66 147.123 61.6165 153.349 54.6553Z" fill="var(--c-empty-state-primary-d2, #004ad7)" />
+				<circle cx="128" cy="100" fill="var(--c-empty-state-primary, #0b5fff)" r="12" />
+				<path d="M128 100C132.441 100 136.316 102.414 138.391 106C136.316 109.586 132.441 112 128 112C123.559 112 119.683 109.586 117.608 106C119.683 102.414 123.559 100 128 100Z" fill="var(--c-empty-state-primary-d2, #004ad7)" />
+				<path d="M142.823 188.978C142.823 201.693 130.451 212 128 212C125.131 212 113.177 201.693 113.177 188.978C113.177 176.263 119.813 165.956 128 165.956C136.186 165.956 142.823 176.263 142.823 188.978Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+				<path d="M134.015 181.1C134.015 186.084 128.994 190.124 128 190.124C126.835 190.124 121.984 186.084 121.984 181.1C121.984 176.117 124.677 172.077 128 172.077C131.322 172.077 134.015 176.117 134.015 181.1Z" fill="var(--c-empty-state-primary-l1, #80acff)" />
+			</g>
+		</g>
+	</symbol>
+	<symbol class="lfr-empty-state-image" fill="none" id="empty-state" viewBox="0 0 256 256">
+		<style>
+			@keyframes satellite-il-breathe {from { transform: scale(1); } to { transform: scale(1.025); }}
+			@keyframes satellite-il-sway {from { transform: rotate(calc(var(--il-angle, 3.5deg) * -1)); } to { transform: rotate(var(--il-angle, 3.5deg)); }}
+			@keyframes satellite-il-twinkle {from { opacity: 1; transform: scale(1); } to { opacity: .65; transform: scale(.97); }}
+			.satellite-il-blob { transform-box: fill-box; transform-origin: center; animation: satellite-il-breathe calc(3s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.satellite-il-sat { --il-angle: 3.5deg; transform-box: view-box; transform-origin: 127.46px 124.25px; animation: satellite-il-sway calc(2.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.satellite-il-star { transform-box: view-box; transform-origin: 159.56px 183.63px; animation: satellite-il-twinkle calc(2.2s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; animation-delay: calc(-.9s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<path class="satellite-il-blob" clip-rule="evenodd" d="M125.521 55.9387C141.066 55.3877 156.339 40.3412 170.477 46.8279C184.339 53.1877 184.881 72.8323 191.878 86.3837C198.517 99.243 208.947 110.327 210.681 124.695C212.506 139.822 211.969 157.383 201.815 168.743C191.634 180.134 172.432 175.412 158.942 182.582C146.131 189.392 139.824 206.863 125.521 209.293C111.121 211.74 95.7237 204.904 84.8279 195.177C74.4834 185.942 74.616 170.092 67.9747 157.919C61.5385 146.122 48.9002 137.894 46.3745 124.695C43.6903 110.667 47.4838 96.0853 53.6802 83.2176C60.1432 69.7964 68.4412 55.2388 82.3673 49.9509C96.1791 44.7063 110.756 56.462 125.521 55.9387Z" fill="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" fill-rule="evenodd" />
+			<circle cx="71.0336" cy="66.3707" fill="var(--c-empty-state-primary-l2, #b3cdff)" r="15.6486" />
+			<path d="M77.666 52.1943C82.9925 54.6907 86.6826 60.0997 86.6826 66.3711C86.6824 75.0134 79.6755 82.0195 71.0332 82.0195C65.5422 82.0194 60.7125 79.1904 57.9199 74.9111C62.9125 65.8057 69.1018 57.1574 77.666 52.1943Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+			<path class="satellite-il-star" d="M157.675 163.605C158.306 161.833 160.812 161.833 161.443 163.605L164.107 171.088C164.474 172.119 165.602 172.664 166.638 172.31L173.776 169.872C175.502 169.282 177.052 171.122 176.178 172.723L172.11 180.177C171.628 181.061 171.878 182.166 172.695 182.756L179.397 187.596C180.847 188.643 180.298 190.922 178.53 191.194L170.78 192.386C169.746 192.545 169.009 193.473 169.089 194.516L169.729 202.835C169.872 204.694 167.618 205.72 166.31 204.392L160.984 198.984C160.201 198.189 158.918 198.189 158.134 198.984L152.808 204.392C151.5 205.72 149.246 204.694 149.389 202.835L150.029 194.516C150.109 193.473 149.373 192.545 148.339 192.386L140.588 191.194C138.82 190.922 138.271 188.643 139.721 187.596L146.423 182.756C147.24 182.166 147.491 181.061 147.008 180.177L142.94 172.723C142.067 171.122 143.616 169.282 145.342 169.872L152.481 172.31C153.517 172.664 154.644 172.119 155.011 171.088L157.675 163.605Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+			<g class="satellite-il-sat">
+				<path d="M143.93 110.581C142.214 110.296 141.637 108.157 142.986 107.086L194.474 66.1933C194.923 65.8369 195.506 65.6871 196.077 65.782L215.58 69.0259C217.296 69.3113 217.874 71.4499 216.524 72.5216L165.036 113.414C164.588 113.77 164.004 113.92 163.434 113.825L143.93 110.581Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+				<path d="M115.574 106.638C113.858 106.353 113.281 104.214 114.63 103.143L166.118 62.2504C166.566 61.894 167.15 61.7443 167.721 61.8392L187.224 65.0831C188.94 65.3685 189.517 67.507 188.168 68.5788L136.68 109.471C136.232 109.827 135.648 109.977 135.077 109.882L115.574 106.638Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+				<path d="M96 114.572C96 106.84 102.268 100.572 110 100.572H158.916V147.918H118C105.85 147.918 96 138.068 96 125.918V114.572Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+				<path d="M125.569 100.572C127.476 105.631 127.599 111.669 125.485 117.519C121.211 129.347 109.412 135.925 99.1328 132.21C98.2494 131.891 97.4065 131.505 96.6055 131.061C96.2103 129.411 96 127.689 96 125.918V114.572C96 106.84 102.268 100.572 110 100.572H125.569Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+				<ellipse cx="105.083" cy="136.524" fill="var(--c-empty-state-primary-d2, #004ad7)" rx="2.86785" ry="4.67761" transform="rotate(-21.814 105.083 136.524)" />
+				<ellipse cx="130.753" cy="137.94" fill="var(--c-empty-state-primary-d2, #004ad7)" rx="2.86785" ry="4.67761" transform="rotate(-21.814 130.753 137.94)" />
+				<path d="M68.7759 181.447C67.06 181.161 66.4826 179.023 67.8321 177.951L119.32 137.058C119.768 136.702 120.352 136.552 120.923 136.647L140.426 139.891C142.142 140.177 142.719 142.315 141.37 143.387L89.8822 184.279C89.4335 184.636 88.8498 184.785 88.2792 184.69L68.7759 181.447Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+				<path d="M40.4197 177.504C38.7038 177.218 38.1264 175.08 39.4759 174.008L90.9635 133.116C91.4122 132.759 91.9958 132.61 92.5664 132.704L112.07 135.948C113.786 136.234 114.363 138.372 113.014 139.444L61.526 180.336C61.0772 180.693 60.4936 180.842 59.923 180.748L40.4197 177.504Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+				<ellipse cx="100.682" cy="105.103" fill="var(--c-empty-state-primary-d2, #004ad7)" rx="19.7908" ry="22.7736" transform="rotate(19.8691 100.682 105.103)" />
+				<path d="M82.0697 98.377C86.3444 86.5482 98.1427 79.9707 108.422 83.6856C110.69 84.5051 112.693 85.7574 114.394 87.3379C118.998 93.0625 120.442 101.652 117.472 109.869C113.197 121.698 101.399 128.275 91.1195 124.561C88.853 123.742 86.8501 122.49 85.1498 120.91C80.5441 115.186 79.0997 106.596 82.0697 98.377Z" fill="var(--c-empty-state-primary-l1, #80acff)" />
+				<ellipse cx="99.8419" cy="104.123" fill="var(--c-empty-state-primary-l0, #5791ff)" rx="2.34431" ry="3.18946" transform="rotate(24.0614 99.8419 104.123)" />
+				<path d="M90.8452 100.021L92.0113 98.0729L100.034 102.876C100.572 103.198 100.747 103.895 100.425 104.433C100.103 104.971 99.406 105.146 98.8682 104.824L90.8452 100.021Z" fill="var(--c-empty-state-primary-d2, #004ad7)" />
+				<path d="M88.5325 97.863L90.7971 97.6481L92.9077 119.889C92.967 120.515 92.5082 121.07 91.8828 121.129C91.2574 121.189 90.7024 120.73 90.643 120.104L88.5325 97.863Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+				<path d="M89.6821 99.3892L88.3162 97.5761L101.593 87.5734C102.094 87.1962 102.806 87.2963 103.183 87.797C103.56 88.2976 103.46 89.0093 102.959 89.3865L89.6821 99.3892Z" fill="var(--c-empty-state-primary-d2, #004ad7)" />
+				<circle cx="89.6821" cy="97.863" fill="var(--c-empty-state-primary, #0b5fff)" r="3" />
+				<path d="M158.915 102.072C160.892 102.072 163.183 103.929 165.065 108.12C166.884 112.17 168.048 117.87 168.048 124.245C168.048 130.62 166.884 136.32 165.065 140.369C163.183 144.56 160.892 146.418 158.915 146.418C156.939 146.418 154.648 144.56 152.766 140.369C150.947 136.32 149.783 130.62 149.783 124.245C149.783 117.87 150.947 112.17 152.766 108.12C154.648 103.929 156.939 102.072 158.915 102.072Z" fill="var(--c-empty-state-primary-l1, #80acff)" stroke="var(--c-empty-state-primary-d2, #004ad7)" stroke-width="3" />
+				<path d="M154.142 103.088C157.616 106.982 160 114.994 160 124.245C160 133.496 157.616 141.507 154.142 145.401C150.667 141.507 148.283 133.496 148.283 124.245C148.283 114.994 150.667 106.982 154.142 103.088Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+				<path d="M158.916 100.572V103.572H158.915C157.897 103.572 155.974 104.637 154.133 108.735C152.42 112.55 151.283 118.031 151.283 124.245C151.283 130.459 152.42 135.94 154.133 139.755C155.974 143.853 157.897 144.917 158.915 144.918L158.916 144.917V147.917L158.915 147.918L158.64 147.91C153.077 147.596 148.576 137.769 148.296 125.463L148.283 124.245C148.283 111.171 153.043 100.572 158.915 100.572H158.916Z" fill="var(--c-empty-state-primary-d2, #004ad7)" />
+			</g>
+			<path class="satellite-il-star" d="M157.658 163.567C158.289 161.795 160.795 161.795 161.426 163.567L164.094 171.061C164.461 172.092 165.588 172.637 166.624 172.283L173.772 169.842C175.498 169.252 177.048 171.091 176.175 172.692L173.028 178.457C168.072 179.232 163.22 180.309 158.942 182.582C154.572 184.905 150.959 188.468 147.527 192.252L140.553 191.18C138.785 190.908 138.237 188.628 139.687 187.581L146.397 182.735C147.214 182.146 147.465 181.041 146.982 180.156L142.909 172.692C142.035 171.091 143.585 169.252 145.311 169.842L152.46 172.283C153.495 172.637 154.623 172.092 154.99 171.061L157.658 163.567Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+		</g>
+	</symbol>
+	<symbol fill="none" id="search-state" viewBox="0 0 256 256">
+		<style>
+			@keyframes telescope-il-sway {from { transform: rotate(calc(var(--il-angle, 3.5deg) * -1)); } to { transform: rotate(var(--il-angle, 3.5deg)); }}
+			@keyframes telescope-il-breathe {from { transform: scale(1); } to { transform: scale(1.025); }}
+			@keyframes telescope-il-twinkle {from { opacity: 1; transform: scale(1); } to { opacity: .65; transform: scale(.97); }}
+			.telescope-il-tube { --il-angle: 4deg; transform-box: view-box; transform-origin: 126px 138px; animation: telescope-il-sway calc(2.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.telescope-il-blob { transform-box: fill-box; transform-origin: center; animation: telescope-il-breathe calc(3s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.telescope-il-moon { transform-box: fill-box; transform-origin: center; animation: telescope-il-breathe calc(2.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; animation-delay: calc(-1.1s * var(--c-empty-state-image-animation-speed, 1)); }
+			.telescope-il-star { transform-box: fill-box; transform-origin: center; animation: telescope-il-twinkle calc(2.2s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; animation-delay: calc(-.7s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<path class="telescope-il-blob" clip-rule="evenodd" d="M124.969 45.2152C141.146 41.1389 160.18 47.666 171.849 59.5882C183.168 71.1522 178.093 90.5101 184.034 105.561C189.522 119.466 204.145 129.157 205.193 144.07C206.322 160.11 200.212 176.459 189.887 188.786C179.483 201.208 164.501 211.681 148.301 211.996C132.74 212.299 122.544 195.881 107.985 190.38C95.026 185.484 78.887 190.539 68.1979 181.728C57.0965 172.577 51.6597 157.564 50.7573 143.205C49.8865 129.35 55.8673 116.09 63.3374 104.389C70.1198 93.7645 82.0645 88.6513 91.1568 79.9217C103.048 68.5044 108.984 49.2434 124.969 45.2152Z" fill="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" fill-rule="evenodd" />
+			<rect fill="var(--c-empty-state-primary-d2, #004ad7)" height="28.5334" width="4.79297" x="123.681" y="147.978" />
+			<rect fill="var(--c-empty-state-primary, #0b5fff)" height="57.0757" rx="2" transform="rotate(28.1631 122.932 143.78)" width="4.79297" x="122.932" y="143.78" />
+			<rect fill="var(--c-empty-state-primary-l1, #80acff)" height="61.1017" rx="2.39648" transform="matrix(-0.881608 0.471983 0.471983 0.881608 129.16 141.957)" width="4.79297" />
+			<rect fill="var(--c-empty-state-primary, #0b5fff)" height="21.4722" rx="6" width="13.7603" x="119.197" y="128" />
+			<g class="telescope-il-tube">
+				<rect fill="var(--c-empty-state-primary-d2, #004ad7)" height="8.42822" rx="1" transform="rotate(-9.01484 86.7271 129.1)" width="3.8291" x="86.7271" y="129.1" />
+				<rect fill="var(--c-empty-state-primary-d2, #004ad7)" height="8.42822" rx="1" transform="rotate(-9.01484 94.2808 124.638)" width="3.8291" x="94.2808" y="124.638" />
+				<path d="M175.782 115.729L87.0328 154.346C85.8252 155.044 83.2237 152.799 81.2219 149.333C79.2201 145.866 78.5762 142.49 79.7838 141.793L158.268 85.3987L175.782 115.729Z" fill="var(--c-empty-state-primary-l1, #80acff)" />
+				<path d="M167.9 102.081L83.5996 152.601C82.7928 151.738 81.9652 150.621 81.2217 149.333C79.2199 145.866 78.5766 142.49 79.7842 141.793L158.268 85.3984L167.9 102.081Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+				<path d="M175.441 95.7044C180.277 104.08 180.43 113.046 175.783 115.729C171.135 118.413 163.446 113.799 158.61 105.423C153.773 97.0477 153.62 88.0821 158.268 85.3983C162.916 82.7145 170.604 87.3286 175.441 95.7044Z" fill="var(--c-empty-state-primary-d2, #004ad7)" />
+				<path d="M156.591 86.886C161.041 87.1506 166.561 91.398 170.34 97.9423C174.496 105.14 175.194 112.773 172.358 116.481C167.908 116.216 162.388 111.968 158.609 105.424C154.453 98.2273 153.756 90.5943 156.591 86.886Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+				<path d="M154.884 92.6033C158.103 94.4309 161.379 97.7581 163.886 102.1C166.456 106.551 167.703 111.169 167.61 114.922C164.391 113.094 161.117 109.766 158.61 105.424C156.04 100.973 154.791 96.356 154.884 92.6033Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+				<ellipse cx="111.795" cy="137.584" fill="var(--c-empty-state-primary, #0b5fff)" rx="3.50781" ry="2.36103" transform="rotate(-132.323 111.795 137.584)" />
+				<rect fill="var(--c-empty-state-primary-d1, #0053f0)" height="2.25" rx="1.125" transform="rotate(-60.4184 91.8296 170.646)" width="38.8407" x="91.8296" y="170.646" />
+				<path d="M173.709 96.7047C171.428 92.7542 168.52 89.7781 165.755 88.1186C162.923 86.419 160.676 86.3171 159.268 87.1303C157.86 87.9435 156.825 89.9399 156.882 93.2423C156.937 96.4667 158.061 100.473 160.342 104.423C162.623 108.374 165.531 111.349 168.296 113.009C171.128 114.708 173.375 114.811 174.783 113.998L175.783 115.73L175.563 115.85C171.044 118.192 163.846 113.953 159.072 106.198L158.61 105.424C153.773 97.0479 153.62 88.0821 158.268 85.3983C162.916 82.7145 170.604 87.3289 175.441 95.7046L175.881 96.4915C180.282 104.635 180.285 113.13 175.783 115.73L174.783 113.998C176.191 113.185 177.225 111.187 177.169 107.885C177.114 104.661 175.99 100.655 173.709 96.7047Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+				<rect fill="var(--c-empty-state-primary, #0b5fff)" height="9.48145" transform="rotate(-35.4214 75.7041 128.646)" width="29.2334" x="75.7041" y="128.646" />
+				<rect fill="var(--c-empty-state-primary-d2, #004ad7)" height="6.2937" rx="3" transform="rotate(-60.4184 88 173.404)" width="21.3133" x="88" y="173.404" />
+				<path d="M99.8172 112.11C99.8945 112.055 100.031 112.012 100.275 112.056C100.522 112.101 100.835 112.228 101.195 112.454C101.913 112.905 102.734 113.694 103.464 114.72C104.194 115.747 104.669 116.781 104.86 117.607C104.955 118.022 104.973 118.359 104.934 118.607C104.895 118.851 104.81 118.966 104.733 119.021C104.656 119.076 104.518 119.12 104.274 119.076C104.028 119.031 103.715 118.904 103.355 118.678C102.636 118.227 101.816 117.439 101.086 116.412C100.355 115.385 99.88 114.351 99.6898 113.525C99.5944 113.11 99.5765 112.773 99.6154 112.525C99.6539 112.28 99.7399 112.165 99.8172 112.11Z" fill="var(--c-empty-state-primary-l1, #80acff)" stroke="var(--c-empty-state-primary-d2, #004ad7)" stroke-width="1" />
+				<ellipse cx="78.4524" cy="132.51" fill="var(--c-empty-state-primary, #0b5fff)" rx="1.95947" ry="4.74072" transform="rotate(-35.4214 78.4524 132.51)" />
+			</g>
+			<path d="M95.1597 191.735C95.2032 191.011 95.9799 190.572 96.6226 190.91L102.548 194.02C103.211 194.368 103.271 195.294 102.658 195.724L97.9735 199.013C96.603 199.975 94.7276 198.927 94.828 197.256L95.1597 191.735Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+			<path d="M158.019 191.81C157.922 191.09 157.115 190.711 156.499 191.096L150.821 194.639C150.186 195.035 150.196 195.963 150.839 196.346L155.756 199.277C157.194 200.134 158.986 198.95 158.761 197.29L158.019 191.81Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+			<path d="M122.071 176.1C121.663 175.434 122.142 174.578 122.924 174.578H129.096C129.905 174.578 130.379 175.489 129.915 176.151L127.499 179.601C126.673 180.78 124.908 180.727 124.156 179.499L122.071 176.1Z" fill="var(--c-empty-state-primary-d2, #004ad7)" />
+			<g class="telescope-il-star">
+				<path d="M93.1616 52.3474C93.6057 50.2275 96.6326 50.2275 97.0767 52.3474L100.372 68.0782C100.532 68.8454 101.126 69.4479 101.891 69.6196L117.383 73.0966C119.465 73.564 119.465 76.532 117.383 76.9995L101.891 80.4765C101.126 80.6481 100.532 81.2507 100.372 82.0179L97.0767 97.7487C96.6326 99.8686 93.6057 99.8686 93.1616 97.7487L89.8665 82.0179C89.7058 81.2507 89.1118 80.6481 88.347 80.4765L72.8556 76.9995C70.773 76.532 70.773 73.564 72.8556 73.0966L88.347 69.6196C89.1118 69.4479 89.7058 68.8454 89.8665 68.0782L93.1616 52.3474Z" fill="var(--c-empty-state-primary-l1, #80acff)" />
+				<path d="M100.483 68.4355C100.73 69.0284 101.25 69.4752 101.892 69.6191L117.383 73.0967C119.465 73.5642 119.465 76.5314 117.383 76.999L101.892 80.4766C101.127 80.6482 100.533 81.2506 100.372 82.0176L97.0762 97.749C96.6318 99.8684 93.6065 99.8684 93.1621 97.749L89.8662 82.0176C89.8162 81.7791 89.7235 81.5571 89.5977 81.3584C90.1249 80.8893 90.6465 80.4122 91.1572 79.9219C94.6442 76.574 97.6172 72.5504 100.483 68.4355Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+			</g>
+			<g class="telescope-il-moon">
+				<circle cx="192" cy="171.756" fill="var(--c-empty-state-primary-l1, #80acff)" r="20" />
+				<path d="M192 151.757C196.821 151.757 201.244 153.462 204.697 156.303C202.938 168.17 197.584 179.595 189.887 188.786C189.179 189.631 188.447 190.466 187.698 191.29C178.72 189.322 172 181.325 172 171.757C172 160.711 180.954 151.757 192 151.757Z" fill="var(--c-empty-state-primary-l0, #5791ff)" />
+			</g>
+		</g>
+	</symbol>
+	<symbol fill="none" id="toolbar-canvas" viewBox="0 0 256 256">
+		<style>
+			@keyframes toolbar-canvas-es06-float {from { transform: translateY(-1.5px); } to { transform: translateY(1.5px); }}
+			@keyframes toolbar-canvas-es06-glow {from { opacity: 0; } to { opacity: .5; }}
+			.toolbar-canvas-es06-toolbar { transform-box: fill-box; transform-origin: center; animation: toolbar-canvas-es06-float calc(2.4s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.toolbar-canvas-es06-shimmer { opacity: 0; animation: toolbar-canvas-es06-glow calc(2.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+		</style>
+		<g>
+			<rect fill="var(--c-empty-state-primary-l3, #f0f5ff)" height="117" rx="14.5" stroke="var(--c-empty-state-primary-l0, #5791ff)" stroke-width="5" width="153" x="51.5" y="69.5" />
+			<rect fill="var(--c-empty-state-primary-l3, #f0f5ff)" height="115" rx="13.5" stroke="var(--c-empty-state-white, #fff)" stroke-width="3" width="151" x="52.5" y="70.5" />
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="16" rx="4" width="32" x="64" y="104" />
+			<path d="M54 84C54 77.3726 59.3726 72 66 72H189.5C196.127 72 201.5 77.3726 201.5 84V88H54V84Z" fill="var(--c-empty-state-primary-l2, #b3cdff)" />
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="16" rx="4" width="32" x="104" y="104" />
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="16" rx="4" width="48" x="144" y="104" />
+			<rect fill="var(--c-empty-state-primary-l1, #80acff)" height="32" rx="8" width="104" x="88" y="136" />
+			<rect fill="var(--c-empty-state-primary-l2, #b3cdff)" height="32" rx="8" transform="matrix(-1 0 0 1 80 136)" width="16" />
+			<g class="toolbar-canvas-es06-toolbar">
+				<rect fill="url(#toolbar-canvas-paint0_linear_10_281)" height="32" rx="8" width="116" x="104" y="144" />
+				<path d="M119.405 151.864C120.156 150.712 121.844 150.712 122.595 151.864L122.969 152.436C123.398 153.095 124.187 153.422 124.956 153.26L125.625 153.119C126.971 152.836 128.164 154.029 127.881 155.375L127.74 156.044C127.578 156.813 127.905 157.602 128.564 158.031L129.136 158.405C130.288 159.156 130.288 160.844 129.136 161.595L128.564 161.969C127.905 162.398 127.578 163.187 127.74 163.956L127.881 164.625C128.164 165.971 126.971 167.164 125.625 166.881L124.956 166.74C124.187 166.578 123.398 166.905 122.969 167.564L122.595 168.136C121.844 169.288 120.156 169.288 119.405 168.136L119.031 167.564C118.602 166.905 117.813 166.578 117.044 166.74L116.375 166.881C115.029 167.164 113.836 165.971 114.119 164.625L114.26 163.956C114.422 163.187 114.095 162.398 113.436 161.969L112.864 161.595C111.712 160.844 111.712 159.156 112.864 158.405L113.436 158.031C114.095 157.602 114.422 156.813 114.26 156.044L114.119 155.375C113.836 154.029 115.029 152.836 116.375 153.119L117.044 153.26C117.813 153.422 118.602 153.095 119.031 152.436L119.405 151.864Z" fill="url(#toolbar-canvas-paint1_linear_10_281)" />
+				<rect fill="url(#toolbar-canvas-paint2_linear_10_281)" height="14" rx="7" transform="matrix(-1 0 0 1 212 153)" width="76" />
+				<g clip-path="url(#toolbar-canvas-barClip_10_281)">
+					<g class="toolbar-canvas-es06-shimmer">
+						<rect fill="var(--c-empty-state-white, #fff)" height="30" width="110" x="120" y="145" />
+					</g>
+				</g>
+			</g>
+		</g>
+		<defs>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-canvas-paint0_linear_10_281" x1="162" x2="162" y1="144" y2="176">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-canvas-paint1_linear_10_281" x1="121" x2="121" y1="151" y2="169">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-canvas-paint2_linear_10_281" x1="0" x2="76" y1="7" y2="7">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+			</linearGradient>
+			<linearGradient x1="0" x2="1" y1="0" y2="0">
+				<stop stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0" />
+				<stop offset="0.5" stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0.4" />
+				<stop offset="1" stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0" />
+			</linearGradient>
+			<clipPath id="toolbar-canvas-barClip_10_281">
+				<rect height="14" rx="7" transform="matrix(-1 0 0 1 212 153)" width="76" />
+			</clipPath>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="toolbar-list" viewBox="0 0 256 256">
+		<style>
+			@keyframes toolbar-list-es11-float {from { transform: translateY(-1.5px); } to { transform: translateY(1.5px); }}
+			@keyframes toolbar-list-es11-glow {from { opacity: 0; } to { opacity: .5; }}
+			@keyframes toolbar-list-es11-load {from { opacity: 1; } to { opacity: .62; }}
+			.toolbar-list-es11-toolbar { transform-box: fill-box; transform-origin: center; animation: toolbar-list-es11-float calc(2.4s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.toolbar-list-es11-shimmer { animation: toolbar-list-es11-glow calc(2.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.toolbar-list-es11-row { animation: toolbar-list-es11-load calc(1.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.toolbar-list-es11-row-2 { animation-delay: calc(-.5s * var(--c-empty-state-image-animation-speed, 1)); }
+			.toolbar-list-es11-row-3 { animation-delay: calc(-1s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<rect fill="var(--c-empty-state-white, #fff)" height="130" rx="13" stroke="var(--c-empty-state-primary-l1, #80acff)" stroke-width="2" width="150" x="62" y="71" />
+			<rect fill="url(#toolbar-list-paint0_linear_10_281)" height="126" rx="11" stroke="var(--c-empty-state-white, #fff)" stroke-width="2" width="144" x="65" y="73" />
+			<rect class="toolbar-list-es11-row" fill="url(#toolbar-list-paint1_linear_10_281)" height="24" rx="8" width="128" x="71" y="87" />
+			<rect class="toolbar-list-es11-row toolbar-list-es11-row-2" fill="url(#toolbar-list-paint2_linear_10_281)" height="24" rx="8" width="128" x="71" y="124" />
+			<rect class="toolbar-list-es11-row toolbar-list-es11-row-3" fill="url(#toolbar-list-paint3_linear_10_281)" height="24" rx="8" width="128" x="71" y="161" />
+			<rect class="toolbar-list-es11-row toolbar-list-es11-row-3" fill="var(--c-empty-state-primary-l1, #80acff)" height="8" rx="4" transform="matrix(-1 0 0 1 94 169)" width="13" />
+			<rect class="toolbar-list-es11-row toolbar-list-es11-row-2" fill="var(--c-empty-state-primary-l1, #80acff)" height="8" rx="4" transform="matrix(-1 0 0 1 94 132)" width="13" />
+			<rect class="toolbar-list-es11-row" fill="var(--c-empty-state-primary-l1, #80acff)" height="8" rx="4" transform="matrix(-1 0 0 1 94 95)" width="13" />
+			<rect class="toolbar-list-es11-row toolbar-list-es11-row-3" fill="url(#toolbar-list-paint4_linear_10_281)" height="8" rx="4" transform="matrix(-1 0 0 1 189 169)" width="89" />
+			<rect class="toolbar-list-es11-row toolbar-list-es11-row-2" fill="url(#toolbar-list-paint5_linear_10_281)" height="8" rx="4" transform="matrix(-1 0 0 1 189 132)" width="89" />
+			<rect class="toolbar-list-es11-row" fill="url(#toolbar-list-paint6_linear_10_281)" height="8" rx="4" transform="matrix(-1 0 0 1 189 95)" width="89" />
+			<g class="toolbar-list-es11-toolbar">
+				<rect fill="url(#toolbar-list-paint7_linear_10_281)" height="36" rx="8" width="148" x="36" y="60" />
+				<path d="M53.4047 69.8641C54.1562 68.712 55.8438 68.712 56.5953 69.8641L56.9686 70.4364C57.3979 71.0946 58.1873 71.4215 58.9562 71.2597L59.6249 71.119C60.971 70.8357 62.1643 72.029 61.881 73.3751L61.7403 74.0438C61.5785 74.8127 61.9054 75.6021 62.5636 76.0314L63.1359 76.4047C64.288 77.1562 64.288 78.8438 63.1359 79.5953L62.5636 79.9686C61.9054 80.3979 61.5785 81.1873 61.7403 81.9562L61.881 82.6249C62.1643 83.971 60.971 85.1643 59.6249 84.881L58.9562 84.7403C58.1873 84.5785 57.3979 84.9054 56.9686 85.5636L56.5953 86.1359C55.8438 87.288 54.1562 87.288 53.4047 86.1359L53.0314 85.5636C52.6021 84.9054 51.8127 84.5785 51.0438 84.7403L50.3751 84.881C49.029 85.1643 47.8357 83.971 48.119 82.6249L48.2597 81.9562C48.4215 81.1873 48.0946 80.3979 47.4364 79.9686L46.8641 79.5953C45.712 78.8438 45.712 77.1562 46.8641 76.4047L47.4364 76.0314C48.0946 75.6021 48.4215 74.8127 48.2597 74.0438L48.119 73.3751C47.8357 72.029 49.029 70.8357 50.3751 71.119L51.0438 71.2597C51.8127 71.4215 52.6021 71.0946 53.0314 70.4364L53.4047 69.8641Z" fill="url(#toolbar-list-paint8_linear_10_281)" />
+				<rect fill="url(#toolbar-list-paint9_linear_10_281)" height="14" rx="7" width="85" x="70" y="71" />
+				<g clip-path="url(#toolbar-list-es11ShimmerClip)">
+					<rect class="toolbar-list-es11-shimmer" fill="var(--c-empty-state-white, #fff)" height="22" opacity="0" width="100" x="66" y="67" />
+				</g>
+				<rect fill="url(#toolbar-list-paint10_linear_10_281)" height="15" rx="6.5" transform="matrix(-1 0 0 1 174 70)" width="13" />
+			</g>
+		</g>
+		<defs>
+			<clipPath id="toolbar-list-es11ShimmerClip">
+				<rect height="14" rx="7" width="85" x="70" y="71" />
+			</clipPath>
+			<linearGradient x1="0" x2="1" y1="0" y2="0">
+				<stop stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0" />
+				<stop offset="0.5" stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0.4" />
+				<stop offset="1" stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint0_linear_10_281" x1="137" x2="137" y1="72" y2="200">
+				<stop stop-color="var(--c-empty-state-white, #fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint1_linear_10_281" x1="71" x2="199" y1="99" y2="99">
+				<stop stop-color="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint2_linear_10_281" x1="71" x2="199" y1="136" y2="136">
+				<stop stop-color="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint3_linear_10_281" x1="71" x2="199" y1="173" y2="173">
+				<stop stop-color="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint4_linear_10_281" x1="0" x2="89" y1="4" y2="4">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint5_linear_10_281" x1="0" x2="89" y1="4" y2="4">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint6_linear_10_281" x1="0" x2="89" y1="4" y2="4">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint7_linear_10_281" x1="110" x2="110" y1="60" y2="96">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint8_linear_10_281" x1="55" x2="55" y1="69" y2="87">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint9_linear_10_281" x1="70" x2="155" y1="78" y2="78">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="toolbar-list-paint10_linear_10_281" x1="6.5" x2="6.5" y1="0" y2="15">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+		</defs>
+	</symbol>
+	<symbol fill="none" id="workflow" viewBox="0 0 256 256">
+		<style>
+			@keyframes workflow-es10-glow {from { opacity: 0; } to { opacity: .5; }}
+			@keyframes workflow-es10-spin {from { transform: rotate(0deg); } to { transform: rotate(360deg); }}
+			@keyframes workflow-es10-node {from { opacity: 1; } to { opacity: .88; }}
+			.workflow-es10-sweep-a,
+			.workflow-es10-sweep-b,
+			.workflow-es10-shim-1,
+			.workflow-es10-shim-2,
+			.workflow-es10-shim-3 { animation: workflow-es10-glow calc(2.6s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.workflow-es10-sweep-b { animation-delay: calc(-.8s * var(--c-empty-state-image-animation-speed, 1)); }
+			.workflow-es10-shim-2 { animation-delay: calc(-.5s * var(--c-empty-state-image-animation-speed, 1)); }
+			.workflow-es10-shim-3 { animation-delay: calc(-1s * var(--c-empty-state-image-animation-speed, 1)); }
+			.workflow-es10-gear { transform-box: fill-box; transform-origin: center; animation: workflow-es10-spin calc(8s * var(--c-empty-state-image-animation-speed, 1)) linear infinite; }
+			.workflow-es10-node { animation: workflow-es10-node calc(1.7s * var(--c-empty-state-image-animation-speed, 1)) cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+			.workflow-es10-node-2 { animation-delay: calc(-.55s * var(--c-empty-state-image-animation-speed, 1)); }
+			.workflow-es10-node-3 { animation-delay: calc(-1.1s * var(--c-empty-state-image-animation-speed, 1)); }
+		</style>
+		<g>
+			<rect fill="url(#workflow-paint0_linear_10_281)" height="92" width="4" x="72" y="89" />
+			<g mask="url(#workflow-es10-mask-a)">
+				<rect class="workflow-es10-sweep-a" fill="var(--c-empty-state-white, #fff)" height="105" opacity="0" width="12" x="70" y="85" />
+			</g>
+			<rect class="workflow-es10-node" height="34" rx="9" stroke="var(--c-empty-state-primary-l1, #80acff)" stroke-width="2" width="129" x="39" y="55" />
+			<rect class="workflow-es10-node workflow-es10-node-2" height="34" rx="9" stroke="var(--c-empty-state-primary-l1, #80acff)" stroke-width="2" width="108" x="103" y="111" />
+			<rect fill="url(#workflow-paint1_linear_10_281)" height="30" rx="7" stroke="var(--c-empty-state-white, #fff)" stroke-width="2" width="125" x="41" y="57" />
+			<rect fill="url(#workflow-paint2_linear_10_281)" height="30" rx="7" stroke="var(--c-empty-state-white, #fff)" stroke-width="2" width="104" x="105" y="113" />
+			<rect fill="url(#workflow-paint3_linear_10_281)" height="14" rx="7" width="83" x="74" y="65" />
+			<g clip-path="url(#workflow-es10-clip-1)">
+				<rect class="workflow-es10-shim-1" fill="var(--c-empty-state-white, #fff)" height="14" opacity="0" width="90" x="74" y="65" />
+			</g>
+			<rect fill="url(#workflow-paint4_linear_10_281)" height="14" rx="7" width="67" x="133" y="121" />
+			<g clip-path="url(#workflow-es10-clip-2)">
+				<rect class="workflow-es10-shim-2" fill="var(--c-empty-state-white, #fff)" height="14" opacity="0" width="74" x="133" y="121" />
+			</g>
+			<path class="workflow-es10-gear" d="M57.4047 63.8641C58.1562 62.712 59.8438 62.712 60.5953 63.8641L60.9686 64.4364C61.3979 65.0946 62.1873 65.4215 62.9562 65.2597L63.6249 65.119C64.971 64.8357 66.1643 66.029 65.881 67.3751L65.7403 68.0438C65.5785 68.8127 65.9054 69.6021 66.5636 70.0314L67.1359 70.4047C68.288 71.1562 68.288 72.8438 67.1359 73.5953L66.5636 73.9686C65.9054 74.3979 65.5785 75.1873 65.7403 75.9562L65.881 76.6249C66.1643 77.971 64.971 79.1643 63.6249 78.881L62.9562 78.7403C62.1873 78.5785 61.3979 78.9054 60.9686 79.5636L60.5953 80.1359C59.8438 81.288 58.1562 81.288 57.4047 80.1359L57.0314 79.5636C56.6021 78.9054 55.8127 78.5785 55.0438 78.7403L54.3751 78.881C53.029 79.1643 51.8357 77.971 52.119 76.6249L52.2597 75.9562C52.4215 75.1873 52.0946 74.3979 51.4364 73.9686L50.8641 73.5953C49.712 72.8438 49.712 71.1562 50.8641 70.4047L51.4364 70.0314C52.0946 69.6021 52.4215 68.8127 52.2597 68.0438L52.119 67.3751C51.8357 66.029 53.029 64.8357 54.3751 65.119L55.0438 65.2597C55.8127 65.4215 56.6021 65.0946 57.0314 64.4364L57.4047 63.8641Z" fill="var(--c-empty-state-primary, #0b5fff)" />
+			<rect class="workflow-es10-node workflow-es10-node-3" fill="url(#workflow-paint5_linear_10_281)" height="32" rx="8" width="128" x="64" y="179" />
+			<rect fill="var(--c-empty-state-primary, #0b5fff)" height="14" rx="7" transform="rotate(90 81 115)" width="26" x="81" y="115" />
+			<path d="M156 160C156 162.209 154.209 164 152 164H109C108.448 164 108 164.448 108 165V180H104V164C104 161.791 105.791 160 108 160H151C151.552 160 152 159.552 152 159V144H156V160Z" fill="url(#workflow-paint6_linear_10_281)" />
+			<g mask="url(#workflow-es10-mask-b)">
+				<rect class="workflow-es10-sweep-b" fill="var(--c-empty-state-white, #fff)" height="45" opacity="0" width="60" x="100" y="140" />
+			</g>
+			<rect fill="var(--c-empty-state-primary-l0, #5791ff)" height="10" rx="5" width="26" x="118" y="157" />
+			<path class="workflow-es10-gear" d="M81.4047 186.864C82.1562 185.712 83.8438 185.712 84.5953 186.864L84.9686 187.436C85.3979 188.095 86.1873 188.422 86.9562 188.26L87.6249 188.119C88.971 187.836 90.1643 189.029 89.881 190.375L89.7403 191.044C89.5785 191.813 89.9054 192.602 90.5636 193.031L91.1359 193.405C92.288 194.156 92.288 195.844 91.1359 196.595L90.5636 196.969C89.9054 197.398 89.5785 198.187 89.7403 198.956L89.881 199.625C90.1643 200.971 88.971 202.164 87.6249 201.881L86.9562 201.74C86.1873 201.578 85.3979 201.905 84.9686 202.564L84.5953 203.136C83.8438 204.288 82.1562 204.288 81.4047 203.136L81.0314 202.564C80.6021 201.905 79.8127 201.578 79.0438 201.74L78.3751 201.881C77.029 202.164 75.8357 200.971 76.119 199.625L76.2597 198.956C76.4215 198.187 76.0946 197.398 75.4364 196.969L74.8641 196.595C73.712 195.844 73.712 194.156 74.8641 193.405L75.4364 193.031C76.0946 192.602 76.4215 191.813 76.2597 191.044L76.119 190.375C75.8357 189.029 77.029 187.836 78.3751 188.119L79.0438 188.26C79.8127 188.422 80.6021 188.095 81.0314 187.436L81.4047 186.864Z" fill="url(#workflow-paint7_linear_10_281)" />
+			<rect fill="url(#workflow-paint8_linear_10_281)" height="14" rx="7" width="64" x="98" y="188" />
+			<g clip-path="url(#workflow-es10-clip-3)">
+				<rect class="workflow-es10-shim-3" fill="var(--c-empty-state-white, #fff)" height="14" opacity="0" width="85" x="98" y="188" />
+			</g>
+			<rect fill="url(#workflow-paint9_linear_10_281)" height="15" rx="6.5" transform="matrix(-1 0 0 1 181 187)" width="13" />
+			<rect fill="var(--c-empty-state-primary, #0b5fff)" height="15" rx="6.5" transform="matrix(-1 0 0 1 127 120)" width="13" />
+		</g>
+		<defs>
+			<linearGradient x1="0" x2="1" y1="0" y2="0">
+				<stop stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0" />
+				<stop offset="0.5" stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0.4" />
+				<stop offset="1" stop-color="var(--c-empty-state-white, #fff)" stop-opacity="0" />
+			</linearGradient>
+			<mask height="102" id="workflow-es10-mask-a" maskUnits="userSpaceOnUse" width="14" x="68" y="84">
+				<rect fill="white" height="92" width="4" x="72" y="89" />
+			</mask>
+			<mask height="44" id="workflow-es10-mask-b" maskUnits="userSpaceOnUse" width="60" x="100" y="140">
+				<path d="M156 160C156 162.209 154.209 164 152 164H109C108.448 164 108 164.448 108 165V180H104V164C104 161.791 105.791 160 108 160H151C151.552 160 152 159.552 152 159V144H156V160Z" fill="white" />
+			</mask>
+			<linearGradient x1="0" x2="0" y1="0" y2="1">
+				<stop offset="0" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+				<stop offset="0.25" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.4" />
+				<stop offset="0.5" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+				<stop offset="0.75" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.4" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint0_linear_10_281" x1="74" x2="74" y1="89" y2="181">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary, #0b5fff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint1_linear_10_281" x1="103.5" x2="103.5" y1="56" y2="88">
+				<stop stop-color="var(--c-empty-state-white, #fff)" />
+				<stop offset="1" stop-color="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint2_linear_10_281" x1="157" x2="157" y1="112" y2="144">
+				<stop stop-color="var(--c-empty-state-white, #fff)" />
+				<stop offset="1" stop-color="color-mix(in srgb, var(--c-empty-state-primary-l2, #b3cdff), var(--c-empty-state-primary-l3, #f0f5ff))" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint3_linear_10_281" x1="74" x2="157" y1="72" y2="72">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint4_linear_10_281" x1="133" x2="200" y1="128" y2="128">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l1, #80acff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint5_linear_10_281" x1="128" x2="128" y1="179" y2="211">
+				<stop stop-color="var(--c-empty-state-primary, #0b5fff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-d2, #004ad7)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint6_linear_10_281" x1="130" x2="130" y1="144" y2="180">
+				<stop stop-color="var(--c-empty-state-primary-l1, #80acff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary, #0b5fff)" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint7_linear_10_281" x1="83" x2="83" y1="186" y2="204">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint8_linear_10_281" x1="98" x2="162" y1="195" y2="195">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient gradientUnits="userSpaceOnUse" id="workflow-paint9_linear_10_281" x1="6.5" x2="6.5" y1="0" y2="15">
+				<stop stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" />
+				<stop offset="1" stop-color="var(--c-empty-state-primary-l3, #f0f5ff)" stop-opacity="0.5" />
+			</linearGradient>
+			<clipPath id="workflow-es10-clip-1">
+				<rect height="14" rx="7" width="83" x="74" y="65" />
+			</clipPath>
+			<clipPath id="workflow-es10-clip-2">
+				<rect height="14" rx="7" width="67" x="133" y="121" />
+			</clipPath>
+			<clipPath id="workflow-es10-clip-3">
+				<rect height="14" rx="7" width="64" x="98" y="188" />
+			</clipPath>
+		</defs>
+	</symbol>
+</svg>

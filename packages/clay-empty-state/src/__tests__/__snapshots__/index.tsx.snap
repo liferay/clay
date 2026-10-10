@@ -1,5 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayEmptyState renders the element passed to \`image\` in place of the image 1`] = `
+<div>
+  <div
+    class="c-empty-state c-empty-state-animation"
+  >
+    <div
+      class="c-empty-state-image"
+    >
+      <div
+        class="c-empty-state-illustration"
+      >
+        <svg
+          aria-hidden="true"
+          class="lexicon-icon"
+        >
+          <use
+            href="/o/empty_states.svg#empty-state"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="c-empty-state-title"
+    >
+      <span>
+        No results found
+      </span>
+    </div>
+    <div
+      class="c-empty-state-text"
+    >
+      Sorry, there are no results found
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayEmptyState renders with a children content 1`] = `
 <div>
   <div

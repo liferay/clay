@@ -353,7 +353,7 @@ describe('Interactions', () => {
 
 			fireEvent(gradientMap, mouseMove);
 
-			expect(handleColorsChange).toBeCalledTimes(2);
+			expect(handleColorsChange).toHaveBeenCalledTimes(2);
 			expect(handleColorsChange.mock.calls[0][0][0]).toBe('5BB0A5');
 		});
 
@@ -381,7 +381,7 @@ describe('Interactions', () => {
 
 			fireEvent.keyDown(handle, {key: 'ArrowRight'});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleColorsChange).toHaveBeenCalledTimes(1);
 			expect(handleColorsChange.mock.calls[0][0]).toContain('FFFCFC');
 		});
 
@@ -392,7 +392,7 @@ describe('Interactions', () => {
 
 			fireEvent.keyDown(handle, {key: 'ArrowRight', shiftKey: true});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleColorsChange).toHaveBeenCalledTimes(1);
 			expect(handleColorsChange.mock.calls[0][0]).toContain('FFE6E6');
 		});
 
@@ -416,7 +416,7 @@ describe('Interactions', () => {
 
 			fireEvent.keyDown(handle, {key: 'End'});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleColorsChange).toHaveBeenCalledTimes(1);
 			expect(handleColorsChange.mock.calls[0][0]).toContain('FF0000');
 		});
 
@@ -427,7 +427,7 @@ describe('Interactions', () => {
 
 			fireEvent.keyDown(handle, {key: 'a'});
 
-			expect(handleColorsChange).not.toBeCalled();
+			expect(handleColorsChange).not.toHaveBeenCalled();
 		});
 
 		it('changes the color by changing the hue', () => {
@@ -438,7 +438,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(hueSlider as HTMLElement, {target: {value: 10}});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleColorsChange).toHaveBeenCalledTimes(1);
 		});
 
 		it('changes the transparancy by changing the alpha', () => {
@@ -451,7 +451,7 @@ describe('Interactions', () => {
 				target: {value: 0.5},
 			});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleColorsChange).toHaveBeenCalledTimes(1);
 		});
 
 		it('changes the color by changing the RGB', () => {
@@ -460,13 +460,13 @@ describe('Interactions', () => {
 			const gInput = editorGetByTestId('gInput');
 
 			fireEvent.change(rInput, {target: {value: '200'}});
-			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleColorsChange).toHaveBeenCalledTimes(1);
 
 			fireEvent.change(gInput, {target: {value: '200'}});
-			expect(handleColorsChange).toBeCalledTimes(2);
+			expect(handleColorsChange).toHaveBeenCalledTimes(2);
 
 			fireEvent.change(bInput, {target: {value: '200'}});
-			expect(handleColorsChange).toBeCalledTimes(3);
+			expect(handleColorsChange).toHaveBeenCalledTimes(3);
 		});
 
 		it('changes the color by changing the input', () => {
@@ -474,7 +474,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleColorsChange).toHaveBeenCalledTimes(1);
 		});
 
 		it('ability to change color of clicked splotch', () => {
@@ -488,7 +488,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleColorsChange).toHaveBeenCalledTimes(1);
 
 			expect(document.body).toMatchSnapshot();
 		});
@@ -501,7 +501,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(hueSlider as HTMLElement, {target: {value: 1}});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleColorsChange).toHaveBeenCalledTimes(1);
 		});
 
 		it('pressing left arrow key descrease hue value', async () => {
@@ -516,7 +516,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(hueSlider as HTMLElement, {target: {value: 1}});
 
-			expect(handleColorsChange).toBeCalledTimes(3);
+			expect(handleColorsChange).toHaveBeenCalledTimes(3);
 		});
 	});
 

@@ -9,8 +9,19 @@ import warning from 'warning';
 
 const ClayIconSpriteContext = React.createContext('');
 
+const ClayIconIllustrationSpriteContext = React.createContext('');
+
 interface IProps extends React.SVGAttributes<SVGSVGElement> {
 	className?: string;
+
+	/**
+	 * Flag to render the symbol as an illustration rather than a Lexicon glyph.
+	 * It omits the `lexicon-icon lexicon-icon-*` classes, which force the 1em
+	 * glyph sizing, so spritemaps drawn at their own size, like the
+	 * illustrations in `empty_states.svg`, keep it. The spritemap falls back to
+	 * `ClayIconIllustrationSpriteContext` instead of `ClayIconSpriteContext`.
+	 */
+	illustration?: boolean;
 
 	/**
 	 * Path to the location of the spritemap resource.
@@ -24,25 +35,41 @@ interface IProps extends React.SVGAttributes<SVGSVGElement> {
 }
 
 const Icon = React.forwardRef<SVGSVGElement, IProps>(
-	({className, spritemap, symbol, ...otherProps}: IProps, ref) => {
-		let spriteMapVal = React.useContext(ClayIconSpriteContext);
+	(
+		{
+			className,
+			illustration = false,
+			spritemap,
+			symbol,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		const glyphSpritemap = React.useContext(ClayIconSpriteContext);
+		const illustrationSpritemap = React.useContext(
+			ClayIconIllustrationSpriteContext
+		);
 
-		if (spritemap) {
-			spriteMapVal = spritemap;
-		}
+		const spriteMapVal =
+			spritemap ||
+			(illustration ? illustrationSpritemap : glyphSpritemap);
 
 		warning(
 			spriteMapVal,
-			'ClayIcon requires a `spritemap` via prop or ClayIconSpriteContext'
+			illustration
+				? 'ClayIcon requires a `spritemap` via prop or ClayIconIllustrationSpriteContext'
+				: 'ClayIcon requires a `spritemap` via prop or ClayIconSpriteContext'
 		);
 
 		return (
 			<svg
 				{...otherProps}
-				className={classNames(
-					`lexicon-icon lexicon-icon-${symbol}`,
-					className
-				)}
+				className={
+					classNames(
+						!illustration && `lexicon-icon lexicon-icon-${symbol}`,
+						className
+					) || undefined
+				}
 				key={symbol}
 				ref={ref}
 				role="presentation"
@@ -56,4 +83,4 @@ const Icon = React.forwardRef<SVGSVGElement, IProps>(
 Icon.displayName = 'ClayIcon';
 
 export default Icon;
-export {ClayIconSpriteContext};
+export {ClayIconIllustrationSpriteContext, ClayIconSpriteContext};

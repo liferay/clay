@@ -75,6 +75,56 @@ describe('ClayEmptyState', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('does not render the image wrapper when no image is provided', () => {
+		const {container} = render(<ClayEmptyState />);
+
+		expect(container.querySelector('.c-empty-state-image')).toBe(null);
+	});
+
+	it('renders the element passed to `image` in place of the image', () => {
+		const {container} = render(
+			<ClayEmptyState
+				image={
+					<svg aria-hidden="true" className="lexicon-icon">
+						<use href="/o/empty_states.svg#empty-state" />
+					</svg>
+				}
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders the element passed to `image` instead of the image defined by `imgSrc` and `imgProps`', () => {
+		const {container} = render(
+			<ClayEmptyState
+				image={<svg data-testid="image" />}
+				imgProps={{alt: 'hello world'}}
+				imgSrc="https://via.placeholder.com/256"
+			/>
+		);
+
+		expect(container.querySelector('img')).toBe(null);
+		expect(container.querySelector('.c-empty-state-aspect-ratio')).toBe(
+			null
+		);
+		expect(
+			container.querySelector(
+				'.c-empty-state-illustration > [data-testid]'
+			)
+		).not.toBe(null);
+	});
+
+	it('adds the animation class when only `image` is provided', () => {
+		const {container} = render(
+			<ClayEmptyState image={<svg data-testid="image" />} />
+		);
+
+		expect(container.querySelector('.c-empty-state-animation')).not.toBe(
+			null
+		);
+	});
+
 	it('renders with different reduced motion image props', () => {
 		const {container} = render(
 			<ClayEmptyState

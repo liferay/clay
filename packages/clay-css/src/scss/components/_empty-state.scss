@@ -1,5 +1,9 @@
 .c-empty-state {
 	@include clay-css($c-empty-state);
+
+	@media (prefers-reduced-motion: reduce) {
+		--c-empty-state-image-animation-speed: 0;
+	}
 }
 
 .c-empty-state-animation {
@@ -9,7 +13,7 @@
 // C Empty State Image
 
 .c-empty-state-image {
-	@include clay-css($c-empty-state-image);
+	@include clay-map-to-css($c-empty-state-image);
 }
 
 .c-empty-state-aspect-ratio {
@@ -44,7 +48,9 @@
 	}
 
 	.c-empty-state-image {
-		@include clay-css(map-get($c-empty-state-sm, c-empty-state-image));
+		@include clay-map-to-css(
+			map-get($c-empty-state-sm, c-empty-state-image)
+		);
 	}
 
 	.c-empty-state-title {

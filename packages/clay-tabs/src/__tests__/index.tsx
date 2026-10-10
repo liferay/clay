@@ -131,10 +131,10 @@ describe('ClayTabs', () => {
 		const tabItems = getAllByTestId('tabItem');
 
 		fireEvent.click(tabItems[0]!);
-		expect(onClick).toBeCalled();
+		expect(onClick).toHaveBeenCalled();
 
 		fireEvent.click(tabItems[1]!);
-		expect(onClick).toBeCalled();
+		expect(onClick).toHaveBeenCalled();
 	});
 
 	it('renders elements not valid tabs should continue to work', () => {

@@ -1,5 +1,9 @@
 .c-empty-state {
 	@include clay-css($cadmin-c-empty-state);
+
+	@media (prefers-reduced-motion: reduce) {
+		--c-empty-state-image-animation-speed: 0;
+	}
 }
 
 .c-empty-state-animation {
@@ -9,7 +13,7 @@
 // C Empty State Image
 
 .c-empty-state-image {
-	@include clay-css($cadmin-c-empty-state-image);
+	@include clay-map-to-css($cadmin-c-empty-state-image);
 }
 
 .c-empty-state-aspect-ratio {
@@ -46,7 +50,7 @@
 	}
 
 	.c-empty-state-image {
-		@include clay-css(
+		@include clay-map-to-css(
 			map-get($cadmin-c-empty-state-sm, c-empty-state-image)
 		);
 	}

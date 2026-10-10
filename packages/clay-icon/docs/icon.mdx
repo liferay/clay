@@ -46,3 +46,11 @@ Add `import { ClayIconSpriteContext } from "@clayui/icon"` use the context as a 
 	<ClayIcon symbol="add-cell" />
 </ClayIconSpriteContext.Provider>
 ```
+
+Icons rendered with `illustration` read their spritemap from `ClayIconIllustrationSpriteContext` instead, so glyphs and illustrations like `empty_states.svg` can each have their own default.
+
+```jsx
+<ClayIconIllustrationSpriteContext.Provider value="/empty_states.svg">
+	<ClayIcon illustration symbol="empty-state" />
+</ClayIconIllustrationSpriteContext.Provider>
+```

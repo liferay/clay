@@ -104,8 +104,8 @@ describe('ClayAutocomplete', () => {
 
 		render(<LoadingIndicatorWithContext />);
 
-		expect(spyFn).toBeCalled();
-		expect(spyFn).toBeCalledWith(true);
+		expect(spyFn).toHaveBeenCalled();
+		expect(spyFn).toHaveBeenCalledWith(true);
 	});
 
 	it('renders Input with classNames when loading for true', () => {

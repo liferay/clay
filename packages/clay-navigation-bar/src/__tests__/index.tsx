@@ -224,7 +224,7 @@ describe('ClayNavigationBar', () => {
 			</ClayNavigationBar>
 		);
 
-		expect(mockWarnings).toBeCalled();
+		expect(mockWarnings).toHaveBeenCalled();
 		expect(mockWarnings.mock.calls[0]![0]).toBe(
 			'Warning: ClayNavigationBar expects 0 or 1 active children, but received 2'
 		);

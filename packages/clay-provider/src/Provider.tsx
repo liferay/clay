@@ -39,6 +39,12 @@ interface IProviderProps
 interface IProviderContext {
 	client: DataClient;
 
+	/**
+	 * Alerts with `autoClose` stay until dismissed. A nested Provider
+	 * inherits the value of its parent when it does not set it.
+	 */
+	persistentAlerts?: boolean;
+
 	prefersReducedMotion?: boolean;
 
 	/**
@@ -52,6 +58,7 @@ const Context = React.createContext<IProviderContext>({} as IProviderContext);
 Context.displayName = 'ClayProviderContext';
 export function Provider({
 	children,
+	persistentAlerts,
 	reducedMotion = 'user',
 	spritemap,
 	storageMaxSize = 20,
@@ -71,10 +78,14 @@ export function Provider({
 
 	useTabReturnFocusRingAnimation();
 
+	const parentContext = useContext(Context);
+
 	return (
 		<Context.Provider
 			value={{
 				client,
+				persistentAlerts:
+					persistentAlerts ?? parentContext.persistentAlerts,
 				prefersReducedMotion: isReducedMotion,
 				theme,
 				...otherProps,

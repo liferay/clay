@@ -422,7 +422,7 @@ describe('ClayDataProvider', () => {
 		});
 
 		await fetchMock.mock.results[0]!.value;
-		await waitFor(() => expect(fetchMock).toBeCalledTimes(2));
+		await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(2));
 	});
 
 	it('calls clay.data with polling of 50ms', async () => {

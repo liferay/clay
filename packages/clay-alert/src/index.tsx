@@ -10,44 +10,7 @@ import React from 'react';
 
 import {ClayAlertFooter} from './Footer';
 import {ClayToastContainer} from './ToastContainer';
-
-function useAutoClose(autoClose?: boolean | number, onClose = () => {}) {
-	const startedTimeRef = React.useRef<number>(0);
-	const timerRef = React.useRef<number | undefined>(undefined);
-	const timeToCloseRef = React.useRef(autoClose === true ? 10000 : autoClose);
-	let pauseTimer = () => {};
-	let startTimer = () => {};
-	if (autoClose) {
-		pauseTimer = () => {
-			if (timerRef.current) {
-				timeToCloseRef.current =
-					(timeToCloseRef.current as number) -
-					(Date.now() - startedTimeRef.current);
-				clearTimeout(timerRef.current);
-				timerRef.current = undefined;
-			}
-		};
-		startTimer = () => {
-			startedTimeRef.current = Date.now();
-			timerRef.current = window.setTimeout(
-				onClose,
-				timeToCloseRef.current as number
-			);
-		};
-	}
-	React.useEffect(() => {
-		if (autoClose) {
-			startTimer();
-
-			return pauseTimer;
-		}
-	}, []);
-
-	return {
-		pauseAutoCloseTimer: pauseTimer,
-		startAutoCloseTimer: startTimer,
-	};
-}
+import {useAutoClose} from './useAutoClose';
 
 export type DisplayType =
 	| 'danger'
@@ -150,10 +113,10 @@ function ClayAlert({
 	variant,
 	...otherProps
 }: IClayAlertProps) {
-	const {pauseAutoCloseTimer, startAutoCloseTimer} = useAutoClose(
+	const {pauseAutoCloseTimer, startAutoCloseTimer} = useAutoClose({
 		autoClose,
-		onClose
-	);
+		onClose,
+	});
 	const ConditionalContainer = ({children}: any) =>
 		variant === 'stripe' ? (
 			<div className={classNames('container', containerClassName)}>

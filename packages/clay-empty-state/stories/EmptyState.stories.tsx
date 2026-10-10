@@ -6,8 +6,10 @@
 import ClayButton from '@clayui/button';
 const emptyImage = require('@clayui/css/src/images/images/empty_state.svg');
 const emptyImageReducedMotion = require('@clayui/css/src/images/images/empty_state_reduced_motion.svg');
+const imagesSpritemap = require('@clayui/css/src/images/images/empty_states.svg');
 const searchImage = require('@clayui/css/src/images/images/search_state.svg');
 const successImage = require('@clayui/css/src/images/images/success_state.svg');
+import ClayIcon from '@clayui/icon';
 import React from 'react';
 
 import ClayEmptyState from '../src';
@@ -59,6 +61,65 @@ export function SuccessState() {
 		/>
 	);
 }
+export function WithIcon(args: any) {
+	return (
+		<div
+			className={
+				args.reducedMotion ? 'c-prefers-reduced-motion' : undefined
+			}
+		>
+			<ClayEmptyState
+				className={args.small ? 'c-empty-state-sm' : undefined}
+				description="You don't have more notifications to review"
+				image={
+					<ClayIcon
+						illustration
+						spritemap={imagesSpritemap}
+						symbol={args.symbol}
+					/>
+				}
+				title="Hurray"
+			>
+				<ClayButton displayType="primary">Button</ClayButton>
+			</ClayEmptyState>
+		</div>
+	);
+}
+
+WithIcon.args = {
+	reducedMotion: false,
+	small: false,
+	symbol: 'success-state',
+};
+
+WithIcon.argTypes = {
+	reducedMotion: {
+		control: {type: 'boolean'},
+	},
+	symbol: {
+		control: {type: 'select'},
+		options: [
+			'action-toolbar',
+			'ai-burst',
+			'ai-chat',
+			'ai-prompt',
+			'ai-workflow',
+			'audience',
+			'contenttypes',
+			'discovery',
+			'document',
+			'knowledge-graph',
+			'pagebuilder',
+			'success-state',
+			'empty-state',
+			'search-state',
+			'toolbar-canvas',
+			'toolbar-list',
+			'workflow',
+		],
+	},
+};
+
 export function WithImage() {
 	return (
 		<ClayEmptyState

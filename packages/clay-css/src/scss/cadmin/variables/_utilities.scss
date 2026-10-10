@@ -915,6 +915,7 @@ $cadmin-displays-c-prefers-reduced-motion: map-deep-merge(
 $cadmin-c-prefers-reduced-motion: () !default;
 $cadmin-c-prefers-reduced-motion: map-merge(
 	(
+		--c-empty-state-image-animation-speed: 0,
 		scroll-behavior: auto,
 		transition: clay-enable-transitions(none),
 	),

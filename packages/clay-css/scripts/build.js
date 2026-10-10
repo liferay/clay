@@ -106,6 +106,15 @@ async function build() {
 		path.join(OUTPUT_DIRECTORY, 'images/icons')
 	);
 
+	fs.mkdirSync(path.join(OUTPUT_DIRECTORY, 'images/images'), {
+		recursive: true,
+	});
+
+	fs.copyFileSync(
+		path.resolve(__dirname, '..', './src/images/images/empty_states.svg'),
+		path.join(OUTPUT_DIRECTORY, 'images/images/empty_states.svg')
+	);
+
 	copyRecursiveSync(
 		path.join(__dirname, '..', '..', 'LICENSES'),
 		path.resolve(__dirname, '..', './LICENSES')

@@ -106,7 +106,7 @@ describe('ClayLocalizedInput', () => {
 			{}
 		);
 
-		expect(onSelectedChangeFn).toBeCalledWith({
+		expect(onSelectedChangeFn).toHaveBeenCalledWith({
 			_key: 'es-ES',
 			id: 'es-ES',
 			label: 'es-ES',
