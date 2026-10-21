@@ -5,6 +5,7 @@
 
 import React, {useCallback, useEffect, useLayoutEffect} from 'react';
 
+import {constrainHeightToViewport} from './constrainHeightToViewport';
 import {doAlign} from './doAlign';
 import {observeRect} from './observeRect';
 
@@ -12,6 +13,7 @@ type Props = {
 	alignmentByViewport?: boolean;
 	alignmentPosition?: number | AlignPoints;
 	autoBestAlign?: boolean;
+	constrainHeight?: boolean;
 	getOffset?: (points: AlignPoints) => [number, number];
 	isOpen: boolean;
 	ref: React.RefObject<HTMLElement>;
@@ -94,6 +96,7 @@ export function useOverlayPosition(
 		alignmentByViewport,
 		alignmentPosition = 5,
 		autoBestAlign = true,
+		constrainHeight = false,
 		getOffset = defaultOffset,
 		isOpen,
 		ref,
@@ -107,6 +110,15 @@ export function useOverlayPosition(
 
 			if (typeof points === 'number') {
 				points = getAlignPoints(points as keyof typeof ALIGN_INVERSE);
+			}
+
+			if (constrainHeight) {
+				points = constrainHeightToViewport({
+					getOffset,
+					points,
+					sourceElement: ref.current,
+					targetElement: triggerRef.current,
+				});
 			}
 
 			doAlign({
