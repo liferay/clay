@@ -8,6 +8,8 @@ import ClayLayout from '@clayui/layout';
 import classNames from 'classnames';
 import React from 'react';
 
+import {AlertIndicator} from './AlertIndicator';
+import {ConditionalContainer} from './ConditionalContainer';
 import {ClayAlertFooter} from './Footer';
 import {ClayToastContainer} from './ToastContainer';
 import {useAutoClose} from './useAutoClose';
@@ -30,7 +32,9 @@ export interface IClayAlertProps
 	/**
 	 * Flag to indicate alert should automatically call `onClose`. It also
 	 * accepts a duration (in ms) which indicates how long to wait. If `true`
-	 * is passed in, the timeout will be 10000ms.
+	 * is passed in, the timeout will be 10000ms. The countdown waits while the
+	 * pointer is over the alert or focus is inside it, then continues with the
+	 * remaining time.
 	 */
 	autoClose?: boolean | number;
 
@@ -105,7 +109,11 @@ function ClayAlert({
 	containerClassName,
 	displayType = 'info',
 	hideCloseIcon = false,
+	onBlur,
 	onClose,
+	onFocus,
+	onMouseOut,
+	onMouseOver,
 	role = 'alert',
 	spritemap,
 	symbol,
@@ -117,23 +125,7 @@ function ClayAlert({
 		autoClose,
 		onClose,
 	});
-	const ConditionalContainer = ({children}: any) =>
-		variant === 'stripe' ? (
-			<div className={classNames('container', containerClassName)}>
-				{children}
-			</div>
-		) : (
-			<>{children}</>
-		);
 	const showDismissible = onClose && !hideCloseIcon;
-	const AlertIndicator = () => (
-		<span className="alert-indicator">
-			<Icon
-				spritemap={spritemap}
-				symbol={symbol || ICON_MAP[displayType]}
-			/>
-		</span>
-	);
 
 	return (
 		<div
@@ -145,10 +137,36 @@ function ClayAlert({
 				'alert-inline': variant === 'inline',
 				[`alert-${displayType}`]: displayType,
 			})}
-			onMouseOut={startAutoCloseTimer}
-			onMouseOver={pauseAutoCloseTimer}
+			onBlur={(event) => {
+				onBlur?.(event);
+
+				if (
+					document.hasFocus() &&
+					!event.currentTarget.contains(event.relatedTarget)
+				) {
+					startAutoCloseTimer('focus');
+				}
+			}}
+			onFocus={(event) => {
+				onFocus?.(event);
+
+				pauseAutoCloseTimer('focus');
+			}}
+			onMouseOut={(event) => {
+				onMouseOut?.(event);
+
+				startAutoCloseTimer('hover');
+			}}
+			onMouseOver={(event) => {
+				onMouseOver?.(event);
+
+				pauseAutoCloseTimer('hover');
+			}}
 		>
-			<ConditionalContainer>
+			<ConditionalContainer
+				className={containerClassName}
+				variant={variant}
+			>
 				<ClayLayout.ContentRow
 					className="alert-autofit-row"
 					role={role as string}
@@ -156,7 +174,10 @@ function ClayAlert({
 					{!VARIANTS.includes(variant as string) && (
 						<ClayLayout.ContentCol>
 							<ClayLayout.ContentSection>
-								<AlertIndicator />
+								<AlertIndicator
+									spritemap={spritemap}
+									symbol={symbol || ICON_MAP[displayType]}
+								/>
 							</ClayLayout.ContentSection>
 						</ClayLayout.ContentCol>
 					)}
@@ -164,7 +185,10 @@ function ClayAlert({
 					<ClayLayout.ContentCol expand>
 						<ClayLayout.ContentSection>
 							{VARIANTS.includes(variant as string) && (
-								<AlertIndicator />
+								<AlertIndicator
+									spritemap={spritemap}
+									symbol={symbol || ICON_MAP[displayType]}
+								/>
 							)}
 
 							{title && <strong className="lead">{title}</strong>}
