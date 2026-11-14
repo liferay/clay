@@ -13,7 +13,7 @@ import {FocusWithinProvider} from '../aria';
 import {useForwardRef} from '../hooks';
 import {KeyboardArrowsIndicator} from '../keyboard-arrows-indicator';
 import {LiveAnnouncer} from '../live-announcer';
-import {Sorting, TableContext} from './context';
+import {Messages, Sorting, TableContext} from './context';
 import {useTreeNavigation} from './useTreeNavigation';
 
 import type {AnnouncerAPI} from '../live-announcer';
@@ -105,8 +105,11 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	messages?: {
 		columnsVisibility: string;
 		columnsVisibilityCell?: string;
+		columnsVisibilityClearSearch?: string;
 		columnsVisibilityDescription: string;
 		columnsVisibilityHeader: string;
+		columnsVisibilityNoResults?: string;
+		columnsVisibilitySearch?: string;
 		expandable: string;
 		sortColumn?: string;
 		sortDescription: string;
@@ -190,6 +193,19 @@ const locator = {
 };
 const defaultSet = new Set<React.Key>();
 
+const DEFAULT_MESSAGES: Messages = {
+	columnsVisibility: 'Manage Columns Visibility',
+	columnsVisibilityClearSearch: 'Clear Search',
+	columnsVisibilityDescription: 'At least one column must remain visible.',
+	columnsVisibilityHeader: 'Columns Visibility',
+	columnsVisibilityNoResults: 'No Results Found',
+	columnsVisibilitySearch: 'Search',
+	expandable: 'expandable',
+	sortColumn: 'sort by {0}',
+	sortDescription: 'sortable column',
+	sorting: 'sorted by column {0} in {1} order',
+};
+
 export const Table = React.forwardRef(
 	(
 		{
@@ -203,16 +219,7 @@ export const Table = React.forwardRef(
 			displayKeyboardArrowsIndicator = false,
 			expandedKeys: externalExpandedKeys,
 			itemIdKey = 'id',
-			messages = {
-				columnsVisibility: 'Manage Columns Visibility',
-				columnsVisibilityDescription:
-					'At least one column must remain visible.',
-				columnsVisibilityHeader: 'Columns Visibility',
-				expandable: 'expandable',
-				sortColumn: 'sort by {0}',
-				sortDescription: 'sortable column',
-				sorting: 'sorted by column {0} in {1} order',
-			},
+			messages: externalMessages,
 			visibleColumns: externalVisibleColumns,
 			onExpandedChange,
 			onVisibleColumnsChange,
@@ -225,6 +232,8 @@ export const Table = React.forwardRef(
 		}: IProps,
 		outRef: React.Ref<HTMLTableElement>
 	) => {
+		const messages: Messages = {...DEFAULT_MESSAGES, ...externalMessages};
+
 		const [expandedKeys, setExpandedKeys] = useControlledState<
 			Set<React.Key>
 		>({
@@ -304,7 +313,7 @@ export const Table = React.forwardRef(
 							onSortChange: useCallback(
 								(sort, textValue) => {
 									announcerAPIRef.current!.announce(
-										sub(messages!.sorting, [
+										sub(messages.sorting, [
 											textValue,
 											sort!.direction,
 										])
@@ -364,7 +373,7 @@ export const Table = React.forwardRef(
 						id={sortDescriptionId}
 						style={{display: 'none'}}
 					>
-						{messages!.sortDescription}
+						{messages.sortDescription}
 					</div>,
 					document.body
 				)}

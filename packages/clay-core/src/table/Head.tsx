@@ -3,12 +3,13 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
-import Button from '@clayui/button';
-import {ClayToggle as Toggle} from '@clayui/form';
+import Button, {ClayButtonWithIcon} from '@clayui/button';
+import {ClayInput, ClayToggle as Toggle} from '@clayui/form';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
-import {useId} from '@clayui/shared';
-import React, {useEffect, useLayoutEffect} from 'react';
+import {Keys, useId} from '@clayui/shared';
+import classNames from 'classnames';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
 import {ChildrenFunction, Collection, useCollection} from '../collection';
 import {Item, Menu} from '../drop-down';
@@ -17,13 +18,38 @@ import {Scope, ScopeContext} from './ScopeContext';
 import {useTable} from './context';
 
 type HeaderProps = {
+	clearSearchLabel: string;
 	description: string;
 	descriptionId: string;
+	inputRef: React.RefObject<HTMLInputElement>;
 	name: string;
 	nameId: string;
+	onSearchTermChange: (searchTerm: string) => void;
+	onTabBack: () => void;
+	searchLabel: string;
+	searchTerm: string;
 };
 
-function Header({description, descriptionId, name, nameId}: HeaderProps) {
+function Header({
+	clearSearchLabel,
+	description,
+	descriptionId,
+	inputRef,
+	name,
+	nameId,
+	onSearchTermChange,
+	onTabBack,
+	searchLabel,
+	searchTerm,
+}: HeaderProps) {
+	useEffect(() => {
+		const timeoutId = setTimeout(() =>
+			inputRef.current?.focus({preventScroll: true})
+		);
+
+		return () => clearTimeout(timeoutId);
+	}, []);
+
 	return (
 		<>
 			<div className="dropdown-subheader mb-0" id={nameId}>
@@ -35,6 +61,65 @@ function Header({description, descriptionId, name, nameId}: HeaderProps) {
 				id={descriptionId}
 			>
 				{description}
+			</div>
+
+			<div className="dropdown-section">
+				<ClayInput.Group small>
+					<ClayInput.GroupItem>
+						<ClayInput
+							aria-label={searchLabel}
+							insetAfter
+							onChange={(event) =>
+								onSearchTermChange(event.target.value)
+							}
+							onKeyDown={(event) => {
+								if (event.key === Keys.Down) {
+									event.preventDefault();
+
+									event.currentTarget
+										.closest('.dropdown-menu')
+										?.querySelector<HTMLElement>(
+											'input[role="switch"]:not(:disabled)'
+										)
+										?.focus();
+								}
+								else if (
+									event.key === Keys.Tab &&
+									event.shiftKey
+								) {
+									event.preventDefault();
+
+									onTabBack();
+								}
+							}}
+							placeholder={searchLabel}
+							ref={inputRef}
+							type="text"
+							value={searchTerm}
+						/>
+
+						<ClayInput.GroupInsetItem after tag="span">
+							{searchTerm ? (
+								<ClayButtonWithIcon
+									aria-label={clearSearchLabel}
+									displayType="unstyled"
+									monospaced
+									onClick={() => {
+										onSearchTermChange('');
+
+										inputRef.current?.focus();
+									}}
+									symbol="times"
+									title={clearSearchLabel}
+								/>
+							) : (
+								<div className="input-group-inset-icon">
+									<Icon symbol="search" />
+								</div>
+							)}
+						</ClayInput.GroupInsetItem>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
 			</div>
 
 			<div className="dropdown-divider" />
@@ -85,6 +170,45 @@ export function Head<T extends Record<string, any>>(
 	const columnsVisibilityDescriptionId = useId();
 	const columnsVisibilityHeaderId = useId();
 
+	const searchInputRef = useRef<HTMLInputElement>(null);
+	const triggerRef = useRef<HTMLButtonElement | null>(null);
+
+	const [active, setActive] = useState(false);
+	const [menuHeight, setMenuHeight] = useState<number>();
+	const [searchTerm, setSearchTerm] = useState('');
+
+	const onSearchTermChange = (searchTerm: string) => {
+		if (menuHeight === undefined) {
+			setMenuHeight(
+				searchInputRef.current?.closest<HTMLElement>('.dropdown-menu')
+					?.offsetHeight
+			);
+		}
+
+		setSearchTerm(searchTerm);
+	};
+
+	const onActiveChange = (active: boolean) => {
+		setActive(active);
+
+		if (!active) {
+			setMenuHeight(undefined);
+			setSearchTerm('');
+		}
+	};
+
+	const normalizedSearchTerm = searchTerm.trim().toLowerCase();
+
+	const columnsVisibilityItems = collection
+		.getItems()
+		.filter(
+			(item) =>
+				!alwaysVisibleColumns.has(item) &&
+				String(collection.getItem(item).value)
+					.toLowerCase()
+					.includes(normalizedSearchTerm)
+		);
+
 	useIsomorphicEffect(() => {
 		if (visibleColumns.size === 0) {
 			onVisibleColumnsChange(collection.getItems(), 0);
@@ -101,55 +225,84 @@ export function Head<T extends Record<string, any>>(
 					{columnsVisibility && (
 						<Cell keyValue="visibility" width="64px">
 							<span className="sr-only">
-								{messages['columnsVisibilityCell'] ||
-									messages['columnsVisibility']}
+								{messages.columnsVisibilityCell ||
+									messages.columnsVisibility}
 							</span>
 
 							<Menu
 								UNSAFE_focusableElements={[
 									'input[role="switch"]',
+									'input[type="text"]',
 								]}
+								active={active}
 								alwaysClose={false}
 								aria-describedby={
 									columnsVisibilityDescriptionId
 								}
 								aria-labelledby={columnsVisibilityHeaderId}
 								header={
-									<Header
-										description={
-											messages[
-												'columnsVisibilityDescription'
-											]!
-										}
-										descriptionId={
-											columnsVisibilityDescriptionId
-										}
-										name={
-											messages['columnsVisibilityHeader']!
-										}
-										nameId={columnsVisibilityHeaderId}
-									/>
+									<>
+										<Header
+											clearSearchLabel={
+												messages.columnsVisibilityClearSearch
+											}
+											description={
+												messages.columnsVisibilityDescription
+											}
+											descriptionId={
+												columnsVisibilityDescriptionId
+											}
+											inputRef={searchInputRef}
+											name={
+												messages.columnsVisibilityHeader
+											}
+											nameId={columnsVisibilityHeaderId}
+											onSearchTermChange={
+												onSearchTermChange
+											}
+											onTabBack={() => {
+												triggerRef.current?.focus();
+
+												onActiveChange(false);
+											}}
+											searchLabel={
+												messages.columnsVisibilitySearch
+											}
+											searchTerm={searchTerm}
+										/>
+
+										<div
+											className={classNames({
+												'dropdown-section text-secondary':
+													!columnsVisibilityItems.length,
+											})}
+											role="status"
+										>
+											{!columnsVisibilityItems.length &&
+												messages.columnsVisibilityNoResults}
+										</div>
+									</>
 								}
-								items={collection
-									.getItems()
-									.filter(
-										(item) =>
-											!alwaysVisibleColumns.has(item)
-									)}
+								items={columnsVisibilityItems}
+								onActiveChange={onActiveChange}
 								style={{
 									maxWidth: '210px',
+									minHeight: menuHeight,
 									minWidth: '210px',
 								}}
 								trigger={
 									<Button
-										aria-label={
-											messages['columnsVisibility']
-										}
+										aria-label={messages.columnsVisibility}
 										borderless
 										displayType="secondary"
 										monospaced
+										ref={(
+											node: HTMLButtonElement | null
+										) => {
+											triggerRef.current = node;
+										}}
 										size="sm"
-										title={messages['columnsVisibility']}
+										title={messages.columnsVisibility}
 									>
 										<Icon symbol="caret-bottom" />
 									</Button>
