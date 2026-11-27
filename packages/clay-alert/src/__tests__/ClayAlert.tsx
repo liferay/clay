@@ -33,6 +33,44 @@ describe('ClayAlert', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it.each([
+		['danger', 'times-circle-full'],
+		['info', 'info-circle'],
+		['secondary', 'password-policies'],
+		['success', 'check-circle-full'],
+		['warning', 'warning-full'],
+	] as const)('renders the %s type with the %s icon', (displayType, icon) => {
+		const {container} = render(
+			<ClayAlert
+				displayType={displayType}
+				spritemap="/foo/bar"
+				title="Hello!"
+			/>
+		);
+
+		expect(
+			container.querySelector(`.lexicon-icon-${icon}`)
+		).toBeInTheDocument();
+	});
+
+	it('renders the given symbol instead of the default icon', () => {
+		const {container} = render(
+			<ClayAlert
+				displayType="danger"
+				spritemap="/foo/bar"
+				symbol="bolt"
+				title="Hello!"
+			/>
+		);
+
+		expect(
+			container.querySelector('.lexicon-icon-bolt')
+		).toBeInTheDocument();
+		expect(
+			container.querySelector('.lexicon-icon-times-circle-full')
+		).not.toBeInTheDocument();
+	});
+
 	it('renders as `stripe` variant', () => {
 		const {container} = render(
 			<ClayAlert spritemap="/foo/bar" title="Hello!" variant="stripe" />
