@@ -28,6 +28,7 @@ type Context = {
 	alwaysVisibleColumns: Set<React.Key>;
 	columnsVisibility: boolean;
 	expandedKeys: Set<React.Key>;
+	expanderColumnKey?: React.Key;
 	headCellsCount: number;
 	itemIdKey: string;
 	messages: Messages;

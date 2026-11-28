@@ -131,6 +131,7 @@ export const Cell = React.forwardRef(
 		const {
 			columnsVisibility,
 			expandedKeys,
+			expanderColumnKey,
 			headCellsCount,
 			messages,
 			onExpandedChange,
@@ -138,6 +139,7 @@ export const Cell = React.forwardRef(
 			sort,
 			sortDescriptionId,
 			treegrid,
+			visibleColumns,
 		} = useTable();
 
 		const [isFocused, setIsFocused] = useState(false);
@@ -190,6 +192,11 @@ export const Cell = React.forwardRef(
 		);
 
 		const isExpandable = (expandable || lazy) && !isLoading;
+		const isExpanderColumn =
+			index ===
+			(expanderColumnKey === undefined
+				? 0
+				: visibleColumns.get(expanderColumnKey));
 		const isSortable = isHead && sortable;
 
 		const activeSortDirection =
@@ -299,7 +306,7 @@ export const Cell = React.forwardRef(
 					<span className="text-truncate-inline">
 						<span className="text-truncate">{children}</span>
 					</span>
-				) : treegrid && index === 0 && !isHead ? (
+				) : treegrid && isExpanderColumn && !isHead ? (
 					<Layout.ContentRow
 						style={{
 							paddingLeft:

@@ -79,6 +79,12 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	expandedKeys?: Set<React.Key>;
 
 	/**
+	 * Key of the column that renders the expand button and the level
+	 * indentation of nested rows. Defaults to the first column.
+	 */
+	expanderColumnKey?: React.Key;
+
+	/**
 	 * This property vertically align the contents
 	 * inside the table header according a given position.
 	 */
@@ -218,6 +224,7 @@ export const Table = React.forwardRef(
 			defaultVisibleColumns = new Map(),
 			displayKeyboardArrowsIndicator = false,
 			expandedKeys: externalExpandedKeys,
+			expanderColumnKey,
 			itemIdKey = 'id',
 			messages: externalMessages,
 			visibleColumns: externalVisibleColumns,
@@ -303,6 +310,7 @@ export const Table = React.forwardRef(
 							alwaysVisibleColumns,
 							columnsVisibility,
 							expandedKeys,
+							expanderColumnKey,
 							headCellsCount,
 							itemIdKey,
 							messages,
